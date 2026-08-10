@@ -284,6 +284,14 @@
   .btn:hover{background:var(--blue-d);transform:translateY(-2px)}
   footer{background:#000;color:#6e6e73;text-align:center;padding:40px 22px;font-size:12px}
   footer .disc{max-width:780px;margin:0 auto 14px;line-height:1.5}
+
+/* --- sticky Icindekiler (fizibilite tarzi) --- */
+.stoc{position:fixed;left:26px;top:110px;width:212px;z-index:60;background:rgba(18,21,28,.92);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border:1px solid #232833;border-radius:16px;padding:14px 10px;display:none;max-height:calc(100vh - 150px);overflow-y:auto}
+@media(min-width:1320px){.stoc{display:block}}
+.stoc .toc-h{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#8a94a4;padding:2px 10px 10px}
+.stoc a{display:block;font-size:13px;color:#b7bfcc;padding:7px 10px;border-radius:8px;text-decoration:none;line-height:1.3;transition:background .15s,color .15s}
+.stoc a:hover{background:#1c212a;color:#fff}
+.stoc a.active{color:#2997ff;background:rgba(41,151,255,.09);font-weight:600}
 </style>
 </head>
 <body>
@@ -341,6 +349,17 @@
   </div>
 </nav>
 
+<aside class="stoc" id="stoc">
+  <div class="toc-h">İçindekiler</div>
+  <a href="#degisim">Davranış Değişimi</a>
+  <a href="#ekonomi">7/24 Ekonomisi</a>
+  <a href="#store">AUTOKITCH Store</a>
+  <a href="#senaryolar">Senaryolar</a>
+  <a href="#ilkadim">İlk Adım</a>
+  <a href="#dunya">Küresel Kanıt</a>
+</aside>
+
+
 <!-- HERO -->
 <header class="hero" id="hero">
   <video class="hero-bg" src="../assets/otonom-kiosk.mp4" autoplay muted loop playsinline></video>
@@ -349,7 +368,7 @@
     <div class="tag rv in">AUTOKITCH Vizyon</div>
     <h1 class="rv in">Tam Otonom<br>İnsansız Mutfak</h1>
     <p class="sub rv in d1">Sipariş robottan, üretim robotik mutfaktan — uçtan uca insansız işletme.</p>
-    <div class="meta rv in d2">Yatırımcı Sunumu · 2026 · Kemal — Torinoarch Studio</div>
+    <div class="meta rv in d2">Özel Sunum · 2026 · Kemal — Torinoarch Studio</div>
     <a href="#otonom" class="hero-btn rv in d3">Keşfet</a>
   </div>
   <a href="#otonom" class="cue">KAYDIR<span></span></a>
@@ -602,8 +621,8 @@
         <div class="body"><h3>Çalışan örnek: Yo-Kai Express</h3><p>İnsansız noodle istasyonu — müşteri ekrandan menüyü seçer, dakikalar içinde sıcak ürününü alır; havalimanlarında 7/24 çalışıyor. Kahvede de aynı model yıllardır sahada: Cafe X, Costa'nın robot baristası, Artly — insanların "robot Starbucks" diye bildiği kiosklar, robottan sipariş alıp kahveyi robot kolla hazırlıyor. Onun gibi.</p></div>
       </div>
       <div class="card pcard rv d2">
-        <img src="../assets/popup-store.jpg" alt="Pop-up store dış tasarım örneği" loading="lazy" style="width:100%;aspect-ratio:16/10;object-fit:cover;display:block">
-        <div class="body"><h3>Dış tasarım: pop-up store gibi</h3><p>Markalı pop-up store'lar gibi — AUTOKITCH Store da güçlü bir dış kimlikle giydirilir ve kurulduğu yere karakter katar. Kurucu mimar/tasarımcı olarak tam bizim işimiz.</p></div>
+        <img src="../assets/store-final.jpg" alt="AUTOKITCH Store final tasarım" loading="lazy" style="width:100%;aspect-ratio:16/10;object-fit:cover;display:block">
+        <div class="body"><h3>Final tasarım</h3><p>AUTOKITCH Store'un dış tasarımı: güçlü marka kimliği, ön yüzde sipariş ekranı, yanda kuryenin QR ile teslim aldığı ışıklı dolaplar — sistem şemasının birebir hayata geçmiş hali. Tasarım: kurucu mimar/tasarımcı.</p></div>
       </div>
     </div>
     <div class="card rv d1" style="text-align:left;margin-top:26px;border:1px solid rgba(41,151,255,.4)">
@@ -691,15 +710,6 @@
   </div>
 </section>
 
-<!-- CTA -->
-<section id="talep" class="cta">
-  <div class="wrap">
-    <div class="eyebrow rv">İletişim</div>
-    <h2 class="rv d1">Bu vizyonu birlikte<br><span class="accent">kurmak</span> ister misiniz?</h2>
-    <a href="mailto:info@torinoarch.com?subject=AUTOKITCH%20-%20Vizyon%20G%C3%B6r%C3%BC%C5%9Fmesi" class="btn rv d2">Görüşelim →</a>
-  </div>
-</section>
-
 <footer>
   <div class="disc">Görseller yapay zeka ile üretilmiş referans konseptlerdir; harici videolar üçüncü taraflara aittir.</div>
   AUTOKITCH · Tam Otonom İnsansız Mutfak · Kemal — Torinoarch Studio · 2026
@@ -724,6 +734,18 @@
 
   const ioE=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.querySelectorAll('.ef-bar').forEach(b=>b.style.width=b.dataset.w);ioE.unobserve(e.target);}});},{threshold:.4});
   const ef=document.querySelector('.effort');if(ef)ioE.observe(ef);
+
+  // Icindekiler aktif-bolum takibi
+  var stoc=document.getElementById('stoc');
+  if(stoc){
+    var tlinks=[].slice.call(stoc.querySelectorAll('a'));
+    var tsecs=tlinks.map(function(a){return document.querySelector(a.getAttribute('href'));});
+    var ioT=new IntersectionObserver(function(es){es.forEach(function(e){
+      if(e.isIntersecting){var id='#'+e.target.id;
+        tlinks.forEach(function(a){a.classList.toggle('active',a.getAttribute('href')===id);});}
+    });},{rootMargin:'-25% 0px -65% 0px'});
+    tsecs.forEach(function(s){if(s)ioT.observe(s);});
+  }
 </script>
 </body>
 </html>
