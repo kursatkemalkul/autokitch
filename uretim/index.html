@@ -9,7 +9,7 @@
 <style>
   :root{
     --black:#000;--panel:#1D1D1F;--light:#F5F5F7;--white:#fff;--dark:#1D1D1F;
-    --gray:#86868B;--gray-l:#A1A1A6;--blue:#FFC72C;--blue-d:#E0A400;--blue-l:#FFE08A;--hair:#2a2a2d;
+    --gray:#86868B;--gray-l:#A1A1A6;--blue:#FF8A2B;--blue-d:#E06900;--blue-l:#FFBE85;--hair:#2a2a2d;
     --maxw:1120px;--font:"SF Pro Display","SF Pro Text",-apple-system,BlinkMacSystemFont,"Helvetica Neue",Helvetica,Arial,sans-serif;
   }
   *{margin:0;padding:0;box-sizing:border-box}
@@ -37,7 +37,7 @@
 
   .hero{min-height:94vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:120px 22px 60px;background:linear-gradient(180deg,rgba(2,8,16,.74),rgba(2,8,16,.5) 45%,rgba(0,0,0,.9)),url('../assets/factory.jpg') center/cover no-repeat}
   .hero .tag{font-size:clamp(15px,1.5vw,20px);font-weight:600;color:var(--gray-l);margin-bottom:10px}
-  .hero h1{font-size:clamp(40px,7vw,92px);font-weight:600;letter-spacing:-.035em;line-height:1.0;background:linear-gradient(168deg,#FFF4D6,var(--blue-l) 32%,var(--blue) 64%,var(--blue-d));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;filter:drop-shadow(0 10px 60px rgba(255,199,44,.35))}
+  .hero h1{font-size:clamp(40px,7vw,92px);font-weight:600;letter-spacing:-.035em;line-height:1.0;background:linear-gradient(168deg,#FFE9D6,var(--blue-l) 32%,var(--blue) 64%,var(--blue-d));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;filter:drop-shadow(0 10px 60px rgba(255,138,43,.35))}
   .hero .sub{font-size:clamp(18px,2.1vw,27px);color:#eef3f8;font-weight:500;max-width:740px;margin:24px auto 0;line-height:1.34;text-shadow:0 2px 20px rgba(0,0,0,.65)}
   .hero .meta{margin-top:20px;color:#c2c8d0;font-size:15px;text-shadow:0 1px 14px rgba(0,0,0,.7)}
   .cue{margin-top:44px;color:var(--gray);font-size:12px;letter-spacing:.18em;text-transform:uppercase;display:flex;flex-direction:column;align-items:center;gap:9px;animation:bob 2s infinite}
@@ -80,8 +80,8 @@
   .prod h4 .d{width:8px;height:8px;border-radius:50%;background:var(--blue);flex:0 0 8px}
   .prod ul{list-style:none;display:flex;flex-wrap:wrap;gap:7px}
   .prod li{font-size:12.5px;color:#D5D8DC;background:#0e0e10;border:1px solid var(--hair);border-radius:100px;padding:5px 11px}
-  .prod.hl{border:1px solid rgba(255,199,44,.5);background:linear-gradient(180deg,rgba(255,199,44,.10),var(--panel))}
-  .prod.hl h4{color:var(--blue-l)}.prod.hl li{border-color:rgba(255,199,44,.35)}
+  .prod.hl{border:1px solid rgba(255,138,43,.5);background:linear-gradient(180deg,rgba(255,138,43,.10),var(--panel))}
+  .prod.hl h4{color:var(--blue-l)}.prod.hl li{border-color:rgba(255,138,43,.35)}
 
   /* plan numbered rows */
   .plan{margin-top:50px;display:flex;flex-direction:column;gap:16px;text-align:left}
@@ -100,7 +100,7 @@
   .cert{background:var(--panel);border-radius:14px;padding:18px 20px}
   .cert .abbr{font-size:17px;font-weight:700;color:var(--blue)}
   .cert .desc{font-size:13.5px;color:#A8A8AD;margin-top:5px;line-height:1.45}
-  .arge{background:linear-gradient(180deg,rgba(255,199,44,.10),var(--panel));border:1px solid rgba(255,199,44,.4);border-radius:20px;padding:34px;margin-top:22px;text-align:left}
+  .arge{background:linear-gradient(180deg,rgba(255,138,43,.10),var(--panel));border:1px solid rgba(255,138,43,.4);border-radius:20px;padding:34px;margin-top:22px;text-align:left}
   .arge h3{font-size:21px;color:#fff;font-weight:600}
   .arge>p{color:var(--gray-l);margin-top:10px;font-size:15px;line-height:1.5}
   .arge .ben{margin-top:18px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
@@ -113,7 +113,7 @@
   .split{display:grid;grid-template-columns:1fr 1fr;gap:46px;margin-top:50px;text-align:left}
   @media(max-width:860px){.split{grid-template-columns:1fr;gap:22px}}
   .col{background:var(--panel);border-radius:20px;padding:32px}
-  .col.auto{border:1px solid rgba(255,199,44,.45)}
+  .col.auto{border:1px solid rgba(255,138,43,.45)}
   .col h3{font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--gray);margin-bottom:16px}
   .col.auto h3{color:var(--blue)}
   .col .item{display:flex;gap:12px;margin-top:14px}
@@ -161,7 +161,7 @@
   .scn-tabs{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:34px}
   .scn-tab{cursor:pointer;background:var(--panel);border:1px solid var(--hair);border-radius:16px;padding:18px 20px 16px;text-align:center;transition:.2s;flex:1 1 220px;max-width:300px}
   .scn-tab:hover{border-color:var(--blue-d);transform:translateY(-2px)}
-  .scn-tab.on{border-color:var(--blue);background:rgba(255,199,44,.09)}
+  .scn-tab.on{border-color:var(--blue);background:rgba(255,138,43,.09)}
   .scn-tab .st-name{font-size:13px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--gray)}
   .scn-tab.on .st-name{color:var(--blue)}
   .scn-tab .st-inv{font-size:clamp(24px,3vw,34px);font-weight:600;color:#fff;margin-top:7px;letter-spacing:-.02em}
@@ -252,6 +252,7 @@
     <a href="../" class="logo">AUTO<b>KITCH</b></a>
     <div style="display:flex;gap:22px;align-items:center">
       <a href="../fizibilite/" class="nav-back">Fizibilite ↗</a>
+      <a href="../fizibilite/index.html" class="nav-back" style="color:var(--blue);font-weight:600">Fizibilite Raporu ↗</a>
       <a href="../" class="nav-back">← Ana sunum</a>
     </div>
   </div>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AUTOKITCH Modüller — Otonom Endüstriyel Mutfak</title>
+<title>AUTOKITCH Line — Otonom Mutfak Hatları</title>
 <!-- Gizli sayfa — sadece direkt linkle erişilir; arama motorları/AI botları engellendi -->
 <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
 <meta name="googlebot" content="noindex, nofollow">
@@ -13,7 +13,7 @@
   :root{
     --black:#000000; --panel:#1D1D1F; --panel2:#2A2A2D; --light:#F5F5F7; --white:#FFFFFF;
     --dark:#1D1D1F; --gray:#86868B; --gray-l:#A1A1A6;
-    --blue:#2997FF; --blue-d:#0A6CE0; --blue-l:#7CC0FF;
+    --blue:#A7B2C2; --blue-d:#0A6CE0; --blue-l:#7CC0FF;
     --maxw:1120px;
     --font:"SF Pro Display","SF Pro Text",-apple-system,BlinkMacSystemFont,"Helvetica Neue",Helvetica,Arial,sans-serif;
   }
@@ -63,13 +63,13 @@
   .hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
   .hero-ov{position:absolute;inset:0;z-index:1;
         background:linear-gradient(180deg,rgba(0,5,12,.62) 0%,rgba(0,5,12,.30) 42%,rgba(0,3,8,.82) 100%),
-                   radial-gradient(120% 90% at 50% 22%,rgba(41,151,255,.22),transparent 58%)}
+                   radial-gradient(120% 90% at 50% 22%,rgba(167,178,194,.22),transparent 58%)}
   .hero-content{position:relative;z-index:2;max-width:880px}
   .hero .tag{font-size:clamp(17px,1.6vw,22px);font-weight:600;color:#cfe0f2;margin-bottom:8px;letter-spacing:0}
   .hero h1{font-size:clamp(72px,15vw,196px);font-weight:600;letter-spacing:-.04em;line-height:.92;
            background:linear-gradient(168deg,#E6F2FF 0%,var(--blue-l) 30%,var(--blue) 62%,var(--blue-d) 100%);
            -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
-           filter:drop-shadow(0 10px 70px rgba(41,151,255,.4))}
+           filter:drop-shadow(0 10px 70px rgba(167,178,194,.4))}
   .hero .sub{font-size:clamp(20px,2.4vw,30px);color:#f0f4f8;font-weight:500;max-width:660px;
              margin:26px auto 0;line-height:1.3;text-shadow:0 2px 20px rgba(0,0,0,.5)}
   .hero .meta{margin-top:20px;color:#aebccb;font-size:15px;text-shadow:0 1px 12px rgba(0,0,0,.6)}
@@ -113,7 +113,7 @@
   /* karşılaştırma: süreç & efor */
   .cmp{display:flex;flex-direction:column;gap:18px;margin-top:54px}
   .cmp-row{background:var(--panel);border-radius:20px;padding:26px 28px;text-align:left}
-  .cmp-row.auto{border:1px solid rgba(41,151,255,.45)}
+  .cmp-row.auto{border:1px solid rgba(167,178,194,.45)}
   .cmp-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;flex-wrap:wrap;gap:10px}
   .cmp-tag{font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--gray)}
   .cmp-tag.accent{color:var(--blue)}
@@ -124,7 +124,7 @@
   .flow{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
   .stepchip{background:#0e0e10;border:1px solid #2a2a2d;border-radius:12px;padding:12px 15px;font-size:14px;font-weight:600;color:#ececed;display:flex;flex-direction:column;gap:3px}
   .stepchip small{color:var(--gray);font-size:11px;font-weight:400}
-  .cmp-row.auto .stepchip{border-color:rgba(41,151,255,.3)}
+  .cmp-row.auto .stepchip{border-color:rgba(167,178,194,.3)}
   .arrow{color:var(--gray);font-weight:700;font-size:15px;flex:0 0 auto}
   .cmp-row.auto .arrow{color:var(--blue)}
   .effort{margin:44px auto 0;display:flex;flex-direction:column;gap:20px;max-width:720px}
@@ -142,7 +142,7 @@
   .cmp-people.auto .ppl{fill:var(--blue)}
   .money{display:flex;align-items:stretch;justify-content:center;gap:16px;margin:46px auto 0;max-width:800px;flex-wrap:wrap}
   .m-card{flex:1 1 300px;background:var(--panel);border-radius:20px;padding:28px;text-align:left}
-  .m-card.auto{border:1px solid rgba(41,151,255,.45)}
+  .m-card.auto{border:1px solid rgba(167,178,194,.45)}
   .m-top{font-size:13px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--gray)}
   .m-card.auto .m-top{color:var(--blue)}
   .m-big{font-size:40px;font-weight:600;color:#fff;letter-spacing:-.02em;margin:10px 0 6px}
@@ -164,7 +164,7 @@
   .bignum{font-size:clamp(30px,3.6vw,46px);font-weight:600;letter-spacing:-.02em;line-height:1.05;background:linear-gradient(160deg,#fff,var(--blue) 62%,var(--blue));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
   .eqn{display:flex;align-items:stretch;justify-content:center;gap:12px;flex-wrap:wrap;margin:42px auto 0;max-width:780px}
   .eqn .eq-box{background:#0e0e10;border:1px solid #2a2a2d;border-radius:16px;padding:20px 18px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;flex:1;min-width:150px}
-  .eqn .eq-box.res{border-color:rgba(41,151,255,.5);background:rgba(41,151,255,.07)}
+  .eqn .eq-box.res{border-color:rgba(167,178,194,.5);background:rgba(167,178,194,.07)}
   .eqn .eq-ic{width:30px;height:30px;margin-bottom:11px;color:var(--blue)}
   .eqn .eq-t{font-size:15px;font-weight:600;color:#fff;line-height:1.25}
   .eqn .eq-s{font-size:11.5px;color:var(--gray);margin-top:4px;line-height:1.3}
@@ -291,7 +291,7 @@
 .stoc .toc-h{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#8a94a4;padding:2px 10px 10px}
 .stoc a{display:block;font-size:13px;color:#b7bfcc;padding:7px 10px;border-radius:8px;text-decoration:none;line-height:1.3;transition:background .15s,color .15s}
 .stoc a:hover{background:#1c212a;color:#fff}
-.stoc a.active{color:#2997ff;background:rgba(41,151,255,.09);font-weight:600}
+.stoc a.active{color:var(--blue);background:rgba(167,178,194,.09);font-weight:600}
 </style>
 </head>
 <body>
@@ -339,12 +339,6 @@
 <nav id="nav">
   <div class="nav-in">
     <a href="../index.html" class="logo">AUTO<b>KITCH</b></a>
-    <div class="nav-links">
-      <a href="#problem">Problem</a>
-      <a href="#urun">Ürün</a>
-      <a href="#pazar">Pazar</a>
-      <a href="../otonom/index.html">Vizyon ↗</a>
-    </div>
     <div class="nav-right">
       <a href="../uretim/index.html" class="nav-prod">Fabrika & Yatırım ↗</a>
       <a href="mailto:info@torinoarch.com?subject=AUTOKITCH" class="nav-cta">İletişim</a>
@@ -373,7 +367,7 @@
   <video class="hero-bg" src="../assets/pide.mp4" autoplay muted loop playsinline></video>
   <div class="hero-ov"></div>
   <div class="hero-content">
-    <div class="tag rv in">Otonom Endüstriyel Mutfak</div>
+    <div class="tag rv in">AUTOKITCH Line · Otonom Mutfak Hatları</div>
     <h1 class="rv in">AUTOKITCH</h1>
     <p class="sub rv in d1">Mutfağın geleceği. Yapay zeka, robotik ve premium tasarımla yeniden tasarlandı.</p>
     <div class="meta rv in d2">Özel Sunum · 2026 · Kemal — Torinoarch Studio</div>
@@ -685,6 +679,14 @@
         tlinks.forEach(function(a){a.classList.toggle('active',a.getAttribute('href')===id);});}
     });},{rootMargin:'-25% 0px -65% 0px'});
     tsecs.forEach(function(s){if(s)ioT.observe(s);});
+  }
+
+  /* Icindekiler: sadece baslangicta gorunur, asagi inince kaybolur */
+  var stoc=document.getElementById('stoc');
+  if(stoc){
+    stoc.style.transition='opacity .35s';
+    var stocT=function(){var hide=window.scrollY>window.innerHeight*0.75;stoc.style.opacity=hide?'0':'1';stoc.style.pointerEvents=hide?'none':'auto';};
+    window.addEventListener('scroll',stocT,{passive:true});stocT();
   }
 </script>
 </body>
