@@ -834,99 +834,1506 @@ a[style*="background:#12151c"] span,div[style*="background:#12151c"] span{color:
 </section>
 
 
-<!-- MAKINE FIYATLARI / TEDARIKCI ARASTIRMASI -->
+<!-- TEDARIKCI RAPORU (TAM) -->
 <section id="fiyatlar" class="center">
   <div class="wrap">
-    <div class="eyebrow rv">Tedarikçi Araştırması · Ağustos 2026</div>
-    <h2 class="rv d1">Tedarik zinciri hazır:<br>64 üretici tek tek tarandı.</h2>
-    <p class="lead rv d2">Küresel robotik mutfak haritasındaki 64 oyuncunun tamamını inceledik: 46'sı aktif tedarikçi, 15'ten fazlasının fiyatı elimizde. Sonuç net — bir Store'un her parçası bugün sipariş edilebilir durumda.</p>
+    <div class="eyebrow rv">Tedarikçi Raporu · Ağustos 2026</div>
+    <h2 class="rv d1">64 üretici tek tek tarandı.<br>İşte tam katalog.</h2>
+    <p class="lead rv d2">Küresel robotik mutfak haritasındaki 64 oyuncunun tamamı incelendi: 46 aktif tedarikçi kartı — ürünleri, fiyatları, e-postaları ve her biri için kopyala-gönder hazır teklif maili. Fiyatı olmayanlara mail adresi ve hazır yazı eklidir.</p>
+    <style>
+#fiyatlar .tr-toplist{background:#fff;border:1px solid #dfe6f0;border-radius:16px;padding:22px;margin:26px 0 8px;text-align:left}
+#fiyatlar .tr-toplist table{width:100%;border-collapse:collapse;font-size:13.5px}
+#fiyatlar .tr-toplist th{color:#8a94a2;font-size:11.5px;text-transform:uppercase;letter-spacing:.06em;text-align:left;padding:6px 10px}
+#fiyatlar .tr-toplist td{padding:8px 10px;border-top:1px solid #e8edf5}
+#fiyatlar .tr-toplist td:first-child{font-weight:600;color:#0f1726}
+#fiyatlar .tr-toplist .p{color:#178a56;font-weight:700}
+#fiyatlar h3.tr-cat{font-size:22px;margin:46px 0 6px;letter-spacing:-.01em;text-align:left;color:#0f1726}
+#fiyatlar .tr-catline{height:3px;width:64px;background:var(--sblue);border-radius:2px;margin-bottom:20px}
+#fiyatlar .tr-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:16px;text-align:left}
+#fiyatlar .tr-card{background:#fff;border:1px solid #dfe6f0;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 8px 26px rgba(20,40,80,.05)}
+#fiyatlar .tr-card img.hero{width:100%;height:160px;object-fit:cover;background:#eef2f8;display:block}
+#fiyatlar .tr-cb{padding:15px 17px 17px;display:flex;flex-direction:column;gap:9px;flex:1}
+#fiyatlar .tr-name{font-size:16.5px;font-weight:700;color:#0f1726}
+#fiyatlar .tr-country{color:#8a94a2;font-size:12px}
+#fiyatlar .tr-badge{display:inline-block;font-size:10.5px;font-weight:700;padding:3px 9px;border-radius:99px;letter-spacing:.04em}
+#fiyatlar .tr-b-ok{background:rgba(23,138,86,.1);color:#178a56}
+#fiyatlar .tr-b-warn{background:rgba(196,124,24,.1);color:#c47c18}
+#fiyatlar .tr-stx{font-size:12px;color:#68758a;line-height:1.45}
+#fiyatlar .tr-prods{font-size:13px;display:flex;flex-direction:column;gap:6px;color:#3d4a5c}
+#fiyatlar .tr-prods a{color:#2456c8;text-decoration:none}
+#fiyatlar .tr-prods a:hover{text-decoration:underline}
+#fiyatlar .tr-prods b{color:#0f1726}
+#fiyatlar .tr-price{font-size:14.5px;font-weight:700;color:#178a56}
+#fiyatlar .tr-price.tr-quote{color:#c47c18}
+#fiyatlar .tr-pn{font-size:11.5px;color:#8a94a2}
+#fiyatlar .tr-mailrow{font-size:12.5px;color:#3d4a5c;word-break:break-all}
+#fiyatlar .tr-mailrow b{color:#0f1726}
+#fiyatlar details{margin-top:auto}
+#fiyatlar summary{cursor:pointer;font-size:12.5px;font-weight:600;color:var(--sblue);padding:7px 0}
+#fiyatlar textarea{width:100%;height:210px;background:#f4f7fb;color:#26303f;border:1px solid #dfe6f0;border-radius:10px;padding:10px;font:11.5px/1.5 Consolas,monospace;resize:vertical}
+#fiyatlar .tr-dead{margin-top:46px;background:#fff;border:1px solid #dfe6f0;border-radius:16px;padding:22px;text-align:left}
+#fiyatlar .tr-dead table{width:100%;border-collapse:collapse;font-size:13px}
+#fiyatlar .tr-dead td{padding:8px 10px;border-top:1px solid #e8edf5;vertical-align:top;color:#3d4a5c}
+#fiyatlar .tr-dead td:first-child{font-weight:600;color:#0f1726;white-space:nowrap}
+#fiyatlar .tr-note{color:#8a94a2;font-size:12px;margin-top:26px;text-align:center}
+@media(max-width:640px){#fiyatlar .tr-toplist{overflow-x:auto}}
+</style>
+    <div class="tr-toplist"><h3 style="font-size:20px;margin-bottom:12px">⭐ Önce bunlara yaz — fiyatı bilinen / en somut 10 tedarikçi</h3>
+<table><tr><th>Tedarikçi</th><th>Ürün</th><th>Fiyat</th><th>E-posta</th></tr>
+<tr><td>RoboBurger</td><td>Burger otomatı (satış!)</td><td class="p">$27.500</td><td>Sales@RoboBurger.com</td></tr>
+<tr><td>BOTINKIT</td><td>OMNI wok robotu</td><td class="p">$24.990 / $902-ay</td><td>contact@botinkit.com</td></tr>
+<tr><td>wetechfood</td><td>Infinity bowl otomatı</td><td class="p">€900/ay</td><td>info@wetechfood.com</td></tr>
+<tr><td>Dobot</td><td>Nova 5 robot kol</td><td class="p">~$13.790</td><td>sales@dobot-robots.com</td></tr>
+<tr><td>xRobotics</td><td>xPizza Cube soslama</td><td class="p">$1.300/ay</td><td>hello@xrobotics.io</td></tr>
+<tr><td>Nala Robotics</td><td>Pizzaiola / Wingman</td><td class="p">$7.000 / $2.999-ay</td><td>info@nalarobotics.com</td></tr>
+<tr><td>goodBytz</td><td>enzo / luca mutfak robotu</td><td class="p">~€3.900/ay</td><td>info@goodbytz.com</td></tr>
+<tr><td>Miso Robotics</td><td>Flippy fritöz</td><td class="p">~$5.400/ay</td><td>contactus@misorobotics.com</td></tr>
+<tr><td>Yo-Kai Express</td><td>Ramen otomatı</td><td class="p">~$4.000/ay</td><td>cs@yokaiexpress.com</td></tr>
+<tr><td>Makr Shakr</td><td>Toni robot barmen</td><td class="p">~€99.000</td><td>filippo@makrshakr.com</td></tr>
+</table></div>
+<h3 class='tr-cat'>Komple Otonom Mutfak &amp; Pizza Sistemleri</h3><div class='tr-catline'></div><div class='tr-grid'>
+<div class='tr-card'>
+<img class='hero' src='https://cdn.prod.website-files.com/69488513498b20ea4f33e295/69488513498b20ea4f33e729_CA-1%20Cooking%20Robot%20Side%20View.webp' loading='lazy' onerror="this.style.display='none'">
+<div class='tr-cb'>
+<div><span class='tr-name'>Circus Group — CA-1</span> <span class='tr-country'>· Almanya</span> <span class='badge b-warn'>DİKKAT</span></div>
+<div class='tr-stx'>Aktif · halka açık — 2026&#x27;da mali türbülans haberleri var, referans sahası iste</div>
+<div class='tr-prods'><div><b>CA-1 Series 4</b> — 7 m²&#x27;de saatte ~120 öğün üreten tam otonom AI mutfak; REWE marketlerde canlı <a href='https://www.circus-group.com/ca-1' target='_blank'>sayfa ↗</a></div><div><b>Beastro (Kitchen Robotics)</b> — dark-kitchen robotik mutfak hücresi — artık Circus çatısında <a href='https://www.k-robo.com/' target='_blank'>sayfa ↗</a></div><div><b>Alberts Blend/Meal Station</b> — smoothie-çorba otomatı — artık Circus çatısında <a href='https://www.alberts.be/en-gb/solution/' target='_blank'>sayfa ↗</a></div></div>
+<div><span class='tr-price tr-quote'>Teklifle</span> <span class='tr-pn'>· Tek mailde 3 ürün ailesi sorulabilir</span></div>
+<div class='tr-mailrow'>✉ <b>sales@circus-group.com</b></div>
+<details><summary>📋 Hazır teklif maili (kopyala-gönder)</summary><textarea readonly onclick='this.select()'>To: sales@circus-group.com
+Subject: Inquiry — unit pricing for Turkiye deployment
 
-    <div class="card rv d1" style="text-align:left;max-width:900px;margin:10px auto 0">
-      <div class="n">Fiyatı bilinen öne çıkan makineler</div>
-      <div style="overflow-x:auto;margin-top:10px">
-      <table style="width:100%;border-collapse:collapse;font-size:14px;min-width:560px">
-        <tr style="color:#8a94a2;font-size:11.5px;text-transform:uppercase;letter-spacing:.06em;text-align:left"><th style="padding:7px 10px">Tedarikçi</th><th style="padding:7px 10px">Ürün</th><th style="padding:7px 10px">Fiyat</th></tr>
-        <tr><td style="padding:8px 10px;border-top:1px solid #e3e9f2;font-weight:600">RoboBurger (ABD)</td><td style="padding:8px 10px;border-top:1px solid #e3e9f2">1 m² otonom burger otomatı</td><td style="padding:8px 10px;border-top:1px solid #e3e9f2;color:var(--sblue);font-weight:700">$27.500 satış · $3.000/ay kira</td></tr>
-        <tr><td style="padding:8px 10px;border-top:1px solid #e3e9f2;font-weight:600">BOTINKIT (Çin)</td><td style="padding:8px 10px;border-top:1px solid #e3e9f2">OMNI wok pişirme robotu (10.000+ tarif)</td><td style="padding:8px 10px;border-top:1px solid #e3e9f2;color:var(--sblue);font-weight:700">$24.990 · RaaS $902/ay</td></tr>
-        <tr><td style="padding:8px 10px;border-top:1px solid #e3e9f2;font-weight:600">wetechfood (İspanya)</td><td style="padding:8px 10px;border-top:1px solid #e3e9f2">Infinity bowl otomatı (100 bowl/gün)</td><td style="padding:8px 10px;border-top:1px solid #e3e9f2;color:var(--sblue);font-weight:700">€900/ay kiralama</td></tr>
-        <tr><td style="padding:8px 10px;border-top:1px solid #e3e9f2;font-weight:600">Dobot (Çin)</td><td style="padding:8px 10px;border-top:1px solid #e3e9f2">Nova 5 gıda-servis robot kolu</td><td style="padding:8px 10px;border-top:1px solid #e3e9f2;color:var(--sblue);font-weight:700">~$13.790</td></tr>
-        <tr><td style="padding:8px 10px;border-top:1px solid #e3e9f2;font-weight:600">xRobotics (ABD)</td><td style="padding:8px 10px;border-top:1px solid #e3e9f2">xPizza Cube soslama+topping (100 pizza/sa)</td><td style="padding:8px 10px;border-top:1px solid #e3e9f2;color:var(--sblue);font-weight:700">$1.300/ay</td></tr>
-        <tr><td style="padding:8px 10px;border-top:1px solid #e3e9f2;font-weight:600">Nala Robotics (ABD)</td><td style="padding:8px 10px;border-top:1px solid #e3e9f2">Pizzaiola pizza robotu / Wingman fritöz</td><td style="padding:8px 10px;border-top:1px solid #e3e9f2;color:var(--sblue);font-weight:700">$7.000/ay · $2.999/ay</td></tr>
-        <tr><td style="padding:8px 10px;border-top:1px solid #e3e9f2;font-weight:600">goodBytz (Almanya)</td><td style="padding:8px 10px;border-top:1px solid #e3e9f2">enzo/luca otonom mutfak robotları</td><td style="padding:8px 10px;border-top:1px solid #e3e9f2;color:var(--sblue);font-weight:700">~€3.900/ay</td></tr>
-        <tr><td style="padding:8px 10px;border-top:1px solid #e3e9f2;font-weight:600">Miso Robotics (ABD)</td><td style="padding:8px 10px;border-top:1px solid #e3e9f2">Flippy robotik fritöz (100 sepet/sa)</td><td style="padding:8px 10px;border-top:1px solid #e3e9f2;color:var(--sblue);font-weight:700">~$5.400/ay</td></tr>
-        <tr><td style="padding:8px 10px;border-top:1px solid #e3e9f2;font-weight:600">Yo-Kai Express (ABD)</td><td style="padding:8px 10px;border-top:1px solid #e3e9f2">Sıcak yemek otomatı (90 sn, 30+ menü)</td><td style="padding:8px 10px;border-top:1px solid #e3e9f2;color:var(--sblue);font-weight:700">~$4.000/ay</td></tr>
-        <tr><td style="padding:8px 10px;border-top:1px solid #e3e9f2;font-weight:600">Makr Shakr (İtalya)</td><td style="padding:8px 10px;border-top:1px solid #e3e9f2">Toni robotik barmen</td><td style="padding:8px 10px;border-top:1px solid #e3e9f2;color:var(--sblue);font-weight:700">~€99.000</td></tr>
-        <tr><td style="padding:8px 10px;border-top:1px solid #e3e9f2;font-weight:600">Adial (Fransa)</td><td style="padding:8px 10px;border-top:1px solid #e3e9f2">Pizzadoor taze pizza otomatı (2.800+ kurulu)</td><td style="padding:8px 10px;border-top:1px solid #e3e9f2;color:var(--sblue);font-weight:700">€40–50 bin · leasing €639/ay</td></tr>
-        <tr><td style="padding:8px 10px;border-top:1px solid #e3e9f2;font-weight:600">Çin pişirmeli otomatlar</td><td style="padding:8px 10px;border-top:1px solid #e3e9f2">Jawo / Foodline — 60–96 pizza stok</td><td style="padding:8px 10px;border-top:1px solid #e3e9f2;color:var(--sblue);font-weight:700">$7.900–10.600</td></tr>
-      </table>
-      </div>
-    </div>
+Hello,
 
-    <div class="grid g2" style="text-align:left;margin-top:26px">
-      <div class="card rv d1"><div class="n">İnsansız satış noktası · 9 tedarikçi</div><h3>Store'un birebir muadilleri</h3>
-        <ul style="margin:0;padding-left:0;list-style:none;font-size:13.5px;line-height:1.55;display:flex;flex-direction:column;gap:7px">
-          <li><b>RoboBurger</b> — 1 m²'de burgeri sipariş üzerine pişiren otomat ($27.500 satış)</li>
-          <li><b>Yo-Kai Express</b> — 90 saniyede ramen pişiren sıcak yemek otomatı (~$4.000/ay)</li>
-          <li><b>Alberts</b> — 2 dakikada taze smoothie/çorba otomatı (Sodexo &amp; NHS kullanıyor)</li>
-          <li><b>Fries &amp; Go</b> — 35 saniyede çift kızartma taze patates otomatı</li>
-          <li><b>SmartFoodie</b> — buharda pişiren yemek otomatı (hastane/kampüs)</li>
-          <li><b>CERĒS</b> — 2,4 m²'de 7/24 robot barista kioskı + akıllı dolap</li>
-          <li><b>xRobotics</b> — tezgâh üstü pizza soslama robotu ($1.300/ay)</li>
-          <li><b>InstaChef</b> — Singapur'da 300+ insansız mutfak otomatı (franchise)</li>
-          <li><b>FreshPod</b> — kişiselleştirilebilir sağlıklı kase otomatı</li>
-        </ul></div>
-      <div class="card rv d2"><div class="n">Komple otonom mutfak · 9 tedarikçi</div><h3>Tek makinede bütün mutfak</h3>
-        <ul style="margin:0;padding-left:0;list-style:none;font-size:13.5px;line-height:1.55;display:flex;flex-direction:column;gap:7px">
-          <li><b>Circus CA-1</b> — saatte 120 yemek; Almanya'da REWE marketlerde canlı</li>
-          <li><b>goodBytz</b> — enzo/luca otonom mutfak robotları (~€3.900/ay; ABD ordusuna tedarik)</li>
-          <li><b>Nala Robotics</b> — pizza + fritöz + bowl robot ailesi ($2.999-7.000/ay)</li>
-          <li><b>Eatch</b> — üretim mutfakları için robotik wok hattı</li>
-          <li><b>Hyper</b> — 40-ft konteynerde insansız restoran (~$800K)</li>
-          <li><b>ROBOEATZ ARK</b> — 80 malzemeli otonom mutfak (Aramark yatırımlı)</li>
-          <li><b>Rolo MAYA</b> — otonom fast-food mikro-mutfak kioskı</li>
-          <li><b>Appetronix</b> — havalimanında canlı insansız pizza kioskı (ortaklık modeli)</li>
-          <li><b>PAZZI</b> — robotik pizzeria (master franchise)</li>
-        </ul></div>
-      <div class="card rv d1"><div class="n">Pişirme istasyonları · 11 tedarikçi</div><h3>Hattın tek tek modülleri</h3>
-        <ul style="margin:0;padding-left:0;list-style:none;font-size:13.5px;line-height:1.55;display:flex;flex-direction:column;gap:7px">
-          <li><b>BOTINKIT OMNI</b> — 10.000+ tarifli wok robotu ($24.990 / $902-ay)</li>
-          <li><b>Aniai Alpha Grill</b> — çift taraflı otonom ızgara (200+ ürün/saat)</li>
-          <li><b>GRILL X</b> — AI sensörlü et/balık ızgara sistemi</li>
-          <li><b>ChronoGrill</b> — proteini tanıyıp pişiren otonom charbroiler</li>
-          <li><b>Miso Flippy</b> — saatte 100 sepet robotik fritöz (~$5.400/ay)</li>
-          <li><b>Lab2Fab</b> — PizzaBot (~$70K) + FryBot; Middleby güvencesi</li>
-          <li><b>PERSOBOTS FRYNIUS</b> — mutfağa entegre otomatik fritöz</li>
-          <li><b>RoboChef SmartFryer</b> — 6 sipariş paralel fritöz ($100/gün)</li>
-          <li><b>Cook-e</b> — günde 30 dk bakımla 7/24 pişirme istasyonu</li>
-          <li><b>Else Labs Oliver</b> — dozaj+pişirme ticari ünitesi</li>
-          <li><b>Mana MC60</b> — ofisler için otonom öğle yemeği istasyonu</li>
-        </ul></div>
-      <div class="card rv d2"><div class="n">Bowl &amp; montaj · 5 tedarikçi</div><h3>Bowl hattımızın muadilleri</h3>
-        <ul style="margin:0;padding-left:0;list-style:none;font-size:13.5px;line-height:1.55;display:flex;flex-direction:column;gap:7px">
-          <li><b>Hyphen Makeline</b> — tezgâh altı robotik bowl montaj hattı</li>
-          <li><b>Chef Robotics</b> — porsiyonlama robot kolu (98M+ porsiyon servis etti)</li>
-          <li><b>wetechfood Infinity</b> — günde 100 bowl'luk otomat (€900/ay)</li>
-          <li><b>Cibotica Remy</b> — AI salata/bowl montaj istasyonu (pilot)</li>
-          <li><b>Kyol</b> — 2 m²'de 30 saniyede poké bowl mikro-fabrikası</li>
-        </ul></div>
-      <div class="card rv d1"><div class="n">İçecek &amp; barista · 5 tedarikçi</div><h3>İçecek tarafı hazır</h3>
-        <ul style="margin:0;padding-left:0;list-style:none;font-size:13.5px;line-height:1.55;display:flex;flex-direction:column;gap:7px">
-          <li><b>Botrista</b> — 12 kategoride içeceği 20-30 saniyede yapan istasyon (~$500/ay)</li>
-          <li><b>Artly</b> — robot barista &amp; bartender kolları</li>
-          <li><b>Smyze</b> — sertifikalı robobarista (Schiphol, ABB, VW referanslı)</li>
-          <li><b>Makr Shakr Toni</b> — 158 şişelik robot barmen (~€99.000)</li>
-          <li><b>Macco Kime</b> — saatte 180 içecek hazırlayan kiosk</li>
-        </ul></div>
-      <div class="card rv d2"><div class="n">Robot kollar · 3 tedarikçi</div><h3>Hat entegrasyonu için</h3>
-        <ul style="margin:0;padding-left:0;list-style:none;font-size:13.5px;line-height:1.55;display:flex;flex-direction:column;gap:7px">
-          <li><b>Dobot Nova</b> — gıda servisi için kompakt robot kol (~$13.790)</li>
-          <li><b>Doosan E-Serisi</b> — gıda-içecek sertifikalı premium cobot (~$22-28K)</li>
-          <li><b>Armstrong</b> — bulaşıkhane robot kolu (yılda 1M+ bulaşık)</li>
-        </ul></div>
-    </div>
+I&#x27;m Kursad Kemal Kul, founder of AUTOKITCH (Istanbul, Turkiye). We are building autonomous kitchen lines and unmanned 7/24 food points, and we are currently selecting equipment suppliers.
 
-    <p class="lead rv center" style="margin-top:34px;font-size:18px">Sektörde ayıklanma bitti: Picnic, DaVinci, Basil Street gibi tam-otomasyon girişimleri kapandı; ayakta kalanlar <b style="color:#0f1726;font-weight:600">kanıtlanmış, sipariş edilebilir makineler</b> üretiyor. AUTOKITCH bu olgunlaşmış tedarik zincirinin üstüne kuruluyor — 46 tedarikçinin ürün, fiyat ve iletişim detayları dahilî katalog raporumuzda.</p>
-    <p class="note">Kaynak: 64 şirketin resmî siteleri (doğrudan inceleme) + TechCrunch, CNBC, GeekWire, The Spoon, Restaurant Dive (Ağustos 2026). Fiyatlar üreticilerin/distribütörlerin yayın tarihindeki beyanlarıdır.</p>
+From your website/catalog we are interested in:
+- CA-1 Series 4 autonomous cooking robot
+- Beastro robotic kitchen cell
+- Alberts blend/meal station
+
+Could you please share:
+1) Unit price for a single unit — purchase price and, if available, lease/subscription terms
+2) Total cost including taxes, packaging and shipping to Istanbul, Turkiye (or EXW/FOB price + estimated freight)
+3) Lead time, warranty and installation/support options
+4) Product catalog and spec sheets
+
+Thank you — looking forward to your reply.
+
+Best regards,
+Kursad Kemal Kul
+AUTOKITCH / Torinoarch Studio — Istanbul, Turkiye
+kursatkemalkul@gmail.com</textarea></details>
+</div></div>
+<div class='tr-card'>
+<div class='tr-cb'>
+<div><span class='tr-name'>goodBytz</span> <span class='tr-country'>· Almanya</span> <span class='badge b-ok'>AKTİF</span></div>
+<div class='tr-stx'>Aktif — ABD ordusuna 40.000 kişilik tedarik anlaşması</div>
+<div class='tr-prods'><div><b>enzo</b> — komple yemek hazırlayan tam otonom robot <a href='https://www.goodbytz.com/' target='_blank'>sayfa ↗</a></div><div><b>luca</b> — salata/bowl odaklı otonom robot <a href='https://www.goodbytz.com/' target='_blank'>sayfa ↗</a></div><div><b>sam / felix</b> — kompakt otonom / yarı otomatik sistemler <a href='https://www.goodbytz.com/' target='_blank'>sayfa ↗</a></div></div>
+<div><span class='tr-price'>Kiralama ~€3.900/ay&#x27;dan</span> <span class='tr-pn'>· büyük sistem €10-12K/ay; satış yok — taban kira + porsiyon başı ücret, bakım dahil</span></div>
+<div class='tr-mailrow'>✉ <b>info@goodbytz.com</b></div>
+<details><summary>📋 Hazır teklif maili (kopyala-gönder)</summary><textarea readonly onclick='this.select()'>To: info@goodbytz.com
+Subject: Inquiry — unit pricing for Turkiye deployment
+
+Hello,
+
+I&#x27;m Kursad Kemal Kul, founder of AUTOKITCH (Istanbul, Turkiye). We are building autonomous kitchen lines and unmanned 7/24 food points, and we are currently selecting equipment suppliers.
+
+From your website/catalog we are interested in:
+- enzo autonomous cooking robot
+- luca bowl robot — monthly rental terms
+
+Could you please share:
+1) Unit price for a single unit — purchase price and, if available, lease/subscription terms
+2) Total cost including taxes, packaging and shipping to Istanbul, Turkiye (or EXW/FOB price + estimated freight)
+3) Lead time, warranty and installation/support options
+4) Product catalog and spec sheets
+
+Thank you — looking forward to your reply.
+
+Best regards,
+Kursad Kemal Kul
+AUTOKITCH / Torinoarch Studio — Istanbul, Turkiye
+kursatkemalkul@gmail.com</textarea></details>
+</div></div>
+<div class='tr-card'>
+<img class='hero' src='https://nalarobotics.com/assets/img/products/pizzaiola-pizza-maker-400.webp' loading='lazy' onerror="this.style.display='none'">
+<div class='tr-cb'>
+<div><span class='tr-name'>Nala Robotics</span> <span class='tr-country'>· ABD</span> <span class='badge b-ok'>AKTİF</span></div>
+<div class='tr-stx'>Aktif — en geniş pişirme portföyü</div>
+<div class='tr-prods'><div><b>Pizzaiola</b> — tam otomatik pizza robotu <a href='https://nalarobotics.com/pizzaiola.html' target='_blank'>sayfa ↗</a></div><div><b>Nala Chef</b> — çok mutfaklı AI şef robotu <a href='https://nalarobotics.com/nala-chef.html' target='_blank'>sayfa ↗</a></div><div><b>The Wingman</b> — çoklu fritöz robotu <a href='https://nalarobotics.com/the-wingman.html' target='_blank'>sayfa ↗</a></div><div><b>Bowls / Sandwich Bot / Spotless</b> — bowl, sandviç ve bulaşık istasyonları <a href='https://nalarobotics.com/' target='_blank'>sayfa ↗</a></div></div>
+<div><span class='tr-price'>Wingman $2.999/ay · Pizzaiola $7.000/ay&#x27;dan</span> <span class='tr-pn'>· kira/abonelik modeli</span></div>
+<div class='tr-mailrow'>✉ <b>info@nalarobotics.com</b> — tel +1 860 544 0000</div>
+<details><summary>📋 Hazır teklif maili (kopyala-gönder)</summary><textarea readonly onclick='this.select()'>To: info@nalarobotics.com
+Subject: Inquiry — unit pricing for Turkiye deployment
+
+Hello,
+
+I&#x27;m Kursad Kemal Kul, founder of AUTOKITCH (Istanbul, Turkiye). We are building autonomous kitchen lines and unmanned 7/24 food points, and we are currently selecting equipment suppliers.
+
+From your website/catalog we are interested in:
+- Pizzaiola autonomous pizza robot
+- The Wingman fryer robot
+- Bowls station — lease terms and unit pricing
+
+Could you please share:
+1) Unit price for a single unit — purchase price and, if available, lease/subscription terms
+2) Total cost including taxes, packaging and shipping to Istanbul, Turkiye (or EXW/FOB price + estimated freight)
+3) Lead time, warranty and installation/support options
+4) Product catalog and spec sheets
+
+Thank you — looking forward to your reply.
+
+Best regards,
+Kursad Kemal Kul
+AUTOKITCH / Torinoarch Studio — Istanbul, Turkiye
+kursatkemalkul@gmail.com</textarea></details>
+</div></div>
+<div class='tr-card'>
+<img class='hero' src='https://eatch.me/_astro/EAK3_2wdzWw.webp' loading='lazy' onerror="this.style.display='none'">
+<div class='tr-cb'>
+<div><span class='tr-name'>Eatch</span> <span class='tr-country'>· Hollanda</span> <span class='badge b-ok'>AKTİF</span></div>
+<div class='tr-stx'>Aktif</div>
+<div class='tr-prods'><div><b>Eatch Robotic Kitchen Platform</b> — üretim mutfakları için wok-pişirme robotik hattı + Meal Creator yazılımı <a href='https://eatch.me/technology' target='_blank'>sayfa ↗</a></div></div>
+<div><span class='tr-price tr-quote'>Teklifle</span> <span class='tr-pn'>· platformu satın alıp kendin işletme seçeneği var</span></div>
+<div class='tr-mailrow'>✉ <b>info@eatch.me</b></div>
+<details><summary>📋 Hazır teklif maili (kopyala-gönder)</summary><textarea readonly onclick='this.select()'>To: info@eatch.me
+Subject: Inquiry — unit pricing for Turkiye deployment
+
+Hello,
+
+I&#x27;m Kursad Kemal Kul, founder of AUTOKITCH (Istanbul, Turkiye). We are building autonomous kitchen lines and unmanned 7/24 food points, and we are currently selecting equipment suppliers.
+
+From your website/catalog we are interested in:
+- Eatch robotic kitchen platform — purchase option for own operation
+
+Could you please share:
+1) Unit price for a single unit — purchase price and, if available, lease/subscription terms
+2) Total cost including taxes, packaging and shipping to Istanbul, Turkiye (or EXW/FOB price + estimated freight)
+3) Lead time, warranty and installation/support options
+4) Product catalog and spec sheets
+
+Thank you — looking forward to your reply.
+
+Best regards,
+Kursad Kemal Kul
+AUTOKITCH / Torinoarch Studio — Istanbul, Turkiye
+kursatkemalkul@gmail.com</textarea></details>
+</div></div>
+<div class='tr-card'>
+<img class='hero' src='https://static.wixstatic.com/media/33d9d8_deb969a939494842850e528a36177be1~mv2.png' loading='lazy' onerror="this.style.display='none'">
+<div class='tr-cb'>
+<div><span class='tr-name'>Appetronix</span> <span class='tr-country'>· ABD</span> <span class='badge b-warn'>DİKKAT</span></div>
+<div class='tr-stx'>Aktif — makine satmıyor, gelir paylaşımı ortaklığı</div>
+<div class='tr-prods'><div><b>Otonom Robotik Pizza Kiosku</b> — siparişten pişirmeye tamamen insansız 7/24 pizza mutfağı; Columbus Havalimanı&#x27;nda canlı <a href='https://www.appetronix.com/' target='_blank'>sayfa ↗</a></div></div>
+<div><span class='tr-price tr-quote'>Gelir paylaşımı — teklifle</span> <span class='tr-pn'>· ünite başına yıllık ~$750K-1,5M ciro potansiyeli (basın)</span></div>
+<div class='tr-mailrow'>✉ <b>media@appetronix.com</b> — ortaklık formu: appetronix.com/contact</div>
+<details><summary>📋 Hazır teklif maili (kopyala-gönder)</summary><textarea readonly onclick='this.select()'>To: media@appetronix.com
+Subject: Inquiry — unit pricing for Turkiye deployment
+
+Hello,
+
+I&#x27;m Kursad Kemal Kul, founder of AUTOKITCH (Istanbul, Turkiye). We are building autonomous kitchen lines and unmanned 7/24 food points, and we are currently selecting equipment suppliers.
+
+From your website/catalog we are interested in:
+- Autonomous robotic pizza kiosk — partnership / licensing terms for Turkiye
+
+Could you please share:
+1) Unit price for a single unit — purchase price and, if available, lease/subscription terms
+2) Total cost including taxes, packaging and shipping to Istanbul, Turkiye (or EXW/FOB price + estimated freight)
+3) Lead time, warranty and installation/support options
+4) Product catalog and spec sheets
+
+Thank you — looking forward to your reply.
+
+Best regards,
+Kursad Kemal Kul
+AUTOKITCH / Torinoarch Studio — Istanbul, Turkiye
+kursatkemalkul@gmail.com</textarea></details>
+</div></div>
+<div class='tr-card'>
+<img class='hero' src='https://www.hyper-robotics.com/wp-content/uploads/2022/10/robot-hyper.png' loading='lazy' onerror="this.style.display='none'">
+<div class='tr-cb'>
+<div><span class='tr-name'>Hyper Food Robotics</span> <span class='tr-country'>· İsrail</span> <span class='badge b-ok'>AKTİF</span></div>
+<div class='tr-stx'>Aktif</div>
+<div class='tr-prods'><div><b>Hyper Autonomous Restaurant</b> — 40-ft konteynerde pizza/burger/bowl yapan tam insansız restoran <a href='https://www.hyper-robotics.com' target='_blank'>sayfa ↗</a></div></div>
+<div><span class='tr-price tr-quote'>Teklifle</span> <span class='tr-pn'>· bilinen referans CapEx ~$800K</span></div>
+<div class='tr-mailrow'>✉ <i>e-posta yayınlanmıyor</i> — form: hyper-robotics.com/#contact</div>
+<details><summary>📋 Hazır teklif maili (kopyala-gönder)</summary><textarea readonly onclick='this.select()'>To: (iletişim formuna yapıştır)
+Subject: Inquiry — unit pricing for Turkiye deployment
+
+Hello,
+
+I&#x27;m Kursad Kemal Kul, founder of AUTOKITCH (Istanbul, Turkiye). We are building autonomous kitchen lines and unmanned 7/24 food points, and we are currently selecting equipment suppliers.
+
+From your website/catalog we are interested in:
+- Hyper autonomous restaurant container unit — pricing
+
+Could you please share:
+1) Unit price for a single unit — purchase price and, if available, lease/subscription terms
+2) Total cost including taxes, packaging and shipping to Istanbul, Turkiye (or EXW/FOB price + estimated freight)
+3) Lead time, warranty and installation/support options
+4) Product catalog and spec sheets
+
+Thank you — looking forward to your reply.
+
+Best regards,
+Kursad Kemal Kul
+AUTOKITCH / Torinoarch Studio — Istanbul, Turkiye
+kursatkemalkul@gmail.com</textarea></details>
+</div></div>
+<div class='tr-card'>
+<img class='hero' src='https://roboeatz.com/wp-content/uploads/2024/10/DSC03386-300x200.jpg' loading='lazy' onerror="this.style.display='none'">
+<div class='tr-cb'>
+<div><span class='tr-name'>ROBOEATZ — ARK</span> <span class='tr-country'>· ABD/Letonya</span> <span class='badge b-warn'>DİKKAT</span></div>
+<div class='tr-stx'>Aktif ama küçük — Aramark stratejik yatırımı (2025)</div>
+<div class='tr-prods'><div><b>ARK</b> — 80 malzemeli, otomatik sanitasyonlu tam otonom robotik mutfak <a href='https://roboeatz.com/technology/' target='_blank'>sayfa ↗</a></div></div>
+<div><span class='tr-price tr-quote'>Teklifle</span></div>
+<div class='tr-mailrow'>✉ <i>e-posta yayınlanmıyor</i> — DİKKAT: sitedeki engitech@... adresi SAHTE tema kalıntısı — formu kullan: roboeatz.com/contact-us</div>
+<details><summary>📋 Hazır teklif maili (kopyala-gönder)</summary><textarea readonly onclick='this.select()'>To: (iletişim formuna yapıştır)
+Subject: Inquiry — unit pricing for Turkiye deployment
+
+Hello,
+
+I&#x27;m Kursad Kemal Kul, founder of AUTOKITCH (Istanbul, Turkiye). We are building autonomous kitchen lines and unmanned 7/24 food points, and we are currently selecting equipment suppliers.
+
+From your website/catalog we are interested in:
+- ARK autonomous robotic kitchen — unit pricing
+
+Could you please share:
+1) Unit price for a single unit — purchase price and, if available, lease/subscription terms
+2) Total cost including taxes, packaging and shipping to Istanbul, Turkiye (or EXW/FOB price + estimated freight)
+3) Lead time, warranty and installation/support options
+4) Product catalog and spec sheets
+
+Thank you — looking forward to your reply.
+
+Best regards,
+Kursad Kemal Kul
+AUTOKITCH / Torinoarch Studio — Istanbul, Turkiye
+kursatkemalkul@gmail.com</textarea></details>
+</div></div>
+<div class='tr-card'>
+<div class='tr-cb'>
+<div><span class='tr-name'>Rolo Robotics — MAYA</span> <span class='tr-country'>· Singapur</span> <span class='badge b-warn'>DİKKAT</span></div>
+<div class='tr-stx'>Aktif, erken aşama ($3,45M tohum, Eki 2025)</div>
+<div class='tr-prods'><div><b>MAYA</b> — 7/24 insansız otonom fast-food mikro-mutfak kioskı <a href='https://www.rolorobotics.com/' target='_blank'>sayfa ↗</a></div></div>
+<div><span class='tr-price tr-quote'>Teklifle</span> <span class='tr-pn'>· ortaklık modeli ağırlıklı</span></div>
+<div class='tr-mailrow'>✉ <i>e-posta yayınlanmıyor</i> — sitede e-posta yok — site formu/LinkedIn</div>
+<details><summary>📋 Hazır teklif maili (kopyala-gönder)</summary><textarea readonly onclick='this.select()'>To: (iletişim formuna yapıştır)
+Subject: Inquiry — unit pricing for Turkiye deployment
+
+Hello,
+
+I&#x27;m Kursad Kemal Kul, founder of AUTOKITCH (Istanbul, Turkiye). We are building autonomous kitchen lines and unmanned 7/24 food points, and we are currently selecting equipment suppliers.
+
+From your website/catalog we are interested in:
+- MAYA autonomous micro-kitchen — partnership or purchase terms
+
+Could you please share:
+1) Unit price for a single unit — purchase price and, if available, lease/subscription terms
+2) Total cost including taxes, packaging and shipping to Istanbul, Turkiye (or EXW/FOB price + estimated freight)
+3) Lead time, warranty and installation/support options
+4) Product catalog and spec sheets
+
+Thank you — looking forward to your reply.
+
+Best regards,
+Kursad Kemal Kul
+AUTOKITCH / Torinoarch Studio — Istanbul, Turkiye
+kursatkemalkul@gmail.com</textarea></details>
+</div></div>
+<div class='tr-card'>
+<div class='tr-cb'>
+<div><span class='tr-name'>PAZZI International</span> <span class='tr-country'>· İsviçre/İspanya</span> <span class='badge b-warn'>DİKKAT</span></div>
+<div class='tr-stx'>Eski FR şirketi tasfiye (2022) → İsviçre sermayesiyle yeniden doğdu; Madrid&#x27;de ilk nokta</div>
+<div class='tr-prods'><div><b>Pazziria</b> — 5 dakikada pizza yapan tam otomatik robotik pizzeria (master franchise) <a href='https://www.pazzipizza.com/' target='_blank'>sayfa ↗</a></div></div>
+<div><span class='tr-price tr-quote'>Franchise — teklifle</span> <span class='tr-pn'>· makine satışı yok</span></div>
+<div class='tr-mailrow'>✉ <b>info@pazzi.co</b></div>
+<details><summary>📋 Hazır teklif maili (kopyala-gönder)</summary><textarea readonly onclick='this.select()'>To: info@pazzi.co
+Subject: Inquiry — unit pricing for Turkiye deployment
+
+Hello,
+
+I&#x27;m Kursad Kemal Kul, founder of AUTOKITCH (Istanbul, Turkiye). We are building autonomous kitchen lines and unmanned 7/24 food points, and we are currently selecting equipment suppliers.
+
+From your website/catalog we are interested in:
+- Pazziria master franchise for Turkiye — terms
+
+Could you please share:
+1) Unit price for a single unit — purchase price and, if available, lease/subscription terms
+2) Total cost including taxes, packaging and shipping to Istanbul, Turkiye (or EXW/FOB price + estimated freight)
+3) Lead time, warranty and installation/support options
+4) Product catalog and spec sheets
+
+Thank you — looking forward to your reply.
+
+Best regards,
+Kursad Kemal Kul
+AUTOKITCH / Torinoarch Studio — Istanbul, Turkiye
+kursatkemalkul@gmail.com</textarea></details>
+</div></div>
+</div>
+<h3 class='tr-cat'>Pişirme İstasyonları (ızgara · fritöz · wok)</h3><div class='tr-catline'></div><div class='tr-grid'>
+<div class='tr-card'>
+<img class='hero' src='https://cos.botinkit.com/botinkitWeb/botinkitAppWeb/fried_rice_in_large_tray.webp' loading='lazy' onerror="this.style.display='none'">
+<div class='tr-cb'>
+<div><span class='tr-name'>BOTINKIT — OMNI</span> <span class='tr-country'>· Çin (Shenzhen)</span> <span class='badge b-ok'>AKTİF</span></div>
+<div class='tr-stx'>Aktif — ABD distribütör ağı var</div>
+<div class='tr-prods'><div><b>OMNI</b> — 30L wok&#x27;lu tam otomatik pişirme robotu; 10.000+ tarif, 13 kanal baharat, otomatik yıkama, 1 m² <a href='https://www.botinkit.ai/product/cooking-robot' target='_blank'>sayfa ↗</a></div><div><b>KMES</b> — çok şubeli mutfak yönetim yazılımı <a href='https://www.botinkit.ai/product/kmes' target='_blank'>sayfa ↗</a></div></div>
+<div><span class='tr-price'>$24.990&#x27;dan · RaaS $902/ay</span> <span class='tr-pn'>· RobotLAB üst konfig $43.000; %40 işçilik tasarrufu iddiası</span></div>
+<div class='tr-mailrow'>✉ <b>contact@botinkit.com</b> — tel +86 400 993 7576</div>
+<details><summary>📋 Hazır teklif maili (kopyala-gönder)</summary><textarea readonly onclick='this.select()'>To: contact@botinkit.com
+Subject: Inquiry — unit pricing for Turkiye deployment
+
+Hello,
+
+I&#x27;m Kursad Kemal Kul, founder of AUTOKITCH (Istanbul, Turkiye). We are building autonomous kitchen lines and unmanned 7/24 food points, and we are currently selecting equipment suppliers.
+
+From your website/catalog we are interested in:
+- OMNI cooking robot — unit price and shipping to Istanbul
+
+Could you please share:
+1) Unit price for a single unit — purchase price and, if available, lease/subscription terms
+2) Total cost including taxes, packaging and shipping to Istanbul, Turkiye (or EXW/FOB price + estimated freight)
+3) Lead time, warranty and installation/support options
+4) Product catalog and spec sheets
+
+Thank you — looking forward to your reply.
+
+Best regards,
+Kursad Kemal Kul
+AUTOKITCH / Torinoarch Studio — Istanbul, Turkiye
+kursatkemalkul@gmail.com</textarea></details>
+</div></div>
+<div class='tr-card'>
+<img class='hero' src='https://images.squarespace-cdn.com/content/v1/63e9c075b58d844d3842f185/3b191213-ce36-4548-9f2d-e8943230f9c6/Frame+47.png' loading='lazy' onerror="this.style.display='none'">
+<div class='tr-cb'>
+<div><span class='tr-name'>Aniai — Alpha Grill</span> <span class='tr-country'>· G.Kore/ABD</span> <span class='badge b-ok'>AKTİF</span></div>
+<div class='tr-stx'>Aktif — 50+ kurulu sistem</div>
+<div class='tr-prods'><div><b>Alpha Grill Two Platen</b> — çift taraflı otonom ızgara — 200+ ürün/saat, robot spatula, kendi kendini temizler <a href='https://www.aniai.ai/ag-2-platen-series' target='_blank'>sayfa ↗</a></div><div><b>Alpha Grill Single Platen</b> — dar mutfaklar için kompakt sürüm (UL+ETL) <a href='https://www.aniai.ai/alpha-grill-single-platen' target='_blank'>sayfa ↗</a></div></div>
+<div><span class='tr-price tr-quote'>Teklifle</span> <span class='tr-pn'>· satın alma + RaaS + pilot programı var</span></div>
+<div class='tr-mailrow'>✉ <b>sales@aniai.ai</b> — tel (704) 917-9228</div>
+<details><summary>📋 Hazır teklif maili (kopyala-gönder)</summary><textarea readonly onclick='this.select()'>To: sales@aniai.ai
+Subject: Inquiry — unit pricing for Turkiye deployment
+
+Hello,
+
+I&#x27;m Kursad Kemal Kul, founder of AUTOKITCH (Istanbul, Turkiye). We are building autonomous kitchen lines and unmanned 7/24 food points, and we are currently selecting equipment suppliers.
+
+From your website/catalog we are interested in:
+- Alpha Grill Two Platen Series
+- Alpha Grill Single Platen — purchase and RaaS pricing
+
+Could you please share:
+1) Unit price for a single unit — purchase price and, if available, lease/subscription terms
+2) Total cost including taxes, packaging and shipping to Istanbul, Turkiye (or EXW/FOB price + estimated freight)
+3) Lead time, warranty and installation/support options
+4) Product catalog and spec sheets
+
+Thank you — looking forward to your reply.
+
+Best regards,
+Kursad Kemal Kul
+AUTOKITCH / Torinoarch Studio — Istanbul, Turkiye
+kursatkemalkul@gmail.com</textarea></details>
+</div></div>
+<div class='tr-card'>
+<div class='tr-cb'>
+<div><span class='tr-name'>Beyond Honeycomb — GRILL X</span> <span class='tr-country'>· G.Kore</span> <span class='badge b-ok'>AKTİF</span></div>
+<div class='tr-stx'>Aktif — NRA Show 2025 lansmanı</div>
+<div class='tr-prods'><div><b>GRILL X</b> — AI + moleküler sensörle et/balık ızgarasını tam otomatik pişiren sistem; her marka ızgaraya takılır <a href='https://grillx.ai/' target='_blank'>sayfa ↗</a></div></div>
+<div><span class='tr-price tr-quote'>Teklifle</span> <span class='tr-pn'>· ~$100&#x27;lık kendi aktüatörü 2027&#x27;de seri üretimde</span></div>
+<div class='tr-mailrow'>✉ <b>sales@beyondhoneycomb.com</b></div>
+<details><summary>📋 Hazır teklif maili (kopyala-gönder)</summary><textarea readonly onclick='this.select()'>To: sales@beyondhoneycomb.com
+Subject: Inquiry — unit pricing for Turkiye deployment
+
+Hello,
+
+I&#x27;m Kursad Kemal Kul, founder of AUTOKITCH (Istanbul, Turkiye). We are building autonomous kitchen lines and unmanned 7/24 food points, and we are currently selecting equipment suppliers.
+
+From your website/catalog we are interested in:
+- GRILL X autonomous grilling system — unit pricing
+
+Could you please share:
+1) Unit price for a single unit — purchase price and, if available, lease/subscription terms
+2) Total cost including taxes, packaging and shipping to Istanbul, Turkiye (or EXW/FOB price + estimated freight)
+3) Lead time, warranty and installation/support options
+4) Product catalog and spec sheets
+
+Thank you — looking forward to your reply.
+
+Best regards,
+Kursad Kemal Kul
+AUTOKITCH / Torinoarch Studio — Istanbul, Turkiye
+kursatkemalkul@gmail.com</textarea></details>
+</div></div>
+<div class='tr-card'>
+<div class='tr-cb'>
+<div><span class='tr-name'>Gastronomous — ChronoGrill</span> <span class='tr-country'>· Kanada</span> <span class='badge b-ok'>AKTİF</span></div>
+<div class='tr-stx'>Aktif — Guelph Üniv. kurulumu (Şub 2026)</div>
+<div class='tr-prods'><div><b>ChronoGrill®</b> — proteini tanıyan, pişirip çeviren, baharatlayan tam otonom AI charbroiler; %50 daha hızlı <a href='https://www.gastronomous.ca/' target='_blank'>sayfa ↗</a></div></div>
+<div><span class='tr-price tr-quote'>Teklifle</span></div>
+<div class='tr-mailrow'>✉ <i>e-posta yayınlanmıyor</i> — form: gastronomous.ca</div>
+<details><summary>📋 Hazır teklif maili (kopyala-gönder)</summary><textarea readonly onclick='this.select()'>To: (iletişim formuna yapıştır)
+Subject: Inquiry — unit pricing for Turkiye deployment
+
+Hello,
+
+I&#x27;m Kursad Kemal Kul, founder of AUTOKITCH (Istanbul, Turkiye). We are building autonomous kitchen lines and unmanned 7/24 food points, and we are currently selecting equipment suppliers.
+
+From your website/catalog we are interested in:
+- ChronoGrill autonomous charbroiler — unit pricing
+
+Could you please share:
+1) Unit price for a single unit — purchase price and, if available, lease/subscription terms
+2) Total cost including taxes, packaging and shipping to Istanbul, Turkiye (or EXW/FOB price + estimated freight)
+3) Lead time, warranty and installation/support options
+4) Product catalog and spec sheets
+
+Thank you — looking forward to your reply.
+
+Best regards,
+Kursad Kemal Kul
+AUTOKITCH / Torinoarch Studio — Istanbul, Turkiye
+kursatkemalkul@gmail.com</textarea></details>
+</div></div>
+<div class='tr-card'>
+<img class='hero' src='https://www.misorobotics.com/hubfs/flippy-Misso-img%20(1).png' loading='lazy' onerror="this.style.display='none'">
+<div class='tr-cb'>
+<div><span class='tr-name'>Miso Robotics — Flippy</span> <span class='tr-country'>· ABD</span> <span class='badge b-ok'>AKTİF</span></div>
+<div class='tr-stx'>Aktif</div>
+<div class='tr-prods'><div><b>Flippy Fry Station</b> — saatte 100 sepet işleyen robotik fritöz asistanı; standart fritözlerle uyumlu <a href='https://www.misorobotics.com/products' target='_blank'>sayfa ↗</a></div></div>
+<div><span class='tr-price'>RaaS ~$5.400/ay</span> <span class='tr-pn'>· peşinatsız, bakım dahil</span></div>
+<div class='tr-mailrow'>✉ <b>contactus@misorobotics.com</b></div>
+<details><summary>📋 Hazır teklif maili (kopyala-gönder)</summary><textarea readonly onclick='this.select()'>To: contactus@misorobotics.com
+Subject: Inquiry — unit pricing for Turkiye deployment
+
+Hello,
+
+I&#x27;m Kursad Kemal Kul, founder of AUTOKITCH (Istanbul, Turkiye). We are building autonomous kitchen lines and unmanned 7/24 food points, and we are currently selecting equipment suppliers.
+
+From your website/catalog we are interested in:
+- Flippy Fry Station — monthly RaaS terms for international deployment
+
+Could you please share:
+1) Unit price for a single unit — purchase price and, if available, lease/subscription terms
+2) Total cost including taxes, packaging and shipping to Istanbul, Turkiye (or EXW/FOB price + estimated freight)
+3) Lead time, warranty and installation/support options
+4) Product catalog and spec sheets
+
+Thank you — looking forward to your reply.
+
+Best regards,
+Kursad Kemal Kul
+AUTOKITCH / Torinoarch Studio — Istanbul, Turkiye
+kursatkemalkul@gmail.com</textarea></details>
+</div></div>
+<div class='tr-card'>
+<img class='hero' src='https://lab2fab.com/wp-content/uploads/2025/06/IMG_6356-1.jpg' loading='lazy' onerror="this.style.display='none'">
+<div class='tr-cb'>
+<div><span class='tr-name'>Lab2Fab (Middleby)</span> <span class='tr-country'>· ABD</span> <span class='badge b-ok'>AKTİF</span></div>
+<div class='tr-stx'>Aktif — Middleby güvencesi</div>
+<div class='tr-prods'><div><b>PizzaBot™</b> — sürekli akışta fırına-hazır pizza hazırlayan hat (~$70K bilinen) <a href='https://lab2fab.com/pizzabot/' target='_blank'>sayfa ↗</a></div><div><b>FryBot™</b> — tam otomatik kızartma istasyonu <a href='https://lab2fab.com/frybot/' target='_blank'>sayfa ↗</a></div><div><b>FizzBot™</b> — POS entegre içecek dolum robotu <a href='https://lab2fab.com/fizzbot/' target='_blank'>sayfa ↗</a></div></div>
+<div><span class='tr-price'>PizzaBot ~$70.000 (basın)</span> <span class='tr-pn'>· diğerleri teklifle</span></div>
+<div class='tr-mailrow'>✉ <b>support@lab2fab.com</b> — satış formu: lab2fab.com/contact — tel 972 284 9997</div>
+<details><summary>📋 Hazır teklif maili (kopyala-gönder)</summary><textarea readonly onclick='this.select()'>To: support@lab2fab.com
+Subject: Inquiry — unit pricing for Turkiye deployment
+
+Hello,
+
+I&#x27;m Kursad Kemal Kul, founder of AUTOKITCH (Istanbul, Turkiye). We are building autonomous kitchen lines and unmanned 7/24 food points, and we are currently selecting equipment suppliers.
+
+From your website/catalog we are interested in:
+- PizzaBot pizza assembly line
+- FryBot frying station — unit prices
+
+Could you please share:
+1) Unit price for a single unit — purchase price and, if available, lease/subscription terms
+2) Total cost including taxes, packaging and shipping to Istanbul, Turkiye (or EXW/FOB price + estimated freight)
+3) Lead time, warranty and installation/support options
+4) Product catalog and spec sheets
+
+Thank you — looking forward to your reply.
+
+Best regards,
+Kursad Kemal Kul
+AUTOKITCH / Torinoarch Studio — Istanbul, Turkiye
+kursatkemalkul@gmail.com</textarea></details>
+</div></div>
+<div class='tr-card'>
+<div class='tr-cb'>
+<div><span class='tr-name'>PERSOBOTS — FRYNIUS</span> <span class='tr-country'>· Almanya</span> <span class='badge b-ok'>AKTİF</span></div>
+<div class='tr-stx'>Aktif</div>
+<div class='tr-prods'><div><b>FRYNIUS</b> — mevcut mutfağa entegre tam otomatik fritöz istasyonu <a href='https://persobots.com/fryer-workstation/' target='_blank'>sayfa ↗</a></div><div><b>FRYNIUS UQR</b> — anahtar teslim insansız robot restoran <a href='https://persobots.com/fryer-shop/' target='_blank'>sayfa ↗</a></div></div>
+<div><span class='tr-price tr-quote'>Teklifle</span> <span class='tr-pn'>· finansman seçenekleri var</span></div>
+<div class='tr-mailrow'>✉ <i>e-posta yayınlanmıyor</i> — form: persobots.com/#footer</div>
+<details><summary>📋 Hazır teklif maili (kopyala-gönder)</summary><textarea readonly onclick='this.select()'>To: (iletişim formuna yapıştır)
+Subject: Inquiry — unit pricing for Turkiye deployment
+
+Hello,
+
+I&#x27;m Kursad Kemal Kul, founder of AUTOKITCH (Istanbul, Turkiye). We are building autonomous kitchen lines and unmanned 7/24 food points, and we are currently selecting equipment suppliers.
+
+From your website/catalog we are interested in:
+- FRYNIUS fryer workstation
+- FRYNIUS UQR unmanned shop — pricing
+
+Could you please share:
+1) Unit price for a single unit — purchase price and, if available, lease/subscription terms
+2) Total cost including taxes, packaging and shipping to Istanbul, Turkiye (or EXW/FOB price + estimated freight)
+3) Lead time, warranty and installation/support options
+4) Product catalog and spec sheets
+
+Thank you — looking forward to your reply.
+
+Best regards,
+Kursad Kemal Kul
+AUTOKITCH / Torinoarch Studio — Istanbul, Turkiye
+kursatkemalkul@gmail.com</textarea></details>
+</div></div>
+<div class='tr-card'>
+<img class='hero' src='https://images.squarespace-cdn.com/content/v1/679e3811af281e412ff9ceb1/bd51a788-8f2a-4b5e-b6e2-8abfb11e0d0a/SmartFryer+robotic+fryer+in+commercial+kitchen' loading='lazy' onerror="this.style.display='none'">
+<div class='tr-cb'>
+<div><span class='tr-name'>RoboChef (ABD) — SmartFryer</span> <span class='tr-country'>· ABD</span> <span class='badge b-ok'>AKTİF</span></div>
+<div class='tr-stx'>Aktif, erken aşama pilot</div>
+<div class='tr-prods'><div><b>SmartFryer</b> — aynı anda 6 sipariş işleyen robotik fritöz <a href='https://www.robochef.ai/smartfryer' target='_blank'>sayfa ↗</a></div></div>
+<div><span class='tr-price'>$100/gün (~$3.000/ay)</span> <span class='tr-pn'>· ekipman+izleme+bakım+7/24 destek dahil; satış yok</span></div>
+<div class='tr-mailrow'>✉ <i>e-posta yayınlanmıyor</i> — form: robochef.ai/contact — tel (224) 325-5336</div>
+<details><summary>📋 Hazır teklif maili (kopyala-gönder)</summary><textarea readonly onclick='this.select()'>To: (iletişim formuna yapıştır)
+Subject: Inquiry — unit pricing for Turkiye deployment
+
+Hello,
+
+I&#x27;m Kursad Kemal Kul, founder of AUTOKITCH (Istanbul, Turkiye). We are building autonomous kitchen lines and unmanned 7/24 food points, and we are currently selecting equipment suppliers.
+
+From your website/catalog we are interested in:
+- SmartFryer pilot program — daily rate for Turkiye
+
+Could you please share:
+1) Unit price for a single unit — purchase price and, if available, lease/subscription terms
+2) Total cost including taxes, packaging and shipping to Istanbul, Turkiye (or EXW/FOB price + estimated freight)
+3) Lead time, warranty and installation/support options
+4) Product catalog and spec sheets
+
+Thank you — looking forward to your reply.
+
+Best regards,
+Kursad Kemal Kul
+AUTOKITCH / Torinoarch Studio — Istanbul, Turkiye
+kursatkemalkul@gmail.com</textarea></details>
+</div></div>
+<div class='tr-card'>
+<img class='hero' src='https://static.wixstatic.com/media/117726_58fef2dc78e845a793fe74061bff6147~mv2.png' loading='lazy' onerror="this.style.display='none'">
+<div class='tr-cb'>
+<div><span class='tr-name'>Cook-e</span> <span class='tr-country'>· Fransa</span> <span class='badge b-ok'>AKTİF</span></div>
+<div class='tr-stx'>Aktif</div>
+<div class='tr-prods'><div><b>Cook-e robotu</b> — sıcak 5 dk / soğuk 2 dk hazırlayan, günde 30 dk operasyonla çalışan 7/24 istasyon <a href='https://www.cook-e.com/robot-cook-e' target='_blank'>sayfa ↗</a></div></div>
+<div><span class='tr-price tr-quote'>Teklifle</span> <span class='tr-pn'>· sitede ~€25/gün işletme maliyeti + ROI hesaplayıcı</span></div>
+<div class='tr-mailrow'>✉ <i>e-posta yayınlanmıyor</i> — form: cook-e.com</div>
+<details><summary>📋 Hazır teklif maili (kopyala-gönder)</summary><textarea readonly onclick='this.select()'>To: (iletişim formuna yapıştır)
+Subject: Inquiry — unit pricing for Turkiye deployment
+
+Hello,
+
+I&#x27;m Kursad Kemal Kul, founder of AUTOKITCH (Istanbul, Turkiye). We are building autonomous kitchen lines and unmanned 7/24 food points, and we are currently selecting equipment suppliers.
+
+From your website/catalog we are interested in:
+- Cook-e autonomous cooking station — unit pricing
+
+Could you please share:
+1) Unit price for a single unit — purchase price and, if available, lease/subscription terms
+2) Total cost including taxes, packaging and shipping to Istanbul, Turkiye (or EXW/FOB price + estimated freight)
+3) Lead time, warranty and installation/support options
+4) Product catalog and spec sheets
+
+Thank you — looking forward to your reply.
+
+Best regards,
+Kursad Kemal Kul
+AUTOKITCH / Torinoarch Studio — Istanbul, Turkiye
+kursatkemalkul@gmail.com</textarea></details>
+</div></div>
+<div class='tr-card'>
+<div class='tr-cb'>
+<div><span class='tr-name'>Else Labs — Oliver Fleet</span> <span class='tr-country'>· Kanada</span> <span class='badge b-ok'>AKTİF</span></div>
+<div class='tr-stx'>Aktif</div>
+<div class='tr-prods'><div><b>The Oliver Fleet</b> — dozaj+su+sıcaklık+karıştırmayı otomatikleyen ticari pişirme ünitesi; catering menüsünün %85+&#x27;i <a href='https://www.elselabs.com/' target='_blank'>sayfa ↗</a></div></div>
+<div><span class='tr-price tr-quote'>Teklifle</span></div>
+<div class='tr-mailrow'>✉ <i>e-posta yayınlanmıyor</i> — form: elselabs.com/contact</div>
+<details><summary>📋 Hazır teklif maili (kopyala-gönder)</summary><textarea readonly onclick='this.select()'>To: (iletişim formuna yapıştır)
+Subject: Inquiry — unit pricing for Turkiye deployment
+
+Hello,
+
+I&#x27;m Kursad Kemal Kul, founder of AUTOKITCH (Istanbul, Turkiye). We are building autonomous kitchen lines and unmanned 7/24 food points, and we are currently selecting equipment suppliers.
+
+From your website/catalog we are interested in:
+- Oliver Fleet commercial cooking units — fleet pricing
+
+Could you please share:
+1) Unit price for a single unit — purchase price and, if available, lease/subscription terms
+2) Total cost including taxes, packaging and shipping to Istanbul, Turkiye (or EXW/FOB price + estimated freight)
+3) Lead time, warranty and installation/support options
+4) Product catalog and spec sheets
+
+Thank you — looking forward to your reply.
+
+Best regards,
+Kursad Kemal Kul
+AUTOKITCH / Torinoarch Studio — Istanbul, Turkiye
+kursatkemalkul@gmail.com</textarea></details>
+</div></div>
+<div class='tr-card'>
+<img class='hero' src='https://cdn.prod.website-files.com/69b7d10029349884b21c4752/6a27dfb2941c7b2487cbf678_MC60_Workplace_02.webp' loading='lazy' onerror="this.style.display='none'">
+<div class='tr-cb'>
+<div><span class='tr-name'>Mana Robotics — MC60</span> <span class='tr-country'>· Almanya</span> <span class='badge b-ok'>AKTİF</span></div>
+<div class='tr-stx'>Aktif — pilot 4,9/5 memnuniyet</div>
+<div class='tr-prods'><div><b>MC60 Workplace</b> — ofisler için taze öğle yemeği pişiren otonom istasyon <a href='https://mana-robotics.com/for-workplaces' target='_blank'>sayfa ↗</a></div></div>
+<div><span class='tr-price tr-quote'>Abonelik — teklifle</span></div>
+<div class='tr-mailrow'>✉ <b>hello@mana-robotics.com</b></div>
+<details><summary>📋 Hazır teklif maili (kopyala-gönder)</summary><textarea readonly onclick='this.select()'>To: hello@mana-robotics.com
+Subject: Inquiry — unit pricing for Turkiye deployment
+
+Hello,
+
+I&#x27;m Kursad Kemal Kul, founder of AUTOKITCH (Istanbul, Turkiye). We are building autonomous kitchen lines and unmanned 7/24 food points, and we are currently selecting equipment suppliers.
+
+From your website/catalog we are interested in:
+- MC60 workplace cooking station — subscription terms
+
+Could you please share:
+1) Unit price for a single unit — purchase price and, if available, lease/subscription terms
+2) Total cost including taxes, packaging and shipping to Istanbul, Turkiye (or EXW/FOB price + estimated freight)
+3) Lead time, warranty and installation/support options
+4) Product catalog and spec sheets
+
+Thank you — looking forward to your reply.
+
+Best regards,
+Kursad Kemal Kul
+AUTOKITCH / Torinoarch Studio — Istanbul, Turkiye
+kursatkemalkul@gmail.com</textarea></details>
+</div></div>
+</div>
+<h3 class='tr-cat'>Bowl &amp; Montaj Hatları</h3><div class='tr-catline'></div><div class='tr-grid'>
+<div class='tr-card'>
+<img class='hero' src='https://cdn.prod.website-files.com/65aad9ed9c946a529975e7cd/6615b8f5e2728e87486f77ce_makeline-transparent.png' loading='lazy' onerror="this.style.display='none'">
+<div class='tr-cb'>
+<div><span class='tr-name'>Hyphen — Makeline</span> <span class='tr-country'>· ABD</span> <span class='badge b-ok'>AKTİF</span></div>
+<div class='tr-stx'>Aktif</div>
+<div class='tr-prods'><div><b>Makeline</b> — tezgah altında robotik bowl montajı, üstte insan paralel çalışır; gastronorm uyumlu <a href='https://www.usehyphen.com/' target='_blank'>sayfa ↗</a></div><div><b>Serve OS</b> — sipariş/envanter/işgücü yazılımı <a href='https://www.usehyphen.com/products' target='_blank'>sayfa ↗</a></div></div>
+<div><span class='tr-price tr-quote'>Teklifle</span> <span class='tr-pn'>· &quot;Reserve Now&quot; formu</span></div>
+<div class='tr-mailrow'>✉ <i>e-posta yayınlanmıyor</i> — form: usehyphen.com</div>
+<details><summary>📋 Hazır teklif maili (kopyala-gönder)</summary><textarea readonly onclick='this.select()'>To: (iletişim formuna yapıştır)
+Subject: Inquiry — unit pricing for Turkiye deployment
+
+Hello,
+
+I&#x27;m Kursad Kemal Kul, founder of AUTOKITCH (Istanbul, Turkiye). We are building autonomous kitchen lines and unmanned 7/24 food points, and we are currently selecting equipment suppliers.
+
+From your website/catalog we are interested in:
+- Makeline automated bowl assembly — unit pricing
+
+Could you please share:
+1) Unit price for a single unit — purchase price and, if available, lease/subscription terms
+2) Total cost including taxes, packaging and shipping to Istanbul, Turkiye (or EXW/FOB price + estimated freight)
+3) Lead time, warranty and installation/support options
+4) Product catalog and spec sheets
+
+Thank you — looking forward to your reply.
+
+Best regards,
+Kursad Kemal Kul
+AUTOKITCH / Torinoarch Studio — Istanbul, Turkiye
+kursatkemalkul@gmail.com</textarea></details>
+</div></div>
+<div class='tr-card'>
+<img class='hero' src='https://cdn.prod.website-files.com/64b77d8a4c7f046a3e2e5feb/6659a3be41d4c89b52f0aa08_Frame%2048095665.png' loading='lazy' onerror="this.style.display='none'">
+<div class='tr-cb'>
+<div><span class='tr-name'>Chef Robotics</span> <span class='tr-country'>· ABD</span> <span class='badge b-ok'>AKTİF</span></div>
+<div class='tr-stx'>Aktif — 98M+ porsiyon servis edildi</div>
+<div class='tr-prods'><div><b>Chef (AI Food Assembly)</b> — düzensiz malzemeleri kaplara porsiyonlayan AI&#x27;lı robot kol + ChefOS <a href='https://www.chefrobotics.ai/solutions/chef-ai-enabled-system' target='_blank'>sayfa ↗</a></div></div>
+<div><span class='tr-price tr-quote'>Yıllık RaaS — teklifle</span> <span class='tr-pn'>· donanım+yazılım+AI+7/24 izleme dahil</span></div>
+<div class='tr-mailrow'>✉ <b>sales@chefrobotics.ai</b></div>
+<details><summary>📋 Hazır teklif maili (kopyala-gönder)</summary><textarea readonly onclick='this.select()'>To: sales@chefrobotics.ai
+Subject: Inquiry — unit pricing for Turkiye deployment
+
+Hello,
+
+I&#x27;m Kursad Kemal Kul, founder of AUTOKITCH (Istanbul, Turkiye). We are building autonomous kitchen lines and unmanned 7/24 food points, and we are currently selecting equipment suppliers.
+
+From your website/catalog we are interested in:
+- Chef AI-enabled food assembly robot — annual RaaS pricing
+
+Could you please share:
+1) Unit price for a single unit — purchase price and, if available, lease/subscription terms
+2) Total cost including taxes, packaging and shipping to Istanbul, Turkiye (or EXW/FOB price + estimated freight)
+3) Lead time, warranty and installation/support options
+4) Product catalog and spec sheets
+
+Thank you — looking forward to your reply.
+
+Best regards,
+Kursad Kemal Kul
+AUTOKITCH / Torinoarch Studio — Istanbul, Turkiye
+kursatkemalkul@gmail.com</textarea></details>
+</div></div>
+<div class='tr-card'>
+<img class='hero' src='https://wetechfood.com/_astro/landscape-poster.FUUuIe3T.webp' loading='lazy' onerror="this.style.display='none'">
+<div class='tr-cb'>
+<div><span class='tr-name'>wetechfood — Infinity</span> <span class='tr-country'>· İspanya</span> <span class='badge b-ok'>AKTİF</span></div>
+<div class='tr-stx'>Aktif — EN ŞEFFAF fiyat</div>
+<div class='tr-prods'><div><b>Infinity Robot</b> — 2,5 dk&#x27;da kişiselleştirilmiş bowl; günde 100 bowl, 220V tak-çalıştır <a href='https://wetechfood.com/' target='_blank'>sayfa ↗</a></div><div><b>Özel mühendislik</b> — dozajlama/montaj/soğuk zincir — özel hat tasarımı yaptırılabilir <a href='https://wetechfood.com/' target='_blank'>sayfa ↗</a></div></div>
+<div><span class='tr-price'>Kiralama €900/ay + €80/ay yazılım</span> <span class='tr-pn'>· vaka: ünite başına ~€2.125+/ay gelir</span></div>
+<div class='tr-mailrow'>✉ <b>info@wetechfood.com</b> — tel +34 711 258 933</div>
+<details><summary>📋 Hazır teklif maili (kopyala-gönder)</summary><textarea readonly onclick='this.select()'>To: info@wetechfood.com
+Subject: Inquiry — unit pricing for Turkiye deployment
+
+Hello,
+
+I&#x27;m Kursad Kemal Kul, founder of AUTOKITCH (Istanbul, Turkiye). We are building autonomous kitchen lines and unmanned 7/24 food points, and we are currently selecting equipment suppliers.
+
+From your website/catalog we are interested in:
+- Infinity bowl robot — rental terms for Turkiye
+- custom food-robotics engineering services
+
+Could you please share:
+1) Unit price for a single unit — purchase price and, if available, lease/subscription terms
+2) Total cost including taxes, packaging and shipping to Istanbul, Turkiye (or EXW/FOB price + estimated freight)
+3) Lead time, warranty and installation/support options
+4) Product catalog and spec sheets
+
+Thank you — looking forward to your reply.
+
+Best regards,
+Kursad Kemal Kul
+AUTOKITCH / Torinoarch Studio — Istanbul, Turkiye
+kursatkemalkul@gmail.com</textarea></details>
+</div></div>
+<div class='tr-card'>
+<div class='tr-cb'>
+<div><span class='tr-name'>Cibotica — Remy</span> <span class='tr-country'>· Kanada</span> <span class='badge b-warn'>DİKKAT</span></div>
+<div class='tr-stx'>Aktif — pilot aşamasında</div>
+<div class='tr-prods'><div><b>Remy</b> — AI destekli otomatik salata/bowl montaj istasyonu <a href='https://www.cibotica.com/' target='_blank'>sayfa ↗</a></div></div>
+<div><span class='tr-price tr-quote'>Pilot — teklifle</span></div>
+<div class='tr-mailrow'>✉ <b>sales@cibotica.com</b></div>
+<details><summary>📋 Hazır teklif maili (kopyala-gönder)</summary><textarea readonly onclick='this.select()'>To: sales@cibotica.com
+Subject: Inquiry — unit pricing for Turkiye deployment
+
+Hello,
+
+I&#x27;m Kursad Kemal Kul, founder of AUTOKITCH (Istanbul, Turkiye). We are building autonomous kitchen lines and unmanned 7/24 food points, and we are currently selecting equipment suppliers.
+
+From your website/catalog we are interested in:
+- Remy salad/bowl assembly station — pilot terms
+
+Could you please share:
+1) Unit price for a single unit — purchase price and, if available, lease/subscription terms
+2) Total cost including taxes, packaging and shipping to Istanbul, Turkiye (or EXW/FOB price + estimated freight)
+3) Lead time, warranty and installation/support options
+4) Product catalog and spec sheets
+
+Thank you — looking forward to your reply.
+
+Best regards,
+Kursad Kemal Kul
+AUTOKITCH / Torinoarch Studio — Istanbul, Turkiye
+kursatkemalkul@gmail.com</textarea></details>
+</div></div>
+<div class='tr-card'>
+<div class='tr-cb'>
+<div><span class='tr-name'>Kyol</span> <span class='tr-country'>· Fransa</span> <span class='badge b-warn'>DİKKAT</span></div>
+<div class='tr-stx'>Erken aşama startup</div>
+<div class='tr-prods'><div><b>Kyol otomatı</b> — 2 m² kapsüllü poké bowl mikro-fabrikası; 30 sn montaj <a href='https://www.lafrenchfab.fr/entreprise/kyol/' target='_blank'>sayfa ↗</a></div></div>
+<div><span class='tr-price tr-quote'>Teklifle</span> <span class='tr-pn'>· &quot;günde 15 bowl&#x27;dan kârlı&quot; iddiası</span></div>
+<div class='tr-mailrow'>✉ <i>e-posta yayınlanmıyor</i> — LinkedIn: linkedin.com/company/kyol-france</div>
+<details><summary>📋 Hazır teklif maili (kopyala-gönder)</summary><textarea readonly onclick='this.select()'>To: (iletişim formuna yapıştır)
+Subject: Inquiry — unit pricing for Turkiye deployment
+
+Hello,
+
+I&#x27;m Kursad Kemal Kul, founder of AUTOKITCH (Istanbul, Turkiye). We are building autonomous kitchen lines and unmanned 7/24 food points, and we are currently selecting equipment suppliers.
+
+From your website/catalog we are interested in:
+- Kyol bowl micro-factory — terms
+
+Could you please share:
+1) Unit price for a single unit — purchase price and, if available, lease/subscription terms
+2) Total cost including taxes, packaging and shipping to Istanbul, Turkiye (or EXW/FOB price + estimated freight)
+3) Lead time, warranty and installation/support options
+4) Product catalog and spec sheets
+
+Thank you — looking forward to your reply.
+
+Best regards,
+Kursad Kemal Kul
+AUTOKITCH / Torinoarch Studio — Istanbul, Turkiye
+kursatkemalkul@gmail.com</textarea></details>
+</div></div>
+</div>
+<h3 class='tr-cat'>İnsansız Satış Noktaları &amp; Vending</h3><div class='tr-catline'></div><div class='tr-grid'>
+<div class='tr-card'>
+<div class='tr-cb'>
+<div><span class='tr-name'>RoboBurger</span> <span class='tr-country'>· ABD</span> <span class='badge b-ok'>AKTİF</span></div>
+<div class='tr-stx'>Aktif — SATIN ALINABİLİR</div>
+<div class='tr-prods'><div><b>RoboBurger Gen 3</b> — 1 m², prize takılan, kendini temizleyen otonom burger otomatı <a href='https://roboburger.com/our-product/' target='_blank'>sayfa ↗</a></div></div>
+<div><span class='tr-price'>SATIŞ $27.500 · kira $3.000/ay</span> <span class='tr-pn'>· $5.000 depozito, 200 adetle sınırlı ön sipariş</span></div>
+<div class='tr-mailrow'>✉ <b>Sales@RoboBurger.com</b> — tel +1 866 805 3330</div>
+<details><summary>📋 Hazır teklif maili (kopyala-gönder)</summary><textarea readonly onclick='this.select()'>To: Sales@RoboBurger.com
+Subject: Inquiry — unit pricing for Turkiye deployment
+
+Hello,
+
+I&#x27;m Kursad Kemal Kul, founder of AUTOKITCH (Istanbul, Turkiye). We are building autonomous kitchen lines and unmanned 7/24 food points, and we are currently selecting equipment suppliers.
+
+From your website/catalog we are interested in:
+- RoboBurger Gen 3 — unit purchase price incl. shipping to Istanbul
+
+Could you please share:
+1) Unit price for a single unit — purchase price and, if available, lease/subscription terms
+2) Total cost including taxes, packaging and shipping to Istanbul, Turkiye (or EXW/FOB price + estimated freight)
+3) Lead time, warranty and installation/support options
+4) Product catalog and spec sheets
+
+Thank you — looking forward to your reply.
+
+Best regards,
+Kursad Kemal Kul
+AUTOKITCH / Torinoarch Studio — Istanbul, Turkiye
+kursatkemalkul@gmail.com</textarea></details>
+</div></div>
+<div class='tr-card'>
+<img class='hero' src='https://cdn.prod.website-files.com/67292a4f5ed6a199622adaa7/6a466c1d745604e571f72f7a_Hero-Size.png' loading='lazy' onerror="this.style.display='none'">
+<div class='tr-cb'>
+<div><span class='tr-name'>xRobotics — xPizza Cube</span> <span class='tr-country'>· ABD</span> <span class='badge b-ok'>AKTİF</span></div>
+<div class='tr-stx'>Aktif — ayda 25.000+ pizza üretiliyor</div>
+<div class='tr-prods'><div><b>xPizza Cube</b> — tezgâh üstü sos+peynir+pepperoni robotu; 30 sn/pizza, 100/saat, 8-16 inç <a href='https://www.xrobotics.io/' target='_blank'>sayfa ↗</a></div></div>
+<div><span class='tr-price'>$1.300/ay (3 yıl)</span> <span class='tr-pn'>· ön sipariş resmen ABD+Kanada; uluslararası için maille sor — ROI: calculator.xrobotics.io</span></div>
+<div class='tr-mailrow'>✉ <b>hello@xrobotics.io</b></div>
+<details><summary>📋 Hazır teklif maili (kopyala-gönder)</summary><textarea readonly onclick='this.select()'>To: hello@xrobotics.io
+Subject: Inquiry — unit pricing for Turkiye deployment
+
+Hello,
+
+I&#x27;m Kursad Kemal Kul, founder of AUTOKITCH (Istanbul, Turkiye). We are building autonomous kitchen lines and unmanned 7/24 food points, and we are currently selecting equipment suppliers.
+
+From your website/catalog we are interested in:
+- xPizza Cube — international lease availability for Turkiye
+
+Could you please share:
+1) Unit price for a single unit — purchase price and, if available, lease/subscription terms
+2) Total cost including taxes, packaging and shipping to Istanbul, Turkiye (or EXW/FOB price + estimated freight)
+3) Lead time, warranty and installation/support options
+4) Product catalog and spec sheets
+
+Thank you — looking forward to your reply.
+
+Best regards,
+Kursad Kemal Kul
+AUTOKITCH / Torinoarch Studio — Istanbul, Turkiye
+kursatkemalkul@gmail.com</textarea></details>
+</div></div>
+<div class='tr-card'>
+<img class='hero' src='https://static.wixstatic.com/media/715ca8_5acd6924bc2c48dd9343b7e0f88825c5~mv2.png' loading='lazy' onerror="this.style.display='none'">
+<div class='tr-cb'>
+<div><span class='tr-name'>Yo-Kai Express</span> <span class='tr-country'>· ABD/Asya</span> <span class='badge b-ok'>AKTİF</span></div>
+<div class='tr-stx'>Aktif — 150+ nokta</div>
+<div class='tr-prods'><div><b>Autonomous Restaurant</b> — 90 sn&#x27;de pişiren ramen/noodle otomatı, 30+ menü <a href='https://www.yokaiexpress.com' target='_blank'>sayfa ↗</a></div><div><b>Rbara / Boba</b> — ramen-bar ve bubble tea üniteleri (partner programı) <a href='https://www.yokaiexpress.com/partnership' target='_blank'>sayfa ↗</a></div></div>
+<div><span class='tr-price'>~$4.000/ay kira (basın)</span> <span class='tr-pn'>· partner/franchise modeli</span></div>
+<div class='tr-mailrow'>✉ <b>cs@yokaiexpress.com</b> — partner başvuru: yokaiexpress.com/partnership</div>
+<details><summary>📋 Hazır teklif maili (kopyala-gönder)</summary><textarea readonly onclick='this.select()'>To: cs@yokaiexpress.com
+Subject: Inquiry — unit pricing for Turkiye deployment
+
+Hello,
+
+I&#x27;m Kursad Kemal Kul, founder of AUTOKITCH (Istanbul, Turkiye). We are building autonomous kitchen lines and unmanned 7/24 food points, and we are currently selecting equipment suppliers.
+
+From your website/catalog we are interested in:
+- Autonomous Restaurant hot-meal machine — partner terms for Turkiye
+
+Could you please share:
+1) Unit price for a single unit — purchase price and, if available, lease/subscription terms
+2) Total cost including taxes, packaging and shipping to Istanbul, Turkiye (or EXW/FOB price + estimated freight)
+3) Lead time, warranty and installation/support options
+4) Product catalog and spec sheets
+
+Thank you — looking forward to your reply.
+
+Best regards,
+Kursad Kemal Kul
+AUTOKITCH / Torinoarch Studio — Istanbul, Turkiye
+kursatkemalkul@gmail.com</textarea></details>
+</div></div>
+<div class='tr-card'>
+<img class='hero' src='https://www.alberts.be/media/2kneafm5/home_row1_new_product.jpg' loading='lazy' onerror="this.style.display='none'">
+<div class='tr-cb'>
+<div><span class='tr-name'>Alberts</span> <span class='tr-country'>· Belçika</span> <span class='badge b-ok'>AKTİF</span></div>
+<div class='tr-stx'>Aktif — Circus çatısında; Decathlon/Sodexo/NHS referanslı</div>
+<div class='tr-prods'><div><b>Alberts One — Blend Station</b> — 2 dk&#x27;da taze smoothie/çorba otomatı <a href='https://www.alberts.be/en-gb/solution/' target='_blank'>sayfa ↗</a></div><div><b>Meal Station</b> — makarna/noodle kasesi (yakında) <a href='https://www.alberts.be/en-gb/solution/' target='_blank'>sayfa ↗</a></div></div>
+<div><span class='tr-price tr-quote'>Teklifle</span></div>
+<div class='tr-mailrow'>✉ <b>team@alberts.be</b> — tel +32 3 361 76 22</div>
+<details><summary>📋 Hazır teklif maili (kopyala-gönder)</summary><textarea readonly onclick='this.select()'>To: team@alberts.be
+Subject: Inquiry — unit pricing for Turkiye deployment
+
+Hello,
+
+I&#x27;m Kursad Kemal Kul, founder of AUTOKITCH (Istanbul, Turkiye). We are building autonomous kitchen lines and unmanned 7/24 food points, and we are currently selecting equipment suppliers.
+
+From your website/catalog we are interested in:
+- Alberts One blend station — unit pricing for Turkiye
+
+Could you please share:
+1) Unit price for a single unit — purchase price and, if available, lease/subscription terms
+2) Total cost including taxes, packaging and shipping to Istanbul, Turkiye (or EXW/FOB price + estimated freight)
+3) Lead time, warranty and installation/support options
+4) Product catalog and spec sheets
+
+Thank you — looking forward to your reply.
+
+Best regards,
+Kursad Kemal Kul
+AUTOKITCH / Torinoarch Studio — Istanbul, Turkiye
+kursatkemalkul@gmail.com</textarea></details>
+</div></div>
+<div class='tr-card'>
+<div class='tr-cb'>
+<div><span class='tr-name'>Fries &amp; Go</span> <span class='tr-country'>· Belçika</span> <span class='badge b-ok'>AKTİF</span></div>
+<div class='tr-stx'>Aktif, büyüyor (2026: Brüksel; İspanya/Dubai ilgisi)</div>
+<div class='tr-prods'><div><b>Fries &amp; Go otomatı</b> — çift kızartmayla 35 saniyede taze patates kızartması; 2 fritöz + 20 kg dondurucu <a href='https://www.friesandgo.com/' target='_blank'>sayfa ↗</a></div></div>
+<div><span class='tr-price tr-quote'>Teklifle</span> <span class='tr-pn'>· porsiyon €3,50 satılıyor</span></div>
+<div class='tr-mailrow'>✉ <i>e-posta yayınlanmıyor</i> — site + IG @friesandgo35</div>
+<details><summary>📋 Hazır teklif maili (kopyala-gönder)</summary><textarea readonly onclick='this.select()'>To: (iletişim formuna yapıştır)
+Subject: Inquiry — unit pricing for Turkiye deployment
+
+Hello,
+
+I&#x27;m Kursad Kemal Kul, founder of AUTOKITCH (Istanbul, Turkiye). We are building autonomous kitchen lines and unmanned 7/24 food points, and we are currently selecting equipment suppliers.
+
+From your website/catalog we are interested in:
+- Fries &amp; Go vending unit — purchase/partnership terms
+
+Could you please share:
+1) Unit price for a single unit — purchase price and, if available, lease/subscription terms
+2) Total cost including taxes, packaging and shipping to Istanbul, Turkiye (or EXW/FOB price + estimated freight)
+3) Lead time, warranty and installation/support options
+4) Product catalog and spec sheets
+
+Thank you — looking forward to your reply.
+
+Best regards,
+Kursad Kemal Kul
+AUTOKITCH / Torinoarch Studio — Istanbul, Turkiye
+kursatkemalkul@gmail.com</textarea></details>
+</div></div>
+<div class='tr-card'>
+<div class='tr-cb'>
+<div><span class='tr-name'>SmartFoodie</span> <span class='tr-country'>· Almanya</span> <span class='badge b-ok'>AKTİF</span></div>
+<div class='tr-stx'>Aktif (Münih, 2024)</div>
+<div class='tr-prods'><div><b>Dampfgar-Automat</b> — 2 dakikada buharla pişiren 24/7 insansız yemek otomatı <a href='https://smartfoodiegmbh.eu/' target='_blank'>sayfa ↗</a></div></div>
+<div><span class='tr-price tr-quote'>Teklifle</span> <span class='tr-pn'>· hastane/üniversite/kantin hedefli</span></div>
+<div class='tr-mailrow'>✉ <i>e-posta yayınlanmıyor</i> — site formu + IG @smartfoodie_gmbh</div>
+<details><summary>📋 Hazır teklif maili (kopyala-gönder)</summary><textarea readonly onclick='this.select()'>To: (iletişim formuna yapıştır)
+Subject: Inquiry — unit pricing for Turkiye deployment
+
+Hello,
+
+I&#x27;m Kursad Kemal Kul, founder of AUTOKITCH (Istanbul, Turkiye). We are building autonomous kitchen lines and unmanned 7/24 food points, and we are currently selecting equipment suppliers.
+
+From your website/catalog we are interested in:
+- SmartFoodie steam-cooking vending machine — pricing
+
+Could you please share:
+1) Unit price for a single unit — purchase price and, if available, lease/subscription terms
+2) Total cost including taxes, packaging and shipping to Istanbul, Turkiye (or EXW/FOB price + estimated freight)
+3) Lead time, warranty and installation/support options
+4) Product catalog and spec sheets
+
+Thank you — looking forward to your reply.
+
+Best regards,
+Kursad Kemal Kul
+AUTOKITCH / Torinoarch Studio — Istanbul, Turkiye
+kursatkemalkul@gmail.com</textarea></details>
+</div></div>
+<div class='tr-card'>
+<img class='hero' src='https://robotceres.com/wp-content/uploads/2024/09/0000-ceres-robo-kiosk-resized.png' loading='lazy' onerror="this.style.display='none'">
+<div class='tr-cb'>
+<div><span class='tr-name'>CERĒS</span> <span class='tr-country'>· ABD (Texas)</span> <span class='badge b-ok'>AKTİF</span></div>
+<div class='tr-stx'>Aktif</div>
+<div class='tr-prods'><div><b>Robot Barista Kiosk</b> — 2,4 m², sadece priz isteyen, 50+ içecekli 7/24 robot barista <a href='https://robotceres.com/meet-ceres/' target='_blank'>sayfa ↗</a></div><div><b>CERĒS Go</b> — Tap-Grab-Go akıllı vending dolabı (%98 AI doğruluk) <a href='https://robotceres.com/ceresgo/' target='_blank'>sayfa ↗</a></div></div>
+<div><span class='tr-price tr-quote'>Satış veya kiralama — teklifle</span> <span class='tr-pn'>· RFP formu var</span></div>
+<div class='tr-mailrow'>✉ <b>info@robotceres.com</b> — tel (346) 338-8213</div>
+<details><summary>📋 Hazır teklif maili (kopyala-gönder)</summary><textarea readonly onclick='this.select()'>To: info@robotceres.com
+Subject: Inquiry — unit pricing for Turkiye deployment
+
+Hello,
+
+I&#x27;m Kursad Kemal Kul, founder of AUTOKITCH (Istanbul, Turkiye). We are building autonomous kitchen lines and unmanned 7/24 food points, and we are currently selecting equipment suppliers.
+
+From your website/catalog we are interested in:
+- CERES robot barista kiosk — purchase and lease pricing
+- CERES Go smart vending cabinet
+
+Could you please share:
+1) Unit price for a single unit — purchase price and, if available, lease/subscription terms
+2) Total cost including taxes, packaging and shipping to Istanbul, Turkiye (or EXW/FOB price + estimated freight)
+3) Lead time, warranty and installation/support options
+4) Product catalog and spec sheets
+
+Thank you — looking forward to your reply.
+
+Best regards,
+Kursad Kemal Kul
+AUTOKITCH / Torinoarch Studio — Istanbul, Turkiye
+kursatkemalkul@gmail.com</textarea></details>
+</div></div>
+<div class='tr-card'>
+<img class='hero' src='https://chefgenie-front.cookhere.com/instachef-web/images/Beef-Lasagna.png' loading='lazy' onerror="this.style.display='none'">
+<div class='tr-cb'>
+<div><span class='tr-name'>InstaChef</span> <span class='tr-country'>· Singapur</span> <span class='badge b-warn'>DİKKAT</span></div>
+<div class='tr-stx'>Aktif — makine satmıyor, franchise (300+ makine)</div>
+<div class='tr-prods'><div><b>InstaChef kiosk</b> — sipariş üzerine taze pişiren AI insansız mutfak otomatı; helal sertifikalı <a href='https://instachef247.com/' target='_blank'>sayfa ↗</a></div></div>
+<div><span class='tr-price tr-quote'>Franchise — teklifle</span></div>
+<div class='tr-mailrow'>✉ <i>e-posta yayınlanmıyor</i> — partner formu: instachef247.com/business — tel +65 3123 7336</div>
+<details><summary>📋 Hazır teklif maili (kopyala-gönder)</summary><textarea readonly onclick='this.select()'>To: (iletişim formuna yapıştır)
+Subject: Inquiry — unit pricing for Turkiye deployment
+
+Hello,
+
+I&#x27;m Kursad Kemal Kul, founder of AUTOKITCH (Istanbul, Turkiye). We are building autonomous kitchen lines and unmanned 7/24 food points, and we are currently selecting equipment suppliers.
+
+From your website/catalog we are interested in:
+- InstaChef franchise / machine supply for Turkiye
+
+Could you please share:
+1) Unit price for a single unit — purchase price and, if available, lease/subscription terms
+2) Total cost including taxes, packaging and shipping to Istanbul, Turkiye (or EXW/FOB price + estimated freight)
+3) Lead time, warranty and installation/support options
+4) Product catalog and spec sheets
+
+Thank you — looking forward to your reply.
+
+Best regards,
+Kursad Kemal Kul
+AUTOKITCH / Torinoarch Studio — Istanbul, Turkiye
+kursatkemalkul@gmail.com</textarea></details>
+</div></div>
+<div class='tr-card'>
+<div class='tr-cb'>
+<div><span class='tr-name'>FreshPod / Pod Robotics</span> <span class='tr-country'>· Singapur</span> <span class='badge b-warn'>DİKKAT</span></div>
+<div class='tr-stx'>Operatör; makineyi Pod Robotics yapıyor</div>
+<div class='tr-prods'><div><b>Freshpod kiosk</b> — 7/24 kişiselleştirilebilir sağlıklı kase otomatı (31.000+ kombinasyon) <a href='https://www.freshpod.sg/' target='_blank'>sayfa ↗</a></div><div><b>Pod Robotics platformu</b> — asıl makine üreticisi <a href='https://podrobotics.com/' target='_blank'>sayfa ↗</a></div></div>
+<div><span class='tr-price tr-quote'>Teklifle (Pod Robotics)</span></div>
+<div class='tr-mailrow'>✉ <b>info@freshpod.sg</b> — tel +65 9787 3174</div>
+<details><summary>📋 Hazır teklif maili (kopyala-gönder)</summary><textarea readonly onclick='this.select()'>To: info@freshpod.sg
+Subject: Inquiry — unit pricing for Turkiye deployment
+
+Hello,
+
+I&#x27;m Kursad Kemal Kul, founder of AUTOKITCH (Istanbul, Turkiye). We are building autonomous kitchen lines and unmanned 7/24 food points, and we are currently selecting equipment suppliers.
+
+From your website/catalog we are interested in:
+- Pod Robotics autonomous food kiosk — machine pricing
+
+Could you please share:
+1) Unit price for a single unit — purchase price and, if available, lease/subscription terms
+2) Total cost including taxes, packaging and shipping to Istanbul, Turkiye (or EXW/FOB price + estimated freight)
+3) Lead time, warranty and installation/support options
+4) Product catalog and spec sheets
+
+Thank you — looking forward to your reply.
+
+Best regards,
+Kursad Kemal Kul
+AUTOKITCH / Torinoarch Studio — Istanbul, Turkiye
+kursatkemalkul@gmail.com</textarea></details>
+</div></div>
+</div>
+<h3 class='tr-cat'>İçecek &amp; Barista Robotları</h3><div class='tr-catline'></div><div class='tr-grid'>
+<div class='tr-card'>
+<img class='hero' src='https://botrista.com/wp-content/uploads/2026/02/machine.png' loading='lazy' onerror="this.style.display='none'">
+<div class='tr-cb'>
+<div><span class='tr-name'>Botrista</span> <span class='tr-country'>· ABD</span> <span class='badge b-ok'>AKTİF</span></div>
+<div class='tr-stx'>Aktif — 6.000+ lokasyon anlaşması</div>
+<div class='tr-prods'><div><b>BotristaPro (DrinkBot)</b> — 12 kategoride içeceği 20-30 saniyede hazırlayan otomatik istasyon <a href='https://botrista.com/' target='_blank'>sayfa ↗</a></div></div>
+<div><span class='tr-price'>~$500/ay veya donanım bedava + içecek başı</span> <span class='tr-pn'>· peşin ücret yok; malzeme Botrista&#x27;dan</span></div>
+<div class='tr-mailrow'>✉ <b>contact@botrista.com</b> — tel 1-800-542-6190</div>
+<details><summary>📋 Hazır teklif maili (kopyala-gönder)</summary><textarea readonly onclick='this.select()'>To: contact@botrista.com
+Subject: Inquiry — unit pricing for Turkiye deployment
+
+Hello,
+
+I&#x27;m Kursad Kemal Kul, founder of AUTOKITCH (Istanbul, Turkiye). We are building autonomous kitchen lines and unmanned 7/24 food points, and we are currently selecting equipment suppliers.
+
+From your website/catalog we are interested in:
+- BotristaPro drink station — subscription terms for international
+
+Could you please share:
+1) Unit price for a single unit — purchase price and, if available, lease/subscription terms
+2) Total cost including taxes, packaging and shipping to Istanbul, Turkiye (or EXW/FOB price + estimated freight)
+3) Lead time, warranty and installation/support options
+4) Product catalog and spec sheets
+
+Thank you — looking forward to your reply.
+
+Best regards,
+Kursad Kemal Kul
+AUTOKITCH / Torinoarch Studio — Istanbul, Turkiye
+kursatkemalkul@gmail.com</textarea></details>
+</div></div>
+<div class='tr-card'>
+<img class='hero' src='https://cdn.prod.website-files.com/67d7865082f3dab393b80bd3/694d0ccf32bd5c5ba7192dea_apps-barista-bot.png' loading='lazy' onerror="this.style.display='none'">
+<div class='tr-cb'>
+<div><span class='tr-name'>Artly</span> <span class='tr-country'>· ABD</span> <span class='badge b-ok'>AKTİF</span></div>
+<div class='tr-stx'>Aktif — 30+ robot sahada</div>
+<div class='tr-prods'><div><b>Barista Bot</b> — espresso bazlı kahveleri baştan sona hazırlayan robot barista <a href='https://artly.ai' target='_blank'>sayfa ↗</a></div><div><b>Bartender Bot / Teaism Bot</b> — kokteyl ve çay robotları <a href='https://artly.ai' target='_blank'>sayfa ↗</a></div><div><b>AI Arm (VisionArm)</b> — 30 dk&#x27;da yeni görev öğrenen 6 eksen görüşlü kol <a href='https://artly.ai' target='_blank'>sayfa ↗</a></div></div>
+<div><span class='tr-price'>Teklifle (~$25K teyitsiz)</span> <span class='tr-pn'>· Lease / Purchase / Franchise seçenekleri</span></div>
+<div class='tr-mailrow'>✉ <i>e-posta yayınlanmıyor</i> — form: artly.ai/contact-us — WhatsApp +1 617 513 9689</div>
+<details><summary>📋 Hazır teklif maili (kopyala-gönder)</summary><textarea readonly onclick='this.select()'>To: (iletişim formuna yapıştır)
+Subject: Inquiry — unit pricing for Turkiye deployment
+
+Hello,
+
+I&#x27;m Kursad Kemal Kul, founder of AUTOKITCH (Istanbul, Turkiye). We are building autonomous kitchen lines and unmanned 7/24 food points, and we are currently selecting equipment suppliers.
+
+From your website/catalog we are interested in:
+- Barista Bot — purchase and lease pricing
+- AI Arm vision robot arm
+
+Could you please share:
+1) Unit price for a single unit — purchase price and, if available, lease/subscription terms
+2) Total cost including taxes, packaging and shipping to Istanbul, Turkiye (or EXW/FOB price + estimated freight)
+3) Lead time, warranty and installation/support options
+4) Product catalog and spec sheets
+
+Thank you — looking forward to your reply.
+
+Best regards,
+Kursad Kemal Kul
+AUTOKITCH / Torinoarch Studio — Istanbul, Turkiye
+kursatkemalkul@gmail.com</textarea></details>
+</div></div>
+<div class='tr-card'>
+<div class='tr-cb'>
+<div><span class='tr-name'>Smyze</span> <span class='tr-country'>· İsviçre</span> <span class='badge b-ok'>AKTİF</span></div>
+<div class='tr-stx'>Aktif — Schiphol/Autogrill/ABB/VW referanslı</div>
+<div class='tr-prods'><div><b>Robobarista</b> — CE/FDA/NAMA sertifikalı robot barista istasyonu (Eversys entegre) <a href='https://smyze.com/' target='_blank'>sayfa ↗</a></div></div>
+<div><span class='tr-price tr-quote'>Teklifle</span></div>
+<div class='tr-mailrow'>✉ <b>sales@smyze.ch</b> — tel +41 44 518 03 10</div>
+<details><summary>📋 Hazır teklif maili (kopyala-gönder)</summary><textarea readonly onclick='this.select()'>To: sales@smyze.ch
+Subject: Inquiry — unit pricing for Turkiye deployment
+
+Hello,
+
+I&#x27;m Kursad Kemal Kul, founder of AUTOKITCH (Istanbul, Turkiye). We are building autonomous kitchen lines and unmanned 7/24 food points, and we are currently selecting equipment suppliers.
+
+From your website/catalog we are interested in:
+- Smyze Robobarista — unit pricing
+
+Could you please share:
+1) Unit price for a single unit — purchase price and, if available, lease/subscription terms
+2) Total cost including taxes, packaging and shipping to Istanbul, Turkiye (or EXW/FOB price + estimated freight)
+3) Lead time, warranty and installation/support options
+4) Product catalog and spec sheets
+
+Thank you — looking forward to your reply.
+
+Best regards,
+Kursad Kemal Kul
+AUTOKITCH / Torinoarch Studio — Istanbul, Turkiye
+kursatkemalkul@gmail.com</textarea></details>
+</div></div>
+<div class='tr-card'>
+<div class='tr-cb'>
+<div><span class='tr-name'>Makr Shakr</span> <span class='tr-country'>· İtalya</span> <span class='badge b-ok'>AKTİF</span></div>
+<div class='tr-stx'>Aktif</div>
+<div class='tr-prods'><div><b>Toni</b> — 158 şişe yöneten çift kollu robotik barmen <a href='https://www.makrshakr.com' target='_blank'>sayfa ↗</a></div><div><b>Veloce / Compatto / Bruno</b> — hızlı, kompakt ve mobil kiralık sürümler <a href='https://www.makrshakr.com' target='_blank'>sayfa ↗</a></div></div>
+<div><span class='tr-price'>Toni ~€99.000 satış</span> <span class='tr-pn'>· etkinlik kiralaması ayrıca</span></div>
+<div class='tr-mailrow'>✉ <b>filippo@makrshakr.com</b></div>
+<details><summary>📋 Hazır teklif maili (kopyala-gönder)</summary><textarea readonly onclick='this.select()'>To: filippo@makrshakr.com
+Subject: Inquiry — unit pricing for Turkiye deployment
+
+Hello,
+
+I&#x27;m Kursad Kemal Kul, founder of AUTOKITCH (Istanbul, Turkiye). We are building autonomous kitchen lines and unmanned 7/24 food points, and we are currently selecting equipment suppliers.
+
+From your website/catalog we are interested in:
+- Toni robotic bartender — unit price
+
+Could you please share:
+1) Unit price for a single unit — purchase price and, if available, lease/subscription terms
+2) Total cost including taxes, packaging and shipping to Istanbul, Turkiye (or EXW/FOB price + estimated freight)
+3) Lead time, warranty and installation/support options
+4) Product catalog and spec sheets
+
+Thank you — looking forward to your reply.
+
+Best regards,
+Kursad Kemal Kul
+AUTOKITCH / Torinoarch Studio — Istanbul, Turkiye
+kursatkemalkul@gmail.com</textarea></details>
+</div></div>
+<div class='tr-card'>
+<div class='tr-cb'>
+<div><span class='tr-name'>Macco Robotics — Kime</span> <span class='tr-country'>· İspanya</span> <span class='badge b-ok'>AKTİF</span></div>
+<div class='tr-stx'>Aktif — 10+ ülke</div>
+<div class='tr-prods'><div><b>Kime</b> — saatte 180 içecek hazırlayan humanoid barmen kioskı <a href='https://www.maccorobotics.com/en/home-2/' target='_blank'>sayfa ↗</a></div></div>
+<div><span class='tr-price tr-quote'>Teklifle</span></div>
+<div class='tr-mailrow'>✉ <b>marketing@maccorobotics.com</b></div>
+<details><summary>📋 Hazır teklif maili (kopyala-gönder)</summary><textarea readonly onclick='this.select()'>To: marketing@maccorobotics.com
+Subject: Inquiry — unit pricing for Turkiye deployment
+
+Hello,
+
+I&#x27;m Kursad Kemal Kul, founder of AUTOKITCH (Istanbul, Turkiye). We are building autonomous kitchen lines and unmanned 7/24 food points, and we are currently selecting equipment suppliers.
+
+From your website/catalog we are interested in:
+- Kime beverage kiosk — unit pricing
+
+Could you please share:
+1) Unit price for a single unit — purchase price and, if available, lease/subscription terms
+2) Total cost including taxes, packaging and shipping to Istanbul, Turkiye (or EXW/FOB price + estimated freight)
+3) Lead time, warranty and installation/support options
+4) Product catalog and spec sheets
+
+Thank you — looking forward to your reply.
+
+Best regards,
+Kursad Kemal Kul
+AUTOKITCH / Torinoarch Studio — Istanbul, Turkiye
+kursatkemalkul@gmail.com</textarea></details>
+</div></div>
+</div>
+<h3 class='tr-cat'>Robot Kollar (hat entegrasyonu için)</h3><div class='tr-catline'></div><div class='tr-grid'>
+<div class='tr-card'>
+<div class='tr-cb'>
+<div><span class='tr-name'>Dobot</span> <span class='tr-country'>· Çin</span> <span class='badge b-ok'>AKTİF</span></div>
+<div class='tr-stx'>Aktif — 100.000+ robot, 100+ ülke</div>
+<div class='tr-prods'><div><b>Nova Serisi</b> — F&amp;B için ultra kompakt cobot (kahve/dondurma/gıda) — Nova 5 ~$13.790 <a href='https://www.dobot-robots.com/products/nova-series/dobot-nova-series.html' target='_blank'>sayfa ↗</a></div><div><b>CRA Serisi / MG400</b> — 3-20 kg cobot ailesi / masaüstü 4 eksen — CR5 ~$22.980 <a href='https://www.dobot-robots.com/products/cra-series/dobot-cra-series.html' target='_blank'>sayfa ↗</a></div></div>
+<div><span class='tr-price'>Nova 5 ~$13.790 · CR5 ~$22.980</span> <span class='tr-pn'>· distribütör açık fiyatları</span></div>
+<div class='tr-mailrow'>✉ <b>sales@dobot-robots.com</b></div>
+<details><summary>📋 Hazır teklif maili (kopyala-gönder)</summary><textarea readonly onclick='this.select()'>To: sales@dobot-robots.com
+Subject: Inquiry — unit pricing for Turkiye deployment
+
+Hello,
+
+I&#x27;m Kursad Kemal Kul, founder of AUTOKITCH (Istanbul, Turkiye). We are building autonomous kitchen lines and unmanned 7/24 food points, and we are currently selecting equipment suppliers.
+
+From your website/catalog we are interested in:
+- Nova 5 collaborative robot — unit price and food-grade options
+
+Could you please share:
+1) Unit price for a single unit — purchase price and, if available, lease/subscription terms
+2) Total cost including taxes, packaging and shipping to Istanbul, Turkiye (or EXW/FOB price + estimated freight)
+3) Lead time, warranty and installation/support options
+4) Product catalog and spec sheets
+
+Thank you — looking forward to your reply.
+
+Best regards,
+Kursad Kemal Kul
+AUTOKITCH / Torinoarch Studio — Istanbul, Turkiye
+kursatkemalkul@gmail.com</textarea></details>
+</div></div>
+<div class='tr-card'>
+<div class='tr-cb'>
+<div><span class='tr-name'>Doosan Robotics</span> <span class='tr-country'>· G.Kore</span> <span class='badge b-ok'>AKTİF</span></div>
+<div class='tr-stx'>Aktif — halka açık; premium</div>
+<div class='tr-prods'><div><b>E-Serisi E0509</b> — GIDA-İÇECEK için tasarlanmış cobot (yağ/su korumalı) <a href='https://www.doosanrobotics.com/en/product-solutions/product/' target='_blank'>sayfa ↗</a></div><div><b>M-Serisi</b> — hassas tork sensörlü amiral aile (~$22-28K referans) <a href='https://www.doosanrobotics.com/en/product-solutions/product/' target='_blank'>sayfa ↗</a></div></div>
+<div><span class='tr-price'>M-Serisi ~$22-28K (referans)</span> <span class='tr-pn'>· teklifle; kurumsal servis ağı</span></div>
+<div class='tr-mailrow'>✉ <i>e-posta yayınlanmıyor</i> — form: doosanrobotics.com ürün talep formu</div>
+<details><summary>📋 Hazır teklif maili (kopyala-gönder)</summary><textarea readonly onclick='this.select()'>To: (iletişim formuna yapıştır)
+Subject: Inquiry — unit pricing for Turkiye deployment
+
+Hello,
+
+I&#x27;m Kursad Kemal Kul, founder of AUTOKITCH (Istanbul, Turkiye). We are building autonomous kitchen lines and unmanned 7/24 food points, and we are currently selecting equipment suppliers.
+
+From your website/catalog we are interested in:
+- E-Series E0509 food &amp; beverage cobot — pricing
+
+Could you please share:
+1) Unit price for a single unit — purchase price and, if available, lease/subscription terms
+2) Total cost including taxes, packaging and shipping to Istanbul, Turkiye (or EXW/FOB price + estimated freight)
+3) Lead time, warranty and installation/support options
+4) Product catalog and spec sheets
+
+Thank you — looking forward to your reply.
+
+Best regards,
+Kursad Kemal Kul
+AUTOKITCH / Torinoarch Studio — Istanbul, Turkiye
+kursatkemalkul@gmail.com</textarea></details>
+</div></div>
+<div class='tr-card'>
+<div class='tr-cb'>
+<div><span class='tr-name'>Armstrong Robotics</span> <span class='tr-country'>· ABD</span> <span class='badge b-warn'>DİKKAT</span></div>
+<div class='tr-stx'>Aktif, erken aşama — bulaşıkhane</div>
+<div class='tr-prods'><div><b>Armstrong bulaşık robotu</b> — karışık tabakları 3B algıyla tanıyıp yıkayan robot kol; yılda 1M+ bulaşık <a href='https://armstrong.ai/' target='_blank'>sayfa ↗</a></div></div>
+<div><span class='tr-price tr-quote'>Aylık abonelik — teklifle</span></div>
+<div class='tr-mailrow'>✉ <b>inquiries@armstrong.ai</b></div>
+<details><summary>📋 Hazır teklif maili (kopyala-gönder)</summary><textarea readonly onclick='this.select()'>To: inquiries@armstrong.ai
+Subject: Inquiry — unit pricing for Turkiye deployment
+
+Hello,
+
+I&#x27;m Kursad Kemal Kul, founder of AUTOKITCH (Istanbul, Turkiye). We are building autonomous kitchen lines and unmanned 7/24 food points, and we are currently selecting equipment suppliers.
+
+From your website/catalog we are interested in:
+- Dishwashing robot — subscription terms
+
+Could you please share:
+1) Unit price for a single unit — purchase price and, if available, lease/subscription terms
+2) Total cost including taxes, packaging and shipping to Istanbul, Turkiye (or EXW/FOB price + estimated freight)
+3) Lead time, warranty and installation/support options
+4) Product catalog and spec sheets
+
+Thank you — looking forward to your reply.
+
+Best regards,
+Kursad Kemal Kul
+AUTOKITCH / Torinoarch Studio — Istanbul, Turkiye
+kursatkemalkul@gmail.com</textarea></details>
+</div></div>
+</div>
+<h3 class='tr-cat'>Ev Tipi / Düşük Maliyetli Test</h3><div class='tr-catline'></div><div class='tr-grid'>
+<div class='tr-card'>
+<div class='tr-cb'>
+<div><span class='tr-name'>Posha</span> <span class='tr-country'>· ABD</span> <span class='badge b-ok'>AKTİF</span></div>
+<div class='tr-stx'>Aktif — ucuz pilot/test aracı</div>
+<div class='tr-prods'><div><b>Posha</b> — 1.000+ tarifi kamera/AI ile pişiren tezgâh üstü robot <a href='https://www.posha.com/private-chef' target='_blank'>sayfa ↗</a></div></div>
+<div><span class='tr-price'>~$1.500 + $15/ay</span> <span class='tr-pn'>· AÇIK FİYAT — 30 gün iade</span></div>
+<div class='tr-mailrow'>✉ <b>care@posha.com</b></div>
+<details><summary>📋 Hazır teklif maili (kopyala-gönder)</summary><textarea readonly onclick='this.select()'>To: care@posha.com
+Subject: Inquiry — unit pricing for Turkiye deployment
+
+Hello,
+
+I&#x27;m Kursad Kemal Kul, founder of AUTOKITCH (Istanbul, Turkiye). We are building autonomous kitchen lines and unmanned 7/24 food points, and we are currently selecting equipment suppliers.
+
+From your website/catalog we are interested in:
+- Posha countertop cooking robot — international shipping to Turkiye
+
+Could you please share:
+1) Unit price for a single unit — purchase price and, if available, lease/subscription terms
+2) Total cost including taxes, packaging and shipping to Istanbul, Turkiye (or EXW/FOB price + estimated freight)
+3) Lead time, warranty and installation/support options
+4) Product catalog and spec sheets
+
+Thank you — looking forward to your reply.
+
+Best regards,
+Kursad Kemal Kul
+AUTOKITCH / Torinoarch Studio — Istanbul, Turkiye
+kursatkemalkul@gmail.com</textarea></details>
+</div></div>
+<div class='tr-card'>
+<img class='hero' src='https://liffo.com/images/wp/Liffo-01_low_2.webp' loading='lazy' onerror="this.style.display='none'">
+<div class='tr-cb'>
+<div><span class='tr-name'>Liffo</span> <span class='tr-country'>· İtalya</span> <span class='badge b-ok'>AKTİF</span></div>
+<div class='tr-stx'>Aktif</div>
+<div class='tr-prods'><div><b>Liffo</b> — 50 cm, 4L indüksiyonlu, 8 hazneli mini otonom mutfak <a href='https://liffo.com/' target='_blank'>sayfa ↗</a></div></div>
+<div><span class='tr-price'>€3.400 (veya €65/ay)</span> <span class='tr-pn'>· AÇIK FİYAT</span></div>
+<div class='tr-mailrow'>✉ <i>e-posta yayınlanmıyor</i> — form: liffo.com/contatti</div>
+<details><summary>📋 Hazır teklif maili (kopyala-gönder)</summary><textarea readonly onclick='this.select()'>To: (iletişim formuna yapıştır)
+Subject: Inquiry — unit pricing for Turkiye deployment
+
+Hello,
+
+I&#x27;m Kursad Kemal Kul, founder of AUTOKITCH (Istanbul, Turkiye). We are building autonomous kitchen lines and unmanned 7/24 food points, and we are currently selecting equipment suppliers.
+
+From your website/catalog we are interested in:
+- Liffo autonomous mini kitchen — shipping to Turkiye
+
+Could you please share:
+1) Unit price for a single unit — purchase price and, if available, lease/subscription terms
+2) Total cost including taxes, packaging and shipping to Istanbul, Turkiye (or EXW/FOB price + estimated freight)
+3) Lead time, warranty and installation/support options
+4) Product catalog and spec sheets
+
+Thank you — looking forward to your reply.
+
+Best regards,
+Kursad Kemal Kul
+AUTOKITCH / Torinoarch Studio — Istanbul, Turkiye
+kursatkemalkul@gmail.com</textarea></details>
+</div></div>
+<div class='tr-card'>
+<div class='tr-cb'>
+<div><span class='tr-name'>Chefee Robotics</span> <span class='tr-country'>· ABD</span> <span class='badge b-warn'>DİKKAT</span></div>
+<div class='tr-stx'>Pre-revenue; ön sipariş, üretim 2026 sözü</div>
+<div class='tr-prods'><div><b>Chefee</b> — dolaba gömülü robot kollu ev şefi <a href='https://chefee.com/' target='_blank'>sayfa ↗</a></div></div>
+<div><span class='tr-price'>Ön sipariş $17.995-58.995</span> <span class='tr-pn'>· lüks konut hedefli</span></div>
+<div class='tr-mailrow'>✉ <i>e-posta yayınlanmıyor</i> — chefee.com üzerinden</div>
+<details><summary>📋 Hazır teklif maili (kopyala-gönder)</summary><textarea readonly onclick='this.select()'>To: (iletişim formuna yapıştır)
+Subject: Inquiry — unit pricing for Turkiye deployment
+
+Hello,
+
+I&#x27;m Kursad Kemal Kul, founder of AUTOKITCH (Istanbul, Turkiye). We are building autonomous kitchen lines and unmanned 7/24 food points, and we are currently selecting equipment suppliers.
+
+From your website/catalog we are interested in:
+- Chefee built-in robot chef — preorder terms
+
+Could you please share:
+1) Unit price for a single unit — purchase price and, if available, lease/subscription terms
+2) Total cost including taxes, packaging and shipping to Istanbul, Turkiye (or EXW/FOB price + estimated freight)
+3) Lead time, warranty and installation/support options
+4) Product catalog and spec sheets
+
+Thank you — looking forward to your reply.
+
+Best regards,
+Kursad Kemal Kul
+AUTOKITCH / Torinoarch Studio — Istanbul, Turkiye
+kursatkemalkul@gmail.com</textarea></details>
+</div></div>
+<div class='tr-card'>
+<div class='tr-cb'>
+<div><span class='tr-name'>Moley Robotics</span> <span class='tr-country'>· İngiltere</span> <span class='badge b-warn'>DİKKAT</span></div>
+<div class='tr-stx'>Aktif — lüks segment</div>
+<div class='tr-prods'><div><b>Moley R</b> — robotik kollu komple mutfak (~£248K) <a href='https://www.moley.com/residential/' target='_blank'>sayfa ↗</a></div><div><b>X-AiR</b> — tek kollu daha ekonomik sürüm <a href='https://www.moley.com/' target='_blank'>sayfa ↗</a></div></div>
+<div><span class='tr-price'>~£248.000 (tam kurulum)</span></div>
+<div class='tr-mailrow'>✉ <b>info@moley.com</b></div>
+<details><summary>📋 Hazır teklif maili (kopyala-gönder)</summary><textarea readonly onclick='this.select()'>To: info@moley.com
+Subject: Inquiry — unit pricing for Turkiye deployment
+
+Hello,
+
+I&#x27;m Kursad Kemal Kul, founder of AUTOKITCH (Istanbul, Turkiye). We are building autonomous kitchen lines and unmanned 7/24 food points, and we are currently selecting equipment suppliers.
+
+From your website/catalog we are interested in:
+- X-AiR robotic kitchen — pricing
+
+Could you please share:
+1) Unit price for a single unit — purchase price and, if available, lease/subscription terms
+2) Total cost including taxes, packaging and shipping to Istanbul, Turkiye (or EXW/FOB price + estimated freight)
+3) Lead time, warranty and installation/support options
+4) Product catalog and spec sheets
+
+Thank you — looking forward to your reply.
+
+Best regards,
+Kursad Kemal Kul
+AUTOKITCH / Torinoarch Studio — Istanbul, Turkiye
+kursatkemalkul@gmail.com</textarea></details>
+</div></div>
+</div>
+<div class='tr-dead'><h3 style='font-size:20px;margin-bottom:12px'>Elenenler — kapanan / satılan / ilgi dışı</h3><table>
+<tr><td>Picnic (ABD)</td><td>Kapandı — 11 May 2026 tasfiye; varlıklar satıldı</td></tr>
+<tr><td>DaVinci Kitchen (Almanya)</td><td>Kapandı — Ara 2022 iflas; site ölü</td></tr>
+<tr><td>Dexai Robotics</td><td>Sony satın aldı (Eyl 2025) — ticari satış belirsiz</td></tr>
+<tr><td>KAIKAKU</td><td>REEF Technologies&#x27;e satıldı — vitrin kapalı (hello@kaikaku.ai)</td></tr>
+<tr><td>REMY Robotics</td><td>REEF bünyesinde ARK oldu — ekipman satmıyor</td></tr>
+<tr><td>Sweetgreen Infinite Kitchen</td><td>Wonder&#x27;a satıldı ($186,4M) — dışarıya satılmıyor</td></tr>
+<tr><td>Caldo</td><td>Site erişilemez, muhtemelen durgun — takipte tut</td></tr>
+<tr><td>Qianxi / FOODOM (Çin)</td><td>Country Garden krizi; site 2021&#x27;de donmuş — riskli</td></tr>
+<tr><td>Bear Robotics · Pudu · KEENON · OrionStar · Galbot · Alphadroid</td><td>İlgi dışı — servis/taşıma/insansı robot; mutfak ürünü yok</td></tr>
+<tr><td>Richtech ADAM</td><td>Kısmen ilgili (barista) — fiyat teyitsiz ~$25K; ir@richtechrobotics.com</td></tr>
+</table></div>
+<p class='tr-note'>Kaynaklar: şirket siteleri (doğrudan ziyaret), TechCrunch, CNBC, GeekWire, The Spoon, Restaurant Dive, EQS, Business Insider, basın bültenleri — Ağustos 2026. Fiyatlar yayın tarihindeki beyanlardır; görseller şirketlerin kendi sitelerinden yüklenir.</p>
+
   </div>
 </section>
 
