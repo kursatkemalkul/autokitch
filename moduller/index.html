@@ -292,6 +292,16 @@
 .stoc a{display:block;font-size:13px;color:#b7bfcc;padding:7px 10px;border-radius:8px;text-decoration:none;line-height:1.3;transition:background .15s,color .15s}
 .stoc a:hover{background:#1c212a;color:#fff}
 .stoc a.active{color:var(--blue);background:rgba(167,178,194,.09);font-weight:600}
+
+section.light [style*="color:#fff"]{color:#1d1d1f!important}
+section.light [style*="color:#b7bfcc"]{color:#4c5568!important}
+section.light .note{color:#8a8a90}
+
+/* Icindekiler: cep/tablet - akista kart olarak */
+@media(max-width:1059px){
+  .stoc{display:block;position:static;width:auto;max-width:720px;margin:34px 18px 0;left:auto;top:auto;max-height:none;opacity:1!important;pointer-events:auto!important}
+}
+@media(min-width:760px) and (max-width:1059px){.stoc{margin:34px auto 0}}
 </style>
 </head>
 <body>
@@ -338,13 +348,24 @@
 
 <nav id="nav">
   <div class="nav-in">
-    <a href="../index.html" class="logo">AUTO<b>KITCH</b></a>
-    <div class="nav-right">
-      <a href="../uretim/index.html" class="nav-prod">Fabrika & Yatırım ↗</a>
-      <a href="mailto:info@torinoarch.com?subject=AUTOKITCH" class="nav-cta">İletişim</a>
-    </div>
+    <a href="../index.html" class="logo" style="display:flex;align-items:center;gap:9px"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" style="flex:0 0 auto"><rect x="3" y="3" width="8.6" height="8.6" rx="2.2" fill="currentColor"/><rect x="12.4" y="3" width="8.6" height="8.6" rx="2.2" fill="currentColor" opacity=".38"/><rect x="3" y="12.4" width="8.6" height="8.6" rx="2.2" fill="currentColor" opacity=".38"/><rect x="12.4" y="12.4" width="8.6" height="8.6" rx="2.2" fill="currentColor"/></svg>AUTO<b>KITCH</b></a>
   </div>
 </nav>
+
+
+
+<!-- HERO -->
+<header class="hero" id="hero">
+  <video class="hero-bg" src="../assets/pide.mp4" autoplay muted loop playsinline></video>
+  <div class="hero-ov"></div>
+  <div class="hero-content">
+    <div class="tag rv in" style="display:flex;align-items:center;justify-content:center;gap:10px;text-transform:uppercase;letter-spacing:.16em;font-size:15px"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" style="flex:0 0 auto"><rect x="3" y="3" width="8.6" height="8.6" rx="2.2" fill="currentColor"/><rect x="12.4" y="3" width="8.6" height="8.6" rx="2.2" fill="currentColor" opacity=".38"/><rect x="3" y="12.4" width="8.6" height="8.6" rx="2.2" fill="currentColor" opacity=".38"/><rect x="12.4" y="12.4" width="8.6" height="8.6" rx="2.2" fill="currentColor"/></svg>AUTOKITCH</div>
+    <h1 class="rv in">Line</h1>
+    <p class="sub rv in d1">Otonom mutfak hatları — pizza ve bowl üretimini insan eli değmeden yürüten modüler robotik sistem.</p>
+    <a href="#vizyon" class="hero-btn rv in d3">Keşfet</a>
+  </div>
+  <a href="#vizyon" class="cue">KAYDIR<span></span></a>
+</header>
 
 <aside class="stoc" id="stoc">
   <div class="toc-h">İçindekiler</div>
@@ -361,20 +382,6 @@
   <a href="#ornekler">Örnek Aletler</a>
 </aside>
 
-
-<!-- HERO -->
-<header class="hero" id="hero">
-  <video class="hero-bg" src="../assets/pide.mp4" autoplay muted loop playsinline></video>
-  <div class="hero-ov"></div>
-  <div class="hero-content">
-    <div class="tag rv in">AUTOKITCH Line · Otonom Mutfak Hatları</div>
-    <h1 class="rv in">AUTOKITCH</h1>
-    <p class="sub rv in d1">Mutfağın geleceği. Yapay zeka, robotik ve premium tasarımla yeniden tasarlandı.</p>
-    <div class="meta rv in d2">Özel Sunum · 2026 · Kemal — Torinoarch Studio</div>
-    <a href="#vizyon" class="hero-btn rv in d3">Keşfet</a>
-  </div>
-  <a href="#vizyon" class="cue">KAYDIR<span></span></a>
-</header>
 
 <!-- VIZYON -->
 <section id="vizyon" class="center">
@@ -482,7 +489,7 @@
 </section>
 
 <!-- URUN + DEMO (birleşik, videolu) -->
-<section id="urun" class="center">
+<section id="urun" class="light center">
   <div class="wrap">
     <div class="eyebrow rv">Ürün · Pizza &amp; Bowl</div>
     <h2 class="rv d1">İki otonom hat:<br>pizza ve bowl.</h2>
@@ -500,7 +507,7 @@
 </section>
 
 <!-- PLATFORM — sadece pizza degil -->
-<section id="platform" class="light center">
+<section id="platform" class="center">
   <div class="wrap">
     <div class="eyebrow rv">Platform · Modüler Sistem</div>
     <h2 class="rv d1">Pizza ve bowl ile başlıyoruz.<br>Ama bu bir <span class="accent">platform</span>.</h2>
@@ -522,7 +529,7 @@
 </section>
 
 <!-- AI MUTFAK BEYNI -->
-<section id="beyin" class="center">
+<section id="beyin" class="light center">
   <div class="wrap">
     <div class="eyebrow rv">AI Mutfak Beyni</div>
     <h2 class="rv d1">Sadece donanım değil.<br>Mutfağın beyni.</h2>
@@ -568,7 +575,7 @@
 </section>
 
 <!-- SEKTOR KANITI -->
-<section id="sektor" class="center">
+<section id="sektor" class="light center">
   <div class="wrap">
     <div class="eyebrow rv">Sektör · Neden Şimdi?</div>
     <h2 class="rv d1">Mutfağın geleceğini tarif edenler,<br>bizim yaptığımızı tarif ediyor.</h2>
@@ -617,7 +624,7 @@
 </section>
 
 <!-- IS MODELI -->
-<section id="ismodeli" class="center">
+<section id="ismodeli" class="light center">
   <div class="wrap">
     <div class="eyebrow rv">İş Modeli</div>
     <h2 class="rv d1">Tek satıştan<br>tekrarlayan gelire.</h2>
@@ -685,7 +692,7 @@
   var stoc=document.getElementById('stoc');
   if(stoc){
     stoc.style.transition='opacity .35s';
-    var stocT=function(){var hide=window.scrollY>window.innerHeight*0.75;stoc.style.opacity=hide?'0':'1';stoc.style.pointerEvents=hide?'none':'auto';};
+    var stocT=function(){if(!window.matchMedia('(min-width:1060px)').matches){stoc.style.opacity='1';stoc.style.pointerEvents='auto';return;}var hide=window.scrollY>window.innerHeight*0.75;stoc.style.opacity=hide?'0':'1';stoc.style.pointerEvents=hide?'none':'auto';};
     window.addEventListener('scroll',stocT,{passive:true});stocT();
   }
 </script>

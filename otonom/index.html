@@ -66,7 +66,7 @@
                    radial-gradient(120% 90% at 50% 22%,rgba(41,151,255,.22),transparent 58%)}
   .hero-content{position:relative;z-index:2;max-width:880px}
   .hero .tag{font-size:clamp(17px,1.6vw,22px);font-weight:600;color:#cfe0f2;margin-bottom:8px;letter-spacing:0}
-  .hero h1{font-size:clamp(40px,7vw,84px);font-weight:600;letter-spacing:-.04em;line-height:.92;
+  .hero h1{font-size:clamp(56px,11vw,150px);font-weight:600;letter-spacing:-.04em;line-height:.92;
            background:linear-gradient(168deg,#E6F2FF 0%,var(--blue-l) 30%,var(--blue) 62%,var(--blue-d) 100%);
            -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
            filter:drop-shadow(0 10px 70px rgba(41,151,255,.4))}
@@ -359,6 +359,12 @@ a[style*="background:#12151c"] span,div[style*="background:#12151c"] span{color:
 [style*="border-top:1px solid rgba(255,255,255"]{border-top-color:#dbe3ee!important}
 .hero .sub{text-shadow:none!important}
 .hero .tag{text-shadow:none!important}
+
+/* Icindekiler: cep/tablet - akista kart olarak */
+@media(max-width:1059px){
+  .stoc{display:block;position:static;width:auto;max-width:720px;margin:34px 18px 0;left:auto;top:auto;max-height:none;opacity:1!important;pointer-events:auto!important}
+}
+@media(min-width:760px) and (max-width:1059px){.stoc{margin:34px auto 0}}
 </style>
 </head>
 <body>
@@ -405,12 +411,23 @@ a[style*="background:#12151c"] span,div[style*="background:#12151c"] span{color:
 
 <nav id="nav">
   <div class="nav-in">
-    <a href="../index.html" class="logo">AUTO<b>KITCH</b></a>
-    <div class="nav-right">
-      <a href="mailto:info@torinoarch.com?subject=AUTOKITCH%20-%20Vizyon" class="nav-cta">İletişim</a>
-    </div>
+    <a href="../index.html" class="logo" style="display:flex;align-items:center;gap:9px"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" style="flex:0 0 auto"><rect x="3" y="3" width="8.6" height="8.6" rx="2.2" fill="currentColor"/><rect x="12.4" y="3" width="8.6" height="8.6" rx="2.2" fill="currentColor" opacity=".38"/><rect x="3" y="12.4" width="8.6" height="8.6" rx="2.2" fill="currentColor" opacity=".38"/><rect x="12.4" y="12.4" width="8.6" height="8.6" rx="2.2" fill="currentColor"/></svg>AUTO<b>KITCH</b></a>
   </div>
 </nav>
+
+
+
+<!-- HERO -->
+<header class="hero" id="hero">
+  <div class="hero-ov"></div>
+  <div class="hero-content">
+    <div class="tag rv in" style="display:flex;align-items:center;justify-content:center;gap:10px;text-transform:uppercase;letter-spacing:.16em;font-size:15px"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" style="flex:0 0 auto"><rect x="3" y="3" width="8.6" height="8.6" rx="2.2" fill="currentColor"/><rect x="12.4" y="3" width="8.6" height="8.6" rx="2.2" fill="currentColor" opacity=".38"/><rect x="3" y="12.4" width="8.6" height="8.6" rx="2.2" fill="currentColor" opacity=".38"/><rect x="12.4" y="12.4" width="8.6" height="8.6" rx="2.2" fill="currentColor"/></svg>AUTOKITCH</div>
+    <h1 class="rv in">Store</h1>
+    <p class="sub rv in d1">Tam otonom, insansız mutfak — 7/24 açık, siparişten teslimata kendi kendini işleten satış noktası.</p>
+    <a href="#otonom" class="hero-btn rv in d3">Keşfet</a>
+  </div>
+  <a href="#otonom" class="cue">KAYDIR<span></span></a>
+</header>
 
 <aside class="stoc" id="stoc">
   <div class="toc-h">İçindekiler</div>
@@ -421,18 +438,6 @@ a[style*="background:#12151c"] span,div[style*="background:#12151c"] span{color:
   <a href="#dunya">Küresel Kanıt</a>
 </aside>
 
-
-<!-- HERO -->
-<header class="hero" id="hero">
-  <div class="hero-ov"></div>
-  <div class="hero-content">
-    <div class="tag rv in">AUTOKITCH Store</div>
-    <h1 class="rv in">Tam Otonom<br>İnsansız Mutfak</h1>
-    <p class="sub rv in d1">Sipariş robottan, üretim robotik mutfaktan — uçtan uca insansız işletme.</p>
-    <a href="#otonom" class="hero-btn rv in d3">Keşfet</a>
-  </div>
-  <a href="#otonom" class="cue">KAYDIR<span></span></a>
-</header>
 
 <!-- DAVRANIS DEGISIMI -->
 <section id="degisim" class="center">
@@ -868,7 +873,7 @@ a[style*="background:#12151c"] span,div[style*="background:#12151c"] span{color:
   var stoc=document.getElementById('stoc');
   if(stoc){
     stoc.style.transition='opacity .35s';
-    var stocT=function(){var hide=window.scrollY>window.innerHeight*0.75;stoc.style.opacity=hide?'0':'1';stoc.style.pointerEvents=hide?'none':'auto';};
+    var stocT=function(){if(!window.matchMedia('(min-width:1060px)').matches){stoc.style.opacity='1';stoc.style.pointerEvents='auto';return;}var hide=window.scrollY>window.innerHeight*0.75;stoc.style.opacity=hide?'0':'1';stoc.style.pointerEvents=hide?'none':'auto';};
     window.addEventListener('scroll',stocT,{passive:true});stocT();
   }
 </script>
