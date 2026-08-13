@@ -153,7 +153,7 @@
   <div class="nav-in">
     <a href="../" class="logo">AUTO<b>KITCH</b> <span style="font-weight:400;color:var(--soft);font-size:14px">· Tablo &amp; Plan</span></a>
     <div class="nav-links">
-      <a href="#tablo">Karşılaştırma &amp; Hesap</a>
+      <a href="../#hesap">Maliyet Tablosu ↗</a>
       <a href="#plan">Dükkan Planı</a>
       <a href="#senaryolar">Senaryolar</a>
       <a href="#kararlar">Kararlar</a>
@@ -179,107 +179,10 @@
 <!-- BİRLEŞİK KARŞILAŞTIRMA + HESAP -->
 <section id="tablo">
   <div class="wrap">
-    <div class="eyebrow">Karşılaştırma &amp; Hesap · Tek Tablo</div>
-    <h2>Aynı mahallede üç model.</h2>
-    <p class="lead">Üstte işletme bilgileri, altında düzenlenebilir rakamlar ve otomatik sonuçlar. Kendi rakamını yaz — sonuç satırları anında güncellenir, değerlerin bu tarayıcıda saklanır.</p>
-
-    <div class="mixwrap">
-      <table class="mix" id="mixt">
-        <tr><th style="min-width:210px"></th><th class="us">AUTOKITCH Nokta</th><th>Domino's Şubesi</th><th>Mahalle Pizzacısı</th></tr>
-
-        <tr class="grp"><td colspan="4">İşletme bilgisi</td></tr>
-        <tr><td>Çalışma saati</td><td class="us">Satış 7/24 · insan 09:00-19:00 <span class="good">✓</span></td><td>10:00-01:00; gece şubeleri en geç 03:00-04:00 (24 saat açık şube yok)</td><td>11:00-23:00</td></tr>
-        <tr><td>Gece (24:00-08:00) satışı</td><td class="us"><span class="good">Açık</span> — kiosk + QR dolap</td><td class="bad">Kapalı</td><td class="bad">Kapalı</td></tr>
-        <tr><td>Alan ihtiyacı</td><td class="us">≈ 10 m²</td><td>80-150 m²</td><td>40-80 m²</td></tr>
-        <tr><td>Hamur tedariki</td><td class="us">Makine <b>un+sudan kendisi yapar</b>; kartuşu günde 1 kez personel doldurur</td><td>Merkez fabrikadan (Gebze/Ankara/İzmir/G.antep), ~3 günde bir sevkiyat</td><td>Yerinde elde açılır</td></tr>
-        <tr><td>Teslimat</td><td class="us">Platform kuryesi + QR'lı dolaptan gel-al</td><td>Kendi motor kuryeleri + platform</td><td>Platform kuryesi</td></tr>
-        <tr><td>Kuruluş yatırımı</td><td class="us">≈ 4-5 milyon TL <span class="est">TAHMİN</span></td><td>15-25 milyon TL (franchise portalları) <span class="est">TAHMİN</span></td><td>1,5-3 milyon TL <span class="est">TAHMİN</span></td></tr>
-        <tr><td>Pizza fiyat çıpası (orta boy)</td><td class="us">Hedef 250-300 TL — minimum fiyatı aşağıda tablo hesaplıyor</td><td>Kampanyalı ≈220 TL, liste 300-380 TL</td><td>300-450 TL</td></tr>
-
-        <tr class="grp"><td colspan="4">Aylık giderler — düzenlenebilir</td></tr>
-        <tr><td>Personel sayısı <span class="note">(kurye hariç; Domino's: 17 saatlik günü 2 vardiyayla döndürmek için ~6 kişi bordroda)</span></td>
-          <td class="us"><input data-c="A" data-k="pers" type="number" step="1"> kişi</td>
-          <td><input data-c="B" data-k="pers" type="number" step="1"> kişi</td>
-          <td><input data-c="C" data-k="pers" type="number" step="1"> kişi</td></tr>
-        <tr><td>Personel maliyeti (kişi başı, SGK dahil)</td>
-          <td class="us"><input data-c="A" data-k="maas" type="number"> TL</td>
-          <td><input data-c="B" data-k="maas" type="number"> TL</td>
-          <td><input data-c="C" data-k="maas" type="number"> TL</td></tr>
-        <tr class="res sub"><td>↳ Aylık personel gideri <span class="note">(kişi × maaş)</span></td><td class="us" data-o="A-pers"></td><td data-o="B-pers"></td><td data-o="C-pers"></td></tr>
-        <tr><td>Kira <span class="note">(biz 10 m² ≈ 6.000 TL/m²; Domino's ~100 m² ≈ 1.500 TL/m²; mahalle ~60 m² ≈ 1.600 TL/m² — küçük dükkanda m² pahalı, toplam ucuz)</span></td>
-          <td class="us"><input data-c="A" data-k="kira" type="number"> TL</td>
-          <td><input data-c="B" data-k="kira" type="number"> TL</td>
-          <td><input data-c="C" data-k="kira" type="number"> TL</td></tr>
-        <tr><td>Elektrik + gaz</td>
-          <td class="us"><input data-c="A" data-k="elek" type="number"> TL</td>
-          <td><input data-c="B" data-k="elek" type="number"> TL</td>
-          <td><input data-c="C" data-k="elek" type="number"> TL</td></tr>
-        <tr><td>Su + internet + temizlik</td>
-          <td class="us"><input data-c="A" data-k="su" type="number"> TL</td>
-          <td><input data-c="B" data-k="su" type="number"> TL</td>
-          <td><input data-c="C" data-k="su" type="number"> TL</td></tr>
-        <tr><td>Muhasebe + vergi/harç ortalaması</td>
-          <td class="us"><input data-c="A" data-k="muh" type="number"> TL</td>
-          <td><input data-c="B" data-k="muh" type="number"> TL</td>
-          <td><input data-c="C" data-k="muh" type="number"> TL</td></tr>
-        <tr><td>Sistem / yazılım</td>
-          <td class="us"><input data-c="A" data-k="sis" type="number"> TL</td>
-          <td><input data-c="B" data-k="sis" type="number"> TL</td>
-          <td><input data-c="C" data-k="sis" type="number"> TL</td></tr>
-        <tr><td>Franchise kesintisi <span class="note">(cironun yüzdesi; bağımsızlarda 0. Domino's ABD 2025 fiili: royalty %7,07 + reklam %5,84 = <b>%12,9 nakit</b>; üstüne zorunlu malzeme alımındaki gizli marj ~%3,3 → gerçek toplam ~%16,2)</span></td>
-          <td class="us"><input data-c="A" data-k="roy" type="number" step="0.5"> %</td>
-          <td><input data-c="B" data-k="roy" type="number" step="0.5"> %</td>
-          <td><input data-c="C" data-k="roy" type="number" step="0.5"> %</td></tr>
-        <tr><td>Toplam yatırım <span class="note">(geri dönüş süresi için)</span></td>
-          <td class="us"><input data-c="A" data-k="yat" type="number"> TL</td>
-          <td><input data-c="B" data-k="yat" type="number"> TL</td>
-          <td><input data-c="C" data-k="yat" type="number"> TL</td></tr>
-
-        <tr class="grp"><td colspan="4">Pizza başı — düzenlenebilir</td></tr>
-        <tr><td>Malzeme maliyeti <span class="note">(Domino's ölçek sayesinde daha ucuza alır — ama merkez fabrikadan almak <b>zorunda</b>, yani bu fiyat zaten Domino's'un marjını içeriyor)</span></td>
-          <td class="us"><input data-c="A" data-k="malz" type="number"> TL</td>
-          <td><input data-c="B" data-k="malz" type="number"> TL</td>
-          <td><input data-c="C" data-k="malz" type="number"> TL</td></tr>
-        <tr><td>Kutu + ambalaj + sachet</td>
-          <td class="us"><input data-c="A" data-k="kutu" type="number"> TL</td>
-          <td><input data-c="B" data-k="kutu" type="number"> TL</td>
-          <td><input data-c="C" data-k="kutu" type="number"> TL</td></tr>
-        <tr><td>Satış fiyatı (ortalama)</td>
-          <td class="us"><input data-c="A" data-k="fiyat" type="number"> TL</td>
-          <td><input data-c="B" data-k="fiyat" type="number"> TL</td>
-          <td><input data-c="C" data-k="fiyat" type="number"> TL</td></tr>
-        <tr><td>① Satışın yüzde kaçı Yemeksepeti/Getir'den geliyor? <span class="note">(gerisi kapıdan/QR'dan gelen, komisyonsuz satış)</span></td>
-          <td class="us"><input data-c="A" data-k="ppay" type="number"> %</td>
-          <td><input data-c="B" data-k="ppay" type="number"> %</td>
-          <td><input data-c="C" data-k="ppay" type="number"> %</td></tr>
-        <tr><td>② Yemeksepeti/Getir o siparişlerden ne kesiyor? <span class="note">(sadece platformdan gelen siparişlere uygulanır)</span></td>
-          <td class="us"><input data-c="A" data-k="pkom" type="number"> %</td>
-          <td><input data-c="B" data-k="pkom" type="number"> %</td>
-          <td><input data-c="C" data-k="pkom" type="number"> %</td></tr>
-        <tr class="res"><td>→ Ortalama komisyon yükü <span class="note">(① × ② + %3 POS · pizza başına)</span></td><td class="us" data-o="A-kom"></td><td data-o="B-kom"></td><td data-o="C-kom"></td></tr>
-        <tr><td>Günlük satış (pizza)</td>
-          <td class="us"><input data-c="A" data-k="adet" type="number"> adet</td>
-          <td><input data-c="B" data-k="adet" type="number"> adet</td>
-          <td><input data-c="C" data-k="adet" type="number"> adet</td></tr>
-
-        <tr class="grp"><td colspan="4">Sonuç — otomatik hesaplanır</td></tr>
-        <tr class="res"><td>Personel gideri <span class="note">(en büyük sabit kalem)</span></td><td class="us" data-o="A-pers2"></td><td data-o="B-pers2"></td><td data-o="C-pers2"></td></tr>
-        <tr class="res"><td>Aylık sabit gider <span class="note">(personel + kira + faturalar)</span></td><td class="us" data-o="A-sabit"></td><td data-o="B-sabit"></td><td data-o="C-sabit"></td></tr>
-        <tr class="res"><td>Pizza başı değişken gider <span class="note">(malzeme+paket+komisyonlar)</span></td><td class="us" data-o="A-deg"></td><td data-o="B-deg"></td><td data-o="C-deg"></td></tr>
-        <tr class="res hi"><td>Bir pizzanın bize TAM maliyeti <span class="note">= bu satış adedinde minimum satış fiyatı; altına satarsan zarar</span></td><td class="us" data-o="A-min"></td><td data-o="B-min"></td><td data-o="C-min"></td></tr>
-        <tr class="res"><td>Aylık gelir</td><td class="us" data-o="A-gelir"></td><td data-o="B-gelir"></td><td data-o="C-gelir"></td></tr>
-        <tr class="res hi"><td>Aylık kâr</td><td class="us" data-o="A-kar"></td><td data-o="B-kar"></td><td data-o="C-kar"></td></tr>
-        <tr class="res hi"><td>Başabaş <span class="note">(masrafı sıfırlayan günlük satış — bunun üstü kâr)</span></td><td class="us" data-o="A-bb"></td><td data-o="B-bb"></td><td data-o="C-bb"></td></tr>
-        <tr class="res"><td>Yatırım geri dönüşü <span class="note">(bu kârla yatırım kaç ayda çıkar)</span></td><td class="us" data-o="A-geri"></td><td data-o="B-geri"></td><td data-o="C-geri"></td></tr>
-      </table>
-    </div>
-
-    <div class="cbtns">
-      <button class="cbtn" onclick="calcReset()">↺ Varsayılana dön</button>
-      <span class="note" style="align-self:center">Varsayılanlar araştırma verili: işveren maliyeti 40.875 TL (ÇSGB) · malzeme 83 TL + paket 10 TL (Ağu 2026 toptan) · Domino's 140 pizza/gün (global şube ortalaması), royalty+reklam ~%12 (ABD FDD) · POS %3 tüm satışta dahil · ay = 30,4 gün</span>
-    </div>
-    <div class="explain" style="background:#eaf0fc;color:#1a3a7a"><b>① ve ② neden ayrı?</b> Çünkü komisyon <b>her satıştan değil, sadece platformdan gelen satıştan</b> kesiliyor. ① toplam satışın ne kadarının Yemeksepeti/Getir'den geldiğini söyler; ② o siparişlerde platformun kestiği oranı. Örnek: günde 100 pizza satıyorsun, 50'si Yemeksepeti'nden (①=%50), Yemeksepeti %32 kesiyor (②=%32) → <b>ortalama yük %16</b>, yani 300 TL'lik pizzada 48 TL. Kapıdan/QR'dan gelen 50 pizzada platform kesintisi yok, sadece kart komisyonu var. <b>Bizim modelin gizli avantajı burada:</b> QR'lı dolap sayesinde müşteri doğrudan bizden alabiliyor — ① düştükçe kâr artıyor. ①'i %20 yaparsan farkı anında görürsün.</div>
-    <div class="explain"><b>Başabaş ne demek?</b> O günlük satış adedinde gelir, tüm masrafı tam karşılar — ne kâr ne zarar. Örnek: bizim kolonda başabaş 26 çıkıyorsa, günde 26 pizza satınca masraf sıfırlanır; 27'nci pizzadan itibaren her pizza kâr yazar. "Bir pizzanın bize TAM maliyeti" satırı da şunu söyler: bu adette pizzayı en az kaça satmak zorundayız.</div>
+    <div class="eyebrow">Karşılaştırma &amp; Hesap</div>
+    <h2>Maliyet tablosu artık Store sayfasında.</h2>
+    <p class="lead">Düzenlenebilir maliyet tablosu, iki AUTOKITCH modelini (insansız / insanlı) Domino's ve mahalle pizzacısıyla birlikte karşılaştıracak şekilde genişletildi ve Store sayfasına taşındı. Bu sayfa mimari plan, ekipman fiyatları ve açık kararlar için kullanılıyor.</p>
+    <a href="../#hesap" class="cbtn" style="display:inline-block;margin-top:20px;border-color:var(--blue);color:var(--blue)">→ Maliyet tablosunu aç (Store sayfası)</a>
 
     <div class="card" style="margin-top:22px">
       <h3>Franchise gerçeği: Domino's bayisi cirosunun ne kadarını merkeze veriyor?</h3>
@@ -300,6 +203,7 @@
       <p class="note" style="margin-top:10px">Kaynak: Domino's Pizza Inc FY2025 Form 10-K (SEC) ve Franchise Disclosure Document Item 6/8/19; DP Eurasia 2017 &amp; 2021 yıllık raporları. Türkiye'ye özel bayi oranı hiçbir resmî belgede açıklanmıyor; Ekonomist dergisi (Oca 2024) giriş bedeli 50.000 $ ve %12 birleşik kesinti yazıyor — bu gazetecilik verisi, resmî değil.</p>
     </div>
   </div>
+
 </section>
 
 <!-- PLAN -->
@@ -524,68 +428,6 @@
 
 <footer>AUTOKITCH · Tablo &amp; Plan — özel çalışma dokümanı · Ağustos 2026<br><a href="../" style="color:var(--blue)">← Store sayfasına dön</a></footer>
 
-<script>
-var DEF = {
-  A: {pers:1, maas:40875, kira:60000, elek:9000,  su:2500, muh:5000, sis:2500, roy:0,  yat:4500000,  malz:83, kutu:10, fiyat:300, ppay:50, pkom:32, adet:45},
-  B: {pers:6, maas:40875, kira:150000, elek:25000, su:4000, muh:8000, sis:5000, roy:12.9, yat:20000000, malz:70, kutu:8,  fiyat:260, ppay:30, pkom:30, adet:140},
-  C: {pers:2, maas:40875, kira:95000,  elek:14000, su:3000, muh:5000, sis:2500, roy:0,  yat:1800000,  malz:83, kutu:10, fiyat:350, ppay:50, pkom:32, adet:50}
-};
-var POS = 0.03, GUN = 30.4;
-function fmt(n){ return Math.round(n).toLocaleString('tr-TR'); }
-function readCol(c){
-  var o = {};
-  document.querySelectorAll('#mixt input[data-c="'+c+'"]').forEach(function(i){ o[i.dataset.k] = parseFloat(String(i.value).replace(',','.')) || 0; });
-  return o;
-}
-function setOut(id, html, cls){
-  var el = document.querySelector('[data-o="'+id+'"]');
-  if(el){ el.innerHTML = html; el.classList.remove('pos','neg'); if(cls) el.classList.add(cls); }
-}
-function calc(c){
-  var v = readCol(c);
-  var sabit = v.pers*v.maas + v.kira + v.elek + v.su + v.muh + v.sis;
-  var platformPos = v.fiyat * ((v.pkom/100)*(v.ppay/100) + POS);
-  var kesinti = platformPos + v.fiyat*(v.roy/100);
-  var degisken = v.malz + v.kutu + kesinti;
-  var marj = v.fiyat - degisken;
-  var aylikAdet = v.adet * GUN;
-  var gelir = aylikAdet * v.fiyat;
-  var kar = gelir - (sabit + aylikAdet * degisken);
-  var min = aylikAdet > 0 ? (sabit/aylikAdet + degisken) : 0;
-  var bb = marj > 0 ? sabit/(GUN*marj) : Infinity;
-  var geri = kar > 0 ? v.yat / kar : Infinity;
-  var persTop = v.pers * v.maas;
-  setOut(c+'-pers', v.pers+' × '+fmt(v.maas)+' = <b>'+fmt(persTop)+' TL</b>');
-  setOut(c+'-pers2', fmt(persTop)+' TL');
-  setOut(c+'-kom', fmt(platformPos)+' TL <span class="note">(fiyatın %'+(v.fiyat>0?(100*platformPos/v.fiyat).toFixed(1):0)+'’i)</span>');
-  setOut(c+'-sabit', fmt(sabit)+' TL');
-  setOut(c+'-deg', fmt(degisken)+' TL');
-  setOut(c+'-min', fmt(min)+' TL', null);
-  setOut(c+'-gelir', fmt(gelir)+' TL <span class="note">('+fmt(aylikAdet)+' pizza/ay)</span>');
-  setOut(c+'-kar', fmt(kar)+' TL', kar>=0?'pos':'neg');
-  setOut(c+'-bb', isFinite(bb) ? ('günde '+bb.toFixed(1)+' pizza') : '—');
-  setOut(c+'-geri', isFinite(geri) ? ('~'+Math.round(geri)+' ay') : 'kâr yok');
-}
-function fill(c, vals){
-  document.querySelectorAll('#mixt input[data-c="'+c+'"]').forEach(function(i){ if(vals[i.dataset.k]!==undefined) i.value = vals[i.dataset.k]; });
-}
-function saveAll(){
-  try{ localStorage.setItem('ak_calc_v2', JSON.stringify({A:readCol('A'), B:readCol('B'), C:readCol('C')})); }catch(e){}
-}
-function calcAll(){ calc('A'); calc('B'); calc('C'); }
-function calcReset(){
-  fill('A',DEF.A); fill('B',DEF.B); fill('C',DEF.C); calcAll();
-  try{ localStorage.removeItem('ak_calc_v2'); }catch(e){}
-}
-(function(){
-  var saved = null;
-  try{ saved = JSON.parse(localStorage.getItem('ak_calc_v2')); }catch(e){}
-  fill('A',(saved&&saved.A)||DEF.A); fill('B',(saved&&saved.B)||DEF.B); fill('C',(saved&&saved.C)||DEF.C);
-  calcAll();
-  document.querySelectorAll('#mixt input').forEach(function(i){
-    i.addEventListener('input', function(){ calc(i.dataset.c); saveAll(); });
-  });
-})();
-</script>
+
 </body>
 </html>
