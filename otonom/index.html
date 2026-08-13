@@ -374,12 +374,12 @@ a[style*="background:#12151c"] span,div[style*="background:#12151c"] span{color:
 [style*="border-top:1px solid rgba(255,255,255"]{border-top-color:#dbe3ee!important}
 
 
-.picker .pick:nth-child(1){background:#f1f6ff!important;border-color:#d6e3f8!important}
-.picker .pick:nth-child(1):hover{border-color:#1a49b8!important}
-.picker .pick:nth-child(1) .pk-tag,.picker .pick:nth-child(1) .pk-go,.picker .pick:nth-child(1) .pk-ico,.picker .pick:nth-child(1) .pk-spec b{color:#1a49b8!important}
-.picker .pick:nth-child(2){background:#fff6ee!important;border-color:#f3ddc8!important}
-.picker .pick:nth-child(2):hover{border-color:#c2600f!important}
-.picker .pick:nth-child(2) .pk-tag,.picker .pick:nth-child(2) .pk-go,.picker .pick:nth-child(2) .pk-ico,.picker .pick:nth-child(2) .pk-spec b{color:#c2600f!important}
+.picker .pick.pk-s{background:#f1f6ff!important;border-color:#d6e3f8!important}
+.picker .pick.pk-s:hover{border-color:#1a49b8!important}
+.picker .pick.pk-s .pk-tag,.picker .pick.pk-s .pk-go,.picker .pick.pk-s .pk-ico,.picker .pick.pk-s .pk-spec b{color:#1a49b8!important}
+.picker .pick.pk-m{background:#fff6ee!important;border-color:#f3ddc8!important}
+.picker .pick.pk-m:hover{border-color:#c2600f!important}
+.picker .pick.pk-m .pk-tag,.picker .pick.pk-m .pk-go,.picker .pick.pk-m .pk-ico,.picker .pick.pk-m .pk-spec b{color:#c2600f!important}
 /* iki model bolumu — gorsel ayrim */
 section#store-s{background:#f1f6ff!important;border-top:1px solid #dfe8f8;border-bottom:1px solid #dfe8f8}
 section#store-m{background:#fff6ee!important;border-bottom:1px solid #f5e2d0}
@@ -512,8 +512,8 @@ section#store-m a[style*="color:var(--blue)"]{color:#c2600f!important}
   <a href="#degisim">Davranış Değişimi</a>
   <a href="#ekonomi">7/24 Ekonomisi</a>
   <a href="#store">İki Store Tipi</a>
-  <a href="#store-s">Model S · İnsansız</a>
   <a href="#store-m">Model M · İnsanlı</a>
+  <a href="#store-s">Model S · İnsansız</a>
   <a href="#hesap">Maliyet Hesabı</a>
   <a href="#dunya">Küresel Kanıt</a>
   <a href="#fiyatlar">Tedarikçi Araştırması</a>
@@ -560,26 +560,7 @@ section#store-m a[style*="color:var(--blue)"]{color:#c2600f!important}
     <p class="lead rv d2">Aynı robot mutfak, aynı 7/24 vaadi — iki farklı yerleşim mantığı. Nokta, insan trafiğine göre seçilir: kimsenin dükkân açmadığı yerde tamamen insansız kompakt ünite; mahallede ve şehir içinde gündüz bir kişinin çalıştığı, akşamdan sonra kendi kendine devam eden nokta.</p>
 
     <div class="picker rv d1">
-      <a href="#store-s" class="pick">
-        <div class="pk-tag">MODEL S · İNSANSIZ</div>
-        <div class="pk-ico">
-          <svg viewBox="0 0 76 58" width="120" height="90" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linejoin="round" stroke-linecap="round">
-            <path d="M8 24 L38 6 L68 24"/>
-            <path d="M15 24 V51 H61 V24"/>
-            <rect x="22" y="30" width="13" height="9" rx="1.6"/>
-            <rect x="22" y="42" width="13" height="7" rx="1.6" opacity=".4"/>
-            <rect x="42" y="30" width="12" height="19" rx="1.6" opacity=".4"/>
-            <circle cx="48" cy="35" r="1.6" fill="currentColor" stroke="none"/>
-          </svg>
-        </div>
-        <h3>İnsansız Store</h3>
-        <div class="pk-spec"><b>≈6 m²</b> · 0 personel · 7/24 robot</div>
-        <p>Sipariş ekrandan ya da telefondan verilir, robot üretir, QR'lı dolaptan alınır. Nokta hiç açılıp kapanmaz — kimse gelmez, kimse gitmez.</p>
-        <div class="pk-where">Okul &amp; yurt · ofis &amp; fabrika · terminal &amp; havalimanı · etkinlik ve sezon alanları · kimsenin dükkân açmadığı tenha noktalar</div>
-        <span class="pk-go">Modeli incele →</span>
-      </a>
-
-      <a href="#store-m" class="pick">
+      <a href="#store-m" class="pick pk-m">
         <div class="pk-tag">MODEL M · İNSANLI</div>
         <div class="pk-ico">
           <svg viewBox="0 0 76 58" width="120" height="90" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linejoin="round" stroke-linecap="round">
@@ -598,270 +579,27 @@ section#store-m a[style*="color:var(--blue)"]{color:#c2600f!important}
         <div class="pk-where">Şehir içi ve mahalle arası · cadde üstü küçük dükkânlar · yoğun yaya trafiği olan noktalar</div>
         <span class="pk-go">Modeli incele →</span>
       </a>
+
+      <a href="#store-s" class="pick pk-s">
+        <div class="pk-tag">MODEL S · İNSANSIZ</div>
+        <div class="pk-ico">
+          <svg viewBox="0 0 76 58" width="120" height="90" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linejoin="round" stroke-linecap="round">
+            <path d="M8 24 L38 6 L68 24"/>
+            <path d="M15 24 V51 H61 V24"/>
+            <rect x="22" y="30" width="13" height="9" rx="1.6"/>
+            <rect x="22" y="42" width="13" height="7" rx="1.6" opacity=".4"/>
+            <rect x="42" y="30" width="12" height="19" rx="1.6" opacity=".4"/>
+            <circle cx="48" cy="35" r="1.6" fill="currentColor" stroke="none"/>
+          </svg>
+        </div>
+        <h3>İnsansız Store</h3>
+        <div class="pk-spec"><b>≈6 m²</b> · 0 personel · 7/24 robot</div>
+        <p>Sipariş ekrandan ya da telefondan verilir, robot üretir, QR'lı dolaptan alınır. Nokta hiç açılıp kapanmaz — kimse gelmez, kimse gitmez.</p>
+        <div class="pk-where">Okul &amp; yurt · ofis &amp; fabrika · terminal &amp; havalimanı · etkinlik ve sezon alanları · kimsenin dükkân açmadığı tenha noktalar</div>
+        <span class="pk-go">Modeli incele →</span>
+      </a>
     </div>
     <p class="note rv" style="margin-top:22px">Aşağıdaki iki bölüm her modelin mimari planını, çalışma senaryolarını ve konum mantığını ayrı ayrı anlatır. Pazar kanıtı, küresel harita ve tedarikçi araştırması ikisi için ortaktır — sayfanın sonunda tek yerde durur.</p>
-  </div>
-</section>
-
-<!-- ============ MODEL S · INSANSIZ ============ -->
-<section id="store-s" class="center">
-  <div class="wrap">
-    <div class="eyebrow rv">Model S · İnsansız Store</div>
-    <h2 class="rv d1">İnsana ihtiyaç duymadan,<br>6 m²'de <span class="accent">durmadan</span> satış.</h2>
-    <p class="lead rv d2">İçinde robot mutfak, dışında sipariş ekranı ve QR'lı teslim dolabı olan kompakt ünite. Noktada çalışan yok; günde bir kez gelen ikmal ekibi var, o da birden çok noktaya bakar. Model tanıdık: insanların "robot Starbucks" diye bildiği robot kahve kioskları (Cafe X, Costa, Artly) yıllardır aynen böyle çalışıyor.</p>
-
-<!-- SISTEM SEMASI -->
-<div class="rv d1" style="margin-top:44px">
-  <div class="subh" style="text-align:center">Sistem şeması <span>· insansız nokta nasıl çalışır</span></div>
-  <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;margin-top:22px;border:1px solid #232833;border-radius:18px;background:#0d1016">
-  <svg viewBox="0 0 1240 900" style="min-width:960px;width:100%;display:block" font-family="inherit" xmlns="http://www.w3.org/2000/svg">
-    <defs>
-      <marker id="arw" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#e8eaed"/></marker>
-      <marker id="arb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2997ff"/></marker>
-    </defs>
-
-    <!-- ================= TOP: cloud brain + panels ================= -->
-    <!-- remote monitoring panel -->
-    <g>
-      <rect x="60" y="52" width="230" height="120" rx="16" fill="#12151c" stroke="#232833"/>
-      <rect x="84" y="76" width="44" height="72" rx="8" fill="none" stroke="#8a94a4" stroke-width="1.8"/>
-      <line x1="98" y1="138" x2="114" y2="138" stroke="#8a94a4" stroke-width="1.8"/>
-      <polyline points="90,120 98,108 106,114 114,98" fill="none" stroke="#2997ff" stroke-width="2"/>
-      <text x="146" y="92" fill="#ffffff" font-size="15" font-weight="600">Uzaktan izleme</text>
-      <text x="146" y="114" fill="#8a94a4" font-size="12.5">canlı sipariş · satış</text>
-      <text x="146" y="132" fill="#8a94a4" font-size="12.5">arıza uyarısı · analiz</text>
-      <text x="146" y="150" fill="#8a94a4" font-size="12.5">tüm noktalar tek panel</text>
-    </g>
-
-    <!-- cloud: kitchen brain -->
-    <g>
-      <path d="M560 132a34 34 0 0 1 6-67 44 44 0 0 1 84-12 36 36 0 0 1 44 35 30 30 0 0 1-8 44z" fill="#12151c" stroke="#2997ff" stroke-width="2"/>
-      <text x="622" y="96" text-anchor="middle" fill="#ffffff" font-size="15.5" font-weight="600">AI Mutfak Beyni</text>
-      <text x="622" y="116" text-anchor="middle" fill="#8a94a4" font-size="12.5">reçete · planlama · tahmin</text>
-    </g>
-
-    <!-- order channels -->
-    <g>
-      <rect x="950" y="52" width="230" height="120" rx="16" fill="#12151c" stroke="#232833"/>
-      <text x="1065" y="82" text-anchor="middle" fill="#ffffff" font-size="15" font-weight="600">Sipariş kanalları</text>
-      <rect x="972" y="96" width="60" height="26" rx="8" fill="none" stroke="#8a94a4"/><text x="1002" y="113" text-anchor="middle" fill="#b7bfcc" font-size="11.5">Getir</text>
-      <rect x="1040" y="96" width="88" height="26" rx="8" fill="none" stroke="#8a94a4"/><text x="1084" y="113" text-anchor="middle" fill="#b7bfcc" font-size="11.5">Yemeksepeti</text>
-      <rect x="972" y="130" width="156" height="26" rx="8" fill="none" stroke="#8a94a4"/><text x="1050" y="147" text-anchor="middle" fill="#b7bfcc" font-size="11.5">Kendi uygulamamız</text>
-    </g>
-
-    <!-- data links (dashed blue) -->
-    <path d="M292 112 H 508" fill="none" stroke="#2997ff" stroke-width="2" stroke-dasharray="7 6" marker-start="url(#arb)" marker-end="url(#arb)"/>
-    <path d="M948 112 H 742" fill="none" stroke="#2997ff" stroke-width="2" stroke-dasharray="7 6" marker-end="url(#arb)"/>
-    <text x="845" y="100" text-anchor="middle" fill="#2997ff" font-size="12">siparişler düşer</text>
-    <path d="M622 150 V 268" fill="none" stroke="#2997ff" stroke-width="2" stroke-dasharray="7 6" marker-start="url(#arb)" marker-end="url(#arb)"/>
-    <text x="638" y="200" fill="#2997ff" font-size="12">komut ↓</text>
-    <text x="638" y="240" fill="#2997ff" font-size="12">telemetri ↑</text>
-
-    <!-- ================= CENTER: the store ================= -->
-    <g>
-      <rect x="240" y="272" width="760" height="300" rx="22" fill="rgba(41,151,255,.05)" stroke="#2997ff" stroke-width="2"/>
-      <rect x="240" y="272" width="760" height="46" rx="22" fill="rgba(41,151,255,.10)"/>
-      <text x="620" y="302" text-anchor="middle" fill="#ffffff" font-size="17" font-weight="700" letter-spacing=".04em">AUTOKITCH STORE — pop-up kimlikli otonom nokta</text>
-      <line x1="486" y1="332" x2="486" y2="556" stroke="#232833" stroke-dasharray="5 6"/>
-      <line x1="754" y1="332" x2="754" y2="556" stroke="#232833" stroke-dasharray="5 6"/>
-
-      <!-- ZONE: front -->
-      <text x="363" y="356" text-anchor="middle" fill="#2997ff" font-size="12.5" font-weight="700" letter-spacing=".1em">ÖN</text>
-      <rect x="308" y="376" width="66" height="88" rx="8" fill="#0d1016" stroke="#e8eaed" stroke-width="1.8"/>
-      <rect x="318" y="388" width="46" height="52" rx="4" fill="none" stroke="#2997ff" stroke-width="1.6"/>
-      <rect x="332" y="470" width="18" height="14" fill="none" stroke="#e8eaed" stroke-width="1.6"/>
-      <text x="418" y="400" fill="#ffffff" font-size="13.5" font-weight="600">Sipariş ekranı</text>
-      <text x="418" y="420" fill="#8a94a4" font-size="12">dokunmatik / QR</text>
-      <text x="418" y="444" fill="#ffffff" font-size="13.5" font-weight="600">Gel-al tezgahı</text>
-      <text x="418" y="464" fill="#8a94a4" font-size="12">hazır sipariş burada</text>
-      <text x="363" y="540" text-anchor="middle" fill="#8a94a4" font-size="12">müşteri yüzü:</text>
-      <text x="363" y="557" text-anchor="middle" fill="#8a94a4" font-size="12">temiz marka, sıfır kuyruk</text>
-
-      <!-- ZONE: middle robot kitchen -->
-      <text x="620" y="356" text-anchor="middle" fill="#2997ff" font-size="12.5" font-weight="700" letter-spacing=".1em">İÇ — GÖRÜNMEZ</text>
-      <g stroke="#e8eaed" stroke-width="2" fill="none">
-        <circle cx="560" cy="470" r="9"/>
-        <path d="M560 461 L560 430 L604 402"/>
-        <circle cx="604" cy="402" r="7"/>
-        <path d="M604 402 L648 418"/>
-        <path d="M640 428 a12 12 0 0 0 20 -6" stroke="#2997ff"/>
-      </g>
-      <rect x="530" y="486" width="180" height="10" rx="5" fill="none" stroke="#8a94a4"/>
-      <text x="620" y="522" text-anchor="middle" fill="#ffffff" font-size="13.5" font-weight="600">AI mutfak modülleri — otonom üretim</text>
-      <text x="620" y="542" text-anchor="middle" fill="#8a94a4" font-size="12">hamur · sos · fırın · paket — insan eli değmeden</text>
-      <text x="620" y="560" text-anchor="middle" fill="#8a94a4" font-size="12">gün sonu CIP: kendi kendini temizler</text>
-
-      <!-- ZONE: back lockers -->
-      <text x="877" y="356" text-anchor="middle" fill="#2997ff" font-size="12.5" font-weight="700" letter-spacing=".1em">ARKA</text>
-      <g fill="none" stroke="#e8eaed" stroke-width="1.8">
-        <rect x="800" y="376" width="154" height="112" rx="10"/>
-        <line x1="877" y1="376" x2="877" y2="488"/>
-        <line x1="800" y1="432" x2="954" y2="432"/>
-      </g>
-      <circle cx="862" cy="404" r="3" fill="#2997ff"/><circle cx="939" cy="404" r="3" fill="#2997ff"/>
-      <circle cx="862" cy="460" r="3" fill="#2997ff"/><circle cx="939" cy="460" r="3" fill="#2997ff"/>
-      <text x="877" y="516" text-anchor="middle" fill="#ffffff" font-size="13.5" font-weight="600">Kilitli teslim dolapları</text>
-      <text x="877" y="536" text-anchor="middle" fill="#8a94a4" font-size="12">sipariş hazır → bölmeye</text>
-      <text x="877" y="554" text-anchor="middle" fill="#8a94a4" font-size="12">ısıtmalı / soğutmalı</text>
-
-      <!-- internal flow arrows -->
-      <path d="M488 440 H 524" fill="none" stroke="#e8eaed" stroke-width="2" marker-end="url(#arw)" transform="translate(0,-8)"/>
-      <path d="M716 432 H 796" fill="none" stroke="#e8eaed" stroke-width="2" marker-end="url(#arw)"/>
-    </g>
-
-    <!-- ================= LEFT: morning supply ================= -->
-    <g>
-      <rect x="24" y="380" width="176" height="112" rx="16" fill="#12151c" stroke="#232833"/>
-      <g fill="none" stroke="#e8eaed" stroke-width="1.8">
-        <rect x="46" y="410" width="52" height="34" rx="4"/>
-        <path d="M98 420 h26 l14 14 v10 h-40 z"/>
-        <circle cx="62" cy="452" r="7"/><circle cx="120" cy="452" r="7"/>
-      </g>
-      <text x="112" y="404" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="600">Sabah ikmali</text>
-      <text x="112" y="474" text-anchor="middle" fill="#8a94a4" font-size="11.5">1 ekip → birçok nokta</text>
-    </g>
-    <path d="M202 436 H 236" fill="none" stroke="#e8eaed" stroke-width="2" marker-end="url(#arw)"/>
-    <text x="120" y="516" fill="#8a94a4" font-size="12">taze malzeme yüklenir,</text>
-    <text x="120" y="533" fill="#8a94a4" font-size="12">sistem aktive edilir</text>
-
-    <!-- ================= BOTTOM: customer & courier ================= -->
-    <!-- customer -->
-    <g>
-      <circle cx="363" cy="656" r="11" fill="none" stroke="#e8eaed" stroke-width="2"/>
-      <path d="M340 700 a23 23 0 0 1 46 0" fill="none" stroke="#e8eaed" stroke-width="2"/>
-      <text x="404" y="660" fill="#ffffff" font-size="14" font-weight="600">Müşteri · gel-al</text>
-      <text x="404" y="681" fill="#8a94a4" font-size="12">yolda uygulamadan söyler,</text>
-      <text x="404" y="698" fill="#8a94a4" font-size="12">geldiğinde hazır — bekleme yok</text>
-    </g>
-    <path d="M363 640 V 578" fill="none" stroke="#e8eaed" stroke-width="2" marker-start="url(#arw)" marker-end="url(#arw)"/>
-
-    <!-- courier -->
-    <g>
-      <g fill="none" stroke="#e8eaed" stroke-width="2">
-        <circle cx="836" cy="700" r="11"/><circle cx="906" cy="700" r="11"/>
-        <path d="M836 700 L858 668 H884 L906 700 M884 668 L872 652 H858"/>
-      </g>
-      <rect x="928" y="648" width="88" height="30" rx="8" fill="none" stroke="#2997ff" stroke-width="1.6"/>
-      <g fill="#2997ff"><rect x="938" y="656" width="6" height="6"/><rect x="948" y="656" width="6" height="6"/><rect x="938" y="666" width="6" height="6"/><rect x="952" y="668" width="4" height="4"/></g>
-      <text x="1006" y="668" text-anchor="middle" fill="#2997ff" font-size="12" font-weight="600">QR</text>
-      <text x="928" y="700" fill="#ffffff" font-size="14" font-weight="600">Motorlu kurye</text>
-      <text x="928" y="720" fill="#8a94a4" font-size="12">QR okutur → dolap açılır →</text>
-      <text x="928" y="737" fill="#8a94a4" font-size="12">alım anı fotoğrafla kayda geçer</text>
-    </g>
-    <path d="M877 592 V 640" fill="none" stroke="#e8eaed" stroke-width="2" marker-end="url(#arw)"/>
-
-    <!-- legend -->
-    <g>
-      <line x1="70" y1="608" x2="110" y2="608" stroke="#e8eaed" stroke-width="2"/>
-      <text x="118" y="612" fill="#8a94a4" font-size="12">fiziksel akış</text>
-      <line x1="70" y1="632" x2="110" y2="632" stroke="#2997ff" stroke-width="2" stroke-dasharray="7 6"/>
-      <text x="118" y="636" fill="#8a94a4" font-size="12">veri / sinyal</text>
-    </g>
-
-    <!-- ================= DAY TIMELINE ================= -->
-    <g>
-      <rect x="60" y="778" width="1120" height="84" rx="16" fill="#12151c" stroke="#232833"/>
-      <text x="620" y="768" text-anchor="middle" fill="#8a94a4" font-size="13">Aynı nokta, günün her saati farklı menü — hiç kapanmaz</text>
-      <line x1="120" y1="820" x2="1120" y2="820" stroke="#232833" stroke-width="2"/>
-      <g text-anchor="middle">
-        <circle cx="200" cy="820" r="6" fill="#2997ff"/>
-        <text x="200" y="806" fill="#ffffff" font-size="13" font-weight="600">06:00</text>
-        <text x="200" y="846" fill="#8a94a4" font-size="12">simit · kahvaltı</text>
-        <circle cx="480" cy="820" r="6" fill="#2997ff"/>
-        <text x="480" y="806" fill="#ffffff" font-size="13" font-weight="600">12:00</text>
-        <text x="480" y="846" fill="#8a94a4" font-size="12">bowl · öğle</text>
-        <circle cx="760" cy="820" r="6" fill="#2997ff"/>
-        <text x="760" y="806" fill="#ffffff" font-size="13" font-weight="600">19:00</text>
-        <text x="760" y="846" fill="#8a94a4" font-size="12">pizza · akşam</text>
-        <circle cx="1040" cy="820" r="6" fill="#2997ff"/>
-        <text x="1040" y="806" fill="#ffffff" font-size="13" font-weight="600">02:00</text>
-        <text x="1040" y="846" fill="#8a94a4" font-size="12">gece · 7/24 devam</text>
-      </g>
-    </g>
-  </svg>
-  </div>
-</div>
-
-    <div class="rv d1" style="max-width:1020px;margin:26px auto 0">
-      <video src="../assets/store-timelapse.mp4" autoplay muted loop playsinline style="width:100%;display:block;border-radius:18px;border:1px solid #232833"></video>
-      <p class="note" style="margin-top:12px">Final tasarım — gündüzden geceye: nokta hiç kapanmaz, 7/24 çalışır.</p>
-    </div>
-    <div class="grid g3" style="text-align:left;margin-top:34px">
-      <div class="card rv d1"><div class="n">Akış 01</div><h3>Sipariş</h3><p>Müşteri cephedeki ekrandan ya da telefonundan seçer, kartla öder. Platform siparişi de (Yemeksepeti/Getir) doğrudan sisteme düşer.</p></div>
-      <div class="card rv d2"><div class="n">Akış 02</div><h3>Üretim</h3><p>Robot hamur topunu presler, soslar, malzemeyi döşer, pişirir ve kutular — 3 dakika. İnsan eli değmez, her ürün birebir aynı çıkar.</p></div>
-      <div class="card rv d1"><div class="n">Akış 03</div><h3>Teslim</h3><p>Robot kol pizzayı (istenirse içeceği de) dolabın gözüne koyar; müşteri ya da kurye QR okutup alır. Bekleme, kuyruk, temas yok.</p></div>
-    </div>
-
-    <div class="rv d1" style="max-width:1020px;margin:30px auto 0">
-      <div class="subh" style="text-align:center">Hangi mekânlarda, hangi alanlarda kullanılıyor?</div>
-      <video src="../assets/store-mekanlar.mp4" autoplay muted loop playsinline style="width:100%;display:block;border-radius:18px;border:1px solid #232833;margin-top:18px"></video>
-    </div>
-    <div class="grid g2" style="text-align:left;margin-top:26px">
-      <div class="card rv d1"><div class="n">Kampüs</div><h3>Okul &amp; yurt</h3><p>Üniversite kampüsü, okul, öğrenci yurdu — öğrenci uygulamadan yolda sipariş verir, derse giderken ya da eve dönerken alır. Gece de açık.</p></div>
-      <div class="card rv d2"><div class="n">İş yeri</div><h3>Ofis &amp; fabrika</h3><p>Plazalar, iş merkezleri, fabrika kampüsleri — öğle yoğunluğunu kuyruksuz karşılar; vardiya çıkışında gece de açıktır.</p></div>
-      <div class="card rv d1"><div class="n">Terminal</div><h3>Otogar &amp; havalimanı</h3><p>Yolcu trafiğinin 7/24 aktığı, gece yemek bulmanın zor olduğu noktalar. Sabit gideri düşük olduğu için trafiği doğrudan paraya çevirir.</p></div>
-      <div class="card rv d2"><div class="n">Tenha nokta</div><h3>Kimsenin dükkân açmadığı yerler</h3><p>Cirosu bir restoranı döndürmeye yetmeyen ama talebin var olduğu bölgeler — küçük mahalleler, sanayi siteleri, yurt çeperleri. Bu noktalar ilk kez kârlı hizmet alanı hâline gelir.</p></div>
-      <div class="card rv d1"><div class="n">Sezonluk</div><h3>Etkinlik &amp; sezon alanları</h3><p>Sahil beldeleri, festival ve fuar alanları, stadyum çevreleri — birkaç aylık yoğunluk için kimse dükkân açıp personel kurmaz; ünite sezon bitince taşınır.</p></div>
-      <div class="card rv d2"><div class="n">Avantaj</div><h3>Taşınabilir yatırım</h3><p>Nokta tutmadıysa yatırım batmaz: ünite sökülür, daha iyi performans beklenen lokasyona taşınır. Klasik şubede bu, dükkân kapatmak demektir.</p></div>
-    </div>
-
-    <div class="rv d1" style="margin-top:52px">
-      <div class="subh" style="text-align:center">Çalışma senaryoları <span>· bir günde dört akış</span></div>
-      <div class="grid g2" style="text-align:left;margin-top:24px">
-
-        <div class="card rv d1">
-          <div class="n">S1 · Sabah ikmali · ~45 dk</div><h3>Günü kuran ziyaret</h3>
-          <div style="margin-top:14px;display:flex;flex-direction:column;gap:9px">
-            <div style="display:flex;gap:11px"><span style="flex:0 0 21px;height:21px;border-radius:50%;background:rgba(41,151,255,.15);color:var(--blue);font-size:11.5px;font-weight:700;display:flex;align-items:center;justify-content:center">1</span><span style="color:#B0B0B5;font-size:15px;line-height:1.5">İkmal ekibi servis kapısından girer; aynı ekip o gün birkaç noktayı dolaşır.</span></div>
-            <div style="display:flex;gap:11px"><span style="flex:0 0 21px;height:21px;border-radius:50%;background:rgba(41,151,255,.15);color:var(--blue);font-size:11.5px;font-weight:700;display:flex;align-items:center;justify-content:center">2</span><span style="color:#B0B0B5;font-size:15px;line-height:1.5">Hamur topu haznesini, sos ve malzeme kartuşlarını doldurur, kutu şeridini yükler.</span></div>
-            <div style="display:flex;gap:11px"><span style="flex:0 0 21px;height:21px;border-radius:50%;background:rgba(41,151,255,.15);color:var(--blue);font-size:11.5px;font-weight:700;display:flex;align-items:center;justify-content:center">3</span><span style="color:#B0B0B5;font-size:15px;line-height:1.5">Gelen tedarik sevkiyatını malzeme dolabına yerleştirir (2–3 günde bir).</span></div>
-            <div style="display:flex;gap:11px"><span style="flex:0 0 21px;height:21px;border-radius:50%;background:rgba(41,151,255,.15);color:var(--blue);font-size:11.5px;font-weight:700;display:flex;align-items:center;justify-content:center">4</span><span style="color:#B0B0B5;font-size:15px;line-height:1.5">Hijyen turunu yapar, dijital kontrol listesini kapatır, dolap gözlerini temizler.</span></div>
-          </div>
-        </div>
-
-        <div class="card rv d2">
-          <div class="n">S2 · Yerinde sipariş · 7/24</div><h3>Ekrandan alıp gitmek</h3>
-          <div style="margin-top:14px;display:flex;flex-direction:column;gap:9px">
-            <div style="display:flex;gap:11px"><span style="flex:0 0 21px;height:21px;border-radius:50%;background:rgba(41,151,255,.15);color:var(--blue);font-size:11.5px;font-weight:700;display:flex;align-items:center;justify-content:center">1</span><span style="color:#B0B0B5;font-size:15px;line-height:1.5">Müşteri cephedeki ekrandan seçer, kartla öder. Kuyruk ve kasa yok.</span></div>
-            <div style="display:flex;gap:11px"><span style="flex:0 0 21px;height:21px;border-radius:50%;background:rgba(41,151,255,.15);color:var(--blue);font-size:11.5px;font-weight:700;display:flex;align-items:center;justify-content:center">2</span><span style="color:#B0B0B5;font-size:15px;line-height:1.5">Robot hamur topunu presler, soslar, pişirir, kutular (~3 dk).</span></div>
-            <div style="display:flex;gap:11px"><span style="flex:0 0 21px;height:21px;border-radius:50%;background:rgba(41,151,255,.15);color:var(--blue);font-size:11.5px;font-weight:700;display:flex;align-items:center;justify-content:center">3</span><span style="color:#B0B0B5;font-size:15px;line-height:1.5">Robot kol pizzayı — istenirse içeceği de — dolabın gözüne koyar.</span></div>
-            <div style="display:flex;gap:11px"><span style="flex:0 0 21px;height:21px;border-radius:50%;background:rgba(41,151,255,.15);color:var(--blue);font-size:11.5px;font-weight:700;display:flex;align-items:center;justify-content:center">4</span><span style="color:#B0B0B5;font-size:15px;line-height:1.5">Ekranda göz numarası ve QR belirir; müşteri açar, alır, gider.</span></div>
-          </div>
-        </div>
-
-        <div class="card rv d1">
-          <div class="n">S3 · Platform siparişi · 7/24</div><h3>Kurye teslimi</h3>
-          <div style="margin-top:14px;display:flex;flex-direction:column;gap:9px">
-            <div style="display:flex;gap:11px"><span style="flex:0 0 21px;height:21px;border-radius:50%;background:rgba(41,151,255,.15);color:var(--blue);font-size:11.5px;font-weight:700;display:flex;align-items:center;justify-content:center">1</span><span style="color:#B0B0B5;font-size:15px;line-height:1.5">Yemeksepeti/Getir ya da kendi uygulamamızdan sipariş sisteme düşer.</span></div>
-            <div style="display:flex;gap:11px"><span style="flex:0 0 21px;height:21px;border-radius:50%;background:rgba(41,151,255,.15);color:var(--blue);font-size:11.5px;font-weight:700;display:flex;align-items:center;justify-content:center">2</span><span style="color:#B0B0B5;font-size:15px;line-height:1.5">Robot üretir; kol ısıtmalı göze koyar, kurye çağrısı otomatik açılır.</span></div>
-            <div style="display:flex;gap:11px"><span style="flex:0 0 21px;height:21px;border-radius:50%;background:rgba(41,151,255,.15);color:var(--blue);font-size:11.5px;font-weight:700;display:flex;align-items:center;justify-content:center">3</span><span style="color:#B0B0B5;font-size:15px;line-height:1.5">Kurye dolapta QR okutur, göz açılır, alır gider — kimseyle muhatap olmaz.</span></div>
-            <div style="display:flex;gap:11px"><span style="flex:0 0 21px;height:21px;border-radius:50%;background:rgba(41,151,255,.15);color:var(--blue);font-size:11.5px;font-weight:700;display:flex;align-items:center;justify-content:center">4</span><span style="color:#B0B0B5;font-size:15px;line-height:1.5">Alım anı kayda geçer; sipariş durumu müşterinin telefonuna düşer.</span></div>
-          </div>
-        </div>
-
-        <div class="card rv d2">
-          <div class="n">S4 · Uzaktan izleme · sürekli</div><h3>Noktayı uzaktan yönetmek</h3>
-          <div style="margin-top:14px;display:flex;flex-direction:column;gap:9px">
-            <div style="display:flex;gap:11px"><span style="flex:0 0 21px;height:21px;border-radius:50%;background:rgba(41,151,255,.15);color:var(--blue);font-size:11.5px;font-weight:700;display:flex;align-items:center;justify-content:center">1</span><span style="color:#B0B0B5;font-size:15px;line-height:1.5">Satış, stok seviyesi ve dolap sıcaklıkları sürekli merkeze akar.</span></div>
-            <div style="display:flex;gap:11px"><span style="flex:0 0 21px;height:21px;border-radius:50%;background:rgba(41,151,255,.15);color:var(--blue);font-size:11.5px;font-weight:700;display:flex;align-items:center;justify-content:center">2</span><span style="color:#B0B0B5;font-size:15px;line-height:1.5">Stok azalınca ya da arıza olunca uyarı doğrudan işletme sahibine gider.</span></div>
-            <div style="display:flex;gap:11px"><span style="flex:0 0 21px;height:21px;border-radius:50%;background:rgba(41,151,255,.15);color:var(--blue);font-size:11.5px;font-weight:700;display:flex;align-items:center;justify-content:center">3</span><span style="color:#B0B0B5;font-size:15px;line-height:1.5">Menü, fiyat ve kampanya tüm noktalara uzaktan tek seferde yüklenir.</span></div>
-            <div style="display:flex;gap:11px"><span style="flex:0 0 21px;height:21px;border-radius:50%;background:rgba(41,151,255,.15);color:var(--blue);font-size:11.5px;font-weight:700;display:flex;align-items:center;justify-content:center">4</span><span style="color:#B0B0B5;font-size:15px;line-height:1.5">Hangi ürün hangi saatte nerede satıyor — yeni nokta seçimi bu veriyle yapılır.</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="subh rv" style="text-align:center;margin-top:52px">Konum mantığı ve avantajlar <span>· bu model neden bu noktalarda kazanır</span></div>
-    <div class="grid g2" style="text-align:left;margin-top:24px">
-      <div class="card rv d1"><div class="n">Konum</div><h3>İnsan trafiği olan ama dükkân olmayan yerler</h3><p>Okul ve yurt, ofis ve fabrika kampüsleri, otogar ve havalimanı, kimsenin dükkân açmadığı tenha noktalar, etkinlik ve sezon alanları. Şehir içi cadde üstü bu modelin hedefi değildir.</p></div>
-      <div class="card rv d2"><div class="n">Fark</div><h3>Noktada hiç personel yok</h3><p>Ne kasiyer, ne usta, ne gece vardiyası. Tek insan teması günde ~45 dakikalık ikmal ziyareti — o da birkaç noktaya birden bakan tek ekip.</p></div>
-      <div class="card rv d1"><div class="n">Avantaj 01</div><h3>Sektörün en düşük başabaşı</h3><p>Bordro yükü neredeyse sıfır olduğu için nokta günde 14 pizzada masrafını çıkarır. Klasik bir şubenin "burada tutmaz" dediği ciro, bu model için yeterlidir.</p></div>
-      <div class="card rv d2"><div class="n">Avantaj 02</div><h3>Taşınabilir yatırım</h3><p>Nokta tutmadıysa yatırım batmaz: ünite sökülür, daha iyi performans beklenen lokasyona taşınır. Klasik şubede bu, dükkân kapatmak demektir.</p></div>
-      <div class="card rv d1"><div class="n">Avantaj 03</div><h3>Personel riski yok</h3><p>Sektörün en büyük sorunu eleman bulmak ve elde tutmak. Bu modelde işe alım, vardiya, devir ve gece zammı diye bir kalem yoktur.</p></div>
-      <div class="card rv d2"><div class="n">Avantaj 04</div><h3>Veriyle büyür</h3><p>Her nokta hangi ürünün hangi saatte nerede sattığını raporlar; menü ve yeni nokta seçimi tahminle değil veriyle yapılır. İki model de aynı panele bağlanır.</p></div>
-    </div>
-
-    <p class="note rv" style="margin-top:18px">Bu modelde şehir içi cadde üstü hedeflenmez — oralarda insan teması ve yaya trafiği daha değerlidir; onun için <a href="#store-m" style="color:var(--blue)">Model M</a> vardır.</p>
   </div>
 </section>
 
@@ -1187,6 +925,268 @@ section#store-m a[style*="color:var(--blue)"]{color:#c2600f!important}
   </div>
 </section>
 
+<!-- ============ MODEL S · INSANSIZ ============ -->
+<section id="store-s" class="center">
+  <div class="wrap">
+    <div class="eyebrow rv">Model S · İnsansız Store</div>
+    <h2 class="rv d1">İnsana ihtiyaç duymadan,<br>6 m²'de <span class="accent">durmadan</span> satış.</h2>
+    <p class="lead rv d2">İçinde robot mutfak, dışında sipariş ekranı ve QR'lı teslim dolabı olan kompakt ünite. Noktada çalışan yok; günde bir kez gelen ikmal ekibi var, o da birden çok noktaya bakar. Model tanıdık: insanların "robot Starbucks" diye bildiği robot kahve kioskları (Cafe X, Costa, Artly) yıllardır aynen böyle çalışıyor.</p>
+
+<!-- SISTEM SEMASI -->
+<div class="rv d1" style="margin-top:44px">
+  <div class="subh" style="text-align:center">Sistem şeması <span>· insansız nokta nasıl çalışır</span></div>
+  <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;margin-top:22px;border:1px solid #232833;border-radius:18px;background:#0d1016">
+  <svg viewBox="0 0 1240 900" style="min-width:960px;width:100%;display:block" font-family="inherit" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <marker id="arw" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#e8eaed"/></marker>
+      <marker id="arb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2997ff"/></marker>
+    </defs>
+
+    <!-- ================= TOP: cloud brain + panels ================= -->
+    <!-- remote monitoring panel -->
+    <g>
+      <rect x="60" y="52" width="230" height="120" rx="16" fill="#12151c" stroke="#232833"/>
+      <rect x="84" y="76" width="44" height="72" rx="8" fill="none" stroke="#8a94a4" stroke-width="1.8"/>
+      <line x1="98" y1="138" x2="114" y2="138" stroke="#8a94a4" stroke-width="1.8"/>
+      <polyline points="90,120 98,108 106,114 114,98" fill="none" stroke="#2997ff" stroke-width="2"/>
+      <text x="146" y="92" fill="#ffffff" font-size="15" font-weight="600">Uzaktan izleme</text>
+      <text x="146" y="114" fill="#8a94a4" font-size="12.5">canlı sipariş · satış</text>
+      <text x="146" y="132" fill="#8a94a4" font-size="12.5">arıza uyarısı · analiz</text>
+      <text x="146" y="150" fill="#8a94a4" font-size="12.5">tüm noktalar tek panel</text>
+    </g>
+
+    <!-- cloud: kitchen brain -->
+    <g>
+      <path d="M560 132a34 34 0 0 1 6-67 44 44 0 0 1 84-12 36 36 0 0 1 44 35 30 30 0 0 1-8 44z" fill="#12151c" stroke="#2997ff" stroke-width="2"/>
+      <text x="622" y="96" text-anchor="middle" fill="#ffffff" font-size="15.5" font-weight="600">AI Mutfak Beyni</text>
+      <text x="622" y="116" text-anchor="middle" fill="#8a94a4" font-size="12.5">reçete · planlama · tahmin</text>
+    </g>
+
+    <!-- order channels -->
+    <g>
+      <rect x="950" y="52" width="230" height="120" rx="16" fill="#12151c" stroke="#232833"/>
+      <text x="1065" y="82" text-anchor="middle" fill="#ffffff" font-size="15" font-weight="600">Sipariş kanalları</text>
+      <rect x="972" y="96" width="60" height="26" rx="8" fill="none" stroke="#8a94a4"/><text x="1002" y="113" text-anchor="middle" fill="#b7bfcc" font-size="11.5">Getir</text>
+      <rect x="1040" y="96" width="88" height="26" rx="8" fill="none" stroke="#8a94a4"/><text x="1084" y="113" text-anchor="middle" fill="#b7bfcc" font-size="11.5">Yemeksepeti</text>
+      <rect x="972" y="130" width="156" height="26" rx="8" fill="none" stroke="#8a94a4"/><text x="1050" y="147" text-anchor="middle" fill="#b7bfcc" font-size="11.5">Kendi uygulamamız</text>
+    </g>
+
+    <!-- data links (dashed blue) -->
+    <path d="M292 112 H 508" fill="none" stroke="#2997ff" stroke-width="2" stroke-dasharray="7 6" marker-start="url(#arb)" marker-end="url(#arb)"/>
+    <path d="M948 112 H 742" fill="none" stroke="#2997ff" stroke-width="2" stroke-dasharray="7 6" marker-end="url(#arb)"/>
+    <text x="845" y="100" text-anchor="middle" fill="#2997ff" font-size="12">siparişler düşer</text>
+    <path d="M622 150 V 268" fill="none" stroke="#2997ff" stroke-width="2" stroke-dasharray="7 6" marker-start="url(#arb)" marker-end="url(#arb)"/>
+    <text x="638" y="200" fill="#2997ff" font-size="12">komut ↓</text>
+    <text x="638" y="240" fill="#2997ff" font-size="12">telemetri ↑</text>
+
+    <!-- ================= CENTER: the store ================= -->
+    <g>
+      <rect x="240" y="272" width="760" height="300" rx="22" fill="rgba(41,151,255,.05)" stroke="#2997ff" stroke-width="2"/>
+      <rect x="240" y="272" width="760" height="46" rx="22" fill="rgba(41,151,255,.10)"/>
+      <text x="620" y="302" text-anchor="middle" fill="#ffffff" font-size="17" font-weight="700" letter-spacing=".04em">AUTOKITCH STORE — pop-up kimlikli otonom nokta</text>
+      <line x1="486" y1="332" x2="486" y2="556" stroke="#232833" stroke-dasharray="5 6"/>
+      <line x1="754" y1="332" x2="754" y2="556" stroke="#232833" stroke-dasharray="5 6"/>
+
+      <!-- ZONE: front -->
+      <text x="363" y="356" text-anchor="middle" fill="#2997ff" font-size="12.5" font-weight="700" letter-spacing=".1em">ÖN</text>
+      <rect x="308" y="376" width="66" height="88" rx="8" fill="#0d1016" stroke="#e8eaed" stroke-width="1.8"/>
+      <rect x="318" y="388" width="46" height="52" rx="4" fill="none" stroke="#2997ff" stroke-width="1.6"/>
+      <rect x="332" y="470" width="18" height="14" fill="none" stroke="#e8eaed" stroke-width="1.6"/>
+      <text x="418" y="400" fill="#ffffff" font-size="13.5" font-weight="600">Sipariş ekranı</text>
+      <text x="418" y="420" fill="#8a94a4" font-size="12">dokunmatik / QR</text>
+      <text x="418" y="444" fill="#ffffff" font-size="13.5" font-weight="600">Gel-al tezgahı</text>
+      <text x="418" y="464" fill="#8a94a4" font-size="12">hazır sipariş burada</text>
+      <text x="363" y="540" text-anchor="middle" fill="#8a94a4" font-size="12">müşteri yüzü:</text>
+      <text x="363" y="557" text-anchor="middle" fill="#8a94a4" font-size="12">temiz marka, sıfır kuyruk</text>
+
+      <!-- ZONE: middle robot kitchen -->
+      <text x="620" y="356" text-anchor="middle" fill="#2997ff" font-size="12.5" font-weight="700" letter-spacing=".1em">İÇ — GÖRÜNMEZ</text>
+      <g stroke="#e8eaed" stroke-width="2" fill="none">
+        <circle cx="560" cy="470" r="9"/>
+        <path d="M560 461 L560 430 L604 402"/>
+        <circle cx="604" cy="402" r="7"/>
+        <path d="M604 402 L648 418"/>
+        <path d="M640 428 a12 12 0 0 0 20 -6" stroke="#2997ff"/>
+      </g>
+      <rect x="530" y="486" width="180" height="10" rx="5" fill="none" stroke="#8a94a4"/>
+      <text x="620" y="522" text-anchor="middle" fill="#ffffff" font-size="13.5" font-weight="600">AI mutfak modülleri — otonom üretim</text>
+      <text x="620" y="542" text-anchor="middle" fill="#8a94a4" font-size="12">hamur · sos · fırın · paket — insan eli değmeden</text>
+      <text x="620" y="560" text-anchor="middle" fill="#8a94a4" font-size="12">gün sonu CIP: kendi kendini temizler</text>
+
+      <!-- ZONE: back lockers -->
+      <text x="877" y="356" text-anchor="middle" fill="#2997ff" font-size="12.5" font-weight="700" letter-spacing=".1em">ARKA</text>
+      <g fill="none" stroke="#e8eaed" stroke-width="1.8">
+        <rect x="800" y="376" width="154" height="112" rx="10"/>
+        <line x1="877" y1="376" x2="877" y2="488"/>
+        <line x1="800" y1="432" x2="954" y2="432"/>
+      </g>
+      <circle cx="862" cy="404" r="3" fill="#2997ff"/><circle cx="939" cy="404" r="3" fill="#2997ff"/>
+      <circle cx="862" cy="460" r="3" fill="#2997ff"/><circle cx="939" cy="460" r="3" fill="#2997ff"/>
+      <text x="877" y="516" text-anchor="middle" fill="#ffffff" font-size="13.5" font-weight="600">Kilitli teslim dolapları</text>
+      <text x="877" y="536" text-anchor="middle" fill="#8a94a4" font-size="12">sipariş hazır → bölmeye</text>
+      <text x="877" y="554" text-anchor="middle" fill="#8a94a4" font-size="12">ısıtmalı / soğutmalı</text>
+
+      <!-- internal flow arrows -->
+      <path d="M488 440 H 524" fill="none" stroke="#e8eaed" stroke-width="2" marker-end="url(#arw)" transform="translate(0,-8)"/>
+      <path d="M716 432 H 796" fill="none" stroke="#e8eaed" stroke-width="2" marker-end="url(#arw)"/>
+    </g>
+
+    <!-- ================= LEFT: morning supply ================= -->
+    <g>
+      <rect x="24" y="380" width="176" height="112" rx="16" fill="#12151c" stroke="#232833"/>
+      <g fill="none" stroke="#e8eaed" stroke-width="1.8">
+        <rect x="46" y="410" width="52" height="34" rx="4"/>
+        <path d="M98 420 h26 l14 14 v10 h-40 z"/>
+        <circle cx="62" cy="452" r="7"/><circle cx="120" cy="452" r="7"/>
+      </g>
+      <text x="112" y="404" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="600">Sabah ikmali</text>
+      <text x="112" y="474" text-anchor="middle" fill="#8a94a4" font-size="11.5">1 ekip → birçok nokta</text>
+    </g>
+    <path d="M202 436 H 236" fill="none" stroke="#e8eaed" stroke-width="2" marker-end="url(#arw)"/>
+    <text x="120" y="516" fill="#8a94a4" font-size="12">taze malzeme yüklenir,</text>
+    <text x="120" y="533" fill="#8a94a4" font-size="12">sistem aktive edilir</text>
+
+    <!-- ================= BOTTOM: customer & courier ================= -->
+    <!-- customer -->
+    <g>
+      <circle cx="363" cy="656" r="11" fill="none" stroke="#e8eaed" stroke-width="2"/>
+      <path d="M340 700 a23 23 0 0 1 46 0" fill="none" stroke="#e8eaed" stroke-width="2"/>
+      <text x="404" y="660" fill="#ffffff" font-size="14" font-weight="600">Müşteri · gel-al</text>
+      <text x="404" y="681" fill="#8a94a4" font-size="12">yolda uygulamadan söyler,</text>
+      <text x="404" y="698" fill="#8a94a4" font-size="12">geldiğinde hazır — bekleme yok</text>
+    </g>
+    <path d="M363 640 V 578" fill="none" stroke="#e8eaed" stroke-width="2" marker-start="url(#arw)" marker-end="url(#arw)"/>
+
+    <!-- courier -->
+    <g>
+      <g fill="none" stroke="#e8eaed" stroke-width="2">
+        <circle cx="836" cy="700" r="11"/><circle cx="906" cy="700" r="11"/>
+        <path d="M836 700 L858 668 H884 L906 700 M884 668 L872 652 H858"/>
+      </g>
+      <rect x="928" y="648" width="88" height="30" rx="8" fill="none" stroke="#2997ff" stroke-width="1.6"/>
+      <g fill="#2997ff"><rect x="938" y="656" width="6" height="6"/><rect x="948" y="656" width="6" height="6"/><rect x="938" y="666" width="6" height="6"/><rect x="952" y="668" width="4" height="4"/></g>
+      <text x="1006" y="668" text-anchor="middle" fill="#2997ff" font-size="12" font-weight="600">QR</text>
+      <text x="928" y="700" fill="#ffffff" font-size="14" font-weight="600">Motorlu kurye</text>
+      <text x="928" y="720" fill="#8a94a4" font-size="12">QR okutur → dolap açılır →</text>
+      <text x="928" y="737" fill="#8a94a4" font-size="12">alım anı fotoğrafla kayda geçer</text>
+    </g>
+    <path d="M877 592 V 640" fill="none" stroke="#e8eaed" stroke-width="2" marker-end="url(#arw)"/>
+
+    <!-- legend -->
+    <g>
+      <line x1="70" y1="608" x2="110" y2="608" stroke="#e8eaed" stroke-width="2"/>
+      <text x="118" y="612" fill="#8a94a4" font-size="12">fiziksel akış</text>
+      <line x1="70" y1="632" x2="110" y2="632" stroke="#2997ff" stroke-width="2" stroke-dasharray="7 6"/>
+      <text x="118" y="636" fill="#8a94a4" font-size="12">veri / sinyal</text>
+    </g>
+
+    <!-- ================= DAY TIMELINE ================= -->
+    <g>
+      <rect x="60" y="778" width="1120" height="84" rx="16" fill="#12151c" stroke="#232833"/>
+      <text x="620" y="768" text-anchor="middle" fill="#8a94a4" font-size="13">Aynı nokta, günün her saati farklı menü — hiç kapanmaz</text>
+      <line x1="120" y1="820" x2="1120" y2="820" stroke="#232833" stroke-width="2"/>
+      <g text-anchor="middle">
+        <circle cx="200" cy="820" r="6" fill="#2997ff"/>
+        <text x="200" y="806" fill="#ffffff" font-size="13" font-weight="600">06:00</text>
+        <text x="200" y="846" fill="#8a94a4" font-size="12">simit · kahvaltı</text>
+        <circle cx="480" cy="820" r="6" fill="#2997ff"/>
+        <text x="480" y="806" fill="#ffffff" font-size="13" font-weight="600">12:00</text>
+        <text x="480" y="846" fill="#8a94a4" font-size="12">bowl · öğle</text>
+        <circle cx="760" cy="820" r="6" fill="#2997ff"/>
+        <text x="760" y="806" fill="#ffffff" font-size="13" font-weight="600">19:00</text>
+        <text x="760" y="846" fill="#8a94a4" font-size="12">pizza · akşam</text>
+        <circle cx="1040" cy="820" r="6" fill="#2997ff"/>
+        <text x="1040" y="806" fill="#ffffff" font-size="13" font-weight="600">02:00</text>
+        <text x="1040" y="846" fill="#8a94a4" font-size="12">gece · 7/24 devam</text>
+      </g>
+    </g>
+  </svg>
+  </div>
+</div>
+
+    <div class="rv d1" style="max-width:1020px;margin:26px auto 0">
+      <video src="../assets/store-timelapse.mp4" autoplay muted loop playsinline style="width:100%;display:block;border-radius:18px;border:1px solid #232833"></video>
+      <p class="note" style="margin-top:12px">Final tasarım — gündüzden geceye: nokta hiç kapanmaz, 7/24 çalışır.</p>
+    </div>
+    <div class="grid g3" style="text-align:left;margin-top:34px">
+      <div class="card rv d1"><div class="n">Akış 01</div><h3>Sipariş</h3><p>Müşteri cephedeki ekrandan ya da telefonundan seçer, kartla öder. Platform siparişi de (Yemeksepeti/Getir) doğrudan sisteme düşer.</p></div>
+      <div class="card rv d2"><div class="n">Akış 02</div><h3>Üretim</h3><p>Robot hamur topunu presler, soslar, malzemeyi döşer, pişirir ve kutular — 3 dakika. İnsan eli değmez, her ürün birebir aynı çıkar.</p></div>
+      <div class="card rv d1"><div class="n">Akış 03</div><h3>Teslim</h3><p>Robot kol pizzayı (istenirse içeceği de) dolabın gözüne koyar; müşteri ya da kurye QR okutup alır. Bekleme, kuyruk, temas yok.</p></div>
+    </div>
+
+    <div class="rv d1" style="max-width:1020px;margin:30px auto 0">
+      <div class="subh" style="text-align:center">Hangi mekânlarda, hangi alanlarda kullanılıyor?</div>
+      <video src="../assets/store-mekanlar.mp4" autoplay muted loop playsinline style="width:100%;display:block;border-radius:18px;border:1px solid #232833;margin-top:18px"></video>
+    </div>
+    <div class="grid g2" style="text-align:left;margin-top:26px">
+      <div class="card rv d1"><div class="n">Kampüs</div><h3>Okul &amp; yurt</h3><p>Üniversite kampüsü, okul, öğrenci yurdu — öğrenci uygulamadan yolda sipariş verir, derse giderken ya da eve dönerken alır. Gece de açık.</p></div>
+      <div class="card rv d2"><div class="n">İş yeri</div><h3>Ofis &amp; fabrika</h3><p>Plazalar, iş merkezleri, fabrika kampüsleri — öğle yoğunluğunu kuyruksuz karşılar; vardiya çıkışında gece de açıktır.</p></div>
+      <div class="card rv d1"><div class="n">Terminal</div><h3>Otogar &amp; havalimanı</h3><p>Yolcu trafiğinin 7/24 aktığı, gece yemek bulmanın zor olduğu noktalar. Sabit gideri düşük olduğu için trafiği doğrudan paraya çevirir.</p></div>
+      <div class="card rv d2"><div class="n">Tenha nokta</div><h3>Kimsenin dükkân açmadığı yerler</h3><p>Cirosu bir restoranı döndürmeye yetmeyen ama talebin var olduğu bölgeler — küçük mahalleler, sanayi siteleri, yurt çeperleri. Bu noktalar ilk kez kârlı hizmet alanı hâline gelir.</p></div>
+      <div class="card rv d1"><div class="n">Sezonluk</div><h3>Etkinlik &amp; sezon alanları</h3><p>Sahil beldeleri, festival ve fuar alanları, stadyum çevreleri — birkaç aylık yoğunluk için kimse dükkân açıp personel kurmaz; ünite sezon bitince taşınır.</p></div>
+      <div class="card rv d2"><div class="n">Avantaj</div><h3>Taşınabilir yatırım</h3><p>Nokta tutmadıysa yatırım batmaz: ünite sökülür, daha iyi performans beklenen lokasyona taşınır. Klasik şubede bu, dükkân kapatmak demektir.</p></div>
+    </div>
+
+    <div class="rv d1" style="margin-top:52px">
+      <div class="subh" style="text-align:center">Çalışma senaryoları <span>· bir günde dört akış</span></div>
+      <div class="grid g2" style="text-align:left;margin-top:24px">
+
+        <div class="card rv d1">
+          <div class="n">S1 · Sabah ikmali · ~45 dk</div><h3>Günü kuran ziyaret</h3>
+          <div style="margin-top:14px;display:flex;flex-direction:column;gap:9px">
+            <div style="display:flex;gap:11px"><span style="flex:0 0 21px;height:21px;border-radius:50%;background:rgba(41,151,255,.15);color:var(--blue);font-size:11.5px;font-weight:700;display:flex;align-items:center;justify-content:center">1</span><span style="color:#B0B0B5;font-size:15px;line-height:1.5">İkmal ekibi servis kapısından girer; aynı ekip o gün birkaç noktayı dolaşır.</span></div>
+            <div style="display:flex;gap:11px"><span style="flex:0 0 21px;height:21px;border-radius:50%;background:rgba(41,151,255,.15);color:var(--blue);font-size:11.5px;font-weight:700;display:flex;align-items:center;justify-content:center">2</span><span style="color:#B0B0B5;font-size:15px;line-height:1.5">Hamur topu haznesini, sos ve malzeme kartuşlarını doldurur, kutu şeridini yükler.</span></div>
+            <div style="display:flex;gap:11px"><span style="flex:0 0 21px;height:21px;border-radius:50%;background:rgba(41,151,255,.15);color:var(--blue);font-size:11.5px;font-weight:700;display:flex;align-items:center;justify-content:center">3</span><span style="color:#B0B0B5;font-size:15px;line-height:1.5">Gelen tedarik sevkiyatını malzeme dolabına yerleştirir (2–3 günde bir).</span></div>
+            <div style="display:flex;gap:11px"><span style="flex:0 0 21px;height:21px;border-radius:50%;background:rgba(41,151,255,.15);color:var(--blue);font-size:11.5px;font-weight:700;display:flex;align-items:center;justify-content:center">4</span><span style="color:#B0B0B5;font-size:15px;line-height:1.5">Hijyen turunu yapar, dijital kontrol listesini kapatır, dolap gözlerini temizler.</span></div>
+          </div>
+        </div>
+
+        <div class="card rv d2">
+          <div class="n">S2 · Yerinde sipariş · 7/24</div><h3>Ekrandan alıp gitmek</h3>
+          <div style="margin-top:14px;display:flex;flex-direction:column;gap:9px">
+            <div style="display:flex;gap:11px"><span style="flex:0 0 21px;height:21px;border-radius:50%;background:rgba(41,151,255,.15);color:var(--blue);font-size:11.5px;font-weight:700;display:flex;align-items:center;justify-content:center">1</span><span style="color:#B0B0B5;font-size:15px;line-height:1.5">Müşteri cephedeki ekrandan seçer, kartla öder. Kuyruk ve kasa yok.</span></div>
+            <div style="display:flex;gap:11px"><span style="flex:0 0 21px;height:21px;border-radius:50%;background:rgba(41,151,255,.15);color:var(--blue);font-size:11.5px;font-weight:700;display:flex;align-items:center;justify-content:center">2</span><span style="color:#B0B0B5;font-size:15px;line-height:1.5">Robot hamur topunu presler, soslar, pişirir, kutular (~3 dk).</span></div>
+            <div style="display:flex;gap:11px"><span style="flex:0 0 21px;height:21px;border-radius:50%;background:rgba(41,151,255,.15);color:var(--blue);font-size:11.5px;font-weight:700;display:flex;align-items:center;justify-content:center">3</span><span style="color:#B0B0B5;font-size:15px;line-height:1.5">Robot kol pizzayı — istenirse içeceği de — dolabın gözüne koyar.</span></div>
+            <div style="display:flex;gap:11px"><span style="flex:0 0 21px;height:21px;border-radius:50%;background:rgba(41,151,255,.15);color:var(--blue);font-size:11.5px;font-weight:700;display:flex;align-items:center;justify-content:center">4</span><span style="color:#B0B0B5;font-size:15px;line-height:1.5">Ekranda göz numarası ve QR belirir; müşteri açar, alır, gider.</span></div>
+          </div>
+        </div>
+
+        <div class="card rv d1">
+          <div class="n">S3 · Platform siparişi · 7/24</div><h3>Kurye teslimi</h3>
+          <div style="margin-top:14px;display:flex;flex-direction:column;gap:9px">
+            <div style="display:flex;gap:11px"><span style="flex:0 0 21px;height:21px;border-radius:50%;background:rgba(41,151,255,.15);color:var(--blue);font-size:11.5px;font-weight:700;display:flex;align-items:center;justify-content:center">1</span><span style="color:#B0B0B5;font-size:15px;line-height:1.5">Yemeksepeti/Getir ya da kendi uygulamamızdan sipariş sisteme düşer.</span></div>
+            <div style="display:flex;gap:11px"><span style="flex:0 0 21px;height:21px;border-radius:50%;background:rgba(41,151,255,.15);color:var(--blue);font-size:11.5px;font-weight:700;display:flex;align-items:center;justify-content:center">2</span><span style="color:#B0B0B5;font-size:15px;line-height:1.5">Robot üretir; kol ısıtmalı göze koyar, kurye çağrısı otomatik açılır.</span></div>
+            <div style="display:flex;gap:11px"><span style="flex:0 0 21px;height:21px;border-radius:50%;background:rgba(41,151,255,.15);color:var(--blue);font-size:11.5px;font-weight:700;display:flex;align-items:center;justify-content:center">3</span><span style="color:#B0B0B5;font-size:15px;line-height:1.5">Kurye dolapta QR okutur, göz açılır, alır gider — kimseyle muhatap olmaz.</span></div>
+            <div style="display:flex;gap:11px"><span style="flex:0 0 21px;height:21px;border-radius:50%;background:rgba(41,151,255,.15);color:var(--blue);font-size:11.5px;font-weight:700;display:flex;align-items:center;justify-content:center">4</span><span style="color:#B0B0B5;font-size:15px;line-height:1.5">Alım anı kayda geçer; sipariş durumu müşterinin telefonuna düşer.</span></div>
+          </div>
+        </div>
+
+        <div class="card rv d2">
+          <div class="n">S4 · Uzaktan izleme · sürekli</div><h3>Noktayı uzaktan yönetmek</h3>
+          <div style="margin-top:14px;display:flex;flex-direction:column;gap:9px">
+            <div style="display:flex;gap:11px"><span style="flex:0 0 21px;height:21px;border-radius:50%;background:rgba(41,151,255,.15);color:var(--blue);font-size:11.5px;font-weight:700;display:flex;align-items:center;justify-content:center">1</span><span style="color:#B0B0B5;font-size:15px;line-height:1.5">Satış, stok seviyesi ve dolap sıcaklıkları sürekli merkeze akar.</span></div>
+            <div style="display:flex;gap:11px"><span style="flex:0 0 21px;height:21px;border-radius:50%;background:rgba(41,151,255,.15);color:var(--blue);font-size:11.5px;font-weight:700;display:flex;align-items:center;justify-content:center">2</span><span style="color:#B0B0B5;font-size:15px;line-height:1.5">Stok azalınca ya da arıza olunca uyarı doğrudan işletme sahibine gider.</span></div>
+            <div style="display:flex;gap:11px"><span style="flex:0 0 21px;height:21px;border-radius:50%;background:rgba(41,151,255,.15);color:var(--blue);font-size:11.5px;font-weight:700;display:flex;align-items:center;justify-content:center">3</span><span style="color:#B0B0B5;font-size:15px;line-height:1.5">Menü, fiyat ve kampanya tüm noktalara uzaktan tek seferde yüklenir.</span></div>
+            <div style="display:flex;gap:11px"><span style="flex:0 0 21px;height:21px;border-radius:50%;background:rgba(41,151,255,.15);color:var(--blue);font-size:11.5px;font-weight:700;display:flex;align-items:center;justify-content:center">4</span><span style="color:#B0B0B5;font-size:15px;line-height:1.5">Hangi ürün hangi saatte nerede satıyor — yeni nokta seçimi bu veriyle yapılır.</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="subh rv" style="text-align:center;margin-top:52px">Konum mantığı ve avantajlar <span>· bu model neden bu noktalarda kazanır</span></div>
+    <div class="grid g2" style="text-align:left;margin-top:24px">
+      <div class="card rv d1"><div class="n">Konum</div><h3>İnsan trafiği olan ama dükkân olmayan yerler</h3><p>Okul ve yurt, ofis ve fabrika kampüsleri, otogar ve havalimanı, kimsenin dükkân açmadığı tenha noktalar, etkinlik ve sezon alanları. Şehir içi cadde üstü bu modelin hedefi değildir.</p></div>
+      <div class="card rv d2"><div class="n">Fark</div><h3>Noktada hiç personel yok</h3><p>Ne kasiyer, ne usta, ne gece vardiyası. Tek insan teması günde ~45 dakikalık ikmal ziyareti — o da birkaç noktaya birden bakan tek ekip.</p></div>
+      <div class="card rv d1"><div class="n">Avantaj 01</div><h3>Sektörün en düşük başabaşı</h3><p>Bordro yükü neredeyse sıfır olduğu için nokta günde 14 pizzada masrafını çıkarır. Klasik bir şubenin "burada tutmaz" dediği ciro, bu model için yeterlidir.</p></div>
+      <div class="card rv d2"><div class="n">Avantaj 02</div><h3>Taşınabilir yatırım</h3><p>Nokta tutmadıysa yatırım batmaz: ünite sökülür, daha iyi performans beklenen lokasyona taşınır. Klasik şubede bu, dükkân kapatmak demektir.</p></div>
+      <div class="card rv d1"><div class="n">Avantaj 03</div><h3>Personel riski yok</h3><p>Sektörün en büyük sorunu eleman bulmak ve elde tutmak. Bu modelde işe alım, vardiya, devir ve gece zammı diye bir kalem yoktur.</p></div>
+      <div class="card rv d2"><div class="n">Avantaj 04</div><h3>Veriyle büyür</h3><p>Her nokta hangi ürünün hangi saatte nerede sattığını raporlar; menü ve yeni nokta seçimi tahminle değil veriyle yapılır. İki model de aynı panele bağlanır.</p></div>
+    </div>
+
+    <p class="note rv" style="margin-top:18px">Bu modelde şehir içi cadde üstü hedeflenmez — oralarda insan teması ve yaya trafiği daha değerlidir; onun için <a href="#store-m" style="color:var(--blue)">Model M</a> vardır.</p>
+  </div>
+</section>
+
 <!-- ORTAK: MALIYET HESABI -->
 <section id="hesap" class="light center">
   <div class="wrap">
@@ -1196,59 +1196,59 @@ section#store-m a[style*="color:var(--blue)"]{color:#c2600f!important}
 
     <div class="hs-box rv d1">
       <table class="hs" id="hst">
-        <thead><tr><th class="lbl"></th><th class="s">Model S<em>insansız · 6 m²</em></th><th class="m">Model M<em>insanlı · 10 m²</em></th><th class="d">Domino's<em>şube</em></th><th class="p">Mahalle<em>pizzacısı</em></th></tr></thead><tbody>
+        <thead><tr><th class="lbl"></th><th class="m">Model M<em>insanlı · 10 m²</em></th><th class="s">Model S<em>insansız · 6 m²</em></th><th class="d">Domino's<em>şube</em></th><th class="p">Mahalle<em>pizzacısı</em></th></tr></thead><tbody>
         <tr class="grp"><td colspan="5">İşletme bilgisi</td></tr>
-        <tr><td class="lbl">Çalışma saati</td><td class="s">7/24 · insan yok</td><td class="m">Satış 7/24 · insan 09:00–19:00</td><td class="d">10:00–01:00 (gece şubeleri en geç 03:00–04:00)</td><td class="p">11:00–23:00</td></tr>
-        <tr><td class="lbl">Alan</td><td class="s">≈6 m²</td><td class="m">≈10 m²</td><td class="d">80–150 m²</td><td class="p">40–80 m²</td></tr>
-        <tr><td class="lbl">Nerede</td><td class="s">Okul, ofis, terminal, tenha nokta, sezon alanı</td><td class="m">Şehir içi, mahalle arası</td><td class="d">Cadde üstü, yoğun trafik</td><td class="p">Mahalle arası</td></tr>
+        <tr><td class="lbl">Çalışma saati</td><td class="m">Satış 7/24 · insan 09:00–19:00</td><td class="s">7/24 · insan yok</td><td class="d">10:00–01:00 (gece şubeleri en geç 03:00–04:00)</td><td class="p">11:00–23:00</td></tr>
+        <tr><td class="lbl">Alan</td><td class="m">≈10 m²</td><td class="s">≈6 m²</td><td class="d">80–150 m²</td><td class="p">40–80 m²</td></tr>
+        <tr><td class="lbl">Nerede</td><td class="m">Şehir içi, mahalle arası</td><td class="s">Okul, ofis, terminal, tenha nokta, sezon alanı</td><td class="d">Cadde üstü, yoğun trafik</td><td class="p">Mahalle arası</td></tr>
         <tr class="grp"><td colspan="5">Aylık sabit giderler — düzenlenebilir (tutarlar KDV hariç)</td></tr>
-        <tr><td class="lbl">Personel sayısı <span class="hnote">7 gün açık bir vardiya tek kişiyle dönmez (45 sa/hafta sınırı): Model M'de 12 saatlik posta ≈1,6 kişi. Model S'de noktada kimse yok — rakam, ikmal elemanının nokta başına düşen payı.</span></td><td class="s num"><input data-c="S" data-k="pers" type="number" step="0.1"><span class="u">kişi</span></td><td class="m num"><input data-c="M" data-k="pers" type="number" step="0.1"><span class="u">kişi</span></td><td class="d num"><input data-c="D" data-k="pers" type="number" step="0.1"><span class="u">kişi</span></td><td class="p num"><input data-c="P" data-k="pers" type="number" step="0.1"><span class="u">kişi</span></td></tr>
-        <tr><td class="lbl">Personel maliyeti (kişiye değil, işverene toplam) <span class="hnote">SGK işveren primi + işsizlik dahil. 2026 asgari ücret işveren maliyeti 40.875 TL (ÇSGB).</span></td><td class="s num"><input data-c="S" data-k="maas" type="number" step="1000"><span class="u">TL</span></td><td class="m num"><input data-c="M" data-k="maas" type="number" step="1000"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="maas" type="number" step="1000"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="maas" type="number" step="1000"><span class="u">TL</span></td></tr>
-        <tr class="res"><td class="lbl">→ Aylık personel gideri</td><td class="s" data-o="S-pers"></td><td class="m" data-o="M-pers"></td><td class="d" data-o="D-pers"></td><td class="p" data-o="P-pers"></td></tr>
-        <tr><td class="lbl">Kira / yer bedeli <span class="hnote">brüt kira; stopaj dahil</span></td><td class="s num"><input data-c="S" data-k="kira" type="number" step="1000"><span class="u">TL</span></td><td class="m num"><input data-c="M" data-k="kira" type="number" step="1000"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="kira" type="number" step="1000"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="kira" type="number" step="1000"><span class="u">TL</span></td></tr>
-        <tr><td class="lbl">Enerji (elektrik + gaz) <span class="hnote">Pizza robotu 7 kW + ısıtmalı teslim dolabı + soğutucular, 7/24 çalışır.</span></td><td class="s num"><input data-c="S" data-k="elek" type="number" step="500"><span class="u">TL</span></td><td class="m num"><input data-c="M" data-k="elek" type="number" step="500"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="elek" type="number" step="500"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="elek" type="number" step="500"><span class="u">TL</span></td></tr>
-        <tr><td class="lbl">Su + internet + temizlik + sarf</td><td class="s num"><input data-c="S" data-k="su" type="number" step="100"><span class="u">TL</span></td><td class="m num"><input data-c="M" data-k="su" type="number" step="100"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="su" type="number" step="100"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="su" type="number" step="100"><span class="u">TL</span></td></tr>
-        <tr><td class="lbl">Muhasebe</td><td class="s num"><input data-c="S" data-k="muh" type="number" step="500"><span class="u">TL</span></td><td class="m num"><input data-c="M" data-k="muh" type="number" step="500"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="muh" type="number" step="500"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="muh" type="number" step="500"><span class="u">TL</span></td></tr>
-        <tr><td class="lbl">Sistem / yazılım / uzaktan izleme</td><td class="s num"><input data-c="S" data-k="sis" type="number" step="500"><span class="u">TL</span></td><td class="m num"><input data-c="M" data-k="sis" type="number" step="500"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="sis" type="number" step="500"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="sis" type="number" step="500"><span class="u">TL</span></td></tr>
-        <tr><td class="lbl">Bakım ve teknik servis (yatırımın %'si, yıllık) <span class="hnote">Robotik ekipmanda yedek parça + periyodik servis: yılda yatırımın %2–6'sı. Aylığa bölünür.</span></td><td class="s num"><input data-c="S" data-k="bakim" type="number" step="0.5"><span class="u">%</span></td><td class="m num"><input data-c="M" data-k="bakim" type="number" step="0.5"><span class="u">%</span></td><td class="d num"><input data-c="D" data-k="bakim" type="number" step="0.5"><span class="u">%</span></td><td class="p num"><input data-c="P" data-k="bakim" type="number" step="0.5"><span class="u">%</span></td></tr>
-        <tr class="res"><td class="lbl">→ Aylık bakım gideri</td><td class="s" data-o="S-bakimtl"></td><td class="m" data-o="M-bakimtl"></td><td class="d" data-o="D-bakimtl"></td><td class="p" data-o="P-bakimtl"></td></tr>
-        <tr><td class="lbl">İkmal / lojistik payı <span class="hnote">Merkez hamur üretimi, soğuk zincir ve ikmal aracının nokta başına düşen payı. Domino's ve mahalle pizzacısında bu iş kendi personelinde olduğu için 0.</span></td><td class="s num"><input data-c="S" data-k="ikmal" type="number" step="500"><span class="u">TL</span></td><td class="m num"><input data-c="M" data-k="ikmal" type="number" step="500"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="ikmal" type="number" step="500"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="ikmal" type="number" step="500"><span class="u">TL</span></td></tr>
-        <tr><td class="lbl">Zorunlu yükümlülükler (ÇTV, tabela, sigorta, damga, oda) <span class="hnote">Yıllık kalemlerin aylığa bölünmüş hâli: çevre temizlik vergisi, ilan-reklam (tabela) vergisi, işyeri sigortası, damga vergisi, oda aidatı.</span></td><td class="s num"><input data-c="S" data-k="zorunlu" type="number" step="500"><span class="u">TL</span></td><td class="m num"><input data-c="M" data-k="zorunlu" type="number" step="500"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="zorunlu" type="number" step="500"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="zorunlu" type="number" step="500"><span class="u">TL</span></td></tr>
-        <tr><td class="lbl">Franchise kesintisi (ciro %'si) <span class="hnote">Domino's ABD 2025 fiili: royalty %7,07 + reklam %5,84 = %12,9 nakit; zorunlu malzeme alımındaki gizli marjla birlikte gerçek yük ~%16,2.</span></td><td class="s num"><input data-c="S" data-k="roy" type="number" step="0.5"><span class="u">%</span></td><td class="m num"><input data-c="M" data-k="roy" type="number" step="0.5"><span class="u">%</span></td><td class="d num"><input data-c="D" data-k="roy" type="number" step="0.5"><span class="u">%</span></td><td class="p num"><input data-c="P" data-k="roy" type="number" step="0.5"><span class="u">%</span></td></tr>
-        <tr class="res hi"><td class="lbl">→ AYLIK SABİT GİDER TOPLAMI</td><td class="s" data-o="S-sabit"></td><td class="m" data-o="M-sabit"></td><td class="d" data-o="D-sabit"></td><td class="p" data-o="P-sabit"></td></tr>
+        <tr><td class="lbl">Personel sayısı <span class="hnote">7 gün açık bir vardiya tek kişiyle dönmez (45 sa/hafta sınırı): Model M'de 12 saatlik posta ≈1,6 kişi. Model S'de noktada kimse yok — rakam, ikmal elemanının nokta başına düşen payı.</span></td><td class="m num"><input data-c="M" data-k="pers" type="number" step="0.1"><span class="u">kişi</span></td><td class="s num"><input data-c="S" data-k="pers" type="number" step="0.1"><span class="u">kişi</span></td><td class="d num"><input data-c="D" data-k="pers" type="number" step="0.1"><span class="u">kişi</span></td><td class="p num"><input data-c="P" data-k="pers" type="number" step="0.1"><span class="u">kişi</span></td></tr>
+        <tr><td class="lbl">Personel maliyeti (kişiye değil, işverene toplam) <span class="hnote">SGK işveren primi + işsizlik dahil. 2026 asgari ücret işveren maliyeti 40.875 TL (ÇSGB).</span></td><td class="m num"><input data-c="M" data-k="maas" type="number" step="1000"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="maas" type="number" step="1000"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="maas" type="number" step="1000"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="maas" type="number" step="1000"><span class="u">TL</span></td></tr>
+        <tr class="res"><td class="lbl">→ Aylık personel gideri</td><td class="m" data-o="M-pers"></td><td class="s" data-o="S-pers"></td><td class="d" data-o="D-pers"></td><td class="p" data-o="P-pers"></td></tr>
+        <tr><td class="lbl">Kira / yer bedeli <span class="hnote">brüt kira; stopaj dahil</span></td><td class="m num"><input data-c="M" data-k="kira" type="number" step="1000"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="kira" type="number" step="1000"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="kira" type="number" step="1000"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="kira" type="number" step="1000"><span class="u">TL</span></td></tr>
+        <tr><td class="lbl">Enerji (elektrik + gaz) <span class="hnote">Pizza robotu 7 kW + ısıtmalı teslim dolabı + soğutucular, 7/24 çalışır.</span></td><td class="m num"><input data-c="M" data-k="elek" type="number" step="500"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="elek" type="number" step="500"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="elek" type="number" step="500"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="elek" type="number" step="500"><span class="u">TL</span></td></tr>
+        <tr><td class="lbl">Su + internet + temizlik + sarf</td><td class="m num"><input data-c="M" data-k="su" type="number" step="100"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="su" type="number" step="100"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="su" type="number" step="100"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="su" type="number" step="100"><span class="u">TL</span></td></tr>
+        <tr><td class="lbl">Muhasebe</td><td class="m num"><input data-c="M" data-k="muh" type="number" step="500"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="muh" type="number" step="500"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="muh" type="number" step="500"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="muh" type="number" step="500"><span class="u">TL</span></td></tr>
+        <tr><td class="lbl">Sistem / yazılım / uzaktan izleme</td><td class="m num"><input data-c="M" data-k="sis" type="number" step="500"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="sis" type="number" step="500"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="sis" type="number" step="500"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="sis" type="number" step="500"><span class="u">TL</span></td></tr>
+        <tr><td class="lbl">Bakım ve teknik servis (yatırımın %'si, yıllık) <span class="hnote">Robotik ekipmanda yedek parça + periyodik servis: yılda yatırımın %2–6'sı. Aylığa bölünür.</span></td><td class="m num"><input data-c="M" data-k="bakim" type="number" step="0.5"><span class="u">%</span></td><td class="s num"><input data-c="S" data-k="bakim" type="number" step="0.5"><span class="u">%</span></td><td class="d num"><input data-c="D" data-k="bakim" type="number" step="0.5"><span class="u">%</span></td><td class="p num"><input data-c="P" data-k="bakim" type="number" step="0.5"><span class="u">%</span></td></tr>
+        <tr class="res"><td class="lbl">→ Aylık bakım gideri</td><td class="m" data-o="M-bakimtl"></td><td class="s" data-o="S-bakimtl"></td><td class="d" data-o="D-bakimtl"></td><td class="p" data-o="P-bakimtl"></td></tr>
+        <tr><td class="lbl">İkmal / lojistik payı <span class="hnote">Merkez hamur üretimi, soğuk zincir ve ikmal aracının nokta başına düşen payı. Domino's ve mahalle pizzacısında bu iş kendi personelinde olduğu için 0.</span></td><td class="m num"><input data-c="M" data-k="ikmal" type="number" step="500"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="ikmal" type="number" step="500"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="ikmal" type="number" step="500"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="ikmal" type="number" step="500"><span class="u">TL</span></td></tr>
+        <tr><td class="lbl">Zorunlu yükümlülükler (ÇTV, tabela, sigorta, damga, oda) <span class="hnote">Yıllık kalemlerin aylığa bölünmüş hâli: çevre temizlik vergisi, ilan-reklam (tabela) vergisi, işyeri sigortası, damga vergisi, oda aidatı.</span></td><td class="m num"><input data-c="M" data-k="zorunlu" type="number" step="500"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="zorunlu" type="number" step="500"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="zorunlu" type="number" step="500"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="zorunlu" type="number" step="500"><span class="u">TL</span></td></tr>
+        <tr><td class="lbl">Franchise kesintisi (ciro %'si) <span class="hnote">Domino's ABD 2025 fiili: royalty %7,07 + reklam %5,84 = %12,9 nakit; zorunlu malzeme alımındaki gizli marjla birlikte gerçek yük ~%16,2.</span></td><td class="m num"><input data-c="M" data-k="roy" type="number" step="0.5"><span class="u">%</span></td><td class="s num"><input data-c="S" data-k="roy" type="number" step="0.5"><span class="u">%</span></td><td class="d num"><input data-c="D" data-k="roy" type="number" step="0.5"><span class="u">%</span></td><td class="p num"><input data-c="P" data-k="roy" type="number" step="0.5"><span class="u">%</span></td></tr>
+        <tr class="res hi"><td class="lbl">→ AYLIK SABİT GİDER TOPLAMI</td><td class="m" data-o="M-sabit"></td><td class="s" data-o="S-sabit"></td><td class="d" data-o="D-sabit"></td><td class="p" data-o="P-sabit"></td></tr>
         <tr class="grp"><td colspan="5">Pizza başı — düzenlenebilir</td></tr>
-        <tr><td class="lbl">Malzeme maliyeti (fire dahil) <span class="hnote">Hamur topu, sos, peynir, malzeme. Domino's ölçek sayesinde ucuza alır ama merkez fabrikadan almak zorunda — o fiyat merkezin marjını içerir.</span></td><td class="s num"><input data-c="S" data-k="malz" type="number" step="1"><span class="u">TL</span></td><td class="m num"><input data-c="M" data-k="malz" type="number" step="1"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="malz" type="number" step="1"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="malz" type="number" step="1"><span class="u">TL</span></td></tr>
-        <tr><td class="lbl">Kutu + ambalaj + sachet</td><td class="s num"><input data-c="S" data-k="kutu" type="number" step="1"><span class="u">TL</span></td><td class="m num"><input data-c="M" data-k="kutu" type="number" step="1"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="kutu" type="number" step="1"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="kutu" type="number" step="1"><span class="u">TL</span></td></tr>
-        <tr><td class="lbl">Menü fiyatı (KDV dahil) <span class="hnote">Türkiye'de menü fiyatı KDV dahil ilan edilir. Hesap, KDV düşülmüş net hasılat üzerinden döner.</span></td><td class="s num"><input data-c="S" data-k="fiyat" type="number" step="5"><span class="u">TL</span></td><td class="m num"><input data-c="M" data-k="fiyat" type="number" step="5"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="fiyat" type="number" step="5"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="fiyat" type="number" step="5"><span class="u">TL</span></td></tr>
-        <tr><td class="lbl">KDV oranı (yiyecek hizmeti) <span class="hnote">Yiyecek-içecek hizmetinde %10.</span></td><td class="s num"><input data-c="S" data-k="kdv" type="number" step="1"><span class="u">%</span></td><td class="m num"><input data-c="M" data-k="kdv" type="number" step="1"><span class="u">%</span></td><td class="d num"><input data-c="D" data-k="kdv" type="number" step="1"><span class="u">%</span></td><td class="p num"><input data-c="P" data-k="kdv" type="number" step="1"><span class="u">%</span></td></tr>
-        <tr><td class="lbl">① Satışın yüzde kaçı Yemeksepeti/Getir'den geliyor? <span class="hnote">Gerisi kapıdan/QR'lı dolaptan gelen komisyonsuz satış. Marka bilinirliği düşük formatlar platforma daha bağımlıdır.</span></td><td class="s num"><input data-c="S" data-k="ppay" type="number" step="5"><span class="u">%</span></td><td class="m num"><input data-c="M" data-k="ppay" type="number" step="5"><span class="u">%</span></td><td class="d num"><input data-c="D" data-k="ppay" type="number" step="5"><span class="u">%</span></td><td class="p num"><input data-c="P" data-k="ppay" type="number" step="5"><span class="u">%</span></td></tr>
-        <tr><td class="lbl">② Platform komisyonu + kampanya payı <span class="hnote">Komisyon + kampanya katkısının efektif toplamı. Kendi kuryesini kullanan zincirlerde belirgin düşüktür.</span></td><td class="s num"><input data-c="S" data-k="pkom" type="number" step="1"><span class="u">%</span></td><td class="m num"><input data-c="M" data-k="pkom" type="number" step="1"><span class="u">%</span></td><td class="d num"><input data-c="D" data-k="pkom" type="number" step="1"><span class="u">%</span></td><td class="p num"><input data-c="P" data-k="pkom" type="number" step="1"><span class="u">%</span></td></tr>
-        <tr class="res"><td class="lbl">→ Ortalama komisyon yükü (pizza başına) <span class="hnote">① × ② platform satışına + %3 POS yalnız kapıdan satışa. Platform siparişinde tahsilatı platform yapar, ayrıca POS kesilmez.</span></td><td class="s" data-o="S-kom"></td><td class="m" data-o="M-kom"></td><td class="d" data-o="D-kom"></td><td class="p" data-o="P-kom"></td></tr>
-        <tr><td class="lbl">Günlük satış</td><td class="s num"><input data-c="S" data-k="adet" type="number" step="1"><span class="u">adet</span></td><td class="m num"><input data-c="M" data-k="adet" type="number" step="1"><span class="u">adet</span></td><td class="d num"><input data-c="D" data-k="adet" type="number" step="1"><span class="u">adet</span></td><td class="p num"><input data-c="P" data-k="adet" type="number" step="1"><span class="u">adet</span></td></tr>
+        <tr><td class="lbl">Malzeme maliyeti (fire dahil) <span class="hnote">Hamur topu, sos, peynir, malzeme. Domino's ölçek sayesinde ucuza alır ama merkez fabrikadan almak zorunda — o fiyat merkezin marjını içerir.</span></td><td class="m num"><input data-c="M" data-k="malz" type="number" step="1"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="malz" type="number" step="1"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="malz" type="number" step="1"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="malz" type="number" step="1"><span class="u">TL</span></td></tr>
+        <tr><td class="lbl">Kutu + ambalaj + sachet</td><td class="m num"><input data-c="M" data-k="kutu" type="number" step="1"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="kutu" type="number" step="1"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="kutu" type="number" step="1"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="kutu" type="number" step="1"><span class="u">TL</span></td></tr>
+        <tr><td class="lbl">Menü fiyatı (KDV dahil) <span class="hnote">Türkiye'de menü fiyatı KDV dahil ilan edilir. Hesap, KDV düşülmüş net hasılat üzerinden döner.</span></td><td class="m num"><input data-c="M" data-k="fiyat" type="number" step="5"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="fiyat" type="number" step="5"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="fiyat" type="number" step="5"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="fiyat" type="number" step="5"><span class="u">TL</span></td></tr>
+        <tr><td class="lbl">KDV oranı (yiyecek hizmeti) <span class="hnote">Yiyecek-içecek hizmetinde %10.</span></td><td class="m num"><input data-c="M" data-k="kdv" type="number" step="1"><span class="u">%</span></td><td class="s num"><input data-c="S" data-k="kdv" type="number" step="1"><span class="u">%</span></td><td class="d num"><input data-c="D" data-k="kdv" type="number" step="1"><span class="u">%</span></td><td class="p num"><input data-c="P" data-k="kdv" type="number" step="1"><span class="u">%</span></td></tr>
+        <tr><td class="lbl">① Satışın yüzde kaçı Yemeksepeti/Getir'den geliyor? <span class="hnote">Gerisi kapıdan/QR'lı dolaptan gelen komisyonsuz satış. Marka bilinirliği düşük formatlar platforma daha bağımlıdır.</span></td><td class="m num"><input data-c="M" data-k="ppay" type="number" step="5"><span class="u">%</span></td><td class="s num"><input data-c="S" data-k="ppay" type="number" step="5"><span class="u">%</span></td><td class="d num"><input data-c="D" data-k="ppay" type="number" step="5"><span class="u">%</span></td><td class="p num"><input data-c="P" data-k="ppay" type="number" step="5"><span class="u">%</span></td></tr>
+        <tr><td class="lbl">② Platform komisyonu + kampanya payı <span class="hnote">Komisyon + kampanya katkısının efektif toplamı. Kendi kuryesini kullanan zincirlerde belirgin düşüktür.</span></td><td class="m num"><input data-c="M" data-k="pkom" type="number" step="1"><span class="u">%</span></td><td class="s num"><input data-c="S" data-k="pkom" type="number" step="1"><span class="u">%</span></td><td class="d num"><input data-c="D" data-k="pkom" type="number" step="1"><span class="u">%</span></td><td class="p num"><input data-c="P" data-k="pkom" type="number" step="1"><span class="u">%</span></td></tr>
+        <tr class="res"><td class="lbl">→ Ortalama komisyon yükü (pizza başına) <span class="hnote">① × ② platform satışına + %3 POS yalnız kapıdan satışa. Platform siparişinde tahsilatı platform yapar, ayrıca POS kesilmez.</span></td><td class="m" data-o="M-kom"></td><td class="s" data-o="S-kom"></td><td class="d" data-o="D-kom"></td><td class="p" data-o="P-kom"></td></tr>
+        <tr><td class="lbl">Günlük satış</td><td class="m num"><input data-c="M" data-k="adet" type="number" step="1"><span class="u">adet</span></td><td class="s num"><input data-c="S" data-k="adet" type="number" step="1"><span class="u">adet</span></td><td class="d num"><input data-c="D" data-k="adet" type="number" step="1"><span class="u">adet</span></td><td class="p num"><input data-c="P" data-k="adet" type="number" step="1"><span class="u">adet</span></td></tr>
         <tr class="grp"><td colspan="5">Yatırım ve vergi — düzenlenebilir</td></tr>
-        <tr><td class="lbl">Toplam yatırım (makine + tadilat + ilk stok)</td><td class="s num"><input data-c="S" data-k="yat" type="number" step="100000"><span class="u">TL</span></td><td class="m num"><input data-c="M" data-k="yat" type="number" step="100000"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="yat" type="number" step="100000"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="yat" type="number" step="100000"><span class="u">TL</span></td></tr>
-        <tr><td class="lbl">Ekipman ömrü (amortisman) <span class="hnote">Yatırım bu sürede yıpranır; amortisman nakit çıkışı değildir ama vergi matrahını düşürür.</span></td><td class="s num"><input data-c="S" data-k="omur" type="number" step="1"><span class="u">yıl</span></td><td class="m num"><input data-c="M" data-k="omur" type="number" step="1"><span class="u">yıl</span></td><td class="d num"><input data-c="D" data-k="omur" type="number" step="1"><span class="u">yıl</span></td><td class="p num"><input data-c="P" data-k="omur" type="number" step="1"><span class="u">yıl</span></td></tr>
-        <tr><td class="lbl">Gelir / kurumlar vergisi oranı <span class="hnote">Limited/A.Ş. kurumlar vergisi %25; şahıs şirketinde artan oranlı gelir vergisi (%15–40).</span></td><td class="s num"><input data-c="S" data-k="vergi" type="number" step="1"><span class="u">%</span></td><td class="m num"><input data-c="M" data-k="vergi" type="number" step="1"><span class="u">%</span></td><td class="d num"><input data-c="D" data-k="vergi" type="number" step="1"><span class="u">%</span></td><td class="p num"><input data-c="P" data-k="vergi" type="number" step="1"><span class="u">%</span></td></tr>
+        <tr><td class="lbl">Toplam yatırım (makine + tadilat + ilk stok)</td><td class="m num"><input data-c="M" data-k="yat" type="number" step="100000"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="yat" type="number" step="100000"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="yat" type="number" step="100000"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="yat" type="number" step="100000"><span class="u">TL</span></td></tr>
+        <tr><td class="lbl">Ekipman ömrü (amortisman) <span class="hnote">Yatırım bu sürede yıpranır; amortisman nakit çıkışı değildir ama vergi matrahını düşürür.</span></td><td class="m num"><input data-c="M" data-k="omur" type="number" step="1"><span class="u">yıl</span></td><td class="s num"><input data-c="S" data-k="omur" type="number" step="1"><span class="u">yıl</span></td><td class="d num"><input data-c="D" data-k="omur" type="number" step="1"><span class="u">yıl</span></td><td class="p num"><input data-c="P" data-k="omur" type="number" step="1"><span class="u">yıl</span></td></tr>
+        <tr><td class="lbl">Gelir / kurumlar vergisi oranı <span class="hnote">Limited/A.Ş. kurumlar vergisi %25; şahıs şirketinde artan oranlı gelir vergisi (%15–40).</span></td><td class="m num"><input data-c="M" data-k="vergi" type="number" step="1"><span class="u">%</span></td><td class="s num"><input data-c="S" data-k="vergi" type="number" step="1"><span class="u">%</span></td><td class="d num"><input data-c="D" data-k="vergi" type="number" step="1"><span class="u">%</span></td><td class="p num"><input data-c="P" data-k="vergi" type="number" step="1"><span class="u">%</span></td></tr>
         <tr class="grp"><td colspan="5">Sonuç — otomatik hesaplanır</td></tr>
-        <tr class="res"><td class="lbl">Aylık ciro (KDV dahil, müşterinin ödediği)</td><td class="s" data-o="S-ciro"></td><td class="m" data-o="M-ciro"></td><td class="d" data-o="D-ciro"></td><td class="p" data-o="P-ciro"></td></tr>
-        <tr class="res"><td class="lbl">Aylık net hasılat (KDV düşülmüş)</td><td class="s" data-o="S-nethas"></td><td class="m" data-o="M-nethas"></td><td class="d" data-o="D-nethas"></td><td class="p" data-o="P-nethas"></td></tr>
-        <tr class="res"><td class="lbl">Ödenecek KDV (devlete) <span class="hnote">Satış KDV'sinden mal/hizmet alışlarında ödenen KDV düşülür.</span></td><td class="s" data-o="S-kdvtl"></td><td class="m" data-o="M-kdvtl"></td><td class="d" data-o="D-kdvtl"></td><td class="p" data-o="P-kdvtl"></td></tr>
-        <tr class="res"><td class="lbl">Pizza başı değişken gider</td><td class="s" data-o="S-deg"></td><td class="m" data-o="M-deg"></td><td class="d" data-o="D-deg"></td><td class="p" data-o="P-deg"></td></tr>
-        <tr class="res hi"><td class="lbl">Bir pizzanın bu adetteki tam maliyeti <span class="hnote">Sabit giderin pizza başına düşen payı + değişken gider.</span></td><td class="s" data-o="S-birim"></td><td class="m" data-o="M-birim"></td><td class="d" data-o="D-birim"></td><td class="p" data-o="P-birim"></td></tr>
-        <tr class="res hi"><td class="lbl">Başabaş menü fiyatı (KDV dahil) <span class="hnote">Bu satış adedinde zarar etmeden satılabilecek en düşük fiyat. Komisyon fiyatın yüzdesi olduğu için fiyat düştükçe komisyon da düşer — hesap bunu içerir.</span></td><td class="s" data-o="S-minf"></td><td class="m" data-o="M-minf"></td><td class="d" data-o="D-minf"></td><td class="p" data-o="P-minf"></td></tr>
-        <tr class="res hi"><td class="lbl">İşletme nakit kârı (FVAÖK) <span class="hnote">Amortisman ve vergi öncesi. Kasaya giren nakit budur.</span></td><td class="s" data-o="S-kar"></td><td class="m" data-o="M-kar"></td><td class="d" data-o="D-kar"></td><td class="p" data-o="P-kar"></td></tr>
-        <tr class="res"><td class="lbl">− Amortisman</td><td class="s" data-o="S-amort"></td><td class="m" data-o="M-amort"></td><td class="d" data-o="D-amort"></td><td class="p" data-o="P-amort"></td></tr>
-        <tr class="res"><td class="lbl">= Vergi öncesi kâr</td><td class="s" data-o="S-vok"></td><td class="m" data-o="M-vok"></td><td class="d" data-o="D-vok"></td><td class="p" data-o="P-vok"></td></tr>
-        <tr class="res"><td class="lbl">− Gelir / kurumlar vergisi</td><td class="s" data-o="S-vergitl"></td><td class="m" data-o="M-vergitl"></td><td class="d" data-o="D-vergitl"></td><td class="p" data-o="P-vergitl"></td></tr>
-        <tr class="res hi"><td class="lbl">NET KÂR (tüm vergiler sonrası) <span class="hnote">Devlete giden her kalem düşüldükten sonra işletmeye kalan.</span></td><td class="s" data-o="S-netkar"></td><td class="m" data-o="M-netkar"></td><td class="d" data-o="D-netkar"></td><td class="p" data-o="P-netkar"></td></tr>
-        <tr class="res hi"><td class="lbl">Başabaş — nakit (yatırım hariç) <span class="hnote">Sabit giderleri karşılayan günlük satış.</span></td><td class="s" data-o="S-bb"></td><td class="m" data-o="M-bb"></td><td class="d" data-o="D-bb"></td><td class="p" data-o="P-bb"></td></tr>
-        <tr class="res hi"><td class="lbl">Başabaş — tam (amortisman dahil) <span class="hnote">Yatırımın yıpranmasını da karşılayan günlük satış. Gerçek eşik budur.</span></td><td class="s" data-o="S-bbtam"></td><td class="m" data-o="M-bbtam"></td><td class="d" data-o="D-bbtam"></td><td class="p" data-o="P-bbtam"></td></tr>
-        <tr class="res"><td class="lbl">Yatırımın geri dönüşü <span class="hnote">Vergi sonrası nakit akışına göre, iskontosuz.</span></td><td class="s" data-o="S-geri"></td><td class="m" data-o="M-geri"></td><td class="d" data-o="D-geri"></td><td class="p" data-o="P-geri"></td></tr>
-        <tr class="res"><td class="lbl">Toplam nakit ihtiyacı (yatırım + 3 ay gider) <span class="hnote">Açılışta cepte olması gereken para: yatırım + ilk 3 ayın işletme gideri.</span></td><td class="s" data-o="S-nakitiht"></td><td class="m" data-o="M-nakitiht"></td><td class="d" data-o="D-nakitiht"></td><td class="p" data-o="P-nakitiht"></td></tr>
+        <tr class="res"><td class="lbl">Aylık ciro (KDV dahil, müşterinin ödediği)</td><td class="m" data-o="M-ciro"></td><td class="s" data-o="S-ciro"></td><td class="d" data-o="D-ciro"></td><td class="p" data-o="P-ciro"></td></tr>
+        <tr class="res"><td class="lbl">Aylık net hasılat (KDV düşülmüş)</td><td class="m" data-o="M-nethas"></td><td class="s" data-o="S-nethas"></td><td class="d" data-o="D-nethas"></td><td class="p" data-o="P-nethas"></td></tr>
+        <tr class="res"><td class="lbl">Ödenecek KDV (devlete) <span class="hnote">Satış KDV'sinden mal/hizmet alışlarında ödenen KDV düşülür.</span></td><td class="m" data-o="M-kdvtl"></td><td class="s" data-o="S-kdvtl"></td><td class="d" data-o="D-kdvtl"></td><td class="p" data-o="P-kdvtl"></td></tr>
+        <tr class="res"><td class="lbl">Pizza başı değişken gider</td><td class="m" data-o="M-deg"></td><td class="s" data-o="S-deg"></td><td class="d" data-o="D-deg"></td><td class="p" data-o="P-deg"></td></tr>
+        <tr class="res hi"><td class="lbl">Bir pizzanın bu adetteki tam maliyeti <span class="hnote">Sabit giderin pizza başına düşen payı + değişken gider.</span></td><td class="m" data-o="M-birim"></td><td class="s" data-o="S-birim"></td><td class="d" data-o="D-birim"></td><td class="p" data-o="P-birim"></td></tr>
+        <tr class="res hi"><td class="lbl">Başabaş menü fiyatı (KDV dahil) <span class="hnote">Bu satış adedinde zarar etmeden satılabilecek en düşük fiyat. Komisyon fiyatın yüzdesi olduğu için fiyat düştükçe komisyon da düşer — hesap bunu içerir.</span></td><td class="m" data-o="M-minf"></td><td class="s" data-o="S-minf"></td><td class="d" data-o="D-minf"></td><td class="p" data-o="P-minf"></td></tr>
+        <tr class="res hi"><td class="lbl">İşletme nakit kârı (FVAÖK) <span class="hnote">Amortisman ve vergi öncesi. Kasaya giren nakit budur.</span></td><td class="m" data-o="M-kar"></td><td class="s" data-o="S-kar"></td><td class="d" data-o="D-kar"></td><td class="p" data-o="P-kar"></td></tr>
+        <tr class="res"><td class="lbl">− Amortisman</td><td class="m" data-o="M-amort"></td><td class="s" data-o="S-amort"></td><td class="d" data-o="D-amort"></td><td class="p" data-o="P-amort"></td></tr>
+        <tr class="res"><td class="lbl">= Vergi öncesi kâr</td><td class="m" data-o="M-vok"></td><td class="s" data-o="S-vok"></td><td class="d" data-o="D-vok"></td><td class="p" data-o="P-vok"></td></tr>
+        <tr class="res"><td class="lbl">− Gelir / kurumlar vergisi</td><td class="m" data-o="M-vergitl"></td><td class="s" data-o="S-vergitl"></td><td class="d" data-o="D-vergitl"></td><td class="p" data-o="P-vergitl"></td></tr>
+        <tr class="res hi"><td class="lbl">NET KÂR (tüm vergiler sonrası) <span class="hnote">Devlete giden her kalem düşüldükten sonra işletmeye kalan.</span></td><td class="m" data-o="M-netkar"></td><td class="s" data-o="S-netkar"></td><td class="d" data-o="D-netkar"></td><td class="p" data-o="P-netkar"></td></tr>
+        <tr class="res hi"><td class="lbl">Başabaş — nakit (yatırım hariç) <span class="hnote">Sabit giderleri karşılayan günlük satış.</span></td><td class="m" data-o="M-bb"></td><td class="s" data-o="S-bb"></td><td class="d" data-o="D-bb"></td><td class="p" data-o="P-bb"></td></tr>
+        <tr class="res hi"><td class="lbl">Başabaş — tam (amortisman dahil) <span class="hnote">Yatırımın yıpranmasını da karşılayan günlük satış. Gerçek eşik budur.</span></td><td class="m" data-o="M-bbtam"></td><td class="s" data-o="S-bbtam"></td><td class="d" data-o="D-bbtam"></td><td class="p" data-o="P-bbtam"></td></tr>
+        <tr class="res"><td class="lbl">Yatırımın geri dönüşü <span class="hnote">Vergi sonrası nakit akışına göre, iskontosuz.</span></td><td class="m" data-o="M-geri"></td><td class="s" data-o="S-geri"></td><td class="d" data-o="D-geri"></td><td class="p" data-o="P-geri"></td></tr>
+        <tr class="res"><td class="lbl">Toplam nakit ihtiyacı (yatırım + 3 ay gider) <span class="hnote">Açılışta cepte olması gereken para: yatırım + ilk 3 ayın işletme gideri.</span></td><td class="m" data-o="M-nakitiht"></td><td class="s" data-o="S-nakitiht"></td><td class="d" data-o="D-nakitiht"></td><td class="p" data-o="P-nakitiht"></td></tr>
         </tbody></table>
     </div>
 
-    <div class="hlegend"><span><i style="background:#eef4ff;border:2px solid #1a49b8"></i>Model S · insansız</span><span><i style="background:#fff6ec;border:2px solid #c2600f"></i>Model M · insanlı</span><span><i style="background:#f5f6f9;border:2px solid #3f4a5c"></i>Domino's</span><span><i style="background:#f4f8f5;border:2px solid #4a5f52"></i>Mahalle pizzacısı</span></div>
+    <div class="hlegend"><span><i style="background:#fff6ec;border:2px solid #c2600f"></i>Model M · insanlı</span><span><i style="background:#eef4ff;border:2px solid #1a49b8"></i>Model S · insansız</span><span><i style="background:#f5f6f9;border:2px solid #3f4a5c"></i>Domino's</span><span><i style="background:#f4f8f5;border:2px solid #4a5f52"></i>Mahalle pizzacısı</span></div>
     <button class="hbtn" onclick="hsReset()">↺ Varsayılana dön</button>
     <div class="hexp"><b>Nasıl okunur?</b> <b>Başabaş</b>, masrafı sıfırlayan günlük satıştır; üstündeki her pizza kâr yazar. İki başabaş var: <i>nakit</i> (işletme giderlerini karşılar) ve <i>tam</i> (yatırımın yıpranmasını da karşılar) — gerçek eşik ikincisidir. <b>① ve ② neden ayrı?</b> Komisyon her satıştan değil, sadece platformdan gelen siparişten kesilir: satışın %50'si Yemeksepeti'nden geliyor ve platform %35 kesiyorsa ortalama yük %17,5 olur. Kapıdan/QR'lı dolaptan gelen satışta platform komisyonu yoktur, yalnız %3 kart komisyonu vardır — bu yüzden ①'i düşürmek fiyat kırmaktan daha kârlıdır. <b>Vergiler</b> ayrı satırlarda: KDV, amortisman ve gelir vergisi düşülmüş "net kâr" en alttadır.</div>
     
