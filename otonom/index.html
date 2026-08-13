@@ -1285,12 +1285,16 @@ section#store-m a[style*="color:var(--blue)"]{color:#c2600f!important}
               <td class="m" data-s="M-100"></td><td class="s" data-s="S-100"></td><td class="d" data-s="D-100"></td><td class="p" data-s="P-100"></td></tr>
             <tr class="res hi"><td class="lbl">★ Bizim varsayımımız <span class="hnote">yukarıdaki tabloda girili günlük satış</span></td>
               <td class="m" data-s="M-cur"></td><td class="s" data-s="S-cur"></td><td class="d" data-s="D-cur"></td><td class="p" data-s="P-cur"></td></tr>
+            <tr><td class="lbl">Bir pizzanın bıraktığı net katkı <span class="hnote">başabaşın üstündeki her pizza bunu kâra yazar</span></td>
+              <td class="m" data-s="M-katki"></td><td class="s" data-s="S-katki"></td><td class="d" data-s="D-katki"></td><td class="p" data-s="P-katki"></td></tr>
             <tr><td class="lbl">Güvenlik payı <span class="hnote">varsayımımız başabaşın ne kadar üstünde</span></td>
               <td class="m" data-s="M-pay"></td><td class="s" data-s="S-pay"></td><td class="d" data-s="D-pay"></td><td class="p" data-s="P-pay"></td></tr>
           </tbody>
         </table>
       </div>
-      <div class="hexp" style="margin-top:14px"><b>Nasıl okunur:</b> ilk satır her modelin ayakta kalma eşiğidir — o adedin altında zarar başlar. Alt satırdaki <b>güvenlik payı</b> ise en kritik göstergedir: varsayımımız eşiğin ne kadar üstünde? %20'nin altındaysa model kırılgandır (kötü bir ay zarara döner), %40 üstü rahat bölgedir. Her hücrede önce günlük satış adedi, altında o adette aya kalan <b>net kâr</b> (tüm vergiler sonrası) yazar.</div>
+      <div class="hexp" style="margin-top:14px"><b>Nasıl okunur:</b> ilk satır her modelin ayakta kalma eşiğidir — o adedin altında zarar başlar. Alt satırdaki <b>güvenlik payı</b> en kritik göstergedir: varsayımımız eşiğin ne kadar üstünde? %20'nin altındaysa model kırılgandır, %40 üstü rahat bölgedir.
+      <br><br><b>Kâr neden birden sıçrıyor?</b> Çünkü başabaş noktasında kira, personel, amortisman gibi <i>tüm sabit giderler zaten karşılanmıştır</i>. O noktadan sonra satılan her pizza, sadece kendi malzemesini ve komisyonunu çıkarır; geriye kalan <b>net katkının tamamı doğrudan kâra yazılır</b>. Örnek: Domino's kolonunda bir pizzanın net katkısı ~110 TL. Günde 37 pizza fazla satmak ayda 37 × 30,4 × 110 ≈ <b>123 bin TL</b> ek katkı demektir — bu yüzden eşiğin hemen üstünde kâr hızla büyür. Aynı kaldıraç aşağı yönde de çalışır: eşiğin altına düşünce zarar da aynı hızla derinleşir.
+      <br><br><b>"Domino's 200 satıyorsa, eşiği 184 nasıl olur — bayiler zararda mı?"</b> Hayır, ama marj gerçekten ince. Bu tablodaki eşik <i>amortisman dahil</i> hesaplanır (yani yatırımın yıpranması da karşılansın diye). Domino's kolonunda 200 satışta işletme nakit kârı ≈173 bin TL, yani cironun <b>%11'i</b> — bu rakam Domino's'un ABD'de yayımladığı resmî franchise verisiyle birebir örtüşüyor (şube EBITDA'sı ciro bandına göre %1,7–14,7; şubelerin yaklaşık yarısı %1,7–6,7 aralığında). Yani sektörün gerçeği bu: <b>yüksek ciro, ince marj.</b> Bizim modellerimizin iddiası da tam burada — aynı işi çok daha küçük sabit giderle yapmak.</div>
     </div>
     <p class="note rv" style="margin-top:18px">Tüm gider tutarları <b>KDV hariç</b>, menü fiyatı <b>KDV dahil</b> girilir; hesap net hasılat üzerinden döner. Ay = 30,4 gün (7 gün açık). Varsayılanlar araştırma verili: asgari ücret işveren maliyeti ₺40.875 (ÇSGB 2026) · 30 cm pizza malzemesi ₺83 + paket ₺10 (Ağu 2026 toptan) · Domino's Türkiye 795 şube, franchise kesintisi ABD 2025 fiili %12,9 · platform komisyonları %30–40 bandı. Bu tablo <b>nokta bazlı birim ekonomisidir</b>; merkez mutfak yönetimi, Ar-Ge ve genel merkez giderleri dahil değildir. Model S ve M'de merkez hamur üretimi + ikmal lojistiği ayrı satırda yüklenmiştir. Mimari plan, ekipman fiyatları ve açık kararlar <a href="tablo/" style="color:var(--sblue)">Tablo &amp; Plan sayfasında</a>.</p>
   </div>
@@ -2092,6 +2096,9 @@ section#store-m a[style*="color:var(--blue)"]{color:#c2600f!important}
       yaz('60', b*1.6);
       yaz('100', b*2);
       yaz('cur', v.adet);
+      var km = document.querySelector('#hsen [data-s="'+c+'-katki"]');
+      if(km) km.innerHTML = '<b>'+hfmt(R.marj)+' TL</b> <span class="hnote" style="display:inline">/ pizza</span>'
+             + '<div class="hnote" style="margin-top:2px">ayda '+hfmt(R.marj*HGUN)+' TL — günde 1 pizza fazla satarsan</div>';
       var pay = document.querySelector('#hsen [data-s="'+c+'-pay"]');
       if(pay){
         if(!Number.isFinite(b) || b<=0){ pay.innerHTML='—'; }
