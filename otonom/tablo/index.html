@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AUTOKITCH · Tablo & Plan — Pizza Noktası İşletme Çalışması</title>
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+<meta name="googlebot" content="noindex, nofollow">
+<style>
+  :root{
+    --bg:#f5f7fa; --card:#ffffff; --ink:#0f1726; --mut:#68758a; --soft:#8a94a2;
+    --line:#dfe6f0; --blue:#2456c8; --blue-l:#eaf0fc; --green:#178a56; --green-l:rgba(23,138,86,.1);
+    --orange:#c47c18; --orange-l:rgba(196,124,24,.1); --red:#c0392b;
+    --maxw:1080px;
+    --font:"SF Pro Display","SF Pro Text",-apple-system,BlinkMacSystemFont,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--font);background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;line-height:1.5;letter-spacing:-.01em}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+  section{padding:64px 0}
+  h2{font-size:clamp(26px,4vw,40px);font-weight:700;letter-spacing:-.02em;line-height:1.1}
+  h3{font-size:20px;font-weight:700}
+  .lead{font-size:16.5px;color:var(--mut);max-width:760px;margin-top:12px;line-height:1.55}
+  .eyebrow{font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);margin-bottom:8px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;box-shadow:0 6px 18px rgba(20,40,80,.04)}
+  .note{font-size:12.5px;color:var(--soft);line-height:1.5}
+  .est{font-size:11px;font-weight:700;color:var(--orange);background:var(--orange-l);padding:2px 8px;border-radius:99px;white-space:nowrap}
+
+  /* NAV */
+  nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.85);backdrop-filter:saturate(180%) blur(16px);border-bottom:1px solid var(--line)}
+  .nav-in{max-width:var(--maxw);margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:52px;padding:0 20px}
+  .logo{font-weight:700;font-size:17px}
+  .logo b{color:var(--blue)}
+  .nav-links{display:flex;gap:20px;font-size:13.5px;color:var(--mut)}
+  .nav-links a:hover{color:var(--blue)}
+  @media(max-width:760px){.nav-links{display:none}}
+  .backlink{font-size:13.5px;font-weight:600;color:var(--blue)}
+
+  /* HERO */
+  header.top{padding:72px 0 20px}
+  header.top h1{font-size:clamp(32px,6vw,54px);font-weight:800;letter-spacing:-.03em;line-height:1.05}
+  header.top h1 span{color:var(--blue)}
+
+  /* ÖZET KARTLARI */
+  .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:34px}
+  @media(max-width:900px){.kpis{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:480px){.kpis{grid-template-columns:1fr}}
+  .kpi{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px}
+  .kpi .v{font-size:26px;font-weight:800;color:var(--ink);letter-spacing:-.02em}
+  .kpi .v em{font-style:normal;color:var(--blue)}
+  .kpi .t{font-size:12.5px;color:var(--mut);margin-top:6px;line-height:1.45}
+
+  /* KARŞILAŞTIRMA TABLOSU */
+  .cmpwrap{overflow-x:auto;margin-top:30px;border:1px solid var(--line);border-radius:16px;background:#fff}
+  table.cmp{width:100%;border-collapse:collapse;font-size:13.5px;min-width:720px}
+  table.cmp th{padding:14px 14px;text-align:left;font-size:12px;letter-spacing:.05em;text-transform:uppercase;color:var(--soft);border-bottom:2px solid var(--line)}
+  table.cmp th.us{color:var(--blue)}
+  table.cmp td{padding:12px 14px;border-top:1px solid #edf1f7;vertical-align:top;color:#3d4a5c;line-height:1.5}
+  table.cmp td:first-child{font-weight:700;color:var(--ink);white-space:nowrap}
+  table.cmp td.us{background:var(--blue-l);font-weight:600;color:var(--ink)}
+  .good{color:var(--green);font-weight:700}
+  .bad{color:var(--red);font-weight:600}
+
+  /* HESAPLAYICI */
+  .calcgrid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:30px}
+  @media(max-width:860px){.calcgrid{grid-template-columns:1fr}}
+  .calc h3{display:flex;align-items:center;gap:8px;margin-bottom:4px}
+  .calc .sub{font-size:12.5px;color:var(--soft);margin-bottom:14px}
+  .frow{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:7px 0;border-bottom:1px dashed #e8edf5}
+  .frow label{font-size:13px;color:#3d4a5c;flex:1;line-height:1.3}
+  .frow input{width:120px;font-size:14px;font-weight:600;text-align:right;padding:7px 10px;border:1px solid var(--line);border-radius:9px;color:var(--ink);background:#fbfcfe;outline:none;font-family:inherit}
+  .frow input:focus{border-color:var(--blue)}
+  .frow .unit{font-size:11.5px;color:var(--soft);width:52px}
+  .out{margin-top:16px;background:#f4f7fb;border-radius:12px;padding:14px 16px}
+  .orow{display:flex;justify-content:space-between;padding:5px 0;font-size:13.5px;color:#3d4a5c}
+  .orow b{color:var(--ink)}
+  .orow.big{font-size:15.5px;padding-top:10px;margin-top:6px;border-top:1px solid var(--line)}
+  .orow.big b{font-size:18px}
+  .pos{color:var(--green)!important}.neg{color:var(--red)!important}
+  .cbtns{display:flex;gap:10px;margin-top:18px;flex-wrap:wrap}
+  .cbtn{font-size:13px;font-weight:600;padding:9px 18px;border-radius:99px;border:1px solid var(--line);background:#fff;color:var(--mut);cursor:pointer;font-family:inherit}
+  .cbtn:hover{border-color:var(--blue);color:var(--blue)}
+
+  /* PLAN */
+  .planbox{background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px;margin-top:30px;overflow-x:auto}
+  .planbox svg{display:block;min-width:640px;width:100%;height:auto}
+  .leg{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:8px 20px;margin-top:18px;font-size:13px;color:#3d4a5c}
+  .leg b{color:var(--ink)}
+  .leg .no{display:inline-flex;width:20px;height:20px;border-radius:50%;background:var(--blue);color:#fff;font-size:11px;font-weight:700;align-items:center;justify-content:center;margin-right:8px;flex:0 0 auto}
+  .eqp{margin-top:26px;overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:#fff}
+  .eqp table{width:100%;border-collapse:collapse;font-size:13px;min-width:620px}
+  .eqp th{padding:11px 13px;text-align:left;font-size:11.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--soft);border-bottom:2px solid var(--line)}
+  .eqp td{padding:10px 13px;border-top:1px solid #edf1f7;color:#3d4a5c}
+  .eqp td:first-child{font-weight:600;color:var(--ink)}
+  .eqp tr.total td{font-weight:800;color:var(--ink);background:#f4f7fb}
+
+  /* SENARYOLAR */
+  .scen{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:30px}
+  @media(max-width:860px){.scen{grid-template-columns:1fr}}
+  .scen .card h3{color:var(--blue);font-size:16px;margin-bottom:12px}
+  .step{display:flex;gap:10px;padding:6px 0;font-size:13.5px;color:#3d4a5c;line-height:1.45}
+  .step .n{flex:0 0 22px;height:22px;border-radius:50%;background:var(--blue-l);color:var(--blue);font-size:11.5px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:1px}
+  .rut{margin-top:16px}
+  .rut .r{display:flex;gap:14px;padding:9px 0;border-bottom:1px dashed #e8edf5;font-size:13.5px}
+  .rut .h{flex:0 0 96px;font-weight:700;color:var(--blue);white-space:nowrap}
+  .rut .d{color:#3d4a5c;line-height:1.45}
+
+  /* KARARLAR */
+  .dec{margin-top:28px;display:flex;flex-direction:column;gap:14px}
+  .dec .card{padding:20px 22px}
+  .dec h3{font-size:16px;margin-bottom:8px}
+  .dec .q{font-size:11px;font-weight:800;letter-spacing:.06em;color:var(--orange);text-transform:uppercase}
+  .dec p{font-size:13.5px;color:#3d4a5c;line-height:1.55;margin-top:6px}
+  .oneri{margin-top:10px;background:var(--green-l);border-radius:10px;padding:10px 14px;font-size:13.5px;color:#14523a;line-height:1.5}
+  .oneri b{color:var(--green)}
+  ul.qs{margin:14px 0 0 18px;font-size:13.5px;color:#3d4a5c;line-height:1.8}
+
+  footer{padding:44px 0 70px;text-align:center;color:var(--soft);font-size:12.5px}
+
+  /* GATE */
+  #gate{position:fixed;inset:0;z-index:99999;background:#0b0d12;display:flex;align-items:center;justify-content:center;text-align:center;transition:opacity .3s}
+  #gate .gbox{padding:30px;max-width:380px}
+  #gate .glogo{font-size:clamp(30px,7vw,40px);font-weight:600;color:#fff;letter-spacing:-.02em}
+  #gate .glogo b{color:#2997FF}
+  #gate .gsub{color:#86868B;margin:14px 0 26px;font-size:15px;line-height:1.45}
+  #gate input{width:210px;font-size:34px;text-align:center;letter-spacing:16px;padding:14px 6px 14px 22px;border-radius:14px;border:1px solid #2a2a2d;background:#15171c;color:#fff;outline:none}
+  #gate input:focus{border-color:#2997FF}
+  #gate .gerr{color:#ff6b6b;font-size:14px;height:18px;margin-top:14px}
+  .gshake{animation:gshake .4s}
+  @keyframes gshake{0%,100%{transform:translateX(0)}20%,60%{transform:translateX(-9px)}40%,80%{transform:translateX(9px)}}
+  body.glocked{overflow:hidden}
+</style>
+</head>
+<body>
+
+<div id="gate">
+  <div class="gbox">
+    <div class="glogo">AUTO<b>KITCH</b></div>
+    <div class="gsub">Özel sunum · Devam etmek için kodu girin</div>
+    <input id="gpin" type="password" inputmode="text" maxlength="4" autocomplete="off" autocapitalize="off" aria-label="Kod">
+    <div class="gerr" id="gerr"></div>
+  </div>
+</div>
+<script>
+(function(){
+  var CODE="alfa";
+  var gate=document.getElementById('gate');
+  if(sessionStorage.getItem('ak_ok')==='1'){ gate.remove(); return; }
+  document.body.classList.add('glocked');
+  var inp=document.getElementById('gpin'), err=document.getElementById('gerr');
+  setTimeout(function(){inp.focus();},120);
+  inp.addEventListener('input',function(){
+    inp.value=inp.value.replace(/[^a-zA-Z0-9]/g,'').slice(0,4); err.textContent='';
+    if(inp.value.length===4){
+      if(inp.value.toLowerCase()===CODE){ sessionStorage.setItem('ak_ok','1'); gate.style.opacity='0'; setTimeout(function(){gate.remove(); document.body.classList.remove('glocked');},320); }
+      else { err.textContent='Hatalı kod, tekrar deneyin.'; inp.classList.add('gshake'); setTimeout(function(){inp.classList.remove('gshake'); inp.value='';},430); }
+    }
+  });
+})();
+</script>
+
+<nav>
+  <div class="nav-in">
+    <a href="../" class="logo">AUTO<b>KITCH</b> <span style="font-weight:400;color:var(--soft);font-size:14px">· Tablo &amp; Plan</span></a>
+    <div class="nav-links">
+      <a href="#karsilastirma">Karşılaştırma</a>
+      <a href="#hesap">Hesaplayıcı</a>
+      <a href="#plan">Dükkan Planı</a>
+      <a href="#senaryolar">Senaryolar</a>
+      <a href="#kararlar">Kararlar</a>
+    </div>
+    <a href="../" class="backlink">← Store</a>
+  </div>
+</nav>
+
+<header class="top">
+  <div class="wrap">
+    <div class="eyebrow">İşletme Çalışması · Ağustos 2026</div>
+    <h1>1 kişiyle <span>7/24</span> pizza noktası.</h1>
+    <p class="lead">Arkada hamuru sıfırdan yapan pizza robotu, önde tek kasiyer, gece tamamen insansız. Bu sayfa işin rakamını, planını ve açık kararlarını tek yerde toplar. Turuncu <span class="est">TAHMİN</span> etiketli değerler araştırma tabanlı tahmindir — hesaplayıcıda hepsini kendin değiştirebilirsin.</p>
+    <div class="kpis">
+      <div class="kpi"><div class="v"><em>7</em> pizza/gün</div><div class="t">Fransa'daki 2.500 makinelik pizza otomatı pazarında resmî başabaş eşiği (Adial). Bizim model de aynı sınıfta.</div></div>
+      <div class="kpi"><div class="v">40.875 TL</div><div class="t">1 asgari ücretli personelin işverene aylık toplam maliyeti (2026, SGK dahil). Domino's vardiyada 2-4 kişi çalıştırıyor; biz 1.</div></div>
+      <div class="kpi"><div class="v">%<em>4</em></div><div class="t">Personelli restoranlarda gece satışının ciro payı — bu yüzden kimse 7/24 açamıyor. İnsansız gece modunda bu pay maliyetsiz kâr.</div></div>
+      <div class="kpi"><div class="v">≈93 TL</div><div class="t">30 cm sucuklu pizzanın paketli malzeme maliyeti (Ağu 2026 toptan fiyatlarıyla). 300 TL satışta food-cost %31.</div></div>
+    </div>
+  </div>
+</header>
+
+<!-- KARŞILAŞTIRMA -->
+<section id="karsilastirma">
+  <div class="wrap">
+    <div class="eyebrow">Rakip Kıyası</div>
+    <h2>Aynı mahallede üç model.</h2>
+    <p class="lead">Domino's rakamları resmî kaynak ve franchise dokümanlarından; mahalle pizzacısı sektör tahmini. Kaynaklar sayfa sonunda.</p>
+    <div class="cmpwrap">
+      <table class="cmp">
+        <tr><th></th><th class="us">AUTOKITCH Nokta</th><th>Domino's Şubesi</th><th>Mahalle Pizzacısı</th></tr>
+        <tr><td>Personel (kurye hariç)</td><td class="us">1 kişi · tek vardiya <span class="good">✓</span></td><td>Vardiyada 2-4, yoğunlukta 4-6; gün toplamı 6-10 farklı kişi</td><td>1-3 kişi (patron + yardımcı)</td></tr>
+        <tr><td>Aylık personel gideri</td><td class="us">≈ 61 bin TL (1 vardiya, izin yedeğiyle 1,5 maaş)</td><td>≈ 250-400 bin TL <span class="est">TAHMİN</span></td><td>≈ 60-120 bin TL</td></tr>
+        <tr><td>Çalışma saati</td><td class="us">Satış 7/24 · insan 09:00-19:00 <span class="good">✓</span></td><td>10:00-01:00 (gece şubeleri en geç 03:00-04:00; <b>24 saat açık şube yok</b>)</td><td>11:00-23:00</td></tr>
+        <tr><td>Gece (24:00-08:00) satışı</td><td class="us">Açık — kiosk + QR dolap <span class="good">✓</span></td><td class="bad">Kapalı</td><td class="bad">Kapalı</td></tr>
+        <tr><td>Günlük pizza</td><td class="us">Hedef 30-60 <span class="est">TAHMİN</span></td><td>~140 (global şube ortalaması)</td><td>30-80 <span class="est">TAHMİN</span></td></tr>
+        <tr><td>Başabaş</td><td class="us">≈ 35 pizza/gün tam dükkân; personelsiz yalın makine kurulumunda 7-12 <span class="est">TAHMİN</span></td><td>~90+ sipariş/gün sınıfı</td><td>~41-90 sipariş/gün</td></tr>
+        <tr><td>Hamur tedariki</td><td class="us">Makine <b>un+sudan kendisi yapar</b>; kartuşu günde 1 kez personel doldurur</td><td>Merkez fabrikadan (Gebze/Ankara/İzmir/G.antep), ~3 günde bir sevkiyat</td><td>Yerinde elde açılır</td></tr>
+        <tr><td>Alan ihtiyacı</td><td class="us">≈ 20 m²</td><td>80-150 m²</td><td>40-80 m²</td></tr>
+        <tr><td>Kuruluş yatırımı</td><td class="us">≈ 4-5 milyon TL <span class="est">TAHMİN</span></td><td>15-25 milyon TL (franchise portalları) <span class="est">TAHMİN</span></td><td>1,5-3 milyon TL <span class="est">TAHMİN</span></td></tr>
+        <tr><td>Teslimat</td><td class="us">Yemeksepeti/Getir kuryesi + QR'lı dolaptan gel-al</td><td>Kendi motor kuryeleri + platform</td><td>Platform kuryesi</td></tr>
+        <tr><td>Orta boy pizza fiyatı</td><td class="us">Hedef 250-300 TL</td><td>Kampanyalı ≈220 TL, liste 300-380 TL</td><td>300-450 TL</td></tr>
+      </table>
+    </div>
+    <p class="note" style="margin-top:14px">Domino's Türkiye: 795 şube (Haz 2026, Jubilant FoodWorks). ABD franchise verisi: değişken giderler cironun %76-81'i; mağaza EBITDA'sı ciroya göre %1,7-14,7. Yani personelli modelde kâr ancak yüksek ciroyla geliyor — bizim model sabit gideri en baştan küçültüyor.</p>
+  </div>
+</section>
+
+<!-- HESAPLAYICI -->
+<section id="hesap" style="background:#eef2f8;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="eyebrow">Canlı Hesap</div>
+    <h2>Maliyet hesaplayıcısı.</h2>
+    <p class="lead">Her kutu düzenlenebilir — kendi rakamını yaz, sonuç anında güncellenir. Değerlerin bu tarayıcıda saklanır; "Varsayılana dön" ile araştırma değerlerine dönersin.</p>
+    <div class="calcgrid">
+
+      <div class="card calc" id="cA">
+        <h3 style="color:var(--blue)">AUTOKITCH Nokta · 7/24</h3>
+        <div class="sub">Gündüz 1 kişilik vardiya (7 gün açık olduğu için izin yedeğiyle 1,5 maaş), gece insansız satış</div>
+        <div class="frow"><label>Personel sayısı</label><input data-k="pers" type="number" step="0.5"><span class="unit">kişi</span></div>
+        <div class="frow"><label>Personel maliyeti (kişi başı, SGK dahil)</label><input data-k="maas" type="number"><span class="unit">TL/ay</span></div>
+        <div class="frow"><label>Kira (≈20 m² mahalle arası)</label><input data-k="kira" type="number"><span class="unit">TL/ay</span></div>
+        <div class="frow"><label>Elektrik (makine 7kW + dolaplar)</label><input data-k="elek" type="number"><span class="unit">TL/ay</span></div>
+        <div class="frow"><label>Su + internet + temizlik</label><input data-k="su" type="number"><span class="unit">TL/ay</span></div>
+        <div class="frow"><label>Muhasebe + vergi/harç ortalaması</label><input data-k="muh" type="number"><span class="unit">TL/ay</span></div>
+        <div class="frow"><label>Sistem/yazılım (sipariş + izleme)</label><input data-k="sis" type="number"><span class="unit">TL/ay</span></div>
+        <div class="frow"><label>Toplam yatırım (makine+dolap+kol+kiosk+tadilat)</label><input data-k="yat" type="number"><span class="unit">TL</span></div>
+        <div class="frow"><label>Amortisman süresi</label><input data-k="ay" type="number"><span class="unit">ay</span></div>
+        <div class="frow"><label>Malzeme maliyeti (pizza başı)</label><input data-k="malz" type="number"><span class="unit">TL</span></div>
+        <div class="frow"><label>Kutu + ambalaj + sachet</label><input data-k="kutu" type="number"><span class="unit">TL</span></div>
+        <div class="frow"><label>Satış fiyatı (ortalama)</label><input data-k="fiyat" type="number"><span class="unit">TL</span></div>
+        <div class="frow"><label>Platform siparişi payı (Yemeksepeti/Getir)</label><input data-k="ppay" type="number"><span class="unit">%</span></div>
+        <div class="frow"><label>Platform komisyonu</label><input data-k="pkom" type="number"><span class="unit">%</span></div>
+        <div class="frow"><label>Günlük satış</label><input data-k="adet" type="number"><span class="unit">pizza</span></div>
+        <div class="out" data-out></div>
+      </div>
+
+      <div class="card calc" id="cB">
+        <h3 style="color:#6a7688">Klasik Pizzacı · 11:00-23:00</h3>
+        <div class="sub">İki kişilik vardiya, 7 gün açık (izin yedeğiyle 3 maaş), fırın + el açımı, gece kapalı</div>
+        <div class="frow"><label>Personel sayısı</label><input data-k="pers" type="number" step="0.5"><span class="unit">kişi</span></div>
+        <div class="frow"><label>Personel maliyeti (kişi başı, SGK dahil)</label><input data-k="maas" type="number"><span class="unit">TL/ay</span></div>
+        <div class="frow"><label>Kira (40-60 m² gerekir)</label><input data-k="kira" type="number"><span class="unit">TL/ay</span></div>
+        <div class="frow"><label>Elektrik + doğalgaz (fırın)</label><input data-k="elek" type="number"><span class="unit">TL/ay</span></div>
+        <div class="frow"><label>Su + internet + temizlik</label><input data-k="su" type="number"><span class="unit">TL/ay</span></div>
+        <div class="frow"><label>Muhasebe + vergi/harç ortalaması</label><input data-k="muh" type="number"><span class="unit">TL/ay</span></div>
+        <div class="frow"><label>Sistem/yazılım</label><input data-k="sis" type="number"><span class="unit">TL/ay</span></div>
+        <div class="frow"><label>Toplam yatırım (fırın+tezgah+tadilat)</label><input data-k="yat" type="number"><span class="unit">TL</span></div>
+        <div class="frow"><label>Amortisman süresi</label><input data-k="ay" type="number"><span class="unit">ay</span></div>
+        <div class="frow"><label>Malzeme maliyeti (pizza başı)</label><input data-k="malz" type="number"><span class="unit">TL</span></div>
+        <div class="frow"><label>Kutu + ambalaj + sachet</label><input data-k="kutu" type="number"><span class="unit">TL</span></div>
+        <div class="frow"><label>Satış fiyatı (ortalama)</label><input data-k="fiyat" type="number"><span class="unit">TL</span></div>
+        <div class="frow"><label>Platform siparişi payı</label><input data-k="ppay" type="number"><span class="unit">%</span></div>
+        <div class="frow"><label>Platform komisyonu</label><input data-k="pkom" type="number"><span class="unit">%</span></div>
+        <div class="frow"><label>Günlük satış</label><input data-k="adet" type="number"><span class="unit">pizza</span></div>
+        <div class="out" data-out></div>
+      </div>
+    </div>
+    <div class="cbtns">
+      <button class="cbtn" onclick="calcReset()">↺ Varsayılana dön</button>
+      <span class="note" style="align-self:center">Varsayılanlar: asgari ücret işveren maliyeti 40.875 TL (ÇSGB) · malzeme 83 TL + paket 10 TL (Ağu 2026 toptan) · POS %3 tüm satışta hesaba dahil · ay = 30,4 gün</span>
+    </div>
+  </div>
+</section>
+
+<!-- PLAN -->
+<section id="plan">
+  <div class="wrap">
+    <div class="eyebrow">Mimari Plan · Üstten Görünüm</div>
+    <h2>≈20 m²'ye sığan dükkan.</h2>
+    <p class="lead">3,5 m cephe × 6,0 m derinlik. Kritik mimari karar: teslim dolabı ve sipariş ekranı <b>sokak cephesine</b> gömülü — gece dükkan kilitliyken müşteri içeri girmeden alışveriş yapar. Robot kol, makine çıkışı ile dolap arasındaki tek transfer noktasında durur.</p>
+
+    <div class="planbox">
+    <svg viewBox="0 0 860 470" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,Helvetica,Arial,sans-serif">
+      <!-- dış duvarlar: iç alan 620x350 (6.0m x 3.5m, 103px=1m), sol=sokak -->
+      <rect x="120" y="60" width="620" height="350" fill="#fbfcfe" stroke="#0f1726" stroke-width="6"/>
+      <!-- sokak yazısı -->
+      <text x="62" y="240" font-size="13" fill="#8a94a2" transform="rotate(-90 62 240)" text-anchor="middle" letter-spacing="4">S O K A K</text>
+      <!-- cephe: locker (pass-through) -->
+      <rect x="108" y="80" width="36" height="120" fill="#2456c8" rx="3"/>
+      <text x="90" y="140" font-size="11" fill="#2456c8" transform="rotate(-90 90 140)" text-anchor="middle" font-weight="700">TESLİM DOLABI · dış erişim</text>
+      <!-- cephe: kiosk -->
+      <rect x="108" y="216" width="30" height="52" fill="#178a56" rx="3"/>
+      <text x="96" y="242" font-size="10" fill="#178a56" transform="rotate(-90 96 242)" text-anchor="middle" font-weight="700">KİOSK</text>
+      <!-- cephe: kapı -->
+      <rect x="114" y="290" width="12" height="92" fill="#fff" stroke="#0f1726" stroke-width="2"/>
+      <path d="M126 290 A 92 92 0 0 1 218 382" fill="none" stroke="#8a94a2" stroke-width="1.5" stroke-dasharray="4 4"/>
+      <text x="150" y="300" font-size="10" fill="#8a94a2">kapı 90</text>
+      <!-- müşteri alanı -->
+      <text x="220" y="230" font-size="11" fill="#b3bcc9" text-anchor="middle" letter-spacing="2">MÜŞTERİ</text>
+      <text x="220" y="244" font-size="11" fill="#b3bcc9" text-anchor="middle" letter-spacing="2">ALANI</text>
+      <!-- kasa tezgahı -->
+      <rect x="300" y="240" width="62" height="165" fill="#e7ecf5" stroke="#68758a" stroke-width="2" rx="4"/>
+      <text x="331" y="325" font-size="11" fill="#3d4a5c" transform="rotate(-90 331 325)" text-anchor="middle" font-weight="700">KASA TEZGAHI 160×60</text>
+      <circle cx="331" cy="218" r="11" fill="none" stroke="#c47c18" stroke-width="2"/><text x="331" y="222" font-size="9" fill="#c47c18" text-anchor="middle" font-weight="700">K</text>
+      <text x="331" y="200" font-size="9.5" fill="#c47c18" text-anchor="middle">kasiyer</text>
+      <!-- iç locker erişimi + robot kol -->
+      <circle cx="230" cy="120" r="34" fill="none" stroke="#c0392b" stroke-width="2" stroke-dasharray="5 4"/>
+      <rect x="212" y="102" width="36" height="36" fill="#c0392b" rx="7"/>
+      <text x="230" y="124" font-size="9" fill="#fff" text-anchor="middle" font-weight="700">KOL</text>
+      <text x="230" y="164" font-size="9.5" fill="#c0392b" text-anchor="middle">erişim Ø 170</text>
+      <!-- içecek dolabı -->
+      <rect x="284" y="80" width="70" height="62" fill="#eaf0fc" stroke="#2456c8" stroke-width="2" rx="4"/>
+      <text x="319" y="108" font-size="10" fill="#2456c8" text-anchor="middle" font-weight="700">İÇECEK</text>
+      <text x="319" y="121" font-size="10" fill="#2456c8" text-anchor="middle" font-weight="700">DOLABI</text>
+      <!-- Let's Pizza makinesi arka -->
+      <rect x="530" y="80" width="206" height="132" fill="#0f1726" rx="6"/>
+      <text x="633" y="132" font-size="13" fill="#fff" text-anchor="middle" font-weight="800">PİZZA ROBOTU</text>
+      <text x="633" y="150" font-size="10.5" fill="#9fb4d8" text-anchor="middle">Let's Pizza GEN 3 · 200×128 · 750 kg · 7 kW</text>
+      <text x="633" y="166" font-size="10.5" fill="#9fb4d8" text-anchor="middle">un+su → hamur → pizza · 100 pizza/dolum</text>
+      <rect x="524" y="128" width="10" height="36" fill="#2997FF" rx="2"/>
+      <text x="516" y="186" font-size="9.5" fill="#2456c8" text-anchor="middle">çıkış</text>
+      <!-- malzeme buzdolabı -->
+      <rect x="530" y="330" width="82" height="74" fill="#e7ecf5" stroke="#68758a" stroke-width="2" rx="4"/>
+      <text x="571" y="362" font-size="10" fill="#3d4a5c" text-anchor="middle" font-weight="700">BUZDOLABI</text>
+      <text x="571" y="376" font-size="9.5" fill="#68758a" text-anchor="middle">600 L · 70×80</text>
+      <!-- kuru depo + kutu -->
+      <rect x="628" y="330" width="108" height="74" fill="#f4ecdd" stroke="#c47c18" stroke-width="2" rx="4"/>
+      <text x="682" y="360" font-size="10" fill="#8a6210" text-anchor="middle" font-weight="700">KURU DEPO + RAF</text>
+      <text x="682" y="374" font-size="9.5" fill="#a8842f" text-anchor="middle">un kartuşu · kutular · sachet</text>
+      <!-- lavabo -->
+      <rect x="446" y="356" width="56" height="48" fill="#e2f0fb" stroke="#4a90c4" stroke-width="2" rx="4"/>
+      <text x="474" y="384" font-size="9.5" fill="#33719e" text-anchor="middle" font-weight="700">LAVABO</text>
+      <!-- personel geçidi -->
+      <text x="440" y="270" font-size="10" fill="#b3bcc9" text-anchor="middle" letter-spacing="1.5">SERVİS KORİDORU 90</text>
+      <!-- akış okları -->
+      <path d="M524 148 L 268 122" stroke="#c0392b" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+      <path d="M212 120 L 152 120" stroke="#c0392b" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+      <path d="M284 108 L 256 112" stroke="#2456c8" stroke-width="1.6" fill="none" marker-end="url(#arrb)"/>
+      <defs>
+        <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 z" fill="#c0392b"/></marker>
+        <marker id="arrb" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 z" fill="#2456c8"/></marker>
+      </defs>
+      <!-- ölçüler -->
+      <line x1="120" y1="436" x2="740" y2="436" stroke="#8a94a2" stroke-width="1"/>
+      <line x1="120" y1="430" x2="120" y2="442" stroke="#8a94a2" stroke-width="1"/><line x1="740" y1="430" x2="740" y2="442" stroke="#8a94a2" stroke-width="1"/>
+      <text x="430" y="456" font-size="12" fill="#68758a" text-anchor="middle" font-weight="600">6,00 m</text>
+      <line x1="774" y1="60" x2="774" y2="410" stroke="#8a94a2" stroke-width="1"/>
+      <line x1="768" y1="60" x2="780" y2="60" stroke="#8a94a2" stroke-width="1"/><line x1="768" y1="410" x2="780" y2="410" stroke="#8a94a2" stroke-width="1"/>
+      <text x="796" y="240" font-size="12" fill="#68758a" text-anchor="middle" font-weight="600" transform="rotate(-90 796 240)">3,50 m</text>
+      <text x="120" y="44" font-size="11" fill="#8a94a2">AUTOKITCH Pizza Noktası · 1/50 kavramsal yerleşim · ≈21 m²</text>
+    </svg>
+    </div>
+
+    <div class="leg">
+      <div><span class="no">1</span><b>Pizza robotu</b> — arka duvar; un+sudan pizza, 3 dk</div>
+      <div><span class="no">2</span><b>Robot kol</b> — çıkıştan alır, dolaba/tezgaha koyar</div>
+      <div><span class="no">3</span><b>Teslim dolabı</b> — cepheye gömülü, çift taraflı (pass-through), 2-3 gözü ısıtmalı</div>
+      <div><span class="no">4</span><b>Sipariş kioski</b> — dış cephede, vandal dayanımlı</div>
+      <div><span class="no">5</span><b>İçecek dolabı</b> — robot kolun erişiminde</div>
+      <div><span class="no">6</span><b>Kasa tezgahı</b> — gündüz modu; altı kutu deposu</div>
+      <div><span class="no">7</span><b>Buzdolabı 600 L</b> — soğuk hava deposu YERİNE yeterli</div>
+      <div><span class="no">8</span><b>Kuru depo</b> — un kartuşu, kutu, sachet rafı</div>
+    </div>
+
+    <div class="eqp">
+      <table>
+        <tr><th>Ekipman</th><th>Araştırılan fiyat (Ağu 2026)</th><th>Bütçe (TL) <span class="est">TAHMİN</span></th><th>Not</th></tr>
+        <tr><td>Let's Pizza GEN 2/3</td><td>Teklif bekleniyor (2012'de &gt;$32.000; Adial sınıfı €40-50 bin)</td><td>≈ 2.000.000-2.500.000</td><td>Fiyat maili gönderildi — gelince güncellenecek</td></tr>
+        <tr><td>Isıtmalı teslim dolabı</td><td>Hatco 6 göz $13.003 · AB pizza sistemleri €13-22 bin · Çin $2-6 bin</td><td>150.000-600.000</td><td>Çin + CE ile başla; Winnsen'le yazışma sürüyor</td></tr>
+        <tr><td>Robot kol + tutucu</td><td>Dobot Nova 5 $13.790 · AUBO i5 $6-10 bin · tutucu $3-6 bin</td><td>500.000-800.000</td><td>Gıda uyumlu kaplamayla</td></tr>
+        <tr><td>Dış mekân sipariş kioski</td><td>32" vandal dayanımlı $3.000-7.500</td><td>130.000-310.000</td><td>Alternatif: sadece QR + telefon = 0 TL</td></tr>
+        <tr><td>İçecek dolabı</td><td>Uğur ticari 20-40 bin TL</td><td>25.000-40.000</td><td></td></tr>
+        <tr><td>Buzdolabı 600 L</td><td>Öztiryakiler 610L 72.216 TL</td><td>60.000-75.000</td><td>Soğuk hava deposu gerekmez</td></tr>
+        <tr><td>Tadilat + cephe + elektrik</td><td>—</td><td>300.000-500.000</td><td>Locker cephe montajı dahil</td></tr>
+        <tr class="total"><td>TOPLAM</td><td></td><td>≈ 3,2 - 4,8 milyon TL</td><td>Makine fiyatı netleşince daralır</td></tr>
+      </table>
+    </div>
+    <p class="note" style="margin-top:12px">Kıyas: Domino's franchise yatırımı Türkiye'de 15-25 milyon TL sınıfı (resmî değil, franchise portalları) — bizim kurulum bunun ~1/4'ü ile 1/5'i arası.</p>
+  </div>
+</section>
+
+<!-- SENARYOLAR -->
+<section id="senaryolar" style="background:#eef2f8;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="eyebrow">Çalışma Planı</div>
+    <h2>Dört senaryo, bir gün.</h2>
+    <p class="lead">Store sayfasındaki sistem şemasının bu dükkâna uyarlanmış hâli. Her senaryoda pizza robotu aynı işi yapar; değişen tek şey teslimatın son metresi.</p>
+    <div class="scen">
+      <div class="card">
+        <h3>S1 · Gündüz — kasiyerli satış (09:00-19:00)</h3>
+        <div class="step"><span class="n">1</span>Müşteri kasada sipariş verir, kasiyer POS'tan alır.</div>
+        <div class="step"><span class="n">2</span>Robot pizzayı sıfırdan yapar (~3 dk); kasiyer içecekleri dolaptan alır.</div>
+        <div class="step"><span class="n">3</span>Pizza çıkışta; kasiyer alır, sachet'leri ekler, müşteriye elden verir. Robot kol bu modda devrede değil.</div>
+        <div class="step"><span class="n">4</span>Sıcak insan teması: mahalle güveni bu vardiyada kurulur.</div>
+      </div>
+      <div class="card">
+        <h3>S2 · Platform siparişi — kurye (7/24)</h3>
+        <div class="step"><span class="n">1</span>Yemeksepeti/Getir siparişi sisteme düşer, robot üretime başlar.</div>
+        <div class="step"><span class="n">2</span>Gündüz: kasiyer paketler, kuryeye verir. Gece: robot kol pizzayı ısıtmalı göze koyar.</div>
+        <div class="step"><span class="n">3</span>Kurye dolapta QR okutur, göz açılır, alır gider — kimseyle muhatap olmaz.</div>
+        <div class="step"><span class="n">4</span>İçecekli siparişte kol, içecek dolabından kutuyu alıp aynı göze ekler.</div>
+      </div>
+      <div class="card">
+        <h3>S3 · Gece — tam insansız (19:00-09:00)</h3>
+        <div class="step"><span class="n">1</span>Dükkan kilitli; cephedeki kiosk ve QR menü aktif.</div>
+        <div class="step"><span class="n">2</span>Müşteri kioska/telefona sipariş verir, kartla öder.</div>
+        <div class="step"><span class="n">3</span>Robot yapar → kol dolaba koyar → müşteriye SMS/QR kodu gider.</div>
+        <div class="step"><span class="n">4</span>Müşteri sokaktan dolabı açar, alır. İçeri hiç girilmez — vandalizm riski cepheyle sınırlı.</div>
+      </div>
+      <div class="card">
+        <h3>S4 · Sabah ikmali (09:00, ~45 dk)</h3>
+        <div class="step"><span class="n">1</span>Kasiyer gelir; gece raporu telefonda hazır (satış, sıcaklıklar, hata var mı).</div>
+        <div class="step"><span class="n">2</span>Un kartuşu + su + malzeme haznelerini doldurur, kutu şeridini yükler.</div>
+        <div class="step"><span class="n">3</span>Anlaşmalı tedarikçiden gelen malzemeyi buzdolabına yerleştirir (Domino's modeli: 2-3 günde bir toplu sevkiyat).</div>
+        <div class="step"><span class="n">4</span>Hijyen turunu yapar, dijital kontrol listesini kapatır; dolap gözlerini temizler.</div>
+      </div>
+    </div>
+    <div class="card rut" style="margin-top:18px">
+      <h3 style="margin-bottom:8px">Kasiyerin günü — tek personelin iş yükü</h3>
+      <div class="r"><span class="h">09:00-09:45</span><span class="d">İkmal + hijyen turu + gece raporu kontrolü (S4)</span></div>
+      <div class="r"><span class="h">09:45-14:30</span><span class="d">Kasa + paketleme; ara saatlerde malzeme siparişleri, dolap temizliği</span></div>
+      <div class="r"><span class="h">14:30-17:00</span><span class="d">Sakin dilim: yarım gün mola düzeni, stok sayımı, kutu katlama</span></div>
+      <div class="r"><span class="h">17:00-19:00</span><span class="d">Akşam pikinin başı — kasada (pizza siparişlerinin piki 17:00-21:00)</span></div>
+      <div class="r"><span class="h">19:00 çıkış</span><span class="d">Hazneleri fulle, gece moduna al, kilitle. 19:00-24:00 piki ve gece satışı tamamen robotta</span></div>
+    </div>
+    <p class="note" style="margin-top:14px">Bilinçli tercih: kasiyer, akşam pikinin tamamını değil başını görür — pik robotla da dönüyor; insanı pahalı saate değil, güven ve ikmal işine koyuyoruz. İstenirse vardiya 11:00-21:00'e kaydırılabilir; hesaplayıcıda maliyeti değişmez.</p>
+  </div>
+</section>
+
+<!-- KARARLAR -->
+<section id="kararlar">
+  <div class="wrap">
+    <div class="eyebrow">Açık Kararlar</div>
+    <h2>Karar bekleyen 6 soru.</h2>
+    <div class="dec">
+      <div class="card">
+        <div class="q">Karar 1</div>
+        <h3>Teslim dolabı ısıtmalı mı olsun?</h3>
+        <p>Isıtmalı batı sistemleri pahalı (Hatco 6 göz ≈ $13 bin; AB sistemleri €13-22 bin), Çin kabinleri $2-6 bin. Isıtmasız dolap yarı fiyat ama pizza kuryeyi 20 dk beklerse soğur.</p>
+        <div class="oneri"><b>Önerim:</b> Hibrit — 6-8 gözün yalnız 2-3'ü ısıtmalı. Pizza sipariş üzerine taze çıkıyor; ısıtma sadece "kurye/müşteri gecikti" senaryosu için lazım. Winnsen zaten tam bunu sordu (çözüm B: soğuk depo + teslimde ısıtma) — cevabımızda hibrit isteyelim.</div>
+      </div>
+      <div class="card">
+        <div class="q">Karar 2</div>
+        <h3>Dış ekran (kiosk) şart mı?</h3>
+        <p>Vandal dayanımlı 32" dış kiosk $3.000-7.500. Alternatif: cepheye sadece büyük bir QR + menü görseli — sipariş telefondan, maliyet sıfır.</p>
+        <div class="oneri"><b>Önerim:</b> Pilotta QR + telefonla başla, kioski 2. faza bırak. Gece müşterisinin telefonu her zaman var; kiosk asıl AVM/terminal gibi yüksek trafikli 2. lokasyonda değer katar. Ara yol: içeriden cama bakan ucuz bir tablet-kiosk (~$1.000) camın arkasında vandal-korumalı durur.</div>
+      </div>
+      <div class="card">
+        <div class="q">Karar 3</div>
+        <h3>Ketçap/mayonez robotla mı verilecek?</h3>
+        <p>Sachet toptan 0,84-1,10 TL/adet. Robotlu dozajlama ayrı bir istasyon demek — maliyet ve arıza noktası.</p>
+        <div class="oneri"><b>Önerim:</b> Robota fonksiyon ekleme. Gündüz kasiyer koyar; gece için kutulara önceden 2'şer sachet bantlanır (sabah ikmalinde 5 dakikalık iş, pizza başı ~2 TL). Sıfır teknoloji, sıfır arıza.</div>
+      </div>
+      <div class="card">
+        <div class="q">Karar 4</div>
+        <h3>Tek robot kol hepsini yapabilir mi? (pizza + içecek + gece ikmali)</h3>
+        <p>Pizza transferi + içecek ekleme: <b>evet, kanıtlanmış</b> — Hyper Food Robotics konteyner pizzacısında kol pizzayı locker'a koyuyor (birebir emsal); Richtech ADAM içecek servis ediyor; Çin'de robot-kollu kahve/dondurma kioskları seri üretimde ($10-40 bin). Hamur kartuşu doldurma ve kutu şeridi yükleme ise: <b>hayır, pratik değil</b> — hijyen sertifikasyonunu bozar, karmaşıklığı ikiye katlar.</p>
+        <div class="oneri"><b>Önerim:</b> Kol yalnız 2 iş yapsın: makine çıkışı→dolap ve içecek→dolap. Hamur/kutu ikmali insanın işi: makine 100 pizza/dolum aldığı için kasiyer çıkarken fullerse gece bitmez. Gece 100+ satan nokta olursak bu "sorun"u kutlarız — o zaman 2. makine koyarız.</div>
+      </div>
+      <div class="card">
+        <div class="q">Karar 5</div>
+        <h3>Soğuk hava deposu gerekli mi?</h3>
+        <p>Domino's merkez fabrikadan 3 günde bir sevkiyat alıyor ve şubede soğuk oda tutuyor — ama onlar günde ~140 pizza satıyor.</p>
+        <div class="oneri"><b>Önerim:</b> Gerekmez. 30-60 pizza/gün hacminde 600 L ticari buzdolabı (≈72 bin TL) + 2-3 günde bir tedarikçi sevkiyatı yeter. Hamur zaten makinede undan yapılıyor — en hacimli soğuk ürün (hamur topu) bizde hiç yok. Bu, klasik pizzacıya karşı gizli bir alan avantajı.</div>
+      </div>
+      <div class="card">
+        <div class="q">Karar 6</div>
+        <h3>Hazne kapasitesi yetecek mi?</h3>
+        <p>Let's Pizza: 100 pizza/dolum (üretici verisi). Hedef 30-60/gün satışta tek sabah dolumu yeter; 19:00 fullemesiyle gece güvence altında.</p>
+        <div class="oneri"><b>Önerim:</b> Yine de üreticinin taahhüdünü yazılı alalım. Aşağıdaki soru listesi hazır — Let's Pizza fiyat cevabı gelince bunları da soracağız.</div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:22px">
+      <h3>Let's Pizza'ya sorulacaklar (cevapları gelince)</h3>
+      <ul class="qs">
+        <li>Hazne 100 pizza/dolum — un/su/sos/malzeme ayrı ayrı kaç servise yetiyor, dolum süresi ne?</li>
+        <li>Kutu şeridi kapasitesi kaç adet? Bittiğinde makine ne yapıyor (durma/uyarı)?</li>
+        <li>GEN 3'te soğutmalı hamur sistemi: malzemelerin raf ömrü ve sıcaklık logları dışarı açılıyor mu (bizim telefon paneline)?</li>
+        <li>Makine çıkışına robot kol entegrasyonu için API/sinyal var mı? (çıkış sensörü, sipariş ID eşleşmesi)</li>
+        <li>Uzaktan izleme paneli: satış, stok, arıza bildirimi — mobil erişim?</li>
+        <li>Elektrik 7 kW: gece tarife optimizasyonu için bekleme modu tüketimi kaç W?</li>
+        <li>Bolzano/İtalya'da çalışan makineyi yerinde görebilir miyiz? (Torino'dan geliriz)</li>
+      </ul>
+    </div>
+
+    <p class="note" style="margin-top:26px"><b>Kaynak notu:</b> Asgari ücret: ÇSGB resmî tablosu. Elektrik/su: Ağu 2026 ticarethane tarifeleri. Malzeme: Bonservis/Bizim Toptan/Akakçe toptan fiyatları. Domino's: Jubilant FoodWorks çeyrek raporları, dominos.com.tr resmî sayfaları, 2025 ABD FDD. Locker/kiosk/kol: WebstaurantStore, ParcelHive, RobotSourced, Alibaba. Adial başabaş: resmî kârlılık sayfası. Tüm <span class="est">TAHMİN</span> etiketli değerler bu kaynaklardan türetilmiş hesaptır; birincil veri değildir. Rakamlar geldikçe (Let's Pizza teklifi, Winnsen dolap teklifi) bu sayfa güncellenecek.</p>
+  </div>
+</section>
+
+<footer>AUTOKITCH · Tablo &amp; Plan — özel çalışma dokümanı · Ağustos 2026<br><a href="../" style="color:var(--blue)">← Store sayfasına dön</a></footer>
+
+<script>
+var DEF = {
+  A: {pers:1.5, maas:40875, kira:15000, elek:9000, su:2500, muh:5000, sis:2500, yat:4000000, ay:60, malz:83, kutu:10, fiyat:300, ppay:50, pkom:32, adet:45},
+  B: {pers:3, maas:40875, kira:25000, elek:14000, su:3000, muh:5000, sis:1000, yat:1800000, ay:60, malz:83, kutu:10, fiyat:320, ppay:50, pkom:32, adet:50}
+};
+var POS = 0.03, GUN = 30.4;
+function fmt(n){ return Math.round(n).toLocaleString('tr-TR'); }
+function readCol(id){
+  var o = {};
+  document.querySelectorAll('#c'+id+' input').forEach(function(i){ o[i.dataset.k] = parseFloat(i.value.replace(',','.')) || 0; });
+  return o;
+}
+function calc(id){
+  var v = readCol(id);
+  var sabit = v.pers*v.maas + v.kira + v.elek + v.su + v.muh + v.sis + (v.ay>0 ? v.yat/v.ay : 0);
+  var komisyon = v.fiyat * (v.pkom/100) * (v.ppay/100) + v.fiyat * POS;
+  var degisken = v.malz + v.kutu + komisyon;
+  var marj = v.fiyat - degisken;
+  var aylikAdet = v.adet * GUN;
+  var gelir = aylikAdet * v.fiyat;
+  var gider = sabit + aylikAdet * degisken;
+  var kar = gelir - gider;
+  var birim = v.adet>0 ? (sabit/aylikAdet + degisken) : 0;
+  var bb = marj>0 ? sabit/(GUN*marj) : Infinity;
+  var out = document.querySelector('#c'+id+' [data-out]');
+  out.innerHTML =
+    '<div class="orow"><span>Aylık sabit gider</span><b>'+fmt(sabit)+' TL</b></div>'+
+    '<div class="orow"><span>Pizza başı değişken (malzeme+paket+komisyon)</span><b>'+fmt(degisken)+' TL</b></div>'+
+    '<div class="orow"><span>Pizza başı TAM maliyet (bu satış adedinde)</span><b>'+fmt(birim)+' TL</b></div>'+
+    '<div class="orow"><span>Aylık gelir ('+fmt(aylikAdet)+' pizza)</span><b>'+fmt(gelir)+' TL</b></div>'+
+    '<div class="orow"><span>Aylık toplam gider</span><b>'+fmt(gider)+' TL</b></div>'+
+    '<div class="orow big"><span>Aylık kâr</span><b class="'+(kar>=0?'pos':'neg')+'">'+fmt(kar)+' TL</b></div>'+
+    '<div class="orow"><span>Başabaş</span><b>'+(isFinite(bb)?bb.toFixed(1)+' pizza/gün':'—')+'</b></div>';
+}
+function fill(id, vals){
+  document.querySelectorAll('#c'+id+' input').forEach(function(i){ if(vals[i.dataset.k]!==undefined) i.value = vals[i.dataset.k]; });
+}
+function save(){
+  try{ localStorage.setItem('ak_calc_v1', JSON.stringify({A:readCol('A'), B:readCol('B')})); }catch(e){}
+}
+function calcReset(){
+  fill('A', DEF.A); fill('B', DEF.B); calc('A'); calc('B');
+  try{ localStorage.removeItem('ak_calc_v1'); }catch(e){}
+}
+(function(){
+  var saved = null;
+  try{ saved = JSON.parse(localStorage.getItem('ak_calc_v1')); }catch(e){}
+  fill('A', (saved&&saved.A)||DEF.A); fill('B', (saved&&saved.B)||DEF.B);
+  calc('A'); calc('B');
+  document.querySelectorAll('.calc input').forEach(function(i){
+    i.addEventListener('input', function(){ var id = i.closest('.calc').id.slice(1); calc(id); save(); });
+  });
+})();
+</script>
+</body>
+</html>
