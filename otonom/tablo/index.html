@@ -64,6 +64,8 @@
   tr.res td{font-weight:700;color:var(--ink)}
   tr.res td:first-child{color:var(--ink)}
   tr.res.hi td{font-size:14.5px}
+  tr.res.sub td{font-weight:600;color:var(--mut);font-size:12.5px;padding-top:4px;padding-bottom:8px}
+  tr.res.sub td:first-child{font-weight:500;color:var(--mut);padding-left:26px}
   .pos{color:var(--green)!important}.neg{color:var(--red)!important}
   .good{color:var(--green);font-weight:700}
   .bad{color:var(--red);font-weight:600}
@@ -203,7 +205,8 @@
           <td class="us"><input data-c="A" data-k="maas" type="number"> TL</td>
           <td><input data-c="B" data-k="maas" type="number"> TL</td>
           <td><input data-c="C" data-k="maas" type="number"> TL</td></tr>
-        <tr><td>Kira <span class="note">(biz 10 m² cadde cephesi; onlar büyük alan)</span></td>
+        <tr class="res sub"><td>↳ Aylık personel gideri <span class="note">(kişi × maaş)</span></td><td class="us" data-o="A-pers"></td><td data-o="B-pers"></td><td data-o="C-pers"></td></tr>
+        <tr><td>Kira <span class="note">(biz 10 m² ≈ 6.000 TL/m²; Domino's ~100 m² ≈ 1.500 TL/m²; mahalle ~60 m² ≈ 1.600 TL/m² — küçük dükkanda m² pahalı, toplam ucuz)</span></td>
           <td class="us"><input data-c="A" data-k="kira" type="number"> TL</td>
           <td><input data-c="B" data-k="kira" type="number"> TL</td>
           <td><input data-c="C" data-k="kira" type="number"> TL</td></tr>
@@ -259,7 +262,8 @@
           <td><input data-c="C" data-k="adet" type="number"> adet</td></tr>
 
         <tr class="grp"><td colspan="4">Sonuç — otomatik hesaplanır</td></tr>
-        <tr class="res"><td>Aylık sabit gider</td><td class="us" data-o="A-sabit"></td><td data-o="B-sabit"></td><td data-o="C-sabit"></td></tr>
+        <tr class="res"><td>Personel gideri <span class="note">(en büyük sabit kalem)</span></td><td class="us" data-o="A-pers2"></td><td data-o="B-pers2"></td><td data-o="C-pers2"></td></tr>
+        <tr class="res"><td>Aylık sabit gider <span class="note">(personel + kira + faturalar)</span></td><td class="us" data-o="A-sabit"></td><td data-o="B-sabit"></td><td data-o="C-sabit"></td></tr>
         <tr class="res"><td>Pizza başı değişken gider <span class="note">(malzeme+paket+komisyonlar)</span></td><td class="us" data-o="A-deg"></td><td data-o="B-deg"></td><td data-o="C-deg"></td></tr>
         <tr class="res hi"><td>Bir pizzanın bize TAM maliyeti <span class="note">= bu satış adedinde minimum satış fiyatı; altına satarsan zarar</span></td><td class="us" data-o="A-min"></td><td data-o="B-min"></td><td data-o="C-min"></td></tr>
         <tr class="res"><td>Aylık gelir</td><td class="us" data-o="A-gelir"></td><td data-o="B-gelir"></td><td data-o="C-gelir"></td></tr>
@@ -502,8 +506,8 @@
 <script>
 var DEF = {
   A: {pers:1, maas:40875, kira:60000, elek:9000,  su:2500, muh:5000, sis:2500, roy:0,  yat:4500000,  malz:83, kutu:10, fiyat:300, ppay:50, pkom:32, adet:45},
-  B: {pers:6, maas:40875, kira:200000, elek:25000, su:4000, muh:8000, sis:5000, roy:12, yat:20000000, malz:70, kutu:8,  fiyat:260, ppay:30, pkom:30, adet:140},
-  C: {pers:2, maas:40875, kira:100000, elek:14000, su:3000, muh:5000, sis:2500, roy:0,  yat:1800000,  malz:83, kutu:10, fiyat:350, ppay:50, pkom:32, adet:50}
+  B: {pers:6, maas:40875, kira:150000, elek:25000, su:4000, muh:8000, sis:5000, roy:12, yat:20000000, malz:70, kutu:8,  fiyat:260, ppay:30, pkom:30, adet:140},
+  C: {pers:2, maas:40875, kira:95000,  elek:14000, su:3000, muh:5000, sis:2500, roy:0,  yat:1800000,  malz:83, kutu:10, fiyat:350, ppay:50, pkom:32, adet:50}
 };
 var POS = 0.03, GUN = 30.4;
 function fmt(n){ return Math.round(n).toLocaleString('tr-TR'); }
@@ -528,6 +532,9 @@ function calc(c){
   var min = aylikAdet > 0 ? (sabit/aylikAdet + degisken) : 0;
   var bb = marj > 0 ? sabit/(GUN*marj) : Infinity;
   var geri = kar > 0 ? v.yat / kar : Infinity;
+  var persTop = v.pers * v.maas;
+  setOut(c+'-pers', v.pers+' × '+fmt(v.maas)+' = <b>'+fmt(persTop)+' TL</b>');
+  setOut(c+'-pers2', fmt(persTop)+' TL');
   setOut(c+'-sabit', fmt(sabit)+' TL');
   setOut(c+'-deg', fmt(degisken)+' TL');
   setOut(c+'-min', fmt(min)+' TL', null);
