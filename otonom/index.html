@@ -417,6 +417,14 @@ section#store-m a[style*="color:var(--blue)"]{color:#c2600f!important}
 #hesap table.hs th.m{background:#c2600f}
 #hesap table.hs th.d{background:#3f4a5c}
 #hesap table.hs th.p{background:#4a5f52}
+#hesap table.hs .rank{display:inline-flex;align-items:center;justify-content:center;width:19px;height:19px;border-radius:50%;font-size:11px;font-weight:800;margin-left:7px;vertical-align:middle;color:#fff}
+#hesap table.hs .rank.r1{background:#c0392b}
+#hesap table.hs .rank.r2{background:#d97a1a}
+#hesap table.hs .rank.r3{background:#8a94a2}
+#hesap table.hs .rank.r4{background:#b6bfcc}
+#hesap table.hs td.lbl .rank{margin-left:0;margin-right:8px;width:18px;height:18px;font-size:10.5px}
+#hesap .rankleg{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:10px;font-size:12.5px;color:#68758a;align-items:center}
+#hesap .rankleg i{display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:50%;font-size:10.5px;font-weight:800;color:#fff;margin-right:6px}
 #hesap table.hs td.num{white-space:nowrap}
 #hesap table.hs td{padding:9px 12px;border-top:1px solid #e8edf5;vertical-align:middle;color:#3d4a5c!important;line-height:1.45;background:#fff}
 #hesap table.hs td.lbl{font-weight:600;color:#0f1726!important;background:#f7f9fc;border-right:1px solid #e3e9f2}
@@ -1248,6 +1256,7 @@ section#store-m a[style*="color:var(--blue)"]{color:#c2600f!important}
         </tbody></table>
     </div>
 
+    <div class="rankleg"><b style="color:#0f1726;font-weight:600">En büyük gider kalemleri:</b><span><i style="background:#c0392b">1</i>birinci</span><span><i style="background:#d97a1a">2</i>ikinci</span><span><i style="background:#8a94a2">3</i>üçüncü</span><span><i style="background:#b6bfcc">4</i>dördüncü</span><span style="color:#8a94a2">— her kolon kendi içinde sıralanır; satır başındaki numara Model M'ye göredir</span></div>
     <div class="hlegend"><span><i style="background:#fff6ec;border:2px solid #c2600f"></i>Model M · insanlı</span><span><i style="background:#eef4ff;border:2px solid #1a49b8"></i>Model S · insansız</span><span><i style="background:#f5f6f9;border:2px solid #3f4a5c"></i>Domino's</span><span><i style="background:#f4f8f5;border:2px solid #4a5f52"></i>Mahalle pizzacısı</span></div>
     <button class="hbtn" onclick="hsReset()">↺ Varsayılana dön</button>
     <div class="hexp"><b>Nasıl okunur?</b> <b>Başabaş</b>, masrafı sıfırlayan günlük satıştır; üstündeki her pizza kâr yazar. İki başabaş var: <i>nakit</i> (işletme giderlerini karşılar) ve <i>tam</i> (yatırımın yıpranmasını da karşılar) — gerçek eşik ikincisidir. <b>① ve ② neden ayrı?</b> Komisyon her satıştan değil, sadece platformdan gelen siparişten kesilir: satışın %50'si Yemeksepeti'nden geliyor ve platform %35 kesiyorsa ortalama yük %17,5 olur. Kapıdan/QR'lı dolaptan gelen satışta platform komisyonu yoktur, yalnız %3 kart komisyonu vardır — bu yüzden ①'i düşürmek fiyat kırmaktan daha kârlıdır. <b>Vergiler</b> ayrı satırlarda: KDV, amortisman ve gelir vergisi düşülmüş "net kâr" en alttadır.</div>
@@ -1994,6 +2003,44 @@ section#store-m a[style*="color:var(--blue)"]{color:#c2600f!important}
     hset(c+'-bbtam', Number.isFinite(bbtam) ? 'günde '+bbtam.toFixed(1) : '<span class="neg">ulaşılamaz</span>');
     hset(c+'-geri', Number.isFinite(geri) ? '~'+Math.round(geri)+' ay' : '<span class="neg">geri dönmez</span>');
     hset(c+'-nakitiht', hfmt(v.yat + 3*sabit)+' TL');
+
+    /* en buyuk gider kalemleri — her kolon icin ayri siralama */
+    var kalemler = [
+      {k:'maas',    tl: personel},
+      {k:'kira',    tl: v.kira},
+      {k:'elek',    tl: v.elek},
+      {k:'su',      tl: v.su},
+      {k:'muh',     tl: v.muh},
+      {k:'sis',     tl: v.sis},
+      {k:'bakim',   tl: bakimTL},
+      {k:'ikmal',   tl: v.ikmal},
+      {k:'zorunlu', tl: v.zorunlu},
+      {k:'malz',    tl: v.malz * aylikAdet},
+      {k:'kutu',    tl: v.kutu * aylikAdet},
+      {o:'kom',     tl: komTL * aylikAdet},
+      {o:'amort',   tl: amort}
+    ];
+    hrank(c, kalemler);
+  }
+  function hrank(c, kalemler){
+    var cls = {S:'s', M:'m', D:'d', P:'p'}[c];
+    document.querySelectorAll('#hst td.'+cls+' .rank').forEach(function(e){ e.remove(); });
+    if(c === 'M') document.querySelectorAll('#hst td.lbl .rank').forEach(function(e){ e.remove(); });
+    kalemler.filter(function(x){ return x.tl > 0; })
+            .sort(function(a,b){ return b.tl - a.tl; })
+            .slice(0,4)
+            .forEach(function(x,i){
+      var cell = null;
+      if(x.k){ var inp = document.querySelector('#hst input[data-c="'+c+'"][data-k="'+x.k+'"]'); if(inp) cell = inp.closest('td'); }
+      else   { cell = document.querySelector('#hst [data-o="'+c+'-'+x.o+'"]'); }
+      if(!cell) return;
+      cell.insertAdjacentHTML('beforeend', '<span class="rank r'+(i+1)+'" title="'+(i+1)+'. en büyük gider — aylık '+hfmt(x.tl)+' TL">'+(i+1)+'</span>');
+      /* satir etiketinin soluna: oncelikli modelimiz Model M'ye gore sira */
+      if(c === 'M'){
+        var lbl = cell.parentElement.querySelector('td.lbl');
+        if(lbl) lbl.insertAdjacentHTML('afterbegin', '<span class="rank r'+(i+1)+'">'+(i+1)+'</span>');
+      }
+    });
   }
   function hfill(c,vals){ document.querySelectorAll('#hst input[data-c="'+c+'"]').forEach(function(i){ if(vals[i.dataset.k]!==undefined) i.value=vals[i.dataset.k]; }); }
   function hsave(){ try{ var o={}; HCOLS.forEach(function(c){o[c]=hread(c);}); localStorage.setItem('ak_hesap_v2',JSON.stringify(o)); }catch(e){} }
