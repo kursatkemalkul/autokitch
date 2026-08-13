@@ -372,6 +372,24 @@ a[style*="background:#12151c"],div[style*="background:#12151c"]{background:#fff!
 a[style*="background:#12151c"] b,div[style*="background:#12151c"] b{color:#0f1726!important}
 a[style*="background:#12151c"] span,div[style*="background:#12151c"] span{color:#7c8798!important}
 [style*="border-top:1px solid rgba(255,255,255"]{border-top-color:#dbe3ee!important}
+
+
+.picker .pick:nth-child(1){background:#f1f6ff!important;border-color:#d6e3f8!important}
+.picker .pick:nth-child(1):hover{border-color:#1a49b8!important}
+.picker .pick:nth-child(1) .pk-tag,.picker .pick:nth-child(1) .pk-go,.picker .pick:nth-child(1) .pk-ico,.picker .pick:nth-child(1) .pk-spec b{color:#1a49b8!important}
+.picker .pick:nth-child(2){background:#fff6ee!important;border-color:#f3ddc8!important}
+.picker .pick:nth-child(2):hover{border-color:#c2600f!important}
+.picker .pick:nth-child(2) .pk-tag,.picker .pick:nth-child(2) .pk-go,.picker .pick:nth-child(2) .pk-ico,.picker .pick:nth-child(2) .pk-spec b{color:#c2600f!important}
+/* iki model bolumu — gorsel ayrim */
+section#store-s{background:#f1f6ff!important;border-top:1px solid #dfe8f8;border-bottom:1px solid #dfe8f8}
+section#store-m{background:#fff6ee!important;border-bottom:1px solid #f5e2d0}
+section#store-s .eyebrow{color:#1a49b8!important}
+section#store-m .eyebrow{color:#c2600f!important}
+section#store-m .accent{color:#c2600f!important}
+section#store-m .card .n{color:#c2600f!important}
+section#store-m .subh span{color:#a9855f!important}
+section#store-m .step .n,section#store-m [style*="rgba(41,151,255,.15)"]{background:rgba(194,96,15,.12)!important;color:#c2600f!important}
+section#store-m a[style*="color:var(--blue)"]{color:#c2600f!important}
 .hero .sub{text-shadow:none!important}
 .hero .tag{text-shadow:none!important}
 
@@ -396,13 +414,13 @@ a[style*="background:#12151c"] span,div[style*="background:#12151c"] span{color:
 #hesap table.hs th em{display:block;font-style:normal;font-size:11px;font-weight:400;color:#b9c6da!important;margin-top:3px}
 #hesap table.hs th.lbl{background:#1a2434;min-width:210px}
 #hesap table.hs th.s{background:#1a49b8}
-#hesap table.hs th.m{background:#2f6ae0}
+#hesap table.hs th.m{background:#c2600f}
 #hesap table.hs th.d{background:#3a4658}
 #hesap table.hs th.p{background:#4a5668}
 #hesap table.hs td{padding:9px 12px;border-top:1px solid #e8edf5;vertical-align:middle;color:#3d4a5c!important;line-height:1.45;background:#fff}
 #hesap table.hs td.lbl{font-weight:600;color:#0f1726!important;background:#f7f9fc;border-right:1px solid #e3e9f2}
 #hesap table.hs td.s{background:#eef4ff;border-left:2px solid #1a49b8}
-#hesap table.hs td.m{background:#f6f9ff;border-right:2px solid #cbd9f2}
+#hesap table.hs td.m{background:#fff6ec;border-right:2px solid #f0d9c2}
 #hesap table.hs td.d,#hesap table.hs td.p{background:#fff}
 #hesap table.hs tr.grp td{background:#e9eef7!important;font-weight:800;color:#0f1726!important;font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;padding:9px 12px;border-top:2px solid #d3ddec}
 #hesap table.hs input{width:96px;font-size:13px;font-weight:600;text-align:right;padding:6px 8px;border:1px solid #c9d5e8;border-radius:8px;color:#0f1726;background:#fff;outline:none;font-family:inherit}
@@ -1227,7 +1245,7 @@ a[style*="background:#12151c"] span,div[style*="background:#12151c"] span{color:
         </tbody></table>
     </div>
 
-    <div class="hlegend"><span><i style="background:#eef4ff;border:2px solid #1a49b8"></i>Model S · insansız</span><span><i style="background:#f6f9ff;border:2px solid #cbd9f2"></i>Model M · insanlı</span><span><i style="background:#fff;border:1px solid #3a4658"></i>Domino's</span><span><i style="background:#fff;border:1px solid #4a5668"></i>Mahalle pizzacısı</span></div>
+    <div class="hlegend"><span><i style="background:#eef4ff;border:2px solid #1a49b8"></i>Model S · insansız</span><span><i style="background:#fff6ec;border:2px solid #c2600f"></i>Model M · insanlı</span><span><i style="background:#fff;border:1px solid #3a4658"></i>Domino's</span><span><i style="background:#fff;border:1px solid #4a5668"></i>Mahalle pizzacısı</span></div>
     <button class="hbtn" onclick="hsReset()">↺ Varsayılana dön</button>
     <div class="hexp"><b>Nasıl okunur?</b> <b>Başabaş</b>, masrafı sıfırlayan günlük satıştır; üstündeki her pizza kâr yazar. İki başabaş var: <i>nakit</i> (işletme giderlerini karşılar) ve <i>tam</i> (yatırımın yıpranmasını da karşılar) — gerçek eşik ikincisidir. <b>① ve ② neden ayrı?</b> Komisyon her satıştan değil, sadece platformdan gelen siparişten kesilir: satışın %50'si Yemeksepeti'nden geliyor ve platform %35 kesiyorsa ortalama yük %17,5 olur. Kapıdan/QR'lı dolaptan gelen satışta platform komisyonu yoktur, yalnız %3 kart komisyonu vardır — bu yüzden ①'i düşürmek fiyat kırmaktan daha kârlıdır. <b>Vergiler</b> ayrı satırlarda: KDV, amortisman ve gelir vergisi düşülmüş "net kâr" en alttadır.</div>
     
