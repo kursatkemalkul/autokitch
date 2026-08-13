@@ -1261,22 +1261,36 @@ section#store-m a[style*="color:var(--blue)"]{color:#c2600f!important}
     <button class="hbtn" onclick="hsReset()">↺ Varsayılana dön</button>
     <div class="hexp"><b>Nasıl okunur?</b> <b>Başabaş</b>, masrafı sıfırlayan günlük satıştır; üstündeki her pizza kâr yazar. İki başabaş var: <i>nakit</i> (işletme giderlerini karşılar) ve <i>tam</i> (yatırımın yıpranmasını da karşılar) — gerçek eşik ikincisidir. <b>① ve ② neden ayrı?</b> Komisyon her satıştan değil, sadece platformdan gelen siparişten kesilir: satışın %50'si Yemeksepeti'nden geliyor ve platform %35 kesiyorsa ortalama yük %17,5 olur. Kapıdan/QR'lı dolaptan gelen satışta platform komisyonu yoktur, yalnız %3 kart komisyonu vardır — bu yüzden ①'i düşürmek fiyat kırmaktan daha kârlıdır. <b>Vergiler</b> ayrı satırlarda: KDV, amortisman ve gelir vergisi düşülmüş "net kâr" en alttadır.</div>
     
-    <div class="card rv d1" style="text-align:left;margin-top:22px">
-      <div class="n">Duyarlılık — asıl soru satış adedidir</div>
-      <p class="note" style="margin-top:10px;font-size:13.5px;color:#4c5a70;line-height:1.6">Tablodaki hiçbir gider kalemi tek başına belirleyici değil. Belirleyici olan <b>yatırım / günlük satış</b> çifti. Model S için (3,5 milyon TL yatırım, güncel varsayımlarla):</p>
-      <div style="overflow-x:auto;margin-top:14px">
-        <table class="hs" style="min-width:520px">
-          <thead><tr><th class="lbl">Günlük satış</th><th class="s">Nakit kâr</th><th class="s">Net kâr (vergi sonrası)</th><th class="d">Yatırımın dönüşü</th></tr></thead>
+    <div class="card rv d1" style="text-align:left;margin-top:26px">
+      <div class="n">Kaç pizza satarsam kurtarır?</div>
+      <h3 style="font-size:19px;margin:6px 0 4px;color:#0f1726">Başabaş noktası ve üstü — dört model yan yana</h3>
+      <p class="note" style="margin-top:6px;font-size:13px">En alttan başlar: <b>sıfıra sıfır</b> noktası, yani o ayın tüm giderini (kira, personel, malzeme, komisyon, vergi ve makinenin yıpranması dahil) tam karşılayan günlük satış. Üstündeki satırlar bu noktanın yüzde kaç üstüne çıkıldığında aya ne kaldığını gösterir. Yukarıdaki tabloda bir rakamı değiştirdiğinde burası da anında güncellenir.</p>
+      <div class="hs-box" style="margin-top:16px">
+        <table class="hs" id="hsen">
+          <thead><tr><th class="lbl">Senaryo</th>
+            <th class="m">Model M<em>insanlı</em></th>
+            <th class="s">Model S<em>insansız</em></th>
+            <th class="d">Domino's<em>şube</em></th>
+            <th class="p">Mahalle<em>pizzacısı</em></th></tr></thead>
           <tbody>
-            <tr><td class="lbl">35 pizza</td><td class="s">16.038 TL</td><td class="s"><span class="neg">−25.629 TL</span></td><td class="d">218 ay</td></tr>
-            <tr><td class="lbl">45 pizza</td><td class="s">46.251 TL</td><td class="s">3.438 TL</td><td class="d">78 ay</td></tr>
-            <tr class="res"><td class="lbl">55 pizza <span class="hnote">varsayılan</span></td><td class="s">76.464 TL</td><td class="s"><span class="pos">26.098 TL</span></td><td class="d">52 ay</td></tr>
-            <tr><td class="lbl">70 pizza</td><td class="s">121.784 TL</td><td class="s"><span class="pos">60.088 TL</span></td><td class="d">34 ay</td></tr>
-            <tr><td class="lbl">55 pizza + yatırım 2,2 M TL</td><td class="s">80.256 TL</td><td class="s"><span class="pos">40.549 TL</span></td><td class="d">33 ay</td></tr>
+            <tr class="res hi"><td class="lbl">⓿ Sıfıra sıfır — başabaş <span class="hnote">bu adette ne kâr ne zarar</span></td>
+              <td class="m" data-s="M-bb"></td><td class="s" data-s="S-bb"></td><td class="d" data-s="D-bb"></td><td class="p" data-s="P-bb"></td></tr>
+            <tr><td class="lbl">Başabaşın %20 üstü</td>
+              <td class="m" data-s="M-20"></td><td class="s" data-s="S-20"></td><td class="d" data-s="D-20"></td><td class="p" data-s="P-20"></td></tr>
+            <tr><td class="lbl">Başabaşın %40 üstü</td>
+              <td class="m" data-s="M-40"></td><td class="s" data-s="S-40"></td><td class="d" data-s="D-40"></td><td class="p" data-s="P-40"></td></tr>
+            <tr><td class="lbl">Başabaşın %60 üstü</td>
+              <td class="m" data-s="M-60"></td><td class="s" data-s="S-60"></td><td class="d" data-s="D-60"></td><td class="p" data-s="P-60"></td></tr>
+            <tr><td class="lbl">Başabaşın iki katı</td>
+              <td class="m" data-s="M-100"></td><td class="s" data-s="S-100"></td><td class="d" data-s="D-100"></td><td class="p" data-s="P-100"></td></tr>
+            <tr class="res hi"><td class="lbl">★ Bizim varsayımımız <span class="hnote">yukarıdaki tabloda girili günlük satış</span></td>
+              <td class="m" data-s="M-cur"></td><td class="s" data-s="S-cur"></td><td class="d" data-s="D-cur"></td><td class="p" data-s="P-cur"></td></tr>
+            <tr><td class="lbl">Güvenlik payı <span class="hnote">varsayımımız başabaşın ne kadar üstünde</span></td>
+              <td class="m" data-s="M-pay"></td><td class="s" data-s="S-pay"></td><td class="d" data-s="D-pay"></td><td class="p" data-s="P-pay"></td></tr>
           </tbody>
         </table>
       </div>
-      <div class="hexp" style="margin-top:14px"><b>Okunması gereken:</b> günde 35 pizzada model amortismanını karşılamaz — nakit üretir ama yatırımı eritir. Savunulacak eşik <b>günde 45'in üstü</b>, rahat bölge <b>55–70</b>. İkinci kaldıraç yatırımı küçültmek: makine bedeli 3,5 M'den 2,2 M'ye inerse aynı 55 satışta geri dönüş 52 aydan 33 aya düşer. Bu yüzden Let's Pizza fiyat teklifi ile kiralama/leasing seçeneği, lokasyon seçiminden sonraki en kritik karardır.</div>
+      <div class="hexp" style="margin-top:14px"><b>Nasıl okunur:</b> ilk satır her modelin ayakta kalma eşiğidir — o adedin altında zarar başlar. Alt satırdaki <b>güvenlik payı</b> ise en kritik göstergedir: varsayımımız eşiğin ne kadar üstünde? %20'nin altındaysa model kırılgandır (kötü bir ay zarara döner), %40 üstü rahat bölgedir. Her hücrede önce günlük satış adedi, altında o adette aya kalan <b>net kâr</b> (tüm vergiler sonrası) yazar.</div>
     </div>
     <p class="note rv" style="margin-top:18px">Tüm gider tutarları <b>KDV hariç</b>, menü fiyatı <b>KDV dahil</b> girilir; hesap net hasılat üzerinden döner. Ay = 30,4 gün (7 gün açık). Varsayılanlar araştırma verili: asgari ücret işveren maliyeti ₺40.875 (ÇSGB 2026) · 30 cm pizza malzemesi ₺83 + paket ₺10 (Ağu 2026 toptan) · Domino's Türkiye 795 şube, franchise kesintisi ABD 2025 fiili %12,9 · platform komisyonları %30–40 bandı. Bu tablo <b>nokta bazlı birim ekonomisidir</b>; merkez mutfak yönetimi, Ar-Ge ve genel merkez giderleri dahil değildir. Model S ve M'de merkez hamur üretimi + ikmal lojistiği ayrı satırda yüklenmiştir. Mimari plan, ekipman fiyatları ve açık kararlar <a href="tablo/" style="color:var(--sblue)">Tablo &amp; Plan sayfasında</a>.</p>
   </div>
@@ -1944,8 +1958,8 @@ section#store-m a[style*="color:var(--blue)"]{color:#c2600f!important}
   function hfmt(n){ return Number.isFinite(n) ? Math.round(n).toLocaleString('tr-TR') : '—'; }
   function hread(c){ var o={}; document.querySelectorAll('#hst input[data-c="'+c+'"]').forEach(function(i){ o[i.dataset.k]=parseFloat(String(i.value).replace(',','.'))||0; }); return o; }
   function hset(id,html,cls){ var el=document.querySelector('#hst [data-o="'+id+'"]'); if(el){ el.innerHTML=html; el.classList.remove('pos','neg'); if(cls) el.classList.add(cls); } }
-  function hcalc(c){
-    var v = hread(c);
+  function hmodel(v, adetOverride){
+    var adet = (adetOverride === undefined) ? v.adet : adetOverride;
     var kdvK = 1 + (v.kdv/100);
     var netFiyat = v.fiyat / kdvK;
     var personel = v.pers * v.maas;
@@ -1960,7 +1974,7 @@ section#store-m a[style*="color:var(--blue)"]{color:#c2600f!important}
     var degisken   = v.malz + v.kutu + komTL + royTL;
     var marj       = netFiyat - degisken;
 
-    var aylikAdet = v.adet * HGUN;
+    var aylikAdet = adet * HGUN;
     var ciro      = aylikAdet * v.fiyat;
     var netHas    = aylikAdet * netFiyat;
     /* odenecek KDV: satis KDV'si - alislarda odenen KDV (malzeme %10, ambalaj+giderler %20 varsayimi) */
@@ -1983,7 +1997,21 @@ section#store-m a[style*="color:var(--blue)"]{color:#c2600f!important}
     var bb    = marj > 0 ? sabit/(HGUN*marj) : NaN;
     var bbtam = marj > 0 ? (sabit+amort)/(HGUN*marj) : NaN;
     var geri  = serbest > 0 ? v.yat/serbest : NaN;
-
+    return {personel:personel, bakimTL:bakimTL, sabit:sabit, netFiyat:netFiyat,
+            platformTL:platformTL, posTL:posTL, royTL:royTL, komTL:komTL,
+            degisken:degisken, marj:marj, aylikAdet:aylikAdet, adet:adet,
+            ciro:ciro, netHas:netHas, kdvOdenecek:kdvOdenecek,
+            nakitKar:nakitKar, amort:amort, vergiOnce:vergiOnce, vergiTL:vergiTL,
+            netKar:netKar, serbest:serbest, birim:birim, minf:minf,
+            bb:bb, bbtam:bbtam, geri:geri, v:v};
+  }
+  function hcalc(c){
+    var v = hread(c);
+    var R = hmodel(v);
+    var personel=R.personel, bakimTL=R.bakimTL, sabit=R.sabit, komTL=R.komTL, platformTL=R.platformTL, posTL=R.posTL,
+        degisken=R.degisken, aylikAdet=R.aylikAdet, ciro=R.ciro, netHas=R.netHas, kdvOdenecek=R.kdvOdenecek,
+        nakitKar=R.nakitKar, amort=R.amort, vergiOnce=R.vergiOnce, vergiTL=R.vergiTL, netKar=R.netKar,
+        birim=R.birim, minf=R.minf, bb=R.bb, bbtam=R.bbtam, geri=R.geri;
     hset(c+'-pers', v.pers+' × '+hfmt(v.maas)+' = <b>'+hfmt(personel)+' TL</b>');
     hset(c+'-bakimtl', hfmt(bakimTL)+' TL');
     hset(c+'-sabit', hfmt(sabit)+' TL');
@@ -2042,15 +2070,50 @@ section#store-m a[style*="color:var(--blue)"]{color:#c2600f!important}
       }
     });
   }
+  function hsen(){
+    if(!document.getElementById('hsen')) return;
+    ['M','S','D','P'].forEach(function(c){
+      var v = hread(c);
+      var R = hmodel(v);
+      function yaz(id, adet, ust){
+        var el = document.querySelector('#hsen [data-s="'+c+'-'+id+'"]');
+        if(!el) return;
+        if(!Number.isFinite(adet) || adet <= 0){ el.innerHTML = '<span class="neg">ulaşılamaz</span>'; return; }
+        var K = hmodel(v, adet);
+        var kar = K.netKar;
+        el.innerHTML = '<b>günde '+adet.toFixed(1)+'</b>'
+          + (ust ? ' <span class="hnote" style="display:inline">'+ust+'</span>' : '')
+          + '<div style="margin-top:2px"><span class="'+(kar>=0?'pos':'neg')+'">'+hfmt(kar)+' TL</span> <span class="hnote" style="display:inline">net/ay</span></div>';
+      }
+      var b = R.bbtam;
+      yaz('bb', b);
+      yaz('20', b*1.2);
+      yaz('40', b*1.4);
+      yaz('60', b*1.6);
+      yaz('100', b*2);
+      yaz('cur', v.adet);
+      var pay = document.querySelector('#hsen [data-s="'+c+'-pay"]');
+      if(pay){
+        if(!Number.isFinite(b) || b<=0){ pay.innerHTML='—'; }
+        else {
+          var p = (v.adet - b)/b*100;
+          var renk = p >= 40 ? 'pos' : (p >= 20 ? '' : 'neg');
+          var etiket = p >= 40 ? 'rahat' : (p >= 20 ? 'sınırda' : (p >= 0 ? 'kırılgan' : 'zarar'));
+          pay.innerHTML = '<span class="'+renk+'"><b>'+(p>=0?'+':'')+p.toFixed(0)+'%</b></span> <span class="hnote" style="display:inline">'+etiket+'</span>';
+        }
+      }
+    });
+  }
   function hfill(c,vals){ document.querySelectorAll('#hst input[data-c="'+c+'"]').forEach(function(i){ if(vals[i.dataset.k]!==undefined) i.value=vals[i.dataset.k]; }); }
   function hsave(){ try{ var o={}; HCOLS.forEach(function(c){o[c]=hread(c);}); localStorage.setItem('ak_hesap_v2',JSON.stringify(o)); }catch(e){} }
-  function hsReset(){ HCOLS.forEach(function(c){ hfill(c,HDEF[c]); hcalc(c); }); try{ localStorage.removeItem('ak_hesap_v2'); }catch(e){} }
+  function hsReset(){ HCOLS.forEach(function(c){ hfill(c,HDEF[c]); hcalc(c); }); hsen(); try{ localStorage.removeItem('ak_hesap_v2'); }catch(e){} }
   (function(){
     if(!document.getElementById('hst')) return;
     var saved=null; try{ saved=JSON.parse(localStorage.getItem('ak_hesap_v2')); }catch(e){}
     HCOLS.forEach(function(c){ hfill(c,(saved&&saved[c])||HDEF[c]); hcalc(c); });
+    hsen();
     document.querySelectorAll('#hst input').forEach(function(i){
-      i.addEventListener('input',function(){ hcalc(i.dataset.c); hsave(); });
+      i.addEventListener('input',function(){ hcalc(i.dataset.c); hsen(); hsave(); });
     });
   })();
 </script>
