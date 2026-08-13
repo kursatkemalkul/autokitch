@@ -248,14 +248,15 @@
           <td class="us"><input data-c="A" data-k="fiyat" type="number"> TL</td>
           <td><input data-c="B" data-k="fiyat" type="number"> TL</td>
           <td><input data-c="C" data-k="fiyat" type="number"> TL</td></tr>
-        <tr><td>Platform siparişi payı <span class="note">(Yemeksepeti/Getir'den gelen satış yüzdesi)</span></td>
+        <tr><td>① Satışın yüzde kaçı Yemeksepeti/Getir'den geliyor? <span class="note">(gerisi kapıdan/QR'dan gelen, komisyonsuz satış)</span></td>
           <td class="us"><input data-c="A" data-k="ppay" type="number"> %</td>
           <td><input data-c="B" data-k="ppay" type="number"> %</td>
           <td><input data-c="C" data-k="ppay" type="number"> %</td></tr>
-        <tr><td>Platform komisyonu</td>
+        <tr><td>② Yemeksepeti/Getir o siparişlerden ne kesiyor? <span class="note">(sadece platformdan gelen siparişlere uygulanır)</span></td>
           <td class="us"><input data-c="A" data-k="pkom" type="number"> %</td>
           <td><input data-c="B" data-k="pkom" type="number"> %</td>
           <td><input data-c="C" data-k="pkom" type="number"> %</td></tr>
+        <tr class="res"><td>→ Ortalama komisyon yükü <span class="note">(① × ② + %3 POS · pizza başına)</span></td><td class="us" data-o="A-kom"></td><td data-o="B-kom"></td><td data-o="C-kom"></td></tr>
         <tr><td>Günlük satış (pizza)</td>
           <td class="us"><input data-c="A" data-k="adet" type="number"> adet</td>
           <td><input data-c="B" data-k="adet" type="number"> adet</td>
@@ -277,6 +278,7 @@
       <button class="cbtn" onclick="calcReset()">↺ Varsayılana dön</button>
       <span class="note" style="align-self:center">Varsayılanlar araştırma verili: işveren maliyeti 40.875 TL (ÇSGB) · malzeme 83 TL + paket 10 TL (Ağu 2026 toptan) · Domino's 140 pizza/gün (global şube ortalaması), royalty+reklam ~%12 (ABD FDD) · POS %3 tüm satışta dahil · ay = 30,4 gün</span>
     </div>
+    <div class="explain" style="background:#eaf0fc;color:#1a3a7a"><b>① ve ② neden ayrı?</b> Çünkü komisyon <b>her satıştan değil, sadece platformdan gelen satıştan</b> kesiliyor. ① toplam satışın ne kadarının Yemeksepeti/Getir'den geldiğini söyler; ② o siparişlerde platformun kestiği oranı. Örnek: günde 100 pizza satıyorsun, 50'si Yemeksepeti'nden (①=%50), Yemeksepeti %32 kesiyor (②=%32) → <b>ortalama yük %16</b>, yani 300 TL'lik pizzada 48 TL. Kapıdan/QR'dan gelen 50 pizzada platform kesintisi yok, sadece kart komisyonu var. <b>Bizim modelin gizli avantajı burada:</b> QR'lı dolap sayesinde müşteri doğrudan bizden alabiliyor — ① düştükçe kâr artıyor. ①'i %20 yaparsan farkı anında görürsün.</div>
     <div class="explain"><b>Başabaş ne demek?</b> O günlük satış adedinde gelir, tüm masrafı tam karşılar — ne kâr ne zarar. Örnek: bizim kolonda başabaş 26 çıkıyorsa, günde 26 pizza satınca masraf sıfırlanır; 27'nci pizzadan itibaren her pizza kâr yazar. "Bir pizzanın bize TAM maliyeti" satırı da şunu söyler: bu adette pizzayı en az kaça satmak zorundayız.</div>
 
     <div class="card" style="margin-top:22px">
@@ -542,7 +544,8 @@ function setOut(id, html, cls){
 function calc(c){
   var v = readCol(c);
   var sabit = v.pers*v.maas + v.kira + v.elek + v.su + v.muh + v.sis;
-  var kesinti = v.fiyat * ((v.pkom/100)*(v.ppay/100) + POS + (v.roy/100));
+  var platformPos = v.fiyat * ((v.pkom/100)*(v.ppay/100) + POS);
+  var kesinti = platformPos + v.fiyat*(v.roy/100);
   var degisken = v.malz + v.kutu + kesinti;
   var marj = v.fiyat - degisken;
   var aylikAdet = v.adet * GUN;
@@ -554,6 +557,7 @@ function calc(c){
   var persTop = v.pers * v.maas;
   setOut(c+'-pers', v.pers+' × '+fmt(v.maas)+' = <b>'+fmt(persTop)+' TL</b>');
   setOut(c+'-pers2', fmt(persTop)+' TL');
+  setOut(c+'-kom', fmt(platformPos)+' TL <span class="note">(fiyatın %'+(v.fiyat>0?(100*platformPos/v.fiyat).toFixed(1):0)+'’i)</span>');
   setOut(c+'-sabit', fmt(sabit)+' TL');
   setOut(c+'-deg', fmt(degisken)+' TL');
   setOut(c+'-min', fmt(min)+' TL', null);
