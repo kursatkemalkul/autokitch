@@ -226,7 +226,7 @@
           <td class="us"><input data-c="A" data-k="sis" type="number"> TL</td>
           <td><input data-c="B" data-k="sis" type="number"> TL</td>
           <td><input data-c="C" data-k="sis" type="number"> TL</td></tr>
-        <tr><td>Franchise royalty + reklam <span class="note">(cironun yüzdesi; bağımsızlarda 0)</span></td>
+        <tr><td>Franchise kesintisi <span class="note">(cironun yüzdesi; bağımsızlarda 0. Domino's ABD 2025 fiili: royalty %7,07 + reklam %5,84 = <b>%12,9 nakit</b>; üstüne zorunlu malzeme alımındaki gizli marj ~%3,3 → gerçek toplam ~%16,2)</span></td>
           <td class="us"><input data-c="A" data-k="roy" type="number" step="0.5"> %</td>
           <td><input data-c="B" data-k="roy" type="number" step="0.5"> %</td>
           <td><input data-c="C" data-k="roy" type="number" step="0.5"> %</td></tr>
@@ -236,7 +236,7 @@
           <td><input data-c="C" data-k="yat" type="number"> TL</td></tr>
 
         <tr class="grp"><td colspan="4">Pizza başı — düzenlenebilir</td></tr>
-        <tr><td>Malzeme maliyeti <span class="note">(Domino's merkezî tedarikle daha ucuza üretir)</span></td>
+        <tr><td>Malzeme maliyeti <span class="note">(Domino's ölçek sayesinde daha ucuza alır — ama merkez fabrikadan almak <b>zorunda</b>, yani bu fiyat zaten Domino's'un marjını içeriyor)</span></td>
           <td class="us"><input data-c="A" data-k="malz" type="number"> TL</td>
           <td><input data-c="B" data-k="malz" type="number"> TL</td>
           <td><input data-c="C" data-k="malz" type="number"> TL</td></tr>
@@ -277,7 +277,26 @@
       <button class="cbtn" onclick="calcReset()">↺ Varsayılana dön</button>
       <span class="note" style="align-self:center">Varsayılanlar araştırma verili: işveren maliyeti 40.875 TL (ÇSGB) · malzeme 83 TL + paket 10 TL (Ağu 2026 toptan) · Domino's 140 pizza/gün (global şube ortalaması), royalty+reklam ~%12 (ABD FDD) · POS %3 tüm satışta dahil · ay = 30,4 gün</span>
     </div>
-    <div class="explain"><b>Başabaş ne demek?</b> O günlük satış adedinde gelir, tüm masrafı tam karşılar — ne kâr ne zarar. Örnek: bizim kolonda başabaş 38 çıkıyorsa, günde 38 pizza satınca masraf sıfırlanır; 39'uncu pizzadan itibaren her pizza kâr yazar. "Bir pizzanın bize TAM maliyeti" satırı da şunu söyler: bu adette pizzayı en az kaça satmak zorundayız.</div>
+    <div class="explain"><b>Başabaş ne demek?</b> O günlük satış adedinde gelir, tüm masrafı tam karşılar — ne kâr ne zarar. Örnek: bizim kolonda başabaş 26 çıkıyorsa, günde 26 pizza satınca masraf sıfırlanır; 27'nci pizzadan itibaren her pizza kâr yazar. "Bir pizzanın bize TAM maliyeti" satırı da şunu söyler: bu adette pizzayı en az kaça satmak zorundayız.</div>
+
+    <div class="card" style="margin-top:22px">
+      <h3>Franchise gerçeği: Domino's bayisi cirosunun ne kadarını merkeze veriyor?</h3>
+      <p class="note" style="margin-top:8px;font-size:13.5px;color:#3d4a5c">Yaygın olarak yazılan "%9,5" veya "%12" rakamları eksik. Domino's'un kendi SEC kayıtlarından (2025 yıl sonu) hesaplanan gerçek tablo:</p>
+      <div style="overflow-x:auto;margin-top:12px">
+      <table class="mix" style="min-width:520px">
+        <tr><th>Kalem</th><th>Cironun %'si</th><th>Not</th></tr>
+        <tr><td>Royalty (isim hakkı)</td><td>5,50 %</td><td>Sözleşme oranı</td></tr>
+        <tr><td>Reklam fonu (ulusal + yerel)</td><td>6,00 %</td><td>"4%" diye yazılır ama yerel fonun 2 puanı ulusala aktarılır — 10-K'da net</td></tr>
+        <tr><td>Teknoloji + yazılım + çağrı merkezi</td><td>≈1,40 %</td><td>Dijital sipariş başına 0,375 $, PULSE lisansı, destek hattı ücreti…</td></tr>
+        <tr class="res"><td>NAKİT TOPLAM (fiili ödenen)</td><td>12,91 %</td><td>2023'te %12,46 idi — her yıl artıyor</td></tr>
+        <tr><td>+ Zorunlu malzeme alımındaki gizli marj</td><td>≈3,27 %</td><td>Hamuru başka yerden alamıyor ("üçüncü taraf tedarikçi yok"); kâr paylaşımı iadesi düşülmüş net rakam</td></tr>
+        <tr class="res hi"><td>GERÇEK TOPLAM</td><td>≈16,2 %</td><td>Kâr paylaşımına girmeyen bayide ≈%18</td></tr>
+      </table>
+      </div>
+      <div class="oneri" style="margin-top:14px"><b>Bunun anlamı:</b> ortalama bir Domino's şubesi yılda merkeze ≈227.000 $ ödüyor; o şubenin kendi kârı ise 139.000-202.000 $. Yani <b>marka, işletmecinin kazandığı kadar veya daha fazlasını alıyor.</b> Bizim modelde bu kalem sıfır — hamuru makine kendisi yapıyor, kimseye isim hakkı ödemiyoruz.</div>
+      <div style="margin-top:12px;background:#fdf4e6;border-radius:10px;padding:12px 16px;font-size:13.5px;color:#7a5a12;line-height:1.55"><b>Türkiye'de tablo daha da ağır:</b> DP Eurasia'nın yıllık raporlarından hesaplandığında, Türkiye'deki bayilerin <b>kasa cirosunun ~%46-48'i</b> merkeze geri dönüyor (2016: %46,4 · 2017: %47,2 · 2021: %48,0). Bunun büyük kısmı isim hakkı değil, <b>zorunlu malzeme bedeli</b> — ama satın alma zorunluluğu var: yerel tedarikçi kullanma muafiyeti sözleşmede yalnızca Azerbaycan ve Gürcistan'a tanınmış, Türkiye şubelerinin çıkış yolu yok. Yani bayi ne hamurunu, ne sosunu, ne kutusunu istediği yerden alabiliyor.</div>
+      <p class="note" style="margin-top:10px">Kaynak: Domino's Pizza Inc FY2025 Form 10-K (SEC) ve Franchise Disclosure Document Item 6/8/19; DP Eurasia 2017 &amp; 2021 yıllık raporları. Türkiye'ye özel bayi oranı hiçbir resmî belgede açıklanmıyor; Ekonomist dergisi (Oca 2024) giriş bedeli 50.000 $ ve %12 birleşik kesinti yazıyor — bu gazetecilik verisi, resmî değil.</p>
+    </div>
   </div>
 </section>
 
@@ -506,7 +525,7 @@
 <script>
 var DEF = {
   A: {pers:1, maas:40875, kira:60000, elek:9000,  su:2500, muh:5000, sis:2500, roy:0,  yat:4500000,  malz:83, kutu:10, fiyat:300, ppay:50, pkom:32, adet:45},
-  B: {pers:6, maas:40875, kira:150000, elek:25000, su:4000, muh:8000, sis:5000, roy:12, yat:20000000, malz:70, kutu:8,  fiyat:260, ppay:30, pkom:30, adet:140},
+  B: {pers:6, maas:40875, kira:150000, elek:25000, su:4000, muh:8000, sis:5000, roy:12.9, yat:20000000, malz:70, kutu:8,  fiyat:260, ppay:30, pkom:30, adet:140},
   C: {pers:2, maas:40875, kira:95000,  elek:14000, su:3000, muh:5000, sis:2500, roy:0,  yat:1800000,  malz:83, kutu:10, fiyat:350, ppay:50, pkom:32, adet:50}
 };
 var POS = 0.03, GUN = 30.4;
