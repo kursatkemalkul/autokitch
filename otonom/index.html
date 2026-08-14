@@ -455,6 +455,9 @@ section#store-m a[style*="color:var(--blue)"]{color:#c2600f!important}
 #hesap .aksw span:before{content:"";position:absolute;width:14px;height:14px;left:3px;top:3px;background:#fff;border-radius:50%;transition:.18s;box-shadow:0 1px 3px rgba(0,0,0,.25)}
 #hesap .aksw input:checked + span{background:#1a49b8}
 #hesap .aksw input:checked + span:before{left:17px}
+#hesap .akmini{width:28px;height:16px;vertical-align:-3px}
+#hesap .akmini span:before{width:10px;height:10px}
+#hesap .akmini input:checked + span:before{left:15px}
 </style>
 </head>
 <body>
@@ -1218,7 +1221,7 @@ section#store-m a[style*="color:var(--blue)"]{color:#c2600f!important}
         <tr><td class="lbl">Personel sayısı <span class="hnote">7 gün açık bir vardiya tek kişiyle dönmez (45 sa/hafta sınırı): Model M'de 12 saatlik posta ≈1,6 kişi. Model S'de noktada kimse yok — rakam, ikmal elemanının nokta başına düşen payı.</span></td><td class="m num"><input data-c="M" data-k="pers" type="number" step="0.1"><span class="u">kişi</span></td><td class="s num"><input data-c="S" data-k="pers" type="number" step="0.1"><span class="u">kişi</span></td><td class="d num"><input data-c="D" data-k="pers" type="number" step="0.1"><span class="u">kişi</span></td><td class="p num"><input data-c="P" data-k="pers" type="number" step="0.1"><span class="u">kişi</span></td></tr>
         <tr><td class="lbl">Personel maliyeti (kişiye değil, işverene toplam) <span class="hnote">SGK işveren primi + işsizlik dahil. 2026 asgari ücret işveren maliyeti 40.875 TL (ÇSGB).</span></td><td class="m num"><input data-c="M" data-k="maas" type="number" step="1000"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="maas" type="number" step="1000"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="maas" type="number" step="1000"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="maas" type="number" step="1000"><span class="u">TL</span></td></tr>
         <tr class="res"><td class="lbl">→ Aylık personel gideri</td><td class="m" data-o="M-pers"></td><td class="s" data-o="S-pers"></td><td class="d" data-o="D-pers"></td><td class="p" data-o="P-pers"></td></tr>
-        <tr><td class="lbl">Kira / yer bedeli <span class="hnote">brüt kira; stopaj dahil</span></td><td class="m num"><input data-c="M" data-k="kira" type="number" step="1000"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="kira" type="number" step="1000"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="kira" type="number" step="1000"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="kira" type="number" step="1000"><span class="u">TL</span></td></tr>
+        <tr><td class="lbl">Kira / yer bedeli <span class="hnote">brüt kira — stopaj (mülk sahibi adına kiradan kesilen vergi) dahil</span></td><td class="m num"><input data-c="M" data-k="kira" type="number" step="1000"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="kira" type="number" step="1000"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="kira" type="number" step="1000"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="kira" type="number" step="1000"><span class="u">TL</span></td></tr>
         <tr><td class="lbl">Enerji (elektrik + gaz) <span class="hnote">Pizza robotu 7 kW + ısıtmalı teslim dolabı + soğutucular, 7/24 çalışır.</span></td><td class="m num"><input data-c="M" data-k="elek" type="number" step="500"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="elek" type="number" step="500"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="elek" type="number" step="500"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="elek" type="number" step="500"><span class="u">TL</span></td></tr>
         <tr><td class="lbl">Su + internet + temizlik + sarf</td><td class="m num"><input data-c="M" data-k="su" type="number" step="100"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="su" type="number" step="100"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="su" type="number" step="100"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="su" type="number" step="100"><span class="u">TL</span></td></tr>
         <tr><td class="lbl">Muhasebe</td><td class="m num"><input data-c="M" data-k="muh" type="number" step="500"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="muh" type="number" step="500"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="muh" type="number" step="500"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="muh" type="number" step="500"><span class="u">TL</span></td></tr>
@@ -1227,47 +1230,48 @@ section#store-m a[style*="color:var(--blue)"]{color:#c2600f!important}
         <tr class="res"><td class="lbl">→ Aylık bakım gideri</td><td class="m" data-o="M-bakimtl"></td><td class="s" data-o="S-bakimtl"></td><td class="d" data-o="D-bakimtl"></td><td class="p" data-o="P-bakimtl"></td></tr>
         <tr><td class="lbl">İkmal / lojistik payı <span class="hnote">Merkez hamur üretimi, soğuk zincir ve ikmal aracının nokta başına düşen payı. Domino's ve mahalle pizzacısında bu iş kendi personelinde olduğu için 0.</span></td><td class="m num"><input data-c="M" data-k="ikmal" type="number" step="500"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="ikmal" type="number" step="500"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="ikmal" type="number" step="500"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="ikmal" type="number" step="500"><span class="u">TL</span></td></tr>
         <tr><td class="lbl">Zorunlu yükümlülükler (ÇTV, tabela, sigorta, damga, oda) <span class="hnote">Yıllık kalemlerin aylığa bölünmüş hâli: çevre temizlik vergisi, ilan-reklam (tabela) vergisi, işyeri sigortası, damga vergisi, oda aidatı.</span></td><td class="m num"><input data-c="M" data-k="zorunlu" type="number" step="500"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="zorunlu" type="number" step="500"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="zorunlu" type="number" step="500"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="zorunlu" type="number" step="500"><span class="u">TL</span></td></tr>
-        <tr><td class="lbl">Franchise kesintisi (ciro %'si) <span class="hnote">Domino's ABD 2025 fiili: royalty %7,07 + reklam %5,84 = %12,9 nakit; zorunlu malzeme alımındaki gizli marjla birlikte gerçek yük ~%16,2.</span></td><td class="m num"><input data-c="M" data-k="roy" type="number" step="0.5"><span class="u">%</span></td><td class="s num"><input data-c="S" data-k="roy" type="number" step="0.5"><span class="u">%</span></td><td class="d num"><input data-c="D" data-k="roy" type="number" step="0.5"><span class="u">%</span></td><td class="p num"><input data-c="P" data-k="roy" type="number" step="0.5"><span class="u">%</span></td></tr>
+        <tr><td class="lbl">Franchise kesintisi (ciro %'si) <span class="hnote">Domino's ABD 2025 fiili nakit kesinti: isim hakkı %5,5 + reklam fonu %6 + teknoloji ücretleri ≈%1,4 = <b>%12,9</b> — tabloya bu yazılır. Alttaki kartta geçen "gerçek yük ~%16,2"nin kalan ~%3,3'ü zorunlu malzeme alımına gömülü pahalılıktır; o fark bu tabloda zaten <b>malzeme maliyeti</b> satırının içinde, iki kez saymamak için burada yok.</span></td><td class="m num"><input data-c="M" data-k="roy" type="number" step="0.5"><span class="u">%</span></td><td class="s num"><input data-c="S" data-k="roy" type="number" step="0.5"><span class="u">%</span></td><td class="d num"><input data-c="D" data-k="roy" type="number" step="0.5"><span class="u">%</span></td><td class="p num"><input data-c="P" data-k="roy" type="number" step="0.5"><span class="u">%</span></td></tr>
         <tr class="res hi"><td class="lbl">→ AYLIK SABİT GİDER TOPLAMI</td><td class="m" data-o="M-sabit"></td><td class="s" data-o="S-sabit"></td><td class="d" data-o="D-sabit"></td><td class="p" data-o="P-sabit"></td></tr>
         <tr class="grp"><td colspan="5">Pizza başı — düzenlenebilir</td></tr>
         <tr><td class="lbl">Malzeme maliyeti (fire dahil) <span class="hnote">Hamur topu, sos, peynir, malzeme. Domino's ölçek sayesinde ucuza alır ama merkez fabrikadan almak zorunda — o fiyat merkezin marjını içerir.</span></td><td class="m num"><input data-c="M" data-k="malz" type="number" step="1"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="malz" type="number" step="1"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="malz" type="number" step="1"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="malz" type="number" step="1"><span class="u">TL</span></td></tr>
         <tr><td class="lbl">Kutu + ambalaj + sachet</td><td class="m num"><input data-c="M" data-k="kutu" type="number" step="1"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="kutu" type="number" step="1"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="kutu" type="number" step="1"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="kutu" type="number" step="1"><span class="u">TL</span></td></tr>
         <tr><td class="lbl">Menü fiyatı (KDV dahil) <span class="hnote">Türkiye'de menü fiyatı KDV dahil ilan edilir. Hesap, KDV düşülmüş net hasılat üzerinden döner.</span></td><td class="m num"><input data-c="M" data-k="fiyat" type="number" step="5"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="fiyat" type="number" step="5"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="fiyat" type="number" step="5"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="fiyat" type="number" step="5"><span class="u">TL</span></td></tr>
-        <tr><td class="lbl">KDV oranı (yiyecek hizmeti) <span class="hnote">Yiyecek-içecek hizmetinde %10.</span></td><td class="m num"><input data-c="M" data-k="kdv" type="number" step="1"><span class="u">%</span></td><td class="s num"><input data-c="S" data-k="kdv" type="number" step="1"><span class="u">%</span></td><td class="d num"><input data-c="D" data-k="kdv" type="number" step="1"><span class="u">%</span></td><td class="p num"><input data-c="P" data-k="kdv" type="number" step="1"><span class="u">%</span></td></tr>
+        <tr class="grp"><td colspan="5">Satış ve komisyon — düzenlenebilir</td></tr>
         <tr><td class="lbl">① Satışın yüzde kaçı Yemeksepeti/Getir'den geliyor? <span class="hnote">Gerisi kapıdan/QR'lı dolaptan gelen komisyonsuz satış. Marka bilinirliği düşük formatlar platforma daha bağımlıdır.</span></td><td class="m num"><input data-c="M" data-k="ppay" type="number" step="5"><span class="u">%</span></td><td class="s num"><input data-c="S" data-k="ppay" type="number" step="5"><span class="u">%</span></td><td class="d num"><input data-c="D" data-k="ppay" type="number" step="5"><span class="u">%</span></td><td class="p num"><input data-c="P" data-k="ppay" type="number" step="5"><span class="u">%</span></td></tr>
         <tr><td class="lbl">② Platform komisyonu + kampanya payı <span class="hnote">Komisyon + kampanya katkısının efektif toplamı. Kendi kuryesini kullanan zincirlerde belirgin düşüktür.</span></td><td class="m num"><input data-c="M" data-k="pkom" type="number" step="1"><span class="u">%</span></td><td class="s num"><input data-c="S" data-k="pkom" type="number" step="1"><span class="u">%</span></td><td class="d num"><input data-c="D" data-k="pkom" type="number" step="1"><span class="u">%</span></td><td class="p num"><input data-c="P" data-k="pkom" type="number" step="1"><span class="u">%</span></td></tr>
         <tr class="res"><td class="lbl">→ Ortalama komisyon yükü (pizza başına) <span class="hnote">① × ② platform satışına + %3 POS yalnız kapıdan satışa. Platform siparişinde tahsilatı platform yapar, ayrıca POS kesilmez.</span></td><td class="m" data-o="M-kom"></td><td class="s" data-o="S-kom"></td><td class="d" data-o="D-kom"></td><td class="p" data-o="P-kom"></td></tr>
-        <tr><td class="lbl">Günlük satış</td><td class="m num"><input data-c="M" data-k="adet" type="number" step="1"><span class="u">adet</span></td><td class="s num"><input data-c="S" data-k="adet" type="number" step="1"><span class="u">adet</span></td><td class="d num"><input data-c="D" data-k="adet" type="number" step="1"><span class="u">adet</span></td><td class="p num"><input data-c="P" data-k="adet" type="number" step="1"><span class="u">adet</span></td></tr>
-        <tr class="grp"><td colspan="5">Vergi — düzenlenebilir</td></tr>
-        <tr><td class="lbl">Gelir / kurumlar vergisi oranı <span class="hnote">Limited/A.Ş. kurumlar vergisi %25; şahıs şirketinde artan oranlı gelir vergisi (%15–40).</span></td><td class="m num"><input data-c="M" data-k="vergi" type="number" step="1"><span class="u">%</span></td><td class="s num"><input data-c="S" data-k="vergi" type="number" step="1"><span class="u">%</span></td><td class="d num"><input data-c="D" data-k="vergi" type="number" step="1"><span class="u">%</span></td><td class="p num"><input data-c="P" data-k="vergi" type="number" step="1"><span class="u">%</span></td></tr>
+        <tr><td class="lbl">Günlük satış varsayımı <span class="hnote">Bütün aylık sonuçlar bu adede göre hesaplanır. En alttaki senaryo tablosu bu varsayımın altını-üstünü gösterir.</span></td><td class="m num"><input data-c="M" data-k="adet" type="number" step="1"><span class="u">adet</span></td><td class="s num"><input data-c="S" data-k="adet" type="number" step="1"><span class="u">adet</span></td><td class="d num"><input data-c="D" data-k="adet" type="number" step="1"><span class="u">adet</span></td><td class="p num"><input data-c="P" data-k="adet" type="number" step="1"><span class="u">adet</span></td></tr>
         <tr class="grp"><td colspan="5">Sonuç — otomatik hesaplanır</td></tr>
         <tr class="res hi"><td class="lbl">Bir pizza bize kaça mal oluyor? (KDV hariç) <span class="hnote">Malzeme + paket + komisyonlar + dükkân masrafının pizza başına payı. Bu satış adedinde geçerli — az satarsan dükkân payı büyür.</span></td><td class="m" data-o="M-birim"></td><td class="s" data-o="S-birim"></td><td class="d" data-o="D-birim"></td><td class="p" data-o="P-birim"></td></tr>
         <tr class="res hi"><td class="lbl">Zarar etmemek için menü fiyatı en az (KDV dahil) <span class="hnote">Menüye bunun altında fiyat yazarsan her pizza zarar eder.</span></td><td class="m" data-o="M-minf"></td><td class="s" data-o="S-minf"></td><td class="d" data-o="D-minf"></td><td class="p" data-o="P-minf"></td></tr>
-        <tr class="res"><td class="lbl">Aylık satış — müşterilerin ödediği (KDV dahil)</td><td class="m" data-o="M-ciro"></td><td class="s" data-o="S-ciro"></td><td class="d" data-o="D-ciro"></td><td class="p" data-o="P-ciro"></td></tr>
-        <tr class="res"><td class="lbl">− Devlete ödenecek KDV <span class="hnote">Satıştaki KDV'den, malzeme ve fatura alırken ödediğimiz KDV düşülür; devlete fark ödenir.</span></td><td class="m" data-o="M-kdvtl"></td><td class="s" data-o="S-kdvtl"></td><td class="d" data-o="D-kdvtl"></td><td class="p" data-o="P-kdvtl"></td></tr>
-        <tr class="res hi"><td class="lbl">= AYDA KASADA KALAN — tüm masraflar sonrası, vergi öncesi <span class="hnote">Kira, personel, malzeme, komisyon, KDV… hepsi ödendikten sonra kasadaki para.</span></td><td class="m" data-o="M-kar"></td><td class="s" data-o="S-kar"></td><td class="d" data-o="D-kar"></td><td class="p" data-o="P-kar"></td></tr>
-        <tr class="res"><td class="lbl">− Gelir / kurumlar vergisi <span class="hnote">Makinenin yıpranma payı vergi matrahını düşürdüğü için vergi sandığından az çıkar.</span></td><td class="m" data-o="M-vergitl"></td><td class="s" data-o="S-vergitl"></td><td class="d" data-o="D-vergitl"></td><td class="p" data-o="P-vergitl"></td></tr>
-        <tr class="res hi"><td class="lbl">= CEBE KALAN (ayda) <span class="hnote">Gerçekte eline geçen para. Makinenin yıpranma payı cebinden çıkmadığı için burada düşülmez.</span></td><td class="m" data-o="M-serbest"></td><td class="s" data-o="S-serbest"></td><td class="d" data-o="D-serbest"></td><td class="p" data-o="P-serbest"></td></tr>
+        <tr class="res"><td class="lbl">Aylık ciro — müşterilerin kasaya ödediği toplam (KDV dahil)</td><td class="m" data-o="M-ciro"></td><td class="s" data-o="S-ciro"></td><td class="d" data-o="D-ciro"></td><td class="p" data-o="P-ciro"></td></tr>
+        <tr class="res hi"><td class="lbl">= MASRAFLAR SONRASI KASADA KALAN — vergiler henüz çıkmadı <span class="hnote">Ciro − kira, personel, malzeme, komisyon, faturalar. Devlete ödenecekler aşağıda tek tek çıkar.</span></td><td class="m" data-o="M-kar"></td><td class="s" data-o="S-kar"></td><td class="d" data-o="D-kar"></td><td class="p" data-o="P-kar"></td></tr>
+        <tr class="grp"><td colspan="5">Vergiler — en son çıkar · tikle hesaba kat / çıkar</td></tr>
+        <tr><td class="lbl">KDV oranı (yiyecek hizmeti) <span class="hnote">Yiyecek-içecek hizmetinde %10.</span></td><td class="m num"><input data-c="M" data-k="kdv" type="number" step="1"><span class="u">%</span></td><td class="s num"><input data-c="S" data-k="kdv" type="number" step="1"><span class="u">%</span></td><td class="d num"><input data-c="D" data-k="kdv" type="number" step="1"><span class="u">%</span></td><td class="p num"><input data-c="P" data-k="kdv" type="number" step="1"><span class="u">%</span></td></tr>
+        <tr class="res" id="rkdv"><td class="lbl"><label class="aksw akmini"><input type="checkbox" id="kdvsw" checked><span></span></label>− Devlete ödenecek KDV <span class="hnote">Satıştaki KDV'den, malzeme ve fatura alırken ödediğimiz KDV düşülür; devlete fark ödenir.</span></td><td class="m" data-o="M-kdvtl"></td><td class="s" data-o="S-kdvtl"></td><td class="d" data-o="D-kdvtl"></td><td class="p" data-o="P-kdvtl"></td></tr>
+        <tr><td class="lbl">Gelir / kurumlar vergisi oranı <span class="hnote">Limited/A.Ş. kurumlar vergisi %25; şahıs şirketinde artan oranlı gelir vergisi (%15–40).</span></td><td class="m num"><input data-c="M" data-k="vergi" type="number" step="1"><span class="u">%</span></td><td class="s num"><input data-c="S" data-k="vergi" type="number" step="1"><span class="u">%</span></td><td class="d num"><input data-c="D" data-k="vergi" type="number" step="1"><span class="u">%</span></td><td class="p num"><input data-c="P" data-k="vergi" type="number" step="1"><span class="u">%</span></td></tr>
+        <tr class="res" id="rgv"><td class="lbl"><label class="aksw akmini"><input type="checkbox" id="gvsw" checked><span></span></label>− Gelir / kurumlar vergisi <span class="hnote">Makinenin yıpranma payı, verginin hesaplandığı tutarı (matrahı) düşürdüğü için vergi sandığından az çıkar.</span></td><td class="m" data-o="M-vergitl"></td><td class="s" data-o="S-vergitl"></td><td class="d" data-o="D-vergitl"></td><td class="p" data-o="P-vergitl"></td></tr>
+        <tr class="res hi"><td class="lbl">= CEBE KALAN (ayda) <span class="hnote">Gerçekte eline geçen para — yalnız tiki açık vergiler düşüldü. Bir vergiyi katmak istemezsen tikini kapat. Yıpranma payı cepten çıkmadığı için burada hiç düşülmez.</span></td><td class="m" data-o="M-serbest"></td><td class="s" data-o="S-serbest"></td><td class="d" data-o="D-serbest"></td><td class="p" data-o="P-serbest"></td></tr>
         <tr class="res hi"><td class="lbl">Ayakta kalmak için günde en az <span class="hnote">Bu adedin altında kasadaki para masrafı karşılamaz.</span></td><td class="m" data-o="M-bb"></td><td class="s" data-o="S-bb"></td><td class="d" data-o="D-bb"></td><td class="p" data-o="P-bb"></td></tr>
         </tbody></table>
     </div>
 
         <div class="hlegend"><span><i style="background:#fff6ec;border:2px solid #c2600f"></i>Model M · insanlı</span><span><i style="background:#eef4ff;border:2px solid #1a49b8"></i>Model S · insansız</span><span><i style="background:#f5f6f9;border:2px solid #3f4a5c"></i>Domino's</span><span><i style="background:#f4f8f5;border:2px solid #4a5f52"></i>Mahalle pizzacısı</span></div>
     <button class="hbtn" onclick="hsReset()">↺ Varsayılana dön</button>
-    <div class="hexp"><b>Nasıl okunur?</b> <b>Başabaş</b>, masrafı sıfırlayan günlük satıştır; üstündeki her pizza kâr yazar. Yatırım, yıpranma ve geri dönüş satırları hemen alttaki <b>Yatırım</b> tablosuna taşındı. <b>① ve ② neden ayrı?</b> Komisyon her satıştan değil, sadece platformdan gelen siparişten kesilir: satışın %50'si Yemeksepeti'nden geliyor ve platform %35 kesiyorsa ortalama yük %17,5 olur. Kapıdan/QR'lı dolaptan gelen satışta platform komisyonu yoktur, yalnız %3 kart komisyonu vardır — bu yüzden ①'i düşürmek fiyat kırmaktan daha kârlıdır. <b>Vergiler</b> ayrı satırlarda: KDV ve gelir vergisi düşüldükten sonra <b>cebe kalan</b> en alttadır.</div>
+    <div class="hexp"><b>Nasıl okunur?</b> <b>Başabaş</b>, masrafı sıfırlayan günlük satıştır; üstündeki her pizza kâr yazar. Yatırım, yıpranma ve geri dönüş satırları hemen alttaki <b>Yatırım</b> tablosundadır. <b>① ve ② neden ayrı?</b> Komisyon her satıştan değil, sadece platformdan gelen siparişten kesilir: satışın %50'si Yemeksepeti'nden geliyor ve platform %35 kesiyorsa ortalama yük %17,5 olur. Kapıdan/QR'lı dolaptan gelen satışta platform komisyonu yoktur, yalnız %3 kart komisyonu vardır — bu yüzden ①'i düşürmek fiyat kırmaktan daha kârlıdır. <b>Vergiler</b> en sonda ve tik'lidir: tiki kapatırsan o vergi hesaba katılmaz, cebe kalanı ona göre görürsün.</div>
     
 
     <div class="card rv d1" style="text-align:left;margin-top:26px">
       <div class="n">Yatırım</div>
       <h3 style="font-size:19px;margin:6px 0 4px;color:#0f1726">Toplam yatırım, yıpranma ve geri dönüş — tek yerde</h3>
-      <p class="note" style="margin-top:6px;font-size:13px"><b>Toplam yatırım</b> satırına tıklayınca kalem kalem kırılım açılır; kalemler düzenlenebilir, toplam yukarıdaki hesaba otomatik yansır. <b>Yıpranma payı (amortisman)</b> cepten çıkan para değildir — makinenin eskidikçe değer kaybıdır; vergi hesabında matrahı düşürdüğü için vergiyi azaltır. Satırın başındaki anahtarla hesaba katıp çıkarabilirsin.</p>
+      <p class="note" style="margin-top:6px;font-size:13px"><b>Toplam yatırım</b> satırına tıklayınca kalem kalem kırılım açılır; kalemler düzenlenebilir, toplam yukarıdaki hesaba otomatik yansır. <b>Yıpranma payı (amortisman)</b> cepten çıkan para değildir — makinenin eskidikçe değer kaybıdır; verginin hesaplandığı tutarı düşürdüğü için vergiyi azaltır. Satırın başındaki anahtarla hesaba katıp çıkarabilirsin. En alttaki blok makinenin parası çıktıktan <b>sonrasını</b> gösterir: yıpranma biter, bakım devam eder — aynı satışla cebe kalan belirgin yükselir.</p>
       <div class="hs-box" style="margin-top:16px">
         <table class="hs" id="hyt">
           <thead><tr><th class="lbl"></th><th class="m">Model M<em>insanlı · 10 m²</em></th><th class="s">Model S<em>insansız · 6 m²</em></th><th class="d">Domino's<em>şube</em></th><th class="p">Mahalle<em>pizzacısı</em></th></tr></thead><tbody>
           <tr class="grp"><td colspan="5">Yatırım — düzenlenebilir</td></tr>
         <tr id="yatrow" style="cursor:pointer"><td class="lbl"><span id="yatok" style="display:inline-block;width:14px;color:#1a49b8;font-weight:800">▸</span> Toplam yatırım (makine + tadilat + ilk stok) <span class="hnote">tıkla — kalem kalem kırılım altında açılır, tekrar tıkla kapanır. Kalemler düzenlenebilir; toplam buraya yansır.</span></td><td class="m num"><input data-c="M" data-k="yat" type="number" step="100000"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="yat" type="number" step="100000"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="yat" type="number" step="100000"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="yat" type="number" step="100000"><span class="u">TL</span></td></tr>
         <tr class="ydet grp" hidden><td colspan="5">↳ Makine ve ekipman</td></tr>
-        <tr class="ydet" hidden><td class="lbl" style="padding-left:26px">Pizza robotu <span class="hnote"><b>€30.000 ex-works, kurulum+eğitim dahil (kurucu teklifi, 14 Ağu)</b> + nakliye+gümrük+KDV tahmini · <a href="makine/#robot" style="color:#1a49b8;font-weight:700">künye ↗</a></span></td><td class="m num"><input data-y="M" data-g="mk" data-yk="robot" type="number" step="1000" value="1700000"><span class="u">TL</span></td><td class="s num"><input data-y="S" data-g="mk" data-yk="robot" type="number" step="1000" value="1700000"><span class="u">TL</span></td><td class="d ydash">—</td><td class="p ydash">—</td></tr>
+        <tr class="ydet" hidden><td class="lbl" style="padding-left:26px">Pizza robotu <span class="hnote"><b>€30.000 fabrika teslim (ex-works), kurulum+eğitim dahil (kurucu teklifi, 14 Ağu)</b> + nakliye+gümrük+KDV tahmini · <a href="makine/#robot" style="color:#1a49b8;font-weight:700">künye ↗</a></span></td><td class="m num"><input data-y="M" data-g="mk" data-yk="robot" type="number" step="1000" value="1700000"><span class="u">TL</span></td><td class="s num"><input data-y="S" data-g="mk" data-yk="robot" type="number" step="1000" value="1700000"><span class="u">TL</span></td><td class="d ydash">—</td><td class="p ydash">—</td></tr>
         <tr class="ydet" hidden><td class="lbl" style="padding-left:26px">Robot kol + tutucu + montaj <span class="hnote">JAKA Zu 7 (7 kg) ya da Dobot Nova 5 (850 mm), gıda uyumlu kaplamalı</span> <a href="makine/#kol" style="color:#1a49b8;font-weight:700;font-size:11px;white-space:nowrap">künye ↗</a></td><td class="m num"><input data-y="M" data-g="mk" data-yk="kol" type="number" step="1000" value="720000"><span class="u">TL</span></td><td class="s num"><input data-y="S" data-g="mk" data-yk="kol" type="number" step="1000" value="720000"><span class="u">TL</span></td><td class="d ydash">—</td><td class="p ydash">—</td></tr>
         <tr class="ydet" hidden><td class="lbl" style="padding-left:26px">Isıtmalı teslim dolabı <span class="hnote">QR kilitli, 6-8 göz, 2-3'ü ısıtmalı · Çin üretimi (batı markası 850 bin)</span> <a href="makine/#dolap" style="color:#1a49b8;font-weight:700;font-size:11px;white-space:nowrap">künye ↗</a></td><td class="m num"><input data-y="M" data-g="mk" data-yk="dolap" type="number" step="1000" value="165000"><span class="u">TL</span></td><td class="s num"><input data-y="S" data-g="mk" data-yk="dolap" type="number" step="1000" value="205000"><span class="u">TL</span></td><td class="d ydash">—</td><td class="p ydash">—</td></tr>
         <tr class="ydet" hidden><td class="lbl" style="padding-left:26px">Dolap–makine yazılım entegrasyonu <span class="hnote">QR eşleştirme, sipariş API'si, uzaktan izleme</span> <a href="makine/#yazilim" style="color:#1a49b8;font-weight:700;font-size:11px;white-space:nowrap">künye ↗</a></td><td class="m num"><input data-y="M" data-g="mk" data-yk="yazilim" type="number" step="1000" value="40000"><span class="u">TL</span></td><td class="s num"><input data-y="S" data-g="mk" data-yk="yazilim" type="number" step="1000" value="40000"><span class="u">TL</span></td><td class="d ydash">—</td><td class="p ydash">—</td></tr>
@@ -1304,13 +1308,17 @@ section#store-m a[style*="color:var(--blue)"]{color:#c2600f!important}
         <tr class="ydet" hidden><td class="lbl" style="padding-left:26px">Zorunlu demirbaş <span class="hnote">Terazi, gıda termometresi, kıyafet · M'de kasa çekmecesi</span></td><td class="m num"><input data-y="M" data-g="st" data-yk="demirbas" type="number" step="1000" value="26400"><span class="u">TL</span></td><td class="s num"><input data-y="S" data-g="st" data-yk="demirbas" type="number" step="1000" value="14000"><span class="u">TL</span></td><td class="d ydash">—</td><td class="p ydash">—</td></tr>
         <tr class="ydet" hidden><td class="lbl" style="padding-left:26px">Görsel iletişim <span class="hnote">Menü baskısı, QR sticker, vitrin folyo</span></td><td class="m num"><input data-y="M" data-g="st" data-yk="gorsel" type="number" step="1000" value="7000"><span class="u">TL</span></td><td class="s num"><input data-y="S" data-g="st" data-yk="gorsel" type="number" step="1000" value="7000"><span class="u">TL</span></td><td class="d ydash">—</td><td class="p ydash">—</td></tr>
         <tr class="ydet res" hidden><td class="lbl" style="padding-left:26px">↳ İlk stok ve sarf ara toplamı</td><td class="m" data-yg="M-st"></td><td class="s" data-yg="S-st"></td><td class="d ydash">—</td><td class="p ydash">—</td></tr>
-        <tr><td class="lbl">Ekipman ömrü (amortisman) <span class="hnote">Yatırım bu sürede yıpranır; amortisman nakit çıkışı değildir ama vergi matrahını düşürür.</span></td><td class="m num"><input data-c="M" data-k="omur" type="number" step="1"><span class="u">yıl</span></td><td class="s num"><input data-c="S" data-k="omur" type="number" step="1"><span class="u">yıl</span></td><td class="d num"><input data-c="D" data-k="omur" type="number" step="1"><span class="u">yıl</span></td><td class="p num"><input data-c="P" data-k="omur" type="number" step="1"><span class="u">yıl</span></td></tr>
+        <tr><td class="lbl">Ekipman ömrü (amortisman) <span class="hnote">Yatırım bu sürede yıpranır; yıpranma payı cepten çıkmaz ama verginin hesaplandığı tutarı (matrahı) düşürür.</span></td><td class="m num"><input data-c="M" data-k="omur" type="number" step="1"><span class="u">yıl</span></td><td class="s num"><input data-c="S" data-k="omur" type="number" step="1"><span class="u">yıl</span></td><td class="d num"><input data-c="D" data-k="omur" type="number" step="1"><span class="u">yıl</span></td><td class="p num"><input data-c="P" data-k="omur" type="number" step="1"><span class="u">yıl</span></td></tr>
           <tr class="grp"><td colspan="5">Yıpranma ve geri dönüş — otomatik hesaplanır</td></tr>
         <tr class="res"><td class="lbl"><label class="aksw"><input type="checkbox" id="amortsw" checked><span></span></label>Makinenin aylık yıpranma payı (amortisman) <span class="hnote">Yatırım ÷ ekipman ömrü. Cepten çıkan para değildir — makinenin eskidikçe değer kaybıdır; yenileme fonu gibi düşün. Anahtarı kapatırsan alttaki yıpranma satırları gizlenir, senaryo tablosundaki eşikler yalnız nakit masraflarla hesaplanır.</span></td><td class="m" data-o="M-amort"></td><td class="s" data-o="S-amort"></td><td class="d" data-o="D-amort"></td><td class="p" data-o="P-amort"></td></tr>
         <tr class="res amdep"><td class="lbl">Muhasebe net kârı — yıpranma düşülmüş <span class="hnote">Resmî kâr rakamı budur; banka ve yatırımcı bunu sorar.</span></td><td class="m" data-o="M-netkar"></td><td class="s" data-o="S-netkar"></td><td class="d" data-o="D-netkar"></td><td class="p" data-o="P-netkar"></td></tr>
         <tr class="res hi amdep"><td class="lbl">Yıpranma dahil gerçek eşik (günde) <span class="hnote">Makinenin eskimesini de karşılayan satış. Uzun vadede asıl hedef bu.</span></td><td class="m" data-o="M-bbtam"></td><td class="s" data-o="S-bbtam"></td><td class="d" data-o="D-bbtam"></td><td class="p" data-o="P-bbtam"></td></tr>
         <tr class="res"><td class="lbl">Yatırım kaç ayda çıkar <span class="hnote">Cebe kalan parayla, yatırımın kendini ödeme süresi.</span></td><td class="m" data-o="M-geri"></td><td class="s" data-o="S-geri"></td><td class="d" data-o="D-geri"></td><td class="p" data-o="P-geri"></td></tr>
         <tr class="res"><td class="lbl">Açılış için gereken toplam nakit <span class="hnote">Yatırım + ilk 3 ayın masrafı — kötü başlayan aylara tampon.</span></td><td class="m" data-o="M-nakitiht"></td><td class="s" data-o="S-nakitiht"></td><td class="d" data-o="D-nakitiht"></td><td class="p" data-o="P-nakitiht"></td></tr>
+        <tr class="grp"><td colspan="5">Makinenin parası çıktıktan sonra — yıpranma biter, bakım devam eder</td></tr>
+        <tr class="res hi"><td class="lbl">⓿ O günden sonra sıfıra sıfır (günde) <span class="hnote">artık yalnız işletme giderini karşılamak yeter</span></td><td class="m" data-s="M-sbb"></td><td class="s" data-s="S-sbb"></td><td class="d" data-s="D-sbb"></td><td class="p" data-s="P-sbb"></td></tr>
+        <tr class="res"><td class="lbl">★ Aynı satışla cebe kalan (ayda) <span class="hnote">varsayımdaki adette, vergi sonrası</span></td><td class="m" data-s="M-scur"></td><td class="s" data-s="S-scur"></td><td class="d" data-s="D-scur"></td><td class="p" data-s="P-scur"></td></tr>
+        <tr class="res"><td class="lbl">Yıllık net — aynı satışla <span class="hnote">12 ay</span></td><td class="m" data-s="M-syil"></td><td class="s" data-s="S-syil"></td><td class="d" data-s="D-syil"></td><td class="p" data-s="P-syil"></td></tr>
           </tbody></table>
       </div>
     </div>
@@ -1318,7 +1326,7 @@ section#store-m a[style*="color:var(--blue)"]{color:#c2600f!important}
     <div class="card rv d1" style="text-align:left;margin-top:26px">
       <div class="n">Kaç pizza satarsam kurtarır?</div>
       <h3 style="font-size:19px;margin:6px 0 4px;color:#0f1726">Başabaş noktası ve üstü — dört model yan yana</h3>
-      <p class="note" style="margin-top:6px;font-size:13px">En alttan başlar: <b>sıfıra sıfır</b> noktası, yani o ayın tüm giderini (kira, personel, malzeme, komisyon, vergi; yıpranma anahtarı açıksa makinenin yıpranma payı da dahil) tam karşılayan günlük satış. Üstündeki satırlar bu noktanın yüzde kaç üstüne çıkıldığında aya ne kaldığını gösterir. Yukarıdaki tabloda bir rakamı değiştirdiğinde burası da anında güncellenir.</p>
+      <p class="note" style="margin-top:6px;font-size:13px">İlk satır <b>sıfıra sıfır</b> noktası: o ayın tüm giderini karşılayan günlük satış (yıpranma anahtarı açıksa makinenin yıpranma payı da dahil). Altında bizim varsayımımız ve üstüne günde +10, +20, +30, +50 satılırsa aya ne kaldığı. Yukarıdaki tabloda bir rakam değiştiğinde burası da anında güncellenir.</p>
       <div class="hs-box" style="margin-top:16px">
         <table class="hs" id="hsen">
           <thead><tr><th class="lbl">Senaryo</th>
@@ -1327,40 +1335,26 @@ section#store-m a[style*="color:var(--blue)"]{color:#c2600f!important}
             <th class="d">Domino's<em>şube</em></th>
             <th class="p">Mahalle<em>pizzacısı</em></th></tr></thead>
           <tbody>
-            <tr class="res hi"><td class="lbl">⓿ Sıfıra sıfır — başabaş <span class="hnote">bu adette ne kâr ne zarar</span></td>
+            <tr class="res hi"><td class="lbl">⓿ Sıfıra sıfır — başabaş <span class="hnote">bu adette ne kâr ne zarar; altı zarar, üstü kâr</span></td>
               <td class="m" data-s="M-bb"></td><td class="s" data-s="S-bb"></td><td class="d" data-s="D-bb"></td><td class="p" data-s="P-bb"></td></tr>
-            <tr><td class="lbl">Günde 10 pizza fazla</td>
-              <td class="m" data-s="M-20"></td><td class="s" data-s="S-20"></td><td class="d" data-s="D-20"></td><td class="p" data-s="P-20"></td></tr>
-            <tr><td class="lbl">Günde 20 pizza fazla</td>
-              <td class="m" data-s="M-40"></td><td class="s" data-s="S-40"></td><td class="d" data-s="D-40"></td><td class="p" data-s="P-40"></td></tr>
-            <tr><td class="lbl">Günde 30 pizza fazla</td>
-              <td class="m" data-s="M-60"></td><td class="s" data-s="S-60"></td><td class="d" data-s="D-60"></td><td class="p" data-s="P-60"></td></tr>
-            <tr><td class="lbl">Günde 50 pizza fazla</td>
-              <td class="m" data-s="M-100"></td><td class="s" data-s="S-100"></td><td class="d" data-s="D-100"></td><td class="p" data-s="P-100"></td></tr>
-            <tr class="res hi"><td class="lbl">★ Bizim varsayımımız <span class="hnote">yukarıdaki tabloda girili günlük satış</span></td>
+            <tr class="res hi"><td class="lbl">★ Bizim varsayımımız <span class="hnote">yukarıdaki "Günlük satış varsayımı" satırındaki adet</span></td>
               <td class="m" data-s="M-cur"></td><td class="s" data-s="S-cur"></td><td class="d" data-s="D-cur"></td><td class="p" data-s="P-cur"></td></tr>
+            <tr><td class="lbl">Günde +10 fazla satarsak</td>
+              <td class="m" data-s="M-p10"></td><td class="s" data-s="S-p10"></td><td class="d" data-s="D-p10"></td><td class="p" data-s="P-p10"></td></tr>
+            <tr><td class="lbl">Günde +20 fazla satarsak</td>
+              <td class="m" data-s="M-p20"></td><td class="s" data-s="S-p20"></td><td class="d" data-s="D-p20"></td><td class="p" data-s="P-p20"></td></tr>
+            <tr><td class="lbl">Günde +30 fazla satarsak</td>
+              <td class="m" data-s="M-p30"></td><td class="s" data-s="S-p30"></td><td class="d" data-s="D-p30"></td><td class="p" data-s="P-p30"></td></tr>
+            <tr><td class="lbl">Günde +50 fazla satarsak</td>
+              <td class="m" data-s="M-p50"></td><td class="s" data-s="S-p50"></td><td class="d" data-s="D-p50"></td><td class="p" data-s="P-p50"></td></tr>
             <tr><td class="lbl">Bir pizzanın bıraktığı net katkı <span class="hnote">başabaşın üstündeki her pizza bunu kâra yazar</span></td>
               <td class="m" data-s="M-katki"></td><td class="s" data-s="S-katki"></td><td class="d" data-s="D-katki"></td><td class="p" data-s="P-katki"></td></tr>
             <tr><td class="lbl">Güvenlik payı <span class="hnote">varsayımımız başabaşın ne kadar üstünde</span></td>
               <td class="m" data-s="M-pay"></td><td class="s" data-s="S-pay"></td><td class="d" data-s="D-pay"></td><td class="p" data-s="P-pay"></td></tr>
-            <tr class="grp"><td colspan="5">Makinenin parası çıktıktan sonra — amortisman biter, bakım devam eder</td></tr>
-            <tr><td class="lbl">Makinenin parası kaç ayda çıkar <span class="hnote">vergi sonrası nakit akışına göre</span></td>
-              <td class="m" data-s="M-odeme"></td><td class="s" data-s="S-odeme"></td><td class="d" data-s="D-odeme"></td><td class="p" data-s="P-odeme"></td></tr>
-            <tr class="res hi"><td class="lbl">⓿ O günden sonra sıfıra sıfır noktası <span class="hnote">artık yalnız işletme giderini karşılamak yeter</span></td>
-              <td class="m" data-s="M-sbb"></td><td class="s" data-s="S-sbb"></td><td class="d" data-s="D-sbb"></td><td class="p" data-s="P-sbb"></td></tr>
-            <tr class="res hi"><td class="lbl">★ Aynı satışta cebe kalan <span class="hnote">varsayımımızdaki adette, makine ödendikten sonra</span></td>
-              <td class="m" data-s="M-scur"></td><td class="s" data-s="S-scur"></td><td class="d" data-s="D-scur"></td><td class="p" data-s="P-scur"></td></tr>
-            <tr><td class="lbl">Günde 30 pizza fazla satarsan</td>
-              <td class="m" data-s="M-s40"></td><td class="s" data-s="S-s40"></td><td class="d" data-s="D-s40"></td><td class="p" data-s="P-s40"></td></tr>
-            <tr><td class="lbl">Yıllık — makine ödendikten sonra <span class="hnote">aynı satış, 12 ay</span></td>
-              <td class="m" data-s="M-syil"></td><td class="s" data-s="S-syil"></td><td class="d" data-s="D-syil"></td><td class="p" data-s="P-syil"></td></tr>
           </tbody>
         </table>
       </div>
-      <div class="hexp" style="margin-top:14px"><b>Hangi rakama bakmalı?</b> Her hücrede iki sayı var. Büyük olan <b>cebe giren nakit</b> — kira, personel, malzeme, komisyon ve vergi ödendikten sonra ayda elinize geçen para. Küçük gri olan ise makinenin aylara bölünmüş payı da düşülmüş hâli; o para her ay cebinizden çıkmaz, makineyi zaten baştan ödediniz. <b>Örnek:</b> Domino's bayisi günde 200 satışta ayda ≈174 bin TL nakit alır (yılda 2,1 milyon TL); "41 bin" rakamı düşük görünür çünkü içinden 119 bin TL'lik makine payı düşülmüştür.<br><br><b>Nasıl okunur:</b> ilk satır her modelin ayakta kalma eşiğidir — o adedin altında zarar başlar. Alt satırdaki <b>güvenlik payı</b> en kritik göstergedir: varsayımımız eşiğin ne kadar üstünde? %20'nin altındaysa model kırılgandır, %40 üstü rahat bölgedir.
-      <br><br><b>Kâr neden birden sıçrıyor?</b> Çünkü başabaş noktasında kira, personel, amortisman gibi <i>tüm sabit giderler zaten karşılanmıştır</i>. O noktadan sonra satılan her pizza, sadece kendi malzemesini ve komisyonunu çıkarır; geriye kalan <b>net katkının tamamı doğrudan kâra yazılır</b>. Örnek: Domino's kolonunda bir pizzanın net katkısı ~110 TL. Günde 37 pizza fazla satmak ayda 37 × 30,4 × 110 ≈ <b>123 bin TL</b> ek katkı demektir — bu yüzden eşiğin hemen üstünde kâr hızla büyür. Aynı kaldıraç aşağı yönde de çalışır: eşiğin altına düşünce zarar da aynı hızla derinleşir.
-      <br><br><b>"Domino's 200 satıyorsa, eşiği 184 nasıl olur — bayiler zararda mı?"</b> Hayır, ama marj gerçekten ince. Bu tablodaki eşik <i>amortisman dahil</i> hesaplanır (yani yatırımın yıpranması da karşılansın diye). Domino's kolonunda 200 satışta işletme nakit kârı ≈173 bin TL, yani cironun <b>%11'i</b> — bu rakam Domino's'un ABD'de yayımladığı resmî franchise verisiyle birebir örtüşüyor (şube EBITDA'sı ciro bandına göre %1,7–14,7; şubelerin yaklaşık yarısı %1,7–6,7 aralığında). Yani sektörün gerçeği bu: <b>yüksek ciro, ince marj.</b> Bizim modellerimizin iddiası da tam burada — aynı işi çok daha küçük sabit giderle yapmak.
-      <br><br><b>Makinenin parası çıkınca ne oluyor?</b> Tablodaki "amortisman", makine bedelinin aylara bölünmüş hâlidir — o parayı bir kere, baştan ödersin; her ay cebinden çıkmaz. Yatırım geri döndükten sonra bu kalem ortadan kalkar (bakım devam eder) ve <b>aynı satışla cebe kalan para belirgin şekilde yükselir</b>. Alttaki blok tam olarak bunu gösterir: makine ödendikten sonraki sıfıra sıfır noktası ve aylık/yıllık net kâr. Asıl yatırım kararı bu iki resme birlikte bakılarak verilir — ilk yıllar borcu ödemek, sonrası kazanmaktır.</div>
+      <div class="hexp" style="margin-top:14px"><b>Hangi rakama bakmalı?</b> Her hücredeki büyük sayı <b>cebe kalan</b> — yukarıdaki tabloda tiki açık olan vergiler düşülmüş hâliyle. Küçük gri satır, makinenin yıpranma payı da düşülürse kalan resmî (muhasebe) kârıdır; yıpranma anahtarı kapalıyken görünmez. <b>Güvenlik payı</b> en kritik göstergedir: varsayımımız başabaşın ne kadar üstünde? %20'nin altı kırılgandır, %40 üstü rahat bölgedir.<br><br><b>Kâr neden birden sıçrıyor?</b> Çünkü başabaş noktasında kira, personel gibi <i>tüm sabit giderler zaten karşılanmıştır</i>. O noktadan sonra satılan her pizza, sadece kendi malzemesini ve komisyonunu çıkarır; geriye kalan <b>net katkının tamamı doğrudan kâra yazılır</b>. Aynı kaldıraç aşağı yönde de çalışır: eşiğin altına düşünce zarar da aynı hızla derinleşir.<br><br><b>"Domino's 200 satıyorsa, eşiği nasıl 184 olur — bayiler zararda mı?"</b> Hayır, ama marj gerçekten ince. Domino's kolonunda 200 satışta işletme nakit kârı cironun ~<b>%11'i</b> — bu, Domino's'un ABD'de yayımladığı resmî franchise verisiyle örtüşüyor (şubenin kaba faaliyet kârı ("EBITDA") %1,7–14,7 bandında). Sektörün gerçeği: <b>yüksek ciro, ince marj.</b> Bizim modellerin iddiası da tam burada — aynı işi çok daha küçük sabit giderle yapmak.</div>
     </div>
     <div class="card rv d1" style="text-align:left;margin-top:26px">
       <h3>Franchise gerçeği: Domino's bayisi cirosunun ne kadarını merkeze veriyor?</h3>
@@ -2038,13 +2032,14 @@ section#store-m a[style*="color:var(--blue)"]{color:#c2600f!important}
 
   /* ===== Maliyet hesabi tablosu v2 ===== */
   var HDEF = {
-    S: {pers:0.5, maas:45000, kira:25000, elek:12000, su:3500, muh:4000, sis:2500, bakim:3.5, ikmal:7000, zorunlu:3000, roy:3,    yat:3500000,  omur:7, vergi:25, malz:83, kutu:10, fiyat:280, kdv:10, ppay:60, pkom:35, adet:55},
-    M: {pers:1.6, maas:40875, kira:60000, elek:14000, su:4500, muh:5000, sis:2500, bakim:3.5, ikmal:5000, zorunlu:3500, roy:3,    yat:4500000,  omur:7, vergi:25, malz:83, kutu:10, fiyat:300, kdv:10, ppay:55, pkom:35, adet:70},
+    S: {pers:0.5, maas:45000, kira:25000, elek:12000, su:3500, muh:4000, sis:2500, bakim:3.5, ikmal:7000, zorunlu:3000, roy:3,    yat:3504269,  omur:7, vergi:25, malz:83, kutu:10, fiyat:280, kdv:10, ppay:60, pkom:35, adet:55},
+    M: {pers:1.6, maas:40875, kira:60000, elek:14000, su:4500, muh:5000, sis:2500, bakim:3.5, ikmal:5000, zorunlu:3500, roy:3,    yat:3397169,  omur:7, vergi:25, malz:83, kutu:10, fiyat:300, kdv:10, ppay:55, pkom:35, adet:70},
     D: {pers:6,   maas:45000, kira:150000,elek:32000, su:7000, muh:8000, sis:5000, bakim:2,   ikmal:0,    zorunlu:6000, roy:12.9, yat:10000000, omur:7, vergi:25, malz:70, kutu:8,  fiyat:260, kdv:10, ppay:30, pkom:16, adet:200},
     P: {pers:2,   maas:40875, kira:95000, elek:18000, su:5000, muh:5000, sis:1500, bakim:2,   ikmal:0,    zorunlu:3000, roy:0,    yat:1800000,  omur:7, vergi:25, malz:83, kutu:10, fiyat:350, kdv:10, ppay:50, pkom:35, adet:50}
   };
   var HPOS = 0.03, HGUN = 30.4, HCOLS = ['S','M','D','P'];
-  var AKFL = (function(){ try{ return JSON.parse(localStorage.getItem('ak_flags_v1')) || {amort:1}; }catch(e){ return {amort:1}; } })();
+  var AKFL = (function(){ var f={}; try{ f = JSON.parse(localStorage.getItem('ak_flags_v1')) || {}; }catch(e){}
+    return {amort: f.amort===0?0:1, kdv: f.kdv===0?0:1, gv: f.gv===0?0:1}; })();
   function hfmt(n){ return Number.isFinite(n) ? Math.round(n).toLocaleString('tr-TR') : '—'; }
   function hread(c){ var o={}; document.querySelectorAll('#hesap input[data-c="'+c+'"]').forEach(function(i){ o[i.dataset.k]=parseFloat(String(i.value).replace(',','.'))||0; }); return o; }
   function hset(id,html,cls){ var el=document.querySelector('#hesap [data-o="'+id+'"]'); if(el){ el.innerHTML=html; el.classList.remove('pos','neg'); if(cls) el.classList.add(cls); } }
@@ -2111,9 +2106,11 @@ section#store-m a[style*="color:var(--blue)"]{color:#c2600f!important}
     hset(c+'-minf', Number.isFinite(minf) ? '<b>'+hfmt(minf)+' TL</b>' : '<span class="neg">hiçbir fiyat kurtarmaz</span>');
     hset(c+'-ciro', hfmt(ciro)+' TL <span class="hnote">'+hfmt(aylikAdet)+' pizza/ay × '+hfmt(v.fiyat)+' TL</span>');
     hset(c+'-kdvtl', '<b>'+hfmt(kdvOdenecek)+' TL</b><div class="hnote" style="margin-top:2px">satış KDV '+hfmt(ciro-netHas)+' − alış KDV '+hfmt(Math.min(kdvAlis, ciro-netHas))+' = '+hfmt(kdvOdenecek)+'</div>');
-    hset(c+'-kar', hfmt(nakitKar)+' TL', nakitKar>=0?'pos':'neg');
+    var brut = nakitKar + kdvOdenecek;
+    hset(c+'-kar', '<b>'+hfmt(brut)+' TL</b>', brut>=0?'pos':'neg');
     hset(c+'-vergitl', hfmt(vergiTL)+' TL');
-    hset(c+'-serbest', '<b>'+hfmt(R.serbest)+' TL</b>', R.serbest>=0?'pos':'neg');
+    var cebe = brut - (AKFL.kdv===0?0:kdvOdenecek) - (AKFL.gv===0?0:vergiTL);
+    hset(c+'-serbest', '<b>'+hfmt(cebe)+' TL</b>', cebe>=0?'pos':'neg');
     hset(c+'-amort', hfmt(amort)+' TL');
     hset(c+'-netkar', hfmt(netKar)+' TL', netKar>=0?'pos':'neg');
     hset(c+'-bb', Number.isFinite(bb) ? '<b>'+bb.toFixed(1)+' pizza</b>' : '<span class="neg">ulaşılamaz</span>');
@@ -2128,23 +2125,24 @@ section#store-m a[style*="color:var(--blue)"]{color:#c2600f!important}
       var v = hread(c);
       var R = hmodel(v);
       function yaz(id, adet, ust){
-        var el = document.querySelector('#hsen [data-s="'+c+'-'+id+'"]');
+        var el = document.querySelector('#hesap [data-s="'+c+'-'+id+'"]');
         if(!el) return;
         if(!Number.isFinite(adet) || adet <= 0){ el.innerHTML = '<span class="neg">ulaşılamaz</span>'; return; }
         var K = hmodel(v, adet);
+        var cash = K.nakitKar + K.kdvOdenecek - (AKFL.kdv===0?0:K.kdvOdenecek) - (AKFL.gv===0?0:K.vergiTL);
         el.innerHTML = '<b>günde '+Math.round(adet)+'</b>'
           + (ust ? ' <span class="hnote" style="display:inline">'+ust+'</span>' : '')
-          + '<div style="margin-top:3px"><span class="'+(K.nakitKar>=0?'pos':'neg')+'" style="font-size:14px">'+hfmt(K.nakitKar)+' TL</span> <span class="hnote" style="display:inline">cebe giren / ay</span></div>'
-          + '<div class="hnote" style="margin-top:1px">'+hfmt(K.netKar)+' TL — makine payı düşülmüş</div>';
+          + '<div style="margin-top:3px"><span class="'+(cash>=0?'pos':'neg')+'" style="font-size:14px">'+hfmt(cash)+' TL</span> <span class="hnote" style="display:inline">cebe kalan / ay</span></div>'
+          + (AKFL.amort===0 ? '' : '<div class="hnote" style="margin-top:1px">'+hfmt(K.netKar)+' TL — makine payı da düşülürse</div>');
       }
       var b = (AKFL.amort===0) ? R.bb : R.bbtam;
       yaz('bb', b);
-      yaz('20', b+10);
-      yaz('40', b+20);
-      yaz('60', b+30);
-      yaz('100', b+50);
       yaz('cur', v.adet);
-      var km = document.querySelector('#hsen [data-s="'+c+'-katki"]');
+      yaz('p10', v.adet+10);
+      yaz('p20', v.adet+20);
+      yaz('p30', v.adet+30);
+      yaz('p50', v.adet+50);
+      var km = document.querySelector('#hesap [data-s="'+c+'-katki"]');
       if(km) km.innerHTML = '<b>'+hfmt(R.marj)+' TL</b> <span class="hnote" style="display:inline">/ pizza</span>'
              + '<div class="hnote" style="margin-top:2px">ayda '+hfmt(R.marj*HGUN)+' TL — günde 1 pizza fazla satarsan</div>';
       /* makine odendikten sonra: amortisman yok, bakim ve vergi var */
@@ -2155,23 +2153,20 @@ section#store-m a[style*="color:var(--blue)"]{color:#c2600f!important}
         return { net: vo - vergi, bb: K.marj > 0 ? K.sabit/(HGUN*K.marj) : NaN };
       }
       function yazSonra(id, adet, ekNot){
-        var el = document.querySelector('#hsen [data-s="'+c+'-'+id+'"]');
+        var el = document.querySelector('#hesap [data-s="'+c+'-'+id+'"]');
         if(!el) return;
         var S = sonrasi(adet);
         el.innerHTML = '<b>günde '+adet.toFixed(1)+'</b>'
           + '<div style="margin-top:2px"><span class="'+(S.net>=0?'pos':'neg')+'">'+hfmt(S.net)+' TL</span> <span class="hnote" style="display:inline">net/ay'+(ekNot||'')+'</span></div>';
       }
       var S0 = sonrasi(v.adet);
-      var elOde = document.querySelector('#hsen [data-s="'+c+'-odeme"]');
-      if(elOde) elOde.innerHTML = Number.isFinite(R.geri) ? '<b>~'+Math.round(R.geri)+' ay</b> <span class="hnote" style="display:inline">≈'+(R.geri/12).toFixed(1)+' yıl</span>' : '<span class="neg">geri dönmez</span>';
-      var elSbb = document.querySelector('#hsen [data-s="'+c+'-sbb"]');
-      if(elSbb) elSbb.innerHTML = Number.isFinite(S0.bb) ? '<b>günde '+S0.bb.toFixed(1)+'</b><div class="hnote" style="margin-top:2px">eskisi: '+(Number.isFinite(R.bbtam)?R.bbtam.toFixed(1):'—')+'</div>' : '<span class="neg">ulaşılamaz</span>';
+      var elSbb = document.querySelector('#hesap [data-s="'+c+'-sbb"]');
+      if(elSbb) elSbb.innerHTML = Number.isFinite(S0.bb) ? '<b>günde '+S0.bb.toFixed(1)+'</b><div class="hnote" style="margin-top:2px">makine ödenmeden önce: '+(Number.isFinite(b)?b.toFixed(1):'—')+'</div>' : '<span class="neg">ulaşılamaz</span>';
       yazSonra('scur', v.adet);
-      yazSonra('s40', v.adet+30);
-      var elYil = document.querySelector('#hsen [data-s="'+c+'-syil"]');
+      var elYil = document.querySelector('#hesap [data-s="'+c+'-syil"]');
       if(elYil) elYil.innerHTML = '<b class="'+(S0.net>=0?'pos':'neg')+'">'+hfmt(S0.net*12)+' TL</b> <span class="hnote" style="display:inline">/ yıl</span>';
 
-      var pay = document.querySelector('#hsen [data-s="'+c+'-pay"]');
+      var pay = document.querySelector('#hesap [data-s="'+c+'-pay"]');
       if(pay){
         if(!Number.isFinite(b) || b<=0){ pay.innerHTML='—'; }
         else {
@@ -2185,7 +2180,20 @@ section#store-m a[style*="color:var(--blue)"]{color:#c2600f!important}
   }
   function hfill(c,vals){ document.querySelectorAll('#hesap input[data-c="'+c+'"]').forEach(function(i){ if(vals[i.dataset.k]!==undefined) i.value=vals[i.dataset.k]; }); }
   function hsave(){ try{ var o={}; HCOLS.forEach(function(c){o[c]=hread(c);}); localStorage.setItem('ak_hesap_v3',JSON.stringify(o)); }catch(e){} }
-  function hsReset(){ HCOLS.forEach(function(c){ hfill(c,HDEF[c]); hcalc(c); }); if(window.yhesap){ yhesap('M'); yhesap('S'); } AKFL={amort:1}; try{ localStorage.removeItem('ak_flags_v1'); }catch(e){} if(window.akApplyFlags) akApplyFlags(); hsen(); try{ localStorage.removeItem('ak_hesap_v3'); }catch(e){} }
+  function hsReset(){
+    HCOLS.forEach(function(c){ hfill(c,HDEF[c]); });
+    document.querySelectorAll('#hesap input[data-y]').forEach(function(i){ i.value = i.defaultValue; });
+    AKFL = {amort:1, kdv:1, gv:1};
+    try{ localStorage.setItem('ak_flags_v1', JSON.stringify(AKFL)); }catch(e){}
+    if(window.yhesap){ yhesap('M'); yhesap('S'); }
+    if(window.ysave) ysave();
+    HCOLS.forEach(function(c){ hcalc(c); });
+    hsave();
+    if(window.akApplyFlags) akApplyFlags(); else hsen();
+    /* buluta da yansisin: esitleme 'input' olayini dinler */
+    var f = document.querySelector('#hesap input[data-c]');
+    if(f) f.dispatchEvent(new Event('input', {bubbles:true}));
+  }
   (function(){
     if(!document.getElementById('hst')) return;
     var saved=null; try{ saved=JSON.parse(localStorage.getItem('ak_hesap_v3')); }catch(e){}
@@ -2205,20 +2213,10 @@ section#store-m a[style*="color:var(--blue)"]{color:#c2600f!important}
       toplam += val;
       gruplar[i.dataset.g] = (gruplar[i.dataset.g]||0) + val;
     });
-    /* kalem paylari */
-    document.querySelectorAll('#hesap input[data-y="'+model+'"]').forEach(function(i){
-      var val = parseFloat(String(i.value).replace(',','.')) || 0;
-      var el = document.querySelector('[data-yp="'+model+'-'+i.dataset.yk+'"]');
-      if(el) el.textContent = toplam>0 ? '%'+(100*val/toplam).toFixed(1) : '—';
-    });
     Object.keys(gruplar).forEach(function(g){
       var el = document.querySelector('[data-yg="'+model+'-'+g+'"]');
       if(el) el.innerHTML = '<b>'+hfmt(gruplar[g])+' TL</b>';
-      var ep = document.querySelector('[data-ygp="'+model+'-'+g+'"]');
-      if(ep) ep.innerHTML = toplam>0 ? '<b>%'+(100*gruplar[g]/toplam).toFixed(0)+'</b>' : '—';
     });
-    var top = document.querySelector('[data-ytop="'+model+'"]');
-    if(top) top.textContent = hfmt(toplam)+' TL';
     /* ana tabloya yansit */
     var yat = document.querySelector('#hesap input[data-c="'+model+'"][data-k="yat"]');
     if(yat && Math.round(parseFloat(yat.value)||0) !== Math.round(toplam)){
@@ -2255,26 +2253,34 @@ section#store-m a[style*="color:var(--blue)"]{color:#c2600f!important}
     });
   })();
 
-  /* yipranma (amortisman) ac/kapa anahtari */
+  /* vergi + yipranma tikleri */
   function akApplyFlags(){
-    try{ AKFL = JSON.parse(localStorage.getItem('ak_flags_v1')) || AKFL; }catch(e){}
-    var on = !(AKFL && AKFL.amort === 0);
-    var sw = document.getElementById('amortsw'); if(sw) sw.checked = on;
-    document.querySelectorAll('#hyt tr.amdep').forEach(function(tr){ tr.hidden = !on; });
+    try{ var f = JSON.parse(localStorage.getItem('ak_flags_v1')); if(f) AKFL = {amort:f.amort===0?0:1, kdv:f.kdv===0?0:1, gv:f.gv===0?0:1}; }catch(e){}
+    var sA=document.getElementById('amortsw'); if(sA) sA.checked = AKFL.amort!==0;
+    var sK=document.getElementById('kdvsw');   if(sK) sK.checked = AKFL.kdv!==0;
+    var sG=document.getElementById('gvsw');    if(sG) sG.checked = AKFL.gv!==0;
+    document.querySelectorAll('#hyt tr.amdep').forEach(function(tr){ tr.hidden = AKFL.amort===0; });
     ['M','S','D','P'].forEach(function(c){
       var td = document.querySelector('#hyt [data-o="'+c+'-amort"]');
-      if(td) td.style.opacity = on ? '' : '.35';
+      if(td) td.style.opacity = AKFL.amort===0 ? '.35' : '';
     });
+    [['rkdv','kdv'],['rgv','gv']].forEach(function(p){
+      var tr = document.getElementById(p[0]); if(!tr) return;
+      tr.querySelectorAll('td:not(.lbl)').forEach(function(td){ td.style.opacity = AKFL[p[1]]===0 ? '.35' : ''; });
+    });
+    HCOLS.forEach(function(c){ hcalc(c); });
     hsen();
   }
   (function(){
-    var sw = document.getElementById('amortsw'); if(!sw) return;
-    sw.addEventListener('change', function(){
-      AKFL.amort = sw.checked ? 1 : 0;
-      try{ localStorage.setItem('ak_flags_v1', JSON.stringify(AKFL)); }catch(e){}
-      akApplyFlags();
+    [['amortsw','amort'],['kdvsw','kdv'],['gvsw','gv']].forEach(function(p){
+      var sw = document.getElementById(p[0]); if(!sw) return;
+      sw.addEventListener('change', function(){
+        AKFL[p[1]] = sw.checked ? 1 : 0;
+        try{ localStorage.setItem('ak_flags_v1', JSON.stringify(AKFL)); }catch(e){}
+        akApplyFlags();
+      });
     });
-    akApplyFlags();
+    if(document.getElementById('amortsw')) akApplyFlags();
   })();
 
 
