@@ -417,14 +417,6 @@ section#store-m a[style*="color:var(--blue)"]{color:#c2600f!important}
 #hesap table.hs th.m{background:#c2600f}
 #hesap table.hs th.d{background:#3f4a5c}
 #hesap table.hs th.p{background:#4a5f52}
-#hesap table.hs .rank{display:inline-flex;align-items:center;justify-content:center;width:19px;height:19px;border-radius:50%;font-size:11px;font-weight:800;margin-left:7px;vertical-align:middle;color:#fff}
-#hesap table.hs .rank.r1{background:#c0392b}
-#hesap table.hs .rank.r2{background:#d97a1a}
-#hesap table.hs .rank.r3{background:#8a94a2}
-#hesap table.hs .rank.r4{background:#b6bfcc}
-#hesap table.hs td.lbl .rank{margin-left:0;margin-right:8px;width:18px;height:18px;font-size:10.5px}
-#hesap .rankleg{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:10px;font-size:12.5px;color:#68758a;align-items:center}
-#hesap .rankleg i{display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:50%;font-size:10.5px;font-weight:800;color:#fff;margin-right:6px}
 #hesap tr.ydet td{background:#fbfcfe}
 #hesap tr.ydet td.m{background:#fff9f2}
 #hesap tr.ydet td.s{background:#f4f8ff}
@@ -1243,7 +1235,7 @@ section#store-m a[style*="color:var(--blue)"]{color:#c2600f!important}
         <tr class="grp"><td colspan="5">Yatırım ve vergi — düzenlenebilir</td></tr>
         <tr id="yatrow" style="cursor:pointer"><td class="lbl"><span id="yatok" style="display:inline-block;width:14px;color:#1a49b8;font-weight:800">▸</span> Toplam yatırım (makine + tadilat + ilk stok) <span class="hnote">tıkla — kalem kalem kırılım altında açılır, tekrar tıkla kapanır. Kalemler düzenlenebilir; toplam buraya yansır.</span></td><td class="m num"><input data-c="M" data-k="yat" type="number" step="100000"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="yat" type="number" step="100000"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="yat" type="number" step="100000"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="yat" type="number" step="100000"><span class="u">TL</span></td></tr>
         <tr class="ydet grp" hidden><td colspan="5">↳ Makine ve ekipman</td></tr>
-        <tr class="ydet" hidden><td class="lbl" style="padding-left:26px">Pizza robotu <span class="hnote">Let's Pizza sınıfı — <a href="makine/#robot" style="color:#1a49b8;font-weight:700">üretici künyesi ↗</a></span></td><td class="m num"><input data-y="M" data-g="mk" data-yk="robot" type="number" step="1000" value="2200000"><span class="u">TL</span></td><td class="s num"><input data-y="S" data-g="mk" data-yk="robot" type="number" step="1000" value="2200000"><span class="u">TL</span></td><td class="d ydash">—</td><td class="p ydash">—</td></tr>
+        <tr class="ydet" hidden><td class="lbl" style="padding-left:26px">Pizza robotu <span class="hnote"><b>€30.000 ex-works, kurulum+eğitim dahil (kurucu teklifi, 14 Ağu)</b> + nakliye+gümrük+KDV tahmini · <a href="makine/#robot" style="color:#1a49b8;font-weight:700">künye ↗</a></span></td><td class="m num"><input data-y="M" data-g="mk" data-yk="robot" type="number" step="1000" value="1700000"><span class="u">TL</span></td><td class="s num"><input data-y="S" data-g="mk" data-yk="robot" type="number" step="1000" value="1700000"><span class="u">TL</span></td><td class="d ydash">—</td><td class="p ydash">—</td></tr>
         <tr class="ydet" hidden><td class="lbl" style="padding-left:26px">Robot kol + tutucu + montaj <span class="hnote">JAKA Zu 7 (7 kg) ya da Dobot Nova 5 (850 mm), gıda uyumlu kaplamalı</span> <a href="makine/#kol" style="color:#1a49b8;font-weight:700;font-size:11px;white-space:nowrap">künye ↗</a></td><td class="m num"><input data-y="M" data-g="mk" data-yk="kol" type="number" step="1000" value="720000"><span class="u">TL</span></td><td class="s num"><input data-y="S" data-g="mk" data-yk="kol" type="number" step="1000" value="720000"><span class="u">TL</span></td><td class="d ydash">—</td><td class="p ydash">—</td></tr>
         <tr class="ydet" hidden><td class="lbl" style="padding-left:26px">Isıtmalı teslim dolabı <span class="hnote">QR kilitli, 6-8 göz, 2-3'ü ısıtmalı · Çin üretimi (batı markası 850 bin)</span> <a href="makine/#dolap" style="color:#1a49b8;font-weight:700;font-size:11px;white-space:nowrap">künye ↗</a></td><td class="m num"><input data-y="M" data-g="mk" data-yk="dolap" type="number" step="1000" value="165000"><span class="u">TL</span></td><td class="s num"><input data-y="S" data-g="mk" data-yk="dolap" type="number" step="1000" value="205000"><span class="u">TL</span></td><td class="d ydash">—</td><td class="p ydash">—</td></tr>
         <tr class="ydet" hidden><td class="lbl" style="padding-left:26px">Dolap–makine yazılım entegrasyonu <span class="hnote">QR eşleştirme, sipariş API'si, uzaktan izleme</span> <a href="makine/#yazilim" style="color:#1a49b8;font-weight:700;font-size:11px;white-space:nowrap">künye ↗</a></td><td class="m num"><input data-y="M" data-g="mk" data-yk="yazilim" type="number" step="1000" value="40000"><span class="u">TL</span></td><td class="s num"><input data-y="S" data-g="mk" data-yk="yazilim" type="number" step="1000" value="40000"><span class="u">TL</span></td><td class="d ydash">—</td><td class="p ydash">—</td></tr>
@@ -1299,8 +1291,7 @@ section#store-m a[style*="color:var(--blue)"]{color:#c2600f!important}
         </tbody></table>
     </div>
 
-    <div class="rankleg"><b style="color:#0f1726;font-weight:600">En büyük gider kalemleri:</b><span><i style="background:#c0392b">1</i>birinci</span><span><i style="background:#d97a1a">2</i>ikinci</span><span><i style="background:#8a94a2">3</i>üçüncü</span><span><i style="background:#b6bfcc">4</i>dördüncü</span><span style="color:#8a94a2">— her kolon kendi içinde sıralanır; satır başındaki numara Model M'ye göredir</span></div>
-    <div class="hlegend"><span><i style="background:#fff6ec;border:2px solid #c2600f"></i>Model M · insanlı</span><span><i style="background:#eef4ff;border:2px solid #1a49b8"></i>Model S · insansız</span><span><i style="background:#f5f6f9;border:2px solid #3f4a5c"></i>Domino's</span><span><i style="background:#f4f8f5;border:2px solid #4a5f52"></i>Mahalle pizzacısı</span></div>
+        <div class="hlegend"><span><i style="background:#fff6ec;border:2px solid #c2600f"></i>Model M · insanlı</span><span><i style="background:#eef4ff;border:2px solid #1a49b8"></i>Model S · insansız</span><span><i style="background:#f5f6f9;border:2px solid #3f4a5c"></i>Domino's</span><span><i style="background:#f4f8f5;border:2px solid #4a5f52"></i>Mahalle pizzacısı</span></div>
     <button class="hbtn" onclick="hsReset()">↺ Varsayılana dön</button>
     <div class="hexp"><b>Nasıl okunur?</b> <b>Başabaş</b>, masrafı sıfırlayan günlük satıştır; üstündeki her pizza kâr yazar. İki başabaş var: <i>nakit</i> (işletme giderlerini karşılar) ve <i>tam</i> (yatırımın yıpranmasını da karşılar) — gerçek eşik ikincisidir. <b>① ve ② neden ayrı?</b> Komisyon her satıştan değil, sadece platformdan gelen siparişten kesilir: satışın %50'si Yemeksepeti'nden geliyor ve platform %35 kesiyorsa ortalama yük %17,5 olur. Kapıdan/QR'lı dolaptan gelen satışta platform komisyonu yoktur, yalnız %3 kart komisyonu vardır — bu yüzden ①'i düşürmek fiyat kırmaktan daha kârlıdır. <b>Vergiler</b> ayrı satırlarda: KDV, amortisman ve gelir vergisi düşülmüş "net kâr" en alttadır.</div>
     
@@ -1524,8 +1515,8 @@ section#store-m a[style*="color:var(--blue)"]{color:#c2600f!important}
 </style>
 <h3 class='sup-cat'>1 · TAM İSABET — taze/çiğden pişiren komple sistemler</h3><div class='sup-catline'></div>
 <div class='sup-row'>
-<div class='sup-head'><span class='sup-name'><a href='https://www.letspizza.com/our-machine' target='_blank' rel='noopener'>🇮🇹 Let's Pizza</a></span><span class='sup-loc'>Dubai · satış: CiboLabs, Bolzano/İtalya</span><span class='sup-badge m-sale'>SATILIK</span><span class='sup-sent'>✅ Mail gönderildi</span></div>
-<div class='sup-mach'><b>GEN 2 &amp; GEN 3 pizza otomatı</b> — her siparişte un + suyu karıştırıp hamuru sıfırdan yapar, açar, soslar, 3 dakikada pişirip kutuda verir. GEN 3: soğutmalı, 2-3 hamur tipi.</div>
+<div class='sup-head'><span class='sup-name'><a href='https://www.letspizza.com/our-machine' target='_blank' rel='noopener'>🇮🇹 Let's Pizza</a></span><span class='sup-loc'>Dubai · satış: CiboLabs, Bolzano/İtalya</span><span class='sup-badge m-sale'>SATILIK</span><span class='sup-sent'>💬 KURUCUDAN TEKLİF GELDİ · 14 Ağu</span></div>
+<div class='sup-mach'><b>GEN 2 &amp; GEN 3 pizza otomatı</b> — uzun fermantasyonlu hazır tabanı +2/+6 °C'de tutar; sipariş gelince soslar, pişirir, kutular — 3 dakikanın altında (kurucu teyidi). Satılan model GEN 2; GEN 3 proje aşamasında.</div>
 <div class='sup-tech'>198×200×128 cm · 750 kg · 7 kW · yüklemede 100 pizza · CE + HACCP + TÜV</div>
 <div class='sup-price'>Fiyat: <span class='p-wait'>Teklif bekleniyor</span></div>
 </div>
@@ -1574,7 +1565,7 @@ section#store-m a[style*="color:var(--blue)"]{color:#c2600f!important}
 </div>
 <div class='sup-row'>
 <div class='sup-head'><span class='sup-name'><a href='https://www.megcook.net/' target='_blank' rel='noopener'>🇨🇳 MEGCOOK (Weston)</a></span><span class='sup-loc'>Suzhou, Çin</span><span class='sup-badge m-sale'>SATILIK</span><span class='sup-sent'>💬 Teklif geldi · 13 Ağu</span></div>
-<div class='sup-mach'><b>Tam otomatik wok makinesi</b> — çiğ et + sebze yüklenir, yemeği kendisi pişirir.</div>
+<div class='sup-mach'><b>Tam otomatik wok makinesi</b> — çiğ malzemeden pişirir. Teknik cevap (14 Ağu): manuel operasyon, uzaktan kontrol/API yok, otomatik temizlik yok — <b>insansız nokta için uygun değil</b>; insanlı mutfak/Line için aday. Türkiye'de noodle restoranı referansı var.</div>
 <div class='sup-tech'>3520W / 4400W modeller · CE, CSA, KC, SAA sertifikalı · Avrupa'ya ihracat</div>
 <div class='sup-price'>Fiyat: <span class='p-ok'>$2.900 (CE'li 3520W) + $564 hava kargo · 3 iş gününde sevk · 1 yıl garanti (çekirdek 3 yıl) · OEM yok</span></div>
 </div>
@@ -1628,7 +1619,7 @@ section#store-m a[style*="color:var(--blue)"]{color:#c2600f!important}
 </div>
 <div class='sup-row'>
 <div class='sup-head'><span class='sup-name'><a href='https://maquinaschurros.com/en/categoria/automatic-churro-machines/' target='_blank' rel='noopener'>🇪🇸 Inblan</a></span><span class='sup-loc'>İspanya</span><span class='sup-badge m-sale'>SATILIK</span><span class='sup-sent'>✅ Mail gönderildi</span></div>
-<div class='sup-mach'><b>Otomatik churro makinesi</b> — hamuru basar ve kızartır.</div>
+<div class='sup-mach'><b>Otomatik churro makinesi</b> — katalog + fiyat listesi geldi; perakende için 3L model önerdiler, kişisel teklif için firma bilgisi istiyorlar.</div>
 <div class='sup-tech'>M-2020 / M-2018 modeller · ihracat yapıyor</div>
 <div class='sup-price'>Fiyat: <span class='p-wait'>Teklif bekleniyor</span></div>
 </div>
@@ -1740,7 +1731,7 @@ section#store-m a[style*="color:var(--blue)"]{color:#c2600f!important}
 <h3 class='sup-cat'>4 · ISITMA / VENDING &amp; DESTEK EKİPMANI</h3><div class='sup-catline'></div>
 <div class='sup-row'>
 <div class='sup-head'><span class='sup-name'><a href='https://zzjawo.en.made-in-china.com/' target='_blank' rel='noopener'>🇨🇳 Jawo</a></span><span class='sup-loc'>Zhengzhou, Çin</span><span class='sup-badge m-sale'>SATILIK</span><span class='sup-sent'>💬 Teklif geldi · 13 Ağu</span></div>
-<div class='sup-mach'><b>Pizza otomatı</b> — donmuş pizzayı ısıtıp verir (taze pişirme değil).</div>
+<div class='sup-mach'><b>Pizza otomatı</b> — <span style='color:#c0392b;font-weight:700'>ELENDİ:</span> taze/par-baked taban tutamıyor (yalnız pişmiş donmuş ısıtır), boy 7-8 inç (18-20 cm) — 30 cm standardımıza küçük. Kapasite 84-96 adet.</div>
 <div class='sup-tech'>WhatsApp: +86 157 3674 1687</div>
 <div class='sup-price'>Fiyat: <span class='p-ok'>Teklif PDF'i geldi · teyit: makine pizza yapmıyor, sadece ısıtıyor</span></div>
 </div>
@@ -1752,7 +1743,7 @@ section#store-m a[style*="color:var(--blue)"]{color:#c2600f!important}
 </div>
 <div class='sup-row'>
 <div class='sup-head'><span class='sup-name'><a href='https://www.xzyvending.com/' target='_blank' rel='noopener'>🇨🇳 XYZ Vending</a></span><span class='sup-loc'>Guangdong, Çin</span><span class='sup-badge m-sale'>SATILIK</span><span class='sup-sent'>✅ Mail gönderildi</span></div>
-<div class='sup-mach'><b>Akıllı pizza otomatı</b> — donmuş pizza ısıtma.</div>
+<div class='sup-mach'><b>Akıllı pizza otomatı</b> — PDF broşür geldi; teklif için ödeme konfigürasyonu (kart/nakit/jeton) ve teslimat adresi istiyorlar (Julie).</div>
 <div class='sup-tech'>WhatsApp: +86 136 3225 7303</div>
 <div class='sup-price'>Fiyat: <span class='p-ok'>$8.358'den</span></div>
 </div>
@@ -1781,7 +1772,7 @@ section#store-m a[style*="color:var(--blue)"]{color:#c2600f!important}
 </div>
 <div class='sup-row'>
 <div class='sup-head'><span class='sup-name'><a href='https://www.winnsen.com/' target='_blank' rel='noopener'>🇨🇳 Winnsen</a></span><span class='sup-loc'>Jiangsu, Çin</span><span class='sup-badge m-sale'>SATILIK</span><span class='sup-sent'>💬 Cevap geldi — soru soruyor</span></div>
-<div class='sup-mach'><b>Soğutmalı/ısıtmalı pizza teslim dolabı</b> — sipariş locker sistemi.</div>
+<div class='sup-mach'><b>Pizza teslim dolabı</b> — CE + sipariş API'si VAR. Kural: pass-through gözler ısıtmasız olur; ısıtmalı göz önden kapılı ayrı modül. Teklif bekleniyor.</div>
 <div class='sup-tech'>İlgili kişi: John Liu</div>
 <div class='sup-price'>Fiyat: <span class='p-wait'>Fiyat için 3 sorumuz var: pizza boyutu · soğutma sıcaklığı · çözüm A (ayrı dolaplar) / B (soğuk depo + teslimde ısıtma) — cevap yazılacak</span></div>
 </div>
@@ -2027,8 +2018,8 @@ section#store-m a[style*="color:var(--blue)"]{color:#c2600f!important}
 
   /* ===== Maliyet hesabi tablosu v2 ===== */
   var HDEF = {
-    S: {pers:0.5, maas:45000, kira:25000, elek:12000, su:3500, muh:4000, sis:2500, bakim:3.5, ikmal:7000, zorunlu:3000, roy:0,    yat:3500000,  omur:7, vergi:25, malz:83, kutu:10, fiyat:280, kdv:10, ppay:60, pkom:35, adet:55},
-    M: {pers:1.6, maas:40875, kira:60000, elek:14000, su:4500, muh:5000, sis:2500, bakim:3.5, ikmal:5000, zorunlu:3500, roy:0,    yat:4500000,  omur:7, vergi:25, malz:83, kutu:10, fiyat:300, kdv:10, ppay:55, pkom:35, adet:70},
+    S: {pers:0.5, maas:45000, kira:25000, elek:12000, su:3500, muh:4000, sis:2500, bakim:3.5, ikmal:7000, zorunlu:3000, roy:3,    yat:3500000,  omur:7, vergi:25, malz:83, kutu:10, fiyat:280, kdv:10, ppay:60, pkom:35, adet:55},
+    M: {pers:1.6, maas:40875, kira:60000, elek:14000, su:4500, muh:5000, sis:2500, bakim:3.5, ikmal:5000, zorunlu:3500, roy:3,    yat:4500000,  omur:7, vergi:25, malz:83, kutu:10, fiyat:300, kdv:10, ppay:55, pkom:35, adet:70},
     D: {pers:6,   maas:45000, kira:150000,elek:32000, su:7000, muh:8000, sis:5000, bakim:2,   ikmal:0,    zorunlu:6000, roy:12.9, yat:10000000, omur:7, vergi:25, malz:70, kutu:8,  fiyat:260, kdv:10, ppay:30, pkom:16, adet:200},
     P: {pers:2,   maas:40875, kira:95000, elek:18000, su:5000, muh:5000, sis:1500, bakim:2,   ikmal:0,    zorunlu:3000, roy:0,    yat:1800000,  omur:7, vergi:25, malz:83, kutu:10, fiyat:350, kdv:10, ppay:50, pkom:35, adet:50}
   };
@@ -2109,43 +2100,6 @@ section#store-m a[style*="color:var(--blue)"]{color:#c2600f!important}
     hset(c+'-geri', Number.isFinite(geri) ? '~'+Math.round(geri)+' ay <span class="hnote">≈'+(geri/12).toFixed(1)+' yıl</span>' : '<span class="neg">geri dönmez</span>');
     hset(c+'-nakitiht', hfmt(v.yat + 3*sabit)+' TL');
 
-    /* en buyuk gider kalemleri — her kolon icin ayri siralama */
-    var kalemler = [
-      {k:'maas',    tl: personel},
-      {k:'kira',    tl: v.kira},
-      {k:'elek',    tl: v.elek},
-      {k:'su',      tl: v.su},
-      {k:'muh',     tl: v.muh},
-      {k:'sis',     tl: v.sis},
-      {k:'bakim',   tl: bakimTL},
-      {k:'ikmal',   tl: v.ikmal},
-      {k:'zorunlu', tl: v.zorunlu},
-      {k:'malz',    tl: v.malz * aylikAdet},
-      {k:'kutu',    tl: v.kutu * aylikAdet},
-      {o:'kom',     tl: komTL * aylikAdet},
-      {o:'amort',   tl: amort}
-    ];
-    hrank(c, kalemler);
-  }
-  function hrank(c, kalemler){
-    var cls = {S:'s', M:'m', D:'d', P:'p'}[c];
-    document.querySelectorAll('#hst td.'+cls+' .rank').forEach(function(e){ e.remove(); });
-    if(c === 'M') document.querySelectorAll('#hst td.lbl .rank').forEach(function(e){ e.remove(); });
-    kalemler.filter(function(x){ return x.tl > 0; })
-            .sort(function(a,b){ return b.tl - a.tl; })
-            .slice(0,4)
-            .forEach(function(x,i){
-      var cell = null;
-      if(x.k){ var inp = document.querySelector('#hst input[data-c="'+c+'"][data-k="'+x.k+'"]'); if(inp) cell = inp.closest('td'); }
-      else   { cell = document.querySelector('#hst [data-o="'+c+'-'+x.o+'"]'); }
-      if(!cell) return;
-      cell.insertAdjacentHTML('beforeend', '<span class="rank r'+(i+1)+'" title="'+(i+1)+'. en büyük gider — aylık '+hfmt(x.tl)+' TL">'+(i+1)+'</span>');
-      /* satir etiketinin soluna: oncelikli modelimiz Model M'ye gore sira */
-      if(c === 'M'){
-        var lbl = cell.parentElement.querySelector('td.lbl');
-        if(lbl) lbl.insertAdjacentHTML('afterbegin', '<span class="rank r'+(i+1)+'">'+(i+1)+'</span>');
-      }
-    });
   }
   function hsen(){
     if(!document.getElementById('hsen')) return;
@@ -2209,11 +2163,11 @@ section#store-m a[style*="color:var(--blue)"]{color:#c2600f!important}
     });
   }
   function hfill(c,vals){ document.querySelectorAll('#hst input[data-c="'+c+'"]').forEach(function(i){ if(vals[i.dataset.k]!==undefined) i.value=vals[i.dataset.k]; }); }
-  function hsave(){ try{ var o={}; HCOLS.forEach(function(c){o[c]=hread(c);}); localStorage.setItem('ak_hesap_v2',JSON.stringify(o)); }catch(e){} }
-  function hsReset(){ HCOLS.forEach(function(c){ hfill(c,HDEF[c]); hcalc(c); }); if(window.yhesap){ yhesap('M'); yhesap('S'); } hsen(); try{ localStorage.removeItem('ak_hesap_v2'); }catch(e){} }
+  function hsave(){ try{ var o={}; HCOLS.forEach(function(c){o[c]=hread(c);}); localStorage.setItem('ak_hesap_v3',JSON.stringify(o)); }catch(e){} }
+  function hsReset(){ HCOLS.forEach(function(c){ hfill(c,HDEF[c]); hcalc(c); }); if(window.yhesap){ yhesap('M'); yhesap('S'); } hsen(); try{ localStorage.removeItem('ak_hesap_v3'); }catch(e){} }
   (function(){
     if(!document.getElementById('hst')) return;
-    var saved=null; try{ saved=JSON.parse(localStorage.getItem('ak_hesap_v2')); }catch(e){}
+    var saved=null; try{ saved=JSON.parse(localStorage.getItem('ak_hesap_v3')); }catch(e){}
     HCOLS.forEach(function(c){ hfill(c,(saved&&saved[c])||HDEF[c]); hcalc(c); });
     hsen();
     document.querySelectorAll('#hst input').forEach(function(i){
@@ -2254,11 +2208,11 @@ section#store-m a[style*="color:var(--blue)"]{color:#c2600f!important}
   }
   function ysave(){
     try{ var o={}; document.querySelectorAll('#hesap input[data-y]').forEach(function(i){ o[i.dataset.y+'-'+i.dataset.yk]=i.value; });
-      localStorage.setItem('ak_yatirim_v1', JSON.stringify(o)); }catch(e){}
+      localStorage.setItem('ak_yatirim_v2', JSON.stringify(o)); }catch(e){}
   }
   (function(){
     if(!document.querySelector('#hesap input[data-y]')) return;
-    var saved=null; try{ saved=JSON.parse(localStorage.getItem('ak_yatirim_v1')); }catch(e){}
+    var saved=null; try{ saved=JSON.parse(localStorage.getItem('ak_yatirim_v2')); }catch(e){}
     if(saved) document.querySelectorAll('#hesap input[data-y]').forEach(function(i){
       var k=i.dataset.y+'-'+i.dataset.yk; if(saved[k]!==undefined) i.value=saved[k];
     });
@@ -2277,6 +2231,97 @@ section#store-m a[style*="color:var(--blue)"]{color:#c2600f!important}
       document.querySelectorAll('#hesap tr.ydet').forEach(function(tr){ tr.hidden = !acik; });
       var ok = document.getElementById('yatok');
       if(ok) ok.textContent = acik ? '▾' : '▸';
+    });
+  })();
+
+
+</script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+<script>
+  /* ===== Bulut esitleme (Firebase - NAKIT ile ayni proje; veri kursatkemalkul hesabina ozel) ===== */
+  (function(){
+    if(!window.firebase || !firebase.auth) return;
+    var FB_CONFIG = {
+      apiKey: "AIzaSyAffxPdRyYEvhlsHlDBlGf7g4iu2wnzf3c",
+      authDomain: "gen-lang-client-0276539885.firebaseapp.com",
+      projectId: "gen-lang-client-0276539885"
+    };
+    var KEYS = ['ak_hesap_v3','ak_yatirim_v2'];
+    var CID = (function(){ try{ var c = localStorage.getItem('ak_cid');
+      if(!c){ c = 'c'+Date.now().toString(36)+Math.floor(Math.random()*1e6).toString(36); localStorage.setItem('ak_cid', c); }
+      return c; }catch(e){ return 'c0'; } })();
+    var cl = { ref:null, applying:false, first:true, timer:null };
+
+    function stat(txt, ok, click){
+      var el = document.getElementById('akcloud');
+      if(!el){ el = document.createElement('div'); el.id = 'akcloud';
+        el.style.cssText = 'position:fixed;bottom:10px;right:10px;z-index:90;font-size:11px;padding:5px 12px;border-radius:12px;background:rgba(255,255,255,.92);color:#68758a;border:1px solid #dfe6f0;box-shadow:0 4px 14px rgba(20,40,80,.08);cursor:default';
+        document.body.appendChild(el); }
+      el.textContent = txt; el.style.color = ok ? '#178a56' : '#c47c18';
+      el.style.cursor = click ? 'pointer' : 'default';
+      el.onclick = click || null;
+    }
+    function payload(){
+      var d = {}; KEYS.forEach(function(k){ var v = localStorage.getItem(k); if(v) d[k] = v; });
+      return d;
+    }
+    function localMt(){ try{ return parseInt(localStorage.getItem('ak_mt')||'0'); }catch(e){ return 0; } }
+    function push(){
+      if(!cl.ref || cl.applying) return;
+      var mt = Date.now(); try{ localStorage.setItem('ak_mt', String(mt)); }catch(e){}
+      cl.ref.set({ data: JSON.stringify(payload()), cid: CID, mt: mt })
+        .then(function(){ stat('\u2601 e\u015fitlendi', true); })
+        .catch(function(){ stat('\u2601 eri\u015fim yok', false); });
+    }
+    function applyRemote(r){
+      try{
+        var d = JSON.parse(r.data || '{}');
+        cl.applying = true;
+        KEYS.forEach(function(k){ if(d[k] !== undefined) try{ localStorage.setItem(k, d[k]); }catch(e){} });
+        try{ localStorage.setItem('ak_mt', String(r.mt || Date.now())); }catch(e){}
+        /* ekrani yeni degerlerle tazele */
+        var savedH = null; try{ savedH = JSON.parse(localStorage.getItem('ak_hesap_v3')); }catch(e){}
+        if(savedH && window.hfill){ HCOLS.forEach(function(c){ if(savedH[c]) hfill(c, savedH[c]); hcalc(c); }); }
+        var savedY = null; try{ savedY = JSON.parse(localStorage.getItem('ak_yatirim_v2')); }catch(e){}
+        if(savedY){ document.querySelectorAll('#hesap input[data-y]').forEach(function(i){
+          var k = i.dataset.y + '-' + i.dataset.yk; if(savedY[k] !== undefined) i.value = savedY[k]; }); }
+        if(window.yhesap){ yhesap('M'); yhesap('S'); }
+        if(window.hsen) hsen();
+        cl.applying = false;
+        stat('\u2601 e\u015fitlendi', true);
+      }catch(e){ cl.applying = false; }
+    }
+    /* localStorage yazan mevcut save fonksiyonlarini dinle: input eventleri zaten kaydediyor — biz debounce ile iteriz */
+    function watch(){
+      document.addEventListener('input', function(ev){
+        if(!ev.target || !ev.target.closest || !ev.target.closest('#hesap')) return;
+        if(cl.timer) clearTimeout(cl.timer);
+        cl.timer = setTimeout(push, 2000);
+      }, true);
+    }
+    function startSync(){
+      var db = firebase.firestore();
+      cl.ref = db.collection('autokitch').doc('hesap');
+      cl.ref.onSnapshot(function(snap){
+        if(snap.metadata.hasPendingWrites) return;
+        if(!snap.exists){ push(); return; }
+        var r = snap.data();
+        if(cl.first){ cl.first = false;
+          if((r.mt||0) > localMt()) applyRemote(r); else push();
+          return; }
+        if(r.cid === CID) return;
+        applyRemote(r);
+      }, function(){ stat('\u2601 eri\u015fim yok \u2014 kurallara autokitch eklenmeli', false); });
+    }
+    function login(){
+      firebase.auth().signInWithPopup(new firebase.auth.GoogleAuthProvider()).catch(function(){});
+    }
+    try{ firebase.initializeApp(FB_CONFIG); }catch(e){}
+    firebase.auth().onAuthStateChanged(function(u){
+      if(u){ stat('\u2601 ba\u011flan\u0131yor\u2026', true); watch(); startSync(); }
+      else stat('\u2601 cihazlar aras\u0131 e\u015fitleme i\u00e7in t\u0131kla \u2014 Google giri\u015fi', false, login);
     });
   })();
 </script>
