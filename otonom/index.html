@@ -427,7 +427,8 @@ section#store-m a[style*="color:var(--blue)"]{color:#c2600f!important}
 #hesap .rankleg i{display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:50%;font-size:10.5px;font-weight:800;color:#fff;margin-right:6px}
 #hesap .ykir{border:1px solid #dde5f0;border-radius:14px;padding:14px 16px;margin-top:14px;background:#fff}
 #hesap .ykir[open]{box-shadow:0 8px 26px rgba(20,40,80,.06)}
-#hesap .ykir summary{cursor:pointer;font-size:15px;color:#0f1726;list-style:none;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+#hesap .ykir summary{cursor:pointer;font-size:15px;color:#0f1726;list-style:none;display:flex;align-items:center;gap:10px;flex-wrap:wrap;background:#f4f7fb;border:1px solid #dde5f0;border-radius:10px;padding:12px 16px;margin:-4px;transition:border-color .2s}
+#hesap .ykir summary:hover{border-color:#1a49b8}
 #hesap .ykir summary::-webkit-details-marker{display:none}
 #hesap .ykir summary::before{content:'▸';color:#8a94a2;font-size:13px;transition:transform .2s}
 #hesap .ykir[open] summary::before{transform:rotate(90deg)}
@@ -1322,7 +1323,7 @@ section#store-m a[style*="color:var(--blue)"]{color:#c2600f!important}
       <br><br><b>"Domino's 200 satıyorsa, eşiği 184 nasıl olur — bayiler zararda mı?"</b> Hayır, ama marj gerçekten ince. Bu tablodaki eşik <i>amortisman dahil</i> hesaplanır (yani yatırımın yıpranması da karşılansın diye). Domino's kolonunda 200 satışta işletme nakit kârı ≈173 bin TL, yani cironun <b>%11'i</b> — bu rakam Domino's'un ABD'de yayımladığı resmî franchise verisiyle birebir örtüşüyor (şube EBITDA'sı ciro bandına göre %1,7–14,7; şubelerin yaklaşık yarısı %1,7–6,7 aralığında). Yani sektörün gerçeği bu: <b>yüksek ciro, ince marj.</b> Bizim modellerimizin iddiası da tam burada — aynı işi çok daha küçük sabit giderle yapmak.
       <br><br><b>Makinenin parası çıkınca ne oluyor?</b> Tablodaki "amortisman", makine bedelinin aylara bölünmüş hâlidir — o parayı bir kere, baştan ödersin; her ay cebinden çıkmaz. Yatırım geri döndükten sonra bu kalem ortadan kalkar (bakım devam eder) ve <b>aynı satışla cebe kalan para belirgin şekilde yükselir</b>. Alttaki blok tam olarak bunu gösterir: makine ödendikten sonraki sıfıra sıfır noktası ve aylık/yıllık net kâr. Asıl yatırım kararı bu iki resme birlikte bakılarak verilir — ilk yıllar borcu ödemek, sonrası kazanmaktır.</div>
     </div>
-        <div class="card rv d1" style="text-align:left;margin-top:26px">
+        <div class="card rv d1" style="text-align:left;margin-top:26px" id="kirilim">
       <div class="n">Yatırımın kırılımı</div>
       <h3 style="font-size:19px;margin:6px 0 4px;color:#0f1726">Bu para tam olarak nereye gidiyor?</h3>
       <p class="note" style="margin-top:6px;font-size:13px">Her kalem düzenlenebilir. Bir rakamı değiştirdiğinde ara toplam, genel toplam ve yukarıdaki tablodaki <b>"Toplam yatırım"</b> satırı anında güncellenir — dolayısıyla başabaş, kâr ve geri dönüş hesapları da. Fiyatlar Ağustos 2026 piyasa araştırmasıdır; teklif geldikçe değiştirilecektir.</p>
