@@ -541,8 +541,8 @@ section#store-m a[style*="color:var(--blue)"]{color:#c2600f!important}
 <section id="turkiye" class="light center">
   <div class="wrap">
     <div class="eyebrow rv">Pazar Araştırması · Türkiye</div>
-    <h2 class="rv d1">Türkiye bir fast food ülkesine dönüşüyor —<br>tam da bizim işin rüzgârı.</h2>
-    <p class="lead rv d2">Pazarı kendi araştırmamızla masaya yatırdık: finans raporları (HSBC Yatırım'ın TAB Gıda analizi, Tem 2026), Ticaret Bakanlığı'nın hızlı ticaret verileri ve saha gözlemleri aynı resmi çiziyor — Türkiye yemekte <b>standart, hızlı ve ucuza</b> koşuyor. Aşağıda dönüşümün hızı, ilk 10'un anatomisi ve bunların AUTOKITCH için anlamı.</p>
+    <h2 class="rv d1">Türkiye bir fast food ülkesine dönüşüyor.<br>Pazar, standart üretimi ödüllendiriyor.</h2>
+    <p class="lead rv d2">Türkiye restoran pazarı hızla zincirleşiyor; talep <b>standart, hızlı ve erişilebilir</b> ürüne kayıyor. Bu bölüm dönüşümün büyüklüğünü, kazanan iş modelinin anatomisini ve AUTOKITCH'in bu tablodaki yerini özetler.</p>
 <style>
 #turkiye .tkgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:26px}
 @media(max-width:860px){#turkiye .tkgrid{grid-template-columns:repeat(2,1fr)}}
@@ -583,10 +583,27 @@ section#store-m a[style*="color:var(--blue)"]{color:#c2600f!important}
 #turkiye .ekook{font-size:20px;color:#b9c6da;font-weight:800}
 #turkiye .ekomark{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;max-width:300px}
 #turkiye .ekomark span{background:#fff6ec;color:#c2600f;border:1px solid #eeddc8;border-radius:99px;font-size:11.5px;font-weight:700;padding:4px 11px;white-space:nowrap}
+/* ilk 10 popup */
+#turkiye .tkstat.pop{position:relative;cursor:pointer}
+#turkiye .tkpop{display:none;position:absolute;left:6px;right:6px;top:calc(100% - 8px);z-index:40;background:#243044;color:#dfe8f6;border-radius:12px;padding:13px 15px;box-shadow:0 18px 44px rgba(10,20,40,.4);text-align:left}
+#turkiye .tkstat.pop:hover .tkpop,#turkiye .tkstat.pop:focus .tkpop,#turkiye .tkstat.pop.acik .tkpop{display:block}
+#turkiye .tph{font-size:11px;color:#9fb1cc;margin-bottom:7px;font-weight:700;letter-spacing:.04em}
+#turkiye .tpr{display:flex;justify-content:space-between;gap:10px;font-size:12.5px;padding:3.5px 0;border-top:1px solid rgba(255,255,255,.08)}
+#turkiye .tpr i{font-style:normal;font-weight:700}
+#turkiye .tpr.piz{color:#ffd9a8;font-weight:800}
+#turkiye .ipucu{display:inline-block;margin-top:5px;font-size:11.5px;color:#1a49b8;font-weight:700}
+/* zincir yukleri iki kolon */
+#turkiye .tkyuk{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:12px}
+@media(max-width:700px){#turkiye .tkyuk{grid-template-columns:1fr}}
+#turkiye .tkyuk ul{margin:7px 0 0;padding-left:18px;font-size:13px;line-height:1.65;color:#1a3a7a}
+#turkiye .ty-h{font-size:11.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+#turkiye .ty-k{color:#8a5b10}
+#turkiye .ty-a{color:#14663f}
+#turkiye .tkstat .c{font-size:15px;font-weight:800;color:#1a49b8;letter-spacing:-.01em}
 </style>
 
     <div class="tkh3 rv">Dönüşümün hızı: 6 yılda %22'den %50'ye</div>
-    <div class="tkh3s rv">Fast food zincirlerinin Türkiye'deki lokantaların toplam cirosu içindeki payı (HSBC'nin TAB Gıda raporundan):</div>
+    <div class="tkh3s rv">Fast food zincirlerinin, Türkiye'deki lokantaların toplam cirosu içindeki payı:</div>
     <div class="tkbars rv d1">
       <div class="tkbar"><div class="y">2019</div><div class="t"><div class="f" style="width:22%"></div></div><div class="v">%22</div></div>
       <div class="tkbar"><div class="y">2025</div><div class="t"><div class="f" style="width:38%"></div></div><div class="v">%38</div></div>
@@ -597,7 +614,18 @@ section#store-m a[style*="color:var(--blue)"]{color:#c2600f!important}
     <div class="tkgrid rv d1">
       <div class="tkstat"><div class="b">%44</div><div class="a">Hızlı servis pazarının %44'ü <b>ilk 10 markada</b>. Pazar konsolide oluyor: kazanan model markalı, standart, entegre üretim.</div></div>
       <div class="tkstat"><div class="b">388,7 milyar TL</div><div class="a">2025 hızlı ticaret (paket servis) hacmi — bir önceki yıla göre <b>+%55,6</b>. Motokuryelik Türkiye'nin en hızlı büyüyen mesleği.</div></div>
-      <div class="tkstat"><div class="b">26,74 milyar TL</div><div class="a">2025'te sipariş edilen <b>hamburger</b> — hızlı ticaretin 1 numaralı ürünü. Kazanan, pakete dayanıklı standart ürün.</div></div>
+      <div class="tkstat pop" tabindex="0" onclick="this.classList.toggle('acik')"><div class="b">26,74 milyar TL</div><div class="a">2025'te sipariş edilen <b>hamburger</b> — hızlı ticaretin 1 numarası (97,9 mln adet). <b>Pizza 3. sırada: 44,1 mln adet.</b><br><span class="ipucu">İlk 10 listesi için üzerine gel ▾</span></div>
+<div class="tkpop"><div class="tph">HIZLI TİCARETTE EN ÇOK TERCİH EDİLEN YEMEKLER — 2025 (milyon adet)</div>
+<div class="tpr"><span>1 · Hamburger</span><i>97,85</i></div>
+<div class="tpr"><span>2 · Tavuk döner</span><i>56,64</i></div>
+<div class="tpr piz"><span>3 · Pizza ← bizim ürünümüz</span><i>44,12</i></div>
+<div class="tpr"><span>4 · Ayran</span><i>43,63</i></div>
+<div class="tpr"><span>5 · Gazlı içecek</span><i>35,03</i></div>
+<div class="tpr"><span>6 · Lahmacun</span><i>33,16</i></div>
+<div class="tpr"><span>7 · Sos (ketçap vb.)</span><i>26,23</i></div>
+<div class="tpr"><span>8 · Hamur işi</span><i>23,09</i></div>
+<div class="tpr"><span>9 · Çiğ köfte</span><i>21,64</i></div>
+<div class="tpr"><span>10 · Tost &amp; sandviç</span><i>18,27</i></div></div></div>
       <div class="tkstat"><div class="b">&gt;%50 İstanbul</div><div class="a">Paket servis hacminin yarıdan fazlası tek şehirden; ikinci sıradaki Ankara sadece %8. Sıkışık şehir = paket servis ekonomisi.</div></div>
       <div class="tkstat"><div class="b">1/3</div><div class="a">Nüfusun üçte biri 14-34 yaş; çalışma saatleri AB ortalamasının çok üstünde. 08.00'de çıkıp 20.00'de dönen, evde yemek yapamayan bir ülke.</div></div>
       <div class="tkstat"><div class="b">2× ($)</div><div class="a">İstanbul'da ortalama restoran fiyatı 10 yılda <b>dolar bazında</b> ikiye katlandı — "kazıklanma korkusu" müşteriyi standart fiyata itiyor.</div></div>
@@ -625,7 +653,14 @@ section#store-m a[style*="color:var(--blue)"]{color:#c2600f!important}
         <div class="ekobox" style="background:#f4f8ff;border-color:#d5e2f8"><b style="color:#1a49b8">Sonuç</b>Fiyat şoklarına dirençli, her aşamanın marjı kendinde. Aynı anda hem 6 markayı besliyor hem esnaftan ucuza satıyor.</div>
       </div>
     </div>
-    <div class="tkh3s rv" style="margin-top:12px"><b>Bizim okumamız:</b> bu şema büyük sermaye gerektirir gibi görünür ama dersi ölçek değil, <b>aracısızlık</b>. AUTOKITCH aynı mantığı tek noktaya sığdırır: hamur merkezden, üretim robotta, satış kapıdan ve QR'lı dolaptan — bordro, usta ve aracı marjı olmadan. TAB'ın holdingle yaptığını, biz makineyle yapıyoruz.</div>
+    <div class="tkexp rv d1" style="margin-top:14px"><b>Bizim okumamız:</b> şemanın dersi ölçek değil, <b>aracısızlık</b> — ama bu model ölçeğin bütün yükünü de taşıyor. AUTOKITCH aynı aracısızlığı, bu yükler olmadan tek noktaya sığdırır:
+<div class="tkyuk">
+<div><span class="ty-h ty-k">Zincir modelinin taşıdığı yük</span>
+<ul><li>On binlerce çalışan: bordro, eleman devri, maaş baskısı</li><li>İnsan eliyle üretim — hijyen ve standart ancak denetimle korunuyor</li><li>Şube başına büyük alan ve cadde kirası</li><li>Şubeler gece kapanıyor — 7/24 satış yok</li><li>Dev franchise ağını yönetme maliyeti</li></ul></div>
+<div><span class="ty-h ty-a">AUTOKITCH'te karşılığı</span>
+<ul><li>Model S: 0 personel · Model M: 1 kişi — bordro yükü yok</li><li>Kapalı hijyenik üretim hücresi; kamerayla şeffaf</li><li>6-10 m² — kira yükü küçük</li><li>7/24 kesintisiz satış — gece de aynı fiyat, aynı ürün</li><li>Tek nokta, tek makine — ağ yükü sıfır</li></ul></div>
+</div>
+<div style="margin-top:10px"><b>TAB'ın holdingle yaptığını, biz makineyle yapıyoruz.</b></div></div>
 
     <div class="tkh3 rv">Dönüşümü süren beş güç — ve her birinin bize çalışması</div>
     <div class="tkbox rv d1">
@@ -643,21 +678,23 @@ section#store-m a[style*="color:var(--blue)"]{color:#c2600f!important}
     <div class="tkbox rv d1">
       <table class="tk">
         <tr><th style="width:17%">Kalem</th><th>Zincir neden kazanıyor</th><th>Esnaf neden kaybediyor</th><th class="ak">AUTOKITCH köprüsü</th></tr>
-        <tr><td>Alım ölçeği</td><td>1 ton yerine 1.000 ton alan fiyatı kırar; sandalyeden içeceğe her kalemde ölçek indirimi.</td><td>Et kasaptan günlük; araya 3 aracı girer, her biri marj alır.</td><td class="ak">Az çeşit + merkez ikmal: küçükken bile toplu alım gücü.</td></tr>
-        <tr><td>Entegrasyon</td><td>Yukarıdaki şema: kendi eti, patatesi, ekmeği, lojistiği, kuryesi.</td><td>Her şey in-house el emeği; insan gücü limite dayanır.</td><td class="ak">Hamur merkezde, gerisi robotta — aracı marjı da el emeği limiti de yok.</td></tr>
-        <tr><td>Platform komisyonu</td><td>Markalara özel düşük oran; kendi kuryesi varsa komisyon hiç yok.</td><td>Butik yüksek komisyon öder: "aynı komisyonla bile çalışmıyoruz."</td><td class="ak">Kapıdan + QR'lı dolap satışıyla platform payını düşürmek (maliyet tablosundaki ① kolu) yapısal avantajımız.</td></tr>
-        <tr><td>Eleman</td><td>"İki eli olan herkesin yapabileceği" birleştirme işi; eğitim maliyeti düşük, eleman devri sorun değil.</td><td>Kalifiye usta + eğitim maliyeti + maaş farkı; usta giderse lezzet de gider.</td><td class="ak">Ustalık makinede: eğitim maliyeti sıfıra iner, lezzet kişiye bağlı değildir.</td></tr>
-        <tr><td>Standart</td><td>Birbirinin aynı milyonlarca ürün: tam beklediğini vermek, asla şaşırtmamak.</td><td>El lezzeti değişken; hesap bile önceden belli değil.</td><td class="ak">Aynı pizza, aynı gramaj, aynı fiyat — sabah 4'te bile.</td></tr>
+        <tr><td>Alım ölçeği</td><td>1.000 ton alan fiyatı kırar.</td><td>Araya 3 aracı girer; her biri marj alır.</td><td class="ak">Az çeşit + merkez ikmal: küçükte bile toplu alım.</td></tr>
+        <tr><td>Entegrasyon</td><td>Kendi eti, patatesi, ekmeği, lojistiği, kuryesi.</td><td>Her şey el emeği; insan gücü limitli.</td><td class="ak">Hamur merkezde, gerisi robotta.</td></tr>
+        <tr><td>Platform komisyonu</td><td>Özel düşük oran; kendi kuryesiyle sıfır.</td><td>Yüksek komisyona mahkûm.</td><td class="ak">Kapı + QR dolap: komisyonsuz kanal (hesaptaki ①).</td></tr>
+        <tr><td>Eleman</td><td>Eğitimsiz işgücü yeter; devir sorun değil.</td><td>Usta + eğitim + maaş farkı; usta giderse lezzet gider.</td><td class="ak">Ustalık makinede; eğitim maliyeti sıfır.</td></tr>
+        <tr><td>Standart</td><td>Milyonlarca aynı ürün: asla şaşırtmaz.</td><td>El lezzeti ve hesap değişken.</td><td class="ak">Aynı pizza, aynı gramaj, aynı fiyat — sabah 4'te bile.</td></tr>
       </table>
     </div>
 
-    <div class="tkexp rv d1"><b>Bu tablo bize ne anlatıyor?</b><br>
-    <b>1 · Rüzgâr arkamızda:</b> pazar 6 yılda %22'den %50'ye, ucuz + hızlı + standarda koşarak gidiyor; biz bu standardı bordrosuz üretiyoruz.
-    <b>2 · İlk 10 bir duvar değil, yol haritası:</b> pazar markalı, standart, aracısız oyuncuyu ödüllendiriyor — AUTOKITCH bu şablonun makineyle kurulmuş hâli.
-    <b>3 · Pilot şehir doğru:</b> paket servis hacminin yarısı İstanbul'da; ilk nokta orada açılıyor.
-    <b>4 · Ürün doğru:</b> teslimatın 1 numarası hamburger; pizza aynı "pakete dayanıklı standart ürün" sınıfında ve uygulamaların 3-4 kazanan ürününden biri.
-    <b>5 · Güven satılabilir:</b> pazarın en büyük açığı güven — "standart olan güven verir" tezi robotun en güçlü olduğu yerdir; gramaj, fiyat ve hijyen makinede sabittir.
-    <b>6 · Boşluk büyüyor:</b> bir uçta fast food, öbür uçta fine dining büyürken ortadaki restoranlar kapanıyor; mahalledeki boşluğu Model M, tenha noktaları Model S dolduruyor.</div>
+    <div class="tkh3 rv">Bu tablo bize ne anlatıyor?</div>
+    <div class="tkgrid rv d1" style="margin-top:14px">
+      <div class="tkstat"><div class="c">1 · Rüzgâr arkamızda</div><div class="a">Pazar 6 yılda %22'den %50'ye koşuyor. Talep standarda kayıyor — biz standardı bordrosuz üretiyoruz.</div></div>
+      <div class="tkstat"><div class="c">2 · İlk 10 bir yol haritası</div><div class="a">Pazar markalı ve aracısız oyuncuyu ödüllendiriyor. AUTOKITCH, bu şablonun makineyle kurulmuş hâli.</div></div>
+      <div class="tkstat"><div class="c">3 · Pilot şehir doğru</div><div class="a">Paket servis hacminin yarısı İstanbul'da. İlk nokta tam talebin merkezinde açılıyor.</div></div>
+      <div class="tkstat"><div class="c">4 · Ürün doğru</div><div class="a">Hamburger 1., pizza 3. sırada. Pizza pakete dayanıklı, standartlaşmaya en uygun ürün.</div></div>
+      <div class="tkstat"><div class="c">5 · Güven satılabilir</div><div class="a">Pazarın en büyük açığı güven. Gramaj, fiyat ve hijyen makinede sabittir.</div></div>
+      <div class="tkstat"><div class="c">6 · Boşluk büyüyor</div><div class="a">Ortadaki restoranlar kapanıyor. Mahalleyi Model M, tenha noktaları Model S alır.</div></div>
+    </div>
     <div class="tknot">Veri kaynakları: HSBC Yatırım — TAB Gıda raporu (Tem 2026, pazar payı ve ilk 10 verisi); Ticaret Bakanlığı — hızlı ticaret istatistikleri (2025); TAB Gıda kamuya açık faaliyet verileri; saha gözlemleri ve işletmeci görüşmeleri.</div>
   </div>
 </section>
@@ -665,11 +702,11 @@ section#store-m a[style*="color:var(--blue)"]{color:#c2600f!important}
 <!-- DAVRANIS DEGISIMI -->
 <section id="degisim" class="center">
   <div class="wrap">
-    <div class="eyebrow rv">Neden Şimdi · Davranış Değişimi</div>
+    <div class="eyebrow rv">Pazar Araştırması · Davranış Değişimi</div>
     <h2 class="rv d1">Türkiye, alışkanlık<br>değiştirmeyi bilir.</h2>
-    <p class="lead rv d2">Yeni bir tüketim modeli önce "kim kullanır ki?" diye karşılanır — sonra herkesin hayatı olur. Bunu bu ülkede üç kez gördük:</p>
+    <p class="lead rv d2">Yukarıdaki dönüşüm bir istisna değil: Türkiye, doğru kurgulanmış yeni tüketim modelini hızla benimser. Yeni model önce "kim kullanır ki?" diye karşılanır, sonra herkesin hayatı olur — bunu bu ülkede üç kez gördük:</p>
     <div class="grid g3" style="text-align:left">
-      <div class="card rv d1"><div class="n">Örnek 01 · 2015</div><h3>Getir — market alışverişini değiştirdi</h3><p>Bakkala ya da markete gitmek yerine telefondan sipariş verip dakikalar içinde kapıda teslim almak, Getir'den sonra sıradanlaştı. Model mahalle içi küçük depolara (dark store) dayanıyordu: 2022'de <b style="color:#fff">11,8 milyar $ değerleme</b> ve <b style="color:#fff">günde ~1 milyon sipariş</b>. Türkiye'nin hızlı ticaret hacmi bugün <b style="color:#fff">yılda ~389 milyar TL</b> (2025, Ticaret Bakanlığı).</p></div>
+      <div class="card rv d1"><div class="n">Örnek 01 · 2015</div><h3>Getir — market alışverişini değiştirdi</h3><p>Bakkala ya da markete gitmek yerine telefondan sipariş verip dakikalar içinde kapıda teslim almak, Getir'den sonra sıradanlaştı. Model mahalle içi küçük depolara (dark store) dayanıyordu: 2022'de <b style="color:#fff">11,8 milyar $ değerleme</b> ve <b style="color:#fff">günde ~1 milyon sipariş</b>.</p></div>
       <div class="card rv d2"><div class="n">Örnek 02 · 1995</div><h3>BİM — maliyet davranışını değiştirdi</h3><p>1995'te <b style="color:#fff">21 mağazayla</b> kurulan BİM hard-discount modelini getirdi: az çeşit, özel markalı ürün, düşük operasyon maliyeti, her yerde aynı standart. Bugün <b style="color:#fff">14.000'i aşkın mağaza</b> ve <b style="color:#fff">~721 milyar TL ciroyla</b> pazar lideri; üç indirim zinciri gıda perakendesinin ~%60'ını yönetiyor.</p></div>
       <div class="card rv d3"><div class="n">Örnek 03 · 2018</div><h3>Martı — ulaşım davranışını değiştirdi</h3><p>Scooter sokağa bırakıldığında tepki büyüktü: "kimse binmez", "kaldırımda duramaz", "Türkiye'de olmaz". Yedi yılda <b style="color:#fff">15 milyon kullanıcıya</b> ve <b style="color:#fff">34,5 binden fazla araca</b> ulaştı; 2023'te <b style="color:#fff">New York borsasında (NYSE American, MRT)</b> işlem görmeye başlayan ilk Türk teknoloji şirketi oldu. Şirketin finansalları hâlâ tartışılır — ama kısa mesafe ulaşım alışkanlığının değiştiği tartışılmaz.</p></div>
     </div>
@@ -682,7 +719,7 @@ section#store-m a[style*="color:var(--blue)"]{color:#c2600f!important}
   <div class="wrap">
     <div class="eyebrow rv">Problem · 7/24 Ekonomisi</div>
     <h2 class="rv d1">7/24 hizmetin gerçek maliyeti,<br>üründe değil bordroda.</h2>
-    <p class="lead rv d2">Kesintisiz hizmet veren bir büfe işletmesinin menüsü büyük ölçüde standarttır: tost, sosis, ıslak hamburger, pizza. Buna rağmen bu standardı 7/24 sunmanın işletmeye dört yapısal maliyeti vardır:</p>
+    <p class="lead rv d2">Pazar 7/24 ve standarda koşarken mevcut oyuncular bu talebi neden karşılayamıyor? Kesintisiz hizmet veren bir büfenin menüsü zaten standarttır: tost, sosis, ıslak hamburger, pizza. Buna rağmen bu standardı 7/24 sunmanın dört yapısal maliyeti vardır:</p>
     <div class="grid g2">
       <div class="card rv d1"><div class="n">01</div><h3>Gece mesaisi pahalı</h3><p>7/24 ayakta kalmak için işçiye daha fazla ödemek, vardiya üstüne vardiya kurmak gerekiyor.</p></div>
       <div class="card rv d2"><div class="n">02</div><h3>Lokasyon kısıtı</h3><p>Ancak "burada tutar" dediği sınırlı yerlerde açabiliyor — o yerlerde de kira ve maliyetler zaten yüksek.</p></div>
