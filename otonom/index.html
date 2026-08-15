@@ -458,6 +458,11 @@ section#store-m a[style*="color:var(--blue)"]{color:#c2600f!important}
 #hesap .akmini{width:28px;height:16px;vertical-align:-3px}
 #hesap .akmini span:before{width:10px;height:10px}
 #hesap .akmini input:checked + span:before{left:15px}
+#topbtn{position:fixed;left:14px;bottom:14px;z-index:95;width:44px;height:44px;border-radius:50%;border:1px solid #dfe6f0;background:rgba(255,255,255,.95);color:#1a49b8;font-size:19px;font-weight:800;cursor:pointer;box-shadow:0 6px 18px rgba(20,40,80,.18);display:none;font-family:inherit}
+#topbtn:hover{border-color:#1a49b8}
+.ymsec{font-weight:700;color:#1a49b8;font-size:12px;margin-right:10px;cursor:pointer;white-space:nowrap}
+.ymsec input{accent-color:#1a49b8;margin-right:4px;cursor:pointer;vertical-align:-1px}
+tr.modeoff{display:none!important}
 </style>
 </head>
 <body>
@@ -1434,11 +1439,20 @@ section#store-m a[style*="color:var(--blue)"]{color:#c2600f!important}
           <thead><tr><th class="lbl"></th><th class="m">Model M<em>insanlı · 10 m²</em></th><th class="s">Model S<em>insansız · 6 m²</em></th><th class="d">Domino's<em>şube</em></th><th class="p">Mahalle<em>pizzacısı</em></th></tr></thead><tbody>
           <tr class="grp"><td colspan="5">Yatırım — düzenlenebilir</td></tr>
         <tr id="yatrow" style="cursor:pointer"><td class="lbl"><span id="yatok" style="display:inline-block;width:14px;color:#1a49b8;font-weight:800">▸</span> Toplam yatırım (makine + tadilat + ilk stok) <span class="hnote">tıkla — kalem kalem kırılım altında açılır, tekrar tıkla kapanır. Kalemler düzenlenebilir; toplam buraya yansır.</span></td><td class="m num"><input data-c="M" data-k="yat" type="number" step="100000"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="yat" type="number" step="100000"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="yat" type="number" step="100000"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="yat" type="number" step="100000"><span class="u">TL</span></td></tr>
-        <tr class="ydet grp" hidden><td colspan="5">↳ Makine ve ekipman</td></tr>
-        <tr class="ydet" hidden><td class="lbl" style="padding-left:26px">Pizza robotu <span class="hnote"><b>€30.000 fabrika teslim (ex-works), kurulum+eğitim dahil (kurucu teklifi, 14 Ağu)</b> + nakliye+gümrük+KDV tahmini · <a href="makine/#robot" style="color:#1a49b8;font-weight:700">künye ↗</a></span></td><td class="m num"><input data-y="M" data-g="mk" data-yk="robot" type="number" step="1000" value="1700000"><span class="u">TL</span></td><td class="s num"><input data-y="S" data-g="mk" data-yk="robot" type="number" step="1000" value="1700000"><span class="u">TL</span></td><td class="d ydash">—</td><td class="p ydash">—</td></tr>
+        <tr class="ydet grp" hidden><td colspan="5">↳ Makine ve ekipman — üretim çekirdeği:&nbsp;
+<label class="ymsec"><input type="radio" name="ymode" value="A"> Yol A · hazır makine</label>
+<label class="ymsec"><input type="radio" name="ymode" value="B"> Yol B · kendi hattımız</label>
+<a href="#yollar" style="color:#1a49b8;font-weight:700;font-size:11px">şablonlar ↓</a></td></tr>
+        <tr class="ydet" hidden data-mode="A"><td class="lbl" style="padding-left:26px">Pizza robotu <span class="hnote"><b>€30.000 fabrika teslim (ex-works), kurulum+eğitim dahil (kurucu teklifi, 14 Ağu)</b> + nakliye+gümrük+KDV tahmini · <a href="makine/#robot" style="color:#1a49b8;font-weight:700">künye ↗</a></span></td><td class="m num"><input data-y="M" data-g="mk" data-yk="robot" type="number" step="1000" value="1700000"><span class="u">TL</span></td><td class="s num"><input data-y="S" data-g="mk" data-yk="robot" type="number" step="1000" value="1700000"><span class="u">TL</span></td><td class="d ydash">—</td><td class="p ydash">—</td></tr>
         <tr class="ydet" hidden><td class="lbl" style="padding-left:26px">Robot kol + tutucu + montaj <span class="hnote">JAKA Zu 7 (7 kg) ya da Dobot Nova 5 (850 mm), gıda uyumlu kaplamalı</span> <a href="makine/#kol" style="color:#1a49b8;font-weight:700;font-size:11px;white-space:nowrap">künye ↗</a></td><td class="m num"><input data-y="M" data-g="mk" data-yk="kol" type="number" step="1000" value="720000"><span class="u">TL</span></td><td class="s num"><input data-y="S" data-g="mk" data-yk="kol" type="number" step="1000" value="720000"><span class="u">TL</span></td><td class="d ydash">—</td><td class="p ydash">—</td></tr>
         <tr class="ydet" hidden><td class="lbl" style="padding-left:26px">Isıtmalı teslim dolabı <span class="hnote">QR kilitli, 6-8 göz, 2-3'ü ısıtmalı · Çin üretimi (batı markası 850 bin)</span> <a href="makine/#dolap" style="color:#1a49b8;font-weight:700;font-size:11px;white-space:nowrap">künye ↗</a></td><td class="m num"><input data-y="M" data-g="mk" data-yk="dolap" type="number" step="1000" value="165000"><span class="u">TL</span></td><td class="s num"><input data-y="S" data-g="mk" data-yk="dolap" type="number" step="1000" value="205000"><span class="u">TL</span></td><td class="d ydash">—</td><td class="p ydash">—</td></tr>
-        <tr class="ydet" hidden><td class="lbl" style="padding-left:26px">Dolap–makine yazılım entegrasyonu <span class="hnote">QR eşleştirme, sipariş API'si, uzaktan izleme</span> <a href="makine/#yazilim" style="color:#1a49b8;font-weight:700;font-size:11px;white-space:nowrap">künye ↗</a></td><td class="m num"><input data-y="M" data-g="mk" data-yk="yazilim" type="number" step="1000" value="40000"><span class="u">TL</span></td><td class="s num"><input data-y="S" data-g="mk" data-yk="yazilim" type="number" step="1000" value="40000"><span class="u">TL</span></td><td class="d ydash">—</td><td class="p ydash">—</td></tr>
+        <tr class="ydet" hidden data-mode="A"><td class="lbl" style="padding-left:26px">Dolap–makine yazılım entegrasyonu <span class="hnote">QR eşleştirme, sipariş API'si, uzaktan izleme</span> <a href="makine/#yazilim" style="color:#1a49b8;font-weight:700;font-size:11px;white-space:nowrap">künye ↗</a></td><td class="m num"><input data-y="M" data-g="mk" data-yk="yazilim" type="number" step="1000" value="40000"><span class="u">TL</span></td><td class="s num"><input data-y="S" data-g="mk" data-yk="yazilim" type="number" step="1000" value="40000"><span class="u">TL</span></td><td class="d ydash">—</td><td class="p ydash">—</td></tr>
+        <tr class="ydet" hidden data-mode="B"><td class="lbl" style="padding-left:26px">Soğutmalı taban istasyonu <span class="hnote">Yol B — fermente tabanlar +2/+6 °C kasetlerde, kolun erişiminde</span></td><td class="m num"><input data-y="M" data-g="mk" data-yk="btaban" type="number" step="1000" value="90000"><span class="u">TL</span></td><td class="s num"><input data-y="S" data-g="mk" data-yk="btaban" type="number" step="1000" value="90000"><span class="u">TL</span></td><td class="d ydash">—</td><td class="p ydash">—</td></tr>
+        <tr class="ydet" hidden data-mode="B"><td class="lbl" style="padding-left:26px">Hamur presi (N31 tipi) <span class="hnote">Yol B — hamur topunu taban hâline presler; Chanda teklifi gelince güncellenir</span></td><td class="m num"><input data-y="M" data-g="mk" data-yk="bpres" type="number" step="1000" value="250000"><span class="u">TL</span></td><td class="s num"><input data-y="S" data-g="mk" data-yk="bpres" type="number" step="1000" value="250000"><span class="u">TL</span></td><td class="d ydash">—</td><td class="p ydash">—</td></tr>
+        <tr class="ydet" hidden data-mode="B"><td class="lbl" style="padding-left:26px">Sos + peynir + topping istasyonu <span class="hnote">Yol B — Juyou teklifi bekleniyor</span></td><td class="m num"><input data-y="M" data-g="mk" data-yk="btop" type="number" step="1000" value="375000"><span class="u">TL</span></td><td class="s num"><input data-y="S" data-g="mk" data-yk="btop" type="number" step="1000" value="375000"><span class="u">TL</span></td><td class="d ydash">—</td><td class="p ydash">—</td></tr>
+        <tr class="ydet" hidden data-mode="B"><td class="lbl" style="padding-left:26px">Konveyörlü pizza fırını <span class="hnote">Yol B — bant girişi kol tarafında; Lincoln/XLT muadili ya da yerli</span></td><td class="m num"><input data-y="M" data-g="mk" data-yk="bfirin" type="number" step="1000" value="300000"><span class="u">TL</span></td><td class="s num"><input data-y="S" data-g="mk" data-yk="bfirin" type="number" step="1000" value="300000"><span class="u">TL</span></td><td class="d ydash">—</td><td class="p ydash">—</td></tr>
+        <tr class="ydet" hidden data-mode="B"><td class="lbl" style="padding-left:26px">Kesme + kutulama istasyonu <span class="hnote">Yol B — özel imalat, tasarım bizde (Torinoarch)</span></td><td class="m num"><input data-y="M" data-g="mk" data-yk="bkes" type="number" step="1000" value="225000"><span class="u">TL</span></td><td class="s num"><input data-y="S" data-g="mk" data-yk="bkes" type="number" step="1000" value="225000"><span class="u">TL</span></td><td class="d ydash">—</td><td class="p ydash">—</td></tr>
+        <tr class="ydet" hidden data-mode="B"><td class="lbl" style="padding-left:26px">Hat yazılımı (görüş + kontrol + sipariş API) <span class="hnote">Yol B — geliştirme bütçesi</span></td><td class="m num"><input data-y="M" data-g="mk" data-yk="byaz" type="number" step="1000" value="225000"><span class="u">TL</span></td><td class="s num"><input data-y="S" data-g="mk" data-yk="byaz" type="number" step="1000" value="225000"><span class="u">TL</span></td><td class="d ydash">—</td><td class="p ydash">—</td></tr>
         <tr class="ydet" hidden><td class="lbl" style="padding-left:26px">Sipariş ekranı <span class="hnote">M: cam arkası tablet · S: dış mekân vandal dayanımlı 32" kiosk</span> <a href="makine/#kiosk" style="color:#1a49b8;font-weight:700;font-size:11px;white-space:nowrap">künye ↗</a></td><td class="m num"><input data-y="M" data-g="mk" data-yk="kiosk" type="number" step="1000" value="30000"><span class="u">TL</span></td><td class="s num"><input data-y="S" data-g="mk" data-yk="kiosk" type="number" step="1000" value="220000"><span class="u">TL</span></td><td class="d ydash">—</td><td class="p ydash">—</td></tr>
         <tr class="ydet" hidden><td class="lbl" style="padding-left:26px">Ticari buzdolabı <span class="hnote">M: Öztiryakiler GN 600 (610 L) · S: 300 L</span> <a href="makine/#buzdolabi" style="color:#1a49b8;font-weight:700;font-size:11px;white-space:nowrap">künye ↗</a></td><td class="m num"><input data-y="M" data-g="mk" data-yk="buzdolabi" type="number" step="1000" value="57500"><span class="u">TL</span></td><td class="s num"><input data-y="S" data-g="mk" data-yk="buzdolabi" type="number" step="1000" value="40000"><span class="u">TL</span></td><td class="d ydash">—</td><td class="p ydash">—</td></tr>
         <tr class="ydet" hidden><td class="lbl" style="padding-left:26px">İçecek soğutucu <span class="hnote">By Kitchen DBB-150 bar tipi, robot kolun erişiminde</span> <a href="makine/#icecek" style="color:#1a49b8;font-weight:700;font-size:11px;white-space:nowrap">künye ↗</a></td><td class="m num"><input data-y="M" data-g="mk" data-yk="icecek" type="number" step="1000" value="34918"><span class="u">TL</span></td><td class="s num"><input data-y="S" data-g="mk" data-yk="icecek" type="number" step="1000" value="34918"><span class="u">TL</span></td><td class="d ydash">—</td><td class="p ydash">—</td></tr>
@@ -2200,8 +2214,8 @@ section#store-m a[style*="color:var(--blue)"]{color:#c2600f!important}
 #yollar .yhead h3{font-size:20px;color:#0f1726;margin:0 0 4px;letter-spacing:-.01em}
 #yollar .yhead p{font-size:13.5px;color:#68758a;line-height:1.55;margin:0}
 #yollar .ysvg{padding:10px 14px 0;overflow-x:auto}
-#yollar .ysvg svg{width:100%;min-width:620px;height:auto;display:block}
-#yollar table.yt{width:100%;border-collapse:collapse;font-size:13px;min-width:640px}
+#yollar .ysvg svg{width:100%;min-width:480px;height:auto;display:block}
+#yollar table.yt{width:100%;border-collapse:collapse;font-size:13px;min-width:460px}
 #yollar .ytwrap{overflow-x:auto;padding:6px 14px 16px}
 #yollar table.yt th{padding:10px 12px;text-align:left;font-size:12px;font-weight:700;color:#fff;background:#243044}
 #yollar table.yt td{padding:9px 12px;border-top:1px solid #e8edf5;vertical-align:top;color:#3d4a5c;line-height:1.5;background:#fff}
@@ -2211,14 +2225,24 @@ section#store-m a[style*="color:var(--blue)"]{color:#c2600f!important}
 #yollar .ynot{padding:0 22px 18px;font-size:12.5px;color:#8a94a2;line-height:1.55;text-align:left}
 #yollar .ykarar{margin-top:26px;background:#eaf0fc;border-radius:12px;padding:16px 18px;font-size:14px;color:#1a3a7a;line-height:1.6;text-align:left}
 #yollar .ykarar b{color:#1a49b8}
+#yollar .ygrid{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start}
+@media(max-width:980px){#yollar .ygrid{grid-template-columns:1fr}}
+#yollar .ysecpill{display:inline-flex;align-items:center;gap:6px;margin-top:10px;background:#f4f8ff;border:1px solid #d5e2f8;border-radius:99px;padding:6px 14px;font-size:12px;font-weight:700;color:#1a49b8;cursor:pointer}
+#yollar .ysecpill input{accent-color:#1a49b8;cursor:pointer}
+#yollar .yvid{padding:4px 14px 16px}
+#yollar .yvid iframe{width:100%;aspect-ratio:16/9;border:0;border-radius:10px;background:#000;display:block}
+#yollar .yvidnot{font-size:11.5px;color:#8a94a2;margin-top:6px;line-height:1.5;text-align:left}
+#yollar table.yt input{width:104px;font:inherit;font-size:12.5px;font-weight:700;color:#1a49b8;border:1px solid #dfe6f0;border-radius:8px;padding:5px 8px;background:#fff;text-align:right}
 </style>
 
+    <div class="ygrid">
     <!-- ============ YOL A ============ -->
     <div class="ybox ya rv d1">
       <div class="yhead">
         <span class="ytag">YOL A · DÜŞÜK RİSK — PİLOT ÖNERİMİZ</span>
         <h3>Hazır çekirdek: Let's Pizza GEN 2 + taşıyıcı robot kol</h3>
         <p>Süreç (taban → sos → pişirme → kutu) kanıtlanmış hazır makinede döner; robot kol tek iş yapar: çıkan pizzayı alıp QR'lı dolaba yerleştirir. Hamur, merkez ikmalden fermente taban olarak gelir.</p>
+        <label class="ysecpill"><input type="radio" name="ymodep" value="A"> Maliyet hesabı bu yolla hesaplansın</label>
       </div>
       <div class="ysvg">
       <svg viewBox="0 0 660 370" xmlns="http://www.w3.org/2000/svg" font-family="Inter,system-ui,sans-serif">
@@ -2266,15 +2290,18 @@ section#store-m a[style*="color:var(--blue)"]{color:#c2600f!important}
       </svg>
       </div>
       <div class="ytwrap"><table class="yt">
-        <tr><th>Makine / kalem</th><th>Fiyat</th><th>Durum</th></tr>
-        <tr><td>Let's Pizza GEN 2</td><td class="f">₺1.700.000</td><td>€30.000 fabrika teslim + nakliye/gümrük/KDV · kurucu teklifi masada (+%3 ciro IoT servis, 2 yıl garanti)</td></tr>
-        <tr><td>Robot kol + tutucu + montaj</td><td class="f">₺720.000</td><td>JAKA Zu 7 / Dobot Nova 5 — Dobot'a mail gitti</td></tr>
-        <tr><td>Isıtmalı QR teslim dolabı</td><td class="f">₺165.000</td><td>Winnsen ile teknik görüşme sürüyor (hibrit tasarım)</td></tr>
-        <tr><td>Sipariş ekranı + yazılım entegrasyonu</td><td class="f">₺70.000</td><td>dolap-makine-sipariş API bağlantısı</td></tr>
-        <tr><td>Destek ekipmanı</td><td class="f">₺233.568</td><td>buzdolabı, içecek, kamera, klima, UPS, ağ, tezgâh, evye, POS</td></tr>
-        <tr class="top"><td>Makine + ekipman toplamı</td><td class="f">₺2.888.568</td><td>+ tadilat ₺353.000 + ilk stok ₺155.601 = <b>₺3.397.169</b> (maliyet tablosundaki M varsayılanı)</td></tr>
+        <tr><th>Makine / kalem</th><th>₺ (Model M · düzenlenebilir)</th><th>Durum</th></tr>
+        <tr><td>Let's Pizza GEN 2</td><td class="f"><input data-ywk="robot" type="number" step="1000"></td><td>€30.000 fabrika teslim + nakliye/gümrük/KDV · kurucu teklifi masada (+%3 ciro IoT, 2 yıl garanti)</td></tr>
+        <tr><td>Robot kol + tutucu + montaj</td><td class="f"><input data-ywk="kol" type="number" step="1000"></td><td>JAKA Zu 7 / Dobot Nova 5 — Dobot'a mail gitti</td></tr>
+        <tr><td>Isıtmalı QR teslim dolabı</td><td class="f"><input data-ywk="dolap" type="number" step="1000"></td><td>Winnsen ile teknik görüşme sürüyor</td></tr>
+        <tr><td>Sipariş ekranı</td><td class="f"><input data-ywk="kiosk" type="number" step="1000"></td><td>cam arkası tablet</td></tr>
+        <tr><td>Yazılım entegrasyonu</td><td class="f"><input data-ywk="yazilim" type="number" step="1000"></td><td>dolap-makine-sipariş API bağlantısı</td></tr>
+        <tr><td>Destek ekipmanı</td><td class="f" data-ywd="A"></td><td>buzdolabı, içecek, kamera, klima, UPS, ağ, tezgâh, evye, POS — kalemleri maliyet tablosundaki kırılımda</td></tr>
+        <tr class="top"><td>Makine + ekipman toplamı</td><td class="f" data-ywt="A"></td><td>+ tadilat ₺353.000 + ilk stok ₺155.601 · rakamlar maliyet hesabıyla canlı bağlı</td></tr>
       </table></div>
       <div class="ynot"><b>Neden pilot için bu:</b> süreç riski sıfıra yakın — makine CE + TÜV + HACCP'li, sahada kanıtlı; biz yalnız taşıma ve teslim katmanını ekliyoruz. Açılış hızı: makine teslimatı + 4-6 hafta tadilat. Bedeli: ciroda %3 kalıcı kesinti ve çekirdek teknolojinin bize ait olmaması.</div>
+      <div class="yvid"><iframe src="https://www.youtube.com/embed/P-FuBhJRhu0" title="Let's Pizza — Self Service Automated Pizzeria" loading="lazy" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+      <div class="yvidnot">Let's Pizza resmî tanıtımı. Not: videodaki süreç ayrıntısı eski nesle ait olabilir — GEN 2'de hamur, hazır fermente taban olarak yüklenir (kurucu teyidi).</div></div>
     </div>
 
     <!-- ============ YOL B ============ -->
@@ -2283,6 +2310,7 @@ section#store-m a[style*="color:var(--blue)"]{color:#c2600f!important}
         <span class="ytag">YOL B · KENDİ HATTIMIZ — GEN 2 HEDEFİ</span>
         <h3>Kol merkezli açık mutfak: 360° erişimli tek robot, çevresinde istasyonlar</h3>
         <p>Nala Pizzaiola mimarisinin bizim parçalarla kurulmuş hâli: merkezdeki 7 eksenli kol; taban istasyonundan alır, presler, sos-peynir-malzeme istasyonundan geçirir, konveyör fırına verir, keser, kutular, dolaba koyar. Teknolojinin tamamı bizim mülkiyetimizde — %3 kesinti yok.</p>
+        <label class="ysecpill"><input type="radio" name="ymodep" value="B"> Maliyet hesabı bu yolla hesaplansın</label>
       </div>
       <div class="ysvg">
       <svg viewBox="0 0 660 370" xmlns="http://www.w3.org/2000/svg" font-family="Inter,system-ui,sans-serif">
@@ -2337,25 +2365,31 @@ section#store-m a[style*="color:var(--blue)"]{color:#c2600f!important}
       </svg>
       </div>
       <div class="ytwrap"><table class="yt">
-        <tr><th>Makine / kalem</th><th>Fiyat</th><th>Durum</th></tr>
-        <tr><td>Robot kol (7 eksen) + tutucu + ray/montaj</td><td class="f">₺720.000</td><td>JAKA Zu 7 / Dobot Nova 5 — Dobot'a mail gitti</td></tr>
-        <tr><td>Soğutmalı taban istasyonu</td><td class="f">₺60-120 bin*</td><td>fermente tabanlar +2/+6°C kasetlerde</td></tr>
-        <tr><td>Hamur presi (N31 tipi)</td><td class="f">₺150-350 bin*</td><td>Chanda'ya mail 12 Ağu — teklif bekleniyor</td></tr>
-        <tr><td>Sos + peynir + topping istasyonu</td><td class="f">₺250-500 bin*</td><td>Juyou'ya mail 12 Ağu — teklif bekleniyor</td></tr>
-        <tr><td>Konveyörlü pizza fırını</td><td class="f">₺200-400 bin*</td><td>Lincoln/XLT muadili ya da yerli — araştırılacak</td></tr>
-        <tr><td>Kesme + kutulama istasyonu</td><td class="f">₺150-300 bin*</td><td>özel imalat — tasarım bizde (Torinoarch)</td></tr>
-        <tr><td>Yazılım: görüş + kontrol + sipariş API</td><td class="f">₺150-300 bin*</td><td>geliştirme bütçesi</td></tr>
-        <tr><td>QR dolap + kiosk + entegrasyon</td><td class="f">₺235.000</td><td>Yol A ile aynı kalemler</td></tr>
-        <tr><td>Destek ekipmanı</td><td class="f">₺233.568</td><td>buzdolabı, içecek, kamera, klima, UPS, ağ, tezgâh, evye, POS</td></tr>
-        <tr class="top"><td>Makine + ekipman tahmini</td><td class="f">₺2,15 - 3,16 M</td><td>+ tadilat ve ilk stok Yol A ile aynı (~₺509 bin) · * işaretli kalemler teklif gelince netleşir</td></tr>
+        <tr><th>Makine / kalem</th><th>₺ (Model M · düzenlenebilir)</th><th>Durum</th></tr>
+        <tr><td>Robot kol (7 eksen) + tutucu + ray</td><td class="f"><input data-ywk="kol" type="number" step="1000"></td><td>JAKA Zu 7 / Dobot Nova 5 — iki yolda da aynı kol</td></tr>
+        <tr><td>Soğutmalı taban istasyonu</td><td class="f"><input data-ywk="btaban" type="number" step="1000"></td><td>fermente tabanlar +2/+6°C kasetlerde</td></tr>
+        <tr><td>Hamur presi (N31 tipi)</td><td class="f"><input data-ywk="bpres" type="number" step="1000"></td><td>Chanda'ya mail 12 Ağu — teklif bekleniyor</td></tr>
+        <tr><td>Sos + peynir + topping istasyonu</td><td class="f"><input data-ywk="btop" type="number" step="1000"></td><td>Juyou'ya mail 12 Ağu — teklif bekleniyor</td></tr>
+        <tr><td>Konveyörlü pizza fırını</td><td class="f"><input data-ywk="bfirin" type="number" step="1000"></td><td>Lincoln/XLT muadili ya da yerli — araştırılacak</td></tr>
+        <tr><td>Kesme + kutulama istasyonu</td><td class="f"><input data-ywk="bkes" type="number" step="1000"></td><td>özel imalat — tasarım bizde (Torinoarch)</td></tr>
+        <tr><td>Hat yazılımı (görüş + kontrol + API)</td><td class="f"><input data-ywk="byaz" type="number" step="1000"></td><td>geliştirme bütçesi</td></tr>
+        <tr><td>Isıtmalı QR teslim dolabı</td><td class="f"><input data-ywk="dolap" type="number" step="1000"></td><td>Yol A ile aynı kalem</td></tr>
+        <tr><td>Sipariş ekranı</td><td class="f"><input data-ywk="kiosk" type="number" step="1000"></td><td>Yol A ile aynı kalem</td></tr>
+        <tr><td>Destek ekipmanı</td><td class="f" data-ywd="B"></td><td>buzdolabı, içecek, kamera, klima, UPS, ağ, tezgâh, evye, POS</td></tr>
+        <tr class="top"><td>Makine + ekipman toplamı</td><td class="f" data-ywt="B"></td><td>+ tadilat ve ilk stok Yol A ile aynı (~₺509 bin) · teklifler geldikçe rakamları güncelle</td></tr>
       </table></div>
       <div class="ynot"><b>Neden GEN 2 hedefi:</b> parasal bant Yol A ile benzer; asıl fark 6-12 aylık geliştirme süresi ve entegrasyon riski. Karşılığında: %3 ciro kesintisi yok, hamur süreci dahil tüm teknoloji bizim, ve ortaya çıkan hat kendisi <b>satılabilir bir AUTOKITCH ürünü</b> olur — nokta işletmecisinden makine üreticisine geçiş bileti.</div>
+      <div class="yvid"><iframe src="https://player.vimeo.com/video/717401541" title="Nala Robotics — Pizzaiola" loading="lazy" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+      <div class="yvidnot">Nala Pizzaiola — kol merkezli mutfağın çalışan örneği (Vimeo). Yol B, bu mimarinin bizim parçalarla kurulmuş hâlidir.</div></div>
     </div>
+
+    </div><!-- /ygrid -->
 
     <div class="ykarar rv d1"><b>Kararın çerçevesi:</b> Yol A ile pilotu hızlı ve düşük riskle aç; satış verisi ve saha tecrübesi birikirken Yol B'yi paralelde tasarla. Pilot kendini ödediğinde (maliyet tablosuna göre ~5 yıl; iyi senaryoda daha erken) ikinci nokta Yol B hattıyla açılır — %3 kesinti biter, teknoloji mülkiyeti ve makine satışı geliri başlar. İki yol rakip değil, ardışıktır.</div>
   </div>
 </section>
 
+<button id="topbtn" aria-label="Yukarı çık" onclick="window.scrollTo({top:0,behavior:'smooth'});document.body.scrollTo({top:0,behavior:'smooth'});document.documentElement.scrollTo({top:0,behavior:'smooth'})">↑</button>
 <footer>
   <div class="disc">Görseller yapay zeka ile üretilmiş referans konseptlerdir; harici videolar üçüncü taraflara aittir.</div>
   AUTOKITCH · Tam Otonom İnsansız Mutfak · Kemal — Torinoarch Studio · 2026
@@ -2411,7 +2445,7 @@ section#store-m a[style*="color:var(--blue)"]{color:#c2600f!important}
   };
   var HPOS = 0.03, HGUN = 30.4, HCOLS = ['S','M','D','P'];
   var AKFL = (function(){ var f={}; try{ f = JSON.parse(localStorage.getItem('ak_flags_v1')) || {}; }catch(e){}
-    return {amort: f.amort===0?0:1, kdv: f.kdv===0?0:1, gv: f.gv===0?0:1}; })();
+    return {amort: f.amort===0?0:1, kdv: f.kdv===0?0:1, gv: f.gv===0?0:1, ymode: f.ymode==='B'?'B':'A'}; })();
   function hfmt(n){ return Number.isFinite(n) ? Math.round(n).toLocaleString('tr-TR') : '—'; }
   function hread(c){ var o={}; document.querySelectorAll('#hesap input[data-c="'+c+'"]').forEach(function(i){ o[i.dataset.k]=parseFloat(String(i.value).replace(',','.'))||0; }); return o; }
   function hset(id,html,cls){ var el=document.querySelector('#hesap [data-o="'+id+'"]'); if(el){ el.innerHTML=html; el.classList.remove('pos','neg'); if(cls) el.classList.add(cls); } }
@@ -2555,7 +2589,7 @@ section#store-m a[style*="color:var(--blue)"]{color:#c2600f!important}
   function hsReset(){
     HCOLS.forEach(function(c){ hfill(c,HDEF[c]); });
     document.querySelectorAll('#hesap input[data-y]').forEach(function(i){ i.value = i.defaultValue; });
-    AKFL = {amort:1, kdv:1, gv:1};
+    AKFL = {amort:1, kdv:1, gv:1, ymode:'A'};
     try{ localStorage.setItem('ak_flags_v1', JSON.stringify(AKFL)); }catch(e){}
     if(window.yhesap){ yhesap('M'); yhesap('S'); }
     if(window.ysave) ysave();
@@ -2581,6 +2615,8 @@ section#store-m a[style*="color:var(--blue)"]{color:#c2600f!important}
   function yhesap(model){
     var toplam = 0, gruplar = {};
     document.querySelectorAll('#hesap input[data-y="'+model+'"]').forEach(function(i){
+      var tr = i.closest('tr');
+      if(tr && tr.dataset.mode && tr.dataset.mode !== AKFL.ymode) return;
       var val = parseFloat(String(i.value).replace(',','.')) || 0;
       toplam += val;
       gruplar[i.dataset.g] = (gruplar[i.dataset.g]||0) + val;
@@ -2627,7 +2663,7 @@ section#store-m a[style*="color:var(--blue)"]{color:#c2600f!important}
 
   /* vergi + yipranma tikleri */
   function akApplyFlags(){
-    try{ var f = JSON.parse(localStorage.getItem('ak_flags_v1')); if(f) AKFL = {amort:f.amort===0?0:1, kdv:f.kdv===0?0:1, gv:f.gv===0?0:1}; }catch(e){}
+    try{ var f = JSON.parse(localStorage.getItem('ak_flags_v1')); if(f) AKFL = {amort:f.amort===0?0:1, kdv:f.kdv===0?0:1, gv:f.gv===0?0:1, ymode:f.ymode==='B'?'B':'A'}; }catch(e){}
     var sA=document.getElementById('amortsw'); if(sA) sA.checked = AKFL.amort!==0;
     var sK=document.getElementById('kdvsw');   if(sK) sK.checked = AKFL.kdv!==0;
     var sG=document.getElementById('gvsw');    if(sG) sG.checked = AKFL.gv!==0;
@@ -2640,6 +2676,10 @@ section#store-m a[style*="color:var(--blue)"]{color:#c2600f!important}
       var tr = document.getElementById(p[0]); if(!tr) return;
       tr.querySelectorAll('td:not(.lbl)').forEach(function(td){ td.style.opacity = AKFL[p[1]]===0 ? '.35' : ''; });
     });
+    document.querySelectorAll('input[name="ymode"], input[name="ymodep"]').forEach(function(rd){ rd.checked = (rd.value === AKFL.ymode); });
+    document.querySelectorAll('#hyt tr[data-mode]').forEach(function(tr){ tr.classList.toggle('modeoff', tr.dataset.mode !== AKFL.ymode); });
+    if(window.yhesap){ yhesap('M'); yhesap('S'); }
+    if(window.ywolSync) ywolSync();
     HCOLS.forEach(function(c){ hcalc(c); });
     hsen();
   }
@@ -2653,6 +2693,58 @@ section#store-m a[style*="color:var(--blue)"]{color:#c2600f!important}
       });
     });
     if(document.getElementById('amortsw')) akApplyFlags();
+  })();
+
+  /* Yol A/B secimi + sablon tablosu aynasi */
+  function ywolSync(){
+    document.querySelectorAll('#yollar input[data-ywk]').forEach(function(i){
+      var src = document.querySelector('#hesap input[data-y="M"][data-yk="'+i.dataset.ywk+'"]');
+      if(src && document.activeElement !== i) i.value = src.value;
+    });
+    var dest = 0;
+    ['buzdolabi','icecek','kamera','klima','ups','ag','tezgah','evye','pos'].forEach(function(k){
+      var s = document.querySelector('#hesap input[data-y="M"][data-yk="'+k+'"]');
+      if(s) dest += parseFloat(String(s.value).replace(',','.'))||0;
+    });
+    document.querySelectorAll('[data-ywd]').forEach(function(el){ el.innerHTML = '<b>'+hfmt(dest)+' TL</b>'; });
+    function top(keys){ var s = dest; keys.forEach(function(k){
+      var i = document.querySelector('#hesap input[data-y="M"][data-yk="'+k+'"]');
+      if(i) s += parseFloat(String(i.value).replace(',','.'))||0; }); return s; }
+    var tA = top(['robot','kol','dolap','kiosk','yazilim']);
+    var tB = top(['kol','btaban','bpres','btop','bfirin','bkes','byaz','dolap','kiosk']);
+    var eA = document.querySelector('[data-ywt="A"]'); if(eA) eA.innerHTML = '<b>'+hfmt(tA)+' TL</b>';
+    var eB = document.querySelector('[data-ywt="B"]'); if(eB) eB.innerHTML = '<b>'+hfmt(tB)+' TL</b>';
+  }
+  (function(){
+    document.querySelectorAll('input[name="ymode"], input[name="ymodep"]').forEach(function(rd){
+      rd.addEventListener('change', function(){
+        if(!rd.checked) return;
+        AKFL.ymode = rd.value === 'B' ? 'B' : 'A';
+        try{ localStorage.setItem('ak_flags_v1', JSON.stringify(AKFL)); }catch(e){}
+        akApplyFlags();
+      });
+    });
+    document.querySelectorAll('#yollar input[data-ywk]').forEach(function(i){
+      i.addEventListener('input', function(){
+        var dst = document.querySelector('#hesap input[data-y="M"][data-yk="'+i.dataset.ywk+'"]');
+        if(dst){ dst.value = i.value; dst.dispatchEvent(new Event('input',{bubbles:true})); }
+        ywolSync();
+      });
+    });
+    document.addEventListener('input', function(ev){
+      if(ev.target && ev.target.matches && ev.target.matches('#hesap input[data-y]')) ywolSync();
+    }, true);
+    if(document.querySelector('#yollar input[data-ywk]')) ywolSync();
+  })();
+
+  /* yukari cik — sayfa body icinde kayiyor, iki kaynagi da dinle */
+  (function(){
+    var b = document.getElementById('topbtn'); if(!b) return;
+    function oku(){ return window.scrollY || document.documentElement.scrollTop || document.body.scrollTop || 0; }
+    function guncelle(){ b.style.display = oku() > 600 ? 'block' : 'none'; }
+    window.addEventListener('scroll', guncelle, {passive:true});
+    document.addEventListener('scroll', guncelle, {passive:true, capture:true});
+    guncelle();
   })();
 
 
