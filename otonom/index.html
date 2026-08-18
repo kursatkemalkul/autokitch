@@ -1457,7 +1457,9 @@ tr.modeoff{display:none!important}
         <thead><tr><th class="lbl"></th><th class="m">Model M<em>insanlı · 10 m²</em></th><th class="s">Model S<em>insansız · 6 m²</em></th><th class="d">Domino's<em>şube</em></th><th class="p">Mahalle<em>pizzacısı</em></th></tr></thead><tbody>
         <tr class="grp"><td colspan="5">4 · KDV — devlete pizza başına ödenen</td></tr>
         <tr><td class="lbl">KDV oranı (yiyecek hizmeti) <span class="hnote">Yiyecek-içecek hizmetinde %10.</span></td><td class="m num"><input data-c="M" data-k="kdv" type="number" step="1"><span class="u">%</span></td><td class="s num"><input data-c="S" data-k="kdv" type="number" step="1"><span class="u">%</span></td><td class="d num"><input data-c="D" data-k="kdv" type="number" step="1"><span class="u">%</span></td><td class="p num"><input data-c="P" data-k="kdv" type="number" step="1"><span class="u">%</span></td></tr>
-        <tr class="res hi"><td class="lbl">→ 1 PİZZAYA ÖDENECEK KDV <span class="hnote">Matrahtaki KDV'den, alışta zaten ödediğimiz KDV (malzeme %10, kutu ve faturalar %20) düşülür; devlete giden <b>fark</b> pizza başına gerçek maliyettir.</span></td><td class="m" data-o="M-kdvpay"></td><td class="s" data-o="S-kdvpay"></td><td class="d" data-o="D-kdvpay"></td><td class="p" data-o="P-kdvpay"></td></tr>
+        <tr class="res"><td class="lbl">+ Satış KDV'si — matrahın %'si <span class="hnote">Üretim maliyetinin üzerine eklenen KDV.</span></td><td class="m" data-o="M-kdvs"></td><td class="s" data-o="S-kdvs"></td><td class="d" data-o="D-kdvs"></td><td class="p" data-o="P-kdvs"></td></tr>
+        <tr class="res"><td class="lbl">− Alışta zaten ödenmiş KDV mahsubu <span class="hnote">Malzeme (%10), kutu ve faturalar (%20) alınırken ödenen KDV devletten düşülür — ikinci kez ödenmez.</span></td><td class="m" data-o="M-kdva"></td><td class="s" data-o="S-kdva"></td><td class="d" data-o="D-kdva"></td><td class="p" data-o="P-kdva"></td></tr>
+        <tr class="res hi"><td class="lbl">= DEVLETE KALAN KDV FARKI <span class="hnote">Üstteki iki satırın farkı — pizza başına devlete fiilen ödenen tutar budur.</span></td><td class="m" data-o="M-kdvpay"></td><td class="s" data-o="S-kdvpay"></td><td class="d" data-o="D-kdvpay"></td><td class="p" data-o="P-kdvpay"></td></tr>
         <tr class="res"><td class="lbl">→ kesinti + KDV toplamı</td><td class="m" data-o="M-satistop"></td><td class="s" data-o="S-satistop"></td><td class="d" data-o="D-satistop"></td><td class="p" data-o="P-satistop"></td></tr>
         <tr class="res hi"><td class="lbl">= 1 PİZZANIN TOPLAM MALİYETİ <span class="hnote">Üretim maliyeti + satışa bağlı kalemler. Alttaki pastanın merkezindeki rakam budur.</span></td><td class="m" data-o="M-toplam"></td><td class="s" data-o="S-toplam"></td><td class="d" data-o="D-toplam"></td><td class="p" data-o="P-toplam"></td></tr>
         <tr hidden><td class="lbl">Gelir / kurumlar vergisi oranı <span class="hnote">Limited/A.Ş. %25; şahısta artan oranlı %15-40. <b>Maliyet kalemi değildir</b> — kâr çıkarsa kârdan ödenir; bu sayfada kâr hesabı yok. Oran, Yatırım tablosundaki geri dönüş hesabında kullanılır.</span></td><td class="m num"><input data-c="M" data-k="vergi" type="number" step="1"><span class="u">%</span></td><td class="s num"><input data-c="S" data-k="vergi" type="number" step="1"><span class="u">%</span></td><td class="d num"><input data-c="D" data-k="vergi" type="number" step="1"><span class="u">%</span></td><td class="p num"><input data-c="P" data-k="vergi" type="number" step="1"><span class="u">%</span></td></tr>
@@ -2621,7 +2623,8 @@ tr.modeoff{display:none!important}
     var cRoy  = cUretim * (v.roy/100);
     var cKes  = cPlat + cPos + cRoy;
     var cKdvAlisPP = v.malz*0.10 + v.kutu*0.20 + (aylikAdet > 0 ? (v.elek+v.su+v.sis+v.muh+bakimTL)*0.20/aylikAdet : 0);
-    var cKdv  = Math.max(0, (cMatrahK - cUretim) - cKdvAlisPP);
+    var cKdvS = cMatrahK - cUretim;
+    var cKdv  = Math.max(0, cKdvS - cKdvAlisPP);
     return {personel:personel, bakimTL:bakimTL, sabit:sabit, netFiyat:netFiyat,
             platformTL:platformTL, posTL:posTL, royTL:royTL, komTL:komTL,
             degisken:degisken, marj:marj, aylikAdet:aylikAdet, adet:adet,
@@ -2629,7 +2632,7 @@ tr.modeoff{display:none!important}
             nakitKar:nakitKar, amort:amort, vergiOnce:vergiOnce, vergiTL:vergiTL,
             netKar:netKar, serbest:serbest, birim:birim, minf:minf,
             bb:bb, bbtam:bbtam, geri:geri,
-            cUretim:cUretim, cMatrahK:cMatrahK, cPlat:cPlat, cPos:cPos, cRoy:cRoy, cKes:cKes, cKdv:cKdv, v:v};
+            cUretim:cUretim, cMatrahK:cMatrahK, cPlat:cPlat, cPos:cPos, cRoy:cRoy, cKes:cKes, cKdv:cKdv, cKdvS:cKdvS, cKdvA:cKdvAlisPP, v:v};
   }
   function hcalc(c){
     var v = hread(c);
@@ -2647,7 +2650,9 @@ tr.modeoff{display:none!important}
     hset(c+'-uretim', Number.isFinite(R.cUretim) && aylikAdet > 0 ? '<b>'+R.cUretim.toFixed(1).replace('.',',')+' TL</b><div class="hnote" style="margin-top:2px">sabit payı '+sabitPay.toFixed(1).replace('.',',')+' + malzeme-ambalaj '+hfmt(v.malz+v.kutu)+'</div>' : '—');
     hset(c+'-matrah', '<b>'+R.cMatrahK.toFixed(1).replace('.',',')+' TL</b><div class="hnote" style="margin-top:2px">'+R.cUretim.toFixed(1).replace('.',',')+' × 1,'+(v.kdv<10?'0':'')+v.kdv+'</div>');
     hset(c+'-kestop', '<b>'+R.cKes.toFixed(1).replace('.',',')+' TL</b><div class="hnote" style="margin-top:2px">platform '+R.cPlat.toFixed(1).replace('.',',')+' + POS '+R.cPos.toFixed(1).replace('.',',')+' + franchise/IoT '+R.cRoy.toFixed(1).replace('.',',')+'</div>');
-    hset(c+'-kdvpay', '<b>'+R.cKdv.toFixed(1).replace('.',',')+' TL</b><div class="hnote" style="margin-top:2px">satış KDV\'sinden alış KDV\'si düşülmüş fark</div>');
+    hset(c+'-kdvs', R.cKdvS.toFixed(1).replace('.',',')+' TL');
+    hset(c+'-kdva', R.cKdvA.toFixed(1).replace('.',',')+' TL');
+    hset(c+'-kdvpay', '<b>'+R.cKdv.toFixed(1).replace('.',',')+' TL</b>');
     hset(c+'-satistop', '<b>'+(R.cKes+R.cKdv).toFixed(1).replace('.',',')+' TL</b>');
     hset(c+'-toplam', '<b>'+(R.cUretim+R.cKes+R.cKdv).toFixed(1).replace('.',',')+' TL</b>');
     hset(c+'-amort', hfmt(amort)+' TL');
