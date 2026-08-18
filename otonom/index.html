@@ -1426,7 +1426,6 @@ tr.modeoff{display:none!important}
         <tr><td class="lbl">İkmal / lojistik payı <span class="hnote">Merkez hamur üretimi, soğuk zincir ve ikmal aracının nokta başına düşen payı. Domino's ve mahalle pizzacısında bu iş kendi personelinde olduğu için 0.</span></td><td class="m num"><input data-c="M" data-k="ikmal" type="number" step="500"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="ikmal" type="number" step="500"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="ikmal" type="number" step="500"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="ikmal" type="number" step="500"><span class="u">TL</span></td></tr>
         <tr><td class="lbl">Zorunlu yükümlülükler (ÇTV, tabela, sigorta, damga, oda) <span class="hnote">Yıllık kalemlerin aylığa bölünmüş hâli: çevre temizlik vergisi, ilan-reklam (tabela) vergisi, işyeri sigortası, damga vergisi, oda aidatı.</span></td><td class="m num"><input data-c="M" data-k="zorunlu" type="number" step="500"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="zorunlu" type="number" step="500"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="zorunlu" type="number" step="500"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="zorunlu" type="number" step="500"><span class="u">TL</span></td></tr>
         <tr class="res"><td class="lbl">→ AYLIK SABİT GİDER TOPLAMI <span class="hnote">Dükkânın aylık yükü: M ~170 bin ↔ Domino's ~495 bin TL/ay.</span></td><td class="m" data-o="M-sabit"></td><td class="s" data-o="S-sabit"></td><td class="d" data-o="D-sabit"></td><td class="p" data-o="P-sabit"></td></tr>
-        <tr hidden><td class="lbl">Üretim adedi <span class="hnote">Teknik parametre — ekranda gösterilmez.</span></td><td class="m num"><input data-c="M" data-k="adet" type="number" step="1"><span class="u">adet</span></td><td class="s num"><input data-c="S" data-k="adet" type="number" step="1"><span class="u">adet</span></td><td class="d num"><input data-c="D" data-k="adet" type="number" step="1"><span class="u">adet</span></td><td class="p num"><input data-c="P" data-k="adet" type="number" step="1"><span class="u">adet</span></td></tr>
         <tr class="res hi"><td class="lbl">→ 1 PİZZAYA DÜŞEN SABİT GİDER PAYI <span class="hnote">Aylık dükkân giderlerinin 1 pizzaya düşen payı — pastadaki "dükkân" dilimlerinin toplamıdır.</span></td><td class="m" data-o="M-sabitpay"></td><td class="s" data-o="S-sabitpay"></td><td class="d" data-o="D-sabitpay"></td><td class="p" data-o="P-sabitpay"></td></tr>
         </tbody></table>
     </div>
@@ -1444,7 +1443,6 @@ tr.modeoff{display:none!important}
         <thead><tr><th class="lbl"></th><th class="m">Model M<em>insanlı · 10 m²</em></th><th class="s">Model S<em>insansız · 6 m²</em></th><th class="d">Domino's<em>şube</em></th><th class="p">Mahalle<em>pizzacısı</em></th></tr></thead><tbody>
         <tr class="grp"><td colspan="5">3 · Komisyon ve kesintiler&nbsp;&nbsp;<label class="aksw akmini"><input type="checkbox" id="platsw" checked><span></span></label><span style="font-weight:600;color:#1a49b8;font-size:12px">Yemeksepeti / Getir satışı</span> <span style="font-weight:400;color:#8a94a2;font-size:11.5px">— kapatırsan hepsi dükkândan satılmış sayılır: platform komisyonu sıfır, yalnız %3 kart komisyonu kalır</span></td></tr>
         <tr class="res"><td class="lbl">→ Kesinti matrahı: üretim maliyeti + KDV <span class="hnote">Komisyon yüzdeleri bir tutar üzerinden hesaplanmak zorundadır; satış fiyatı girmiyoruz — taban olarak pizzanın kendi maliyetinin KDV'li hâlini alıyoruz. Gerçekte platformlar satış fiyatından keser; satış fiyatı maliyetin üstünde olacağı için buradaki kesintiler <b>alt sınırdır</b>.</span></td><td class="m" data-o="M-matrah"></td><td class="s" data-o="S-matrah"></td><td class="d" data-o="D-matrah"></td><td class="p" data-o="P-matrah"></td></tr>
-        <tr hidden><td class="lbl">Satış fiyatı (KDV dahil) — yalnız yüzde hesabı için <span class="hnote"><b>Bu bir maliyet değildir; burada kâr da hesaplanmaz.</b> Girilme sebebi tek: Yemeksepeti/Getir komisyonu, kart komisyonu ve KDV <b>fiyatın yüzdesi</b> olarak kesilir — fiyat bilinmeden bu kalemlerin TL karşılığı çıkmaz. Üstteki üretim maliyeti bu rakamdan etkilenmez.</span></td><td class="m num"><input data-c="M" data-k="fiyat" type="number" step="5"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="fiyat" type="number" step="5"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="fiyat" type="number" step="5"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="fiyat" type="number" step="5"><span class="u">TL</span></td></tr>
         <tr class="platdep"><td class="lbl">① Satışın yüzde kaçı Yemeksepeti/Getir'den geliyor? <span class="hnote">Gerisi kapıdan/QR'lı dolaptan gelen komisyonsuz satış. Marka bilinirliği düşük formatlar platforma daha bağımlıdır.</span></td><td class="m num"><input data-c="M" data-k="ppay" type="number" step="5"><span class="u">%</span></td><td class="s num"><input data-c="S" data-k="ppay" type="number" step="5"><span class="u">%</span></td><td class="d num"><input data-c="D" data-k="ppay" type="number" step="5"><span class="u">%</span></td><td class="p num"><input data-c="P" data-k="ppay" type="number" step="5"><span class="u">%</span></td></tr>
         <tr class="platdep"><td class="lbl">② Platform komisyonu + kampanya payı <span class="hnote">Komisyon + kampanya katkısının efektif toplamı. Kendi kuryesini kullanan zincirlerde belirgin düşüktür.</span></td><td class="m num"><input data-c="M" data-k="pkom" type="number" step="1"><span class="u">%</span></td><td class="s num"><input data-c="S" data-k="pkom" type="number" step="1"><span class="u">%</span></td><td class="d num"><input data-c="D" data-k="pkom" type="number" step="1"><span class="u">%</span></td><td class="p num"><input data-c="P" data-k="pkom" type="number" step="1"><span class="u">%</span></td></tr>
         <tr><td class="lbl">Franchise kesintisi (ciro %'si) <span class="hnote">Domino's ABD 2025 fiili nakit kesinti: isim hakkı %5,5 + reklam fonu %6 + teknoloji ücretleri ≈%1,4 = <b>%12,9</b> — tabloya bu yazılır. Alttaki kartta geçen "gerçek yük ~%16,2"nin kalan ~%3,3'ü zorunlu malzeme alımına gömülü pahalılıktır; o fark bu tabloda zaten <b>malzeme maliyeti</b> satırının içinde, iki kez saymamak için burada yok.</span></td><td class="m num"><input data-c="M" data-k="roy" type="number" step="0.5"><span class="u">%</span></td><td class="s num"><input data-c="S" data-k="roy" type="number" step="0.5"><span class="u">%</span></td><td class="d num"><input data-c="D" data-k="roy" type="number" step="0.5"><span class="u">%</span></td><td class="p num"><input data-c="P" data-k="roy" type="number" step="0.5"><span class="u">%</span></td></tr>
@@ -1461,7 +1459,6 @@ tr.modeoff{display:none!important}
         <tr class="res hi"><td class="lbl">= DEVLETE KALAN KDV FARKI <span class="hnote">Üstteki iki satırın farkı — pizza başına devlete fiilen ödenen tutar budur.</span></td><td class="m" data-o="M-kdvpay"></td><td class="s" data-o="S-kdvpay"></td><td class="d" data-o="D-kdvpay"></td><td class="p" data-o="P-kdvpay"></td></tr>
         <tr class="res"><td class="lbl">→ kesinti + KDV toplamı</td><td class="m" data-o="M-satistop"></td><td class="s" data-o="S-satistop"></td><td class="d" data-o="D-satistop"></td><td class="p" data-o="P-satistop"></td></tr>
         <tr class="res hi"><td class="lbl">= 1 PİZZANIN TOPLAM MALİYETİ <span class="hnote">Üretim maliyeti + satışa bağlı kalemler. Alttaki pastanın merkezindeki rakam budur.</span></td><td class="m" data-o="M-toplam"></td><td class="s" data-o="S-toplam"></td><td class="d" data-o="D-toplam"></td><td class="p" data-o="P-toplam"></td></tr>
-        <tr hidden><td class="lbl">Gelir / kurumlar vergisi oranı <span class="hnote">Limited/A.Ş. %25; şahısta artan oranlı %15-40. <b>Maliyet kalemi değildir</b> — kâr çıkarsa kârdan ödenir; bu sayfada kâr hesabı yok. Oran, Yatırım tablosundaki geri dönüş hesabında kullanılır.</span></td><td class="m num"><input data-c="M" data-k="vergi" type="number" step="1"><span class="u">%</span></td><td class="s num"><input data-c="S" data-k="vergi" type="number" step="1"><span class="u">%</span></td><td class="d num"><input data-c="D" data-k="vergi" type="number" step="1"><span class="u">%</span></td><td class="p num"><input data-c="P" data-k="vergi" type="number" step="1"><span class="u">%</span></td></tr>
         </tbody></table>
     </div>
 
@@ -1485,6 +1482,33 @@ tr.modeoff{display:none!important}
           <div class="pzm"><div class="md" data-pzm="P"></div><h5>Mahalle pizzacısı</h5><div class="t" style="color:#4a5f52" data-pzmt="P"></div></div>
         </div>
       </div>
+    </div>
+
+
+    <div class="card rv d1" style="text-align:left;margin-top:26px">
+      <div class="n">Aylık İş Hesabı</div>
+      <h3 style="font-size:19px;margin:6px 0 4px;color:#0f1726">Bu fiyattan bu kadar satarsak, ayda cebimizde ne kalır?</h3>
+      <p class="note" style="margin-top:6px;font-size:13px">Bu bölümün <b>1 pizza maliyet hesabıyla ilgisi yoktur</b> — orası "pizzayı yapmak kaça mal oluyor" sorusuydu. Burası işletme hesabı: satış fiyatını ve günlük adedi gir, aylık ciro çıksın, üstünden KDV, komisyonlar, malzeme, dükkân gideri ve gelir vergisi düşülsün, <b>ayda net kaç para kaldığını</b> gör.</p>
+      <div class="hs-box" style="margin-top:16px">
+        <table class="hs">
+          <thead><tr><th class="lbl"></th><th class="m">Model M<em>insanlı · 10 m²</em></th><th class="s">Model S<em>insansız · 6 m²</em></th><th class="d">Domino's<em>şube</em></th><th class="p">Mahalle<em>pizzacısı</em></th></tr></thead><tbody>
+        <tr class="grp"><td colspan="5">Kararlarımız — düzenlenebilir</td></tr>
+        <tr><td class="lbl">Pizzayı kaça satacağız? <span class="hnote">Menüdeki satış fiyatı — müşterinin ödediği, KDV dahil tutar.</span></td><td class="m num"><input data-c="M" data-k="fiyat" type="number" step="5"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="fiyat" type="number" step="5"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="fiyat" type="number" step="5"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="fiyat" type="number" step="5"><span class="u">TL</span></td></tr>
+        <tr><td class="lbl">Günde kaç adet satacağız? <span class="hnote">Aylık hesap bu adetten çıkar: adet × 30,4 gün.</span></td><td class="m num"><input data-c="M" data-k="adet" type="number" step="5"><span class="u">adet</span></td><td class="s num"><input data-c="S" data-k="adet" type="number" step="5"><span class="u">adet</span></td><td class="d num"><input data-c="D" data-k="adet" type="number" step="5"><span class="u">adet</span></td><td class="p num"><input data-c="P" data-k="adet" type="number" step="5"><span class="u">adet</span></td></tr>
+        <tr><td class="lbl">Gelir / kurumlar vergisi oranı <span class="hnote">Limited/A.Ş. kurumlar vergisi %25; şahıs şirketinde artan oranlı gelir vergisi (%15–40).</span></td><td class="m num"><input data-c="M" data-k="vergi" type="number" step="1"><span class="u">%</span></td><td class="s num"><input data-c="S" data-k="vergi" type="number" step="1"><span class="u">%</span></td><td class="d num"><input data-c="D" data-k="vergi" type="number" step="1"><span class="u">%</span></td><td class="p num"><input data-c="P" data-k="vergi" type="number" step="1"><span class="u">%</span></td></tr>
+        <tr class="grp"><td colspan="5">Aylık sonuç — otomatik hesaplanır</td></tr>
+        <tr class="res"><td class="lbl">→ Aylık satış adedi <span class="hnote">Günlük adet × 30,4 gün.</span></td><td class="m" data-o="M-maylik"></td><td class="s" data-o="S-maylik"></td><td class="d" data-o="D-maylik"></td><td class="p" data-o="P-maylik"></td></tr>
+        <tr class="res hi"><td class="lbl">AYLIK CİRO — müşterilerin ödediği <span class="hnote">KDV dahil kasaya giren toplam.</span></td><td class="m" data-o="M-mciro"></td><td class="s" data-o="S-mciro"></td><td class="d" data-o="D-mciro"></td><td class="p" data-o="P-mciro"></td></tr>
+        <tr class="res"><td class="lbl">− Devlete ödenecek KDV <span class="hnote">Satış KDV'sinden, alışlarda ödenen KDV düşülmüş fark.</span></td><td class="m" data-o="M-mkdv"></td><td class="s" data-o="S-mkdv"></td><td class="d" data-o="D-mkdv"></td><td class="p" data-o="P-mkdv"></td></tr>
+        <tr class="res"><td class="lbl">− Malzeme + ambalaj (aylık, KDV dahil) </td><td class="m" data-o="M-mmalz"></td><td class="s" data-o="S-mmalz"></td><td class="d" data-o="D-mmalz"></td><td class="p" data-o="P-mmalz"></td></tr>
+        <tr class="res"><td class="lbl">− Komisyon ve kesintiler (aylık) <span class="hnote">Platform + kart komisyonu + franchise/IoT. Yukarıdaki platform anahtarına bağlıdır.</span></td><td class="m" data-o="M-mkom"></td><td class="s" data-o="S-mkom"></td><td class="d" data-o="D-mkom"></td><td class="p" data-o="P-mkom"></td></tr>
+        <tr class="res"><td class="lbl">− Dükkân sabit giderleri (aylık, KDV dahil) <span class="hnote">Kira, personel, faturalar, bakım, ikmal, zorunlu yükümlülükler.</span></td><td class="m" data-o="M-msabit"></td><td class="s" data-o="S-msabit"></td><td class="d" data-o="D-msabit"></td><td class="p" data-o="P-msabit"></td></tr>
+        <tr class="res hi"><td class="lbl">= Vergi öncesi kâr </td><td class="m" data-o="M-mvonce"></td><td class="s" data-o="S-mvonce"></td><td class="d" data-o="D-mvonce"></td><td class="p" data-o="P-mvonce"></td></tr>
+        <tr class="res"><td class="lbl">− Gelir / kurumlar vergisi <span class="hnote">Makinenin yıpranma payı matrahı düşürdüğü için vergi, kârın tam yüzdesinden azdır.</span></td><td class="m" data-o="M-mvergi"></td><td class="s" data-o="S-mvergi"></td><td class="d" data-o="D-mvergi"></td><td class="p" data-o="P-mvergi"></td></tr>
+        <tr class="res hi"><td class="lbl">= AYLIK NET KÂR — cebe kalan </td><td class="m" data-o="M-mnet"></td><td class="s" data-o="S-mnet"></td><td class="d" data-o="D-mnet"></td><td class="p" data-o="P-mnet"></td></tr>
+        </tbody></table>
+      </div>
+      <div class="hexp" style="margin-top:16px"><b>Nasıl okunur?</b> Fiyat ve adet senin kararın; gerisi yukarıdaki gider tablolarından otomatik gelir. Bir rakamı değiştirdiğinde bütün satırlar anında yeniden hesaplanır — "fiyatı 20 lira artırsam", "günde 10 pizza fazla satsam" sorularının cevabı burada görünür. <b>Not:</b> yıpranma payı (amortisman) buradan düşülmez çünkü cepten çıkan bir para değildir; yalnız vergi matrahını azaltır. Makinenin kendini ödeme süresi alttaki <b>Yatırım</b> tablosundadır.</div>
     </div>
 
     <div class="card rv d1" style="text-align:left;margin-top:26px">
@@ -2585,8 +2609,9 @@ tr.modeoff{display:none!important}
     var sabit = personel + v.kira + v.elek + v.su + v.muh + v.sis + bakimTL + v.ikmal + v.zorunlu;
 
     /* kesintiler: platform komisyonu yalniz platform satisina, POS yalniz kapidan satisa */
-    var platformTL = v.fiyat * (v.pkom/100) * (v.ppay/100);
-    var posTL      = v.fiyat * HPOS * (1 - v.ppay/100);
+    var mPpay      = (AKFL && AKFL.plat === 0) ? 0 : v.ppay;
+    var platformTL = v.fiyat * (v.pkom/100) * (mPpay/100);
+    var posTL      = v.fiyat * HPOS * (1 - mPpay/100);
     var royTL      = netFiyat * (v.roy/100);
     var komTL      = platformTL + posTL;
     var degisken   = v.malz + v.kutu + komTL + royTL;
@@ -2656,6 +2681,27 @@ tr.modeoff{display:none!important}
     hset(c+'-kdvpay', '<b>'+R.cKdv.toFixed(1).replace('.',',')+' TL</b>');
     hset(c+'-satistop', '<b>'+(R.cKes+R.cKdv).toFixed(1).replace('.',',')+' TL</b>');
     hset(c+'-toplam', '<b>'+(R.cUretim+R.cKes+R.cKdv).toFixed(1).replace('.',',')+' TL</b>');
+    /* ---- aylik is hesabi (pizza basi maliyetten bagimsiz) ---- */
+    var mAdet  = v.adet * HGUN;
+    var mCiro  = mAdet * v.fiyat;
+    var mMalz  = mAdet * (v.malz*1.10 + v.kutu*1.20);
+    var mKom   = mAdet * (R.komTL + R.royTL);
+    var mFatKdv= (v.elek+v.su+v.sis+v.muh+bakimTL)*0.20;
+    var mSabit = sabit + mFatKdv;
+    var mVonce = mCiro - kdvOdenecek - mMalz - mKom - mSabit;
+    var mAmort = (AKFL && AKFL.amort === 0) ? 0 : (v.omur > 0 ? v.yat/(v.omur*12) : 0);
+    var mMatrah= mVonce - mAmort;
+    var mVergi = mMatrah > 0 ? mMatrah*(v.vergi/100) : 0;
+    var mNet   = mVonce - mVergi;
+    hset(c+'-maylik', hfmt(mAdet)+' pizza');
+    hset(c+'-mciro',  '<b>'+hfmt(mCiro)+' TL</b>');
+    hset(c+'-mkdv',   hfmt(kdvOdenecek)+' TL');
+    hset(c+'-mmalz',  hfmt(mMalz)+' TL');
+    hset(c+'-mkom',   hfmt(mKom)+' TL');
+    hset(c+'-msabit', hfmt(mSabit)+' TL');
+    hset(c+'-mvonce', '<b>'+hfmt(mVonce)+' TL</b>', mVonce>=0?'pos':'neg');
+    hset(c+'-mvergi', hfmt(mVergi)+' TL');
+    hset(c+'-mnet',   '<b>'+hfmt(mNet)+' TL</b>', mNet>=0?'pos':'neg');
     hset(c+'-amort', hfmt(amort)+' TL');
     hset(c+'-netkar', hfmt(netKar)+' TL', netKar>=0?'pos':'neg');
     hset(c+'-bb', Number.isFinite(bb) ? '<b>'+bb.toFixed(1)+' pizza</b>' : '<span class="neg">ulaşılamaz</span>');
