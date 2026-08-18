@@ -2775,6 +2775,15 @@ tr.modeoff{display:none!important}
   (function(){
     if(!document.querySelector('#hesap input[data-c]')) return;
     var saved=null; try{ saved=JSON.parse(localStorage.getItem('ak_hesap_v3')); }catch(e){}
+    /* tek seferlik tazeleme: 'tek ortak adet' doneminde dort kolona da ayni adet
+       yazilmisti — kolon basina gercek adetleri geri getir, diger duzenlemeler kalsin */
+    try{
+      if(saved && !localStorage.getItem('ak_mig_adet')){
+        HCOLS.forEach(function(c){ if(saved[c]) saved[c].adet = HDEF[c].adet; });
+        localStorage.setItem('ak_hesap_v3', JSON.stringify(saved));
+        localStorage.setItem('ak_mig_adet','1');
+      }
+    }catch(e){}
     HCOLS.forEach(function(c){ hfill(c,(saved&&saved[c])||HDEF[c]); hcalc(c); });
     hsen();
     document.querySelectorAll('#hesap input[data-c]').forEach(function(i){
