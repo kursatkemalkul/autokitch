@@ -1426,7 +1426,7 @@ tr.modeoff{display:none!important}
         <tr><td class="lbl">İkmal / lojistik payı <span class="hnote">Merkez hamur üretimi, soğuk zincir ve ikmal aracının nokta başına düşen payı. Domino's ve mahalle pizzacısında bu iş kendi personelinde olduğu için 0.</span></td><td class="m num"><input data-c="M" data-k="ikmal" type="number" step="500"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="ikmal" type="number" step="500"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="ikmal" type="number" step="500"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="ikmal" type="number" step="500"><span class="u">TL</span></td></tr>
         <tr><td class="lbl">Zorunlu yükümlülükler (ÇTV, tabela, sigorta, damga, oda) <span class="hnote">Yıllık kalemlerin aylığa bölünmüş hâli: çevre temizlik vergisi, ilan-reklam (tabela) vergisi, işyeri sigortası, damga vergisi, oda aidatı.</span></td><td class="m num"><input data-c="M" data-k="zorunlu" type="number" step="500"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="zorunlu" type="number" step="500"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="zorunlu" type="number" step="500"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="zorunlu" type="number" step="500"><span class="u">TL</span></td></tr>
         <tr class="res"><td class="lbl">→ AYLIK SABİT GİDER TOPLAMI <span class="hnote">Dükkânın aylık yükü: M ~170 bin ↔ Domino's ~495 bin TL/ay.</span></td><td class="m" data-o="M-sabit"></td><td class="s" data-o="S-sabit"></td><td class="d" data-o="D-sabit"></td><td class="p" data-o="P-sabit"></td></tr>
-        <tr class="res hi"><td class="lbl">→ 1 PİZZAYA DÜŞEN SABİT GİDER PAYI <span class="hnote">Aylık dükkân giderlerinin 1 pizzaya düşen payı. <b>Dört model de aynı satış adediyle hesaplanır</b> (Aylık İş Hesabı kartındaki rakam) — böylece dev dükkân, hacim avantajıyla ucuz görünemez.</span></td><td class="m" data-o="M-sabitpay"></td><td class="s" data-o="S-sabitpay"></td><td class="d" data-o="D-sabitpay"></td><td class="p" data-o="P-sabitpay"></td></tr>
+        <tr class="res hi"><td class="lbl">→ 1 PİZZAYA DÜŞEN SABİT GİDER PAYI <span class="hnote">Aylık dükkân giderlerinin 1 pizzaya düşen payı. <b>Dört model de aynı satış adediyle kıyaslanır</b> (Model M kolonuna girdiğin adet) — böylece dev dükkân, hacim avantajıyla ucuz görünemez. Gri satırda her firmanın <b>kendi gerçek hacmindeki</b> payı da yazar; aylık kâr hesabı o rakamla döner.</span></td><td class="m" data-o="M-sabitpay"></td><td class="s" data-o="S-sabitpay"></td><td class="d" data-o="D-sabitpay"></td><td class="p" data-o="P-sabitpay"></td></tr>
         </tbody></table>
     </div>
     <div class="hs-box rv d1">
@@ -1488,13 +1488,13 @@ tr.modeoff{display:none!important}
     <div class="card rv d1" style="text-align:left;margin-top:26px">
       <div class="n">Aylık İş Hesabı</div>
       <h3 style="font-size:19px;margin:6px 0 4px;color:#0f1726">Bu fiyattan bu kadar satarsak, ayda cebimizde ne kalır?</h3>
-      <p class="note" style="margin-top:6px;font-size:13px">Üstteki tablolar "1 pizza kaça mal oluyor" sorusuna cevap veriyordu; burası işletme hesabı: satış fiyatını ve günlük adedi gir, aylık ciro çıksın, üstünden KDV, komisyonlar, malzeme, dükkân gideri ve gelir vergisi düşülsün, <b>ayda net kaç para kaldığını</b> gör. <b>Adet tek ve ortaktır</b> — dört model de aynı hacimde değerlendirilir, o yüzden iki tablo birbiriyle tam tutarlıdır: 1 pizza maliyeti × adet + kâr = ciro.</p>
+      <p class="note" style="margin-top:6px;font-size:13px">Üstteki tablolar "1 pizza kaça mal oluyor" sorusuna cevap veriyordu; burası işletme hesabı: satış fiyatını ve günlük adedi gir, aylık ciro çıksın, üstünden KDV, komisyonlar, malzeme, dükkân gideri ve gelir vergisi düşülsün, <b>ayda net kaç para kaldığını</b> gör. <b>Burada her model kendi gerçek hacmiyle çalışır</b> (Domino's 200/gün, biz 70/gün) — çünkü soru "gerçekte ayda ne kazanır" sorusudur. Üstteki 1 pizza maliyeti tablosu ise dördünü <b>aynı adette</b> kıyaslar; ikisi farklı sorulara cevap verir, çelişki değildir.</p>
       <div class="hs-box" style="margin-top:16px">
         <table class="hs">
           <thead><tr><th class="lbl"></th><th class="m">Model M<em>insanlı · 10 m²</em></th><th class="s">Model S<em>insansız · 6 m²</em></th><th class="d">Domino's<em>şube</em></th><th class="p">Mahalle<em>pizzacısı</em></th></tr></thead><tbody>
         <tr class="grp"><td colspan="5">Kararlarımız — düzenlenebilir</td></tr>
         <tr><td class="lbl">Pizzayı kaça satacağız? <span class="hnote">Menüdeki satış fiyatı — müşterinin ödediği, KDV dahil tutar.</span></td><td class="m num"><input data-c="M" data-k="fiyat" type="number" step="5"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="fiyat" type="number" step="5"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="fiyat" type="number" step="5"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="fiyat" type="number" step="5"><span class="u">TL</span></td></tr>
-        <tr><td class="lbl">Günde kaç adet satacağız? <span class="hnote"><b>Tek rakam, dört model için de aynı.</b> Kıyasın adil olması için hepsi aynı satış hacminde değerlendirilir — bu sayı hem üstteki 1 pizza maliyetini hem aşağıdaki aylık sonucu belirler. Aylık = adet × 30,4 gün.</span></td><td colspan="4" class="m num" style="text-align:left"><input data-c="M" data-k="adet" type="number" step="5"><span class="u">adet/gün</span> <span class="hnote" style="display:inline;margin-left:8px">dört kolon da bu adetle hesaplanır</span></td></tr>
+        <tr><td class="lbl">Günde kaç adet satacağız? <span class="hnote">Her model <b>kendi gerçek satış hacmiyle</b> değerlendirilir — Domino's şubesi günde 200, mahalle pizzacısı 50 satar. Aylık sonuç bu adetten çıkar: adet × 30,4 gün. <b>Not:</b> üstteki 1 pizza maliyeti tablosu bundan bağımsızdır; orada dört model de <b>aynı adette</b> kıyaslanır ki dev dükkân hacim avantajıyla ucuz görünmesin.</span></td><td class="m num"><input data-c="M" data-k="adet" type="number" step="5" value="70"><span class="u">adet</span></td><td class="s num"><input data-c="S" data-k="adet" type="number" step="5" value="55"><span class="u">adet</span></td><td class="d num"><input data-c="D" data-k="adet" type="number" step="5" value="200"><span class="u">adet</span></td><td class="p num"><input data-c="P" data-k="adet" type="number" step="5" value="50"><span class="u">adet</span></td></tr>
         <tr><td class="lbl"><label class="aksw akmini"><input type="checkbox" id="gvsw" checked><span></span></label>Gelir / kurumlar vergisi oranı <span class="hnote">Anahtarı kapatırsan vergi hesaba katılmaz — vergi öncesi kâr doğrudan cebe kalan olur. Limited/A.Ş. kurumlar vergisi %25; şahıs şirketinde artan oranlı gelir vergisi (%15–40).</span></td><td class="m num"><input data-c="M" data-k="vergi" type="number" step="1"><span class="u">%</span></td><td class="s num"><input data-c="S" data-k="vergi" type="number" step="1"><span class="u">%</span></td><td class="d num"><input data-c="D" data-k="vergi" type="number" step="1"><span class="u">%</span></td><td class="p num"><input data-c="P" data-k="vergi" type="number" step="1"><span class="u">%</span></td></tr>
         <tr class="grp"><td colspan="5">Aylık sonuç — otomatik hesaplanır</td></tr>
         <tr class="res"><td class="lbl">→ Aylık satış adedi <span class="hnote">Günlük adet × 30,4 gün.</span></td><td class="m" data-o="M-maylik"></td><td class="s" data-o="S-maylik"></td><td class="d" data-o="D-maylik"></td><td class="p" data-o="P-maylik"></td></tr>
@@ -2598,9 +2598,10 @@ tr.modeoff{display:none!important}
     return parseFloat(v.replace(',', '.')) || 0; }
   var AK_PARA_K = ['yat','kira','maas','elek','su','muh','sis','ikmal','zorunlu'];
   function hread(c){ var o={}; document.querySelectorAll('#hesap input[data-c="'+c+'"]').forEach(function(i){ o[i.dataset.k]=hnum(i.value); });
-    var ai = document.querySelector('#hesap input[data-k="adet"]'); if(ai) o.adet = hnum(ai.value);
     return o; }
   function hset(id,html,cls){ var el=document.querySelector('#hesap [data-o="'+id+'"]'); if(el){ el.innerHTML=html; el.classList.remove('pos','neg'); if(cls) el.classList.add(cls); } }
+  function hrefAdet(){ var i = document.querySelector('#hesap input[data-c="M"][data-k="adet"]');
+    var a = i ? hnum(i.value) : 70; return (a > 0 ? a : 70) * HGUN; }
   function hmodel(v, adetOverride){
     var adet = (adetOverride === undefined) ? v.adet : adetOverride;
     var kdvK = 1 + (v.kdv/100);
@@ -2643,7 +2644,8 @@ tr.modeoff{display:none!important}
     var geri  = serbest > 0 ? v.yat/serbest : NaN;
 
     /* maliyet-bazli kesintiler: matrah = uretim maliyeti (sabit payi + malzeme), fiyat girilmez */
-    var cSabitPay = aylikAdet > 0 ? sabit/aylikAdet : 0;
+    var refA = hrefAdet();
+    var cSabitPay = sabit / refA;
     var cUretim  = cSabitPay + v.malz + v.kutu;
     var cMatrahK = v.fiyat;
     var ePpay = (AKFL && AKFL.plat === 0) ? 0 : v.ppay;
@@ -2651,7 +2653,7 @@ tr.modeoff{display:none!important}
     var cPos  = cMatrahK * HPOS * (1 - ePpay/100);
     var cRoy  = (cMatrahK / kdvK) * (v.roy/100);
     var cKes  = cPlat + cPos + cRoy;
-    var cKdvAlisPP = v.malz*0.10 + v.kutu*0.20 + (aylikAdet > 0 ? (v.elek+v.su+v.sis+v.muh+bakimTL)*0.20/aylikAdet : 0);
+    var cKdvAlisPP = v.malz*0.10 + v.kutu*0.20 + (v.elek+v.su+v.sis+v.muh+bakimTL)*0.20/refA;
     var cKdvS = cMatrahK - (cMatrahK / kdvK);
     var cKdv  = Math.max(0, cKdvS - cKdvAlisPP);
     return {personel:personel, bakimTL:bakimTL, sabit:sabit, netFiyat:netFiyat,
@@ -2661,7 +2663,7 @@ tr.modeoff{display:none!important}
             nakitKar:nakitKar, amort:amort, vergiOnce:vergiOnce, vergiTL:vergiTL,
             netKar:netKar, serbest:serbest, birim:birim, minf:minf,
             bb:bb, bbtam:bbtam, geri:geri,
-            cUretim:cUretim, cSabitPay:cSabitPay, cMatrahK:cMatrahK, cPlat:cPlat, cPos:cPos, cRoy:cRoy, cKes:cKes, cKdv:cKdv, cKdvS:cKdvS, cKdvA:cKdvAlisPP, v:v};
+            cUretim:cUretim, cSabitPay:cSabitPay, refA:refA, cMatrahK:cMatrahK, cPlat:cPlat, cPos:cPos, cRoy:cRoy, cKes:cKes, cKdv:cKdv, cKdvS:cKdvS, cKdvA:cKdvAlisPP, v:v};
   }
   function hcalc(c){
     var v = hread(c);
@@ -2673,7 +2675,10 @@ tr.modeoff{display:none!important}
     hset(c+'-pers', v.pers+' × '+hfmt(v.maas)+' = <b>'+hfmt(personel)+' TL</b>');
     hset(c+'-bakimtl', hfmt(bakimTL)+' TL');
     hset(c+'-sabit', '<b>'+hfmt(sabit)+' TL</b>');
-    hset(c+'-sabitpay', '<b>'+R.cSabitPay.toFixed(1).replace('.',',')+' TL</b>');
+    var kendiPay = aylikAdet > 0 ? sabit/aylikAdet : NaN;
+    hset(c+'-sabitpay', '<b>'+R.cSabitPay.toFixed(1).replace('.',',')+' TL</b>'
+      + (Number.isFinite(kendiPay) && Math.abs(kendiPay - R.cSabitPay) > 0.5
+         ? '<div class="hnote" style="margin-top:2px">kendi satış hacminde: '+kendiPay.toFixed(1).replace('.',',')+' TL</div>' : ''));
     hset(c+'-uretim', '<b>'+R.cUretim.toFixed(1).replace('.',',')+' TL</b><div class="hnote" style="margin-top:2px">sabit payı '+R.cSabitPay.toFixed(1).replace('.',',')+' + malzeme '+hfmt(v.malz)+' + ambalaj '+hfmt(v.kutu)+'</div>');
     hset(c+'-matrah', '<b>'+hfmt(R.cMatrahK)+' TL</b><div class="hnote" style="margin-top:2px">menüdeki satış fiyatı — Aylık İş Hesabı kartından</div>');
     hset(c+'-kestop', '<b>'+R.cKes.toFixed(1).replace('.',',')+' TL</b><div class="hnote" style="margin-top:2px">platform '+R.cPlat.toFixed(1).replace('.',',')+' + POS '+R.cPos.toFixed(1).replace('.',',')+' + franchise/IoT '+R.cRoy.toFixed(1).replace('.',',')+'</div>');
@@ -2717,7 +2722,7 @@ tr.modeoff{display:none!important}
     var ad = {malz:'Malzeme', plat:'Platform komisyonu', pers:'Personel payı', kira:'Kira payı', diger:'Faturalar + diğer sabit payı', roy:'Franchise / IoT kesintisi', kutu:'Kutu + ambalaj', bakim:'Bakım payı', pos:'POS / kart komisyonu', kdv:'Devlete ödenecek KDV payı'};
     ['M','S','D','P'].forEach(function(c){
       var v = hread(c); var X = hmodel(v);
-      var a = X.aylikAdet;
+      var a = X.refA;
       if(!(a > 0)) return;
       var p = { malz:v.malz, kutu:v.kutu, plat:X.cPlat, roy:X.cRoy, pos:X.cPos, kdv:X.cKdv,
                 pers:X.personel/a, kira:v.kira/a, diger:(v.elek+v.su+v.muh+v.sis+v.ikmal+v.zorunlu)/a, bakim:X.bakimTL/a };
