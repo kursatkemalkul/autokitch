@@ -1426,7 +1426,7 @@ tr.modeoff{display:none!important}
         <tr><td class="lbl">İkmal / lojistik payı <span class="hnote">Merkez hamur üretimi, soğuk zincir ve ikmal aracının nokta başına düşen payı. Domino's ve mahalle pizzacısında bu iş kendi personelinde olduğu için 0.</span></td><td class="m num"><input data-c="M" data-k="ikmal" type="number" step="500"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="ikmal" type="number" step="500"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="ikmal" type="number" step="500"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="ikmal" type="number" step="500"><span class="u">TL</span></td></tr>
         <tr><td class="lbl">Zorunlu yükümlülükler (ÇTV, tabela, sigorta, damga, oda) <span class="hnote">Yıllık kalemlerin aylığa bölünmüş hâli: çevre temizlik vergisi, ilan-reklam (tabela) vergisi, işyeri sigortası, damga vergisi, oda aidatı.</span></td><td class="m num"><input data-c="M" data-k="zorunlu" type="number" step="500"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="zorunlu" type="number" step="500"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="zorunlu" type="number" step="500"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="zorunlu" type="number" step="500"><span class="u">TL</span></td></tr>
         <tr class="res"><td class="lbl">→ AYLIK SABİT GİDER TOPLAMI <span class="hnote">Dükkânın aylık yükü: M ~170 bin ↔ Domino's ~495 bin TL/ay.</span></td><td class="m" data-o="M-sabit"></td><td class="s" data-o="S-sabit"></td><td class="d" data-o="D-sabit"></td><td class="p" data-o="P-sabit"></td></tr>
-        <tr class="res hi"><td class="lbl">→ 1 PİZZAYA DÜŞEN SABİT GİDER PAYI <span class="hnote">Aylık dükkân giderlerinin 1 pizzaya düşen payı — pastadaki "dükkân" dilimlerinin toplamıdır.</span></td><td class="m" data-o="M-sabitpay"></td><td class="s" data-o="S-sabitpay"></td><td class="d" data-o="D-sabitpay"></td><td class="p" data-o="P-sabitpay"></td></tr>
+        <tr class="res hi"><td class="lbl">→ 1 PİZZAYA DÜŞEN SABİT GİDER PAYI <span class="hnote">Aylık dükkân giderlerinin 1 pizzaya düşen payı. <b>Dört model de aynı satış adediyle hesaplanır</b> (Aylık İş Hesabı kartındaki rakam) — böylece dev dükkân, hacim avantajıyla ucuz görünemez.</span></td><td class="m" data-o="M-sabitpay"></td><td class="s" data-o="S-sabitpay"></td><td class="d" data-o="D-sabitpay"></td><td class="p" data-o="P-sabitpay"></td></tr>
         </tbody></table>
     </div>
     <div class="hs-box rv d1">
@@ -1488,13 +1488,13 @@ tr.modeoff{display:none!important}
     <div class="card rv d1" style="text-align:left;margin-top:26px">
       <div class="n">Aylık İş Hesabı</div>
       <h3 style="font-size:19px;margin:6px 0 4px;color:#0f1726">Bu fiyattan bu kadar satarsak, ayda cebimizde ne kalır?</h3>
-      <p class="note" style="margin-top:6px;font-size:13px">Bu bölümün <b>1 pizza maliyet hesabıyla ilgisi yoktur</b> — orası "pizzayı yapmak kaça mal oluyor" sorusuydu. Burası işletme hesabı: satış fiyatını ve günlük adedi gir, aylık ciro çıksın, üstünden KDV, komisyonlar, malzeme, dükkân gideri ve gelir vergisi düşülsün, <b>ayda net kaç para kaldığını</b> gör.</p>
+      <p class="note" style="margin-top:6px;font-size:13px">Üstteki tablolar "1 pizza kaça mal oluyor" sorusuna cevap veriyordu; burası işletme hesabı: satış fiyatını ve günlük adedi gir, aylık ciro çıksın, üstünden KDV, komisyonlar, malzeme, dükkân gideri ve gelir vergisi düşülsün, <b>ayda net kaç para kaldığını</b> gör. <b>Adet tek ve ortaktır</b> — dört model de aynı hacimde değerlendirilir, o yüzden iki tablo birbiriyle tam tutarlıdır: 1 pizza maliyeti × adet + kâr = ciro.</p>
       <div class="hs-box" style="margin-top:16px">
         <table class="hs">
           <thead><tr><th class="lbl"></th><th class="m">Model M<em>insanlı · 10 m²</em></th><th class="s">Model S<em>insansız · 6 m²</em></th><th class="d">Domino's<em>şube</em></th><th class="p">Mahalle<em>pizzacısı</em></th></tr></thead><tbody>
         <tr class="grp"><td colspan="5">Kararlarımız — düzenlenebilir</td></tr>
         <tr><td class="lbl">Pizzayı kaça satacağız? <span class="hnote">Menüdeki satış fiyatı — müşterinin ödediği, KDV dahil tutar.</span></td><td class="m num"><input data-c="M" data-k="fiyat" type="number" step="5"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="fiyat" type="number" step="5"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="fiyat" type="number" step="5"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="fiyat" type="number" step="5"><span class="u">TL</span></td></tr>
-        <tr><td class="lbl">Günde kaç adet satacağız? <span class="hnote">Aylık hesap bu adetten çıkar: adet × 30,4 gün.</span></td><td class="m num"><input data-c="M" data-k="adet" type="number" step="5"><span class="u">adet</span></td><td class="s num"><input data-c="S" data-k="adet" type="number" step="5"><span class="u">adet</span></td><td class="d num"><input data-c="D" data-k="adet" type="number" step="5"><span class="u">adet</span></td><td class="p num"><input data-c="P" data-k="adet" type="number" step="5"><span class="u">adet</span></td></tr>
+        <tr><td class="lbl">Günde kaç adet satacağız? <span class="hnote"><b>Tek rakam, dört model için de aynı.</b> Kıyasın adil olması için hepsi aynı satış hacminde değerlendirilir — bu sayı hem üstteki 1 pizza maliyetini hem aşağıdaki aylık sonucu belirler. Aylık = adet × 30,4 gün.</span></td><td colspan="4" class="m num" style="text-align:left"><input data-c="M" data-k="adet" type="number" step="5"><span class="u">adet/gün</span> <span class="hnote" style="display:inline;margin-left:8px">dört kolon da bu adetle hesaplanır</span></td></tr>
         <tr><td class="lbl"><label class="aksw akmini"><input type="checkbox" id="gvsw" checked><span></span></label>Gelir / kurumlar vergisi oranı <span class="hnote">Anahtarı kapatırsan vergi hesaba katılmaz — vergi öncesi kâr doğrudan cebe kalan olur. Limited/A.Ş. kurumlar vergisi %25; şahıs şirketinde artan oranlı gelir vergisi (%15–40).</span></td><td class="m num"><input data-c="M" data-k="vergi" type="number" step="1"><span class="u">%</span></td><td class="s num"><input data-c="S" data-k="vergi" type="number" step="1"><span class="u">%</span></td><td class="d num"><input data-c="D" data-k="vergi" type="number" step="1"><span class="u">%</span></td><td class="p num"><input data-c="P" data-k="vergi" type="number" step="1"><span class="u">%</span></td></tr>
         <tr class="grp"><td colspan="5">Aylık sonuç — otomatik hesaplanır</td></tr>
         <tr class="res"><td class="lbl">→ Aylık satış adedi <span class="hnote">Günlük adet × 30,4 gün.</span></td><td class="m" data-o="M-maylik"></td><td class="s" data-o="S-maylik"></td><td class="d" data-o="D-maylik"></td><td class="p" data-o="P-maylik"></td></tr>
@@ -2588,9 +2588,8 @@ tr.modeoff{display:none!important}
     P: {pers:2,   maas:40875, kira:95000, elek:18000, su:5000, muh:5000, sis:1500, bakim:2,   ikmal:0,    zorunlu:3000, roy:0,    yat:1800000,  omur:7, vergi:25, malz:83, kutu:10, fiyat:350, kdv:10, ppay:50, pkom:35, adet:50}
   };
   var HPOS = 0.03, HGUN = 30.4, HCOLS = ['S','M','D','P'];
-  /* Sabit gider dagitiminda TUM kolonlar ayni tabana bolunur — firmalar kendi hacmine
-     bolunurse dev dukkan ucuz gorunur. Esit kiyas icin tek taban: */
-  var HREFA = 70 * HGUN;
+  /* Adet tek ve ortaktir (hread her kolona ayni degeri verir) — bu sayede 1 pizza maliyeti
+     ile aylik is hesabi ayni hacim tabaninda calisir. */
   var AKFL = (function(){ var f={}; try{ f = JSON.parse(localStorage.getItem('ak_flags_v1')) || {}; }catch(e){}
     return {amort: f.amort===0?0:1, kdv: f.kdv===0?0:1, gv: f.gv===0?0:1, plat: f.plat===0?0:1, ymode: f.ymode==='B'?'B':'A'}; })();
   function hfmt(n){ return Number.isFinite(n) ? Math.round(n).toLocaleString('tr-TR') : '—'; }
@@ -2598,7 +2597,9 @@ tr.modeoff{display:none!important}
     if(/^\d{1,3}(\.\d{3})+$/.test(v)) return parseFloat(v.replace(/\./g, '')) || 0;
     return parseFloat(v.replace(',', '.')) || 0; }
   var AK_PARA_K = ['yat','kira','maas','elek','su','muh','sis','ikmal','zorunlu'];
-  function hread(c){ var o={}; document.querySelectorAll('#hesap input[data-c="'+c+'"]').forEach(function(i){ o[i.dataset.k]=hnum(i.value); }); return o; }
+  function hread(c){ var o={}; document.querySelectorAll('#hesap input[data-c="'+c+'"]').forEach(function(i){ o[i.dataset.k]=hnum(i.value); });
+    var ai = document.querySelector('#hesap input[data-k="adet"]'); if(ai) o.adet = hnum(ai.value);
+    return o; }
   function hset(id,html,cls){ var el=document.querySelector('#hesap [data-o="'+id+'"]'); if(el){ el.innerHTML=html; el.classList.remove('pos','neg'); if(cls) el.classList.add(cls); } }
   function hmodel(v, adetOverride){
     var adet = (adetOverride === undefined) ? v.adet : adetOverride;
@@ -2642,7 +2643,7 @@ tr.modeoff{display:none!important}
     var geri  = serbest > 0 ? v.yat/serbest : NaN;
 
     /* maliyet-bazli kesintiler: matrah = uretim maliyeti (sabit payi + malzeme), fiyat girilmez */
-    var cSabitPay = sabit / HREFA;
+    var cSabitPay = aylikAdet > 0 ? sabit/aylikAdet : 0;
     var cUretim  = cSabitPay + v.malz + v.kutu;
     var cMatrahK = cUretim * kdvK;
     var ePpay = (AKFL && AKFL.plat === 0) ? 0 : v.ppay;
@@ -2650,7 +2651,7 @@ tr.modeoff{display:none!important}
     var cPos  = cMatrahK * HPOS * (1 - ePpay/100);
     var cRoy  = cUretim * (v.roy/100);
     var cKes  = cPlat + cPos + cRoy;
-    var cKdvAlisPP = v.malz*0.10 + v.kutu*0.20 + (v.elek+v.su+v.sis+v.muh+bakimTL)*0.20/HREFA;
+    var cKdvAlisPP = v.malz*0.10 + v.kutu*0.20 + (aylikAdet > 0 ? (v.elek+v.su+v.sis+v.muh+bakimTL)*0.20/aylikAdet : 0);
     var cKdvS = cMatrahK - cUretim;
     var cKdv  = Math.max(0, cKdvS - cKdvAlisPP);
     return {personel:personel, bakimTL:bakimTL, sabit:sabit, netFiyat:netFiyat,
@@ -2716,7 +2717,8 @@ tr.modeoff{display:none!important}
     var ad = {malz:'Malzeme', plat:'Platform komisyonu', pers:'Personel payı', kira:'Kira payı', diger:'Faturalar + diğer sabit payı', roy:'Franchise / IoT kesintisi', kutu:'Kutu + ambalaj', bakim:'Bakım payı', pos:'POS / kart komisyonu', kdv:'Devlete ödenecek KDV payı'};
     ['M','S','D','P'].forEach(function(c){
       var v = hread(c); var X = hmodel(v);
-      var a = HREFA;
+      var a = X.aylikAdet;
+      if(!(a > 0)) return;
       var p = { malz:v.malz, kutu:v.kutu, plat:X.cPlat, roy:X.cRoy, pos:X.cPos, kdv:X.cKdv,
                 pers:X.personel/a, kira:v.kira/a, diger:(v.elek+v.su+v.muh+v.sis+v.ikmal+v.zorunlu)/a, bakim:X.bakimTL/a };
       var toplam = 0; Object.keys(p).forEach(function(k){ toplam += p[k]; });
