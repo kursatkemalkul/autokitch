@@ -1545,10 +1545,6 @@ tr.modeoff{display:none!important}
         <tr class="res hi amdep"><td class="lbl">Yıpranma dahil gerçek eşik (günde) <span class="hnote">Makinenin eskimesini de karşılayan satış. Uzun vadede asıl hedef bu.</span></td><td class="m" data-o="M-bbtam"></td><td class="s" data-o="S-bbtam"></td><td class="d" data-o="D-bbtam"></td><td class="p" data-o="P-bbtam"></td></tr>
         <tr class="res"><td class="lbl">Yatırım kaç ayda çıkar <span class="hnote">Cebe kalan parayla, yatırımın kendini ödeme süresi.</span></td><td class="m" data-o="M-geri"></td><td class="s" data-o="S-geri"></td><td class="d" data-o="D-geri"></td><td class="p" data-o="P-geri"></td></tr>
         <tr class="res"><td class="lbl">Açılış için gereken toplam nakit <span class="hnote">Yatırım + ilk 3 ayın masrafı — kötü başlayan aylara tampon.</span></td><td class="m" data-o="M-nakitiht"></td><td class="s" data-o="S-nakitiht"></td><td class="d" data-o="D-nakitiht"></td><td class="p" data-o="P-nakitiht"></td></tr>
-        <tr class="grp"><td colspan="5">Makinenin parası çıktıktan sonra — yıpranma biter, bakım devam eder</td></tr>
-        <tr class="res hi"><td class="lbl">⓿ O günden sonra sıfıra sıfır (günde) <span class="hnote">artık yalnız işletme giderini karşılamak yeter</span></td><td class="m" data-s="M-sbb"></td><td class="s" data-s="S-sbb"></td><td class="d" data-s="D-sbb"></td><td class="p" data-s="P-sbb"></td></tr>
-        <tr class="res"><td class="lbl">★ Aynı satışla cebe kalan (ayda) <span class="hnote">varsayımdaki adette, vergi sonrası</span></td><td class="m" data-s="M-scur"></td><td class="s" data-s="S-scur"></td><td class="d" data-s="D-scur"></td><td class="p" data-s="P-scur"></td></tr>
-        <tr class="res"><td class="lbl">Yıllık net — aynı satışla <span class="hnote">12 ay</span></td><td class="m" data-s="M-syil"></td><td class="s" data-s="S-syil"></td><td class="d" data-s="D-syil"></td><td class="p" data-s="P-syil"></td></tr>
           </tbody></table>
       </div>
     </div>
@@ -2678,65 +2674,7 @@ tr.modeoff{display:none!important}
       }
     });
   }
-  function hsen(){
-    if(window.hpasta) hpasta();
-    ['M','S','D','P'].forEach(function(c){
-      var v = hread(c);
-      var R = hmodel(v);
-      function yaz(id, adet, ust){
-        var el = document.querySelector('#hesap [data-s="'+c+'-'+id+'"]');
-        if(!el) return;
-        if(!Number.isFinite(adet) || adet <= 0){ el.innerHTML = '<span class="neg">ulaşılamaz</span>'; return; }
-        var K = hmodel(v, adet);
-        var cash = K.nakitKar + K.kdvOdenecek - (AKFL.kdv===0?0:K.kdvOdenecek) - (AKFL.gv===0?0:K.vergiTL);
-        el.innerHTML = '<b>günde '+Math.round(adet)+'</b>'
-          + (ust ? ' <span class="hnote" style="display:inline">'+ust+'</span>' : '')
-          + '<div style="margin-top:3px"><span class="'+(cash>=0?'pos':'neg')+'" style="font-size:14px">'+hfmt(cash)+' TL</span> <span class="hnote" style="display:inline">cebe kalan / ay</span></div>'
-          + (AKFL.amort===0 ? '' : '<div class="hnote" style="margin-top:1px">'+hfmt(K.netKar)+' TL — makine payı da düşülürse</div>');
-      }
-      var b = (AKFL.amort===0) ? R.bb : R.bbtam;
-      yaz('bb', b);
-      yaz('cur', v.adet);
-      yaz('p10', v.adet+10);
-      yaz('p20', v.adet+20);
-      yaz('p30', v.adet+30);
-      yaz('p50', v.adet+50);
-      var km = document.querySelector('#hesap [data-s="'+c+'-katki"]');
-      if(km) km.innerHTML = '<b>'+hfmt(R.marj)+' TL</b> <span class="hnote" style="display:inline">/ pizza</span>'
-             + '<div class="hnote" style="margin-top:2px">ayda '+hfmt(R.marj*HGUN)+' TL — günde 1 pizza fazla satarsan</div>';
-      /* makine odendikten sonra: amortisman yok, bakim ve vergi var */
-      function sonrasi(adet){
-        var K = hmodel(v, adet);
-        var vo = K.nakitKar;                 /* amortisman dusulmez */
-        var vergi = vo > 0 ? vo*(v.vergi/100) : 0;
-        return { net: vo - vergi, bb: K.marj > 0 ? K.sabit/(HGUN*K.marj) : NaN };
-      }
-      function yazSonra(id, adet, ekNot){
-        var el = document.querySelector('#hesap [data-s="'+c+'-'+id+'"]');
-        if(!el) return;
-        var S = sonrasi(adet);
-        el.innerHTML = '<b>günde '+adet.toFixed(1)+'</b>'
-          + '<div style="margin-top:2px"><span class="'+(S.net>=0?'pos':'neg')+'">'+hfmt(S.net)+' TL</span> <span class="hnote" style="display:inline">net/ay'+(ekNot||'')+'</span></div>';
-      }
-      var S0 = sonrasi(v.adet);
-      var elSbb = document.querySelector('#hesap [data-s="'+c+'-sbb"]');
-      if(elSbb) elSbb.innerHTML = Number.isFinite(S0.bb) ? '<b>günde '+S0.bb.toFixed(1)+'</b><div class="hnote" style="margin-top:2px">makine ödenmeden önce: '+(Number.isFinite(b)?b.toFixed(1):'—')+'</div>' : '<span class="neg">ulaşılamaz</span>';
-      yazSonra('scur', v.adet);
-      var elYil = document.querySelector('#hesap [data-s="'+c+'-syil"]');
-      if(elYil) elYil.innerHTML = '<b class="'+(S0.net>=0?'pos':'neg')+'">'+hfmt(S0.net*12)+' TL</b> <span class="hnote" style="display:inline">/ yıl</span>';
-
-      var pay = document.querySelector('#hesap [data-s="'+c+'-pay"]');
-      if(pay){
-        if(!Number.isFinite(b) || b<=0){ pay.innerHTML='—'; }
-        else {
-          var p = (v.adet - b)/b*100;
-          var renk = p >= 40 ? 'pos' : (p >= 20 ? '' : 'neg');
-          var etiket = p >= 40 ? 'rahat' : (p >= 20 ? 'sınırda' : (p >= 0 ? 'kırılgan' : 'zarar'));
-          pay.innerHTML = '<span class="'+renk+'"><b>'+(p>=0?'+':'')+p.toFixed(0)+'%</b></span> <span class="hnote" style="display:inline">'+etiket+'</span>';
-        }
-      }
-    });
-  }
+  function hsen(){ if(window.hpasta) hpasta(); }
   function hfill(c,vals){ document.querySelectorAll('#hesap input[data-c="'+c+'"]').forEach(function(i){ if(vals[i.dataset.k]!==undefined) i.value=vals[i.dataset.k]; }); }
   function hsave(){ try{ var o={}; HCOLS.forEach(function(c){o[c]=hread(c);}); localStorage.setItem('ak_hesap_v3',JSON.stringify(o)); }catch(e){} }
   function hsReset(){
