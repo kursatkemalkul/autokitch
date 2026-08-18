@@ -1426,7 +1426,7 @@ tr.modeoff{display:none!important}
         <tr><td class="lbl">İkmal / lojistik payı <span class="hnote">Merkez hamur üretimi, soğuk zincir ve ikmal aracının nokta başına düşen payı. Domino's ve mahalle pizzacısında bu iş kendi personelinde olduğu için 0.</span></td><td class="m num"><input data-c="M" data-k="ikmal" type="number" step="500"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="ikmal" type="number" step="500"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="ikmal" type="number" step="500"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="ikmal" type="number" step="500"><span class="u">TL</span></td></tr>
         <tr><td class="lbl">Zorunlu yükümlülükler (ÇTV, tabela, sigorta, damga, oda) <span class="hnote">Yıllık kalemlerin aylığa bölünmüş hâli: çevre temizlik vergisi, ilan-reklam (tabela) vergisi, işyeri sigortası, damga vergisi, oda aidatı.</span></td><td class="m num"><input data-c="M" data-k="zorunlu" type="number" step="500"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="zorunlu" type="number" step="500"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="zorunlu" type="number" step="500"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="zorunlu" type="number" step="500"><span class="u">TL</span></td></tr>
         <tr class="res"><td class="lbl">→ AYLIK SABİT GİDER TOPLAMI <span class="hnote">Dükkânın aylık yükü: M ~170 bin ↔ Domino's ~495 bin TL/ay.</span></td><td class="m" data-o="M-sabit"></td><td class="s" data-o="S-sabit"></td><td class="d" data-o="D-sabit"></td><td class="p" data-o="P-sabit"></td></tr>
-        <tr class="res hi"><td class="lbl">→ 1 PİZZAYA DÜŞEN SABİT GİDER PAYI <span class="hnote">Aylık dükkân giderlerinin 1 pizzaya düşen payı. <b>Dört model de aynı satış adediyle kıyaslanır</b> (Model M kolonuna girdiğin adet) — böylece dev dükkân, hacim avantajıyla ucuz görünemez. Gri satırda her firmanın <b>kendi gerçek hacmindeki</b> payı da yazar; aylık kâr hesabı o rakamla döner.</span></td><td class="m" data-o="M-sabitpay"></td><td class="s" data-o="S-sabitpay"></td><td class="d" data-o="D-sabitpay"></td><td class="p" data-o="P-sabitpay"></td></tr>
+        <tr class="res hi"><td class="lbl">→ 1 PİZZAYA DÜŞEN SABİT GİDER PAYI <span class="hnote">Aylık dükkân giderlerinin 1 pizzaya düşen payı — <b>her firma kendi satış hacminde</b> (Domino's 200/gün sattığı için payı düşüktür). Gri satırdaki "aynı hacimde kıyas", hepsi bizim adetimizde çalışsaydı ne olacağını gösterir.</span></td><td class="m" data-o="M-sabitpay"></td><td class="s" data-o="S-sabitpay"></td><td class="d" data-o="D-sabitpay"></td><td class="p" data-o="P-sabitpay"></td></tr>
         </tbody></table>
     </div>
     <div class="hs-box rv d1">
@@ -1458,13 +1458,14 @@ tr.modeoff{display:none!important}
         <tr class="res"><td class="lbl">− Alışta zaten ödenmiş KDV mahsubu <span class="hnote">Malzeme (%10), kutu ve faturalar (%20) alınırken ödenen KDV devletten düşülür — ikinci kez ödenmez.</span></td><td class="m" data-o="M-kdva"></td><td class="s" data-o="S-kdva"></td><td class="d" data-o="D-kdva"></td><td class="p" data-o="P-kdva"></td></tr>
         <tr class="res hi"><td class="lbl">= DEVLETE KALAN KDV FARKI <span class="hnote">Üstteki iki satırın farkı — pizza başına devlete fiilen ödenen tutar budur.</span></td><td class="m" data-o="M-kdvpay"></td><td class="s" data-o="S-kdvpay"></td><td class="d" data-o="D-kdvpay"></td><td class="p" data-o="P-kdvpay"></td></tr>
         <tr class="res"><td class="lbl">→ kesinti + KDV toplamı</td><td class="m" data-o="M-satistop"></td><td class="s" data-o="S-satistop"></td><td class="d" data-o="D-satistop"></td><td class="p" data-o="P-satistop"></td></tr>
-        <tr class="res hi"><td class="lbl">= 1 PİZZANIN TOPLAM MALİYETİ <span class="hnote">Üretim maliyeti + satışa bağlı kalemler. Alttaki pastanın merkezindeki rakam budur.</span></td><td class="m" data-o="M-toplam"></td><td class="s" data-o="S-toplam"></td><td class="d" data-o="D-toplam"></td><td class="p" data-o="P-toplam"></td></tr>
+        <tr class="res hi"><td class="lbl">= 1 PİZZANIN TOPLAM MALİYETİ <span class="hnote">Her firmanın <b>kendi gerçek satış hacminde</b>. Alttaki Aylık İş Hesabı bu rakamla çalışır: satış fiyatı bunun üstündeyse kâr, altındaysa zarar. Pastanın merkezindeki rakam da budur.</span></td><td class="m" data-o="M-toplam"></td><td class="s" data-o="S-toplam"></td><td class="d" data-o="D-toplam"></td><td class="p" data-o="P-toplam"></td></tr>
+        <tr class="res"><td class="lbl">→ aynı satış hacminde olsaydı <span class="hnote">Hepsi <b>Model M'in adediyle</b> çalışsaydı 1 pizza kaça mal olurdu? Ölçek avantajı kalkınca yapısal fark ortaya çıkar: dev dükkân küçük hacimde ezilir. Kâr hesabı bu satırla değil, üstteki gerçek maliyetle döner.</span></td><td class="m" data-o="M-toplamref"></td><td class="s" data-o="S-toplamref"></td><td class="d" data-o="D-toplamref"></td><td class="p" data-o="P-toplamref"></td></tr>
         </tbody></table>
     </div>
 
         <div class="hlegend"><span><i style="background:#fff6ec;border:2px solid #c2600f"></i>Model M · insanlı</span><span><i style="background:#eef4ff;border:2px solid #1a49b8"></i>Model S · insansız</span><span><i style="background:#f5f6f9;border:2px solid #3f4a5c"></i>Domino's</span><span><i style="background:#f4f8f5;border:2px solid #4a5f52"></i>Mahalle pizzacısı</span></div>
     <button class="hbtn" onclick="hsReset()">↺ Varsayılana dön</button>
-    <div class="hexp"><b>Tek soru, tek cevap: 1 pizza kime kaça mal oluyor?</b> Akış 1 pizza üzerinden toplanır: dükkân giderlerinin paya düşeni + malzeme + ambalaj = <b>üretim maliyeti</b> → üstüne bu tutarın KDV'li hâli üzerinden platform/kart komisyonu ve franchise kesintisi → üstüne devlete ödenecek KDV farkı = <b>1 pizzanın toplam maliyeti</b>. Satış fiyatı, kâr, gelir vergisi: hiçbiri bu sayfada yok.</div>
+    <div class="hexp"><b>Tek soru, tek cevap: 1 pizza kime kaça mal oluyor?</b> Ana rakam her firmanın <b>kendi gerçek satış hacmine</b> göredir — bu yüzden alttaki Aylık İş Hesabı ile birebir tutarlıdır: satış fiyatı maliyetin üstündeyse kâr, altındaysa zarar çıkar. Hemen altındaki <b>"aynı satış hacminde olsaydı"</b> satırı ise yapısal kıyastır: dev dükkânın hacim avantajını kaldırıp gerçek verimliliği gösterir. Akış 1 pizza üzerinden toplanır: dükkân giderlerinin paya düşeni + malzeme + ambalaj = <b>üretim maliyeti</b> → üstüne bu tutarın KDV'li hâli üzerinden platform/kart komisyonu ve franchise kesintisi → üstüne devlete ödenecek KDV farkı = <b>1 pizzanın toplam maliyeti</b>. Satış fiyatı, kâr, gelir vergisi: hiçbiri bu sayfada yok.</div>
 
     <div class="card rv d1" style="text-align:left;margin-top:26px">
       <div class="n">1 Pizzanın Maliyet Haritası</div>
@@ -2645,17 +2646,28 @@ tr.modeoff{display:none!important}
 
     /* maliyet-bazli kesintiler: matrah = uretim maliyeti (sabit payi + malzeme), fiyat girilmez */
     var refA = hrefAdet();
-    var cSabitPay = sabit / refA;
-    var cUretim  = cSabitPay + v.malz + v.kutu;
+    var ownA = aylikAdet > 0 ? aylikAdet : refA;
+    function cPaket(A){
+      var sp = sabit / A;
+      var ur = sp + v.malz + v.kutu;
+      var ka = v.malz*0.10 + v.kutu*0.20 + (v.elek+v.su+v.sis+v.muh+bakimTL)*0.20/A;
+      return {sp:sp, ur:ur, ka:ka};
+    }
+    var PO = cPaket(ownA), PR = cPaket(refA);
+    var cSabitPay = PO.sp;
+    var cUretim  = PO.ur;
     var cMatrahK = v.fiyat;
     var ePpay = (AKFL && AKFL.plat === 0) ? 0 : v.ppay;
     var cPlat = cMatrahK * (v.pkom/100) * (ePpay/100);
     var cPos  = cMatrahK * HPOS * (1 - ePpay/100);
     var cRoy  = (cMatrahK / kdvK) * (v.roy/100);
     var cKes  = cPlat + cPos + cRoy;
-    var cKdvAlisPP = v.malz*0.10 + v.kutu*0.20 + (v.elek+v.su+v.sis+v.muh+bakimTL)*0.20/refA;
+    var cKdvAlisPP = PO.ka;
     var cKdvS = cMatrahK - (cMatrahK / kdvK);
     var cKdv  = Math.max(0, cKdvS - cKdvAlisPP);
+    var cKdvRef = Math.max(0, cKdvS - PR.ka);
+    var cToplam    = cUretim + cKes + cKdv;
+    var cToplamRef = PR.ur + cKes + cKdvRef;
     return {personel:personel, bakimTL:bakimTL, sabit:sabit, netFiyat:netFiyat,
             platformTL:platformTL, posTL:posTL, royTL:royTL, komTL:komTL,
             degisken:degisken, marj:marj, aylikAdet:aylikAdet, adet:adet,
@@ -2663,7 +2675,7 @@ tr.modeoff{display:none!important}
             nakitKar:nakitKar, amort:amort, vergiOnce:vergiOnce, vergiTL:vergiTL,
             netKar:netKar, serbest:serbest, birim:birim, minf:minf,
             bb:bb, bbtam:bbtam, geri:geri,
-            cUretim:cUretim, cSabitPay:cSabitPay, refA:refA, cMatrahK:cMatrahK, cPlat:cPlat, cPos:cPos, cRoy:cRoy, cKes:cKes, cKdv:cKdv, cKdvS:cKdvS, cKdvA:cKdvAlisPP, v:v};
+            cUretim:cUretim, cSabitPay:cSabitPay, cSabitPayRef:PR.sp, cToplam:cToplam, cToplamRef:cToplamRef, refA:refA, ownA:ownA, cMatrahK:cMatrahK, cPlat:cPlat, cPos:cPos, cRoy:cRoy, cKes:cKes, cKdv:cKdv, cKdvS:cKdvS, cKdvA:cKdvAlisPP, v:v};
   }
   function hcalc(c){
     var v = hread(c);
@@ -2675,10 +2687,9 @@ tr.modeoff{display:none!important}
     hset(c+'-pers', v.pers+' × '+hfmt(v.maas)+' = <b>'+hfmt(personel)+' TL</b>');
     hset(c+'-bakimtl', hfmt(bakimTL)+' TL');
     hset(c+'-sabit', '<b>'+hfmt(sabit)+' TL</b>');
-    var kendiPay = aylikAdet > 0 ? sabit/aylikAdet : NaN;
     hset(c+'-sabitpay', '<b>'+R.cSabitPay.toFixed(1).replace('.',',')+' TL</b>'
-      + (Number.isFinite(kendiPay) && Math.abs(kendiPay - R.cSabitPay) > 0.5
-         ? '<div class="hnote" style="margin-top:2px">kendi satış hacminde: '+kendiPay.toFixed(1).replace('.',',')+' TL</div>' : ''));
+      + (Math.abs(R.cSabitPayRef - R.cSabitPay) > 0.5
+         ? '<div class="hnote" style="margin-top:2px">aynı hacimde kıyas: '+R.cSabitPayRef.toFixed(1).replace('.',',')+' TL</div>' : ''));
     hset(c+'-uretim', '<b>'+R.cUretim.toFixed(1).replace('.',',')+' TL</b><div class="hnote" style="margin-top:2px">sabit payı '+R.cSabitPay.toFixed(1).replace('.',',')+' + malzeme '+hfmt(v.malz)+' + ambalaj '+hfmt(v.kutu)+'</div>');
     hset(c+'-matrah', '<b>'+hfmt(R.cMatrahK)+' TL</b><div class="hnote" style="margin-top:2px">menüdeki satış fiyatı — Aylık İş Hesabı kartından</div>');
     hset(c+'-kestop', '<b>'+R.cKes.toFixed(1).replace('.',',')+' TL</b><div class="hnote" style="margin-top:2px">platform '+R.cPlat.toFixed(1).replace('.',',')+' + POS '+R.cPos.toFixed(1).replace('.',',')+' + franchise/IoT '+R.cRoy.toFixed(1).replace('.',',')+'</div>');
@@ -2686,7 +2697,9 @@ tr.modeoff{display:none!important}
     hset(c+'-kdva', R.cKdvA.toFixed(1).replace('.',',')+' TL');
     hset(c+'-kdvpay', '<b>'+R.cKdv.toFixed(1).replace('.',',')+' TL</b>');
     hset(c+'-satistop', '<b>'+(R.cKes+R.cKdv).toFixed(1).replace('.',',')+' TL</b>');
-    hset(c+'-toplam', '<b>'+(R.cUretim+R.cKes+R.cKdv).toFixed(1).replace('.',',')+' TL</b>');
+    hset(c+'-toplam', '<b>'+R.cToplam.toFixed(1).replace('.',',')+' TL</b>');
+    hset(c+'-toplamref', R.cToplamRef.toFixed(1).replace('.',',')+' TL'
+      + (Math.abs(R.cToplamRef - R.cToplam) > 0.5 ? '' : '<div class="hnote" style="margin-top:2px">bizim hacmimiz — fark yok</div>'));
     /* ---- aylik is hesabi (pizza basi maliyetten bagimsiz) ---- */
     var mAdet  = v.adet * HGUN;
     var mCiro  = mAdet * v.fiyat;
@@ -2722,7 +2735,7 @@ tr.modeoff{display:none!important}
     var ad = {malz:'Malzeme', plat:'Platform komisyonu', pers:'Personel payı', kira:'Kira payı', diger:'Faturalar + diğer sabit payı', roy:'Franchise / IoT kesintisi', kutu:'Kutu + ambalaj', bakim:'Bakım payı', pos:'POS / kart komisyonu', kdv:'Devlete ödenecek KDV payı'};
     ['M','S','D','P'].forEach(function(c){
       var v = hread(c); var X = hmodel(v);
-      var a = X.refA;
+      var a = X.ownA;
       if(!(a > 0)) return;
       var p = { malz:v.malz, kutu:v.kutu, plat:X.cPlat, roy:X.cRoy, pos:X.cPos, kdv:X.cKdv,
                 pers:X.personel/a, kira:v.kira/a, diger:(v.elek+v.su+v.muh+v.sis+v.ikmal+v.zorunlu)/a, bakim:X.bakimTL/a };
