@@ -1405,7 +1405,8 @@ tr.modeoff{display:none!important}
         <thead><tr><th class="lbl"></th><th class="m">Model M<em>insanlı · 10 m²</em></th><th class="s">Model S<em>insansız · 6 m²</em></th><th class="d">Domino's<em>şube</em></th><th class="p">Mahalle<em>pizzacısı</em></th></tr></thead><tbody>
         <tr class="grp"><td colspan="5">İşletme bilgisi</td></tr>
         <tr><td class="lbl">Çalışma saati</td><td class="m">Satış 7/24 · insan 09:00–19:00</td><td class="s">7/24 · insan yok</td><td class="d">10:00–01:00 (gece şubeleri en geç 03:00–04:00)</td><td class="p">11:00–23:00</td></tr>
-        <tr><td class="lbl">Alan</td><td class="m">≈10 m²</td><td class="s">≈6 m²</td><td class="d">80–150 m²</td><td class="p">40–80 m²</td></tr>
+                <tr><td class="lbl">Ürün <span class="hnote">Karşılaştırmanın adil olması için dört kolonda da aynı ürün: <b>orta boy (25 cm) pizza</b>. Domino's'un menüsündeki tek pizza 475 TL; kampanyalı ikili 490 TL olduğu için gerçek satış fiyatı ≈245 TL — tabloya bu yazılıdır.</span></td><td class="m">Orta boy · 25 cm</td><td class="s">Orta boy · 25 cm</td><td class="d">Orta boy · 25 cm</td><td class="p">Orta boy · 25 cm</td></tr>
+<tr><td class="lbl">Alan</td><td class="m">≈10 m²</td><td class="s">≈6 m²</td><td class="d">80–150 m²</td><td class="p">40–80 m²</td></tr>
         <tr><td class="lbl">Nerede</td><td class="m">Şehir içi, mahalle arası</td><td class="s">Okul, ofis, terminal, tenha nokta, sezon alanı</td><td class="d">Cadde üstü, yoğun trafik</td><td class="p">Mahalle arası</td></tr>
         </tbody></table>
     </div>
@@ -1433,7 +1434,7 @@ tr.modeoff{display:none!important}
       <table class="hs">
         <thead><tr><th class="lbl"></th><th class="m">Model M<em>insanlı · 10 m²</em></th><th class="s">Model S<em>insansız · 6 m²</em></th><th class="d">Domino's<em>şube</em></th><th class="p">Mahalle<em>pizzacısı</em></th></tr></thead><tbody>
         <tr class="grp"><td colspan="5">2 · Pizza başı malzeme — düzenlenebilir (KDV hariç)</td></tr>
-        <tr><td class="lbl">Malzeme maliyeti (fire dahil) <span class="hnote">Hamur topu, sos, peynir, malzeme. Domino's ölçek sayesinde ucuza alır ama merkez fabrikadan almak zorunda — o fiyat merkezin marjını içerir.</span></td><td class="m num"><input data-c="M" data-k="malz" type="number" step="1"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="malz" type="number" step="1"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="malz" type="number" step="1"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="malz" type="number" step="1"><span class="u">TL</span></td></tr>
+        <tr><td class="lbl">Malzeme maliyeti (fire dahil) <span class="hnote">Orta boy (25 cm) için hamur tabanı, sos, peynir, malzeme — fire dahil. Domino's ölçek sayesinde 70 TL'ye alır (kendi et/hamur fabrikaları var); biz ilk yıl 72 TL varsayıyoruz, kendi taban üretimimiz kurulunca düşer.</span></td><td class="m num"><input data-c="M" data-k="malz" type="number" step="1"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="malz" type="number" step="1"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="malz" type="number" step="1"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="malz" type="number" step="1"><span class="u">TL</span></td></tr>
         <tr><td class="lbl">Kutu + ambalaj + sachet</td><td class="m num"><input data-c="M" data-k="kutu" type="number" step="1"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="kutu" type="number" step="1"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="kutu" type="number" step="1"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="kutu" type="number" step="1"><span class="u">TL</span></td></tr>
         <tr class="res hi"><td class="lbl">→ 1 PİZZANIN ÜRETİM MALİYETİ <span class="hnote">Sabit gider payı + malzeme + ambalaj. Alttaki iki tablo, 1 pizzanın üstüne binen kesinti ve vergidir.</span></td><td class="m" data-o="M-uretim"></td><td class="s" data-o="S-uretim"></td><td class="d" data-o="D-uretim"></td><td class="p" data-o="P-uretim"></td></tr>
         </tbody></table>
@@ -1495,6 +1496,7 @@ tr.modeoff{display:none!important}
         <tr class="grp"><td colspan="5">Kararlarımız — düzenlenebilir</td></tr>
         <tr><td class="lbl">Pizzayı kaça satacağız? <span class="hnote">Menüdeki satış fiyatı — müşterinin ödediği, KDV dahil tutar.</span></td><td class="m num"><input data-c="M" data-k="fiyat" type="number" step="5"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="fiyat" type="number" step="5"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="fiyat" type="number" step="5"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="fiyat" type="number" step="5"><span class="u">TL</span></td></tr>
         <tr><td class="lbl">Günde kaç adet satacağız? <span class="hnote">Her kolonun kendi rakamı — <b>maliyet de aylık sonuç da bu adetten çıkar.</b> Dükkânın aylık gideri kaç pizzaya bölüneceğini bilmeden 1 pizzaya düşen payı hesaplanamaz; bu yüzden burada girilen adet hem 1 pizzanın maliyetini hem aylık kârı belirler. Domino's'a 200 yazarsan onun maliyeti 200 üzerinden, 70 yazarsan 70 üzerinden çıkar.</span></td><td class="m num"><input data-c="M" data-k="adet" type="number" step="5" value="70"><span class="u">adet</span></td><td class="s num"><input data-c="S" data-k="adet" type="number" step="5" value="55"><span class="u">adet</span></td><td class="d num"><input data-c="D" data-k="adet" type="number" step="5" value="200"><span class="u">adet</span></td><td class="p num"><input data-c="P" data-k="adet" type="number" step="5" value="50"><span class="u">adet</span></td></tr>
+        <tr><td class="lbl">Yan ürün net katkısı — pizza başına <span class="hnote">İçecek ve paketli tatlıdan kalan net kâr, satılan her pizzaya düşen payıyla. <b>Örnek hesap:</b> siparişlerin %50'sinde içecek satılıyor, kolayı 25 TL'ye alıp 60 TL'ye satıyoruz → 35 × %50 = 17,5 TL; üstüne %15 ihtimalle tatlı (30 TL kâr) → ≈20 TL. Robot kol içeceği soğutucudan alıp dolaba koyar; ek makine gerekmez. <b>Kıyas:</b> Domino's aynı kolayı 130-165 TL'ye satıyor — bizim 60 TL'lik fiyatımız hem müşteriyi çeker hem 35 TL bırakır.</span></td><td class="m num"><input data-c="M" data-k="yan" type="number" step="5" value="20"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="yan" type="number" step="5" value="20"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="yan" type="number" step="5" value="35"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="yan" type="number" step="5" value="15"><span class="u">TL</span></td></tr>
         <tr><td class="lbl"><label class="aksw akmini"><input type="checkbox" id="gvsw" checked><span></span></label>Gelir / kurumlar vergisi oranı <span class="hnote">Anahtarı kapatırsan vergi hesaba katılmaz — vergi öncesi kâr doğrudan cebe kalan olur. Limited/A.Ş. kurumlar vergisi %25; şahıs şirketinde artan oranlı gelir vergisi (%15–40).</span></td><td class="m num"><input data-c="M" data-k="vergi" type="number" step="1"><span class="u">%</span></td><td class="s num"><input data-c="S" data-k="vergi" type="number" step="1"><span class="u">%</span></td><td class="d num"><input data-c="D" data-k="vergi" type="number" step="1"><span class="u">%</span></td><td class="p num"><input data-c="P" data-k="vergi" type="number" step="1"><span class="u">%</span></td></tr>
         <tr class="grp"><td colspan="5">Aylık sonuç — otomatik hesaplanır</td></tr>
         <tr class="res"><td class="lbl">→ Aylık satış adedi <span class="hnote">Günlük adet × 30,4 gün.</span></td><td class="m" data-o="M-maylik"></td><td class="s" data-o="S-maylik"></td><td class="d" data-o="D-maylik"></td><td class="p" data-o="P-maylik"></td></tr>
@@ -1503,6 +1505,7 @@ tr.modeoff{display:none!important}
         <tr class="res"><td class="lbl">− Malzeme + ambalaj (aylık, KDV dahil) </td><td class="m" data-o="M-mmalz"></td><td class="s" data-o="S-mmalz"></td><td class="d" data-o="D-mmalz"></td><td class="p" data-o="P-mmalz"></td></tr>
         <tr class="res"><td class="lbl">− Komisyon ve kesintiler (aylık) <span class="hnote">Platform + kart komisyonu + franchise/IoT. Yukarıdaki platform anahtarına bağlıdır.</span></td><td class="m" data-o="M-mkom"></td><td class="s" data-o="S-mkom"></td><td class="d" data-o="D-mkom"></td><td class="p" data-o="P-mkom"></td></tr>
         <tr class="res"><td class="lbl">− Dükkân sabit giderleri (aylık, KDV dahil) <span class="hnote">Kira, personel, faturalar, bakım, ikmal, zorunlu yükümlülükler.</span></td><td class="m" data-o="M-msabit"></td><td class="s" data-o="S-msabit"></td><td class="d" data-o="D-msabit"></td><td class="p" data-o="P-msabit"></td></tr>
+        <tr class="res"><td class="lbl">+ Yan ürün geliri (aylık) <span class="hnote">Pizza başına katkı × aylık satış adedi.</span></td><td class="m" data-o="M-myan"></td><td class="s" data-o="S-myan"></td><td class="d" data-o="D-myan"></td><td class="p" data-o="P-myan"></td></tr>
         <tr class="res hi"><td class="lbl">= Vergi öncesi kâr </td><td class="m" data-o="M-mvonce"></td><td class="s" data-o="S-mvonce"></td><td class="d" data-o="D-mvonce"></td><td class="p" data-o="P-mvonce"></td></tr>
         <tr class="res gvdep"><td class="lbl">− Gelir / kurumlar vergisi <span class="hnote">Makinenin yıpranma payı matrahı düşürdüğü için vergi, kârın tam yüzdesinden azdır.</span></td><td class="m" data-o="M-mvergi"></td><td class="s" data-o="S-mvergi"></td><td class="d" data-o="D-mvergi"></td><td class="p" data-o="P-mvergi"></td></tr>
         <tr class="res hi"><td class="lbl">= AYLIK NET KÂR — cebe kalan </td><td class="m" data-o="M-mnet"></td><td class="s" data-o="S-mnet"></td><td class="d" data-o="D-mnet"></td><td class="p" data-o="P-mnet"></td></tr>
@@ -1596,7 +1599,7 @@ tr.modeoff{display:none!important}
       <p class="note" style="margin-top:10px">Kaynak: Domino's Pizza Inc FY2025 Form 10-K (SEC) ve Franchise Disclosure Document Item 6/8/19; DP Eurasia 2017 &amp; 2021 yıllık raporları. Türkiye'ye özel bayi oranı hiçbir resmî belgede açıklanmıyor; Ekonomist dergisi (Oca 2024) giriş bedeli 50.000 $ ve %12 birleşik kesinti yazıyor — bu gazetecilik verisi, resmî değil.</p>
     </div>
 
-    <p class="note rv" style="margin-top:18px">Tüm gider tutarları <b>KDV hariç</b>, menü fiyatı <b>KDV dahil</b> girilir; hesap net hasılat üzerinden döner. Ay = 30,4 gün (7 gün açık). Varsayılanlar araştırma verili: asgari ücret işveren maliyeti ₺40.875 (ÇSGB 2026) · 30 cm pizza malzemesi ₺83 + paket ₺10 (Ağu 2026 toptan) · Domino's Türkiye 795 şube, franchise kesintisi ABD 2025 fiili %12,9 · platform komisyonları %30–40 bandı. Bu tablo <b>nokta bazlı birim ekonomisidir</b>; merkez mutfak yönetimi, Ar-Ge ve genel merkez giderleri dahil değildir. Model S ve M'de merkez hamur üretimi + ikmal lojistiği ayrı satırda yüklenmiştir. Makinenin teknik künyesi ve açık kararlar <a href="makine/" style="color:var(--sblue)">Makine Künyesi sayfasında</a>.</p>
+    <p class="note rv" style="margin-top:18px">Tüm gider tutarları <b>KDV hariç</b>, menü fiyatı <b>KDV dahil</b> girilir; hesap net hasılat üzerinden döner. Ay = 30,4 gün (7 gün açık). Varsayılanlar araştırma verili: asgari ücret işveren maliyeti ₺40.875 (ÇSGB 2026) · 25 cm (orta boy) pizza malzemesi ₺72 + paket ₺10 (Ağu 2026 toptan) · Domino's Türkiye 795 şube, franchise kesintisi ABD 2025 fiili %12,9 · platform komisyonları %30–40 bandı. Bu tablo <b>nokta bazlı birim ekonomisidir</b>; merkez mutfak yönetimi, Ar-Ge ve genel merkez giderleri dahil değildir. Model S ve M'de merkez hamur üretimi + ikmal lojistiği ayrı satırda yüklenmiştir. Makinenin teknik künyesi ve açık kararlar <a href="makine/" style="color:var(--sblue)">Makine Künyesi sayfasında</a>.</p>
   </div>
 </section>
 
@@ -2077,7 +2080,7 @@ tr.modeoff{display:none!important}
 </div>
 <div class='sup-row'>
 <div class='sup-head'><span class='sup-name'><a href='https://zzjawo.en.made-in-china.com/' target='_blank' rel='noopener'>🇨🇳 Jawo</a></span><span class='sup-loc'>Zhengzhou, Çin</span><span class='sup-badge m-sale'>SATILIK</span><span class='sup-sent'>💬 Kesin elendi · 14 Ağu</span></div>
-<div class='sup-mach'><b>Pizza otomatı</b> — <span style='color:#c0392b;font-weight:700'>ELENDİ:</span> taze/par-baked taban tutamıyor (yalnız pişmiş donmuş ısıtır), boy 7-8 inç (18-20 cm) — 30 cm standardımıza küçük. Kapasite 84-96 adet.</div>
+<div class='sup-mach'><b>Pizza otomatı</b> — <span style='color:#c0392b;font-weight:700'>ELENDİ:</span> taze/par-baked taban tutamıyor (yalnız pişmiş donmuş ısıtır), boy 7-8 inç (18-20 cm) — 25 cm standardımıza küçük. Kapasite 84-96 adet.</div>
 <div class='sup-tech'>WhatsApp: +86 157 3674 1687</div>
 <div class='sup-price'>Fiyat: <span class='p-ok'>Teklif PDF'i geldi · teyit: makine pizza yapmıyor, sadece ısıtıyor</span></div>
 </div>
@@ -2582,10 +2585,10 @@ tr.modeoff{display:none!important}
 
   /* ===== Maliyet hesabi tablosu v2 ===== */
   var HDEF = {
-    S: {pers:0.5, maas:45000, kira:25000, elek:12000, su:3500, muh:4000, sis:2500, bakim:3.5, ikmal:7000, zorunlu:3000, roy:3,    yat:3504269,  omur:7, vergi:25, malz:83, kutu:10, fiyat:280, kdv:10, ppay:60, pkom:35, adet:55},
-    M: {pers:1.6, maas:40875, kira:60000, elek:14000, su:4500, muh:5000, sis:2500, bakim:3.5, ikmal:5000, zorunlu:3500, roy:3,    yat:3397169,  omur:7, vergi:25, malz:83, kutu:10, fiyat:300, kdv:10, ppay:55, pkom:35, adet:70},
-    D: {pers:6,   maas:45000, kira:150000,elek:32000, su:7000, muh:8000, sis:5000, bakim:2,   ikmal:0,    zorunlu:6000, roy:12.9, yat:10000000, omur:7, vergi:25, malz:70, kutu:8,  fiyat:260, kdv:10, ppay:30, pkom:16, adet:200},
-    P: {pers:2,   maas:40875, kira:95000, elek:18000, su:5000, muh:5000, sis:1500, bakim:2,   ikmal:0,    zorunlu:3000, roy:0,    yat:1800000,  omur:7, vergi:25, malz:83, kutu:10, fiyat:350, kdv:10, ppay:50, pkom:35, adet:50}
+    S: {pers:0.5, maas:45000, kira:25000, elek:12000, su:3500, muh:4000, sis:2500, bakim:3.5, ikmal:7000, zorunlu:3000, roy:3,    yan:20, yat:3504269,  omur:7, vergi:25, malz:72, kutu:8,  fiyat:240, kdv:10, ppay:60, pkom:35, adet:55},
+    M: {pers:1.6, maas:40875, kira:60000, elek:14000, su:4500, muh:5000, sis:2500, bakim:3.5, ikmal:5000, zorunlu:3500, roy:3,    yan:20, yat:3397169,  omur:7, vergi:25, malz:72, kutu:8,  fiyat:240, kdv:10, ppay:55, pkom:35, adet:70},
+    D: {pers:6,   maas:45000, kira:150000,elek:32000, su:7000, muh:8000, sis:5000, bakim:2,   ikmal:0,    zorunlu:6000, roy:12.9, yan:35, yat:10000000, omur:7, vergi:25, malz:70, kutu:8,  fiyat:245, kdv:10, ppay:30, pkom:16, adet:200},
+    P: {pers:2,   maas:40875, kira:95000, elek:18000, su:5000, muh:5000, sis:1500, bakim:2,   ikmal:0,    zorunlu:3000, roy:0,    yan:15, yat:1800000,  omur:7, vergi:25, malz:75, kutu:8,  fiyat:300, kdv:10, ppay:50, pkom:35, adet:50}
   };
   var HPOS = 0.03, HGUN = 30.4, HCOLS = ['S','M','D','P'];
   /* Adet tek ve ortaktir (hread her kolona ayni degeri verir) — bu sayede 1 pizza maliyeti
@@ -2688,7 +2691,8 @@ tr.modeoff{display:none!important}
     var mKom   = mAdet * (R.komTL + R.royTL);
     var mFatKdv= (v.elek+v.su+v.sis+v.muh+bakimTL)*0.20;
     var mSabit = sabit + mFatKdv;
-    var mVonce = mCiro - kdvOdenecek - mMalz - mKom - mSabit;
+    var mYan   = (v.yan || 0) * mAdet;
+    var mVonce = mCiro - kdvOdenecek - mMalz - mKom - mSabit + mYan;
     var mAmort = (AKFL && AKFL.amort === 0) ? 0 : (v.omur > 0 ? v.yat/(v.omur*12) : 0);
     var mMatrah= mVonce - mAmort;
     var mVergi = (AKFL && AKFL.gv === 0) ? 0 : (mMatrah > 0 ? mMatrah*(v.vergi/100) : 0);
@@ -2699,6 +2703,7 @@ tr.modeoff{display:none!important}
     hset(c+'-mmalz',  hfmt(mMalz)+' TL');
     hset(c+'-mkom',   hfmt(mKom)+' TL');
     hset(c+'-msabit', hfmt(mSabit)+' TL');
+    hset(c+'-myan', '+'+hfmt(mYan)+' TL', mYan>0?'pos':'');
     hset(c+'-mvonce', '<b>'+hfmt(mVonce)+' TL</b>', mVonce>=0?'pos':'neg');
     hset(c+'-mvergi', hfmt(mVergi)+' TL');
     hset(c+'-mnet',   '<b>'+hfmt(mNet)+' TL</b>', mNet>=0?'pos':'neg');
