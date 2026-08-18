@@ -1425,9 +1425,8 @@ tr.modeoff{display:none!important}
         <tr class="res"><td class="lbl">→ Aylık bakım gideri</td><td class="m" data-o="M-bakimtl"></td><td class="s" data-o="S-bakimtl"></td><td class="d" data-o="D-bakimtl"></td><td class="p" data-o="P-bakimtl"></td></tr>
         <tr><td class="lbl">İkmal / lojistik payı <span class="hnote">Merkez hamur üretimi, soğuk zincir ve ikmal aracının nokta başına düşen payı. Domino's ve mahalle pizzacısında bu iş kendi personelinde olduğu için 0.</span></td><td class="m num"><input data-c="M" data-k="ikmal" type="number" step="500"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="ikmal" type="number" step="500"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="ikmal" type="number" step="500"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="ikmal" type="number" step="500"><span class="u">TL</span></td></tr>
         <tr><td class="lbl">Zorunlu yükümlülükler (ÇTV, tabela, sigorta, damga, oda) <span class="hnote">Yıllık kalemlerin aylığa bölünmüş hâli: çevre temizlik vergisi, ilan-reklam (tabela) vergisi, işyeri sigortası, damga vergisi, oda aidatı.</span></td><td class="m num"><input data-c="M" data-k="zorunlu" type="number" step="500"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="zorunlu" type="number" step="500"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="zorunlu" type="number" step="500"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="zorunlu" type="number" step="500"><span class="u">TL</span></td></tr>
-        <tr class="res hi"><td class="lbl">→ AYLIK SABİT GİDER TOPLAMI</td><td class="m" data-o="M-sabit"></td><td class="s" data-o="S-sabit"></td><td class="d" data-o="D-sabit"></td><td class="p" data-o="P-sabit"></td></tr>
+        <tr class="res hi"><td class="lbl">→ AYLIK SABİT GİDER TOPLAMI <span class="hnote">Dükkânın aylık yükü — <b>pizza maliyetine bölüştürülmez</b>, 1 ürün hesabı alttaki tablolarda ayrıdır. Karşılaştırma burada: M ~170 bin ↔ Domino's ~495 bin TL/ay.</span></td><td class="m" data-o="M-sabit"></td><td class="s" data-o="S-sabit"></td><td class="d" data-o="D-sabit"></td><td class="p" data-o="P-sabit"></td></tr>
         <tr hidden><td class="lbl">Günde kaç pizza yapıyoruz — üretim adedi <span class="hnote">Kira ve personel <b>aylık</b> giderdir; 1 pizzaya düşen payı bulmak için aya kaç pizza üretildiğini bilmek zorunludur: sabit ÷ (30,4 gün × adet). Bu bölme işleminin paydasıdır — satış tahmini ya da kâr hesabı değil. Az üretirsen pizza başına pay büyür, çok üretirsen küçülür.</span></td><td class="m num"><input data-c="M" data-k="adet" type="number" step="1"><span class="u">adet</span></td><td class="s num"><input data-c="S" data-k="adet" type="number" step="1"><span class="u">adet</span></td><td class="d num"><input data-c="D" data-k="adet" type="number" step="1"><span class="u">adet</span></td><td class="p num"><input data-c="P" data-k="adet" type="number" step="1"><span class="u">adet</span></td></tr>
-        <tr class="res hi"><td class="lbl">→ 1 PİZZAYA DÜŞEN SABİT GİDER PAYI <span class="hnote">Aylık toplam, her modelin tipik günlük üretimine bölünür (M 70 · S 55 · Domino's 200 · mahalle 50 pizza/gün varsayımı). <b>Domino's ile neredeyse aynı çıkması ölçek etkisidir:</b> dükkânı ~3 kat pahalı ama ~3 kat fazla satar. Fark düşük satışta açılır — Domino's günde 70 satsa payı 232 TL olur; mahalle pizzacısının 140 TL'lik payı bunun kanıtı. Bizim avantaj: aylık sabit yükün kendisi küçük (170 bin ↔ 495 bin TL).</span></td><td class="m" data-o="M-sabitpay"></td><td class="s" data-o="S-sabitpay"></td><td class="d" data-o="D-sabitpay"></td><td class="p" data-o="P-sabitpay"></td></tr>
         </tbody></table>
     </div>
     <div class="hs-box rv d1">
@@ -1436,8 +1435,7 @@ tr.modeoff{display:none!important}
         <tr class="grp"><td colspan="5">2 · Pizza başı malzeme — düzenlenebilir (KDV hariç)</td></tr>
         <tr><td class="lbl">Malzeme maliyeti (fire dahil) <span class="hnote">Hamur topu, sos, peynir, malzeme. Domino's ölçek sayesinde ucuza alır ama merkez fabrikadan almak zorunda — o fiyat merkezin marjını içerir.</span></td><td class="m num"><input data-c="M" data-k="malz" type="number" step="1"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="malz" type="number" step="1"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="malz" type="number" step="1"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="malz" type="number" step="1"><span class="u">TL</span></td></tr>
         <tr><td class="lbl">Kutu + ambalaj + sachet</td><td class="m num"><input data-c="M" data-k="kutu" type="number" step="1"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="kutu" type="number" step="1"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="kutu" type="number" step="1"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="kutu" type="number" step="1"><span class="u">TL</span></td></tr>
-        <tr class="res"><td class="lbl">→ 1 pizzaya malzeme + ambalaj</td><td class="m" data-o="M-malztop"></td><td class="s" data-o="S-malztop"></td><td class="d" data-o="D-malztop"></td><td class="p" data-o="P-malztop"></td></tr>
-        <tr class="res hi"><td class="lbl">→ 1 PİZZANIN ÜRETİM MALİYETİ <span class="hnote">Sabit gider payı + malzeme + ambalaj. <b>Fiyattan tamamen bağımsızdır</b> — pizzayı yapmak bize bu kadara mal olur. Alttaki iki tablo, satmaya başlayınca üstüne binen kalemlerdir.</span></td><td class="m" data-o="M-uretim"></td><td class="s" data-o="S-uretim"></td><td class="d" data-o="D-uretim"></td><td class="p" data-o="P-uretim"></td></tr>
+        <tr class="res hi"><td class="lbl">→ 1 PİZZANIN ÜRETİM MALİYETİ <span class="hnote">Malzeme + ambalaj — <b>1 ürünün kendisi.</b> Dükkân gideri buraya karıştırılmaz (aylık tabloda). Alttaki iki tablo, satarken üstüne binen kalemlerdir.</span></td><td class="m" data-o="M-uretim"></td><td class="s" data-o="S-uretim"></td><td class="d" data-o="D-uretim"></td><td class="p" data-o="P-uretim"></td></tr>
         </tbody></table>
     </div>
     <div class="hs-box rv d1">
@@ -1468,12 +1466,12 @@ tr.modeoff{display:none!important}
 
         <div class="hlegend"><span><i style="background:#fff6ec;border:2px solid #c2600f"></i>Model M · insanlı</span><span><i style="background:#eef4ff;border:2px solid #1a49b8"></i>Model S · insansız</span><span><i style="background:#f5f6f9;border:2px solid #3f4a5c"></i>Domino's</span><span><i style="background:#f4f8f5;border:2px solid #4a5f52"></i>Mahalle pizzacısı</span></div>
     <button class="hbtn" onclick="hsReset()">↺ Varsayılana dön</button>
-    <div class="hexp"><b>Tek soru, tek cevap: 1 pizza kime kaça mal oluyor?</b> Akış yukarıdan aşağı toplanır: aylık sabit giderin pizzaya düşen payı + malzeme = <b>üretim maliyeti</b> → üstüne bu maliyetin KDV'li tutarı üzerinden platform/kart komisyonu ve franchise kesintisi → üstüne devlete pizza başına ödenecek KDV farkı = <b>1 pizzanın toplam maliyeti</b>. Satış fiyatı, kâr, satış adedi tahmini — hiçbiri bu sayfada yok. Gelir/kurumlar vergisi de yok: o, kâr edilirse kârdan ödenir; pizzanın maliyetiyle ilgisi yoktur.</div>
+    <div class="hexp"><b>Tek soru, tek cevap: 1 pizza kime kaça mal oluyor?</b> Hesap tamamen <b>1 ürün</b> üzerindendir: malzeme + ambalaj = <b>üretim maliyeti</b> → üstüne bu tutarın KDV'li hâli üzerinden platform/kart komisyonu ve franchise kesintisi → üstüne devlete ödenecek KDV farkı = <b>1 pizzanın toplam maliyeti</b>. Dükkânın aylık yükü (kira, personel, faturalar) 1. tabloda ayrı karşılaştırılır — pizzaya bölüştürülmez. Satış fiyatı, kâr, satış adedi, gelir vergisi: hiçbiri bu sayfada yok.</div>
 
     <div class="card rv d1" style="text-align:left;margin-top:26px">
       <div class="n">1 Pizzanın Maliyet Haritası</div>
       <h3 style="font-size:19px;margin:6px 0 4px;color:#0f1726">Bir pizza bize kaça mal oluyor — parça parça</h3>
-      <p class="note" style="margin-top:6px;font-size:13px">Dört maliyet tablosundan canlı hesaplanır: sabit gider payı + malzeme + satış kesintileri + pizza başına ödenecek KDV. <b>Satış fiyatı ve kâr pastada yok</b> — bu harita yalnız maliyettir. Tabloda bir rakamı değiştirdiğin an pasta yeniden çizilir.</p>
+      <p class="note" style="margin-top:6px;font-size:13px">1 ürün üzerinden canlı hesaplanır: malzeme + ambalaj + kesintiler + KDV farkı. <b>Dükkân gideri, satış fiyatı ve kâr pastada yok</b> — dükkânın aylık yükü kendi tablosunda karşılaştırılır. Tabloda bir rakamı değiştirdiğin an pasta yeniden çizilir.</p>
       <div id="hpz">
         <div class="pzana">
           <div class="pzd"><div class="pzdonut" data-pz="M"></div><div class="pzmerkez"><b data-pzt="M"></b><span>Model M · 1 pizzanın vergiler dahil maliyeti</span></div></div>
@@ -2616,13 +2614,13 @@ tr.modeoff{display:none!important}
     var geri  = serbest > 0 ? v.yat/serbest : NaN;
 
     /* maliyet-bazli kesintiler: matrah = uretim maliyeti (sabit payi + malzeme), fiyat girilmez */
-    var cUretim  = (aylikAdet > 0 ? sabit/aylikAdet : 0) + v.malz + v.kutu;
+    var cUretim  = v.malz + v.kutu;
     var cMatrahK = cUretim * kdvK;
     var cPlat = cMatrahK * (v.pkom/100) * (v.ppay/100);
     var cPos  = cMatrahK * HPOS * (1 - v.ppay/100);
     var cRoy  = cUretim * (v.roy/100);
     var cKes  = cPlat + cPos + cRoy;
-    var cKdvAlisPP = v.malz*0.10 + v.kutu*0.20 + (aylikAdet > 0 ? (v.elek+v.su+v.sis+v.muh+bakimTL)*0.20/aylikAdet : 0);
+    var cKdvAlisPP = v.malz*0.10 + v.kutu*0.20;
     var cKdvS = cMatrahK - cUretim;
     var cKdv  = Math.max(0, cKdvS - cKdvAlisPP);
     return {personel:personel, bakimTL:bakimTL, sabit:sabit, netFiyat:netFiyat,
@@ -2644,10 +2642,7 @@ tr.modeoff{display:none!important}
     hset(c+'-pers', v.pers+' × '+hfmt(v.maas)+' = <b>'+hfmt(personel)+' TL</b>');
     hset(c+'-bakimtl', hfmt(bakimTL)+' TL');
     hset(c+'-sabit', '<b>'+hfmt(sabit)+' TL</b>');
-    hset(c+'-sabitpay', aylikAdet > 0 ? '<b>'+(sabit/aylikAdet).toFixed(1).replace('.',',')+' TL</b><div class="hnote" style="margin-top:2px">'+hfmt(sabit)+' TL ÷ '+hfmt(aylikAdet)+' pizza/ay</div>' : '—');
-    hset(c+'-malztop', '<b>'+hfmt(v.malz+v.kutu)+' TL</b>');
-    var sabitPay = aylikAdet > 0 ? sabit/aylikAdet : NaN;
-    hset(c+'-uretim', Number.isFinite(R.cUretim) && aylikAdet > 0 ? '<b>'+R.cUretim.toFixed(1).replace('.',',')+' TL</b><div class="hnote" style="margin-top:2px">sabit payı '+sabitPay.toFixed(1).replace('.',',')+' + malzeme-ambalaj '+hfmt(v.malz+v.kutu)+'</div>' : '—');
+    hset(c+'-uretim', '<b>'+R.cUretim.toFixed(1).replace('.',',')+' TL</b><div class="hnote" style="margin-top:2px">malzeme '+hfmt(v.malz)+' + ambalaj '+hfmt(v.kutu)+'</div>');
     hset(c+'-matrah', '<b>'+R.cMatrahK.toFixed(1).replace('.',',')+' TL</b><div class="hnote" style="margin-top:2px">'+R.cUretim.toFixed(1).replace('.',',')+' × 1,'+(v.kdv<10?'0':'')+v.kdv+'</div>');
     hset(c+'-kestop', '<b>'+R.cKes.toFixed(1).replace('.',',')+' TL</b><div class="hnote" style="margin-top:2px">platform '+R.cPlat.toFixed(1).replace('.',',')+' + POS '+R.cPos.toFixed(1).replace('.',',')+' + franchise/IoT '+R.cRoy.toFixed(1).replace('.',',')+'</div>');
     hset(c+'-kdvs', R.cKdvS.toFixed(1).replace('.',',')+' TL');
@@ -2671,9 +2666,7 @@ tr.modeoff{display:none!important}
       var v = hread(c); var X = hmodel(v);
       if(!(X.aylikAdet > 0)) return;
       var a = X.aylikAdet;
-      var p = { malz:v.malz, plat:X.cPlat, pers:X.personel/a, kira:v.kira/a,
-                diger:(v.elek+v.su+v.muh+v.sis+v.ikmal+v.zorunlu)/a, roy:X.cRoy,
-                kutu:v.kutu, bakim:X.bakimTL/a, pos:X.cPos, kdv:X.cKdv };
+      var p = { malz:v.malz, kutu:v.kutu, plat:X.cPlat, roy:X.cRoy, pos:X.cPos, kdv:X.cKdv };
       var toplam = 0; Object.keys(p).forEach(function(k){ toplam += p[k]; });
       if(!(toplam > 0)) return;
       var sira = Object.keys(p).sort(function(x,y){ return p[y]-p[x]; });
@@ -2695,7 +2688,7 @@ tr.modeoff{display:none!important}
           html += '<div class="pzlr'+(i2===0?' enb':'')+'"><i style="background:'+renk[k]+'"></i><span>'+ad[k]+(i2===0?' — en büyük kalem':'')+'</span><b>'+p[k].toFixed(1).replace('.',',')+' TL</b><span class="yz">%'+(100*p[k]/toplam).toFixed(0)+'</span></div>';
         });
         var gr = {uretim:0, satis:0};
-        Object.keys(p).forEach(function(k){ gr[(k==='plat'||k==='pos'||k==='roy'||k==='kdv') ? 'satis' : 'uretim'] += p[k]; });
+        Object.keys(p).forEach(function(k){ gr[(k==='malz'||k==='kutu') ? 'uretim' : 'satis'] += p[k]; });
         html += '<div class="pzlr" style="border-top:1px solid #e8edf5;padding-top:7px;margin-top:4px"><i style="background:#c2600f;opacity:.4"></i><span>Üretim maliyeti <span style="color:#8a94a2">— fiyattan bağımsız</span></span><b>'+gr.uretim.toFixed(1).replace('.',',')+' TL</b><span class="yz">%'+(100*gr.uretim/toplam).toFixed(0)+'</span></div>';
         html += '<div class="pzlr"><i style="background:#8a94a2;opacity:.6"></i><span>Satışa bağlı <span style="color:#8a94a2">— komisyon + KDV</span></span><b>'+gr.satis.toFixed(1).replace('.',',')+' TL</b><span class="yz">%'+(100*gr.satis/toplam).toFixed(0)+'</span></div>';
         html += '<div class="pzlr" style="border-top:1px solid #e8edf5;padding-top:7px;margin-top:4px"><i style="background:#0f1726"></i><span><b>TOPLAM — 1 pizzanın vergiler dahil maliyeti</b></span><b>'+hfmt(toplam)+' TL</b><span class="yz">%100</span></div>';
