@@ -1442,11 +1442,11 @@ tr.modeoff{display:none!important}
     <div class="hs-box rv d1">
       <table class="hs">
         <thead><tr><th class="lbl"></th><th class="m">Model M<em>insanlı · 10 m²</em></th><th class="s">Model S<em>insansız · 6 m²</em></th><th class="d">Domino's<em>şube</em></th><th class="p">Mahalle<em>pizzacısı</em></th></tr></thead><tbody>
-        <tr class="grp"><td colspan="5">3 · Komisyon ve kesintiler — pizzanın kendi maliyeti üzerinden</td></tr>
+        <tr class="grp"><td colspan="5">3 · Komisyon ve kesintiler&nbsp;&nbsp;<label class="aksw akmini"><input type="checkbox" id="platsw" checked><span></span></label><span style="font-weight:600;color:#1a49b8;font-size:12px">Yemeksepeti / Getir satışı</span> <span style="font-weight:400;color:#8a94a2;font-size:11.5px">— kapatırsan hepsi dükkândan satılmış sayılır: platform komisyonu sıfır, yalnız %3 kart komisyonu kalır</span></td></tr>
         <tr class="res"><td class="lbl">→ Kesinti matrahı: üretim maliyeti + KDV <span class="hnote">Komisyon yüzdeleri bir tutar üzerinden hesaplanmak zorundadır; satış fiyatı girmiyoruz — taban olarak pizzanın kendi maliyetinin KDV'li hâlini alıyoruz. Gerçekte platformlar satış fiyatından keser; satış fiyatı maliyetin üstünde olacağı için buradaki kesintiler <b>alt sınırdır</b>.</span></td><td class="m" data-o="M-matrah"></td><td class="s" data-o="S-matrah"></td><td class="d" data-o="D-matrah"></td><td class="p" data-o="P-matrah"></td></tr>
         <tr hidden><td class="lbl">Satış fiyatı (KDV dahil) — yalnız yüzde hesabı için <span class="hnote"><b>Bu bir maliyet değildir; burada kâr da hesaplanmaz.</b> Girilme sebebi tek: Yemeksepeti/Getir komisyonu, kart komisyonu ve KDV <b>fiyatın yüzdesi</b> olarak kesilir — fiyat bilinmeden bu kalemlerin TL karşılığı çıkmaz. Üstteki üretim maliyeti bu rakamdan etkilenmez.</span></td><td class="m num"><input data-c="M" data-k="fiyat" type="number" step="5"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="fiyat" type="number" step="5"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="fiyat" type="number" step="5"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="fiyat" type="number" step="5"><span class="u">TL</span></td></tr>
-        <tr><td class="lbl">① Satışın yüzde kaçı Yemeksepeti/Getir'den geliyor? <span class="hnote">Gerisi kapıdan/QR'lı dolaptan gelen komisyonsuz satış. Marka bilinirliği düşük formatlar platforma daha bağımlıdır.</span></td><td class="m num"><input data-c="M" data-k="ppay" type="number" step="5"><span class="u">%</span></td><td class="s num"><input data-c="S" data-k="ppay" type="number" step="5"><span class="u">%</span></td><td class="d num"><input data-c="D" data-k="ppay" type="number" step="5"><span class="u">%</span></td><td class="p num"><input data-c="P" data-k="ppay" type="number" step="5"><span class="u">%</span></td></tr>
-        <tr><td class="lbl">② Platform komisyonu + kampanya payı <span class="hnote">Komisyon + kampanya katkısının efektif toplamı. Kendi kuryesini kullanan zincirlerde belirgin düşüktür.</span></td><td class="m num"><input data-c="M" data-k="pkom" type="number" step="1"><span class="u">%</span></td><td class="s num"><input data-c="S" data-k="pkom" type="number" step="1"><span class="u">%</span></td><td class="d num"><input data-c="D" data-k="pkom" type="number" step="1"><span class="u">%</span></td><td class="p num"><input data-c="P" data-k="pkom" type="number" step="1"><span class="u">%</span></td></tr>
+        <tr class="platdep"><td class="lbl">① Satışın yüzde kaçı Yemeksepeti/Getir'den geliyor? <span class="hnote">Gerisi kapıdan/QR'lı dolaptan gelen komisyonsuz satış. Marka bilinirliği düşük formatlar platforma daha bağımlıdır.</span></td><td class="m num"><input data-c="M" data-k="ppay" type="number" step="5"><span class="u">%</span></td><td class="s num"><input data-c="S" data-k="ppay" type="number" step="5"><span class="u">%</span></td><td class="d num"><input data-c="D" data-k="ppay" type="number" step="5"><span class="u">%</span></td><td class="p num"><input data-c="P" data-k="ppay" type="number" step="5"><span class="u">%</span></td></tr>
+        <tr class="platdep"><td class="lbl">② Platform komisyonu + kampanya payı <span class="hnote">Komisyon + kampanya katkısının efektif toplamı. Kendi kuryesini kullanan zincirlerde belirgin düşüktür.</span></td><td class="m num"><input data-c="M" data-k="pkom" type="number" step="1"><span class="u">%</span></td><td class="s num"><input data-c="S" data-k="pkom" type="number" step="1"><span class="u">%</span></td><td class="d num"><input data-c="D" data-k="pkom" type="number" step="1"><span class="u">%</span></td><td class="p num"><input data-c="P" data-k="pkom" type="number" step="1"><span class="u">%</span></td></tr>
         <tr><td class="lbl">Franchise kesintisi (ciro %'si) <span class="hnote">Domino's ABD 2025 fiili nakit kesinti: isim hakkı %5,5 + reklam fonu %6 + teknoloji ücretleri ≈%1,4 = <b>%12,9</b> — tabloya bu yazılır. Alttaki kartta geçen "gerçek yük ~%16,2"nin kalan ~%3,3'ü zorunlu malzeme alımına gömülü pahalılıktır; o fark bu tabloda zaten <b>malzeme maliyeti</b> satırının içinde, iki kez saymamak için burada yok.</span></td><td class="m num"><input data-c="M" data-k="roy" type="number" step="0.5"><span class="u">%</span></td><td class="s num"><input data-c="S" data-k="roy" type="number" step="0.5"><span class="u">%</span></td><td class="d num"><input data-c="D" data-k="roy" type="number" step="0.5"><span class="u">%</span></td><td class="p num"><input data-c="P" data-k="roy" type="number" step="0.5"><span class="u">%</span></td></tr>
         <tr class="res hi"><td class="lbl">→ 1 PİZZAYA SATIŞ KESİNTİSİ <span class="hnote">Kesintiler KDV dahil satış fiyatı üzerinden hesaplanır — platformlar brüt tutardan keser. Platform payı yalnız platform satışına, %3 POS yalnız kapıdan satışa uygulanıp harmanlanır.</span></td><td class="m" data-o="M-kestop"></td><td class="s" data-o="S-kestop"></td><td class="d" data-o="D-kestop"></td><td class="p" data-o="P-kestop"></td></tr>
         </tbody></table>
@@ -2568,7 +2568,7 @@ tr.modeoff{display:none!important}
      bolunurse dev dukkan ucuz gorunur. Esit kiyas icin tek taban: */
   var HREFA = 70 * HGUN;
   var AKFL = (function(){ var f={}; try{ f = JSON.parse(localStorage.getItem('ak_flags_v1')) || {}; }catch(e){}
-    return {amort: f.amort===0?0:1, kdv: f.kdv===0?0:1, gv: f.gv===0?0:1, ymode: f.ymode==='B'?'B':'A'}; })();
+    return {amort: f.amort===0?0:1, kdv: f.kdv===0?0:1, gv: f.gv===0?0:1, plat: f.plat===0?0:1, ymode: f.ymode==='B'?'B':'A'}; })();
   function hfmt(n){ return Number.isFinite(n) ? Math.round(n).toLocaleString('tr-TR') : '—'; }
   function hnum(v){ v = String(v == null ? '' : v).trim(); if(!v) return 0;
     if(/^\d{1,3}(\.\d{3})+$/.test(v)) return parseFloat(v.replace(/\./g, '')) || 0;
@@ -2620,8 +2620,9 @@ tr.modeoff{display:none!important}
     var cSabitPay = sabit / HREFA;
     var cUretim  = cSabitPay + v.malz + v.kutu;
     var cMatrahK = cUretim * kdvK;
-    var cPlat = cMatrahK * (v.pkom/100) * (v.ppay/100);
-    var cPos  = cMatrahK * HPOS * (1 - v.ppay/100);
+    var ePpay = (AKFL && AKFL.plat === 0) ? 0 : v.ppay;
+    var cPlat = cMatrahK * (v.pkom/100) * (ePpay/100);
+    var cPos  = cMatrahK * HPOS * (1 - ePpay/100);
     var cRoy  = cUretim * (v.roy/100);
     var cKes  = cPlat + cPos + cRoy;
     var cKdvAlisPP = v.malz*0.10 + v.kutu*0.20 + (v.elek+v.su+v.sis+v.muh+bakimTL)*0.20/HREFA;
@@ -2707,7 +2708,7 @@ tr.modeoff{display:none!important}
   function hsReset(){
     HCOLS.forEach(function(c){ hfill(c,HDEF[c]); });
     document.querySelectorAll('#hesap input[data-y]').forEach(function(i){ i.value = i.defaultValue; });
-    AKFL = {amort:1, kdv:1, gv:1, ymode:'A'};
+    AKFL = {amort:1, kdv:1, gv:1, plat:1, ymode:'A'};
     try{ localStorage.setItem('ak_flags_v1', JSON.stringify(AKFL)); }catch(e){}
     if(window.yhesap){ yhesap('M'); yhesap('S'); }
     if(window.ysave) ysave();
@@ -2781,10 +2782,12 @@ tr.modeoff{display:none!important}
 
   /* vergi + yipranma tikleri */
   function akApplyFlags(){
-    try{ var f = JSON.parse(localStorage.getItem('ak_flags_v1')); if(f) AKFL = {amort:f.amort===0?0:1, kdv:f.kdv===0?0:1, gv:f.gv===0?0:1, ymode:f.ymode==='B'?'B':'A'}; }catch(e){}
+    try{ var f = JSON.parse(localStorage.getItem('ak_flags_v1')); if(f) AKFL = {amort:f.amort===0?0:1, kdv:f.kdv===0?0:1, gv:f.gv===0?0:1, plat:f.plat===0?0:1, ymode:f.ymode==='B'?'B':'A'}; }catch(e){}
     var sA=document.getElementById('amortsw'); if(sA) sA.checked = AKFL.amort!==0;
     var sK=document.getElementById('kdvsw');   if(sK) sK.checked = AKFL.kdv!==0;
     var sG=document.getElementById('gvsw');    if(sG) sG.checked = AKFL.gv!==0;
+    var sP=document.getElementById('platsw');  if(sP) sP.checked = AKFL.plat!==0;
+    document.querySelectorAll('#hesap tr.platdep').forEach(function(tr){ tr.style.opacity = AKFL.plat===0 ? '.4' : ''; });
     document.querySelectorAll('#hyt tr.amdep').forEach(function(tr){ tr.hidden = AKFL.amort===0; });
     ['M','S','D','P'].forEach(function(c){
       var td = document.querySelector('#hyt [data-o="'+c+'-amort"]');
@@ -2803,7 +2806,7 @@ tr.modeoff{display:none!important}
     hsen();
   }
   (function(){
-    [['amortsw','amort'],['kdvsw','kdv'],['gvsw','gv']].forEach(function(p){
+    [['amortsw','amort'],['kdvsw','kdv'],['gvsw','gv'],['platsw','plat']].forEach(function(p){
       var sw = document.getElementById(p[0]); if(!sw) return;
       sw.addEventListener('change', function(){
         AKFL[p[1]] = sw.checked ? 1 : 0;
@@ -2811,7 +2814,7 @@ tr.modeoff{display:none!important}
         akApplyFlags();
       });
     });
-    if(document.getElementById('amortsw')) akApplyFlags();
+    if(document.getElementById('amortsw') || document.getElementById('platsw')) akApplyFlags();
   })();
 
   /* Yol A/B secimi + sablon tablosu aynasi */
