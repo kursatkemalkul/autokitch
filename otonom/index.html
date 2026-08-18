@@ -458,6 +458,27 @@ section#store-m a[style*="color:var(--blue)"]{color:#c2600f!important}
 #hesap .akmini{width:28px;height:16px;vertical-align:-3px}
 #hesap .akmini span:before{width:10px;height:10px}
 #hesap .akmini input:checked + span:before{left:15px}
+#hpz .pzana{display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center;margin-top:16px}
+@media(max-width:700px){#hpz .pzana{grid-template-columns:1fr;justify-items:center}}
+#hpz .pzd{position:relative;width:200px;height:200px;flex-shrink:0}
+#hpz .pzdonut{width:100%;height:100%;border-radius:50%}
+#hpz .pzmerkez{position:absolute;inset:44px;background:#fff;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;box-shadow:inset 0 0 0 1px #eef2f8}
+#hpz .pzmerkez b{font-size:19px;color:#0f1726;letter-spacing:-.01em}
+#hpz .pzmerkez span{font-size:9.5px;color:#8a94a2;margin-top:2px;max-width:90px;line-height:1.3}
+#hpz .pzlej{display:flex;flex-direction:column;gap:5px;min-width:0}
+#hpz .pzlr{display:grid;grid-template-columns:14px 1fr auto 46px;gap:9px;align-items:center;font-size:12.5px;color:#3d4a5c}
+#hpz .pzlr i{width:12px;height:12px;border-radius:3px;display:inline-block}
+#hpz .pzlr b{color:#0f1726;white-space:nowrap}
+#hpz .pzlr .yz{color:#8a94a2;font-size:11.5px;text-align:right}
+#hpz .pzlr.enb span,#hpz .pzlr.enb b{font-weight:800}
+#hpz .pzmini{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:22px}
+@media(max-width:760px){#hpz .pzmini{grid-template-columns:repeat(2,1fr)}}
+#hpz .pzm{background:#f7f9fc;border:1px solid #e3e9f2;border-radius:12px;padding:13px 10px;text-align:center}
+#hpz .pzm .md{width:76px;height:76px;border-radius:50%;margin:0 auto;position:relative}
+#hpz .pzm .md:after{content:"";position:absolute;inset:17px;background:#f7f9fc;border-radius:50%}
+#hpz .pzm h5{font-size:12px;margin:9px 0 3px;color:#0f1726}
+#hpz .pzm .t{font-size:16.5px;font-weight:800;letter-spacing:-.01em}
+#hpz .pzm .alt{font-size:10.5px;color:#8a94a2;line-height:1.55;margin-top:4px}
 #topbtn{position:fixed;left:14px;bottom:14px;z-index:95;width:44px;height:44px;border-radius:50%;border:1px solid #dfe6f0;background:rgba(255,255,255,.95);color:#1a49b8;font-size:19px;font-weight:800;cursor:pointer;box-shadow:0 6px 18px rgba(20,40,80,.18);display:none;font-family:inherit}
 #topbtn:hover{border-color:#1a49b8}
 .ymsec{font-weight:700;color:#1a49b8;font-size:12px;margin-right:10px;cursor:pointer;white-space:nowrap}
@@ -1401,17 +1422,17 @@ tr.modeoff{display:none!important}
         <tr><td class="lbl">Zorunlu yükümlülükler (ÇTV, tabela, sigorta, damga, oda) <span class="hnote">Yıllık kalemlerin aylığa bölünmüş hâli: çevre temizlik vergisi, ilan-reklam (tabela) vergisi, işyeri sigortası, damga vergisi, oda aidatı.</span></td><td class="m num"><input data-c="M" data-k="zorunlu" type="number" step="500"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="zorunlu" type="number" step="500"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="zorunlu" type="number" step="500"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="zorunlu" type="number" step="500"><span class="u">TL</span></td></tr>
         <tr><td class="lbl">Franchise kesintisi (ciro %'si) <span class="hnote">Domino's ABD 2025 fiili nakit kesinti: isim hakkı %5,5 + reklam fonu %6 + teknoloji ücretleri ≈%1,4 = <b>%12,9</b> — tabloya bu yazılır. Alttaki kartta geçen "gerçek yük ~%16,2"nin kalan ~%3,3'ü zorunlu malzeme alımına gömülü pahalılıktır; o fark bu tabloda zaten <b>malzeme maliyeti</b> satırının içinde, iki kez saymamak için burada yok.</span></td><td class="m num"><input data-c="M" data-k="roy" type="number" step="0.5"><span class="u">%</span></td><td class="s num"><input data-c="S" data-k="roy" type="number" step="0.5"><span class="u">%</span></td><td class="d num"><input data-c="D" data-k="roy" type="number" step="0.5"><span class="u">%</span></td><td class="p num"><input data-c="P" data-k="roy" type="number" step="0.5"><span class="u">%</span></td></tr>
         <tr class="res hi"><td class="lbl">→ AYLIK SABİT GİDER TOPLAMI</td><td class="m" data-o="M-sabit"></td><td class="s" data-o="S-sabit"></td><td class="d" data-o="D-sabit"></td><td class="p" data-o="P-sabit"></td></tr>
-        <tr class="grp"><td colspan="5">Pizza başı — düzenlenebilir</td></tr>
+        <tr class="grp"><td colspan="5">Pizza başı malzeme — düzenlenebilir (tutarlar KDV hariç)</td></tr>
         <tr><td class="lbl">Malzeme maliyeti (fire dahil) <span class="hnote">Hamur topu, sos, peynir, malzeme. Domino's ölçek sayesinde ucuza alır ama merkez fabrikadan almak zorunda — o fiyat merkezin marjını içerir.</span></td><td class="m num"><input data-c="M" data-k="malz" type="number" step="1"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="malz" type="number" step="1"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="malz" type="number" step="1"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="malz" type="number" step="1"><span class="u">TL</span></td></tr>
         <tr><td class="lbl">Kutu + ambalaj + sachet</td><td class="m num"><input data-c="M" data-k="kutu" type="number" step="1"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="kutu" type="number" step="1"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="kutu" type="number" step="1"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="kutu" type="number" step="1"><span class="u">TL</span></td></tr>
-        <tr><td class="lbl">Menü fiyatı (KDV dahil) <span class="hnote">Türkiye'de menü fiyatı KDV dahil ilan edilir. Hesap, KDV düşülmüş net hasılat üzerinden döner.</span></td><td class="m num"><input data-c="M" data-k="fiyat" type="number" step="5"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="fiyat" type="number" step="5"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="fiyat" type="number" step="5"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="fiyat" type="number" step="5"><span class="u">TL</span></td></tr>
         <tr class="grp"><td colspan="5">Satış ve komisyon — düzenlenebilir</td></tr>
+        <tr><td class="lbl">Menü fiyatı (KDV dahil) <span class="hnote"><b>Bu bizim maliyetimiz değil — müşteriye satış fiyatıdır;</b> rakiplere bakarak sen belirlersin (Domino's 260 · mahalle 350 girili). Maliyetten önce girilmesinin sebebi: platform komisyonları bu fiyatın yüzdesi olarak kesilir. Türkiye'de fiyat KDV dahil ilan edilir; hesap 300 ÷ 1,10 = net hasılatla döner. "En az kaç olmalı" cevabı sonuç satırında.</span></td><td class="m num"><input data-c="M" data-k="fiyat" type="number" step="5"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="fiyat" type="number" step="5"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="fiyat" type="number" step="5"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="fiyat" type="number" step="5"><span class="u">TL</span></td></tr>
         <tr><td class="lbl">① Satışın yüzde kaçı Yemeksepeti/Getir'den geliyor? <span class="hnote">Gerisi kapıdan/QR'lı dolaptan gelen komisyonsuz satış. Marka bilinirliği düşük formatlar platforma daha bağımlıdır.</span></td><td class="m num"><input data-c="M" data-k="ppay" type="number" step="5"><span class="u">%</span></td><td class="s num"><input data-c="S" data-k="ppay" type="number" step="5"><span class="u">%</span></td><td class="d num"><input data-c="D" data-k="ppay" type="number" step="5"><span class="u">%</span></td><td class="p num"><input data-c="P" data-k="ppay" type="number" step="5"><span class="u">%</span></td></tr>
         <tr><td class="lbl">② Platform komisyonu + kampanya payı <span class="hnote">Komisyon + kampanya katkısının efektif toplamı. Kendi kuryesini kullanan zincirlerde belirgin düşüktür.</span></td><td class="m num"><input data-c="M" data-k="pkom" type="number" step="1"><span class="u">%</span></td><td class="s num"><input data-c="S" data-k="pkom" type="number" step="1"><span class="u">%</span></td><td class="d num"><input data-c="D" data-k="pkom" type="number" step="1"><span class="u">%</span></td><td class="p num"><input data-c="P" data-k="pkom" type="number" step="1"><span class="u">%</span></td></tr>
-        <tr class="res"><td class="lbl">→ Ortalama komisyon yükü (pizza başına) <span class="hnote">① × ② platform satışına + %3 POS yalnız kapıdan satışa. Platform siparişinde tahsilatı platform yapar, ayrıca POS kesilmez.</span></td><td class="m" data-o="M-kom"></td><td class="s" data-o="S-kom"></td><td class="d" data-o="D-kom"></td><td class="p" data-o="P-kom"></td></tr>
+        <tr class="res"><td class="lbl">→ Ortalama komisyon yükü (pizza başına) <span class="hnote">Kesintiler <b>KDV dahil menü fiyatı üzerinden</b> hesaplanır — platformlar brüt tutardan keser. ① × ② platform satışına + %3 POS yalnız kapıdan satışa; platform siparişinde ayrıca POS kesilmez.</span></td><td class="m" data-o="M-kom"></td><td class="s" data-o="S-kom"></td><td class="d" data-o="D-kom"></td><td class="p" data-o="P-kom"></td></tr>
         <tr><td class="lbl">Günlük satış varsayımı <span class="hnote">Bütün aylık sonuçlar bu adede göre hesaplanır. En alttaki senaryo tablosu bu varsayımın altını-üstünü gösterir.</span></td><td class="m num"><input data-c="M" data-k="adet" type="number" step="1"><span class="u">adet</span></td><td class="s num"><input data-c="S" data-k="adet" type="number" step="1"><span class="u">adet</span></td><td class="d num"><input data-c="D" data-k="adet" type="number" step="1"><span class="u">adet</span></td><td class="p num"><input data-c="P" data-k="adet" type="number" step="1"><span class="u">adet</span></td></tr>
         <tr class="grp"><td colspan="5">Sonuç — otomatik hesaplanır</td></tr>
-        <tr class="res hi"><td class="lbl">Bir pizza bize kaça mal oluyor? (KDV hariç) <span class="hnote">Malzeme + paket + komisyonlar + dükkân masrafının pizza başına payı. Bu satış adedinde geçerli — az satarsan dükkân payı büyür.</span></td><td class="m" data-o="M-birim"></td><td class="s" data-o="S-birim"></td><td class="d" data-o="D-birim"></td><td class="p" data-o="P-birim"></td></tr>
+        <tr class="res hi"><td class="lbl">Bir pizza bize kaça mal oluyor? (KDV hariç) <span class="hnote">Malzeme + paket + komisyonlar + dükkân masrafının pizza başına payı. Bu satış adedinde geçerli — az satarsan dükkân payı büyür. Kalem kalem dökümü alttaki <b>pasta grafiğinde</b>.</span></td><td class="m" data-o="M-birim"></td><td class="s" data-o="S-birim"></td><td class="d" data-o="D-birim"></td><td class="p" data-o="P-birim"></td></tr>
         <tr class="res hi"><td class="lbl">Zarar etmemek için menü fiyatı en az (KDV dahil) <span class="hnote">Menüye bunun altında fiyat yazarsan her pizza zarar eder.</span></td><td class="m" data-o="M-minf"></td><td class="s" data-o="S-minf"></td><td class="d" data-o="D-minf"></td><td class="p" data-o="P-minf"></td></tr>
         <tr class="res"><td class="lbl">Aylık ciro — müşterilerin kasaya ödediği toplam (KDV dahil)</td><td class="m" data-o="M-ciro"></td><td class="s" data-o="S-ciro"></td><td class="d" data-o="D-ciro"></td><td class="p" data-o="P-ciro"></td></tr>
         <tr class="res hi"><td class="lbl">= MASRAFLAR SONRASI KASADA KALAN — vergiler henüz çıkmadı <span class="hnote">Ciro − kira, personel, malzeme, komisyon, faturalar. Devlete ödenecekler aşağıda tek tek çıkar.</span></td><td class="m" data-o="M-kar"></td><td class="s" data-o="S-kar"></td><td class="d" data-o="D-kar"></td><td class="p" data-o="P-kar"></td></tr>
@@ -1429,6 +1450,25 @@ tr.modeoff{display:none!important}
     <button class="hbtn" onclick="hsReset()">↺ Varsayılana dön</button>
     <div class="hexp"><b>Nasıl okunur?</b> <b>Başabaş</b>, masrafı sıfırlayan günlük satıştır; üstündeki her pizza kâr yazar. Yatırım, yıpranma ve geri dönüş satırları hemen alttaki <b>Yatırım</b> tablosundadır. <b>① ve ② neden ayrı?</b> Komisyon her satıştan değil, sadece platformdan gelen siparişten kesilir: satışın %50'si Yemeksepeti'nden geliyor ve platform %35 kesiyorsa ortalama yük %17,5 olur. Kapıdan/QR'lı dolaptan gelen satışta platform komisyonu yoktur, yalnız %3 kart komisyonu vardır — bu yüzden ①'i düşürmek fiyat kırmaktan daha kârlıdır. <b>Vergiler</b> en sonda ve tik'lidir: tiki kapatırsan o vergi hesaba katılmaz, cebe kalanı ona göre görürsün.</div>
     
+
+
+    <div class="card rv d1" style="text-align:left;margin-top:26px">
+      <div class="n">1 Pizzanın Maliyet Haritası</div>
+      <h3 style="font-size:19px;margin:6px 0 4px;color:#0f1726">Bir pizza bize kaça mal oluyor — parça parça</h3>
+      <p class="note" style="margin-top:6px;font-size:13px">Yukarıdaki tablodan canlı hesaplanır: aylık sabit giderin pizza başına düşen payı + malzeme + kesintiler. <b>KDV pastada yok</b> çünkü maliyet kalemi değildir — alırken ödediğin, satarken mahsup edilir; devlete giden fark sonuç satırlarında ayrı durur. <b>Menü fiyatı da pastada yok</b> — o maliyet değil, satış fiyatıdır; pastayla farkı senin kârındır.</p>
+      <div id="hpz">
+        <div class="pzana">
+          <div class="pzd"><div class="pzdonut" data-pz="M"></div><div class="pzmerkez"><b data-pzt="M"></b><span>Model M · 1 pizza maliyeti</span></div></div>
+          <div class="pzlej" data-pzl="M"></div>
+        </div>
+        <div class="pzmini">
+          <div class="pzm"><div class="md" data-pzm="M"></div><h5>Model M · insanlı</h5><div class="t" style="color:#c2600f" data-pzmt="M"></div><div class="alt" data-pzma="M"></div></div>
+          <div class="pzm"><div class="md" data-pzm="S"></div><h5>Model S · insansız</h5><div class="t" style="color:#1a49b8" data-pzmt="S"></div><div class="alt" data-pzma="S"></div></div>
+          <div class="pzm"><div class="md" data-pzm="D"></div><h5>Domino's · şube</h5><div class="t" style="color:#3f4a5c" data-pzmt="D"></div><div class="alt" data-pzma="D"></div></div>
+          <div class="pzm"><div class="md" data-pzm="P"></div><h5>Mahalle pizzacısı</h5><div class="t" style="color:#4a5f52" data-pzmt="P"></div><div class="alt" data-pzma="P"></div></div>
+        </div>
+      </div>
+    </div>
 
     <div class="card rv d1" style="text-align:left;margin-top:26px">
       <div class="n">Yatırım</div>
@@ -2630,6 +2670,44 @@ tr.modeoff{display:none!important}
     hset(c+'-nakitiht', hfmt(v.yat + 3*sabit)+' TL');
 
   }
+  function hpasta(){
+    if(!document.getElementById('hpz')) return;
+    var renk = {malz:'#c2600f', plat:'#e08a3b', pers:'#1a49b8', kira:'#3b6fe0', diger:'#7ea2e8', roy:'#68758a', kutu:'#8a94a2', bakim:'#b9c6da', pos:'#dfe6f0'};
+    var ad = {malz:'Malzeme', plat:'Platform komisyonu', pers:'Personel payı', kira:'Kira payı', diger:'Faturalar + diğer sabit payı', roy:'Franchise / IoT kesintisi', kutu:'Kutu + ambalaj', bakim:'Bakım payı', pos:'POS / kart komisyonu'};
+    ['M','S','D','P'].forEach(function(c){
+      var v = hread(c); var X = hmodel(v);
+      if(!(X.aylikAdet > 0)) return;
+      var a = X.aylikAdet;
+      var p = { malz:v.malz, plat:X.platformTL, pers:X.personel/a, kira:v.kira/a,
+                diger:(v.elek+v.su+v.muh+v.sis+v.ikmal+v.zorunlu)/a, roy:X.royTL,
+                kutu:v.kutu, bakim:X.bakimTL/a, pos:X.posTL };
+      var toplam = 0; Object.keys(p).forEach(function(k){ toplam += p[k]; });
+      if(!(toplam > 0)) return;
+      var sira = Object.keys(p).sort(function(x,y){ return p[y]-p[x]; });
+      var acc = 0, seg = [];
+      sira.forEach(function(k){
+        var st = acc/toplam*360, en = (acc+p[k])/toplam*360;
+        seg.push(renk[k]+' '+st.toFixed(1)+'deg '+en.toFixed(1)+'deg');
+        acc += p[k];
+      });
+      var grad = 'conic-gradient(' + seg.join(',') + ')';
+      var d = document.querySelector('[data-pz="'+c+'"]'); if(d) d.style.background = grad;
+      var md = document.querySelector('[data-pzm="'+c+'"]'); if(md) md.style.background = grad;
+      var tt = document.querySelector('[data-pzt="'+c+'"]'); if(tt) tt.textContent = hfmt(toplam)+' TL';
+      var mt = document.querySelector('[data-pzmt="'+c+'"]'); if(mt) mt.textContent = hfmt(toplam)+' TL';
+      var ma = document.querySelector('[data-pzma="'+c+'"]');
+      if(ma) ma.innerHTML = 'menü (KDV hariç): '+hfmt(X.netFiyat)+' TL<br>pizza başı kâr: <b>'+hfmt(X.netFiyat-toplam)+' TL</b>';
+      var lej = document.querySelector('[data-pzl="'+c+'"]');
+      if(lej){
+        var html = '';
+        sira.forEach(function(k,i2){
+          html += '<div class="pzlr'+(i2===0?' enb':'')+'"><i style="background:'+renk[k]+'"></i><span>'+ad[k]+(i2===0?' — en büyük kalem':'')+'</span><b>'+p[k].toFixed(1).replace('.',',')+' TL</b><span class="yz">%'+(100*p[k]/toplam).toFixed(0)+'</span></div>';
+        });
+        html += '<div class="pzlr" style="border-top:1px solid #e8edf5;padding-top:7px;margin-top:4px"><i style="background:#0f1726"></i><span><b>TOPLAM — 1 pizzanın bize maliyeti</b></span><b>'+hfmt(toplam)+' TL</b><span class="yz">%100</span></div>';
+        lej.innerHTML = html;
+      }
+    });
+  }
   function hsen(){
     if(!document.getElementById('hsen')) return;
     ['M','S','D','P'].forEach(function(c){
@@ -2688,6 +2766,7 @@ tr.modeoff{display:none!important}
         }
       }
     });
+    if(window.hpasta) hpasta();
   }
   function hfill(c,vals){ document.querySelectorAll('#hesap input[data-c="'+c+'"]').forEach(function(i){ if(vals[i.dataset.k]!==undefined) i.value=vals[i.dataset.k]; }); }
   function hsave(){ try{ var o={}; HCOLS.forEach(function(c){o[c]=hread(c);}); localStorage.setItem('ak_hesap_v3',JSON.stringify(o)); }catch(e){} }
