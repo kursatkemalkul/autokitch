@@ -1495,7 +1495,7 @@ tr.modeoff{display:none!important}
         <tr class="grp"><td colspan="5">Kararlarımız — düzenlenebilir</td></tr>
         <tr><td class="lbl">Pizzayı kaça satacağız? <span class="hnote">Menüdeki satış fiyatı — müşterinin ödediği, KDV dahil tutar.</span></td><td class="m num"><input data-c="M" data-k="fiyat" type="number" step="5"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="fiyat" type="number" step="5"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="fiyat" type="number" step="5"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="fiyat" type="number" step="5"><span class="u">TL</span></td></tr>
         <tr><td class="lbl">Günde kaç adet satacağız? <span class="hnote">Aylık hesap bu adetten çıkar: adet × 30,4 gün.</span></td><td class="m num"><input data-c="M" data-k="adet" type="number" step="5"><span class="u">adet</span></td><td class="s num"><input data-c="S" data-k="adet" type="number" step="5"><span class="u">adet</span></td><td class="d num"><input data-c="D" data-k="adet" type="number" step="5"><span class="u">adet</span></td><td class="p num"><input data-c="P" data-k="adet" type="number" step="5"><span class="u">adet</span></td></tr>
-        <tr><td class="lbl">Gelir / kurumlar vergisi oranı <span class="hnote">Limited/A.Ş. kurumlar vergisi %25; şahıs şirketinde artan oranlı gelir vergisi (%15–40).</span></td><td class="m num"><input data-c="M" data-k="vergi" type="number" step="1"><span class="u">%</span></td><td class="s num"><input data-c="S" data-k="vergi" type="number" step="1"><span class="u">%</span></td><td class="d num"><input data-c="D" data-k="vergi" type="number" step="1"><span class="u">%</span></td><td class="p num"><input data-c="P" data-k="vergi" type="number" step="1"><span class="u">%</span></td></tr>
+        <tr><td class="lbl"><label class="aksw akmini"><input type="checkbox" id="gvsw" checked><span></span></label>Gelir / kurumlar vergisi oranı <span class="hnote">Anahtarı kapatırsan vergi hesaba katılmaz — vergi öncesi kâr doğrudan cebe kalan olur. Limited/A.Ş. kurumlar vergisi %25; şahıs şirketinde artan oranlı gelir vergisi (%15–40).</span></td><td class="m num"><input data-c="M" data-k="vergi" type="number" step="1"><span class="u">%</span></td><td class="s num"><input data-c="S" data-k="vergi" type="number" step="1"><span class="u">%</span></td><td class="d num"><input data-c="D" data-k="vergi" type="number" step="1"><span class="u">%</span></td><td class="p num"><input data-c="P" data-k="vergi" type="number" step="1"><span class="u">%</span></td></tr>
         <tr class="grp"><td colspan="5">Aylık sonuç — otomatik hesaplanır</td></tr>
         <tr class="res"><td class="lbl">→ Aylık satış adedi <span class="hnote">Günlük adet × 30,4 gün.</span></td><td class="m" data-o="M-maylik"></td><td class="s" data-o="S-maylik"></td><td class="d" data-o="D-maylik"></td><td class="p" data-o="P-maylik"></td></tr>
         <tr class="res hi"><td class="lbl">AYLIK CİRO — müşterilerin ödediği <span class="hnote">KDV dahil kasaya giren toplam.</span></td><td class="m" data-o="M-mciro"></td><td class="s" data-o="S-mciro"></td><td class="d" data-o="D-mciro"></td><td class="p" data-o="P-mciro"></td></tr>
@@ -1504,7 +1504,7 @@ tr.modeoff{display:none!important}
         <tr class="res"><td class="lbl">− Komisyon ve kesintiler (aylık) <span class="hnote">Platform + kart komisyonu + franchise/IoT. Yukarıdaki platform anahtarına bağlıdır.</span></td><td class="m" data-o="M-mkom"></td><td class="s" data-o="S-mkom"></td><td class="d" data-o="D-mkom"></td><td class="p" data-o="P-mkom"></td></tr>
         <tr class="res"><td class="lbl">− Dükkân sabit giderleri (aylık, KDV dahil) <span class="hnote">Kira, personel, faturalar, bakım, ikmal, zorunlu yükümlülükler.</span></td><td class="m" data-o="M-msabit"></td><td class="s" data-o="S-msabit"></td><td class="d" data-o="D-msabit"></td><td class="p" data-o="P-msabit"></td></tr>
         <tr class="res hi"><td class="lbl">= Vergi öncesi kâr </td><td class="m" data-o="M-mvonce"></td><td class="s" data-o="S-mvonce"></td><td class="d" data-o="D-mvonce"></td><td class="p" data-o="P-mvonce"></td></tr>
-        <tr class="res"><td class="lbl">− Gelir / kurumlar vergisi <span class="hnote">Makinenin yıpranma payı matrahı düşürdüğü için vergi, kârın tam yüzdesinden azdır.</span></td><td class="m" data-o="M-mvergi"></td><td class="s" data-o="S-mvergi"></td><td class="d" data-o="D-mvergi"></td><td class="p" data-o="P-mvergi"></td></tr>
+        <tr class="res gvdep"><td class="lbl">− Gelir / kurumlar vergisi <span class="hnote">Makinenin yıpranma payı matrahı düşürdüğü için vergi, kârın tam yüzdesinden azdır.</span></td><td class="m" data-o="M-mvergi"></td><td class="s" data-o="S-mvergi"></td><td class="d" data-o="D-mvergi"></td><td class="p" data-o="P-mvergi"></td></tr>
         <tr class="res hi"><td class="lbl">= AYLIK NET KÂR — cebe kalan </td><td class="m" data-o="M-mnet"></td><td class="s" data-o="S-mnet"></td><td class="d" data-o="D-mnet"></td><td class="p" data-o="P-mnet"></td></tr>
         </tbody></table>
       </div>
@@ -2691,7 +2691,7 @@ tr.modeoff{display:none!important}
     var mVonce = mCiro - kdvOdenecek - mMalz - mKom - mSabit;
     var mAmort = (AKFL && AKFL.amort === 0) ? 0 : (v.omur > 0 ? v.yat/(v.omur*12) : 0);
     var mMatrah= mVonce - mAmort;
-    var mVergi = mMatrah > 0 ? mMatrah*(v.vergi/100) : 0;
+    var mVergi = (AKFL && AKFL.gv === 0) ? 0 : (mMatrah > 0 ? mMatrah*(v.vergi/100) : 0);
     var mNet   = mVonce - mVergi;
     hset(c+'-maylik', hfmt(mAdet)+' pizza');
     hset(c+'-mciro',  '<b>'+hfmt(mCiro)+' TL</b>');
@@ -2834,6 +2834,7 @@ tr.modeoff{display:none!important}
     var sG=document.getElementById('gvsw');    if(sG) sG.checked = AKFL.gv!==0;
     var sP=document.getElementById('platsw');  if(sP) sP.checked = AKFL.plat!==0;
     document.querySelectorAll('#hesap tr.platdep').forEach(function(tr){ tr.style.opacity = AKFL.plat===0 ? '.4' : ''; });
+    document.querySelectorAll('#hesap tr.gvdep').forEach(function(tr){ tr.style.opacity = AKFL.gv===0 ? '.4' : ''; });
     document.querySelectorAll('#hyt tr.amdep').forEach(function(tr){ tr.hidden = AKFL.amort===0; });
     ['M','S','D','P'].forEach(function(c){
       var td = document.querySelector('#hyt [data-o="'+c+'-amort"]');
