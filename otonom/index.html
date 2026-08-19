@@ -2814,6 +2814,7 @@ tr.modeoff{display:none!important}
     document.querySelectorAll('input[data-rk]').forEach(function(i){ i.addEventListener('input', hrakip); });
     if(window.hrakip) hrakip();
     document.querySelectorAll('#hesap input[data-c]').forEach(function(i){
+      i.addEventListener('input',function(){ hcalc(i.dataset.c); hsen(); hsave(); });
     });
   })();
 
