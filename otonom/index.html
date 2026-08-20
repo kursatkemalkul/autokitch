@@ -2896,6 +2896,17 @@ tr.modeoff{display:none!important}
   }
   (function(){
     if(!document.querySelector('#hesap input[data-c]')) return;
+    /* tek seferlik temizlik: eski kayitlardaki acik vergi bayragi + bugunku duzeltmelerden
+       onceki pide verisi sifirlanir; ak_mt damgasi ile eski bulut kaydinin geri ezmesi onlenir */
+    try{ if(!localStorage.getItem('ak_mig_v2')){
+      localStorage.removeItem('ak_hesap_pide_v1');
+      var f9 = JSON.parse(localStorage.getItem('ak_flags_v1')) || {}; f9.gv = 0;
+      localStorage.setItem('ak_flags_v1', JSON.stringify(f9));
+      localStorage.setItem('ak_mt', String(Date.now()));
+      localStorage.setItem('ak_mig_v2', '1');
+      setTimeout(function(){ var fx = document.querySelector('#hesap input[data-c]');
+        if(fx) fx.dispatchEvent(new Event('input', {bubbles:true})); }, 1500);
+    } }catch(e){}
     try{ var f0 = JSON.parse(localStorage.getItem('ak_flags_v1')); if(f0 && f0.urun === 'pide') AKFL.urun = 'pide'; }catch(e){}
     if(akUrun() === 'pide'){ akUrunText('pide'); AK_DOMURUN = 'pide'; }
     akPillSync();
