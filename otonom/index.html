@@ -455,6 +455,10 @@ section#store-m a[style*="color:var(--blue)"]{color:#c2600f!important}
 #hesap .aksw span:before{content:"";position:absolute;width:14px;height:14px;left:3px;top:3px;background:#fff;border-radius:50%;transition:.18s;box-shadow:0 1px 3px rgba(0,0,0,.25)}
 #hesap .aksw input:checked + span{background:#1a49b8}
 #hesap .aksw input:checked + span:before{left:17px}
+.upills{display:flex;gap:10px;justify-content:center;margin:4px 0 20px}
+.upill{font:inherit;font-size:16px;font-weight:700;padding:10px 30px;border-radius:99px;border:1.5px solid #c7d2e4;background:#fff;color:#3f4a5c;cursor:pointer;transition:.15s}
+.upill.on{background:#1a49b8;border-color:#1a49b8;color:#fff}
+.upill:hover{transform:translateY(-1px)}
 #hesap .akmini{width:28px;height:16px;vertical-align:-3px}
 #hesap .akmini span:before{width:10px;height:10px}
 #hesap .akmini input:checked + span:before{left:15px}
@@ -543,7 +547,7 @@ tr.modeoff{display:none!important}
   <div class="hero-content">
     <div class="tag rv in" style="display:flex;align-items:center;justify-content:center;gap:10px;text-transform:uppercase;letter-spacing:.16em;font-size:15px"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" style="flex:0 0 auto"><rect x="3" y="3" width="8.6" height="8.6" rx="2.2" fill="currentColor"/><rect x="12.4" y="3" width="8.6" height="8.6" rx="2.2" fill="currentColor" opacity=".38"/><rect x="3" y="12.4" width="8.6" height="8.6" rx="2.2" fill="currentColor" opacity=".38"/><rect x="12.4" y="12.4" width="8.6" height="8.6" rx="2.2" fill="currentColor"/></svg>AUTOKITCH</div>
     <h1 class="rv in">Store</h1>
-    <p class="sub rv in d1">Robotik mutfaklı satış noktası — 7/24 açık. İki tipte kurulur: tamamen insansız kompakt ünite ya da gündüz bir kişinin çalıştığı, geceyi robotla süren nokta.</p>
+    <p class="sub rv in d1">Robotik mutfaklı satış noktası — 7/24 açık. İki tipte kurulur: tamamen insansız kompakt ünite ya da gündüz bir kişinin çalıştığı, geceyi robotla süren nokta. İlk ürün hatları: pizza ve pide.</p>
     <a href="#otonom" class="hero-btn rv in d3">Keşfet</a>
   </div>
   <a href="#otonom" class="cue">KAYDIR<span></span></a>
@@ -905,7 +909,7 @@ tr.modeoff{display:none!important}
 
       <!-- pizza robotu (sağ duvar) -->
       <rect x="540" y="336" width="128" height="200" fill="#1b2331" stroke="#2997ff" stroke-width="1.8" rx="4"/>
-      <text x="592" y="436" text-anchor="middle" fill="#ffffff" font-size="11.5" font-weight="800" transform="rotate(-90 592 436)">PİZZA ROBOTU</text>
+      <text x="592" y="436" text-anchor="middle" fill="#ffffff" font-size="11.5" font-weight="800" transform="rotate(-90 592 436)">ÜRETİM ROBOTU</text>
       <text x="612" y="436" text-anchor="middle" fill="#7d8ca3" font-size="9" transform="rotate(-90 612 436)">hamur hazırlanır → pişer · 3 dk</text>
       <text x="628" y="436" text-anchor="middle" fill="#7d8ca3" font-size="9" transform="rotate(-90 628 436)">2,00 × 1,28 m · 90 taban/dolum</text>
       <circle cx="654" cy="356" r="10" fill="#2997ff"/><text x="654" y="360" text-anchor="middle" fill="#0d1016" font-size="11" font-weight="800">6</text>
@@ -952,7 +956,7 @@ tr.modeoff{display:none!important}
         <circle cx="726" cy="496" r="9" fill="#2997ff"/><text x="726" y="500" text-anchor="middle" fill="#0d1016" font-size="10.5" font-weight="800">5</text>
         <text x="744" y="494" fill="#ffffff" font-weight="600">İçecek dolabı</text>
         <circle cx="726" cy="524" r="9" fill="#2997ff"/><text x="726" y="528" text-anchor="middle" fill="#0d1016" font-size="10.5" font-weight="800">6</text>
-        <text x="744" y="522" fill="#ffffff" font-weight="600">Pizza robotu — hamur topundan pizza</text>
+        <text x="744" y="522" fill="#ffffff" font-weight="600">Üretim robotu — hamurdan ürüne (pizza, pide…)</text>
         <circle cx="726" cy="552" r="9" fill="#8a94a4"/><text x="726" y="556" text-anchor="middle" fill="#0d1016" font-size="10.5" font-weight="800">7</text>
         <text x="744" y="550" fill="#ffffff" font-weight="600">Buzdolabı 600 L</text>
         <text x="744" y="565" fill="#8a94a4" font-size="10.5">soğuk oda gerekmez — hamur makinede</text>
@@ -1075,7 +1079,7 @@ tr.modeoff{display:none!important}
           <div class="n">S2 · Gündüz 09:00–19:00</div><h3>Pencereden satış</h3>
           <div style="margin-top:14px;display:flex;flex-direction:column;gap:9px">
             <div style="display:flex;gap:11px"><span style="flex:0 0 21px;height:21px;border-radius:50%;background:rgba(41,151,255,.15);color:var(--blue);font-size:11.5px;font-weight:700;display:flex;align-items:center;justify-content:center">1</span><span style="color:#B0B0B5;font-size:15px;line-height:1.5">Müşteri servis penceresine gelir, kasiyere söyler, kartla öder.</span></div>
-            <div style="display:flex;gap:11px"><span style="flex:0 0 21px;height:21px;border-radius:50%;background:rgba(41,151,255,.15);color:var(--blue);font-size:11.5px;font-weight:700;display:flex;align-items:center;justify-content:center">2</span><span style="color:#B0B0B5;font-size:15px;line-height:1.5">Robot hamur topunu presleyip pizzayı hazırlar ve pişirir (~3 dk); kasiyer içeceği dolaptan alır.</span></div>
+            <div style="display:flex;gap:11px"><span style="flex:0 0 21px;height:21px;border-radius:50%;background:rgba(41,151,255,.15);color:var(--blue);font-size:11.5px;font-weight:700;display:flex;align-items:center;justify-content:center">2</span><span style="color:#B0B0B5;font-size:15px;line-height:1.5">Robot hamur topunu presleyip ürünü hazırlar ve pişirir (~3 dk); kasiyer içeceği dolaptan alır.</span></div>
             <div style="display:flex;gap:11px"><span style="flex:0 0 21px;height:21px;border-radius:50%;background:rgba(41,151,255,.15);color:var(--blue);font-size:11.5px;font-weight:700;display:flex;align-items:center;justify-content:center">3</span><span style="color:#B0B0B5;font-size:15px;line-height:1.5">Kasiyer çıkıştan alır, sachet ekler, pencereden verir. Robot kol bu modda devre dışı.</span></div>
             <div style="display:flex;gap:11px"><span style="flex:0 0 21px;height:21px;border-radius:50%;background:rgba(41,151,255,.15);color:var(--blue);font-size:11.5px;font-weight:700;display:flex;align-items:center;justify-content:center">4</span><span style="color:#B0B0B5;font-size:15px;line-height:1.5">Mahalle güveni bu vardiyada kurulur — insanla temas gündüz var.</span></div>
           </div>
@@ -1096,7 +1100,7 @@ tr.modeoff{display:none!important}
           <div style="margin-top:14px;display:flex;flex-direction:column;gap:9px">
             <div style="display:flex;gap:11px"><span style="flex:0 0 21px;height:21px;border-radius:50%;background:rgba(41,151,255,.15);color:var(--blue);font-size:11.5px;font-weight:700;display:flex;align-items:center;justify-content:center">1</span><span style="color:#B0B0B5;font-size:15px;line-height:1.5">Nokta kilitli; cephedeki QR panel ve telefon siparişi aktif.</span></div>
             <div style="display:flex;gap:11px"><span style="flex:0 0 21px;height:21px;border-radius:50%;background:rgba(41,151,255,.15);color:var(--blue);font-size:11.5px;font-weight:700;display:flex;align-items:center;justify-content:center">2</span><span style="color:#B0B0B5;font-size:15px;line-height:1.5">Müşteri sipariş verir, kartla öder; robot üretime başlar.</span></div>
-            <div style="display:flex;gap:11px"><span style="flex:0 0 21px;height:21px;border-radius:50%;background:rgba(41,151,255,.15);color:var(--blue);font-size:11.5px;font-weight:700;display:flex;align-items:center;justify-content:center">3</span><span style="color:#B0B0B5;font-size:15px;line-height:1.5">Kol pizzayı dolaba koyar; müşteriye SMS ile QR kodu gider.</span></div>
+            <div style="display:flex;gap:11px"><span style="flex:0 0 21px;height:21px;border-radius:50%;background:rgba(41,151,255,.15);color:var(--blue);font-size:11.5px;font-weight:700;display:flex;align-items:center;justify-content:center">3</span><span style="color:#B0B0B5;font-size:15px;line-height:1.5">Kol ürünü dolaba koyar; müşteriye SMS ile QR kodu gider.</span></div>
             <div style="display:flex;gap:11px"><span style="flex:0 0 21px;height:21px;border-radius:50%;background:rgba(41,151,255,.15);color:var(--blue);font-size:11.5px;font-weight:700;display:flex;align-items:center;justify-content:center">4</span><span style="color:#B0B0B5;font-size:15px;line-height:1.5">Sokaktan dolabı açar, alır. İçeri girilmez — risk cepheyle sınırlı.</span></div>
           </div>
         </div>
@@ -1289,7 +1293,7 @@ tr.modeoff{display:none!important}
     <!-- ================= DAY TIMELINE ================= -->
     <g>
       <rect x="60" y="778" width="1120" height="84" rx="16" fill="#12151c" stroke="#232833"/>
-      <text x="620" y="768" text-anchor="middle" fill="#8a94a4" font-size="13">Tek ürün, tek standart — gün boyu aynı pizza, hiç kapanmayan nokta</text>
+      <text x="620" y="768" text-anchor="middle" fill="#8a94a4" font-size="13">Tek menü, tek standart — gün boyu aynı ürün, hiç kapanmayan nokta</text>
       <line x1="120" y1="820" x2="1120" y2="820" stroke="#232833" stroke-width="2"/>
       <g text-anchor="middle">
         <circle cx="200" cy="820" r="6" fill="#2997ff"/>
@@ -1317,7 +1321,7 @@ tr.modeoff{display:none!important}
     <div class="grid g3" style="text-align:left;margin-top:34px">
       <div class="card rv d1"><div class="n">Akış 01</div><h3>Sipariş</h3><p>Müşteri cephedeki ekrandan ya da telefonundan seçer, kartla öder. Platform siparişi de (Yemeksepeti/Getir) doğrudan sisteme düşer.</p></div>
       <div class="card rv d2"><div class="n">Akış 02</div><h3>Üretim</h3><p>Robot hamur topunu presler, soslar, malzemeyi döşer, pişirir ve kutular — 3 dakika. İnsan eli değmez, her ürün birebir aynı çıkar.</p></div>
-      <div class="card rv d1"><div class="n">Akış 03</div><h3>Teslim</h3><p>Robot kol pizzayı (istenirse içeceği de) dolabın gözüne koyar; müşteri ya da kurye QR okutup alır. Bekleme, kuyruk, temas yok.</p></div>
+      <div class="card rv d1"><div class="n">Akış 03</div><h3>Teslim</h3><p>Robot kol ürünü (istenirse içeceği de) dolabın gözüne koyar; müşteri ya da kurye QR okutup alır. Bekleme, kuyruk, temas yok.</p></div>
     </div>
 
     <div class="rv d1" style="max-width:1020px;margin:30px auto 0">
@@ -1352,7 +1356,7 @@ tr.modeoff{display:none!important}
           <div style="margin-top:14px;display:flex;flex-direction:column;gap:9px">
             <div style="display:flex;gap:11px"><span style="flex:0 0 21px;height:21px;border-radius:50%;background:rgba(41,151,255,.15);color:var(--blue);font-size:11.5px;font-weight:700;display:flex;align-items:center;justify-content:center">1</span><span style="color:#B0B0B5;font-size:15px;line-height:1.5">Müşteri cephedeki ekrandan seçer, kartla öder. Kuyruk ve kasa yok.</span></div>
             <div style="display:flex;gap:11px"><span style="flex:0 0 21px;height:21px;border-radius:50%;background:rgba(41,151,255,.15);color:var(--blue);font-size:11.5px;font-weight:700;display:flex;align-items:center;justify-content:center">2</span><span style="color:#B0B0B5;font-size:15px;line-height:1.5">Robot hamur topunu presler, soslar, pişirir, kutular (~3 dk).</span></div>
-            <div style="display:flex;gap:11px"><span style="flex:0 0 21px;height:21px;border-radius:50%;background:rgba(41,151,255,.15);color:var(--blue);font-size:11.5px;font-weight:700;display:flex;align-items:center;justify-content:center">3</span><span style="color:#B0B0B5;font-size:15px;line-height:1.5">Robot kol pizzayı — istenirse içeceği de — dolabın gözüne koyar.</span></div>
+            <div style="display:flex;gap:11px"><span style="flex:0 0 21px;height:21px;border-radius:50%;background:rgba(41,151,255,.15);color:var(--blue);font-size:11.5px;font-weight:700;display:flex;align-items:center;justify-content:center">3</span><span style="color:#B0B0B5;font-size:15px;line-height:1.5">Robot kol ürünü — istenirse içeceği de — dolabın gözüne koyar.</span></div>
             <div style="display:flex;gap:11px"><span style="flex:0 0 21px;height:21px;border-radius:50%;background:rgba(41,151,255,.15);color:var(--blue);font-size:11.5px;font-weight:700;display:flex;align-items:center;justify-content:center">4</span><span style="color:#B0B0B5;font-size:15px;line-height:1.5">Ekranda göz numarası ve QR belirir; müşteri açar, alır, gider.</span></div>
           </div>
         </div>
@@ -1383,7 +1387,7 @@ tr.modeoff{display:none!important}
     <div class="grid g2" style="text-align:left;margin-top:24px">
       <div class="card rv d1"><div class="n">Konum</div><h3>İnsan trafiği olan ama dükkân olmayan yerler</h3><p>Okul ve yurt, ofis ve fabrika kampüsleri, otogar ve havalimanı, kimsenin dükkân açmadığı tenha noktalar, etkinlik ve sezon alanları. Şehir içi cadde üstü bu modelin hedefi değildir.</p></div>
       <div class="card rv d2"><div class="n">Fark</div><h3>Noktada hiç personel yok</h3><p>Ne kasiyer, ne usta, ne gece vardiyası. Tek insan teması günde ~45 dakikalık ikmal ziyareti — o da birkaç noktaya birden bakan tek ekip.</p></div>
-      <div class="card rv d1"><div class="n">Avantaj 01</div><h3>Sektörün en düşük başabaşı</h3><p>Bordro yükü neredeyse sıfır olduğu için nokta günde 14 pizzada masrafını çıkarır. Klasik bir şubenin "burada tutmaz" dediği ciro, bu model için yeterlidir.</p></div>
+      <div class="card rv d1"><div class="n">Avantaj 01</div><h3>Sektörün en düşük başabaşı</h3><p>Bordro yükü neredeyse sıfır olduğu için nokta günde 14 üründe masrafını çıkarır. Klasik bir şubenin "burada tutmaz" dediği ciro, bu model için yeterlidir.</p></div>
       <div class="card rv d2"><div class="n">Avantaj 02</div><h3>Taşınabilir yatırım</h3><p>Nokta tutmadıysa yatırım batmaz: ünite sökülür, daha iyi performans beklenen lokasyona taşınır. Klasik şubede bu, dükkân kapatmak demektir.</p></div>
       <div class="card rv d1"><div class="n">Avantaj 03</div><h3>Personel riski yok</h3><p>Sektörün en büyük sorunu eleman bulmak ve elde tutmak. Bu modelde işe alım, vardiya, devir ve gece zammı diye bir kalem yoktur.</p></div>
       <div class="card rv d2"><div class="n">Avantaj 04</div><h3>Veriyle büyür</h3><p>Her nokta hangi ürünün hangi saatte nerede sattığını raporlar; menü ve yeni nokta seçimi tahminle değil veriyle yapılır. İki model de aynı panele bağlanır.</p></div>
@@ -1398,8 +1402,9 @@ tr.modeoff{display:none!important}
   <div class="wrap">
     <div class="eyebrow rv">Ortak · Maliyet Hesabı</div>
     <h2 class="rv d1">Dört model,<br>aynı mahalle, tek tablo.</h2>
-    <p class="lead rv d2">İki AUTOKITCH modeli ile klasik rakipler yan yana — bu sayfa <b>yalnız maliyeti</b> hesaplar. Beyaz kutulu her rakam düzenlenebilir; değiştirdiğin an dört tablo ve pasta yeniden hesaplanır. Değerlerin bu tarayıcıda saklanır ve cihazların arasında eşitlenir.</p>
+    <p class="lead rv d2">İki AUTOKITCH modeli ile klasik rakipler yan yana — bu sayfa <b>yalnız maliyeti</b> hesaplar. Beyaz kutulu her rakam düzenlenebilir; değiştirdiğin an dört tablo ve pasta yeniden hesaplanır. Değerlerin bu tarayıcıda saklanır ve cihazların arasında eşitlenir. Üstteki <b>Pizza / Pide</b> seçicisi tabloyu ürüne göre kurar: rakip zincir, fiyatlar ve malzeme o ürünün gerçeğine döner; iki ürünün değerleri ayrı ayrı saklanır.</p>
 
+        <div class="upills rv d1"><button class="upill on" data-up="pizza" type="button">🍕 Pizza</button><button class="upill" data-up="pide" type="button">🥟 Pide</button></div>
         <div class="hs-box rv d1">
       <table class="hs">
         <thead><tr><th class="lbl"></th><th class="m">Model M<em>insanlı · 10 m²</em></th><th class="s">Model S<em>insansız · 6 m²</em></th><th class="d">Domino's<em>şube</em></th><th class="p">Mahalle<em>pizzacısı</em></th></tr></thead><tbody>
@@ -1446,7 +1451,7 @@ tr.modeoff{display:none!important}
         <tr class="res"><td class="lbl">→ Kesinti ve KDV matrahı — gerçek satış fiyatı <span class="hnote">Komisyon ve KDV, müşterinin ödediği tutardan kesilir. Platform anahtarı açıkken liste fiyatı <b>taban ÷ (1 − komisyon)</b> ile otomatik yükselir; komisyon düşülünce elimize taban fiyat kalır. Buradaki rakam, platform ve kapı satışlarının payına göre <b>harmanlanmış</b> fiyattır — hücrenin altında dökümü yazar.</span></td><td class="m" data-o="M-matrah"></td><td class="s" data-o="S-matrah"></td><td class="d" data-o="D-matrah"></td><td class="p" data-o="P-matrah"></td></tr>
         <tr class="platdep"><td class="lbl">① Satışın yüzde kaçı Yemeksepeti/Getir'den geliyor? <span class="hnote">Yeni markada bu oran <b>%85-90</b>'dır — marka bilinirliği oluşana kadar sipariş platformdan gelir. Domino's'ta %55 (gerisi kendi uygulaması ve gel-al). Gerisi kapıdan/QR dolaptan gelen komisyonsuz satıştır.</span></td><td class="m num"><input data-c="M" data-k="ppay" type="number" step="5"><span class="u">%</span></td><td class="s num"><input data-c="S" data-k="ppay" type="number" step="5"><span class="u">%</span></td><td class="d num"><input data-c="D" data-k="ppay" type="number" step="5"><span class="u">%</span></td><td class="p num"><input data-c="P" data-k="ppay" type="number" step="5"><span class="u">%</span></td></tr>
         <tr class="platdep"><td class="lbl">② Platform komisyonu + kampanya payı <span class="hnote">Anahtarı kapatırsan platform yokmuş gibi hesaplanır. Yeni marka platform kuryesiyle çalışırsa baz komisyon <b>%32-38</b>, zorunlu kampanyalarla efektif <b>%40-45</b>'e çıkar. Domino's kendi kuryesini kullandığı için %10-14 baz, efektif ~%22 öder — ama kurye maaşı, motor ve SGK'sı kendi sabit giderindedir.</span></td><td class="m num"><input data-c="M" data-k="pkom" type="number" step="1"><span class="u">%</span></td><td class="s num"><input data-c="S" data-k="pkom" type="number" step="1"><span class="u">%</span></td><td class="d num"><input data-c="D" data-k="pkom" type="number" step="1"><span class="u">%</span></td><td class="p num"><input data-c="P" data-k="pkom" type="number" step="1"><span class="u">%</span></td></tr>
-        <tr><td class="lbl">Franchise kesintisi (ciro %'si) <span class="hnote">Domino's ABD 2025 fiili nakit kesinti: isim hakkı %5,5 + reklam fonu %6 + teknoloji ücretleri ≈%1,4 = <b>%12,9</b> — tabloya bu yazılır. Alttaki kartta geçen "gerçek yük ~%16,2"nin kalan ~%3,3'ü zorunlu malzeme alımına gömülü pahalılıktır; o fark bu tabloda zaten <b>malzeme maliyeti</b> satırının içinde, iki kez saymamak için burada yok.</span></td><td class="m num"><input data-c="M" data-k="roy" type="number" step="0.5"><span class="u">%</span></td><td class="s num"><input data-c="S" data-k="roy" type="number" step="0.5"><span class="u">%</span></td><td class="d num"><input data-c="D" data-k="roy" type="number" step="0.5"><span class="u">%</span></td><td class="p num"><input data-c="P" data-k="roy" type="number" step="0.5"><span class="u">%</span></td></tr>
+        <tr><td class="lbl">Franchise kesintisi (ciro %'si) <span class="hnote">Zincirin markaya ödediği ciro kesintisi: isim hakkı + reklam fonu + teknoloji. Pizza devinde fiili toplam ~%12,9; pide zincirinde bayilik kesintisi ~%9; bağımsız esnafta 0. Zorunlu malzeme alımına gömülü pahalılık bu tabloda malzeme satırının içindedir, iki kez sayılmaz.<b>%12,9</b> — tabloya bu yazılır. Alttaki kartta geçen "gerçek yük ~%16,2"nin kalan ~%3,3'ü zorunlu malzeme alımına gömülü pahalılıktır; o fark bu tabloda zaten <b>malzeme maliyeti</b> satırının içinde, iki kez saymamak için burada yok.</span></td><td class="m num"><input data-c="M" data-k="roy" type="number" step="0.5"><span class="u">%</span></td><td class="s num"><input data-c="S" data-k="roy" type="number" step="0.5"><span class="u">%</span></td><td class="d num"><input data-c="D" data-k="roy" type="number" step="0.5"><span class="u">%</span></td><td class="p num"><input data-c="P" data-k="roy" type="number" step="0.5"><span class="u">%</span></td></tr>
         <tr class="res hi"><td class="lbl">→ 1 PİZZAYA SATIŞ KESİNTİSİ <span class="hnote">Kesintiler KDV dahil satış fiyatı üzerinden hesaplanır — platformlar brüt tutardan keser. Platform payı yalnız platform satışına, %3 POS yalnız kapıdan satışa uygulanıp harmanlanır.</span></td><td class="m" data-o="M-kestop"></td><td class="s" data-o="S-kestop"></td><td class="d" data-o="D-kestop"></td><td class="p" data-o="P-kestop"></td></tr>
         </tbody></table>
     </div>
@@ -2592,7 +2597,61 @@ tr.modeoff{display:none!important}
     D: {pers:6,   maas:45000, kira:150000,elek:32000, su:7000, muh:8000, sis:5000, bakim:2,   ikmal:0,    zorunlu:6000, roy:12.9, yan:30, ick:90,  yat:10000000, omur:7, vergi:25, malz:70, kutu:8,  fiyat:190, kdv:10, ppay:55, pkom:22, adet:200},
     P: {pers:2,   maas:40875, kira:95000, elek:18000, su:5000, muh:5000, sis:1500, bakim:2,   ikmal:0,    zorunlu:3000, roy:0,    yan:15, ick:70,  yat:1800000,  omur:7, vergi:25, malz:75, kutu:8,  fiyat:230, kdv:10, ppay:85, pkom:35, adet:50}
   };
+  /* PIDE varsayilanlari — rakip zincir: Usta Pideci (TAB Gida), esnaf: mahalle pideci.
+     Usta Pideci taban 230 TL -> %22 komisyonla platform listesi ~295 TL (Getir'de gorulen). */
+  var HDEFP = {
+    S: {pers:0.5, maas:45000, kira:25000, elek:12000, su:3500, muh:4000, sis:2500, bakim:3.5, ikmal:7000, zorunlu:3000, roy:3, yan:25, ick:60, yat:3504269, omur:7, vergi:25, malz:50, kutu:8, fiyat:180, kdv:10, ppay:90, pkom:35, adet:55},
+    M: {pers:1.6, maas:40875, kira:60000, elek:14000, su:4500, muh:5000, sis:2500, bakim:3.5, ikmal:5000, zorunlu:3500, roy:3, yan:25, ick:60, yat:3397169, omur:7, vergi:25, malz:50, kutu:8, fiyat:180, kdv:10, ppay:90, pkom:35, adet:70},
+    D: {pers:5, maas:45000, kira:120000, elek:25000, su:6000, muh:8000, sis:5000, bakim:2, ikmal:0, zorunlu:6000, roy:9, yan:30, ick:90, yat:8000000, omur:7, vergi:25, malz:45, kutu:8, fiyat:230, kdv:10, ppay:60, pkom:22, adet:150},
+    P: {pers:3, maas:40875, kira:70000, elek:16000, su:5000, muh:5000, sis:1500, bakim:2, ikmal:0, zorunlu:3000, roy:0, yan:15, ick:40, yat:2500000, omur:7, vergi:25, malz:60, kutu:8, fiyat:220, kdv:10, ppay:70, pkom:35, adet:60}
+  };
   var HPOS = 0.03, HGUN = 30.4, HCOLS = ['S','M','D','P'];
+  var AK_DOMURUN = 'pizza';   /* DOM su an hangi urunu gosteriyor */
+  function akUrun(){ return (AKFL && AKFL.urun === 'pide') ? 'pide' : 'pizza'; }
+  function akHKey(){ return akUrun() === 'pide' ? 'ak_hesap_pide_v1' : 'ak_hesap_v3'; }
+  function akHDEF(){ return akUrun() === 'pide' ? HDEFP : HDEF; }
+  function akUrunText(p){
+    var MAP = p === 'pide'
+      ? [["Pizzayı","Pideyi"],["PİZZANIN","PİDENİN"],["PİZZAYA","PİDEYE"],["PİZZADAN","PİDEDEN"],["pizzacısı","pidecisi"],["pizzacı","pideci"],["Pizzanın","Pidenin"],["pizzanın","pidenin"],["pizzayı","pideyi"],["pizzaya","pideye"],["pizzadan","pideden"],["Pizza","Pide"],["pizza","pide"],["Domino's","rakip zincir"]]
+      : [["Pideyi","Pizzayı"],["PİDENİN","PİZZANIN"],["PİDEYE","PİZZAYA"],["PİDEDEN","PİZZADAN"],["pidecisi","pizzacısı"],["pideci","pizzacı"],["Pidenin","Pizzanın"],["pidenin","pizzanın"],["pideyi","pizzayı"],["pideye","pizzaya"],["pideden","pizzadan"],["Pide","Pizza"],["pide","pizza"],["rakip zincir","Domino's"]];
+    var root = document.getElementById('hesap');
+    if(!root) return;
+    var w = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null), n;
+    while((n = w.nextNode())){
+      var s = n.nodeValue;
+      if(!s || s.length < 4) continue;
+      for(var k = 0; k < MAP.length; k++){ if(s.indexOf(MAP[k][0]) !== -1) s = s.split(MAP[k][0]).join(MAP[k][1]); }
+      if(s !== n.nodeValue) n.nodeValue = s;
+    }
+    document.querySelectorAll('#hesap thead th.d').forEach(function(th){
+      var tw = document.createTreeWalker(th, NodeFilter.SHOW_TEXT, null), x;
+      while((x = tw.nextNode())){
+        var v = (x.nodeValue || '').trim();
+        if(v && v !== 'şube'){ x.nodeValue = p === 'pide' ? 'Usta Pideci' : "Domino's"; break; }
+      }
+    });
+  }
+  function akPillSync(){
+    var u = akUrun();
+    document.querySelectorAll('.upill').forEach(function(b){ b.classList.toggle('on', b.dataset.up === u); });
+  }
+  function akUrunApplyDom(p){
+    if(AK_DOMURUN !== p){ akUrunText(p); AK_DOMURUN = p; }
+    akPillSync();
+    var saved = null; try{ saved = JSON.parse(localStorage.getItem(akHKey())); }catch(e){}
+    HCOLS.forEach(function(c){ hfill(c, (saved && saved[c]) || akHDEF()[c]); hcalc(c); });
+    if(window.hsen) hsen();
+  }
+  function akUrunSet(p){
+    p = p === 'pide' ? 'pide' : 'pizza';
+    if(p === akUrun()) return;
+    hsave();                                   /* mevcut urunun degerleri kendi anahtarina */
+    AKFL.urun = p;
+    try{ localStorage.setItem('ak_flags_v1', JSON.stringify(AKFL)); }catch(e){}
+    akUrunApplyDom(p);
+    var f = document.querySelector('#hesap input[data-c]');
+    if(f) f.dispatchEvent(new Event('input', {bubbles:true}));   /* buluta itilsin */
+  }
   /* Adet tek ve ortaktir (hread her kolona ayni degeri verir) — bu sayede 1 pizza maliyeti
      ile aylik is hesabi ayni hacim tabaninda calisir. */
   var AKFL = (function(){ var f={}; try{ f = JSON.parse(localStorage.getItem('ak_flags_v1')) || {}; }catch(e){}
@@ -2706,14 +2765,14 @@ tr.modeoff{display:none!important}
     var mMatrah= mVonce - mAmort;
     var mVergi = (AKFL && AKFL.gv === 0) ? 0 : (mMatrah > 0 ? mMatrah*(v.vergi/100) : 0);
     var mNet   = mVonce - mVergi;
-    hset(c+'-maylik', hfmt(mAdet)+' pizza');
+    hset(c+'-maylik', hfmt(mAdet)+' '+(akUrun()==='pide'?'pide':'pizza'));
     hset(c+'-mciro',  '<b>'+hfmt(mCiro)+' TL</b>');
     hset(c+'-mkdv',   hfmt(mKdvAy)+' TL');
     hset(c+'-mmalz',  hfmt(mMalz)+' TL');
     hset(c+'-mkom',   hfmt(mKom)+' TL');
     hset(c+'-msabit', hfmt(mSabit)+' TL');
     hset(c+'-myan', '+'+hfmt(mYan)+' TL', mYan>0?'pos':'');
-    hset(c+'-sepet', 'pizza + içecek = <b>'+hfmt(v.fiyat + (v.ick||0))+' TL</b>');
+    hset(c+'-sepet', (akUrun()==='pide'?'pide':'pizza')+' + içecek = <b>'+hfmt(v.fiyat + (v.ick||0))+' TL</b>');
     hset(c+'-liste', R.ePpay > 0 && R.pFiyat > v.fiyat ? 'platformda: <b>'+hfmt(R.pFiyat)+' TL</b>' : '');
     hset(c+'-mvonce', '<b>'+hfmt(mVonce)+' TL</b>', mVonce>=0?'pos':'neg');
     hset(c+'-mvergi', hfmt(mVergi)+' TL');
@@ -2788,11 +2847,11 @@ tr.modeoff{display:none!important}
     try{ var o={}; document.querySelectorAll('input[data-rk]').forEach(function(i){ o[i.dataset.rk]=i.value; });
       localStorage.setItem('ak_rakip', JSON.stringify(o)); }catch(e){}
   }
-  function hsave(){ try{ var o={}; HCOLS.forEach(function(c){o[c]=hread(c);}); localStorage.setItem('ak_hesap_v3',JSON.stringify(o)); }catch(e){} }
+  function hsave(){ try{ var o={}; HCOLS.forEach(function(c){o[c]=hread(c);}); localStorage.setItem(akHKey(),JSON.stringify(o)); }catch(e){} }
   function hsReset(){
-    HCOLS.forEach(function(c){ hfill(c,HDEF[c]); });
+    HCOLS.forEach(function(c){ hfill(c,akHDEF()[c]); });
     document.querySelectorAll('#hesap input[data-y]').forEach(function(i){ i.value = i.defaultValue; });
-    AKFL = {amort:1, kdv:1, gv:1, plat:1, ymode:'A'};
+    AKFL = {amort:1, kdv:1, gv:1, plat:1, ymode:'A', urun:akUrun()};
     try{ localStorage.setItem('ak_flags_v1', JSON.stringify(AKFL)); }catch(e){}
     if(window.yhesap){ yhesap('M'); yhesap('S'); }
     if(window.ysave) ysave();
@@ -2805,8 +2864,12 @@ tr.modeoff{display:none!important}
   }
   (function(){
     if(!document.querySelector('#hesap input[data-c]')) return;
-    var saved=null; try{ saved=JSON.parse(localStorage.getItem('ak_hesap_v3')); }catch(e){}
-    HCOLS.forEach(function(c){ hfill(c,(saved&&saved[c])||HDEF[c]); hcalc(c); });
+    try{ var f0 = JSON.parse(localStorage.getItem('ak_flags_v1')); if(f0 && f0.urun === 'pide') AKFL.urun = 'pide'; }catch(e){}
+    if(akUrun() === 'pide'){ akUrunText('pide'); AK_DOMURUN = 'pide'; }
+    akPillSync();
+    var saved=null; try{ saved=JSON.parse(localStorage.getItem(akHKey())); }catch(e){}
+    HCOLS.forEach(function(c){ hfill(c,(saved&&saved[c])||akHDEF()[c]); hcalc(c); });
+    document.querySelectorAll('.upill').forEach(function(b){ b.addEventListener('click', function(){ akUrunSet(b.dataset.up); }); });
     hsen();
     try{ var rk=JSON.parse(localStorage.getItem('ak_rakip')||'null');
       if(rk) document.querySelectorAll('input[data-rk]').forEach(function(i){ if(rk[i.dataset.rk]!==undefined) i.value=rk[i.dataset.rk]; });
@@ -2871,7 +2934,8 @@ tr.modeoff{display:none!important}
 
   /* vergi + yipranma tikleri */
   function akApplyFlags(){
-    try{ var f = JSON.parse(localStorage.getItem('ak_flags_v1')); if(f) AKFL = {amort:f.amort===0?0:1, kdv:f.kdv===0?0:1, gv:f.gv===0?0:1, plat:f.plat===0?0:1, ymode:f.ymode==='B'?'B':'A'}; }catch(e){}
+    try{ var f = JSON.parse(localStorage.getItem('ak_flags_v1')); if(f) AKFL = {amort:f.amort===0?0:1, kdv:f.kdv===0?0:1, gv:f.gv===0?0:1, plat:f.plat===0?0:1, ymode:f.ymode==='B'?'B':'A', urun:f.urun==='pide'?'pide':'pizza'}; }catch(e){}
+    if(AKFL.urun !== AK_DOMURUN) akUrunApplyDom(AKFL.urun); else akPillSync();
     var sA=document.getElementById('amortsw'); if(sA) sA.checked = AKFL.amort!==0;
     var sK=document.getElementById('kdvsw');   if(sK) sK.checked = AKFL.kdv!==0;
     var sG=document.getElementById('gvsw');    if(sG) sG.checked = AKFL.gv!==0;
@@ -2999,7 +3063,7 @@ tr.modeoff{display:none!important}
       authDomain: "gen-lang-client-0276539885.firebaseapp.com",
       projectId: "gen-lang-client-0276539885"
     };
-    var KEYS = ['ak_hesap_v3','ak_yatirim_v2','ak_flags_v1'];
+    var KEYS = ['ak_hesap_v3','ak_hesap_pide_v1','ak_yatirim_v2','ak_flags_v1'];
     var CID = (function(){ try{ var c = localStorage.getItem('ak_cid');
       if(!c){ c = 'c'+Date.now().toString(36)+Math.floor(Math.random()*1e6).toString(36); localStorage.setItem('ak_cid', c); }
       return c; }catch(e){ return 'c0'; } })();
@@ -3033,7 +3097,8 @@ tr.modeoff{display:none!important}
         KEYS.forEach(function(k){ if(d[k] !== undefined) try{ localStorage.setItem(k, d[k]); }catch(e){} });
         try{ localStorage.setItem('ak_mt', String(r.mt || Date.now())); }catch(e){}
         /* ekrani yeni degerlerle tazele */
-        var savedH = null; try{ savedH = JSON.parse(localStorage.getItem('ak_hesap_v3')); }catch(e){}
+        if(window.akApplyFlags) akApplyFlags();
+        var savedH = null; try{ savedH = JSON.parse(localStorage.getItem(window.akHKey ? akHKey() : 'ak_hesap_v3')); }catch(e){}
         if(savedH && window.hfill){ HCOLS.forEach(function(c){ if(savedH[c]) hfill(c, savedH[c]); hcalc(c); }); }
         var savedY = null; try{ savedY = JSON.parse(localStorage.getItem('ak_yatirim_v2')); }catch(e){}
         if(savedY){ document.querySelectorAll('#hesap input[data-y]').forEach(function(i){
