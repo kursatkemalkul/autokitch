@@ -3091,6 +3091,7 @@ tr.modeoff{display:none!important}
       authDomain: "gen-lang-client-0276539885.firebaseapp.com",
       projectId: "gen-lang-client-0276539885"
     };
+    if(/^(localhost|127\.0\.0\.1)$/.test(location.hostname)) return;  /* onizleme/test buluta YAZMASIN — gercek cihaz verisi kirlenmesin */
     var KEYS = ['ak_hesap_v3','ak_hesap_pide_v1','ak_yatirim_v2','ak_flags_v1','ak_rakip2'];
     var CID = (function(){ try{ var c = localStorage.getItem('ak_cid');
       if(!c){ c = 'c'+Date.now().toString(36)+Math.floor(Math.random()*1e6).toString(36); localStorage.setItem('ak_cid', c); }
