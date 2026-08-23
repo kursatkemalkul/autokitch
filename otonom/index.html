@@ -2559,7 +2559,9 @@ tr.modeoff{display:none!important}
         <circle cx="668" cy="222" r="7" fill="#ffffff" stroke="#1a49b8" stroke-width="3"/>
         <circle cx="732" cy="182" r="7" fill="#ffffff" stroke="#1a49b8" stroke-width="3"/>
         <path d="M 766 234 l 6 10 M 778 232 l -2 12" stroke="#1a49b8" stroke-width="4" stroke-linecap="round" fill="none"/>
-        <text x="668" y="392" text-anchor="middle" font-size="10" font-weight="700" fill="#1a49b8">robot kol + kamera</text>
+        <circle cx="756" cy="212" r="5" fill="#c2600f"/>
+        <path d="M 752 204 l -6 -9 M 756 202 l 0 -11 M 760 204 l 6 -9" stroke="#c2600f" stroke-width="1.5" stroke-linecap="round"/>
+        <text x="668" y="392" text-anchor="middle" font-size="10" font-weight="700" fill="#1a49b8">robot kol + kamera + bilekte yağ nozülü</text>
 
         <rect x="800" y="120" width="130" height="95" fill="#eaf6ef" stroke="#1d7a4f" stroke-width="2.5"/>
         <line x1="843" y1="120" x2="843" y2="215" stroke="#bfe3cd" stroke-width="1.5"/>
@@ -2584,7 +2586,7 @@ tr.modeoff{display:none!important}
         <rect x="1012" y="288" width="86" height="30" fill="#ffffff" stroke="#1d7a4f" stroke-width="2"/>
         <line x1="1018" y1="303" x2="1092" y2="303" stroke="#c2600f" stroke-width="3"/>
         <text x="1055" y="268" text-anchor="middle" font-size="8.5" fill="#68758a">motorlu kapaklar · taş taban</text>
-        <rect x="1120" y="240" width="26" height="18" fill="#eaf6ef" stroke="#1d7a4f" stroke-width="2"/>
+        
         <g stroke="#8a94a2" fill="#fafbfd" stroke-width="2" stroke-dasharray="7 5">
           <rect x="1180" y="272" width="80" height="100"/>
           <rect x="1280" y="136" width="110" height="236"/>
@@ -2594,7 +2596,7 @@ tr.modeoff{display:none!important}
         <line x1="1335" y1="136" x2="1335" y2="372" stroke="#8a94a2" stroke-width="1.5" stroke-dasharray="4 3"/>
         <text x="1055" y="182" text-anchor="middle" font-size="10" font-weight="800" fill="#1d7a4f">3 · KAPAKLI HAZNE FIRIN</text>
         <text x="1055" y="195" text-anchor="middle" font-size="10" font-weight="800" fill="#1d7a4f">2 kavite · 25-35/saat</text>
-        <text x="1133" y="234" text-anchor="middle" font-size="8.5" font-weight="700" fill="#1d7a4f">yağ spreyi</text>
+        
         <text x="1220" y="326" text-anchor="middle" font-size="10" font-weight="700" fill="#8a94a2">4 · KUTU</text>
         <text x="1335" y="126" text-anchor="middle" font-size="10.5" font-weight="700" fill="#8a94a2">5 · QR DOLAP + içecek</text>
 
@@ -2643,7 +2645,7 @@ tr.modeoff{display:none!important}
           <li><b>Pişirme ve kapasite:</b> ~300-350 °C, pide 3-4 dk; 2 kavite dönüşümlü → <b>saatte 25-35 pide</b> — günde 100 hedefi ve pik saat için yeterli. Satış 150+/güne çıkarsa 3. kavite veya konveyör (B planı) eklenir.</li>
           <li><b>Robot akışı:</b> motorlu kapak açılır → kol küreğiyle tabanı sürer → kapak kapanır → süre dolunca açılır, kol alır. Kol zaten hattın ortasında; koy-al toplam ~10 saniye.</li>
           <li><b>Kontrol:</b> bant hızı + üst/alt ısı PLC'den — reçete başına profil, gece ölü saatte eko-mod, uzaktan izleme. "Akıllı fırın"ı satın almıyoruz, yazılımla kendimiz kuruyoruz.</li>
-          <li><b>YAĞ SPREYİ ÜNİTESİ (fırın çıkışında) — tam tarif:</b> pideci fırçasının otomatiği. <b>Hazne:</b> 3-4 L paslanmaz, ısıtmalı (bain-marie, 45-50 °C) — yağı sıvı tutar; termostat + seviye sensörü PLC'ye bağlı. <b>Yağ:</b> sadeyağ (yanmaz, aroması tereyağı) veya yarı tereyağı + yarı ayçiçek — pilot tadımında kesinleşir. <b>Püskürtme:</b> gıda tipi nozül + damla önleyici, küçük pompa; porsiyon 3-5 ml/pide, gramaj PLC'den. <b>Çalışma:</b> kol pideyi spreyin altından tek harekette geçirir (~2 sn) — koyma-alma yok. <b>Dolum:</b> tüketim ~0,4 L/gün; hamur dolum gününde hazne tazelenir. <b>Temizlik:</b> hattın tek sıvı borusu burası — gün sonu sıcak su+deterjan çekilerek nozül kendini yıkar (mini CIP). <b>Tedarik:</b> fırıncılık sektörünün hazır "food spraying" üniteleri ve waffle/popcorn yağ dispenserleri bu iş için satılıyor — hazır alınıp uyarlanır, güç ihtiyacı 100-200 W.</li>
+          <li><b>YAĞLAMA — ✔ KARAR: ROBOT SIKAR.</b> Ayrı sabit istasyon yok. <b>Pilot (v0):</b> kolun tutucusuna sabitlenmiş gıda tipi aerosol sprey + pnömatik tetik parmağı — kol, kutuya koyduğu pidenin üstünde bir tur atıp sıkar (~3 sn); kutu bitince kişi dolum sırasında değiştirir (~150 pide/kutu, ~0,8 TL/pide). <b>Ürün (v1):</b> bileğe monte ısıtmalı hatlı mini nozül — sadeyağ, arkadaki 3-4 L ısıtmalı tanktan (45-50 °C) ince gıda hortumuyla beslenir, porsiyon PLC'den 3-5 ml; gün sonu sıcak su çekilerek hat kendini yıkar. Vitrin bonusu: kolun pidenin üstünde dönerek yağ sıkması, camdan izlenen şovun en güzel karesi.</li>
           <li><b>Konveyör B planında:</b> yüksek hacim gerekirse kapısız sürekli akış için kompakt konveyör (Zanolli 06/40 sınıfı) devreye alınır — elektrik bedeli karşılığında kapasite.</li>
           <li><b>Altyapı notu:</b> 2 kavite toplam 4-6 kW — tek faz sınırında; pano baştan 380V hazırlanır. Kapalı hazne + gece eko-modu = elektrik kalemine ayda ~2-4 bin TL tasarruf.</li>
         </ul>
