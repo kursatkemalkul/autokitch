@@ -2490,6 +2490,37 @@ tr.modeoff{display:none!important}
 
     </div><!-- /ygrid -->
 
+    <div class="ybox rv d1" style="margin-top:26px;border:2px solid #1d7a4f">
+      <div class="yhead">
+        <span class="ytag" style="background:#eaf6ef;color:#1d7a4f;border-color:#bfe3cd">YOL C · CANLI TASARIM DEFTERİ — İSTASYON İSTASYON KENDİ HATTIMIZ</span>
+        <h3>Tek dükkân içinde çözülen tam hat — merkez mutfaksız, bir kişilik</h3>
+        <p>Kurallarımız: her şey <b>tek dükkânın içinde</b> çözülür (merkez mutfak yok), içeride <b>bir kişi</b> çalışır ve ona <b>çok az iş</b> düşer, ürün <b>yuvarlak pide</b>dir (pizza hattıyla aynı makineler). Her istasyon kararlaştıkça bu deftere işlenir.</p>
+      </div>
+
+      <div style="margin-top:14px;padding:16px 18px;background:#f4faf6;border-radius:14px">
+        <div style="font-weight:800;color:#1d7a4f;font-size:14px;letter-spacing:.02em">İSTASYON 1 · HAMUR — ✔ KARAR VERİLDİ</div>
+        <p style="margin:8px 0 12px;font-size:14px;color:#3f4a5c">Hamur topları mahalle fırınından hazır gelir (220 g, kasayla) — yoğurma ve kesme makinesi yok, o yatırım ve temizlik yükü baştan siliniyor. Şekil verme tamamen içeride, otomatik.</p>
+        <ul style="margin:0;padding-left:18px;font-size:14px;line-height:1.65;color:#22304a">
+          <li><b>Dik buzdolabı (+3&nbsp;°C) — ana stok:</b> endüstriyel dik tip, GN 2/1 tepsi raylı; 10-12 tepsi × 20 top = <b>200-240 top ≈ 2-3 günlük stok</b> (hedef 100/gün). Robot tarafında motorlu <b>servis kapağı + tepsi sürücüsü</b> (tek özel imalat parçası — sıradaki tepsiyi kapağa getirir, kapak 5 sn açılır, kol alır). Ölçü ≈ 140×80×205 cm.</li>
+          <li><b>Çukurlu silikon tepsiler:</b> GN 2/1 (65×53 cm), 20 çukur; çukur Ø12 cm, top 220 g / Ø9-10 cm. Tek parça — yapışmaz, tek hamlede yıkanır; çukur topu ortalar, robot hep aynı noktadan alır (Nala'nın kase sistemiyle aynı mantık, 700 kase yıkamadan).</li>
+          <li><b>Ilık bekleme rafı:</b> oda sıcaklığında, kapaklı, 1 tepsi (10-12 top). Isıtıcı yok — top preslenmeden önce 30-60 dk burada ılınır; sınır 2-3 saat.</li>
+          <li><b>Pres — topu yuvarlak tabana basan makine (Fersah, İstanbul):</b> iki aday: <b>CP-330 soğuk pres</b> (Ø40 cm'e kadar, 400-500 adet/saat, 0,75 kW, 55×80×83 cm) veya <b>PZP-400 ısıtmalı pres</b> (500-700 adet/saat, 100-750 g, 15-40 cm, 3,5 kW). Seçim pilot testiyle: rafta 30 dk beklemiş top soğuk preste geri çekiyorsa ısıtmalı alınır. Teklif ve otomasyon soruları (çıkış konveyörü, PLC) firmaya iletildi.</li>
+          <li><b>Çöp haznesi:</b> presin yanında, kapaklı, sayaçlı — süresi dolan top buraya, gün sonunda fire raporu (beklenen fire %3-5).</li>
+          <li><b>Rezerv dondurucu yuvası — bugün BOŞ:</b> 140×80 cm boşluk + priz hazır, yazılımda "Bölme 2" tanımlı ama pasif, <b>robot kolun erişimi bu boşluğu bugünden kapsar</b>. İhtiyaç doğunca çift kapılı dondurucu takılır: 35 tepsi = <b>600-700 donuk top</b>, dolum haftada bire iner (donuk top tedarikçisi veya şok soğutucuyla). Kurulumu yarım günlük iş.</li>
+        </ul>
+        <div style="margin-top:14px;font-weight:700;color:#1d7a4f;font-size:13px">NASIL ÇALIŞIR</div>
+        <ol style="margin:6px 0 0;padding-left:18px;font-size:14px;line-height:1.65;color:#22304a">
+          <li><b>Dolum:</b> 3 günde bir fırından kasalar gelir; kişi tepsilere dizer, ekranda onaylar — <b>10 dakika</b>.</li>
+          <li><b>Adresli raf + FIFO:</b> her çukurun adresi (A1, B3…) ve her topun giriş saati yazılımda. Robot söylenen adrese gider, kamera milimetrik düzeltir; <b>en eski top önce</b> kullanılır.</li>
+          <li><b>Sürekli döngü:</b> ılık raf hep 10-12 topta tutulur; sipariş düşünce raftan top → pres → sos-malzeme → fırın. Basılan taban <b>bekletilmez</b>, doğrudan üretime gider.</li>
+          <li><b>Süre bekçisi:</b> buzdolabında 4 günü, rafta 2-3 saati aşan top otomatik çöpe; sayaç düşer.</li>
+          <li><b>Gece rutini:</b> sistem dünkü satışa bakıp yarının stoğunu ayarlar; stok 1 günün altına inerse sahibine mesaj atar. Dondurucu aktifse gece aktarma da bu rutinde (donuk top buzdolabında 8-12 saatte çözülür).</li>
+          <li><b>İnsan işi (hamurla ilgili tamamı):</b> 3 günde bir 10 dk kasa dizme + günlük ~15 dk hazne doldurma + 45 dk temizlik.</li>
+        </ol>
+        <div style="margin-top:14px;font-size:13px;color:#68758a"><b>Sıradaki istasyonlar (bu deftere sırayla eklenecek):</b> 2 · Sos + kaşar dozajı &nbsp;→&nbsp; 3 · Tünel fırın &nbsp;→&nbsp; 4 · Kutulama &nbsp;→&nbsp; 5 · QR teslimat dolabı + içecek &nbsp;→&nbsp; Omurga: robot kol + kamera + PLC. Başlangıç menüsü: kaşarlı · sucuklu · kavurmalı (yuvarlak pide).</div>
+      </div>
+    </div>
+
     <div class="ysec-h rv">Artılar &amp; eksiler — yan yana</div>
     <div class="ygrid">
       <div class="ybox ya rv d1">
