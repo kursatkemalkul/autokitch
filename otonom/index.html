@@ -2609,6 +2609,17 @@ tr.modeoff{display:none!important}
         <text x="1055" y="182" text-anchor="middle" font-size="10" font-weight="800" fill="#1d7a4f">3 · KAPAKLI HAZNE FIRIN</text>
         <text x="1055" y="195" text-anchor="middle" font-size="10" font-weight="800" fill="#1d7a4f">2 kavite · 25-35/saat</text>
         
+        <rect x="1158" y="122" width="124" height="88" fill="#eaf6ef" stroke="#1d7a4f" stroke-width="2.5"/>
+        <line x1="1164" y1="142" x2="1272" y2="152" stroke="#bfe3cd" stroke-width="1.5"/>
+        <line x1="1164" y1="166" x2="1272" y2="176" stroke="#bfe3cd" stroke-width="1.5"/>
+        <line x1="1164" y1="190" x2="1272" y2="200" stroke="#bfe3cd" stroke-width="1.5"/>
+        <circle cx="1264" cy="147" r="4.5" fill="#f2d09b" stroke="#c2600f"/>
+        <circle cx="1264" cy="171" r="4.5" fill="#f2d09b" stroke="#c2600f"/>
+        <circle cx="1264" cy="195" r="4.5" fill="#f2d09b" stroke="#c2600f"/>
+        <line x1="1278" y1="128" x2="1278" y2="140" stroke="#1d7a4f" stroke-width="1.5" stroke-dasharray="3 3"/>
+        <line x1="1278" y1="152" x2="1278" y2="164" stroke="#1d7a4f" stroke-width="1.5" stroke-dasharray="3 3"/>
+        <line x1="1278" y1="176" x2="1278" y2="188" stroke="#1d7a4f" stroke-width="1.5" stroke-dasharray="3 3"/>
+        <text x="1220" y="114" text-anchor="middle" font-size="9.5" font-weight="800" fill="#1d7a4f">İÇECEK SOĞUTUCUSU ✔</text>
         <text x="1220" y="222" text-anchor="middle" font-size="9.5" font-weight="800" fill="#1d7a4f">4 · KESİM+KUTU ✔</text>
         <text x="1220" y="392" text-anchor="middle" font-size="9" fill="#68758a">piston + bıçak yıldızı</text>
         <text x="1335" y="126" text-anchor="middle" font-size="10.5" font-weight="800" fill="#1d7a4f">5 · QR DOLAP ✔</text>
@@ -2691,7 +2702,7 @@ tr.modeoff{display:none!important}
         <ul style="margin:0;padding-left:18px;font-size:14px;line-height:1.65;color:#22304a">
           <li><b>Göz sayısı:</b> 10-12 göz (iç ~36×36×12 cm — 30 cm kutu + pay). Fırın saatte 25-35 üretir, müşteri ortalama 5-10 dk'da alır → pik saatte 4-8 kutu aynı anda bekler; kurye gecikmeleri için pay var.</li>
           <li><b>Isıtmalı gözler (~60 °C):</b> pide beklerken sıcak kalır — pizza dolaplarının standardı. Göz kapısında LED durum ışığı (yeşil = hazır).</li>
-          <li><b>İçecek soğutucusu (ayrı dolap, robot erişiminde):</b> eğimli kanallı — içecek alınınca arkadaki öne kayar, <b>robot hep kanal ağzından alır</b> (adres sabit). Kanal başına tek ürün: 2× kutu kola · ayran · su · altta 1 L şişeler. Kapak yerine şerit perde (motor yok, soğuk kaçmaz); stok sayacı yazılımda, dolum 3 günde bir. Teslimatta ayrı göz YOK — kol içeceği kutuyla <b>aynı göze</b> koyar, müşteri tek kapak açar.</li>
+          <li><b>İçecek soğutucusu — ÜST KABİN (kesim istasyonunun üstüne monte, robot erişiminde):</b> eğimli kanallı — içecek alınınca arkadaki öne kayar, <b>robot hep kanal ağzından alır</b> (adres sabit). Kanal başına tek ürün: 2× kutu kola · ayran · su · altta 1 L şişeler. Kapak yerine şerit perde (motor yok, soğuk kaçmaz); stok sayacı yazılımda, dolum 3 günde bir. Teslimatta ayrı göz YOK — kol içeceği kutuyla <b>aynı göze</b> koyar, müşteri tek kapak açar.</li>
           <li><b>Robot eli (omurga notu):</b> tek <b>kombine el</b> — bir yüzü paslanmaz kürek (hamur topu, taban, pişmiş pide), öbür yüzü silikon pedli geniş pençe 0-110 mm (kutu, kutu kola, 1 L şişe boynu); bilek çevirince yüz değişir. Otomatik el değiştirici (tool changer) YOK — pahalı, yavaş, gereksiz. Kol bu yüzden 10 kg taşıma sınıfından seçilir.</li>
           <li><b>Yazılım:</b> sipariş no ↔ göz eşleşmesi PLC'de; süre bekçisi burada da: 30 dk alınmayan sipariş için müşteriye hatırlatma, 2 saatte imha kaydı.</li>
           <li><b>Göz mekanizması (kesin kurgu):</b> merkezde <b>TEK QR kamerası</b> + ekran + kontrol kartı. Her gözde: <b>motorlu ön kapak</b> (PC açar-kapatır, sıkışma emniyetli), <b>yaylı arka kapakçık</b> (robot tarafı dükkânın kilitli içi — motor gerekmez, robot iter, yay kapatır), <b>kızılötesi doluluk sensörü</b> (kutu alınınca "boşaldı"yı görür), kapak sensörü, 50-80W termostatlı ısıtıcı (boş göz ısıtılmaz), LED. <b>Sekans:</b> robot koyar → sensör doldu → LED + mesaj → müşteri ortadaki kameraya QR okutur → o gözün kapağı motorla açılır → sensör boşaldı → 3-5 sn sonra kapak kendini kapatır → göz sıradaki siparişe hazır. Okutup almayana: 60 sn sonra kapak kapanır, kod tekrar çalışır.</li>
