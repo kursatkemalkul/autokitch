@@ -2509,7 +2509,7 @@ tr.modeoff{display:none!important}
         <text x="300" y="84" text-anchor="middle" font-size="12" font-weight="800" fill="#1d7a4f" letter-spacing=".04em">İSTASYON 1 · HAMUR ✔</text>
         <text x="855" y="84" text-anchor="middle" font-size="12" font-weight="800" fill="#1d7a4f" letter-spacing=".04em">İSTASYON 2 · SOS-MALZEME (taslak)</text>
         <text x="1055" y="84" text-anchor="middle" font-size="12" font-weight="800" fill="#1d7a4f" letter-spacing=".04em">İST. 3 · FIRIN ✔</text>
-        <text x="1300" y="84" text-anchor="middle" font-size="12" font-weight="800" fill="#8a94a2" letter-spacing=".04em">SIRADAKİLER</text>
+        
         <line x1="28" y1="94" x2="1412" y2="94" stroke="#e3e9f2" stroke-width="1"/>
 
         <rect x="24" y="102" width="1372" height="284" rx="16" fill="none" stroke="#c2600f" stroke-width="2" stroke-dasharray="10 7" opacity=".8"/>
@@ -2597,18 +2597,21 @@ tr.modeoff{display:none!important}
         <line x1="1220" y1="289" x2="1220" y2="319" stroke="#1d7a4f" stroke-width="1.5"/>
         <line x1="1209" y1="293" x2="1231" y2="315" stroke="#1d7a4f" stroke-width="1.5"/>
         <line x1="1231" y1="293" x2="1209" y2="315" stroke="#1d7a4f" stroke-width="1.5"/>
-        <g stroke="#8a94a2" fill="#fafbfd" stroke-width="2" stroke-dasharray="7 5">
-          <rect x="1280" y="136" width="110" height="236"/>
-        </g>
-        <line x1="1280" y1="215" x2="1390" y2="215" stroke="#8a94a2" stroke-width="1.5" stroke-dasharray="4 3"/>
-        <line x1="1280" y1="294" x2="1390" y2="294" stroke="#8a94a2" stroke-width="1.5" stroke-dasharray="4 3"/>
-        <line x1="1335" y1="136" x2="1335" y2="372" stroke="#8a94a2" stroke-width="1.5" stroke-dasharray="4 3"/>
+        <rect x="1280" y="136" width="110" height="236" fill="#eaf6ef" stroke="#1d7a4f" stroke-width="2.5"/>
+        <line x1="1280" y1="215" x2="1390" y2="215" stroke="#bfe3cd" stroke-width="1.5"/>
+        <line x1="1280" y1="294" x2="1390" y2="294" stroke="#bfe3cd" stroke-width="1.5"/>
+        <line x1="1335" y1="136" x2="1335" y2="372" stroke="#bfe3cd" stroke-width="1.5"/>
+        <rect x="1288" y="180" width="38" height="14" rx="2" fill="#f2d09b" stroke="#c2600f"/>
+        <rect x="1343" y="258" width="38" height="14" rx="2" fill="#f2d09b" stroke="#c2600f"/>
+        <circle cx="1330" cy="146" r="3" fill="#1d7a4f"/><circle cx="1385" cy="146" r="3" fill="#1d7a4f"/>
+        <circle cx="1330" cy="224" r="3" fill="#1d7a4f"/><circle cx="1385" cy="224" r="3" fill="#8a94a2"/>
+        <text x="1335" y="360" text-anchor="middle" font-size="8.5" fill="#1d7a4f">ısıtmalı gözler · LED</text>
         <text x="1055" y="182" text-anchor="middle" font-size="10" font-weight="800" fill="#1d7a4f">3 · KAPAKLI HAZNE FIRIN</text>
         <text x="1055" y="195" text-anchor="middle" font-size="10" font-weight="800" fill="#1d7a4f">2 kavite · 25-35/saat</text>
         
         <text x="1220" y="222" text-anchor="middle" font-size="9.5" font-weight="800" fill="#1d7a4f">4 · KESİM+KUTU ✔</text>
         <text x="1220" y="392" text-anchor="middle" font-size="9" fill="#68758a">piston + bıçak yıldızı</text>
-        <text x="1335" y="126" text-anchor="middle" font-size="10.5" font-weight="700" fill="#8a94a2">5 · QR DOLAP + içecek</text>
+        <text x="1335" y="126" text-anchor="middle" font-size="10.5" font-weight="800" fill="#1d7a4f">5 · QR DOLAP ✔</text>
 
         <defs><marker id="akok" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 z" fill="#1a49b8"/></marker></defs>
         <g font-size="15" fill="#1a49b8" font-weight="800">
@@ -2646,7 +2649,7 @@ tr.modeoff{display:none!important}
           <li><b>Gece rutini:</b> sistem dünkü satışa bakıp yarının stoğunu ayarlar; stok 1 günün altına inerse sahibine mesaj atar. Dondurucu aktifse gece aktarma da bu rutinde (donuk top buzdolabında 8-12 saatte çözülür).</li>
           <li><b>İnsan işi (hamurla ilgili tamamı):</b> 3 günde bir 10 dk kasa dizme + günlük ~15 dk hazne doldurma + 45 dk temizlik.</li>
         </ol>
-        <div style="margin-top:14px;font-size:13px;color:#68758a"><b>Kalan kararlar:</b> 2 · Sos-malzeme dozajı — kule mi, dilimli porsiyon kartuşu mu, xPizza Cube mü (fiyat geldi: 39.000 $ + gümrük ≈ 2,2 mln TL — kendi kulemiz önde) &nbsp;→&nbsp; 5 · QR teslimat dolabı + içecek &nbsp;→&nbsp; Omurga: ray üstünde tek kol + kamera + PLC. Başlangıç menüsü: kaşarlı · sucuklu · kavurmalı (yuvarlak pide).</div>
+        <div style="margin-top:14px;font-size:13px;color:#68758a"><b>Kalan tek karar:</b> 2 · Sos-malzeme dozajı — kule mi, dilimli porsiyon kartuşu mu, xPizza Cube mü (39.000 $ + gümrük ≈ 2,2 mln TL — kendi kulemiz önde). Omurga (ray üstünde tek kol + kamera + PLC) fiilen kararlı, resmî kilidi bekliyor. Başlangıç menüsü: kaşarlı · sucuklu · kavurmalı (yuvarlak pide).</div>
       <div style="margin-top:14px;padding:16px 18px;background:#f4faf6;border-radius:14px">
         <div style="font-weight:800;color:#1d7a4f;font-size:14px;letter-spacing:.02em">İSTASYON 3 · FIRIN — ✔ KARAR VERİLDİ: MOTORLU KAPAKLI HAZNE (2 KAVİTE)</div>
         <p style="margin:8px 0 12px;font-size:14px;color:#3f4a5c">Pazzi ve konsept renderlarla aynı çözüm: <b>motorlu kapaklı, üst üste 2 kaviteli hazne fırın</b> — kapağı robot değil motor açar, robot kürekle koyar-alır. Kapalı hazne konveyörden <b>daha az elektrik yakar</b> (iki ucu açık tünelde ısı sürekli kaçar: ~1.300-1.800 kWh/ay yerine ~500-800 kWh/ay) ve dikey istiflendiği için tek gövdede daha az yer tutar.</p>
@@ -2670,6 +2673,18 @@ tr.modeoff{display:none!important}
           <li><b>Kutu hattı — piyasada hazır makinesi YOK, kendimiz yapacağız:</b> fabrika tipi "box erector"lar devasa ve pahalı; bizim ölçeğe hazır ürün çıkmadı. Kurgumuz (entegratörle imal, basit mekanik): eleman yassı kutuları katlayıp rafa dizer (3 günde bir ~10 dk) → raf, en alttaki <b>katlanmış-açık kutuyu</b> öne sürer → kesilen pide itilir → kutu ilerlerken <b>sabit eğik sac kapağı kendiliğinden kapatır</b> (motorsuz — kapatan şey kutunun kendi hareketi) → robot kapalı kutuyu alır. Hareketli parça yalnız itici; v1 tek gövdede vakumlu otomatik katlayıcı eklenir, insan katlaması da biter.</li>
           <li><b>Maliyet:</b> bıçak seti + piston + gövde + itici ≈ <b>15-20 bin TL</b>; kutu açıcıyla birlikte ~40-60 bin TL.</li>
           <li><b>Hijyen:</b> bıçak kafası tek hamlede çıkar, günlük temizlikte yıkanır.</li>
+        </ul>
+      </div>
+      <div style="margin-top:14px;padding:16px 18px;background:#f4faf6;border-radius:14px">
+        <div style="font-weight:800;color:#1d7a4f;font-size:14px;letter-spacing:.02em">İSTASYON 5 · QR TESLİMAT DOLABI + İÇECEK — ✔ KARAR VERİLDİ</div>
+        <p style="margin:8px 0 12px;font-size:14px;color:#3f4a5c">Dükkânın müşteriye bakan yüzü. Robot arkadan koyar, müşteri önden alır — <b>çift kapılı (geçişli) gözler</b>. Sipariş hazır olunca telefona kod gider; ekrana QR okutulur, yalnız o siparişin gözü açılır.</p>
+        <ul style="margin:0;padding-left:18px;font-size:14px;line-height:1.65;color:#22304a">
+          <li><b>Göz sayısı:</b> 10-12 göz (iç ~36×36×12 cm — 30 cm kutu + pay). Fırın saatte 25-35 üretir, müşteri ortalama 5-10 dk'da alır → pik saatte 4-8 kutu aynı anda bekler; kurye gecikmeleri için pay var.</li>
+          <li><b>Isıtmalı gözler (~60 °C):</b> pide beklerken sıcak kalır — pizza dolaplarının standardı. Göz kapısında LED durum ışığı (yeşil = hazır).</li>
+          <li><b>İçecek:</b> ayrı göz YOK — kol, sipariş içecekliyse soğutucudan alıp kutuyla <b>aynı göze</b> koyar; müşteri tek kapak açar.</li>
+          <li><b>Yazılım:</b> sipariş no ↔ göz eşleşmesi PLC'de; süre bekçisi burada da: 30 dk alınmayan sipariş için müşteriye hatırlatma, 2 saatte imha kaydı.</li>
+          <li><b>Tedarik:</b> piyasada hazır sınıf VAR — ısıtmalı teslimat dolapları (Carter-Hoffmann/Hatco tipi, ithal) ve Winnsen tipi pizza dolapları (kampanya maili atıldı, cevap bekleniyor). Yerli alternatif: kargo-dolabı (kargomat) üreticisine ısıtmalı göz + çift kapı custom — muhtemelen en ucuzu. Bütçe bandı ~150-400 bin TL, teklifle netleşir.</li>
+          <li><b>Vitrin rolü:</b> dolap cephenin kendisi — üstünde menü/sipariş ekranı; "camın arkasında robot" görünümüyle dükkânın reklam yüzü.</li>
         </ul>
       </div>
       </div>
