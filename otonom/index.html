@@ -2552,6 +2552,7 @@ tr.modeoff{display:none!important}
         <rect x="576" y="314" width="34" height="58" fill="#f4f6f9" stroke="#8a94a2" stroke-width="2"/>
         <text x="593" y="392" text-anchor="middle" font-size="10" fill="#68758a">çöp</text>
 
+        <line x1="360" y1="366" x2="1300" y2="366" stroke="#1a49b8" stroke-width="3" stroke-dasharray="12 7" opacity=".55"/>
         <rect x="640" y="332" width="56" height="40" fill="#eef4ff" stroke="#1a49b8" stroke-width="2.5"/>
         <line x1="668" y1="332" x2="668" y2="222" stroke="#1a49b8" stroke-width="7" stroke-linecap="round"/>
         <line x1="668" y1="222" x2="732" y2="182" stroke="#1a49b8" stroke-width="6" stroke-linecap="round"/>
@@ -2560,7 +2561,7 @@ tr.modeoff{display:none!important}
         <circle cx="732" cy="182" r="7" fill="#ffffff" stroke="#1a49b8" stroke-width="3"/>
         <path d="M 766 234 l 6 10 M 778 232 l -2 12" stroke="#1a49b8" stroke-width="4" stroke-linecap="round" fill="none"/>
         
-        <text x="668" y="392" text-anchor="middle" font-size="10" font-weight="700" fill="#1a49b8">robot kol + kamera</text>
+        <text x="668" y="392" text-anchor="middle" font-size="10" font-weight="700" fill="#1a49b8">robot kol · 7. eksen ray · bilek kamerası</text>
 
         <rect x="800" y="120" width="130" height="95" fill="#eaf6ef" stroke="#1d7a4f" stroke-width="2.5"/>
         <line x1="843" y1="120" x2="843" y2="215" stroke="#bfe3cd" stroke-width="1.5"/>
@@ -2671,7 +2672,7 @@ tr.modeoff{display:none!important}
           <li><b>Gece rutini:</b> sistem dünkü satışa bakıp yarının stoğunu ayarlar; stok 1 günün altına inerse sahibine mesaj atar. Dondurucu aktifse gece aktarma da bu rutinde (donuk top buzdolabında 8-12 saatte çözülür).</li>
           <li><b>İnsan işi (hamurla ilgili tamamı):</b> 3 günde bir 10 dk kasa dizme + günlük ~15 dk hazne doldurma + 45 dk temizlik.</li>
         </ol>
-        <div style="margin-top:14px;font-size:13px;color:#68758a"><b>Kalan tek karar:</b> 2 · Sos-malzeme dozajı — kule mi, dilimli porsiyon kartuşu mu, xPizza Cube mü (39.000 $ + gümrük ≈ 2,2 mln TL — kendi kulemiz önde). Omurga (ray üstünde tek kol + kamera + PLC) fiilen kararlı, resmî kilidi bekliyor. <b>Kaba makine+otomasyon toplamı ≈ 1,7-2,9 mln TL</b> — maliyet tablosundaki Model S yatırım kalemiyle uyumlu; Fersah / Kutu / Metasel / Winnsen teklifleri geldikçe netleşecek. Başlangıç menüsü: kaşarlı · sucuklu · kavurmalı (yuvarlak pide).</div>
+        <div style="margin-top:14px;font-size:13px;color:#68758a"><b>Kalan tek karar:</b> 2 · Sos-malzeme dozajı — kule mi, dilimli porsiyon kartuşu mu, xPizza Cube mü (39.000 $ + gümrük ≈ 2,2 mln TL — kendi kulemiz önde). Omurga + Beyin ✔ karar verildi — blok aşağıda. <b>Kaba makine+otomasyon toplamı ≈ 1,7-2,9 mln TL</b> — maliyet tablosundaki Model S yatırım kalemiyle uyumlu; Fersah / Kutu / Metasel / Winnsen teklifleri geldikçe netleşecek. Başlangıç menüsü: kaşarlı · sucuklu · kavurmalı (yuvarlak pide).</div>
       <div style="margin-top:14px;padding:16px 18px;background:#fdf7ea;border:1.5px dashed #d9b96a;border-radius:14px">
         <div style="font-weight:800;color:#9a6b1f;font-size:14px;letter-spacing:.02em">İSTASYON 2 · SOS + MALZEME DOZAJI — ⏳ SON AÇIK KARAR</div>
         <p style="margin:8px 0 12px;font-size:14px;color:#3f4a5c">Görev: basılmış tabana kaşar + sucuk + kavurma dozajı (yağ burada DEĞİL — fırın çıkışındaki sabit spreyde). Üç seçenek masada:</p>
@@ -2720,6 +2721,23 @@ tr.modeoff{display:none!important}
           <li><b>Göz mekanizması (kesin kurgu):</b> merkezde <b>TEK QR kamerası</b> + ekran + kontrol kartı. Her gözde: <b>motorlu ön kapak</b> (PC açar-kapatır, sıkışma emniyetli), <b>yaylı arka kapakçık</b> (robot tarafı dükkânın kilitli içi — motor gerekmez, robot iter, yay kapatır), <b>kızılötesi doluluk sensörü</b> (kutu alınınca "boşaldı"yı görür), kapak sensörü, 50-80W termostatlı ısıtıcı (boş göz ısıtılmaz), LED. <b>Sekans:</b> robot koyar → sensör doldu → LED + mesaj → müşteri ortadaki kameraya QR okutur → o gözün kapağı motorla açılır → sensör boşaldı → 3-5 sn sonra kapak kendini kapatır → göz sıradaki siparişe hazır. Okutup almayana: 60 sn sonra kapak kapanır, kod tekrar çalışır.</li>
           <li><b>Tedarik:</b> hazır sınıf VAR — ısıtmalı teslimat dolapları (Carter-Hoffmann/Hatco tipi, ithal), Winnsen pizza dolabı (mail beklemede). <b>Yerli adaylar: <a href="https://kutu.tech/" target="_blank" rel="noopener">Kutu</a> ve <a href="https://metasel.com/akilli-dolap-sistemleri-istanbul-kocaeli-yalova" target="_blank" rel="noopener">Metasel</a></b> — akıllı teslimat dolabı üreticileri; ısıtmalı göz + motorlu kapak + API özelleştirmesi sorulacak. Isıtmalı gövde bilgisi ayrıca yerli endüstriyel mutfakçılarda (S2000/Oskar/Asaf sınıfı). Bütçe bandı ~150-400 bin TL, teklifle netleşir.</li>
           <li><b>Vitrin rolü:</b> dolap cephenin kendisi — üstünde menü/sipariş ekranı; "camın arkasında robot" görünümüyle dükkânın reklam yüzü.</li>
+        </ul>
+      </div>
+
+      <div style="margin-top:14px;padding:16px 18px;background:#eef4ff;border-radius:14px">
+        <div style="font-weight:800;color:#1a49b8;font-size:14px;letter-spacing:.02em">OMURGA + BEYİN — ✔ KARAR VERİLDİ: RAY ÜSTÜNDE TEK KOL + ÜÇ KATMANLI KONTROL</div>
+        <p style="margin:8px 0 12px;font-size:14px;color:#3f4a5c">Bütün istasyonlara tek kol servis verir, bütün makineleri tek beyin yönetir. <b>Oda yok, server satın alma yok, laptop yok</b> — beynin tamamı elektrik panosunun rafında bir ayakkabı kutusu hacmindedir.</p>
+        <ul style="margin:0;padding-left:18px;font-size:14px;line-height:1.65;color:#22304a">
+          <li><b>Ray + kol (7. eksen):</b> 3-4 m lineer ray üstünde 6 eksenli, 10 kg sınıfı cobot — hattaki her istasyona kayarak ulaşır. Adaylar: Dobot CR10 (ekonomik) · Fanuc CRX-10iA/L · UR10e. Zaman bütçesi doğrulandı: pide başına ~50 sn kol işi → pik saatte (30 pide) doluluk <b>%42</b> — tek kol bol bol yeter; ara konveyör ihtiyacının tamamını siler.</li>
+          <li><b>Kombine el:</b> bir yüzü paslanmaz kürek (top, taban, pişmiş pide), öbür yüzü silikon pedli pençe 0-110 mm (kutu, kutu kola, 1 L şişe); bilek dönünce yüz değişir. Bilekte kamera — adres ince ayarı. Otomatik el değiştirici YOK (pahalı, yavaş, gereksiz).</li>
+          <li><b>Kolun görev listesi:</b> gece dondurucu→buzdolabı aktarımı · tepsiden top→pres · taban→dozaj tablası · tabla→fırın · fırından al→sprey altından geçir→kesime bırak · kapalı kutu→göz · içecek→aynı göz.</li>
+          <li><b>Arıza planı:</b> servis sözleşmesi + kritik yedekler rafta; Model M'de kişi pik saatte kürekle manuel devralabilir. Kol durunca hat durur — tek nokta riski bilinçli kabul, iki koldan ucuz yönetilir.</li>
+          <li><b>BEYİN · Katman 1 — PLC (refleksler):</b> Siemens S7-1200 sınıfı endüstriyel kontrol kartı; motorlar, kapaklar, ısıtıcılar, sensörler buna bağlı. Laptop değil çünkü PLC fabrika donanımıdır — 10 yıl kesintisiz çalışır. Robot kolun kendi kontrol kutusu kolla gelir; PLC ona yalnız "şu programı çalıştır" der.</li>
+          <li><b>BEYİN · Katman 2 — mini endüstriyel PC (akıl):</b> Raspberry sınıfının endüstriyel abisi, fansız, avuç içi (~10-30 bin TL). Sipariş kuyruğu, reçeteler, FIFO + süre bekçileri, kiosk ve dolap ekranları, kamera işleme, entegrasyonlar: kiosk içinde banka POS modülü (ödeme doğrudan bankaya) + Yemeksepeti/Getir sipariş API'si.</li>
+          <li><b>BEYİN · Katman 3 — kiralık bulut (uzaktan göz):</b> ayda ~300-1.000 TL sanal sunucu (satın alma yok): telefondan canlı panel ("3 sipariş, kaşar %40"), satış kayıtları, uzaktan güncelleme, arıza bildirimi. <b>İnternet koparsa dükkân yerel beyinle çalışmaya devam eder</b> — yalnız uzaktan izleme kesilir.</li>
+          <li><b>Siparişin yolculuğu:</b> kiosk/YS → mini PC reçeteyi kuyruğa yazar ("kaşarlı" = adım listesi) → adımlar tek tek PLC'ye → her adım sensör onayıyla ilerler → biten sipariş göze eşlenir, müşteriye SMS.</li>
+          <li><b>Kontrol iki ekrandan:</b> dükkânda dokunmatik servis paneli (gramaj/süre menüden değişir, kod yok) + telefonda aynı panel.</li>
+          <li><b>Fiyat bantları:</b> kol 600 bin-1,8 mln · ray 150-300 bin · el+kamera 80-160 bin · PLC + mini PC + yazılım 150-400 bin · şasi/pano/montaj 100-200 bin TL.</li>
         </ul>
       </div>
       </div>
