@@ -16,5 +16,7 @@ Kapananlar silinmez, ÇÖZÜLDÜ olarak kalır. Güncelleme: 3 Eyl 2026 (v7 — 
 | T10 | Kavurma az/çok satıldı (kaset erken/geç bitti) | ÇÖZÜLDÜ (v7) | Saat kuralı (kavurma/kuşbaşı 3,5 g) dolan kaseti çıkarır (≤1 kg fire); donmuş kasetin saati durur, haftaya devreder; çok satışta robot erken çözer, biterse kiosk çeşidi kapatır |
 | T11 | Kaşar 15 kg kasette topaklanma | ÖNERİ VAR | Sütun 25 cm'e indi; pilot testi, gerekirse çark miline köprü kırıcı kanat |
 | T12 | Robot 15 kg kaset takası — kobot yükü, kulp, kapaklar | AÇIK | Kobot ≥12 kg sınıfı (UR16e / CRX-20), kaset kulpu = robot tutamağı, üst/alt kapak motorlu-sensörlü — robot turu |
-| T13 | Farklı boy kasetlerde çıkışlar pideye simetrik gelmiyor | ÇÖZÜLDÜ (v7) | 4 çıkış tabla kayma ekseni üzerinde (±3 cm, x 30·39·45,5·53,5); tabla Ø36 kayar+döner → merkezden kenara spiral |
+| T13 | Farklı boy kasetlerde çıkışlar pideye simetrik gelmiyor | ÇÖZÜLDÜ (v8) | v7: eksen kuralı; v8: tabla kalktı, robot gezdirir → çıkış konumu serbest (bkz. T16) |
 | T14 | Soğutma/elektrik erişimi | ÇÖZÜLDÜ (v7) | Teknik bölme EN ÜSTTE (soğutma 25 + elektrik 14), servis üstten; diğer istasyonlarda da (STORE) aynı ilke |
+| T15 | Döner-kayar tabla + kızak + 2 motor | ÇÖZÜLDÜ (v8) | Kemal tepsi konsepti: robot pideyi TEPSİ ucuyla çıkışların altında gezdirir; tabla ve sürücüleri kalktı; dozaj boşluğu açık, soğutulmaz |
+| T16 | Tepsi yan duvara çarpar (Blender, sağ uç) | ÇÖZÜLDÜ (v8) | Tepsi merkezi x 20-52, y ≥17, ön açık → çıkışlar içe çekildi (20·40·47·52), koni 3-8 cm içe taşır |

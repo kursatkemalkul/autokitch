@@ -18,3 +18,5 @@ belgeler, mail taslakları oraya gider. Yeni netlik = yeni versiyon, ilgili klas
 
 İstasyon isimleri (ONAYLI): 1 STORE · 2 PRESS · 3 TOPPING · 4 OVEN · 5 PACK · 6 PICKUP (+SERVICE)
 İstek üzerine tüm istasyonlar birleştirilip tek "full makine" çizimi üretilir (_uretec'ten).
+
+- 8_ROBOT    — robot ucu/tepsi (4 Eyl 2026): robot_tepsi_el_v1 = kulplu tepsi robotun kilitli aksesuar ucu; pide press→kutu tepside; fırına tepsiyle girer; TOPPING v8 (tabla kalktı, açık dozaj boşluğu) — ONAY BEKLİYOR
