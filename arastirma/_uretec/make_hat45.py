@@ -96,6 +96,12 @@ repline('tx(X0,Y0-72,"Robot:',
 repline('tx(X0,Y0-54,"Ölçüler cm.',
         'tx(X0,Y0-54,"Ölçüler cm. HER KABİN 70/65/140 × 197 × 84. Açık: ② fırın kavitesi 44 · ⑩ yağ pompa · ⑫ tepsi Ø32 zinciri (robot uç v2) · TOPPING prototip (spiral 11, kaşar akış) — bu turda çözülen: ③ ⑤ ⑦ ⑧ ⑨ ⑪",10,"start","","#333")')
 rep('hat_on_gorunus_teknik_v44.svg', 'hat_on_gorunus_teknik_v45.svg')
+# ---- v45.1: tx() '<' kaçışı (XML kırığı) + STORE −18 kaset çekmecesinde TOPPING kapları (kıyma ×2, kuşbaşı ×2 + boş, 16×54×24) ----
+repline('def tx(x,y,s,fs=11,a="middle",w="",col="#111"):', 'def tx(x,y,s,fs=11,a="middle",w="",col="#111"):' + NL + '    s=str(s).replace("<","&lt;")')
+rep("for xx_,nm in ((xl2,'KAVURMA'),(xr2,'KUŞBAŞI')):", "for xx_,nm in ((xl2,'KIYMA'),(xr2,'KUŞBAŞI')):")
+rep("    for i in range(2): rc(xx_+px(40)+i*px(185),yk+px(15),px(170),px(250),.8,2,'#1a49b8','3,3')", "    for i in range(2): rc(xx_+px(30)+i*px(190),yk+px(20),px(160),px(240),.9,2,'#1a49b8',None,'#eef3ff')")
+rep("    rc(xx_+px(410),yk+px(15),px(170),px(250),.6,2,'#999','3,3')", "    rc(xx_+px(410),yk+px(20),px(160),px(240),.6,2,'#999','3,3')")
+rep("    tx(xx_+wc2/2,yk+px(275),'KASET %s ×2 · −18' % nm,6,'middle','bold','#1a49b8')", "    tx(xx_+wc2/2,yk+px(275),'TOPPING KABI %s ×2 + boş · 16×54×24 · −18' % nm,5.4,'middle','bold','#1a49b8')")
 OUT = r"C:\Users\Kemal\Desktop\Kemal\WEBSİTE\AUTOKITCH\arastirma\_uretec\teknik_cizim45.py"
 io.open(OUT, 'w', encoding='utf-8', newline='\n').write(t)
 print('v45 uretici ok')

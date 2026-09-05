@@ -25,6 +25,7 @@ def el(cx,cy,rx,ry,sw=1.4,c="#111",dash=None):
     d=f' stroke-dasharray="{dash}"' if dash else ""
     E.append(f'<ellipse cx="{cx:.1f}" cy="{cy:.1f}" rx="{rx:.1f}" ry="{ry:.1f}" fill="none" stroke="{c}" stroke-width="{sw}"{d}/>')
 def tx(x,y,s,fs=11,a="middle",w="",col="#111"):
+    s=str(s).replace("<","&lt;")
     fw=f' font-weight="{w}"' if w else ""
     E.append(f'<text x="{x:.1f}" y="{y:.1f}" text-anchor="{a}" font-size="{fs}" fill="{col}" font-family="Arial"{fw}>{s}</text>')
 def oy(x1,x2,y,cm,fs=11):
@@ -93,11 +94,11 @@ for k in range(2):
         for i in range(4): el(xx_+px(92)+i*px(140),y+px(48),px(45),px(26),.6,'#1a49b8','3,3')
         tx(xx_+wc2/2,y+px(88),'DONMUŞ %d · 20 top' % nm,5.5,'middle','bold','#1a49b8')
 yk=Y0+px(1483)
-for xx_,nm in ((xl2,'KAVURMA'),(xr2,'KUŞBAŞI')):
+for xx_,nm in ((xl2,'KIYMA'),(xr2,'KUŞBAŞI')):
     fr(xx_,yk,wc2,px(284),'#1a49b8','#dfe7fb')
-    for i in range(2): rc(xx_+px(40)+i*px(185),yk+px(15),px(170),px(250),.8,2,'#1a49b8','3,3')
-    rc(xx_+px(410),yk+px(15),px(170),px(250),.6,2,'#999','3,3')
-    tx(xx_+wc2/2,yk+px(275),'KASET %s ×2 · −18' % nm,6,'middle','bold','#1a49b8')
+    for i in range(2): rc(xx_+px(30)+i*px(190),yk+px(20),px(160),px(240),.9,2,'#1a49b8',None,'#eef3ff')
+    rc(xx_+px(410),yk+px(20),px(160),px(240),.6,2,'#999','3,3')
+    tx(xx_+wc2/2,yk+px(275),'TOPPING KABI %s ×2 + boş · 16×54×24 · −18' % nm,5.4,'middle','bold','#1a49b8')
 tx((a0+a1)/2,Y0+px(347),'① ✓ STORE v4: 19 çekmece × 61 (kapak yok) · alt −18 6 çekmece · PU 60/80 · içecek 13 / taze 10,5 / donmuş 10',6.5,'middle','bold','#1d7a4f')
 a2,a3=am,xs[1]
 
