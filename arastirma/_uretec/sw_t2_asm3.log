@@ -1,0 +1,21 @@
+  paneWndVisible                           0 -> 0
+  taskpaneDismissed                        1 -> 1
+  paneWndIsExpanded                        0 -> 0
+  Visible                                  0 -> 0
+  Floating                                 0 -> 0
+  Show Welcome Screen                      1 -> 1
+  Show Latest News feeds In task pane      0 -> 0
+  Taskpane Animation                       0 -> 0
+Traceback (most recent call last):
+  File "C:\Users\Kemal\Desktop\Kemal\WEBSİTE\AUTOKITCH\arastirma\_uretec\sw_topping2.py", line 69, in <module>
+    sw.CloseAllDocuments(True); st = Station(ROOT, "TOPPING"); st.load_dir(); print("kasa parca yuklendi:", len(st.parts))
+                                                               ^^^^^^^^^^^^^
+  File "C:\Users\Kemal\Desktop\Kemal\WEBSİTE\AUTOKITCH\arastirma\_uretec\sw_lib.py", line 139, in load_dir
+    d = sw.OpenDoc6(path, 1, 1, "", e, w); bb = bbox_of(d); sw.CloseDoc(d.GetTitle); self._track(bb)
+                                                ^^^^^^^^^^
+  File "C:\Users\Kemal\Desktop\Kemal\WEBSİTE\AUTOKITCH\arastirma\_uretec\sw_lib.py", line 48, in bbox_of
+    for x in doc.GetBodies2(0, True):
+             ^^^^^^^^^^^^^^
+  File "C:\Users\Kemal\AppData\Local\Programs\Python\Python312\Lib\site-packages\win32com\client\dynamic.py", line 631, in __getattr__
+    raise AttributeError(f"{self._username_}.{attr}")
+AttributeError: <unknown>.GetBodies2

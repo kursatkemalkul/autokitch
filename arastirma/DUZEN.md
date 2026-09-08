@@ -24,3 +24,13 @@ belgeler, mail taslakları oraya gider. Yeni netlik = yeni versiyon, ilgili klas
 - _uretec/render_hq.py — SVG → PNG 2,5× (Chrome device-scale-factor); 4 Eyl'den itibaren tüm PNG'ler bununla (güncel 8 çizim yeniden üretildi)
 
 - SİTE (7 Eyl 2026) — otonom/hat/ = HAT · Yol C sayfaları (_uretec/hat_site_gen.py üretir; görseller otonom/hat/img/ içine kopyalanır): index.html DÜKKAN 3B (three.js kutu modeli, makine tek grup kırmızı → makine.html; SERVICE/dolap/ekran/kod kendi sayfasına) + genel senaryo + dükkan v7 · makine.html (istasyonlar ayrı renk + robot → store/press/topping/oven/pack/robot.html) · birim sayfaları hep aynı 6 başlık: senaryo · özellikler · teknik resimler · tedarikçiler · açık konular · sürüm geçmişi · scene.js + hat.css ortak. Store sayfası (otonom/index.html) Yol C araştırma bloğu silindi → kart + nav linki "HAT · Yol C →". Yeni pafta/karar geldiğinde: hat_site_gen.py içindeki ilgili unit() metnini ve IMGS listesini güncelle, çalıştır, commit, push, dispatch.
+
+## SolidWorks 3B model (7 Eyl 2026)
+- `1_STORE/STORE_dis_v1.SLDPRT` — STORE dış gövde, doğrudan SolidWorks 2025 içinde COM API ile üretildi (`_uretec/sw_store_dis.py`). 31 gövde, feature ağacında adlı (govde_kasa, ayak_1..4, sove_*, cekmece_*, *_kulp, panel_*). Gabari 1400×1970×840 mm, ön yüz z=+20, gövde z 0..−820.
+- `1_STORE/STORE_dis_v1_sw_iso.png` — SolidWorks izometrik görüntü.
+- CadQuery STEP/STL/SVG çıktıları (STORE_dis_v1.step vb.) eski deneme; SLDPRT esas.
+- `2_PRESS/PRESS_dis_v1.SLDPRT`, `3_TOPPING/TOPPING_dis_v1.SLDPRT`, `4_OVEN/OVEN_dis_v1.SLDPRT`, `5_PACK/PACK_dis_v1.SLDPRT` — 70×197×84 dış gövdeler (`_uretec/sw_hat_dis.py`; zonlar kapak_gorunus2'den). Açıklıklar gövdeye 100 mm oyuk, servis kapakları sağ kenar dikey kulplu, cam kapak 12 mm.
+- `FULL_MAKINE/HAT_dis_v1.SLDASM` — 5 istasyon yan yana (x: 0/1400/2100/2800/3500, toplam 4200), ön yüzler aynı düzlemde; `_sw_iso.png` + `_sw_on.png`.
+- API notu: FeatureCut4 Dir bayrağı ekstrüzyonun TERSİ; AddComponent5 verilen noktaya BBOX MERKEZİNİ koyar.
+- `1_STORE/STORE.SLDASM` + `1_STORE/parca/*.SLDPRT` (105 ayrı parça, `_uretec/sw_store_asm.py`) — AYRI PARÇALI SAC KASA: dış kabuk 1,5 / iç kabuk 1,0 / PU 60 (yan-arka-taban-tavan) / PU80 ayırıcı / orta bölme 24 sandviç / L-T bükme söveler / çekmece önü sandviç 40 (1,5+37,5 PU+1,0) / çekmece kutusu U 1,0 × 600. Parçalar global koordinatta; montajda sabit. `STORE_asm_iso.png`, `STORE_asm_on.png`.
+- Eski çok gövdeli `STORE_dis_v1.SLDPRT` HAT_dis_v1.SLDASM'de hâlâ kullanılıyor (dış gabari).

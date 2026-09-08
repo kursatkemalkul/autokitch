@@ -1,0 +1,26 @@
+Traceback (most recent call last):
+  File "C:\Users\Kemal\Desktop\Kemal\WEBSİTE\AUTOKITCH\arastirma\_uretec\sw_all.py", line 250, in <module>
+    for a in sys.argv[1:]: globals()[a]()
+                           ^^^^^^^^^^^^^^
+  File "C:\Users\Kemal\Desktop\Kemal\WEBSİTE\AUTOKITCH\arastirma\_uretec\sw_all.py", line 88, in topping
+    shell(st, p, W, "plint", y0=YB); sove_L(st, p, W, YB, H)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Kemal\Desktop\Kemal\WEBSİTE\AUTOKITCH\arastirma\_uretec\sw_lib.py", line 134, in shell
+    st.box(p+"dis_yan_sol", 0, T_DIS, y0, H, ZK, 0); st.box(p+"dis_yan_sag", W-T_DIS, W, y0, H, ZK, 0)
+                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Kemal\Desktop\Kemal\WEBSİTE\AUTOKITCH\arastirma\_uretec\sw_lib.py", line 79, in box
+    return self.part(fname, ops)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Kemal\Desktop\Kemal\WEBSİTE\AUTOKITCH\arastirma\_uretec\sw_lib.py", line 56, in part
+    try: return self._part(fname, ops)
+                ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Kemal\Desktop\Kemal\WEBSİTE\AUTOKITCH\arastirma\_uretec\sw_lib.py", line 64, in _part
+    doc, sk, fm, pl = self._new()
+                      ^^^^^^^^^^^
+  File "C:\Users\Kemal\Desktop\Kemal\WEBSİTE\AUTOKITCH\arastirma\_uretec\sw_lib.py", line 43, in _new
+    if mcall(f, "GetTypeName2") == "RefPlane": pl.append(f)
+       ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Kemal\Desktop\Kemal\WEBSİTE\AUTOKITCH\arastirma\_uretec\sw_lib.py", line 16, in mcall
+    r = o._oleobj_.Invoke(did, 0, pythoncom.DISPATCH_METHOD | pythoncom.DISPATCH_PROPERTYGET, True, *args)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pywintypes.com_error: (-2147417848, 'The object invoked has disconnected from its clients.', None, None)

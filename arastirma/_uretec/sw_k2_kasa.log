@@ -1,0 +1,63 @@
+  paneWndVisible                           0 -> 0
+  taskpaneDismissed                        1 -> 1
+  paneWndIsExpanded                        0 -> 0
+  Visible                                  0 -> 0
+  Floating                                 0 -> 0
+  Show Welcome Screen                      1 -> 1
+  Show Latest News feeds In task pane      0 -> 0
+  Taskpane Animation                       0 -> 0
+uyari: PACK_kalip_duvari_45 → 5 s bekleyip yeniden (feature olusmadi: PACK_kalip_duvari_45_1)
+uyari: PACK_kalip_duvari_45 → 5 s bekleyip yeniden (feature olusmadi: PACK_kalip_duvari_45_1)
+Traceback (most recent call last):
+  File "C:\Users\Kemal\Desktop\Kemal\WEBSİTE\AUTOKITCH\arastirma\_uretec\sw_lib.py", line 80, in part
+    try: return self._part(fname, ops)
+                ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Kemal\Desktop\Kemal\WEBSİTE\AUTOKITCH\arastirma\_uretec\sw_lib.py", line 95, in _part
+    sk.InsertSketch(True); self._ext(fm, "%s_%d" % (fname, k+1), n0, n1, cut); doc.ClearSelection2(True)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Kemal\Desktop\Kemal\WEBSİTE\AUTOKITCH\arastirma\_uretec\sw_lib.py", line 76, in _ext
+    if f is None: raise RuntimeError("feature olusmadi: " + name)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: feature olusmadi: PACK_kalip_duvari_45_1
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kemal\Desktop\Kemal\WEBSİTE\AUTOKITCH\arastirma\_uretec\sw_lib.py", line 80, in part
+    try: return self._part(fname, ops)
+                ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Kemal\Desktop\Kemal\WEBSİTE\AUTOKITCH\arastirma\_uretec\sw_lib.py", line 95, in _part
+    sk.InsertSketch(True); self._ext(fm, "%s_%d" % (fname, k+1), n0, n1, cut); doc.ClearSelection2(True)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Kemal\Desktop\Kemal\WEBSİTE\AUTOKITCH\arastirma\_uretec\sw_lib.py", line 76, in _ext
+    if f is None: raise RuntimeError("feature olusmadi: " + name)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: feature olusmadi: PACK_kalip_duvari_45_1
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kemal\Desktop\Kemal\WEBSİTE\AUTOKITCH\arastirma\_uretec\sw_pack2.py", line 80, in <module>
+    sw.CloseAllDocuments(True); st = Station(ROOT, "PACK"); kasa(st); print("kasa parca:", len(st.parts)); st.exit_sw()
+                                                            ^^^^^^^^
+  File "C:\Users\Kemal\Desktop\Kemal\WEBSİTE\AUTOKITCH\arastirma\_uretec\sw_pack2.py", line 57, in kasa
+    st.prism_y(p+"kalip_duvari_45", [(185, -565), (515, -565), (515, -235), (185, -235), (185, -237.5), (512.5, -237.5), (512.5, -562.5), (187.5, -562.5), (187.5, -237.5), (185, -237.5)], 552, 597)
+  File "C:\Users\Kemal\Desktop\Kemal\WEBSİTE\AUTOKITCH\arastirma\_uretec\sw_lib.py", line 107, in prism_y
+    return self.part(fname, ops)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Kemal\Desktop\Kemal\WEBSİTE\AUTOKITCH\arastirma\_uretec\sw_lib.py", line 86, in part
+    return self.part(fname, ops, _retry-1)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Kemal\Desktop\Kemal\WEBSİTE\AUTOKITCH\arastirma\_uretec\sw_lib.py", line 86, in part
+    return self.part(fname, ops, _retry-1)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Kemal\Desktop\Kemal\WEBSİTE\AUTOKITCH\arastirma\_uretec\sw_lib.py", line 80, in part
+    try: return self._part(fname, ops)
+                ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Kemal\Desktop\Kemal\WEBSİTE\AUTOKITCH\arastirma\_uretec\sw_lib.py", line 95, in _part
+    sk.InsertSketch(True); self._ext(fm, "%s_%d" % (fname, k+1), n0, n1, cut); doc.ClearSelection2(True)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Kemal\Desktop\Kemal\WEBSİTE\AUTOKITCH\arastirma\_uretec\sw_lib.py", line 76, in _ext
+    if f is None: raise RuntimeError("feature olusmadi: " + name)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: feature olusmadi: PACK_kalip_duvari_45_1

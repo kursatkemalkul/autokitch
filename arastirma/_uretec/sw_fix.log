@@ -1,0 +1,67 @@
+  paneWndVisible                           0 -> 0
+  taskpaneDismissed                        1 -> 1
+  paneWndIsExpanded                        0 -> 0
+  Visible                                  0 -> 0
+  Floating                                 0 -> 0
+  Show Welcome Screen                      1 -> 1
+  Show Latest News feeds In task pane      0 -> 0
+  Taskpane Animation                       0 -> 0
+SolidWorks baglanti denemesi 1: (-2146959355, 'Server execution failed', None, None)
+SolidWorks baglanti denemesi 2: (-2146959355, 'Server execution failed', None, None)
+SolidWorks baglanti denemesi 3: (-2146959355, 'Server execution failed', None, None)
+SolidWorks baglanti denemesi 4: (-2146959355, 'Server execution failed', None, None)
+duzeltildi: sw_topping2.py
+duzeltildi: sw_oven2.py
+uyari: KAP_on_cekme_dudagi → 5 s bekleyip yeniden (feature olusmadi: KAP_on_cekme_dudagi_1)
+uyari: KAP_on_cekme_dudagi → 5 s bekleyip yeniden (feature olusmadi: KAP_on_cekme_dudagi_1)
+Traceback (most recent call last):
+  File "C:\Users\Kemal\Desktop\Kemal\WEBSİTE\AUTOKITCH\arastirma\_uretec\sw_lib.py", line 80, in part
+    if f is None: raise RuntimeError("feature olusmadi: " + name)
+                ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Kemal\Desktop\Kemal\WEBSİTE\AUTOKITCH\arastirma\_uretec\sw_lib.py", line 95, in _part
+    if kind == 'rect': sk.CreateCornerRectangle(geo[0]*M, geo[2]*M, 0, geo[1]*M, geo[3]*M, 0)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Kemal\Desktop\Kemal\WEBSİTE\AUTOKITCH\arastirma\_uretec\sw_lib.py", line 76, in _ext
+    if n0 >= 0: dirf, fs, st, dp = False, False, n0, n1 - n0
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: feature olusmadi: KAP_on_cekme_dudagi_1
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kemal\Desktop\Kemal\WEBSİTE\AUTOKITCH\arastirma\_uretec\sw_lib.py", line 80, in part
+    if f is None: raise RuntimeError("feature olusmadi: " + name)
+                ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Kemal\Desktop\Kemal\WEBSİTE\AUTOKITCH\arastirma\_uretec\sw_lib.py", line 95, in _part
+    if kind == 'rect': sk.CreateCornerRectangle(geo[0]*M, geo[2]*M, 0, geo[1]*M, geo[3]*M, 0)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Kemal\Desktop\Kemal\WEBSİTE\AUTOKITCH\arastirma\_uretec\sw_lib.py", line 76, in _ext
+    if n0 >= 0: dirf, fs, st, dp = False, False, n0, n1 - n0
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: feature olusmadi: KAP_on_cekme_dudagi_1
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kemal\Desktop\Kemal\WEBSİTE\AUTOKITCH\arastirma\_uretec\sw_dudak_fix.py", line 22, in <module>
+    st.box(p + "on_cekme_dudagi", -70, 70, yt-15, yt, -20, -5)     # üstte değil, ÖNDE (z −20 → −5)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Kemal\Desktop\Kemal\WEBSİTE\AUTOKITCH\arastirma\_uretec\sw_lib.py", line 103, in box
+    # kısa yollar (global mm)
+              ^^^^^^^^^^^^^^^
+  File "C:\Users\Kemal\Desktop\Kemal\WEBSİTE\AUTOKITCH\arastirma\_uretec\sw_lib.py", line 86, in part
+    if _retry <= 0: raise
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Kemal\Desktop\Kemal\WEBSİTE\AUTOKITCH\arastirma\_uretec\sw_lib.py", line 86, in part
+    if _retry <= 0: raise
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Kemal\Desktop\Kemal\WEBSİTE\AUTOKITCH\arastirma\_uretec\sw_lib.py", line 80, in part
+    if f is None: raise RuntimeError("feature olusmadi: " + name)
+                ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Kemal\Desktop\Kemal\WEBSİTE\AUTOKITCH\arastirma\_uretec\sw_lib.py", line 95, in _part
+    if kind == 'rect': sk.CreateCornerRectangle(geo[0]*M, geo[2]*M, 0, geo[1]*M, geo[3]*M, 0)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Kemal\Desktop\Kemal\WEBSİTE\AUTOKITCH\arastirma\_uretec\sw_lib.py", line 76, in _ext
+    if n0 >= 0: dirf, fs, st, dp = False, False, n0, n1 - n0
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: feature olusmadi: KAP_on_cekme_dudagi_1

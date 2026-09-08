@@ -1,0 +1,20 @@
+Traceback (most recent call last):
+  File "C:\Users\Kemal\Desktop\Kemal\WEBSİTE\AUTOKITCH\arastirma\_uretec\sw_all.py", line 250, in <module>
+    for a in sys.argv[1:]: globals()[a]()
+                           ^^^^^^^^^^^^^^
+  File "C:\Users\Kemal\Desktop\Kemal\WEBSİTE\AUTOKITCH\arastirma\_uretec\sw_all.py", line 88, in topping
+    shell(st, p, W, "plint", y0=YB); sove_L(st, p, W, YB, H)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Kemal\Desktop\Kemal\WEBSİTE\AUTOKITCH\arastirma\_uretec\sw_lib.py", line 126, in shell
+    st.box(p+"dis_yan_sol", 0, T_DIS, y0, H, ZK, 0); st.box(p+"dis_yan_sag", W-T_DIS, W, y0, H, ZK, 0)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Kemal\Desktop\Kemal\WEBSİTE\AUTOKITCH\arastirma\_uretec\sw_lib.py", line 71, in box
+    return self.part(fname, ops)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Kemal\Desktop\Kemal\WEBSİTE\AUTOKITCH\arastirma\_uretec\sw_lib.py", line 63, in part
+    sk.InsertSketch(True); self._ext(fm, "%s_%d" % (fname, k+1), n0, n1, cut); doc.ClearSelection2(True)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Kemal\Desktop\Kemal\WEBSİTE\AUTOKITCH\arastirma\_uretec\sw_lib.py", line 52, in _ext
+    if f is None: raise RuntimeError("feature olusmadi: " + name)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: feature olusmadi: TOPPING_dis_yan_sol_1
