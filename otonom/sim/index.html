@@ -87,7 +87,7 @@ th{color:var(--gray);font-weight:500;font-size:11px}
 
   <h3>KESİCİ · SPREY</h3>
   <div class="row"><label>Kesici açık (yalnız pide)</label><div class="sw on" data-k="cutter"></div></div>
-  <div class="row"><label>Kesici nerede</label><select data-k="cutterAt"><option value="OVEN" selected>OVEN'da (robot tutar 14 sn)</option><option value="PACK">PACK'te (robot bırakır, 20 sn kendi keser)</option></select></div>
+  <div class="row"><label>Kesici nerede</label><select data-k="cutterAt"><option value="OVEN" selected>OVEN · robot TUTAR (14 sn)</option><option value="OVEN_MASA">OVEN işlem ağzı · robot BIRAKIR</option><option value="PACK">PACK tarafı · robot bırakır</option></select></div>
   <div class="row"><label>Kesici → PACK itici</label><div class="sw" data-k="pusher"></div></div>
 
   <h3>PRESS</h3>
@@ -315,7 +315,7 @@ class Sim{
     for(const ch of [...this.chambers,...this.lch]) for(const sl of ch.slots){
       if(sl.p.state!=='baked') continue;
       // kesici PACK'te ve doluysa pide fırından alınamaz — kesici masası tek, sıra var
-      if(sl.p.kind==='pide' && c.cutter && c.cutterAt==='PACK' && this.cutter.p) continue;
+      if(sl.p.kind==='pide' && c.cutter && c.cutterAt!=='OVEN' && this.cutter.p) continue;
       cands.push({pri:0,t:sl.end, mk:()=>this.jobUnload(ch, sl.p)});
     }
     if(this.press.p && this.press.p.state==='baseReady') cands.push({pri:1,t:this.press.end, mk:()=>this.jobPickBase(this.press.p)});
@@ -643,9 +643,9 @@ function draw(sim, speed){
         if(sl) drawItem(sl.p.kind, (sl.p.state==='baked'||sl.p.state==='unloading')?'baked':'topped', x+w-24, y+hh/2, .55);
       }
       // işlem ağzı: sprey + kesici (OVEN'da ise)
-      const cutHere = c.cutter && c.cutterAt==='OVEN';
-      const st = sim.cutter.working && cutHere ? 'work':'idle';
-      statusBox(x+6, cmy(112), w-12, cmy(79)-cmy(112), cutHere?st:'idle', cutHere?(st==='work'?`KESİCİ ${Math.ceil(sim.cutter.wEnd-t)} sn`:'KESİCİ ✕ 8'):'—', cutHere?'robot tutar':(c.cutter?'kesici PACK\'te':'kesici KAPALI'));
+      const cutHere = c.cutter && c.cutterAt!=='PACK';
+      const st = sim.cutter.working && cutHere ? 'work' : (cutHere && sim.cutter.p && sim.cutter.p.state==='cutDone' ? 'done' : 'idle');
+      statusBox(x+6, cmy(112), w-12, cmy(79)-cmy(112), cutHere?st:'idle', !c.cutter?'KESİCİ KAPALI' : (cutHere ? (st==='work'?`KESİCİ+SPREY ${Math.ceil(sim.cutter.wEnd-t)} sn`:(st==='done'?'KESİLDİ ✓ robot alacak':'KESİCİ ✕ 8 + SPREY')) : 'kesici PACK tarafinda'), cutHere ? (c.cutterAt==='OVEN'?'robot tutar':'robot BIRAKIR · masa keser') : '');
       statusBox(x+6, cmy(78), w-12, cmy(62)-cmy(78), 'idle', 'SPREY · sadeyağ', '');
       statusBox(x+6, cmy(60), w-12, cmy(14)-cmy(60), 'idle', 'PANO · YAĞ', '');
     }
