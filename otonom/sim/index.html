@@ -190,10 +190,12 @@ class Sim{
     this.pendingOrders=orders.map((o,i)=>({id:i+1, arr:o.arr, items:o.items.slice(), started:false}));
     // hazneler
     const n=c.pideCh, bandBot=(n>=3)?79:112, bandH=168-bandBot, h=bandH/n;
-    this.chambers=[]; for(let i=0;i<n;i++) this.chambers.push({id:'F'+(i+1), type:'pide', y0:bandBot+i*h, h, p:null, reserved:null, end:0, busy:0});
-    this.lch=[]; if(c.lahm && c.lahmOven) this.lch.push({id:'L1', type:'lahm', y0:118, h:34, p:null, reserved:null, end:0, busy:0, cap:c.lahmCap});
+    // HAZNE = firinin bir gozu. Her goz `cap` kadar TEPSI alir (tepsi 320 -> pide gozu 1, lahmacun gozu 1-2 yan yana).
+    // Robotun TEK tepsisi var: her tepsiyi AYRI sefer koyar/alir; ikisi ayni gozde yan yana piser.
+    this.chambers=[]; for(let i=0;i<n;i++) this.chambers.push({id:'F'+(i+1), type:'pide', cap:1, slots:[], res:0, y0:bandBot+i*h, h, busy:0});
+    this.lch=[]; if(c.lahm && c.lahmOven) this.lch.push({id:'L1', type:'lahm', cap:c.lahmCap, slots:[], res:0, y0:118, h:34, busy:0});
     this.press={p:null, end:0, working:false, wEnd:0};
-    this.topping={tray:[], working:false, wEnd:0};
+    this.topping={holding:null, working:false, wEnd:0};
     this.cutter={p:null, end:0, working:false, wEnd:0, at:c.cutterAt, pushEnd:0};
     this.pack={folding:null, end:0, queue:[], boxed:[]};
     this.lockers=[]; for(let i=0;i<c.lockers;i++) this.lockers.push({p:null, free:0});
@@ -210,24 +212,21 @@ class Sim{
   }
   addOrder(items, arr, id){
     const c=this.cfg; const ord={id:id||(this.orders.length+1), arr, items:items.slice(), products:[], doneT:null};
-    // lahmacun eşleme: ayrı fırın 2'li ise çift, değilse tekli
+    // HER URUN KENDI TEPSISINDE — robotun tek tepsisi var, her birini ayri tasir.
     const lahms=items.filter(k=>k==='lahm').length, pides=items.filter(k=>k==='pide').length;
-    for(let i=0;i<pides;i++) ord.products.push(this.mkProduct('pide',1,ord));
-    if(c.lahm){
-      const pairOK = c.lahmOven && c.lahmCap>=2;
-      let rest=lahms;
-      while(rest>0){ if(pairOK && rest>=2){ ord.products.push(this.mkProduct('lahm',2,ord)); rest-=2; } else { ord.products.push(this.mkProduct('lahm',1,ord)); rest-=1; } }
-    } else { for(let i=0;i<lahms;i++) ord.products.push(this.mkProduct('pide',1,ord)); }
+    for(let i=0;i<pides;i++) ord.products.push(this.mkProduct('pide',ord));
+    for(let i=0;i<lahms;i++) ord.products.push(this.mkProduct(c.lahm?'lahm':'pide',ord));
     this.orders.push(ord); this.say(`<b>Sipariş #${ord.id}</b> geldi: ${this.itemsText(ord)}`);
     return ord;
   }
   itemsText(o){ const p=o.items.filter(k=>k==='pide').length, l=o.items.filter(k=>k==='lahm').length; return [p?`${p} pide`:'', l?`${l} lahmacun`:''].filter(Boolean).join(' + '); }
-  mkProduct(kind, units, ord){ const p={id:this.nextPid++, kind, units, order:ord, state:'wait', ch:null, doneUnits:0, bake: kind==='pide'?this.cfg.bakePide:this.cfg.bakeLahm, wrap:0}; this.products.push(p); return p; }
+  mkProduct(kind, ord){ const p={id:this.nextPid++, kind, units:1, order:ord, state:'wait', ch:null, doneUnits:0, bake: kind==='pide'?this.cfg.bakePide:this.cfg.bakeLahm, wrap:0}; this.products.push(p); return p; }
 
   /* --- kaynak seçimi --- */
   freeChamber(p){
-    if(p.kind==='lahm' && this.lch.length){ return this.lch.find(ch=>!ch.p && !ch.reserved) || null; }
-    return this.chambers.find(ch=>!ch.p && !ch.reserved) || null;
+    const yer=(ch)=> ch.slots.length + ch.res < ch.cap;
+    if(p.kind==='lahm' && this.lch.length) return this.lch.find(yer) || null;
+    return this.chambers.find(yer) || null;
   }
   nextStartable(){
     const c=this.cfg;
@@ -241,7 +240,7 @@ class Sim{
   }
   pickJob(){
     const c=this.cfg, cands=[];
-    for(const ch of [...this.chambers,...this.lch]) if(ch.p && ch.p.state==='baked') cands.push({pri:0,t:ch.end, mk:()=>this.jobUnload(ch)});
+    for(const ch of [...this.chambers,...this.lch]) for(const sl of ch.slots) if(sl.p.state==='baked') cands.push({pri:0,t:sl.end, mk:()=>this.jobUnload(ch, sl.p)});
     if(this.press.p && this.press.p.state==='baseReady') cands.push({pri:1,t:this.press.end, mk:()=>this.jobPickBase(this.press.p)});
     if(this.cutter.p && this.cutter.p.state==='cutDone' && !c.pusher) cands.push({pri:1,t:this.cutter.end, mk:()=>this.jobCarryCut(this.cutter.p)});
     for(const p of this.pack.boxed) if(this.lockers.some(l=>!l.p || l.p.order===p.order)) cands.push({pri:2,t:p.boxedT, mk:()=>this.jobDeliver(p)});
@@ -267,61 +266,54 @@ class Sim{
 
   jobStart(p, ch){
     const T=this.T, c=this.cfg, S=[];
-    ch.reserved=p; p.ch=ch; p.state='starting';
+    ch.res++; p.ch=ch; p.state='starting';
     const unitLoop=(k)=>{
       S.push(...this.mode('KAVRAMA'));
       S.push(this.go('STORE',110), this.act(T.takeDough,'hamur topunu KAVRA','STORE',110,()=>{this.robot.carry={kind:p.kind,st:'dough'}; p.state='carry';}));
       if(c.pressAuto){
-        S.push(this.go('PRESS',95), this.act(T.pressDrop,'prese bırak','PRESS',95,()=>{this.robot.carry=null; this.press.p=p; this.press.end=this.t+T.pressCycle; this.press.working=true; this.press.wEnd=this.press.end; p.state='pressing'; p.unitK=k;}));
+        S.push(this.go('PRESS',95), this.act(T.pressDrop,'hamuru tepsiye bırak · pres basar','PRESS',95,()=>{this.robot.carry=null; this.press.p=p; this.press.end=this.t+T.pressCycle; this.press.working=true; this.press.wEnd=this.press.end; p.state='pressing'; p.unitK=k;}));
         return false; // robot serbest; devamı jobPickBase
       }
-      S.push(this.go('PRESS',95), this.act(T.pressPlace,'prese koy · bas','PRESS',95,()=>{this.press.working=false; this.robot.carry={kind:p.kind,st:'base'};}, ()=>{this.press.working=true; this.press.wEnd=this.t+T.pressPlace;}));
+      S.push(this.go('PRESS',95), this.act(T.pressPlace,'hamuru tepsiye koy · PRES BASAR','PRESS',95,()=>{this.press.working=false; this.robot.carry={kind:p.kind,st:'base'};}, ()=>{this.press.working=true; this.press.wEnd=this.t+T.pressPlace;}));
       S.push(...this.mode('KÜREK'));
-      S.push(this.act(T.pressTake,'açılmış tabanı KÜREKLE al','PRESS',95,()=>{}));
+      S.push(this.act(T.pressTake,'tepsiyi al (taban üstünde)','PRESS',95,()=>{}));
       this.afterPress(S,p,k);
       return true;
     };
     const first=unitLoop(0);
     if(!first) return {name:'START-A #'+p.id, steps:S, p};
-    if(p.units===2){ const ok=unitLoop(1); }
     this.loadSteps(S,p);
     return {name:'START #'+p.id, steps:S, p};
   }
   afterPress(S,p,k){
+    /* TOPPING'de tepsi BIRAKILMIYOR — birakacak raf yok. Robot tepsiyi dozaj agzinin altinda TUTAR,
+       kasetler malzemeyi ustune doker, sonra ayni elle firina goturur. */
     const T=this.T, c=this.cfg;
-    S.push(...this.mode('KÜREK'));
-    S.push(this.go('TOPPING',100), this.act(T.trayPlace,'tabanı tepsiye bırak','TOPPING',100,()=>{this.robot.carry=null; this.topping.tray.push({kind:p.kind, st:'base', p}); p.state='dosing';}));
     const dur=p.kind==='pide'?T.dose:T.harc;
-    S.push(this.act(dur, p.kind==='pide'?'DOZAJ: kaşar · sucuk · et':'HARÇ SÜR','TOPPING',100,()=>{this.topping.working=false; const it=this.topping.tray.find(x=>x.p===p&&x.st==='base'); if(it) it.st='topped'; p.doneUnits++; p.state='onTray';}, ()=>{this.topping.working=true; this.topping.wEnd=this.t+dur;}));
+    S.push(this.go('TOPPING',100), this.act(dur, p.kind==='pide'?'tepsiyi ağızda TUT · DOZAJ':'tepsiyi ağızda TUT · HARÇ','TOPPING',100,
+      ()=>{this.topping.working=false; this.topping.holding=null; this.robot.carry={kind:p.kind,st:'topped'}; p.state='onTray';},
+      ()=>{this.topping.working=true; this.topping.wEnd=this.t+dur; this.topping.holding=p;}));
   }
   loadSteps(S,p){
     const T=this.T, ch=p.ch, isL=ch.type==='lahm';
-    S.push(...this.mode('KAVRAMA'));
-    S.push(this.act(0,'tepsiyi kulbundan KAVRA','TOPPING',100,()=>{this.robot.carry={kind:p.kind,st:'topped',units:p.units}; this.topping.tray=this.topping.tray.filter(x=>x.p!==p);}));
     const ovenId=isL?'LOVEN':'OVEN', y=ch.y0+ch.h/2;
-    const dur=T.ovenLoad+(p.units===2?T.lahmLoadExtra:0);
-    S.push(this.go(ovenId,y), this.act(dur, `${ch.id}'e koy`, ovenId, y, ()=>{this.robot.carry=null; ch.p=p; ch.reserved=null; ch.end=this.t+p.bake; p.state='baking'; this.say(`${p.kind==='pide'?'Pide':'Lahmacun'} #${p.id} → <b>${ovenId} ${ch.id}</b> · ${p.bake} sn pişecek`);}));
+    S.push(this.go(ovenId,y), this.act(T.ovenLoad, `tepsiyi ${ch.id}'e koy`, ovenId, y, ()=>{
+      this.robot.carry=null; ch.res--; ch.slots.push({p, end:this.t+p.bake}); p.state='baking';
+      this.say(`${p.kind==='pide'?'Pide':'Lahmacun'} #${p.id} → <b>${ovenId} ${ch.id}</b>${ch.slots.length>1?' (yaninda #'+ch.slots[0].p.id+')':''} · ${p.bake} sn`);}));
   }
   jobPickBase(p){
     const S=[]; const T=this.T;
     S.push(...this.mode('KÜREK'));
-    S.push(this.go('PRESS',95), this.act(T.pressTake,'açılmış tabanı KÜREKLE al','PRESS',95,()=>{this.press.p=null; this.robot.carry={kind:p.kind,st:'base'}; p.state='carry';}));
+    S.push(this.go('PRESS',95), this.act(T.pressTake,'tepsiyi al (taban üstünde)','PRESS',95,()=>{this.press.p=null; this.robot.carry={kind:p.kind,st:'base'}; p.state='carry';}));
     this.afterPress(S,p,p.unitK||0);
-    if(p.units===2 && p.doneUnits+1<2){
-      // ikinci hamur: yeniden STORE → PRESS (otomatik) ; sonra jobPickBase tekrar
-      S.push(...this.mode('KAVRAMA'));
-      S.push(this.go('STORE',110), this.act(T.takeDough,'2. hamur topunu KAVRA','STORE',110,()=>{this.robot.carry={kind:p.kind,st:'dough'};}));
-      S.push(this.go('PRESS',95), this.act(T.pressDrop,'prese bırak','PRESS',95,()=>{this.robot.carry=null; this.press.p=p; this.press.end=this.t+T.pressCycle; this.press.working=true; this.press.wEnd=this.press.end; p.state='pressing'; p.unitK=1;}));
-      return {name:'PICK-BASE #'+p.id, steps:S, p};
-    }
     this.loadSteps(S,p);
     return {name:'PICK-BASE #'+p.id, steps:S, p};
   }
-  jobUnload(ch){
-    const T=this.T, c=this.cfg, p=ch.p, S=[], isL=ch.type==='lahm', ovenId=isL?'LOVEN':'OVEN', y=ch.y0+ch.h/2;
+  jobUnload(ch, p){
+    const T=this.T, c=this.cfg, S=[], isL=ch.type==='lahm', ovenId=isL?'LOVEN':'OVEN', y=ch.y0+ch.h/2;
     p.state='unloading';
     S.push(...this.mode('KAVRAMA'));
-    S.push(this.go(ovenId,y), this.act(T.ovenUnload+(p.units===2?T.lahmUnloadExtra:0), `${ch.id}'den al`, ovenId, y, ()=>{ch.p=null; this.robot.carry={kind:p.kind,st:'baked',units:p.units}; p.state='carry';}));
+    S.push(this.go(ovenId,y), this.act(T.ovenUnload, `tepsiyi ${ch.id}'den al`, ovenId, y, ()=>{ch.slots=ch.slots.filter(sl=>sl.p!==p); this.robot.carry={kind:p.kind,st:'baked'}; p.state='carry';}));
     if(p.kind==='pide'){
       S.push(this.act(T.spray,'sadeyağ sprey','OVEN',78,()=>{}));
       if(c.cutter){
@@ -349,12 +341,12 @@ class Sim{
     let li=this.lockers.findIndex(l=>l.p && l.p.order===p.order);      // aynı siparişin gözü varsa oraya
     if(li<0) li=this.lockers.findIndex(l=>!l.p);
     if(li<0) return null;
-    this.lockers[li].p=p; this.lockers[li].pending=true; this.lockers[li].n=(this.lockers[li].n||0)+p.units; // rezerve
+    this.lockers[li].p=p; this.lockers[li].pending=true; this.lockers[li].n=(this.lockers[li].n||0)+1; // rezerve
     this.pack.boxed=this.pack.boxed.filter(x=>x!==p); p.state='delivering';
     S.push(...this.mode('KAVRAMA'));
-    S.push(this.go('PACK',85), this.act(T.boxTake*(p.units===2?1.3:1),'kutuyu KAVRA','PACK',85,()=>{this.robot.carry={kind:p.kind,st:'box',units:p.units, oid:p.order.id};}));
+    S.push(this.go('PACK',85), this.act(T.boxTake,'kutuyu KAVRA','PACK',85,()=>{this.robot.carry={kind:p.kind,st:'box', oid:p.order.id};}));
     const lx=this.lockerX(li), ly=this.lockerY(li);
-    S.push(this.go('PICKUP',ly,lx), this.act(T.lockerPlace,`göz ${li+1}'e koy`,'PICKUP',ly,()=>{this.robot.carry=null; this.lockers[li].pending=false; p.state='done'; p.doneT=this.t; this.deliveredUnits+=p.units; if(this.firstDelivery===null) this.firstDelivery=this.t;
+    S.push(this.go('PICKUP',ly,lx), this.act(T.lockerPlace,`göz ${li+1}'e koy`,'PICKUP',ly,()=>{this.robot.carry=null; this.lockers[li].pending=false; p.state='done'; p.doneT=this.t; this.deliveredUnits+=1; if(this.firstDelivery===null) this.firstDelivery=this.t;
       const o=p.order; if(o.products.every(q=>q.state==='done')){ o.doneT=this.t; this.say(`<b>Sipariş #${o.id} TESLİM</b> — ${this.fmt(o.doneT-o.arr)} bekledi`); this.lockers.forEach(l=>{ if(l.p&&l.p.order===o) l.free=this.t+this.T.customerPickup; }); }
     }));
     return {name:'DELIVER #'+p.id, steps:S, p};
@@ -368,14 +360,15 @@ class Sim{
     const c=this.cfg, T=this.T, R=this.robot;
     this.t+=dt; this.releaseOrders();
     // fırınlar
-    for(const ch of [...this.chambers,...this.lch]){ if(ch.p){ ch.busy+=dt; if(ch.p.state==='baking' && this.t>=ch.end){ ch.p.state='baked'; this.say(`${ch.id} <b>HAZIR</b> — #${ch.p.id} pişti`); } } }
+    for(const ch of [...this.chambers,...this.lch]){ if(ch.slots.length) ch.busy+=dt*ch.slots.length/ch.cap;
+      for(const sl of ch.slots) if(sl.p.state==='baking' && this.t>=sl.end){ sl.p.state='baked'; this.say(`${ch.id} <b>HAZIR</b> — #${sl.p.id} pisti`); } }
     // pres otomatik
     if(this.press.p && this.press.p.state==='pressing' && this.t>=this.press.end){ this.press.p.state='baseReady'; this.press.working=false; }
     // kesici otomatik
     if(this.cutter.p && this.cutter.p.state==='cutting' && this.t>=this.cutter.end){ this.cutter.working=false; if(c.pusher){ this.cutter.p.state='pushing'; this.cutter.pushEnd=this.t+T.pusher; } else this.cutter.p.state='cutDone'; }
     if(this.cutter.p && this.cutter.p.state==='pushing' && this.t>=this.cutter.pushEnd){ const p=this.cutter.p; this.cutter.p=null; this.toPack(p); }
     // pack katlama
-    if(!this.pack.folding && this.pack.queue.length){ const p=this.pack.queue.shift(); this.pack.folding=p; p.state='packing'; this.pack.end=this.t+c.fold*p.units; }
+    if(!this.pack.folding && this.pack.queue.length){ const p=this.pack.queue.shift(); this.pack.folding=p; p.state='packing'; this.pack.end=this.t+c.fold; }
     if(this.pack.folding && this.t>=this.pack.end){ const p=this.pack.folding; this.pack.folding=null; p.state='boxed'; p.boxedT=this.t; this.pack.boxed.push(p); }
     // müşteri alır
     for(const l of this.lockers) if(l.p && !l.pending && l.free && this.t>=l.free){ l.p=null; l.free=0; l.n=0; }
@@ -448,7 +441,7 @@ function drawItem(kind, st, x, y, scale, units, oid){
     if(st==='cut'){ ctx.strokeStyle='#3a2410'; ctx.lineWidth=1; ctx.beginPath(); ctx.moveTo(x+dx-r,y); ctx.lineTo(x+dx+r,y); ctx.moveTo(x+dx,y-r*.42); ctx.lineTo(x+dx,y+r*.42); ctx.stroke(); }
     ctx.strokeStyle='rgba(0,0,0,.35)'; ctx.lineWidth=1; ctx.beginPath(); ctx.ellipse(x+dx,y,r,r*0.42,0,0,7); ctx.stroke();
   };
-  if(units===2){ one(-r-2); one(r+2); } else one(0);
+  one(0);
 }
 function draw(sim, speed){
   const W=cv.width, H=cv.height; ctx.fillStyle='#0b0b0c'; ctx.fillRect(0,0,W,H);
@@ -476,7 +469,7 @@ function draw(sim, speed){
     if(s.id==='PRESS'){
       const st = sim.press.working?'work' : (sim.press.p && sim.press.p.state==='baseReady')?'done':'idle';
       const rem = sim.press.working? Math.max(0, sim.press.wEnd - t) : 0;
-      statusBox(x+8, cmy(140), w-16, cmy(80)-cmy(140), st, st==='work'?`PRES ${Math.ceil(rem)} sn`: st==='done'?'TABAN HAZIR ✓':'PZP-400', st==='idle'?(c.pressAuto?'kendi besler':'robot tutar'):'');
+      statusBox(x+8, cmy(140), w-16, cmy(80)-cmy(140), st, st==='work'?`PRES ${Math.ceil(rem)} sn`: st==='done'?'TABAN HAZIR ✓':'PZP-400', st==='idle'?(c.pressAuto?'kendi besler · tepsi içeride':'tepsi presin içinde'):'');
       ctx.fillStyle='#55555c'; ctx.fillRect(x+16,cmy(96),w-32,4); ctx.fillRect(x+16,cmy(112),w-32,4);
       if(sim.press.p){ drawItem(sim.press.p.kind, sim.press.p.state==='baseReady'?'base':'dough', x+w/2, cmy(98), .9); }
       if(c.gripper==='changer'){
@@ -486,20 +479,21 @@ function draw(sim, speed){
       }
     }
     if(s.id==='TOPPING'){
-      const st=sim.topping.working?'work':(sim.topping.tray.length?'done':'idle'); const rem=sim.topping.working?Math.max(0,sim.topping.wEnd-t):0;
-      statusBox(x+8, cmy(175), w-16, cmy(115)-cmy(175), st, st==='work'?`DOZAJ ${Math.ceil(rem)} sn`:'4 KASET', st==='idle'?(c.lahm?'kaşar·sucuk·et + harç':'kaşar·sucuk·kıyma·kuşbaşı'):'');
+      const hold=sim.topping.holding, st=sim.topping.working?'work':'idle'; const rem=sim.topping.working?Math.max(0,sim.topping.wEnd-t):0;
+      statusBox(x+8, cmy(175), w-16, cmy(115)-cmy(175), st, st==='work'?`DOZAJ ${Math.ceil(rem)} sn`:'4 KASET', st==='idle'?(c.lahm?'kaşar·sucuk·et + harç':'kaşar·sucuk·kıyma·kuşbaşı'):'#'+(hold?hold.id:''));
       for(let i=0;i<4;i++){ ctx.fillStyle='#24242a'; ctx.fillRect(x+12+i*(w-24)/4, cmy(170), (w-24)/4-3, cmy(125)-cmy(170)); }
-      ctx.fillStyle='#55555c'; ctx.fillRect(x+12,cmy(100),w-24,4); label('döner tabla', x+w/2, cmy(88), 9, C.dim);
-      sim.topping.tray.forEach((it,i)=>drawItem(it.kind, it.st, x+w/2+(sim.topping.tray.length===2?(i?14:-14):0), cmy(103), .85));
+      statusBox(x+8, cmy(112), w-16, cmy(86)-cmy(112), st, 'ROBOT AĞZI', 'tepsi robotun elinde · raf yok');
+      if(hold && sim.topping.working){ ctx.strokeStyle=C.work; ctx.lineWidth=1; for(let i=0;i<3;i++){ ctx.beginPath(); ctx.moveTo(x+w/2-14+i*14, cmy(122)); ctx.lineTo(x+w/2-14+i*14, cmy(108)); ctx.stroke(); } }
     }
     if(s.id==='OVEN'){
       for(const ch of sim.chambers){
-        const y=cmy(ch.y0+ch.h), hh=ch.h*PX;
+        const y=cmy(ch.y0+ch.h), hh=ch.h*PX, sl=ch.slots[0];
         let st='idle', txt=ch.id+' · boş', sub='';
-        if(ch.p){ if(ch.p.state==='baked'||ch.p.state==='unloading'){ st='done'; txt=ch.id+' HAZIR ✓'; sub='bekliyor '+Math.round(t-ch.end)+' sn'; } else { st='work'; txt=`${ch.id} pişiyor`; sub=sim.fmt(ch.end-t)+' kaldı'; } }
-        else if(ch.reserved){ st='idle'; txt=ch.id+' · rezerve'; sub='#'+ch.reserved.id+' geliyor'; }
+        if(sl){ if(sl.p.state==='baked'||sl.p.state==='unloading'){ st='done'; txt=ch.id+' HAZIR ✓'; sub='#'+sl.p.id+' · bekliyor '+Math.round(t-sl.end)+' sn'; }
+                else { st='work'; txt=ch.id+' pişiyor'; sub='#'+sl.p.id+' · '+sim.fmt(sl.end-t)+' kaldı'; } }
+        else if(ch.res){ txt=ch.id+' · rezerve'; sub='tepsi geliyor'; }
         statusBox(x+6, y+2, w-12, hh-4, st, txt, sub);
-        if(ch.p){ drawItem(ch.p.kind, (ch.p.state==='baked'||ch.p.state==='unloading')?'baked':'topped', x+w-22, y+hh/2, .55, ch.p.units); }
+        if(sl) drawItem(sl.p.kind, (sl.p.state==='baked'||sl.p.state==='unloading')?'baked':'topped', x+w-24, y+hh/2, .55);
       }
       // işlem ağzı: sprey + kesici (OVEN'da ise)
       const cutHere = c.cutter && c.cutterAt==='OVEN';
@@ -510,12 +504,15 @@ function draw(sim, speed){
     }
     if(s.id==='LOVEN'){
       const ch=sim.lch[0]; const y=cmy(ch.y0+ch.h), hh=ch.h*PX;
-      let st='idle', txt='L1 · boş ('+ch.cap+' yan yana)', sub='';
-      if(ch.p){ if(ch.p.state==='baked'||ch.p.state==='unloading'){ st='done'; txt='L1 HAZIR ✓'; sub='bekliyor '+Math.round(t-ch.end)+' sn'; } else { st='work'; txt='L1 pişiyor'; sub=sim.fmt(ch.end-t)+' kaldı'; } }
-      else if(ch.reserved){ txt='L1 · rezerve'; sub='#'+ch.reserved.id+' geliyor'; }
+      const hazir=ch.slots.filter(sl=>sl.p.state!=='baking').length, pisen=ch.slots.filter(sl=>sl.p.state==='baking');
+      let st = hazir?'done' : (pisen.length?'work':'idle');
+      let txt = hazir? `L1 HAZIR ✓ ${hazir}/${ch.cap}` : (pisen.length? `L1 pişiyor ${ch.slots.length}/${ch.cap}` : `L1 · boş (${ch.cap} tepsi yan yana)`);
+      let sub = ch.slots.length? ch.slots.map(sl=>'#'+sl.p.id+(sl.p.state==='baking'?' '+sim.fmt(sl.end-t):' ✓')).join(' | ') : (ch.res?'tepsi geliyor':'');
       statusBox(x+6, y+2, w-12, hh-4, st, txt, sub);
-      if(ch.p) drawItem('lahm', (ch.p.state==='baked'||ch.p.state==='unloading')?'baked':'topped', x+w/2, y+hh-12, .6, ch.p.units);
-      statusBox(x+6, cmy(112), w-12, cmy(60)-cmy(112), 'idle', 'taş taban · 400 °C', 'sprey yok · kesici yok');
+      ch.slots.forEach((sl,i)=>drawItem('lahm', sl.p.state==='baking'?'topped':'baked',
+        x+w/2+(ch.cap>1?(i?24:-24):0), y+hh-14, .5));
+      statusBox(x+6, cmy(112), w-12, cmy(60)-cmy(112), 'idle', 'taş taban · 400 °C',
+        ch.cap>1?'2 TEPSİ yan yana · robot ayrı ayrı koyar':'tek tepsi · sprey yok · kesici yok');
     }
     if(s.id==='PACK'){
       if(c.cutter && c.cutterAt==='PACK'){
