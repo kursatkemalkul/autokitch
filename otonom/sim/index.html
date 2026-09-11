@@ -39,7 +39,7 @@ main{display:flex;flex-direction:column;min-width:0}
 .sep{width:1px;height:24px;background:var(--line);margin:0 4px}
 .clock{font-variant-numeric:tabular-nums;font-size:20px;font-weight:600;min-width:86px}
 canvas{display:block;width:100%;background:#0b0b0c}
-.metrics{display:grid;grid-template-columns:repeat(8,1fr);gap:1px;background:var(--line);border-bottom:1px solid var(--line)}
+.metrics{display:grid;grid-template-columns:repeat(9,1fr);gap:1px;background:var(--line);border-bottom:1px solid var(--line)}
 .m{background:var(--panel);padding:9px 12px}
 .m .k{color:var(--gray);font-size:10px;letter-spacing:.1em;text-transform:uppercase}
 .m .v{font-size:19px;font-weight:600;margin-top:2px;font-variant-numeric:tabular-nums}
@@ -120,13 +120,18 @@ th{color:var(--gray);font-weight:500;font-size:11px}
     <span style="color:var(--gray)">senaryo</span>
     <select id="scenario" class="btn">
       <option value="tek">Tek sipariş · 1 pide + 2 lahmacun</option>
-      <option value="uc" selected>3 müşteri · 1'er dk arayla</option>
-      <option value="gercek">GERÇEKÇİ AKŞAM · 2 saat × 13 sipariş/saat</option>
-      <option value="stres">STRES TESTİ · 20 dk × dakikada 1 (hedefin 4 katı)</option>
-      <option value="saat">Sürekli · saatte N sipariş (1 saat)</option>
+      <option value="uc">3 müşteri · 1'er dk arayla</option>
+      <option value="ogle">ÖĞLE PİKİ · 12–14 · 14 sipariş</option>
+      <option value="aksam" selected>AKŞAM PİKİ · hafta içi · 17–20 · 25 sipariş</option>
+      <option value="cmt">CUMARTESİ AKŞAMI · 17–20 · 35 sipariş</option>
+      <option value="buyume">BÜYÜME · 150 pide/gün · 17–20 · 38 sipariş</option>
+      <option value="iftar">İFTAR / DERBİ · 45 dk · 30 sipariş</option>
+      <option value="surekli">SÜREKLİ AKIŞ · 1 saat · aralığı sen seç</option>
       <option value="bos">Boş — siparişi ben vereceğim</option>
     </select>
-    <span id="rateWrap" style="display:none;align-items:center;gap:6px"><input type="range" id="rate" min="6" max="45" value="20" step="1"><span id="v-rate">20/saat</span> · lahmacun <input type="range" id="lahmPct" min="0" max="100" value="30" step="5"><span id="v-lahmPct">%30</span></span>
+    <span id="rateWrap" style="display:none;align-items:center;gap:6px">her <input type="range" id="gap" min="20" max="300" value="90" step="10"><b id="v-gap">90 sn</b>'de 1 sipariş <span id="v-gaph" style="color:var(--gray)"></span></span>
+    <span class="sep"></span><span style="color:var(--gray)">lahmacun</span><input type="range" id="lahmPct" min="0" max="100" value="30" step="5"><span id="v-lahmPct">%30</span>
+    <button class="btn" id="seedBtn" title="aynı yoğunlukta başka bir akşam">🎲 başka akşam</button>
     <span class="sep"></span>
     <span style="color:var(--gray)">şimdi sipariş ver</span>
     <button class="btn warn" data-inj="pide">+ 1 pide</button>
@@ -139,6 +144,7 @@ th{color:var(--gray);font-weight:500;font-size:11px}
   <div class="metrics">
     <div class="m"><div class="k">teslim edilen</div><div class="v" id="m-del">0 <small>sipariş</small></div></div>
     <div class="m"><div class="k">ort. bekleme</div><div class="v" id="m-avg">–</div></div>
+    <div class="m"><div class="k">%95 bunun altında</div><div class="v" id="m-p95">–</div></div>
     <div class="m"><div class="k">en kötü bekleme</div><div class="v" id="m-max">–</div></div>
     <div class="m"><div class="k">robot doluluk</div><div class="v" id="m-rob">0%</div></div>
     <div class="m"><div class="k">fırın doluluk</div><div class="v" id="m-ov">0%</div></div>
@@ -164,39 +170,57 @@ const T0 = { takeDough:8, drinkTake:6, drinkPlace:5, pressPlace:14, pressCycle:4
   boxTake:5, lockerPlace:8, pusher:3, lahmLoadExtra:2, lahmUnloadExtra:4, customerPickup:150 };
 
 const CFG = { lahm:true, lahmOven:true, lahmCap:2, pideCh:2, bakePide:240, bakeLahm:180, cutter:true, cutterAt:'OVEN',
-  pusher:false, pressAuto:false, gripper:'kombine', toolChange:12, drinkPct:50, fold:15, rail:50, robotK:1, smart:true, lockers:12,
-  scenario:'uc', rate:20, lahmPct:30 };
+  pusher:false, pressAuto:false, gripper:'kombine', toolChange:12, drinkPct:50, seed:1, gapSec:90, randArr:true, fold:15, rail:50, robotK:1, smart:true, lockers:12,
+  scenario:'aksam', rate:20, lahmPct:30 };
 
 /* ---------- senaryolar ---------- */
-/* SENARYOLARIN KAYNAGI
-   tek     : Kemal'in sorusu — "bir kisi 1 pide 2 lahmacun dedi mesela"
-   uc      : Kemal'in sorusu — "saat 7'de siparis verdim, 1 dk sonra baskasi, 1 dk sonra bir daha"
-   gercek  : HEDEFTEN TURETILDI — 80-100 pide/gun · 1,4 pide/siparis = 57-71 siparis/gun
-             (KONTROL_LISTESI 2.5). 12 saat acik, aksam 2 saati gunun ~%38'i -> saatte ~13 siparis.
-   stres   : VARSAYIM, gercek talep degil — 20 dk boyunca dakikada 1 (saatte 60 siparis oraninda,
-             gunluk hedefin ~4 kati). Hattin nerede kirildigini gormek icin.
-   saat    : serbest — hizi sen verirsin.
-   Urun karisimi: lahmacun payi panelden (varsayilan %30, VARSAYIM). Lahmacun siparisleri 2'li
-   (Kemal: "lahmacun her siparis ikiden az gelmez"). Pide siparislerinin 1/3'u cift pide
-   (1,4 pide/siparis ortalamasini tutturur). Icecek orani panelden (varsayilan %50 — memory:
-   "icecek %50 katilim x 80/gun"). Her 7. icecekli siparis 1 L. */
+/* ====================== SENARYOLAR ======================
+   KAYNAK: Yemeksepeti 2023 (AA) — en yogun saatler 17:00-20:00, en yogun tek saat 18:00,
+   bu uc saat toplam siparisin %36'si. Uluslararasi veri de aksam penceresini dogruluyor.
+   HEDEF: 80-100 pide/gun / 1,4 pide-siparis = 57-71 siparis/gun; hesaplar 70 uzerinden.
+   GELIS: Poisson (sabit oranli surecte siparisler saat icine RASTGELE dagilir) — gercek akis
+   boyle davranir: uc siparis ust uste duser, sonra sessizlik. Sabit aralik hatti kayirir.
+   TOHUM: ayni senaryo hep ayni aksami uretir (adil karsilastirma); "baska bir aksam" tohumu degistirir. */
+function rng(seed){ return function(){ seed|=0; seed=seed+0x6D2B79F5|0; let t=Math.imul(seed^seed>>>15,1|seed);
+  t=t+Math.imul(t^t>>>7,61|t)^t; return ((t^t>>>14)>>>0)/4294967296; }; }
+/* siparis icerigi: pide adedi %65 tek · %25 cift · %10 uclu (ort 1,45 ~ hedef 1,4)
+   lahmacun payi panelden, geldiginde HEP ikiser (Kemal: "ikiden az gelmez"), %15 uclu */
+function mkItems(rnd, cfg){
+  if(cfg.lahm && rnd() < cfg.lahmPct/100){ const it=['lahm','lahm']; if(rnd()<0.15) it.push('lahm'); return it; }
+  const r=rnd(), n = r<0.65?1 : r<0.90?2 : 3, it=[]; for(let i=0;i<n;i++) it.push('pide'); return it;
+}
+const AKSAM_EGRI=[0.28, 0.42, 0.30];   // 17h · 18h(tepe) · 19h
+const SEN={
+  tek:     {ad:'Tek sipariş', sure:0},
+  uc:      {ad:'3 müşteri', sure:0},
+  ogle:    {ad:'ÖĞLE PİKİ',        saat:12, n:14, egri:[0.45,0.55]},
+  aksam:   {ad:'AKŞAM PİKİ · hafta içi', saat:17, n:25, egri:AKSAM_EGRI},
+  cmt:     {ad:'CUMARTESİ AKŞAMI', saat:17, n:35, egri:AKSAM_EGRI},
+  buyume:  {ad:'BÜYÜME · 150 pide/gün', saat:17, n:38, egri:AKSAM_EGRI},
+  iftar:   {ad:'İFTAR / DERBİ', saat:19, n:30, pencere:2700},
+  surekli: {ad:'SÜREKLİ AKIŞ', saat:18, pencere:3600},
+};
 function scenarioOrders(cfg){
-  const L = cfg.lahm, o = [];
-  const two = L ? ['lahm','lahm'] : ['pide','pide'];
+  const L=cfg.lahm, o=[], rnd=rng((cfg.seed||1)*7919+13);
   const mix = L ? ['pide','lahm','lahm'] : ['pide','pide'];
-  const akis=(n, gap)=>{ for(let i=0;i<n;i++){ const r=(i*37)%100;
-      o.push({arr:i*gap, items:(L && r<cfg.lahmPct)?['lahm','lahm']:((i%3===0)?['pide','pide']:['pide'])}); } };
   switch(cfg.scenario){
-    case 'tek':    o.push({arr:0, items:mix}); break;
-    case 'uc':     o.push({arr:0, items:['pide','pide']}, {arr:60, items:mix}, {arr:120, items:['pide']}); break;
-    case 'gercek': akis(26, 3600/13); break;           // 2 saat x 13 siparis/saat
-    case 'stres':  for(let i=0;i<20;i++) o.push({arr:i*60, items:(i%10<7)?['pide']:two}); break;
-    case 'saat':   akis(cfg.rate, 3600/cfg.rate); break;
-    case 'bos': break;
+    case 'tek': o.push({arr:0, items:mix}); break;
+    case 'uc':  o.push({arr:0, items:['pide','pide']}, {arr:60, items:mix}, {arr:120, items:['pide']}); break;
+    case 'surekli': {
+      const gap=cfg.gapSec;
+      if(cfg.randArr){ let t=0; while(t<3600){ t += -Math.log(1-rnd())*gap; if(t<3600) o.push({arr:t, items:mkItems(rnd,cfg)}); } }
+      else { for(let t=0;t<3600;t+=gap) o.push({arr:t, items:mkItems(rnd,cfg)}); }
+      break; }
+    case 'iftar': { const S=SEN.iftar; for(let k=0;k<S.n;k++) o.push({arr:rnd()*S.pencere, items:mkItems(rnd,cfg)}); break; }
+    default: {
+      const S=SEN[cfg.scenario]; if(!S||!S.egri) break;
+      S.egri.forEach((pay,i)=>{ const n=Math.round(S.n*pay);
+        for(let k=0;k<n;k++) o.push({arr:i*3600+rnd()*3600, items:mkItems(rnd,cfg)}); });
+      break; }
   }
+  o.sort((a,b)=>a.arr-b.arr);
   return o;
 }
-
 /* ---------- yerleşim ---------- */
 function layout(cfg){
   const S=[]; let x=0;
@@ -242,6 +266,9 @@ class Sim{
   }
   say(s){ this.log.push({t:this.t, s}); if(this.log.length>400) this.log.shift(); }
   fmt(s){ s=Math.max(0,Math.round(s)); return String(Math.floor(s/60)).padStart(2,'0')+':'+String(s%60).padStart(2,'0'); }
+  saat(t){ const S=SEN[this.cfg.scenario]; if(!S||S.saat===undefined) return null;
+    const x=S.saat*3600+Math.max(0,t), h=Math.floor(x/3600)%24, m=Math.floor(x/60)%60;
+    return String(h).padStart(2,'0')+':'+String(m).padStart(2,'0'); }
   /* --- sipariş kabul --- */
   releaseOrders(){
     while(this.pendingOrders.length && this.pendingOrders[0].arr<=this.t+1e-9){
@@ -470,7 +497,9 @@ class Sim{
     const done=this.orders.filter(o=>o.doneT!==null), w=done.map(o=>o.doneT-o.arr);
     const ovBusy=[...this.chambers,...this.lch].reduce((a,ch)=>a+ch.busy,0), nCh=this.chambers.length+this.lch.length;
     const span=Math.max(this.t,1);
+    const srt=[...w].sort((a,b)=>a-b);
     return { delivered:done.length, avg:w.length?w.reduce((a,b)=>a+b,0)/w.length:null, max:w.length?Math.max(...w):null,
+      p95: w.length?srt[Math.min(srt.length-1,Math.floor(srt.length*0.95))]:null,
       robot:this.robot.busy/span, oven:nCh?ovBusy/(span*nCh):0, queue:this.orders.filter(o=>o.doneT===null).length,
       thr: this.deliveredUnits>0 && this.t>0 ? this.deliveredUnits/(this.t/3600) : null };
   }
@@ -676,6 +705,7 @@ function draw(sim, speed){
   else if(!sim.done){ label('robot boşta', rx, RAILY-32, 11, C.dim); }
   // saat
   label(sim.fmt(t), 60, 22, 22, '#fff','left'); label(speed+'×', 150, 24, 12, C.dim,'left');
+  { const sa=sim.saat(t); if(sa) label('saat '+sa, 200, 23, 15, '#2997FF','left'); }
   if(sim.done) label('SENARYO BİTTİ — tüm siparişler teslim', W/2, 24, 14, C.done);
   // öncelik açıklaması
   label(c.smart?'ROBOT KURALI: pişmiş varsa al › kutu hazırsa dolaba › boş hazne varsa yeni ürün › uzun pişeni önce':'ROBOT KURALI: ne gelirse sırayla (akıllı öncelik KAPALI)', W-16, 22, 10, C.dim, 'right');
@@ -684,18 +714,23 @@ function draw(sim, speed){
 /* ---------- uygulama ---------- */
 let sim, speed=1, playing=false, last=performance.now(), baseline=null;
 const SEN_NOT={
-  tek:'<b style="color:#F5F5F7">Senin sorun</b> — "bir kişi 1 pide 2 lahmacun dedi mesela". Hat boş, önünde kuyruk yok.',
-  uc:'<b style="color:#F5F5F7">Senin sorun</b> — "saat 7\'de sipariş verdim, 1 dk sonra başkası, 1 dk sonra bir daha". 3 müşteri, 60 sn arayla.',
-  gercek:'<b style="color:#30d158">HEDEFTEN TÜRETİLDİ</b> — 80–100 pide/gün ÷ 1,4 pide/sipariş = 57–71 sipariş/gün (kontrol listesi). 12 saat açık, akşamın 2 saati günün ~%38\'i → <b style="color:#F5F5F7">saatte 13 sipariş</b>. Gerçek işletme yükü bu.',
-  stres:'<b style="color:#ff453a">VARSAYIM — gerçek talep değil.</b> 20 dk boyunca dakikada 1 sipariş = saatte 60 sipariş oranında, <b style="color:#F5F5F7">günlük hedefin ~4 katı</b>. Hattın nerede kırıldığını görmek için; buradaki 40 dk\'lık beklemeler gerçek beklentin değil.',
-  saat:'Hızı sen veriyorsun. Karşılaştırma için: gerçekçi akşam ≈ 13/saat · robot tavanı ≈ 35/saat.',
+  tek:'<b style="color:#F5F5F7">Senin sorun</b> — "bir kişi 1 pide 2 lahmacun dedi mesela". Hat boş, kuyruk yok.',
+  uc:'<b style="color:#F5F5F7">Senin sorun</b> — "saat 7\'de sipariş verdim, 1 dk sonra başkası, 1 dk sonra bir daha".',
+  ogle:'<b style="color:#30d158">VERİYE DAYALI</b> — öğle penceresi günün ~%20\'si → 70 sipariş/gün × %20 = <b style="color:#F5F5F7">14 sipariş / 2 saat</b>. Geliş rastgele (Poisson).',
+  aksam:'<b style="color:#30d158">VERİYE DAYALI</b> — Yemeksepeti 2023: 17:00–20:00 = toplam siparişin <b style="color:#F5F5F7">%36\'sı</b>, tepe saat 18:00. 70 sipariş/gün → <b style="color:#F5F5F7">25 sipariş / 3 saat</b> (7 · 10 · 8). Geliş rastgele.',
+  cmt:'<b style="color:#30d158">VERİYE DAYALI</b> — hafta sonu ×1,4 → 98 sipariş/gün → <b style="color:#F5F5F7">35 sipariş / 3 saat</b>, tepe saat 18:00\'de 15 sipariş. Gerçek zorlanma burada başlar.',
+  buyume:'<b style="color:#ffd60a">HEDEF ÜST SINIR</b> — 150 pide/gün = 107 sipariş/gün → <b style="color:#F5F5F7">38 sipariş / 3 saat</b>, tepe saatte 16. Hattın büyümeye hazır olup olmadığını burada gör.',
+  iftar:'<b style="color:#ff453a">EKSTREM</b> — iftar/derbi: <b style="color:#F5F5F7">45 dakikada 30 sipariş</b> (saatlik 40 oranı). Robot tavanı ~35 ürün/saat — burası kesin kırılır. Amaç: ne kadar kırıldığını görmek.',
+  surekli:'<b style="color:#ff453a">EN ZOR — AYARI SEN VER</b> — 1 saat boyunca durmadan sipariş. Üstteki kaydırıcıyla aralığı seç; 90 sn = saatte 40 sipariş, 60 sn = 60/saat, 30 sn = 120/saat. Robot tavanı ~35 ürün/saat.',
   bos:'Boş hat — üstteki düğmelerle istediğin an sipariş at, robotun ne yaptığını izle.'};
 function rebuild(){ document.getElementById('senNot').innerHTML=SEN_NOT[CFG.scenario]||''; sim=new Sim(CFG, scenarioOrders(CFG)); playing=false; document.getElementById('play').textContent='▶ Başlat'; refreshAB(); render(); }
 function render(){ draw(sim, speed); const m=sim.metrics();
   const f=(s)=>s===null?'–':(s/60).toFixed(1)+' <small>dk</small>';
-  document.getElementById('clock').textContent=sim.fmt(sim.t);
+  { const sa=sim.saat(sim.t); document.getElementById('clock').textContent = sa ? sa : sim.fmt(sim.t); }
   document.getElementById('m-del').innerHTML=m.delivered+' <small>sipariş</small>';
   document.getElementById('m-avg').innerHTML=f(m.avg); document.getElementById('m-max').innerHTML=f(m.max);
+  { const el=document.getElementById('m-p95'); el.innerHTML=f(m.p95);
+    el.style.color = m.p95===null?'' : (m.p95<=15*60?'#30d158':'#ff453a'); }
   document.getElementById('m-rob').textContent=Math.round(m.robot*100)+'%'; document.getElementById('m-ov').textContent=Math.round(m.oven*100)+'%';
   document.getElementById('m-q').innerHTML=m.queue+' <small>sipariş</small>'; document.getElementById('m-thr').innerHTML=(m.thr?m.thr.toFixed(0):'–')+' <small>ürün/saat</small>';
   const S=sim.stock;
@@ -750,6 +785,7 @@ function refreshAB(){
   el.innerHTML=`<div class="h">anlık hesap — bu kurulum, bu senaryo (sonuna kadar)</div>
   <table><tr><td></td><td class="h">şimdi</td><td class="h">${baseline?'temel':''}</td><td class="h">${baseline?'fark':''}</td></tr>
   <tr><td>ort. bekleme</td><td><b>${f(m.avg)}</b></td><td>${baseline?f(baseline.avg):''}</td><td>${d(m.avg,baseline&&baseline.avg,true)}</td></tr>
+  <tr><td>%95 altında</td><td><b>${f(m.p95)}</b></td><td>${baseline?f(baseline.p95):''}</td><td>${d(m.p95,baseline&&baseline.p95,true)}</td></tr>
   <tr><td>en kötü</td><td><b>${f(m.max)}</b></td><td>${baseline?f(baseline.max):''}</td><td>${d(m.max,baseline&&baseline.max,true)}</td></tr>
   <tr><td>robot doluluk</td><td><b>${pct(m.robot)}</b></td><td>${baseline?pct(baseline.robot):''}</td><td></td></tr>
   <tr><td>fırın doluluk</td><td><b>${pct(m.oven)}</b></td><td>${baseline?pct(baseline.oven):''}</td><td></td></tr>
@@ -767,10 +803,15 @@ function syncPanel(){
   dis('lahmOven',!CFG.lahm); dis('lahmCap',!(CFG.lahm&&CFG.lahmOven)); dis('bakeLahm',!CFG.lahm);
   dis('cutterAt',!CFG.cutter); dis('pusher',!(CFG.cutter&&CFG.cutterAt==='PACK'));
   document.getElementById('injL').style.display=CFG.lahm?'':'none'; document.getElementById('injPL').style.display=CFG.lahm?'':'none';
-  document.getElementById('rateWrap').style.display=CFG.scenario==='saat'?'inline-flex':'none';
+  document.getElementById('rateWrap').style.display=CFG.scenario==='surekli'?'inline-flex':'none';
+  document.getElementById('seedBtn').style.display=['tek','uc','bos'].includes(CFG.scenario)?'none':'';
 }
 document.getElementById('scenario').onchange=(e)=>{ CFG.scenario=e.target.value; syncPanel(); rebuild(); };
-document.getElementById('rate').oninput=(e)=>{ CFG.rate=parseInt(e.target.value); document.getElementById('v-rate').textContent=CFG.rate+'/saat'; }; document.getElementById('rate').onchange=()=>rebuild();
+const gapEl=document.getElementById('gap');
+function gapTxt(){ document.getElementById('v-gap').textContent=CFG.gapSec+' sn';
+  document.getElementById('v-gaph').textContent='= saatte '+Math.round(3600/CFG.gapSec)+' sipariş'; }
+gapEl.oninput=(e)=>{ CFG.gapSec=parseInt(e.target.value); gapTxt(); }; gapEl.onchange=()=>rebuild(); gapTxt();
+document.getElementById('seedBtn').onclick=()=>{ CFG.seed=(CFG.seed||1)+1; rebuild(); };
 document.getElementById('lahmPct').oninput=(e)=>{ CFG.lahmPct=parseInt(e.target.value); document.getElementById('v-lahmPct').textContent='%'+CFG.lahmPct; }; document.getElementById('lahmPct').onchange=()=>rebuild();
 document.getElementById('play').onclick=()=>{ playing=!playing; document.getElementById('play').textContent=playing?'❚❚ Durdur':'▶ Başlat'; };
 document.getElementById('reset').onclick=rebuild;
