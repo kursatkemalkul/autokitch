@@ -39,7 +39,7 @@ main{display:flex;flex-direction:column;min-width:0}
 .sep{width:1px;height:24px;background:var(--line);margin:0 4px}
 .clock{font-variant-numeric:tabular-nums;font-size:20px;font-weight:600;min-width:86px}
 canvas{display:block;width:100%;background:#0b0b0c}
-.metrics{display:grid;grid-template-columns:repeat(9,1fr);gap:1px;background:var(--line);border-bottom:1px solid var(--line)}
+.metrics{display:grid;grid-template-columns:repeat(10,1fr);gap:1px;background:var(--line);border-bottom:1px solid var(--line)}
 .m{background:var(--panel);padding:9px 12px}
 .m .k{color:var(--gray);font-size:10px;letter-spacing:.1em;text-transform:uppercase}
 .m .v{font-size:19px;font-weight:600;margin-top:2px;font-variant-numeric:tabular-nums}
@@ -103,6 +103,7 @@ th{color:var(--gray);font-weight:500;font-size:11px}
   <div class="row"><label>Kol hız katsayısı</label><input type="range" data-k="robotK" min="0.5" max="1.5" step="0.05" value="1"><span class="val" id="v-robotK">1.00</span></div>
   <div class="row"><label>Akıllı öncelik (pişmiş önce · uzun pişen önce)</label><div class="sw on" data-k="smart"></div></div>
   <div class="row"><label>İçecekli sipariş oranı</label><input type="range" data-k="drinkPct" min="0" max="100" step="10" value="50"><span class="val" id="v-drinkPct">%50</span></div>
+  <div class="row"><label><b>HEDEF: kimse şundan fazla beklemesin</b></label><input type="number" data-k="hedefDk" value="25" min="5" max="60" step="1"> <span class="val">dk</span></div>
   <div class="row"><label>PICKUP göz sayısı</label><input type="number" data-k="lockers" value="12" min="2" max="24"></div>
 
   <div class="ab" id="ab"></div>
@@ -121,12 +122,9 @@ th{color:var(--gray);font-weight:500;font-size:11px}
     <select id="scenario" class="btn">
       <option value="tek">Tek sipariş · 1 pide + 2 lahmacun</option>
       <option value="uc">3 müşteri · 1'er dk arayla</option>
-      <option value="ogle">ÖĞLE PİKİ · 12–14 · 14 sipariş</option>
-      <option value="aksam" selected>AKŞAM PİKİ · hafta içi · 17–20 · 25 sipariş</option>
-      <option value="cmt">CUMARTESİ AKŞAMI · 17–20 · 35 sipariş</option>
-      <option value="buyume">BÜYÜME · 150 pide/gün · 17–20 · 38 sipariş</option>
-      <option value="iftar">İFTAR / DERBİ · 45 dk · 30 sipariş</option>
-      <option value="surekli">SÜREKLİ AKIŞ · 1 saat · aralığı sen seç</option>
+      <option value="aksam">AKŞAM PİKİ · hafta içi · 17–20 · 25 sipariş</option>
+      <option value="cmt" selected>CUMARTESİ AKŞAMI · 17–20 · 35 sipariş (karar senaryosu)</option>
+      <option value="surekli">SÜREKLİ AKIŞ · 1 saat · aralığı sen seç (sınır testi)</option>
       <option value="bos">Boş — siparişi ben vereceğim</option>
     </select>
     <span id="rateWrap" style="display:none;align-items:center;gap:6px">her <input type="range" id="gap" min="20" max="300" value="90" step="10"><b id="v-gap">90 sn</b>'de 1 sipariş <span id="v-gaph" style="color:var(--gray)"></span></span>
@@ -138,12 +136,15 @@ th{color:var(--gray);font-weight:500;font-size:11px}
     <button class="btn warn" data-inj="pide,pide">+ 2 pide</button>
     <button class="btn warn" data-inj="lahm,lahm" id="injL">+ 2 lahmacun</button>
     <button class="btn warn" data-inj="pide,lahm,lahm" id="injPL">+ pide & 2 lahmacun</button>
+    <span class="sep"></span>
+    <button class="btn pri" id="kapBtn" title="bu kurulumda hedefi tutan en yüksek sipariş hızını bulur">📊 KAPASİTE BUL</button>
   </div>
   <div id="senNot" style="padding:6px 16px;border-bottom:1px solid var(--line);background:#121214;color:var(--gray);font-size:11px"></div>
   <canvas id="cv" width="1400" height="600"></canvas>
   <div class="metrics">
     <div class="m"><div class="k">teslim edilen</div><div class="v" id="m-del">0 <small>sipariş</small></div></div>
     <div class="m"><div class="k">ort. bekleme</div><div class="v" id="m-avg">–</div></div>
+    <div class="m"><div class="k">hedefi aşan</div><div class="v" id="m-asan">–</div></div>
     <div class="m"><div class="k">%95 bunun altında</div><div class="v" id="m-p95">–</div></div>
     <div class="m"><div class="k">en kötü bekleme</div><div class="v" id="m-max">–</div></div>
     <div class="m"><div class="k">robot doluluk</div><div class="v" id="m-rob">0%</div></div>
@@ -171,7 +172,7 @@ const T0 = { takeDough:8, drinkTake:6, drinkPlace:5, pressPlace:14, pressCycle:4
 
 const CFG = { lahm:true, lahmOven:true, lahmCap:2, pideCh:2, bakePide:240, bakeLahm:180, cutter:true, cutterAt:'OVEN',
   pusher:false, pressAuto:false, gripper:'kombine', toolChange:12, drinkPct:50, seed:1, gapSec:90, randArr:true, fold:15, rail:50, robotK:1, smart:true, lockers:12,
-  scenario:'aksam', rate:20, lahmPct:30 };
+  scenario:'cmt', hedefDk:25, rate:20, lahmPct:30 };
 
 /* ---------- senaryolar ---------- */
 /* ====================== SENARYOLAR ======================
@@ -193,11 +194,8 @@ const AKSAM_EGRI=[0.28, 0.42, 0.30];   // 17h · 18h(tepe) · 19h
 const SEN={
   tek:     {ad:'Tek sipariş', sure:0},
   uc:      {ad:'3 müşteri', sure:0},
-  ogle:    {ad:'ÖĞLE PİKİ',        saat:12, n:14, egri:[0.45,0.55]},
   aksam:   {ad:'AKŞAM PİKİ · hafta içi', saat:17, n:25, egri:AKSAM_EGRI},
   cmt:     {ad:'CUMARTESİ AKŞAMI', saat:17, n:35, egri:AKSAM_EGRI},
-  buyume:  {ad:'BÜYÜME · 150 pide/gün', saat:17, n:38, egri:AKSAM_EGRI},
-  iftar:   {ad:'İFTAR / DERBİ', saat:19, n:30, pencere:2700},
   surekli: {ad:'SÜREKLİ AKIŞ', saat:18, pencere:3600},
 };
 function scenarioOrders(cfg){
@@ -211,7 +209,6 @@ function scenarioOrders(cfg){
       if(cfg.randArr){ let t=0; while(t<3600){ t += -Math.log(1-rnd())*gap; if(t<3600) o.push({arr:t, items:mkItems(rnd,cfg)}); } }
       else { for(let t=0;t<3600;t+=gap) o.push({arr:t, items:mkItems(rnd,cfg)}); }
       break; }
-    case 'iftar': { const S=SEN.iftar; for(let k=0;k<S.n;k++) o.push({arr:rnd()*S.pencere, items:mkItems(rnd,cfg)}); break; }
     default: {
       const S=SEN[cfg.scenario]; if(!S||!S.egri) break;
       S.egri.forEach((pay,i)=>{ const n=Math.round(S.n*pay);
@@ -721,11 +718,8 @@ let sim, speed=1, playing=false, last=performance.now(), baseline=null;
 const SEN_NOT={
   tek:'<b style="color:#F5F5F7">Senin sorun</b> — "bir kişi 1 pide 2 lahmacun dedi mesela". Hat boş, kuyruk yok.',
   uc:'<b style="color:#F5F5F7">Senin sorun</b> — "saat 7\'de sipariş verdim, 1 dk sonra başkası, 1 dk sonra bir daha".',
-  ogle:'<b style="color:#30d158">VERİYE DAYALI</b> — öğle penceresi günün ~%20\'si → 70 sipariş/gün × %20 = <b style="color:#F5F5F7">14 sipariş / 2 saat</b>. Geliş rastgele (Poisson).',
   aksam:'<b style="color:#30d158">VERİYE DAYALI</b> — Yemeksepeti 2023: 17:00–20:00 = toplam siparişin <b style="color:#F5F5F7">%36\'sı</b>, tepe saat 18:00. 70 sipariş/gün → <b style="color:#F5F5F7">25 sipariş / 3 saat</b> (7 · 10 · 8). Geliş rastgele.',
   cmt:'<b style="color:#30d158">VERİYE DAYALI</b> — hafta sonu ×1,4 → 98 sipariş/gün → <b style="color:#F5F5F7">35 sipariş / 3 saat</b>, tepe saat 18:00\'de 15 sipariş. Gerçek zorlanma burada başlar.',
-  buyume:'<b style="color:#ffd60a">HEDEF ÜST SINIR</b> — 150 pide/gün = 107 sipariş/gün → <b style="color:#F5F5F7">38 sipariş / 3 saat</b>, tepe saatte 16. Hattın büyümeye hazır olup olmadığını burada gör.',
-  iftar:'<b style="color:#ff453a">EKSTREM</b> — iftar/derbi: <b style="color:#F5F5F7">45 dakikada 30 sipariş</b> (saatlik 40 oranı). Robot tavanı ~35 ürün/saat — burası kesin kırılır. Amaç: ne kadar kırıldığını görmek.',
   surekli:'<b style="color:#ff453a">EN ZOR — AYARI SEN VER</b> — 1 saat boyunca durmadan sipariş. Üstteki kaydırıcıyla aralığı seç; 90 sn = saatte 40 sipariş, 60 sn = 60/saat, 30 sn = 120/saat. Robot tavanı ~35 ürün/saat.',
   bos:'Boş hat — üstteki düğmelerle istediğin an sipariş at, robotun ne yaptığını izle.'};
 function rebuild(){ document.getElementById('senNot').innerHTML=SEN_NOT[CFG.scenario]||''; sim=new Sim(CFG, scenarioOrders(CFG)); playing=false; document.getElementById('play').textContent='▶ Başlat'; refreshAB(); render(); }
@@ -735,7 +729,11 @@ function render(){ draw(sim, speed); const m=sim.metrics();
   document.getElementById('m-del').innerHTML=m.delivered+' <small>sipariş</small>';
   document.getElementById('m-avg').innerHTML=f(m.avg); document.getElementById('m-max').innerHTML=f(m.max);
   { const el=document.getElementById('m-p95'); el.innerHTML=f(m.p95);
-    el.style.color = m.p95===null?'' : (m.p95<=15*60?'#30d158':'#ff453a'); }
+    el.style.color = m.p95===null?'' : (m.p95<=CFG.hedefDk*60?'#30d158':'#ff453a'); }
+  { const dn=sim.orders.filter(o=>o.doneT!==null), as=dn.filter(o=>(o.doneT-o.arr)>CFG.hedefDk*60).length;
+    const el=document.getElementById('m-asan');
+    el.innerHTML = dn.length? `${as} <small>/ ${dn.length} sipariş</small>` : '–';
+    el.style.color = as?'#ff453a':'#30d158'; }
   document.getElementById('m-rob').textContent=Math.round(m.robot*100)+'%'; document.getElementById('m-ov').textContent=Math.round(m.oven*100)+'%';
   document.getElementById('m-q').innerHTML=m.queue+' <small>sipariş</small>'; document.getElementById('m-thr').innerHTML=(m.thr?m.thr.toFixed(0):'–')+' <small>ürün/saat</small>';
   const S=sim.stock;
@@ -765,16 +763,16 @@ function render(){ draw(sim, speed); const m=sim.metrics();
   const done=sim.orders.filter(o=>o.doneT!==null).slice(-34);
   const ch=document.getElementById('chart'), chx=document.getElementById('chartx');
   if(done.length){
-    const mx=Math.max(15*60, ...done.map(o=>o.doneT-o.arr));
-    ch.innerHTML=`<div class="hedef" style="bottom:${10*60/mx*100}%"><b>10 dk hedef</b></div>`+done.map(o=>{
-      const w=o.doneT-o.arr, hh=Math.max(3,Math.round(w/mx*100));
-      const col=w<=8*60?'#30d158':w<=12*60?'#ffd60a':'#ff453a';
+    const mx=Math.max(CFG.hedefDk*60*1.1, ...done.map(o=>o.doneT-o.arr));
+    ch.innerHTML=`<div class="hedef" style="bottom:${CFG.hedefDk*60/mx*100}%"><b>${CFG.hedefDk} dk HEDEF</b></div>`+done.map(o=>{
+      const w=o.doneT-o.arr, hh=Math.max(3,Math.round(w/mx*100)), H=CFG.hedefDk*60;
+      const col=w<=H*0.6?'#30d158':w<=H?'#ffd60a':'#ff453a';
       return `<div class="b" style="height:${hh}%;background:${col}" title="#${o.id} ${sim.kisa(o)} · ${(w/60).toFixed(1)} dk"><i>${(w/60).toFixed(0)}</i></div>`;
     }).join('');
     chx.innerHTML=done.map(o=>`<div>${o.id}</div>`).join('');
     const ws=done.map(o=>o.doneT-o.arr), son5=ws.slice(-5);
     document.getElementById('chartnote').innerHTML=
-      `yeşil ≤8 dk · sarı 8–12 · kırmızı >12 &nbsp;|&nbsp; <b style="color:#F5F5F7">en kötü ${(Math.max(...ws)/60).toFixed(1)} dk</b> · son 5 siparişin ortalaması ${(son5.reduce((a,b)=>a+b,0)/son5.length/60).toFixed(1)} dk`;
+      `yeşil ≤${(CFG.hedefDk*0.6).toFixed(0)} dk · sarı ${(CFG.hedefDk*0.6).toFixed(0)}–${CFG.hedefDk} · <b style="color:#ff453a">kırmızı = hedefi aştı</b> &nbsp;|&nbsp; <b style="color:#F5F5F7">en kötü ${(Math.max(...ws)/60).toFixed(1)} dk</b> · son 5 siparişin ortalaması ${(son5.reduce((a,b)=>a+b,0)/son5.length/60).toFixed(1)} dk`;
   } else { ch.innerHTML=''; chx.innerHTML=''; document.getElementById('chartnote').textContent='henüz teslim yok'; }
   const lg=document.getElementById('log'); lg.innerHTML=sim.log.slice(-12).reverse().map(e=>`<div>${sim.fmt(e.t)} · ${e.s}</div>`).join('');
 }
@@ -822,6 +820,37 @@ document.getElementById('play').onclick=()=>{ playing=!playing; document.getElem
 document.getElementById('reset').onclick=rebuild;
 document.querySelectorAll('.spd').forEach(b=>b.onclick=()=>{ speed=parseFloat(b.dataset.s); document.querySelectorAll('.spd').forEach(x=>x.classList.toggle('on',x===b)); });
 document.querySelectorAll('[data-inj]').forEach(b=>b.onclick=()=>{ sim.addOrder(b.dataset.inj.split(','), sim.t); sim.done=false; render(); });
+/* KAPASİTE BUL — 5 farklı akşam koşturup, hiçbir müşterinin hedefi aşmadığı en yüksek hızı bulur */
+document.getElementById('kapBtn').onclick=()=>{
+  const btn=document.getElementById('kapBtn'), eski=btn.textContent; btn.textContent='hesaplanıyor…'; btn.disabled=true;
+  setTimeout(()=>{
+    const H=CFG.hedefDk*60, sonuc=[];
+    const dene=(gap)=>{ let enKotu=0, urun=0, rob=0, bt=0;
+      for(const sd of [1,2,3,4,5]){
+        const c=Object.assign(JSON.parse(JSON.stringify(CFG)),{scenario:'surekli', gapSec:gap, seed:sd});
+        const sm=new Sim(c, scenarioOrders(c)); let g=0;
+        while(!sm.done && g++<150000) sm.step(1);
+        const w=sm.orders.filter(o=>o.doneT!==null).map(o=>o.doneT-o.arr); if(!w.length) continue;
+        enKotu=Math.max(enKotu, Math.max(...w)); const m=sm.metrics(); urun+=m.thr||0; rob+=m.robot; bt++;
+      }
+      return {gap, sipSaat:Math.round(3600/gap), enKotu:enKotu/60, urun:urun/bt, robot:100*rob/bt}; };
+    let iyi=null;
+    for(const gap of [400,360,330,300,280,260,240,230,220,210,200,190,180,170,160,150,140,130,120]){
+      const r=dene(gap); sonuc.push(r);
+      if(r.enKotu<=CFG.hedefDk) iyi=r; else break;
+    }
+    btn.textContent=eski; btn.disabled=false;
+    const el=document.getElementById('ab');
+    if(!iyi){ el.innerHTML='<div class="h">kapasite</div><div class="st-r">En düşük hızda bile hedef tutmuyor — hedefi yükselt ya da hattı hızlandır.</div>'; return; }
+    el.innerHTML=`<div class="h">KAPASİTE · hedef ${CFG.hedefDk} dk</div>
+      <div style="font-size:22px;font-weight:700;color:#30d158;margin:4px 0">${iyi.urun.toFixed(0)} ürün/saat</div>
+      <table><tr><td>sipariş hızı</td><td><b>${iyi.sipSaat}/saat</b> (her ${iyi.gap} sn)</td></tr>
+      <tr><td>5 akşamın en kötüsü</td><td><b>${iyi.enKotu.toFixed(1)} dk</b></td></tr>
+      <tr><td>robot doluluk</td><td><b>${iyi.robot.toFixed(0)}%</b></td></tr></table>
+      <div class="note" style="margin-top:6px">Sınır: saatte ${sonuc[sonuc.length-1].sipSaat} siparişte en kötü ${sonuc[sonuc.length-1].enKotu.toFixed(1)} dk — hedefi aşıyor.<br>
+      Bu sayı <b>bu kurulumun</b> sonucu. Panelden bir şey değiştir, tekrar bas, farkı gör.</div>`;
+  }, 30);
+};
 function fit(){ const w=cv.parentElement.clientWidth; cv.style.height=(w*600/1400)+'px'; }
 window.addEventListener('resize',fit); fit();
 syncPanel(); rebuild(); requestAnimationFrame(loop);
