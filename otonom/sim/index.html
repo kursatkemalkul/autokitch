@@ -312,7 +312,12 @@ class Sim{
   }
   pickJob(){
     const c=this.cfg, cands=[];
-    for(const ch of [...this.chambers,...this.lch]) for(const sl of ch.slots) if(sl.p.state==='baked') cands.push({pri:0,t:sl.end, mk:()=>this.jobUnload(ch, sl.p)});
+    for(const ch of [...this.chambers,...this.lch]) for(const sl of ch.slots){
+      if(sl.p.state!=='baked') continue;
+      // kesici PACK'te ve doluysa pide fırından alınamaz — kesici masası tek, sıra var
+      if(sl.p.kind==='pide' && c.cutter && c.cutterAt==='PACK' && this.cutter.p) continue;
+      cands.push({pri:0,t:sl.end, mk:()=>this.jobUnload(ch, sl.p)});
+    }
     if(this.press.p && this.press.p.state==='baseReady') cands.push({pri:1,t:this.press.end, mk:()=>this.jobPickBase(this.press.p)});
     if(this.cutter.p && this.cutter.p.state==='cutDone' && !c.pusher) cands.push({pri:1,t:this.cutter.end, mk:()=>this.jobCarryCut(this.cutter.p)});
     for(const p of this.pack.boxed) if(this.lockers.some(l=>!l.p || l.p.order===p.order)) cands.push({pri:2,t:p.boxedT, mk:()=>this.jobDeliver(p)});
