@@ -121,7 +121,8 @@ th{color:var(--gray);font-weight:500;font-size:11px}
     <select id="scenario" class="btn">
       <option value="tek">Tek sipariş · 1 pide + 2 lahmacun</option>
       <option value="uc" selected>3 müşteri · 1'er dk arayla</option>
-      <option value="pik">Akşam piki · 20 dk × dakikada 1</option>
+      <option value="gercek">GERÇEKÇİ AKŞAM · 2 saat × 13 sipariş/saat</option>
+      <option value="stres">STRES TESTİ · 20 dk × dakikada 1 (hedefin 4 katı)</option>
       <option value="saat">Sürekli · saatte N sipariş (1 saat)</option>
       <option value="bos">Boş — siparişi ben vereceğim</option>
     </select>
@@ -133,6 +134,7 @@ th{color:var(--gray);font-weight:500;font-size:11px}
     <button class="btn warn" data-inj="lahm,lahm" id="injL">+ 2 lahmacun</button>
     <button class="btn warn" data-inj="pide,lahm,lahm" id="injPL">+ pide & 2 lahmacun</button>
   </div>
+  <div id="senNot" style="padding:6px 16px;border-bottom:1px solid var(--line);background:#121214;color:var(--gray);font-size:11px"></div>
   <canvas id="cv" width="1400" height="600"></canvas>
   <div class="metrics">
     <div class="m"><div class="k">teslim edilen</div><div class="v" id="m-del">0 <small>sipariş</small></div></div>
@@ -166,15 +168,30 @@ const CFG = { lahm:true, lahmOven:true, lahmCap:2, pideCh:2, bakePide:240, bakeL
   scenario:'uc', rate:20, lahmPct:30 };
 
 /* ---------- senaryolar ---------- */
+/* SENARYOLARIN KAYNAGI
+   tek     : Kemal'in sorusu — "bir kisi 1 pide 2 lahmacun dedi mesela"
+   uc      : Kemal'in sorusu — "saat 7'de siparis verdim, 1 dk sonra baskasi, 1 dk sonra bir daha"
+   gercek  : HEDEFTEN TURETILDI — 80-100 pide/gun · 1,4 pide/siparis = 57-71 siparis/gun
+             (KONTROL_LISTESI 2.5). 12 saat acik, aksam 2 saati gunun ~%38'i -> saatte ~13 siparis.
+   stres   : VARSAYIM, gercek talep degil — 20 dk boyunca dakikada 1 (saatte 60 siparis oraninda,
+             gunluk hedefin ~4 kati). Hattin nerede kirildigini gormek icin.
+   saat    : serbest — hizi sen verirsin.
+   Urun karisimi: lahmacun payi panelden (varsayilan %30, VARSAYIM). Lahmacun siparisleri 2'li
+   (Kemal: "lahmacun her siparis ikiden az gelmez"). Pide siparislerinin 1/3'u cift pide
+   (1,4 pide/siparis ortalamasini tutturur). Icecek orani panelden (varsayilan %50 — memory:
+   "icecek %50 katilim x 80/gun"). Her 7. icecekli siparis 1 L. */
 function scenarioOrders(cfg){
   const L = cfg.lahm, o = [];
   const two = L ? ['lahm','lahm'] : ['pide','pide'];
   const mix = L ? ['pide','lahm','lahm'] : ['pide','pide'];
+  const akis=(n, gap)=>{ for(let i=0;i<n;i++){ const r=(i*37)%100;
+      o.push({arr:i*gap, items:(L && r<cfg.lahmPct)?['lahm','lahm']:((i%3===0)?['pide','pide']:['pide'])}); } };
   switch(cfg.scenario){
-    case 'tek': o.push({arr:0, items:mix}); break;
-    case 'uc':  o.push({arr:0, items:['pide','pide']}, {arr:60, items:mix}, {arr:120, items:['pide']}); break;
-    case 'pik': for(let i=0;i<20;i++) o.push({arr:i*60, items:(i%10<7)?['pide']:two}); break;
-    case 'saat': { const n=cfg.rate, gap=3600/n; for(let i=0;i<n;i++){ const r=(i*37)%100; o.push({arr:i*gap, items:(L && r<cfg.lahmPct)?['lahm','lahm']:((i%3==0)?['pide','pide']:['pide'])}); } break; }
+    case 'tek':    o.push({arr:0, items:mix}); break;
+    case 'uc':     o.push({arr:0, items:['pide','pide']}, {arr:60, items:mix}, {arr:120, items:['pide']}); break;
+    case 'gercek': akis(26, 3600/13); break;           // 2 saat x 13 siparis/saat
+    case 'stres':  for(let i=0;i<20;i++) o.push({arr:i*60, items:(i%10<7)?['pide']:two}); break;
+    case 'saat':   akis(cfg.rate, 3600/cfg.rate); break;
     case 'bos': break;
   }
   return o;
@@ -666,7 +683,14 @@ function draw(sim, speed){
 
 /* ---------- uygulama ---------- */
 let sim, speed=1, playing=false, last=performance.now(), baseline=null;
-function rebuild(){ sim=new Sim(CFG, scenarioOrders(CFG)); playing=false; document.getElementById('play').textContent='▶ Başlat'; refreshAB(); render(); }
+const SEN_NOT={
+  tek:'<b style="color:#F5F5F7">Senin sorun</b> — "bir kişi 1 pide 2 lahmacun dedi mesela". Hat boş, önünde kuyruk yok.',
+  uc:'<b style="color:#F5F5F7">Senin sorun</b> — "saat 7\'de sipariş verdim, 1 dk sonra başkası, 1 dk sonra bir daha". 3 müşteri, 60 sn arayla.',
+  gercek:'<b style="color:#30d158">HEDEFTEN TÜRETİLDİ</b> — 80–100 pide/gün ÷ 1,4 pide/sipariş = 57–71 sipariş/gün (kontrol listesi). 12 saat açık, akşamın 2 saati günün ~%38\'i → <b style="color:#F5F5F7">saatte 13 sipariş</b>. Gerçek işletme yükü bu.',
+  stres:'<b style="color:#ff453a">VARSAYIM — gerçek talep değil.</b> 20 dk boyunca dakikada 1 sipariş = saatte 60 sipariş oranında, <b style="color:#F5F5F7">günlük hedefin ~4 katı</b>. Hattın nerede kırıldığını görmek için; buradaki 40 dk\'lık beklemeler gerçek beklentin değil.',
+  saat:'Hızı sen veriyorsun. Karşılaştırma için: gerçekçi akşam ≈ 13/saat · robot tavanı ≈ 35/saat.',
+  bos:'Boş hat — üstteki düğmelerle istediğin an sipariş at, robotun ne yaptığını izle.'};
+function rebuild(){ document.getElementById('senNot').innerHTML=SEN_NOT[CFG.scenario]||''; sim=new Sim(CFG, scenarioOrders(CFG)); playing=false; document.getElementById('play').textContent='▶ Başlat'; refreshAB(); render(); }
 function render(){ draw(sim, speed); const m=sim.metrics();
   const f=(s)=>s===null?'–':(s/60).toFixed(1)+' <small>dk</small>';
   document.getElementById('clock').textContent=sim.fmt(sim.t);
