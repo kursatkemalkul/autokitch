@@ -44,7 +44,7 @@ canvas{display:block;width:100%;background:#0b0b0c}
 .m .k{color:var(--gray);font-size:10px;letter-spacing:.1em;text-transform:uppercase}
 .m .v{font-size:19px;font-weight:600;margin-top:2px;font-variant-numeric:tabular-nums}
 .m .v small{font-size:11px;color:var(--gray);font-weight:400}
-.bottom{display:grid;grid-template-columns:1.1fr 1.4fr 1fr;gap:1px;background:var(--line);flex:1;min-height:180px}
+.bottom{display:grid;grid-template-columns:1fr 1.2fr 1fr 1fr;gap:1px;background:var(--line);flex:1;min-height:180px}
 .box{background:var(--panel);padding:10px 14px;overflow:auto;max-height:260px}
 .box h4{margin:0 0 6px;font-size:11px;letter-spacing:.12em;color:var(--gray);font-weight:600}
 table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
@@ -58,6 +58,11 @@ th{color:var(--gray);font-weight:500;font-size:11px}
 .ab .h{color:var(--gray);font-size:10px;letter-spacing:.1em;text-transform:uppercase}
 .ab .d{color:var(--green)}.ab .u{color:var(--red)}
 .note{color:var(--gray);font-size:11px;line-height:1.45;margin-top:8px}
+.dg{display:flex;align-items:center;gap:8px;padding:3px 0}
+.dg .ad{width:78px;color:#c9c9ce;font-size:11px}
+.dg .bar{flex:1;height:14px;background:#1a1a1d;border-radius:3px;overflow:hidden;position:relative}
+.dg .bar i{position:absolute;left:0;top:0;bottom:0;border-radius:3px}
+.dg .pc{width:38px;text-align:right;font-variant-numeric:tabular-nums;font-size:11px}
 @media (max-width:1000px){.wrap{grid-template-columns:1fr}aside{border-right:0;border-bottom:1px solid var(--line)}.metrics{grid-template-columns:repeat(4,1fr)}.bottom{grid-template-columns:1fr}}
 .chart{position:relative;display:flex;align-items:flex-end;gap:2px;height:126px;padding:16px 0 2px;border-bottom:1px solid var(--line)}
 .chart .b{flex:1;min-width:5px;border-radius:2px 2px 0 0;position:relative}
@@ -155,6 +160,8 @@ th{color:var(--gray);font-weight:500;font-size:11px}
   <div class="bottom">
     <div class="box"><h4>SİPARİŞLER <span style="color:var(--gray);font-weight:400">— <b>dolapta</b> = son parçanın QR gözüne konduğu saat · <b>süre</b> = sipariş → dolap · ⏱ hâlâ sayıyor</span></h4><table><thead><tr><th>#</th><th>içerik</th><th>geldi</th><th>dolapta</th><th>süre</th><th>ürünler nerede</th></tr></thead><tbody id="orders"></tbody></table></div>
     <div class="box"><h4>TESLİM SÜRELERİ · sipariş sipariş (dk)</h4><div class="chart" id="chart"></div><div class="chart-x" id="chartx"></div><div class="note" id="chartnote"></div></div>
+    <div class="box"><h4>HAT DENGESİ <span style="color:var(--gray);font-weight:400">— her istasyon ne kadar meşgul</span></h4><div id="denge"></div>
+      <div class="note" id="dengeNot"></div></div>
     <div class="box log"><h4>ROBOT NE YAPTI</h4><div id="log"></div></div>
   </div>
 </main>
@@ -240,7 +247,10 @@ class Sim{
     // Robotun TEK tepsisi var: her tepsiyi AYRI sefer koyar/alir; ikisi ayni gozde yan yana piser.
     this.chambers=[]; for(let i=0;i<n;i++) this.chambers.push({id:'F'+(i+1), type:'pide', cap:1, slots:[], res:0, y0:bandBot+i*h, h, busy:0});
     this.lch=[]; if(c.lahm && c.lahmOven) this.lch.push({id:'L1', type:'lahm', cap:c.lahmCap, slots:[], res:0, y0:118, h:34, busy:0});
-    this.press={p:null, end:0, working:false, wEnd:0};
+    // HAT DENGESI: her istasyonun MESGUL suresi (sn). Doluluk = mesgul / gecen sure.
+    // Istasyon "mesgul" = o kaynak o an baska urun alamaz (robot orada beklese de beklemese de).
+    this.busy={press:0, topping:0, kesici:0, pack:0, pickup:0};
+    this.press={p:null, end:0, working:false, wEnd:0, mesgul:false};
     this.topping={holding:null, working:false, wEnd:0};
     this.cutter={p:null, end:0, working:false, wEnd:0, at:c.cutterAt, pushEnd:0};
     this.pack={folding:null, end:0, queue:[], boxed:[]};
@@ -354,12 +364,12 @@ class Sim{
       S.push(...this.mode('KAVRAMA'));
       S.push(this.go('STORE',110), this.act(T.takeDough,'hamur topunu KAVRA','STORE',110,()=>{this.robot.carry={kind:p.kind,st:'dough'}; p.state='carry'; this.tuket(p.kind);}));
       if(c.pressAuto){
-        S.push(this.go('PRESS',95), this.act(T.pressDrop,'hamuru tepsiye bırak · pres basar','PRESS',95,()=>{this.robot.carry=null; this.press.p=p; this.press.end=this.t+T.pressCycle; this.press.working=true; this.press.wEnd=this.press.end; p.state='pressing'; p.unitK=k;}));
+        S.push(this.go('PRESS',95), this.act(T.pressDrop,'hamuru tepsiye bırak · pres basar','PRESS',95,()=>{this.robot.carry=null; this.press.p=p; this.press.end=this.t+T.pressCycle; this.press.working=true; this.press.mesgul=true; this.press.wEnd=this.press.end; p.state='pressing'; p.unitK=k;}));
         return false; // robot serbest; devamı jobPickBase
       }
-      S.push(this.go('PRESS',95), this.act(T.pressPlace,'hamuru tepsiye koy · PRES BASAR','PRESS',95,()=>{this.press.working=false; this.robot.carry={kind:p.kind,st:'base'};}, ()=>{this.press.working=true; this.press.wEnd=this.t+T.pressPlace;}));
+      S.push(this.go('PRESS',95), this.act(T.pressPlace,'hamuru tepsiye koy · PRES BASAR','PRESS',95,()=>{this.press.working=false; this.robot.carry={kind:p.kind,st:'base'};}, ()=>{this.press.working=true; this.press.mesgul=true; this.press.wEnd=this.t+T.pressPlace;}));
       S.push(...this.mode('KÜREK'));
-      S.push(this.act(T.pressTake,'tepsiyi al (taban üstünde)','PRESS',95,()=>{}));
+      S.push(this.act(T.pressTake,'tepsiyi al (taban üstünde)','PRESS',95,()=>{this.press.mesgul=false;}));
       this.afterPress(S,p,k);
       return true;
     };
@@ -387,7 +397,7 @@ class Sim{
   jobPickBase(p){
     const S=[]; const T=this.T;
     S.push(...this.mode('KÜREK'));
-    S.push(this.go('PRESS',95), this.act(T.pressTake,'tepsiyi al (taban üstünde)','PRESS',95,()=>{this.press.p=null; this.robot.carry={kind:p.kind,st:'base'}; p.state='carry';}));
+    S.push(this.go('PRESS',95), this.act(T.pressTake,'tepsiyi al (taban üstünde)','PRESS',95,()=>{this.press.p=null; this.press.mesgul=false; this.robot.carry={kind:p.kind,st:'base'}; p.state='carry';}));
     this.afterPress(S,p,p.unitK||0);
     this.loadSteps(S,p);
     return {name:'PICK-BASE #'+p.id, steps:S, p};
@@ -459,6 +469,12 @@ class Sim{
     if(this.done) return;
     const c=this.cfg, T=this.T, R=this.robot;
     this.t+=dt; this.releaseOrders();
+    // --- istasyon mesgul sayaclari ---
+    if(this.press.mesgul||this.press.working) this.busy.press+=dt;
+    if(this.topping.working) this.busy.topping+=dt;
+    if(this.cutter.working||this.cutter.p) this.busy.kesici+=dt;
+    if(this.pack.folding) this.busy.pack+=dt;
+    this.busy.pickup += dt*this.lockers.filter(l=>l.p).length/Math.max(1,this.lockers.length);
     // fırınlar
     for(const ch of [...this.chambers,...this.lch]){ if(ch.slots.length) ch.busy+=dt*ch.slots.length/ch.cap;
       for(const sl of ch.slots) if(sl.p.state==='baking' && this.t>=sl.end){ sl.p.state='baked'; this.say(`${ch.id} <b>HAZIR</b> — #${sl.p.id} pisti`); } }
@@ -504,7 +520,16 @@ class Sim{
     const ovBusy=[...this.chambers,...this.lch].reduce((a,ch)=>a+ch.busy,0), nCh=this.chambers.length+this.lch.length;
     const span=Math.max(this.t,1);
     const srt=[...w].sort((a,b)=>a-b);
-    return { delivered:done.length, avg:w.length?w.reduce((a,b)=>a+b,0)/w.length:null, max:w.length?Math.max(...w):null,
+    const nCh2=this.chambers.length+this.lch.length;
+    const B={ store:null,
+      press:  this.busy.press/span,
+      topping:this.busy.topping/span,
+      oven:   ovBusy/(span*(nCh2||1)),
+      kesici: this.busy.kesici/span,
+      pack:   this.busy.pack/span,
+      pickup: this.busy.pickup/span,
+      robot:  this.robot.busy/span };
+    return { doluluk:B, delivered:done.length, avg:w.length?w.reduce((a,b)=>a+b,0)/w.length:null, max:w.length?Math.max(...w):null,
       p95: w.length?srt[Math.min(srt.length-1,Math.floor(srt.length*0.95))]:null,
       robot:this.robot.busy/span, oven:nCh?ovBusy/(span*nCh):0, queue:this.orders.filter(o=>o.doneT===null).length,
       thr: this.deliveredUnits>0 && this.t>0 ? this.deliveredUnits/(this.t/3600) : null };
@@ -778,6 +803,20 @@ function render(){ draw(sim, speed); const m=sim.metrics();
     document.getElementById('chartnote').innerHTML=
       `yeşil ≤${(CFG.hedefDk*0.6).toFixed(0)} dk · sarı ${(CFG.hedefDk*0.6).toFixed(0)}–${CFG.hedefDk} · <b style="color:#ff453a">kırmızı = hedefi aştı</b> &nbsp;|&nbsp; <b style="color:#F5F5F7">en kötü ${(Math.max(...ws)/60).toFixed(1)} dk</b> · son 5 siparişin ortalaması ${(son5.reduce((a,b)=>a+b,0)/son5.length/60).toFixed(1)} dk`;
   } else { ch.innerHTML=''; chx.innerHTML=''; document.getElementById('chartnote').textContent='henüz teslim yok'; }
+  // --- hat dengesi ---
+  { const B=m.doluluk, el=document.getElementById('denge');
+    const SIRA=[['ROBOT','robot'],['FIRIN','oven'],['PRESS','press'],['TOPPING','topping'],['KESİCİ','kesici'],['PACK','pack'],['PICKUP','pickup']];
+    const mx=Math.max(...SIRA.map(([,k])=>B[k]||0), 0.01);
+    el.innerHTML=SIRA.map(([ad,k])=>{ const v=(B[k]||0)*100;
+      const col = v>=85?'#ff453a' : v>=65?'#ffd60a' : v>=30?'#30d158' : '#3a7bd5';
+      return `<div class="dg"><div class="ad">${ad}</div><div class="bar"><i style="width:${Math.min(100,v)}%;background:${col}"></i></div><div class="pc" style="color:${col}">${v.toFixed(0)}%</div></div>`;
+    }).join('');
+    const en=SIRA.reduce((a,[ad,k])=>((B[k]||0)>(B[a[1]]||0)?[ad,k]:a),SIRA[0]);
+    const bos=SIRA.filter(([,k])=>(B[k]||0)<0.25).map(([ad])=>ad);
+    document.getElementById('dengeNot').innerHTML=
+      `Darboğaz: <b style="color:#F5F5F7">${en[0]}</b> (%${((B[en[1]]||0)*100).toFixed(0)}). ` +
+      (bos.length?`Boş duran: ${bos.join(' · ')} — kapasite artırırken bunlara dokunmaya gerek yok.`:'Hat dengeli.');
+  }
   const lg=document.getElementById('log'); lg.innerHTML=sim.log.slice(-12).reverse().map(e=>`<div>${sim.fmt(e.t)} · ${e.s}</div>`).join('');
 }
 /* zaman: setInterval (sekme arkadayken de ilerler) · çizim: rAF */
