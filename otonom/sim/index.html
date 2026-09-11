@@ -319,8 +319,13 @@ class Sim{
     if(this.press.p && this.press.p.state==='baseReady') cands.push({pri:1,t:this.press.end, mk:()=>this.jobPickBase(this.press.p)});
     if(this.cutter.p && this.cutter.p.state==='cutDone' && !c.pusher) cands.push({pri:1,t:this.cutter.end, mk:()=>this.jobCarryCut(this.cutter.p)});
     for(const p of this.pack.boxed) if(this.lockers.some(l=>!l.p || l.p.order===p.order)) cands.push({pri:2,t:p.boxedT, mk:()=>this.jobDeliver(p)});
-    for(const o of this.orders) if(o.drink && !o.drinkDone && !o.drinkBusy && o.products.some(q=>!['wait','starting','carry'].includes(q.state)) && this.lockers.some(l=>!l.p || l.p.order===o))
-      cands.push({pri:2, t:o.arr, mk:()=>this.jobDrink(o)});
+    /* İÇECEK — ROBOTUN BOŞ ZAMAN İŞİ. Ürünler fırındayken robot zaten bekliyor; içeceği o aralıkta
+       taşırsa kimseyi geciktirmez. Bu yüzden en düşük öncelik (5). TEK İSTİSNA: siparişin bütün
+       ürünleri dolaba girmişse sipariş yalnız içeceği bekliyor demektir — o an acil olur (1). */
+    for(const o of this.orders) if(o.drink && !o.drinkDone && !o.drinkBusy && o.products.some(q=>!['wait','starting','carry'].includes(q.state)) && this.lockers.some(l=>!l.p || l.p.order===o)){
+      const sadeceIcecekKaldi = o.products.every(q=>q.state==='done');
+      cands.push({pri: sadeceIcecekKaldi?1:5, t:o.arr, mk:()=>this.jobDrink(o)});
+    }
     // pres kendi besliyorsa ve içinde ürün varsa (basıyor ya da taban bekliyor) yeni ürün başlatma — pres tek
     const presFree = !c.pressAuto || !this.press.p;
     const ns=presFree ? this.nextStartable() : null; if(ns) cands.push({pri:3,t:ns.p.order.arr, mk:()=>this.jobStart(ns.p, ns.ch)});
