@@ -633,7 +633,7 @@ function draw(sim, speed){
         const col = dk<=8?C.done : dk<=12?'#ffd60a' : C.work;
         statusBox(cmx(lx)-lw/2, cmy(ly)-lh/2, lw, lh, st,
           '#'+o.id+' · '+sim.kisa(o)+ic,                               // İÇİNDE NE VAR
-          (tam?'':'~')+dk.toFixed(1)+' dk',                            // KAÇ DAKİKADA KONDU
+          (tam?'':'~')+dk.toFixed(1)+' dk · '+Math.round((tam?o.doneT:t)-o.arr)+' sn',   // KAÇ DAKİKADA/SANİYEDE KONDU
           l.pending?'kutu geliyor':(tam?(l.free?'müşteri alır '+Math.max(0,Math.round(l.free-t))+' sn':''):'sipariş tamamlanıyor'),
           col);
       }
@@ -692,7 +692,8 @@ function render(){ draw(sim, speed); const m=sim.metrics();
     for(const p of o.products){ const [ad,cl]=NER[p.state]||['?','st-w']; const k=ad+'|'+cl; say[k]=(say[k]||0)+1; }
     let ner=Object.entries(say).map(([k,v])=>{ const [ad,cl]=k.split('|'); return `<span class="${cl}">${v>1?v+' ':''}${ad}</span>`; }).join(' · ');
     if(o.drink) ner += o.drinkDone ? ' <span class="st-g">+içecek ✓</span>' : ' <span class="st-w">+içecek bekliyor</span>';
-    const sure = bitti ? `<b class="st-g">${w.toFixed(1)} dk</b>` : `<span class="st-a">⏱ ${w.toFixed(1)}</span>`;
+    const sn=Math.round((bitti?o.doneT:sim.t)-o.arr);
+    const sure = bitti ? `<b class="st-g">${w.toFixed(1)} dk</b> <span style="color:var(--gray)">${sn} sn</span>` : `<span class="st-a">⏱ ${w.toFixed(1)} dk · ${sn} sn</span>`;
     h+=`<tr><td>#${o.id}</td><td>${sim.itemsText(o)}</td><td>${sim.fmt(o.arr)}</td><td>${bitti?sim.fmt(o.doneT):'<span class="st-w">—</span>'}</td><td>${sure}</td><td>${ner}</td></tr>`;
   }
   tb.innerHTML=h||'<tr><td colspan=6 class="st-w">sipariş yok — üstten "şimdi sipariş ver"</td></tr>';
