@@ -87,8 +87,7 @@ th{color:var(--gray);font-weight:500;font-size:11px}
 
   <h3>KESİCİ · SPREY</h3>
   <div class="row"><label>Kesici açık (yalnız pide)</label><div class="sw on" data-k="cutter"></div></div>
-  <div class="row"><label>Kesici nerede</label><select data-k="cutterAt"><option value="OVEN" selected>OVEN · robot TUTAR (14 sn)</option><option value="OVEN_MASA">OVEN işlem ağzı · robot BIRAKIR</option><option value="PACK">PACK tarafı · robot bırakır</option></select></div>
-  <div class="row"><label>Kesici → PACK itici</label><div class="sw" data-k="pusher"></div></div>
+  <div class="row"><label>Kesim sırasında robot</label><select data-k="cutterAt"><option value="OVEN" selected>robot TUTAR (14 sn)</option><option value="OVEN_MASA">MASA · robot bırakır gider</option></select></div>
 
   <h3>PRESS</h3>
   <div class="row"><label>Pres kendi besler (robot bırakır gider)</label><div class="sw" data-k="pressAuto"></div></div>
@@ -107,7 +106,7 @@ th{color:var(--gray);font-weight:500;font-size:11px}
   <div class="row"><label>PICKUP göz sayısı</label><input type="number" data-k="lockers" value="12" min="2" max="24"></div>
 
   <div class="ab" id="ab"></div>
-  <div class="note">Robot süreleri hattın kendi bütçesinden (103 sn/pide: 8 hamur al · 14 prese koy · 8 presten al · 4 tepsiye · 22 dozaj · 8 fırına · 8 fırından al · 14 kesim/sprey · 17 kutu+dolap). Ray: igus drylin ZLW 7. eksen cobot modunda 0,3 m/s; kol UR10e sınıfı, uç 1 m/s. Değişiklik yapınca simülasyon baştan başlar ve sağdaki hesap anında yenilenir.</div>
+  <div class="note"><b style="color:#F5F5F7">Karar (11 Eyl):</b> kesici ve sprey <b>ayrı</b> kalıyor — birleştirmenin hız kazancı %2, bakım/iç içe geçme riski ona değmez. Kutuya taşımayı robot yapıyor (OVEN ile PACK yan yana değil, arada lahmacun fırını var — mekanik aktarma yok).<br><br>Robot süreleri hattın kendi bütçesinden (103 sn/pide: 8 hamur al · 14 prese koy · 8 presten al · 4 tepsiye · 22 dozaj · 8 fırına · 8 fırından al · 14 kesim/sprey · 17 kutu+dolap). Ray: igus drylin ZLW 7. eksen cobot modunda 0,3 m/s; kol UR10e sınıfı, uç 1 m/s. Değişiklik yapınca simülasyon baştan başlar ve sağdaki hesap anında yenilenir.</div>
 </aside>
 <main>
   <div class="toolbar">
@@ -809,7 +808,7 @@ document.querySelectorAll('#cfg input[type=range]').forEach(el=>{ el.oninput=()=
 function syncPanel(){
   const dis=(k,off)=>{ const el=document.querySelector(`#cfg [data-k="${k}"]`); if(!el) return; if(el.classList.contains('sw')) el.classList.toggle('dis',off); else el.disabled=off; };
   dis('lahmOven',!CFG.lahm); dis('lahmCap',!(CFG.lahm&&CFG.lahmOven)); dis('bakeLahm',!CFG.lahm);
-  dis('cutterAt',!CFG.cutter); dis('pusher',!(CFG.cutter&&CFG.cutterAt==='PACK'));
+  dis('cutterAt',!CFG.cutter);
   document.getElementById('injL').style.display=CFG.lahm?'':'none'; document.getElementById('injPL').style.display=CFG.lahm?'':'none';
   document.getElementById('rateWrap').style.display=CFG.scenario==='surekli'?'inline-flex':'none';
   document.getElementById('seedBtn').style.display=['tek','uc','bos'].includes(CFG.scenario)?'none':'';
