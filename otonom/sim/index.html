@@ -39,12 +39,12 @@ main{display:flex;flex-direction:column;min-width:0}
 .sep{width:1px;height:24px;background:var(--line);margin:0 4px}
 .clock{font-variant-numeric:tabular-nums;font-size:20px;font-weight:600;min-width:86px}
 canvas{display:block;width:100%;background:#0b0b0c}
-.metrics{display:grid;grid-template-columns:repeat(7,1fr);gap:1px;background:var(--line);border-bottom:1px solid var(--line)}
+.metrics{display:grid;grid-template-columns:repeat(8,1fr);gap:1px;background:var(--line);border-bottom:1px solid var(--line)}
 .m{background:var(--panel);padding:9px 12px}
 .m .k{color:var(--gray);font-size:10px;letter-spacing:.1em;text-transform:uppercase}
 .m .v{font-size:19px;font-weight:600;margin-top:2px;font-variant-numeric:tabular-nums}
 .m .v small{font-size:11px;color:var(--gray);font-weight:400}
-.bottom{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);flex:1;min-height:180px}
+.bottom{display:grid;grid-template-columns:1.1fr 1.4fr 1fr;gap:1px;background:var(--line);flex:1;min-height:180px}
 .box{background:var(--panel);padding:10px 14px;overflow:auto;max-height:260px}
 .box h4{margin:0 0 6px;font-size:11px;letter-spacing:.12em;color:var(--gray);font-weight:600}
 table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
@@ -59,6 +59,12 @@ th{color:var(--gray);font-weight:500;font-size:11px}
 .ab .d{color:var(--green)}.ab .u{color:var(--red)}
 .note{color:var(--gray);font-size:11px;line-height:1.45;margin-top:8px}
 @media (max-width:1000px){.wrap{grid-template-columns:1fr}aside{border-right:0;border-bottom:1px solid var(--line)}.metrics{grid-template-columns:repeat(4,1fr)}.bottom{grid-template-columns:1fr}}
+.chart{position:relative;display:flex;align-items:flex-end;gap:2px;height:126px;padding:16px 0 2px;border-bottom:1px solid var(--line)}
+.chart .b{flex:1;min-width:5px;border-radius:2px 2px 0 0;position:relative}
+.chart .b i{position:absolute;top:-13px;left:50%;transform:translateX(-50%);font-size:9px;font-style:normal;color:var(--gray)}
+.chart .hedef{position:absolute;left:0;right:0;border-top:1px dashed var(--gray);opacity:.55}
+.chart .hedef b{position:absolute;right:0;top:-13px;font-size:9px;color:var(--gray);font-weight:400}
+.chart-x{display:flex;gap:2px;margin-top:3px}.chart-x div{flex:1;min-width:5px;text-align:center;font-size:8px;color:#5a5a60}
 </style>
 </head>
 <body>
@@ -96,6 +102,7 @@ th{color:var(--gray);font-weight:500;font-size:11px}
   <div class="row"><label>Ray hızı (cm/s)</label><input type="range" data-k="rail" min="20" max="200" step="10" value="50"><span class="val" id="v-rail">50</span></div>
   <div class="row"><label>Kol hız katsayısı</label><input type="range" data-k="robotK" min="0.5" max="1.5" step="0.05" value="1"><span class="val" id="v-robotK">1.00</span></div>
   <div class="row"><label>Akıllı öncelik (pişmiş önce · uzun pişen önce)</label><div class="sw on" data-k="smart"></div></div>
+  <div class="row"><label>İçecekli sipariş oranı</label><input type="range" data-k="drinkPct" min="0" max="100" step="10" value="50"><span class="val" id="v-drinkPct">%50</span></div>
   <div class="row"><label>PICKUP göz sayısı</label><input type="number" data-k="lockers" value="12" min="2" max="24"></div>
 
   <div class="ab" id="ab"></div>
@@ -135,9 +142,11 @@ th{color:var(--gray);font-weight:500;font-size:11px}
     <div class="m"><div class="k">fırın doluluk</div><div class="v" id="m-ov">0%</div></div>
     <div class="m"><div class="k">kuyrukta</div><div class="v" id="m-q">0 <small>sipariş</small></div></div>
     <div class="m"><div class="k">çıkış hızı</div><div class="v" id="m-thr">– <small>ürün/saat</small></div></div>
+    <div class="m"><div class="k">kalan hamur</div><div class="v" id="m-stock">– <small>top</small></div></div>
   </div>
   <div class="bottom">
     <div class="box"><h4>SİPARİŞLER</h4><table><thead><tr><th>#</th><th>içerik</th><th>geldi</th><th>durum</th><th>bekleme</th></tr></thead><tbody id="orders"></tbody></table></div>
+    <div class="box"><h4>TESLİM SÜRELERİ · sipariş sipariş (dk)</h4><div class="chart" id="chart"></div><div class="chart-x" id="chartx"></div><div class="note" id="chartnote"></div></div>
     <div class="box log"><h4>ROBOT NE YAPTI</h4><div id="log"></div></div>
   </div>
 </main>
@@ -148,12 +157,12 @@ th{color:var(--gray);font-weight:500;font-size:11px}
    AUTOKITCH hat simülasyonu — olay tabanlı motor + 2D ön görünüş
    Tüm süreler saniye, tüm uzunluklar cm. Robot TEK kaynak.
    ================================================================ */
-const T0 = { takeDough:8, pressPlace:14, pressCycle:4, pressDrop:6, pressTake:8, trayPlace:4, dose:22, harc:22,
+const T0 = { takeDough:8, drinkTake:6, drinkPlace:5, pressPlace:14, pressCycle:4, pressDrop:6, pressTake:8, trayPlace:4, dose:22, harc:22,
   ovenLoad:8, ovenUnload:8, spray:1, cutHold:14, cutDrop:5, cutAuto:20, carryToPack:6, packPlace:4,
   boxTake:5, lockerPlace:8, pusher:3, lahmLoadExtra:2, lahmUnloadExtra:4, customerPickup:150 };
 
 const CFG = { lahm:true, lahmOven:true, lahmCap:2, pideCh:2, bakePide:240, bakeLahm:180, cutter:true, cutterAt:'OVEN',
-  pusher:false, pressAuto:false, gripper:'kombine', toolChange:12, fold:15, rail:50, robotK:1, smart:true, lockers:12,
+  pusher:false, pressAuto:false, gripper:'kombine', toolChange:12, drinkPct:50, fold:15, rail:50, robotK:1, smart:true, lockers:12,
   scenario:'uc', rate:20, lahmPct:30 };
 
 /* ---------- senaryolar ---------- */
@@ -200,7 +209,19 @@ class Sim{
     this.pack={folding:null, end:0, queue:[], boxed:[]};
     this.lockers=[]; for(let i=0;i<c.lockers;i++) this.lockers.push({p:null, free:0});
     this.robot={x:this.L.STORE.cx, mode:'KAVRAMA', carry:null, steps:[], step:null, left:0, tx:null, ty:110, label:'', busy:0, job:null};
+    // HAMUR STOGU — STORE v3 modelinden: taze 8 cekmece x 20 = 160 (2 gun) · donmus 4 x 20 = 80 (1 gun)
+    // lahmacun: donmus pide rezervinden 2 cekmece feda + mevcut 102 mm bosluk = 3 cekmece x 24 = 72 (1 gun)
+    this.stock={ taze:160, tazeN:8, donmus:80, donmusN:4, lahm:(c.lahm?72:0), lahmN:3,
+                 taze0:160, donmus0:80, lahm0:(c.lahm?72:0), cozulme:0, kutu:252, kutu0:252, sise:42, sise0:42 };
     this.done=false; this.deliveredUnits=0; this.firstDelivery=null;
+  }
+  tuket(kind){
+    const S=this.stock;
+    if(kind==='lahm'){ if(S.lahm>0){ S.lahm--; if(S.lahm===0) this.say('<b>LAHMACUN HAMURU BİTTİ</b> — bugünlük stok tükendi'); }
+      else this.say('<b>LAHMACUN YOK</b> — sipariş karşılanamıyor'); return; }
+    if(S.taze>0){ S.taze--; if(S.taze===0) this.say('<b>TAZE HAMUR BİTTİ</b> — donmuş rafına geçiliyor (çözülme 8–12 saat)'); }
+    else if(S.donmus>0){ S.donmus--; S.cozulme++; }
+    else this.say('<b>HAMUR BİTTİ</b> — üretim duracak');
   }
   say(s){ this.log.push({t:this.t, s}); if(this.log.length>400) this.log.shift(); }
   fmt(s){ s=Math.max(0,Math.round(s)); return String(Math.floor(s/60)).padStart(2,'0')+':'+String(s%60).padStart(2,'0'); }
@@ -211,7 +232,8 @@ class Sim{
     }
   }
   addOrder(items, arr, id){
-    const c=this.cfg; const ord={id:id||(this.orders.length+1), arr, items:items.slice(), products:[], doneT:null};
+    const c=this.cfg; const ord={id:id||(this.orders.length+1), arr, items:items.slice(), products:[], doneT:null, drink:null, drinkDone:false, drinkBusy:false};
+    if(c.drinkPct>0 && ((ord.id*37)%100) < c.drinkPct) ord.drink = (ord.id%7===0)?'1L':'kutu';
     // HER URUN KENDI TEPSISINDE — robotun tek tepsisi var, her birini ayri tasir.
     const lahms=items.filter(k=>k==='lahm').length, pides=items.filter(k=>k==='pide').length;
     for(let i=0;i<pides;i++) ord.products.push(this.mkProduct('pide',ord));
@@ -219,7 +241,16 @@ class Sim{
     this.orders.push(ord); this.say(`<b>Sipariş #${ord.id}</b> geldi: ${this.itemsText(ord)}`);
     return ord;
   }
-  itemsText(o){ const p=o.items.filter(k=>k==='pide').length, l=o.items.filter(k=>k==='lahm').length; return [p?`${p} pide`:'', l?`${l} lahmacun`:''].filter(Boolean).join(' + '); }
+  kisa(o){ const p=o.items.filter(k=>k==='pide').length, l=o.items.filter(k=>k==='lahm').length;
+    return [p?p+'P':'', l?l+'L':'', o.drink?(o.drink==='1L'?'1L':'İ'):''].filter(Boolean).join('+'); }
+  checkOrder(o){
+    if(o.doneT!==null) return;
+    if(o.products.every(q=>q.state==='done') && (!o.drink || o.drinkDone)){
+      o.doneT=this.t; this.say(`<b>Sipariş #${o.id} TESLİM</b> — ${this.fmt(o.doneT-o.arr)} bekledi`);
+      this.lockers.forEach(l=>{ if(l.p&&l.p.order===o) l.free=this.t+this.T.customerPickup; });
+    }
+  }
+  itemsText(o){ const p=o.items.filter(k=>k==='pide').length, l=o.items.filter(k=>k==='lahm').length; return [p?`${p} pide`:'', l?`${l} lahmacun`:'', o.drink?(o.drink==='1L'?'1 L':'içecek'):''].filter(Boolean).join(' + '); }
   mkProduct(kind, ord){ const p={id:this.nextPid++, kind, units:1, order:ord, state:'wait', ch:null, doneUnits:0, bake: kind==='pide'?this.cfg.bakePide:this.cfg.bakeLahm, wrap:0}; this.products.push(p); return p; }
 
   /* --- kaynak seçimi --- */
@@ -244,6 +275,8 @@ class Sim{
     if(this.press.p && this.press.p.state==='baseReady') cands.push({pri:1,t:this.press.end, mk:()=>this.jobPickBase(this.press.p)});
     if(this.cutter.p && this.cutter.p.state==='cutDone' && !c.pusher) cands.push({pri:1,t:this.cutter.end, mk:()=>this.jobCarryCut(this.cutter.p)});
     for(const p of this.pack.boxed) if(this.lockers.some(l=>!l.p || l.p.order===p.order)) cands.push({pri:2,t:p.boxedT, mk:()=>this.jobDeliver(p)});
+    for(const o of this.orders) if(o.drink && !o.drinkDone && !o.drinkBusy && o.products.some(q=>!['wait','starting','carry'].includes(q.state)) && this.lockers.some(l=>!l.p || l.p.order===o))
+      cands.push({pri:2, t:o.arr, mk:()=>this.jobDrink(o)});
     // pres kendi besliyorsa ve içinde ürün varsa (basıyor ya da taban bekliyor) yeni ürün başlatma — pres tek
     const presFree = !c.pressAuto || !this.press.p;
     const ns=presFree ? this.nextStartable() : null; if(ns) cands.push({pri:3,t:ns.p.order.arr, mk:()=>this.jobStart(ns.p, ns.ch)});
@@ -269,7 +302,7 @@ class Sim{
     ch.res++; p.ch=ch; p.state='starting';
     const unitLoop=(k)=>{
       S.push(...this.mode('KAVRAMA'));
-      S.push(this.go('STORE',110), this.act(T.takeDough,'hamur topunu KAVRA','STORE',110,()=>{this.robot.carry={kind:p.kind,st:'dough'}; p.state='carry';}));
+      S.push(this.go('STORE',110), this.act(T.takeDough,'hamur topunu KAVRA','STORE',110,()=>{this.robot.carry={kind:p.kind,st:'dough'}; p.state='carry'; this.tuket(p.kind);}));
       if(c.pressAuto){
         S.push(this.go('PRESS',95), this.act(T.pressDrop,'hamuru tepsiye bırak · pres basar','PRESS',95,()=>{this.robot.carry=null; this.press.p=p; this.press.end=this.t+T.pressCycle; this.press.working=true; this.press.wEnd=this.press.end; p.state='pressing'; p.unitK=k;}));
         return false; // robot serbest; devamı jobPickBase
@@ -341,15 +374,32 @@ class Sim{
     let li=this.lockers.findIndex(l=>l.p && l.p.order===p.order);      // aynı siparişin gözü varsa oraya
     if(li<0) li=this.lockers.findIndex(l=>!l.p);
     if(li<0) return null;
-    this.lockers[li].p=p; this.lockers[li].pending=true; this.lockers[li].n=(this.lockers[li].n||0)+1; // rezerve
+    if(!this.lockers[li].p || this.lockers[li].p.kind==='drink') this.lockers[li].p=p; this.lockers[li].pending=true; this.lockers[li].n=(this.lockers[li].n||0)+1; // rezerve
     this.pack.boxed=this.pack.boxed.filter(x=>x!==p); p.state='delivering';
     S.push(...this.mode('KAVRAMA'));
     S.push(this.go('PACK',85), this.act(T.boxTake,'kutuyu KAVRA','PACK',85,()=>{this.robot.carry={kind:p.kind,st:'box', oid:p.order.id};}));
     const lx=this.lockerX(li), ly=this.lockerY(li);
     S.push(this.go('PICKUP',ly,lx), this.act(T.lockerPlace,`göz ${li+1}'e koy`,'PICKUP',ly,()=>{this.robot.carry=null; this.lockers[li].pending=false; p.state='done'; p.doneT=this.t; this.deliveredUnits+=1; if(this.firstDelivery===null) this.firstDelivery=this.t;
-      const o=p.order; if(o.products.every(q=>q.state==='done')){ o.doneT=this.t; this.say(`<b>Sipariş #${o.id} TESLİM</b> — ${this.fmt(o.doneT-o.arr)} bekledi`); this.lockers.forEach(l=>{ if(l.p&&l.p.order===o) l.free=this.t+this.T.customerPickup; }); }
+      this.checkOrder(p.order);
     }));
     return {name:'DELIVER #'+p.id, steps:S, p};
+  }
+  jobDrink(o){
+    const S=[], T=this.T;
+    let li=this.lockers.findIndex(l=>l.p && l.p.order===o);
+    if(li<0) li=this.lockers.findIndex(l=>!l.p);
+    if(li<0) return null;
+    const L=this.lockers[li]; if(!L.p){ L.p={order:o, kind:'drink', state:'drinkslot'}; L.pending=true; }
+    o.drinkBusy=true;
+    S.push(...this.mode('KAVRAMA'));
+    S.push(this.go('STORE',125), this.act(T.drinkTake,(o.drink==='1L'?'1 L şişeyi':'içecek kutusunu')+' KAVRA','STORE',125,()=>{
+      const St=this.stock; if(o.drink==='1L'){ if(St.sise>0) St.sise--; else this.say('<b>1 L BİTTİ</b>'); } else { if(St.kutu>0) St.kutu--; else this.say('<b>İÇECEK KUTUSU BİTTİ</b>'); }
+      this.robot.carry={kind:'drink',st:o.drink};}));
+    const lx=this.lockerX(li), ly=this.lockerY(li);
+    S.push(this.go('PICKUP',ly,lx), this.act(T.drinkPlace,`içeceği göz ${li+1}'e koy`,'PICKUP',ly,()=>{
+      this.robot.carry=null; o.drinkDone=true; o.drinkBusy=false; L.n=(L.n||0)+1; if(L.p.kind==='drink' && !o.products.some(q=>q.state==='done')) L.pending=true; else L.pending=false;
+      this.checkOrder(o);}));
+    return {name:'İÇECEK #'+o.id, steps:S, o};
   }
   lockerX(i){ const s=this.L.PICKUP; const col=i%2, cols=2; return s.x0+12+col*(s.w-24)/cols+(s.w-24)/cols/2; }
   lockerY(i){ const row=Math.floor(i/2), rows=Math.ceil(this.cfg.lockers/2); return 158-row*(118/rows)-(118/rows)/2; }
@@ -424,16 +474,20 @@ const C={idle:'#2e2e33', edge:'#4a4a50', work:'#ff453a', done:'#30d158', txt:'#F
 function roundRect(x,y,w,h,r){ ctx.beginPath(); ctx.moveTo(x+r,y); ctx.arcTo(x+w,y,x+w,y+h,r); ctx.arcTo(x+w,y+h,x,y+h,r); ctx.arcTo(x,y+h,x,y,r); ctx.arcTo(x,y,x+w,y,r); ctx.closePath(); }
 const FONT=getComputedStyle(document.body).fontFamily;
 function label(txt,x,y,size,color,align){ ctx.font=`${size||11}px ${FONT}`; ctx.fillStyle=color||C.txt; ctx.textAlign=align||'center'; ctx.textBaseline='middle'; ctx.fillText(txt,x,y); }
-function statusBox(x,y,w,h,state,txt,sub){ // state: idle/work/done
+function statusBox(x,y,w,h,state,txt,sub,sub2,subCol){ // state: idle/work/done
   ctx.fillStyle = state==='work'?'rgba(255,69,58,.18)': state==='done'?'rgba(48,209,88,.18)':'#1a1a1d';
   roundRect(x,y,w,h,4); ctx.fill(); ctx.lineWidth= state==='idle'?1:2; ctx.strokeStyle= state==='work'?C.work: state==='done'?C.done:C.edge; ctx.stroke();
-  if(txt) label(txt, x+w/2, y+h/2-(sub?6:0), 11, state==='work'?C.work:state==='done'?C.done:C.dim);
-  if(sub) label(sub, x+w/2, y+h/2+8, 10, C.dim);
+  const n=(txt?1:0)+(sub?1:0)+(sub2?1:0), top=y+h/2-(n-1)*6.5;
+  let k=0;
+  if(txt){ label(txt, x+w/2, top+k*13, 11, state==='work'?C.work:state==='done'?C.done:C.dim); k++; }
+  if(sub){ label(sub, x+w/2, top+k*13, 10, subCol||C.dim); k++; }
+  if(sub2){ label(sub2, x+w/2, top+k*13, 9, C.dim); }
 }
 function drawItem(kind, st, x, y, scale, units, oid){
   scale=scale||1; const r=(kind==='pide'?15:12)*scale;
   const one=(dx)=>{
     if(st==='dough'){ ctx.fillStyle=C.dough; ctx.beginPath(); ctx.arc(x+dx,y-6*scale,8*scale,0,7); ctx.fill(); return; }
+    if(kind==='drink'){ ctx.fillStyle=st==='1L'?'#3a7bd5':'#d23b3b'; roundRect(x+dx-5*scale,y-14*scale,10*scale,(st==='1L'?22:14)*scale,2); ctx.fill(); return; }
     if(st==='box'){ ctx.fillStyle=C.box; roundRect(x+dx-r,y-9*scale,2*r,14*scale,2); ctx.fill(); ctx.strokeStyle='#6b5d44'; ctx.lineWidth=1; ctx.stroke(); if(oid) label('#'+oid,x+dx,y-2*scale,9,'#3a3020'); return; }
     ctx.fillStyle = st==='base'?C.base: (st==='baked'||st==='cut')?(kind==='pide'?C.baked:'#8f2f1f') : (kind==='pide'?'#e3b95a':C.lahm);
     ctx.beginPath(); ctx.ellipse(x+dx,y,r,r*0.42,0,0,7); ctx.fill();
@@ -459,12 +513,52 @@ function draw(sim, speed){
     label(s.label, x+w/2, top+13, 11, '#c9c9ce');
     label(s.w+' cm', x+w/2, top+27, 9, C.dim);
     if(s.id==='STORE'){
-      // çekmece sıraları (sağ: taze hamur 8 · sol: donmuş + içecek) — sadeleştirilmiş
-      for(let i=0;i<8;i++){ const y=cmy(71+i*12.1); ctx.fillStyle='#232327'; ctx.fillRect(x+w/2+4,y-9,w/2-10,8*PX-2); ctx.strokeStyle='#39393e'; ctx.strokeRect(x+w/2+4,y-9,w/2-10,8*PX-2); ctx.fillStyle=C.dough; for(let k=0;k<5;k++){ ctx.beginPath(); ctx.arc(x+w/2+14+k*11,y-2,3.2,0,7); ctx.fill(); } }
-      for(let i=0;i<4;i++){ const y=cmy(20+i*11.7); ctx.fillStyle='#22262d'; ctx.fillRect(x+w/2+4,y-9,w/2-10,9*PX); ctx.strokeStyle='#39393e'; ctx.strokeRect(x+w/2+4,y-9,w/2-10,9*PX); }
-      label('taze hamur 8 çekmece', x+w*.75, cmy(172), 9, C.dim); label('donmuş 4', x+w*.75, cmy(66), 9, C.dim);
-      label('içecek · 1L', x+w*.25, cmy(120), 9, C.dim); ctx.fillStyle='#22262d'; ctx.fillRect(x+6,cmy(165),w/2-10,cmy(60)-cmy(165)); ctx.strokeStyle='#39393e'; ctx.strokeRect(x+6,cmy(165),w/2-10,cmy(60)-cmy(165));
-      if(c.lahm){ label('lahmacun hamuru', x+w*.25, cmy(40), 9, '#d9a066'); ctx.fillStyle='#23201b'; ctx.fillRect(x+6,cmy(55),w/2-10,cmy(22)-cmy(55)); ctx.strokeStyle='#5a4a33'; ctx.strokeRect(x+6,cmy(55),w/2-10,cmy(22)-cmy(55)); ctx.fillStyle=C.dough; for(let k=0;k<6;k++){ ctx.beginPath(); ctx.arc(x+14+k*9,cmy(38),2.6,0,7); ctx.fill(); } }
+      const S=sim.stock, hx=x+w/2+4, hw=w/2-10;
+      // --- SAG: taze hamur 8 cekmece (her biri 20 top) ---
+      const doluTaze=Math.ceil(S.taze/20);
+      for(let i=0;i<8;i++){
+        const y=cmy(71+i*12.1), dolu=(i<doluTaze), kalan=dolu?Math.min(20,S.taze-i*20):0;
+        ctx.fillStyle=dolu?'#232327':'#191919'; ctx.fillRect(hx,y-9,hw,8*PX-2);
+        ctx.strokeStyle=dolu?'#4a4a50':'#2c2c30'; ctx.strokeRect(hx,y-9,hw,8*PX-2);
+        if(dolu){ ctx.fillStyle=C.dough; const n=Math.min(5,Math.ceil(kalan/4)); for(let k=0;k<n;k++){ ctx.beginPath(); ctx.arc(hx+10+k*11,y-2,3.2,0,7); ctx.fill(); } }
+      }
+      // --- SAG ALT: donmus 4 cekmece ---
+      const doluDon=Math.ceil(S.donmus/20);
+      for(let i=0;i<4;i++){
+        const y=cmy(20+i*11.7), dolu=(i<doluDon);
+        ctx.fillStyle=dolu?'#22262d':'#191919'; ctx.fillRect(hx,y-9,hw,9*PX);
+        ctx.strokeStyle=dolu?'#3f5068':'#2c2c30'; ctx.strokeRect(hx,y-9,hw,9*PX);
+        if(dolu){ ctx.fillStyle='#cfe0f5'; for(let k=0;k<4;k++){ ctx.beginPath(); ctx.arc(hx+12+k*12,y-1,3,0,7); ctx.fill(); } }
+      }
+      // --- SOL: icecek + 1 L ---
+      ctx.fillStyle='#22262d'; ctx.fillRect(x+6,cmy(165),w/2-10,cmy(60)-cmy(165));
+      ctx.strokeStyle='#39393e'; ctx.strokeRect(x+6,cmy(165),w/2-10,cmy(60)-cmy(165));
+      label('İÇECEK', x+w*.25, cmy(149), 9, C.dim);
+      { const oran=S.kutu/S.kutu0, cc=oran>.4?C.done:oran>.15?'#ffd60a':C.work;
+        label('kutu  '+S.kutu+' / '+S.kutu0, x+w*.25, cmy(140), 11, cc);
+        const o2=S.sise/S.sise0, c2=o2>.4?C.done:o2>.15?'#ffd60a':C.work;
+        label('1 L    '+S.sise+' / '+S.sise0, x+w*.25, cmy(122), 11, c2);
+        // kutu sıraları (4 çekmece)
+        for(let i=0;i<4;i++){ const n=Math.max(0,Math.min(7,Math.ceil((S.kutu-i*63)/9))); for(let k=0;k<n;k++){ ctx.fillStyle='#d23b3b'; ctx.fillRect(x+12+k*7, cmy(108-i*10), 5, 8); } }
+        for(let k=0;k<Math.min(6,Math.ceil(S.sise/7));k++){ ctx.fillStyle='#3a7bd5'; ctx.fillRect(x+12+k*8, cmy(66), 5, 12); } }
+      // --- SOL ALT: lahmacun hamuru ---
+      if(c.lahm){
+        const p0=S.lahm0?S.lahm/S.lahm0:0;
+        ctx.fillStyle='#23201b'; ctx.fillRect(x+6,cmy(55),w/2-10,cmy(22)-cmy(55));
+        ctx.strokeStyle='#5a4a33'; ctx.strokeRect(x+6,cmy(55),w/2-10,cmy(22)-cmy(55));
+        ctx.fillStyle=C.dough; const n=Math.round(6*p0); for(let k=0;k<n;k++){ ctx.beginPath(); ctx.arc(x+14+k*9,cmy(38),2.6,0,7); ctx.fill(); }
+      }
+      // --- SAYAÇLAR ---
+      const sayac=(txt, val, tot, yy, col)=>{
+        const oran=tot?val/tot:0, cc= oran>.4?C.done : oran>.15?'#ffd60a' : C.work;
+        ctx.fillStyle='rgba(0,0,0,.55)'; roundRect(x+6, yy-9, w-12, 18, 3); ctx.fill();
+        label(txt, x+12, yy, 10, C.dim, 'left');
+        label(val+' / '+tot, x+w-12, yy, 11, tot?cc:C.dim, 'right');
+      };
+      sayac('TAZE HAMUR (2 gün)', S.taze, S.taze0, cmy(183));
+      sayac('BUZLUK · donmuş (1 gün)', S.donmus, S.donmus0, cmy(172));
+      if(c.lahm) sayac('LAHMACUN HAMURU', S.lahm, S.lahm0, cmy(161));
+      if(S.cozulme) label('donmuştan çözülen: '+S.cozulme, x+w*.75, cmy(66), 9, '#ffd60a');
     }
     if(s.id==='PRESS'){
       const st = sim.press.working?'work' : (sim.press.p && sim.press.p.state==='baseReady')?'done':'idle';
@@ -534,9 +628,16 @@ function draw(sim, speed){
       for(let i=0;i<c.lockers;i++){
         const lx=sim.lockerX(i), ly=sim.lockerY(i), lw=(s.w-24)/2-4, lh=118/rows*PX-4;
         const l=sim.lockers[i]; const st=l.p?(l.pending?'work':'done'):'idle';
-        statusBox(cmx(lx)-lw/2, cmy(ly)-lh/2, lw, lh, st, l.p?('#'+l.p.order.id+(l.n>1?' ×'+l.n:'')+(l.pending?' …':'')):String(i+1), l.p?(l.pending?'kutu geliyor':(l.free?'müşteri '+Math.max(0,Math.round(l.free-t))+' sn':'sipariş tamamlanıyor')):'');
+        if(!l.p){ statusBox(cmx(lx)-lw/2, cmy(ly)-lh/2, lw, lh, 'idle', String(i+1), 'boş'); continue; }
+        const o=l.p.order, tam=(o.doneT!==null), dk=((tam?o.doneT:t)-o.arr)/60; const ic=(o.drink&&o.drinkDone)?' 🥤':'';
+        const col = dk<=8?C.done : dk<=12?'#ffd60a' : C.work;
+        statusBox(cmx(lx)-lw/2, cmy(ly)-lh/2, lw, lh, st,
+          '#'+o.id+' · '+sim.kisa(o)+ic,                               // İÇİNDE NE VAR
+          (tam?'':'~')+dk.toFixed(1)+' dk',                            // KAÇ DAKİKADA KONDU
+          l.pending?'kutu geliyor':(tam?(l.free?'müşteri alır '+Math.max(0,Math.round(l.free-t))+' sn':''):'sipariş tamamlanıyor'),
+          col);
       }
-      label('QR ile açılır', x+w/2, cmy(28), 9, C.dim);
+      label('QR ile açılır · göz = sipariş · süre = sipariş → dolap', x+w/2, cmy(28), 9, C.dim);
     }
   }
   // robot
@@ -573,6 +674,8 @@ function render(){ draw(sim, speed); const m=sim.metrics();
   document.getElementById('m-avg').innerHTML=f(m.avg); document.getElementById('m-max').innerHTML=f(m.max);
   document.getElementById('m-rob').textContent=Math.round(m.robot*100)+'%'; document.getElementById('m-ov').textContent=Math.round(m.oven*100)+'%';
   document.getElementById('m-q').innerHTML=m.queue+' <small>sipariş</small>'; document.getElementById('m-thr').innerHTML=(m.thr?m.thr.toFixed(0):'–')+' <small>ürün/saat</small>';
+  const S=sim.stock;
+  document.getElementById('m-stock').innerHTML=(S.taze+S.donmus)+' <small>pide'+(CFG.lahm?' · '+S.lahm+' lahm':'')+' · '+S.kutu+' içecek</small>';
   // siparişler
   const tb=document.getElementById('orders'); let h='';
   const rows=[...sim.orders].reverse().slice(0,40);
@@ -582,6 +685,21 @@ function render(){ draw(sim, speed); const m=sim.metrics();
     h+=`<tr><td>#${o.id}</td><td>${sim.itemsText(o)}</td><td>${sim.fmt(o.arr)}</td><td>${st}</td><td>${w.toFixed(1)} dk</td></tr>`;
   }
   tb.innerHTML=h||'<tr><td colspan=5 class="st-w">sipariş yok — üstten "şimdi sipariş ver"</td></tr>';
+  // teslim süreleri çubuk grafiği
+  const done=sim.orders.filter(o=>o.doneT!==null).slice(-34);
+  const ch=document.getElementById('chart'), chx=document.getElementById('chartx');
+  if(done.length){
+    const mx=Math.max(15*60, ...done.map(o=>o.doneT-o.arr));
+    ch.innerHTML=`<div class="hedef" style="bottom:${10*60/mx*100}%"><b>10 dk hedef</b></div>`+done.map(o=>{
+      const w=o.doneT-o.arr, hh=Math.max(3,Math.round(w/mx*100));
+      const col=w<=8*60?'#30d158':w<=12*60?'#ffd60a':'#ff453a';
+      return `<div class="b" style="height:${hh}%;background:${col}" title="#${o.id} ${sim.kisa(o)} · ${(w/60).toFixed(1)} dk"><i>${(w/60).toFixed(0)}</i></div>`;
+    }).join('');
+    chx.innerHTML=done.map(o=>`<div>${o.id}</div>`).join('');
+    const ws=done.map(o=>o.doneT-o.arr), son5=ws.slice(-5);
+    document.getElementById('chartnote').innerHTML=
+      `yeşil ≤8 dk · sarı 8–12 · kırmızı >12 &nbsp;|&nbsp; <b style="color:#F5F5F7">en kötü ${(Math.max(...ws)/60).toFixed(1)} dk</b> · son 5 siparişin ortalaması ${(son5.reduce((a,b)=>a+b,0)/son5.length/60).toFixed(1)} dk`;
+  } else { ch.innerHTML=''; chx.innerHTML=''; document.getElementById('chartnote').textContent='henüz teslim yok'; }
   const lg=document.getElementById('log'); lg.innerHTML=sim.log.slice(-12).reverse().map(e=>`<div>${sim.fmt(e.t)} · ${e.s}</div>`).join('');
 }
 /* zaman: setInterval (sekme arkadayken de ilerler) · çizim: rAF */
@@ -607,7 +725,7 @@ function refreshAB(){
 /* panel bağlama */
 document.querySelectorAll('#cfg .sw').forEach(sw=>{ sw.onclick=()=>{ sw.classList.toggle('on'); CFG[sw.dataset.k]=sw.classList.contains('on'); syncPanel(); rebuild(); }; });
 document.querySelectorAll('#cfg select, #cfg input[type=number]').forEach(el=>{ el.onchange=()=>{ const v=el.value; CFG[el.dataset.k]= isNaN(parseFloat(v))?v:parseFloat(v); if(el.dataset.k==='cutterAt') CFG.cutterAt=v; rebuild(); }; });
-document.querySelectorAll('#cfg input[type=range]').forEach(el=>{ el.oninput=()=>{ CFG[el.dataset.k]=parseFloat(el.value); document.getElementById('v-'+el.dataset.k).textContent= el.dataset.k==='robotK'?parseFloat(el.value).toFixed(2):el.value; }; el.onchange=()=>rebuild(); });
+document.querySelectorAll('#cfg input[type=range]').forEach(el=>{ el.oninput=()=>{ CFG[el.dataset.k]=parseFloat(el.value); document.getElementById('v-'+el.dataset.k).textContent= el.dataset.k==='robotK'?parseFloat(el.value).toFixed(2):(el.dataset.k==='drinkPct'?'%'+el.value:el.value); }; el.onchange=()=>rebuild(); });
 function syncPanel(){
   const dis=(k,off)=>{ const el=document.querySelector(`#cfg [data-k="${k}"]`); if(!el) return; if(el.classList.contains('sw')) el.classList.toggle('dis',off); else el.disabled=off; };
   dis('lahmOven',!CFG.lahm); dis('lahmCap',!(CFG.lahm&&CFG.lahmOven)); dis('bakeLahm',!CFG.lahm);
