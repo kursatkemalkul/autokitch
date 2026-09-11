@@ -1,0 +1,602 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AUTOKITCH · Hat Simülasyonu</title>
+<style>
+:root{--font:"SF Pro Display","SF Pro Text",-apple-system,BlinkMacSystemFont,"Helvetica Neue",Helvetica,Arial,sans-serif;
+ --bg:#0f0f10;--panel:#1D1D1F;--panel2:#26262a;--light:#F5F5F7;--gray:#86868B;--blue:#2997FF;--red:#ff453a;--green:#30d158;--amber:#ffd60a;--line:#3a3a3e}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--light);font-family:var(--font);font-size:13px}
+a{color:var(--blue);text-decoration:none}
+header{display:flex;align-items:center;gap:18px;padding:12px 20px;border-bottom:1px solid var(--line);background:var(--panel)}
+header h1{font-size:15px;margin:0;letter-spacing:.06em;font-weight:600}
+header .sub{color:var(--gray)}
+header .back{margin-left:auto}
+.wrap{display:grid;grid-template-columns:300px 1fr;gap:0;min-height:calc(100vh - 46px)}
+aside{background:var(--panel);border-right:1px solid var(--line);padding:14px 16px;overflow:auto}
+aside h3{margin:14px 0 6px;font-size:11px;letter-spacing:.14em;color:var(--gray);font-weight:600}
+aside h3:first-child{margin-top:0}
+.row{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:5px 0;border-bottom:1px solid #2c2c30}
+.row label{color:#d0d0d4}
+.row input[type=number]{width:64px;background:#111;border:1px solid var(--line);color:var(--light);padding:3px 6px;border-radius:5px;font:inherit;text-align:right}
+.row select{background:#111;border:1px solid var(--line);color:var(--light);padding:3px 6px;border-radius:5px;font:inherit}
+.row input[type=range]{width:110px}
+.row .val{color:var(--gray);min-width:44px;text-align:right}
+.sw{position:relative;width:38px;height:22px;background:#3a3a3e;border-radius:11px;cursor:pointer;flex:none}
+.sw.on{background:var(--green)}
+.sw::after{content:"";position:absolute;top:2px;left:2px;width:18px;height:18px;border-radius:50%;background:#fff;transition:left .15s}
+.sw.on::after{left:18px}
+.sw.dis{opacity:.35;pointer-events:none}
+main{display:flex;flex-direction:column;min-width:0}
+.toolbar{display:flex;flex-wrap:wrap;align-items:center;gap:8px;padding:10px 16px;border-bottom:1px solid var(--line);background:#161618}
+.btn{background:#2a2a2e;border:1px solid var(--line);color:var(--light);padding:6px 12px;border-radius:7px;cursor:pointer;font:inherit}
+.btn:hover{background:#333}
+.btn.pri{background:var(--blue);border-color:var(--blue);color:#fff}
+.btn.on{background:#fff;color:#000;border-color:#fff}
+.btn.warn{border-color:var(--amber);color:var(--amber)}
+.sep{width:1px;height:24px;background:var(--line);margin:0 4px}
+.clock{font-variant-numeric:tabular-nums;font-size:20px;font-weight:600;min-width:86px}
+canvas{display:block;width:100%;background:#0b0b0c}
+.metrics{display:grid;grid-template-columns:repeat(7,1fr);gap:1px;background:var(--line);border-bottom:1px solid var(--line)}
+.m{background:var(--panel);padding:9px 12px}
+.m .k{color:var(--gray);font-size:10px;letter-spacing:.1em;text-transform:uppercase}
+.m .v{font-size:19px;font-weight:600;margin-top:2px;font-variant-numeric:tabular-nums}
+.m .v small{font-size:11px;color:var(--gray);font-weight:400}
+.bottom{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);flex:1;min-height:180px}
+.box{background:var(--panel);padding:10px 14px;overflow:auto;max-height:260px}
+.box h4{margin:0 0 6px;font-size:11px;letter-spacing:.12em;color:var(--gray);font-weight:600}
+table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+td,th{padding:3px 6px;text-align:left;border-bottom:1px solid #2c2c30;white-space:nowrap}
+th{color:var(--gray);font-weight:500;font-size:11px}
+.st-w{color:var(--gray)}.st-r{color:var(--red)}.st-g{color:var(--green)}.st-b{color:var(--blue)}.st-a{color:var(--amber)}
+.log div{padding:2px 0;border-bottom:1px solid #222;color:#c8c8cc;font-variant-numeric:tabular-nums}
+.log div b{color:var(--light);font-weight:600}
+.ab{background:var(--panel2);border:1px solid var(--line);border-radius:8px;padding:8px 10px;margin-top:10px;font-variant-numeric:tabular-nums}
+.ab table td{padding:2px 4px;border:0}
+.ab .h{color:var(--gray);font-size:10px;letter-spacing:.1em;text-transform:uppercase}
+.ab .d{color:var(--green)}.ab .u{color:var(--red)}
+.note{color:var(--gray);font-size:11px;line-height:1.45;margin-top:8px}
+@media (max-width:1000px){.wrap{grid-template-columns:1fr}aside{border-right:0;border-bottom:1px solid var(--line)}.metrics{grid-template-columns:repeat(4,1fr)}.bottom{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header>
+  <h1>AUTOKITCH · HAT SİMÜLASYONU</h1>
+  <span class="sub">robot kol · istasyonlar · sipariş kuyruğu — gerçek süreler</span>
+  <a class="back" href="../">← Ana sayfa</a>
+</header>
+<div class="wrap">
+<aside id="cfg">
+  <h3>ÜRÜNLER</h3>
+  <div class="row"><label>Lahmacun menüde</label><div class="sw on" data-k="lahm"></div></div>
+  <div class="row"><label>Ayrı LAHMACUN OVEN</label><div class="sw on" data-k="lahmOven"></div></div>
+  <div class="row"><label>Lahmacun fırını hazne kapasitesi</label><select data-k="lahmCap"><option value="1">1 · tekli</option><option value="2" selected>2 · yan yana</option></select></div>
+
+  <h3>OVEN · PİDE FIRINI</h3>
+  <div class="row"><label>Hazne sayısı</label><select data-k="pideCh"><option>1</option><option selected>2</option><option>3</option><option>4</option></select></div>
+  <div class="row"><label>Pide pişme (sn)</label><input type="number" data-k="bakePide" value="240" step="10"></div>
+  <div class="row"><label>Lahmacun pişme (sn)</label><input type="number" data-k="bakeLahm" value="180" step="10"></div>
+
+  <h3>KESİCİ · SPREY</h3>
+  <div class="row"><label>Kesici açık (yalnız pide)</label><div class="sw on" data-k="cutter"></div></div>
+  <div class="row"><label>Kesici nerede</label><select data-k="cutterAt"><option value="OVEN" selected>OVEN'da (robot tutar 14 sn)</option><option value="PACK">PACK'te (robot bırakır, 20 sn kendi keser)</option></select></div>
+  <div class="row"><label>Kesici → PACK itici</label><div class="sw" data-k="pusher"></div></div>
+
+  <h3>PRESS</h3>
+  <div class="row"><label>Pres kendi besler (robot bırakır gider)</label><div class="sw" data-k="pressAuto"></div></div>
+  <div class="row"><label>El değişimi (sn, 0 = kombine el)</label><input type="number" data-k="toolChange" value="0" min="0" step="1"></div>
+
+  <h3>PACK</h3>
+  <div class="row"><label>Kutu katlama (sn)</label><input type="number" data-k="fold" value="15" min="0" step="1"></div>
+
+  <h3>ROBOT</h3>
+  <div class="row"><label>Ray hızı (cm/s)</label><input type="range" data-k="rail" min="20" max="200" step="10" value="50"><span class="val" id="v-rail">50</span></div>
+  <div class="row"><label>Kol hız katsayısı</label><input type="range" data-k="robotK" min="0.5" max="1.5" step="0.05" value="1"><span class="val" id="v-robotK">1.00</span></div>
+  <div class="row"><label>Akıllı öncelik (pişmiş önce · uzun pişen önce)</label><div class="sw on" data-k="smart"></div></div>
+  <div class="row"><label>PICKUP göz sayısı</label><input type="number" data-k="lockers" value="12" min="2" max="24"></div>
+
+  <div class="ab" id="ab"></div>
+  <div class="note">Robot süreleri hattın kendi bütçesinden (103 sn/pide: 8 hamur al · 14 prese koy · 8 presten al · 4 tepsiye · 22 dozaj · 8 fırına · 8 fırından al · 14 kesim/sprey · 17 kutu+dolap). Ray: igus drylin ZLW 7. eksen cobot modunda 0,3 m/s; kol UR10e sınıfı, uç 1 m/s. Değişiklik yapınca simülasyon baştan başlar ve sağdaki hesap anında yenilenir.</div>
+</aside>
+<main>
+  <div class="toolbar">
+    <span class="clock" id="clock">00:00</span>
+    <button class="btn pri" id="play">▶ Başlat</button>
+    <button class="btn" id="reset">↺ Sıfırla</button>
+    <span class="sep"></span>
+    <span style="color:var(--gray)">hız</span>
+    <button class="btn spd on" data-s="1">1×</button><button class="btn spd" data-s="3">3×</button><button class="btn spd" data-s="10">10×</button><button class="btn spd" data-s="30">30×</button>
+    <span class="sep"></span>
+    <span style="color:var(--gray)">senaryo</span>
+    <select id="scenario" class="btn">
+      <option value="tek">Tek sipariş · 1 pide + 2 lahmacun</option>
+      <option value="uc" selected>3 müşteri · 1'er dk arayla</option>
+      <option value="pik">Akşam piki · 20 dk × dakikada 1</option>
+      <option value="saat">Sürekli · saatte N sipariş (1 saat)</option>
+      <option value="bos">Boş — siparişi ben vereceğim</option>
+    </select>
+    <span id="rateWrap" style="display:none;align-items:center;gap:6px"><input type="range" id="rate" min="6" max="45" value="20" step="1"><span id="v-rate">20/saat</span> · lahmacun <input type="range" id="lahmPct" min="0" max="100" value="30" step="5"><span id="v-lahmPct">%30</span></span>
+    <span class="sep"></span>
+    <span style="color:var(--gray)">şimdi sipariş ver</span>
+    <button class="btn warn" data-inj="pide">+ 1 pide</button>
+    <button class="btn warn" data-inj="pide,pide">+ 2 pide</button>
+    <button class="btn warn" data-inj="lahm,lahm" id="injL">+ 2 lahmacun</button>
+    <button class="btn warn" data-inj="pide,lahm,lahm" id="injPL">+ pide & 2 lahmacun</button>
+  </div>
+  <canvas id="cv" width="1400" height="600"></canvas>
+  <div class="metrics">
+    <div class="m"><div class="k">teslim edilen</div><div class="v" id="m-del">0 <small>sipariş</small></div></div>
+    <div class="m"><div class="k">ort. bekleme</div><div class="v" id="m-avg">–</div></div>
+    <div class="m"><div class="k">en kötü bekleme</div><div class="v" id="m-max">–</div></div>
+    <div class="m"><div class="k">robot doluluk</div><div class="v" id="m-rob">0%</div></div>
+    <div class="m"><div class="k">fırın doluluk</div><div class="v" id="m-ov">0%</div></div>
+    <div class="m"><div class="k">kuyrukta</div><div class="v" id="m-q">0 <small>sipariş</small></div></div>
+    <div class="m"><div class="k">çıkış hızı</div><div class="v" id="m-thr">– <small>ürün/saat</small></div></div>
+  </div>
+  <div class="bottom">
+    <div class="box"><h4>SİPARİŞLER</h4><table><thead><tr><th>#</th><th>içerik</th><th>geldi</th><th>durum</th><th>bekleme</th></tr></thead><tbody id="orders"></tbody></table></div>
+    <div class="box log"><h4>ROBOT NE YAPTI</h4><div id="log"></div></div>
+  </div>
+</main>
+</div>
+
+<script>
+/* ================================================================
+   AUTOKITCH hat simülasyonu — olay tabanlı motor + 2D ön görünüş
+   Tüm süreler saniye, tüm uzunluklar cm. Robot TEK kaynak.
+   ================================================================ */
+const T0 = { takeDough:8, pressPlace:14, pressCycle:4, pressDrop:6, pressTake:8, trayPlace:4, dose:22, harc:22,
+  ovenLoad:8, ovenUnload:8, spray:1, cutHold:14, cutDrop:5, cutAuto:20, carryToPack:6, packPlace:4,
+  boxTake:5, lockerPlace:8, pusher:3, lahmLoadExtra:2, lahmUnloadExtra:4, customerPickup:150 };
+
+const CFG = { lahm:true, lahmOven:true, lahmCap:2, pideCh:2, bakePide:240, bakeLahm:180, cutter:true, cutterAt:'OVEN',
+  pusher:false, pressAuto:false, toolChange:0, fold:15, rail:50, robotK:1, smart:true, lockers:12,
+  scenario:'uc', rate:20, lahmPct:30 };
+
+/* ---------- senaryolar ---------- */
+function scenarioOrders(cfg){
+  const L = cfg.lahm, o = [];
+  const two = L ? ['lahm','lahm'] : ['pide','pide'];
+  const mix = L ? ['pide','lahm','lahm'] : ['pide','pide'];
+  switch(cfg.scenario){
+    case 'tek': o.push({arr:0, items:mix}); break;
+    case 'uc':  o.push({arr:0, items:['pide','pide']}, {arr:60, items:mix}, {arr:120, items:['pide']}); break;
+    case 'pik': for(let i=0;i<20;i++) o.push({arr:i*60, items:(i%10<7)?['pide']:two}); break;
+    case 'saat': { const n=cfg.rate, gap=3600/n; for(let i=0;i<n;i++){ const r=(i*37)%100; o.push({arr:i*gap, items:(L && r<cfg.lahmPct)?['lahm','lahm']:((i%3==0)?['pide','pide']:['pide'])}); } break; }
+    case 'bos': break;
+  }
+  return o;
+}
+
+/* ---------- yerleşim ---------- */
+function layout(cfg){
+  const S=[]; let x=0;
+  const add=(id,w,label)=>{S.push({id,x0:x,w,cx:x+w/2,label}); x+=w;};
+  add('STORE',140,'STORE'); add('PRESS',70,'PRESS'); add('TOPPING',70,'TOPPING'); add('OVEN',65,'OVEN');
+  if(cfg.lahm && cfg.lahmOven) add('LOVEN',82,'LAHMACUN OVEN');
+  add('PACK',70,'PACK'); x+=20; add('PICKUP',124,'PICKUP');
+  const map={}; S.forEach(s=>map[s.id]=s); map._all=S; map._len=x; return map;
+}
+
+/* ---------- motor ---------- */
+class Sim{
+  constructor(cfg, orders){
+    this.cfg=JSON.parse(JSON.stringify(cfg)); this.T={...T0};
+    const c=this.cfg; this.L=layout(c);
+    this.t=0; this.log=[]; this.orders=[]; this.products=[]; this.nextPid=1;
+    this.pendingOrders=orders.map((o,i)=>({id:i+1, arr:o.arr, items:o.items.slice(), started:false}));
+    // hazneler
+    const n=c.pideCh, bandBot=(n>=3)?79:112, bandH=168-bandBot, h=bandH/n;
+    this.chambers=[]; for(let i=0;i<n;i++) this.chambers.push({id:'F'+(i+1), type:'pide', y0:bandBot+i*h, h, p:null, reserved:null, end:0, busy:0});
+    this.lch=[]; if(c.lahm && c.lahmOven) this.lch.push({id:'L1', type:'lahm', y0:118, h:34, p:null, reserved:null, end:0, busy:0, cap:c.lahmCap});
+    this.press={p:null, end:0, working:false, wEnd:0};
+    this.topping={tray:[], working:false, wEnd:0};
+    this.cutter={p:null, end:0, working:false, wEnd:0, at:c.cutterAt, pushEnd:0};
+    this.pack={folding:null, end:0, queue:[], boxed:[]};
+    this.lockers=[]; for(let i=0;i<c.lockers;i++) this.lockers.push({p:null, free:0});
+    this.robot={x:this.L.STORE.cx, hand:'PENÇE', carry:null, steps:[], step:null, left:0, tx:null, ty:110, label:'', busy:0, job:null};
+    this.done=false; this.deliveredUnits=0; this.firstDelivery=null;
+  }
+  say(s){ this.log.push({t:this.t, s}); if(this.log.length>400) this.log.shift(); }
+  fmt(s){ s=Math.max(0,Math.round(s)); return String(Math.floor(s/60)).padStart(2,'0')+':'+String(s%60).padStart(2,'0'); }
+  /* --- sipariş kabul --- */
+  releaseOrders(){
+    while(this.pendingOrders.length && this.pendingOrders[0].arr<=this.t+1e-9){
+      const o=this.pendingOrders.shift(); this.addOrder(o.items, o.arr, o.id);
+    }
+  }
+  addOrder(items, arr, id){
+    const c=this.cfg; const ord={id:id||(this.orders.length+1), arr, items:items.slice(), products:[], doneT:null};
+    // lahmacun eşleme: ayrı fırın 2'li ise çift, değilse tekli
+    const lahms=items.filter(k=>k==='lahm').length, pides=items.filter(k=>k==='pide').length;
+    for(let i=0;i<pides;i++) ord.products.push(this.mkProduct('pide',1,ord));
+    if(c.lahm){
+      const pairOK = c.lahmOven && c.lahmCap>=2;
+      let rest=lahms;
+      while(rest>0){ if(pairOK && rest>=2){ ord.products.push(this.mkProduct('lahm',2,ord)); rest-=2; } else { ord.products.push(this.mkProduct('lahm',1,ord)); rest-=1; } }
+    } else { for(let i=0;i<lahms;i++) ord.products.push(this.mkProduct('pide',1,ord)); }
+    this.orders.push(ord); this.say(`<b>Sipariş #${ord.id}</b> geldi: ${this.itemsText(ord)}`);
+    return ord;
+  }
+  itemsText(o){ const p=o.items.filter(k=>k==='pide').length, l=o.items.filter(k=>k==='lahm').length; return [p?`${p} pide`:'', l?`${l} lahmacun`:''].filter(Boolean).join(' + '); }
+  mkProduct(kind, units, ord){ const p={id:this.nextPid++, kind, units, order:ord, state:'wait', ch:null, doneUnits:0, bake: kind==='pide'?this.cfg.bakePide:this.cfg.bakeLahm, wrap:0}; this.products.push(p); return p; }
+
+  /* --- kaynak seçimi --- */
+  freeChamber(p){
+    if(p.kind==='lahm' && this.lch.length){ return this.lch.find(ch=>!ch.p && !ch.reserved) || null; }
+    return this.chambers.find(ch=>!ch.p && !ch.reserved) || null;
+  }
+  nextStartable(){
+    const c=this.cfg;
+    for(const o of this.orders){
+      let cands=o.products.filter(p=>p.state==='wait');
+      if(!cands.length) continue;
+      if(c.smart) cands.sort((a,b)=>b.bake-a.bake);
+      for(const p of cands){ const ch=this.freeChamber(p); if(ch) return {p,ch}; }
+    }
+    return null;
+  }
+  pickJob(){
+    const c=this.cfg, cands=[];
+    for(const ch of [...this.chambers,...this.lch]) if(ch.p && ch.p.state==='baked') cands.push({pri:0,t:ch.end, mk:()=>this.jobUnload(ch)});
+    if(this.press.p && this.press.p.state==='baseReady') cands.push({pri:1,t:this.press.end, mk:()=>this.jobPickBase(this.press.p)});
+    if(this.cutter.p && this.cutter.p.state==='cutDone' && !c.pusher) cands.push({pri:1,t:this.cutter.end, mk:()=>this.jobCarryCut(this.cutter.p)});
+    for(const p of this.pack.boxed) if(this.lockers.some(l=>!l.p || l.p.order===p.order)) cands.push({pri:2,t:p.boxedT, mk:()=>this.jobDeliver(p)});
+    // pres kendi besliyorsa ve içinde ürün varsa (basıyor ya da taban bekliyor) yeni ürün başlatma — pres tek
+    const presFree = !c.pressAuto || !this.press.p;
+    const ns=presFree ? this.nextStartable() : null; if(ns) cands.push({pri:3,t:ns.p.order.arr, mk:()=>this.jobStart(ns.p, ns.ch)});
+    if(!cands.length) return null;
+    cands.sort((a,b)=> c.smart ? (a.pri-b.pri || a.t-b.t) : (a.t-b.t || a.pri-b.pri));
+    return cands[0].mk();
+  }
+
+  /* --- adım yapıcılar --- */
+  go(id, y, sub){ const s=this.L[id]; return {go:true, x: sub!==undefined?sub:s.cx, y, at:id}; }
+  act(dur, label, at, y, fn, startFn){ return {act:true, dur:dur*this.cfg.robotK, label, at, y, fn, startFn}; }
+  hand(h){ const T=this.T, c=this.cfg; if(!c.toolChange) return []; return [{act:true, dur:c.toolChange, label:'EL DEĞİŞ → '+h, at:'PRESS', y:60, fn:()=>{this.robot.hand=h;}, handOnly:true}]; }
+
+  jobStart(p, ch){
+    const T=this.T, c=this.cfg, S=[];
+    ch.reserved=p; p.ch=ch; p.state='starting';
+    const unitLoop=(k)=>{
+      S.push(...this.hand('PENÇE'));
+      S.push(this.go('STORE',110), this.act(T.takeDough,'hamur al','STORE',110,()=>{this.robot.carry={kind:p.kind,st:'dough'}; p.state='carry';}));
+      if(c.pressAuto){
+        S.push(this.go('PRESS',95), this.act(T.pressDrop,'prese bırak','PRESS',95,()=>{this.robot.carry=null; this.press.p=p; this.press.end=this.t+T.pressCycle; this.press.working=true; this.press.wEnd=this.press.end; p.state='pressing'; p.unitK=k;}));
+        return false; // robot serbest; devamı jobPickBase
+      }
+      S.push(this.go('PRESS',95), this.act(T.pressPlace,'prese koy · bas','PRESS',95,()=>{this.press.working=false; this.robot.carry={kind:p.kind,st:'base'};}, ()=>{this.press.working=true; this.press.wEnd=this.t+T.pressPlace;}));
+      S.push(this.act(T.pressTake,'presten al','PRESS',95,()=>{}));
+      this.afterPress(S,p,k);
+      return true;
+    };
+    const first=unitLoop(0);
+    if(!first) return {name:'START-A #'+p.id, steps:S, p};
+    if(p.units===2){ const ok=unitLoop(1); }
+    this.loadSteps(S,p);
+    return {name:'START #'+p.id, steps:S, p};
+  }
+  afterPress(S,p,k){
+    const T=this.T, c=this.cfg;
+    S.push(this.go('TOPPING',100), this.act(T.trayPlace,'tepsiye koy','TOPPING',100,()=>{this.robot.carry=null; this.topping.tray.push({kind:p.kind, st:'base', p}); p.state='dosing';}));
+    S.push(...this.hand('KÜREK'));
+    const dur=p.kind==='pide'?T.dose:T.harc;
+    S.push(this.act(dur, p.kind==='pide'?'DOZAJ: kaşar · sucuk · et':'HARÇ SÜR','TOPPING',100,()=>{this.topping.working=false; const it=this.topping.tray.find(x=>x.p===p&&x.st==='base'); if(it) it.st='topped'; p.doneUnits++; p.state='onTray';}, ()=>{this.topping.working=true; this.topping.wEnd=this.t+dur;}));
+  }
+  loadSteps(S,p){
+    const T=this.T, ch=p.ch, isL=ch.type==='lahm';
+    S.push(this.act(0,'tepsiyi al','TOPPING',100,()=>{this.robot.carry={kind:p.kind,st:'topped',units:p.units}; this.topping.tray=this.topping.tray.filter(x=>x.p!==p);}));
+    const ovenId=isL?'LOVEN':'OVEN', y=ch.y0+ch.h/2;
+    const dur=T.ovenLoad+(p.units===2?T.lahmLoadExtra:0);
+    S.push(this.go(ovenId,y), this.act(dur, `${ch.id}'e koy`, ovenId, y, ()=>{this.robot.carry=null; ch.p=p; ch.reserved=null; ch.end=this.t+p.bake; p.state='baking'; this.say(`${p.kind==='pide'?'Pide':'Lahmacun'} #${p.id} → <b>${ovenId} ${ch.id}</b> · ${p.bake} sn pişecek`);}));
+  }
+  jobPickBase(p){
+    const S=[]; const T=this.T;
+    S.push(...this.hand('PENÇE'));
+    S.push(this.go('PRESS',95), this.act(T.pressTake,'presten al','PRESS',95,()=>{this.press.p=null; this.robot.carry={kind:p.kind,st:'base'}; p.state='carry';}));
+    this.afterPress(S,p,p.unitK||0);
+    if(p.units===2 && p.doneUnits+1<2){
+      // ikinci hamur: yeniden STORE → PRESS (otomatik) ; sonra jobPickBase tekrar
+      S.push(...this.hand('PENÇE'));
+      S.push(this.go('STORE',110), this.act(T.takeDough,'2. hamur al','STORE',110,()=>{this.robot.carry={kind:p.kind,st:'dough'};}));
+      S.push(this.go('PRESS',95), this.act(T.pressDrop,'prese bırak','PRESS',95,()=>{this.robot.carry=null; this.press.p=p; this.press.end=this.t+T.pressCycle; this.press.working=true; this.press.wEnd=this.press.end; p.state='pressing'; p.unitK=1;}));
+      return {name:'PICK-BASE #'+p.id, steps:S, p};
+    }
+    this.loadSteps(S,p);
+    return {name:'PICK-BASE #'+p.id, steps:S, p};
+  }
+  jobUnload(ch){
+    const T=this.T, c=this.cfg, p=ch.p, S=[], isL=ch.type==='lahm', ovenId=isL?'LOVEN':'OVEN', y=ch.y0+ch.h/2;
+    p.state='unloading';
+    S.push(...this.hand('KÜREK'));
+    S.push(this.go(ovenId,y), this.act(T.ovenUnload+(p.units===2?T.lahmUnloadExtra:0), `${ch.id}'den al`, ovenId, y, ()=>{ch.p=null; this.robot.carry={kind:p.kind,st:'baked',units:p.units}; p.state='carry';}));
+    if(p.kind==='pide'){
+      S.push(this.act(T.spray,'sadeyağ sprey','OVEN',78,()=>{}));
+      if(c.cutter){
+        if(c.cutterAt==='OVEN'){
+          S.push(this.act(T.cutHold,'KESİCİ: 8 dilim','OVEN',95,()=>{this.cutter.working=false; this.robot.carry.st='cut';}, ()=>{this.cutter.working=true; this.cutter.wEnd=this.t+T.cutHold;}));
+        } else {
+          S.push(this.go('PACK',110), this.act(T.cutDrop,'kesici masasına bırak','PACK',110,()=>{this.robot.carry=null; this.cutter.p=p; this.cutter.end=this.t+T.cutAuto; this.cutter.working=true; this.cutter.wEnd=this.cutter.end; p.state='cutting';}));
+          return {name:'UNLOAD #'+p.id, steps:S, p};
+        }
+      }
+    }
+    S.push(this.go('PACK',85), this.act(T.packPlace,'PACK\'e koy','PACK',85,()=>{this.robot.carry=null; this.toPack(p);}));
+    return {name:'UNLOAD #'+p.id, steps:S, p};
+  }
+  jobCarryCut(p){
+    const S=[], T=this.T;
+    S.push(this.go('PACK',110), this.act(T.carryToPack,'kesiciden PACK\'e','PACK',85,()=>{this.cutter.p=null; this.toPack(p);}));
+    return {name:'CARRY #'+p.id, steps:S, p};
+  }
+  toPack(p){ p.state='packQ'; this.pack.queue.push(p); }
+  jobDeliver(p){
+    const S=[], T=this.T;
+    let li=this.lockers.findIndex(l=>l.p && l.p.order===p.order);      // aynı siparişin gözü varsa oraya
+    if(li<0) li=this.lockers.findIndex(l=>!l.p);
+    if(li<0) return null;
+    this.lockers[li].p=p; this.lockers[li].pending=true; this.lockers[li].n=(this.lockers[li].n||0)+p.units; // rezerve
+    this.pack.boxed=this.pack.boxed.filter(x=>x!==p); p.state='delivering';
+    S.push(this.go('PACK',85), this.act(T.boxTake*(p.units===2?1.3:1),'kutuyu al','PACK',85,()=>{this.robot.carry={kind:p.kind,st:'box',units:p.units, oid:p.order.id};}));
+    const lx=this.lockerX(li), ly=this.lockerY(li);
+    S.push(this.go('PICKUP',ly,lx), this.act(T.lockerPlace,`göz ${li+1}'e koy`,'PICKUP',ly,()=>{this.robot.carry=null; this.lockers[li].pending=false; p.state='done'; p.doneT=this.t; this.deliveredUnits+=p.units; if(this.firstDelivery===null) this.firstDelivery=this.t;
+      const o=p.order; if(o.products.every(q=>q.state==='done')){ o.doneT=this.t; this.say(`<b>Sipariş #${o.id} TESLİM</b> — ${this.fmt(o.doneT-o.arr)} bekledi`); this.lockers.forEach(l=>{ if(l.p&&l.p.order===o) l.free=this.t+this.T.customerPickup; }); }
+    }));
+    return {name:'DELIVER #'+p.id, steps:S, p};
+  }
+  lockerX(i){ const s=this.L.PICKUP; const col=i%2, cols=2; return s.x0+12+col*(s.w-24)/cols+(s.w-24)/cols/2; }
+  lockerY(i){ const row=Math.floor(i/2), rows=Math.ceil(this.cfg.lockers/2); return 158-row*(118/rows)-(118/rows)/2; }
+
+  /* --- zaman adımı --- */
+  step(dt){
+    if(this.done) return;
+    const c=this.cfg, T=this.T, R=this.robot;
+    this.t+=dt; this.releaseOrders();
+    // fırınlar
+    for(const ch of [...this.chambers,...this.lch]){ if(ch.p){ ch.busy+=dt; if(ch.p.state==='baking' && this.t>=ch.end){ ch.p.state='baked'; this.say(`${ch.id} <b>HAZIR</b> — #${ch.p.id} pişti`); } } }
+    // pres otomatik
+    if(this.press.p && this.press.p.state==='pressing' && this.t>=this.press.end){ this.press.p.state='baseReady'; this.press.working=false; }
+    // kesici otomatik
+    if(this.cutter.p && this.cutter.p.state==='cutting' && this.t>=this.cutter.end){ this.cutter.working=false; if(c.pusher){ this.cutter.p.state='pushing'; this.cutter.pushEnd=this.t+T.pusher; } else this.cutter.p.state='cutDone'; }
+    if(this.cutter.p && this.cutter.p.state==='pushing' && this.t>=this.cutter.pushEnd){ const p=this.cutter.p; this.cutter.p=null; this.toPack(p); }
+    // pack katlama
+    if(!this.pack.folding && this.pack.queue.length){ const p=this.pack.queue.shift(); this.pack.folding=p; p.state='packing'; this.pack.end=this.t+c.fold*p.units; }
+    if(this.pack.folding && this.t>=this.pack.end){ const p=this.pack.folding; this.pack.folding=null; p.state='boxed'; p.boxedT=this.t; this.pack.boxed.push(p); }
+    // müşteri alır
+    for(const l of this.lockers) if(l.p && !l.pending && l.free && this.t>=l.free){ l.p=null; l.free=0; l.n=0; }
+    // robot
+    let left=dt, guard=0;
+    while(left>1e-9 && guard++<200){
+      if(!R.step){ if(R.steps.length){ R.step=R.steps.shift(); this.beginStep(R.step); } else { const j=this.pickJob(); if(!j || !j.steps.length){ R.label=''; break; } R.job=j; R.steps=j.steps.slice(); this.say(`Robot: <b>${j.name}</b>`); continue; } }
+      const s=R.step;
+      if(s.go){
+        const d=s.x-R.x, v=c.rail, need=Math.abs(d)/v;
+        if(need<=left){ R.x=s.x; R.busy+=need; left-=need; R.step=null; }
+        else { R.x+=Math.sign(d)*v*left; R.busy+=left; left=0; }
+      } else {
+        const use=Math.min(left, R.left); R.left-=use; R.busy+=use; left-=use;
+        if(R.left<=1e-9){ if(s.fn) s.fn(); R.step=null; }
+      }
+    }
+    // bitti mi
+    if(!this.pendingOrders.length && this.orders.length && this.orders.every(o=>o.doneT!==null)) this.done=true;
+  }
+  beginStep(s){ const R=this.robot; if(s.go){ R.ty=s.y; R.label='→ '+s.at; } else { R.left=s.dur; R.ty=s.y; R.label=s.label; if(s.startFn) s.startFn(); } }
+  metrics(){
+    const done=this.orders.filter(o=>o.doneT!==null), w=done.map(o=>o.doneT-o.arr);
+    const ovBusy=[...this.chambers,...this.lch].reduce((a,ch)=>a+ch.busy,0), nCh=this.chambers.length+this.lch.length;
+    const span=Math.max(this.t,1);
+    return { delivered:done.length, avg:w.length?w.reduce((a,b)=>a+b,0)/w.length:null, max:w.length?Math.max(...w):null,
+      robot:this.robot.busy/span, oven:nCh?ovBusy/(span*nCh):0, queue:this.orders.filter(o=>o.doneT===null).length,
+      thr: this.deliveredUnits>0 && this.t>0 ? this.deliveredUnits/(this.t/3600) : null };
+  }
+}
+/* ---------- başsız koşu (anlık hesap) ---------- */
+function headless(cfg){
+  const s=new Sim(cfg, scenarioOrders(cfg)); let guard=0;
+  if(!s.pendingOrders.length) return null;
+  while(!s.done && s.t<6*3600 && guard++<200000) s.step(1.0);
+  return s.metrics();
+}
+
+/* ---------- çizim ---------- */
+const cv=document.getElementById('cv'), ctx=cv.getContext('2d');
+const PX=2.0, X0=30, FLOOR=545, RAILY=95;
+const cmx=(cm)=>X0+cm*PX, cmy=(cm)=>FLOOR-cm*PX;
+const C={idle:'#2e2e33', edge:'#4a4a50', work:'#ff453a', done:'#30d158', txt:'#F5F5F7', dim:'#86868B', dough:'#e9d9a8', base:'#f3e6bf', baked:'#b5651d', lahm:'#c9392b', box:'#d9c7a3'};
+function roundRect(x,y,w,h,r){ ctx.beginPath(); ctx.moveTo(x+r,y); ctx.arcTo(x+w,y,x+w,y+h,r); ctx.arcTo(x+w,y+h,x,y+h,r); ctx.arcTo(x,y+h,x,y,r); ctx.arcTo(x,y,x+w,y,r); ctx.closePath(); }
+const FONT=getComputedStyle(document.body).fontFamily;
+function label(txt,x,y,size,color,align){ ctx.font=`${size||11}px ${FONT}`; ctx.fillStyle=color||C.txt; ctx.textAlign=align||'center'; ctx.textBaseline='middle'; ctx.fillText(txt,x,y); }
+function statusBox(x,y,w,h,state,txt,sub){ // state: idle/work/done
+  ctx.fillStyle = state==='work'?'rgba(255,69,58,.18)': state==='done'?'rgba(48,209,88,.18)':'#1a1a1d';
+  roundRect(x,y,w,h,4); ctx.fill(); ctx.lineWidth= state==='idle'?1:2; ctx.strokeStyle= state==='work'?C.work: state==='done'?C.done:C.edge; ctx.stroke();
+  if(txt) label(txt, x+w/2, y+h/2-(sub?6:0), 11, state==='work'?C.work:state==='done'?C.done:C.dim);
+  if(sub) label(sub, x+w/2, y+h/2+8, 10, C.dim);
+}
+function drawItem(kind, st, x, y, scale, units, oid){
+  scale=scale||1; const r=(kind==='pide'?15:12)*scale;
+  const one=(dx)=>{
+    if(st==='dough'){ ctx.fillStyle=C.dough; ctx.beginPath(); ctx.arc(x+dx,y-6*scale,8*scale,0,7); ctx.fill(); return; }
+    if(st==='box'){ ctx.fillStyle=C.box; roundRect(x+dx-r,y-9*scale,2*r,14*scale,2); ctx.fill(); ctx.strokeStyle='#6b5d44'; ctx.lineWidth=1; ctx.stroke(); if(oid) label('#'+oid,x+dx,y-2*scale,9,'#3a3020'); return; }
+    ctx.fillStyle = st==='base'?C.base: (st==='baked'||st==='cut')?(kind==='pide'?C.baked:'#8f2f1f') : (kind==='pide'?'#e3b95a':C.lahm);
+    ctx.beginPath(); ctx.ellipse(x+dx,y,r,r*0.42,0,0,7); ctx.fill();
+    if(st==='topped' && kind==='pide'){ ctx.fillStyle='#b23a2a'; for(let i=0;i<5;i++){ ctx.beginPath(); ctx.arc(x+dx-r*.6+i*r*.3, y+((i%2)?2:-2)*scale, 2.2*scale,0,7); ctx.fill(); } }
+    if(st==='cut'){ ctx.strokeStyle='#3a2410'; ctx.lineWidth=1; ctx.beginPath(); ctx.moveTo(x+dx-r,y); ctx.lineTo(x+dx+r,y); ctx.moveTo(x+dx,y-r*.42); ctx.lineTo(x+dx,y+r*.42); ctx.stroke(); }
+    ctx.strokeStyle='rgba(0,0,0,.35)'; ctx.lineWidth=1; ctx.beginPath(); ctx.ellipse(x+dx,y,r,r*0.42,0,0,7); ctx.stroke();
+  };
+  if(units===2){ one(-r-2); one(r+2); } else one(0);
+}
+function draw(sim, speed){
+  const W=cv.width, H=cv.height; ctx.fillStyle='#0b0b0c'; ctx.fillRect(0,0,W,H);
+  const L=sim.L, c=sim.cfg, T=sim.T, t=sim.t;
+  // zemin
+  ctx.fillStyle='#141416'; ctx.fillRect(0,FLOOR,W,H-FLOOR); ctx.fillStyle='#2a2a2e'; ctx.fillRect(0,FLOOR,W,2);
+  // ray
+  ctx.fillStyle='#3a3a40'; ctx.fillRect(cmx(-10),RAILY-4,cmx(L._len+10)-cmx(-10),8);
+  label('RAY · 7. eksen · '+c.rail+' cm/s', cmx(L._len+12), RAILY, 10, C.dim, 'left');
+  // istasyonlar
+  for(const s of L._all){
+    const x=cmx(s.x0), w=s.w*PX, top=cmy(197), h=197*PX;
+    ctx.fillStyle='#1c1c1f'; roundRect(x,top,w,h,6); ctx.fill(); ctx.strokeStyle='#3a3a3e'; ctx.lineWidth=1; ctx.stroke();
+    ctx.fillStyle='#121214'; ctx.fillRect(x,cmy(12),w,12*PX); // plint
+    label(s.label, x+w/2, top+13, 11, '#c9c9ce');
+    label(s.w+' cm', x+w/2, top+27, 9, C.dim);
+    if(s.id==='STORE'){
+      // çekmece sıraları (sağ: taze hamur 8 · sol: donmuş + içecek) — sadeleştirilmiş
+      for(let i=0;i<8;i++){ const y=cmy(71+i*12.1); ctx.fillStyle='#232327'; ctx.fillRect(x+w/2+4,y-9,w/2-10,8*PX-2); ctx.strokeStyle='#39393e'; ctx.strokeRect(x+w/2+4,y-9,w/2-10,8*PX-2); ctx.fillStyle=C.dough; for(let k=0;k<5;k++){ ctx.beginPath(); ctx.arc(x+w/2+14+k*11,y-2,3.2,0,7); ctx.fill(); } }
+      for(let i=0;i<4;i++){ const y=cmy(20+i*11.7); ctx.fillStyle='#22262d'; ctx.fillRect(x+w/2+4,y-9,w/2-10,9*PX); ctx.strokeStyle='#39393e'; ctx.strokeRect(x+w/2+4,y-9,w/2-10,9*PX); }
+      label('taze hamur 8 çekmece', x+w*.75, cmy(172), 9, C.dim); label('donmuş 4', x+w*.75, cmy(66), 9, C.dim);
+      label('içecek · 1L', x+w*.25, cmy(120), 9, C.dim); ctx.fillStyle='#22262d'; ctx.fillRect(x+6,cmy(165),w/2-10,cmy(60)-cmy(165)); ctx.strokeStyle='#39393e'; ctx.strokeRect(x+6,cmy(165),w/2-10,cmy(60)-cmy(165));
+      if(c.lahm){ label('lahmacun hamuru', x+w*.25, cmy(40), 9, '#d9a066'); ctx.fillStyle='#23201b'; ctx.fillRect(x+6,cmy(55),w/2-10,cmy(22)-cmy(55)); ctx.strokeStyle='#5a4a33'; ctx.strokeRect(x+6,cmy(55),w/2-10,cmy(22)-cmy(55)); ctx.fillStyle=C.dough; for(let k=0;k<6;k++){ ctx.beginPath(); ctx.arc(x+14+k*9,cmy(38),2.6,0,7); ctx.fill(); } }
+    }
+    if(s.id==='PRESS'){
+      const st = sim.press.working?'work' : (sim.press.p && sim.press.p.state==='baseReady')?'done':'idle';
+      const rem = sim.press.working? Math.max(0, sim.press.wEnd - t) : 0;
+      statusBox(x+8, cmy(140), w-16, cmy(80)-cmy(140), st, st==='work'?`PRES ${Math.ceil(rem)} sn`: st==='done'?'TABAN HAZIR ✓':'PZP-400', st==='idle'?(c.pressAuto?'kendi besler':'robot tutar'):'');
+      ctx.fillStyle='#55555c'; ctx.fillRect(x+16,cmy(96),w-32,4); ctx.fillRect(x+16,cmy(112),w-32,4);
+      if(sim.press.p){ drawItem(sim.press.p.kind, sim.press.p.state==='baseReady'?'base':'dough', x+w/2, cmy(98), .9); }
+      label('uç yuvası', x+w/2, cmy(170), 9, C.dim); ctx.strokeStyle='#39393e'; ctx.strokeRect(x+10,cmy(190),w-20,cmy(150)-cmy(190));
+      if(c.toolChange){ label(sim.robot.hand==='PENÇE'?'KÜREK burada':'PENÇE burada', x+w/2, cmy(158), 9, '#c9c9ce'); }
+    }
+    if(s.id==='TOPPING'){
+      const st=sim.topping.working?'work':(sim.topping.tray.length?'done':'idle'); const rem=sim.topping.working?Math.max(0,sim.topping.wEnd-t):0;
+      statusBox(x+8, cmy(175), w-16, cmy(115)-cmy(175), st, st==='work'?`DOZAJ ${Math.ceil(rem)} sn`:'4 KASET', st==='idle'?(c.lahm?'kaşar·sucuk·et + harç':'kaşar·sucuk·kıyma·kuşbaşı'):'');
+      for(let i=0;i<4;i++){ ctx.fillStyle='#24242a'; ctx.fillRect(x+12+i*(w-24)/4, cmy(170), (w-24)/4-3, cmy(125)-cmy(170)); }
+      ctx.fillStyle='#55555c'; ctx.fillRect(x+12,cmy(100),w-24,4); label('döner tabla', x+w/2, cmy(88), 9, C.dim);
+      sim.topping.tray.forEach((it,i)=>drawItem(it.kind, it.st, x+w/2+(sim.topping.tray.length===2?(i?14:-14):0), cmy(103), .85));
+    }
+    if(s.id==='OVEN'){
+      for(const ch of sim.chambers){
+        const y=cmy(ch.y0+ch.h), hh=ch.h*PX;
+        let st='idle', txt=ch.id+' · boş', sub='';
+        if(ch.p){ if(ch.p.state==='baked'||ch.p.state==='unloading'){ st='done'; txt=ch.id+' HAZIR ✓'; sub='bekliyor '+Math.round(t-ch.end)+' sn'; } else { st='work'; txt=`${ch.id} pişiyor`; sub=sim.fmt(ch.end-t)+' kaldı'; } }
+        else if(ch.reserved){ st='idle'; txt=ch.id+' · rezerve'; sub='#'+ch.reserved.id+' geliyor'; }
+        statusBox(x+6, y+2, w-12, hh-4, st, txt, sub);
+        if(ch.p){ drawItem(ch.p.kind, (ch.p.state==='baked'||ch.p.state==='unloading')?'baked':'topped', x+w-22, y+hh/2, .55, ch.p.units); }
+      }
+      // işlem ağzı: sprey + kesici (OVEN'da ise)
+      const cutHere = c.cutter && c.cutterAt==='OVEN';
+      const st = sim.cutter.working && cutHere ? 'work':'idle';
+      statusBox(x+6, cmy(112), w-12, cmy(79)-cmy(112), cutHere?st:'idle', cutHere?(st==='work'?`KESİCİ ${Math.ceil(sim.cutter.wEnd-t)} sn`:'KESİCİ ✕ 8'):'—', cutHere?'robot tutar':(c.cutter?'kesici PACK\'te':'kesici KAPALI'));
+      statusBox(x+6, cmy(78), w-12, cmy(62)-cmy(78), 'idle', 'SPREY · sadeyağ', '');
+      statusBox(x+6, cmy(60), w-12, cmy(14)-cmy(60), 'idle', 'PANO · YAĞ', '');
+    }
+    if(s.id==='LOVEN'){
+      const ch=sim.lch[0]; const y=cmy(ch.y0+ch.h), hh=ch.h*PX;
+      let st='idle', txt='L1 · boş ('+ch.cap+' yan yana)', sub='';
+      if(ch.p){ if(ch.p.state==='baked'||ch.p.state==='unloading'){ st='done'; txt='L1 HAZIR ✓'; sub='bekliyor '+Math.round(t-ch.end)+' sn'; } else { st='work'; txt='L1 pişiyor'; sub=sim.fmt(ch.end-t)+' kaldı'; } }
+      else if(ch.reserved){ txt='L1 · rezerve'; sub='#'+ch.reserved.id+' geliyor'; }
+      statusBox(x+6, y+2, w-12, hh-4, st, txt, sub);
+      if(ch.p) drawItem('lahm', (ch.p.state==='baked'||ch.p.state==='unloading')?'baked':'topped', x+w/2, y+hh-12, .6, ch.p.units);
+      statusBox(x+6, cmy(112), w-12, cmy(60)-cmy(112), 'idle', 'taş taban · 400 °C', 'sprey yok · kesici yok');
+    }
+    if(s.id==='PACK'){
+      if(c.cutter && c.cutterAt==='PACK'){
+        const cp=sim.cutter.p; let st='idle', txt='KESİCİ masası', sub='robot bırakır';
+        if(cp){ if(cp.state==='cutting'){ st='work'; txt=`KESİCİ ${Math.ceil(sim.cutter.end-t)} sn`; sub=''; } else if(cp.state==='pushing'){ st='work'; txt='İTİCİ → PACK'; } else { st='done'; txt='KESİLDİ ✓'; sub='robot alacak'; } }
+        statusBox(x+6, cmy(140), w-12, cmy(100)-cmy(140), st, txt, sub);
+        if(cp) drawItem(cp.kind, cp.state==='cutting'?'baked':'cut', x+w/2, cmy(118), .7);
+      } else { statusBox(x+6, cmy(140), w-12, cmy(100)-cmy(140), 'idle', 'ŞARJÖR · 487 blank', ''); }
+      const f=sim.pack.folding; let st='idle', txt='KUTU KATLAMA', sub=c.fold+' sn/kutu';
+      if(f){ st='work'; txt=`KATLANIYOR ${Math.ceil(sim.pack.end-t)} sn`; sub='#'+f.order.id; }
+      else if(sim.pack.boxed.length){ st='done'; txt='KUTU HAZIR ✓ ×'+sim.pack.boxed.length; sub='robot alacak'; }
+      statusBox(x+6, cmy(96), w-12, cmy(60)-cmy(96), st, txt, sub);
+      sim.pack.boxed.slice(0,3).forEach((p,i)=>drawItem(p.kind,'box',x+w/2-16+i*16, cmy(70), .55, 1, p.order.id));
+      if(f) drawItem(f.kind, 'cut', x+w/2, cmy(72), .6);
+      if(sim.pack.queue.length) label('sırada '+sim.pack.queue.length, x+w/2, cmy(52), 9, C.dim);
+    }
+    if(s.id==='PICKUP'){
+      const rows=Math.ceil(c.lockers/2);
+      for(let i=0;i<c.lockers;i++){
+        const lx=sim.lockerX(i), ly=sim.lockerY(i), lw=(s.w-24)/2-4, lh=118/rows*PX-4;
+        const l=sim.lockers[i]; const st=l.p?(l.pending?'work':'done'):'idle';
+        statusBox(cmx(lx)-lw/2, cmy(ly)-lh/2, lw, lh, st, l.p?('#'+l.p.order.id+(l.n>1?' ×'+l.n:'')+(l.pending?' …':'')):String(i+1), l.p?(l.pending?'kutu geliyor':(l.free?'müşteri '+Math.max(0,Math.round(l.free-t))+' sn':'sipariş tamamlanıyor')):'');
+      }
+      label('QR ile açılır', x+w/2, cmy(28), 9, C.dim);
+    }
+  }
+  // robot
+  const R=sim.robot, rx=cmx(R.x), hy=cmy(R.ty||110);
+  ctx.fillStyle='#d0d0d6'; roundRect(rx-22,RAILY-14,44,26,5); ctx.fill(); ctx.fillStyle='#2997FF'; ctx.fillRect(rx-22,RAILY+8,44,3);
+  const ex=rx+(hy-RAILY)*0.18, ey=RAILY+12+(hy-RAILY)*0.45;
+  ctx.strokeStyle='#e6e6ea'; ctx.lineWidth=7; ctx.lineCap='round'; ctx.beginPath(); ctx.moveTo(rx,RAILY+12); ctx.lineTo(ex,ey); ctx.lineTo(rx,hy-14); ctx.stroke();
+  ctx.fillStyle='#e6e6ea'; ctx.beginPath(); ctx.arc(ex,ey,6,0,7); ctx.fill();
+  ctx.fillStyle=R.hand==='PENÇE'?'#2997FF':'#ffd60a'; roundRect(rx-12,hy-16,24,10,3); ctx.fill(); label(R.hand,rx,hy-11,8,'#000');
+  if(R.carry) drawItem(R.carry.kind, R.carry.st, rx, hy+2, .9, R.carry.units, R.carry.oid);
+  // robot etiketi
+  if(R.label){ const txt=R.step&&R.step.act?`${R.label} · ${Math.ceil(R.left)} sn`:R.label; ctx.fillStyle='rgba(0,0,0,.75)'; const tw=ctx.measureText(txt).width+18; roundRect(rx-tw/2,RAILY-42,tw,20,5); ctx.fill(); label(txt,rx,RAILY-32,11,R.step&&R.step.act?'#ff9f0a':'#fff'); }
+  else if(!sim.done){ label('robot boşta', rx, RAILY-32, 11, C.dim); }
+  // saat
+  label(sim.fmt(t), 60, 22, 22, '#fff','left'); label(speed+'×', 150, 24, 12, C.dim,'left');
+  if(sim.done) label('SENARYO BİTTİ — tüm siparişler teslim', W/2, 24, 14, C.done);
+  // öncelik açıklaması
+  label(c.smart?'ROBOT KURALI: pişmiş varsa al › kutu hazırsa dolaba › boş hazne varsa yeni ürün › uzun pişeni önce':'ROBOT KURALI: ne gelirse sırayla (akıllı öncelik KAPALI)', W-16, 22, 10, C.dim, 'right');
+}
+
+/* ---------- uygulama ---------- */
+let sim, speed=1, playing=false, last=performance.now(), baseline=null;
+function rebuild(){ sim=new Sim(CFG, scenarioOrders(CFG)); playing=false; document.getElementById('play').textContent='▶ Başlat'; refreshAB(); render(); }
+function render(){ draw(sim, speed); const m=sim.metrics();
+  const f=(s)=>s===null?'–':(s/60).toFixed(1)+' <small>dk</small>';
+  document.getElementById('clock').textContent=sim.fmt(sim.t);
+  document.getElementById('m-del').innerHTML=m.delivered+' <small>sipariş</small>';
+  document.getElementById('m-avg').innerHTML=f(m.avg); document.getElementById('m-max').innerHTML=f(m.max);
+  document.getElementById('m-rob').textContent=Math.round(m.robot*100)+'%'; document.getElementById('m-ov').textContent=Math.round(m.oven*100)+'%';
+  document.getElementById('m-q').innerHTML=m.queue+' <small>sipariş</small>'; document.getElementById('m-thr').innerHTML=(m.thr?m.thr.toFixed(0):'–')+' <small>ürün/saat</small>';
+  // siparişler
+  const tb=document.getElementById('orders'); let h='';
+  const rows=[...sim.orders].reverse().slice(0,40);
+  for(const o of rows){
+    const st = o.doneT!==null ? '<span class="st-g">TESLİM ✓</span>' : o.products.some(p=>['baking','baked'].includes(p.state)) ? '<span class="st-r">pişiyor</span>' : o.products.some(p=>p.state!=='wait') ? '<span class="st-a">hazırlanıyor</span>' : '<span class="st-w">kuyrukta</span>';
+    const w = ((o.doneT!==null?o.doneT:sim.t)-o.arr)/60;
+    h+=`<tr><td>#${o.id}</td><td>${sim.itemsText(o)}</td><td>${sim.fmt(o.arr)}</td><td>${st}</td><td>${w.toFixed(1)} dk</td></tr>`;
+  }
+  tb.innerHTML=h||'<tr><td colspan=5 class="st-w">sipariş yok — üstten "şimdi sipariş ver"</td></tr>';
+  const lg=document.getElementById('log'); lg.innerHTML=sim.log.slice(-12).reverse().map(e=>`<div>${sim.fmt(e.t)} · ${e.s}</div>`).join('');
+}
+/* zaman: setInterval (sekme arkadayken de ilerler) · çizim: rAF */
+setInterval(()=>{ const now=performance.now(); const dt=Math.min(0.25,(now-last)/1000); last=now; if(playing && !sim.done){ sim.step(dt*speed); } }, 33);
+function loop(){ if(playing) render(); requestAnimationFrame(loop); }
+function refreshAB(){
+  const m=headless(CFG); const el=document.getElementById('ab');
+  const f=(s)=>s===null||s===undefined?'–':(s/60).toFixed(1)+' dk';
+  const pct=(v)=>Math.round(v*100)+'%';
+  if(!m){ el.innerHTML='<div class="h">anlık hesap</div><div class="st-w">"Boş" senaryoda hesap yok — sipariş verip izle.</div>'; return; }
+  const d=(a,b,lowGood)=>{ if(!baseline||a===null||b===null) return ''; const x=a-b; if(Math.abs(x)<1e-6) return ''; const good = lowGood? x<0 : x>0; return `<span class="${good?'d':'u'}">${x>0?'+':''}${(x/60).toFixed(1)}</span>`; };
+  el.innerHTML=`<div class="h">anlık hesap — bu kurulum, bu senaryo (sonuna kadar)</div>
+  <table><tr><td></td><td class="h">şimdi</td><td class="h">${baseline?'temel':''}</td><td class="h">${baseline?'fark':''}</td></tr>
+  <tr><td>ort. bekleme</td><td><b>${f(m.avg)}</b></td><td>${baseline?f(baseline.avg):''}</td><td>${d(m.avg,baseline&&baseline.avg,true)}</td></tr>
+  <tr><td>en kötü</td><td><b>${f(m.max)}</b></td><td>${baseline?f(baseline.max):''}</td><td>${d(m.max,baseline&&baseline.max,true)}</td></tr>
+  <tr><td>robot doluluk</td><td><b>${pct(m.robot)}</b></td><td>${baseline?pct(baseline.robot):''}</td><td></td></tr>
+  <tr><td>fırın doluluk</td><td><b>${pct(m.oven)}</b></td><td>${baseline?pct(baseline.oven):''}</td><td></td></tr>
+  <tr><td>çıkış</td><td><b>${m.thr?m.thr.toFixed(0):'–'} ürün/saat</b></td><td>${baseline?(baseline.thr?baseline.thr.toFixed(0):'–'):''}</td><td></td></tr></table>
+  <div style="margin-top:6px;display:flex;gap:6px"><button class="btn" id="setBase" style="padding:4px 8px">Bunu TEMEL yap</button>${baseline?'<button class="btn" id="clrBase" style="padding:4px 8px">temeli sil</button>':''}</div>`;
+  document.getElementById('setBase').onclick=()=>{baseline=m; refreshAB();};
+  const cb=document.getElementById('clrBase'); if(cb) cb.onclick=()=>{baseline=null; refreshAB();};
+}
+/* panel bağlama */
+document.querySelectorAll('#cfg .sw').forEach(sw=>{ sw.onclick=()=>{ sw.classList.toggle('on'); CFG[sw.dataset.k]=sw.classList.contains('on'); syncPanel(); rebuild(); }; });
+document.querySelectorAll('#cfg select, #cfg input[type=number]').forEach(el=>{ el.onchange=()=>{ const v=el.value; CFG[el.dataset.k]= isNaN(parseFloat(v))?v:parseFloat(v); if(el.dataset.k==='cutterAt') CFG.cutterAt=v; rebuild(); }; });
+document.querySelectorAll('#cfg input[type=range]').forEach(el=>{ el.oninput=()=>{ CFG[el.dataset.k]=parseFloat(el.value); document.getElementById('v-'+el.dataset.k).textContent= el.dataset.k==='robotK'?parseFloat(el.value).toFixed(2):el.value; }; el.onchange=()=>rebuild(); });
+function syncPanel(){
+  const dis=(k,off)=>{ const el=document.querySelector(`#cfg [data-k="${k}"]`); if(!el) return; if(el.classList.contains('sw')) el.classList.toggle('dis',off); else el.disabled=off; };
+  dis('lahmOven',!CFG.lahm); dis('lahmCap',!(CFG.lahm&&CFG.lahmOven)); dis('bakeLahm',!CFG.lahm);
+  dis('cutterAt',!CFG.cutter); dis('pusher',!(CFG.cutter&&CFG.cutterAt==='PACK'));
+  document.getElementById('injL').style.display=CFG.lahm?'':'none'; document.getElementById('injPL').style.display=CFG.lahm?'':'none';
+  document.getElementById('rateWrap').style.display=CFG.scenario==='saat'?'inline-flex':'none';
+}
+document.getElementById('scenario').onchange=(e)=>{ CFG.scenario=e.target.value; syncPanel(); rebuild(); };
+document.getElementById('rate').oninput=(e)=>{ CFG.rate=parseInt(e.target.value); document.getElementById('v-rate').textContent=CFG.rate+'/saat'; }; document.getElementById('rate').onchange=()=>rebuild();
+document.getElementById('lahmPct').oninput=(e)=>{ CFG.lahmPct=parseInt(e.target.value); document.getElementById('v-lahmPct').textContent='%'+CFG.lahmPct; }; document.getElementById('lahmPct').onchange=()=>rebuild();
+document.getElementById('play').onclick=()=>{ playing=!playing; document.getElementById('play').textContent=playing?'❚❚ Durdur':'▶ Başlat'; };
+document.getElementById('reset').onclick=rebuild;
+document.querySelectorAll('.spd').forEach(b=>b.onclick=()=>{ speed=parseFloat(b.dataset.s); document.querySelectorAll('.spd').forEach(x=>x.classList.toggle('on',x===b)); });
+document.querySelectorAll('[data-inj]').forEach(b=>b.onclick=()=>{ sim.addOrder(b.dataset.inj.split(','), sim.t); sim.done=false; render(); });
+function fit(){ const w=cv.parentElement.clientWidth; cv.style.height=(w*600/1400)+'px'; }
+window.addEventListener('resize',fit); fit();
+syncPanel(); rebuild(); requestAnimationFrame(loop);
+</script>
+</body>
+</html>
