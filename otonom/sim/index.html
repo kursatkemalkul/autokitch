@@ -145,7 +145,7 @@ th{color:var(--gray);font-weight:500;font-size:11px}
     <div class="m"><div class="k">kalan hamur</div><div class="v" id="m-stock">– <small>top</small></div></div>
   </div>
   <div class="bottom">
-    <div class="box"><h4>SİPARİŞLER</h4><table><thead><tr><th>#</th><th>içerik</th><th>geldi</th><th>durum</th><th>bekleme</th></tr></thead><tbody id="orders"></tbody></table></div>
+    <div class="box"><h4>SİPARİŞLER <span style="color:var(--gray);font-weight:400">— süre = sipariş → dolap · ⏱ hâlâ sayıyor</span></h4><table><thead><tr><th>#</th><th>içerik</th><th>geldi</th><th>hazır</th><th>süre</th><th>ürünler nerede</th></tr></thead><tbody id="orders"></tbody></table></div>
     <div class="box"><h4>TESLİM SÜRELERİ · sipariş sipariş (dk)</h4><div class="chart" id="chart"></div><div class="chart-x" id="chartx"></div><div class="note" id="chartnote"></div></div>
     <div class="box log"><h4>ROBOT NE YAPTI</h4><div id="log"></div></div>
   </div>
@@ -679,12 +679,23 @@ function render(){ draw(sim, speed); const m=sim.metrics();
   // siparişler
   const tb=document.getElementById('orders'); let h='';
   const rows=[...sim.orders].reverse().slice(0,40);
+  const NER={ wait:['kuyrukta','st-w'], starting:['hamur alınıyor','st-a'], carry:['taşınıyor','st-a'],
+    pressing:['preste','st-a'], baseReady:['preste hazır','st-a'], dosing:['dozajda','st-a'], onTray:['dozajda','st-a'],
+    baking:['pişiyor','st-r'], baked:['fırında HAZIR','st-g'], unloading:['fırından alınıyor','st-a'],
+    cutting:['kesiliyor','st-a'], packQ:['kutu sırasında','st-a'], packing:['kutulanıyor','st-a'],
+    boxed:['kutu hazır','st-g'], delivering:['dolaba gidiyor','st-b'], done:['dolapta','st-g'] };
   for(const o of rows){
-    const st = o.doneT!==null ? '<span class="st-g">TESLİM ✓</span>' : o.products.some(p=>['baking','baked'].includes(p.state)) ? '<span class="st-r">pişiyor</span>' : o.products.some(p=>p.state!=='wait') ? '<span class="st-a">hazırlanıyor</span>' : '<span class="st-w">kuyrukta</span>';
-    const w = ((o.doneT!==null?o.doneT:sim.t)-o.arr)/60;
-    h+=`<tr><td>#${o.id}</td><td>${sim.itemsText(o)}</td><td>${sim.fmt(o.arr)}</td><td>${st}</td><td>${w.toFixed(1)} dk</td></tr>`;
+    const bitti = o.doneT!==null;
+    const w = ((bitti?o.doneT:sim.t)-o.arr)/60;
+    // ürünler nerede — aynı durumdakileri grupla
+    const say={};
+    for(const p of o.products){ const [ad,cl]=NER[p.state]||['?','st-w']; const k=ad+'|'+cl; say[k]=(say[k]||0)+1; }
+    let ner=Object.entries(say).map(([k,v])=>{ const [ad,cl]=k.split('|'); return `<span class="${cl}">${v>1?v+' ':''}${ad}</span>`; }).join(' · ');
+    if(o.drink) ner += o.drinkDone ? ' <span class="st-g">+içecek ✓</span>' : ' <span class="st-w">+içecek bekliyor</span>';
+    const sure = bitti ? `<b class="st-g">${w.toFixed(1)} dk</b>` : `<span class="st-a">⏱ ${w.toFixed(1)}</span>`;
+    h+=`<tr><td>#${o.id}</td><td>${sim.itemsText(o)}</td><td>${sim.fmt(o.arr)}</td><td>${bitti?sim.fmt(o.doneT):'<span class="st-w">—</span>'}</td><td>${sure}</td><td>${ner}</td></tr>`;
   }
-  tb.innerHTML=h||'<tr><td colspan=5 class="st-w">sipariş yok — üstten "şimdi sipariş ver"</td></tr>';
+  tb.innerHTML=h||'<tr><td colspan=6 class="st-w">sipariş yok — üstten "şimdi sipariş ver"</td></tr>';
   // teslim süreleri çubuk grafiği
   const done=sim.orders.filter(o=>o.doneT!==null).slice(-34);
   const ch=document.getElementById('chart'), chx=document.getElementById('chartx');
