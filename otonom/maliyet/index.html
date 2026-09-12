@@ -1,0 +1,1706 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AUTOKITCH — Maliyet Hesabı</title>
+<meta name="color-scheme" content="only light">
+<!-- Gizli sayfa — sadece direkt linkle erişilir; arama motorları/AI botları engellendi -->
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+<meta name="googlebot" content="noindex, nofollow">
+<meta name="ClaudeBot" content="noindex, nofollow">
+<meta name="GPTBot" content="noindex, nofollow">
+<style>
+  :root{color-scheme:only light}
+
+  :root{
+    --black:#000000; --panel:#1D1D1F; --panel2:#2A2A2D; --light:#F5F5F7; --white:#FFFFFF;
+    --dark:#1D1D1F; --gray:#86868B; --gray-l:#A1A1A6;
+    --blue:#2997FF; --blue-d:#0A6CE0; --blue-l:#7CC0FF;
+    --maxw:1120px;
+    --font:"SF Pro Display","SF Pro Text",-apple-system,BlinkMacSystemFont,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth;background:#000}
+  body{font-family:var(--font);background:var(--black);color:var(--white);
+       -webkit-font-smoothing:antialiased;line-height:1.4;overflow-x:hidden;letter-spacing:-.01em}
+  a{color:inherit;text-decoration:none}
+  section{padding:130px 22px;position:relative}
+  .wrap{max-width:var(--maxw);margin:0 auto}
+  .center{text-align:center}
+  .eyebrow{font-size:clamp(15px,1.5vw,21px);font-weight:600;letter-spacing:0;margin-bottom:10px;
+        background:linear-gradient(90deg,var(--blue-l),var(--blue));-webkit-background-clip:text;
+        background-clip:text;-webkit-text-fill-color:transparent}
+  h1,h2,h3{font-weight:600;letter-spacing:-.022em;line-height:1.05}
+  h2{font-size:clamp(34px,5.2vw,68px)}
+  .lead{font-size:clamp(19px,2.1vw,28px);color:var(--gray-l);max-width:740px;line-height:1.45;
+        font-weight:400;margin-top:20px}
+  .center .lead{margin-left:auto;margin-right:auto}
+  .accent{color:var(--blue)}
+  .light{background:var(--light);color:var(--dark)}
+  .light h2{color:var(--dark)}
+  .light .lead{color:var(--gray)}
+
+  /* NAV */
+  nav{position:fixed;top:0;left:0;right:0;z-index:100;height:52px;display:flex;justify-content:center;
+      transition:background .4s,backdrop-filter .4s}
+  nav.solid{background:rgba(0,0,0,.72);backdrop-filter:saturate(180%) blur(20px)}
+  .nav-in{max-width:1024px;width:100%;display:flex;align-items:center;justify-content:space-between;padding:0 22px}
+  .logo{font-weight:600;font-size:19px;letter-spacing:-.01em}
+  .logo b{color:var(--blue)}
+  .nav-links{display:flex;gap:32px}
+  .nav-links a{font-size:14px;color:#d6d6d8;opacity:.85;transition:opacity .2s}
+  .nav-links a:hover{opacity:1;color:var(--blue)}
+  .nav-cta{font-size:14px;font-weight:500;color:#fff !important;background:var(--blue);
+           padding:7px 16px;border-radius:980px;transition:background .2s,transform .2s}
+  .nav-cta:hover{background:var(--blue-d);transform:translateY(-1px)}
+  .nav-right{display:flex;align-items:center;gap:16px}
+  .nav-prod{font-size:14px;font-weight:600;color:var(--blue)}
+  .nav-prod:hover{color:var(--blue-l)}
+  @media(max-width:480px){.nav-prod{display:none}}
+  @media(max-width:820px){.nav-links{display:none}}
+
+  /* HERO — full-bleed cinematic video */
+  .hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;
+        text-align:center;overflow:hidden;padding:120px 22px}
+  .hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+  .hero-ov{position:absolute;inset:0;z-index:1;
+        background:linear-gradient(180deg,rgba(0,5,12,.62) 0%,rgba(0,5,12,.30) 42%,rgba(0,3,8,.82) 100%),
+                   radial-gradient(120% 90% at 50% 22%,rgba(41,151,255,.22),transparent 58%)}
+  .hero-content{position:relative;z-index:2;max-width:880px}
+  .hero .tag{font-size:clamp(17px,1.6vw,22px);font-weight:600;color:#cfe0f2;margin-bottom:8px;letter-spacing:0}
+  .hero h1{font-size:clamp(56px,11vw,150px);font-weight:600;letter-spacing:-.04em;line-height:.92;
+           background:linear-gradient(168deg,#E6F2FF 0%,var(--blue-l) 30%,var(--blue) 62%,var(--blue-d) 100%);
+           -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+           filter:drop-shadow(0 10px 70px rgba(41,151,255,.4))}
+  .hero .sub{font-size:clamp(20px,2.4vw,30px);color:#f0f4f8;font-weight:500;max-width:660px;
+             margin:26px auto 0;line-height:1.3;text-shadow:0 2px 20px rgba(0,0,0,.5)}
+  .hero .meta{margin-top:20px;color:#aebccb;font-size:15px;text-shadow:0 1px 12px rgba(0,0,0,.6)}
+  .hero-btn{display:inline-block;margin-top:34px;background:var(--blue);color:#fff;font-weight:500;
+            padding:14px 34px;border-radius:980px;font-size:17px;transition:background .2s,transform .2s}
+  .hero-btn:hover{background:var(--blue-d);transform:translateY(-2px)}
+  .cue{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);z-index:2;
+       color:#aebccb;font-size:12px;letter-spacing:.18em;text-transform:uppercase;
+       display:flex;flex-direction:column;align-items:center;gap:9px;animation:bob 2s infinite}
+  .cue span{width:1px;height:30px;background:linear-gradient(#aebccb,transparent)}
+  @keyframes bob{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,7px)}}
+
+  /* reveal */
+  .rv{opacity:0;transform:translateY(30px);transition:opacity .8s cubic-bezier(.2,.6,.2,1),transform .8s cubic-bezier(.2,.6,.2,1)}
+  .rv.in{opacity:1;transform:none}
+  .rv.d1{transition-delay:.08s}.rv.d2{transition-delay:.16s}.rv.d3{transition-delay:.24s}.rv.d4{transition-delay:.32s}
+
+  /* grids & cards */
+  .grid{display:grid;gap:20px;margin-top:60px}
+  .g2{grid-template-columns:repeat(2,1fr)}
+  .g3{grid-template-columns:repeat(3,1fr)}
+  @media(max-width:860px){.g2,.g3{grid-template-columns:1fr}}
+  .card{background:var(--panel);border-radius:22px;padding:34px;transition:transform .35s}
+  .card:hover{transform:translateY(-6px)}
+  .card .n{font-size:15px;font-weight:600;color:var(--blue)}
+  .card h3{font-size:23px;color:#fff;margin:10px 0 12px;font-weight:600}
+  .card p{font-size:16px;color:#B0B0B5;line-height:1.55}
+  .light .card{background:var(--white)}
+  .light .card h3{color:var(--dark)}
+
+  /* model secici */
+  .picker{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:48px}
+  @media(max-width:860px){.picker{grid-template-columns:1fr}}
+  .pick{display:block;background:var(--panel);border:1px solid #232833;border-radius:22px;padding:32px 30px 28px;
+        text-align:left;transition:transform .35s,border-color .3s,background .3s}
+  .pick:hover{transform:translateY(-6px);border-color:var(--blue);background:#212227}
+  .pk-tag{font-size:12px;font-weight:700;letter-spacing:.12em;color:var(--blue)}
+  .pk-ico{color:var(--blue);margin:18px 0 6px;opacity:.9}
+  .pick h3{font-size:27px;color:#fff;margin:6px 0 8px;font-weight:600}
+  .pk-spec{font-size:15px;color:#fff;margin-bottom:14px}
+  .pk-spec b{color:var(--blue);font-weight:600}
+  .pick p{font-size:16px;color:#B0B0B5;line-height:1.55}
+  .pk-where{margin-top:16px;padding-top:14px;border-top:1px solid #2a2c33;font-size:13.5px;color:var(--gray);line-height:1.6}
+  .pk-go{display:inline-block;margin-top:18px;font-size:15px;font-weight:600;color:var(--blue)}
+
+  /* split */
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;margin-top:30px}
+  @media(max-width:860px){.split{grid-template-columns:1fr;gap:36px}}
+  .split img{width:100%;border-radius:24px;display:block}
+  .vlist{margin-top:30px;display:flex;flex-direction:column;gap:22px}
+  .vrow{display:flex;gap:15px;align-items:flex-start}
+  .vrow .dot{flex:0 0 9px;width:9px;height:9px;border-radius:50%;background:var(--blue);margin-top:9px}
+  .vrow b{color:#fff;font-weight:600;font-size:18px}
+  .vrow span{color:var(--gray);font-size:17px}
+
+  /* karşılaştırma: süreç & efor */
+  .cmp{display:flex;flex-direction:column;gap:18px;margin-top:54px}
+  .cmp-row{background:var(--panel);border-radius:20px;padding:26px 28px;text-align:left}
+  .cmp-row.auto{border:1px solid rgba(41,151,255,.45)}
+  .cmp-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;flex-wrap:wrap;gap:10px}
+  .cmp-tag{font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--gray)}
+  .cmp-tag.accent{color:var(--blue)}
+  .cmp-people{display:flex;align-items:center;gap:9px;color:#fff;font-weight:600;font-size:15px}
+  .dots{display:inline-flex;gap:5px}
+  .dots i{width:11px;height:11px;border-radius:50%;background:var(--gray);display:block}
+  .cmp-people.auto .dots i{background:var(--blue)}
+  .flow{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+  .stepchip{background:#0e0e10;border:1px solid #2a2a2d;border-radius:12px;padding:12px 15px;font-size:14px;font-weight:600;color:#ececed;display:flex;flex-direction:column;gap:3px}
+  .stepchip small{color:var(--gray);font-size:11px;font-weight:400}
+  .cmp-row.auto .stepchip{border-color:rgba(41,151,255,.3)}
+  .arrow{color:var(--gray);font-weight:700;font-size:15px;flex:0 0 auto}
+  .cmp-row.auto .arrow{color:var(--blue)}
+  .effort{margin:44px auto 0;display:flex;flex-direction:column;gap:20px;max-width:720px}
+  .ef-row{text-align:left}
+  .ef-label{display:flex;justify-content:space-between;font-size:14px;color:var(--gray);margin-bottom:8px}
+  .ef-label span:last-child{color:#fff;font-weight:600}
+  .ef-track{background:#1a1a1c;border-radius:12px;height:46px;overflow:hidden}
+  .ef-bar{height:100%;border-radius:12px;display:flex;align-items:center;padding-left:18px;color:#fff;font-weight:600;font-size:15px;width:0;white-space:nowrap;transition:width 1.1s cubic-bezier(.2,.6,.2,1)}
+  .ef-bar.trad{background:linear-gradient(90deg,#5a5a5e,#3a3a3d)}
+  .ef-bar.auto{background:linear-gradient(90deg,var(--blue-l),var(--blue-d))}
+  @media(max-width:680px){.arrow{display:none}.flow{gap:8px}.stepchip{flex:1 1 42%}}
+  .ppl{display:inline-flex;gap:4px;vertical-align:middle}
+  .pico{width:18px;height:18px;display:block}
+  .cmp-people .ppl{fill:var(--gray)}
+  .cmp-people.auto .ppl{fill:var(--blue)}
+  .money{display:flex;align-items:stretch;justify-content:center;gap:16px;margin:46px auto 0;max-width:1120px;flex-wrap:wrap}
+  .m-card{flex:1 1 300px;background:var(--panel);border-radius:20px;padding:28px;text-align:left}
+  .m-card.auto{border:1px solid rgba(41,151,255,.45)}
+  .m-top{font-size:13px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--gray)}
+  .m-card.auto .m-top{color:var(--blue)}
+  .m-big{font-size:40px;font-weight:600;color:#fff;letter-spacing:-.02em;margin:10px 0 6px}
+  .m-big span{font-size:18px;color:var(--gray);font-weight:400}
+  .m-sub{font-size:14px;color:var(--gray)}
+  .m-year{margin-top:14px;font-size:15px;color:#fff;font-weight:600;border-top:1px solid #2a2a2d;padding-top:14px}
+  .m-arrow{display:flex;align-items:center;color:var(--blue);font-size:28px;font-weight:700}
+  @media(max-width:680px){.m-arrow{transform:rotate(90deg);justify-content:center}}
+  .perks{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:18px;text-align:left}
+  @media(max-width:780px){.perks{grid-template-columns:1fr 1fr}}
+  .perk{background:var(--panel);border-radius:14px;padding:18px}
+  .perk b{color:#fff;font-size:15px;font-weight:600;display:block}
+  .perk span{color:var(--gray);font-size:13px;display:block;margin-top:5px;line-height:1.35}
+  .perk b.num{font-size:clamp(22px,2.6vw,30px);letter-spacing:-.02em;background:linear-gradient(150deg,#fff,var(--blue));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .vstrip{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;margin-top:46px}
+  .vstrip .vs{background:var(--panel);border:1px solid #2a2a2d;border-radius:16px;padding:20px 28px;min-width:168px}
+  .vstrip .vs-n{font-size:clamp(28px,3.6vw,42px);font-weight:600;letter-spacing:-.02em;line-height:1;background:linear-gradient(150deg,#fff,var(--blue));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .vstrip .vs-l{font-size:13px;color:var(--gray);margin-top:9px}
+  .bignum{font-size:clamp(30px,3.6vw,46px);font-weight:600;letter-spacing:-.02em;line-height:1.05;background:linear-gradient(160deg,#fff,var(--blue) 62%,var(--blue));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .eqn{display:flex;align-items:stretch;justify-content:center;gap:12px;flex-wrap:wrap;margin:42px auto 0;max-width:780px}
+  .eqn .eq-box{background:#0e0e10;border:1px solid #2a2a2d;border-radius:16px;padding:20px 18px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;flex:1;min-width:150px}
+  .eqn .eq-box.res{border-color:rgba(41,151,255,.5);background:rgba(41,151,255,.07)}
+  .eqn .eq-ic{width:30px;height:30px;margin-bottom:11px;color:var(--blue)}
+  .eqn .eq-t{font-size:15px;font-weight:600;color:#fff;line-height:1.25}
+  .eqn .eq-s{font-size:11.5px;color:var(--gray);margin-top:4px;line-height:1.3}
+  .eqn .eq-op{display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:300;color:var(--blue);flex:0 0 auto}
+  @media(max-width:640px){.eqn{flex-direction:column}.eqn .eq-op{transform:rotate(90deg)}.vstrip .vs{flex:1 1 40%}}
+
+  /* product cards */
+  .pcard{overflow:hidden;padding:0}
+  .pcard img{width:100%;height:210px;object-fit:cover;display:block}
+  .pcard video{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;background:#000}
+  .pcard .body{padding:30px}
+  .pcard .out{margin-top:18px;font-weight:600;color:#fff;font-size:15px}
+  .pcard .out::before{content:"→ ";color:var(--blue)}
+
+  /* videos */
+  .videos{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:60px}
+  @media(max-width:860px){.videos{grid-template-columns:1fr}}
+  .vid{border-radius:22px;overflow:hidden;background:#000}
+  .vid video{width:100%;display:block;aspect-ratio:16/9;object-fit:cover}
+  .vcap{margin-top:16px}.vcap b{color:#fff;font-size:17px;font-weight:600}
+  .vcap span{display:block;color:var(--gray);font-size:14px;margin-top:5px;line-height:1.4}
+
+  /* steps */
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:60px}
+  @media(max-width:860px){.steps{grid-template-columns:1fr 1fr}}
+  .step{background:var(--white);border-radius:20px;padding:30px}
+  .step .num{font-size:34px;font-weight:600;color:var(--blue);letter-spacing:-.02em}
+  .step h3{font-size:19px;color:var(--dark);margin:14px 0 8px;font-weight:600}
+  .step p{font-size:15px;color:var(--gray);line-height:1.45}
+
+  /* stats */
+  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:64px}
+  @media(max-width:860px){.stats{grid-template-columns:1fr}}
+  .stat{text-align:center;padding:10px}
+  .stat .lab{font-size:15px;font-weight:600;color:var(--gray);letter-spacing:.04em}
+  .stat .big{font-size:clamp(56px,8vw,104px);font-weight:600;letter-spacing:-.03em;margin:8px 0 14px;line-height:1;
+        background:linear-gradient(160deg,var(--blue-l),var(--blue) 55%,var(--blue-d));
+        -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .stat p{font-size:16px;color:var(--gray);max-width:300px;margin:0 auto;line-height:1.45}
+  .note{margin-top:30px;font-size:14px;color:var(--gray);text-align:center}
+  .ytgrid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:30px;text-align:left}
+  @media(max-width:760px){.ytgrid{grid-template-columns:1fr}}
+  .yt{position:relative;width:100%;padding-top:56.25%;border-radius:16px;overflow:hidden;border:1px solid #2a2a2d}
+  .yt iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+  .ycap{margin-top:10px;color:var(--gray);font-size:13px}
+  .ycap b{color:#fff;font-weight:600}
+  .note a{color:var(--blue);text-decoration:none}
+  .light .note{color:#6e6e73}
+
+  /* table */
+  .tablewrap{margin-top:56px;border-radius:20px;overflow:hidden;border:1px solid #2a2a2d}
+  table{width:100%;border-collapse:collapse;font-size:16px}
+  thead th{background:#000;color:#fff;text-align:left;padding:18px 22px;font-weight:600;font-size:15px}
+  tbody td{padding:18px 22px;border-top:1px solid #2a2a2d;color:var(--gray)}
+  tbody td:first-child{color:#fff;font-weight:600}
+  tbody tr{background:var(--panel)}
+  tbody tr:nth-child(even){background:#202022}
+  .diff{color:var(--blue);font-weight:600}
+  td a{color:var(--blue)}
+
+  /* financial */
+  .fin{display:grid;grid-template-columns:1fr 1fr;gap:60px;margin-top:60px;align-items:center}
+  @media(max-width:860px){.fin{grid-template-columns:1fr}}
+  .fingrid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .fcard{background:var(--panel);border-radius:18px;padding:26px}
+  .fcard .v{font-size:30px;font-weight:600;color:#fff;letter-spacing:-.02em}
+  .fcard .l{font-weight:600;color:#fff;font-size:15px;margin-top:10px}
+  .fcard .s{font-size:13px;color:var(--gray);margin-top:4px}
+  .subh{font-size:21px;font-weight:600;color:#fff;margin-bottom:22px}
+  .subh span{color:var(--gray);font-weight:400}
+  .chart{display:flex;align-items:flex-end;justify-content:space-around;gap:26px;height:300px;
+         border-bottom:1px solid #2a2a2d;padding:0 6px}
+  .bar{width:84px;display:flex;flex-direction:column;align-items:center;justify-content:flex-end}
+  .bar .col{width:100%;background:linear-gradient(var(--blue-l),var(--blue-d));border-radius:10px 10px 0 0;
+            height:0;transition:height 1.2s cubic-bezier(.2,.6,.2,1)}
+  .bar .val{font-weight:600;color:#fff;margin-bottom:12px;font-size:20px}
+  .bar .yr{margin-top:16px;color:var(--gray);font-size:15px}
+
+  /* roadmap */
+  .road{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:60px}
+  @media(max-width:860px){.road{grid-template-columns:1fr}}
+  .phase{background:var(--white);border-radius:22px;padding:34px}
+  .phase .ph{font-size:23px;font-weight:600;color:var(--dark)}
+  .phase .when{color:var(--blue-d);font-weight:600;font-size:15px;margin-left:10px}
+  .phase .tick{width:36px;height:4px;border-radius:4px;background:var(--blue);margin:20px 0}
+  .phase p{color:var(--gray);font-size:16px;line-height:1.5}
+  .northstar{background:#14161A;color:#fff;border-radius:24px;padding:48px 40px;margin-top:30px;text-align:center}
+  .northstar .ns-label{font-size:14px;font-weight:600;letter-spacing:.08em;color:var(--blue);text-transform:uppercase}
+  .northstar .ns-h{font-size:clamp(26px,3.4vw,42px);font-weight:600;margin:14px 0 16px;color:#fff;letter-spacing:-.02em}
+  .northstar p{color:var(--gray-l);font-size:clamp(16px,1.8vw,20px);max-width:780px;margin:0 auto;line-height:1.45}
+  .northstar p b{color:#fff;font-weight:600}
+
+  /* team */
+  .team{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:60px}
+  @media(max-width:860px){.team{grid-template-columns:1fr}}
+  .founder{background:var(--panel);border-radius:24px;padding:40px}
+  .ava{width:78px;height:78px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+       font-size:36px;font-weight:600;color:#fff;background:linear-gradient(150deg,var(--blue-l),var(--blue-d))}
+  .founder h3{font-size:28px;font-weight:600;margin-top:20px}
+  .founder .role{color:var(--blue);font-size:15px;font-weight:600;margin-top:5px}
+  .founder p{color:var(--gray);margin-top:20px;font-size:16px;line-height:1.5}
+  .needs{background:var(--panel);border-radius:24px;padding:40px}
+  .needs h3{color:#fff;font-size:20px;margin-bottom:8px;font-weight:600}
+  .need{display:flex;gap:15px;margin-top:24px}
+  .need .dot{flex:0 0 10px;width:10px;height:10px;border-radius:50%;background:var(--blue);margin-top:6px}
+  .need b{color:#fff;font-size:16px}.need span{display:block;color:var(--gray);font-size:14px;margin-top:3px}
+
+  /* CTA */
+  .cta{text-align:center;background:radial-gradient(110% 80% at 50% 100%,#0c1a2b 0%,#06101a 42%,#000 78%)}
+  .cta h2{max-width:920px;margin:0 auto}
+  .asks{display:flex;justify-content:center;gap:46px;flex-wrap:wrap;margin-top:54px}
+  .ask{text-align:center;max-width:240px}
+  .ask b{color:#fff;font-size:18px;font-weight:600}
+  .ask span{display:block;color:var(--gray);font-size:15px;margin-top:8px;line-height:1.4}
+  .btn{display:inline-block;margin-top:56px;background:var(--blue);color:#fff;font-weight:500;
+       padding:15px 40px;border-radius:980px;font-size:18px;transition:background .2s,transform .2s}
+  .btn:hover{background:var(--blue-d);transform:translateY(-2px)}
+  footer{background:#000;color:#6e6e73;text-align:center;padding:40px 22px;font-size:12px}
+  footer .disc{max-width:780px;margin:0 auto 14px;line-height:1.5}
+
+/* --- sticky Icindekiler (fizibilite tarzi) --- */
+.stoc{position:fixed;left:26px;top:110px;width:212px;z-index:60;background:rgba(18,21,28,.92);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border:1px solid #232833;border-radius:16px;padding:14px 10px;display:none;max-height:calc(100vh - 150px);overflow-y:auto}
+@media(min-width:1060px){.stoc{display:block}}
+.stoc .toc-h{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#8a94a4;padding:2px 10px 10px}
+.stoc a{display:block;font-size:13px;color:#b7bfcc;padding:7px 10px;border-radius:8px;text-decoration:none;line-height:1.3;transition:background .15s,color .15s}
+.stoc a:hover{background:#1c212a;color:#fff}
+.stoc a.active{color:#2997ff;background:rgba(41,151,255,.09);font-weight:600}
+</style>
+
+<style id="__light_theme">
+/* ==== AUTOKITCH STORE — beyaz + mavi tema (bizim tasarimin renkleri) ==== */
+:root{--sblue:#2456c8}
+body{background:#f5f7fb!important;color:#0f1726!important}
+section{background:transparent!important}
+section.light{background:#ffffff!important}
+h1,h2,h3,h4{color:#0f1726!important}
+.lead{color:#44536a!important}
+.note{color:#8a94a2!important}
+.eyebrow{color:var(--sblue)!important}
+.accent{color:var(--sblue)!important}
+.card{background:#fff!important;border:1px solid #e3e9f2!important;box-shadow:0 10px 34px rgba(20,40,80,.07)}
+.card p{color:#4c5a70!important}
+.card .n{color:var(--sblue)!important}
+.card .bignum{color:var(--sblue)!important}
+nav#nav{background:rgba(245,247,251,.88)!important;border-bottom:1px solid #e3e9f2}
+nav#nav.solid{background:rgba(245,247,251,.96)!important}
+#nav .logo,#nav a{color:#0f1726!important}
+#nav .logo b{color:var(--sblue)!important}
+#nav .nav-cta{background:var(--sblue)!important;color:#fff!important;border-color:var(--sblue)!important}
+.hero{background:linear-gradient(180deg,#e9effa,#f5f7fb)!important}
+.hero-ov{display:none!important}
+.hero h1{color:#0f1726!important}
+.hero .sub{color:#44536a!important}
+.hero .tag{color:var(--sblue)!important}
+.hero-btn{background:#0f1726!important;color:#fff!important;border-color:#0f1726!important}
+.cue{color:#8a94a2!important}
+.stepchip{background:#fff!important;border:1px solid #dbe3ee!important;color:#0f1726!important}
+.stepchip small{color:#8a94a2!important}
+.cmp-tag{color:#0f1726!important}
+.cmp-tag.accent{color:var(--sblue)!important}
+.cmp-people{color:#44536a!important}
+.arrow,.m-arrow{color:#9aa7b8!important}
+.subh{color:#0f1726!important}
+.subh span{color:#8a94a2!important}
+.ycap{color:#44536a!important}
+.ycap b{color:#0f1726!important}
+footer{color:#8a94a2!important;border-top:1px solid #e3e9f2}
+.stoc{background:rgba(255,255,255,.94)!important;border:1px solid #e3e9f2!important}
+.stoc .toc-h{color:#8a94a2!important}
+.stoc a{color:#44536a!important}
+.stoc a:hover{background:#eef2f8!important;color:#0f1726!important}
+.stoc a.active{color:var(--sblue)!important;background:rgba(36,86,200,.08)!important}
+/* inline beyaz vurgular -> koyu; koyu kartlarin ici haric */
+[style*="color:#fff"]{color:#0f1726!important}
+[style*="color:#b7bfcc"]{color:#44536a!important}
+[style*="color:#9aa4b2"]{color:#8a94a2!important}
+.m-card,.m-card *{color:#e8ecf4}
+.m-card{background:#101a2e!important;border:1px solid #1c2b4a!important}
+.m-card [style*="color:#fff"]{color:#fff!important}
+.m-card [style*="color:#b7bfcc"]{color:#b7bfcc!important}
+.m-card [style*="color:#9aa4b2"]{color:#9aa4b2!important}
+.m-card .m-sub,.m-card .m-top{color:#93a3bd!important}
+.m-card .m-year{color:#cdd8ea!important}
+.cta{background:#0f1726!important}
+.cta h2,.cta [style*="color:#fff"]{color:#fff!important}
+.cta .eyebrow{color:#7fa4ff!important}
+blockquote{color:#0f1726!important;border-left-color:var(--sblue)!important}
+blockquote .n{color:#8a94a2!important}
+a[style*="background:#12151c"],div[style*="background:#12151c"]{background:#fff!important;border-color:#e3e9f2!important}
+a[style*="background:#12151c"] b,div[style*="background:#12151c"] b{color:#0f1726!important}
+a[style*="background:#12151c"] span,div[style*="background:#12151c"] span{color:#7c8798!important}
+[style*="border-top:1px solid rgba(255,255,255"]{border-top-color:#dbe3ee!important}
+
+
+.picker .pick.pk-s{background:#f1f6ff!important;border-color:#d6e3f8!important}
+.picker .pick.pk-s:hover{border-color:#1a49b8!important}
+.picker .pick.pk-s .pk-tag,.picker .pick.pk-s .pk-go,.picker .pick.pk-s .pk-ico,.picker .pick.pk-s .pk-spec b{color:#1a49b8!important}
+.picker .pick.pk-m{background:#fff6ee!important;border-color:#f3ddc8!important}
+.picker .pick.pk-m:hover{border-color:#c2600f!important}
+.picker .pick.pk-m .pk-tag,.picker .pick.pk-m .pk-go,.picker .pick.pk-m .pk-ico,.picker .pick.pk-m .pk-spec b{color:#c2600f!important}
+/* iki model bolumu — gorsel ayrim */
+section#store-s{background:#f1f6ff!important;border-top:1px solid #dfe8f8;border-bottom:1px solid #dfe8f8}
+section#store-m{background:#fff6ee!important;border-bottom:1px solid #f5e2d0}
+section#store-s .eyebrow{color:#1a49b8!important}
+section#store-m .eyebrow{color:#c2600f!important}
+section#store-m .accent{color:#c2600f!important}
+section#store-m .card .n{color:#c2600f!important}
+section#store-m .subh span{color:#a9855f!important}
+section#store-m .step .n,section#store-m [style*="rgba(41,151,255,.15)"]{background:rgba(194,96,15,.12)!important;color:#c2600f!important}
+section#store-m a[style*="color:var(--blue)"]{color:#c2600f!important}
+.hero .sub{text-shadow:none!important}
+.hero .tag{text-shadow:none!important}
+
+/* iki-model secici */
+.pick{background:#fff!important;border:1px solid #e3e9f2!important;box-shadow:0 10px 34px rgba(20,40,80,.07)}
+.pick:hover{background:#fff!important;border-color:var(--sblue)!important}
+.pick h3{color:#0f1726!important}
+.pk-tag,.pk-go{color:var(--sblue)!important}
+.pk-ico{color:var(--sblue)!important}
+.pk-spec{color:#0f1726!important}
+.pk-spec b{color:var(--sblue)!important}
+.pick p{color:#4c5a70!important}
+.pk-where{color:#8a94a2!important;border-top-color:#e3e9f2!important}
+/* senaryo/adim kartlarindaki koyu-tema inline renkleri */
+[style*="color:#B0B0B5"]{color:#4c5a70!important}
+[style*="border-bottom:1px solid #232833"]{border-bottom-color:#e3e9f2!important}
+
+/* maliyet hesabi tablosu */
+#hesap .hs-box{background:#fff;border:1px solid #dde5f0;border-radius:16px;overflow-x:auto;margin-top:30px;text-align:left;box-shadow:0 10px 34px rgba(20,40,80,.07)}
+#hesap table.hs{width:100%;border-collapse:collapse;font-size:13px;min-width:880px;background:#fff}
+#hesap table.hs th{padding:14px 12px;text-align:left;font-size:13px;font-weight:700;color:#fff!important;background:#243044;vertical-align:bottom;line-height:1.25}
+#hesap table.hs th em{display:block;font-style:normal;font-size:11px;font-weight:400;color:#b9c6da!important;margin-top:3px}
+#hesap table.hs th.lbl{background:#1a2434;min-width:210px}
+#hesap table.hs th.s{background:#1a49b8}
+#hesap table.hs th.m{background:#c2600f}
+#hesap table.hs th.d{background:#3f4a5c}
+#hesap table.hs th.p{background:#4a5f52}
+#hesap tr.ydet td{background:#fbfcfe}
+#hesap tr.ydet td.m{background:#fff9f2}
+#hesap tr.ydet td.s{background:#f4f8ff}
+#hesap tr.ydet.grp td{background:#eef2f9!important;font-size:11px}
+#hesap tr.ydet .ydash{color:#c3cad6;text-align:center}
+#hesap tr.ydet input{width:104px}
+#hesap tr.pdet td{background:#fbfcfe}
+#hesap tr.pdet td.m{background:#fff9f2}
+#hesap tr.pdet td.s{background:#f4f8ff}
+#hesap tr.pdet input{width:104px}
+#hesap #yatrow:hover td{background:#eef3fb}
+#hesap table.hs td.num{white-space:nowrap}
+#hesap table.hs td{padding:9px 12px;border-top:1px solid #e8edf5;vertical-align:middle;color:#3d4a5c!important;line-height:1.45;background:#fff}
+#hesap table.hs td.lbl{font-weight:600;color:#0f1726!important;background:#f7f9fc;border-right:1px solid #e3e9f2}
+#hesap table.hs td.s{background:#eef4ff;border-left:2px solid #1a49b8}
+#hesap table.hs td.m{background:#fff6ec;border-right:2px solid #f0d9c2}
+#hesap table.hs td.d{background:#f5f6f9;border-left:2px solid #3f4a5c}
+#hesap table.hs td.p{background:#f4f8f5;border-left:2px solid #4a5f52}
+#hesap table.hs tr.grp td{background:#e9eef7!important;font-weight:800;color:#0f1726!important;font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;padding:9px 12px;border-top:2px solid #d3ddec}
+#hesap table.hs input{width:84px;font-size:13px;font-weight:600;text-align:right;padding:6px 8px;border:1px solid #c9d5e8;border-radius:8px;color:#0f1726;background:#fff;outline:none;font-family:inherit}
+#hesap table.hs input:focus{border-color:#1a49b8;box-shadow:0 0 0 3px rgba(26,73,184,.12)}
+#hesap table.hs .u{font-size:11px;color:#8a94a2;margin-left:6px}
+#hesap table.hs tr.res td{font-weight:700;color:#0f1726!important}
+#hesap table.hs tr.res.hi td{font-size:14.5px}
+#hesap table.hs tr.res.hi td.lbl{font-size:13px}
+#hesap table.hs tbody tr:hover td{filter:brightness(.985)}
+#hesap .hnote{font-size:11.5px;color:#8a94a2!important;font-weight:400;display:block;margin-top:3px}
+#hesap .pos{color:#178a56!important}
+#hesap .neg{color:#c0392b!important}
+#hesap .hlegend{display:flex;gap:18px;flex-wrap:wrap;justify-content:center;margin-top:16px;font-size:12.5px;color:#68758a}
+#hesap .hlegend span{display:inline-flex;align-items:center;gap:7px}
+#hesap .hlegend i{width:13px;height:13px;border-radius:4px;display:inline-block}
+#hesap .hexp{margin-top:16px;background:#eaf0fc;border-radius:12px;padding:13px 16px;font-size:13.5px;color:#1a3a7a;line-height:1.55;text-align:left}
+#hesap .hexp b{color:#1a49b8}
+#hesap .hbtn{font-size:13px;font-weight:600;padding:9px 18px;border-radius:99px;border:1px solid #dfe6f0;background:#fff;color:#68758a;cursor:pointer;font-family:inherit;margin-top:16px}
+#hesap .hbtn:hover{border-color:#1a49b8;color:#1a49b8}
+#hesap .aksw{position:relative;display:inline-block;width:34px;height:20px;margin-right:8px;vertical-align:-5px;cursor:pointer}
+#hesap .aksw input{position:absolute;opacity:0;width:100%;height:100%;margin:0;cursor:pointer;z-index:2}
+#hesap .aksw span{position:absolute;inset:0;background:#c7d2e4;border-radius:99px;transition:.18s}
+#hesap .aksw span:before{content:"";position:absolute;width:14px;height:14px;left:3px;top:3px;background:#fff;border-radius:50%;transition:.18s;box-shadow:0 1px 3px rgba(0,0,0,.25)}
+#hesap .aksw input:checked + span{background:#1a49b8}
+#hesap .aksw input:checked + span:before{left:17px}
+.upills{display:flex;gap:10px;justify-content:center;margin:4px 0 20px}
+.upill{font:inherit;font-size:16px;font-weight:700;padding:10px 30px;border-radius:99px;border:1.5px solid #c7d2e4;background:#fff;color:#3f4a5c;cursor:pointer;transition:.15s}
+.upill.on{background:#1a49b8;border-color:#1a49b8;color:#fff}
+.upill:hover{transform:translateY(-1px)}
+#hesap .akmini{width:28px;height:16px;vertical-align:-3px}
+#hesap .akmini span:before{width:10px;height:10px}
+#hesap .akmini input:checked + span:before{left:15px}
+#hpz .pzana{display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center;margin-top:16px}
+@media(max-width:700px){#hpz .pzana{grid-template-columns:1fr;justify-items:center}}
+#hpz .pzd{position:relative;width:200px;height:200px;flex-shrink:0}
+#hpz .pzdonut{width:100%;height:100%;border-radius:50%}
+#hpz .pzmerkez{position:absolute;inset:44px;background:#fff;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;box-shadow:inset 0 0 0 1px #eef2f8}
+#hpz .pzmerkez b{font-size:19px;color:#0f1726;letter-spacing:-.01em}
+#hpz .pzmerkez span{font-size:9.5px;color:#8a94a2;margin-top:2px;max-width:90px;line-height:1.3}
+#hpz .pzlej{display:flex;flex-direction:column;gap:5px;min-width:0}
+#hpz .pzlr{display:grid;grid-template-columns:14px 1fr auto 46px;gap:9px;align-items:center;font-size:12.5px;color:#3d4a5c}
+#hpz .pzlr i{width:12px;height:12px;border-radius:3px;display:inline-block}
+#hpz .pzlr b{color:#0f1726;white-space:nowrap}
+#hpz .pzlr .yz{color:#8a94a2;font-size:11.5px;text-align:right}
+#hpz .pzlr.enb span,#hpz .pzlr.enb b{font-weight:800}
+#hpz .pzmini{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:22px}
+@media(max-width:760px){#hpz .pzmini{grid-template-columns:repeat(2,1fr)}}
+#hpz .pzm{background:#f7f9fc;border:1px solid #e3e9f2;border-radius:12px;padding:13px 10px;text-align:center}
+#hpz .pzm .md{width:76px;height:76px;border-radius:50%;margin:0 auto;position:relative}
+#hpz .pzm .md:after{content:"";position:absolute;inset:17px;background:#f7f9fc;border-radius:50%}
+#hpz .pzm h5{font-size:12px;margin:9px 0 3px;color:#0f1726}
+#hpz .pzm .t{font-size:16.5px;font-weight:800;letter-spacing:-.01em}
+#hpz .pzm .alt{font-size:10.5px;color:#8a94a2;line-height:1.55;margin-top:4px}
+#topbtn{position:fixed;left:14px;bottom:14px;z-index:95;width:44px;height:44px;border-radius:50%;border:1px solid #dfe6f0;background:rgba(255,255,255,.95);color:#1a49b8;font-size:19px;font-weight:800;cursor:pointer;box-shadow:0 6px 18px rgba(20,40,80,.18);display:none;font-family:inherit}
+#topbtn:hover{border-color:#1a49b8}
+.ymsec{font-weight:700;color:#1a49b8;font-size:12px;margin-right:10px;cursor:pointer;white-space:nowrap}
+.ymsec input{accent-color:#1a49b8;margin-right:4px;cursor:pointer;vertical-align:-1px}
+tr.modeoff{display:none!important}
+</style>
+</head>
+
+<body>
+
+<!-- ŞİFRE KAPISI -->
+<style>
+  #gate{position:fixed;inset:0;z-index:99999;background:#000;display:flex;align-items:center;justify-content:center;text-align:center;transition:opacity .3s}
+  #gate .gbox{padding:30px;max-width:380px}
+  #gate .glogo{font-size:clamp(30px,7vw,40px);font-weight:600;color:#fff;letter-spacing:-.02em}
+  #gate .glogo b{color:var(--blue)}
+  #gate .gsub{color:var(--gray);margin:14px 0 26px;font-size:15px;line-height:1.45}
+  #gate input{width:210px;font-size:34px;text-align:center;letter-spacing:16px;padding:14px 6px 14px 22px;border-radius:14px;border:1px solid #2a2a2d;background:#15171c;color:#fff;outline:none}
+  #gate input:focus{border-color:var(--blue)}
+  #gate .gerr{color:#ff6b6b;font-size:14px;height:18px;margin-top:14px}
+  .gshake{animation:gshake .4s}
+  @keyframes gshake{0%,100%{transform:translateX(0)}20%,60%{transform:translateX(-9px)}40%,80%{transform:translateX(9px)}}
+  body.glocked{overflow:hidden}
+</style>
+<div id="gate">
+  <div class="gbox">
+    <div class="glogo">AUTO<b>KITCH</b></div>
+    <div class="gsub">Özel sunum · Devam etmek için kodu girin</div>
+    <input id="gpin" type="password" inputmode="text" maxlength="4" autocomplete="off" autocapitalize="off" aria-label="Kod">
+    <div class="gerr" id="gerr"></div>
+  </div>
+</div>
+<script>
+(function(){
+  var CODE="alfa"; /* <<< ŞİFRE BURADA (büyük/küçük harf farketmez) */
+  var gate=document.getElementById('gate');
+  if(sessionStorage.getItem('ak_ok')==='1'){ gate.remove(); return; }
+  document.body.classList.add('glocked');
+  var inp=document.getElementById('gpin'), err=document.getElementById('gerr');
+  setTimeout(function(){inp.focus();},120);
+  inp.addEventListener('input',function(){
+    inp.value=inp.value.replace(/[^a-zA-Z0-9]/g,'').slice(0,4); err.textContent='';
+    if(inp.value.length===4){
+      if(inp.value.toLowerCase()===CODE){ sessionStorage.setItem('ak_ok','1'); gate.style.opacity='0'; setTimeout(function(){gate.remove(); document.body.classList.remove('glocked');},320); }
+      else { err.textContent='Hatalı kod, tekrar deneyin.'; inp.classList.add('gshake'); setTimeout(function(){inp.classList.remove('gshake'); inp.value='';},430); }
+    }
+  });
+})();
+</script>
+
+<nav id="nav">
+  <div class="nav-in">
+    <a href="../../index.html" class="logo" style="display:flex;align-items:center;gap:9px"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" style="flex:0 0 auto"><rect x="3" y="3" width="8.6" height="8.6" rx="2.2" fill="currentColor"/><rect x="12.4" y="3" width="8.6" height="8.6" rx="2.2" fill="currentColor" opacity=".38"/><rect x="3" y="12.4" width="8.6" height="8.6" rx="2.2" fill="currentColor" opacity=".38"/><rect x="12.4" y="12.4" width="8.6" height="8.6" rx="2.2" fill="currentColor"/></svg>AUTO<b>KITCH</b></a>
+    <div class="nav-right"><a href="../" class="nav-prod" style="display:inline-block;margin-right:16px">← Store</a><a href="../hat/" class="nav-prod" style="display:inline-block;margin-right:16px">HAT · Yol C →</a><a href="../sim/" target="_blank" rel="noopener" class="nav-prod" style="display:inline-block">Hat Simülasyonu ↗</a></div>
+  </div>
+</nav>
+
+<aside class="stoc" id="stoc">
+  <div class="toc-h">İçindekiler</div>
+  <a href="#hesap">Maliyet Hesabı</a>
+  <a href="#yollar">Kurulum Şablonları</a>
+</aside>
+
+<!-- ORTAK: MALIYET HESABI -->
+<section id="hesap" class="light center">
+  <div class="wrap">
+    <div class="eyebrow rv">Ortak · Maliyet Hesabı</div>
+    <h2 class="rv d1">Dört model,<br>aynı mahalle, tek tablo.</h2>
+    <p class="lead rv d2" data-nosw>İki AUTOKITCH modeli ile klasik rakipler yan yana — bu sayfa <b>yalnız maliyeti</b> hesaplar. Beyaz kutulu her rakam düzenlenebilir; değiştirdiğin an dört tablo ve pasta yeniden hesaplanır. Değerlerin bu tarayıcıda saklanır ve cihazların arasında eşitlenir. Üstteki <b>Pizza / Pide / Lahmacun</b> seçicisi tabloyu ürüne göre kurar: rakip zincir, fiyatlar ve malzeme o ürünün gerçeğine döner; her ürünün değerleri ayrı saklanır.</p>
+
+        <div class="upills rv d1" data-nosw><button class="upill on" data-up="pizza" type="button">🍕 Pizza</button><button class="upill" data-up="pide" type="button">🥟 Pide</button><button class="upill" data-up="lahmacun" type="button">🫓 Lahmacun</button></div>
+        <div class="hs-box">
+      <table class="hs">
+        <thead><tr><th class="lbl"></th><th class="m">Model M<em>insanlı · 10 m²</em></th><th class="s">Model S<em>insansız · 6 m²</em></th><th class="d">Domino's<em>şube</em></th><th class="p">Mahalle<em>pizzacısı</em></th></tr></thead><tbody>
+        <tr class="grp"><td colspan="5">İşletme bilgisi</td></tr>
+        <tr><td class="lbl">Çalışma saati</td><td class="m">Satış 7/24 · insan 09:00–19:00</td><td class="s">7/24 · insan yok</td><td class="d">10:00–01:00 (gece şubeleri en geç 03:00–04:00)</td><td class="p">11:00–23:00</td></tr>
+                <tr><td class="lbl">Ürün <span class="hnote">Karşılaştırmanın adil olması için dört kolonda da aynı ürün: <b>orta boy (25 cm) pizza</b>. Domino's'un menüsündeki tek pizza 475 TL; kampanyalı ikili 490 TL olduğu için gerçek satış fiyatı ≈245 TL — tabloya bu yazılıdır.</span></td><td class="m">Orta boy · 25 cm</td><td class="s">Orta boy · 25 cm</td><td class="d">Orta boy · 25 cm</td><td class="p">Orta boy · 25 cm</td></tr>
+<tr><td class="lbl">Alan</td><td class="m">≈10 m²</td><td class="s">≈6 m²</td><td class="d">80–150 m²</td><td class="p">40–80 m²</td></tr>
+        <tr><td class="lbl">Nerede</td><td class="m">Şehir içi, mahalle arası</td><td class="s">Okul, ofis, terminal, tenha nokta, sezon alanı</td><td class="d">Cadde üstü, yoğun trafik</td><td class="p">Mahalle arası</td></tr>
+        </tbody></table>
+    </div>
+    <div class="hs-box">
+      <table class="hs">
+        <thead><tr><th class="lbl"></th><th class="m">Model M<em>insanlı · 10 m²</em></th><th class="s">Model S<em>insansız · 6 m²</em></th><th class="d">Domino's<em>şube</em></th><th class="p">Mahalle<em>pizzacısı</em></th></tr></thead><tbody>
+        <tr class="grp"><td colspan="5">1 · Aylık sabit giderler — düzenlenebilir (tutarlar KDV hariç)</td></tr>
+        <tr><td class="lbl">Personel sayısı <span class="hnote">7 gün açık bir vardiya tek kişiyle dönmez (45 sa/hafta sınırı): Model M'de 12 saatlik posta ≈1,6 kişi. Model S'de noktada kimse yok — rakam, ikmal elemanının nokta başına düşen payı.</span></td><td class="m num"><input data-c="M" data-k="pers" type="number" step="0.1"><span class="u">kişi</span></td><td class="s num"><input data-c="S" data-k="pers" type="number" step="0.1"><span class="u">kişi</span></td><td class="d num"><input data-c="D" data-k="pers" type="number" step="0.1"><span class="u">kişi</span></td><td class="p num"><input data-c="P" data-k="pers" type="number" step="0.1"><span class="u">kişi</span></td></tr>
+        <tr><td class="lbl">Personel maliyeti (kişiye değil, işverene toplam) <span class="hnote">SGK işveren primi + işsizlik dahil. 2026 asgari ücret işveren maliyeti 40.875 TL (ÇSGB).</span></td><td class="m num"><input data-c="M" data-k="maas" type="number" step="1000"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="maas" type="number" step="1000"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="maas" type="number" step="1000"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="maas" type="number" step="1000"><span class="u">TL</span></td></tr>
+        <tr class="res" id="persrow" style="cursor:pointer"><td class="lbl"><span id="persok" style="display:inline-block;width:14px;color:#1a49b8;font-weight:800">▸</span> → Aylık personel gideri <span class="hnote">tıkla — kişi kişi maaş gir; tekrar tıkla kapanır.</span></td><td class="m" data-o="M-pers"></td><td class="s" data-o="S-pers"></td><td class="d" data-o="D-pers"></td><td class="p" data-o="P-pers"></td></tr>
+        <tr class="pdet" hidden><td class="lbl" style="padding-left:26px">Kişi 1 — işverene aylık maliyeti <span class="hnote">Bu kişinin işverene toplam aylık maliyeti (net maaş + SGK işveren primi + işsizlik). <b>Bir kolonda en az bir kişiye rakam yazarsan o kolonun personel gideri bu listenin toplamı olur</b>; üstteki "kişi sayısı × maliyet" o kolonda devre dışı kalır (soluk görünür). Hepsini boş bırakırsan eski hesap geçerli.</span></td><td class="m num"><input data-c="M" data-k="p1" type="number" step="1000" placeholder="—"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="p1" type="number" step="1000" placeholder="—"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="p1" type="number" step="1000" placeholder="—"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="p1" type="number" step="1000" placeholder="—"><span class="u">TL</span></td></tr>
+        <tr class="pdet" hidden><td class="lbl" style="padding-left:26px">Kişi 2</td><td class="m num"><input data-c="M" data-k="p2" type="number" step="1000" placeholder="—"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="p2" type="number" step="1000" placeholder="—"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="p2" type="number" step="1000" placeholder="—"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="p2" type="number" step="1000" placeholder="—"><span class="u">TL</span></td></tr>
+        <tr class="pdet" hidden><td class="lbl" style="padding-left:26px">Kişi 3</td><td class="m num"><input data-c="M" data-k="p3" type="number" step="1000" placeholder="—"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="p3" type="number" step="1000" placeholder="—"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="p3" type="number" step="1000" placeholder="—"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="p3" type="number" step="1000" placeholder="—"><span class="u">TL</span></td></tr>
+        <tr class="pdet" hidden><td class="lbl" style="padding-left:26px">Kişi 4</td><td class="m num"><input data-c="M" data-k="p4" type="number" step="1000" placeholder="—"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="p4" type="number" step="1000" placeholder="—"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="p4" type="number" step="1000" placeholder="—"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="p4" type="number" step="1000" placeholder="—"><span class="u">TL</span></td></tr>
+        <tr class="pdet" hidden><td class="lbl" style="padding-left:26px">Kişi 5</td><td class="m num"><input data-c="M" data-k="p5" type="number" step="1000" placeholder="—"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="p5" type="number" step="1000" placeholder="—"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="p5" type="number" step="1000" placeholder="—"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="p5" type="number" step="1000" placeholder="—"><span class="u">TL</span></td></tr>
+        <tr class="pdet" hidden><td class="lbl" style="padding-left:26px">Kişi 6</td><td class="m num"><input data-c="M" data-k="p6" type="number" step="1000" placeholder="—"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="p6" type="number" step="1000" placeholder="—"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="p6" type="number" step="1000" placeholder="—"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="p6" type="number" step="1000" placeholder="—"><span class="u">TL</span></td></tr>
+        <tr><td class="lbl">Kira / yer bedeli <span class="hnote">brüt kira — stopaj (mülk sahibi adına kiradan kesilen vergi) dahil</span></td><td class="m num"><input data-c="M" data-k="kira" type="number" step="1000"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="kira" type="number" step="1000"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="kira" type="number" step="1000"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="kira" type="number" step="1000"><span class="u">TL</span></td></tr>
+        <tr><td class="lbl">Enerji (elektrik + gaz) <span class="hnote">Pizza robotu 7 kW + ısıtmalı teslim dolabı + soğutucular, 7/24 çalışır.</span></td><td class="m num"><input data-c="M" data-k="elek" type="number" step="500"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="elek" type="number" step="500"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="elek" type="number" step="500"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="elek" type="number" step="500"><span class="u">TL</span></td></tr>
+        <tr><td class="lbl">Su + internet + temizlik + sarf</td><td class="m num"><input data-c="M" data-k="su" type="number" step="100"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="su" type="number" step="100"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="su" type="number" step="100"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="su" type="number" step="100"><span class="u">TL</span></td></tr>
+        <tr><td class="lbl">Muhasebe</td><td class="m num"><input data-c="M" data-k="muh" type="number" step="500"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="muh" type="number" step="500"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="muh" type="number" step="500"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="muh" type="number" step="500"><span class="u">TL</span></td></tr>
+        <tr><td class="lbl">Sistem / yazılım / uzaktan izleme</td><td class="m num"><input data-c="M" data-k="sis" type="number" step="500"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="sis" type="number" step="500"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="sis" type="number" step="500"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="sis" type="number" step="500"><span class="u">TL</span></td></tr>
+        <tr><td class="lbl">Bakım ve teknik servis (yatırımın %'si, yıllık) <span class="hnote">Robotik ekipmanda yedek parça + periyodik servis: yılda yatırımın %2–6'sı. Aylığa bölünür.</span></td><td class="m num"><input data-c="M" data-k="bakim" type="number" step="0.5"><span class="u">%</span></td><td class="s num"><input data-c="S" data-k="bakim" type="number" step="0.5"><span class="u">%</span></td><td class="d num"><input data-c="D" data-k="bakim" type="number" step="0.5"><span class="u">%</span></td><td class="p num"><input data-c="P" data-k="bakim" type="number" step="0.5"><span class="u">%</span></td></tr>
+        <tr class="res"><td class="lbl">→ Aylık bakım gideri</td><td class="m" data-o="M-bakimtl"></td><td class="s" data-o="S-bakimtl"></td><td class="d" data-o="D-bakimtl"></td><td class="p" data-o="P-bakimtl"></td></tr>
+        <tr><td class="lbl">İkmal / lojistik payı <span class="hnote">Merkez hamur üretimi, soğuk zincir ve ikmal aracının nokta başına düşen payı. Domino's ve mahalle pizzacısında bu iş kendi personelinde olduğu için 0.</span></td><td class="m num"><input data-c="M" data-k="ikmal" type="number" step="500"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="ikmal" type="number" step="500"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="ikmal" type="number" step="500"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="ikmal" type="number" step="500"><span class="u">TL</span></td></tr>
+        <tr><td class="lbl">Zorunlu yükümlülükler (ÇTV, tabela, sigorta, damga, oda) <span class="hnote">Yıllık kalemlerin aylığa bölünmüş hâli: çevre temizlik vergisi, ilan-reklam (tabela) vergisi, işyeri sigortası, damga vergisi, oda aidatı.</span></td><td class="m num"><input data-c="M" data-k="zorunlu" type="number" step="500"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="zorunlu" type="number" step="500"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="zorunlu" type="number" step="500"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="zorunlu" type="number" step="500"><span class="u">TL</span></td></tr>
+        <tr class="res"><td class="lbl">→ AYLIK SABİT GİDER TOPLAMI <span class="hnote">Dükkânın aylık yükü: M ~170 bin ↔ Domino's ~495 bin TL/ay.</span></td><td class="m" data-o="M-sabit"></td><td class="s" data-o="S-sabit"></td><td class="d" data-o="D-sabit"></td><td class="p" data-o="P-sabit"></td></tr>
+        <tr class="res hi"><td class="lbl">→ 1 PİZZAYA DÜŞEN SABİT GİDER PAYI <span class="hnote">Aylık dükkân giderlerinin 1 pizzaya düşen payı. <b>Dört model de aynı satış adediyle hesaplanır</b> (Aylık İş Hesabı kartındaki rakam) — böylece dev dükkân, hacim avantajıyla ucuz görünemez.</span></td><td class="m" data-o="M-sabitpay"></td><td class="s" data-o="S-sabitpay"></td><td class="d" data-o="D-sabitpay"></td><td class="p" data-o="P-sabitpay"></td></tr>
+        </tbody></table>
+    </div>
+    <div class="hs-box">
+      <table class="hs">
+        <thead><tr><th class="lbl"></th><th class="m">Model M<em>insanlı · 10 m²</em></th><th class="s">Model S<em>insansız · 6 m²</em></th><th class="d">Domino's<em>şube</em></th><th class="p">Mahalle<em>pizzacısı</em></th></tr></thead><tbody>
+        <tr class="grp"><td colspan="5">2 · Pizza başı malzeme — düzenlenebilir (KDV hariç)</td></tr>
+        <tr><td class="lbl">Malzeme maliyeti (fire dahil) <span class="hnote">Hamur + peynir/et + sos ve sebze — fire dahil. <b>Eylül 2026 toptan (restoran tedarik) fiyatları:</b> kaşar 420, dana kıyma 690 (kasap toptan), mozzarella ~533 TL/kg; un 27 TL/kg. Maliyetin %90'ı peynir ya da ettir, un 1-5 TL. Zincir ölçek sayesinde ~%10 ucuza alır (kendi et/hamur fabrikaları var); bizde kendi taban üretimi kurulunca düşer.</span></td><td class="m num"><input data-c="M" data-k="malz" type="number" step="1"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="malz" type="number" step="1"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="malz" type="number" step="1"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="malz" type="number" step="1"><span class="u">TL</span></td></tr>
+        <tr><td class="lbl">Kutu + ambalaj + sachet</td><td class="m num"><input data-c="M" data-k="kutu" type="number" step="1"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="kutu" type="number" step="1"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="kutu" type="number" step="1"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="kutu" type="number" step="1"><span class="u">TL</span></td></tr>
+        <tr class="res hi"><td class="lbl">→ 1 PİZZANIN ÜRETİM MALİYETİ <span class="hnote">Sabit gider payı + malzeme + ambalaj. Alttaki iki tablo, 1 pizzanın üstüne binen kesinti ve vergidir.</span></td><td class="m" data-o="M-uretim"></td><td class="s" data-o="S-uretim"></td><td class="d" data-o="D-uretim"></td><td class="p" data-o="P-uretim"></td></tr>
+        </tbody></table>
+    </div>
+    <div class="hs-box">
+      <table class="hs">
+        <thead><tr><th class="lbl"></th><th class="m">Model M<em>insanlı · 10 m²</em></th><th class="s">Model S<em>insansız · 6 m²</em></th><th class="d">Domino's<em>şube</em></th><th class="p">Mahalle<em>pizzacısı</em></th></tr></thead><tbody>
+        <tr class="grp"><td colspan="5">3 · Komisyon ve kesintiler&nbsp;&nbsp;<label class="aksw akmini"><input type="checkbox" id="platsw" checked><span></span></label><span style="font-weight:600;color:#1a49b8;font-size:12px">Yemeksepeti / Getir satışı</span> <span style="font-weight:400;color:#8a94a2;font-size:11.5px">— kapatırsan hepsi dükkândan satılmış sayılır: platform komisyonu sıfır, yalnız %3 kart komisyonu kalır</span></td></tr>
+        <tr class="res"><td class="lbl">→ Kesinti ve KDV matrahı — gerçek satış fiyatı <span class="hnote">Komisyon ve KDV, müşterinin ödediği tutardan kesilir. Platform anahtarı açıkken liste fiyatı <b>taban ÷ (1 − komisyon)</b> ile otomatik yükselir; komisyon düşülünce elimize taban fiyat kalır. Buradaki rakam, platform ve kapı satışlarının payına göre <b>harmanlanmış</b> fiyattır — hücrenin altında dökümü yazar.</span></td><td class="m" data-o="M-matrah"></td><td class="s" data-o="S-matrah"></td><td class="d" data-o="D-matrah"></td><td class="p" data-o="P-matrah"></td></tr>
+        <tr class="platdep"><td class="lbl">① Satışın yüzde kaçı Yemeksepeti/Getir'den geliyor? <span class="hnote">Yeni markada bu oran <b>%85-90</b>'dır — marka bilinirliği oluşana kadar sipariş platformdan gelir. Domino's'ta %55 (gerisi kendi uygulaması ve gel-al). Gerisi kapıdan/QR dolaptan gelen komisyonsuz satıştır.</span></td><td class="m num"><input data-c="M" data-k="ppay" type="number" step="5"><span class="u">%</span></td><td class="s num"><input data-c="S" data-k="ppay" type="number" step="5"><span class="u">%</span></td><td class="d num"><input data-c="D" data-k="ppay" type="number" step="5"><span class="u">%</span></td><td class="p num"><input data-c="P" data-k="ppay" type="number" step="5"><span class="u">%</span></td></tr>
+        <tr class="platdep"><td class="lbl">② Platform komisyonu + kampanya payı <span class="hnote">Anahtarı kapatırsan platform yokmuş gibi hesaplanır. Yeni marka platform kuryesiyle çalışırsa baz komisyon <b>%32-38</b>, zorunlu kampanyalarla efektif <b>%40-45</b>'e çıkar. Domino's kendi kuryesini kullandığı için %10-14 baz, efektif ~%22 öder — ama kurye maaşı, motor ve SGK'sı kendi sabit giderindedir.</span></td><td class="m num"><input data-c="M" data-k="pkom" type="number" step="1"><span class="u">%</span></td><td class="s num"><input data-c="S" data-k="pkom" type="number" step="1"><span class="u">%</span></td><td class="d num"><input data-c="D" data-k="pkom" type="number" step="1"><span class="u">%</span></td><td class="p num"><input data-c="P" data-k="pkom" type="number" step="1"><span class="u">%</span></td></tr>
+        <tr><td class="lbl" data-nosw>Franchise kesintisi (ciro %'si) <span class="hnote">Zincirin markaya ödediği ciro kesintisi: isim hakkı + reklam fonu + teknoloji. Pizza devinde fiili toplam ~%12,9; pide zincirinde bayilik kesintisi ~%9; bağımsız esnafta 0. <b>Biz kimseye franchise ödemiyoruz — Model M ve S için 0.</b> Zorunlu malzeme alımına gömülü pahalılık bu tabloda malzeme satırının içindedir, iki kez sayılmaz.<b>%12,9</b> — tabloya bu yazılır. Alttaki kartta geçen "gerçek yük ~%16,2"nin kalan ~%3,3'ü zorunlu malzeme alımına gömülü pahalılıktır; o fark bu tabloda zaten <b>malzeme maliyeti</b> satırının içinde, iki kez saymamak için burada yok.</span></td><td class="m num"><input data-c="M" data-k="roy" type="number" step="0.5"><span class="u">%</span></td><td class="s num"><input data-c="S" data-k="roy" type="number" step="0.5"><span class="u">%</span></td><td class="d num"><input data-c="D" data-k="roy" type="number" step="0.5"><span class="u">%</span></td><td class="p num"><input data-c="P" data-k="roy" type="number" step="0.5"><span class="u">%</span></td></tr>
+        <tr class="res hi"><td class="lbl">→ 1 PİZZAYA SATIŞ KESİNTİSİ <span class="hnote">Kesintiler KDV dahil satış fiyatı üzerinden hesaplanır — platformlar brüt tutardan keser. Platform payı yalnız platform satışına, %3 POS yalnız kapıdan satışa uygulanıp harmanlanır.</span></td><td class="m" data-o="M-kestop"></td><td class="s" data-o="S-kestop"></td><td class="d" data-o="D-kestop"></td><td class="p" data-o="P-kestop"></td></tr>
+        </tbody></table>
+    </div>
+    <div class="hs-box">
+      <table class="hs">
+        <thead><tr><th class="lbl"></th><th class="m">Model M<em>insanlı · 10 m²</em></th><th class="s">Model S<em>insansız · 6 m²</em></th><th class="d">Domino's<em>şube</em></th><th class="p">Mahalle<em>pizzacısı</em></th></tr></thead><tbody>
+        <tr class="grp"><td colspan="5">4 · KDV — devlete pizza başına ödenen</td></tr>
+        <tr><td class="lbl">KDV oranı (yiyecek hizmeti) <span class="hnote">Yiyecek-içecek hizmetinde %10.</span></td><td class="m num"><input data-c="M" data-k="kdv" type="number" step="1"><span class="u">%</span></td><td class="s num"><input data-c="S" data-k="kdv" type="number" step="1"><span class="u">%</span></td><td class="d num"><input data-c="D" data-k="kdv" type="number" step="1"><span class="u">%</span></td><td class="p num"><input data-c="P" data-k="kdv" type="number" step="1"><span class="u">%</span></td></tr>
+        <tr class="res"><td class="lbl">+ Satış KDV'si — matrahın %'si <span class="hnote">Üretim maliyetinin üzerine eklenen KDV.</span></td><td class="m" data-o="M-kdvs"></td><td class="s" data-o="S-kdvs"></td><td class="d" data-o="D-kdvs"></td><td class="p" data-o="P-kdvs"></td></tr>
+        <tr class="res"><td class="lbl">− Alışta zaten ödenmiş KDV mahsubu <span class="hnote">Malzeme (%10), kutu ve faturalar (%20) alınırken ödenen KDV devletten düşülür — ikinci kez ödenmez.</span></td><td class="m" data-o="M-kdva"></td><td class="s" data-o="S-kdva"></td><td class="d" data-o="D-kdva"></td><td class="p" data-o="P-kdva"></td></tr>
+        <tr class="res hi"><td class="lbl">= DEVLETE KALAN KDV FARKI <span class="hnote">Üstteki iki satırın farkı — pizza başına devlete fiilen ödenen tutar budur.</span></td><td class="m" data-o="M-kdvpay"></td><td class="s" data-o="S-kdvpay"></td><td class="d" data-o="D-kdvpay"></td><td class="p" data-o="P-kdvpay"></td></tr>
+        <tr class="res"><td class="lbl">→ kesinti + KDV toplamı</td><td class="m" data-o="M-satistop"></td><td class="s" data-o="S-satistop"></td><td class="d" data-o="D-satistop"></td><td class="p" data-o="P-satistop"></td></tr>
+        <tr class="res hi"><td class="lbl">= 1 PİZZANIN TOPLAM MALİYETİ <span class="hnote">Üretim maliyeti + satışa bağlı kalemler — <b>bu kolona girdiğin adede göre</b>. Az satarsan dükkân gideri pizza başına ağır biner, çok satarsan erir. Alttaki aylık sonuç da aynı adetten türer, ikisi asla çelişmez.</span></td><td class="m" data-o="M-toplam"></td><td class="s" data-o="S-toplam"></td><td class="d" data-o="D-toplam"></td><td class="p" data-o="P-toplam"></td></tr>
+        </tbody></table>
+    </div>
+
+        <div class="hlegend"><span><i style="background:#fff6ec;border:2px solid #c2600f"></i>Model M · insanlı</span><span><i style="background:#eef4ff;border:2px solid #1a49b8"></i>Model S · insansız</span><span><i style="background:#f5f6f9;border:2px solid #3f4a5c"></i>Domino's</span><span><i style="background:#f4f8f5;border:2px solid #4a5f52"></i>Mahalle pizzacısı</span></div>
+    <button class="hbtn" onclick="hsReset()">↺ Varsayılana dön</button>
+    <div class="hexp"><b>Tek soru, tek cevap: 1 pizza kime kaça mal oluyor?</b> Akış 1 pizza üzerinden toplanır: dükkân giderlerinin paya düşeni + malzeme + ambalaj = <b>üretim maliyeti</b> → üstüne bu tutarın KDV'li hâli üzerinden platform/kart komisyonu ve franchise kesintisi → üstüne devlete ödenecek KDV farkı = <b>1 pizzanın toplam maliyeti</b>. Satış fiyatı, kâr, gelir vergisi: hiçbiri bu sayfada yok.</div>
+
+    <div class="card rv d1" style="text-align:left;margin-top:26px">
+      <div class="n">1 Pizzanın Maliyet Haritası</div>
+      <h3 style="font-size:19px;margin:6px 0 4px;color:#0f1726">Bir pizza bize kaça mal oluyor — parça parça</h3>
+      <p class="note" style="margin-top:6px;font-size:13px">1 pizza üzerinden canlı hesaplanır: sabit gider payı + malzeme + ambalaj + kesintiler + KDV farkı. <b>Satış fiyatı ve kâr pastada yok</b> — bu harita yalnız maliyettir. Tabloda bir rakamı değiştirdiğin an pasta yeniden çizilir.</p>
+      <div id="hpz">
+        <div class="pzana">
+          <div class="pzd"><div class="pzdonut" data-pz="M"></div><div class="pzmerkez"><b data-pzt="M"></b><span>Model M · 1 pizzanın vergiler dahil maliyeti</span></div></div>
+          <div class="pzlej" data-pzl="M"></div>
+        </div>
+        <div class="pzmini">
+          <div class="pzm"><div class="md" data-pzm="M"></div><h5>Model M · insanlı</h5><div class="t" style="color:#c2600f" data-pzmt="M"></div></div>
+          <div class="pzm"><div class="md" data-pzm="S"></div><h5>Model S · insansız</h5><div class="t" style="color:#1a49b8" data-pzmt="S"></div></div>
+          <div class="pzm"><div class="md" data-pzm="D"></div><h5>Domino's · şube</h5><div class="t" style="color:#3f4a5c" data-pzmt="D"></div></div>
+          <div class="pzm"><div class="md" data-pzm="P"></div><h5>Mahalle pizzacısı</h5><div class="t" style="color:#4a5f52" data-pzmt="P"></div></div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="card rv d1" style="text-align:left;margin-top:26px">
+      <div class="n">Aylık İş Hesabı</div>
+      <h3 style="font-size:19px;margin:6px 0 4px;color:#0f1726">Bu fiyattan bu kadar satarsak, ayda cebimizde ne kalır?</h3>
+      <p class="note" style="margin-top:6px;font-size:13px">Üstteki tablolar "1 pizza kaça mal oluyor" sorusuna cevap veriyordu; burası işletme hesabı: satış fiyatını ve günlük adedi gir, aylık ciro çıksın, üstünden KDV, komisyonlar, malzeme, dükkân gideri ve gelir vergisi düşülsün, <b>ayda net kaç para kaldığını</b> gör. <b>Adet tek ve ortaktır</b> — dört model de aynı hacimde değerlendirilir, o yüzden iki tablo birbiriyle tam tutarlıdır: 1 pizza maliyeti × adet + kâr = ciro.</p>
+      <div class="hs-box" style="margin-top:16px">
+        <table class="hs">
+          <thead><tr><th class="lbl"></th><th class="m">Model M<em>insanlı · 10 m²</em></th><th class="s">Model S<em>insansız · 6 m²</em></th><th class="d">Domino's<em>şube</em></th><th class="p">Mahalle<em>pizzacısı</em></th></tr></thead><tbody>
+        <tr class="grp"><td colspan="5">Kararlarımız — düzenlenebilir</td></tr>
+        <tr><td class="lbl">Pizzayı kaça satacağız? — kapı/QR fiyatı <span class="hnote">Kapıdan/QR dolaptan satış fiyatın. <b>Platform komisyonu anahtarı açıkken</b> Yemeksepeti/Getir liste fiyatı otomatik yükselir (fiyat ÷ (1 − komisyon)) — komisyonu müşteri öder, sana bu taban fiyat kalır. Kutunun altında liste fiyatı yazar.</span></td><td class="m num"><input data-c="M" data-k="fiyat" type="number" step="5"><span class="u">TL</span><div class="hnote" data-o="M-liste" style="margin-top:3px"></div></td><td class="s num"><input data-c="S" data-k="fiyat" type="number" step="5"><span class="u">TL</span><div class="hnote" data-o="S-liste" style="margin-top:3px"></div></td><td class="d num"><input data-c="D" data-k="fiyat" type="number" step="5"><span class="u">TL</span><div class="hnote" data-o="D-liste" style="margin-top:3px"></div></td><td class="p num"><input data-c="P" data-k="fiyat" type="number" step="5"><span class="u">TL</span><div class="hnote" data-o="P-liste" style="margin-top:3px"></div></td></tr>
+        <tr><td class="lbl">Rakiplerin en ucuzu — platform fiyatı <span class="hnote">4 büyük zincirin Yemeksepeti/Getir'deki en ucuz karşılaştırılabilir ürünü — bazıları 2'li kampanyanın birim fiyatıdır. Rakamlar düzenlenebilir: platformda birebir gördüğünü kutulara yaz, alttaki kıyas anında güncellenir. Her ürünün listesi ayrı saklanır; 0 = fiyatı bilinmiyor.</span></td><td colspan="4" style="text-align:left" data-nosw><span id="rkwrap"></span><div class="hnote" id="rakipsonuc" style="margin-top:6px"></div></td></tr>
+        <tr><td class="lbl" data-nosw>Günde kaç adet satacağız? <span class="hnote">Her kolonun kendi rakamı — maliyet de aylık sonuç da bu adetten çıkar. <b>Kaynaklı gerçekler:</b> TAB Gıda 2025 raporu 66,6 mln işlem ÷ 2.030 şube = şube başına günde ~90 sipariş — <b>bu grup ortalamasıdır (BK+Popeyes dahil)</b>, pide şubesi tekil olarak altında kalabilir — ≈ <b>Usta Pideci ~120-150 adet/gün</b>; Domino's şubesi hafta içi 150-250, hafta sonu 400+ satar; mahalle esnafı 50-250 arasıdır. <b>Bizim gerçekçi rampamız:</b> markasız yeni nokta ilk 2 ay günde 25-40; görünürlük oturunca 6. aydan sonra iyi lokasyonda 60-90. Varsayılan 70 hedef değeridir — temkinli senaryo için 40 yaz, tablo anında gösterir.</span></td><td class="m num"><input data-c="M" data-k="adet" type="number" step="5" value="70"><span class="u">adet</span></td><td class="s num"><input data-c="S" data-k="adet" type="number" step="5" value="55"><span class="u">adet</span></td><td class="d num"><input data-c="D" data-k="adet" type="number" step="5" value="200"><span class="u">adet</span></td><td class="p num"><input data-c="P" data-k="adet" type="number" step="5" value="50"><span class="u">adet</span></td></tr>
+        <tr><td class="lbl">Yan ürün net katkısı — pizza başına <span class="hnote">İçecek ve paketli tatlıdan kalan net kâr, satılan her pizzaya düşen payıyla. <b>Örnek hesap:</b> siparişlerin %50'sinde içecek satılıyor, kolayı 25 TL'ye alıp 60 TL'ye satıyoruz → 35 × %50 = 17,5 TL; üstüne %15 ihtimalle tatlı (30 TL kâr) → ≈20 TL. Robot kol içeceği soğutucudan alıp dolaba koyar; ek makine gerekmez. <b>Kıyas:</b> Domino's aynı kolayı 130-165 TL'ye satıyor — bizim 60 TL'lik fiyatımız hem müşteriyi çeker hem 35 TL bırakır.</span></td><td class="m num"><input data-c="M" data-k="yan" type="number" step="5" value="20"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="yan" type="number" step="5" value="20"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="yan" type="number" step="5" value="30"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="yan" type="number" step="5" value="15"><span class="u">TL</span></td></tr>
+        <tr><td class="lbl">İçecek — müşteriye satış fiyatı <span class="hnote">Müşteri pizzayı değil <b>sepeti</b> karşılaştırır — her hücrenin altında toplam yazar. Domino's gel-al'da kutu kola 90 TL (paket serviste 130-165 TL'ye çıkar); biz 60 TL'ye satıp yine ~35 TL kâr ediyoruz (alış ~25 TL). Fark küçük ama yönü doğru: <b>bizde sepet her zaman daha ucuz</b>, üstelik 7/24 ve beklemesiz.</span></td><td class="m num"><input data-c="M" data-k="ick" type="number" step="5" value="60"><span class="u">TL</span><div class="hnote" data-o="M-sepet" style="margin-top:3px"></div></td><td class="s num"><input data-c="S" data-k="ick" type="number" step="5" value="60"><span class="u">TL</span><div class="hnote" data-o="S-sepet" style="margin-top:3px"></div></td><td class="d num"><input data-c="D" data-k="ick" type="number" step="5" value="90"><span class="u">TL</span><div class="hnote" data-o="D-sepet" style="margin-top:3px"></div></td><td class="p num"><input data-c="P" data-k="ick" type="number" step="5" value="70"><span class="u">TL</span><div class="hnote" data-o="P-sepet" style="margin-top:3px"></div></td></tr>
+        <tr><td class="lbl"><label class="aksw akmini"><input type="checkbox" id="gvsw"><span></span></label>Gelir / kurumlar vergisi oranı <span class="hnote">Anahtarı kapatırsan vergi hesaba katılmaz — vergi öncesi kâr doğrudan cebe kalan olur. Limited/A.Ş. kurumlar vergisi %25; şahıs şirketinde artan oranlı gelir vergisi (%15–40).</span></td><td class="m num"><input data-c="M" data-k="vergi" type="number" step="1"><span class="u">%</span></td><td class="s num"><input data-c="S" data-k="vergi" type="number" step="1"><span class="u">%</span></td><td class="d num"><input data-c="D" data-k="vergi" type="number" step="1"><span class="u">%</span></td><td class="p num"><input data-c="P" data-k="vergi" type="number" step="1"><span class="u">%</span></td></tr>
+        <tr class="grp"><td colspan="5">Aylık sonuç — otomatik hesaplanır</td></tr>
+        <tr class="res"><td class="lbl">→ Aylık satış adedi <span class="hnote">Günlük adet × 30,4 gün.</span></td><td class="m" data-o="M-maylik"></td><td class="s" data-o="S-maylik"></td><td class="d" data-o="D-maylik"></td><td class="p" data-o="P-maylik"></td></tr>
+        <tr class="res hi"><td class="lbl">AYLIK CİRO — müşterilerin ödediği <span class="hnote">KDV dahil kasaya giren toplam.</span></td><td class="m" data-o="M-mciro"></td><td class="s" data-o="S-mciro"></td><td class="d" data-o="D-mciro"></td><td class="p" data-o="P-mciro"></td></tr>
+        <tr class="res"><td class="lbl">− Devlete ödenecek KDV <span class="hnote">Satış KDV'sinden, alışlarda ödenen KDV düşülmüş fark.</span></td><td class="m" data-o="M-mkdv"></td><td class="s" data-o="S-mkdv"></td><td class="d" data-o="D-mkdv"></td><td class="p" data-o="P-mkdv"></td></tr>
+        <tr class="res"><td class="lbl">− Malzeme + ambalaj (aylık, KDV dahil) </td><td class="m" data-o="M-mmalz"></td><td class="s" data-o="S-mmalz"></td><td class="d" data-o="D-mmalz"></td><td class="p" data-o="P-mmalz"></td></tr>
+        <tr class="res"><td class="lbl">− Komisyon ve kesintiler (aylık) <span class="hnote">Platform + kart komisyonu + franchise/IoT. Yukarıdaki platform anahtarına bağlıdır.</span></td><td class="m" data-o="M-mkom"></td><td class="s" data-o="S-mkom"></td><td class="d" data-o="D-mkom"></td><td class="p" data-o="P-mkom"></td></tr>
+        <tr class="res"><td class="lbl">− Dükkân sabit giderleri (aylık, KDV dahil) <span class="hnote">Kira, personel, faturalar, bakım, ikmal, zorunlu yükümlülükler.</span></td><td class="m" data-o="M-msabit"></td><td class="s" data-o="S-msabit"></td><td class="d" data-o="D-msabit"></td><td class="p" data-o="P-msabit"></td></tr>
+        <tr class="res"><td class="lbl">+ Yan ürün geliri (aylık) <span class="hnote">Pizza başına katkı × aylık satış adedi.</span></td><td class="m" data-o="M-myan"></td><td class="s" data-o="S-myan"></td><td class="d" data-o="D-myan"></td><td class="p" data-o="P-myan"></td></tr>
+        <tr class="res hi"><td class="lbl">= Vergi öncesi kâr </td><td class="m" data-o="M-mvonce"></td><td class="s" data-o="S-mvonce"></td><td class="d" data-o="D-mvonce"></td><td class="p" data-o="P-mvonce"></td></tr>
+        <tr class="res gvdep"><td class="lbl">− Gelir / kurumlar vergisi <span class="hnote">Makinenin yıpranma payı matrahı düşürdüğü için vergi, kârın tam yüzdesinden azdır.</span></td><td class="m" data-o="M-mvergi"></td><td class="s" data-o="S-mvergi"></td><td class="d" data-o="D-mvergi"></td><td class="p" data-o="P-mvergi"></td></tr>
+        <tr class="res hi"><td class="lbl">= AYLIK NET KÂR — cebe kalan </td><td class="m" data-o="M-mnet"></td><td class="s" data-o="S-mnet"></td><td class="d" data-o="D-mnet"></td><td class="p" data-o="P-mnet"></td></tr>
+        </tbody></table>
+      </div>
+      <div class="hexp" style="margin-top:16px"><b>Nasıl okunur?</b> Fiyat ve adet senin kararın; gerisi yukarıdaki gider tablolarından otomatik gelir. Bir rakamı değiştirdiğinde bütün satırlar anında yeniden hesaplanır — "fiyatı 20 lira artırsam", "günde 10 pizza fazla satsam" sorularının cevabı burada görünür. <b>Not:</b> yıpranma payı (amortisman) buradan düşülmez çünkü cepten çıkan bir para değildir; yalnız vergi matrahını azaltır. Makinenin kendini ödeme süresi alttaki <b>Yatırım</b> tablosundadır.</div>
+    </div>
+
+    <div class="card rv d1" style="text-align:left;margin-top:26px">
+      <div class="n">Yatırım</div>
+      <h3 style="font-size:19px;margin:6px 0 4px;color:#0f1726">Toplam yatırım, yıpranma ve geri dönüş — tek yerde</h3>
+      <p class="note" style="margin-top:6px;font-size:13px"><b>Toplam yatırım</b> satırına tıklayınca kalem kalem kırılım açılır; kalemler düzenlenebilir, toplam yukarıdaki hesaba otomatik yansır. <b>Yıpranma payı (amortisman)</b> cepten çıkan para değildir — makinenin eskidikçe değer kaybıdır; verginin hesaplandığı tutarı düşürdüğü için vergiyi azaltır. Satırın başındaki anahtarla hesaba katıp çıkarabilirsin. En alttaki blok makinenin parası çıktıktan <b>sonrasını</b> gösterir: yıpranma biter, bakım devam eder — aynı satışla cebe kalan belirgin yükselir.</p>
+      <div class="hs-box" style="margin-top:16px">
+        <table class="hs" id="hyt">
+          <thead><tr><th class="lbl"></th><th class="m">Model M<em>insanlı · 10 m²</em></th><th class="s">Model S<em>insansız · 6 m²</em></th><th class="d">Domino's<em>şube</em></th><th class="p">Mahalle<em>pizzacısı</em></th></tr></thead><tbody>
+          <tr class="grp"><td colspan="5">Yatırım — düzenlenebilir</td></tr>
+        <tr><td class="lbl" data-nosw>Markaya giriş bedeli — tek seferlik <span class="hnote">Zincire katılmanın peşin bedeli (isim hakkı). <b>Usta Pideci bayiliği 150.000 USD + KDV ≈ 7 mln TL</b> (TAB Gıda; geri dönüş vaadi 12-24 ay). Pidem 175-200 bin USD ister. Domino's'ta giriş bedeli görece düşüktür, esas para şube yatırımına gömülür — rakam tahminidir, kutudan düzelt. <b>Bizde 0: kimseye isim parası ödemiyoruz.</b></span></td><td class="m num"><input data-c="M" data-k="isim" type="text"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="isim" type="text"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="isim" type="text"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="isim" type="text"><span class="u">TL</span></td></tr>
+        <tr id="yatrow" style="cursor:pointer"><td class="lbl"><span id="yatok" style="display:inline-block;width:14px;color:#1a49b8;font-weight:800">▸</span> Toplam yatırım (makine + tadilat + ilk stok) <span class="hnote">tıkla — kalem kalem kırılım altında açılır, tekrar tıkla kapanır. Kalemler düzenlenebilir; toplam buraya yansır.</span></td><td class="m num"><input data-c="M" data-k="yat" type="number" step="100000"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="yat" type="number" step="100000"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="yat" type="number" step="100000"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="yat" type="number" step="100000"><span class="u">TL</span></td></tr>
+        <tr class="ydet grp" hidden><td colspan="5">↳ Makine ve ekipman — üretim çekirdeği:&nbsp;
+<label class="ymsec"><input type="radio" name="ymode" value="A"> Yol A · hazır makine</label>
+<label class="ymsec"><input type="radio" name="ymode" value="B"> Yol B · kendi hattımız</label>
+<a href="#yollar" style="color:#1a49b8;font-weight:700;font-size:11px">şablonlar ↓</a></td></tr>
+        <tr class="ydet" hidden data-mode="A"><td class="lbl" style="padding-left:26px">Pizza robotu <span class="hnote"><b>€30.000 fabrika teslim (ex-works), kurulum+eğitim dahil (kurucu teklifi, 14 Ağu)</b> + nakliye+gümrük+KDV tahmini ·</span></td><td class="m num"><input data-y="M" data-g="mk" data-yk="robot" type="number" step="1000" value="1700000"><span class="u">TL</span></td><td class="s num"><input data-y="S" data-g="mk" data-yk="robot" type="number" step="1000" value="1700000"><span class="u">TL</span></td><td class="d ydash">—</td><td class="p ydash">—</td></tr>
+        <tr class="ydet" hidden><td class="lbl" style="padding-left:26px">Robot kol + tutucu + montaj <span class="hnote">JAKA Zu 7 (7 kg) ya da Dobot Nova 5 (850 mm), gıda uyumlu kaplamalı</span></td><td class="m num"><input data-y="M" data-g="mk" data-yk="kol" type="number" step="1000" value="720000"><span class="u">TL</span></td><td class="s num"><input data-y="S" data-g="mk" data-yk="kol" type="number" step="1000" value="720000"><span class="u">TL</span></td><td class="d ydash">—</td><td class="p ydash">—</td></tr>
+        <tr class="ydet" hidden><td class="lbl" style="padding-left:26px">Isıtmalı teslim dolabı <span class="hnote">QR kilitli, 6-8 göz, 2-3'ü ısıtmalı · Çin üretimi (batı markası 850 bin)</span></td><td class="m num"><input data-y="M" data-g="mk" data-yk="dolap" type="number" step="1000" value="165000"><span class="u">TL</span></td><td class="s num"><input data-y="S" data-g="mk" data-yk="dolap" type="number" step="1000" value="205000"><span class="u">TL</span></td><td class="d ydash">—</td><td class="p ydash">—</td></tr>
+        <tr class="ydet" hidden data-mode="A"><td class="lbl" style="padding-left:26px">Dolap–makine yazılım entegrasyonu <span class="hnote">QR eşleştirme, sipariş API'si, uzaktan izleme</span></td><td class="m num"><input data-y="M" data-g="mk" data-yk="yazilim" type="number" step="1000" value="40000"><span class="u">TL</span></td><td class="s num"><input data-y="S" data-g="mk" data-yk="yazilim" type="number" step="1000" value="40000"><span class="u">TL</span></td><td class="d ydash">—</td><td class="p ydash">—</td></tr>
+        <tr class="ydet" hidden data-mode="B"><td class="lbl" style="padding-left:26px">Soğutmalı taban istasyonu <span class="hnote">Yol B — fermente tabanlar +2/+6 °C kasetlerde, kolun erişiminde</span></td><td class="m num"><input data-y="M" data-g="mk" data-yk="btaban" type="number" step="1000" value="90000"><span class="u">TL</span></td><td class="s num"><input data-y="S" data-g="mk" data-yk="btaban" type="number" step="1000" value="90000"><span class="u">TL</span></td><td class="d ydash">—</td><td class="p ydash">—</td></tr>
+        <tr class="ydet" hidden data-mode="B"><td class="lbl" style="padding-left:26px">Hamur presi (N31 tipi) <span class="hnote">Yol B — hamur topunu taban hâline presler; Chanda teklifi gelince güncellenir</span></td><td class="m num"><input data-y="M" data-g="mk" data-yk="bpres" type="number" step="1000" value="250000"><span class="u">TL</span></td><td class="s num"><input data-y="S" data-g="mk" data-yk="bpres" type="number" step="1000" value="250000"><span class="u">TL</span></td><td class="d ydash">—</td><td class="p ydash">—</td></tr>
+        <tr class="ydet" hidden data-mode="B"><td class="lbl" style="padding-left:26px">Sos + peynir + topping istasyonu <span class="hnote">Yol B — Juyou teklifi bekleniyor</span></td><td class="m num"><input data-y="M" data-g="mk" data-yk="btop" type="number" step="1000" value="375000"><span class="u">TL</span></td><td class="s num"><input data-y="S" data-g="mk" data-yk="btop" type="number" step="1000" value="375000"><span class="u">TL</span></td><td class="d ydash">—</td><td class="p ydash">—</td></tr>
+        <tr class="ydet" hidden data-mode="B"><td class="lbl" style="padding-left:26px">Konveyörlü pizza fırını <span class="hnote">Yol B — bant girişi kol tarafında; Lincoln/XLT muadili ya da yerli</span></td><td class="m num"><input data-y="M" data-g="mk" data-yk="bfirin" type="number" step="1000" value="300000"><span class="u">TL</span></td><td class="s num"><input data-y="S" data-g="mk" data-yk="bfirin" type="number" step="1000" value="300000"><span class="u">TL</span></td><td class="d ydash">—</td><td class="p ydash">—</td></tr>
+        <tr class="ydet" hidden data-mode="B"><td class="lbl" style="padding-left:26px">Kesme + kutulama istasyonu <span class="hnote">Yol B — özel imalat, tasarım bizde (Torinoarch)</span></td><td class="m num"><input data-y="M" data-g="mk" data-yk="bkes" type="number" step="1000" value="225000"><span class="u">TL</span></td><td class="s num"><input data-y="S" data-g="mk" data-yk="bkes" type="number" step="1000" value="225000"><span class="u">TL</span></td><td class="d ydash">—</td><td class="p ydash">—</td></tr>
+        <tr class="ydet" hidden data-mode="B"><td class="lbl" style="padding-left:26px">Hat yazılımı (görüş + kontrol + sipariş API) <span class="hnote">Yol B — geliştirme bütçesi</span></td><td class="m num"><input data-y="M" data-g="mk" data-yk="byaz" type="number" step="1000" value="225000"><span class="u">TL</span></td><td class="s num"><input data-y="S" data-g="mk" data-yk="byaz" type="number" step="1000" value="225000"><span class="u">TL</span></td><td class="d ydash">—</td><td class="p ydash">—</td></tr>
+        <tr class="ydet" hidden><td class="lbl" style="padding-left:26px">Sipariş ekranı <span class="hnote">M: cam arkası tablet · S: dış mekân vandal dayanımlı 32" kiosk</span></td><td class="m num"><input data-y="M" data-g="mk" data-yk="kiosk" type="number" step="1000" value="30000"><span class="u">TL</span></td><td class="s num"><input data-y="S" data-g="mk" data-yk="kiosk" type="number" step="1000" value="220000"><span class="u">TL</span></td><td class="d ydash">—</td><td class="p ydash">—</td></tr>
+        <tr class="ydet" hidden><td class="lbl" style="padding-left:26px">Ticari buzdolabı <span class="hnote">M: Öztiryakiler GN 600 (610 L) · S: 300 L</span></td><td class="m num"><input data-y="M" data-g="mk" data-yk="buzdolabi" type="number" step="1000" value="57500"><span class="u">TL</span></td><td class="s num"><input data-y="S" data-g="mk" data-yk="buzdolabi" type="number" step="1000" value="40000"><span class="u">TL</span></td><td class="d ydash">—</td><td class="p ydash">—</td></tr>
+        <tr class="ydet" hidden><td class="lbl" style="padding-left:26px">İçecek soğutucu <span class="hnote">By Kitchen DBB-150 bar tipi, robot kolun erişiminde</span></td><td class="m num"><input data-y="M" data-g="mk" data-yk="icecek" type="number" step="1000" value="34918"><span class="u">TL</span></td><td class="s num"><input data-y="S" data-g="mk" data-yk="icecek" type="number" step="1000" value="34918"><span class="u">TL</span></td><td class="d ydash">—</td><td class="p ydash">—</td></tr>
+        <tr class="ydet" hidden><td class="lbl" style="padding-left:26px">Güvenlik kamerası + kayıt <span class="hnote">Hikvision 4 kamera + NVR, gece görüşlü, mobilden izlenir</span></td><td class="m num"><input data-y="M" data-g="mk" data-yk="kamera" type="number" step="1000" value="12500"><span class="u">TL</span></td><td class="s num"><input data-y="S" data-g="mk" data-yk="kamera" type="number" step="1000" value="12500"><span class="u">TL</span></td><td class="d ydash">—</td><td class="p ydash">—</td></tr>
+        <tr class="ydet" hidden><td class="lbl" style="padding-left:26px">Klima + montaj <span class="hnote">12.000 BTU inverter</span></td><td class="m num"><input data-y="M" data-g="mk" data-yk="klima" type="number" step="1000" value="26500"><span class="u">TL</span></td><td class="s num"><input data-y="S" data-g="mk" data-yk="klima" type="number" step="1000" value="26500"><span class="u">TL</span></td><td class="d ydash">—</td><td class="p ydash">—</td></tr>
+        <tr class="ydet" hidden><td class="lbl" style="padding-left:26px">Kesintisiz güç (UPS 3 kVA) <span class="hnote">AGP/Makelsan online — kesintide robotu ve soğutmayı korur</span></td><td class="m num"><input data-y="M" data-g="mk" data-yk="ups" type="number" step="1000" value="14150"><span class="u">TL</span></td><td class="s num"><input data-y="S" data-g="mk" data-yk="ups" type="number" step="1000" value="14150"><span class="u">TL</span></td><td class="d ydash">—</td><td class="p ydash">—</td></tr>
+        <tr class="ydet" hidden><td class="lbl" style="padding-left:26px">Ağ donanımı <span class="hnote">Router + 4G yedek modem</span></td><td class="m num"><input data-y="M" data-g="mk" data-yk="ag" type="number" step="1000" value="7000"><span class="u">TL</span></td><td class="s num"><input data-y="S" data-g="mk" data-yk="ag" type="number" step="1000" value="7000"><span class="u">TL</span></td><td class="d ydash">—</td><td class="p ydash">—</td></tr>
+        <tr class="ydet" hidden><td class="lbl" style="padding-left:26px">Paslanmaz tezgah + raf <span class="hnote">M: Öztiryakiler 160 cm · S: küçük hazırlık rafı</span></td><td class="m num"><input data-y="M" data-g="mk" data-yk="tezgah" type="number" step="1000" value="47000"><span class="u">TL</span></td><td class="s num"><input data-y="S" data-g="mk" data-yk="tezgah" type="number" step="1000" value="25000"><span class="u">TL</span></td><td class="d ydash">—</td><td class="p ydash">—</td></tr>
+        <tr class="ydet" hidden><td class="lbl" style="padding-left:26px">Evye + su filtresi <span class="hnote">Öztiryakiler evyeli tezgah + yumuşatıcı filtre</span></td><td class="m num"><input data-y="M" data-g="mk" data-yk="evye" type="number" step="1000" value="24000"><span class="u">TL</span></td><td class="s num"><input data-y="S" data-g="mk" data-yk="evye" type="number" step="1000" value="24000"><span class="u">TL</span></td><td class="d ydash">—</td><td class="p ydash">—</td></tr>
+        <tr class="ydet" hidden><td class="lbl" style="padding-left:26px">POS / yeni nesil ÖKC <span class="hnote">Banka ücretsiz verebilir · S'de ödeme kiosk içinde</span></td><td class="m num"><input data-y="M" data-g="mk" data-yk="pos" type="number" step="1000" value="10000"><span class="u">TL</span></td><td class="s num"><input data-y="S" data-g="mk" data-yk="pos" type="number" step="1000" value="0"><span class="u">TL</span></td><td class="d ydash">—</td><td class="p ydash">—</td></tr>
+        <tr class="ydet res" hidden><td class="lbl" style="padding-left:26px">↳ Makine ve ekipman ara toplamı</td><td class="m" data-yg="M-mk"></td><td class="s" data-yg="S-mk"></td><td class="d ydash">—</td><td class="p ydash">—</td></tr>
+        <tr class="ydet grp" hidden><td colspan="5">↳ Tadilat ve inşaat</td></tr>
+        <tr class="ydet" hidden><td class="lbl" style="padding-left:26px">Elektrik tesisatı <span class="hnote">3 faz pano, 7 kW besleme, kaçak akım, topraklama</span></td><td class="m num"><input data-y="M" data-g="td" data-yk="elektrik" type="number" step="1000" value="45000"><span class="u">TL</span></td><td class="s num"><input data-y="S" data-g="td" data-yk="elektrik" type="number" step="1000" value="45000"><span class="u">TL</span></td><td class="d ydash">—</td><td class="p ydash">—</td></tr>
+        <tr class="ydet" hidden><td class="lbl" style="padding-left:26px">Su ve pis su tesisatı</td><td class="m num"><input data-y="M" data-g="td" data-yk="su" type="number" step="1000" value="18000"><span class="u">TL</span></td><td class="s num"><input data-y="S" data-g="td" data-yk="su" type="number" step="1000" value="18000"><span class="u">TL</span></td><td class="d ydash">—</td><td class="p ydash">—</td></tr>
+        <tr class="ydet" hidden><td class="lbl" style="padding-left:26px">Zemin kaplama <span class="hnote">Epoksi ya da porselen seramik, 10 m²</span></td><td class="m num"><input data-y="M" data-g="td" data-yk="zemin" type="number" step="1000" value="25000"><span class="u">TL</span></td><td class="s num"><input data-y="S" data-g="td" data-yk="zemin" type="number" step="1000" value="18000"><span class="u">TL</span></td><td class="d ydash">—</td><td class="p ydash">—</td></tr>
+        <tr class="ydet" hidden><td class="lbl" style="padding-left:26px">Duvar, tavan, boya</td><td class="m num"><input data-y="M" data-g="td" data-yk="duvar" type="number" step="1000" value="30000"><span class="u">TL</span></td><td class="s num"><input data-y="S" data-g="td" data-yk="duvar" type="number" step="1000" value="22000"><span class="u">TL</span></td><td class="d ydash">—</td><td class="p ydash">—</td></tr>
+        <tr class="ydet" hidden><td class="lbl" style="padding-left:26px">Havalandırma / aspiratör <span class="hnote">Fırın baca gereksinimi üreticiye soruldu</span></td><td class="m num"><input data-y="M" data-g="td" data-yk="hava" type="number" step="1000" value="22000"><span class="u">TL</span></td><td class="s num"><input data-y="S" data-g="td" data-yk="hava" type="number" step="1000" value="22000"><span class="u">TL</span></td><td class="d ydash">—</td><td class="p ydash">—</td></tr>
+        <tr class="ydet" hidden><td class="lbl" style="padding-left:26px">Cephe kompozit panel kaplama <span class="hnote">Turuncu alüminyum kompozit, montaj dahil</span></td><td class="m num"><input data-y="M" data-g="td" data-yk="cephe" type="number" step="1000" value="55000"><span class="u">TL</span></td><td class="s num"><input data-y="S" data-g="td" data-yk="cephe" type="number" step="1000" value="45000"><span class="u">TL</span></td><td class="d ydash">—</td><td class="p ydash">—</td></tr>
+        <tr class="ydet" hidden><td class="lbl" style="padding-left:26px">Işıklı tabela + 3D logo <span class="hnote">LED kutu harf + pizza dilimi maketi</span></td><td class="m num"><input data-y="M" data-g="td" data-yk="tabela" type="number" step="1000" value="45000"><span class="u">TL</span></td><td class="s num"><input data-y="S" data-g="td" data-yk="tabela" type="number" step="1000" value="38000"><span class="u">TL</span></td><td class="d ydash">—</td><td class="p ydash">—</td></tr>
+        <tr class="ydet" hidden><td class="lbl" style="padding-left:26px">Servis penceresi <span class="hnote">Alüminyum doğrama + temperli cam — yalnız insanlı modelde</span></td><td class="m num"><input data-y="M" data-g="td" data-yk="pencere" type="number" step="1000" value="28000"><span class="u">TL</span></td><td class="s num"><input data-y="S" data-g="td" data-yk="pencere" type="number" step="1000" value="0"><span class="u">TL</span></td><td class="d ydash">—</td><td class="p ydash">—</td></tr>
+        <tr class="ydet" hidden><td class="lbl" style="padding-left:26px">Dolap ve kiosk cephe nişi <span class="hnote">Gömme çerçeve, su yalıtımı</span></td><td class="m num"><input data-y="M" data-g="td" data-yk="nis" type="number" step="1000" value="20000"><span class="u">TL</span></td><td class="s num"><input data-y="S" data-g="td" data-yk="nis" type="number" step="1000" value="26000"><span class="u">TL</span></td><td class="d ydash">—</td><td class="p ydash">—</td></tr>
+        <tr class="ydet" hidden><td class="lbl" style="padding-left:26px">Aydınlatma <span class="hnote">Spot + LED şerit + cephe</span></td><td class="m num"><input data-y="M" data-g="td" data-yk="aydinlatma" type="number" step="1000" value="12000"><span class="u">TL</span></td><td class="s num"><input data-y="S" data-g="td" data-yk="aydinlatma" type="number" step="1000" value="9000"><span class="u">TL</span></td><td class="d ydash">—</td><td class="p ydash">—</td></tr>
+        <tr class="ydet" hidden><td class="lbl" style="padding-left:26px">Genel işçilik ve ufak imalat</td><td class="m num"><input data-y="M" data-g="td" data-yk="isci" type="number" step="1000" value="20000"><span class="u">TL</span></td><td class="s num"><input data-y="S" data-g="td" data-yk="isci" type="number" step="1000" value="16000"><span class="u">TL</span></td><td class="d ydash">—</td><td class="p ydash">—</td></tr>
+        <tr class="ydet" hidden><td class="lbl" style="padding-left:26px">Proje, ruhsat, harçlar <span class="hnote">Mimari proje, işyeri ruhsatı, itfaiye, gıda kayıt</span></td><td class="m num"><input data-y="M" data-g="td" data-yk="proje" type="number" step="1000" value="25000"><span class="u">TL</span></td><td class="s num"><input data-y="S" data-g="td" data-yk="proje" type="number" step="1000" value="25000"><span class="u">TL</span></td><td class="d ydash">—</td><td class="p ydash">—</td></tr>
+        <tr class="ydet" hidden><td class="lbl" style="padding-left:26px">Yangın + iş güvenliği <span class="hnote">ABC tüpler, duman dedektörü, ilk yardım</span></td><td class="m num"><input data-y="M" data-g="td" data-yk="yangin" type="number" step="1000" value="8000"><span class="u">TL</span></td><td class="s num"><input data-y="S" data-g="td" data-yk="yangin" type="number" step="1000" value="8000"><span class="u">TL</span></td><td class="d ydash">—</td><td class="p ydash">—</td></tr>
+        <tr class="ydet res" hidden><td class="lbl" style="padding-left:26px">↳ Tadilat ve inşaat ara toplamı</td><td class="m" data-yg="M-td"></td><td class="s" data-yg="S-td"></td><td class="d ydash">—</td><td class="p ydash">—</td></tr>
+        <tr class="ydet grp" hidden><td colspan="5">↳ İlk stok ve sarf</td></tr>
+        <tr class="ydet" hidden><td class="lbl" style="padding-left:26px">Ambalaj ve servis sarfı <span class="hnote">Kutu, peçete, ketçap-mayonez sachet, eldiven</span></td><td class="m num"><input data-y="M" data-g="st" data-yk="ambalaj" type="number" step="1000" value="21842"><span class="u">TL</span></td><td class="s num"><input data-y="S" data-g="st" data-yk="ambalaj" type="number" step="1000" value="21842"><span class="u">TL</span></td><td class="d ydash">—</td><td class="p ydash">—</td></tr>
+        <tr class="ydet" hidden><td class="lbl" style="padding-left:26px">Temizlik ve hijyen <span class="hnote">HACCP uyumlu dezenfektan, sanitizer</span></td><td class="m num"><input data-y="M" data-g="st" data-yk="temizlik" type="number" step="1000" value="9271"><span class="u">TL</span></td><td class="s num"><input data-y="S" data-g="st" data-yk="temizlik" type="number" step="1000" value="9271"><span class="u">TL</span></td><td class="d ydash">—</td><td class="p ydash">—</td></tr>
+        <tr class="ydet" hidden><td class="lbl" style="padding-left:26px">İlk gıda stoğu (2 hafta) <span class="hnote">840 pizzalık hamur, peynir, sos, malzeme</span></td><td class="m num"><input data-y="M" data-g="st" data-yk="gida" type="number" step="1000" value="91088"><span class="u">TL</span></td><td class="s num"><input data-y="S" data-g="st" data-yk="gida" type="number" step="1000" value="91088"><span class="u">TL</span></td><td class="d ydash">—</td><td class="p ydash">—</td></tr>
+        <tr class="ydet" hidden><td class="lbl" style="padding-left:26px">Zorunlu demirbaş <span class="hnote">Terazi, gıda termometresi, kıyafet · M'de kasa çekmecesi</span></td><td class="m num"><input data-y="M" data-g="st" data-yk="demirbas" type="number" step="1000" value="26400"><span class="u">TL</span></td><td class="s num"><input data-y="S" data-g="st" data-yk="demirbas" type="number" step="1000" value="14000"><span class="u">TL</span></td><td class="d ydash">—</td><td class="p ydash">—</td></tr>
+        <tr class="ydet" hidden><td class="lbl" style="padding-left:26px">Görsel iletişim <span class="hnote">Menü baskısı, QR sticker, vitrin folyo</span></td><td class="m num"><input data-y="M" data-g="st" data-yk="gorsel" type="number" step="1000" value="7000"><span class="u">TL</span></td><td class="s num"><input data-y="S" data-g="st" data-yk="gorsel" type="number" step="1000" value="7000"><span class="u">TL</span></td><td class="d ydash">—</td><td class="p ydash">—</td></tr>
+        <tr class="ydet res" hidden><td class="lbl" style="padding-left:26px">↳ İlk stok ve sarf ara toplamı</td><td class="m" data-yg="M-st"></td><td class="s" data-yg="S-st"></td><td class="d ydash">—</td><td class="p ydash">—</td></tr>
+        <tr class="res hi"><td class="lbl" data-nosw>→ AÇILIŞ İÇİN GEREKEN TOPLAM PARA <span class="hnote">Yatırım + markaya giriş bedeli. TAB Gıda 2025 verisi: 66,6 mln işlem ÷ 2.030 şube ≈ şube başına günde ~90 sipariş, ayda ~2,5 mln TL ciro (tüm markaların ortalaması — BK ağırlıklı; pide şubesi daha düşük olabilir).</span></td><td class="m" data-o="M-acilis"></td><td class="s" data-o="S-acilis"></td><td class="d" data-o="D-acilis"></td><td class="p" data-o="P-acilis"></td></tr>
+        <tr><td class="lbl">Ekipman ömrü (amortisman) <span class="hnote">Yatırım bu sürede yıpranır; yıpranma payı cepten çıkmaz ama verginin hesaplandığı tutarı (matrahı) düşürür.</span></td><td class="m num"><input data-c="M" data-k="omur" type="number" step="1"><span class="u">yıl</span></td><td class="s num"><input data-c="S" data-k="omur" type="number" step="1"><span class="u">yıl</span></td><td class="d num"><input data-c="D" data-k="omur" type="number" step="1"><span class="u">yıl</span></td><td class="p num"><input data-c="P" data-k="omur" type="number" step="1"><span class="u">yıl</span></td></tr>
+          <tr class="grp"><td colspan="5">Yıpranma ve geri dönüş — otomatik hesaplanır</td></tr>
+        <tr class="res"><td class="lbl"><label class="aksw"><input type="checkbox" id="amortsw" checked><span></span></label>Makinenin aylık yıpranma payı (amortisman) <span class="hnote">Yatırım ÷ ekipman ömrü. Cepten çıkan para değildir — makinenin eskidikçe değer kaybıdır; yenileme fonu gibi düşün. Anahtarı kapatırsan alttaki yıpranma satırları gizlenir, senaryo tablosundaki eşikler yalnız nakit masraflarla hesaplanır.</span></td><td class="m" data-o="M-amort"></td><td class="s" data-o="S-amort"></td><td class="d" data-o="D-amort"></td><td class="p" data-o="P-amort"></td></tr>
+        <tr class="res amdep"><td class="lbl">Muhasebe net kârı — yıpranma düşülmüş <span class="hnote">Resmî kâr rakamı budur; banka ve yatırımcı bunu sorar.</span></td><td class="m" data-o="M-netkar"></td><td class="s" data-o="S-netkar"></td><td class="d" data-o="D-netkar"></td><td class="p" data-o="P-netkar"></td></tr>
+        <tr class="res"><td class="lbl">Yatırım kaç ayda çıkar <span class="hnote">Cebe kalan parayla, yatırımın kendini ödeme süresi.</span></td><td class="m" data-o="M-geri"></td><td class="s" data-o="S-geri"></td><td class="d" data-o="D-geri"></td><td class="p" data-o="P-geri"></td></tr>
+        <tr class="res"><td class="lbl">Açılış için gereken toplam nakit <span class="hnote">Yatırım + ilk 3 ayın masrafı — kötü başlayan aylara tampon.</span></td><td class="m" data-o="M-nakitiht"></td><td class="s" data-o="S-nakitiht"></td><td class="d" data-o="D-nakitiht"></td><td class="p" data-o="P-nakitiht"></td></tr>
+          </tbody></table>
+      </div>
+    </div>
+
+    <div class="card rv d1" style="text-align:left;margin-top:26px">
+      <h3>Franchise gerçeği: Domino's bayisi cirosunun ne kadarını merkeze veriyor?</h3>
+      <p class="note" style="margin-top:8px;font-size:13.5px;color:#3d4a5c">Yaygın olarak yazılan "%9,5" veya "%12" rakamları eksik. Domino's'un kendi SEC kayıtlarından (2025 yıl sonu) hesaplanan gerçek tablo:</p>
+      <div style="overflow-x:auto;margin-top:12px">
+      <table class="hs" style="min-width:520px">
+        <tr><th>Kalem</th><th>Cironun %'si</th><th>Not</th></tr>
+        <tr><td>Royalty (isim hakkı)</td><td>5,50 %</td><td>Sözleşme oranı</td></tr>
+        <tr><td>Reklam fonu (ulusal + yerel)</td><td>6,00 %</td><td>"4%" diye yazılır ama yerel fonun 2 puanı ulusala aktarılır — 10-K'da net</td></tr>
+        <tr><td>Teknoloji + yazılım + çağrı merkezi</td><td>≈1,40 %</td><td>Dijital sipariş başına 0,375 $, PULSE lisansı, destek hattı ücreti…</td></tr>
+        <tr class="res"><td>NAKİT TOPLAM (fiili ödenen)</td><td>12,91 %</td><td>2023'te %12,46 idi — her yıl artıyor</td></tr>
+        <tr><td>+ Zorunlu malzeme alımındaki gizli marj</td><td>≈3,27 %</td><td>Hamuru başka yerden alamıyor ("üçüncü taraf tedarikçi yok"); kâr paylaşımı iadesi düşülmüş net rakam</td></tr>
+        <tr class="res hi"><td>GERÇEK TOPLAM</td><td>≈16,2 %</td><td>Kâr paylaşımına girmeyen bayide ≈%18</td></tr>
+      </table>
+      </div>
+      <div class="hexp" style="margin-top:14px"><b>Bunun anlamı:</b> ortalama bir Domino's şubesi yılda merkeze ≈225.000 $ ödüyor; o şubenin kendi kârı ise 139.000-202.000 $. Yani <b>marka, işletmecinin kazandığı kadar veya daha fazlasını çekiyor.</b> Dürüst olmak gerekirse bunun tamamı markanın kârı değil: reklam fonu (%5,84) gerçekten reklama harcanıyor. Markanın cebine kalan net pay ≈%10,3. Ama bayi açısından fark etmez — parayı her hâlükârda ödüyor. Bizim modelde bu kalem sıfır: hamuru makine kendisi yapıyor, kimseye isim hakkı ödemiyoruz, malzemeyi istediğimiz yerden alıyoruz.</div>
+      <div style="margin-top:12px;background:#fdf4e6;border-radius:10px;padding:12px 16px;font-size:13.5px;color:#7a5a12;line-height:1.55"><b>Türkiye'de tablo daha da ağır:</b> DP Eurasia'nın yıllık raporlarından hesaplandığında, Türkiye'deki bayilerin <b>kasa cirosunun ~%46-49'u</b> merkeze geri dönüyor (2016: %46,4 · 2017: %47,2 · 2019: %49,3 · 2021: %48,0 — ABD'de aynı hesap %42 veriyor). Bunun büyük kısmı isim hakkı değil, <b>zorunlu malzeme bedeli</b> — ama satın alma zorunluluğu var: yerel tedarikçi kullanma muafiyeti sözleşmede yalnızca Azerbaycan ve Gürcistan'a tanınmış, Türkiye şubelerinin çıkış yolu yok. Yani bayi ne hamurunu, ne sosunu, ne kutusunu istediği yerden alabiliyor.</div>
+      <p class="note" style="margin-top:10px">Kaynak: Domino's Pizza Inc FY2025 Form 10-K (SEC) ve Franchise Disclosure Document Item 6/8/19; DP Eurasia 2017 &amp; 2021 yıllık raporları. Türkiye'ye özel bayi oranı hiçbir resmî belgede açıklanmıyor; Ekonomist dergisi (Oca 2024) giriş bedeli 50.000 $ ve %12 birleşik kesinti yazıyor — bu gazetecilik verisi, resmî değil.</p>
+    </div>
+
+    <p class="note rv" style="margin-top:18px">Tüm gider tutarları <b>KDV hariç</b>, menü fiyatı <b>KDV dahil</b> girilir; hesap net hasılat üzerinden döner. Ay = 30,4 gün (7 gün açık). Varsayılanlar araştırma verili: asgari ücret işveren maliyeti ₺40.875 (ÇSGB 2026) · 25 cm (orta boy) pizza malzemesi ₺90 + paket ₺8 (Eyl 2026 toptan) · Domino's Türkiye 795 şube, franchise kesintisi ABD 2025 fiili %12,9 · platform komisyonları %30–40 bandı. Bu tablo <b>nokta bazlı birim ekonomisidir</b>; merkez mutfak yönetimi, Ar-Ge ve genel merkez giderleri dahil değildir. Model S ve M'de merkez hamur üretimi + ikmal lojistiği ayrı satırda yüklenmiştir.</p>
+  </div>
+</section>
+
+<!-- KURULUM SABLONLARI: YOL A / YOL B -->
+<section id="yollar" class="light center">
+  <div class="wrap">
+    <div class="eyebrow rv">Kurulum · İki Yol</div>
+    <h2 class="rv d1">Aynı dükkân, iki üretim çekirdeği:<br>Yol A hazır makine, Yol B kendi hattımız.</h2>
+    <p class="lead rv d2">İki şablon da aynı kabuğu kullanır: cepheye gömülü QR'lı teslim dolabı, sipariş kioskı ve 7/24 insansız akış. Fark üretim çekirdeğinde — <b>Yol A</b> kanıtlanmış hazır makineyle en düşük riskle açılır; <b>Yol B</b> robot kolu merkeze koyup hattı kendimiz kurar, teknolojinin mülkiyetini alır.</p>
+<style>
+#yollar .ybox{background:#fff;border:1px solid #dde5f0;border-radius:16px;margin-top:30px;text-align:left;box-shadow:0 10px 34px rgba(20,40,80,.07);overflow:hidden}
+#yollar .yhead{padding:18px 22px 6px}
+#yollar .ytag{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.08em;padding:4px 12px;border-radius:99px;margin-bottom:8px}
+#yollar .ya .ytag{background:rgba(23,138,86,.12);color:#178a56}
+#yollar .yb .ytag{background:rgba(26,73,184,.1);color:#1a49b8}
+#yollar .yhead h3{font-size:20px;color:#0f1726;margin:0 0 4px;letter-spacing:-.01em}
+#yollar .yhead p{font-size:13.5px;color:#68758a;line-height:1.55;margin:0}
+#yollar .ysvg{padding:10px 14px 0;overflow-x:auto}
+#yollar .ysvg svg{width:100%;min-width:480px;height:auto;display:block}
+#yollar table.yt{width:100%;border-collapse:collapse;font-size:13px;min-width:460px}
+#yollar .ytwrap{overflow-x:auto;padding:6px 14px 16px}
+#yollar table.yt th{padding:10px 12px;text-align:left;font-size:12px;font-weight:700;color:#fff;background:#243044}
+#yollar table.yt td{padding:9px 12px;border-top:1px solid #e8edf5;vertical-align:top;color:#3d4a5c;line-height:1.5;background:#fff}
+#yollar table.yt td:first-child{font-weight:700;color:#0f1726}
+#yollar table.yt td.f{white-space:nowrap;font-weight:700;color:#1a49b8}
+#yollar table.yt tr.top td{background:#f4f8ff;color:#1a3a7a;font-weight:800;border-top:2px solid #d5e2f8}
+#yollar .ynot{padding:0 22px 18px;font-size:12.5px;color:#8a94a2;line-height:1.55;text-align:left}
+#yollar .ykarar{margin-top:26px;background:#eaf0fc;border-radius:12px;padding:16px 18px;font-size:14px;color:#1a3a7a;line-height:1.6;text-align:left}
+#yollar .ykarar b{color:#1a49b8}
+#yollar .yctb tbody tr{background:transparent!important}
+#yollar .yctb tbody td{border-top:none;color:#22304a}
+
+#yollar .ygrid{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start}
+@media(max-width:980px){#yollar .ygrid{grid-template-columns:1fr}}
+#yollar .ysecpill{display:inline-flex;align-items:center;gap:6px;margin-top:10px;background:#f4f8ff;border:1px solid #d5e2f8;border-radius:99px;padding:6px 14px;font-size:12px;font-weight:700;color:#1a49b8;cursor:pointer}
+#yollar .ysecpill input{accent-color:#1a49b8;cursor:pointer}
+#yollar .yvid{padding:4px 14px 16px}
+#yollar .yvid iframe{width:100%;aspect-ratio:16/9;border:0;border-radius:10px;background:#000;display:block}
+#yollar .yvidnot{font-size:11.5px;color:#8a94a2;margin-top:6px;line-height:1.5;text-align:left}
+#yollar table.yt input{width:104px;font:inherit;font-size:12.5px;font-weight:700;color:#1a49b8;border:1px solid #dfe6f0;border-radius:8px;padding:5px 8px;background:#fff;text-align:right}
+#yollar .ysec-h{font-size:20px;font-weight:800;color:#0f1726;margin:38px 0 4px;text-align:left;letter-spacing:-.01em}
+#yollar .ysec-s{font-size:13px;color:#68758a;text-align:left;margin-bottom:4px;line-height:1.5}
+#yollar .yae{padding:4px 22px 18px;text-align:left}
+#yollar .yae h4{font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;margin:12px 0 6px;font-weight:800}
+#yollar .yae .art{color:#178a56}
+#yollar .yae .eks{color:#b3261e}
+#yollar .yae ul{margin:0;padding-left:18px;font-size:13px;line-height:1.65;color:#3d4a5c}
+#yollar .ytl{padding:4px 22px 20px;text-align:left}
+#yollar .ytlrow{display:grid;grid-template-columns:52px 1fr;gap:12px;padding:9px 0;border-top:1px solid #eef2f8;align-items:start}
+#yollar .ytlay{font-size:11px;font-weight:800;color:#fff;border-radius:8px;padding:5px 0;text-align:center;background:#243044}
+#yollar .ya .ytlay{background:#178a56}
+#yollar .yb .ytlay{background:#1a49b8}
+#yollar .ytltx{font-size:13px;line-height:1.55;color:#3d4a5c}
+#yollar .ytltx b{color:#0f1726}
+</style>
+
+    <div class="ygrid">
+    <!-- ============ YOL A ============ -->
+    <div class="ybox ya">
+      <div class="yhead">
+        <span class="ytag" style="background:#f6f0e8;color:#9a6b1f;border-color:#e4d3b4">YOL A · PASİF — BEKLEMEDE</span>
+        <h3>Hazır çekirdek: Let's Pizza GEN 2 + taşıyıcı robot kol</h3>
+        <p style="margin:6px 0 0;font-size:13px;color:#9a6b1f;font-weight:600">Neden pasif: sitelerinde yazdığı üzere malzemeler "önceden porsiyonlanmış paketlerle düzenli olarak Let's Pizza tarafından teslim edilir" — Türkiye'de sarf ağı yok, %3 ciro payıyla birleşince kalıcı bağımlılık demek. Kendi hattımız (Yol C) ana plan yapıldı; GEN 2 kapısı kapatılmadı, sarf bağımsızlığı yazılı garanti edilirse yeniden değerlendirilir.</p>
+        <p>Süreç (taban → sos → pişirme → kutu) kanıtlanmış hazır makinede döner; robot kol tek iş yapar: çıkan pizzayı alıp QR'lı dolaba yerleştirir. Hamur, merkez ikmalden fermente taban olarak gelir.</p>
+        <label class="ysecpill"><input type="radio" name="ymodep" value="A"> Maliyet hesabı bu yolla hesaplansın</label>
+      </div>
+      <div class="ysvg">
+      <svg viewBox="0 0 660 370" xmlns="http://www.w3.org/2000/svg" font-family="Inter,system-ui,sans-serif">
+        <rect x="18" y="18" width="624" height="300" fill="#f7f9fc" stroke="#243044" stroke-width="3" rx="4"/>
+        <text x="30" y="40" font-size="11" fill="#8a94a2" font-weight="700">≈10 m² (4,0 × 2,5 m) — Model M kabuğu · Model S'te aynı düzen 6 m²</text>
+        <!-- Lets Pizza -->
+        <rect x="40" y="60" width="200" height="130" fill="#fff6ec" stroke="#c2600f" stroke-width="2.5" rx="8"/>
+        <text x="60" y="105" font-size="13" font-weight="800" fill="#c2600f">LET'S PIZZA GEN 2</text>
+        <text x="60" y="123" font-size="10.5" fill="#7a5a12">198×200 cm · 90 taban dolum</text>
+        <text x="60" y="138" font-size="10.5" fill="#7a5a12">sos → pişir → kutula (&lt;3 dk)</text>
+        <circle cx="240" cy="160" r="6" fill="#c2600f"/>
+        <text x="152" y="180" font-size="9.5" fill="#c2600f" font-weight="700">ürün çıkışı</text>
+        <!-- robot kol -->
+        <circle cx="340" cy="200" r="95" fill="none" stroke="#1a49b8" stroke-dasharray="5 5" opacity=".45"/>
+        <circle cx="340" cy="200" r="26" fill="#1a49b8"/>
+        <text x="340" y="204" font-size="9.5" fill="#fff" text-anchor="middle" font-weight="800">KOL</text>
+        <text x="340" y="120" font-size="10.5" fill="#1a49b8" text-anchor="middle" font-weight="700">robot kol: makineden alır → dolaba koyar</text>
+        <!-- dolap -->
+        <rect x="380" y="288" width="150" height="42" fill="#eef4ff" stroke="#1a49b8" stroke-width="2.5" rx="6"/>
+        <text x="455" y="306" font-size="10.5" fill="#1a49b8" text-anchor="middle" font-weight="800">QR'LI TESLİM DOLABI</text>
+        <text x="455" y="320" font-size="9" fill="#68758a" text-anchor="middle">cepheye gömülü · 6-8 göz · ısıtmalı</text>
+        <!-- kiosk -->
+        <rect x="556" y="288" width="66" height="42" fill="#fff" stroke="#3f4a5c" stroke-width="2" rx="6"/>
+        <text x="589" y="306" font-size="9.5" fill="#3f4a5c" text-anchor="middle" font-weight="700">SİPARİŞ</text>
+        <text x="589" y="318" font-size="9.5" fill="#3f4a5c" text-anchor="middle" font-weight="700">KİOSK</text>
+        <!-- destek -->
+        <rect x="430" y="50" width="110" height="45" fill="#fff" stroke="#8a94a2" stroke-width="1.5" rx="6"/>
+        <text x="485" y="70" font-size="9.5" fill="#68758a" text-anchor="middle" font-weight="700">TEZGÂH + EVYE</text>
+        <text x="485" y="84" font-size="8.5" fill="#8a94a2" text-anchor="middle">su filtresi</text>
+        <rect x="560" y="50" width="62" height="70" fill="#fff" stroke="#8a94a2" stroke-width="1.5" rx="6"/>
+        <text x="591" y="82" font-size="9" fill="#68758a" text-anchor="middle" font-weight="700">BUZDOLABI</text>
+        <text x="591" y="95" font-size="8.5" fill="#8a94a2" text-anchor="middle">610 L</text>
+        <rect x="560" y="132" width="62" height="48" fill="#fff" stroke="#8a94a2" stroke-width="1.5" rx="6"/>
+        <text x="591" y="153" font-size="9" fill="#68758a" text-anchor="middle" font-weight="700">İÇECEK</text>
+        <text x="591" y="166" font-size="8.5" fill="#8a94a2" text-anchor="middle">kol erişiminde</text>
+        <rect x="560" y="192" width="62" height="36" fill="#fff" stroke="#8a94a2" stroke-width="1.5" rx="6"/>
+        <text x="591" y="207" font-size="8.5" fill="#68758a" text-anchor="middle" font-weight="700">UPS + AĞ</text>
+        <text x="591" y="219" font-size="8" fill="#8a94a2" text-anchor="middle">4G yedekli</text>
+        <!-- akis oklari -->
+        <defs><marker id="okA" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 z" fill="#1a49b8"/></marker></defs>
+        <path d="M246,162 Q290,175 316,192" fill="none" stroke="#1a49b8" stroke-width="2.2" marker-end="url(#okA)"/>
+        <path d="M352,224 Q400,258 435,286" fill="none" stroke="#1a49b8" stroke-width="2.2" marker-end="url(#okA)"/>
+        <path d="M455,332 L455,352" fill="none" stroke="#178a56" stroke-width="2.2" marker-end="url(#okA)"/>
+        <text x="470" y="350" font-size="10" fill="#178a56" font-weight="800">MÜŞTERİ / KURYE</text>
+      </svg>
+      </div>
+      <div class="ytwrap"><table class="yt">
+        <tr><th>Makine / kalem</th><th>₺ (Model M · düzenlenebilir)</th><th>Durum</th></tr>
+        <tr><td>Let's Pizza GEN 2</td><td class="f"><input data-ywk="robot" type="number" step="1000"></td><td>€30.000 fabrika teslim + nakliye/gümrük/KDV · kurucu teklifi masada (+%3 ciro IoT, 2 yıl garanti)</td></tr>
+        <tr><td>Robot kol + tutucu + montaj</td><td class="f"><input data-ywk="kol" type="number" step="1000"></td><td>JAKA Zu 7 / Dobot Nova 5 — Dobot'a mail gitti</td></tr>
+        <tr><td>Isıtmalı QR teslim dolabı</td><td class="f"><input data-ywk="dolap" type="number" step="1000"></td><td>Winnsen ile teknik görüşme sürüyor</td></tr>
+        <tr><td>Sipariş ekranı</td><td class="f"><input data-ywk="kiosk" type="number" step="1000"></td><td>cam arkası tablet</td></tr>
+        <tr><td>Yazılım entegrasyonu</td><td class="f"><input data-ywk="yazilim" type="number" step="1000"></td><td>dolap-makine-sipariş API bağlantısı</td></tr>
+        <tr><td>Destek ekipmanı</td><td class="f" data-ywd="A"></td><td>buzdolabı, içecek, kamera, klima, UPS, ağ, tezgâh, evye, POS — kalemleri maliyet tablosundaki kırılımda</td></tr>
+        <tr class="top"><td>Makine + ekipman toplamı</td><td class="f" data-ywt="A"></td><td>+ tadilat ₺353.000 + ilk stok ₺155.601 · rakamlar maliyet hesabıyla canlı bağlı</td></tr>
+      </table></div>
+      <div class="ynot"><b>Neden pilot için bu:</b> süreç riski sıfıra yakın — makine CE + TÜV + HACCP'li, sahada kanıtlı; biz yalnız taşıma ve teslim katmanını ekliyoruz. Açılış hızı: makine teslimatı + 4-6 hafta tadilat. Bedeli: ciroda %3 kalıcı kesinti ve çekirdek teknolojinin bize ait olmaması.</div>
+      <div class="yvid"><iframe src="https://www.youtube.com/embed/5Ij6T2q75Lo" title="Let's Pizza GEN 2 — süreç videosu" loading="lazy" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+      <div class="yvidnot">GEN 2 süreç videosu — kurucunun paylaştığı güncel akış: hazır fermente taban → sos → fırın → kutu. (Un+su yoğurma gösteren eski videolar önceki nesle ait; üretici revize edeceğini yazdı.)</div></div>
+    </div>
+
+    <!-- ============ YOL B ============ -->
+    <div class="ybox yb">
+      <div class="yhead">
+        <span class="ytag">YOL B · KENDİ HATTIMIZ — GEN 2 HEDEFİ</span>
+        <h3>Kol merkezli açık mutfak: 360° erişimli tek robot, çevresinde istasyonlar</h3>
+        <p>Nala Pizzaiola mimarisinin bizim parçalarla kurulmuş hâli: merkezdeki 7 eksenli kol; taban istasyonundan alır, presler, sos-peynir-malzeme istasyonundan geçirir, konveyör fırına verir, keser, kutular, dolaba koyar. Teknolojinin tamamı bizim mülkiyetimizde — %3 kesinti yok.</p>
+        <label class="ysecpill"><input type="radio" name="ymodep" value="B"> Maliyet hesabı bu yolla hesaplansın</label>
+      </div>
+      <div class="ysvg">
+      <svg viewBox="0 0 660 370" xmlns="http://www.w3.org/2000/svg" font-family="Inter,system-ui,sans-serif">
+        <rect x="18" y="18" width="624" height="300" fill="#f7f9fc" stroke="#243044" stroke-width="3" rx="4"/>
+        <text x="30" y="40" font-size="11" fill="#8a94a2" font-weight="700">≈10 m² (4,0 × 2,5 m) — istasyonlar kolun 360° erişim dairesinde</text>
+        <!-- kol merkez -->
+        <circle cx="330" cy="180" r="118" fill="none" stroke="#1a49b8" stroke-dasharray="5 5" opacity=".45"/>
+        <circle cx="330" cy="180" r="28" fill="#1a49b8"/>
+        <text x="330" y="184" font-size="9.5" fill="#fff" text-anchor="middle" font-weight="800">KOL</text>
+        <text x="330" y="220" font-size="9" fill="#1a49b8" text-anchor="middle" font-weight="700">7 eksen · 360° erişim</text>
+        <!-- istasyonlar sol -->
+        <rect x="36" y="56" width="130" height="52" fill="#eef4ff" stroke="#1a49b8" stroke-width="2" rx="6"/>
+        <text x="101" y="76" font-size="9.5" fill="#1a49b8" text-anchor="middle" font-weight="800">① TABAN İSTASYONU</text>
+        <text x="101" y="90" font-size="8.5" fill="#68758a" text-anchor="middle">fermente taban · +2/+6°C</text>
+        <rect x="36" y="126" width="130" height="52" fill="#eef4ff" stroke="#1a49b8" stroke-width="2" rx="6"/>
+        <text x="101" y="146" font-size="9.5" fill="#1a49b8" text-anchor="middle" font-weight="800">② HAMUR PRESİ</text>
+        <text x="101" y="160" font-size="8.5" fill="#68758a" text-anchor="middle">N31 tipi · topu taban yapar</text>
+        <rect x="36" y="196" width="130" height="52" fill="#eef4ff" stroke="#1a49b8" stroke-width="2" rx="6"/>
+        <text x="101" y="216" font-size="9.5" fill="#1a49b8" text-anchor="middle" font-weight="800">③ SOS + TOPPING</text>
+        <text x="101" y="230" font-size="8.5" fill="#68758a" text-anchor="middle">sos, peynir, malzeme serme</text>
+        <!-- istasyonlar sag -->
+        <rect x="474" y="56" width="148" height="58" fill="#fff6ec" stroke="#c2600f" stroke-width="2" rx="6"/>
+        <text x="548" y="78" font-size="9.5" fill="#c2600f" text-anchor="middle" font-weight="800">④ KONVEYÖR FIRIN</text>
+        <text x="548" y="92" font-size="8.5" fill="#7a5a12" text-anchor="middle">bant girişi kol tarafında</text>
+        <rect x="474" y="130" width="148" height="52" fill="#eef4ff" stroke="#1a49b8" stroke-width="2" rx="6"/>
+        <text x="548" y="150" font-size="9.5" fill="#1a49b8" text-anchor="middle" font-weight="800">⑤ KESME + KUTULAMA</text>
+        <text x="548" y="164" font-size="8.5" fill="#68758a" text-anchor="middle">özel imalat istasyon</text>
+        <rect x="474" y="198" width="148" height="42" fill="#fff" stroke="#8a94a2" stroke-width="1.5" rx="6"/>
+        <text x="548" y="215" font-size="9" fill="#68758a" text-anchor="middle" font-weight="700">BUZDOLABI + İÇECEK</text>
+        <text x="548" y="228" font-size="8.5" fill="#8a94a2" text-anchor="middle">UPS + ağ rafı yanında</text>
+        <!-- dolap + kiosk -->
+        <rect x="380" y="288" width="150" height="42" fill="#eef4ff" stroke="#1a49b8" stroke-width="2.5" rx="6"/>
+        <text x="455" y="306" font-size="10.5" fill="#1a49b8" text-anchor="middle" font-weight="800">⑥ QR'LI TESLİM DOLABI</text>
+        <text x="455" y="320" font-size="9" fill="#68758a" text-anchor="middle">cepheye gömülü · ısıtmalı</text>
+        <rect x="556" y="288" width="66" height="42" fill="#fff" stroke="#3f4a5c" stroke-width="2" rx="6"/>
+        <text x="589" y="306" font-size="9.5" fill="#3f4a5c" text-anchor="middle" font-weight="700">SİPARİŞ</text>
+        <text x="589" y="318" font-size="9.5" fill="#3f4a5c" text-anchor="middle" font-weight="700">KİOSK</text>
+        <!-- evye -->
+        <rect x="60" y="272" width="100" height="40" fill="#fff" stroke="#8a94a2" stroke-width="1.5" rx="6"/>
+        <text x="110" y="289" font-size="9" fill="#68758a" text-anchor="middle" font-weight="700">EVYE + TEZGÂH</text>
+        <text x="110" y="302" font-size="8.5" fill="#8a94a2" text-anchor="middle">CIP temizlik suyu</text>
+        <!-- akis -->
+        <defs><marker id="okB" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 z" fill="#1a49b8"/></marker></defs>
+        <path d="M170,82 Q240,100 302,158" fill="none" stroke="#1a49b8" stroke-width="1.8" opacity=".7" marker-end="url(#okB)"/>
+        <path d="M170,152 Q230,165 300,176" fill="none" stroke="#1a49b8" stroke-width="1.8" opacity=".7" marker-end="url(#okB)"/>
+        <path d="M170,222 Q235,210 302,192" fill="none" stroke="#1a49b8" stroke-width="1.8" opacity=".7" marker-end="url(#okB)"/>
+        <path d="M358,168 Q420,130 470,95" fill="none" stroke="#c2600f" stroke-width="1.8" opacity=".8" marker-end="url(#okB)"/>
+        <path d="M470,156 Q420,166 360,176" fill="none" stroke="#1a49b8" stroke-width="1.8" opacity=".7" marker-end="url(#okB)"/>
+        <path d="M352,204 Q400,250 435,286" fill="none" stroke="#1a49b8" stroke-width="2.2" marker-end="url(#okB)"/>
+        <path d="M455,332 L455,352" fill="none" stroke="#178a56" stroke-width="2.2" marker-end="url(#okB)"/>
+        <text x="470" y="350" font-size="10" fill="#178a56" font-weight="800">MÜŞTERİ / KURYE</text>
+      </svg>
+      </div>
+      <div class="ytwrap"><table class="yt">
+        <tr><th>Makine / kalem</th><th>₺ (Model M · düzenlenebilir)</th><th>Durum</th></tr>
+        <tr><td>Robot kol (7 eksen) + tutucu + ray</td><td class="f"><input data-ywk="kol" type="number" step="1000"></td><td>JAKA Zu 7 / Dobot Nova 5 — iki yolda da aynı kol</td></tr>
+        <tr><td>Soğutmalı taban istasyonu</td><td class="f"><input data-ywk="btaban" type="number" step="1000"></td><td>fermente tabanlar +2/+6°C kasetlerde</td></tr>
+        <tr><td>Hamur presi (N31 tipi)</td><td class="f"><input data-ywk="bpres" type="number" step="1000"></td><td>Chanda'ya mail 12 Ağu — teklif bekleniyor</td></tr>
+        <tr><td>Sos + peynir + topping istasyonu</td><td class="f"><input data-ywk="btop" type="number" step="1000"></td><td>Juyou'ya mail 12 Ağu — teklif bekleniyor</td></tr>
+        <tr><td>Konveyörlü pizza fırını</td><td class="f"><input data-ywk="bfirin" type="number" step="1000"></td><td>Lincoln/XLT muadili ya da yerli — araştırılacak</td></tr>
+        <tr><td>Kesme + kutulama istasyonu</td><td class="f"><input data-ywk="bkes" type="number" step="1000"></td><td>özel imalat — tasarım bizde (Torinoarch)</td></tr>
+        <tr><td>Hat yazılımı (görüş + kontrol + API)</td><td class="f"><input data-ywk="byaz" type="number" step="1000"></td><td>geliştirme bütçesi</td></tr>
+        <tr><td>Isıtmalı QR teslim dolabı</td><td class="f"><input data-ywk="dolap" type="number" step="1000"></td><td>Yol A ile aynı kalem</td></tr>
+        <tr><td>Sipariş ekranı</td><td class="f"><input data-ywk="kiosk" type="number" step="1000"></td><td>Yol A ile aynı kalem</td></tr>
+        <tr><td>Destek ekipmanı</td><td class="f" data-ywd="B"></td><td>buzdolabı, içecek, kamera, klima, UPS, ağ, tezgâh, evye, POS</td></tr>
+        <tr class="top"><td>Makine + ekipman toplamı</td><td class="f" data-ywt="B"></td><td>+ tadilat ve ilk stok Yol A ile aynı (~₺509 bin) · teklifler geldikçe rakamları güncelle</td></tr>
+      </table></div>
+      <div class="ynot"><b>Neden GEN 2 hedefi:</b> parasal bant Yol A ile benzer; asıl fark 6-12 aylık geliştirme süresi ve entegrasyon riski. Karşılığında: %3 ciro kesintisi yok, hamur süreci dahil tüm teknoloji bizim, ve ortaya çıkan hat kendisi <b>satılabilir bir AUTOKITCH ürünü</b> olur — nokta işletmecisinden makine üreticisine geçiş bileti.</div>
+      <div class="yvid"><video controls preload="metadata" src="../../assets/pazzi-valdeurope.mp4" style="width:100%;border-radius:10px;background:#000;display:block"></video>
+      <div class="yvidnot">Pazzi Val d'Europe — 3 robot kollu pizzeria çalışırken (arşiv görüntüsü). 12,2 M € Ar-Ge'nin ürünü; iflastan sonra marka bugün Madrid'de tek şubeyle yaşıyor. Yol B'nin hem "yapılabilir" kanıtı hem sadelik uyarısı.</div></div>
+      <div class="yvid"><iframe src="https://player.vimeo.com/video/717401541" title="Nala Robotics — Pizzaiola" loading="lazy" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+      <div class="yvidnot">Nala Pizzaiola — kol merkezli mutfağın çalışan örneği (Vimeo). Yol B, bu mimarinin bizim parçalarla kurulmuş hâlidir.</div></div>
+    </div>
+
+    </div><!-- /ygrid -->
+
+    <div class="ybox" style="margin-top:26px;border:2px solid #1d7a4f">
+      <div class="yhead">
+        <span class="ytag" style="background:#eaf6ef;color:#1d7a4f;border-color:#bfe3cd">YOL C · ANA PLAN — İSTASYON İSTASYON KENDİ HATTIMIZ</span>
+        <h3>Tek dükkân içinde çözülen tam hat — merkez mutfaksız, bir kişilik</h3>
+        <p>Canlı tasarım defteri artık kendi sayfasında: 3B dükkan modeli, makine, istasyonlar, teslim dolabı, sipariş ekranı, kod ünitesi ve SERVICE; her birinde çalışma senaryosu, özellikler, teknik resimler, tedarikçiler ve açık konular.</p>
+        <p style="margin-top:10px"><a href="../hat/" style="display:inline-block;padding:10px 18px;background:#1d7a4f;color:#fff;border-radius:999px;font-weight:700;text-decoration:none">HAT · Yol C sayfasına git →</a></p>
+      </div>
+    </div>
+</section>
+
+<button id="topbtn" aria-label="Yukarı çık" onclick="window.scrollTo({top:0,behavior:'smooth'});document.body.scrollTo({top:0,behavior:'smooth'});document.documentElement.scrollTo({top:0,behavior:'smooth'})">↑</button>
+<footer>
+  <div class="disc">Görseller yapay zeka ile üretilmiş referans konseptlerdir; harici videolar üçüncü taraflara aittir.</div>
+  AUTOKITCH · Tam Otonom İnsansız Mutfak · Kemal — Torinoarch Studio · 2026
+</footer>
+
+<script>
+  const nav=document.getElementById('nav');
+  const onScroll=()=>nav.classList.toggle('solid',window.scrollY>40);
+  onScroll();window.addEventListener('scroll',onScroll,{passive:true});
+
+  const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.14});
+  const io0=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io0.unobserve(e.target);}});},{threshold:0});
+  const assignRv=()=>{document.querySelectorAll('.rv:not(.in)').forEach(el=>{
+    if(el.getBoundingClientRect().height > window.innerHeight*0.6){ io.unobserve(el); io0.observe(el); }
+    else { io.observe(el); }
+  });};
+  assignRv();
+  window.addEventListener('load', assignRv);
+  setTimeout(assignRv, 1500); setTimeout(assignRv, 4000);
+  /* emniyet: hangi kapsayici kaydirilirsa kaydirilsin, ekrana giren .rv acilir */
+  const revFallback=()=>{document.querySelectorAll('.rv:not(.in)').forEach(el=>{
+    const b=el.getBoundingClientRect();
+    if(b.top < window.innerHeight && b.bottom > 0 && b.height > 0) el.classList.add('in');
+  });};
+  ['scroll','touchmove','resize'].forEach(ev=>window.addEventListener(ev, revFallback, {passive:true, capture:true}));
+  setInterval(revFallback, 800);
+
+  const fmt=(n)=>(Math.round(n*10)/10).toString().replace('.',',');
+  const countUp=(el)=>{const target=parseFloat(el.dataset.count),pre=el.dataset.prefix||'',suf=el.dataset.suffix||'',dur=1300,t0=performance.now();
+    const tick=(t)=>{let p=Math.min(1,(t-t0)/dur);p=1-Math.pow(1-p,3);el.textContent=pre+fmt(target*p)+suf;if(p<1)requestAnimationFrame(tick);};requestAnimationFrame(tick);};
+  const ioC=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){countUp(e.target);ioC.unobserve(e.target);}});},{threshold:.6});
+  document.querySelectorAll('[data-count]').forEach(el=>ioC.observe(el));
+
+  const ioB=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.querySelectorAll('.col').forEach(c=>c.style.height=c.dataset.h+'px');ioB.unobserve(e.target);}});},{threshold:.4});
+  document.querySelectorAll('.chart').forEach(c=>ioB.observe(c));
+
+  const ioE=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.querySelectorAll('.ef-bar').forEach(b=>b.style.width=b.dataset.w);ioE.unobserve(e.target);}});},{threshold:.4});
+  const ef=document.querySelector('.effort');if(ef)ioE.observe(ef);
+
+  // Icindekiler aktif-bolum takibi
+  var stoc=document.getElementById('stoc');
+  if(stoc){
+    var tlinks=[].slice.call(stoc.querySelectorAll('a'));
+    var tsecs=tlinks.map(function(a){return document.querySelector(a.getAttribute('href'));});
+    var ioT=new IntersectionObserver(function(es){es.forEach(function(e){
+      if(e.isIntersecting){var id='#'+e.target.id;
+        tlinks.forEach(function(a){a.classList.toggle('active',a.getAttribute('href')===id);});}
+    });},{rootMargin:'-25% 0px -65% 0px'});
+    tsecs.forEach(function(s){if(s)ioT.observe(s);});
+  }
+
+  /* Icindekiler: sadece baslangicta gorunur, asagi inince kaybolur */
+  var stoc=document.getElementById('stoc');
+  if(stoc){
+    stoc.style.transition='opacity .35s';
+    var stocT=function(){if(!window.matchMedia('(min-width:1060px)').matches){stoc.style.opacity='1';stoc.style.pointerEvents='auto';return;}var hide=window.scrollY>window.innerHeight*0.75;stoc.style.opacity=hide?'0':'1';stoc.style.pointerEvents=hide?'none':'auto';};
+    window.addEventListener('scroll',stocT,{passive:true});stocT();
+  }
+
+
+  /* ===== Maliyet hesabi tablosu v2 ===== */
+  var HDEF = {
+    S: {pers:0, maas:45000, kira:25000, elek:12000, su:3500, muh:4000, sis:2500, bakim:3.5, ikmal:7000, zorunlu:3000, roy:0,    yan:20, ick:60,  yat:3504269,  omur:7, vergi:25, malz:90, kutu:8,  fiyat:190, kdv:10, ppay:90, pkom:35, adet:55, isim:0},
+    M: {pers:1, maas:40875, kira:60000, elek:14000, su:4500, muh:5000, sis:2500, bakim:3.5, ikmal:5000, zorunlu:3500, roy:0,    yan:20, ick:60,  yat:3397169,  omur:7, vergi:25, malz:90, kutu:8,  fiyat:190, kdv:10, ppay:90, pkom:35, adet:70, isim:0},
+    D: {pers:4,   maas:45000, kira:150000,elek:32000, su:7000, muh:8000, sis:5000, bakim:2,   ikmal:0,    zorunlu:6000, roy:12.9, yan:30, ick:90,  yat:10000000, omur:7, vergi:25, malz:88, kutu:8,  fiyat:190, kdv:10, ppay:55, pkom:22, adet:200, isim:1000000},
+    P: {pers:2,   maas:40875, kira:95000, elek:18000, su:5000, muh:5000, sis:1500, bakim:2,   ikmal:0,    zorunlu:3000, roy:0,    yan:15, ick:70,  yat:1800000,  omur:7, vergi:25, malz:94, kutu:8,  fiyat:230, kdv:10, ppay:85, pkom:35, adet:50, isim:0}
+  };
+  /* PIDE varsayilanlari — rakip zincir: Usta Pideci (TAB Gida), esnaf: mahalle pideci.
+     Usta Pideci taban 230 TL -> %22 komisyonla platform listesi ~295 TL (Getir'de gorulen). */
+  var HDEFP = {
+    S: {pers:0, maas:45000, kira:25000, elek:12000, su:3500, muh:4000, sis:2500, bakim:3.5, ikmal:7000, zorunlu:3000, roy:0, yan:25, ick:60, yat:3504269, omur:7, vergi:25, malz:60, kutu:8, fiyat:180, kdv:10, ppay:90, pkom:35, adet:55, isim:0},
+    M: {pers:1, maas:40875, kira:60000, elek:14000, su:4500, muh:5000, sis:2500, bakim:3.5, ikmal:5000, zorunlu:3500, roy:0, yan:25, ick:60, yat:3397169, omur:7, vergi:25, malz:60, kutu:8, fiyat:180, kdv:10, ppay:90, pkom:35, adet:70, isim:0},
+    D: {pers:4, maas:45000, kira:120000, elek:25000, su:6000, muh:8000, sis:5000, bakim:2, ikmal:0, zorunlu:6000, roy:9, yan:60, ick:90, yat:8000000, omur:7, vergi:25, malz:54, kutu:8, fiyat:230, kdv:10, ppay:60, pkom:22, adet:150, isim:7000000},
+    P: {pers:3, maas:40875, kira:70000, elek:16000, su:5000, muh:5000, sis:1500, bakim:2, ikmal:0, zorunlu:3000, roy:0, yan:15, ick:40, yat:2500000, omur:7, vergi:25, malz:72, kutu:8, fiyat:220, kdv:10, ppay:70, pkom:35, adet:60, isim:0}
+  };
+  /* LAHMACUN varsayilanlari (12 Eyl 2026) — isletme varsayimlari pide ile ayni; farkli olan malzeme, ambalaj, fiyat, adet.
+     Malzeme: 55 g dana kiyma x 690 TL/kg (kasap toptan; UKON karkas 593, ATB kol 540-600) = 38 + un/sebze/yag ~3,3 + fire = 42 TL.
+     Ambalaj: kagit + poset 5 TL. Fiyat: Yemeksepeti'nde Pidem lahmacun menusu (2 adet + kucuk kola) 430 TL -> tek ~180;
+     esnaf pideci YS 220 (Kemal, 12 Eyl). Taban 115 -> %35 komisyonla liste ~177. Usta Pideci lahmacun fiyati dogrulanmadi. */
+  var HDEFL = {
+    S: {pers:0, maas:45000, kira:25000, elek:12000, su:3500, muh:4000, sis:2500, bakim:3.5, ikmal:7000, zorunlu:3000, roy:0, yan:25, ick:60, yat:3504269, omur:7, vergi:25, malz:42, kutu:5, fiyat:115, kdv:10, ppay:90, pkom:35, adet:80, isim:0},
+    M: {pers:1, maas:40875, kira:60000, elek:14000, su:4500, muh:5000, sis:2500, bakim:3.5, ikmal:5000, zorunlu:3500, roy:0, yan:25, ick:60, yat:3397169, omur:7, vergi:25, malz:42, kutu:5, fiyat:115, kdv:10, ppay:90, pkom:35, adet:100, isim:0},
+    D: {pers:4, maas:45000, kira:120000, elek:25000, su:6000, muh:8000, sis:5000, bakim:2, ikmal:0, zorunlu:6000, roy:9, yan:60, ick:90, yat:8000000, omur:7, vergi:25, malz:38, kutu:5, fiyat:140, kdv:10, ppay:60, pkom:22, adet:150, isim:7000000},
+    P: {pers:3, maas:40875, kira:70000, elek:16000, su:5000, muh:5000, sis:1500, bakim:2, ikmal:0, zorunlu:3000, roy:0, yan:15, ick:40, yat:2500000, omur:7, vergi:25, malz:46, kutu:5, fiyat:145, kdv:10, ppay:70, pkom:35, adet:200, isim:0}
+  };
+  /* kisi kisi personel maliyeti (p1..p6): doluysa o kolonda pers x maas yerine toplamlari kullanilir */
+  var AK_PKISI = ['p1','p2','p3','p4','p5','p6'];
+  [HDEF, HDEFP, HDEFL].forEach(function(o){ ['S','M','D','P'].forEach(function(c){ AK_PKISI.forEach(function(k){ o[c][k] = 0; }); }); });
+  function akKisiler(v){ return AK_PKISI.map(function(k){ return v[k] || 0; }).filter(function(x){ return x > 0; }); }
+  var HPOS = 0.03, HGUN = 30.4, HCOLS = ['S','M','D','P'];
+  var AK_DOMURUN = 'pizza';   /* DOM su an hangi urunu gosteriyor */
+  function akUrunNorm(p){ return (p === 'pide' || p === 'lahmacun') ? p : 'pizza'; }
+  function akUrun(){ return akUrunNorm(AKFL && AKFL.urun); }
+  function akHKey(){ var u = akUrun(); return u === 'pide' ? 'ak_hesap_pide_v1' : (u === 'lahmacun' ? 'ak_hesap_lahm_v1' : 'ak_hesap_v3'); }
+  function akHDEF(){ var u = akUrun(); return u === 'pide' ? HDEFP : (u === 'lahmacun' ? HDEFL : HDEF); }
+  var AK_GEN = {pizza:'pizzanın', pide:'pidenin', lahmacun:'lahmacunun'};
+  /* Metin degisimi: her urun icin ayni sirada kelime listesi; DOM'daki urunden hedefe cevrilir.
+     Uzun kelime once degistirilir ki "lahmacunu", "lahmacunun"un icinde yakalanmasin. */
+  var AK_KELIME = {
+    pizza:    ["Pizzayı","PİZZANIN","PİZZAYA","PİZZADAN","pizzacısı","pizzacı","Pizzanın","pizzanın","pizzayı","pizzaya","pizzadan","Pizza","pizza","Domino's"],
+    pide:     ["Pideyi","PİDENİN","PİDEYE","PİDEDEN","pidecisi","pideci","Pidenin","pidenin","pideyi","pideye","pideden","Pide","pide","rakip zincir"],
+    lahmacun: ["Lahmacunu","LAHMACUNUN","LAHMACUNA","LAHMACUNDAN","lahmacuncusu","lahmacuncu","Lahmacunun","lahmacunun","lahmacunu","lahmacuna","lahmacundan","Lahmacun","lahmacun","rakip zincir"]
+  };
+  function akUrunText(p){
+    var from = AK_DOMURUN, to = akUrunNorm(p);
+    if(from === to) return;
+    var a = AK_KELIME[from], b = AK_KELIME[to], MAP = [];
+    for(var i = 0; i < a.length; i++){ if(a[i] !== b[i]) MAP.push([a[i], b[i]]); }
+    MAP.sort(function(x, y){ return y[0].length - x[0].length; });
+    var root = document.getElementById('hesap');
+    if(!root) return;
+    var w = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null), n;
+    while((n = w.nextNode())){
+      if(n.parentNode && n.parentNode.closest && n.parentNode.closest('[data-nosw]')) continue;
+      var s = n.nodeValue;
+      if(!s || s.length < 4) continue;
+      for(var k = 0; k < MAP.length; k++){ if(s.indexOf(MAP[k][0]) !== -1) s = s.split(MAP[k][0]).join(MAP[k][1]); }
+      if(s !== n.nodeValue) n.nodeValue = s;
+    }
+    document.querySelectorAll('#hesap thead th.d').forEach(function(th){
+      var tw = document.createTreeWalker(th, NodeFilter.SHOW_TEXT, null), x;
+      while((x = tw.nextNode())){
+        var v = (x.nodeValue || '').trim();
+        if(v && v !== 'şube'){ x.nodeValue = to === 'pizza' ? "Domino's" : 'Usta Pideci'; break; }
+      }
+    });
+  }
+  function akPillSync(){
+    var u = akUrun();
+    document.querySelectorAll('.upill').forEach(function(b){ b.classList.toggle('on', b.dataset.up === u); });
+  }
+  function akUrunApplyDom(p){
+    p = akUrunNorm(p);
+    if(AK_DOMURUN !== p){ akUrunText(p); AK_DOMURUN = p; }
+    akPillSync();
+    var saved = null; try{ saved = JSON.parse(localStorage.getItem(akHKey())); }catch(e){}
+    HCOLS.forEach(function(c){ hfill(c, (saved && saved[c]) || akHDEF()[c]); hcalc(c); });
+    if(window.hsen) hsen();
+    if(window.rkBuild) rkBuild();
+  }
+  function akUrunSet(p){
+    p = akUrunNorm(p);
+    if(p === akUrun()) return;
+    hsave();                                   /* mevcut urunun degerleri kendi anahtarina */
+    AKFL.urun = p;
+    try{ localStorage.setItem('ak_flags_v1', JSON.stringify(AKFL)); }catch(e){}
+    akUrunApplyDom(p);
+    var f = document.querySelector('#hesap input[data-c]');
+    if(f) f.dispatchEvent(new Event('input', {bubbles:true}));   /* buluta itilsin */
+  }
+  /* Adet tek ve ortaktir (hread her kolona ayni degeri verir) — bu sayede 1 pizza maliyeti
+     ile aylik is hesabi ayni hacim tabaninda calisir. */
+  var AKFL = (function(){ var f={}; try{ f = JSON.parse(localStorage.getItem('ak_flags_v1')) || {}; }catch(e){}
+    return {amort: f.amort===0?0:1, kdv: f.kdv===0?0:1, gv: f.gv===1?1:0, plat: f.plat===0?0:1, ymode: f.ymode==='B'?'B':'A'}; })();
+  function hfmt(n){ return Number.isFinite(n) ? Math.round(n).toLocaleString('tr-TR') : '—'; }
+  function hnum(v){ v = String(v == null ? '' : v).trim(); if(!v) return 0;
+    if(/^\d{1,3}(\.\d{3})+$/.test(v)) return parseFloat(v.replace(/\./g, '')) || 0;
+    return parseFloat(v.replace(',', '.')) || 0; }
+  var AK_PARA_K = ['yat','kira','maas','elek','su','muh','sis','ikmal','zorunlu','p1','p2','p3','p4','p5','p6'];
+  function hread(c){ var o={}; document.querySelectorAll('#hesap input[data-c="'+c+'"]').forEach(function(i){ o[i.dataset.k]=hnum(i.value); });
+    return o; }
+  function hset(id,html,cls){ var el=document.querySelector('#hesap [data-o="'+id+'"]'); if(el){ el.innerHTML=html; el.classList.remove('pos','neg'); if(cls) el.classList.add(cls); } }
+  function hmodel(v, adetOverride){
+    var adet = (adetOverride === undefined) ? v.adet : adetOverride;
+    var kdvK = 1 + (v.kdv/100);
+    var netFiyat = v.fiyat / kdvK;
+    var kisiler  = akKisiler(v);
+    var personel = kisiler.length ? kisiler.reduce(function(a, b){ return a + b; }, 0) : v.pers * v.maas;
+    var bakimTL  = v.yat * (v.bakim/100) / 12;
+    var sabit = personel + v.kira + v.elek + v.su + v.muh + v.sis + bakimTL + v.ikmal + v.zorunlu;
+
+    /* kesintiler: platform komisyonu yalniz platform satisina, POS yalniz kapidan satisa */
+    var mPpay      = (AKFL && AKFL.plat === 0) ? 0 : v.ppay;
+    var platformTL = v.fiyat * (v.pkom/100) * (mPpay/100);
+    var posTL      = v.fiyat * HPOS * (1 - mPpay/100);
+    var royTL      = netFiyat * (v.roy/100);
+    var komTL      = platformTL + posTL;
+    var degisken   = v.malz + v.kutu + komTL + royTL;
+    var marj       = netFiyat - degisken;
+
+    var aylikAdet = adet * HGUN;
+    var ciro      = aylikAdet * v.fiyat;
+    var netHas    = aylikAdet * netFiyat;
+    /* odenecek KDV: satis KDV'si - alislarda odenen KDV (malzeme %10, ambalaj+giderler %20 varsayimi) */
+    var kdvSatis  = ciro - netHas;
+    var kdvAlis   = aylikAdet * (v.malz*0.10 + v.kutu*0.20) + (v.elek+v.su+v.sis+v.muh+bakimTL)*0.20;
+    var kdvOdenecek = Math.max(0, kdvSatis - kdvAlis);
+
+    var nakitKar  = aylikAdet*marj - sabit;
+    var amort     = v.omur > 0 ? v.yat/(v.omur*12) : 0;
+    var vergiOnce = nakitKar - amort;
+    var vergiTL   = vergiOnce > 0 ? vergiOnce*(v.vergi/100) : 0;
+    var netKar    = vergiOnce - vergiTL;
+    var serbest   = nakitKar - vergiTL;
+
+    var birim = aylikAdet > 0 ? (sabit/aylikAdet + degisken) : NaN;
+    /* basabas menu fiyati: P*[1/(1+kdv) - k - roy/(1+kdv)] = sabitBirim + malz + kutu */
+    var kOran = (v.pkom/100)*(v.ppay/100) + HPOS*(1 - v.ppay/100);
+    var payda = 1/kdvK - kOran - (v.roy/100)/kdvK;
+    var minf  = (aylikAdet > 0 && payda > 0) ? (sabit/aylikAdet + v.malz + v.kutu)/payda : NaN;
+    var bb    = marj > 0 ? sabit/(HGUN*marj) : NaN;
+    var bbtam = marj > 0 ? (sabit+amort)/(HGUN*marj) : NaN;
+    var geri  = serbest > 0 ? v.yat/serbest : NaN;
+
+    /* maliyet-bazli kesintiler: matrah = uretim maliyeti (sabit payi + malzeme), fiyat girilmez */
+    var cSabitPay = aylikAdet > 0 ? sabit/aylikAdet : 0;
+    var cUretim  = cSabitPay + v.malz + v.kutu;
+    var ePpay = (AKFL && AKFL.plat === 0) ? 0 : v.ppay;
+    /* KANAL FIYATLAMASI: platform acikken liste fiyati komisyonu karsilayacak sekilde yukselir,
+       boylece komisyon dusuldukten sonra elimize taban fiyat kalir. */
+    var pOran   = Math.min(0.9, (v.pkom || 0) / 100);
+    var pFiyat  = (ePpay > 0) ? v.fiyat / (1 - pOran) : v.fiyat;   /* platformdaki liste fiyati */
+    var pPay    = ePpay / 100;
+    var cSatis  = pPay * pFiyat + (1 - pPay) * v.fiyat;            /* harmanlanmis gercek satis fiyati */
+    var cMatrahK = cSatis;
+    var cPlat = pFiyat * pOran * pPay;
+    var cPos  = v.fiyat * HPOS * (1 - pPay);
+    var cRoy  = (cSatis / kdvK) * (v.roy/100);
+    var cKes  = cPlat + cPos + cRoy;
+    var cKdvAlisPP = v.malz*0.10 + v.kutu*0.20 + (aylikAdet > 0 ? (v.elek+v.su+v.sis+v.muh+bakimTL)*0.20/aylikAdet : 0);
+    var cKdvS = cMatrahK - (cMatrahK / kdvK);
+    var cKdv  = Math.max(0, cKdvS - cKdvAlisPP);
+    return {personel:personel, bakimTL:bakimTL, sabit:sabit, netFiyat:netFiyat,
+            platformTL:platformTL, posTL:posTL, royTL:royTL, komTL:komTL,
+            degisken:degisken, marj:marj, aylikAdet:aylikAdet, adet:adet,
+            ciro:ciro, netHas:netHas, kdvOdenecek:kdvOdenecek, kdvAlis:kdvAlis,
+            nakitKar:nakitKar, amort:amort, vergiOnce:vergiOnce, vergiTL:vergiTL,
+            netKar:netKar, serbest:serbest, birim:birim, minf:minf,
+            bb:bb, bbtam:bbtam, geri:geri,
+            cUretim:cUretim, cSabitPay:cSabitPay, cMatrahK:cMatrahK, pFiyat:pFiyat, cSatis:cSatis, ePpay:ePpay, cPlat:cPlat, cPos:cPos, cRoy:cRoy, cKes:cKes, cKdv:cKdv, cKdvS:cKdvS, cKdvA:cKdvAlisPP, v:v};
+  }
+  function hcalc(c){
+    var v = hread(c);
+    var R = hmodel(v);
+    var personel=R.personel, bakimTL=R.bakimTL, sabit=R.sabit, komTL=R.komTL, platformTL=R.platformTL, posTL=R.posTL,
+        degisken=R.degisken, aylikAdet=R.aylikAdet, ciro=R.ciro, netHas=R.netHas, kdvOdenecek=R.kdvOdenecek,
+        nakitKar=R.nakitKar, amort=R.amort, vergiOnce=R.vergiOnce, vergiTL=R.vergiTL, netKar=R.netKar, kdvAlis=R.kdvAlis,
+        birim=R.birim, minf=R.minf, bb=R.bb, bbtam=R.bbtam, geri=R.geri;
+    var kisiler = akKisiler(v);
+    hset(c+'-pers', kisiler.length
+      ? kisiler.length+' kişi: '+kisiler.map(hfmt).join(' + ')+' = <b>'+hfmt(personel)+' TL</b>'
+      : v.pers+' × '+hfmt(v.maas)+' = <b>'+hfmt(personel)+' TL</b>');
+    document.querySelectorAll('#hesap input[data-c="'+c+'"][data-k="pers"], #hesap input[data-c="'+c+'"][data-k="maas"]').forEach(function(i){
+      i.closest('td').style.opacity = kisiler.length ? '.4' : ''; });
+    hset(c+'-bakimtl', hfmt(bakimTL)+' TL');
+    hset(c+'-sabit', '<b>'+hfmt(sabit)+' TL</b>');
+    hset(c+'-sabitpay', '<b>'+R.cSabitPay.toFixed(1).replace('.',',')+' TL</b>');
+    hset(c+'-uretim', '<b>'+R.cUretim.toFixed(1).replace('.',',')+' TL</b><div class="hnote" style="margin-top:2px">sabit payı '+R.cSabitPay.toFixed(1).replace('.',',')+' + malzeme '+hfmt(v.malz)+' + ambalaj '+hfmt(v.kutu)+'</div>');
+    hset(c+'-matrah', '<b>'+hfmt(R.cMatrahK)+' TL</b>' + (R.ePpay > 0 && R.pFiyat > v.fiyat ? '<div class="hnote" style="margin-top:2px">platformda liste <b>'+hfmt(R.pFiyat)+' TL</b> · kapıda '+hfmt(v.fiyat)+' TL</div>' : '<div class="hnote" style="margin-top:2px">tek fiyat — komisyon yok</div>'));
+    hset(c+'-kestop', '<b>'+R.cKes.toFixed(1).replace('.',',')+' TL</b><div class="hnote" style="margin-top:2px">platform '+R.cPlat.toFixed(1).replace('.',',')+' + POS '+R.cPos.toFixed(1).replace('.',',')+' + franchise/IoT '+R.cRoy.toFixed(1).replace('.',',')+'</div>');
+    hset(c+'-kdvs', R.cKdvS.toFixed(1).replace('.',',')+' TL');
+    hset(c+'-kdva', R.cKdvA.toFixed(1).replace('.',',')+' TL');
+    hset(c+'-kdvpay', '<b>'+R.cKdv.toFixed(1).replace('.',',')+' TL</b>');
+    hset(c+'-satistop', '<b>'+(R.cKes+R.cKdv).toFixed(1).replace('.',',')+' TL</b>');
+    hset(c+'-toplam', '<b>'+(R.cUretim+R.cKes+R.cKdv).toFixed(1).replace('.',',')+' TL</b>');
+    /* ---- aylik is hesabi (pizza basi maliyetten bagimsiz) ---- */
+    var mAdet  = v.adet * HGUN;
+    var mCiro  = mAdet * R.cSatis;
+    var mMalz  = mAdet * (v.malz*1.10 + v.kutu*1.20);
+    var mKom   = mAdet * (R.cPlat + R.cPos + R.cRoy);
+    var mFatKdv= (v.elek+v.su+v.sis+v.muh+bakimTL)*0.20;
+    var mSabit = sabit + mFatKdv;
+    var mYan   = (v.yan || 0) * mAdet;
+    var mKdvAy = R.cKdv * mAdet;
+    var mVonce = mCiro - mKdvAy - mMalz - mKom - mSabit + mYan;
+    var mAmort = (AKFL && AKFL.amort === 0) ? 0 : (v.omur > 0 ? v.yat/(v.omur*12) : 0);
+    var mMatrah= mVonce - mAmort;
+    var mVergi = (AKFL && AKFL.gv === 0) ? 0 : (mMatrah > 0 ? mMatrah*(v.vergi/100) : 0);
+    var mNet   = mVonce - mVergi;
+    hset(c+'-maylik', hfmt(mAdet)+' '+akUrun());
+    hset(c+'-mciro',  '<b>'+hfmt(mCiro)+' TL</b>');
+    hset(c+'-mkdv',   hfmt(mKdvAy)+' TL');
+    hset(c+'-mmalz',  hfmt(mMalz)+' TL');
+    hset(c+'-mkom',   hfmt(mKom)+' TL');
+    hset(c+'-msabit', hfmt(mSabit)+' TL');
+    hset(c+'-myan', '+'+hfmt(mYan)+' TL', mYan>0?'pos':'');
+    hset(c+'-sepet', akUrun()+' + içecek = <b>'+hfmt(v.fiyat + (v.ick||0))+' TL</b>');
+    hset(c+'-liste', R.ePpay > 0 && R.pFiyat > v.fiyat ? 'platformda: <b>'+hfmt(R.pFiyat)+' TL</b>' : '');
+    hset(c+'-mvonce', '<b>'+hfmt(mVonce)+' TL</b>', mVonce>=0?'pos':'neg');
+    hset(c+'-mvergi', hfmt(mVergi)+' TL');
+    hset(c+'-mnet',   '<b>'+hfmt(mNet)+' TL</b>', mNet>=0?'pos':'neg');
+    if(window.hrakip) hrakip();
+    hset(c+'-acilis', '<b>'+hfmt((v.yat||0) + (v.isim||0))+' TL</b>' + ((v.isim||0) > 0 ? '<div class="hnote" style="margin-top:2px">'+hfmt(v.yat)+' yatırım + '+hfmt(v.isim)+' giriş bedeli</div>' : ''));
+    hset(c+'-amort', hfmt(amort)+' TL');
+    hset(c+'-netkar', hfmt(netKar)+' TL', netKar>=0?'pos':'neg');
+    hset(c+'-bb', Number.isFinite(bb) ? '<b>'+bb.toFixed(1)+' pizza</b>' : '<span class="neg">ulaşılamaz</span>');
+    hset(c+'-bbtam', Number.isFinite(bbtam) ? '<b>'+bbtam.toFixed(1)+' pizza</b>' : '<span class="neg">ulaşılamaz</span>');
+    hset(c+'-geri', Number.isFinite(geri) ? '~'+Math.round(geri)+' ay <span class="hnote">≈'+(geri/12).toFixed(1)+' yıl</span>' : '<span class="neg">geri dönmez</span>');
+    hset(c+'-nakitiht', hfmt(v.yat + 3*sabit)+' TL');
+
+  }
+  function hpasta(){
+    if(!document.getElementById('hpz')) return;
+    var renk = {malz:'#c2600f', plat:'#e08a3b', pers:'#1a49b8', kira:'#3b6fe0', diger:'#7ea2e8', roy:'#68758a', kutu:'#8a94a2', bakim:'#b9c6da', pos:'#dfe6f0', kdv:'#d9a441'};
+    var ad = {malz:'Malzeme', plat:'Platform komisyonu', pers:'Personel payı', kira:'Kira payı', diger:'Faturalar + diğer sabit payı', roy:'Franchise / IoT kesintisi', kutu:'Kutu + ambalaj', bakim:'Bakım payı', pos:'POS / kart komisyonu', kdv:'Devlete ödenecek KDV payı'};
+    ['M','S','D','P'].forEach(function(c){
+      var v = hread(c); var X = hmodel(v);
+      var a = X.aylikAdet;
+      if(!(a > 0)) return;
+      var p = { malz:v.malz, kutu:v.kutu, plat:X.cPlat, roy:X.cRoy, pos:X.cPos, kdv:X.cKdv,
+                pers:X.personel/a, kira:v.kira/a, diger:(v.elek+v.su+v.muh+v.sis+v.ikmal+v.zorunlu)/a, bakim:X.bakimTL/a };
+      var toplam = 0; Object.keys(p).forEach(function(k){ toplam += p[k]; });
+      if(!(toplam > 0)) return;
+      var sira = Object.keys(p).sort(function(x,y){ return p[y]-p[x]; });
+      var acc = 0, seg = [];
+      sira.forEach(function(k){
+        var st = acc/toplam*360, en = (acc+p[k])/toplam*360;
+        seg.push(renk[k]+' '+st.toFixed(1)+'deg '+en.toFixed(1)+'deg');
+        acc += p[k];
+      });
+      var grad = 'conic-gradient(' + seg.join(',') + ')';
+      var d = document.querySelector('[data-pz="'+c+'"]'); if(d) d.style.background = grad;
+      var md = document.querySelector('[data-pzm="'+c+'"]'); if(md) md.style.background = grad;
+      var tt = document.querySelector('[data-pzt="'+c+'"]'); if(tt) tt.textContent = hfmt(toplam)+' TL';
+      var mt = document.querySelector('[data-pzmt="'+c+'"]'); if(mt) mt.textContent = hfmt(toplam)+' TL';
+      var lej = document.querySelector('[data-pzl="'+c+'"]');
+      if(lej){
+        var html = '';
+        sira.forEach(function(k,i2){
+          html += '<div class="pzlr'+(i2===0?' enb':'')+'"><i style="background:'+renk[k]+'"></i><span>'+ad[k]+(i2===0?' — en büyük kalem':'')+'</span><b>'+p[k].toFixed(1).replace('.',',')+' TL</b><span class="yz">%'+(100*p[k]/toplam).toFixed(0)+'</span></div>';
+        });
+        var gr = {uretim:0, satis:0};
+        Object.keys(p).forEach(function(k){ gr[(k==='plat'||k==='pos'||k==='roy'||k==='kdv') ? 'satis' : 'uretim'] += p[k]; });
+        html += '<div class="pzlr" style="border-top:1px solid #e8edf5;padding-top:7px;margin-top:4px"><i style="background:#c2600f;opacity:.4"></i><span>Üretim maliyeti <span style="color:#8a94a2">— fiyattan bağımsız</span></span><b>'+gr.uretim.toFixed(1).replace('.',',')+' TL</b><span class="yz">%'+(100*gr.uretim/toplam).toFixed(0)+'</span></div>';
+        html += '<div class="pzlr"><i style="background:#8a94a2;opacity:.6"></i><span>Satışa bağlı <span style="color:#8a94a2">— komisyon + KDV</span></span><b>'+gr.satis.toFixed(1).replace('.',',')+' TL</b><span class="yz">%'+(100*gr.satis/toplam).toFixed(0)+'</span></div>';
+        html += '<div class="pzlr" style="border-top:1px solid #e8edf5;padding-top:7px;margin-top:4px"><i style="background:#0f1726"></i><span><b>TOPLAM — 1 '+AK_GEN[akUrun()]+' vergiler dahil maliyeti</b></span><b>'+hfmt(toplam)+' TL</b><span class="yz">%100</span></div>';
+        lej.innerHTML = html;
+      }
+    });
+  }
+  function hsen(){ if(window.hpasta) hpasta(); }
+  function hfill(c,vals){ document.querySelectorAll('#hesap input[data-c="'+c+'"]').forEach(function(i){ var k = i.dataset.k;
+    if(AK_PKISI.indexOf(k) > -1){ i.value = vals[k] ? hfmt(vals[k]) : ''; }   /* bos kisi = bos kutu, 0 yazmasin */
+    else if(vals[k]!==undefined) i.value=vals[k]; }); }
+  var RKSET = {
+    pizza: {ad:["Domino's","Pizza Hut","Little Caesars","Pizza Bulls"], f:[250,150,160,140]},
+    pide:  {ad:["Usta Pideci","Pidem","Pide By Pide","Esnaf pideci"],   f:[295,410,300,525]},
+    lahmacun: {ad:["Pidem (menüden)","Usta Pideci","Pide By Pide","Esnaf pideci"], f:[180,0,0,220]}
+  };
+  function rkStore(){ try{ return JSON.parse(localStorage.getItem('ak_rakip2')) || {}; }catch(e){ return {}; } }
+  function rkSave(){ try{ var st = rkStore();
+    st[akUrun()] = [].map.call(document.querySelectorAll('#rkwrap input'), function(i){ return hnum(i.value); });
+    localStorage.setItem('ak_rakip2', JSON.stringify(st)); }catch(e){} }
+  function rkBuild(){
+    var w = document.getElementById('rkwrap'); if(!w) return;
+    var u = akUrun(), st = rkStore();
+    var vals = (st[u] && st[u].length === 4) ? st[u] : RKSET[u].f.slice();
+    w.innerHTML = '';
+    RKSET[u].ad.forEach(function(ad, ix){
+      var s = document.createElement('span');
+      s.style.cssText = 'display:inline-flex;align-items:center;gap:5px;margin:3px 14px 3px 0';
+      var b = document.createElement('b'); b.style.fontSize = '13px'; b.textContent = ad; s.appendChild(b);
+      var inp = document.createElement('input');
+      inp.type = 'number'; inp.step = '5'; inp.value = vals[ix]; inp.dataset.rk = String(ix);
+      inp.style.width = '76px';
+      inp.addEventListener('input', function(){ rkSave(); hrakip(); });
+      s.appendChild(inp);
+      var u2 = document.createElement('span'); u2.className = 'u'; u2.textContent = 'TL'; s.appendChild(u2);
+      w.appendChild(s);
+    });
+    hrakip();
+  }
+  function hrakip(){
+    var el = document.getElementById('rakipsonuc'); if(!el) return;
+    var u = akUrun(), en = null, enAd = '';
+    document.querySelectorAll('#rkwrap input').forEach(function(i, ix){
+      var d = hnum(i.value);
+      if(d > 0 && (en === null || d < en)){ en = d; enAd = RKSET[u].ad[ix]; }
+    });
+    var taban = hnum((document.querySelector('#hesap input[data-c="M"][data-k="fiyat"]')||{}).value);
+    var pk = Math.min(0.9, hnum((document.querySelector('#hesap input[data-c="M"][data-k="pkom"]')||{}).value)/100);
+    var platAcik = !(AKFL && AKFL.plat === 0);
+    var biz = (platAcik && pk > 0) ? taban/(1-pk) : taban;
+    if(en === null || !biz){ el.innerHTML = ''; return; }
+    var fark = biz - en, renk = fark <= 0 ? '#178a56' : '#b3261e';
+    el.innerHTML = 'En ucuz: <b>'+enAd+' '+hfmt(en)+' TL</b> &nbsp;·&nbsp; bizim platform listemiz <b>'+hfmt(biz)+' TL</b> '
+      + '<span style="color:'+renk+';font-weight:700">('
+      + (fark === 0 ? 'aynı' : (fark < 0 ? hfmt(-fark)+' TL ucuz' : hfmt(fark)+' TL pahalı')) + ')</span>'
+      + (platAcik ? '' : ' <span style="color:#8a94a2">— komisyon kapalı: kapı fiyatıyla kıyas</span>');
+  }
+  function hsave(){ try{ var o={}; HCOLS.forEach(function(c){o[c]=hread(c);}); localStorage.setItem(akHKey(),JSON.stringify(o)); }catch(e){} }
+  function hsReset(){
+    HCOLS.forEach(function(c){ hfill(c,akHDEF()[c]); });
+    document.querySelectorAll('#hesap input[data-y]').forEach(function(i){ i.value = i.defaultValue; });
+    AKFL = {amort:1, kdv:1, gv:0, plat:1, ymode:'A', urun:akUrun()};
+    try{ localStorage.setItem('ak_flags_v1', JSON.stringify(AKFL)); }catch(e){}
+    if(window.yhesap){ yhesap('M'); yhesap('S'); }
+    if(window.ysave) ysave();
+    try{ localStorage.removeItem('ak_rakip2'); }catch(e){}
+    if(window.rkBuild) rkBuild();
+    HCOLS.forEach(function(c){ hcalc(c); });
+    hsave();
+    if(window.akApplyFlags) akApplyFlags(); else hsen();
+    /* buluta da yansisin: esitleme 'input' olayini dinler */
+    var f = document.querySelector('#hesap input[data-c]');
+    if(f) f.dispatchEvent(new Event('input', {bubbles:true}));
+  }
+  (function(){
+    if(!document.querySelector('#hesap input[data-c]')) return;
+    /* tek seferlik temizlik: eski kayitlardaki acik vergi bayragi + bugunku duzeltmelerden
+       onceki pide verisi sifirlanir; ak_mt damgasi ile eski bulut kaydinin geri ezmesi onlenir */
+    try{ if(!localStorage.getItem('ak_mig_v4')){
+      /* 12 Eyl 2026: kiyma 730 -> 690 TL/kg, lahmacun malzeme 44 -> 42 — eski lahmacun kaydi ezmesin */
+      localStorage.removeItem('ak_hesap_lahm_v1');
+      localStorage.setItem('ak_mt', String(Date.now()));
+      localStorage.setItem('ak_mig_v4', '1');
+    } }catch(e){}
+    try{ if(!localStorage.getItem('ak_mig_v3')){
+      /* 12 Eyl 2026: toptan fiyatla malzeme degisti (pizza 72->90, pide 50->60) — eski kayit ezmesin */
+      ['ak_hesap_v3','ak_hesap_pide_v1'].forEach(function(k){ localStorage.removeItem(k); });
+      localStorage.removeItem('ak_rakip2');
+      localStorage.setItem('ak_mt', String(Date.now()));
+      localStorage.setItem('ak_mig_v3', '1');
+    } }catch(e){}
+    try{ if(!localStorage.getItem('ak_mig_v2')){
+      localStorage.removeItem('ak_hesap_pide_v1');
+      var f9 = JSON.parse(localStorage.getItem('ak_flags_v1')) || {}; f9.gv = 0;
+      localStorage.setItem('ak_flags_v1', JSON.stringify(f9));
+      localStorage.setItem('ak_mt', String(Date.now()));
+      localStorage.setItem('ak_mig_v2', '1');
+      setTimeout(function(){ var fx = document.querySelector('#hesap input[data-c]');
+        if(fx) fx.dispatchEvent(new Event('input', {bubbles:true})); }, 1500);
+    } }catch(e){}
+    try{ var f0 = JSON.parse(localStorage.getItem('ak_flags_v1')); if(f0 && f0.urun) AKFL.urun = akUrunNorm(f0.urun); }catch(e){}
+    if(akUrun() !== 'pizza'){ akUrunText(akUrun()); AK_DOMURUN = akUrun(); }
+    akPillSync();
+    var saved=null; try{ saved=JSON.parse(localStorage.getItem(akHKey())); }catch(e){}
+    HCOLS.forEach(function(c){ hfill(c,(saved&&saved[c])||akHDEF()[c]); hcalc(c); });
+    document.querySelectorAll('.upill').forEach(function(b){ b.addEventListener('click', function(){ akUrunSet(b.dataset.up); }); });
+    hsen();
+    rkBuild();
+    document.querySelectorAll('#hesap input[data-c]').forEach(function(i){
+      i.addEventListener('input',function(){ hcalc(i.dataset.c); hsen(); hsave(); });
+    });
+  })();
+
+  /* ===== Yatirim kirilimi ===== */
+  var YKOL = {M:'M', S:'S'};
+  function yhesap(model){
+    var toplam = 0, gruplar = {};
+    document.querySelectorAll('#hesap input[data-y="'+model+'"]').forEach(function(i){
+      var tr = i.closest('tr');
+      if(tr && tr.dataset.mode && tr.dataset.mode !== AKFL.ymode) return;
+      var val = hnum(i.value);
+      toplam += val;
+      gruplar[i.dataset.g] = (gruplar[i.dataset.g]||0) + val;
+    });
+    Object.keys(gruplar).forEach(function(g){
+      var el = document.querySelector('[data-yg="'+model+'-'+g+'"]');
+      if(el) el.innerHTML = '<b>'+hfmt(gruplar[g])+' TL</b>';
+    });
+    /* ana tabloya yansit */
+    var yat = document.querySelector('#hesap input[data-c="'+model+'"][data-k="yat"]');
+    if(yat && Math.round(hnum(yat.value)) !== Math.round(toplam)){
+      yat.value = hfmt(toplam);
+      hcalc(model); hsen();
+    }
+    return toplam;
+  }
+  function ysave(){
+    try{ var o={}; document.querySelectorAll('#hesap input[data-y]').forEach(function(i){ o[i.dataset.y+'-'+i.dataset.yk]=i.value; });
+      localStorage.setItem('ak_yatirim_v2', JSON.stringify(o)); }catch(e){}
+  }
+  (function(){
+    if(!document.querySelector('#hesap input[data-y]')) return;
+    var saved=null; try{ saved=JSON.parse(localStorage.getItem('ak_yatirim_v2')); }catch(e){}
+    if(saved) document.querySelectorAll('#hesap input[data-y]').forEach(function(i){
+      var k=i.dataset.y+'-'+i.dataset.yk; if(saved[k]!==undefined) i.value=saved[k];
+    });
+    document.querySelectorAll('#hesap input[data-y]').forEach(function(i){
+      i.addEventListener('input', function(){ yhesap(i.dataset.y); ysave(); });
+    });
+    yhesap('M'); yhesap('S');
+  })();
+
+  /* kirilim ac/kapa */
+  (function(){
+    var row = document.getElementById('yatrow');
+    if(!row) return;
+    row.querySelector('td.lbl').addEventListener('click', function(){
+      var acik = !document.querySelector('#hesap tr.ydet:not([hidden])');
+      document.querySelectorAll('#hesap tr.ydet').forEach(function(tr){ tr.hidden = !acik; });
+      var ok = document.getElementById('yatok');
+      if(ok) ok.textContent = acik ? '▾' : '▸';
+    });
+  })();
+
+  /* personel kisi kisi ac/kapa */
+  (function(){
+    var row = document.getElementById('persrow');
+    if(!row) return;
+    row.querySelector('td.lbl').addEventListener('click', function(){
+      var acik = !document.querySelector('#hesap tr.pdet:not([hidden])');
+      document.querySelectorAll('#hesap tr.pdet').forEach(function(tr){ tr.hidden = !acik; });
+      var ok = document.getElementById('persok');
+      if(ok) ok.textContent = acik ? '▾' : '▸';
+    });
+  })();
+
+  /* vergi + yipranma tikleri */
+  function akApplyFlags(){
+    try{ var f = JSON.parse(localStorage.getItem('ak_flags_v1')); if(f) AKFL = {amort:f.amort===0?0:1, kdv:f.kdv===0?0:1, gv:f.gv===1?1:0, plat:f.plat===0?0:1, ymode:f.ymode==='B'?'B':'A', urun:akUrunNorm(f.urun)}; }catch(e){}
+    if(AKFL.urun !== AK_DOMURUN) akUrunApplyDom(AKFL.urun); else akPillSync();
+    var sA=document.getElementById('amortsw'); if(sA) sA.checked = AKFL.amort!==0;
+    var sK=document.getElementById('kdvsw');   if(sK) sK.checked = AKFL.kdv!==0;
+    var sG=document.getElementById('gvsw');    if(sG) sG.checked = AKFL.gv!==0;
+    var sP=document.getElementById('platsw');  if(sP) sP.checked = AKFL.plat!==0;
+    document.querySelectorAll('#hesap tr.platdep').forEach(function(tr){ tr.style.opacity = AKFL.plat===0 ? '.4' : ''; });
+    document.querySelectorAll('#hesap tr.gvdep').forEach(function(tr){ tr.style.opacity = AKFL.gv===0 ? '.4' : ''; });
+    document.querySelectorAll('#hyt tr.amdep').forEach(function(tr){ tr.hidden = AKFL.amort===0; });
+    ['M','S','D','P'].forEach(function(c){
+      var td = document.querySelector('#hyt [data-o="'+c+'-amort"]');
+      if(td) td.style.opacity = AKFL.amort===0 ? '.35' : '';
+    });
+    [['rkdv','kdv'],['rgv','gv']].forEach(function(p){
+      var tr = document.getElementById(p[0]); if(!tr) return;
+      tr.querySelectorAll('td:not(.lbl)').forEach(function(td){ td.style.opacity = AKFL[p[1]]===0 ? '.35' : ''; });
+    });
+    document.querySelectorAll('input[name="ymode"], input[name="ymodep"]').forEach(function(rd){ rd.checked = (rd.value === AKFL.ymode); });
+    document.querySelectorAll('#hyt tr[data-mode]').forEach(function(tr){ tr.classList.toggle('modeoff', tr.dataset.mode !== AKFL.ymode); });
+    if(window.yhesap){ yhesap('M'); yhesap('S'); }
+    if(window.akPara) akPara();
+    if(window.ywolSync) ywolSync();
+    HCOLS.forEach(function(c){ hcalc(c); });
+    hsen();
+  }
+  (function(){
+    [['amortsw','amort'],['kdvsw','kdv'],['gvsw','gv'],['platsw','plat']].forEach(function(p){
+      var sw = document.getElementById(p[0]); if(!sw) return;
+      sw.addEventListener('change', function(){
+        AKFL[p[1]] = sw.checked ? 1 : 0;
+        try{ localStorage.setItem('ak_flags_v1', JSON.stringify(AKFL)); }catch(e){}
+        akApplyFlags();
+      });
+    });
+    if(document.getElementById('amortsw') || document.getElementById('platsw')) akApplyFlags();
+  })();
+
+  /* Yol A/B secimi + sablon tablosu aynasi */
+  function ywolSync(){
+    document.querySelectorAll('#yollar input[data-ywk]').forEach(function(i){
+      var src = document.querySelector('#hesap input[data-y="M"][data-yk="'+i.dataset.ywk+'"]');
+      if(src && document.activeElement !== i) i.value = src.value;
+    });
+    var dest = 0;
+    ['buzdolabi','icecek','kamera','klima','ups','ag','tezgah','evye','pos'].forEach(function(k){
+      var s = document.querySelector('#hesap input[data-y="M"][data-yk="'+k+'"]');
+      if(s) dest += hnum(s.value);
+    });
+    document.querySelectorAll('[data-ywd]').forEach(function(el){ el.innerHTML = '<b>'+hfmt(dest)+' TL</b>'; });
+    function top(keys){ var s = dest; keys.forEach(function(k){
+      var i = document.querySelector('#hesap input[data-y="M"][data-yk="'+k+'"]');
+      if(i) s += hnum(i.value); }); return s; }
+    var tA = top(['robot','kol','dolap','kiosk','yazilim']);
+    var tB = top(['kol','btaban','bpres','btop','bfirin','bkes','byaz','dolap','kiosk']);
+    var eA = document.querySelector('[data-ywt="A"]'); if(eA) eA.innerHTML = '<b>'+hfmt(tA)+' TL</b>';
+    var eB = document.querySelector('[data-ywt="B"]'); if(eB) eB.innerHTML = '<b>'+hfmt(tB)+' TL</b>';
+  }
+  (function(){
+    document.querySelectorAll('input[name="ymode"], input[name="ymodep"]').forEach(function(rd){
+      rd.addEventListener('change', function(){
+        if(!rd.checked) return;
+        AKFL.ymode = rd.value === 'B' ? 'B' : 'A';
+        try{ localStorage.setItem('ak_flags_v1', JSON.stringify(AKFL)); }catch(e){}
+        akApplyFlags();
+      });
+    });
+    document.querySelectorAll('#yollar input[data-ywk]').forEach(function(i){
+      i.addEventListener('input', function(){
+        var dst = document.querySelector('#hesap input[data-y="M"][data-yk="'+i.dataset.ywk+'"]');
+        if(dst){ dst.value = i.value; dst.dispatchEvent(new Event('input',{bubbles:true})); }
+        ywolSync();
+      });
+    });
+    document.addEventListener('input', function(ev){
+      if(ev.target && ev.target.matches && ev.target.matches('#hesap input[data-y]')) ywolSync();
+    }, true);
+    if(document.querySelector('#yollar input[data-ywk]')) ywolSync();
+  })();
+
+  /* para girislerinde binlik nokta */
+  function akParaSec(){
+    var s = Array.prototype.slice.call(document.querySelectorAll('#hesap input[data-y], #yollar input[data-ywk]'));
+    document.querySelectorAll('#hesap input[data-c]').forEach(function(i){ if(AK_PARA_K.indexOf(i.dataset.k) > -1) s.push(i); });
+    return s;
+  }
+  function akPara(){
+    akParaSec().forEach(function(i){
+      if(i.type !== 'text'){ i.type = 'text'; i.setAttribute('inputmode', 'numeric'); i.autocomplete = 'off'; }
+      if(document.activeElement === i) return;
+      var n = hnum(i.value);
+      i.value = n ? hfmt(n) : i.value;
+    });
+  }
+  (function(){
+    document.addEventListener('blur', function(ev){
+      var i = ev.target;
+      if(!i || !i.matches) return;
+      if(i.matches('#hesap input[data-y], #yollar input[data-ywk]') || (i.matches('#hesap input[data-c]') && AK_PARA_K.indexOf(i.dataset.k) > -1)){
+        var n = hnum(i.value);
+        if(n) i.value = hfmt(n);
+      }
+    }, true);
+    akPara();
+  })();
+
+  /* yukari cik — sayfa body icinde kayiyor, iki kaynagi da dinle */
+  (function(){
+    var b = document.getElementById('topbtn'); if(!b) return;
+    function oku(){ return window.scrollY || document.documentElement.scrollTop || document.body.scrollTop || 0; }
+    function guncelle(){ b.style.display = oku() > 600 ? 'block' : 'none'; }
+    window.addEventListener('scroll', guncelle, {passive:true});
+    document.addEventListener('scroll', guncelle, {passive:true, capture:true});
+    guncelle();
+  })();
+
+
+</script>
+
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+<script>
+  /* ===== Bulut esitleme (Firebase - NAKIT ile ayni proje; veri kursatkemalkul hesabina ozel) ===== */
+  (function(){
+    if(!window.firebase || !firebase.auth) return;
+    var FB_CONFIG = {
+      apiKey: "AIzaSyAffxPdRyYEvhlsHlDBlGf7g4iu2wnzf3c",
+      authDomain: "gen-lang-client-0276539885.firebaseapp.com",
+      projectId: "gen-lang-client-0276539885"
+    };
+    if(/^(localhost|127\.0\.0\.1)$/.test(location.hostname)) return;  /* onizleme/test buluta YAZMASIN — gercek cihaz verisi kirlenmesin */
+    var KEYS = ['ak_hesap_v3','ak_hesap_pide_v1','ak_hesap_lahm_v1','ak_yatirim_v2','ak_flags_v1','ak_rakip2'];
+    var CID = (function(){ try{ var c = localStorage.getItem('ak_cid');
+      if(!c){ c = 'c'+Date.now().toString(36)+Math.floor(Math.random()*1e6).toString(36); localStorage.setItem('ak_cid', c); }
+      return c; }catch(e){ return 'c0'; } })();
+    var cl = { ref:null, applying:false, first:true, timer:null };
+
+    function stat(txt, ok, click){
+      var el = document.getElementById('akcloud');
+      if(!el){ el = document.createElement('div'); el.id = 'akcloud';
+        el.style.cssText = 'position:fixed;bottom:10px;right:10px;z-index:90;font-size:11px;padding:5px 12px;border-radius:12px;background:rgba(255,255,255,.92);color:#68758a;border:1px solid #dfe6f0;box-shadow:0 4px 14px rgba(20,40,80,.08);cursor:default';
+        document.body.appendChild(el); }
+      el.textContent = txt; el.style.color = ok ? '#178a56' : '#c47c18';
+      el.style.cursor = click ? 'pointer' : 'default';
+      el.onclick = click || null;
+    }
+    function payload(){
+      var d = {}; KEYS.forEach(function(k){ var v = localStorage.getItem(k); if(v) d[k] = v; });
+      return d;
+    }
+    function localMt(){ try{ return parseInt(localStorage.getItem('ak_mt')||'0'); }catch(e){ return 0; } }
+    function push(){
+      if(!cl.ref || cl.applying) return;
+      var mt = Date.now(); try{ localStorage.setItem('ak_mt', String(mt)); }catch(e){}
+      cl.ref.set({ data: JSON.stringify(payload()), cid: CID, mt: mt })
+        .then(function(){ stat('\u2601 e\u015fitlendi', true); })
+        .catch(function(){ stat('\u2601 eri\u015fim yok', false); });
+    }
+    function applyRemote(r){
+      try{
+        var d = JSON.parse(r.data || '{}');
+        cl.applying = true;
+        KEYS.forEach(function(k){ if(d[k] !== undefined) try{ localStorage.setItem(k, d[k]); }catch(e){} });
+        try{ localStorage.setItem('ak_mt', String(r.mt || Date.now())); }catch(e){}
+        /* ekrani yeni degerlerle tazele */
+        if(window.akApplyFlags) akApplyFlags();
+        var savedH = null; try{ savedH = JSON.parse(localStorage.getItem(window.akHKey ? akHKey() : 'ak_hesap_v3')); }catch(e){}
+        if(savedH && window.hfill){ HCOLS.forEach(function(c){ if(savedH[c]) hfill(c, savedH[c]); hcalc(c); }); }
+        var savedY = null; try{ savedY = JSON.parse(localStorage.getItem('ak_yatirim_v2')); }catch(e){}
+        if(savedY){ document.querySelectorAll('#hesap input[data-y]').forEach(function(i){
+          var k = i.dataset.y + '-' + i.dataset.yk; if(savedY[k] !== undefined) i.value = savedY[k]; }); }
+        if(window.yhesap){ yhesap('M'); yhesap('S'); }
+        if(window.hsen) hsen();
+        if(window.akApplyFlags) akApplyFlags();
+        cl.applying = false;
+        stat('\u2601 e\u015fitlendi', true);
+      }catch(e){ cl.applying = false; }
+    }
+    /* localStorage yazan mevcut save fonksiyonlarini dinle: input eventleri zaten kaydediyor — biz debounce ile iteriz */
+    function watch(){
+      document.addEventListener('input', function(ev){
+        if(!ev.target || !ev.target.closest || !ev.target.closest('#hesap')) return;
+        if(cl.timer) clearTimeout(cl.timer);
+        cl.timer = setTimeout(push, 2000);
+      }, true);
+    }
+    function startSync(){
+      var db = firebase.firestore();
+      cl.ref = db.collection('autokitch').doc('hesap');
+      cl.ref.onSnapshot(function(snap){
+        if(snap.metadata.hasPendingWrites) return;
+        if(!snap.exists){ push(); return; }
+        var r = snap.data();
+        if(cl.first){ cl.first = false;
+          if((r.mt||0) > localMt()) applyRemote(r); else push();
+          return; }
+        if(r.cid === CID) return;
+        applyRemote(r);
+      }, function(){ stat('\u2601 eri\u015fim yok \u2014 kurallara autokitch eklenmeli', false); });
+    }
+    function login(){
+      firebase.auth().signInWithPopup(new firebase.auth.GoogleAuthProvider()).catch(function(){});
+    }
+    try{ firebase.initializeApp(FB_CONFIG); }catch(e){}
+    firebase.auth().onAuthStateChanged(function(u){
+      if(u){ stat('\u2601 ba\u011flan\u0131yor\u2026', true); watch(); startSync(); }
+      else stat('\u2601 cihazlar aras\u0131 e\u015fitleme i\u00e7in t\u0131kla \u2014 Google giri\u015fi', false, login);
+    });
+  })();
+</script>
+</body>
+</html>
