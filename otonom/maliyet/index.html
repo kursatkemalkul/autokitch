@@ -658,8 +658,8 @@ tr.modeoff{display:none!important}
         <tr class="udet res" data-u="pide" data-nosw hidden><td class="lbl" style="padding-left:26px">→ Malzeme maliyeti — otomatik <span class="hnote">tarif gramı × alış fiyatı (KDV hariç) · döküm hücrenin altında</span></td><td class="m" data-o="M-pd_malzd"></td><td class="s" data-o="S-pd_malzd"></td><td class="d" data-o="D-pd_malzd"></td><td class="p" data-o="P-pd_malzd"></td></tr>
         <tr class="udet" data-u="pide" data-nosw hidden><td class="lbl" style="padding-left:26px">Kutu + ambalaj (KDV hariç) <span class="hnote">Pide kutusu 42×15×4 cm: Unipak 100'lü 834,60 TL → 8,35 + poşet 1,50 + peçete 0,14 = <b>9,99 TL KDV dahil → 8,3 TL</b>. Poşet: büyük boy atlet ~1,50 TL (Akakçe · Royaleks 30×56 ~3.000 adet 4.498 TL) · peçete 0,14 TL (Bizim Toptan · Teno 100'lü 13,50 TL). Fiyatlar KDV dahil gösterim; ambalaj KDV'si %20 düşülerek yazıldı.</span></td><td class="m num"><input data-c="M" data-k="pd_kutu" type="number" step="1"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="pd_kutu" type="number" step="1"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="pd_kutu" type="number" step="1"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="pd_kutu" type="number" step="1"><span class="u">TL</span></td></tr>
         <tr class="udet res" data-u="pide" data-nosw hidden><td class="lbl" style="padding-left:26px">→ 1 PİDENİN MALİYETİ <span class="hnote">sabit gider payı + malzeme + ambalaj — KDV ve komisyon hariç, fiyattan bağımsız</span></td><td class="m" data-o="M-pd_uretim"></td><td class="s" data-o="S-pd_uretim"></td><td class="d" data-o="D-pd_uretim"></td><td class="p" data-o="P-pd_uretim"></td></tr>
-        <tr class="udet" data-u="pide" data-nosw hidden><td class="lbl" style="padding-left:26px">Kâr ekle — 1 pide başına <span class="hnote">KDV, kart / platform komisyonu ve franchise payı düşüldükten sonra <b>cebine kalan</b> tutar (gelir vergisi öncesi). Satış fiyatı bu kâra göre otomatik hesaplanır.</span></td><td class="m num"><input data-c="M" data-k="pd_kar" type="number" step="5"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="pd_kar" type="number" step="5"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="pd_kar" type="number" step="5"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="pd_kar" type="number" step="5"><span class="u">TL</span></td></tr>
-        <tr class="udet res hi" data-u="pide" data-nosw hidden><td class="lbl" style="padding-left:26px">→ Satış fiyatı — kapı / QR (KDV dahil) <span class="hnote">maliyet + kâr + KDV + kart komisyonu %3 (+ franchise) — döküm hücrenin altında</span></td><td class="m" data-o="M-pd_kapi"></td><td class="s" data-o="S-pd_kapi"></td><td class="d" data-o="D-pd_kapi"></td><td class="p" data-o="P-pd_kapi"></td></tr>
+        <tr class="udet" data-u="pide" data-nosw hidden><td class="lbl" style="padding-left:26px">Kâr ekle — 1 pide başına <span class="hnote">Yazdığın kâr satış fiyatını belirler ve fiyat <b>sabitlenir</b>. Sonra adedi ya da gideri değiştirirsen fiyat yerinde kalır, bu kutu o durumdaki <b>gerçek kârı</b> gösterir: az satışta sabit gider payı büyür, kâr düşer, eksiye geçebilir. (KDV, komisyon ve franchise düşülmüş, gelir vergisi öncesi.)</span></td><td class="m num"><input data-c="M" data-k="pd_kar" type="number" step="5"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="pd_kar" type="number" step="5"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="pd_kar" type="number" step="5"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="pd_kar" type="number" step="5"><span class="u">TL</span></td></tr>
+        <tr class="udet res hi" data-u="pide" data-nosw hidden><td class="lbl" style="padding-left:26px">Satış fiyatı — kapı / QR (KDV dahil) <span class="hnote">kâr yazınca otomatik dolar ve sabit kalır; istersen doğrudan fiyat yaz · döküm kutunun altında</span></td><td class="m num"><input data-c="M" data-k="pd_fiyat" type="number" step="5"><span class="u">TL</span><div class="ubrk" data-o="M-pd_kapid"></div></td><td class="s num"><input data-c="S" data-k="pd_fiyat" type="number" step="5"><span class="u">TL</span><div class="ubrk" data-o="S-pd_kapid"></div></td><td class="d num"><input data-c="D" data-k="pd_fiyat" type="number" step="5"><span class="u">TL</span><div class="ubrk" data-o="D-pd_kapid"></div></td><td class="p num"><input data-c="P" data-k="pd_fiyat" type="number" step="5"><span class="u">TL</span><div class="ubrk" data-o="P-pd_kapid"></div></td></tr>
         <tr class="udet res hi platdep" data-u="pide" data-nosw hidden><td class="lbl" style="padding-left:26px">→ Platform fiyatı — Yemeksepeti / Getir <span class="hnote">aynı kâr kalacak şekilde platform komisyonu fiyata eklenir; komisyon oranı yukarıdaki 2. tabloda</span></td><td class="m" data-o="M-pd_plat"></td><td class="s" data-o="S-pd_plat"></td><td class="d" data-o="D-pd_plat"></td><td class="p" data-o="P-pd_plat"></td></tr>
         <tr class="udet" data-u="pide" data-nosw hidden><td class="lbl" style="padding-left:26px">Rakiplerin fiyatı — platform <span class="hnote">Yemeksepeti / Getir'de gördüğün fiyatı kutulara yaz; 0 = bilinmiyor. Kıyas Model M'nin fiyatıyla yapılır.</span></td><td colspan="4" style="text-align:left"><span id="rkwrap-pide"></span><div class="hnote" id="rakipsonuc-pide" style="margin-top:6px"></div></td></tr>
         <tr class="udet res" data-u="pide" data-nosw hidden><td class="lbl" style="padding-left:26px">→ Bu üründen aylık kâr <span class="hnote">aylık adet × adet başı kâr (gelir vergisi öncesi)</span></td><td class="m" data-o="M-pd_aykar"></td><td class="s" data-o="S-pd_aykar"></td><td class="d" data-o="D-pd_aykar"></td><td class="p" data-o="P-pd_aykar"></td></tr>
@@ -677,8 +677,8 @@ tr.modeoff{display:none!important}
         <tr class="udet res" data-u="lahmacun" data-nosw hidden><td class="lbl" style="padding-left:26px">→ Malzeme maliyeti — otomatik <span class="hnote">tarif gramı × alış fiyatı (KDV hariç) · döküm hücrenin altında</span></td><td class="m" data-o="M-lh_malzd"></td><td class="s" data-o="S-lh_malzd"></td><td class="d" data-o="D-lh_malzd"></td><td class="p" data-o="P-lh_malzd"></td></tr>
         <tr class="udet" data-u="lahmacun" data-nosw hidden><td class="lbl" style="padding-left:26px">Kutu + ambalaj (KDV hariç) <span class="hnote">Lahmacun kutusu 32×19×6 cm: Unipak 100'lü 1.243,91 TL → 12,44 + poşet 1,50 + peçete 0,14 = <b>14,08 TL KDV dahil → 11,7 TL</b>. Bir kutuya 2 lahmacun konuyorsa kutu payı yarıya iner; kapıda kâğıda sarılırsa çok daha ucuzdur. Poşet: büyük boy atlet ~1,50 TL (Akakçe · Royaleks 30×56 ~3.000 adet 4.498 TL) · peçete 0,14 TL (Bizim Toptan · Teno 100'lü 13,50 TL). Fiyatlar KDV dahil gösterim; ambalaj KDV'si %20 düşülerek yazıldı.</span></td><td class="m num"><input data-c="M" data-k="lh_kutu" type="number" step="1"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="lh_kutu" type="number" step="1"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="lh_kutu" type="number" step="1"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="lh_kutu" type="number" step="1"><span class="u">TL</span></td></tr>
         <tr class="udet res" data-u="lahmacun" data-nosw hidden><td class="lbl" style="padding-left:26px">→ 1 LAHMACUNUN MALİYETİ <span class="hnote">sabit gider payı + malzeme + ambalaj — KDV ve komisyon hariç, fiyattan bağımsız</span></td><td class="m" data-o="M-lh_uretim"></td><td class="s" data-o="S-lh_uretim"></td><td class="d" data-o="D-lh_uretim"></td><td class="p" data-o="P-lh_uretim"></td></tr>
-        <tr class="udet" data-u="lahmacun" data-nosw hidden><td class="lbl" style="padding-left:26px">Kâr ekle — 1 lahmacun başına <span class="hnote">KDV, kart / platform komisyonu ve franchise payı düşüldükten sonra <b>cebine kalan</b> tutar (gelir vergisi öncesi). Satış fiyatı bu kâra göre otomatik hesaplanır.</span></td><td class="m num"><input data-c="M" data-k="lh_kar" type="number" step="5"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="lh_kar" type="number" step="5"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="lh_kar" type="number" step="5"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="lh_kar" type="number" step="5"><span class="u">TL</span></td></tr>
-        <tr class="udet res hi" data-u="lahmacun" data-nosw hidden><td class="lbl" style="padding-left:26px">→ Satış fiyatı — kapı / QR (KDV dahil) <span class="hnote">maliyet + kâr + KDV + kart komisyonu %3 (+ franchise) — döküm hücrenin altında</span></td><td class="m" data-o="M-lh_kapi"></td><td class="s" data-o="S-lh_kapi"></td><td class="d" data-o="D-lh_kapi"></td><td class="p" data-o="P-lh_kapi"></td></tr>
+        <tr class="udet" data-u="lahmacun" data-nosw hidden><td class="lbl" style="padding-left:26px">Kâr ekle — 1 lahmacun başına <span class="hnote">Yazdığın kâr satış fiyatını belirler ve fiyat <b>sabitlenir</b>. Sonra adedi ya da gideri değiştirirsen fiyat yerinde kalır, bu kutu o durumdaki <b>gerçek kârı</b> gösterir: az satışta sabit gider payı büyür, kâr düşer, eksiye geçebilir. (KDV, komisyon ve franchise düşülmüş, gelir vergisi öncesi.)</span></td><td class="m num"><input data-c="M" data-k="lh_kar" type="number" step="5"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="lh_kar" type="number" step="5"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="lh_kar" type="number" step="5"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="lh_kar" type="number" step="5"><span class="u">TL</span></td></tr>
+        <tr class="udet res hi" data-u="lahmacun" data-nosw hidden><td class="lbl" style="padding-left:26px">Satış fiyatı — kapı / QR (KDV dahil) <span class="hnote">kâr yazınca otomatik dolar ve sabit kalır; istersen doğrudan fiyat yaz · döküm kutunun altında</span></td><td class="m num"><input data-c="M" data-k="lh_fiyat" type="number" step="5"><span class="u">TL</span><div class="ubrk" data-o="M-lh_kapid"></div></td><td class="s num"><input data-c="S" data-k="lh_fiyat" type="number" step="5"><span class="u">TL</span><div class="ubrk" data-o="S-lh_kapid"></div></td><td class="d num"><input data-c="D" data-k="lh_fiyat" type="number" step="5"><span class="u">TL</span><div class="ubrk" data-o="D-lh_kapid"></div></td><td class="p num"><input data-c="P" data-k="lh_fiyat" type="number" step="5"><span class="u">TL</span><div class="ubrk" data-o="P-lh_kapid"></div></td></tr>
         <tr class="udet res hi platdep" data-u="lahmacun" data-nosw hidden><td class="lbl" style="padding-left:26px">→ Platform fiyatı — Yemeksepeti / Getir <span class="hnote">aynı kâr kalacak şekilde platform komisyonu fiyata eklenir; komisyon oranı yukarıdaki 2. tabloda</span></td><td class="m" data-o="M-lh_plat"></td><td class="s" data-o="S-lh_plat"></td><td class="d" data-o="D-lh_plat"></td><td class="p" data-o="P-lh_plat"></td></tr>
         <tr class="udet" data-u="lahmacun" data-nosw hidden><td class="lbl" style="padding-left:26px">Rakiplerin fiyatı — platform <span class="hnote">Yemeksepeti / Getir'de gördüğün fiyatı kutulara yaz; 0 = bilinmiyor. Kıyas Model M'nin fiyatıyla yapılır.</span></td><td colspan="4" style="text-align:left"><span id="rkwrap-lahmacun"></span><div class="hnote" id="rakipsonuc-lahmacun" style="margin-top:6px"></div></td></tr>
         <tr class="udet res" data-u="lahmacun" data-nosw hidden><td class="lbl" style="padding-left:26px">→ Bu üründen aylık kâr <span class="hnote">aylık adet × adet başı kâr (gelir vergisi öncesi)</span></td><td class="m" data-o="M-lh_aykar"></td><td class="s" data-o="S-lh_aykar"></td><td class="d" data-o="D-lh_aykar"></td><td class="p" data-o="P-lh_aykar"></td></tr>
@@ -693,8 +693,8 @@ tr.modeoff{display:none!important}
         <tr class="udet res" data-u="pizza" data-nosw hidden><td class="lbl" style="padding-left:26px">→ Malzeme maliyeti — otomatik <span class="hnote">tarif gramı × alış fiyatı (KDV hariç) · döküm hücrenin altında</span></td><td class="m" data-o="M-pz_malzd"></td><td class="s" data-o="S-pz_malzd"></td><td class="d" data-o="D-pz_malzd"></td><td class="p" data-o="P-pz_malzd"></td></tr>
         <tr class="udet" data-u="pizza" data-nosw hidden><td class="lbl" style="padding-left:26px">Kutu + ambalaj (KDV hariç) <span class="hnote">Pizza kutusu 28×28×4 cm (25 cm pizza): Unipak 100'lü 1.073,40 TL → 10,73 + poşet 1,50 + peçete 0,14 = <b>12,37 TL KDV dahil → 10,3 TL</b>. Poşet: büyük boy atlet ~1,50 TL (Akakçe · Royaleks 30×56 ~3.000 adet 4.498 TL) · peçete 0,14 TL (Bizim Toptan · Teno 100'lü 13,50 TL). Fiyatlar KDV dahil gösterim; ambalaj KDV'si %20 düşülerek yazıldı.</span></td><td class="m num"><input data-c="M" data-k="pz_kutu" type="number" step="1"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="pz_kutu" type="number" step="1"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="pz_kutu" type="number" step="1"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="pz_kutu" type="number" step="1"><span class="u">TL</span></td></tr>
         <tr class="udet res" data-u="pizza" data-nosw hidden><td class="lbl" style="padding-left:26px">→ 1 PİZZANIN MALİYETİ <span class="hnote">sabit gider payı + malzeme + ambalaj — KDV ve komisyon hariç, fiyattan bağımsız</span></td><td class="m" data-o="M-pz_uretim"></td><td class="s" data-o="S-pz_uretim"></td><td class="d" data-o="D-pz_uretim"></td><td class="p" data-o="P-pz_uretim"></td></tr>
-        <tr class="udet" data-u="pizza" data-nosw hidden><td class="lbl" style="padding-left:26px">Kâr ekle — 1 pizza başına <span class="hnote">KDV, kart / platform komisyonu ve franchise payı düşüldükten sonra <b>cebine kalan</b> tutar (gelir vergisi öncesi). Satış fiyatı bu kâra göre otomatik hesaplanır.</span></td><td class="m num"><input data-c="M" data-k="pz_kar" type="number" step="5"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="pz_kar" type="number" step="5"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="pz_kar" type="number" step="5"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="pz_kar" type="number" step="5"><span class="u">TL</span></td></tr>
-        <tr class="udet res hi" data-u="pizza" data-nosw hidden><td class="lbl" style="padding-left:26px">→ Satış fiyatı — kapı / QR (KDV dahil) <span class="hnote">maliyet + kâr + KDV + kart komisyonu %3 (+ franchise) — döküm hücrenin altında</span></td><td class="m" data-o="M-pz_kapi"></td><td class="s" data-o="S-pz_kapi"></td><td class="d" data-o="D-pz_kapi"></td><td class="p" data-o="P-pz_kapi"></td></tr>
+        <tr class="udet" data-u="pizza" data-nosw hidden><td class="lbl" style="padding-left:26px">Kâr ekle — 1 pizza başına <span class="hnote">Yazdığın kâr satış fiyatını belirler ve fiyat <b>sabitlenir</b>. Sonra adedi ya da gideri değiştirirsen fiyat yerinde kalır, bu kutu o durumdaki <b>gerçek kârı</b> gösterir: az satışta sabit gider payı büyür, kâr düşer, eksiye geçebilir. (KDV, komisyon ve franchise düşülmüş, gelir vergisi öncesi.)</span></td><td class="m num"><input data-c="M" data-k="pz_kar" type="number" step="5"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="pz_kar" type="number" step="5"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="pz_kar" type="number" step="5"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="pz_kar" type="number" step="5"><span class="u">TL</span></td></tr>
+        <tr class="udet res hi" data-u="pizza" data-nosw hidden><td class="lbl" style="padding-left:26px">Satış fiyatı — kapı / QR (KDV dahil) <span class="hnote">kâr yazınca otomatik dolar ve sabit kalır; istersen doğrudan fiyat yaz · döküm kutunun altında</span></td><td class="m num"><input data-c="M" data-k="pz_fiyat" type="number" step="5"><span class="u">TL</span><div class="ubrk" data-o="M-pz_kapid"></div></td><td class="s num"><input data-c="S" data-k="pz_fiyat" type="number" step="5"><span class="u">TL</span><div class="ubrk" data-o="S-pz_kapid"></div></td><td class="d num"><input data-c="D" data-k="pz_fiyat" type="number" step="5"><span class="u">TL</span><div class="ubrk" data-o="D-pz_kapid"></div></td><td class="p num"><input data-c="P" data-k="pz_fiyat" type="number" step="5"><span class="u">TL</span><div class="ubrk" data-o="P-pz_kapid"></div></td></tr>
         <tr class="udet res hi platdep" data-u="pizza" data-nosw hidden><td class="lbl" style="padding-left:26px">→ Platform fiyatı — Yemeksepeti / Getir <span class="hnote">aynı kâr kalacak şekilde platform komisyonu fiyata eklenir; komisyon oranı yukarıdaki 2. tabloda</span></td><td class="m" data-o="M-pz_plat"></td><td class="s" data-o="S-pz_plat"></td><td class="d" data-o="D-pz_plat"></td><td class="p" data-o="P-pz_plat"></td></tr>
         <tr class="udet" data-u="pizza" data-nosw hidden><td class="lbl" style="padding-left:26px">Rakiplerin fiyatı — platform <span class="hnote">Yemeksepeti / Getir'de gördüğün fiyatı kutulara yaz; 0 = bilinmiyor. Kıyas Model M'nin fiyatıyla yapılır.</span></td><td colspan="4" style="text-align:left"><span id="rkwrap-pizza"></span><div class="hnote" id="rakipsonuc-pizza" style="margin-top:6px"></div></td></tr>
         <tr class="udet res" data-u="pizza" data-nosw hidden><td class="lbl" style="padding-left:26px">→ Bu üründen aylık kâr <span class="hnote">aylık adet × adet başı kâr (gelir vergisi öncesi)</span></td><td class="m" data-o="M-pz_aykar"></td><td class="s" data-o="S-pz_aykar"></td><td class="d" data-o="D-pz_aykar"></td><td class="p" data-o="P-pz_aykar"></td></tr>
@@ -711,6 +711,7 @@ tr.modeoff{display:none!important}
         <tr class="res"><td class="lbl">− Dükkân sabit giderleri (aylık, KDV dahil) <span class="hnote">Kira, personel, faturalar, bakım, ikmal, zorunlu yükümlülükler.</span></td><td class="m" data-o="M-msabit"></td><td class="s" data-o="S-msabit"></td><td class="d" data-o="D-msabit"></td><td class="p" data-o="P-msabit"></td></tr>
         <tr class="res"><td class="lbl">+ Yan ürün geliri (aylık) <span class="hnote">Ürün başına katkı × toplam aylık satış adedi.</span></td><td class="m" data-o="M-myan"></td><td class="s" data-o="S-myan"></td><td class="d" data-o="D-myan"></td><td class="p" data-o="P-myan"></td></tr>
         <tr class="res hi"><td class="lbl">= Vergi öncesi kâr </td><td class="m" data-o="M-mvonce"></td><td class="s" data-o="S-mvonce"></td><td class="d" data-o="D-mvonce"></td><td class="p" data-o="P-mvonce"></td></tr>
+        <tr class="res hi" data-nosw><td class="lbl">→ Başabaş — günde kaç ürün satılmalı? <span class="hnote">Bu fiyatlar ve bu ürün karışımıyla (pide / lahmacun / pizza oranı) sabit giderleri tam karşılayan günlük satış. Altında zarar; üstünde her ek ürün, sabit gider zaten karşılandığı için neredeyse tüm katkısını kâra yazar.</span></td><td class="m" data-o="M-bbadet"></td><td class="s" data-o="S-bbadet"></td><td class="d" data-o="D-bbadet"></td><td class="p" data-o="P-bbadet"></td></tr>
         <tr class="res gvdep"><td class="lbl">− Gelir / kurumlar vergisi <span class="hnote">Makinenin yıpranma payı matrahı düşürdüğü için vergi, kârın tam yüzdesinden azdır.</span></td><td class="m" data-o="M-mvergi"></td><td class="s" data-o="S-mvergi"></td><td class="d" data-o="D-mvergi"></td><td class="p" data-o="P-mvergi"></td></tr>
         <tr class="res hi"><td class="lbl">= AYLIK NET KÂR — cebe kalan </td><td class="m" data-o="M-mnet"></td><td class="s" data-o="S-mnet"></td><td class="d" data-o="D-mnet"></td><td class="p" data-o="P-mnet"></td></tr>
         </tbody></table>
@@ -1117,7 +1118,7 @@ tr.modeoff{display:none!important}
   var AK_ORTAK = ['pers','maas','p1','p2','p3','p4','p5','p6','isvor','kira','elek','su','muh','sis','bakim','ikmal','zorunlu','roy','yan','ick','yat','omur','vergi','kdv','ppay','pkom','isim'];
   /* Ortak alanlar pide varsayilanlarindan: rakip zincir Usta Pideci (TAB Gida), esnaf mahalle pidecisi.
      Malzeme (Eyl 2026 toptan): pide kasar 130 g x ~420 TL/kg; lahmacun 55 g kiyma x 690 TL/kg; pizza mozzarella ~533 TL/kg.
-     Kar varsayilani eski varsayilan kapi fiyatlarindan geri hesaplanir (HDEF_FIYAT) — rakamlar bir anda degismesin. */
+     FIYAT KARARDIR ve sabittir (HDEF_FIYAT varsayilan); kar = fiyattan ve o anki adet/giderden hesaplanir. */
   var HDEF = {
     S: {pers:0, maas:45000, kira:25000, elek:12000, su:3500, muh:4000, sis:2500, bakim:3.5, ikmal:7000, zorunlu:3000, roy:0, yan:25, ick:60, yat:3504269, omur:7, vergi:25, kdv:10, ppay:90, pkom:35, isim:0,
         pd_adet:55, pd_kutu:8.3, lh_adet:80, lh_kutu:11.7, pz_adet:0, pz_kutu:10.3},
@@ -1197,7 +1198,8 @@ tr.modeoff{display:none!important}
   var HPOS = 0.03, HGUN = 30.4, HCOLS = ['S','M','D','P'];
   var AK_DOMURUN = 'pizza';   /* HTML metni pizza diliyle yazili; acilista bir kez pide diline cevrilir */
   function akHKey(){ return 'ak_hesap_v4'; }
-  function akKarFiyattan(v, u, fiyat){ var x = hmodel(v).U[u]; return Math.round(fiyat * x.dKapi - x.uretim); }
+  /* kar ekle -> fiyat (bir kez hesaplanir, 0,1 TL); uretim ve dKapi fiyattan bagimsizdir */
+  function akFiyatKardan(v, u, kar){ var x = hmodel(v).U[u]; return x.dKapi > 0 ? Math.round((x.uretim + kar) / x.dKapi * 10) / 10 : 0; }
   function akHDEF(){
     var out = {};
     HCOLS.forEach(function(c){
@@ -1205,8 +1207,7 @@ tr.modeoff{display:none!important}
       AK_PKISI.forEach(function(k){ v[k] = 0; }); v.isvor = 23.75; akKisiyeCevir(v);
       AK_MALZ.forEach(function(m){ v['fy_'+m.k] = HDEF_FY[m.k]; });
       AK_URUNLER.forEach(function(u){ Object.keys(AK_TARIF[u.id]).forEach(function(m){ v[u.p+'g_'+m] = AK_TARIF[u.id][m]; }); v[u.p+'fire'] = 0; });
-      AK_URUNLER.forEach(function(u){ v[u.p+'kar'] = 0; });
-      AK_URUNLER.forEach(function(u){ v[u.p+'kar'] = akKarFiyattan(v, u.id, HDEF_FIYAT[c][u.id]); });
+      AK_URUNLER.forEach(function(u){ v[u.p+'fiyat'] = HDEF_FIYAT[c][u.id]; });
       out[c] = v;
     });
     return out;
@@ -1229,7 +1230,7 @@ tr.modeoff{display:none!important}
         if(u.id !== 'pizza' && o.adet !== undefined) v[u.p+'adet'] = o.adet;
         if(o.fiyat > 0) fiyat[u.id] = o.fiyat;
       });
-      AK_URUNLER.forEach(function(u){ if(fiyat[u.id]) v[u.p+'kar'] = akKarFiyattan(v, u.id, fiyat[u.id]); });
+      AK_URUNLER.forEach(function(u){ if(fiyat[u.id]) v[u.p+'fiyat'] = fiyat[u.id]; });
       out[c] = v;
     });
     return out;
@@ -1294,9 +1295,10 @@ tr.modeoff{display:none!important}
     var fatKdvPay = ayToplam > 0 ? fatKdv/ayToplam : 0;
     var U = {}, T = {ciro:0, kdv:0, malz:0, kom:0, kar:0};
     AK_URUNLER.forEach(function(u){
-      var adet = Math.max(0, v[u.p+'adet'] || 0), malzD = akMalzeme(v, u.id), malz = malzD.tl, kutu = v[u.p+'kutu'] || 0, kar = v[u.p+'kar'] || 0;
+      var adet = Math.max(0, v[u.p+'adet'] || 0), malzD = akMalzeme(v, u.id), malz = malzD.tl, kutu = v[u.p+'kutu'] || 0, fiyat = v[u.p+'fiyat'] || 0;
       var uretim = sabitPay + malz + kutu;
-      var kapi  = dKapi > 0 ? (uretim + kar)/dKapi : NaN;
+      var kapi  = fiyat;                            /* FIYAT SABIT (karar) — adet degisince fiyat degil KAR degisir */
+      var kar   = kapi*dKapi - uretim;              /* cebe kalan: KDV, kart, franchise ve sabit gider payi dusulmus */
       var plat  = (pPay > 0 && dPlat > 0) ? (uretim + kar)/dPlat : kapi;
       var satis = pPay*plat + (1 - pPay)*kapi;                       /* kanal payina gore harmanlanmis fiyat */
       var kPlat = pPay*plat*kom, kPos = (1 - pPay)*kapi*HPOS, kRoy = satis/kdvK*roy;
@@ -1345,11 +1347,11 @@ tr.modeoff{display:none!important}
       hset(c+'-'+p+'ozet', '<b>'+hfmt(x.adet)+'</b>/gün · kapı <b>'+hfmt(x.kapi)+'</b>'+(platAcik ? ' · platform <b>'+hfmt(x.plat)+'</b>' : '')+' TL');
       hset(c+'-'+p+'malzd', '<b>'+f1(x.malz)+' TL</b><div class="ubrk">'+x.malzD.kalem.filter(function(q){ return q.tl > 0; }).map(function(q){ return AK_MALZ_AD[q.k]+' '+f1(q.tl); }).join(' + ')+(x.malzD.fire > 0 ? ' · fire +%'+f1(x.malzD.fire*100) : '')+'</div>');
       hset(c+'-'+p+'uretim', '<b>'+f1(x.uretim)+' TL</b><div class="ubrk">sabit payı '+f1(R.sabitPay)+' + malzeme '+f1(x.malz)+' + ambalaj '+hfmt(x.kutu)+'</div>');
-      hset(c+'-'+p+'kapi', Number.isFinite(x.kapi)
-        ? '<b>'+hfmt(x.kapi)+' TL</b><div class="ubrk">maliyet '+f1(x.uretim)+' + kâr '+hfmt(x.kar)+' + KDV '+f1(x.kapiKdv)+' + kart '+f1(x.kapiPos)+(x.kapiRoy > 0 ? ' + franchise '+f1(x.kapiRoy) : '')+'</div>'
-        : '<span class="neg">hesaplanamaz</span>');
+      hset(c+'-'+p+'kapid', 'maliyet '+f1(x.uretim)+(x.kar >= 0 ? ' + kâr '+f1(x.kar) : ' − zarar '+f1(-x.kar))+' + KDV '+f1(x.kapiKdv)+' + kart '+f1(x.kapiPos)+(x.kapiRoy > 0 ? ' + franchise '+f1(x.kapiRoy) : ''));
+      var kInp = document.querySelector('#hesap input[data-c="'+c+'"][data-k="'+p+'kar"]');
+      if(kInp){ if(document.activeElement !== kInp) kInp.value = Math.round(x.kar*10)/10; kInp.style.color = x.kar < 0 ? '#c0392b' : ''; }
       hset(c+'-'+p+'plat', platAcik && Number.isFinite(x.plat)
-        ? '<b>'+hfmt(x.plat)+' TL</b><div class="ubrk">maliyet '+f1(x.uretim)+' + kâr '+hfmt(x.kar)+' + KDV '+f1(x.platKdv)+' + komisyon '+f1(x.platKom)+(x.platRoy > 0 ? ' + franchise '+f1(x.platRoy) : '')+'</div>'
+        ? '<b>'+hfmt(x.plat)+' TL</b><div class="ubrk">maliyet '+f1(x.uretim)+(x.kar >= 0 ? ' + kâr '+f1(x.kar) : ' − zarar '+f1(-x.kar))+' + KDV '+f1(x.platKdv)+' + komisyon '+f1(x.platKom)+(x.platRoy > 0 ? ' + franchise '+f1(x.platRoy) : '')+'</div>'
         : '<span class="hnote">platform kapalı</span>');
       hset(c+'-'+p+'aykar', hfmt(x.ay)+' × '+hfmt(x.kar)+' = <b>'+hfmt(x.ay*x.kar)+' TL</b>', x.ay > 0 ? (x.kar >= 0 ? 'pos' : 'neg') : '');
       if(x.adet > 0) adetYazi.push(hfmt(x.ay)+' '+u.ad);
@@ -1363,6 +1365,13 @@ tr.modeoff{display:none!important}
     hset(c+'-myan', '+'+hfmt(R.mYan)+' TL', R.mYan > 0 ? 'pos' : '');
     hset(c+'-sepet', 'pide + içecek = <b>'+hfmt(R.U.pide.kapi + (v.ick || 0))+' TL</b>');
     hset(c+'-mvonce', '<b>'+hfmt(R.mVonce)+' TL</b>', R.mVonce >= 0 ? 'pos' : 'neg');
+    /* basabas: urun basi ortalama katki (sabit gider oncesi) = (SUM ay x (kar + sabit payi) + yan urun) / toplam adet */
+    var katki = R.mYan; AK_URUNLER.forEach(function(u){ var x = R.U[u.id]; katki += x.ay * (x.kar + R.sabitPay); });
+    var gunSimdi = R.ayToplam / HGUN;
+    var bb = (R.ayToplam > 0 && katki > 0) ? R.sabit / (katki / R.ayToplam) / HGUN : NaN;
+    hset(c+'-bbadet', Number.isFinite(bb)
+      ? '<b>günde '+f1(bb)+' ürün</b><div class="hnote" style="margin-top:2px">şu an günde '+hfmt(gunSimdi)+' · '+(gunSimdi >= bb ? 'başabaşın %'+hfmt(100*gunSimdi/bb)+"'i" : 'başabaşın '+hfmt(bb - gunSimdi)+' ürün altında')+'</div>'
+      : '<span class="neg">bu fiyatlarla ulaşılamaz</span>', Number.isFinite(bb) ? (gunSimdi >= bb ? 'pos' : 'neg') : '');
     hset(c+'-mvergi', hfmt(R.mVergi)+' TL');
     hset(c+'-mnet',   '<b>'+hfmt(R.mNet)+' TL</b>', R.mNet >= 0 ? 'pos' : 'neg');
     if(c === 'M' && window.hrakip) AK_URUNLER.forEach(function(u){ hrakip(u.id); });
@@ -1526,6 +1535,9 @@ tr.modeoff{display:none!important}
       if(saved && saved[c]) Object.keys(saved[c]).forEach(function(k){ o[k] = saved[c][k]; });
       if(akKisiyeCevir(o)) cevrildi = true;
       if(kutuGoc) [['pd_kutu', 8], ['lh_kutu', 5], ['pz_kutu', 8]].forEach(function(e){ if(o[e[0]] === e[1]){ o[e[0]] = D[c][e[0]]; cevrildi = true; } });
+      /* 12 Eyl 2026 hata duzeltmesi: eski kayitta fiyat yok, kar var -> ekranda gorulen fiyat sabitlenir */
+      AK_URUNLER.forEach(function(u){ var sc = saved && saved[c];
+        if(sc && sc[u.p+'fiyat'] === undefined && sc[u.p+'kar'] !== undefined){ o[u.p+'fiyat'] = akFiyatKardan(o, u.id, sc[u.p+'kar']); cevrildi = true; } });
       hfill(c, o); });
     HCOLS.forEach(function(c){ hcalc(c); });
     if(cevrildi) hsave();
@@ -1542,7 +1554,15 @@ tr.modeoff{display:none!important}
     hsen();
     rkBuildAll();
     document.querySelectorAll('#hesap input[data-c]').forEach(function(i){
-      i.addEventListener('input',function(){ hcalc(i.dataset.c); hsen(); hsave(); });
+      i.addEventListener('input',function(){
+        var c = i.dataset.c, m = /^(pd|lh|pz)_kar$/.exec(i.dataset.k);
+        if(m){   /* kar yazildi -> fiyat bu kara gore bir kez hesaplanip sabitlenir */
+          var u = AK_URUNLER.filter(function(x){ return x.p === m[1]+'_'; })[0];
+          var fi = document.querySelector('#hesap input[data-c="'+c+'"][data-k="'+u.p+'fiyat"]');
+          if(fi) fi.value = akFiyatKardan(hread(c), u.id, hnum(i.value));
+        }
+        hcalc(c); hsen(); hsave();
+      });
     });
   })();
 
