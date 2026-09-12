@@ -1442,7 +1442,7 @@ tr.modeoff{display:none!important}
       <table class="hs">
         <thead><tr><th class="lbl"></th><th class="m">Model M<em>insanlı · 10 m²</em></th><th class="s">Model S<em>insansız · 6 m²</em></th><th class="d">Domino's<em>şube</em></th><th class="p">Mahalle<em>pizzacısı</em></th></tr></thead><tbody>
         <tr class="grp"><td colspan="5">2 · Pizza başı malzeme — düzenlenebilir (KDV hariç)</td></tr>
-        <tr><td class="lbl">Malzeme maliyeti (fire dahil) <span class="hnote">Hamur + peynir/et + sos ve sebze — fire dahil. <b>Eylül 2026 toptan (restoran tedarik) fiyatları:</b> kaşar 420, dana kıyma 730, mozzarella ~533 TL/kg; un 30 TL/kg. Maliyetin %90'ı peynir ya da ettir, un 1-5 TL. Zincir ölçek sayesinde ~%10 ucuza alır (kendi et/hamur fabrikaları var); bizde kendi taban üretimi kurulunca düşer.</span></td><td class="m num"><input data-c="M" data-k="malz" type="number" step="1"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="malz" type="number" step="1"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="malz" type="number" step="1"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="malz" type="number" step="1"><span class="u">TL</span></td></tr>
+        <tr><td class="lbl">Malzeme maliyeti (fire dahil) <span class="hnote">Hamur + peynir/et + sos ve sebze — fire dahil. <b>Eylül 2026 toptan (restoran tedarik) fiyatları:</b> kaşar 420, dana kıyma 690 (kasap toptan), mozzarella ~533 TL/kg; un 27 TL/kg. Maliyetin %90'ı peynir ya da ettir, un 1-5 TL. Zincir ölçek sayesinde ~%10 ucuza alır (kendi et/hamur fabrikaları var); bizde kendi taban üretimi kurulunca düşer.</span></td><td class="m num"><input data-c="M" data-k="malz" type="number" step="1"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="malz" type="number" step="1"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="malz" type="number" step="1"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="malz" type="number" step="1"><span class="u">TL</span></td></tr>
         <tr><td class="lbl">Kutu + ambalaj + sachet</td><td class="m num"><input data-c="M" data-k="kutu" type="number" step="1"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="kutu" type="number" step="1"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="kutu" type="number" step="1"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="kutu" type="number" step="1"><span class="u">TL</span></td></tr>
         <tr class="res hi"><td class="lbl">→ 1 PİZZANIN ÜRETİM MALİYETİ <span class="hnote">Sabit gider payı + malzeme + ambalaj. Alttaki iki tablo, 1 pizzanın üstüne binen kesinti ve vergidir.</span></td><td class="m" data-o="M-uretim"></td><td class="s" data-o="S-uretim"></td><td class="d" data-o="D-uretim"></td><td class="p" data-o="P-uretim"></td></tr>
         </tbody></table>
@@ -2584,14 +2584,14 @@ tr.modeoff{display:none!important}
     P: {pers:3, maas:40875, kira:70000, elek:16000, su:5000, muh:5000, sis:1500, bakim:2, ikmal:0, zorunlu:3000, roy:0, yan:15, ick:40, yat:2500000, omur:7, vergi:25, malz:72, kutu:8, fiyat:220, kdv:10, ppay:70, pkom:35, adet:60, isim:0}
   };
   /* LAHMACUN varsayilanlari (12 Eyl 2026) — isletme varsayimlari pide ile ayni; farkli olan malzeme, ambalaj, fiyat, adet.
-     Malzeme: 55 g dana kiyma x 730 TL/kg (toptan) = 40 + un 40 g 1 + sogan/domates/biber/maydanoz ~3 = 44 TL.
+     Malzeme: 55 g dana kiyma x 690 TL/kg (kasap toptan; UKON karkas 593, ATB kol 540-600) = 38 + un/sebze/yag ~3,3 + fire = 42 TL.
      Ambalaj: kagit + poset 5 TL. Fiyat: Yemeksepeti'nde Pidem lahmacun menusu (2 adet + kucuk kola) 430 TL -> tek ~180;
      esnaf pideci YS 220 (Kemal, 12 Eyl). Taban 115 -> %35 komisyonla liste ~177. Usta Pideci lahmacun fiyati dogrulanmadi. */
   var HDEFL = {
-    S: {pers:0, maas:45000, kira:25000, elek:12000, su:3500, muh:4000, sis:2500, bakim:3.5, ikmal:7000, zorunlu:3000, roy:0, yan:25, ick:60, yat:3504269, omur:7, vergi:25, malz:44, kutu:5, fiyat:115, kdv:10, ppay:90, pkom:35, adet:80, isim:0},
-    M: {pers:1, maas:40875, kira:60000, elek:14000, su:4500, muh:5000, sis:2500, bakim:3.5, ikmal:5000, zorunlu:3500, roy:0, yan:25, ick:60, yat:3397169, omur:7, vergi:25, malz:44, kutu:5, fiyat:115, kdv:10, ppay:90, pkom:35, adet:100, isim:0},
-    D: {pers:4, maas:45000, kira:120000, elek:25000, su:6000, muh:8000, sis:5000, bakim:2, ikmal:0, zorunlu:6000, roy:9, yan:60, ick:90, yat:8000000, omur:7, vergi:25, malz:40, kutu:5, fiyat:140, kdv:10, ppay:60, pkom:22, adet:150, isim:7000000},
-    P: {pers:3, maas:40875, kira:70000, elek:16000, su:5000, muh:5000, sis:1500, bakim:2, ikmal:0, zorunlu:3000, roy:0, yan:15, ick:40, yat:2500000, omur:7, vergi:25, malz:48, kutu:5, fiyat:145, kdv:10, ppay:70, pkom:35, adet:200, isim:0}
+    S: {pers:0, maas:45000, kira:25000, elek:12000, su:3500, muh:4000, sis:2500, bakim:3.5, ikmal:7000, zorunlu:3000, roy:0, yan:25, ick:60, yat:3504269, omur:7, vergi:25, malz:42, kutu:5, fiyat:115, kdv:10, ppay:90, pkom:35, adet:80, isim:0},
+    M: {pers:1, maas:40875, kira:60000, elek:14000, su:4500, muh:5000, sis:2500, bakim:3.5, ikmal:5000, zorunlu:3500, roy:0, yan:25, ick:60, yat:3397169, omur:7, vergi:25, malz:42, kutu:5, fiyat:115, kdv:10, ppay:90, pkom:35, adet:100, isim:0},
+    D: {pers:4, maas:45000, kira:120000, elek:25000, su:6000, muh:8000, sis:5000, bakim:2, ikmal:0, zorunlu:6000, roy:9, yan:60, ick:90, yat:8000000, omur:7, vergi:25, malz:38, kutu:5, fiyat:140, kdv:10, ppay:60, pkom:22, adet:150, isim:7000000},
+    P: {pers:3, maas:40875, kira:70000, elek:16000, su:5000, muh:5000, sis:1500, bakim:2, ikmal:0, zorunlu:3000, roy:0, yan:15, ick:40, yat:2500000, omur:7, vergi:25, malz:46, kutu:5, fiyat:145, kdv:10, ppay:70, pkom:35, adet:200, isim:0}
   };
   var HPOS = 0.03, HGUN = 30.4, HCOLS = ['S','M','D','P'];
   var AK_DOMURUN = 'pizza';   /* DOM su an hangi urunu gosteriyor */
@@ -2897,6 +2897,12 @@ tr.modeoff{display:none!important}
     if(!document.querySelector('#hesap input[data-c]')) return;
     /* tek seferlik temizlik: eski kayitlardaki acik vergi bayragi + bugunku duzeltmelerden
        onceki pide verisi sifirlanir; ak_mt damgasi ile eski bulut kaydinin geri ezmesi onlenir */
+    try{ if(!localStorage.getItem('ak_mig_v4')){
+      /* 12 Eyl 2026: kiyma 730 -> 690 TL/kg, lahmacun malzeme 44 -> 42 — eski lahmacun kaydi ezmesin */
+      localStorage.removeItem('ak_hesap_lahm_v1');
+      localStorage.setItem('ak_mt', String(Date.now()));
+      localStorage.setItem('ak_mig_v4', '1');
+    } }catch(e){}
     try{ if(!localStorage.getItem('ak_mig_v3')){
       /* 12 Eyl 2026: toptan fiyatla malzeme degisti (pizza 72->90, pide 50->60) — eski kayit ezmesin */
       ['ak_hesap_v3','ak_hesap_pide_v1'].forEach(function(k){ localStorage.removeItem(k); });
