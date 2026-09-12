@@ -700,8 +700,10 @@ tr.modeoff{display:none!important}
         <tr class="udet res hi platdep" data-u="pizza" data-nosw hidden><td class="lbl" style="padding-left:26px">→ Platform fiyatı — Yemeksepeti / Getir <span class="hnote">aynı kâr kalacak şekilde platform komisyonu fiyata eklenir; komisyon oranı yukarıdaki 2. tabloda</span></td><td class="m" data-o="M-pz_plat"></td><td class="s" data-o="S-pz_plat"></td><td class="d" data-o="D-pz_plat"></td><td class="p" data-o="P-pz_plat"></td></tr>
         <tr class="udet res" data-u="pizza" data-nosw hidden><td class="lbl" style="padding-left:26px">→ Bu üründen aylık kâr <span class="hnote">aylık adet × adet başı kâr (gelir vergisi öncesi)</span></td><td class="m" data-o="M-pz_aykar"></td><td class="s" data-o="S-pz_aykar"></td><td class="d" data-o="D-pz_aykar"></td><td class="p" data-o="P-pz_aykar"></td></tr>
         <tr class="grp" data-nosw><td colspan="5">Ortak kararlar — düzenlenebilir</td></tr>
-        <tr data-nosw><td class="lbl">Yan ürün (içecek, tatlı) — ürün başına net kâr <span class="hnote">Pide, lahmacun ve pizza dışında satılan içecek, tatlı gibi ürünlerden kalan net kâr — satılan her ürüne düşen payıyla. <b>Varsayılan 0:</b> önceki rakamlar (ürün başına 25 / 60 / 15 TL) kaynaksız tahmindi, kaldırıldı. Biliyorsan yaz; örnek: her 4 siparişin 1'inde net 35 TL kalan bir içecek satılıyorsa 35 ÷ 4 = 8,75 TL.</span></td><td class="m num"><input data-c="M" data-k="yan" type="number" step="5" value="20"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="yan" type="number" step="5" value="20"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="yan" type="number" step="5" value="30"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="yan" type="number" step="5" value="15"><span class="u">TL</span></td></tr>
-        <tr><td class="lbl">İçecek — müşteriye satış fiyatı <span class="hnote">Müşteri pizzayı değil <b>sepeti</b> karşılaştırır — her hücrenin altında toplam yazar. Domino's gel-al'da kutu kola 90 TL (paket serviste 130-165 TL'ye çıkar); biz 60 TL'ye satıp yine ~35 TL kâr ediyoruz (alış ~25 TL). Fark küçük ama yönü doğru: <b>bizde sepet her zaman daha ucuz</b>, üstelik 7/24 ve beklemesiz.</span></td><td class="m num"><input data-c="M" data-k="ick" type="number" step="5" value="60"><span class="u">TL</span><div class="hnote" data-o="M-sepet" style="margin-top:3px"></div></td><td class="s num"><input data-c="S" data-k="ick" type="number" step="5" value="60"><span class="u">TL</span><div class="hnote" data-o="S-sepet" style="margin-top:3px"></div></td><td class="d num"><input data-c="D" data-k="ick" type="number" step="5" value="90"><span class="u">TL</span><div class="hnote" data-o="D-sepet" style="margin-top:3px"></div></td><td class="p num"><input data-c="P" data-k="ick" type="number" step="5" value="70"><span class="u">TL</span><div class="hnote" data-o="P-sepet" style="margin-top:3px"></div></td></tr>
+        <tr data-nosw><td class="lbl">Diğer yan ürün (tatlı vb.) — ürün başına net kâr <span class="hnote">İçecek aşağıda ayrı hesaplanır. Tatlı gibi diğer ürünlerden kalan net kâr, satılan her ürüne düşen payıyla. Varsayılan 0 — kaynaklı veri yok; biliyorsan yaz.</span></td><td class="m num"><input data-c="M" data-k="yan" type="number" step="5" value="20"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="yan" type="number" step="5" value="20"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="yan" type="number" step="5" value="30"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="yan" type="number" step="5" value="15"><span class="u">TL</span></td></tr>
+        <tr data-nosw><td class="lbl">İçecek — satış fiyatı (kapı / QR, KDV dahil) <span class="hnote">İçecekte de KDV %10 (restoran hizmeti). Platformda aynı kâr kalsın diye içeceğin liste fiyatı komisyonla otomatik yükselir — aylık satırın altında yazar.</span></td><td class="m num"><input data-c="M" data-k="ick" type="number" step="5" value="60"><span class="u">TL</span><div class="hnote" data-o="M-sepet" style="margin-top:3px"></div></td><td class="s num"><input data-c="S" data-k="ick" type="number" step="5" value="60"><span class="u">TL</span><div class="hnote" data-o="S-sepet" style="margin-top:3px"></div></td><td class="d num"><input data-c="D" data-k="ick" type="number" step="5" value="90"><span class="u">TL</span><div class="hnote" data-o="D-sepet" style="margin-top:3px"></div></td><td class="p num"><input data-c="P" data-k="ick" type="number" step="5" value="70"><span class="u">TL</span><div class="hnote" data-o="P-sepet" style="margin-top:3px"></div></td></tr>
+        <tr data-nosw><td class="lbl">İçecek — alış fiyatı (KDV hariç) <span class="hnote">kutu kola vb. toptan alış</span></td><td class="m num"><input data-c="M" data-k="ick_alis" type="number" step="1"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="ick_alis" type="number" step="1"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="ick_alis" type="number" step="1"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="ick_alis" type="number" step="1"><span class="u">TL</span></td></tr>
+        <tr data-nosw><td class="lbl">Satılan ürünlerin yüzde kaçına içecek eşlik ediyor? <span class="hnote">4 üründen 1'inde içecek → %25 · 2 lahmacun + 1 kola → %50. Yayımlanmış bir ortalama yok (Ipsos 2025: içeceksiz sipariş artıyor, içecek siparişi ~%38 pahalandırıyor). Varsayılan dört kolonda %25; aylık içecek satırının altında %25 ve %50 iki durum birlikte yazar.</span></td><td class="m num"><input data-c="M" data-k="ick_oran" type="number" step="5"><span class="u">%</span></td><td class="s num"><input data-c="S" data-k="ick_oran" type="number" step="5"><span class="u">%</span></td><td class="d num"><input data-c="D" data-k="ick_oran" type="number" step="5"><span class="u">%</span></td><td class="p num"><input data-c="P" data-k="ick_oran" type="number" step="5"><span class="u">%</span></td></tr>
         <tr><td class="lbl"><label class="aksw akmini"><input type="checkbox" id="gvsw"><span></span></label>Gelir / kurumlar vergisi oranı <span class="hnote">Anahtarı kapatırsan vergi hesaba katılmaz — vergi öncesi kâr doğrudan cebe kalan olur. Limited/A.Ş. kurumlar vergisi %25; şahıs şirketinde artan oranlı gelir vergisi (%15–40).</span></td><td class="m num"><input data-c="M" data-k="vergi" type="number" step="1"><span class="u">%</span></td><td class="s num"><input data-c="S" data-k="vergi" type="number" step="1"><span class="u">%</span></td><td class="d num"><input data-c="D" data-k="vergi" type="number" step="1"><span class="u">%</span></td><td class="p num"><input data-c="P" data-k="vergi" type="number" step="1"><span class="u">%</span></td></tr>
         <tr class="grp"><td colspan="5">Aylık sonuç — otomatik hesaplanır</td></tr>
         <tr class="res"><td class="lbl">→ Aylık satış adedi <span class="hnote">Günlük adet × 30,4 gün.</span></td><td class="m" data-o="M-maylik"></td><td class="s" data-o="S-maylik"></td><td class="d" data-o="D-maylik"></td><td class="p" data-o="P-maylik"></td></tr>
@@ -710,7 +712,8 @@ tr.modeoff{display:none!important}
         <tr class="res"><td class="lbl">− Malzeme + ambalaj (aylık, KDV dahil) </td><td class="m" data-o="M-mmalz"></td><td class="s" data-o="S-mmalz"></td><td class="d" data-o="D-mmalz"></td><td class="p" data-o="P-mmalz"></td></tr>
         <tr class="res"><td class="lbl">− Komisyon ve kesintiler (aylık) <span class="hnote">Platform + kart komisyonu + franchise/IoT. Yukarıdaki platform anahtarına bağlıdır.</span></td><td class="m" data-o="M-mkom"></td><td class="s" data-o="S-mkom"></td><td class="d" data-o="D-mkom"></td><td class="p" data-o="P-mkom"></td></tr>
         <tr class="res"><td class="lbl">− Dükkân sabit giderleri (aylık, KDV dahil) <span class="hnote">Kira, personel, faturalar, bakım, ikmal, zorunlu yükümlülükler.</span></td><td class="m" data-o="M-msabit"></td><td class="s" data-o="S-msabit"></td><td class="d" data-o="D-msabit"></td><td class="p" data-o="P-msabit"></td></tr>
-        <tr class="res"><td class="lbl">+ Yan ürün geliri (aylık) <span class="hnote">Ürün başına katkı × toplam aylık satış adedi.</span></td><td class="m" data-o="M-myan"></td><td class="s" data-o="S-myan"></td><td class="d" data-o="D-myan"></td><td class="p" data-o="P-myan"></td></tr>
+        <tr class="res" data-nosw><td class="lbl">+ İçecek net kârı (aylık) <span class="hnote">içecek adedi = toplam ürün × oran · 1 içecekten kalan = satış ÷ 1,10 (KDV) − kart %3 − franchise − alış; platformda liste fiyatı aynı kârı bırakacak kadar yükselir</span></td><td class="m" data-o="M-mick"></td><td class="s" data-o="S-mick"></td><td class="d" data-o="D-mick"></td><td class="p" data-o="P-mick"></td></tr>
+        <tr class="res"><td class="lbl">+ Diğer yan ürün (aylık) <span class="hnote">ürün başına katkı × toplam aylık satış adedi</span></td><td class="m" data-o="M-myan"></td><td class="s" data-o="S-myan"></td><td class="d" data-o="D-myan"></td><td class="p" data-o="P-myan"></td></tr>
         <tr class="res hi"><td class="lbl">= Vergi öncesi kâr </td><td class="m" data-o="M-mvonce"></td><td class="s" data-o="S-mvonce"></td><td class="d" data-o="D-mvonce"></td><td class="p" data-o="P-mvonce"></td></tr>
         <tr class="res hi" data-nosw><td class="lbl">→ Başabaş — günde kaç ürün satılmalı? <span class="hnote">Bu fiyatlar ve bu ürün karışımıyla (pide / lahmacun / pizza oranı) sabit giderleri tam karşılayan günlük satış. Altında zarar; üstünde her ek ürün, sabit gider zaten karşılandığı için neredeyse tüm katkısını kâra yazar.</span></td><td class="m" data-o="M-bbadet"></td><td class="s" data-o="S-bbadet"></td><td class="d" data-o="D-bbadet"></td><td class="p" data-o="P-bbadet"></td></tr>
         <tr class="res gvdep"><td class="lbl">− Gelir / kurumlar vergisi <span class="hnote">Makinenin yıpranma payı matrahı düşürdüğü için vergi, kârın tam yüzdesinden azdır.</span></td><td class="m" data-o="M-mvergi"></td><td class="s" data-o="S-mvergi"></td><td class="d" data-o="D-mvergi"></td><td class="p" data-o="P-mvergi"></td></tr>
@@ -1116,18 +1119,18 @@ tr.modeoff{display:none!important}
     {id:'lahmacun', p:'lh_', ad:'lahmacun', gen:'lahmacunun', Gen:'Lahmacunun', eski:'ak_hesap_lahm_v1'},
     {id:'pizza',    p:'pz_', ad:'pizza',    gen:'pizzanın',   Gen:'Pizzanın',   eski:'ak_hesap_v3'}
   ];
-  var AK_ORTAK = ['pers','maas','p1','p2','p3','p4','p5','p6','isvor','kira','elek','su','muh','sis','bakim','ikmal','zorunlu','roy','yan','ick','yat','omur','vergi','kdv','ppay','pkom','isim'];
+  var AK_ORTAK = ['pers','maas','p1','p2','p3','p4','p5','p6','isvor','kira','elek','su','muh','sis','bakim','ikmal','zorunlu','roy','yan','ick','ick_alis','ick_oran','yat','omur','vergi','kdv','ppay','pkom','isim'];
   /* Ortak alanlar pide varsayilanlarindan: rakip zincir Usta Pideci (TAB Gida), esnaf mahalle pidecisi.
      Malzeme (Eyl 2026 toptan): pide kasar 130 g x ~420 TL/kg; lahmacun 55 g kiyma x 690 TL/kg; pizza mozzarella ~533 TL/kg.
      FIYAT KARARDIR ve sabittir (HDEF_FIYAT varsayilan); kar = fiyattan ve o anki adet/giderden hesaplanir. */
   var HDEF = {
-    S: {pers:0, maas:45000, kira:25000, elek:12000, su:3500, muh:4000, sis:2500, bakim:3.5, ikmal:7000, zorunlu:3000, roy:0, yan:0, ick:60, yat:3504269, omur:7, vergi:25, kdv:10, ppay:90, pkom:35, isim:0,
+    S: {pers:0, maas:45000, kira:25000, elek:12000, su:3500, muh:4000, sis:2500, bakim:3.5, ikmal:7000, zorunlu:3000, roy:0, yan:0, ick:60, ick_alis:40, ick_oran:25, yat:3504269, omur:7, vergi:25, kdv:10, ppay:90, pkom:35, isim:0,
         pd_adet:55, pd_kutu:8.3, lh_adet:80, lh_kutu:11.7, pz_adet:0, pz_kutu:10.3},
-    M: {pers:1, maas:40875, kira:60000, elek:14000, su:4500, muh:5000, sis:2500, bakim:3.5, ikmal:5000, zorunlu:3500, roy:0, yan:0, ick:60, yat:3397169, omur:7, vergi:25, kdv:10, ppay:90, pkom:35, isim:0,
+    M: {pers:1, maas:40875, kira:60000, elek:14000, su:4500, muh:5000, sis:2500, bakim:3.5, ikmal:5000, zorunlu:3500, roy:0, yan:0, ick:60, ick_alis:40, ick_oran:25, yat:3397169, omur:7, vergi:25, kdv:10, ppay:90, pkom:35, isim:0,
         pd_adet:70, pd_kutu:8.3, lh_adet:100, lh_kutu:11.7, pz_adet:0, pz_kutu:10.3},
-    D: {pers:4, maas:45000, kira:120000, elek:25000, su:6000, muh:8000, sis:5000, bakim:2, ikmal:0, zorunlu:6000, roy:9, yan:0, ick:90, yat:8000000, omur:7, vergi:25, kdv:10, ppay:60, pkom:22, isim:7000000,
+    D: {pers:4, maas:45000, kira:120000, elek:25000, su:6000, muh:8000, sis:5000, bakim:2, ikmal:0, zorunlu:6000, roy:9, yan:0, ick:80, ick_alis:40, ick_oran:25, yat:8000000, omur:7, vergi:25, kdv:10, ppay:60, pkom:22, isim:7000000,
         pd_adet:150, pd_kutu:8.3, lh_adet:150, lh_kutu:11.7, pz_adet:0, pz_kutu:10.3},
-    P: {pers:3, maas:40875, kira:70000, elek:16000, su:5000, muh:5000, sis:1500, bakim:2, ikmal:0, zorunlu:3000, roy:0, yan:0, ick:40, yat:2500000, omur:7, vergi:25, kdv:10, ppay:70, pkom:35, isim:0,
+    P: {pers:3, maas:40875, kira:70000, elek:16000, su:5000, muh:5000, sis:1500, bakim:2, ikmal:0, zorunlu:3000, roy:0, yan:0, ick:80, ick_alis:40, ick_oran:25, yat:2500000, omur:7, vergi:25, kdv:10, ppay:70, pkom:35, isim:0,
         pd_adet:60, pd_kutu:8.3, lh_adet:200, lh_kutu:11.7, pz_adet:0, pz_kutu:10.3}
   };
   var HDEF_FIYAT = { M:{pide:180, lahmacun:115, pizza:190}, S:{pide:180, lahmacun:115, pizza:190},
@@ -1314,7 +1317,12 @@ tr.modeoff{display:none!important}
     });
     var mSabit = sabit + fatKdv;
     var mYan   = (v.yan || 0) * ayToplam;
-    var mVonce = T.ciro - T.kdv - T.malz - T.kom - mSabit + mYan;
+    /* ICECEK: kapida satis fiyati; platformda ayni kar kalacak sekilde liste fiyati. Alis KDV'si mahsup edildigi icin kari etkilemez. */
+    var ickS = v.ick || 0, ickA = v.ick_alis || 0, ickOran = Math.max(0, v.ick_oran || 0) / 100;
+    var ickKar = ickS * dKapi - ickA;
+    var ickPlat = dPlat > 0 ? (ickKar + ickA) / dPlat : NaN;
+    var ickAy = ayToplam * ickOran, mIck = ickAy * ickKar;
+    var mVonce = T.ciro - T.kdv - T.malz - T.kom - mSabit + mYan + mIck;
     var amort  = v.omur > 0 ? v.yat/(v.omur*12) : 0;
     var mAmort = (AKFL && AKFL.amort === 0) ? 0 : amort;
     var mMatrah = mVonce - mAmort;
@@ -1322,6 +1330,7 @@ tr.modeoff{display:none!important}
     var mNet   = mVonce - mVergi;
     return {personel:personel, bakimTL:bakimTL, sabit:sabit, fatKdv:fatKdv, sabitPay:sabitPay, ayToplam:ayToplam,
             ePpay:ePpay, pPay:pPay, U:U, T:T, mSabit:mSabit, mYan:mYan, mVonce:mVonce,
+            ickKar:ickKar, ickPlat:ickPlat, ickAy:ickAy, mIck:mIck,
             amort:amort, mAmort:mAmort, mVergi:mVergi, mNet:mNet, netKar:mMatrah - mVergi,
             geri: mNet > 0 ? v.yat/mNet : NaN, v:v};
   }
@@ -1364,10 +1373,11 @@ tr.modeoff{display:none!important}
     hset(c+'-mkom',   hfmt(R.T.kom)+' TL');
     hset(c+'-msabit', hfmt(R.mSabit)+' TL');
     hset(c+'-myan', '+'+hfmt(R.mYan)+' TL', R.mYan > 0 ? 'pos' : '');
+    hset(c+'-mick', (R.mIck < 0 ? '−' : '+')+hfmt(Math.abs(R.mIck))+' TL<div class="hnote" style="margin-top:2px">'+hfmt(R.ickAy)+' içecek × '+f1(R.ickKar)+' TL'+(R.pPay > 0 && Number.isFinite(R.ickPlat) ? ' · platformda '+hfmt(R.ickPlat)+' TL' : '')+'<br>%25 ise '+(R.ickKar < 0 ? '−' : '+')+hfmt(Math.abs(R.ayToplam*0.25*R.ickKar))+' · %50 ise '+(R.ickKar < 0 ? '−' : '+')+hfmt(Math.abs(R.ayToplam*0.50*R.ickKar))+' TL'+'</div>', R.mIck > 0 ? 'pos' : (R.mIck < 0 ? 'neg' : ''));
     hset(c+'-sepet', 'pide + içecek = <b>'+hfmt(R.U.pide.kapi + (v.ick || 0))+' TL</b>');
     hset(c+'-mvonce', '<b>'+hfmt(R.mVonce)+' TL</b>', R.mVonce >= 0 ? 'pos' : 'neg');
     /* basabas: urun basi ortalama katki (sabit gider oncesi) = (SUM ay x (kar + sabit payi) + yan urun) / toplam adet */
-    var katki = R.mYan; AK_URUNLER.forEach(function(u){ var x = R.U[u.id]; katki += x.ay * (x.kar + R.sabitPay); });
+    var katki = R.mYan + R.mIck; AK_URUNLER.forEach(function(u){ var x = R.U[u.id]; katki += x.ay * (x.kar + R.sabitPay); });
     var gunSimdi = R.ayToplam / HGUN;
     var bb = (R.ayToplam > 0 && katki > 0) ? R.sabit / (katki / R.ayToplam) / HGUN : NaN;
     hset(c+'-bbadet', Number.isFinite(bb)
@@ -1482,7 +1492,8 @@ tr.modeoff{display:none!important}
       if(saved){ try{ localStorage.setItem(akHKey(), JSON.stringify(saved)); localStorage.setItem('ak_mt', String(Date.now())); }catch(e){} }
     }
     var D = akHDEF();
-    var cevrildi = false, kutuGoc = false, fiyatGoc = false, yanGoc = false;
+    var cevrildi = false, kutuGoc = false, fiyatGoc = false, yanGoc = false, ickGoc = false;
+    try{ ickGoc = !localStorage.getItem('ak_mig_ick1'); localStorage.setItem('ak_mig_ick1', '1'); }catch(e){}
     try{ yanGoc = !localStorage.getItem('ak_mig_yan1'); localStorage.setItem('ak_mig_yan1', '1'); }catch(e){}
     /* 12 Eyl 2026: sabit fiyata geciste kaydedilen fiyatlar HATALI modelin sisirdigi fiyatlardi
        (adet dusunce fiyat kendiliginden artiyordu: Usta Pideci pide 50 adette 411 TL). Fiyatlar BIR KEZ varsayilana doner. */
@@ -1494,6 +1505,8 @@ tr.modeoff{display:none!important}
       if(akKisiyeCevir(o)) cevrildi = true;
       /* 12 Eyl 2026: yan urun katkisi kaynaksiz tahmindi (25/60/15 TL) -> 0 */
       if(yanGoc && saved && saved[c] && [25, 20, 30, 60, 15].indexOf(o.yan) > -1){ o.yan = 0; cevrildi = true; }
+      /* 12 Eyl 2026: rakip icecek satis fiyati Kemal'in verisiyle 80 TL (eski tahmin 90 / 70 / 40) */
+      if(ickGoc && saved && saved[c] && D[c].ick === 80 && [90, 70, 40].indexOf(o.ick) > -1){ o.ick = 80; cevrildi = true; }
       if(kutuGoc) [['pd_kutu', 8], ['lh_kutu', 5], ['pz_kutu', 8]].forEach(function(e){ if(o[e[0]] === e[1]){ o[e[0]] = D[c][e[0]]; cevrildi = true; } });
       /* 12 Eyl 2026 hata duzeltmesi: eski kayitta fiyat yok, kar var -> ekranda gorulen fiyat sabitlenir */
       AK_URUNLER.forEach(function(u){ var sc = saved && saved[c];
