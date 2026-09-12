@@ -576,14 +576,16 @@ tr.modeoff{display:none!important}
         <thead><tr><th class="lbl"></th><th class="m">Model M<em>insanlı · 10 m²</em></th><th class="s">Model S<em>insansız · 6 m²</em></th><th class="d">Domino's<em>şube</em></th><th class="p">Mahalle<em>pizzacısı</em></th></tr></thead><tbody>
         <tr class="grp"><td colspan="5">1 · Aylık sabit giderler — düzenlenebilir (tutarlar KDV hariç)</td></tr>
         <tr><td class="lbl">Personel sayısı <span class="hnote">7 gün açık bir vardiya tek kişiyle dönmez (45 sa/hafta sınırı): Model M'de 12 saatlik posta ≈1,6 kişi. Model S'de noktada kimse yok — rakam, ikmal elemanının nokta başına düşen payı.</span></td><td class="m num"><input data-c="M" data-k="pers" type="number" step="0.1"><span class="u">kişi</span></td><td class="s num"><input data-c="S" data-k="pers" type="number" step="0.1"><span class="u">kişi</span></td><td class="d num"><input data-c="D" data-k="pers" type="number" step="0.1"><span class="u">kişi</span></td><td class="p num"><input data-c="P" data-k="pers" type="number" step="0.1"><span class="u">kişi</span></td></tr>
-        <tr><td class="lbl">Personel maliyeti (kişiye değil, işverene toplam) <span class="hnote">SGK işveren primi + işsizlik dahil. 2026 asgari ücret işveren maliyeti 40.875 TL (ÇSGB).</span></td><td class="m num"><input data-c="M" data-k="maas" type="number" step="1000"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="maas" type="number" step="1000"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="maas" type="number" step="1000"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="maas" type="number" step="1000"><span class="u">TL</span></td></tr>
+        <tr><td class="lbl">Personel maliyeti (kişiye değil, işverene toplam) <span class="hnote">SGK işveren primi + işsizlik dahil. 2026 asgari ücret işveren maliyeti 40.875 TL (teşviksiz %23,75; imalat dışı 2 puan teşvikle 40.214 TL). Kişi kişi net maaş girmek için aşağıdaki "Aylık personel gideri" satırına tıkla.</span></td><td class="m num"><input data-c="M" data-k="maas" type="number" step="1000"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="maas" type="number" step="1000"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="maas" type="number" step="1000"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="maas" type="number" step="1000"><span class="u">TL</span></td></tr>
         <tr class="res" id="persrow" style="cursor:pointer"><td class="lbl"><span id="persok" style="display:inline-block;width:14px;color:#1a49b8;font-weight:800">▸</span> → Aylık personel gideri <span class="hnote">tıkla — kişi kişi maaş gir; tekrar tıkla kapanır.</span></td><td class="m" data-o="M-pers"></td><td class="s" data-o="S-pers"></td><td class="d" data-o="D-pers"></td><td class="p" data-o="P-pers"></td></tr>
-        <tr class="pdet" hidden><td class="lbl" style="padding-left:26px">Kişi 1 — işverene aylık maliyeti <span class="hnote">Bu kişinin işverene toplam aylık maliyeti (net maaş + SGK işveren primi + işsizlik). <b>Bir kolonda en az bir kişiye rakam yazarsan o kolonun personel gideri bu listenin toplamı olur</b>; üstteki "kişi sayısı × maliyet" o kolonda devre dışı kalır (soluk görünür). Hepsini boş bırakırsan eski hesap geçerli.</span></td><td class="m num"><input data-c="M" data-k="p1" type="number" step="1000" placeholder="—"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="p1" type="number" step="1000" placeholder="—"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="p1" type="number" step="1000" placeholder="—"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="p1" type="number" step="1000" placeholder="—"><span class="u">TL</span></td></tr>
-        <tr class="pdet" hidden><td class="lbl" style="padding-left:26px">Kişi 2</td><td class="m num"><input data-c="M" data-k="p2" type="number" step="1000" placeholder="—"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="p2" type="number" step="1000" placeholder="—"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="p2" type="number" step="1000" placeholder="—"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="p2" type="number" step="1000" placeholder="—"><span class="u">TL</span></td></tr>
-        <tr class="pdet" hidden><td class="lbl" style="padding-left:26px">Kişi 3</td><td class="m num"><input data-c="M" data-k="p3" type="number" step="1000" placeholder="—"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="p3" type="number" step="1000" placeholder="—"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="p3" type="number" step="1000" placeholder="—"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="p3" type="number" step="1000" placeholder="—"><span class="u">TL</span></td></tr>
-        <tr class="pdet" hidden><td class="lbl" style="padding-left:26px">Kişi 4</td><td class="m num"><input data-c="M" data-k="p4" type="number" step="1000" placeholder="—"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="p4" type="number" step="1000" placeholder="—"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="p4" type="number" step="1000" placeholder="—"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="p4" type="number" step="1000" placeholder="—"><span class="u">TL</span></td></tr>
-        <tr class="pdet" hidden><td class="lbl" style="padding-left:26px">Kişi 5</td><td class="m num"><input data-c="M" data-k="p5" type="number" step="1000" placeholder="—"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="p5" type="number" step="1000" placeholder="—"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="p5" type="number" step="1000" placeholder="—"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="p5" type="number" step="1000" placeholder="—"><span class="u">TL</span></td></tr>
-        <tr class="pdet" hidden><td class="lbl" style="padding-left:26px">Kişi 6</td><td class="m num"><input data-c="M" data-k="p6" type="number" step="1000" placeholder="—"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="p6" type="number" step="1000" placeholder="—"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="p6" type="number" step="1000" placeholder="—"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="p6" type="number" step="1000" placeholder="—"><span class="u">TL</span></td></tr>
+        <tr class="pdet" hidden><td class="lbl" style="padding-left:26px">Kişi 1 — net maaşı (eline geçen) <span class="hnote">Her kişinin <b>eline geçen net maaşını</b> yaz; hesap brütü ve işveren maliyetini kendisi bulur: net → brüt (SGK işçi %14 + işsizlik %1 + gelir vergisi + damga vergisi, asgari ücret istisnası düşülerek) → + işveren primi. Gelir vergisi dilimi yıl içinde birikerek yükseldiği için <b>12 ayın ortalaması</b> alınır. Bir kolonda en az bir kişi yazılıysa o kolonun personel gideri bu kişilerin işveren maliyetleri toplamıdır; üstteki "kişi sayısı × maliyet" soluklaşır. Hepsi boşsa eski hesap geçerli.</span></td><td class="m num"><input data-c="M" data-k="p1" type="number" step="1000" placeholder="—"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="p1" type="number" step="1000" placeholder="—"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="p1" type="number" step="1000" placeholder="—"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="p1" type="number" step="1000" placeholder="—"><span class="u">TL</span></td></tr>
+        <tr class="pdet" hidden><td class="lbl" style="padding-left:26px">Kişi 2 — net maaşı</td><td class="m num"><input data-c="M" data-k="p2" type="number" step="1000" placeholder="—"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="p2" type="number" step="1000" placeholder="—"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="p2" type="number" step="1000" placeholder="—"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="p2" type="number" step="1000" placeholder="—"><span class="u">TL</span></td></tr>
+        <tr class="pdet" hidden><td class="lbl" style="padding-left:26px">Kişi 3 — net maaşı</td><td class="m num"><input data-c="M" data-k="p3" type="number" step="1000" placeholder="—"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="p3" type="number" step="1000" placeholder="—"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="p3" type="number" step="1000" placeholder="—"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="p3" type="number" step="1000" placeholder="—"><span class="u">TL</span></td></tr>
+        <tr class="pdet" hidden><td class="lbl" style="padding-left:26px">Kişi 4 — net maaşı</td><td class="m num"><input data-c="M" data-k="p4" type="number" step="1000" placeholder="—"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="p4" type="number" step="1000" placeholder="—"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="p4" type="number" step="1000" placeholder="—"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="p4" type="number" step="1000" placeholder="—"><span class="u">TL</span></td></tr>
+        <tr class="pdet" hidden><td class="lbl" style="padding-left:26px">Kişi 5 — net maaşı</td><td class="m num"><input data-c="M" data-k="p5" type="number" step="1000" placeholder="—"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="p5" type="number" step="1000" placeholder="—"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="p5" type="number" step="1000" placeholder="—"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="p5" type="number" step="1000" placeholder="—"><span class="u">TL</span></td></tr>
+        <tr class="pdet" hidden><td class="lbl" style="padding-left:26px">Kişi 6 — net maaşı</td><td class="m num"><input data-c="M" data-k="p6" type="number" step="1000" placeholder="—"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="p6" type="number" step="1000" placeholder="—"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="p6" type="number" step="1000" placeholder="—"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="p6" type="number" step="1000" placeholder="—"><span class="u">TL</span></td></tr>
+        <tr class="pdet" hidden><td class="lbl" style="padding-left:26px">İşveren SGK + işsizlik primi oranı <span class="hnote">2026: MYÖ %12 + GSS %7,5 + kısa vadeli %2,25 + işsizlik %2 = <b>%23,75</b> (teşviksiz). SGK borcu olmayan imalat dışı işyerinde Hazine 2 puan karşılar → <b>%21,75</b> (imalatta %18,75). Kaynak: 7566 sayılı Kanun, alomaliye 2026.</span></td><td class="m num"><input data-c="M" data-k="isvor" type="number" step="0.25" value="23.75"><span class="u">%</span></td><td class="s num"><input data-c="S" data-k="isvor" type="number" step="0.25" value="23.75"><span class="u">%</span></td><td class="d num"><input data-c="D" data-k="isvor" type="number" step="0.25" value="23.75"><span class="u">%</span></td><td class="p num"><input data-c="P" data-k="isvor" type="number" step="0.25" value="23.75"><span class="u">%</span></td></tr>
+        <tr class="pdet res" hidden><td class="lbl" style="padding-left:26px">↳ Kişi kişi: net → işverene maliyet <span class="hnote">yılın 12 ayının ortalaması · asgari ücret (net 28.075,50) = brüt 33.030 → %23,75 ile 40.875 TL</span></td><td class="m" data-o="M-pkisi"></td><td class="s" data-o="S-pkisi"></td><td class="d" data-o="D-pkisi"></td><td class="p" data-o="P-pkisi"></td></tr>
         <tr><td class="lbl">Kira / yer bedeli <span class="hnote">brüt kira — stopaj (mülk sahibi adına kiradan kesilen vergi) dahil</span></td><td class="m num"><input data-c="M" data-k="kira" type="number" step="1000"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="kira" type="number" step="1000"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="kira" type="number" step="1000"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="kira" type="number" step="1000"><span class="u">TL</span></td></tr>
         <tr><td class="lbl">Enerji (elektrik + gaz) <span class="hnote">Pizza robotu 7 kW + ısıtmalı teslim dolabı + soğutucular, 7/24 çalışır.</span></td><td class="m num"><input data-c="M" data-k="elek" type="number" step="500"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="elek" type="number" step="500"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="elek" type="number" step="500"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="elek" type="number" step="500"><span class="u">TL</span></td></tr>
         <tr><td class="lbl">Su + internet + temizlik + sarf</td><td class="m num"><input data-c="M" data-k="su" type="number" step="100"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="su" type="number" step="100"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="su" type="number" step="100"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="su" type="number" step="100"><span class="u">TL</span></td></tr>
@@ -1080,6 +1082,39 @@ tr.modeoff{display:none!important}
   var AK_PKISI = ['p1','p2','p3','p4','p5','p6'];
   [HDEF, HDEFP, HDEFL].forEach(function(o){ ['S','M','D','P'].forEach(function(c){ AK_PKISI.forEach(function(k){ o[c][k] = 0; }); }); });
   function akKisiler(v){ return AK_PKISI.map(function(k){ return v[k] || 0; }).filter(function(x){ return x > 0; }); }
+  /* 2026 BORDRO PARAMETRELERI — kaynak: Asgari Ucret Tespit Komisyonu 2025/1, GVGT Seri No 332 (ucret tarifesi),
+     7566 sayili Kanun (MYO isveren +1 puan, SGK tavani 9 x asgari). Yil degisince yalniz bu blok guncellenir. */
+  var BORDRO = { asgBrut: 33030, sgkIsci: 0.14, issizIsci: 0.01, sgkTavan: 297270, damga: 0.00759,
+    dilim: [[190000, 0.15], [400000, 0.20], [1500000, 0.27], [5300000, 0.35], [Infinity, 0.40]] };
+  BORDRO.asgMatrah = BORDRO.asgBrut * (1 - BORDRO.sgkIsci - BORDRO.issizIsci);   /* 28.075,50 */
+  BORDRO.asgDamga  = BORDRO.asgBrut * BORDRO.damga;                                /* 250,70 */
+  function bordroGV(m){ var v = 0, alt = 0; for(var i = 0; i < BORDRO.dilim.length; i++){ var ust = BORDRO.dilim[i][0];
+      if(m > alt){ v += (Math.min(m, ust) - alt) * BORDRO.dilim[i][1]; } alt = ust; } return v; }
+  /* bir ayin kesintileri: K = kisinin yil ici birikmis GV matrahi, KA = asgari ucretin birikmis matrahi (istisna icin) */
+  function bordroAy(brut, K, KA){
+    var sgkMatrah = Math.min(brut, BORDRO.sgkTavan);
+    var isciPay = sgkMatrah * (BORDRO.sgkIsci + BORDRO.issizIsci);
+    var gvMatrah = brut - isciPay;
+    var gv = bordroGV(K + gvMatrah) - bordroGV(K);
+    var gvIst = Math.min(gv, bordroGV(KA + BORDRO.asgMatrah) - bordroGV(KA));
+    var dv = Math.max(0, brut * BORDRO.damga - BORDRO.asgDamga);
+    return { net: brut - isciPay - (gv - gvIst) - dv, gvMatrah: gvMatrah, sgkMatrah: sgkMatrah };
+  }
+  /* net maastan yillik ortalama brut ve isveren maliyeti — her ay brut ikiye bolme ile bulunur */
+  var BORDRO_ONBELLEK = {};
+  function bordroNettenMaliyet(net, isvOran){
+    var key = net + '|' + isvOran; if(BORDRO_ONBELLEK[key]) return BORDRO_ONBELLEK[key];
+    var K = 0, KA = 0, topBrut = 0, topMal = 0;
+    for(var ay = 0; ay < 12; ay++){
+      var lo = net, hi = net * 2.5 + 1000;
+      for(var it = 0; it < 60; it++){ var mid = (lo + hi) / 2; if(bordroAy(mid, K, KA).net < net) lo = mid; else hi = mid; }
+      var r = bordroAy(hi, K, KA);
+      K += r.gvMatrah; KA += BORDRO.asgMatrah;
+      topBrut += hi; topMal += hi + r.sgkMatrah * isvOran;
+    }
+    return (BORDRO_ONBELLEK[key] = { brut: topBrut / 12, maliyet: topMal / 12 });
+  }
+  function akIsvOran(v){ return ((v.isvor > 0 ? v.isvor : 23.75) / 100); }
   var HPOS = 0.03, HGUN = 30.4, HCOLS = ['S','M','D','P'];
   var AK_DOMURUN = 'pizza';   /* DOM su an hangi urunu gosteriyor */
   function akUrunNorm(p){ return (p === 'pide' || p === 'lahmacun') ? p : 'pizza'; }
@@ -1150,6 +1185,7 @@ tr.modeoff{display:none!important}
     if(/^\d{1,3}(\.\d{3})+$/.test(v)) return parseFloat(v.replace(/\./g, '')) || 0;
     return parseFloat(v.replace(',', '.')) || 0; }
   var AK_PARA_K = ['yat','kira','maas','elek','su','muh','sis','ikmal','zorunlu','p1','p2','p3','p4','p5','p6'];
+  [HDEF, HDEFP, HDEFL].forEach(function(o){ ['S','M','D','P'].forEach(function(c){ o[c].isvor = 23.75; }); });
   function hread(c){ var o={}; document.querySelectorAll('#hesap input[data-c="'+c+'"]').forEach(function(i){ o[i.dataset.k]=hnum(i.value); });
     return o; }
   function hset(id,html,cls){ var el=document.querySelector('#hesap [data-o="'+id+'"]'); if(el){ el.innerHTML=html; el.classList.remove('pos','neg'); if(cls) el.classList.add(cls); } }
@@ -1158,7 +1194,8 @@ tr.modeoff{display:none!important}
     var kdvK = 1 + (v.kdv/100);
     var netFiyat = v.fiyat / kdvK;
     var kisiler  = akKisiler(v);
-    var personel = kisiler.length ? kisiler.reduce(function(a, b){ return a + b; }, 0) : v.pers * v.maas;
+    var isvOran  = akIsvOran(v);
+    var personel = kisiler.length ? kisiler.reduce(function(a, n){ return a + bordroNettenMaliyet(n, isvOran).maliyet; }, 0) : v.pers * v.maas;
     var bakimTL  = v.yat * (v.bakim/100) / 12;
     var sabit = personel + v.kira + v.elek + v.su + v.muh + v.sis + bakimTL + v.ikmal + v.zorunlu;
 
@@ -1230,9 +1267,14 @@ tr.modeoff{display:none!important}
         nakitKar=R.nakitKar, amort=R.amort, vergiOnce=R.vergiOnce, vergiTL=R.vergiTL, netKar=R.netKar, kdvAlis=R.kdvAlis,
         birim=R.birim, minf=R.minf, bb=R.bb, bbtam=R.bbtam, geri=R.geri;
     var kisiler = akKisiler(v);
+    var isvOranC = akIsvOran(v);
     hset(c+'-pers', kisiler.length
-      ? kisiler.length+' kişi: '+kisiler.map(hfmt).join(' + ')+' = <b>'+hfmt(personel)+' TL</b>'
+      ? kisiler.length+' kişi · net '+hfmt(kisiler.reduce(function(a, b){ return a + b; }, 0))+' → işverene <b>'+hfmt(personel)+' TL</b>'
       : v.pers+' × '+hfmt(v.maas)+' = <b>'+hfmt(personel)+' TL</b>');
+    hset(c+'-pkisi', kisiler.length
+      ? kisiler.map(function(n){ var b = bordroNettenMaliyet(n, isvOranC);
+          return 'net '+hfmt(n)+' → brüt '+hfmt(b.brut)+' → <b>'+hfmt(b.maliyet)+'</b>'; }).join('<br>')
+      : '—');
     document.querySelectorAll('#hesap input[data-c="'+c+'"][data-k="pers"], #hesap input[data-c="'+c+'"][data-k="maas"]').forEach(function(i){
       i.closest('td').style.opacity = kisiler.length ? '.4' : ''; });
     hset(c+'-bakimtl', hfmt(bakimTL)+' TL');
