@@ -39,7 +39,7 @@ main{display:flex;flex-direction:column;min-width:0}
 .sep{width:1px;height:24px;background:var(--line);margin:0 4px}
 .clock{font-variant-numeric:tabular-nums;font-size:20px;font-weight:600;min-width:86px}
 canvas{display:block;width:100%;background:#0b0b0c}
-.metrics{display:grid;grid-template-columns:repeat(10,1fr);gap:1px;background:var(--line);border-bottom:1px solid var(--line)}
+.metrics{display:grid;grid-template-columns:repeat(11,1fr);gap:1px;background:var(--line);border-bottom:1px solid var(--line)}
 .m{background:var(--panel);padding:9px 12px}
 .m .k{color:var(--gray);font-size:10px;letter-spacing:.1em;text-transform:uppercase}
 .m .v{font-size:19px;font-weight:600;margin-top:2px;font-variant-numeric:tabular-nums}
@@ -150,6 +150,7 @@ th{color:var(--gray);font-weight:500;font-size:11px}
   <canvas id="cv" width="1400" height="600"></canvas>
   <div class="metrics">
     <div class="m"><div class="k">teslim edilen</div><div class="v" id="m-del">0 <small>sipariş</small></div></div>
+    <div class="m"><div class="k">çıkan ürün</div><div class="v" id="m-urun">0 <small>pide · lahmacun</small></div></div>
     <div class="m"><div class="k">ort. bekleme</div><div class="v" id="m-avg">–</div></div>
     <div class="m"><div class="k">hedefi aşan</div><div class="v" id="m-asan">–</div></div>
     <div class="m"><div class="k">%95 bunun altında</div><div class="v" id="m-p95">–</div></div>
@@ -252,7 +253,7 @@ class Sim{
     // = 28 çekmece. 43 gerekiyordu: lahmacun 300 (1,5 gün), içecek 280 (4 gün) — eksik, açık.
     const cw=(this.L._storeEnd-4)/5; this.storeCol=(i)=>2+cw*i+cw/2; this.storeOpen=null;
     this.stock={ taze:240, taze0:240, lahm:(c.lahm?300:0), lahm0:(c.lahm?300:0), kutu:280, kutu0:280 };
-    this.done=false; this.deliveredUnits=0; this.firstDelivery=null;
+    this.done=false; this.deliveredUnits=0; this.firstDelivery=null; this.delivered={pide:0, lahm:0, drink:0};
   }
   say(s){ this.log.push({t:this.t, s}); if(this.log.length>400) this.log.shift(); }
   fmt(s){ s=Math.max(0,Math.round(s)); return String(Math.floor(s/60)).padStart(2,'0')+':'+String(s%60).padStart(2,'0'); }
@@ -322,7 +323,7 @@ class Sim{
     this.pack.boxed=this.pack.boxed.filter(x=>x!==p); p.state='delivering';
     S.push(this.go('PACK',140), this.act(T.boxTake,'kutuyu KAVRA','PACK',140,()=>{this.robot.carry={kind:p.kind,st:'box', oid:p.order.id};}));
     const lx=this.lockerX(li), ly=this.lockerY(li);
-    S.push(this.go('PICKUP',ly,lx), this.act(T.lockerPlace,`göz ${li+1}'e koy`,'PICKUP',ly,()=>{this.robot.carry=null; this.lockers[li].pending=false; p.state='done'; p.doneT=this.t; this.deliveredUnits+=1; if(this.firstDelivery===null) this.firstDelivery=this.t; this.checkOrder(p.order);}));
+    S.push(this.go('PICKUP',ly,lx), this.act(T.lockerPlace,`göz ${li+1}'e koy`,'PICKUP',ly,()=>{this.robot.carry=null; this.lockers[li].pending=false; p.state='done'; p.doneT=this.t; this.deliveredUnits+=1; this.delivered[p.kind]=(this.delivered[p.kind]||0)+1; if(this.firstDelivery===null) this.firstDelivery=this.t; this.checkOrder(p.order);}));
     return {name:'KUTU #'+p.id, steps:S, p};
   }
   jobDrink(o){
@@ -335,7 +336,7 @@ class Sim{
       ()=>{ const St=this.stock; if(St.kutu>0) St.kutu--; else this.say('<b>İÇECEK BİTTİ</b>'); this.robot.carry={kind:'drink',st:'kutu'}; this.storeOpen=null; },
       ()=>{this.storeOpen=ck;}));
     const lx=this.lockerX(li), ly=this.lockerY(li);
-    S.push(this.go('PICKUP',ly,lx), this.act(T.drinkPlace,`içeceği göz ${li+1}'e koy`,'PICKUP',ly,()=>{ this.robot.carry=null; o.drinkDone=true; o.drinkBusy=false; L.n=(L.n||0)+1; if(L.p.kind==='drink' && !o.products.some(q=>q.state==='done')) L.pending=true; else L.pending=false; this.checkOrder(o);}));
+    S.push(this.go('PICKUP',ly,lx), this.act(T.drinkPlace,`içeceği göz ${li+1}'e koy`,'PICKUP',ly,()=>{ this.robot.carry=null; o.drinkDone=true; o.drinkBusy=false; this.delivered.drink++; L.n=(L.n||0)+1; if(L.p.kind==='drink' && !o.products.some(q=>q.state==='done')) L.pending=true; else L.pending=false; this.checkOrder(o);}));
     return {name:'İÇECEK #'+o.id, steps:S, o};
   }
   lockerX(i){ const s=this.L.PICKUP; const col=i%2, cols=2; return s.x0+12+col*(s.w-24)/cols+(s.w-24)/cols/2; }
@@ -405,7 +406,7 @@ class Sim{
     return { doluluk:B, delivered:done.length, avg:w.length?w.reduce((a,b)=>a+b,0)/w.length:null, max:w.length?Math.max(...w):null,
       p95: w.length?srt[Math.min(srt.length-1,Math.floor(srt.length*0.95))]:null,
       robot:B.robot, oven:ovBusy, queue:this.orders.filter(o=>o.doneT===null).length,
-      thr: this.deliveredUnits>0 && this.t>0 ? this.deliveredUnits/(this.t/3600) : null, cap:this.ovenCap() };
+      thr: this.deliveredUnits>0 && this.t>0 ? this.deliveredUnits/(this.t/3600) : null, cap:this.ovenCap(), urun:{...this.delivered} };
   }
 }
 /* ---------- başsız koşu ---------- */
@@ -561,6 +562,7 @@ function render(){ draw(sim, speed); const m=sim.metrics();
   const f=(s)=>s===null?'–':(s/60).toFixed(1)+' <small>dk</small>';
   { const sa=sim.saat(sim.t); document.getElementById('clock').textContent = sa ? sa : sim.fmt(sim.t); }
   document.getElementById('m-del').innerHTML=m.delivered+' <small>sipariş</small>';
+  { const u=sim.delivered; document.getElementById('m-urun').innerHTML=(u.pide+u.lahm)+` <small>${u.pide} pide · ${u.lahm} lahm · ${u.drink} içecek</small>`; }
   document.getElementById('m-avg').innerHTML=f(m.avg); document.getElementById('m-max').innerHTML=f(m.max);
   { const el=document.getElementById('m-p95'); el.innerHTML=f(m.p95); el.style.color = m.p95===null?'' : (m.p95<=CFG.hedefDk*60?'#30d158':'#ff453a'); }
   { const dn=sim.orders.filter(o=>o.doneT!==null), as=dn.filter(o=>(o.doneT-o.arr)>CFG.hedefDk*60).length; const el=document.getElementById('m-asan');
@@ -616,6 +618,7 @@ function refreshAB(){
   <tr><td>en kötü</td><td><b>${f(m.max)}</b></td><td>${baseline?f(baseline.max):''}</td><td>${d(m.max,baseline&&baseline.max,true)}</td></tr>
   <tr><td>robot doluluk</td><td><b>${pct(m.robot)}</b></td><td>${baseline?pct(baseline.robot):''}</td><td></td></tr>
   <tr><td>fırın doluluk</td><td><b>${pct(m.oven)}</b></td><td>${baseline?pct(baseline.oven):''}</td><td></td></tr>
+  <tr><td>çıkan ürün</td><td><b>${m.urun.pide+m.urun.lahm}</b> (${m.urun.pide} pide · ${m.urun.lahm} lahm)</td><td>${baseline?(baseline.urun.pide+baseline.urun.lahm):''}</td><td></td></tr>
   <tr><td>çıkış</td><td><b>${m.thr?m.thr.toFixed(0):'–'} ürün/saat</b></td><td>${baseline?(baseline.thr?baseline.thr.toFixed(0):'–'):''}</td><td></td></tr>
   <tr><td>fırın tavanı</td><td><b>${m.cap.toFixed(0)} ürün/saat</b></td><td>${baseline?baseline.cap.toFixed(0):''}</td><td></td></tr></table>
   <div style="margin-top:6px;display:flex;gap:6px"><button class="btn" id="setBase" style="padding:4px 8px">Bunu TEMEL yap</button>${baseline?'<button class="btn" id="clrBase" style="padding:4px 8px">temeli sil</button>':''}</div>`;
