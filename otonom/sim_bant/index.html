@@ -87,8 +87,8 @@ th{color:var(--gray);font-weight:500;font-size:11px}
 
   <h3>KONVEYÖR FIRIN</h3>
   <div class="row"><label>Fırın sayısı</label><select data-k="ovens"><option value="1" selected>1 · tek bant, pide hızı</option><option value="2">2 üst üste · pide / lahmacun ayrı</option></select></div>
-  <div class="row"><label>Pişirme haznesi (mm)</label><select data-k="chamber"><option value="457">457 · TurboChef HhC 1618</option><option value="914">914 · Middleby PS536</option><option value="1016">1016 · PS640 sınıfı</option><option value="1400">1400 · 4 ürün</option><option value="1750" selected>1750 · 5 ürün · özel fırın</option><option value="1778">1778 · PS670 sınıfı</option></select></div>
-  <div class="row"><label>Giriş + çıkış tüneli (mm)</label><input type="number" data-k="extra" value="200" min="0" step="10"></div>
+  <div class="row"><label>Pişirme haznesi (mm)</label><select data-k="chamber"><option value="457">457 · TurboChef HhC 1618</option><option value="914">914 · Middleby PS536</option><option value="1016">1016 · PS640 sınıfı</option><option value="1400" selected>1400 · 4 ürün · özel fırın (karar)</option><option value="1750">1750 · 5 ürün</option><option value="1778">1778 · PS670 sınıfı</option></select></div>
+  <div class="row"><label>Giriş + çıkış tüneli (mm)</label><input type="number" data-k="extra" value="600" min="0" step="10"></div>
   <div class="row"><label>Pide pişme (sn)</label><input type="number" data-k="bakePide" value="240" step="10"></div>
   <div class="row"><label>Lahmacun pişme (sn)</label><input type="number" data-k="bakeLahm" value="180" step="10"></div>
   <div class="row"><label>Tek fırında bant hızı</label><select data-k="tekHiz"><option value="pide" selected>pide süresine göre</option><option value="lahm">lahmacun süresine göre</option></select></div>
@@ -114,7 +114,7 @@ th{color:var(--gray);font-weight:500;font-size:11px}
   <div class="row"><label>PICKUP göz sayısı</label><input type="number" data-k="lockers" value="12" min="2" max="24"></div>
 
   <div class="ab" id="ab"></div>
-  <div class="note"><b style="color:#F5F5F7">Bantlı hat (13 Eyl):</b> STORE bantın altında; robot kolu çekmeceye iner, hamuru alır, prese bırakır (8 + 6 sn), pres tabanı banda verir. İçeceği de alttaki K5 kolonundan alıp QR gözüne koyar. Bant ürünü 6 dozaj başlığının altından geçirir (istasyon başına 25 sn), doğrudan konveyör fırına verir. Fırın bandının hızı = hazne boyu / pişme süresi; aynı anda haznede hazne / adım kadar ürün olur (1750 / 350 = 5). Varsayılan fırın: özel yapım, hazne 1750, giriş-çıkış tüneli toplam 200 (hava perdesi — varsayım; PS536'da 610, PS640/670'te 914). Topping bandından çıkan ürün doğrudan hazneye girer. Çıkışta sabit plaka: sprey + 8 bıçak, itici kutuya iter; robot kutuyu QR gözüne taşır (5 + 8 sn). Fırın bir boru: bant ne kadar hızlı olursa olsun fırın hazne / adım × 3600 / pişme'den fazlasını vermez.<br><br>Eski robotlu hat (karşılaştırma): cumartesi senaryosunda en kötü 105–123 dk, 25 dk sınırında 24 ürün/saat. Kaynak: Middleby PS536 spec (hazne 914, bant 508, konveyör 1524, 16 kW); pişme süreleri eski simle aynı varsayım.</div>
+  <div class="note"><b style="color:#F5F5F7">Bantlı hat (13 Eyl):</b> STORE bantın altında; robot kolu çekmeceye iner, hamuru alır, prese bırakır (8 + 6 sn), pres tabanı banda verir. İçeceği de alttaki K5 kolonundan alıp QR gözüne koyar. Bant ürünü 6 dozaj başlığının altından geçirir (istasyon başına 25 sn), doğrudan konveyör fırına verir. Fırın bandının hızı = hazne boyu / pişme süresi; aynı anda haznede hazne / adım kadar ürün olur (1400 / 350 = 4). Varsayılan fırın (Kemal'in kararı, 13 Eyl): özel yapım, hazne 1400, tek bant 400–450, giriş-çıkış tüneli toplam 600 (her uçta 300; PS536'da 610, PS640/670'te 914). Topping bandından çıkan ürün doğrudan hazneye girer. Çıkışta sabit plaka: sprey + 8 bıçak, itici kutuya iter; robot kutuyu QR gözüne taşır (5 + 8 sn). Fırın bir boru: bant ne kadar hızlı olursa olsun fırın hazne / adım × 3600 / pişme'den fazlasını vermez.<br><br>Eski robotlu hat (karşılaştırma): cumartesi senaryosunda en kötü 105–123 dk, 25 dk sınırında 24 ürün/saat. Kaynak: Middleby PS536 spec (hazne 914, bant 508, konveyör 1524, 16 kW); pişme süreleri eski simle aynı varsayım.</div>
 </aside>
 <main>
   <div class="toolbar">
@@ -178,7 +178,7 @@ th{color:var(--gray);font-weight:500;font-size:11px}
    ================================================================ */
 const T0 = { takeDough:8, pressDrop:6, pressCycle:4, boxTake:5, lockerPlace:8, drinkTake:6, drinkPlace:5, customerPickup:150 };
 
-const CFG = { lahm:true, ovens:1, chamber:1750, extra:200, bakePide:240, bakeLahm:180, tekHiz:'pide', pitch:350,
+const CFG = { lahm:true, ovens:1, chamber:1400, extra:600, bakePide:240, bakeLahm:180, tekHiz:'pide', pitch:350,
   topN:6, topStep:25, toBelt:5, cutPide:15, cutLahm:5, fold:15,
   rail:50, robotK:1, drinkPct:50, seed:1, gapSec:90, randArr:true, lockers:12, smart:true,
   scenario:'cmt', hedefDk:25, lahmPct:65 };
