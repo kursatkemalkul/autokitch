@@ -82,11 +82,11 @@ th{color:var(--gray);font-weight:500;font-size:11px}
 <aside id="cfg">
   <h3>ÜRÜNLER</h3>
   <div class="row"><label>Lahmacun menüde</label><div class="sw on" data-k="lahm"></div></div>
-  <div class="row"><label>Ayrı LAHMACUN OVEN</label><div class="sw on" data-k="lahmOven"></div></div>
+  <div class="row"><label>Ayrı LAHMACUN OVEN</label><div class="sw" data-k="lahmOven"></div></div>
   <div class="row"><label>Lahmacun fırını hazne kapasitesi</label><select data-k="lahmCap"><option value="1">1 · tekli</option><option value="2" selected>2 · yan yana</option></select></div>
 
-  <h3>OVEN · PİDE FIRINI</h3>
-  <div class="row"><label>Hazne sayısı</label><select data-k="pideCh"><option>1</option><option selected>2</option><option>3</option><option>4</option></select></div>
+  <h3>OVEN · ORTAK FIRIN · pide + lahmacun</h3>
+  <div class="row"><label>Hazne sayısı</label><select data-k="pideCh"><option>1</option><option>2</option><option selected>3</option><option>4</option></select></div>
   <div class="row"><label>Pide pişme (sn)</label><input type="number" data-k="bakePide" value="240" step="10"></div>
   <div class="row"><label>Lahmacun pişme (sn)</label><input type="number" data-k="bakeLahm" value="180" step="10"></div>
 
@@ -111,7 +111,7 @@ th{color:var(--gray);font-weight:500;font-size:11px}
   <div class="row"><label>PICKUP göz sayısı</label><input type="number" data-k="lockers" value="12" min="2" max="24"></div>
 
   <div class="ab" id="ab"></div>
-  <div class="note"><b style="color:#F5F5F7">Karar (11 Eyl):</b> kesici ve sprey <b>ayrı</b> kalıyor — birleştirmenin hız kazancı %2, bakım/iç içe geçme riski ona değmez. Kutuya taşımayı robot yapıyor (OVEN ile PACK yan yana değil, arada lahmacun fırını var — mekanik aktarma yok).<br><br>Robot süreleri hattın kendi bütçesinden (103 sn/pide: 8 hamur al · 14 prese koy · 8 presten al · 4 tepsiye · 22 dozaj · 8 fırına · 8 fırından al · 14 kesim/sprey · 17 kutu+dolap). Ray: igus drylin ZLW 7. eksen cobot modunda 0,3 m/s; kol UR10e sınıfı, uç 1 m/s. Değişiklik yapınca simülasyon baştan başlar ve sağdaki hesap anında yenilenir.</div>
+  <div class="note"><b style="color:#F5F5F7">Kararlar (13 Eyl):</b> günde 80 pide + 200 lahmacun · OVEN 3 hazne, pide ve lahmacun aynı haznelerde, ayrı lahmacun fırını yok · STORE 271 cm, hamur 3 gün taze +3 °C, içecek 7 gün, 1 L yok · TOPPING 14 yuva, 12 ortak kaset. Kesici ve sprey <b>ayrı</b> kalıyor (11 Eyl). OVEN ile PACK yan yana; kutuya taşımayı robot yapıyor.<br><br>Robot süreleri hattın kendi bütçesinden (103 sn/pide: 8 hamur al · 14 prese koy · 8 presten al · 4 tepsiye · 22 dozaj · 8 fırına · 8 fırından al · 14 kesim/sprey · 17 kutu+dolap). Ray: igus drylin ZLW 7. eksen cobot modunda 0,3 m/s; kol UR10e sınıfı, uç 1 m/s. Değişiklik yapınca simülasyon baştan başlar ve sağdaki hesap anında yenilenir.</div>
 </aside>
 <main>
   <div class="toolbar">
@@ -126,13 +126,13 @@ th{color:var(--gray);font-weight:500;font-size:11px}
     <select id="scenario" class="btn">
       <option value="tek">Tek sipariş · 1 pide + 2 lahmacun</option>
       <option value="uc">3 müşteri · 1'er dk arayla</option>
-      <option value="aksam">AKŞAM PİKİ · hafta içi · 17–20 · 25 sipariş</option>
-      <option value="cmt" selected>CUMARTESİ AKŞAMI · 17–20 · 35 sipariş (karar senaryosu)</option>
+      <option value="aksam">AKŞAM PİKİ · hafta içi · 17–20 · 53 sipariş</option>
+      <option value="cmt" selected>CUMARTESİ AKŞAMI · 17–20 · 74 sipariş (karar senaryosu)</option>
       <option value="surekli">SÜREKLİ AKIŞ · 1 saat · aralığı sen seç (sınır testi)</option>
       <option value="bos">Boş — siparişi ben vereceğim</option>
     </select>
     <span id="rateWrap" style="display:none;align-items:center;gap:6px">her <input type="range" id="gap" min="20" max="300" value="90" step="10"><b id="v-gap">90 sn</b>'de 1 sipariş <span id="v-gaph" style="color:var(--gray)"></span></span>
-    <span class="sep"></span><span style="color:var(--gray)">lahmacun</span><input type="range" id="lahmPct" min="0" max="100" value="30" step="5"><span id="v-lahmPct">%30</span>
+    <span class="sep"></span><span style="color:var(--gray)">lahmacun</span><input type="range" id="lahmPct" min="0" max="100" value="65" step="5"><span id="v-lahmPct">%65</span>
     <button class="btn" id="seedBtn" title="aynı yoğunlukta başka bir akşam">🎲 başka akşam</button>
     <span class="sep"></span>
     <span style="color:var(--gray)">şimdi sipariş ver</span>
@@ -176,15 +176,17 @@ const T0 = { takeDough:8, drinkTake:6, drinkPlace:5, pressPlace:14, pressCycle:4
   ovenLoad:8, ovenUnload:8, spray:1, cutHold:14, cutDrop:5, cutAuto:20, carryToPack:6, packPlace:4,
   boxTake:5, lockerPlace:8, pusher:3, lahmLoadExtra:2, lahmUnloadExtra:4, customerPickup:150 };
 
-const CFG = { lahm:true, lahmOven:true, lahmCap:2, pideCh:2, bakePide:240, bakeLahm:180, cutter:true, cutterAt:'OVEN',
+const CFG = { lahm:true, lahmOven:false, lahmCap:2, pideCh:3, bakePide:240, bakeLahm:180, cutter:true, cutterAt:'OVEN',
   pusher:false, pressAuto:false, gripper:'kombine', toolChange:12, drinkPct:50, seed:1, gapSec:90, randArr:true, fold:15, rail:50, robotK:1, smart:true, lockers:12,
-  scenario:'cmt', hedefDk:25, rate:20, lahmPct:30 };
+  scenario:'cmt', hedefDk:25, rate:20, lahmPct:65 };
 
 /* ---------- senaryolar ---------- */
 /* ====================== SENARYOLAR ======================
    KAYNAK: Yemeksepeti 2023 (AA) — en yogun saatler 17:00-20:00, en yogun tek saat 18:00,
    bu uc saat toplam siparisin %36'si. Uluslararasi veri de aksam penceresini dogruluyor.
-   HEDEF: 80-100 pide/gun / 1,4 pide-siparis = 57-71 siparis/gun; hesaplar 70 uzerinden.
+   HEDEF (13 Eyl 2026): gunde 80 pide + 200 lahmacun. Pide siparisi ort 1,45 pide -> 55 siparis ·
+   lahmacun siparisi ort 2,15 lahmacun -> 93 siparis · toplam ~148 siparis/gun · lahmacun payi %63 (panel %65).
+   Hafta ici aksam 148 x %36 = 53 · cumartesi x1,4 = 207/gun -> 74.
    GELIS: Poisson (sabit oranli surecte siparisler saat icine RASTGELE dagilir) — gercek akis
    boyle davranir: uc siparis ust uste duser, sonra sessizlik. Sabit aralik hatti kayirir.
    TOHUM: ayni senaryo hep ayni aksami uretir (adil karsilastirma); "baska bir aksam" tohumu degistirir. */
@@ -200,8 +202,8 @@ const AKSAM_EGRI=[0.28, 0.42, 0.30];   // 17h · 18h(tepe) · 19h
 const SEN={
   tek:     {ad:'Tek sipariş', sure:0},
   uc:      {ad:'3 müşteri', sure:0},
-  aksam:   {ad:'AKŞAM PİKİ · hafta içi', saat:17, n:25, egri:AKSAM_EGRI},
-  cmt:     {ad:'CUMARTESİ AKŞAMI', saat:17, n:35, egri:AKSAM_EGRI},
+  aksam:   {ad:'AKŞAM PİKİ · hafta içi', saat:17, n:53, egri:AKSAM_EGRI},
+  cmt:     {ad:'CUMARTESİ AKŞAMI', saat:17, n:74, egri:AKSAM_EGRI},
   surekli: {ad:'SÜREKLİ AKIŞ', saat:18, pencere:3600},
 };
 function scenarioOrders(cfg){
@@ -228,7 +230,7 @@ function scenarioOrders(cfg){
 function layout(cfg){
   const S=[]; let x=0;
   const add=(id,w,label)=>{S.push({id,x0:x,w,cx:x+w/2,label}); x+=w;};
-  add('STORE',140,'STORE'); add('PRESS',70,'PRESS'); add('TOPPING',70,'TOPPING'); add('OVEN',65,'OVEN');
+  add('STORE',271,'STORE'); add('PRESS',70,'PRESS'); add('TOPPING',70,'TOPPING'); add('OVEN',70,'OVEN');   // STORE v6 2710 mm (13 Eyl)
   if(cfg.lahm && cfg.lahmOven) add('LOVEN',82,'LAHMACUN OVEN');
   add('PACK',70,'PACK'); x+=20; add('PICKUP',124,'PICKUP');
   const map={}; S.forEach(s=>map[s.id]=s); map._all=S; map._len=x; return map;
@@ -256,19 +258,18 @@ class Sim{
     this.pack={folding:null, end:0, queue:[], boxed:[]};
     this.lockers=[]; for(let i=0;i<c.lockers;i++) this.lockers.push({p:null, free:0});
     this.robot={x:this.L.STORE.cx, mode:'KAVRAMA', carry:null, steps:[], step:null, left:0, tx:null, ty:110, label:'', busy:0, job:null};
-    // HAMUR STOGU — STORE v3 modelinden: taze 8 cekmece x 20 = 160 (2 gun) · donmus 4 x 20 = 80 (1 gun)
-    // lahmacun: donmus pide rezervinden 2 cekmece feda + mevcut 102 mm bosluk = 3 cekmece x 24 = 72 (1 gun)
-    this.stock={ taze:160, tazeN:8, donmus:80, donmusN:4, lahm:(c.lahm?72:0), lahmN:3,
-                 taze0:160, donmus0:80, lahm0:(c.lahm?72:0), cozulme:0, kutu:252, kutu0:252, sise:42, sise0:42 };
+    // STOK — STORE v6 (13 Eyl 2026): hamur 3 gun TAZE +3 °C, dondurucu yok
+    //   pide 12 cekmece x 20 = 240 · lahmacun 20 x 30 = 600 · icecek 9 x 56 = 504 kutu (7 gun) · 1 L menuden kalkti
+    this.stock={ taze:240, tazeN:12, donmus:0, donmusN:0, lahm:(c.lahm?600:0), lahmN:20,
+                 taze0:240, donmus0:0, lahm0:(c.lahm?600:0), cozulme:0, kutu:504, kutu0:504, sise:0, sise0:0 };
     this.done=false; this.deliveredUnits=0; this.firstDelivery=null;
   }
   tuket(kind){
     const S=this.stock;
     if(kind==='lahm'){ if(S.lahm>0){ S.lahm--; if(S.lahm===0) this.say('<b>LAHMACUN HAMURU BİTTİ</b> — bugünlük stok tükendi'); }
       else this.say('<b>LAHMACUN YOK</b> — sipariş karşılanamıyor'); return; }
-    if(S.taze>0){ S.taze--; if(S.taze===0) this.say('<b>TAZE HAMUR BİTTİ</b> — donmuş rafına geçiliyor (çözülme 8–12 saat)'); }
-    else if(S.donmus>0){ S.donmus--; S.cozulme++; }
-    else this.say('<b>HAMUR BİTTİ</b> — üretim duracak');
+    if(S.taze>0){ S.taze--; if(S.taze===0) this.say('<b>PİDE HAMURU BİTTİ</b> — 3 günlük stok tükendi, üretim duracak'); }
+    else this.say('<b>PİDE HAMURU YOK</b> — sipariş karşılanamıyor');
   }
   say(s){ this.log.push({t:this.t, s}); if(this.log.length>400) this.log.shift(); }
   fmt(s){ s=Math.max(0,Math.round(s)); return String(Math.floor(s/60)).padStart(2,'0')+':'+String(s%60).padStart(2,'0'); }
@@ -283,7 +284,7 @@ class Sim{
   }
   addOrder(items, arr, id){
     const c=this.cfg; const ord={id:id||(this.orders.length+1), arr, items:items.slice(), products:[], doneT:null, drink:null, drinkDone:false, drinkBusy:false};
-    if(c.drinkPct>0 && ((ord.id*37)%100) < c.drinkPct) ord.drink = (ord.id%7===0)?'1L':'kutu';
+    if(c.drinkPct>0 && ((ord.id*37)%100) < c.drinkPct) ord.drink = 'kutu';   // 1 L menuden kalkti (12 Eyl)
     // HER URUN KENDI TEPSISINDE — robotun tek tepsisi var, her birini ayri tasir.
     const lahms=items.filter(k=>k==='lahm').length, pides=items.filter(k=>k==='pide').length;
     for(let i=0;i<pides;i++) ord.products.push(this.mkProduct('pide',ord));
@@ -545,7 +546,7 @@ function headless(cfg){
 
 /* ---------- çizim ---------- */
 const cv=document.getElementById('cv'), ctx=cv.getContext('2d');
-const PX=2.0, X0=30, FLOOR=545, RAILY=95;
+const PX=1.9, X0=30, FLOOR=545, RAILY=95;   // hat 695 cm (STORE 271) tuvale sigsin
 const cmx=(cm)=>X0+cm*PX, cmy=(cm)=>FLOOR-cm*PX;
 const C={idle:'#2e2e33', edge:'#4a4a50', work:'#ff453a', done:'#30d158', txt:'#F5F5F7', dim:'#86868B', dough:'#e9d9a8', base:'#f3e6bf', baked:'#b5651d', lahm:'#c9392b', box:'#d9c7a3'};
 function roundRect(x,y,w,h,r){ ctx.beginPath(); ctx.moveTo(x+r,y); ctx.arcTo(x+w,y,x+w,y+h,r); ctx.arcTo(x+w,y+h,x,y+h,r); ctx.arcTo(x,y+h,x,y,r); ctx.arcTo(x,y,x+w,y,r); ctx.closePath(); }
@@ -590,52 +591,33 @@ function draw(sim, speed){
     label(s.label, x+w/2, top+13, 11, '#c9c9ce');
     label(s.w+' cm', x+w/2, top+27, 9, C.dim);
     if(s.id==='STORE'){
-      const S=sim.stock, hx=x+w/2+4, hw=w/2-10;
-      // --- SAG: taze hamur 8 cekmece (her biri 20 top) ---
-      const doluTaze=Math.ceil(S.taze/20);
-      for(let i=0;i<8;i++){
-        const y=cmy(71+i*12.1), dolu=(i<doluTaze), kalan=dolu?Math.min(20,S.taze-i*20):0;
-        ctx.fillStyle=dolu?'#232327':'#191919'; ctx.fillRect(hx,y-9,hw,8*PX-2);
-        ctx.strokeStyle=dolu?'#4a4a50':'#2c2c30'; ctx.strokeRect(hx,y-9,hw,8*PX-2);
-        if(dolu){ ctx.fillStyle=C.dough; const n=Math.min(5,Math.ceil(kalan/4)); for(let k=0;k<n;k++){ ctx.beginPath(); ctx.arc(hx+10+k*11,y-2,3.2,0,7); ctx.fill(); } }
-      }
-      // --- SAG ALT: donmus 4 cekmece ---
-      const doluDon=Math.ceil(S.donmus/20);
-      for(let i=0;i<4;i++){
-        const y=cmy(20+i*11.7), dolu=(i<doluDon);
-        ctx.fillStyle=dolu?'#22262d':'#191919'; ctx.fillRect(hx,y-9,hw,9*PX);
-        ctx.strokeStyle=dolu?'#3f5068':'#2c2c30'; ctx.strokeRect(hx,y-9,hw,9*PX);
-        if(dolu){ ctx.fillStyle='#cfe0f5'; for(let k=0;k<4;k++){ ctx.beginPath(); ctx.arc(hx+12+k*12,y-1,3,0,7); ctx.fill(); } }
-      }
-      // --- SOL: icecek + 1 L ---
-      ctx.fillStyle='#22262d'; ctx.fillRect(x+6,cmy(165),w/2-10,cmy(60)-cmy(165));
-      ctx.strokeStyle='#39393e'; ctx.strokeRect(x+6,cmy(165),w/2-10,cmy(60)-cmy(165));
-      label('İÇECEK', x+w*.25, cmy(149), 9, C.dim);
-      { const oran=S.kutu/S.kutu0, cc=oran>.4?C.done:oran>.15?'#ffd60a':C.work;
-        label('kutu  '+S.kutu+' / '+S.kutu0, x+w*.25, cmy(140), 11, cc);
-        const o2=S.sise/S.sise0, c2=o2>.4?C.done:o2>.15?'#ffd60a':C.work;
-        label('1 L    '+S.sise+' / '+S.sise0, x+w*.25, cmy(122), 11, c2);
-        // kutu sıraları (4 çekmece)
-        for(let i=0;i<4;i++){ const n=Math.max(0,Math.min(7,Math.ceil((S.kutu-i*63)/9))); for(let k=0;k<n;k++){ ctx.fillStyle='#d23b3b'; ctx.fillRect(x+12+k*7, cmy(108-i*10), 5, 8); } }
-        for(let k=0;k<Math.min(6,Math.ceil(S.sise/7));k++){ ctx.fillStyle='#3a7bd5'; ctx.fillRect(x+12+k*8, cmy(66), 5, 12); } }
-      // --- SOL ALT: lahmacun hamuru ---
-      if(c.lahm){
-        const p0=S.lahm0?S.lahm/S.lahm0:0;
-        ctx.fillStyle='#23201b'; ctx.fillRect(x+6,cmy(55),w/2-10,cmy(22)-cmy(55));
-        ctx.strokeStyle='#5a4a33'; ctx.strokeRect(x+6,cmy(55),w/2-10,cmy(22)-cmy(55));
-        ctx.fillStyle=C.dough; const n=Math.round(6*p0); for(let k=0;k<n;k++){ ctx.beginPath(); ctx.arc(x+14+k*9,cmy(38),2.6,0,7); ctx.fill(); }
-      }
-      // --- SAYAÇLAR ---
-      const sayac=(txt, val, tot, yy, col)=>{
+      /* STORE v6 (13 Eyl 2026): 4 kolon, hepsi +3 °C, dondurucu yok.
+         K1 pide 12 cekmece x 20 · K2 lahmacun 12 x 30 · K3 lahmacun 8 x 30 · K4 icecek 9 x 56 kutu */
+      const S=sim.stock, cw=(w-12)/4, yAlt=cmy(16), yUst=cmy(147), dh=(yAlt-yUst)/12;
+      const pideDolu=Math.ceil(S.taze/20), lahmDolu=Math.ceil(S.lahm/30), icDolu=Math.ceil(S.kutu/56);
+      const KOL=[{ad:'PİDE', n:12, dolu:pideDolu, renk:C.dough, zemin:'#232327'},
+                 {ad:'LAHMACUN', n:12, dolu:Math.min(12,lahmDolu), renk:C.dough, zemin:'#23201b'},
+                 {ad:'LAHMACUN', n:8, dolu:Math.max(0,lahmDolu-12), renk:C.dough, zemin:'#23201b'},
+                 {ad:'İÇECEK', n:9, dolu:icDolu, renk:'#d23b3b', zemin:'#22262d'}];
+      KOL.forEach((k,ci)=>{
+        const kx=x+6+ci*cw;
+        label('K'+(ci+1)+' '+k.ad, kx+cw/2, cmy(152), 8, C.dim);
+        for(let i=0;i<k.n;i++){
+          const yy=yAlt-(i+1)*dh, on=i<k.dolu;
+          ctx.fillStyle=on?k.zemin:'#191919'; ctx.fillRect(kx+1, yy+1, cw-3, dh-2);
+          ctx.strokeStyle=on?'#4a4a50':'#2c2c30'; ctx.strokeRect(kx+1, yy+1, cw-3, dh-2);
+          if(on){ ctx.fillStyle=k.renk; for(let j=0;j<3;j++){ ctx.beginPath(); ctx.arc(kx+10+j*((cw-20)/2), yy+dh/2, 2.2, 0, 7); ctx.fill(); } }
+        }
+      });
+      const sayac=(txt, val, tot, yy)=>{
         const oran=tot?val/tot:0, cc= oran>.4?C.done : oran>.15?'#ffd60a' : C.work;
         ctx.fillStyle='rgba(0,0,0,.55)'; roundRect(x+6, yy-9, w-12, 18, 3); ctx.fill();
         label(txt, x+12, yy, 10, C.dim, 'left');
         label(val+' / '+tot, x+w-12, yy, 11, tot?cc:C.dim, 'right');
       };
-      sayac('TAZE HAMUR (2 gün)', S.taze, S.taze0, cmy(183));
-      sayac('BUZLUK · donmuş (1 gün)', S.donmus, S.donmus0, cmy(172));
-      if(c.lahm) sayac('LAHMACUN HAMURU', S.lahm, S.lahm0, cmy(161));
-      if(S.cozulme) label('donmuştan çözülen: '+S.cozulme, x+w*.75, cmy(66), 9, '#ffd60a');
+      sayac('PİDE HAMURU · 3 gün · +3 °C', S.taze, S.taze0, cmy(182));
+      if(c.lahm) sayac('LAHMACUN HAMURU · 3 gün · +3 °C', S.lahm, S.lahm0, cmy(172));
+      sayac('İÇECEK KUTUSU · 7 gün', S.kutu, S.kutu0, cmy(162));
     }
     if(s.id==='PRESS'){
       const st = sim.press.working?'work' : (sim.press.p && sim.press.p.state==='baseReady')?'done':'idle';
@@ -651,7 +633,7 @@ function draw(sim, speed){
     }
     if(s.id==='TOPPING'){
       const hold=sim.topping.holding, st=sim.topping.working?'work':'idle'; const rem=sim.topping.working?Math.max(0,sim.topping.wEnd-t):0;
-      statusBox(x+8, cmy(175), w-16, cmy(115)-cmy(175), st, st==='work'?`DOZAJ ${Math.ceil(rem)} sn`:'4 KASET', st==='idle'?(c.lahm?'kaşar·sucuk·et + harç':'kaşar·sucuk·kıyma·kuşbaşı'):'#'+(hold?hold.id:''));
+      statusBox(x+8, cmy(175), w-16, cmy(115)-cmy(175), st, st==='work'?`DOZAJ ${Math.ceil(rem)} sn`:'12 KASET · 14 YUVA', st==='idle'?'harç·kıyma·kuşbaşı·kaşar·sucuk':'#'+(hold?hold.id:''));
       for(let i=0;i<4;i++){ ctx.fillStyle='#24242a'; ctx.fillRect(x+12+i*(w-24)/4, cmy(170), (w-24)/4-3, cmy(125)-cmy(170)); }
       statusBox(x+8, cmy(112), w-16, cmy(86)-cmy(112), st, 'ROBOT AĞZI', 'tepsi robotun elinde · raf yok');
       if(hold && sim.topping.working){ ctx.strokeStyle=C.work; ctx.lineWidth=1; for(let i=0;i<3;i++){ ctx.beginPath(); ctx.moveTo(x+w/2-14+i*14, cmy(122)); ctx.lineTo(x+w/2-14+i*14, cmy(108)); ctx.stroke(); } }
@@ -691,7 +673,7 @@ function draw(sim, speed){
         if(cp){ if(cp.state==='cutting'){ st='work'; txt=`KESİCİ ${Math.ceil(sim.cutter.end-t)} sn`; sub=''; } else if(cp.state==='pushing'){ st='work'; txt='İTİCİ → PACK'; } else { st='done'; txt='KESİLDİ ✓'; sub='robot alacak'; } }
         statusBox(x+6, cmy(140), w-12, cmy(100)-cmy(140), st, txt, sub);
         if(cp) drawItem(cp.kind, cp.state==='cutting'?'baked':'cut', x+w/2, cmy(118), .7);
-      } else { statusBox(x+6, cmy(140), w-12, cmy(100)-cmy(140), 'idle', 'ŞARJÖR · 487 blank', ''); }
+      } else { statusBox(x+6, cmy(140), w-12, cmy(100)-cmy(140), 'idle', 'ŞARJÖR · 506 blank', ''); }
       const f=sim.pack.folding; let st='idle', txt='KUTU KATLAMA', sub=c.fold+' sn/kutu';
       if(f){ st='work'; txt=`KATLANIYOR ${Math.ceil(sim.pack.end-t)} sn`; sub='#'+f.order.id; }
       else if(sim.pack.boxed.length){ st='done'; txt='KUTU HAZIR ✓ ×'+sim.pack.boxed.length; sub='robot alacak'; }
@@ -747,8 +729,8 @@ let sim, speed=1, playing=false, last=performance.now(), baseline=null;
 const SEN_NOT={
   tek:'<b style="color:#F5F5F7">Senin sorun</b> — "bir kişi 1 pide 2 lahmacun dedi mesela". Hat boş, kuyruk yok.',
   uc:'<b style="color:#F5F5F7">Senin sorun</b> — "saat 7\'de sipariş verdim, 1 dk sonra başkası, 1 dk sonra bir daha".',
-  aksam:'<b style="color:#30d158">VERİYE DAYALI</b> — Yemeksepeti 2023: 17:00–20:00 = toplam siparişin <b style="color:#F5F5F7">%36\'sı</b>, tepe saat 18:00. 70 sipariş/gün → <b style="color:#F5F5F7">25 sipariş / 3 saat</b> (7 · 10 · 8). Geliş rastgele.',
-  cmt:'<b style="color:#30d158">VERİYE DAYALI</b> — hafta sonu ×1,4 → 98 sipariş/gün → <b style="color:#F5F5F7">35 sipariş / 3 saat</b>, tepe saat 18:00\'de 15 sipariş. Gerçek zorlanma burada başlar.',
+  aksam:'<b style="color:#30d158">VERİYE DAYALI</b> — Yemeksepeti 2023: 17:00–20:00 = toplam siparişin <b style="color:#F5F5F7">%36\'sı</b>, tepe saat 18:00. Günde 80 pide + 200 lahmacun ≈ 148 sipariş → <b style="color:#F5F5F7">53 sipariş / 3 saat</b> (15 · 22 · 16). Geliş rastgele.',
+  cmt:'<b style="color:#30d158">VERİYE DAYALI</b> — hafta sonu ×1,4 → 207 sipariş/gün → <b style="color:#F5F5F7">74 sipariş / 3 saat</b>, tepe saat 18:00\'de 31 sipariş. Gerçek zorlanma burada başlar.',
   surekli:'<b style="color:#ff453a">EN ZOR — AYARI SEN VER</b> — 1 saat boyunca durmadan sipariş. Üstteki kaydırıcıyla aralığı seç; 90 sn = saatte 40 sipariş, 60 sn = 60/saat, 30 sn = 120/saat. Robot tavanı ~35 ürün/saat.',
   bos:'Boş hat — üstteki düğmelerle istediğin an sipariş at, robotun ne yaptığını izle.'};
 function rebuild(){ document.getElementById('senNot').innerHTML=SEN_NOT[CFG.scenario]||''; sim=new Sim(CFG, scenarioOrders(CFG)); playing=false; document.getElementById('play').textContent='▶ Başlat'; refreshAB(); render(); }
