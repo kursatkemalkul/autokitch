@@ -1,0 +1,657 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AUTOKITCH · Bantlı Hat Simülasyonu</title>
+<style>
+:root{--font:"SF Pro Display","SF Pro Text",-apple-system,BlinkMacSystemFont,"Helvetica Neue",Helvetica,Arial,sans-serif;
+ --bg:#0f0f10;--panel:#1D1D1F;--panel2:#26262a;--light:#F5F5F7;--gray:#86868B;--blue:#2997FF;--red:#ff453a;--green:#30d158;--amber:#ffd60a;--line:#3a3a3e}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--light);font-family:var(--font);font-size:13px}
+a{color:var(--blue);text-decoration:none}
+header{display:flex;align-items:center;gap:18px;padding:12px 20px;border-bottom:1px solid var(--line);background:var(--panel)}
+header h1{font-size:15px;margin:0;letter-spacing:.06em;font-weight:600}
+header .sub{color:var(--gray)}
+header .back{margin-left:auto}
+.wrap{display:grid;grid-template-columns:300px 1fr;gap:0;min-height:calc(100vh - 46px)}
+aside{background:var(--panel);border-right:1px solid var(--line);padding:14px 16px;overflow:auto}
+aside h3{margin:14px 0 6px;font-size:11px;letter-spacing:.14em;color:var(--gray);font-weight:600}
+aside h3:first-child{margin-top:0}
+.row{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:5px 0;border-bottom:1px solid #2c2c30}
+.row label{color:#d0d0d4}
+.row input[type=number]{width:64px;background:#111;border:1px solid var(--line);color:var(--light);padding:3px 6px;border-radius:5px;font:inherit;text-align:right}
+.row select{background:#111;border:1px solid var(--line);color:var(--light);padding:3px 6px;border-radius:5px;font:inherit;max-width:150px}
+.row input[type=range]{width:110px}
+.row .val{color:var(--gray);min-width:44px;text-align:right}
+.sw{position:relative;width:38px;height:22px;background:#3a3a3e;border-radius:11px;cursor:pointer;flex:none}
+.sw.on{background:var(--green)}
+.sw::after{content:"";position:absolute;top:2px;left:2px;width:18px;height:18px;border-radius:50%;background:#fff;transition:left .15s}
+.sw.on::after{left:18px}
+.sw.dis{opacity:.35;pointer-events:none}
+main{display:flex;flex-direction:column;min-width:0}
+.toolbar{display:flex;flex-wrap:wrap;align-items:center;gap:8px;padding:10px 16px;border-bottom:1px solid var(--line);background:#161618}
+.btn{background:#2a2a2e;border:1px solid var(--line);color:var(--light);padding:6px 12px;border-radius:7px;cursor:pointer;font:inherit}
+.btn:hover{background:#333}
+.btn.pri{background:var(--blue);border-color:var(--blue);color:#fff}
+.btn.on{background:#fff;color:#000;border-color:#fff}
+.btn.warn{border-color:var(--amber);color:var(--amber)}
+.sep{width:1px;height:24px;background:var(--line);margin:0 4px}
+.clock{font-variant-numeric:tabular-nums;font-size:20px;font-weight:600;min-width:86px}
+canvas{display:block;width:100%;background:#0b0b0c}
+.metrics{display:grid;grid-template-columns:repeat(10,1fr);gap:1px;background:var(--line);border-bottom:1px solid var(--line)}
+.m{background:var(--panel);padding:9px 12px}
+.m .k{color:var(--gray);font-size:10px;letter-spacing:.1em;text-transform:uppercase}
+.m .v{font-size:19px;font-weight:600;margin-top:2px;font-variant-numeric:tabular-nums}
+.m .v small{font-size:11px;color:var(--gray);font-weight:400}
+.bottom{display:grid;grid-template-columns:1fr 1.2fr 1fr 1fr;gap:1px;background:var(--line);flex:1;min-height:180px}
+.box{background:var(--panel);padding:10px 14px;overflow:auto;max-height:260px}
+.box h4{margin:0 0 6px;font-size:11px;letter-spacing:.12em;color:var(--gray);font-weight:600}
+table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+td,th{padding:3px 6px;text-align:left;border-bottom:1px solid #2c2c30;white-space:nowrap}
+th{color:var(--gray);font-weight:500;font-size:11px}
+.st-w{color:var(--gray)}.st-r{color:var(--red)}.st-g{color:var(--green)}.st-b{color:var(--blue)}.st-a{color:var(--amber)}
+.log div{padding:2px 0;border-bottom:1px solid #222;color:#c8c8cc;font-variant-numeric:tabular-nums}
+.log div b{color:var(--light);font-weight:600}
+.ab{background:var(--panel2);border:1px solid var(--line);border-radius:8px;padding:8px 10px;margin-top:10px;font-variant-numeric:tabular-nums}
+.ab table td{padding:2px 4px;border:0}
+.ab .h{color:var(--gray);font-size:10px;letter-spacing:.1em;text-transform:uppercase}
+.ab .d{color:var(--green)}.ab .u{color:var(--red)}
+.note{color:var(--gray);font-size:11px;line-height:1.45;margin-top:8px}
+.dg{display:flex;align-items:center;gap:8px;padding:3px 0}
+.dg .ad{width:78px;color:#c9c9ce;font-size:11px}
+.dg .bar{flex:1;height:14px;background:#1a1a1d;border-radius:3px;overflow:hidden;position:relative}
+.dg .bar i{position:absolute;left:0;top:0;bottom:0;border-radius:3px}
+.dg .pc{width:38px;text-align:right;font-variant-numeric:tabular-nums;font-size:11px}
+@media (max-width:1000px){.wrap{grid-template-columns:1fr}aside{border-right:0;border-bottom:1px solid var(--line)}.metrics{grid-template-columns:repeat(4,1fr)}.bottom{grid-template-columns:1fr}}
+.chart{position:relative;display:flex;align-items:flex-end;gap:2px;height:126px;padding:16px 0 2px;border-bottom:1px solid var(--line)}
+.chart .b{flex:1;min-width:5px;border-radius:2px 2px 0 0;position:relative}
+.chart .b i{position:absolute;top:-13px;left:50%;transform:translateX(-50%);font-size:9px;font-style:normal;color:var(--gray)}
+.chart .hedef{position:absolute;left:0;right:0;border-top:1px dashed var(--gray);opacity:.55}
+.chart .hedef b{position:absolute;right:0;top:-13px;font-size:9px;color:var(--gray);font-weight:400}
+.chart-x{display:flex;gap:2px;margin-top:3px}.chart-x div{flex:1;min-width:5px;text-align:center;font-size:8px;color:#5a5a60}
+.tag{display:inline-block;padding:1px 6px;border-radius:4px;background:#2a2a2e;color:var(--amber);font-size:10px;margin-left:6px;vertical-align:middle}
+</style>
+</head>
+<body>
+<header>
+  <h1>AUTOKITCH · BANTLI HAT SİMÜLASYONU <span class="tag">YENİ MAKİNE · v1</span></h1>
+  <span class="sub">konveyör bant · 6 dozaj başlığı · konveyör fırın · kesme plakası · robot yalnız hamur + kutu + içecek</span>
+  <a class="back" href="../sim/" style="margin-left:auto">← Robotlu hat (eski model)</a>
+  <a class="back" href="../" style="margin-left:18px">Ana sayfa</a>
+</header>
+<div class="wrap">
+<aside id="cfg">
+  <h3>ÜRÜNLER</h3>
+  <div class="row"><label>Lahmacun menüde</label><div class="sw on" data-k="lahm"></div></div>
+
+  <h3>KONVEYÖR FIRIN</h3>
+  <div class="row"><label>Fırın sayısı</label><select data-k="ovens"><option value="1" selected>1 · tek bant, pide hızı</option><option value="2">2 üst üste · pide / lahmacun ayrı</option></select></div>
+  <div class="row"><label>Pişirme haznesi (mm)</label><select data-k="chamber"><option value="457">457 · TurboChef HhC 1618</option><option value="914" selected>914 · Middleby PS536</option><option value="1016">1016 · PS640 sınıfı</option><option value="1400">1400</option><option value="1778">1778 · PS670 sınıfı</option></select></div>
+  <div class="row"><label>Giriş + çıkış tüneli (mm)</label><input type="number" data-k="extra" value="610" min="0" step="10"></div>
+  <div class="row"><label>Pide pişme (sn)</label><input type="number" data-k="bakePide" value="240" step="10"></div>
+  <div class="row"><label>Lahmacun pişme (sn)</label><input type="number" data-k="bakeLahm" value="180" step="10"></div>
+  <div class="row"><label>Tek fırında bant hızı</label><select data-k="tekHiz"><option value="pide" selected>pide süresine göre</option><option value="lahm">lahmacun süresine göre</option></select></div>
+  <div class="row"><label>Ürün adımı bantta (mm)</label><input type="number" data-k="pitch" value="350" min="300" step="10"></div>
+
+  <h3>TOPPING BANDI</h3>
+  <div class="row"><label>İstasyon sayısı</label><input type="number" data-k="topN" value="6" min="1" max="8" step="1"></div>
+  <div class="row"><label>İstasyon başına süre (sn)</label><input type="number" data-k="topStep" value="25" min="5" step="1"></div>
+  <div class="row"><label>Pres → bant geçişi (sn)</label><input type="number" data-k="toBelt" value="5" min="0" step="1"></div>
+
+  <h3>KESME PLAKASI · SPREY</h3>
+  <div class="row"><label>Pide: sprey + 8 bıçak (sn)</label><input type="number" data-k="cutPide" value="15" min="0" step="1"></div>
+  <div class="row"><label>Lahmacun: geçiş (sn)</label><input type="number" data-k="cutLahm" value="5" min="0" step="1"></div>
+
+  <h3>PACK</h3>
+  <div class="row"><label>Kutu katlama (sn)</label><input type="number" data-k="fold" value="15" min="0" step="1"></div>
+
+  <h3>ROBOT</h3>
+  <div class="row"><label>Ray hızı (cm/s)</label><input type="range" data-k="rail" min="20" max="200" step="10" value="50"><span class="val" id="v-rail">50</span></div>
+  <div class="row"><label>Kol hız katsayısı</label><input type="range" data-k="robotK" min="0.5" max="1.5" step="0.05" value="1"><span class="val" id="v-robotK">1.00</span></div>
+  <div class="row"><label>İçecekli sipariş oranı</label><input type="range" data-k="drinkPct" min="0" max="100" step="10" value="50"><span class="val" id="v-drinkPct">%50</span></div>
+  <div class="row"><label><b>HEDEF: kimse şundan fazla beklemesin</b></label><input type="number" data-k="hedefDk" value="25" min="5" max="60" step="1"> <span class="val">dk</span></div>
+  <div class="row"><label>PICKUP göz sayısı</label><input type="number" data-k="lockers" value="12" min="2" max="24"></div>
+
+  <div class="ab" id="ab"></div>
+  <div class="note"><b style="color:#F5F5F7">Bantlı hat (13 Eyl):</b> robot hamuru STORE'dan alıp prese bırakır (8 + 6 sn), pres tabanı banda verir. Bant ürünü 6 dozaj başlığının altından geçirir (istasyon başına 25 sn), doğrudan konveyör fırına verir. Fırın bandının hızı = hazne boyu / pişme süresi; aynı anda haznede hazne / adım kadar ürün olur (914 / 350 = 2,6). Çıkışta sabit plaka: sprey + 8 bıçak, itici kutuya iter; robot kutuyu QR gözüne taşır (5 + 8 sn). Fırın bir boru: bant ne kadar hızlı olursa olsun fırın hazne / adım × 3600 / pişme'den fazlasını vermez.<br><br>Eski robotlu hat (karşılaştırma): cumartesi senaryosunda en kötü 105–123 dk, 25 dk sınırında 24 ürün/saat. Kaynak: Middleby PS536 spec (hazne 914, bant 508, konveyör 1524, 16 kW); pişme süreleri eski simle aynı varsayım.</div>
+</aside>
+<main>
+  <div class="toolbar">
+    <span class="clock" id="clock">00:00</span>
+    <button class="btn pri" id="play">▶ Başlat</button>
+    <button class="btn" id="reset">↺ Sıfırla</button>
+    <span class="sep"></span>
+    <span style="color:var(--gray)">hız</span>
+    <button class="btn spd on" data-s="1">1×</button><button class="btn spd" data-s="3">3×</button><button class="btn spd" data-s="10">10×</button><button class="btn spd" data-s="30">30×</button>
+    <span class="sep"></span>
+    <span style="color:var(--gray)">senaryo</span>
+    <select id="scenario" class="btn">
+      <option value="tek">Tek sipariş · 1 pide + 2 lahmacun</option>
+      <option value="uc">3 müşteri · 1'er dk arayla</option>
+      <option value="aksam">AKŞAM PİKİ · hafta içi · 17–20 · 53 sipariş</option>
+      <option value="cmt" selected>CUMARTESİ AKŞAMI · 17–20 · 74 sipariş (karar senaryosu)</option>
+      <option value="surekli">SÜREKLİ AKIŞ · 1 saat · aralığı sen seç (sınır testi)</option>
+      <option value="bos">Boş — siparişi ben vereceğim</option>
+    </select>
+    <span id="rateWrap" style="display:none;align-items:center;gap:6px">her <input type="range" id="gap" min="20" max="300" value="90" step="10"><b id="v-gap">90 sn</b>'de 1 sipariş <span id="v-gaph" style="color:var(--gray)"></span></span>
+    <span class="sep"></span><span style="color:var(--gray)">lahmacun</span><input type="range" id="lahmPct" min="0" max="100" value="65" step="5"><span id="v-lahmPct">%65</span>
+    <button class="btn" id="seedBtn" title="aynı yoğunlukta başka bir akşam">🎲 başka akşam</button>
+    <span class="sep"></span>
+    <span style="color:var(--gray)">şimdi sipariş ver</span>
+    <button class="btn warn" data-inj="pide">+ 1 pide</button>
+    <button class="btn warn" data-inj="pide,pide">+ 2 pide</button>
+    <button class="btn warn" data-inj="lahm,lahm" id="injL">+ 2 lahmacun</button>
+    <button class="btn warn" data-inj="pide,lahm,lahm" id="injPL">+ pide & 2 lahmacun</button>
+    <span class="sep"></span>
+    <button class="btn pri" id="kapBtn" title="bu kurulumda hedefi tutan en yüksek sipariş hızını bulur">📊 KAPASİTE BUL</button>
+  </div>
+  <div id="senNot" style="padding:6px 16px;border-bottom:1px solid var(--line);background:#121214;color:var(--gray);font-size:11px"></div>
+  <canvas id="cv" width="1400" height="600"></canvas>
+  <div class="metrics">
+    <div class="m"><div class="k">teslim edilen</div><div class="v" id="m-del">0 <small>sipariş</small></div></div>
+    <div class="m"><div class="k">ort. bekleme</div><div class="v" id="m-avg">–</div></div>
+    <div class="m"><div class="k">hedefi aşan</div><div class="v" id="m-asan">–</div></div>
+    <div class="m"><div class="k">%95 bunun altında</div><div class="v" id="m-p95">–</div></div>
+    <div class="m"><div class="k">en kötü bekleme</div><div class="v" id="m-max">–</div></div>
+    <div class="m"><div class="k">robot doluluk</div><div class="v" id="m-rob">0%</div></div>
+    <div class="m"><div class="k">fırın doluluk</div><div class="v" id="m-ov">0%</div></div>
+    <div class="m"><div class="k">kuyrukta</div><div class="v" id="m-q">0 <small>sipariş</small></div></div>
+    <div class="m"><div class="k">çıkış hızı</div><div class="v" id="m-thr">– <small>ürün/saat</small></div></div>
+    <div class="m"><div class="k">fırın tavanı</div><div class="v" id="m-cap">– <small>ürün/saat</small></div></div>
+  </div>
+  <div class="bottom">
+    <div class="box"><h4>SİPARİŞLER <span style="color:var(--gray);font-weight:400">— <b>dolapta</b> = son parçanın QR gözüne konduğu saat · <b>süre</b> = sipariş → dolap · ⏱ hâlâ sayıyor</span></h4><table><thead><tr><th>#</th><th>içerik</th><th>geldi</th><th>dolapta</th><th>süre</th><th>ürünler nerede</th></tr></thead><tbody id="orders"></tbody></table></div>
+    <div class="box"><h4>TESLİM SÜRELERİ · sipariş sipariş (dk)</h4><div class="chart" id="chart"></div><div class="chart-x" id="chartx"></div><div class="note" id="chartnote"></div></div>
+    <div class="box"><h4>HAT DENGESİ <span style="color:var(--gray);font-weight:400">— her istasyon ne kadar meşgul</span></h4><div id="denge"></div>
+      <div class="note" id="dengeNot"></div></div>
+    <div class="box log"><h4>HAT NE YAPTI</h4><div id="log"></div></div>
+  </div>
+</main>
+</div>
+
+<script>
+/* ================================================================
+   AUTOKITCH BANTLI HAT simülasyonu — olay/adım tabanlı motor + 2D ön görünüş
+   Tüm süreler saniye, uzunluklar cm (fırın içi mm). Robot yalnız hamur, kutu, içecek taşır.
+   ================================================================ */
+const T0 = { takeDough:8, pressDrop:6, pressCycle:4, boxTake:5, lockerPlace:8, drinkTake:6, drinkPlace:5, customerPickup:150 };
+
+const CFG = { lahm:true, ovens:1, chamber:914, extra:610, bakePide:240, bakeLahm:180, tekHiz:'pide', pitch:350,
+  topN:6, topStep:25, toBelt:5, cutPide:15, cutLahm:5, fold:15,
+  rail:50, robotK:1, drinkPct:50, seed:1, gapSec:90, randArr:true, lockers:12, smart:true,
+  scenario:'cmt', hedefDk:25, lahmPct:65 };
+
+/* ---------- senaryolar (robotlu hat simiyle birebir aynı talep modeli) ---------- */
+function rng(seed){ return function(){ seed|=0; seed=seed+0x6D2B79F5|0; let t=Math.imul(seed^seed>>>15,1|seed);
+  t=t+Math.imul(t^t>>>7,61|t)^t; return ((t^t>>>14)>>>0)/4294967296; }; }
+function mkItems(rnd, cfg){
+  if(cfg.lahm && rnd() < cfg.lahmPct/100){ const it=['lahm','lahm']; if(rnd()<0.15) it.push('lahm'); return it; }
+  const r=rnd(), n = r<0.65?1 : r<0.90?2 : 3, it=[]; for(let i=0;i<n;i++) it.push('pide'); return it;
+}
+const AKSAM_EGRI=[0.28, 0.42, 0.30];
+const SEN={
+  tek:     {ad:'Tek sipariş', sure:0},
+  uc:      {ad:'3 müşteri', sure:0},
+  aksam:   {ad:'AKŞAM PİKİ · hafta içi', saat:17, n:53, egri:AKSAM_EGRI},
+  cmt:     {ad:'CUMARTESİ AKŞAMI', saat:17, n:74, egri:AKSAM_EGRI},
+  surekli: {ad:'SÜREKLİ AKIŞ', saat:18, pencere:3600},
+};
+function scenarioOrders(cfg){
+  const L=cfg.lahm, o=[], rnd=rng((cfg.seed||1)*7919+13);
+  const mix = L ? ['pide','lahm','lahm'] : ['pide','pide'];
+  switch(cfg.scenario){
+    case 'tek': o.push({arr:0, items:mix}); break;
+    case 'uc':  o.push({arr:0, items:['pide','pide']}, {arr:60, items:mix}, {arr:120, items:['pide']}); break;
+    case 'surekli': {
+      const gap=cfg.gapSec;
+      if(cfg.randArr){ let t=0; while(t<3600){ t += -Math.log(1-rnd())*gap; if(t<3600) o.push({arr:t, items:mkItems(rnd,cfg)}); } }
+      else { for(let t=0;t<3600;t+=gap) o.push({arr:t, items:mkItems(rnd,cfg)}); }
+      break; }
+    default: {
+      const S=SEN[cfg.scenario]; if(!S||!S.egri) break;
+      S.egri.forEach((pay,i)=>{ const n=Math.round(S.n*pay);
+        for(let k=0;k<n;k++) o.push({arr:i*3600+rnd()*3600, items:mkItems(rnd,cfg)}); });
+      break; }
+  }
+  o.sort((a,b)=>a.arr-b.arr);
+  return o;
+}
+/* ---------- yerleşim (cm) — bantlı hat v1 paftası ---------- */
+function ovenW(cfg){ return Math.round((cfg.chamber+cfg.extra+76)/10); }   // PS536: 914+610+76 = 160 cm
+function layout(cfg){
+  const S=[]; let x=0;
+  const add=(id,w,label)=>{S.push({id,x0:x,w,cx:x+w/2,label}); x+=w;};
+  add('PRESS',70,'PRESS'); add('TOPPING',100,'TOPPING BANDI'); add('OVEN',ovenW(cfg),'KONVEYÖR FIRIN'); add('KESME',60,'KESME'); add('PACK',70,'PACK'); x+=20; add('PICKUP',124,'PICKUP');
+  const map={}; S.forEach(s=>map[s.id]=s); map._all=S; map._len=x; map._storeEnd=S[3].x0+S[3].w; return map;
+}
+const Y_BANT=130;   // bant kotu (cm) — pafta: 1300 mm
+
+/* ---------- motor ---------- */
+class Sim{
+  constructor(cfg, orders){
+    this.cfg=JSON.parse(JSON.stringify(cfg)); this.T={...T0};
+    const c=this.cfg; this.L=layout(c);
+    this.t=0; this.log=[]; this.orders=[]; this.products=[]; this.nextPid=1;
+    this.pendingOrders=orders.map((o,i)=>({id:i+1, arr:o.arr, items:o.items.slice(), started:false}));
+    // fırın şeritleri: tek fırın = tek bant tek hız · iki fırın = pide/lahmacun ayrı
+    const Ltot=c.chamber+c.extra;
+    const mk=(id,bake)=>({id, bake, v:c.chamber/bake, Ltot, items:[], free:0, busy:0});
+    if(c.ovens>=2){ this.lanes={pide:mk('F1 · pide',c.bakePide), lahm:mk('F2 · lahmacun',c.bakeLahm)}; }
+    else { const b=(c.tekHiz==='lahm'&&c.lahm)?c.bakeLahm:c.bakePide; const l=mk('F1',b); this.lanes={pide:l, lahm:l}; }
+    this.laneList=Object.values(this.lanes).filter((l,i,a)=>a.indexOf(l)===i);
+    this.capInChamber=c.chamber/c.pitch;                      // aynı anda haznede
+    this.press={p:null, end:0};                               // robot bırakır; pres basar + banda verir
+    this.belt={items:[], transit:c.topN*c.topStep, spacing:c.topStep, blocked:false};
+    this.plate={p:null, end:0, queue:[]};
+    this.pack={ready:1, folding:false, end:0, boxed:[]};
+    this.busy={press:0, topping:0, kesici:0, pack:0, pickup:0, ovenIn:0};
+    this.lockers=[]; for(let i=0;i<c.lockers;i++) this.lockers.push({p:null, free:0});
+    this.robot={x:40, carry:null, steps:[], step:null, left:0, ty:110, label:'', busy:0, job:null};
+    // STOK — bant altı STORE: 12 pide (240) + 14 lahmacun (420) + 2 paket; içecek ayrı dolap (yeri açık) 504
+    this.stock={ taze:240, taze0:240, lahm:(c.lahm?420:0), lahm0:(c.lahm?420:0), kutu:504, kutu0:504 };
+    this.done=false; this.deliveredUnits=0; this.firstDelivery=null;
+  }
+  say(s){ this.log.push({t:this.t, s}); if(this.log.length>400) this.log.shift(); }
+  fmt(s){ s=Math.max(0,Math.round(s)); return String(Math.floor(s/60)).padStart(2,'0')+':'+String(s%60).padStart(2,'0'); }
+  saat(t){ const S=SEN[this.cfg.scenario]; if(!S||S.saat===undefined) return null;
+    const x=S.saat*3600+Math.max(0,t), h=Math.floor(x/3600)%24, m=Math.floor(x/60)%60;
+    return String(h).padStart(2,'0')+':'+String(m).padStart(2,'0'); }
+  tuket(kind){ const S=this.stock;
+    if(kind==='lahm'){ if(S.lahm>0){ S.lahm--; if(S.lahm===0) this.say('<b>LAHMACUN HAMURU BİTTİ</b>'); } else this.say('<b>LAHMACUN YOK</b>'); return; }
+    if(S.taze>0){ S.taze--; if(S.taze===0) this.say('<b>PİDE HAMURU BİTTİ</b>'); } else this.say('<b>PİDE HAMURU YOK</b>'); }
+  releaseOrders(){ while(this.pendingOrders.length && this.pendingOrders[0].arr<=this.t+1e-9){ const o=this.pendingOrders.shift(); this.addOrder(o.items, o.arr, o.id); } }
+  addOrder(items, arr, id){
+    const c=this.cfg; const ord={id:id||(this.orders.length+1), arr, items:items.slice(), products:[], doneT:null, drink:null, drinkDone:false, drinkBusy:false};
+    if(c.drinkPct>0 && ((ord.id*37)%100) < c.drinkPct) ord.drink='kutu';
+    for(const k of items) ord.products.push(this.mkProduct(c.lahm?k:'pide', ord));
+    this.orders.push(ord); this.say(`<b>Sipariş #${ord.id}</b> geldi: ${this.itemsText(ord)}`);
+    return ord;
+  }
+  mkProduct(kind, ord){ const p={id:this.nextPid++, kind, order:ord, state:'wait', pos:0, x:0, boxedT:0, doneT:null}; this.products.push(p); return p; }
+  kisa(o){ const p=o.items.filter(k=>k==='pide').length, l=o.items.filter(k=>k==='lahm').length; return [p?p+'P':'', l?l+'L':'', o.drink?'İ':''].filter(Boolean).join('+'); }
+  itemsText(o){ const p=o.items.filter(k=>k==='pide').length, l=o.items.filter(k=>k==='lahm').length; return [p?`${p} pide`:'', l?`${l} lahmacun`:'', o.drink?'içecek':''].filter(Boolean).join(' + '); }
+  checkOrder(o){
+    if(o.doneT!==null) return;
+    if(o.products.every(q=>q.state==='done') && (!o.drink || o.drinkDone)){
+      o.doneT=this.t; this.say(`<b>Sipariş #${o.id} TESLİM</b> — ${this.fmt(o.doneT-o.arr)} bekledi`);
+      this.lockers.forEach(l=>{ if(l.p&&l.p.order===o) l.free=this.t+this.T.customerPickup; });
+    }
+  }
+  /* --- robot işleri --- */
+  go(id, y, sub){ const s=this.L[id]; return {go:true, x: sub!==undefined?sub:s.cx, y, at:id}; }
+  act(dur, label, at, y, fn){ return {act:true, dur:dur*this.cfg.robotK, label, at, y, fn}; }
+  nextStartable(){
+    for(const o of this.orders){ const p=o.products.find(q=>q.state==='wait'); if(p) return p; }
+    return null;
+  }
+  pickJob(){
+    const c=this.cfg, cands=[];
+    for(const p of this.pack.boxed) if(this.lockers.some(l=>!l.p || l.p.order===p.order)) cands.push({pri:0,t:p.boxedT, mk:()=>this.jobDeliver(p)});
+    for(const o of this.orders) if(o.drink && !o.drinkDone && !o.drinkBusy && o.products.some(q=>!['wait','starting'].includes(q.state)) && this.lockers.some(l=>!l.p || l.p.order===o)){
+      const sadece = o.products.every(q=>q.state==='done');
+      cands.push({pri: sadece?0:5, t:o.arr, mk:()=>this.jobDrink(o)});
+    }
+    if(!this.press.p){ const p=this.nextStartable(); if(p) cands.push({pri:1,t:p.order.arr, mk:()=>this.jobStart(p)}); }
+    if(!cands.length) return null;
+    cands.sort((a,b)=> a.pri-b.pri || a.t-b.t);
+    return cands[0].mk();
+  }
+  storeX(kind){ return kind==='lahm'? 120 : 35; }   // bant altı STORE: pide K1-K2 (PRESS/TOPPING altı), lahmacun K3-K5
+  jobStart(p){
+    const T=this.T, S=[]; p.state='starting';
+    S.push(this.go('PRESS',150,this.storeX(p.kind)), this.act(T.takeDough,'hamur topunu KAVRA','STORE',150,()=>{this.robot.carry={kind:p.kind,st:'dough'}; p.state='carry'; this.tuket(p.kind);}));
+    S.push(this.go('PRESS',155), this.act(T.pressDrop,'hamuru prese bırak','PRESS',155,()=>{this.robot.carry=null; this.press.p=p; this.press.end=this.t+T.pressCycle+this.cfg.toBelt; p.state='pressing';}));
+    return {name:'HAMUR #'+p.id, steps:S, p};
+  }
+  jobDeliver(p){
+    const S=[], T=this.T;
+    let li=this.lockers.findIndex(l=>l.p && l.p.order===p.order); if(li<0) li=this.lockers.findIndex(l=>!l.p); if(li<0) return null;
+    if(!this.lockers[li].p || this.lockers[li].p.kind==='drink') this.lockers[li].p=p; this.lockers[li].pending=true; this.lockers[li].n=(this.lockers[li].n||0)+1;
+    this.pack.boxed=this.pack.boxed.filter(x=>x!==p); p.state='delivering';
+    S.push(this.go('PACK',140), this.act(T.boxTake,'kutuyu KAVRA','PACK',140,()=>{this.robot.carry={kind:p.kind,st:'box', oid:p.order.id};}));
+    const lx=this.lockerX(li), ly=this.lockerY(li);
+    S.push(this.go('PICKUP',ly,lx), this.act(T.lockerPlace,`göz ${li+1}'e koy`,'PICKUP',ly,()=>{this.robot.carry=null; this.lockers[li].pending=false; p.state='done'; p.doneT=this.t; this.deliveredUnits+=1; if(this.firstDelivery===null) this.firstDelivery=this.t; this.checkOrder(p.order);}));
+    return {name:'KUTU #'+p.id, steps:S, p};
+  }
+  jobDrink(o){
+    const S=[], T=this.T;
+    let li=this.lockers.findIndex(l=>l.p && l.p.order===o); if(li<0) li=this.lockers.findIndex(l=>!l.p); if(li<0) return null;
+    const L=this.lockers[li]; if(!L.p){ L.p={order:o, kind:'drink', state:'drinkslot'}; L.pending=true; }
+    o.drinkBusy=true;
+    S.push(this.go('OVEN',150,this.L.OVEN.x0+this.L.OVEN.w-30), this.act(T.drinkTake,'içecek kutusunu KAVRA','STORE',150,()=>{ const St=this.stock; if(St.kutu>0) St.kutu--; else this.say('<b>İÇECEK BİTTİ</b>'); this.robot.carry={kind:'drink',st:'kutu'};}));
+    const lx=this.lockerX(li), ly=this.lockerY(li);
+    S.push(this.go('PICKUP',ly,lx), this.act(T.drinkPlace,`içeceği göz ${li+1}'e koy`,'PICKUP',ly,()=>{ this.robot.carry=null; o.drinkDone=true; o.drinkBusy=false; L.n=(L.n||0)+1; if(L.p.kind==='drink' && !o.products.some(q=>q.state==='done')) L.pending=true; else L.pending=false; this.checkOrder(o);}));
+    return {name:'İÇECEK #'+o.id, steps:S, o};
+  }
+  lockerX(i){ const s=this.L.PICKUP; const col=i%2, cols=2; return s.x0+12+col*(s.w-24)/cols+(s.w-24)/cols/2; }
+  lockerY(i){ const row=Math.floor(i/2), rows=Math.ceil(this.cfg.lockers/2); return 158-row*(118/rows)-(118/rows)/2; }
+
+  /* --- zaman adımı --- */
+  step(dt){
+    if(this.done) return;
+    const c=this.cfg, T=this.T, R=this.robot, B=this.belt;
+    this.t+=dt; this.releaseOrders();
+    // --- pres: bastı + banda verdi -> bant girişi (aralık kuralı) ---
+    if(this.press.p) this.busy.press+=dt;
+    if(this.press.p && this.t>=this.press.end){
+      const last=B.items[B.items.length-1];
+      if(!last || last.pos*B.transit >= B.spacing-1e-9){ const p=this.press.p; this.press.p=null; p.state='belt'; p.pos=0; B.items.push(p); }
+    }
+    // --- topping bandı: baştaki ürün fırına giremiyorsa bant durur ---
+    if(B.items.length) this.busy.topping+=dt*Math.min(1,B.items.length/c.topN);
+    const head=B.items[0]; let blocked=false;
+    if(head && head.pos>=1-1e-9){
+      const lane=this.lanes[head.kind];
+      if(this.t>=lane.free){ B.items.shift(); head.state='baking'; head.x=0; head.lane=lane; lane.items.push(head); lane.free=this.t+c.pitch/lane.v;
+        this.say(`${head.kind==='pide'?'Pide':'Lahmacun'} #${head.id} → <b>${lane.id}</b> · haznede ${lane.bake} sn · toplam ${Math.round(lane.Ltot/lane.v)} sn`); }
+      else blocked=true;
+    }
+    B.blocked=blocked;
+    if(!blocked) for(const p of B.items) p.pos=Math.min(1, p.pos+dt/B.transit);
+    // --- fırın şeritleri ---
+    for(const lane of this.laneList){
+      const inCh=lane.items.filter(p=>p.x>=c.extra/2 && p.x<=c.extra/2+c.chamber).length;
+      lane.busy+=dt*Math.min(1, inCh/this.capInChamber);
+      for(const p of lane.items) p.x+=lane.v*dt;
+      const out=lane.items.filter(p=>p.x>=lane.Ltot);
+      for(const p of out){ lane.items=lane.items.filter(q=>q!==p); p.state='exit'; this.plate.queue.push(p); }
+    }
+    // --- kesme plakası: sprey + kesici (pide) / geçiş (lahmacun), sonra kutuya it ---
+    if(this.plate.p) this.busy.kesici+=dt;
+    if(!this.plate.p && this.plate.queue.length){ const p=this.plate.queue.shift(); this.plate.p=p; p.state='cutting'; this.plate.end=this.t+(p.kind==='pide'?c.cutPide:c.cutLahm); }
+    if(this.plate.p && this.plate.p.state==='cutting' && this.t>=this.plate.end) this.plate.p.state='boxWait';
+    if(this.plate.p && this.plate.p.state==='boxWait' && this.pack.ready>0){ const p=this.plate.p; this.plate.p=null; this.pack.ready--; p.state='boxed'; p.boxedT=this.t; this.pack.boxed.push(p); }
+    // --- pack: hep bir katlanmış kutu hazır tutar ---
+    if(this.pack.folding) this.busy.pack+=dt;
+    if(!this.pack.folding && this.pack.ready<1){ this.pack.folding=true; this.pack.end=this.t+c.fold; }
+    if(this.pack.folding && this.t>=this.pack.end){ this.pack.folding=false; this.pack.ready++; }
+    this.busy.pickup += dt*this.lockers.filter(l=>l.p).length/Math.max(1,this.lockers.length);
+    for(const l of this.lockers) if(l.p && !l.pending && l.free && this.t>=l.free){ l.p=null; l.free=0; l.n=0; }
+    // --- robot ---
+    let left=dt, guard=0;
+    while(left>1e-9 && guard++<200){
+      if(!R.step){ if(R.steps.length){ R.step=R.steps.shift(); this.beginStep(R.step); } else { const j=this.pickJob(); if(!j || !j.steps.length){ R.label=''; break; } R.job=j; R.steps=j.steps.slice(); this.say(`Robot: <b>${j.name}</b>`); continue; } }
+      const s=R.step;
+      if(s.go){ const d=s.x-R.x, v=c.rail, need=Math.abs(d)/v;
+        if(need<=left){ R.x=s.x; R.busy+=need; left-=need; R.step=null; } else { R.x+=Math.sign(d)*v*left; R.busy+=left; left=0; } }
+      else { const use=Math.min(left, R.left); R.left-=use; R.busy+=use; left-=use; if(R.left<=1e-9){ if(s.fn) s.fn(); R.step=null; } }
+    }
+    if(!this.pendingOrders.length && this.orders.length && this.orders.every(o=>o.doneT!==null)) this.done=true;
+  }
+  beginStep(s){ const R=this.robot; if(s.go){ R.ty=s.y; R.label='→ '+s.at; } else { R.left=s.dur; R.ty=s.y; R.label=s.label; } }
+  ovenCap(){ // teorik tavan ürün/saat
+    return this.laneList.reduce((a,l)=>a+3600*this.cfg.chamber/(l.bake*this.cfg.pitch),0);
+  }
+  metrics(){
+    const done=this.orders.filter(o=>o.doneT!==null), w=done.map(o=>o.doneT-o.arr);
+    const span=Math.max(this.t,1), srt=[...w].sort((a,b)=>a-b);
+    const ovBusy=this.laneList.reduce((a,l)=>a+l.busy,0)/(span*this.laneList.length);
+    const B={ press:this.busy.press/span, topping:this.busy.topping/span, oven:ovBusy, kesici:this.busy.kesici/span, pack:this.busy.pack/span, pickup:this.busy.pickup/span, robot:this.robot.busy/span };
+    return { doluluk:B, delivered:done.length, avg:w.length?w.reduce((a,b)=>a+b,0)/w.length:null, max:w.length?Math.max(...w):null,
+      p95: w.length?srt[Math.min(srt.length-1,Math.floor(srt.length*0.95))]:null,
+      robot:B.robot, oven:ovBusy, queue:this.orders.filter(o=>o.doneT===null).length,
+      thr: this.deliveredUnits>0 && this.t>0 ? this.deliveredUnits/(this.t/3600) : null, cap:this.ovenCap() };
+  }
+}
+/* ---------- başsız koşu ---------- */
+function headless(cfg){
+  const s=new Sim(cfg, scenarioOrders(cfg)); let guard=0;
+  if(!s.pendingOrders.length) return null;
+  while(!s.done && s.t<6*3600 && guard++<200000) s.step(1.0);
+  return s.metrics();
+}
+
+/* ---------- çizim ---------- */
+const cv=document.getElementById('cv'), ctx=cv.getContext('2d');
+const X0=30, FLOOR=545, RAILY=70;
+let PX=2.1;
+const cmx=(cm)=>X0+cm*PX, cmy=(cm)=>FLOOR-cm*PX;
+const C={idle:'#2e2e33', edge:'#4a4a50', work:'#ff453a', done:'#30d158', txt:'#F5F5F7', dim:'#86868B', dough:'#e9d9a8', base:'#f3e6bf', baked:'#b5651d', lahm:'#c9392b', box:'#d9c7a3', bant:'#2997FF', firin:'#ff9f0a'};
+function roundRect(x,y,w,h,r){ ctx.beginPath(); ctx.moveTo(x+r,y); ctx.arcTo(x+w,y,x+w,y+h,r); ctx.arcTo(x+w,y+h,x,y+h,r); ctx.arcTo(x,y+h,x,y,r); ctx.arcTo(x,y,x+w,y,r); ctx.closePath(); }
+const FONT=getComputedStyle(document.body).fontFamily;
+function label(txt,x,y,size,color,align){ ctx.font=`${size||11}px ${FONT}`; ctx.fillStyle=color||C.txt; ctx.textAlign=align||'center'; ctx.textBaseline='middle'; ctx.fillText(txt,x,y); }
+function statusBox(x,y,w,h,state,txt,sub,sub2,subCol){
+  ctx.fillStyle = state==='work'?'rgba(255,69,58,.18)': state==='done'?'rgba(48,209,88,.18)':'#1a1a1d';
+  roundRect(x,y,w,h,4); ctx.fill(); ctx.lineWidth= state==='idle'?1:2; ctx.strokeStyle= state==='work'?C.work: state==='done'?C.done:C.edge; ctx.stroke();
+  const n=(txt?1:0)+(sub?1:0)+(sub2?1:0), top=y+h/2-(n-1)*6.5; let k=0;
+  if(txt){ label(txt, x+w/2, top+k*13, 11, state==='work'?C.work:state==='done'?C.done:C.dim); k++; }
+  if(sub){ label(sub, x+w/2, top+k*13, 10, subCol||C.dim); k++; }
+  if(sub2){ label(sub2, x+w/2, top+k*13, 9, C.dim); }
+}
+function drawItem(kind, st, x, y, scale, oid){
+  scale=scale||1; const r=(kind==='pide'?15:12)*scale;
+  if(st==='dough'){ ctx.fillStyle=C.dough; ctx.beginPath(); ctx.arc(x,y-6*scale,8*scale,0,7); ctx.fill(); return; }
+  if(kind==='drink'){ ctx.fillStyle='#d23b3b'; roundRect(x-5*scale,y-14*scale,10*scale,14*scale,2); ctx.fill(); return; }
+  if(st==='box'){ ctx.fillStyle=C.box; roundRect(x-r,y-9*scale,2*r,14*scale,2); ctx.fill(); ctx.strokeStyle='#6b5d44'; ctx.lineWidth=1; ctx.stroke(); if(oid) label('#'+oid,x,y-2*scale,9,'#3a3020'); return; }
+  ctx.fillStyle = st==='base'?C.base: (st==='baked'||st==='cut')?(kind==='pide'?C.baked:'#8f2f1f') : (kind==='pide'?'#e3b95a':C.lahm);
+  ctx.beginPath(); ctx.ellipse(x,y,r,r*0.42,0,0,7); ctx.fill();
+  if(st==='topped' && kind==='pide'){ ctx.fillStyle='#b23a2a'; for(let i=0;i<5;i++){ ctx.beginPath(); ctx.arc(x-r*.6+i*r*.3, y+((i%2)?2:-2)*scale, 2.2*scale,0,7); ctx.fill(); } }
+  if(st==='cut'){ ctx.strokeStyle='#3a2410'; ctx.lineWidth=1; ctx.beginPath(); ctx.moveTo(x-r,y); ctx.lineTo(x+r,y); ctx.moveTo(x,y-r*.42); ctx.lineTo(x,y+r*.42); ctx.stroke(); }
+  ctx.strokeStyle='rgba(0,0,0,.35)'; ctx.lineWidth=1; ctx.beginPath(); ctx.ellipse(x,y,r,r*0.42,0,0,7); ctx.stroke();
+}
+const URUN=['KAŞAR','SUCUK','HARÇ','HARÇ','KIYMA','KUŞBAŞI','—','—'];
+function draw(sim, speed){
+  const W=cv.width, H=cv.height; ctx.fillStyle='#0b0b0c'; ctx.fillRect(0,0,W,H);
+  const L=sim.L, c=sim.cfg, t=sim.t;
+  PX=Math.min(2.1, (W-60)/L._len);
+  ctx.fillStyle='#141416'; ctx.fillRect(0,FLOOR,W,H-FLOOR); ctx.fillStyle='#2a2a2e'; ctx.fillRect(0,FLOOR,W,2);
+  ctx.fillStyle='#3a3a40'; ctx.fillRect(cmx(-10),RAILY-4,cmx(L._len+10)-cmx(-10),8);
+  label('RAY · 7. eksen · '+c.rail+' cm/s', cmx(L._len+12), RAILY, 10, C.dim, 'left');
+  const yB=cmy(Y_BANT);
+  // istasyon kabinleri
+  for(const s of L._all){
+    const x=cmx(s.x0), w=s.w*PX, top=cmy(197), h=197*PX;
+    ctx.fillStyle='#1c1c1f'; roundRect(x,top,w,h,6); ctx.fill(); ctx.strokeStyle='#3a3a3e'; ctx.lineWidth=1; ctx.stroke();
+    ctx.fillStyle='#121214'; ctx.fillRect(x,cmy(12),w,12*PX);
+    label(s.label, x+w/2, top+13, 11, '#c9c9ce'); label(s.w+' cm', x+w/2, top+27, 9, C.dim);
+  }
+  // STORE — bant altı (PRESS..KESME): 5 kolon
+  { const x0=cmx(2), x1=cmx(L._storeEnd-2), cw=(x1-x0)/5, yAlt=cmy(16), yUst=cmy(100), S=sim.stock;
+    const KOL=[{ad:'K1 PİDE',n:6,dolu:Math.ceil(Math.min(S.taze,120)/20),z:'#232327'},{ad:'K2 PİDE',n:7,dolu:Math.ceil(Math.max(0,S.taze-120)/20),z:'#232327'},
+               {ad:'K3 LAHM',n:5,dolu:Math.ceil(Math.min(S.lahm,120)/30),z:'#23201b'},{ad:'K4 LAHM',n:5,dolu:Math.ceil(Math.max(0,Math.min(S.lahm-120,150))/30),z:'#23201b'},{ad:'K5 LAHM',n:5,dolu:Math.ceil(Math.max(0,S.lahm-270)/30),z:'#23201b'}];
+    ctx.fillStyle='#17181a'; ctx.fillRect(x0,yUst-14,x1-x0,yAlt-yUst+14); ctx.strokeStyle='#2c2c30'; ctx.strokeRect(x0,yUst-14,x1-x0,yAlt-yUst+14);
+    KOL.forEach((k,ci)=>{ const kx=x0+ci*cw, dh=(yAlt-yUst)/7; label(k.ad, kx+cw/2, yUst-6, 8, C.dim);
+      for(let i=0;i<k.n;i++){ const yy=yAlt-(i+1)*dh, on=i<k.dolu; ctx.fillStyle=on?k.z:'#191919'; ctx.fillRect(kx+2,yy+1,cw-4,dh-2); ctx.strokeStyle=on?'#4a4a50':'#2c2c30'; ctx.strokeRect(kx+2,yy+1,cw-4,dh-2);
+        if(on){ ctx.fillStyle=C.dough; for(let j=0;j<3;j++){ ctx.beginPath(); ctx.arc(kx+12+j*((cw-24)/2), yy+dh/2, 2, 0, 7); ctx.fill(); } } } });
+    const sayac=(txt,val,tot,xx,yy)=>{ const oran=tot?val/tot:0, cc=oran>.4?C.done:oran>.15?'#ffd60a':C.work; ctx.fillStyle='rgba(0,0,0,.6)'; roundRect(xx,yy-9,150,18,3); ctx.fill(); label(txt,xx+6,yy,9,C.dim,'left'); label(val+'/'+tot,xx+144,yy,10,cc,'right'); };
+    sayac('PİDE · 3 gün', S.taze, S.taze0, x0+4, cmy(110)); if(c.lahm) sayac('LAHMACUN · 2 gün', S.lahm, S.lahm0, x0+160, cmy(110)); sayac('İÇECEK · ayrı dolap', S.kutu, S.kutu0, x0+316, cmy(110));
+    label('STORE · bant altı · 28 çekmece (43 gerekli: 6 lahmacun + 9 içecek açık)', x1-6, cmy(110), 9, C.dim, 'right');
+  }
+  // PRESS
+  { const s=L.PRESS, x=cmx(s.x0), w=s.w*PX; const p=sim.press.p; const st=p?(t<sim.press.end?'work':'done'):'idle';
+    statusBox(x+8, cmy(185), w-16, cmy(142)-cmy(185), st, st==='work'?`PRES ${Math.ceil(sim.press.end-t)} sn`: st==='done'?'BANT GİRİŞİ BEKLİYOR':'PZP-400 · tabla 130', st==='idle'?'robot hamuru bırakır gider':'#'+(p?p.id:''));
+    ctx.fillStyle='#55555c'; ctx.fillRect(x+16,yB-3,w-32,4);
+    if(p) drawItem(p.kind, t<sim.press.end?'dough':'base', x+w/2, yB-4, .9);
+  }
+  // TOPPING BANDI
+  { const s=L.TOPPING, x=cmx(s.x0), w=s.w*PX, B=sim.belt;
+    const n=c.topN, kw=(w-16)/n;
+    for(let i=0;i<n;i++){ const kx=x+8+i*kw;
+      ctx.fillStyle='#24242a'; ctx.fillRect(kx+1, cmy(190), kw-2, cmy(168)-cmy(190)); label(URUN[i]||'', kx+kw/2, cmy(179), 7, C.dim);
+      ctx.fillStyle='#2a2a30'; ctx.fillRect(kx+1, cmy(166), kw-2, cmy(146)-cmy(166)); label(URUN[i]||'', kx+kw/2, cmy(156), 7, '#c9c9ce');
+      ctx.fillStyle='#1f2a33'; ctx.fillRect(kx+3, cmy(145), kw-6, cmy(134)-cmy(145)); }
+    ctx.fillStyle=B.blocked?'rgba(255,69,58,.5)':C.bant; ctx.fillRect(x+4, yB-2, w-8, 5);
+    label(B.blocked?'BANT DURDU · fırın kapısı dolu':`bant · ${c.topN} başlık · ${c.topStep} sn/istasyon`, x+w/2, yB+14, 9, B.blocked?C.work:C.dim);
+    for(const p of B.items) drawItem(p.kind, p.pos>0.5?'topped':'base', x+8+p.pos*(w-16), yB-4, .75);
+  }
+  // OVEN
+  { const s=L.OVEN, x=cmx(s.x0), w=s.w*PX, lanes=sim.laneList; const lh=lanes.length>1?34:44;
+    lanes.forEach((lane,i)=>{ const y=yB-8-i*(lh+12), inCh=lane.items.filter(p=>p.x>=c.extra/2 && p.x<=c.extra/2+c.chamber).length;
+      const x0=x+6, x1=x+w-6, cw=(x1-x0)*c.chamber/lane.Ltot, cx0=x0+(x1-x0)*(c.extra/2)/lane.Ltot;
+      ctx.fillStyle='#1a1a1d'; roundRect(x0, y-lh+8, x1-x0, lh, 4); ctx.fill(); ctx.strokeStyle=C.edge; ctx.lineWidth=1; ctx.stroke();
+      ctx.fillStyle=inCh?'rgba(255,159,10,.22)':'rgba(255,159,10,.08)'; ctx.fillRect(cx0, y-lh+9, cw, lh-2); ctx.strokeStyle=C.firin; ctx.strokeRect(cx0, y-lh+9, cw, lh-2);
+      ctx.fillStyle='#55555c'; ctx.fillRect(x0, y+4, x1-x0, 3);
+      label(`${lane.id} · hazne ${c.chamber} · ${lane.bake} sn · ${(lane.v).toFixed(1)} mm/s`, x+w/2, y-lh+18, 9, C.firin);
+      label(`haznede ${inCh} / ${sim.capInChamber.toFixed(1)} · adım ${Math.round(c.pitch/lane.v)} sn · geçiş ${Math.round(lane.Ltot/lane.v)} sn`, x+w/2, y-lh+30, 8, C.dim);
+      for(const p of lane.items) drawItem(p.kind, (p.x>c.extra/2+c.chamber*0.7)?'baked':'topped', x0+(x1-x0)*p.x/lane.Ltot, y+2, .65);
+    });
+    statusBox(x+6, cmy(196)+16, w-12, 26, 'idle', c.ovens>=2?'2 FIRIN ÜST ÜSTE · her biri kendi hızında':'TEK FIRIN · tek bant hızı ('+(sim.lanes.pide.bake)+' sn)', '');
+    label('EGZOZ · fan · filtre', x+w/2, cmy(196)+56, 9, C.dim);
+  }
+  // KESME PLAKASI
+  { const s=L.KESME, x=cmx(s.x0), w=s.w*PX, p=sim.plate.p; let st='idle', txt='PLAKA · sprey + 8 bıçak', sub='itici → kutu';
+    if(p){ if(p.state==='cutting'){ st='work'; txt=`${p.kind==='pide'?'SPREY + KESİM':'GEÇİŞ'} ${Math.ceil(sim.plate.end-t)} sn`; sub='#'+p.id; } else { st='done'; txt='KUTU BEKLİYOR'; sub='pack katlıyor'; } }
+    statusBox(x+6, cmy(190), w-12, cmy(150)-cmy(190), st, txt, sub);
+    ctx.fillStyle='#55555c'; ctx.fillRect(x+8,yB-3,w-16,4);
+    if(p) drawItem(p.kind, p.state==='cutting'?'baked':'cut', x+w/2, yB-4, .75);
+    if(sim.plate.queue.length){ label('çıkışta '+sim.plate.queue.length+' ürün bekliyor', x+w/2, yB+16, 9, C.work); }
+  }
+  // PACK
+  { const s=L.PACK, x=cmx(s.x0), w=s.w*PX; const P=sim.pack; let st='idle', txt='KUTU HAZIR ✓', sub='';
+    if(P.folding){ st='work'; txt=`KATLANIYOR ${Math.ceil(P.end-t)} sn`; } else if(!P.ready){ st='idle'; txt='KUTU YOK'; }
+    statusBox(x+6, cmy(190), w-12, cmy(150)-cmy(190), st, txt, 'şarjör 506 blank · alttan');
+    const bx=P.boxed; if(bx.length){ statusBox(x+6, cmy(148), w-12, cmy(118)-cmy(148), 'done', 'KUTUDA ×'+bx.length, 'robot alacak'); bx.slice(0,3).forEach((p,i)=>drawItem(p.kind,'box',x+w/2-16+i*16, cmy(108), .55, p.order.id)); }
+    else statusBox(x+6, cmy(148), w-12, cmy(118)-cmy(148), 'idle', 'KUTULAMA AĞZI', 'plaka kotunda');
+  }
+  // PICKUP
+  { const s=L.PICKUP, x=cmx(s.x0), w=s.w*PX, rows=Math.ceil(c.lockers/2);
+    for(let i=0;i<c.lockers;i++){
+      const lx=sim.lockerX(i), ly=sim.lockerY(i), lw=(s.w-24)/2*PX-4, lh=118/rows*PX-4; const l=sim.lockers[i]; const st=l.p?(l.pending?'work':'done'):'idle';
+      if(!l.p){ statusBox(cmx(lx)-lw/2, cmy(ly)-lh/2, lw, lh, 'idle', String(i+1), 'boş'); continue; }
+      const o=l.p.order, tam=(o.doneT!==null), dk=((tam?o.doneT:t)-o.arr)/60; const ic=(o.drink&&o.drinkDone)?' 🥤':'';
+      const col = dk<=8?C.done : dk<=12?'#ffd60a' : C.work;
+      statusBox(cmx(lx)-lw/2, cmy(ly)-lh/2, lw, lh, st, '#'+o.id+' · '+sim.kisa(o)+ic, (tam?'':'~')+dk.toFixed(1)+' dk', l.pending?'kutu geliyor':(tam?(l.free?'müşteri alır '+Math.max(0,Math.round(l.free-t))+' sn':''):'tamamlanıyor'), col);
+    }
+    label('QR ile açılır · göz = sipariş', x+w/2, cmy(28), 9, C.dim);
+  }
+  // robot
+  const R=sim.robot, rx=cmx(R.x), hy=cmy(R.ty||110);
+  ctx.fillStyle='#d0d0d6'; roundRect(rx-22,RAILY-14,44,26,5); ctx.fill(); ctx.fillStyle='#2997FF'; ctx.fillRect(rx-22,RAILY+8,44,3);
+  const ex=rx+(hy-RAILY)*0.18, ey=RAILY+12+(hy-RAILY)*0.45;
+  ctx.strokeStyle='#e6e6ea'; ctx.lineWidth=7; ctx.lineCap='round'; ctx.beginPath(); ctx.moveTo(rx,RAILY+12); ctx.lineTo(ex,ey); ctx.lineTo(rx,hy-14); ctx.stroke();
+  ctx.fillStyle='#e6e6ea'; ctx.beginPath(); ctx.arc(ex,ey,6,0,7); ctx.fill();
+  ctx.strokeStyle='#2997FF'; ctx.lineWidth=3; ctx.beginPath(); ctx.moveTo(rx-9,hy-4); ctx.lineTo(rx-11,hy+8); ctx.moveTo(rx+9,hy-4); ctx.lineTo(rx+11,hy+8); ctx.stroke();
+  if(R.carry) drawItem(R.carry.kind, R.carry.st, rx, hy+2, .9, R.carry.oid);
+  if(R.label){ const txt=R.step&&R.step.act?`${R.label} · ${Math.ceil(R.left)} sn`:R.label; ctx.fillStyle='rgba(0,0,0,.75)'; const tw=ctx.measureText(txt).width+18; roundRect(rx-tw/2,RAILY-42,tw,20,5); ctx.fill(); label(txt,rx,RAILY-32,11,R.step&&R.step.act?'#ff9f0a':'#fff'); }
+  else if(!sim.done){ label('robot boşta', rx, RAILY-32, 11, C.dim); }
+  label(sim.fmt(t), 60, 22, 22, '#fff','left'); label(speed+'×', 150, 24, 12, C.dim,'left');
+  { const sa=sim.saat(t); if(sa) label('saat '+sa, 200, 23, 15, '#2997FF','left'); }
+  if(sim.done) label('SENARYO BİTTİ — tüm siparişler teslim', W/2, 24, 14, C.done);
+  label(`FIRIN TAVANI ${sim.ovenCap().toFixed(0)} ürün/saat = ${sim.laneList.map(l=>`${c.chamber}/${c.pitch} × 3600/${l.bake}`).join(' + ')}`, W-16, 22, 10, C.firin, 'right');
+}
+
+/* ---------- uygulama ---------- */
+let sim, speed=1, playing=false, last=performance.now(), baseline=null;
+const SEN_NOT={
+  tek:'<b style="color:#F5F5F7">Boş hat</b> — 1 pide + 2 lahmacun. Bantta ürünün yolu: pres → 6 istasyon → fırın tüneli → plaka → kutu → dolap.',
+  uc:'<b style="color:#F5F5F7">3 müşteri</b> — 1\'er dk arayla.',
+  aksam:'<b style="color:#30d158">VERİYE DAYALI</b> — Yemeksepeti 2023: 17:00–20:00 toplamın %36\'sı. Günde 80 pide + 200 lahmacun → <b style="color:#F5F5F7">53 sipariş / 3 saat</b>. Robotlu hatta en kötü 45–60 dk idi.',
+  cmt:'<b style="color:#30d158">VERİYE DAYALI</b> — hafta sonu ×1,4 → <b style="color:#F5F5F7">74 sipariş / 3 saat</b>, tepe 18:00. Robotlu hatta en kötü 105–123 dk idi. Fırın tavanı sağ üstte: bant hızı fırını aşamaz.',
+  surekli:'<b style="color:#ff453a">SINIR TESTİ</b> — 1 saat durmadan sipariş. 90 sn = saatte 40 sipariş. Robotlu hat 25 dk sınırında 16 sipariş/saat (24 ürün) tutuyordu.',
+  bos:'Boş hat — üstteki düğmelerle sipariş at, bantı izle.'};
+function rebuild(){ document.getElementById('senNot').innerHTML=SEN_NOT[CFG.scenario]||''; sim=new Sim(CFG, scenarioOrders(CFG)); playing=false; document.getElementById('play').textContent='▶ Başlat'; refreshAB(); render(); }
+function render(){ draw(sim, speed); const m=sim.metrics();
+  const f=(s)=>s===null?'–':(s/60).toFixed(1)+' <small>dk</small>';
+  { const sa=sim.saat(sim.t); document.getElementById('clock').textContent = sa ? sa : sim.fmt(sim.t); }
+  document.getElementById('m-del').innerHTML=m.delivered+' <small>sipariş</small>';
+  document.getElementById('m-avg').innerHTML=f(m.avg); document.getElementById('m-max').innerHTML=f(m.max);
+  { const el=document.getElementById('m-p95'); el.innerHTML=f(m.p95); el.style.color = m.p95===null?'' : (m.p95<=CFG.hedefDk*60?'#30d158':'#ff453a'); }
+  { const dn=sim.orders.filter(o=>o.doneT!==null), as=dn.filter(o=>(o.doneT-o.arr)>CFG.hedefDk*60).length; const el=document.getElementById('m-asan');
+    el.innerHTML = dn.length? `${as} <small>/ ${dn.length} sipariş</small>` : '–'; el.style.color = as?'#ff453a':'#30d158'; }
+  document.getElementById('m-rob').textContent=Math.round(m.robot*100)+'%'; document.getElementById('m-ov').textContent=Math.round(m.oven*100)+'%';
+  document.getElementById('m-q').innerHTML=m.queue+' <small>sipariş</small>'; document.getElementById('m-thr').innerHTML=(m.thr?m.thr.toFixed(0):'–')+' <small>ürün/saat</small>';
+  document.getElementById('m-cap').innerHTML=m.cap.toFixed(0)+' <small>ürün/saat teorik</small>';
+  const tb=document.getElementById('orders'); let h='';
+  const rows=[...sim.orders].reverse().slice(0,40);
+  const NER={ wait:['kuyrukta','st-w'], starting:['hamur alınıyor','st-a'], carry:['prese gidiyor','st-a'], pressing:['preste','st-a'], belt:['dozaj bandında','st-a'],
+    baking:['fırında','st-r'], exit:['çıkışta bekliyor','st-a'], cutting:['kesim + sprey','st-a'], boxWait:['kutu bekliyor','st-a'], boxed:['kutuda','st-g'], delivering:['dolaba gidiyor','st-b'], done:['dolapta','st-g'] };
+  for(const o of rows){
+    const bitti = o.doneT!==null, w = ((bitti?o.doneT:sim.t)-o.arr)/60, say={};
+    for(const p of o.products){ const [ad,cl]=NER[p.state]||['?','st-w']; const k=ad+'|'+cl; say[k]=(say[k]||0)+1; }
+    let ner=Object.entries(say).map(([k,v])=>{ const [ad,cl]=k.split('|'); return `<span class="${cl}">${v>1?v+' ':''}${ad}</span>`; }).join(' · ');
+    if(o.drink) ner += o.drinkDone ? ' <span class="st-g">+içecek ✓</span>' : ' <span class="st-w">+içecek bekliyor</span>';
+    const sn=Math.round((bitti?o.doneT:sim.t)-o.arr);
+    const sure = bitti ? `<b class="st-g">${w.toFixed(1)} dk</b> <span style="color:var(--gray)">${sn} sn</span>` : `<span class="st-a">⏱ ${w.toFixed(1)} dk · ${sn} sn</span>`;
+    h+=`<tr><td>#${o.id}</td><td>${sim.itemsText(o)}</td><td>${sim.fmt(o.arr)}</td><td>${bitti?sim.fmt(o.doneT):'<span class="st-w">—</span>'}</td><td>${sure}</td><td>${ner}</td></tr>`;
+  }
+  tb.innerHTML=h||'<tr><td colspan=6 class="st-w">sipariş yok — üstten "şimdi sipariş ver"</td></tr>';
+  const done=sim.orders.filter(o=>o.doneT!==null).slice(-34);
+  const ch=document.getElementById('chart'), chx=document.getElementById('chartx');
+  if(done.length){
+    const mx=Math.max(CFG.hedefDk*60*1.1, ...done.map(o=>o.doneT-o.arr));
+    ch.innerHTML=`<div class="hedef" style="bottom:${CFG.hedefDk*60/mx*100}%"><b>${CFG.hedefDk} dk HEDEF</b></div>`+done.map(o=>{
+      const w=o.doneT-o.arr, hh=Math.max(3,Math.round(w/mx*100)), H=CFG.hedefDk*60; const col=w<=H*0.6?'#30d158':w<=H?'#ffd60a':'#ff453a';
+      return `<div class="b" style="height:${hh}%;background:${col}" title="#${o.id} ${sim.kisa(o)} · ${(w/60).toFixed(1)} dk"><i>${(w/60).toFixed(0)}</i></div>`; }).join('');
+    chx.innerHTML=done.map(o=>`<div>${o.id}</div>`).join('');
+    const ws=done.map(o=>o.doneT-o.arr), son5=ws.slice(-5);
+    document.getElementById('chartnote').innerHTML=`yeşil ≤${(CFG.hedefDk*0.6).toFixed(0)} dk · sarı ${(CFG.hedefDk*0.6).toFixed(0)}–${CFG.hedefDk} · <b style="color:#ff453a">kırmızı = hedefi aştı</b> &nbsp;|&nbsp; <b style="color:#F5F5F7">en kötü ${(Math.max(...ws)/60).toFixed(1)} dk</b> · son 5 siparişin ortalaması ${(son5.reduce((a,b)=>a+b,0)/son5.length/60).toFixed(1)} dk`;
+  } else { ch.innerHTML=''; chx.innerHTML=''; document.getElementById('chartnote').textContent='henüz teslim yok'; }
+  { const B=m.doluluk, el=document.getElementById('denge');
+    const SIRA=[['FIRIN','oven'],['ROBOT','robot'],['PRESS','press'],['TOPPING','topping'],['KESME','kesici'],['PACK','pack'],['PICKUP','pickup']];
+    el.innerHTML=SIRA.map(([ad,k])=>{ const v=(B[k]||0)*100; const col = v>=85?'#ff453a' : v>=65?'#ffd60a' : v>=30?'#30d158' : '#3a7bd5';
+      return `<div class="dg"><div class="ad">${ad}</div><div class="bar"><i style="width:${Math.min(100,v)}%;background:${col}"></i></div><div class="pc" style="color:${col}">${v.toFixed(0)}%</div></div>`; }).join('');
+    const en=SIRA.reduce((a,[ad,k])=>((B[k]||0)>(B[a[1]]||0)?[ad,k]:a),SIRA[0]);
+    const bos=SIRA.filter(([,k])=>(B[k]||0)<0.25).map(([ad])=>ad);
+    document.getElementById('dengeNot').innerHTML=`Darboğaz: <b style="color:#F5F5F7">${en[0]}</b> (%${((B[en[1]]||0)*100).toFixed(0)}). `+(bos.length?`Boş duran: ${bos.join(' · ')}.`:'Hat dengeli.')+` Fırın doluluk = haznedeki ürün / (hazne ÷ adım).`; }
+  const lg=document.getElementById('log'); lg.innerHTML=sim.log.slice(-12).reverse().map(e=>`<div>${sim.fmt(e.t)} · ${e.s}</div>`).join('');
+}
+setInterval(()=>{ const now=performance.now(); const dt=Math.min(0.25,(now-last)/1000); last=now; if(playing && !sim.done){ sim.step(dt*speed); } }, 33);
+function loop(){ if(playing) render(); requestAnimationFrame(loop); }
+function refreshAB(){
+  const m=headless(CFG); const el=document.getElementById('ab');
+  const f=(s)=>s===null||s===undefined?'–':(s/60).toFixed(1)+' dk'; const pct=(v)=>Math.round(v*100)+'%';
+  if(!m){ el.innerHTML='<div class="h">anlık hesap</div><div class="st-w">"Boş" senaryoda hesap yok — sipariş verip izle.</div>'; return; }
+  const d=(a,b,lowGood)=>{ if(!baseline||a===null||b===null) return ''; const x=a-b; if(Math.abs(x)<1e-6) return ''; const good = lowGood? x<0 : x>0; return `<span class="${good?'d':'u'}">${x>0?'+':''}${(x/60).toFixed(1)}</span>`; };
+  el.innerHTML=`<div class="h">anlık hesap — bu kurulum, bu senaryo (sonuna kadar)</div>
+  <table><tr><td></td><td class="h">şimdi</td><td class="h">${baseline?'temel':''}</td><td class="h">${baseline?'fark':''}</td></tr>
+  <tr><td>ort. bekleme</td><td><b>${f(m.avg)}</b></td><td>${baseline?f(baseline.avg):''}</td><td>${d(m.avg,baseline&&baseline.avg,true)}</td></tr>
+  <tr><td>%95 altında</td><td><b>${f(m.p95)}</b></td><td>${baseline?f(baseline.p95):''}</td><td>${d(m.p95,baseline&&baseline.p95,true)}</td></tr>
+  <tr><td>en kötü</td><td><b>${f(m.max)}</b></td><td>${baseline?f(baseline.max):''}</td><td>${d(m.max,baseline&&baseline.max,true)}</td></tr>
+  <tr><td>robot doluluk</td><td><b>${pct(m.robot)}</b></td><td>${baseline?pct(baseline.robot):''}</td><td></td></tr>
+  <tr><td>fırın doluluk</td><td><b>${pct(m.oven)}</b></td><td>${baseline?pct(baseline.oven):''}</td><td></td></tr>
+  <tr><td>çıkış</td><td><b>${m.thr?m.thr.toFixed(0):'–'} ürün/saat</b></td><td>${baseline?(baseline.thr?baseline.thr.toFixed(0):'–'):''}</td><td></td></tr>
+  <tr><td>fırın tavanı</td><td><b>${m.cap.toFixed(0)} ürün/saat</b></td><td>${baseline?baseline.cap.toFixed(0):''}</td><td></td></tr></table>
+  <div style="margin-top:6px;display:flex;gap:6px"><button class="btn" id="setBase" style="padding:4px 8px">Bunu TEMEL yap</button>${baseline?'<button class="btn" id="clrBase" style="padding:4px 8px">temeli sil</button>':''}</div>`;
+  document.getElementById('setBase').onclick=()=>{baseline=m; refreshAB();};
+  const cb=document.getElementById('clrBase'); if(cb) cb.onclick=()=>{baseline=null; refreshAB();};
+}
+document.querySelectorAll('#cfg .sw').forEach(sw=>{ sw.onclick=()=>{ sw.classList.toggle('on'); CFG[sw.dataset.k]=sw.classList.contains('on'); syncPanel(); rebuild(); }; });
+document.querySelectorAll('#cfg select, #cfg input[type=number]').forEach(el=>{ el.onchange=()=>{ const v=el.value; CFG[el.dataset.k]= isNaN(parseFloat(v))?v:parseFloat(v); syncPanel(); rebuild(); }; });
+document.querySelectorAll('#cfg input[type=range]').forEach(el=>{ el.oninput=()=>{ CFG[el.dataset.k]=parseFloat(el.value); document.getElementById('v-'+el.dataset.k).textContent= el.dataset.k==='robotK'?parseFloat(el.value).toFixed(2):(el.dataset.k==='drinkPct'?'%'+el.value:el.value); }; el.onchange=()=>rebuild(); });
+function syncPanel(){
+  const dis=(k,off)=>{ const el=document.querySelector(`#cfg [data-k="${k}"]`); if(!el) return; if(el.classList.contains('sw')) el.classList.toggle('dis',off); else el.disabled=off; };
+  dis('bakeLahm',!CFG.lahm); dis('tekHiz', CFG.ovens>=2 || !CFG.lahm); dis('cutLahm',!CFG.lahm);
+  document.getElementById('injL').style.display=CFG.lahm?'':'none'; document.getElementById('injPL').style.display=CFG.lahm?'':'none';
+  document.getElementById('rateWrap').style.display=CFG.scenario==='surekli'?'inline-flex':'none';
+  document.getElementById('seedBtn').style.display=['tek','uc','bos'].includes(CFG.scenario)?'none':'';
+}
+document.getElementById('scenario').onchange=(e)=>{ CFG.scenario=e.target.value; syncPanel(); rebuild(); };
+const gapEl=document.getElementById('gap');
+function gapTxt(){ document.getElementById('v-gap').textContent=CFG.gapSec+' sn'; document.getElementById('v-gaph').textContent='= saatte '+Math.round(3600/CFG.gapSec)+' sipariş'; }
+gapEl.oninput=(e)=>{ CFG.gapSec=parseInt(e.target.value); gapTxt(); }; gapEl.onchange=()=>rebuild(); gapTxt();
+document.getElementById('seedBtn').onclick=()=>{ CFG.seed=(CFG.seed||1)+1; rebuild(); };
+document.getElementById('lahmPct').oninput=(e)=>{ CFG.lahmPct=parseInt(e.target.value); document.getElementById('v-lahmPct').textContent='%'+CFG.lahmPct; }; document.getElementById('lahmPct').onchange=()=>rebuild();
+document.getElementById('play').onclick=()=>{ playing=!playing; document.getElementById('play').textContent=playing?'❚❚ Durdur':'▶ Başlat'; };
+document.getElementById('reset').onclick=rebuild;
+document.querySelectorAll('.spd').forEach(b=>b.onclick=()=>{ speed=parseFloat(b.dataset.s); document.querySelectorAll('.spd').forEach(x=>x.classList.toggle('on',x===b)); });
+document.querySelectorAll('[data-inj]').forEach(b=>b.onclick=()=>{ sim.addOrder(b.dataset.inj.split(','), sim.t); sim.done=false; render(); });
+document.getElementById('kapBtn').onclick=()=>{
+  const btn=document.getElementById('kapBtn'), eski=btn.textContent; btn.textContent='hesaplanıyor…'; btn.disabled=true;
+  setTimeout(()=>{
+    const sonuc=[];
+    const dene=(gap)=>{ let enKotu=0, urun=0, rob=0, ov=0, bt=0;
+      for(const sd of [1,2,3,4,5]){
+        const c=Object.assign(JSON.parse(JSON.stringify(CFG)),{scenario:'surekli', gapSec:gap, seed:sd});
+        const sm=new Sim(c, scenarioOrders(c)); let g=0; while(!sm.done && g++<150000) sm.step(1);
+        const w=sm.orders.filter(o=>o.doneT!==null).map(o=>o.doneT-o.arr); if(!w.length) continue;
+        enKotu=Math.max(enKotu, Math.max(...w)); const m=sm.metrics(); urun+=m.thr||0; rob+=m.robot; ov+=m.oven; bt++; }
+      return {gap, sipSaat:Math.round(3600/gap), enKotu:enKotu/60, urun:urun/bt, robot:100*rob/bt, oven:100*ov/bt}; };
+    let iyi=null;
+    for(const gap of [400,360,330,300,280,260,240,230,220,210,200,190,180,170,160,150,140,130,120,110,100,90,80,70,60]){ const r=dene(gap); sonuc.push(r); if(r.enKotu<=CFG.hedefDk) iyi=r; else break; }
+    btn.textContent=eski; btn.disabled=false; const el=document.getElementById('ab');
+    if(!iyi){ el.innerHTML='<div class="h">kapasite</div><div class="st-r">En düşük hızda bile hedef tutmuyor — hedefi yükselt ya da fırını büyüt.</div>'; return; }
+    el.innerHTML=`<div class="h">KAPASİTE · hedef ${CFG.hedefDk} dk</div>
+      <div style="font-size:22px;font-weight:700;color:#30d158;margin:4px 0">${iyi.urun.toFixed(0)} ürün/saat</div>
+      <table><tr><td>sipariş hızı</td><td><b>${iyi.sipSaat}/saat</b> (her ${iyi.gap} sn)</td></tr>
+      <tr><td>5 akşamın en kötüsü</td><td><b>${iyi.enKotu.toFixed(1)} dk</b></td></tr>
+      <tr><td>fırın doluluk</td><td><b>${iyi.oven.toFixed(0)}%</b></td></tr><tr><td>robot doluluk</td><td><b>${iyi.robot.toFixed(0)}%</b></td></tr></table>
+      <div class="note" style="margin-top:6px">Sınır: saatte ${sonuc[sonuc.length-1].sipSaat} siparişte en kötü ${sonuc[sonuc.length-1].enKotu.toFixed(1)} dk — hedefi aşıyor. Fırın tavanı ${sim.ovenCap().toFixed(0)} ürün/saat; sipariş öbeklendiği için tavanın tamamı kullanılamaz.</div>`;
+  }, 30);
+};
+function fit(){ const w=cv.parentElement.clientWidth; cv.style.height=(w*600/1400)+'px'; }
+window.addEventListener('resize',fit); fit();
+syncPanel(); rebuild(); requestAnimationFrame(loop);
+</script>
+</body>
+</html>
