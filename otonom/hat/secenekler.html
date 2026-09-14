@@ -75,11 +75,11 @@ ul.ae li.p::before{content:"+";color:var(--green)}ul.ae li.m::before{content:"�
 
 <tr class="grp"><th colspan="5">Kapasite · simülasyon</th></tr>
 <tr><th>Fırın</th><td>özel konveyör · hazne 1320 · içeride 4 ürün · en çok 60/saat</td><td>A ile aynı</td><td>özel konveyör · hazne 1400 · içeride 4 ürün · en çok 60/saat</td><td>3 hazneli fırın · içeride 3 ürün · en çok 42/saat</td></tr>
-<tr><th>Saatte ürün<small>hiçbir müşteri 25 dk'dan fazla beklemeden</small></th><td><b>52</b></td><td><b>52</b></td><td><b>52</b></td><td class="zayif">30</td></tr>
-<tr><th>Tam yük · 60 dk'da çıkan</th><td>51</td><td>51</td><td class="iyi">54</td><td class="zayif">28</td></tr>
+<tr><th>En yüksek hız<small>hat dolu ve ısınmışken, saatte çıkan ürün</small></th><td>≈ 57</td><td>≈ 57</td><td class="iyi">≈ 60</td><td class="zayif">≈ 32</td></tr><tr><th>İlk 60 dakikada çıkan<small>hat boş başlar, ilk dakikalarda ürün çıkmaz</small></th><td>51<small>ilk ürün 6. dk</small></td><td>51<small>ilk ürün 6. dk</small></td><td class="iyi">54<small>ilk ürün 7. dk</small></td><td class="zayif">28</td></tr><tr><th>25 dk kuralıyla alınabilen iş<small>hiçbir müşteri 25 dk'dan fazla beklemesin diye saatte en çok</small></th><td>28 sipariş ≈ 52 ürün</td><td>28 sipariş ≈ 52 ürün</td><td>28 sipariş ≈ 52 ürün</td><td class="zayif">16 sipariş ≈ 30 ürün</td></tr>
+
 <tr><th>Cumartesi en uzun bekleme<small>74 sipariş</small></th><td>16,2 dk</td><td>16,2 dk</td><td class="iyi">13,3 dk</td><td class="zayif">105–123 dk</td></tr>
 <tr><th>Hafta içi en uzun bekleme<small>53 sipariş</small></th><td>13,9 dk</td><td>13,9 dk</td><td class="iyi">12,4 dk</td><td class="zayif">45–60 dk</td></tr>
-<tr><th>280 ürün tam kapasitede</th><td>≈ 5,4 saat</td><td>≈ 5,4 saat</td><td>≈ 5,4 saat</td><td>≈ 9,3 saat</td></tr>
+<tr><th>Günlük 280 ürün<small>hat hiç durmadan en yüksek hızla çalışsa</small></th><td>≈ 4,9 saatte biter</td><td>≈ 4,9 saatte biter</td><td class="iyi">≈ 4,7 saatte biter</td><td class="zayif">≈ 8,8 saatte biter</td></tr>
 <tr><th>Darboğaz</th><td>fırın</td><td>fırın</td><td>fırın</td><td>robot (%99 dolu)</td></tr>
 
 <tr class="grp"><th colspan="5">Hamur</th></tr>
@@ -102,13 +102,13 @@ ul.ae li.p::before{content:"+";color:var(--green)}ul.ae li.m::before{content:"�
 <tr><th>Soğutma grubu · hat panosu</th><td>soğutma PRESS altında · pano TOPPING altında</td><td>ikisi de KESME altında</td><td>KESME altındaki TEKNİK bölmesinde</td><td>pano OVEN ve PACK altında</td></tr>
 <tr><th>Artı · eksi</th>
 <td><ul class="ae"><li class="p">en kısa ve en alçak hat</li><li class="p">tabla basit: 3 motor, tek parça yıkanır</li><li class="m">her gün tam dolum</li><li class="m">harcın Atosa kasetinden verilmesi Atosa'ya sorulacak</li></ul></td>
-<td><ul class="ae"><li class="p">hamur, malzeme ve içecek tam 3 gün</li><li class="p">saatte 52 ürün, A ile aynı</li><li class="m">kutu şarjörü 1,8 gün</li><li class="m">kaset seti her gün elle değişir</li></ul></td>
+<td><ul class="ae"><li class="p">hamur, malzeme ve içecek tam 3 gün</li><li class="p">kapasite A ile aynı</li><li class="m">kutu şarjörü 1,8 gün</li><li class="m">kaset seti her gün elle değişir</li></ul></td>
 <td><ul class="ae"><li class="p">zirvede en kısa bekleme, tam yükte en çok ürün</li><li class="m">6 geniş dozaj başlığı harçla denenmedi, bant yıkanmalı</li><li class="m">içecek ve 6 lahmacun çekmecesi sığmadı</li><li class="m">kaset motor paketi 830 derinliğe sığmıyor</li></ul></td>
-<td><ul class="ae"><li class="p">bant ya da tabla yok, en az özel mekanizma</li><li class="p">içecek 7 gün</li><li class="m">saatte 30 ürün, cumartesi bekleme 2 saate çıkıyor</li><li class="m">en uzun hat; robot ürün başına ~100 sn çalışıyor</li></ul></td></tr>
+<td><ul class="ae"><li class="p">bant ya da tabla yok, en az özel mekanizma</li><li class="p">içecek 7 gün</li><li class="m">en yüksek hız saatte ~32 ürün, cumartesi bekleme 2 saate çıkıyor</li><li class="m">en uzun hat; robot ürün başına ~100 sn çalışıyor</li></ul></td></tr>
 </tbody></table></div>
 
 <div class="card"><h3 style="margin-top:0">Rakamlar nereden geliyor</h3><div class="kv">
-<b>Kapasite</b><span>A, B, C: tabla–bant karşılaştırma simülasyonu (14 Eyl · 4'lü fırın · malzeme başına 20 sn dozaj · aynı siparişler). D: robotlu hat simülasyonu (13 Eyl · 3 hazneli fırın). "Saatte ürün" = hiçbir müşteri 25 dk'dan fazla beklemeden kaldırılan yük, 5 akşamın en kötüsü.</span>
+<b>Kapasite</b><span>A, B, C: tabla–bant karşılaştırma simülasyonu (14 Eyl · 4'lü fırın · malzeme başına 20 sn dozaj · aynı siparişler). D: robotlu hat simülasyonu (13 Eyl · 3 hazneli fırın). Üç ayrı ölçü var: <b>en yüksek hız</b> = sipariş durmadan gelirken hattın 2. saatte çıkardığı ürün; <b>ilk 60 dakika</b> = aynı koşu, hat boş başladığı için ilk dakikalar ürünsüz geçer; <b>25 dk kuralı</b> = saatte gelen sipariş artırılır, 5 farklı akışta en kötü bekleme 25 dk'yı aşmayan en yüksek yük alınır (bir üst adımda, saatte 30 siparişte, bekleme 27–29 dk'ya çıkıyor).</span>
 <b>Günlük ihtiyaç</b><span>80 pide + 200 lahmacun → harç 21,6 kg · kıyma 3,2 · kuşbaşı 2,9 · kaşar 4,4 · sucuk 1,4 kg · içecek 70 kutu · kutu 280.</span>
 <b>Atosa kaseti</b><span>Broşürdeki topping haznesi 6 lb = 2,72 kg ≈ 4,7 L. Genişlik fotoğraftan ~108 mm; derinlik 250 ve yükseklik 360 varsayım. Taşma payı için en çok %90 dolum.</span>
 <b>C ve D kasetleri</b><span>12,5 L plastik kaset. Kilo hesabı yoğunlukla: harç ve kıyma 1,0 · kaşar 0,40 · kuşbaşı ve sucuk 0,58 kg/L.</span>
