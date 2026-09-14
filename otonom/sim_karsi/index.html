@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AUTOKITCH · Tabla – Bant Karşılaştırma</title>
+<style>
+:root{--font:"SF Pro Display","SF Pro Text",-apple-system,BlinkMacSystemFont,"Helvetica Neue",Helvetica,Arial,sans-serif;
+ --bg:#0f0f10;--panel:#1D1D1F;--panel2:#26262a;--light:#F5F5F7;--gray:#86868B;--blue:#2997FF;--red:#ff453a;--green:#30d158;--amber:#ffd60a;--line:#3a3a3e}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--light);font-family:var(--font);font-size:13px}
+a{color:var(--blue);text-decoration:none}
+header{display:flex;flex-wrap:wrap;align-items:center;gap:14px;padding:12px 20px;border-bottom:1px solid var(--line);background:var(--panel)}
+header h1{font-size:15px;margin:0;letter-spacing:.06em;font-weight:600}
+header .sub{color:var(--gray)}
+header .links{margin-left:auto;display:flex;gap:16px}
+.tag{display:inline-block;padding:1px 6px;border-radius:4px;background:#2a2a2e;color:var(--amber);font-size:10px;margin-left:6px;vertical-align:middle}
+.toolbar{display:flex;flex-wrap:wrap;align-items:center;gap:8px;padding:10px 16px;border-bottom:1px solid var(--line);background:#161618}
+.btn{background:#2a2a2e;border:1px solid var(--line);color:var(--light);padding:6px 12px;border-radius:7px;cursor:pointer;font:inherit}
+.btn:hover{background:#333}
+.btn.pri{background:var(--blue);border-color:var(--blue);color:#fff}
+.btn.on{background:#fff;color:#000;border-color:#fff}
+.btn.warn{border-color:var(--amber);color:var(--amber)}
+.btn:disabled{opacity:.5;cursor:default}
+.sep{width:1px;height:24px;background:var(--line);margin:0 4px}
+.clock{font-variant-numeric:tabular-nums;font-size:20px;font-weight:600;min-width:70px}
+#senNot{padding:6px 16px;border-bottom:1px solid var(--line);background:#121214;color:var(--gray);font-size:11px}
+details.ayar{border-bottom:1px solid var(--line);background:var(--panel)}
+details.ayar summary{cursor:pointer;padding:8px 16px;color:var(--gray);font-size:11px;letter-spacing:.12em}
+.ayar-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0 24px;padding:4px 16px 12px}
+.ayar-grid h3{grid-column:1/-1;margin:10px 0 2px;font-size:10px;letter-spacing:.14em;color:var(--gray);font-weight:600}
+.row{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:4px 0;border-bottom:1px solid #2c2c30}
+.row label{color:#d0d0d4}
+.row input[type=number]{width:64px;background:#111;border:1px solid var(--line);color:var(--light);padding:3px 6px;border-radius:5px;font:inherit;text-align:right}
+.row select{background:#111;border:1px solid var(--line);color:var(--light);padding:3px 6px;border-radius:5px;font:inherit;max-width:170px}
+.row input[type=range]{width:100px}
+.row .val{color:var(--gray);min-width:40px;text-align:right}
+.sw{position:relative;width:38px;height:22px;background:#3a3a3e;border-radius:11px;cursor:pointer;flex:none}
+.sw.on{background:var(--green)}
+.sw::after{content:"";position:absolute;top:2px;left:2px;width:18px;height:18px;border-radius:50%;background:#fff;transition:left .15s}
+.sw.on::after{left:18px}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line)}
+.side{background:var(--panel);display:flex;flex-direction:column;min-width:0}
+.side h2{margin:0;padding:9px 14px;font-size:13px;letter-spacing:.06em;font-weight:600;border-bottom:1px solid var(--line);display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.side h2 small{color:var(--gray);font-weight:400;letter-spacing:0;font-size:11px}
+.side canvas{display:block;width:100%;background:#0b0b0c}
+.mini{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--line);border-top:1px solid var(--line)}
+.m{background:var(--panel);padding:7px 10px}
+.m .k{color:var(--gray);font-size:9px;letter-spacing:.1em;text-transform:uppercase}
+.m .v{font-size:16px;font-weight:600;margin-top:2px;font-variant-numeric:tabular-nums}
+.m .v small{font-size:10px;color:var(--gray);font-weight:400}
+.log{height:170px;overflow:auto;padding:6px 12px;border-top:1px solid var(--line)}
+.log h4,.box h4{margin:4px 0 6px;font-size:10px;letter-spacing:.12em;color:var(--gray);font-weight:600}
+.log div{padding:2px 0;border-bottom:1px solid #222;color:#c8c8cc;font-variant-numeric:tabular-nums;font-size:11px}
+.log div b{color:var(--light);font-weight:600}
+.alt{display:grid;grid-template-columns:1.1fr 1fr;gap:1px;background:var(--line);border-top:1px solid var(--line)}
+.box{background:var(--panel);padding:12px 16px;overflow:auto}
+table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+td,th{padding:4px 8px;text-align:left;border-bottom:1px solid #2c2c30;white-space:nowrap}
+th{color:var(--gray);font-weight:500;font-size:11px}
+td.iyi{color:var(--green);font-weight:600}
+.note{color:var(--gray);font-size:11px;line-height:1.5;margin-top:8px}
+.adim td{white-space:normal}
+.adim td.sn{text-align:right;white-space:nowrap;color:var(--light)}
+.adim tr.top td{border-top:1px solid var(--gray);font-weight:600;color:var(--amber)}
+@media (max-width:1100px){.duo,.alt{grid-template-columns:1fr}.ayar-grid{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<header>
+  <h1>AUTOKITCH · TABLA – BANT KARŞILAŞTIRMA <span class="tag">aynı saat · aynı siparişler</span></h1>
+  <span class="sub">solda tablalı taşıyıcı (Atosa tipi) · sağda bantlı topping (Picnic tipi) · robot, pres, fırın, kesme, kutu, dolap ikisinde aynı</span>
+  <div class="links"><a href="../sim/">Robotlu hat</a><a href="../sim_bant/">Bantlı hat</a><a href="../">Ana sayfa</a></div>
+</header>
+<div class="toolbar">
+  <span class="clock" id="clock">00:00</span>
+  <button class="btn pri" id="play">▶ Başlat</button>
+  <button class="btn" id="reset">↺ Sıfırla</button>
+  <span class="sep"></span>
+  <span style="color:var(--gray)">hız</span>
+  <button class="btn spd on" data-s="1">1×</button><button class="btn spd" data-s="3">3×</button><button class="btn spd" data-s="10">10×</button><button class="btn spd" data-s="30">30×</button>
+  <span class="sep"></span>
+  <span style="color:var(--gray)">senaryo</span>
+  <select id="scenario" class="btn">
+    <option value="tek">Tek sipariş · 1 pide + 2 lahmacun</option>
+    <option value="uc">3 müşteri · 1'er dk arayla</option>
+    <option value="aksam">AKŞAM PİKİ · hafta içi · 17–20 · 53 sipariş</option>
+    <option value="cmt" selected>CUMARTESİ AKŞAMI · 17–20 · 74 sipariş</option>
+    <option value="surekli">SÜREKLİ AKIŞ · 1 saat · aralığı sen seç</option>
+    <option value="bos">Boş — siparişi ben vereceğim</option>
+  </select>
+  <span id="rateWrap" style="display:none;align-items:center;gap:6px">her <input type="range" id="gap" min="20" max="300" value="90" step="10"><b id="v-gap">90 sn</b>'de 1 sipariş <span id="v-gaph" style="color:var(--gray)"></span></span>
+  <span class="sep"></span><span style="color:var(--gray)">lahmacun</span><input type="range" id="lahmPct" min="0" max="100" value="65" step="5"><span id="v-lahmPct">%65</span>
+  <button class="btn" id="seedBtn" title="aynı yoğunlukta başka bir akşam">🎲 başka akşam</button>
+  <span class="sep"></span>
+  <span style="color:var(--gray)">ikisine birden sipariş</span>
+  <button class="btn warn" data-inj="pide">+ 1 pide</button>
+  <button class="btn warn" data-inj="lahm,lahm" id="injL">+ 2 lahmacun</button>
+  <button class="btn warn" data-inj="pide,lahm,lahm" id="injPL">+ pide & 2 lahmacun</button>
+</div>
+<div id="senNot"></div>
+<details class="ayar"><summary>AYARLAR · iki hatta aynı uygulanır (değişince ikisi de baştan başlar)</summary>
+<div class="ayar-grid" id="cfg">
+  <h3>ÜRÜN · FIRIN (ikisinde aynı)</h3>
+  <div class="row"><label>Lahmacun menüde</label><div class="sw on" data-k="lahm"></div></div>
+  <div class="row"><label>Pişirme haznesi (mm)</label><select data-k="chamber"><option value="914">914 · 2,6 ürün</option><option value="1050">1050 · 3 ürün</option><option value="1400" selected>1400 · 4 ürün (karar)</option><option value="1750">1750 · 5 ürün</option></select></div>
+  <div class="row"><label>Fırın duvarları (mm, tünelsiz)</label><input type="number" data-k="extra" value="100" min="0" step="10"></div>
+  <div class="row"><label>Ürün adımı (mm)</label><input type="number" data-k="pitch" value="350" min="300" step="10"></div>
+  <div class="row"><label>Pide pişme (sn)</label><input type="number" data-k="bakePide" value="240" step="10"></div>
+  <div class="row"><label>Lahmacun pişme (sn)</label><input type="number" data-k="bakeLahm" value="180" step="10"></div>
+  <div class="row"><label>Tek bant hızı</label><select data-k="tekHiz"><option value="pide" selected>pide süresine göre</option><option value="lahm">lahmacun süresine göre</option></select></div>
+  <div class="row"><label>Pres basma (sn)</label><input type="number" data-k="pressCycle" value="4" min="1" step="1"></div>
+  <h3>DOZAJ (ikisinde aynı)</h3>
+  <div class="row"><label>Dozaj süresi · malzeme başına (sn)</label><input type="number" data-k="dose" value="20" min="5" step="1"></div>
+  <div class="row"><label>Helezon geri emme + klape (sn)</label><input type="number" data-k="sucBack" value="1.5" min="0" step="0.5"></div>
+  <h3>TABLALI TAŞIYICI</h3>
+  <div class="row"><label>Kızak hızı (mm/sn)</label><input type="number" data-k="vX" value="500" min="100" step="50"></div>
+  <div class="row"><label>Kalk / in (sn)</label><input type="number" data-k="zMove" value="1" min="0.2" step="0.2"></div>
+  <div class="row"><label>İtici iner (sn)</label><input type="number" data-k="stripDown" value="1" min="0" step="0.2"></div>
+  <div class="row"><label>İtici pideyi banda iter (sn)</label><input type="number" data-k="push" value="1.2" min="0.2" step="0.2"></div>
+  <h3>BANTLI TOPPING</h3>
+  <div class="row"><label>Presten banda aktarım (sn)</label><input type="number" data-k="toBelt" value="5" min="0" step="1"></div>
+  <div class="row"><label>Bant hızı</label><span class="val" id="v-bantHiz">300 mm / dozaj</span></div>
+  <h3>KESME · PACK · ROBOT</h3>
+  <div class="row"><label>Pide: sprey + 8 bıçak (sn)</label><input type="number" data-k="cutPide" value="15" min="0" step="1"></div>
+  <div class="row"><label>Lahmacun: geçiş (sn)</label><input type="number" data-k="cutLahm" value="5" min="0" step="1"></div>
+  <div class="row"><label>Kutu katlama (sn)</label><input type="number" data-k="fold" value="15" min="0" step="1"></div>
+  <div class="row"><label>PICKUP göz sayısı</label><input type="number" data-k="lockers" value="12" min="2" max="24"></div>
+  <div class="row"><label>Ray hızı (cm/sn)</label><input type="range" data-k="rail" min="20" max="200" step="10" value="50"><span class="val" id="v-rail">50</span></div>
+  <div class="row"><label>Kol hız katsayısı</label><input type="range" data-k="robotK" min="0.5" max="1.5" step="0.05" value="1"><span class="val" id="v-robotK">1.00</span></div>
+  <div class="row"><label>İçecekli sipariş oranı</label><input type="range" data-k="drinkPct" min="0" max="100" step="10" value="50"><span class="val" id="v-drinkPct">%50</span></div>
+  <div class="row"><label><b>HEDEF: en fazla bekleme (dk)</b></label><input type="number" data-k="hedefDk" value="25" min="5" max="60" step="1"></div>
+</div></details>
+<div class="duo">
+  <section class="side">
+    <h2>◀ TABLALI TAŞIYICI <small>tek tabla · pres tablanın üstüne basar · kasetin altında döner + kayar · iterek fırına · boş döner</small></h2>
+    <canvas id="cvA" width="1000" height="600"></canvas>
+    <div class="mini" id="mA"></div>
+    <div class="log" id="logA"><h4>TABLA + ROBOT NE YAPTI</h4><div></div></div>
+  </section>
+  <section class="side">
+    <h2>BANTLI TOPPING ▶ <small>pres → banda aktarım · sürekli bant · başlığın altından geçerken dozaj · bant sonunda fırın sırası yoksa bant durur</small></h2>
+    <canvas id="cvB" width="1000" height="600"></canvas>
+    <div class="mini" id="mB"></div>
+    <div class="log" id="logB"><h4>BANT + ROBOT NE YAPTI</h4><div></div></div>
+  </section>
+</div>
+<div class="alt">
+  <div class="box"><h4>KARŞILAŞTIRMA · bu senaryo sonuna kadar (hesap)</h4><div id="cmp"></div>
+    <div style="display:flex;gap:8px;margin-top:10px;flex-wrap:wrap"><button class="btn pri" id="kapBtn">📊 KAPASİTE BUL · hedef dk kuralı</button><button class="btn pri" id="tamBtn">⏱ TAM YÜK · 60 DK</button></div>
+    <div id="kap"></div>
+  </div>
+  <div class="box"><h4>ADIMLAR · hiçbiri atlanmıyor (süreler ayarlardan)</h4><div id="adim"></div></div>
+</div>
+<script src="motor.js"></script>
+<script src="cizim.js"></script>
+<script src="arayuz.js"></script>
+</body>
+</html>
