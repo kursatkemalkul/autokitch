@@ -118,6 +118,8 @@ td.iyi{color:var(--green);font-weight:600}
   <div class="row"><label>Kalk / in (sn)</label><input type="number" data-k="zMove" value="1" min="0.2" step="0.2"></div>
   <div class="row"><label>İtici iner (sn)</label><input type="number" data-k="stripDown" value="1" min="0" step="0.2"></div>
   <div class="row"><label>İtici pideyi banda iter (sn)</label><input type="number" data-k="push" value="1.2" min="0.2" step="0.2"></div>
+  <div class="row"><label>Atosa: ürün başına en az (sn)</label><input type="number" data-k="atosaTur" value="60" min="0" step="5"></div>
+  <div class="row"><label>Robot sonraki hamuru önceden getirir</label><div class="sw on" data-k="onceden"></div></div>
   <h3>BANTLI TOPPING</h3>
   <div class="row"><label>Presten banda aktarım (sn)</label><input type="number" data-k="toBelt" value="5" min="0" step="1"></div>
   <div class="row"><label>Bant hızı</label><span class="val" id="v-bantHiz">300 mm / dozaj</span></div>
@@ -133,7 +135,7 @@ td.iyi{color:var(--green);font-weight:600}
 </div></details>
 <div class="duo">
   <section class="side">
-    <h2>◀ TABLALI TAŞIYICI <small>tek tabla · pres tablanın üstüne basar · kasetin altında döner + kayar · iterek fırına · boş döner</small></h2>
+    <h2>◀ TABLALI TAŞIYICI <small>tek tabla · pres tablanın üstüne basar · kasetin altında döner + kayar · iterek fırına · boş döner · ürün başına en az 60 sn (Atosa)</small></h2>
     <canvas id="cvA" width="1000" height="600"></canvas>
     <div class="mini" id="mA"></div>
     <div class="log" id="logA"><h4>TABLA + ROBOT NE YAPTI</h4><div></div></div>

@@ -6,7 +6,7 @@
 const T0 = { takeDough:8, pressDrop:6, boxTake:5, lockerPlace:8, drinkTake:6, drinkPlace:5, customerPickup:150 };
 
 const CFG = { lahm:true, chamber:1400, extra:100, bakePide:240, bakeLahm:180, tekHiz:'pide', pitch:350, pressCycle:4,
-  dose:20, sucBack:1.5, vX:500, zMove:1, stripDown:1, push:1.2, toBelt:5,
+  dose:20, sucBack:1.5, vX:500, zMove:1, stripDown:1, push:1.2, toBelt:5, atosaTur:60, onceden:true,
   cutPide:15, cutLahm:5, fold:15, rail:50, robotK:1, drinkPct:50, seed:1, gapSec:90, randArr:true, lockers:12,
   scenario:'cmt', hedefDk:25, lahmPct:65 };
 
@@ -130,7 +130,7 @@ class Sim{
   act(dur, label, y, fn, startFn){ return {act:true, dur:dur*this.cfg.robotK, label, y, fn, startFn}; }
   nextStartable(){ for(const o of this.orders){ const p=o.products.find(q=>q.state==='wait'); if(p) return p; } return null; }
   canStart(){
-    if(this.mode==='tabla'){ const Tr=this.tray; return Tr.reserved===null && (Tr.state==='bekliyor' || Tr.state==='donus'); }
+    if(this.mode==='tabla'){ const Tr=this.tray; return Tr.reserved===null && (this.cfg.onceden || Tr.state==='bekliyor' || Tr.state==='donus'); }  // onceden: robot sonraki hamuru tabla çalışırken getirir, pres önünde bekler
     return !this.press.p;
   }
   pickJob(){
@@ -189,6 +189,11 @@ class Sim{
   tact(dur, label, fn, startFn){ return {act:true, dur, label, fn, startFn}; }
   trayLoad(p){
     const Tr=this.tray, c=this.cfg, S=[];
+    /* ATOSA: ürün başına en az c.atosaTur sn (üretici: bir pizza en fazla 1 dk) — kısa kalan süre dozaja eklenir */
+    let top=2*c.zMove+c.pressCycle, xx=G.P;
+    for(const a of p.adim){ top+=Math.abs(G.K[a.k]-xx)/c.vX+2*c.zMove+c.dose+c.sucBack; xx=G.K[a.k]; }
+    top+=Math.abs(G.F-xx)/c.vX+c.stripDown+c.push+Math.abs(G.F-G.P)/c.vX;
+    const dz=c.dose+Math.max(0,(c.atosaTur||0)-top)/p.adim.length;
     Tr.reserved=null; Tr.p=p; Tr.gram=0; Tr.state='calisiyor'; Tr.cycleStart=this.t; p.state='tabla';
     this.say(`Tabla: tartı hamuru gördü → #${p.id} ${p.tur}`);
     S.push(this.tact(c.zMove, 'örse iner', ()=>{ Tr.z='ors'; }, ()=>{ Tr.z='iniyor'; }));
@@ -198,9 +203,9 @@ class Sim{
       const K=KASET[a.k];
       S.push({move:true, x:G.K[a.k], label:`→ K${a.k+1} ${K.ad} altına`});
       S.push(this.tact(c.zMove, `ağıza kalkar (K${a.k+1})`, ()=>{ Tr.z='agiz'; }, ()=>{ Tr.z='kalkiyor'; }));
-      S.push(this.tact(c.dose, `DOZAJ ${K.ad} · döner + kayar`,
+      S.push(this.tact(dz, `DOZAJ ${K.ad} · döner + kayar`,
         ()=>{ Tr.gram+=a.g; Tr.dosing=null; this.say(`Tabla: K${a.k+1} ${K.ad} ${a.g} g ✓ · tartı ${Math.round(Tr.gram)} g`); },
-        ()=>{ Tr.dosing={k:a.k, g:a.g, g0:Tr.gram, dur:c.dose}; }));
+        ()=>{ Tr.dosing={k:a.k, g:a.g, g0:Tr.gram, dur:dz}; }));
       S.push(this.tact(c.sucBack, 'helezon geri emer · klape kapanır'));
       S.push(this.tact(c.zMove, 'iner', ()=>{ Tr.z='seyir'; }, ()=>{ Tr.z='iniyor'; }));
     }

@@ -74,7 +74,8 @@ function adimHTML(){
       add('ağıza kalkar',c.zMove); add(`dozaj: döner + kayar → tartı +${a.g} g`,c.dose); add('helezon geri emer, klape kapanır',c.sucBack); add('iner',c.zMove); }
     add('fırın ağzına gider',mv(x,G.F),`${Math.abs(G.F-x)} mm`); add('fırın sırası',`bekler (≤ ${Math.round(c.pitch/v)} sn)`);
     add('itici iner',c.stripDown); add('itici pideyi fırın bandına iter · tartı 0 g',c.push); add('pres altına boş döner',mv(G.F,G.P),`${G.F-G.P} mm`);
-    return rows+`<tr class="top"><td>tabla turu (fırın sırası hariç)</td><td class="sn">${top.toFixed(1)} sn</td></tr>`; };
+    const ek=Math.max(0,(c.atosaTur||0)-top); if(ek>0) rows+=r(`Atosa hızı: dozaja eklenen süre (ürün başına en az ${c.atosaTur} sn)`,ek);
+    return rows+`<tr class="top"><td>tabla turu (fırın sırası hariç)</td><td class="sn">${(top+ek).toFixed(1)} sn</td></tr>`; };
   return `<table class="adim">
     <tr class="top"><td>ORTAK · robot</td><td></td></tr>
     ${r('robot rayda gider',`${c.rail} cm/sn`)}${r('çekmeceden hamur topunu kavrar',T.takeDough)}${r('pres altına bırakır (tablaya / prese)',T.pressDrop)}
@@ -88,7 +89,7 @@ function adimHTML(){
     ${r(`fırından geçiş · ${c.chamber+c.extra} mm, ${v.toFixed(2)} mm/sn`,(c.chamber+c.extra)/v,`haznede ${bake} sn`)}${r('fırın 1 ürünü şu aralıkla alır',c.pitch/v,`${c.pitch} mm adım`)}
     ${r('kesme plakası: pide sprey + 8 bıçak / lahmacun geçiş',`${c.cutPide} / ${c.cutLahm} sn`)}${r('kutu katlama (hep 1 kutu hazır)',c.fold)}
     ${r('robot kutuyu kavrar',T.boxTake)}${r('robot QR dolabına koyar',T.lockerPlace)}${r('içecek: çekmeceden al + dolaba koy',`${T.drinkTake} + ${T.drinkPlace} sn`)}</table>
-    <div class="note"><b style="color:#F5F5F7">Varsayımlar:</b> kaset adımı 150 mm (son kaset fırın duvarından 180 mm geride, Ø340 tabla çarpmasın) · tabla fırına pideyi arkadan iterek verir (geri çekilirse pide ile bant arasında boşluk kalıp katlanır) · bantlı hatta başlık 300 mm, bant hızı = 300 mm / dozaj süresi · dozaj süresi iki hatta aynı · pide çeşidi 4 çeşit eşit (kaşarlı 130 g kaşar · sucuklu 90 g kaşar + 70 g sucuk · kıymalı 160 g · kuşbaşılı 145 g) · lahmacun harcı 108 g, iki harç kaseti sırayla · fırın tek bant, pide hızında.</div>`;
+    <div class="note"><b style="color:#F5F5F7">Varsayımlar:</b> kaset adımı 150 mm (son kaset fırın duvarından 180 mm geride, Ø340 tabla çarpmasın) · tabla fırına pideyi arkadan iterek verir (geri çekilirse pide ile bant arasında boşluk kalıp katlanır) · bantlı hatta başlık 300 mm, bant hızı = 300 mm / dozaj süresi · dozaj süresi iki hatta aynı · pide çeşidi 4 çeşit eşit (kaşarlı 130 g kaşar · sucuklu 90 g kaşar + 70 g sucuk · kıymalı 160 g · kuşbaşılı 145 g) · lahmacun harcı 108 g, iki harç kaseti sırayla · fırın tek bant, pide hızında · tabla turu Atosa verisine göre ürün başına en az ${c.atosaTur} sn (üretici: bir pizza en fazla 1 dk; kısa kalan süre dozaja eklenir) · robot sonraki hamuru tabla çalışırken getirip pres önünde bekler (ayarlardan kapatılabilir).</div>`;
 }
 
 /* --- panel --- */
