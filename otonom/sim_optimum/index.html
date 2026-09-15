@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AUTOKITCH · Optimum Hat Simülasyonu</title>
+<style>
+:root{--font:"SF Pro Display","SF Pro Text",-apple-system,BlinkMacSystemFont,"Helvetica Neue",Helvetica,Arial,sans-serif;
+ --bg:#0f0f10;--panel:#1D1D1F;--panel2:#26262a;--light:#F5F5F7;--gray:#86868B;--blue:#2997FF;--red:#ff453a;--green:#30d158;--amber:#ffd60a;--line:#3a3a3e}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--light);font-family:var(--font);font-size:13px}
+a{color:var(--blue);text-decoration:none}
+header{display:flex;flex-wrap:wrap;align-items:center;gap:14px;padding:12px 20px;border-bottom:1px solid var(--line);background:var(--panel)}
+header h1{font-size:15px;margin:0;letter-spacing:.06em;font-weight:600}
+header .sub{color:var(--gray)}
+header .links{margin-left:auto;display:flex;gap:16px;flex-wrap:wrap}
+.tag{display:inline-block;padding:1px 6px;border-radius:4px;background:#2a2a2e;color:var(--amber);font-size:10px;margin-left:6px;vertical-align:middle}
+.toolbar{display:flex;flex-wrap:wrap;align-items:center;gap:8px;padding:10px 16px;border-bottom:1px solid var(--line);background:#161618}
+.btn{background:#2a2a2e;border:1px solid var(--line);color:var(--light);padding:6px 12px;border-radius:7px;cursor:pointer;font:inherit}
+.btn:hover{background:#333}
+.btn.pri{background:var(--blue);border-color:var(--blue);color:#fff}
+.btn.on{background:#fff;color:#000;border-color:#fff}
+.btn.warn{border-color:var(--amber);color:var(--amber)}
+.btn:disabled{opacity:.5;cursor:default}
+.sep{width:1px;height:24px;background:var(--line);margin:0 4px}
+.clock{font-variant-numeric:tabular-nums;font-size:20px;font-weight:600;min-width:70px}
+#senNot{padding:6px 16px;border-bottom:1px solid var(--line);background:#121214;color:var(--gray);font-size:11px}
+details.ayar{border-bottom:1px solid var(--line);background:var(--panel)}
+details.ayar summary{cursor:pointer;padding:8px 16px;color:var(--gray);font-size:11px;letter-spacing:.12em}
+.ayar-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0 24px;padding:4px 16px 12px}
+.ayar-grid h3{grid-column:1/-1;margin:10px 0 2px;font-size:10px;letter-spacing:.14em;color:var(--gray);font-weight:600}
+.row{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:4px 0;border-bottom:1px solid #2c2c30}
+.row label{color:#d0d0d4}
+.row input[type=number]{width:64px;background:#111;border:1px solid var(--line);color:var(--light);padding:3px 6px;border-radius:5px;font:inherit;text-align:right}
+.row select{background:#111;border:1px solid var(--line);color:var(--light);padding:3px 6px;border-radius:5px;font:inherit;max-width:190px}
+.row input[type=range]{width:100px}
+.row .val{color:var(--gray);min-width:40px;text-align:right}
+.sw{position:relative;width:38px;height:22px;background:#3a3a3e;border-radius:11px;cursor:pointer;flex:none}
+.sw.on{background:var(--green)}
+.sw::after{content:"";position:absolute;top:2px;left:2px;width:18px;height:18px;border-radius:50%;background:#fff;transition:left .15s}
+.sw.on::after{left:18px}
+.ana{background:var(--panel);display:flex;flex-direction:column;min-width:0}
+.ana h2{margin:0;padding:9px 14px;font-size:13px;letter-spacing:.06em;font-weight:600;border-bottom:1px solid var(--line);display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.ana h2 small{color:var(--gray);font-weight:400;letter-spacing:0;font-size:11px}
+.cvwrap{background:#0b0b0c}
+.ana canvas{display:block;width:100%;max-width:1300px;margin:0 auto;background:#0b0b0c}
+.mini{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--line);border-top:1px solid var(--line)}
+.m{background:var(--panel);padding:7px 10px}
+.m .k{color:var(--gray);font-size:9px;letter-spacing:.1em;text-transform:uppercase}
+.m .v{font-size:16px;font-weight:600;margin-top:2px;font-variant-numeric:tabular-nums}
+.m .v small{font-size:10px;color:var(--gray);font-weight:400}
+.log{height:200px;overflow:auto;padding:6px 12px;border-top:1px solid var(--line)}
+.log h4,.box h4{margin:4px 0 6px;font-size:10px;letter-spacing:.12em;color:var(--gray);font-weight:600}
+.log div{padding:2px 0;border-bottom:1px solid #222;color:#c8c8cc;font-variant-numeric:tabular-nums;font-size:11px}
+.log div b{color:var(--light);font-weight:600}
+.alt{display:grid;grid-template-columns:1fr 1.1fr;gap:1px;background:var(--line);border-top:1px solid var(--line)}
+.box{background:var(--panel);padding:12px 16px;overflow:auto}
+table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+td,th{padding:4px 8px;text-align:left;border-bottom:1px solid #2c2c30;white-space:nowrap}
+th{color:var(--gray);font-weight:500;font-size:11px}
+td.iyi{color:var(--green);font-weight:600}
+td.kotu{color:var(--red);font-weight:600}
+.note{color:var(--gray);font-size:11px;line-height:1.5;margin-top:8px}
+.adim td{white-space:normal}
+.adim td.sn,.adim th.sn,td.sn{text-align:right;white-space:nowrap;color:var(--light)}
+.adim td.kay{color:var(--gray);font-size:10px;white-space:nowrap}
+.adim tr.top td{border-top:1px solid var(--gray);font-weight:600;color:var(--amber)}
+@media (max-width:1100px){.alt{grid-template-columns:1fr}.ayar-grid{grid-template-columns:1fr 1fr}.mini{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:600px){.ayar-grid{grid-template-columns:1fr}header .links{margin-left:0}td,th{white-space:normal}}
+</style>
+</head>
+<body>
+<header>
+  <h1>AUTOKITCH · OPTİMUM HAT <span class="tag">tabla · 3,2 göz fırın · akıllı robot · sipariş kutusu</span></h1>
+  <span class="sub">robot çekmeceden hamuru alır → tabla basar ve dozajlar → tek sıra fırın 3,5 dk → kesme → aynı siparişin lahmacunları aynı kutuya → robot kutuyu ve içeceği QR dolabına koyar</span>
+  <div class="links"><a href="../sim_karsi/">Tabla – Bant</a><a href="../hat/secenekler.html">Hat seçenekleri</a><a href="../">Ana sayfa</a></div>
+</header>
+<div class="toolbar">
+  <span class="clock" id="clock">00:00</span>
+  <button class="btn pri" id="play">▶ Başlat</button>
+  <button class="btn" id="reset">↺ Sıfırla</button>
+  <span class="sep"></span>
+  <span style="color:var(--gray)">hız</span>
+  <button class="btn spd on" data-s="1">1×</button><button class="btn spd" data-s="3">3×</button><button class="btn spd" data-s="10">10×</button><button class="btn spd" data-s="30">30×</button>
+  <span class="sep"></span>
+  <span style="color:var(--gray)">senaryo</span>
+  <select id="scenario" class="btn">
+    <option value="tek3" selected>Tek sipariş · 3 lahmacun + içecek</option>
+    <option value="uc">3 müşteri · 30 sn arayla</option>
+    <option value="aksam">AKŞAM PİKİ · hafta içi · 17–20 · 53 sipariş</option>
+    <option value="cmt">CUMARTESİ AKŞAMI · 17–20 · 74 sipariş</option>
+    <option value="surekli">SÜREKLİ AKIŞ · 1 saat · aralığı sen seç</option>
+    <option value="bos">Boş — siparişi ben vereceğim</option>
+  </select>
+  <span id="rateWrap" style="display:none;align-items:center;gap:6px">her <input type="range" id="gap" min="20" max="300" value="90" step="10"><b id="v-gap">90 sn</b>'de 1 sipariş <span id="v-gaph" style="color:var(--gray)"></span></span>
+  <span class="sep"></span><span style="color:var(--gray)">lahmacun</span><input type="range" id="lahmPct" min="0" max="100" value="65" step="5"><span id="v-lahmPct">%65</span>
+  <button class="btn" id="seedBtn" title="aynı yoğunlukta başka bir akşam">🎲 başka akşam</button>
+  <span class="sep"></span>
+  <span style="color:var(--gray)">sipariş ver</span>
+  <button class="btn warn" data-inj="lahm,lahm,lahm">+ 3 lahmacun</button>
+  <button class="btn warn" data-inj="lahm,lahm">+ 2 lahmacun</button>
+  <button class="btn warn" data-inj="pide">+ 1 pide</button>
+  <button class="btn warn" data-inj="pide,pide">+ 2 pide</button>
+  <span style="color:var(--gray)">içecekli</span><div class="sw on" id="injDrink"></div>
+</div>
+<div id="senNot"></div>
+<details class="ayar"><summary>AYARLAR · değişince sim baştan başlar</summary>
+<div class="ayar-grid" id="cfg">
+  <h3>FIRIN · TEK SIRA</h3>
+  <div class="row"><label>Pişirme haznesi (mm)</label><select data-k="chamber"><option value="930">930 · 3 göz</option><option value="1000" selected>1000 · 3,2 göz (optimum)</option><option value="1085">1085 · 3,5 göz</option><option value="1240">1240 · 4 göz</option></select></div>
+  <div class="row"><label>Ürün adımı (mm)</label><input type="number" data-k="pitch" value="310" min="300" step="10"></div>
+  <div class="row"><label>Pişme · pide ve lahmacun (sn)</label><input type="number" data-k="bake" value="210" min="60" step="10"></div>
+  <div class="row"><label>Fırın duvarları (mm)</label><input type="number" data-k="extra" value="100" min="0" step="10"></div>
+  <h3>TABLA (ATOSA TİPİ)</h3>
+  <div class="row"><label>Atosa: ürün başına (sn)</label><input type="number" data-k="atosaTur" value="60" min="0" step="5"></div>
+  <div class="row"><label>Pres basma (sn)</label><input type="number" data-k="pressCycle" value="4" min="1" step="1"></div>
+  <div class="row"><label>Dozaj · malzeme başına (sn)</label><input type="number" data-k="dose" value="20" min="5" step="1"></div>
+  <div class="row"><label>Kızak hızı (mm/sn)</label><input type="number" data-k="vX" value="500" min="100" step="50"></div>
+  <h3>KESME · KUTU</h3>
+  <div class="row"><label>Aynı siparişin lahmacunları aynı kutuya</label><div class="sw on" data-k="siparisKutu"></div></div>
+  <div class="row"><label>Bir kutuya en çok lahmacun</label><input type="number" data-k="lahmKutu" value="3" min="1" max="5" step="1"></div>
+  <div class="row"><label>Kutu katlama (sn)</label><input type="number" data-k="fold" value="15" min="0" step="1"></div>
+  <div class="row"><label>Kapak kapanır (sn)</label><input type="number" data-k="lid" value="3" min="0" step="1"></div>
+  <div class="row"><label>Pide: sprey + 8 bıçak (sn)</label><input type="number" data-k="cutPide" value="15" min="0" step="1"></div>
+  <div class="row"><label>Lahmacun: geçiş (sn)</label><input type="number" data-k="cutLahm" value="5" min="0" step="1"></div>
+  <h3>ROBOT · QR DOLABI</h3>
+  <div class="row"><label>Akıllı iş sırası</label><div class="sw on" data-k="akilli"></div></div>
+  <div class="row"><label>Sonraki hamuru önceden getirir</label><div class="sw on" data-k="onceden"></div></div>
+  <div class="row"><label>Ray hızı (cm/sn)</label><input type="range" data-k="rail" min="20" max="200" step="5" value="50"><span class="val" id="v-rail">50</span></div>
+  <div class="row"><label>Kol yavaşlık katsayısı (1 = varsayım)</label><input type="range" data-k="robotK" min="0.5" max="2" step="0.05" value="1"><span class="val" id="v-robotK">1.00</span></div>
+  <div class="row"><label>İçecekli sipariş oranı</label><input type="range" data-k="drinkPct" min="0" max="100" step="10" value="50"><span class="val" id="v-drinkPct">%50</span></div>
+  <div class="row"><label>QR dolabı göz sayısı</label><input type="number" data-k="lockers" value="12" min="2" max="24"></div>
+  <div class="row"><label><b>HEDEF: en fazla bekleme (dk)</b></label><input type="number" data-k="hedefDk" value="25" min="5" max="60" step="1"></div>
+</div></details>
+<section class="ana">
+  <h2>OPTİMUM HAT · ÖN GÖRÜNÜŞ <small>STORE hattın altında (tam 3 gün) · robot rayda · tabla pres altında hamuru alır, kasetlerin altında dozajlar, iterek fırına verir · fırın tek sıra · kutu ağzında aynı siparişin lahmacunları üst üste · QR dolabında göz = sipariş</small></h2>
+  <div class="cvwrap"><canvas id="cv" width="1000" height="600"></canvas></div>
+  <div class="mini" id="m"></div>
+  <div class="log" id="log"><h4>HAT NE YAPTI · en yeni üstte · kutucuklar senaryonun başından şu ana kadar</h4><div></div></div>
+</section>
+<div class="alt">
+  <div class="box">
+    <h4>HESAP · hat dolu, robot hep zamanında (formül)</h4><div id="hesap"></div>
+    <h4 style="margin-top:16px">BU SENARYO · baştan sona (sim)</h4><div id="sonuc"></div>
+    <div style="display:flex;gap:8px;margin-top:12px;flex-wrap:wrap"><button class="btn pri" id="tamBtn">⏱ HAT DOLU · 60 DK · kim yüzde kaç çalışıyor</button><button class="btn pri" id="kapBtn">📊 KAPASİTE · 25 dk kuralı</button></div>
+    <div id="kap"></div>
+  </div>
+  <div class="box"><h4>ADIMLAR · hiçbiri atlanmıyor · "varsayım" yazanlar ölçülecek</h4><div id="adim"></div></div>
+</div>
+<script src="motor.js"></script>
+<script src="cizim.js"></script>
+<script src="arayuz.js"></script>
+</body>
+</html>
