@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>AUTOKITCH — Kaset 3D / AR</title>
+<meta name="color-scheme" content="only light">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+<meta name="googlebot" content="noindex, nofollow">
+<style>
+  :root{color-scheme:only light;
+    --black:#000;--panel:#1D1D1F;--line:#333336;--gray:#86868B;--gray-l:#A1A1A6;--blue:#2997FF;
+    --font:"SF Pro Display","SF Pro Text",-apple-system,BlinkMacSystemFont,"Helvetica Neue",Helvetica,Arial,sans-serif}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:var(--font);background:var(--black);color:#fff;-webkit-font-smoothing:antialiased;
+       letter-spacing:-.01em;padding:22px 18px 60px}
+  .wrap{max-width:680px;margin:0 auto}
+  h1{font-size:26px;font-weight:600}
+  .sub{color:var(--gray-l);font-size:14px;margin-top:8px;line-height:1.5}
+  .tabs{display:flex;gap:10px;margin:20px 0 14px}
+  .tab{flex:1;padding:12px 10px;border:1px solid var(--line);border-radius:12px;background:var(--panel);
+       color:#fff;font-size:15px;font-weight:600;text-align:center;cursor:pointer}
+  .tab.on{border-color:var(--blue);color:var(--blue)}
+  model-viewer{width:100%;height:60vh;min-height:360px;background:#111114;border:1px solid var(--line);
+               border-radius:16px;--poster-color:transparent}
+  .ar{display:block;width:100%;margin-top:14px;padding:15px;border:0;border-radius:12px;background:var(--blue);
+      color:#fff;font-size:16px;font-weight:600;text-align:center;cursor:pointer}
+  table{width:100%;border-collapse:collapse;margin-top:18px;font-size:14.5px}
+  td{padding:9px 0;border-bottom:1px solid #2b2b2e;color:var(--gray-l)}
+  td:last-child{text-align:right;color:#fff}
+  .note{color:var(--gray);font-size:12.5px;margin-top:16px;line-height:1.6}
+  a{color:var(--blue);text-decoration:none;font-size:14px}
+</style>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script>
+</head>
+<body>
+<div class="wrap">
+  <h1>Kaset — gerçek boyut</h1>
+  <div class="sub">Telefonda aç, <b>AR'de gör</b>'e bas, kamerayı tezgâha tut. Kaset gerçek ölçüsünde görünür; parmakla döndür, yerini değiştir.</div>
+
+  <div class="tabs">
+    <div class="tab on" data-m="kaset">Standart kaset</div>
+    <div class="tab" data-m="kasar">Kaşar kabı</div>
+  </div>
+
+  <model-viewer id="mv" src="kaset.glb" ios-src="kaset.usdz" alt="Kaset"
+    ar ar-modes="webxr scene-viewer quick-look" ar-scale="fixed" ar-placement="floor"
+    loading="eager" reveal="auto"
+    camera-controls touch-action="pan-y" auto-rotate shadow-intensity="1"
+    exposure="1.1" camera-orbit="35deg 70deg 1.6m" min-camera-orbit="auto auto 0.6m">
+  </model-viewer>
+  <button class="ar" id="arbtn">AR'de gör — gerçek boyut</button>
+
+  <table id="tablo"></table>
+  <div class="note" id="notu"></div>
+  <a href="../">← AUTOKITCH</a>
+</div>
+
+<script>
+const D = {
+  kaset:{ad:"Standart kaset", w:140, d:400, h:360, brut:20.2, net:14,
+         icerik:"Harç ×4 (43,2 kg) · Kıyma ×1 (6,4 kg) · Kuşbaşı ×1 (5,8 kg)", dolu:"12,5 kg (harç, dolu)"},
+  kasar:{ad:"Kaşar kabı", w:280, d:400, h:360, brut:40.3, net:28,
+         icerik:"Kaşar ×1 (8,8 kg, 2 günlük) · karıştırıcılı", dolu:"10 kg (dolu)"}
+};
+const mv = document.getElementById('mv'), tablo = document.getElementById('tablo'), notu = document.getElementById('notu');
+function goster(k){
+  const m = D[k];
+  mv.setAttribute('src', k + ".glb"); mv.setAttribute('ios-src', k + ".usdz");
+  tablo.innerHTML =
+    "<tr><td>Ölçü (G × D × Y)</td><td>" + m.w + " × " + m.d + " × " + m.h + " mm</td></tr>" +
+    "<tr><td>Brüt hacim</td><td>" + m.brut.toString().replace('.', ',') + " L</td></tr>" +
+    "<tr><td>Kullanılabilir</td><td>" + m.net + " L</td></tr>" +
+    "<tr><td>Dolu ağırlık</td><td>" + m.dolu + "</td></tr>" +
+    "<tr><td>Ne taşıyor</td><td>" + m.icerik + "</td></tr>";
+  notu.textContent = k === 'kaset'
+    ? "Tek kalıp: harç, kıyma ve kuşbaşı aynı kaseti kullanıyor. Bulaşık makinesi sepetine (500 × 500) giriyor."
+    : "Rendelenmiş kaşar köprü yaptığı için içinde karıştırıcı var. 2 günlük kaşar tam bu hacme oturuyor.";
+  document.querySelectorAll('.tab').forEach(t => t.classList.toggle('on', t.dataset.m === k));
+}
+document.querySelectorAll('.tab').forEach(t => t.onclick = () => goster(t.dataset.m));
+document.getElementById('arbtn').onclick = () => { if (mv.canActivateAR) mv.activateAR(); else alert("Bu cihaz AR desteklemiyor. iPhone'da Safari, Android'de Chrome ile aç."); };
+goster('kaset');
+</script>
+</body>
+</html>
