@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AUTOKITCH — 3D Robot Erişim Simülasyonu</title>
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+<style>
+  :root{--bg:#0d1016;--panel:#161a22;--line:#2a2f3a;--gray:#8a94a4;--blue:#2997ff;--green:#3ddc84;--red:#ff5c5c;--amber:#ffb340;
+    --font:"SF Pro Display",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif}
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{height:100%;background:var(--bg);color:#e8eaed;font-family:var(--font);font-size:14px;-webkit-font-smoothing:antialiased}
+  #c{position:fixed;left:0;top:0;display:block}
+  #ui{position:fixed;top:0;right:0;bottom:0;width:340px;background:var(--panel);border-left:1px solid var(--line);padding:16px 16px 24px;overflow:auto}
+  #ui h1{font-size:16px;font-weight:700;letter-spacing:-.01em;margin-bottom:2px}
+  #ui .sub{color:var(--gray);font-size:12px;margin-bottom:14px;line-height:1.45}
+  #ui h2{font-size:11px;font-weight:700;letter-spacing:.12em;color:var(--gray);margin:16px 0 8px;text-transform:uppercase}
+  .row{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:6px 0;font-size:13px}
+  .row label{color:#c9ccd3}
+  select,input[type=range],button{font:inherit}
+  select{background:#0d1016;color:#fff;border:1px solid var(--line);border-radius:8px;padding:5px 8px;min-width:130px}
+  input[type=range]{width:140px;accent-color:var(--blue)}
+  .val{min-width:56px;text-align:right;color:#fff;font-variant-numeric:tabular-nums}
+  .btns{display:flex;flex-wrap:wrap;gap:6px}
+  button{background:#232833;color:#fff;border:1px solid var(--line);border-radius:9px;padding:7px 10px;cursor:pointer;font-size:12.5px}
+  button:hover{border-color:var(--blue)}
+  button.play{background:var(--blue);border-color:var(--blue);font-weight:700;width:100%;padding:10px}
+  #out{background:#0d1016;border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin-top:10px;font-size:12.5px;line-height:1.6}
+  #out b{font-weight:700}
+  .ok{color:var(--green)} .yok{color:var(--red)} .amb{color:var(--amber)}
+  #step{color:var(--blue);font-weight:600;min-height:20px;margin-top:8px}
+  table{width:100%;border-collapse:collapse;font-size:12px;margin-top:8px}
+  td{padding:3px 0;border-bottom:1px solid #1f242e;color:#c9ccd3} td:last-child{text-align:right;color:#fff}
+  .note{color:var(--gray);font-size:11.5px;line-height:1.5;margin-top:12px}
+  a{color:var(--blue);text-decoration:none}
+  @media(max-width:760px){#ui{width:100%;top:auto;height:52%;border-left:0;border-top:1px solid var(--line)}}
+</style>
+</head>
+<body>
+<canvas id="c"></canvas>
+<div id="ui">
+  <h1>3D Robot Erişim Simülasyonu</h1>
+  <div class="sub">HAT 2 KOL v9 hattı + yer rayı. Senaryo: çekmece açılır → robot yana kayar → topu alır → çekmece kapanır → prese koyar. Erişim canlı ölçülür. Sürükle: döndür · tekerlek: yakınlaş · sağ tuş: kaydır.</div>
+
+  <h2>Robot</h2>
+  <div class="row"><label>Model</label><select id="model"></select></div>
+  <div class="row"><label>Ray ekseni z (hattan)</label><input type="range" id="railz" min="150" max="600" step="10" value="250"><span class="val" id="railz_v">250</span></div>
+  <div class="row"><label>Omuz kotu</label><input type="range" id="omuz" min="700" max="1500" step="10" value="1000"><span class="val" id="omuz_v">1000</span></div>
+  <div class="row"><label>Pres plakası kotu</label><select id="plaka"><option value="1640">PZP B üstünde · 1640</option><option value="1150">tezgâh üstü pres · 1150</option><option value="820">PZP zeminde · 820</option></select></div>
+  <div class="row"><label>Emniyet payı</label><select id="pay"><option value="0.95">%5</option><option value="0.9">%10</option><option value="1">yok</option></select></div>
+
+  <h2>Senaryo</h2>
+  <div class="row"><label>Çekmece</label><select id="cek"><option value="K1">K1 (pres altı)</option><option value="K2" selected>K2</option><option value="K3">K3</option></select></div>
+  <div class="row"><label>Sıra</label><select id="sira"><option value="alt">en alt</option><option value="ust">en üst</option></select></div>
+  <div class="row"><label>Top</label><select id="top"><option value="yakin">robota yakın yarı</option><option value="uzak">uzak yarı</option><option value="orta">orta</option></select></div>
+  <button class="play" id="play">▶ Senaryoyu oynat</button>
+  <div id="step"></div>
+
+  <h2>Hedefe git (erişim ölç)</h2>
+  <div class="btns" id="hedefler"></div>
+
+  <div id="out"></div>
+  <div class="note">Kol modeli: Logorob kataloğu s.13 çizimlerinden (FR5: omuz 152 · üst kol 425 · ön kol 395 · bilek+flanş ≈200 · tutucu 180). Basit zincir: yan ofset ve eklem limitleri ihmal, dirsek yukarı çözüm. Çarpışma kontrolü yok — sadece geometri. <a href="../">← AUTOKITCH</a></div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+<script>
+/* ================= VERİ (mm) — HAT 2 KOL v9 / DÜKKAN v10 ================= */
+const ROBOT = {
+  FR5:  {ad:"FR5 · 922 · 8.490 €",   d1:152, a2:425, a3:395, bilek:200, tutucu:180, taban:149},
+  FR10: {ad:"FR10 · 1400 · 13.590 €", d1:228, a2:700, a3:536, bilek:240, tutucu:180, taban:190},
+  FR20: {ad:"FR20 · 1854 · 15.490 €", d1:240, a2:1000, a3:813, bilek:240, tutucu:180, taban:240},
+  FR5WML:{ad:"FR5 WML · 1900 · 12.000 €", d1:152, a2:900, a3:850, bilek:200, tutucu:180, taban:149}
+};
+const HAT = {uz:3500, derin:830, yuk:2030, B_yuk:1060};
+const MOD = [["A · PRESS",0,700],["B · ÇEKMECE + C · TOPPING",700,2100],["D · FIRIN",2100,2800],["E · KUTU + İÇECEK",2800,3500]];
+// cekmece kolonlari: x0, x1, alt kot, cekmece sayisi/pitch listesi (kot listesi: her cekmecenin taban kotu)
+const KOLON = {
+  K1:{x0:62.5, x1:682.5, kotlar:[287.5,395.5,503.5,611.5,719.5,827.5], ic:75},
+  K2:{x0:717.5,x1:1337.5,kotlar:[167.5,275.5,383.5,476.5,569.5,662.5,755.5,848.5], ic:60},
+  K3:{x0:1372.5,x1:1992.5,kotlar:[167.5,260.5,353.5,446.5,539.5,632.5], ic:60}
+};
+const CEK_ACIK = 700, TOP_CAP = 95;
+const HEDEF = [
+  {ad:"Pres plakası", x:350, z:-350, y:()=>+plaka.value, not:"tepsi plakaya"},
+  {ad:"Topping ağzı (kaşar)", x:1730, z:-300, y:()=>1130, not:"taban ağızda"},
+  {ad:"Fırın göz 1 (alt)", x:2450, z:-350, y:()=>1115},
+  {ad:"Fırın göz 2", x:2450, z:-350, y:()=>1435},
+  {ad:"Fırın göz 3 (üst)", x:2450, z:-350, y:()=>1755},
+  {ad:"Kesici ağzı", x:2450, z:-300, y:()=>900},
+  {ad:"Kutu ağzı", x:3150, z:-250, y:()=>800},
+  {ad:"Aktarma rafı", x:2100, z:()=>+railz.value+430, y:()=>1100, not:"ray arkası"},
+  {ad:"E içecek çekmecesi", x:3150, cx:2700, z:350, y:()=>560, not:"robot 450 solda durur, açık çekmece"},
+  {ad:"QR alt göz (40)", x:3470, z:()=>+railz.value+420+150, y:()=>450, not:"dolap arkası z ray+420"},
+  {ad:"QR üst göz (160)", x:3470, z:()=>+railz.value+420+150, y:()=>1650}
+];
+
+/* ================= SAHNE ================= */
+const canvas = document.getElementById('c');
+const renderer = new THREE.WebGLRenderer({canvas, antialias:true});
+renderer.setPixelRatio(Math.min(2, devicePixelRatio));
+const scene = new THREE.Scene(); scene.background = new THREE.Color(0x0d1016);
+const camera = new THREE.PerspectiveCamera(45, 1, 10, 30000);
+camera.position.set(-1400, 2400, 4800);
+const controls = new THREE.OrbitControls(camera, canvas); controls.target.set(1750, 900, 0); controls.update();
+scene.add(new THREE.HemisphereLight(0xffffff, 0x334455, 1.0));
+const dl = new THREE.DirectionalLight(0xffffff, .7); dl.position.set(2000, 4000, 3000); scene.add(dl);
+const M = (c, o=1)=> new THREE.MeshLambertMaterial({color:c, transparent:o<1, opacity:o});
+function box(w,h,d,c,o=1){ const m=new THREE.Mesh(new THREE.BoxGeometry(w,h,d), M(c,o)); return m; }
+function edge(mesh, c=0x55606f){ const e=new THREE.LineSegments(new THREE.EdgesGeometry(mesh.geometry), new THREE.LineBasicMaterial({color:c})); mesh.add(e); }
+// zemin
+const zemin = box(6000, 10, 3600, 0x1a1f28); zemin.position.set(1750, -5, 900); scene.add(zemin);
+// hat modulleri
+MOD.forEach(([ad,x0,x1],i)=>{ const b = box(x1-x0-4, HAT.yuk, HAT.derin, i%2?0x2a3140:0x2f3748); b.position.set((x0+x1)/2, HAT.yuk/2, -HAT.derin/2); edge(b); scene.add(b); });
+// B ust cizgisi
+const bline = box(2100, 6, HAT.derin+2, 0x3b82f6); bline.position.set(1050, HAT.B_yuk, -HAT.derin/2); scene.add(bline);
+// cekmeceler (kapali: on yuz cizgi; acik: kutu disari)
+const cekMesh = {};
+Object.entries(KOLON).forEach(([k,K])=>{
+  K.kotlar.forEach((y,i)=>{ const f = box(K.x1-K.x0-16, K.ic+30-4, 30, 0x3f9c7a); f.position.set((K.x0+K.x1)/2, y+(K.ic+30)/2, -15); scene.add(f); });
+  const acik = box(K.x1-K.x0-16, K.ic+30-4, CEK_ACIK, 0x5fd3a8, .85); acik.visible=false; scene.add(acik); cekMesh[k]=acik;
+});
+// pres plakasi, firin gozleri, kutu agzi, aktarma rafi, QR dolabi
+const plakaMesh = new THREE.Mesh(new THREE.CylinderGeometry(170,170,12,32), M(0xc0c6d0)); scene.add(plakaMesh);
+[1115,1435,1755].forEach(y=>{ const g=box(640,40,600,0xd08060); g.position.set(2450,y-25,-350); scene.add(g); });
+const kutu = box(320,45,320,0xe0c890); kutu.position.set(3150, 780, -250); scene.add(kutu);
+const raf = box(400,400,400,0x3b82f6,.35); scene.add(raf);
+const qr = box(860,2000,520,0x4a5568,.9); scene.add(qr); edge(qr, 0x8899aa);
+// ray + araba + kaide + robot
+const ray = box(3700,120,120,0x2997ff); scene.add(ray);
+const araba = box(400,200,300,0x3a4250); scene.add(araba);
+const kaide = new THREE.Mesh(new THREE.CylinderGeometry(100,100,1,24), M(0x596273)); scene.add(kaide);
+const tabanM = new THREE.Mesh(new THREE.CylinderGeometry(75,75,120,24), M(0x9aa3b2)); scene.add(tabanM);
+const ustKol = new THREE.Mesh(new THREE.CylinderGeometry(45,45,1,16), M(0xe8eaed)); scene.add(ustKol);
+const onKol  = new THREE.Mesh(new THREE.CylinderGeometry(38,38,1,16), M(0xe8eaed)); scene.add(onKol);
+const bilekM = new THREE.Mesh(new THREE.CylinderGeometry(30,30,1,16), M(0xb8bfc9)); scene.add(bilekM);
+const tutucuM= new THREE.Mesh(new THREE.CylinderGeometry(20,40,1,16), M(0x2997ff)); scene.add(tutucuM);
+const eklem = [0,0,0].map(()=>{ const s=new THREE.Mesh(new THREE.SphereGeometry(50,16,12), M(0x2997ff)); scene.add(s); return s; });
+const topM = new THREE.Mesh(new THREE.SphereGeometry(TOP_CAP/2,16,12), M(0xf0d9a8)); scene.add(topM);
+const hedefM = new THREE.Mesh(new THREE.SphereGeometry(28,12,10), M(0xff5c5c)); scene.add(hedefM);
+const erisimM = new THREE.Mesh(new THREE.SphereGeometry(1,32,24), new THREE.MeshBasicMaterial({color:0x2997ff, transparent:true, opacity:.08, side:THREE.DoubleSide})); scene.add(erisimM);
+const erisimW = new THREE.LineSegments(new THREE.WireframeGeometry(new THREE.SphereGeometry(1,18,12)), new THREE.LineBasicMaterial({color:0x2997ff, transparent:true, opacity:.15})); scene.add(erisimW);
+
+/* ================= DURUM ================= */
+const S = { model:'FR5', carX:1027, tcp:new THREE.Vector3(1027, 1200, 100), topTaşınıyor:false, sonD:0 };
+const model=document.getElementById('model'), railz=document.getElementById('railz'), omuz=document.getElementById('omuz'), plaka=document.getElementById('plaka'), pay=document.getElementById('pay');
+const cekS=document.getElementById('cek'), siraS=document.getElementById('sira'), topS=document.getElementById('top');
+Object.entries(ROBOT).forEach(([k,r])=>{ const o=document.createElement('option'); o.value=k; o.textContent=r.ad; model.appendChild(o); });
+function R(){ return ROBOT[model.value]; }
+function railZ(){ return +railz.value; }
+function omuzY(){ return +omuz.value; }
+function tabanY(){ return omuzY() - R().d1; }
+function seg(mesh, a, b){ const v=new THREE.Vector3().subVectors(b,a); const L=v.length()||1; mesh.scale.set(1,L,1); mesh.position.copy(a).addScaledVector(v,.5); mesh.quaternion.setFromUnitVectors(new THREE.Vector3(0,1,0), v.clone().normalize()); }
+
+/* ================= IK (dirsek yukarı, uç aşağı bakar) ================= */
+function ik(tcp){
+  const r=R(), base=new THREE.Vector3(S.carX, tabanY(), railZ()), Sh=base.clone().setY(omuzY());
+  const Ltool = r.bilek + r.tutucu;
+  const Wc = tcp.clone().setY(tcp.y + Ltool);                       // bilek merkezi hedefin üstünde
+  const dx=Wc.x-Sh.x, dz=Wc.z-Sh.z, h=Wc.y-Sh.y, rr=Math.hypot(dx,dz);
+  const D=Math.hypot(rr,h), maxD=(r.a2+r.a3)*(+pay.value), minD=Math.abs(r.a2-r.a3)+20;
+  let ok = D<=maxD && D>=minD, Duse=Math.min(Math.max(D,minD), r.a2+r.a3-1);
+  const dir=new THREE.Vector3(dx,0,dz).normalize();
+  const cosE=(r.a2*r.a2+Duse*Duse-r.a3*r.a3)/(2*r.a2*Duse), th=Math.atan2(h,rr)+Math.acos(Math.max(-1,Math.min(1,cosE)));
+  const E=Sh.clone().addScaledVector(dir, r.a2*Math.cos(th)).setY(Sh.y + r.a2*Math.sin(th));
+  const vw=new THREE.Vector3(dx,h,dz).normalize(); const Wr=ok? Wc.clone() : Sh.clone().addScaledVector(new THREE.Vector3(dx,h,dz).normalize(), Duse);
+  // W = E + a3 yönünde: ok ise tam Wc, degilse en yakin nokta
+  const W = ok ? Wc : E.clone().add(new THREE.Vector3().subVectors(Wr,E).normalize().multiplyScalar(r.a3));
+  const T = W.clone().setY(W.y - Ltool);
+  return {ok, D, maxD, base, Sh, E, W, T};
+}
+function ciz(){
+  const r=R(), z=railZ();
+  ray.position.set(1850, 60, z); araba.position.set(S.carX, 220, z);
+  const kt = tabanY(); kaide.scale.y = Math.max(1, kt-320); kaide.position.set(S.carX, 320+(kt-320)/2, z);
+  tabanM.scale.set(r.taban/150, 1, r.taban/150); tabanM.position.set(S.carX, kt+60, z);
+  const k = ik(S.tcp);
+  seg(ustKol, k.Sh, k.E); seg(onKol, k.E, k.W); seg(bilekM, k.W, k.W.clone().setY(k.W.y - r.bilek)); seg(tutucuM, k.W.clone().setY(k.W.y - r.bilek), k.T);
+  eklem[0].position.copy(k.Sh); eklem[1].position.copy(k.E); eklem[2].position.copy(k.W);
+  if(S.topTaşınıyor) topM.position.copy(k.T).setY(k.T.y - TOP_CAP/2);
+  hedefM.position.copy(S.tcp); hedefM.material.color.set(k.ok?0x3ddc84:0xff5c5c);
+  erisimM.position.copy(k.Sh); erisimM.scale.setScalar(k.maxD); erisimW.position.copy(k.Sh); erisimW.scale.setScalar(k.maxD);
+  plakaMesh.position.set(350, +plaka.value, -350);
+  raf.position.set(2100, 1100, z+430); qr.position.set(3470, 1000, z+420+260);
+  S.sonD = k.D;
+  out.innerHTML = `<b>${r.ad}</b><br>omuz → bilek merkezi: <b>${k.D.toFixed(0)} mm</b> · sınır <b>${k.maxD.toFixed(0)}</b> (a2+a3 = ${r.a2+r.a3}) → <span class="${k.ok?'ok':'yok'}"><b>${k.ok?'YETİŞİYOR':'YETİŞMİYOR'}</b>${k.ok?'':' · '+(k.D-k.maxD).toFixed(0)+' mm eksik'}</span><br>
+    hedef TCP x ${S.tcp.x.toFixed(0)} · y ${S.tcp.y.toFixed(0)} · z ${S.tcp.z.toFixed(0)} · araba x ${S.carX.toFixed(0)} · omuz ${omuzY()} · ray z ${z}
+    <table><tr><td>yatay uzaklık (dx, dz)</td><td>${(k.W.x-k.Sh.x).toFixed(0)}, ${(k.W.z-k.Sh.z).toFixed(0)}</td></tr><tr><td>düşey (bilek − omuz)</td><td>${(k.W.y-k.Sh.y).toFixed(0)}</td></tr><tr><td>uç, bilek altında</td><td>${r.bilek+r.tutucu}</td></tr></table>`;
+}
+const out=document.getElementById('out');
+function resize(){ const w=innerWidth-(innerWidth>760?340:0), h=innerWidth>760?innerHeight:innerHeight*.48; renderer.setSize(w,h,true); camera.aspect=w/h; camera.updateProjectionMatrix(); }
+addEventListener('resize', ()=>{resize(); ciz();}); resize();
+[model,railz,omuz,plaka,pay].forEach(e=>e.addEventListener('input',()=>{ railz_v.textContent=railz.value; omuz_v.textContent=omuz.value; ciz(); }));
+(function loop(){ renderer.render(scene,camera); requestAnimationFrame(loop); })();
+
+/* ================= HEDEFLER ================= */
+const hb=document.getElementById('hedefler');
+HEDEF.forEach(h=>{ const b=document.createElement('button'); b.textContent=h.ad; b.onclick=()=>{ dur(); S.topTaşınıyor=false; const z=typeof h.z==='function'?h.z():h.z; S.carX=h.cx||h.x; S.tcp.set(h.x, h.y(), z); ciz(); step.textContent=h.ad+(h.not?' · '+h.not:''); }; hb.appendChild(b); });
+
+/* ================= SENARYO ================= */
+let anim=null;
+function dur(){ if(anim){ cancelAnimationFrame(anim); anim=null; } }
+function lerpV(a,b,t){ return a.clone().lerp(b,t); }
+function ease(t){ return t<.5?2*t*t:-1+(4-2*t)*t; }
+function play(){
+  dur(); S.topTaşınıyor=false;
+  const K=KOLON[cekS.value], kot = siraS.value==='alt'?K.kotlar[0]:K.kotlar[K.kotlar.length-1];
+  const kx=(K.x0+K.x1)/2, sag = kx + (K.x1-K.x0)/2 + 100 + R().taban/2;      // robot cekmecenin sagina kayar: kenar + 100 pay + kaide yaricapi
+  const topX = topS.value==='yakin'? K.x1-80 : topS.value==='uzak'? K.x0+80 : kx;
+  const topY = kot + 15 + TOP_CAP/2 + 20, topZ = 350;                          // acik cekmecenin orta sirasi (z 0..700)
+  const yuk = new THREE.Vector3(kx, 1300, railZ()-150), hazir=new THREE.Vector3(sag, 1300, railZ()-150);
+  const adim = [
+    ['1 · robot çekmecenin önünde, çekmece kapalı', 900, t=>{ S.carX=kx; S.tcp.copy(yuk); }],
+    ['2 · robot '+(sag-kx).toFixed(0)+' mm sağa kayar', 1200, t=>{ S.carX=kx+(sag-kx)*ease(t); S.tcp.set(S.carX,1300,railZ()-150); }],
+    ['3 · çekmece '+CEK_ACIK+' açılır', 1200, t=>{ const m=cekMesh[cekS.value]; m.visible=true; const a=CEK_ACIK*ease(t); m.scale.z=Math.max(.01,a/CEK_ACIK); m.position.set(kx, kot+(K.ic+30)/2, a/2); topM.position.set(topX, topY-20, a*(topZ/CEK_ACIK)); }],
+    ['4 · kol eğilir, topu yandan alır', 1600, t=>{ S.tcp.copy(lerpV(hazir, new THREE.Vector3(topX, topY, topZ), ease(t))); }],
+    ['5 · top tutucuda, kol kalkar', 1000, t=>{ S.topTaşınıyor=true; S.tcp.copy(lerpV(new THREE.Vector3(topX, topY, topZ), hazir, ease(t))); }],
+    ['6 · çekmece kapanır', 1000, t=>{ const m=cekMesh[cekS.value]; const a=CEK_ACIK*(1-ease(t)); m.scale.z=Math.max(.01,a/CEK_ACIK); m.position.z=a/2; if(t>=1) m.visible=false; }],
+    ['7 · robot prese gider (x 350)', 1600, t=>{ S.carX=sag+(350-sag)*ease(t); S.tcp.set(S.carX,1300,railZ()-150); }],
+    ['8 · topu plakaya koyar', 1400, t=>{ S.tcp.copy(lerpV(new THREE.Vector3(350,1300,railZ()-150), new THREE.Vector3(350, +plaka.value+TOP_CAP/2+15, -350), ease(t))); }],
+    ['9 · bırakır, kol kalkar', 900, t=>{ if(t>0){ S.topTaşınıyor=false; topM.position.set(350, +plaka.value+TOP_CAP/2, -350); } S.tcp.copy(lerpV(new THREE.Vector3(350, +plaka.value+TOP_CAP/2+15, -350), new THREE.Vector3(350,1300,railZ()-150), ease(t))); }]
+  ];
+  let i=0, t0=performance.now(); const erisimLog=[];
+  function frame(now){
+    const [ad,sure,fn]=adim[i]; const t=Math.min(1,(now-t0)/sure); fn(t); ciz();
+    step.textContent=ad; if(i===3||i===7){ const k=ik(S.tcp); if(t>=1) erisimLog.push((i===3?'top: ':'pres: ')+k.D.toFixed(0)+'/'+k.maxD.toFixed(0)+(k.ok?' OK':' YOK')); }
+    if(t>=1){ i++; t0=now; if(i>=adim.length){ anim=null; step.innerHTML='bitti · '+erisimLog.map(s=>'<span class="'+(s.endsWith('OK')?'ok':'yok')+'">'+s+'</span>').join(' · '); return; } }
+    anim=requestAnimationFrame(frame);
+  }
+  anim=requestAnimationFrame(frame);
+}
+document.getElementById('play').onclick=play;
+const step=document.getElementById('step');
+ciz();
+</script>
+</body>
+</html>
