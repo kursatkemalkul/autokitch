@@ -641,7 +641,6 @@ details.arsiv[open] > summary{margin-bottom:10px}
         <tr><td class="lbl">Su + internet + temizlik + sarf</td><td class="m num"><input data-c="M" data-k="su" type="number" step="100"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="su" type="number" step="100"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="su" type="number" step="100"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="su" type="number" step="100"><span class="u">TL</span></td></tr>
         <tr><td class="lbl">Muhasebe</td><td class="m num"><input data-c="M" data-k="muh" type="number" step="500"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="muh" type="number" step="500"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="muh" type="number" step="500"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="muh" type="number" step="500"><span class="u">TL</span></td></tr>
         <tr><td class="lbl">Sistem / yazılım / uzaktan izleme</td><td class="m num"><input data-c="M" data-k="sis" type="number" step="500"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="sis" type="number" step="500"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="sis" type="number" step="500"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="sis" type="number" step="500"><span class="u">TL</span></td></tr>
-        <tr><td class="lbl">Reklam / tanıtım <span class="hnote">Yeni marka: platform içi reklam, sosyal medya, el ilanı. <b>Varsayım</b> — kaynaklı veri yok. Usta Pideci'de reklam fonu franchise kesintisinin içinde (0 yazıldı, iki kez sayılmaz).</span></td><td class="m num"><input data-c="M" data-k="reklam" type="number" step="500"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="reklam" type="number" step="500"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="reklam" type="number" step="500"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="reklam" type="number" step="500"><span class="u">TL</span></td></tr>
         <tr><td class="lbl">Zorunlu yükümlülükler (ÇTV, tabela, sigorta, damga, oda) <span class="hnote">Yıllık kalemlerin aylığa bölünmüş hâli: çevre temizlik vergisi, ilan-reklam (tabela) vergisi, işyeri sigortası, damga vergisi, oda aidatı.</span></td><td class="m num"><input data-c="M" data-k="zorunlu" type="number" step="500"><span class="u">TL</span></td><td class="s num"><input data-c="S" data-k="zorunlu" type="number" step="500"><span class="u">TL</span></td><td class="d num"><input data-c="D" data-k="zorunlu" type="number" step="500"><span class="u">TL</span></td><td class="p num"><input data-c="P" data-k="zorunlu" type="number" step="500"><span class="u">TL</span></td></tr>
         <tr class="res"><td class="lbl">→ AYLIK SABİT GİDER TOPLAMI <span class="hnote">Satış olsa da olmasa da her ay çıkan para.</span></td><td class="m" data-o="M-sabit"></td><td class="s" data-o="S-sabit"></td><td class="d" data-o="D-sabit"></td><td class="p" data-o="P-sabit"></td></tr>
         <tr class="res hi" data-nosw><td class="lbl">→ 1 ÜRÜNE DÜŞEN SABİT GİDER PAYI <span class="hnote">Aylık sabit gider ÷ üç ürünün <b>toplam</b> aylık satış adedi (pide + lahmacun + pizza). Adetler aşağıda Aylık İş Hesabı'ndaki ürün bloklarında girilir — çok satan dükkânda sabit gider ürün başına erir.</span></td><td class="m" data-o="M-sabitpay"></td><td class="s" data-o="S-sabitpay"></td><td class="d" data-o="D-sabitpay"></td><td class="p" data-o="P-sabitpay"></td></tr>
@@ -725,7 +724,7 @@ details.arsiv[open] > summary{margin-bottom:10px}
         <tr class="res"><td class="lbl">− Devlete ödenecek KDV <span class="hnote">Satış KDV'si (%10) − alışlarda ödenen KDV: malzeme %1, ambalaj ve faturalar %20, platform komisyonu ve franchise faturası %20. Komisyon KDV'si büyük olduğu için bu satır küçük kalır.</span></td><td class="m" data-o="M-mkdv"></td><td class="s" data-o="S-mkdv"></td><td class="d" data-o="D-mkdv"></td><td class="p" data-o="P-mkdv"></td></tr>
         <tr class="res"><td class="lbl">− Malzeme + ambalaj (aylık, KDV dahil) </td><td class="m" data-o="M-mmalz"></td><td class="s" data-o="S-mmalz"></td><td class="d" data-o="D-mmalz"></td><td class="p" data-o="P-mmalz"></td></tr>
         <tr class="res"><td class="lbl">− Komisyon ve kesintiler (aylık) <span class="hnote">Platforma ve franchise'a fiilen ödenen para: komisyon + üzerindeki %20 KDV (beyannamede düşülür, üstteki KDV satırını azaltır) + kart komisyonu %3. Platform anahtarına bağlıdır.</span></td><td class="m" data-o="M-mkom"></td><td class="s" data-o="S-mkom"></td><td class="d" data-o="D-mkom"></td><td class="p" data-o="P-mkom"></td></tr>
-        <tr class="res"><td class="lbl">− Dükkân sabit giderleri (aylık, KDV dahil) <span class="hnote">Kira, personel, faturalar (temizlik malzemesi dahil), reklam, zorunlu yükümlülükler; yatırım anahtarı açıksa bakım.</span></td><td class="m" data-o="M-msabit"></td><td class="s" data-o="S-msabit"></td><td class="d" data-o="D-msabit"></td><td class="p" data-o="P-msabit"></td></tr>
+        <tr class="res"><td class="lbl">− Dükkân sabit giderleri (aylık, KDV dahil) <span class="hnote">Kira, personel, faturalar (temizlik malzemesi dahil), zorunlu yükümlülükler; yatırım anahtarı açıksa bakım.</span></td><td class="m" data-o="M-msabit"></td><td class="s" data-o="S-msabit"></td><td class="d" data-o="D-msabit"></td><td class="p" data-o="P-msabit"></td></tr>
         <tr class="res" data-nosw><td class="lbl">+ İçecek net kârı (aylık) <span class="hnote">içecek adedi = toplam ürün × oran · 1 içecekten kalan = satış ÷ 1,10 (KDV) − kart %3 − franchise − alış; platformda liste fiyatı aynı kârı bırakacak kadar yükselir</span></td><td class="m" data-o="M-mick"></td><td class="s" data-o="S-mick"></td><td class="d" data-o="D-mick"></td><td class="p" data-o="P-mick"></td></tr>
         <tr class="res"><td class="lbl">+ Diğer yan ürün (aylık) <span class="hnote">ürün başına katkı × toplam aylık satış adedi</span></td><td class="m" data-o="M-myan"></td><td class="s" data-o="S-myan"></td><td class="d" data-o="D-myan"></td><td class="p" data-o="P-myan"></td></tr>
         <tr class="res hi ozkar"><td class="lbl">= AYLIK KÂR <span class="hnote">ciro − KDV − malzeme ve ambalaj − komisyon − sabit gider + içecek + yan ürün. Gelir / kurumlar vergisi düşülmemiş hâli; vergi anahtarı kapalıyken sonuç budur.</span></td><td class="m" data-o="M-mvonce"></td><td class="s" data-o="S-mvonce"></td><td class="d" data-o="D-mvonce"></td><td class="p" data-o="P-mvonce"></td></tr>
@@ -894,18 +893,18 @@ details.arsiv[open] > summary{margin-bottom:10px}
     {id:'lahmacun', p:'lh_', ad:'lahmacun', gen:'lahmacunun', Gen:'Lahmacunun', eski:'ak_hesap_lahm_v1'},
     {id:'pizza',    p:'pz_', ad:'pizza',    gen:'pizzanın',   Gen:'Pizzanın',   eski:'ak_hesap_v3'}
   ];
-  var AK_ORTAK = ['pers','maas','p1','p2','p3','p4','p5','p6','isvor','kira','elek','su','muh','sis','bakim','zorunlu','reklam','roy','yan','ick','ick_alis','ick_oran','yat','omur','vergi','kdv','ppay','pkom','isim'];
+  var AK_ORTAK = ['pers','maas','p1','p2','p3','p4','p5','p6','isvor','kira','elek','su','muh','sis','bakim','zorunlu','roy','yan','ick','ick_alis','ick_oran','yat','omur','vergi','kdv','ppay','pkom','isim'];
   /* Ortak alanlar pide varsayilanlarindan: rakip zincir Usta Pideci (TAB Gida), esnaf mahalle pidecisi.
      Malzeme (Eyl 2026 toptan): pide kasar 130 g x ~420 TL/kg; lahmacun 55 g kiyma x 690 TL/kg; pizza mozzarella ~533 TL/kg.
      FIYAT KARARDIR ve sabittir (HDEF_FIYAT varsayilan); kar = fiyattan ve o anki adet/giderden hesaplanir. */
   var HDEF = {
-    S: {pers:0, maas:45000, kira:25000, elek:12000, su:3500, muh:4000, sis:2500, bakim:3.5, zorunlu:3000, reklam:10000, roy:0, yan:0, ick:60, ick_alis:40, ick_oran:25, yat:3504269, omur:7, vergi:25, kdv:10, ppay:90, pkom:35, isim:0,
+    S: {pers:0, maas:45000, kira:25000, elek:12000, su:3500, muh:4000, sis:2500, bakim:3.5, zorunlu:3000, roy:0, yan:0, ick:60, ick_alis:40, ick_oran:25, yat:3504269, omur:7, vergi:25, kdv:10, ppay:90, pkom:35, isim:0,
         pd_adet:55, pd_kutu:8.3, lh_adet:80, lh_kutu:11.7, pz_adet:0, pz_kutu:10.3},
-    M: {pers:1, maas:40875, kira:60000, elek:14000, su:4500, muh:5000, sis:2500, bakim:3.5, zorunlu:3500, reklam:10000, roy:0, yan:0, ick:60, ick_alis:40, ick_oran:25, yat:3397169, omur:7, vergi:25, kdv:10, ppay:90, pkom:35, isim:0,
+    M: {pers:1, maas:40875, kira:60000, elek:14000, su:4500, muh:5000, sis:2500, bakim:3.5, zorunlu:3500, roy:0, yan:0, ick:60, ick_alis:40, ick_oran:25, yat:3397169, omur:7, vergi:25, kdv:10, ppay:90, pkom:35, isim:0,
         pd_adet:70, pd_kutu:8.3, lh_adet:100, lh_kutu:11.7, pz_adet:0, pz_kutu:10.3},
-    D: {pers:4, maas:45000, kira:120000, elek:25000, su:6000, muh:8000, sis:5000, bakim:2, zorunlu:6000, reklam:0, roy:9, yan:0, ick:80, ick_alis:40, ick_oran:25, yat:8000000, omur:7, vergi:25, kdv:10, ppay:60, pkom:22, isim:7000000,
+    D: {pers:4, maas:45000, kira:120000, elek:25000, su:6000, muh:8000, sis:5000, bakim:2, zorunlu:6000, roy:9, yan:0, ick:80, ick_alis:40, ick_oran:25, yat:8000000, omur:7, vergi:25, kdv:10, ppay:60, pkom:22, isim:7000000,
         pd_adet:60, pd_kutu:8.3, lh_adet:90, lh_kutu:11.7, pz_adet:0, pz_kutu:10.3},
-    P: {pers:3, maas:40875, kira:70000, elek:16000, su:5000, muh:5000, sis:1500, bakim:2, zorunlu:3000, reklam:2000, roy:0, yan:0, ick:80, ick_alis:40, ick_oran:25, yat:2500000, omur:7, vergi:25, kdv:10, ppay:70, pkom:35, isim:0,
+    P: {pers:3, maas:40875, kira:70000, elek:16000, su:5000, muh:5000, sis:1500, bakim:2, zorunlu:3000, roy:0, yan:0, ick:80, ick_alis:40, ick_oran:25, yat:2500000, omur:7, vergi:25, kdv:10, ppay:70, pkom:35, isim:0,
         pd_adet:90, pd_kutu:8.3, lh_adet:225, lh_kutu:11.7, pz_adet:0, pz_kutu:10.3}
   };
   var HDEF_FIYAT = { M:{pide:180, lahmacun:115, pizza:190}, S:{pide:180, lahmacun:115, pizza:190},
@@ -1028,7 +1027,7 @@ details.arsiv[open] > summary{margin-bottom:10px}
   function hnum(v){ v = String(v == null ? '' : v).trim(); if(!v) return 0;
     if(/^\d{1,3}(\.\d{3})+$/.test(v)) return parseFloat(v.replace(/\./g, '')) || 0;
     return parseFloat(v.replace(',', '.')) || 0; }
-  var AK_PARA_K = ['yat','kira','maas','elek','su','muh','sis','zorunlu','reklam','p1','p2','p3','p4','p5','p6'];
+  var AK_PARA_K = ['yat','kira','maas','elek','su','muh','sis','zorunlu','p1','p2','p3','p4','p5','p6'];
   function hread(c){ var o={}; document.querySelectorAll('#hesap input[data-c="'+c+'"]').forEach(function(i){ o[i.dataset.k]=hnum(i.value); });
     return o; }
   function hset(id,html,cls){ var el=document.querySelector('#hesap [data-o="'+id+'"]'); if(el){ el.innerHTML=html; el.classList.remove('pos','neg'); if(cls) el.classList.add(cls); } }
@@ -1040,8 +1039,8 @@ details.arsiv[open] > summary{margin-bottom:10px}
     var personel = kisiler.reduce(function(a, n){ return a + bordroNettenMaliyet(n, isvOran).maliyet; }, 0);
     var yatAcik  = !!(AKFL && AKFL.yat === 1);          /* yatirim kapaliyken bakim, amortisman, geri donus hesaba girmez */
     var bakimTL  = yatAcik ? v.yat * (v.bakim/100) / 12 : 0;
-    var sabit    = personel + v.kira + v.elek + v.su + v.muh + v.sis + bakimTL + v.zorunlu + (v.reklam || 0);
-    var fatKdv   = (v.elek + v.su + v.sis + v.muh + bakimTL + (v.reklam || 0)) * 0.20;      /* faturalarda odenen KDV (mahsup edilir) */
+    var sabit    = personel + v.kira + v.elek + v.su + v.muh + v.sis + bakimTL + v.zorunlu;
+    var fatKdv   = (v.elek + v.su + v.sis + v.muh + bakimTL) * 0.20;      /* faturalarda odenen KDV (mahsup edilir) */
     var ePpay = (AKFL && AKFL.plat === 0) ? 0 : (v.ppay || 0);
     var pPay = ePpay/100, kom = Math.min(0.9, (v.pkom || 0)/100), roy = (v.roy || 0)/100;
     var dKapi = 1/kdvK - HPOS - roy/kdvK;
@@ -1167,7 +1166,7 @@ details.arsiv[open] > summary{margin-bottom:10px}
       if(!(a > 0)){ [d, md].forEach(function(e){ if(e) e.style.background = '#e8edf5'; }); [tt, mt].forEach(function(e){ if(e) e.textContent = '—'; });
         if(lej) lej.innerHTML = '<div class="pzlr"><span>Bu kolonda satış adedi yok.</span></div>'; return; }
       var p = { malz:x.malz, kutu:x.kutu, plat:x.kPlat, roy:x.kRoy, pos:x.kPos, kdv:Math.max(0, x.kdvPay),
-                pers:X.personel/a, kira:v.kira/a, diger:(v.elek+v.su+v.muh+v.sis+v.zorunlu+(v.reklam||0))/a, bakim:X.bakimTL/a };
+                pers:X.personel/a, kira:v.kira/a, diger:(v.elek+v.su+v.muh+v.sis+v.zorunlu)/a, bakim:X.bakimTL/a };
       var toplam = 0; Object.keys(p).forEach(function(k){ toplam += p[k]; });
       if(!(toplam > 0)) return;
       var sira = Object.keys(p).sort(function(x1,y1){ return p[y1]-p[x1]; });
