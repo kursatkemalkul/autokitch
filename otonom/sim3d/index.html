@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AUTOKITCH — 3D Robot Simülasyonu v2</title>
+<title>AUTOKITCH — 3D Robot Simülasyonu v3</title>
 <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
 <style>
   :root{--bg:#0d1016;--panel:#161a22;--line:#2a2f3a;--gray:#8a94a4;--blue:#2997ff;--green:#3ddc84;--red:#ff5c5c;--amber:#ffb340;
@@ -11,67 +11,75 @@
   *{margin:0;padding:0;box-sizing:border-box}
   html,body{height:100%;background:var(--bg);color:#e8eaed;font-family:var(--font);font-size:13px;-webkit-font-smoothing:antialiased;overflow:hidden}
   #c{position:fixed;left:0;top:0;display:block}
-  #ui{position:fixed;top:0;right:0;bottom:0;width:360px;background:var(--panel);border-left:1px solid var(--line);padding:14px 14px 24px;overflow:auto}
+  #ui{position:fixed;top:0;right:0;bottom:0;width:380px;background:var(--panel);border-left:1px solid var(--line);padding:14px 14px 24px;overflow:auto}
   #ui h1{font-size:15px;font-weight:700;margin-bottom:2px}
   #ui .sub{color:var(--gray);font-size:11.5px;margin-bottom:10px;line-height:1.45}
   #ui h2{font-size:10.5px;font-weight:700;letter-spacing:.12em;color:var(--gray);margin:12px 0 6px;text-transform:uppercase}
   .row{display:flex;align-items:center;justify-content:space-between;gap:8px;margin:4px 0;font-size:12.5px}
   .row label{color:#c9ccd3}
-  select,input[type=range],button{font:inherit}
-  select{background:#0d1016;color:#fff;border:1px solid var(--line);border-radius:7px;padding:4px 6px;min-width:120px;font-size:12px}
+  select,input[type=range],input[type=number],button{font:inherit}
+  select,input[type=number]{background:#0d1016;color:#fff;border:1px solid var(--line);border-radius:7px;padding:4px 6px;min-width:120px;font-size:12px}
+  input[type=number]{min-width:70px;width:70px}
   input[type=range]{width:120px;accent-color:var(--blue)}
   .val{min-width:44px;text-align:right;color:#fff;font-variant-numeric:tabular-nums}
   .btns{display:flex;flex-wrap:wrap;gap:5px}
   button{background:#232833;color:#fff;border:1px solid var(--line);border-radius:8px;padding:6px 9px;cursor:pointer;font-size:12px}
   button:hover{border-color:var(--blue)}
   button.play{background:var(--blue);border-color:var(--blue);font-weight:700;flex:1;padding:9px}
-  #step{color:var(--blue);font-weight:600;min-height:18px;margin-top:6px;font-size:12.5px}
-  #out{background:#0d1016;border:1px solid var(--line);border-radius:9px;padding:8px 10px;margin-top:8px;font-size:12px;line-height:1.55}
+  #step{color:var(--blue);font-weight:600;min-height:18px;margin-top:6px;font-size:12.5px;line-height:1.4}
+  #out,#kpi{background:#0d1016;border:1px solid var(--line);border-radius:9px;padding:8px 10px;margin-top:8px;font-size:12px;line-height:1.55}
   .ok{color:var(--green)} .yok{color:var(--red)} .amb{color:var(--amber)}
-  table{width:100%;border-collapse:collapse;font-size:11.5px;margin-top:6px}
-  td{padding:2px 0;border-bottom:1px solid #1f242e;color:#c9ccd3;vertical-align:top} td:last-child{text-align:right;color:#fff;white-space:nowrap}
-  #log{margin-top:8px;font-size:11.5px;line-height:1.45}
-  #log div{padding:3px 0;border-bottom:1px solid #1f242e}
+  table{width:100%;border-collapse:collapse;font-size:11.5px}
+  td{padding:2px 0;border-bottom:1px solid #1f242e;color:#c9ccd3;vertical-align:top} td:last-child{text-align:right;color:#fff}
+  #log,#siparisler{margin-top:8px;font-size:11.5px;line-height:1.45;max-height:260px;overflow:auto}
+  #log div,#siparisler div{padding:3px 0;border-bottom:1px solid #1f242e}
   #log b{color:#fff;font-weight:600}
   .note{color:var(--gray);font-size:11px;line-height:1.5;margin-top:10px}
   a{color:var(--blue);text-decoration:none}
-  @media(max-width:760px){#ui{width:100%;top:auto;height:55%;border-left:0;border-top:1px solid var(--line)}}
+  #gwrap{position:fixed;left:0;bottom:0;right:380px;height:236px;background:rgba(13,16,22,.92);border-top:1px solid var(--line);overflow-x:auto;overflow-y:hidden}
+  #gwrap.gizli{display:none}
+  @media(max-width:760px){#ui{width:100%;top:auto;height:55%;border-left:0;border-top:1px solid var(--line)} #gwrap{display:none}}
 </style>
 </head>
 <body>
 <canvas id="c"></canvas>
+<div id="gwrap"><canvas id="gantt"></canvas></div>
 <div id="ui">
-  <h1>3D Robot Simülasyonu v2</h1>
-  <div class="sub">Ağızlar gerçek boşluk (HAT v9 ölçüleri). Tam döngü: tepsi → pres → hamur → topping (spiral) → fırın → kesim → sprey → kutu → QR. Her karede erişim + çarpışma ölçülür; kırmızı noktalar temas.</div>
+  <h1>3D Robot Simülasyonu v3</h1>
+  <div class="sub">El: pim + iki parmak (çatal yok) · tepsi sokete takılır · kutu tepside taşınır · içecek/tatlı yandan kavranır · fırın, QR ve çekmece kapakları otomatik · her hareket mesafe/hızdan hesaplanır · akşam piki çizelgesi (tek robot).</div>
 
-  <div class="btns"><button class="play" id="play">▶ Tam döngüyü oynat</button><button id="stop">■</button></div>
+  <h2>Senaryo</h2>
+  <div class="row"><label>Senaryo</label><select id="sen"><option value="tek">Tek sipariş · full detay</option><option value="uc">3 müşteri</option><option value="aksam">AKŞAM PİKİ · hafta içi · 53</option><option value="cmt">CUMARTESİ AKŞAMI · 74</option></select></div>
+  <div class="row"><label>Tek sipariş ürünü</label><select id="urun"><option value="pide">kaşarlı pide</option><option value="lahm">lahmacun</option></select></div>
+  <div class="row"><label>İçecek · tatlı</label><span><input type="checkbox" id="kola" checked> içecek &nbsp; <input type="checkbox" id="tatli" checked> tatlı</span></div>
+  <div class="row"><label>Tohum · başlangıç saati</label><span><input type="number" id="seed" value="1" min="1" max="99"> <input type="number" id="saat0" value="17" min="0" max="23"></span></div>
+  <div class="btns"><button id="planla">Planla</button><button class="play" id="play">▶ Oynat</button><button id="stop">■</button><button id="kontrol">Sessiz kontrol</button></div>
   <div id="step"></div>
+  <div id="kpi"></div>
 
   <h2>Robot</h2>
   <div class="row"><label>Model</label><select id="model"></select></div>
-  <div class="row"><label>Omuz kotu</label><input type="range" id="omuz" min="700" max="1500" step="10" value="900"><span class="val" id="omuz_v">900</span></div>
+  <div class="row"><label>Omuz kotu</label><input type="range" id="omuz" min="700" max="1500" step="10" value="1000"><span class="val" id="omuz_v">1000</span></div>
   <div class="row"><label>Ray ekseni z</label><input type="range" id="railz" min="150" max="500" step="10" value="300"><span class="val" id="railz_v">300</span></div>
   <div class="row"><label>Emniyet payı</label><select id="pay"><option value="0.95">%5</option><option value="0.9">%10</option><option value="1">yok</option></select></div>
-  <div class="row"><label>Hız</label><select id="hiz"><option value="1">×1</option><option value="2" selected>×2</option><option value="4">×4</option></select></div>
-
-  <h2>Hat</h2>
-  <div class="row"><label>Pres plakası</label><select id="plaka"><option value="1640">PZP B üstünde · 1640</option><option value="1150">tezgâh presi · 1150</option><option value="820">PZP zeminde · 820</option></select></div>
-  <div class="row"><label>Fırın gözü</label><select id="goz"><option value="0">göz 1 · taban 1165</option><option value="1">göz 2 · 1485</option><option value="2" selected>göz 3 (pide) · 1805</option></select></div>
-  <div class="row"><label>Çekmece</label><select id="cek"><option value="K1">K1</option><option value="K2" selected>K2</option><option value="K3">K3</option></select></div>
-  <div class="row"><label>Sıra</label><select id="sira"><option value="alt">en alt</option><option value="ust">en üst</option></select></div>
-  <div class="row"><label>Top</label><select id="top"><option value="yakin">yakın yarı</option><option value="uzak">uzak yarı</option><option value="orta" selected>orta</option></select></div>
+  <div class="row"><label>Oynatma hızı</label><select id="hiz"><option value="1">×1</option><option value="2" selected>×2</option><option value="4">×4</option><option value="10">×10</option><option value="30">×30</option></select></div>
+  <div class="row"><label>Hareket hızı profili</label><select id="hizp"><option value="1">temkinli · 0,6 / ray 0,5 m/s</option><option value="1.6">hızlı · 1,0 / ray 0,8 m/s</option></select></div>
+  <div class="row"><label>Pres plakası</label><select id="plaka"><option value="1150">tezgâh presi · 1150</option><option value="820">PZP zeminde · 820</option><option value="1640">PZP B üstünde · 1640</option></select></div>
 
   <h2>Görüş</h2>
-  <div class="btns"><button data-cam="iso">izometrik</button><button data-cam="on">önden</button><button data-cam="ust">üstten</button><button data-cam="yan">yandan</button><button data-cam="robot">robot yakın</button></div>
+  <div class="btns"><button data-cam="iso">izometrik</button><button data-cam="on">önden</button><button data-cam="ust">üstten</button><button data-cam="yan">yandan</button><button data-cam="robot">robot yakın</button><label style="font-size:12px;margin-left:6px"><input type="checkbox" id="takip"> kamera robotu izlesin</label></div>
 
   <div id="out"></div>
+  <h2>Siparişler</h2>
+  <div id="siparisler"></div>
   <h2>Adım sonuçları</h2>
   <div id="log"></div>
-  <div class="note">Uç (varsayım): çatal 200 × 12 × 600 + kavrama bloğu 120 × 64 × 100; tepsi Ø340 ayaklı (15) çatal altına girer; top için iki vakum ped: çatal ucunda eksenel (alt sıralar, çatal dikey) + çatal altında (üst sıralar, çatal yatay). Kol: katalog s.13 (FR5 omuz 152 · üst kol 425 · ön kol 395 · bilek 120). Yan ofset ve eklem limitleri yok; çarpışma = geometri (kol kapsülleri + uç + yük) ↔ gövdeler − ağız boşlukları. <a href="../">← AUTOKITCH</a></div>
+  <div class="note">Varsayımlar: el 100 bilek + 40 avuç + 40 pim, parmak 90 (açıklık 20–140); tepsi Ø340 ayaklı, sap 150 + dişi soket; pres kızağı 400 strok (tepsi ağız dışında yüklenir — Fersah'a sorulacak); içecek şarjörü (eğimli kanal, kutu ön yuvaya yatık iner) + tatlı şarjörü (kap yığını) D altında, robot yuvadan yandan kavrar; kutu itici 360 strok; QR gözü 380×180×440, alttan menteşeli kapak (açıkken öne yatar); fırın kapağı üstten menteşeli motorlu. Hızlar: serbest 0,6 m/s · hassas 0,2 · mikro 0,08 · ray 0,5 · parmak 0,6 s · pim 0,8 s · çekmece 2,8 s · kapak 1,5 s · pres 5 s · kaşar 12 s · harç 15 s · fırın 240/120 s · kesim 4 · sprey 3 · kutu kapanma 4 · itici 2 · müşteri 150 s. Kol: katalog s.13 FR5 152/425/395. <a href="../">← AUTOKITCH</a></div>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
-<script src="sim.js?v=2"></script>
-<script src="sim2.js?v=2"></script>
+<script src="sim.js?v=3"></script>
+<script src="sim2.js?v=3"></script>
+<script src="sim3.js?v=3"></script>
 </body>
 </html>
