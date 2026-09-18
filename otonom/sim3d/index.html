@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AUTOKITCH — 3D Robot Simülasyonu v7</title>
+<title>AUTOKITCH — 3D Hat Simülasyonu</title>
 <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
 <style>
   :root{--bg:#0d1016;--panel:#161a22;--line:#2a2f3a;--gray:#8a94a4;--blue:#2997ff;--green:#3ddc84;--red:#ff5c5c;--amber:#ffb340;
@@ -45,44 +45,40 @@
 <canvas id="c"></canvas>
 <div id="gwrap"><canvas id="gantt"></canvas></div>
 <div id="ui">
-  <h1>3D Robot Simülasyonu v7</h1>
-  <div class="sub">Pafta HAT v17 ölçüleri · 3B tarama: omuz 970 · ray hat yüzünden 360 → 3 fırın gözü + sprey + kesim + pres + QR hepsi erişilir · tepsi doğrudan presin alt plakasına, hamur ağızdan içeri tepsinin ortasına · içecek + tatlı B modülünde K3 üstündeki 2 katlı çekmeceden · kaşar/sucuk deposu K4'te · 6 hazne + nozul çıkışları · giyotin fırın kapağı · QR gözü: solda tatlı + kola, sağda kutu · dirsek hep yukarı, eklem hız sınırı, kendi gövdesi çarpışma testi.</div>
+  <h1>AUTOKITCH · 3D Hat Simülasyonu</h1>
+  <div class="sub">Pafta HAT v17 · tek FR5 yer rayında · her hareket mesafe ve hızdan hesaplanır, erişim ve çarpışma kontrollü.</div>
 
-  <h2>Senaryo</h2>
-  <div class="row"><label>Senaryo</label><select id="sen"><option value="tek">Tek sipariş · full detay</option><option value="uc">3 müşteri</option><option value="aksam">AKŞAM PİKİ · hafta içi · 53</option><option value="cmt">CUMARTESİ AKŞAMI · 74</option></select></div>
-  <div class="row"><label>Tek sipariş ürünü</label><select id="urun"><option value="pide">kaşarlı pide</option><option value="lahm">lahmacun</option></select></div>
-  <div class="row"><label>İçecek · tatlı</label><span><input type="checkbox" id="kola" checked> içecek &nbsp; <input type="checkbox" id="tatli" checked> tatlı</span></div>
-  <div class="row"><label>Tohum · başlangıç saati</label><span><input type="number" id="seed" value="1" min="1" max="99"> <input type="number" id="saat0" value="17" min="0" max="23"></span></div>
-  <div class="btns"><button id="planla">Planla</button><button class="play" id="play">▶ Oynat</button><button id="stop">■</button><button id="kontrol">Sessiz kontrol</button></div>
+  <div class="row"><label>Senaryo</label><select id="sen"><option value="tek">Tek sipariş</option><option value="uc">3 müşteri · 1'er dk arayla</option><option value="aksam" selected>Akşam piki · hafta içi 17–20 · 53 sipariş</option><option value="cmt">Cumartesi akşamı 17–20 · 74 sipariş</option><option value="akis">Sürekli akış · 1 saat (sınır testi)</option></select></div>
+  <div class="row" id="tekRow"><label>Ürün</label><span><select id="urun" style="min-width:110px"><option value="pide">kaşarlı pide</option><option value="lahm">lahmacun</option></select> &nbsp;<input type="checkbox" id="kola" checked> içecek <input type="checkbox" id="tatli" checked> tatlı</span></div>
+  <div class="row" id="akisRow"><label>Sipariş aralığı (sn)</label><input type="number" id="aralik" value="120" min="20" max="600" step="10"></div>
+  <div class="btns" style="margin-top:8px"><button class="play" id="play">▶ Oynat</button><button id="stop">■</button><select id="hiz" style="min-width:64px"><option value="1">×1</option><option value="2">×2</option><option value="4" selected>×4</option><option value="10">×10</option><option value="30">×30</option></select></div>
   <div id="step"></div>
   <div id="kpi"></div>
 
-  <h2>Robot</h2>
-  <div class="row"><label>Model</label><select id="model"></select></div>
-  <div class="row"><label>Omuz kotu</label><input type="range" id="omuz" min="700" max="1500" step="10" value="970"><span class="val" id="omuz_v">970</span></div>
-  <div class="row"><label>Ray ekseni z</label><input type="range" id="railz" min="150" max="500" step="10" value="360"><span class="val" id="railz_v">360</span></div>
-  <div class="row"><label>Emniyet payı</label><select id="pay"><option value="0.95">%5</option><option value="0.9">%10</option><option value="1">yok</option></select></div>
-  <div class="row"><label>Oynatma hızı</label><select id="hiz"><option value="1">×1</option><option value="2" selected>×2</option><option value="4">×4</option><option value="10">×10</option><option value="30">×30</option></select></div>
-  <div class="row"><label>Hareket hızı profili</label><select id="hizp"><option value="1">temkinli · 0,6 / ray 0,5 m/s</option><option value="1.6">hızlı · 1,0 / ray 0,8 m/s</option></select></div>
-  <div class="row"><label>Pres plakası</label><select id="plaka"><option value="1150">tezgâh presi · 1150</option><option value="820">PZP zeminde · 820</option><option value="1640">PZP B üstünde · 1640</option></select></div>
-
   <h2>Görüş</h2>
-  <div class="btns"><button data-cam="iso">izometrik</button><button data-cam="on">önden</button><button data-cam="ust">üstten</button><button data-cam="yan">yandan</button><button data-cam="robot">robot yakın</button><label style="font-size:12px;margin-left:6px"><input type="checkbox" id="takip"> kamera robotu izlesin</label></div>
-
+  <div class="btns"><button data-cam="iso">izometrik</button><button data-cam="on">önden</button><button data-cam="ust">üstten</button><button data-cam="robot">robot yakın</button><label style="font-size:12px;margin-left:6px"><input type="checkbox" id="takip"> robotu izle</label></div>
   <div id="out"></div>
+
   <h2>Siparişler</h2>
   <div id="siparisler"></div>
-  <h2>Adım sonuçları</h2>
+
+  <h2>Kontrol</h2>
+  <div class="btns"><button id="kontrol">Tüm adımları tara · erişim + çarpışma</button><button id="planla">Yeniden planla</button></div>
   <div id="log"></div>
-  <div class="note"><b>Süreler — kaynak / varsayım:</b> pres 9 s (Cuppone Pizzaform 400 taban/saat = 9 s/taban; Fersah PZP değeri yok → varsayım) · kaşar 15 s (xRobotics xPizza Cube: 14" sos + peynir 30 s → malzeme başı 15 s) · harç 20 s (viskoz macun, varsayım; RoboLabs sos+peynir+pepperoni 30–45 s, Yindu tam pizza ~60 s) · fırın 240 / 120 s (bizim hedef) · kesim 4 · sprey 3 · kutu kapağı 4 · itici 2 · çekmece 2,8 (700 strok) · kapak 1,5 · pim 0,8 · parmak 0,6 · müşteri 150 s (hepsi varsayım).<br>
+
+  <details class="note"><summary style="cursor:pointer;color:#c9ccd3">Süreler · hızlar · varsayımlar</summary><b>Süreler — kaynak / varsayım:</b> pres 9 s (Cuppone Pizzaform 400 taban/saat = 9 s/taban; Fersah PZP değeri yok → varsayım) · kaşar 15 s (xRobotics xPizza Cube: 14" sos + peynir 30 s → malzeme başı 15 s) · harç 20 s (viskoz macun, varsayım; RoboLabs sos+peynir+pepperoni 30–45 s, Yindu tam pizza ~60 s) · fırın 240 / 120 s (bizim hedef) · kesim 4 · sprey 3 · kutu kapağı 4 · itici 2 · çekmece 2,8 (700 strok) · kapak 1,5 · pim 0,8 · parmak 0,6 · müşteri 150 s (hepsi varsayım).<br>
 <b>Hızlar:</b> FR5 katalog uç hızı 1 m/s, eklem 180°/s → sim: serbest 0,6 m/s · ağız içi 0,4 · hassas 0,2 · mikro 0,08 · ivme 2 m/s² · eklem sınırı 150°/s (aşılırsa adım uzar) · ray 0,5 m/s · ivme 1 m/s² (Logorob'dan istenen ≥ 1 m/s).<br>
 <b>Çizelge (v6):</b> ray 200–3700 (dükkân iç 3900 = hat boyu; araba 400 → sola/sağa daha fazla uzayamaz) · pide önce K1'den (presin tam altı): araba K1'in sağında durur, çekmeceden alıp kıpırdamadan prese koyar · fırın gözü 70 s içinde boşalacaksa sıradaki ürün şimdiden başlatılır · sırada ürün varsa tepsi QR'dan nişe uğramadan prese gider.<br>
-<b>Varsayımlar:</b> el 100 bilek + 40 avuç + 40 pim, parmak 90 (açıklık 20–140); tepsi Ø340 ayaklı, sap 150 + dişi soket; pres ağzı 594 × 220 (pafta v10), plaka seçimi aşağıda; fırın kapakları giyotin (menteşeli kapak 900 koridorda kola çarpıyor); QR gözü 460 × 190 × 440 (pafta 380: kutu 320 + tatlı Ø90 yan yana sığmıyor), robot kapağı alttan menteşeli, göz ağzında tek yönlü klape kutuyu tutar; içecek + tatlı çekmecesi K3 üstünde 2 kat (725–1000): tatlı sol 2 sütun (yan duvar alçak), kola 3 sütun × 8; K4: soğutma grubu 140–360 · kaşar+sucuk deposu 375–675 · 6 tepsi 690–1000. Kol: katalog s.13 FR5 152/425/395. <a href="../">← AUTOKITCH</a></div>
+<b>Varsayımlar:</b> el 100 bilek + 40 avuç + 40 pim, parmak 90 (açıklık 20–140); tepsi Ø340 ayaklı, sap 150 + dişi soket; pres ağzı 594 × 220 (pafta v10), plaka seçimi aşağıda; fırın kapakları giyotin (menteşeli kapak 900 koridorda kola çarpıyor); QR gözü 460 × 190 × 440 (pafta 380: kutu 320 + tatlı Ø90 yan yana sığmıyor), robot kapağı alttan menteşeli, göz ağzında tek yönlü klape kutuyu tutar; içecek + tatlı çekmecesi K3 üstünde 2 kat (725–1000): tatlı sol 2 sütun (yan duvar alçak), kola 3 sütun × 8; K4: soğutma grubu 140–360 · kaşar+sucuk deposu 375–675 · 6 tepsi 690–1000. Kol: katalog s.13 FR5 152/425/395. </details>
+  <div class="note"><a href="../">← AUTOKITCH</a> · eski 2D simülasyonlar: <a href="../gecmis/">Geçmiş</a></div>
+  <!-- pafta v17 ile sabit değerler: menüde gösterilmez -->
+  <div style="display:none"><select id="model"></select><input type="range" id="omuz" min="700" max="1500" step="10" value="970"><span id="omuz_v">970</span><input type="range" id="railz" min="150" max="500" step="10" value="360"><span id="railz_v">360</span>
+    <select id="pay"><option value="0.95">%5</option></select><select id="hizp"><option value="1">1</option></select><select id="plaka"><option value="1150">1150</option></select><input type="number" id="seed" value="1"><input type="number" id="saat0" value="17"></div>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
-<script src="sim.js?v=11"></script>
-<script src="sim2.js?v=11"></script>
-<script src="sim3.js?v=11"></script>
+<script src="sim.js?v=12"></script>
+<script src="sim2.js?v=12"></script>
+<script src="sim3.js?v=12"></script>
 </body>
 </html>
