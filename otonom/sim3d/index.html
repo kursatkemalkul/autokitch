@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AUTOKITCH — 3D Robot Simülasyonu v4</title>
+<title>AUTOKITCH — 3D Robot Simülasyonu v5</title>
 <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
 <style>
   :root{--bg:#0d1016;--panel:#161a22;--line:#2a2f3a;--gray:#8a94a4;--blue:#2997ff;--green:#3ddc84;--red:#ff5c5c;--amber:#ffb340;
@@ -45,8 +45,8 @@
 <canvas id="c"></canvas>
 <div id="gwrap"><canvas id="gantt"></canvas></div>
 <div id="ui">
-  <h1>3D Robot Simülasyonu v4</h1>
-  <div class="sub">Pafta HAT v10 + DÜKKAN v10 ölçüleri · tepsi doğrudan presin alt plakasına, hamur ağızdan içeri tepsinin ortasına · içecek + tatlı E altındaki çekmeceden · 6 hazne + nozul çıkışları · giyotin fırın kapağı · QR gözü: solda tatlı + kola, sağda kutu · dirsek hep yukarı, eklem hız sınırı, kendi gövdesi çarpışma testi.</div>
+  <h1>3D Robot Simülasyonu v5</h1>
+  <div class="sub">Pafta HAT v11 ölçüleri · tepsi doğrudan presin alt plakasına, hamur ağızdan içeri tepsinin ortasına · içecek + tatlı B modülünde K3 üstündeki 2 katlı çekmeceden · kaşar/sucuk deposu K4'te · 6 hazne + nozul çıkışları · giyotin fırın kapağı · QR gözü: solda tatlı + kola, sağda kutu · dirsek hep yukarı, eklem hız sınırı, kendi gövdesi çarpışma testi.</div>
 
   <h2>Senaryo</h2>
   <div class="row"><label>Senaryo</label><select id="sen"><option value="tek">Tek sipariş · full detay</option><option value="uc">3 müşteri</option><option value="aksam">AKŞAM PİKİ · hafta içi · 53</option><option value="cmt">CUMARTESİ AKŞAMI · 74</option></select></div>
@@ -76,12 +76,12 @@
   <div id="log"></div>
   <div class="note"><b>Süreler — kaynak / varsayım:</b> pres 9 s (Cuppone Pizzaform 400 taban/saat = 9 s/taban; Fersah PZP değeri yok → varsayım) · kaşar 15 s (xRobotics xPizza Cube: 14" sos + peynir 30 s → malzeme başı 15 s) · harç 20 s (viskoz macun, varsayım; RoboLabs sos+peynir+pepperoni 30–45 s, Yindu tam pizza ~60 s) · fırın 240 / 120 s (bizim hedef) · kesim 4 · sprey 3 · kutu kapağı 4 · itici 2 · çekmece 2,8 (700 strok) · kapak 1,5 · pim 0,8 · parmak 0,6 · müşteri 150 s (hepsi varsayım).<br>
 <b>Hızlar:</b> FR5 katalog uç hızı 1 m/s, eklem 180°/s → sim: serbest 0,6 m/s · ağız içi 0,4 · hassas 0,2 · mikro 0,08 · ivme 2 m/s² · eklem sınırı 150°/s (aşılırsa adım uzar) · ray 0,5 m/s · ivme 1 m/s² (Logorob'dan istenen ≥ 1 m/s).<br>
-<b>Varsayımlar:</b> el 100 bilek + 40 avuç + 40 pim, parmak 90 (açıklık 20–140); tepsi Ø340 ayaklı, sap 150 + dişi soket; pres ağzı 594 × 220 (pafta v10), plaka seçimi aşağıda; fırın kapakları giyotin (menteşeli kapak 900 koridorda kola çarpıyor); QR gözü 460 × 190 × 440 (pafta 380: kutu 320 + tatlı Ø90 yan yana sığmıyor), robot kapağı alttan menteşeli, göz ağzında tek yönlü klape kutuyu tutar; E çekmecesi 2 kat: tatlı sol sütun (yan duvar alçak), kola 3 sütun × 8. Kol: katalog s.13 FR5 152/425/395. <a href="../">← AUTOKITCH</a></div>
+<b>Varsayımlar:</b> el 100 bilek + 40 avuç + 40 pim, parmak 90 (açıklık 20–140); tepsi Ø340 ayaklı, sap 150 + dişi soket; pres ağzı 594 × 220 (pafta v10), plaka seçimi aşağıda; fırın kapakları giyotin (menteşeli kapak 900 koridorda kola çarpıyor); QR gözü 460 × 190 × 440 (pafta 380: kutu 320 + tatlı Ø90 yan yana sığmıyor), robot kapağı alttan menteşeli, göz ağzında tek yönlü klape kutuyu tutar; içecek + tatlı çekmecesi K3 üstünde 2 kat (725–1000): tatlı sol 2 sütun (yan duvar alçak), kola 3 sütun × 8; K4: soğutma grubu 140–360 · kaşar+sucuk deposu 375–675 · 6 tepsi 690–1000. Kol: katalog s.13 FR5 152/425/395. <a href="../">← AUTOKITCH</a></div>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
-<script src="sim.js?v=4"></script>
-<script src="sim2.js?v=4"></script>
-<script src="sim3.js?v=4"></script>
+<script src="sim.js?v=5"></script>
+<script src="sim2.js?v=5"></script>
+<script src="sim3.js?v=5"></script>
 </body>
 </html>

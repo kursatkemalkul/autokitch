@@ -14,9 +14,9 @@ function topPos(kolon,sira,k){ const K=KOLON[kolon], kot=K.kotlar[sira], y=kot+1
   return V(K.x0+100+105*(k%5), y, 68+91*Math.floor(k/5)); }   // iç 580 × 640: top merkezleri duvardan ≥ 48
 function stokKur(){ const s={pide:[],lahm:[]}; for(let i=0;i<2;i++) s.pide.push({kolon:'K2',sira:i,n:20,k:0}); for(let i=0;i<6;i++) s.pide.push({kolon:'K1',sira:i,n:20,k:0});
   for(let i=2;i<8;i++) s.lahm.push({kolon:'K2',sira:i,n:35,k:0}); for(let i=0;i<6;i++) s.lahm.push({kolon:'K3',sira:i,n:35,k:0});
-  s.kola=[{kat:1,n:24,k:0},{kat:0,n:24,k:0}]; s.tatli=[{kat:1,n:5,k:0},{kat:0,n:4,k:0}]; return s; }   // E çekmecesi: üst kat önce · alt katta en öndeki tatlı FR5 erişimi dışında (4)
+  s.kola=[{kat:1,n:24,k:0},{kat:0,n:24,k:0}]; s.tatli=[{kat:1,n:10,k:0},{kat:0,n:10,k:0}]; return s; }   // E çekmecesi: üst kat önce · alt katta en öndeki tatlı FR5 erişimi dışında (4)
 function stokAl(st,tip){ const q=st[tip].find(d=>d.k<d.n); if(!q) return null; const k=q.k++;
-  if(tip==='kola'||tip==='tatli'){ const pos=icecekPos(tip,q.kat,k); if(tip==='kola'){ const yan=cekmeceYani(KOLON.KE,pos,YUK.kola.L); if(yan===null) return stokAl(st,tip); return {kat:q.kat,pos,yan}; } return {kat:q.kat,pos}; }
+  if(tip==='kola'||tip==='tatli'){ const pos=icecekPos(tip,q.kat,k); if(tip==='kola'){ const yan=cekmeceYani(KOLON.KI,pos,YUK.kola.L); if(yan===null) return stokAl(st,tip); return {kat:q.kat,pos,yan}; } return {kat:q.kat,pos}; }
   const pos=topPos(q.kolon,q.sira,k), yan=cekmeceYani(KOLON[q.kolon],pos,YUK.top.L); if(yan===null){ st.erisilemeyen=(st.erisilemeyen||0)+1; return stokAl(st,tip); } return {kolon:q.kolon,sira:q.sira,pos,yan}; }
 
 /* ================= ERİŞİM ÖN TESTİ ================= */

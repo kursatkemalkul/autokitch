@@ -1,6 +1,6 @@
 /* AUTOKITCH 3D robot simülasyonu v4 — 19 Eyl 2026. mm · x hat boyu · y kot · z: hat yüzü 0, hat içi −, koridor +
-   KAYNAK PAFTALAR: HAT_2KOL_v10 (A pres · B çekmece + K4 tepsi nişi · C topping 6 hazne · D fırın/kesim/sprey kotları) + DÜKKAN v10 rayli (E: soğutucu 0–240 · 2 katlı içecek+tatlı çekmecesi 287–560 · katlayıcı 570–740 · kutu ağzı 750–1000 · QR dolabı x 3040–3900 karşıda).
-   v4: pres kızağı YOK (tepsi doğrudan alt plakaya, hamur ağızdan içeri tepsi ortasına) · içecek/tatlı E çekmecesinden · 6 hazne + nozul çıkışları · fırın kapakları giyotin (süpürme yok) · dirsek hep yukarı (dal değişimi yok) · eklem hız sınırı · kendi gövdesi çarpışma testi · QR gözü: sol şerit tatlı (robot tarafı) + kola (derinde, yatık) · sağ kutu. */
+   KAYNAK PAFTALAR: HAT_2KOL_v10 (A pres · B çekmece + K4 tepsi nişi · C topping 6 hazne · D fırın/kesim/sprey kotları) + DÜKKAN v10 rayli (QR dolabı karşıda). v5 (Kemal 19 Eyl): içecek + tatlı çekmecesi K3 ÜSTÜNE geri geldi (pafta v7 yeri) · kaşar+sucuk deposu topping genişleyince açılan K4 kolonuna · E modülü HAT v10'daki gibi (kutu ağzı 430–680).
+   v4: pres kızağı YOK (tepsi doğrudan alt plakaya, hamur ağızdan içeri tepsi ortasına) · içecek/tatlı K3 üstü çekmeceden · 6 hazne + nozul çıkışları · fırın kapakları giyotin (süpürme yok) · dirsek hep yukarı (dal değişimi yok) · eklem hız sınırı · kendi gövdesi çarpışma testi · QR gözü: sol şerit tatlı (robot tarafı) + kola (derinde, yatık) · sağ kutu. */
 const V = (x,y,z)=>new THREE.Vector3(x,y,z);
 const ROBOT = {
   FR5:  {ad:"FR5 · 922 · 8.490 €",      d1:152, a2:425,  a3:395, taban:149},
@@ -15,16 +15,16 @@ const YUK = {  // tcp = W + L t + P u  (yük merkezi)
   bos:{L:500,P:-20}, tepsi:{L:500,P:-20}, top:{L:232.5,P:0}, kola:{L:242.5,P:0}, tatli:{L:230,P:-15}
 };
 const HAT = {yuk:2030, derin:830, B_yuk:1060};
-const MOD = [["A · PRESS",0,700,1060,2030],["B · ÇEKMECE",0,2500,0,1060],["C · TOPPING",700,2500,1060,2030],["D · FIRIN",2500,3200,0,2030],["E · KUTU + İÇECEK",3200,3900,0,2030]];
-const KOLON = {  // çekmeceler 620 × 680 · motorlu 700 strok — hamur: pide 4×5 (140 pitch) · lahm 5×7 · KE: içecek + tatlı (dükkân v10: E altı, 2 katlı, 287–560)
-  K1:{x0:62.5,  x1:682.5,  kotlar:[287.5,395.5,503.5,611.5,719.5,827.5], ic:75, tip:"pide", acik:700},
+const MOD = [["A · PRESS",0,700,1060,2030],["B · ÇEKMECE",0,2500,0,1060],["C · TOPPING",700,2500,1060,2030],["D · FIRIN",2500,3200,0,2030],["E · KUTU",3200,3900,0,2030]];
+const KOLON = {  // çekmeceler 620 × 680 · motorlu 700 strok — hamur: pide 4×5 (140 pitch) · lahm 5×7 · KI: içecek + tatlı (K3 üstü, 2 katlı, 725–1000)
+  K1:{x0:62.5,  x1:682.5,  kotlar:[167.5,275.5,383.5,491.5,599.5,707.5], ic:75, tip:"pide", acik:700},   // pafta v10: soğutma grubu K4'e gidince K1 167,5'ten başlar
   K2:{x0:717.5, x1:1337.5, kotlar:[167.5,275.5,383.5,476.5,569.5,662.5,755.5,848.5], ic:60, tip:"karma", acik:700},
   K3:{x0:1372.5,x1:1992.5, kotlar:[167.5,260.5,353.5,446.5,539.5,632.5], ic:60, tip:"lahm", acik:700},
-  KE:{x0:3240,  x1:3860,   kotlar:[287,423], ic:106, tip:"icecek", acik:700, yanAcik:true}
+  KI:{x0:1372.5,x1:1992.5, kotlar:[725.5,862.5], ic:104, tip:"icecek", acik:700, yanAcik:true}   // İÇECEK + TATLI · K3 ÜSTÜ (pafta v7 yeri · v11'de geri geldi) · 2 kat
 };
 /* E çekmecesi dizilişi: tatlı sol sütun (robot yandan, el yatay +x · kap dik kalır) · kola 3 sütun × 8 (üstten kavrama, parmak ekseni x → sütun aralığı 116) */
-function icecekPos(tip,kat,k){ const K=KOLON.KE, y0=K.kotlar[kat]+12; return tip==='kola'?V(K.x0+180+116*(k%3), y0+EL.KOLA_H/2, 62+75*Math.floor(k/3)):V(K.x0+60, y0+EL.TATLI_H/2, 200+95*k); }   // tatlı z ≥ 200: el +x yönünde girerken parmaklar hat yüzüne, dirsek D'ye girmesin
-const NIS={x:[2070,2455], y:[500,960], z:[-660,0], cx:2262, cz:-450, raf0:512, pitch:50, n:8};           // K4 tepsi nişi
+function icecekPos(tip,kat,k){ const K=KOLON.KI, y0=K.kotlar[kat]+12; return tip==='kola'?V(K.x0+280+116*(k%3), y0+EL.KOLA_H/2, 62+75*Math.floor(k/3)):V(K.x0+60+100*Math.floor(k/5), y0+EL.TATLI_H/2, 200+95*(k%5)); }   // tatlı z ≥ 200: el +x yönünde girerken parmaklar hat yüzüne, dirsek D'ye girmesin
+const NIS={x:[2070,2455], y:[690,1000], z:[-660,0], cx:2262, cz:-450, raf0:702, pitch:50, n:6};          // K4 üstü: 6 tepsi (v11) · altında kaşar+sucuk deposu 375–675 · en altta soğutma grubu 140–360
 const T_AGZ=[1070,1180], T_Y=1120, T_BAS=[1183,1317], T_KAS=[1320,1680];
 const HAZNE=[["HARÇ 1",280,1070,0xc06040],["HARÇ 2",280,1350,0xc06040],["KIYMA",140,1560,0x9a5a3a],["KUŞBAŞI",140,1700,0x8a4a3a],["KAŞAR",280,1910,0xffd24a],["SUCUK",180,2140,0xb03a2a]];   // pafta v10 YUVA sırası
 const NOZ={kasar:{x:1910,renk:0xffd24a}, harc:{x:1350,renk:0xb0402a}, harc2:{x:1070,renk:0xb0402a}, z:-310, alt:1183};
@@ -32,7 +32,7 @@ const FIR=[[1065,1380],[1385,1700],[1705,2028]];                                
 const FIR_X={x:[2533,3167], ic:[2650,3050], cx:2850, cz:-360};
 const KES={x:[2553,3147], y:[800,935], z:[-540,0], cx:2850, cz:-270};
 const YAG={x:[2553,2920], y:[580,755], z:[-440,0], cx:2737, cz:-220};
-const KUT={x:[3230,3870], y:[750,1000], z:[-768,0], cx:3550, cz:-390, plaka:790, itme:360};                // dükkân v10: kutu ağzı 750–1000
+const KUT={x:[3230,3870], y:[430,680], z:[-768,0], cx:3550, cz:-390, plaka:470, itme:360};                 // pafta HAT v10: kutu ağzı 430–680
 /* QR: göz 480 × 190 × 440 (pafta 380: kutu 320 + tatlı Ø90 yan yana sığmıyor → sol şerit 135 + kutu 320 + paylar = 480 · varsayım) */
 const QR ={x:[2895,3900], y:[400,2000], z:[900,1340], kol:[[2910,3390],[3410,3890]], satir:[410,610,810,1010,1210,1410], derin:440, goz_h:190,
   serit:78, kutuX:305, tatliZ:965, kolaZ:1080, kutuZ:1165};
@@ -62,6 +62,7 @@ function agiz(x0,x1,y0,y1,z0,z1){ return aabb(x0,x1,y0,y1,z0,z1,0xff5c5c,.10,0xf
 agiz(730,2470,T_AGZ[0],T_AGZ[1],-768,0); agiz(KES.x[0],KES.x[1],KES.y[0],KES.y[1],KES.z[0],KES.z[1]);
 agiz(YAG.x[0],YAG.x[1],YAG.y[0],YAG.y[1],YAG.z[0],YAG.z[1]); agiz(KUT.x[0],KUT.x[1],KUT.y[0],KUT.y[1],KUT.z[0],KUT.z[1]);
 agiz(NIS.x[0],NIS.x[1],NIS.y[0],NIS.y[1],NIS.z[0],NIS.z[1]);
+aabb(2035,2420,375,675,-820,-6,0xd9b04a,1,0x20242c); aabb(2035,2420,140,360,-306,-6,0x5a6472,1,0x20242c);   // K4: KAŞAR + SUCUK DEPOSU (kapaklı · eleman doldurur) · soğutma grubu
 /* C · TOPPING: 6 hazne (kaset) + dozaj başlığı + alt çıkış (nozul ağzı, robot ağzının tavanında) */
 HAZNE.forEach(([ad,gw,xc,renk])=>{ aabb(xc-gw/2+6,xc+gw/2-6,T_KAS[0]+8,T_KAS[1]-8,NOZ.z-200,NOZ.z+200,renk,1,0x20242c);
   aabb(xc-45,xc+45,T_BAS[0],T_BAS[1],NOZ.z-90,NOZ.z+90,0x6a7484,.9); const h=silindir(60,24,T_KAS[0]-T_BAS[1]+30,renk,1); h.position.set(xc,(T_KAS[0]+T_BAS[1])/2+10,NOZ.z); scene.add(h);

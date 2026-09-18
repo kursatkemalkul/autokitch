@@ -161,16 +161,18 @@ function G_bitir(B,p,o){ const tray=p.tray, ky=KUT.plaka+120, kutuH={tip:'kutu',
   B.mv('dönüş pozu',{tcp:V(bx,1150,585)}); B.don('180° geri dönüş',V(0,1,0),-180,335,2.0);
   tepsiKoy(B,tray,'tepsi nişi',NIS.cx,nisPos(tray.raf).y,NIS.cz,null,NIS.cx-450);
 }
-/* G6 · içecek / tatlı: E ALTINDAKİ ÇEKMECEDEN (dükkân v10) → QR gözü SOL şerit
+/* G6 · içecek / tatlı: B MODÜLÜ · K3 ÜSTÜNDEKİ 2 KATLI ÇEKMECEDEN (pafta v7 yeri, v11'de geri geldi) → QR gözü SOL şerit
    kola: üstten kavranır (el dikey) → el +z'ye yatırılır, kutu yatık → şeridin DERİNİNE (sol ileri) · tatlı: yandan kavranır (el yatay +x, kap dik kalır) → şeridin ROBOT tarafına (sol arka) */
-function G_icecek(B,o,tip){ const it=o[tip+'Stok'], c=it.pos, H={tip,pos:c.clone(),icerik:''}, q=qrKapak[o.goz], sx=q.k0+QR.serit, K=KOLON.KE;
-  const ac=kapakAnim('cek','KE',1,e=>{ H.pos.z=c.z*e; },()=>{ S.cekI.KE=it.kat; H.yatik=false; H.pos.copy(c); H.pos.z=0; nesneGoster(H); });
+function G_icecek(B,o,tip){ const it=o[tip+'Stok'], c=it.pos, H={tip,pos:c.clone(),icerik:''}, q=qrKapak[o.goz], sx=q.k0+QR.serit, K=KOLON.KI;
+  const ac=kapakAnim('cek','KI',1,e=>{ H.pos.z=c.z*e; },()=>{ S.cekI.KI=it.kat; H.yatik=false; H.pos.copy(c); H.pos.z=0; nesneGoster(H); });
   B.tasima('taşıma pozu · kol çekmece kotunun üstünde');
   if(tip==='kola'){ const cx=it.yan; ac.gecikme=gecikmeHesap(B.cur.carX,cx,K);
-    B.kay('→ E içecek çekmecesi · '+(it.kat+1)+'. kat · araba çekilince açılır',cx,null,ac);
-    B.mv('çekmece yanı · el için boşluk',{tcp:V(B.cur.carX+300,1100,280)}); B.don('el dikey (parmaklar aşağı)',V(1,0,0),-90,0,0.9); B.yuk('üstten kavrama','kola'); B.parmak('parmaklar açılır',110);
-    B.mv('kutunun üstüne',{tcp:V(c.x,c.y+170,c.z)}); B.mv('in · parmaklar kutunun üst 45 mm’sine',{tcp:c.clone()},HIZ.ince); B.parmak('parmaklar kapanır · kutu kavrandı',66,()=>{ S.tasi=H; }); B.mv('kaldır',{tcp:V(c.x,c.y+170,c.z)},HIZ.ince);
-    B.mv('yüksel · çekmece kapanır',{tcp:V(c.x,760,350)},null,null,kapakAnim('cek','KE',0)); B.don('el QR yönüne yatar (kutu yatık · +z)',V(1,0,0),-90,0,1.0);
+    B.kay('→ içecek çekmecesi (K3 üstü) · '+(it.kat+1)+'. kat · araba çekilince açılır',cx,null,ac);
+    const yon=cx>K.x1?-300:300, Yk=c.y+170;                                   // araba çekmecenin hangi yanındaysa el o yanda döner · kaldırma kotu: kutu altı ön panelin (kot+134) üstünde
+    B.mv('çekmece yanı · el çekmece üstü kotunda',{tcp:V(B.cur.carX+yon,1350,280)}); B.don('el dikey (parmaklar aşağı)',V(1,0,0),-90,0,0.9); B.yuk('üstten kavrama','kola'); B.parmak('parmaklar açılır',110);
+    B.mv('kutunun üstüne',{tcp:V(c.x,Yk,c.z)}); B.mv('in · parmaklar kutunun üst 45 mm’sine',{tcp:c.clone()},HIZ.ince); B.parmak('parmaklar kapanır · kutu kavrandı',66,()=>{ S.tasi=H; }); B.mv('kaldır',{tcp:V(c.x,Yk,c.z)},HIZ.ince);
+    B.mv('koridor ortasına çekil · çekmece kapanır',{tcp:V(B.cur.carX+yon,Yk,720)},null,null,kapakAnim('cek','KI',0)); if(yon<0) B.mv('omuz önünden QR tarafına',{tcp:V(B.cur.carX+300,Yk,720)});
+    B.mv('dönüş pozu',{tcp:V(B.cur.carX+300,Yk,350)}); B.don('el QR yönüne yatar (kutu yatık · +z)',V(1,0,0),-90,0,1.0);
     B.kay('→ QR göz '+(o.goz+1)+' · sol şerit',Math.min(RAY_X[1],sx-100));
     B.mv('QR: göz üstünde bekle',{tcp:V(sx,q.y+250,722.5)}); B.kapak('QR kapağı açılır','qr',o.goz,1);
     B.mv('QR: şerit kotuna in',{tcp:V(sx,q.y+48,722.5)},HIZ.orta); gir(B,'QR: kola şeridin derinine (SOL İLERİ)',V(sx,q.y+48,QR.kolaZ));
@@ -178,10 +180,10 @@ function G_icecek(B,o,tip){ const it=o[tip+'Stok'], c=it.pos, H={tip,pos:c.clone
     B.mv('QR: el çıkar',{tcp:V(sx,q.y+48,722.5)},HIZ.orta); B.mv('QR: yukarı',{tcp:V(sx,q.y+250,722.5)}); B.kapak('QR kapağı kapanır','qr',o.goz,0);
     B.mv('dönüş pozu',{tcp:V(B.cur.carX+300,1000,722.5)}); B.don('el geri döner (aşağıdan −z’ye)',V(1,0,0),180,0,1.6); B.parmak('parmaklar 70',70); B.yuk('boş el','bos');
   } else { const cx=Math.max(RAY_X[0],c.x-YUK.tatli.L-330); ac.gecikme=gecikmeHesap(B.cur.carX,cx,K);
-    B.kay('→ E çekmecesi · tatlı köşesi · '+(it.kat+1)+'. kat · araba çekilince açılır',cx,null,ac);
+    B.kay('→ içecek çekmecesi (K3 üstü) · tatlı köşesi · '+(it.kat+1)+'. kat · araba çekilince açılır',cx,null,ac);
     B.mv('dönüş pozu',{tcp:V(cx+200,1000,280)}); B.don('el +x yönüne (yatay · kap dik kalır)',V(0,1,0),-90,140,1.0); B.yuk('yandan kavrama','tatli'); B.parmak('parmaklar açılır',120);
-    B.mv('kap hizası · çekmecenin solu',{tcp:V(c.x-130,c.y,c.z)}); B.mv('kaba yanaş',{tcp:c.clone()},HIZ.ince); B.parmak('parmaklar kapanır · kap kavrandı',88,()=>{ S.tasi=H; }); B.mv('kaldır',{tcp:V(c.x,c.y+90,c.z)},HIZ.ince);
-    B.mv('geri çek · yüksel · çekmece kapanır',{tcp:V(cx+290,985,620)},null,null,kapakAnim('cek','KE',0));
+    B.mv('kap hizası · çekmecenin solu',{tcp:V(c.x-130,c.y,c.z)}); B.mv('kaba yanaş',{tcp:c.clone()},HIZ.ince); B.parmak('parmaklar kapanır · kap kavrandı',88,()=>{ S.tasi=H; }); B.mv('kaldır · kap altı ön panelin üstüne',{tcp:V(c.x,c.y+140,c.z)},HIZ.ince);
+    B.mv('geri çek · çekmece kapanır',{tcp:V(cx+290,c.y+140,620)},null,null,kapakAnim('cek','KI',0));
     B.kay('→ QR göz '+(o.goz+1)+' · sol şerit',Math.min(RAY_X[1],sx-200)); B.don('el QR yönüne (+z)',V(0,1,0),-90,140,1.0);
     B.mv('QR: göz üstünde bekle',{tcp:V(sx,q.y+250,710)}); B.kapak('QR kapağı açılır','qr',o.goz,1);
     B.mv('QR: şerit kotuna in',{tcp:V(sx,q.y+34,710)},HIZ.orta); B.mv('QR: tatlı şeridin robot tarafına (SOL ARKA)',{tcp:V(sx,q.y+34,QR.tatliZ)},HIZ.ince); B.mv('indir',{tcp:V(sx,q.y+31,QR.tatliZ)},HIZ.mikro);
