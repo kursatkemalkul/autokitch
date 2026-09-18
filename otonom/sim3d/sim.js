@@ -36,7 +36,7 @@ const KUT={x:[3230,3870], y:[430,680], z:[-768,0], cx:3550, cz:-390, plaka:470, 
 /* QR: göz 480 × 190 × 440 (pafta 380: kutu 320 + tatlı Ø90 yan yana sığmıyor → sol şerit 135 + kutu 320 + paylar = 480 · varsayım) */
 const QR ={x:[2895,3900], y:[400,2000], z:[900,1340], kol:[[2910,3390],[3410,3890]], satir:[410,610,810,1010,1210,1410], derin:440, goz_h:190,
   serit:78, kutuX:305, tatliZ:965, kolaZ:1080, kutuZ:1165};
-const KOR=900, RAY_X=[200,3500];
+const KOR=900, DUVAR_X=[0,3900]; let RAY_X=[200,3700];   // dükkân iç 3900 = hat boyu → araba (400) duvara dayanır: merkez 200…3700 · 'ray' seçimiyle değişir
 function PRES(){ const p=+plaka.value; return {x:[53,647], y:[p,p+220], z:[-650,0], cx:350, cz:-440, plaka:p}; }   // pafta v10: ağız 594 × 220, alt kenar plaka kotunda
 const carPres=()=>PRES().cx+400;                                                                          // kol ağza çapraz girer: bilek omuz ekseninden geçmez, ön kol ağız üst kenarına değmez
 /* hızlar — kaynak/varsayım notu index.html altında */

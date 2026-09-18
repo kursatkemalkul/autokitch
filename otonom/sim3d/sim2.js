@@ -92,14 +92,17 @@ function tepsiKoy(B,tray,ad,cx,cy,cz,cb,carx,ustten){ if(ustten) B.mv('yüksel �
 function tepsiAl(B,tray,ad,cx,cy,cz,cb,carx,ek){ B.kay('→ '+ad,carx===undefined?carFor(cx):carx,null,ek); B.mv(ad+': ağız hizası',{tcp:V(cx,cy,TZ)}); gir(B,ad+': pim sokete',V(cx,cy,cz));
   B.bekle('pim kilitlenir',HIZ.pim); B.yuk('tepsi alındı','tepsi',()=>{ S.tasi=tray; if(cb) cb(); }); B.mv(ad+': kaldır',{tcp:V(cx,cy+20,cz)},HIZ.mikro); B.mv(ad+': çıkar',{tcp:V(cx,cy+20,TZ)},HIZ.orta); }
 /* araba çekmecenin DIŞINDA durur; en yakın konum seçilir, şartlar: erişim tam + dirsek hat yüzünden ≥ 100 mm açıkta (dirsek yukarı çözümde alçak/yüze yakın hedefte dirsek hatta girmesin) */
-function cekmeceYani(K,pos,L){ const Wy=pos.y+L; let en=null; for(let off=100+R().taban/2; off<=600; off+=25) for(const cx of [K.x0-off,K.x1+off]){ if(cx<RAY_X[0]||cx>RAY_X[1]) continue;
-    const k=ikq(V(pos.x,Wy,pos.z),cx), k2=ikq(V(pos.x,Wy+170,pos.z),cx); if(!k.ok||!k2.ok||Math.min(k.E.z,k2.E.z)<100||k.rr<200) continue; const skor=Math.abs(pos.x-cx); if(!en||skor<en.skor) en={cx,skor}; }
+/* TEK DURUŞ: araba bu konumdayken pres de erişilir mi? (tepsi koy/al + hamuru ağızdan içeri) — ön kol ağzın içinden geçmeli, bilek omuz eksenine yaklaşmamalı */
+function presErisir(cx){ const P=PRES(), by=P.plaka+100, pozlar=[V(P.cx,P.plaka+60,TZ+500),V(P.cx,P.plaka+60,P.cz+500),V(P.cx,by,720),V(P.cx,by,120+YUK.top.L),V(P.cx,by,P.cz+YUK.top.L)];
+  for(const W of pozlar){ const k=ikq(W,cx); if(!k.ok||k.rr<160||k.E.z<50) return false; if(W.z<0){ const t=k.E.z/(k.E.z-W.z), xc=k.E.x+t*(W.x-k.E.x), yc=k.E.y+t*(W.y-k.E.y); if(xc<P.x[0]+50||xc>P.x[1]-50||yc<P.y[0]+45||yc>P.y[1]-45) return false; } } return true; }
+function cekmeceYani(K,pos,L,tercih){ const Wy=pos.y+L; let en=null; for(let off=100+R().taban/2; off<=600; off+=25) for(const cx of [K.x0-off,K.x1+off]){ if(cx<RAY_X[0]||cx>RAY_X[1]) continue;
+    const k=ikq(V(pos.x,Wy,pos.z),cx), k2=ikq(V(pos.x,Wy+170,pos.z),cx); if(!k.ok||!k2.ok||Math.min(k.E.z,k2.E.z)<100||k.rr<200) continue; const skor=Math.abs(pos.x-cx)-(tercih&&tercih(cx)?3000:0); if(!en||skor<en.skor) en={cx,skor}; }
   return en?en.cx:null; }
 function nisPos(i){ return V(NIS.cx, NIS.raf0+NIS.pitch*i+20, NIS.cz); }
 /* G1 · nişten tepsi → PRESİN ALT PLAKASINA (üst plakanın tam altı) → çekmeceden hamur → ağızdan içeri, tepsinin tam ortasına */
-function G_baslat(B,p){ const P=PRES(), tray=p.tray, ballH={tip:'top',pos:p.topPos.clone(),icerik:''}, by=P.plaka+100;
-  tepsiAl(B,tray,'tepsi nişi',NIS.cx,nisPos(tray.raf).y,NIS.cz,null,NIS.cx-450);
-  tepsiKoy(B,tray,'pres alt plakası',P.cx,P.plaka+20,P.cz,null,carPres(),true);
+function G_baslat(B,p,elde){ const P=PRES(), tray=p.tray, ballH={tip:'top',pos:p.topPos.clone(),icerik:''}, by=P.plaka+100, cp=p.carPres||carPres();
+  if(!elde) tepsiAl(B,tray,'tepsi nişi',NIS.cx,nisPos(tray.raf).y,NIS.cz,null,NIS.cx-450);   // elde: tepsi QR'dan dönerken zaten elde (nişe uğramaz)
+  tepsiKoy(B,tray,'pres alt plakası',P.cx,P.plaka+20,P.cz,null,cp,true);
   const K=KOLON[p.kolon], yan=p.yan, sagda=yan>K.x1;
   const ac=kapakAnim('cek',p.kolon,1,e=>{ ballH.pos.z=p.topPos.z*e; },()=>{ S.cekI[p.kolon]=p.sira; ballH.pos.copy(p.topPos); ballH.pos.z=0; nesneGoster(ballH); }); ac.gecikme=gecikmeHesap(B.cur.carX,yan,K);
   B.kay('→ çekmece '+p.kolon+(sagda?' (sağ)':' (sol)')+' · araba çekilince çekmece açılır',yan,null,ac);
@@ -107,16 +110,18 @@ function G_baslat(B,p){ const P=PRES(), tray=p.tray, ballH={tip:'top',pos:p.topP
   B.parmak('parmaklar açılır',120); B.mv('topun üstüne',{tcp:V(p.topPos.x,p.topPos.y+150,p.topPos.z)}); B.mv('in',{tcp:p.topPos.clone()},HIZ.ince);
   B.parmak('parmaklar kapanır · top kavrandı',85,()=>{ S.tasi=ballH; }); B.mv('kaldır',{tcp:V(p.topPos.x,p.topPos.y+150,p.topPos.z)},HIZ.ince);
   B.mv('yüksel · çekmece kapanır',{tcp:V(p.topPos.x,900,350)},null,null,kapakAnim('cek',p.kolon,0));
-  B.don('el yatay · top önde',V(1,0,0),90,0,0.9); B.mv('taşıma · bilek koridor ortasında',{tcp:V(p.topPos.x,by,720-YUK.top.L)});
-  B.kay('→ pres',carPres()); B.mv('omuz önünden karşıya',{tcp:V(P.cx,by,720-YUK.top.L)}); B.mv('pres ağzı önü',{tcp:V(P.cx,by,120)}); gir(B,'pres ağzından içeri · tepsinin tam ortası',V(P.cx,by,P.cz));
+  B.don('el yatay · top önde',V(1,0,0),90,0,0.9);
+  const ayniTaraf=(p.topPos.x-yan)*(P.cx-cp)>0;                                       // top ve pres arabanın aynı yanındaysa omuz ekseni geçilmez → koridor ortasına açılmaya gerek yok
+  if(!ayniTaraf) B.mv('taşıma · bilek koridor ortasında',{tcp:V(p.topPos.x,by,720-YUK.top.L)});
+  B.kay(cp===yan?'araba yerinde · pres buradan erişiliyor':'→ pres',cp); if(!ayniTaraf) B.mv('omuz önünden karşıya',{tcp:V(P.cx,by,720-YUK.top.L)}); B.mv('pres ağzı önü',{tcp:V(P.cx,by,120)}); gir(B,'pres ağzından içeri · tepsinin tam ortası',V(P.cx,by,P.cz));
   B.parmak('parmaklar açılır · top tepsinin ortasında',120,()=>{ nesneSil(ballH); tray.icerik='top'; }); B.mv('el ağızdan çıkar',{tcp:V(P.cx,by,120)},HIZ.orta);
   B.parmak('parmaklar 70',70); B.yuk('boş el','bos');
 }
 /* pres çevrimi (istasyon işi · robot yok): üst plaka iner · basar · kalkar */
 function G_presCevrim(B,p){ const tray=p.tray; B.bekle('PRES · '+HIZ.pres+' s',HIZ.pres,e=>{ const a=e<.4?e/.4:e>.6?(1-e)/.4:1; S.ustPlakaY=a*172; if(e>.45) tray.icerik='taban'; }); }
 /* G2 · tepsiyi presten al → topping (nozul sabit, robot tepsiyi spiral gezdirir) → fırın (giyotin kapak yolda açılır) */
-function G_topping(B,p){ const P=PRES(), tray=p.tray, noz=p.tip==='pide'?NOZ.kasar:(p.id%2?NOZ.harc:NOZ.harc2), ds=p.tip==='pide'?HIZ.kasar:HIZ.harc, ic=p.tip==='pide'?'kasar':'harc';
-  tepsiAl(B,tray,'pres alt plakası',P.cx,P.plaka+20,P.cz,null,carPres()); B.mv('yüksel · tepsi omuz üstünden geçecek',{tcp:V(P.cx,TR,TZ)});
+function G_topping(B,p){ const P=PRES(), cpT=presErisir(B.cur.carX)?B.cur.carX:carPres(), tray=p.tray, noz=p.tip==='pide'?NOZ.kasar:(p.id%2?NOZ.harc:NOZ.harc2), ds=p.tip==='pide'?HIZ.kasar:HIZ.harc, ic=p.tip==='pide'?'kasar':'harc';
+  tepsiAl(B,tray,'pres alt plakası',P.cx,P.plaka+20,P.cz,null,cpT); B.mv('yüksel · tepsi omuz üstünden geçecek',{tcp:V(P.cx,TR,TZ)});
   B.kay('→ topping · '+(p.tip==='pide'?'kaşar haznesi':'harç haznesi'),carFor(noz.x)); B.mv('omuz üstünden karşıya',{tcp:V(noz.x,TR,TZ)}); B.mv('topping: ağız hizası',{tcp:V(noz.x,T_Y,TZ)}); gir(B,'topping: nozul çıkışının altına',V(noz.x,T_Y,NOZ.z));
   { B.st.push({ad:(p.tip==='pide'?'KAŞAR':'HARÇ')+' DOZAJI · spiral 2 tur · '+ds+' s',sure:ds,basla:()=>{ tray.icerik=ic; tray.dolu=0; S.akis={x:noz.x,z:NOZ.z,renk:noz.renk}; },fn:e=>{ const th=e*4*Math.PI, rr=110*e; S.tcp.set(noz.x+rr*Math.cos(th),T_Y,NOZ.z+rr*Math.sin(th)); tray.dolu=e; },bitir:()=>{ S.akis=null; tray.dolu=1; }}); B.cur.tcp.set(noz.x+110,T_Y,NOZ.z); }
   B.mv('topping: merkeze',{tcp:V(noz.x,T_Y,NOZ.z)},HIZ.ince); B.mv('topping: çıkar',{tcp:V(noz.x,T_Y,TZ)},HIZ.orta);
@@ -139,7 +144,7 @@ function G_sprey(B,p){ const tray=p.tray; tepsiAl(B,tray,'kesim',KES.cx,KES.y[0]
 function G_spreyCevrim(B){ B.bekle('SPREY · tereyağı · '+HIZ.sprey+' s',HIZ.sprey); }
 /* G5 · spreyden al → kutu (tepsi açık kutunun üstünde eğilir, geri çekilirken tarak pideyi tutar → pide kutuya iner · kapak kapanır · itici kutuyu tepsiye iter)
         → QR gözü SAĞ bölme (kapak açılırken tepsi süpürmenin üstünde bekler · klape kutuyu tutar) → tepsi nişe */
-function G_bitir(B,p,o){ const tray=p.tray, ky=KUT.plaka+120, kutuH={tip:'kutu',pos:V(KUT.cx,KUT.plaka+EL.KUTU_H/2,KUT.cz),kapali:false,kapanma:0,icerik:''}, pd={tip:'pide',pos:V(KUT.cx,ky+12,KUT.cz)};
+function G_bitir(B,p,o,zincirle){ const tray=p.tray, ky=KUT.plaka+120, kutuH={tip:'kutu',pos:V(KUT.cx,KUT.plaka+EL.KUTU_H/2,KUT.cz),kapali:false,kapanma:0,icerik:''}, pd={tip:'pide',pos:V(KUT.cx,ky+12,KUT.cz)};
   tepsiAl(B,tray,'sprey',YAG.cx,YAG.y[0]+20,YAG.cz);
   B.kay('→ kutulama · açık kutu plakada hazır',carFor(KUT.cx),null,{sure:0.1,gecikme:0,basla:()=>{ kutuH.kapali=false; kutuH.kapanma=0; kutuH.icerik=''; kutuH.pos.set(KUT.cx,KUT.plaka+EL.KUTU_H/2,KUT.cz); nesneGoster(kutuH); },fn:()=>{}});
   B.mv('kutu: ağız hizası',{tcp:V(KUT.cx,ky,TZ)}); gir(B,'kutu: açık kutunun üstüne',V(KUT.cx,ky,KUT.cz));
@@ -159,7 +164,7 @@ function G_bitir(B,p,o){ const tray=p.tray, ky=KUT.plaka+120, kutuH={tip:'kutu',
     B.st.push({ad:'tepsi geri çekilir · göz ağzındaki tek yönlü klape kutuyu tutar → kutu gözde kalır',sure:1.4,fn:e=>{ S.tcp.lerpVectors(a.tcp,b,e); if(e>.5&&tray.icerik==='kutu'){ tray.icerik=''; nesneGoster(yeni); o.nesneler.push(yeni); } }}); B.cur.tcp.copy(b); }
   B.mv('QR: yukarı çık',{tcp:V(bx,ust,700)}); B.kapak('QR kapağı kapanır','qr',o.goz,0);
   B.mv('dönüş pozu',{tcp:V(bx,1150,585)}); B.don('180° geri dönüş',V(0,1,0),-180,335,2.0);
-  tepsiKoy(B,tray,'tepsi nişi',NIS.cx,nisPos(tray.raf).y,NIS.cz,null,NIS.cx-450);
+  if(!zincirle) tepsiKoy(B,tray,'tepsi nişi',NIS.cx,nisPos(tray.raf).y,NIS.cz,null,NIS.cx-450);   // zincir: sırada ürün varsa tepsi nişe gitmez, doğrudan prese
 }
 /* G6 · içecek / tatlı: B MODÜLÜ · K3 ÜSTÜNDEKİ 2 KATLI ÇEKMECEDEN (pafta v7 yeri, v11'de geri geldi) → QR gözü SOL şerit
    kola: üstten kavranır (el dikey) → el +z'ye yatırılır, kutu yatık → şeridin DERİNİNE (sol ileri) · tatlı: yandan kavranır (el yatay +x, kap dik kalır) → şeridin ROBOT tarafına (sol arka) */
