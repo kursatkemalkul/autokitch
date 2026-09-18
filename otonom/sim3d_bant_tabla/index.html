@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AUTOKITCH — 3D Sim · Bantlı / Tablalı Hat</title>
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+<style>
+  :root{--bg:#0d1016;--panel:#161a22;--line:#2a2f3a;--gray:#8a94a4;--blue:#2997ff;--green:#3ddc84;--red:#ff5c5c;--amber:#ffb340;
+    --font:"SF Pro Display",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif}
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{height:100%;background:var(--bg);color:#e8eaed;font-family:var(--font);font-size:13px;-webkit-font-smoothing:antialiased;overflow:hidden}
+  #c{position:fixed;left:0;top:0;display:block}
+  #ui{position:fixed;top:0;right:0;bottom:0;width:380px;background:var(--panel);border-left:1px solid var(--line);padding:14px 14px 24px;overflow:auto}
+  #ui h1{font-size:15px;font-weight:700;margin-bottom:2px}
+  #ui .sub{color:var(--gray);font-size:11.5px;margin-bottom:10px;line-height:1.45}
+  #ui h2{font-size:10.5px;font-weight:700;letter-spacing:.12em;color:var(--gray);margin:12px 0 6px;text-transform:uppercase}
+  .row{display:flex;align-items:center;justify-content:space-between;gap:8px;margin:4px 0;font-size:12.5px}
+  .row label{color:#c9ccd3}
+  select,input[type=range],input[type=number],button{font:inherit}
+  select,input[type=number]{background:#0d1016;color:#fff;border:1px solid var(--line);border-radius:7px;padding:4px 6px;min-width:120px;font-size:12px}
+  input[type=number]{min-width:70px;width:70px}
+  input[type=range]{width:120px;accent-color:var(--blue)}
+  .val{min-width:44px;text-align:right;color:#fff;font-variant-numeric:tabular-nums}
+  .btns{display:flex;flex-wrap:wrap;gap:5px}
+  button{background:#232833;color:#fff;border:1px solid var(--line);border-radius:8px;padding:6px 9px;cursor:pointer;font-size:12px}
+  button:hover{border-color:var(--blue)}
+  button.play{background:var(--blue);border-color:var(--blue);font-weight:700;flex:1;padding:9px}
+  #step{color:var(--blue);font-weight:600;height:56px;overflow:hidden;margin-top:6px;font-size:12.5px;line-height:18px}
+  #step div{height:18px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  #out,#kpi{background:#0d1016;border:1px solid var(--line);border-radius:9px;padding:8px 10px;margin-top:8px;font-size:12px;line-height:1.55}
+  .ok{color:var(--green)} .yok{color:var(--red)} .amb{color:var(--amber)}
+  table{width:100%;border-collapse:collapse;font-size:11.5px}
+  td{padding:2px 0;border-bottom:1px solid #1f242e;color:#c9ccd3;vertical-align:top} td:last-child{text-align:right;color:#fff}
+  #log,#siparisler{margin-top:8px;font-size:11.5px;line-height:1.45;max-height:260px;overflow:auto}
+  #log div,#siparisler div{padding:3px 0;border-bottom:1px solid #1f242e}
+  #log b{color:#fff;font-weight:600}
+  .note{color:var(--gray);font-size:11px;line-height:1.5;margin-top:10px}
+  a{color:var(--blue);text-decoration:none}
+  #gwrap{position:fixed;left:0;bottom:0;right:380px;height:0;background:rgba(13,16,22,.92);overflow-x:auto;overflow-y:hidden}
+  #kafa{position:absolute;top:0;bottom:0;width:2px;background:#fff;pointer-events:none;left:70px}
+  #tut{position:fixed;left:0;right:380px;bottom:30px;height:10px;background:#161a22;border-top:1px solid var(--line);cursor:ns-resize;display:flex;align-items:center;justify-content:center;touch-action:none}
+  #tut::after{content:"";width:48px;height:3px;border-radius:2px;background:#3a4250}
+  #tut:hover::after{background:var(--blue)}
+  #gwrap canvas{cursor:pointer;display:block}
+  #scrubwrap{position:fixed;left:0;right:380px;bottom:0;height:30px;background:rgba(13,16,22,.95);border-top:1px solid var(--line);display:flex;align-items:center;gap:10px;padding:0 12px}
+  #scrubwrap span{font-size:12px;color:#c9ccd3;font-variant-numeric:tabular-nums;white-space:nowrap}
+  #scrub{flex:1;width:auto;height:18px;cursor:grab}
+  @media(max-width:760px){#ui{width:100%;top:auto;height:52%;border-left:0;border-top:1px solid var(--line)} #gwrap,#tut{display:none} #scrubwrap{right:0;bottom:52%}}
+</style>
+</head>
+<body>
+<canvas id="c"></canvas>
+<div id="tut" title="Zaman çizelgesi · tutup yukarı çek · çift tıkla aç/kapa"></div>
+<div id="scrubwrap"><span id="scrubT">17:00:00</span><input type="range" id="scrub" min="0" max="100" step="0.5" value="0"></div>
+<div id="gwrap"><canvas id="gantt"></canvas><div id="kafa"></div></div>
+<div id="ui">
+  <h1>AUTOKITCH · 3D Sim · Bantlı / Tablalı Hat</h1>
+  <div class="sub">Pafta BANTLI HAT v6 · ATOSA TABLALI HAT v2 · TEK Fairino FR5 yer rayında · ürün tepsisiz akar, robot yalnız hamur + kutu + içecek taşır · her hareket mesafe ve hızdan hesaplanır, erişim ve çarpışma kontrollü.</div>
+
+  <div class="row"><label>Hat</label><select id="hat"><option value="bant">BANTLI HAT v6 · pres → bant → fırın</option><option value="tabla">ATOSA TABLALI HAT v2 · tabla arabası</option></select></div>
+
+  <div class="row"><label>Senaryo</label><select id="sen"><option value="tek">Tek sipariş</option><option value="uc">3 müşteri · 1'er dk arayla</option><option value="aksam">Akşam piki · hafta içi 17–20 · 53 sipariş</option><option value="cmt">Cumartesi akşamı 17–20 · 74 sipariş</option><option value="fullpide">TAM YÜK · 1 saat · yalnız pide</option><option value="fulllahm">TAM YÜK · 1 saat · yalnız lahmacun</option><option value="full" selected>TAM YÜK · 1 saatte kaç çıkar · içeceksiz</option><option value="fullic">TAM YÜK · 1 saat · içecek + tatlı dahil</option><option value="akis">Sürekli akış · 1 saat (sınır testi)</option></select></div>
+  <div class="row" id="tekRow"><label>Ürün</label><span><select id="urun" style="min-width:110px"><option value="pide">kaşarlı pide</option><option value="lahm">lahmacun</option></select> &nbsp;<input type="checkbox" id="kola" checked> içecek <input type="checkbox" id="tatli" checked> tatlı</span></div>
+  <div class="row" id="akisRow"><label>Sipariş aralığı (sn)</label><input type="number" id="aralik" value="120" min="20" max="600" step="10"></div>
+  <div class="btns" style="margin-top:8px"><button class="play" id="play">▶ Oynat</button><button id="stop">■</button><select id="hiz" style="min-width:64px"><option value="1">×1</option><option value="2">×2</option><option value="4" selected>×4</option><option value="10">×10</option><option value="30">×30</option></select></div>
+  <div id="step"></div>
+  <div id="kpi"></div>
+
+  <div id="out"></div>
+
+  <h2>Siparişler</h2>
+  <div id="siparisler"></div>
+
+  <h2>Kontrol</h2>
+  <div class="btns"><button id="kontrol">Tüm adımları tara · erişim + çarpışma</button><button id="planla">Yeniden planla</button></div>
+  <div id="log"></div>
+
+  <details class="note"><summary style="cursor:pointer;color:#c9ccd3">Süreler · hızlar · varsayımlar</summary><b>Robot (sim3d · HAT v19 ile aynı):</b> FR5 katalog uç hızı 1 m/s, eklem 180°/s → sim: serbest 0,6 m/s · ağız içi 0,4 · hassas 0,2 · mikro 0,08 · ivme 2 m/s² · eklem sınırı 150°/s · ray 0,5 m/s, ivme 1 m/s² · çekmece 2,8 s (700 strok) · QR kapağı 1,5 · pim 0,8 · parmak 0,6 · omuz 970 · ray ekseni hat yüzünden 360 · erişim payı %5.<br>
+<b>Makine süreleri:</b> pres 9 s (Cuppone Pizzaform 400 taban/saat; Fersah PZP değeri yok → varsayım) · kaşar 15 s (xRobotics xPizza Cube: sos + peynir 30 s → malzeme başı 15 s) · harç 20 s (varsayım) · kesim 4 · sprey 3 · itici 2 · kutu kapağı 4 · müşteri 150 s (varsayım).<br>
+<b>Konveyör fırın (varsayım · özel imalat):</b> hazne 1400, bant 450, ürün adımı 350 → aynı anda 4 ürün · TEK bant hızı: pişme 240 s (pide); lahmacun da aynı hızda geçer → girişler arası en az 60 s → tavan 60 ürün/saat. Lahmacunun 240 s'de pişmesi pilot ister.<br>
+<b>Bantlı hat (varsayım):</b> pres → bant geçişi 5 s (düzenek çözülmedi) · bant hızı 15 mm/s (300 mm başlık / 20 s) · fırın sırası yoksa bütün bant durur · dozaj başlığı 300 geniş (yeniden tasarım).<br>
+<b>Tablalı hat (varsayım · Atosa cevabı yok):</b> tabla 500 mm/s · örse iniş / kalkış / ağıza kalkış 1'er s · geri emme 1,5 s · itici iniş 1 + itme 1,2 s · tabla boş döner. Atosa: “bir pizza en fazla 1 dk”.<br>
+<b>Kutu:</b> katlama 15 s (varsayım) · bir kutu tepsisi kutulama ağzında bekler; robot tepsiyi QR'a götürürken ya da kutu katlanırken ürün kesme plakasında bekler. Plaka doluyken fırından ürün gelirse SIKIŞMA sayılır.<br>
+<b>Çizelge:</b> tek robot · öncelik: kapalı kutu → QR · içecek / tatlı · hamur. Pres / tabla 22 s içinde boşalacaksa robot sıradaki hamuru şimdiden getirir, ağız önünde bekler. İçecek ve tatlı kutudan önce göze konur (göz düzeni: sol şerit içecek + tatlı, sağ kutu).</details>
+  <div class="note"><a href="../">← AUTOKITCH</a> · robotlu hat (HAT v19): <a href="../sim3d/">3D Hat Simülasyonu</a></div>
+  <!-- pafta v17 ile sabit değerler: menüde gösterilmez -->
+  <div style="display:none"><label><input type="checkbox" id="takip"></label><select id="model"></select><input type="range" id="omuz" min="700" max="1500" step="10" value="970"><span id="omuz_v">970</span><input type="range" id="railz" min="150" max="500" step="10" value="360"><span id="railz_v">360</span>
+    <select id="pay"><option value="0.95">%5</option></select><select id="hizp"><option value="1">1</option></select><select id="plaka"><option value="1150">1150</option></select><input type="number" id="seed" value="1"><input type="number" id="saat0" value="17"></div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+<script src="sim.js?v=5"></script>
+<script src="sim2.js?v=5"></script>
+<script src="sim3.js?v=5"></script>
+</body>
+</html>
