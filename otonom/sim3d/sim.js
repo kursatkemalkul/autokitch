@@ -24,7 +24,7 @@ const KOLON = {  // çekmeceler 620 × 680 · motorlu 700 strok — hamur: pide 
 };
 /* E çekmecesi dizilişi: tatlı sol sütun (robot yandan, el yatay +x · kap dik kalır) · kola 3 sütun × 8 (üstten kavrama, parmak ekseni x → sütun aralığı 116) */
 function icecekPos(tip,kat,k){ const K=KOLON.KI, y0=K.kotlar[kat]+12; return tip==='kola'?(k<16?V(K.x0+216+116*(k%2), y0+EL.KOLA_H/2, 62+75*Math.floor(k/2)):V(K.x0+100, y0+EL.KOLA_H/2, 62+75*(k-16))):V(K.x1-60-100*Math.floor(k/5), y0+EL.TATLI_H/2, 200+95*(k%5)); }   // kola 3 sütun: önce ortadaki 2 sütun (çekmecenin SAĞ duruşundan da erişilir → SAĞ robot SOL'un bölgesine girmez), sonra en soldaki sütun · tatlı SAĞDA 2 sütun: robot çekmecenin sağında durur, el −x yönünde girer → SAĞ robot kendi bölgesinden alır   // tatlı z ≥ 200: el +x yönünde girerken parmaklar hat yüzüne, dirsek D'ye girmesin
-const NIS={x:[2070,2455], y:[690,1000], z:[-660,0], cx:2262, cz:-450, raf0:692, pitch:36, n:6};
+const NIS={x:[2070,2455], y:[690,1000], z:[-660,0], cx:2262, cz:-450, raf0:702, pitch:50, n:6};
 const RAF={y:925};   // AKTARMA GÖZÜ (pafta v18): nişin en üst gözü (6 boş tepsi rafı 36 aralıkla altında kalır) · SOL robot topping'li tepsiyi soldan bırakır, SAĞ robot sağdan alıp fırına götürür          // K4 üstü: 6 tepsi (v11) · altında kaşar+sucuk deposu 375–675 · en altta soğutma grubu 140–360
 const T_AGZ=[1070,1180], T_Y=1120, T_BAS=[1183,1317], T_KAS=[1320,1680];
 const HAZNE=[["HARÇ 1",280,1070,0xc06040],["HARÇ 2",280,1350,0xc06040],["KIYMA",140,1560,0x9a5a3a],["KUŞBAŞI",140,1700,0x8a4a3a],["KAŞAR",280,1910,0xffd24a],["SUCUK",180,2140,0xb03a2a]];   // pafta v10 YUVA sırası
