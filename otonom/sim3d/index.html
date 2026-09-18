@@ -37,18 +37,24 @@
   .note{color:var(--gray);font-size:11px;line-height:1.5;margin-top:10px}
   a{color:var(--blue);text-decoration:none}
   #gwrap{position:fixed;left:0;bottom:0;right:380px;height:236px;background:rgba(13,16,22,.92);border-top:1px solid var(--line);overflow-x:auto;overflow-y:hidden}
-  #gwrap.gizli{display:none}
-  @media(max-width:760px){#ui{width:100%;top:auto;height:55%;border-left:0;border-top:1px solid var(--line)} #gwrap{display:none}}
+  #gwrap{position:fixed} #kafa{position:absolute;top:0;bottom:0;width:2px;background:#fff;pointer-events:none;left:70px}
+  #gwrap canvas{cursor:pointer;display:block}
+  #scrubwrap{position:fixed;left:0;right:380px;bottom:236px;height:30px;background:rgba(13,16,22,.95);border-top:1px solid var(--line);display:flex;align-items:center;gap:10px;padding:0 12px}
+  #scrubwrap span{font-size:12px;color:#c9ccd3;font-variant-numeric:tabular-nums;white-space:nowrap}
+  #scrub{flex:1;width:auto;height:18px;cursor:grab}
+  @media(max-width:760px){#ui{width:100%;top:auto;height:52%;border-left:0;border-top:1px solid var(--line)} #gwrap{display:none} #scrubwrap{right:0;bottom:52%}}
 </style>
 </head>
 <body>
 <canvas id="c"></canvas>
-<div id="gwrap"><canvas id="gantt"></canvas></div>
+<div id="scrubwrap"><span id="scrubT">17:00:00</span><input type="range" id="scrub" min="0" max="100" step="0.5" value="0"></div>
+<div id="gwrap"><canvas id="gantt"></canvas><div id="kafa"></div></div>
 <div id="ui">
   <h1>AUTOKITCH · 3D Hat Simülasyonu</h1>
-  <div class="sub">Pafta HAT v17 · tek FR5 yer rayında · her hareket mesafe ve hızdan hesaplanır, erişim ve çarpışma kontrollü.</div>
+  <div class="sub">Pafta HAT v17 · FR5 yer rayında (1 ya da 2 robot) · her hareket mesafe ve hızdan hesaplanır, erişim ve çarpışma kontrollü.</div>
 
   <div class="row"><label>Senaryo</label><select id="sen"><option value="tek">Tek sipariş</option><option value="uc">3 müşteri · 1'er dk arayla</option><option value="aksam" selected>Akşam piki · hafta içi 17–20 · 53 sipariş</option><option value="cmt">Cumartesi akşamı 17–20 · 74 sipariş</option><option value="akis">Sürekli akış · 1 saat (sınır testi)</option></select></div>
+  <div class="row"><label>Robot</label><select id="robotN"><option value="1">1 robot · tek FR5 rayda</option><option value="2">2 robot · aynı rayda SOL + SAĞ</option></select></div>
   <div class="row" id="tekRow"><label>Ürün</label><span><select id="urun" style="min-width:110px"><option value="pide">kaşarlı pide</option><option value="lahm">lahmacun</option></select> &nbsp;<input type="checkbox" id="kola" checked> içecek <input type="checkbox" id="tatli" checked> tatlı</span></div>
   <div class="row" id="akisRow"><label>Sipariş aralığı (sn)</label><input type="number" id="aralik" value="120" min="20" max="600" step="10"></div>
   <div class="btns" style="margin-top:8px"><button class="play" id="play">▶ Oynat</button><button id="stop">■</button><select id="hiz" style="min-width:64px"><option value="1">×1</option><option value="2">×2</option><option value="4" selected>×4</option><option value="10">×10</option><option value="30">×30</option></select></div>
@@ -77,8 +83,8 @@
 </div>
 <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
-<script src="sim.js?v=12"></script>
-<script src="sim2.js?v=12"></script>
-<script src="sim3.js?v=12"></script>
+<script src="sim.js?v=25"></script>
+<script src="sim2.js?v=25"></script>
+<script src="sim3.js?v=25"></script>
 </body>
 </html>

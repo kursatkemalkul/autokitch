@@ -88,16 +88,14 @@ const bicak=silindir(150,150,20,0xb0b8c4,.9,32); bicak.position.set(KES.cx,KES.y
 aabb(KUT.cx-200,KUT.cx+200,KUT.plaka-10,KUT.plaka,KUT.cz-200,KUT.cz+200,0x8a94a4,1);
 const itici=box(300,30,20,0xff8c40); scene.add(itici);
 const ray=box(3900,120,120,0x2997ff); scene.add(ray);
-const araba=box(400,140,300,0x3a4250); scene.add(araba);
-const kaide=silindir(100,100,1,0x596273); scene.add(kaide);
-const tabanM=silindir(75,75,120,0x9aa3b2); scene.add(tabanM);
-const ustKol=silindir(45,45,1,0xe8eaed,1,16); scene.add(ustKol);
-const onKol=silindir(40,40,1,0xe8eaed,1,16); scene.add(onKol);
-const bilekM=silindir(35,35,1,0xb8bfc9,1,16); scene.add(bilekM);
-const eklem=[0,0,0].map(()=>{ const s=new THREE.Mesh(new THREE.SphereGeometry(50,16,12),M(0x2997ff)); scene.add(s); return s; });
-const avucM=silindir(40,40,EL.AVUC,0x2997ff); scene.add(avucM);
-const pimM=silindir(10,10,EL.PIM,0xffb340,1,12); scene.add(pimM);
-const parmakM=[box(EL.PARMAK_W,EL.PARMAK_H,EL.PARMAK,0x7fb8ff),box(EL.PARMAK_W,EL.PARMAK_H,EL.PARMAK,0x7fb8ff)]; parmakM.forEach(m=>scene.add(m));
+/* robot görsel seti — iki robot için iki kopya (0: SOL · mavi, 1: SAĞ · turuncu) */
+function mkRobotM(renk){ const o={}; const ek=m=>{ scene.add(m); return m; };
+  o.araba=ek(box(400,140,300,0x3a4250)); o.kaide=ek(silindir(100,100,1,0x596273)); o.tabanM=ek(silindir(75,75,120,0x9aa3b2));
+  o.ustKol=ek(silindir(45,45,1,0xe8eaed,1,16)); o.onKol=ek(silindir(40,40,1,0xe8eaed,1,16)); o.bilekM=ek(silindir(35,35,1,0xb8bfc9,1,16));
+  o.eklem=[0,0,0].map(()=>ek(new THREE.Mesh(new THREE.SphereGeometry(50,16,12),M(renk)))); o.avucM=ek(silindir(40,40,EL.AVUC,renk)); o.pimM=ek(silindir(10,10,EL.PIM,0xffb340,1,12));
+  o.parmakM=[ek(box(EL.PARMAK_W,EL.PARMAK_H,EL.PARMAK,0x7fb8ff)),ek(box(EL.PARMAK_W,EL.PARMAK_H,EL.PARMAK,0x7fb8ff))];
+  o.hepsi=[o.araba,o.kaide,o.tabanM,o.ustKol,o.onKol,o.bilekM,o.avucM,o.pimM].concat(o.eklem,o.parmakM); return o; }
+const ROBM=[mkRobotM(0x2997ff),mkRobotM(0xff8c40)];
 function havuz(n,mk){ const a=[]; for(let i=0;i<n;i++){ const g=mk(); g.visible=false; scene.add(g); a.push(g); } return a; }
 /* kutu: taban + 4 duvar + içinde pide + arkadan menteşeli kapak (kapanma 0..1) */
 function mkKutu(){ const g=new THREE.Group(), K=EL.KUTU, H=EL.KUTU_H, c=0xe0c890; const tb=box(K,4,K,c); tb.position.y=-H/2+2; g.add(tb);
@@ -116,12 +114,14 @@ const HAVUZ={ tepsi:havuz(NIS.n,mkTepsi), kutu:havuz(30,mkKutu),
   kola:havuz(60,()=>silindir(EL.KOLA_R,EL.KOLA_R,EL.KOLA_H,0xd03030,1,16)),
   tatli:havuz(40,()=>silindir(EL.TATLI_R,EL.TATLI_R-6,EL.TATLI_H,0xf5e6c8,1,16)),
   top:havuz(40,()=>new THREE.Mesh(new THREE.SphereGeometry(EL.TOP_R,16,12),M(0xf0d9a8))) };
-const temasM=havuz(24,()=>new THREE.Mesh(new THREE.SphereGeometry(22,10,8),new THREE.MeshBasicMaterial({color:0xff2d2d})));
-const erisimW=new THREE.LineSegments(new THREE.WireframeGeometry(new THREE.SphereGeometry(1,18,12)),new THREE.LineBasicMaterial({color:0x2997ff,transparent:true,opacity:.12})); scene.add(erisimW);
+const temasM=havuz(36,()=>new THREE.Mesh(new THREE.SphereGeometry(22,10,8),new THREE.MeshBasicMaterial({color:0xff2d2d})));
+/* erişim küresi kaldırıldı (menü sadeleşti) */
 
 /* ================= DURUM ================= */
-const S={carX:1100, tcp:V(1400,1300,220), t:V(0,0,-1), u:V(0,1,0), yuk:'bos', tasi:null, parmak:70,
-  cek:{}, cekI:{}, kapak:[0,0,0], qrk:{}, itme:0, ustPlakaY:0, bicakY:0, akis:null, nesne:[], sonIK:null, temas:[]};
+const mkRob=(x)=>({carX:x, tcp:V(x+300,1300,220), t:V(0,0,-1), u:V(0,1,0), yuk:'bos', tasi:null, parmak:70, sonIK:null, temas:[]});
+const ROB=[mkRob(1100),mkRob(3300)];
+const S={ri:0, n:1, cek:{}, cekI:{}, kapak:[0,0,0], qrk:{}, itme:0, ustPlakaY:0, bicakY:0, akis:null, nesne:[]};
+['carX','tcp','t','u','yuk','tasi','parmak','sonIK','temas'].forEach(k=>Object.defineProperty(S,k,{get(){ return ROB[S.ri][k]; },set(v){ ROB[S.ri][k]=v; }}));   // S.carX vb. = AKTİF robotun alanı
 Object.keys(KOLON).forEach(k=>{ S.cek[k]=0; S.cekI[k]=0; });
 const $=id=>document.getElementById(id);
 const model=$('model'), omuz=$('omuz'), railz=$('railz'), pay=$('pay'), hiz=$('hiz'), plaka=$('plaka'), out=$('out'), step=$('step'), log=$('log');
@@ -132,7 +132,7 @@ function Wof(st){ const y=YUK[st.yuk]; return st.tcp.clone().addScaledVector(st.
 function tcpOf(W,st,yuk){ const y=YUK[yuk]; return W.clone().addScaledVector(st.t,y.L).addScaledVector(st.u,y.P); }
 /* dünya nesneleri: {tip, pos, icerik, kapali, yatik, mesh} */
 function nesneGoster(n){ if(!n.mesh){ n.mesh=HAVUZ[n.tip].find(m=>!m.visible&&!m.userData.sahip); if(!n.mesh) return; n.mesh.userData.sahip=n; } n.mesh.visible=true; if(S.nesne.indexOf(n)<0) S.nesne.push(n); }
-function nesneSil(n){ if(n.mesh){ n.mesh.visible=false; n.mesh.userData.sahip=null; n.mesh=null; } const i=S.nesne.indexOf(n); if(i>=0) S.nesne.splice(i,1); if(S.tasi===n) S.tasi=null; }
+function nesneSil(n){ if(n.mesh){ n.mesh.visible=false; n.mesh.userData.sahip=null; n.mesh=null; } const i=S.nesne.indexOf(n); if(i>=0) S.nesne.splice(i,1); ROB.forEach(r=>{ if(r.tasi===n) r.tasi=null; }); }
 
 /* ================= ENGELLER / BOŞLUKLAR ================= */
 function cavities(){
@@ -151,6 +151,7 @@ function solids(){
   const s=MOD.map(([ad,x0,x1,y0,y1])=>({ad,b:[x0,x1,y0,y1,-HAT.derin,0]}));
   s.push({ad:"zemin",b:[-9000,9000,-500,0,-9000,9000]}, {ad:"koridor duvarı",b:[-9000,9000,0,3000,KOR,KOR+300]}, {ad:"QR dolabı",b:[QR.x[0],QR.x[1],QR.y[0],QR.y[1],QR.z[0],QR.z[1]]},
     {ad:"ray + araba",b:[S.carX-200,S.carX+200,0,260,railZ()-150,railZ()+150]});
+  if(S.n>1){ const ox=ROB[1-S.ri].carX; s.push({ad:"DİĞER ROBOT arabası",b:[ox-200,ox+200,0,260,railZ()-150,railZ()+150]},{ad:"DİĞER ROBOT gövdesi",b:[ox-100,ox+100,0,omuzY()+60,railZ()-100,railZ()+100]}); }
   Object.entries(KOLON).forEach(([k,K])=>{ const a=S.cek[k]||0; if(a>0.02){ const y=K.kotlar[S.cekI[k]]; s.push({ad:"açık çekmece "+k,b:[K.x0,K.x1,y,y+K.ic+30,0,a*K.acik]}); } });
   qrKapak.forEach((q,i)=>{ const a=S.qrk[i]||0; if(a>0.05) s.push({ad:"açık QR kapağı",b:[q.x-235,q.x+235,q.y-14,q.y,QR.z[0]-a*(QR.goz_h-10),QR.z[0]]}); });   // alttan menteşeli: açıkken öne yatar
   return s;
