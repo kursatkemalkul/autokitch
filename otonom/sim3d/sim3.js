@@ -155,7 +155,16 @@ function kpiYaz(ps){ const k=ps.kpi, e=$('kpi'), T=Math.max(1,k.sure);
   $('siparisler').innerHTML=ps.O.slice(0,120).map(o=>`<div>#${o.id} ${saat(o.arr)} · ${o.items.join('+')}${o.kola?' +içecek':''}${o.tatli?' +tatlı':''} → ${o.teslim?'<span class="'+((o.teslim-o.arr)>1500?'yok':'ok')+'">'+fmt(o.teslim-o.arr)+'</span>':'<span class="yok">teslim yok</span>'}</div>`).join('');
 }
 /* ================= ZAMAN ÇİZELGESİ + OYNATMA ÇUBUĞU ================= */
-let GX=null;
+let GX=null, GH=0, GHmax=0;                                   // GH: zaman çizelgesinin açık yüksekliği (0 = kapalı, yalnız oynatma çubuğu görünür)
+function altKur(){ $('gwrap').style.height=GH+'px'; $('scrubwrap').style.bottom=GH+'px'; $('tut').style.bottom=(GH+30)+'px'; }
+try{ const v=localStorage.getItem('ak_gantt_h'); if(v!==null) GH=Math.max(0,+v||0); }catch(e){}
+(function(){ const t=$('tut'); let y0=0, h0=0;
+  t.addEventListener('pointerdown',e=>{ y0=e.clientY; h0=GH; t.setPointerCapture(e.pointerId); t._sur=true; e.preventDefault(); });
+  t.addEventListener('pointermove',e=>{ if(!t._sur) return; GH=Math.max(0,Math.min(GHmax,h0+(y0-e.clientY))); altKur(); });
+  const birak=()=>{ if(!t._sur) return; t._sur=false; try{ localStorage.setItem('ak_gantt_h',GH); }catch(e2){} };
+  t.addEventListener('pointerup',birak); t.addEventListener('pointercancel',birak);
+  t.addEventListener('dblclick',()=>{ GH=GH>20?0:GHmax; altKur(); try{ localStorage.setItem('ak_gantt_h',GH); }catch(e){} }); })();
+altKur();
 function gantt(ps){ const c=$('gantt'), W=Math.max(1200,Math.ceil(ps.kpi.sure/3600*1400)+80), N=ps.N, rows=(N>1?['robot SOL','robot SAĞ']:['robot']).concat(['pres','topping','fırın 1','fırın 2','fırın 3','kesim','sprey','kutu','QR dolabı']), H=30+rows.length*19; c.width=W; c.height=H; const g=c.getContext('2d'); g.fillStyle='#0d1016'; g.fillRect(0,0,W,H);
   const T1=Math.max(600,ps.kpi.sure), x=t=>70+t/T1*(W-90), ry=i=>6+i*19, o=N>1?1:0; GX={x,T1,W};
   g.font='11px sans-serif'; g.fillStyle='#8a94a4'; rows.forEach((r,i)=>g.fillText(r,4,ry(i)+12));
@@ -166,8 +175,8 @@ function gantt(ps){ const c=$('gantt'), W=Math.max(1200,Math.ceil(ps.kpi.sure/36
       b.steps.forEach(()=>{}); if(key==='TOP'&&!b.firin){ g.fillStyle='#ffb340'; g.fillRect(x(b.t0+15),ry(2+o),Math.max(1,x(b.t1)-x(b.t0+15)),15); } if(b.bitis){ g.fillStyle='#2997ff'; g.fillRect(x(b.t0+8),ry(8+o),Math.max(1,x(b.t0+30)-x(b.t0+8)),15); } }
     else if(b.tip==='istasyon'){ const i=b.ad.indexOf('PRES')===0?1:b.ad.indexOf('KESİM')===0?6:7; g.fillStyle='#4a5568'; g.fillRect(x(b.t0),ry(i+o),Math.max(1,x(b.t1)-x(b.t0)),15); } });
   ps.O.forEach(q=>{ if(!q.teslim) return; g.fillStyle='rgba(41,151,255,.35)'; g.fillRect(x(q.arr),ry(9+o),Math.max(1,x(q.teslim+HIZ.musteri)-x(q.arr)),15); g.fillStyle='#fff'; g.fillRect(x(q.arr),ry(9+o),1,15); });
-  $('gwrap').style.height=(H+8)+'px'; $('scrubwrap').style.bottom=(H+8)+'px'; const sc=$('scrub'); sc.max=Math.ceil(ps.kpi.sure); sc.value=0; kafaKoy(0); }
-function kafaKoy(T){ const k=$('kafa'); if(!k||!GX) return; k.style.left=GX.x(T)+'px'; const w=$('gwrap'); if(anim){ const xx=GX.x(T); if(xx<w.scrollLeft+60||xx>w.scrollLeft+w.clientWidth-80) w.scrollLeft=Math.max(0,xx-w.clientWidth/3); } }
+  GHmax=H+8; if(GH>GHmax) GH=GHmax; altKur(); const sc=$('scrub'); sc.max=Math.ceil(ps.kpi.sure); sc.value=0; kafaKoy(0); }
+function kafaKoy(T){ const k=$('kafa'); if(!k||!GX||GH<20) return; k.style.left=GX.x(T)+'px'; const w=$('gwrap'); if(anim){ const xx=GX.x(T); if(xx<w.scrollLeft+60||xx>w.scrollLeft+w.clientWidth-80) w.scrollLeft=Math.max(0,xx-w.clientWidth/3); } }
 
 /* ================= UI ================= */
 let PLAN=null;

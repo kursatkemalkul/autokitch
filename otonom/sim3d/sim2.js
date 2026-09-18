@@ -45,7 +45,7 @@ addEventListener('resize',resize); resize();
 const CAM={iso:[[-1200,2600,5400],[2000,900,0]], on:[[2000,1100,6600],[2000,1000,0]], ust:[[2000,7500,600],[2000,0,400]], yan:[[-4800,1400,600],[1200,900,300]], robot:[[0,1800,2400],[0,1100,100]]};
 function kamera(k){ const c=CAM[k]; if(k==='robot'){ c[0][0]=ROB[0].carX-1500; c[1][0]=ROB[0].carX; } camera.position.set(...c[0]); controls.target.set(...c[1]); controls.update(); }
 kamera('iso');
-document.querySelectorAll('[data-cam]').forEach(b=>b.onclick=()=>kamera(b.dataset.cam));
+document.querySelectorAll('[data-cam]').forEach(b=>b.onclick=()=>kamera(b.dataset.cam));   // menüde düğme yok; kamera fareyle çevrilir
 let takip=false; $('takip').onchange=e=>{ takip=e.target.checked; };
 (function loop(){ if(takip&&anim){ controls.target.lerp(V(ROB[0].carX+300,1000,100),.08); const d=camera.position.clone().sub(controls.target); camera.position.copy(controls.target).add(d.setLength(Math.max(2600,d.length()))); controls.update(); } ciz(); renderer.render(scene,camera); requestAnimationFrame(loop); })();
 
