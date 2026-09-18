@@ -23,7 +23,7 @@ const KOLON = {  // çekmeceler 620 × 680 · motorlu 700 strok — hamur: pide 
   KI:{x0:1372.5,x1:1992.5, kotlar:[725.5,862.5], ic:104, tip:"icecek", acik:700, yanAcik:true}   // İÇECEK + TATLI · K3 ÜSTÜ (pafta v7 yeri · v11'de geri geldi) · 2 kat
 };
 /* E çekmecesi dizilişi: tatlı sol sütun (robot yandan, el yatay +x · kap dik kalır) · kola 3 sütun × 8 (üstten kavrama, parmak ekseni x → sütun aralığı 116) */
-function icecekPos(tip,kat,k){ const K=KOLON.KI, y0=K.kotlar[kat]+12; return tip==='kola'?V(K.x0+280+116*(k%3), y0+EL.KOLA_H/2, 62+75*Math.floor(k/3)):V(K.x0+60+100*Math.floor(k/5), y0+EL.TATLI_H/2, 200+95*(k%5)); }   // tatlı z ≥ 200: el +x yönünde girerken parmaklar hat yüzüne, dirsek D'ye girmesin
+function icecekPos(tip,kat,k){ const K=KOLON.KI, y0=K.kotlar[kat]+12; return tip==='kola'?(k<16?V(K.x0+216+116*(k%2), y0+EL.KOLA_H/2, 62+75*Math.floor(k/2)):V(K.x0+100, y0+EL.KOLA_H/2, 62+75*(k-16))):V(K.x1-60-100*Math.floor(k/5), y0+EL.TATLI_H/2, 200+95*(k%5)); }   // kola 3 sütun: önce ortadaki 2 sütun (çekmecenin SAĞ duruşundan da erişilir → SAĞ robot SOL'un bölgesine girmez), sonra en soldaki sütun · tatlı SAĞDA 2 sütun: robot çekmecenin sağında durur, el −x yönünde girer → SAĞ robot kendi bölgesinden alır   // tatlı z ≥ 200: el +x yönünde girerken parmaklar hat yüzüne, dirsek D'ye girmesin
 const NIS={x:[2070,2455], y:[690,1000], z:[-660,0], cx:2262, cz:-450, raf0:702, pitch:50, n:6};          // K4 üstü: 6 tepsi (v11) · altında kaşar+sucuk deposu 375–675 · en altta soğutma grubu 140–360
 const T_AGZ=[1070,1180], T_Y=1120, T_BAS=[1183,1317], T_KAS=[1320,1680];
 const HAZNE=[["HARÇ 1",280,1070,0xc06040],["HARÇ 2",280,1350,0xc06040],["KIYMA",140,1560,0x9a5a3a],["KUŞBAŞI",140,1700,0x8a4a3a],["KAŞAR",280,1910,0xffd24a],["SUCUK",180,2140,0xb03a2a]];   // pafta v10 YUVA sırası
@@ -144,7 +144,7 @@ function cavities(){
     {ad:"tepsi nişi",b:[NIS.x[0],NIS.x[1],NIS.y[0],NIS.y[1],NIS.z[0],100]}];
   FIR.forEach((f,i)=>{ if(S.kapak[i]>0.95) c.push({ad:"fırın kapağı "+(i+1),b:[FIR_X.x[0],FIR_X.x[1],f[0]+40,f[1]-40,-200,100]}); c.push({ad:"fırın iç "+(i+1),b:[FIR_X.ic[0],FIR_X.ic[1],f[0]+100,f[1]-100,-560,-160]}); });
   qrKapak.forEach((q,i)=>{ if((S.qrk[i]||0)>0.95) c.push({ad:"QR göz",b:[q.x-240,q.x+240,q.y-15,q.y+QR.goz_h,QR.z[0]-100,QR.z[0]+QR.derin]}); });
-  Object.entries(KOLON).forEach(([k,K])=>{ const a=S.cek[k]||0; if(a>0.02) c.push({ad:"açık "+k,b:[K.yanAcik?K.x0-300:K.x0+20,K.x1-20,K.kotlar[S.cekI[k]]+12,K.kotlar[S.cekI[k]]+2000,20,a*K.acik-20]}); });
+  Object.entries(KOLON).forEach(([k,K])=>{ const a=S.cek[k]||0; if(a>0.02) c.push({ad:"açık "+k,b:[K.x0+20,K.yanAcik?K.x1+300:K.x1-20,K.kotlar[S.cekI[k]]+12,K.kotlar[S.cekI[k]]+2000,20,a*K.acik-20]}); });
   return c;
 }
 function solids(){
