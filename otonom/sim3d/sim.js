@@ -28,10 +28,10 @@ const NIS={x:[2070,2455], y:[690,1000], z:[-660,0], cx:2262, cz:-450, raf0:702, 
 const T_AGZ=[1070,1180], T_Y=1120, T_BAS=[1183,1317], T_KAS=[1320,1680];
 const HAZNE=[["HARÇ 1",280,1070,0xc06040],["HARÇ 2",280,1350,0xc06040],["KIYMA",140,1560,0x9a5a3a],["KUŞBAŞI",140,1700,0x8a4a3a],["KAŞAR",280,1910,0xffd24a],["SUCUK",180,2140,0xb03a2a]];   // pafta v10 YUVA sırası
 const NOZ={kasar:{x:1910,renk:0xffd24a}, harc:{x:1350,renk:0xb0402a}, harc2:{x:1070,renk:0xb0402a}, z:-310, alt:1183};
-const FIR=[[1065,1380],[1385,1700],[1705,2028]];                                                            // pafta v10 kotları · kapak y0+40..y1−40 · iç taban y0+100 (iç 400×400×100 · taş)
+const FIR=[[805,1120],[1125,1440],[1445,1768]];   // pafta v17 (3B tarama sonucu: omuz 970 · ray z 360 · D kolonu alt kotu 285) ·                                                            // pafta v10 kotları · kapak y0+40..y1−40 · iç taban y0+100 (iç 400×400×100 · taş)
 const FIR_X={x:[2533,3167], ic:[2650,3050], cx:2850, cz:-360};
-const KES={x:[2553,3147], y:[800,935], z:[-540,0], cx:2850, cz:-270};
-const YAG={x:[2553,2920], y:[580,755], z:[-440,0], cx:2737, cz:-220};
+const KES={x:[2553,3147], y:[540,675], z:[-540,0], cx:2850, cz:-270};
+const YAG={x:[2553,2920], y:[320,495], z:[-440,0], cx:2737, cz:-220};
 const KUT={x:[3230,3870], y:[430,680], z:[-768,0], cx:3550, cz:-390, plaka:470, itme:360};                 // pafta HAT v10: kutu ağzı 430–680
 /* QR: göz 480 × 190 × 440 (pafta 380: kutu 320 + tatlı Ø90 yan yana sığmıyor → sol şerit 135 + kutu 320 + paylar = 480 · varsayım) */
 const QR ={x:[2895,3900], y:[400,2000], z:[900,1340], kol:[[2910,3390],[3410,3890]], satir:[410,610,810,1010,1210,1410], derin:440, goz_h:190,
@@ -62,6 +62,7 @@ function agiz(x0,x1,y0,y1,z0,z1){ return aabb(x0,x1,y0,y1,z0,z1,0xff5c5c,.10,0xf
 agiz(730,2470,T_AGZ[0],T_AGZ[1],-768,0); agiz(KES.x[0],KES.x[1],KES.y[0],KES.y[1],KES.z[0],KES.z[1]);
 agiz(YAG.x[0],YAG.x[1],YAG.y[0],YAG.y[1],YAG.z[0],YAG.z[1]); agiz(KUT.x[0],KUT.x[1],KUT.y[0],KUT.y[1],KUT.z[0],KUT.z[1]);
 agiz(NIS.x[0],NIS.x[1],NIS.y[0],NIS.y[1],NIS.z[0],NIS.z[1]);
+aabb(2540,3160,140,275,-400,-6,0x5a6472,1,0x20242c);   // D altı: robot kontrol kutusu bölmesi (ray yanında)
 aabb(2035,2420,375,675,-820,-6,0xd9b04a,1,0x20242c); aabb(2035,2420,140,360,-306,-6,0x5a6472,1,0x20242c);   // K4: KAŞAR + SUCUK DEPOSU (kapaklı · eleman doldurur) · soğutma grubu
 /* C · TOPPING: 6 hazne (kaset) + dozaj başlığı + alt çıkış (nozul ağzı, robot ağzının tavanında) */
 HAZNE.forEach(([ad,gw,xc,renk])=>{ aabb(xc-gw/2+6,xc+gw/2-6,T_KAS[0]+8,T_KAS[1]-8,NOZ.z-200,NOZ.z+200,renk,1,0x20242c);

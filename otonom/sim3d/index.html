@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AUTOKITCH — 3D Robot Simülasyonu v6</title>
+<title>AUTOKITCH — 3D Robot Simülasyonu v7</title>
 <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
 <style>
   :root{--bg:#0d1016;--panel:#161a22;--line:#2a2f3a;--gray:#8a94a4;--blue:#2997ff;--green:#3ddc84;--red:#ff5c5c;--amber:#ffb340;
@@ -45,8 +45,8 @@
 <canvas id="c"></canvas>
 <div id="gwrap"><canvas id="gantt"></canvas></div>
 <div id="ui">
-  <h1>3D Robot Simülasyonu v6</h1>
-  <div class="sub">Pafta HAT v11 ölçüleri · tepsi doğrudan presin alt plakasına, hamur ağızdan içeri tepsinin ortasına · içecek + tatlı B modülünde K3 üstündeki 2 katlı çekmeceden · kaşar/sucuk deposu K4'te · 6 hazne + nozul çıkışları · giyotin fırın kapağı · QR gözü: solda tatlı + kola, sağda kutu · dirsek hep yukarı, eklem hız sınırı, kendi gövdesi çarpışma testi.</div>
+  <h1>3D Robot Simülasyonu v7</h1>
+  <div class="sub">Pafta HAT v17 ölçüleri · 3B tarama: omuz 970 · ray hat yüzünden 360 → 3 fırın gözü + sprey + kesim + pres + QR hepsi erişilir · tepsi doğrudan presin alt plakasına, hamur ağızdan içeri tepsinin ortasına · içecek + tatlı B modülünde K3 üstündeki 2 katlı çekmeceden · kaşar/sucuk deposu K4'te · 6 hazne + nozul çıkışları · giyotin fırın kapağı · QR gözü: solda tatlı + kola, sağda kutu · dirsek hep yukarı, eklem hız sınırı, kendi gövdesi çarpışma testi.</div>
 
   <h2>Senaryo</h2>
   <div class="row"><label>Senaryo</label><select id="sen"><option value="tek">Tek sipariş · full detay</option><option value="uc">3 müşteri</option><option value="aksam">AKŞAM PİKİ · hafta içi · 53</option><option value="cmt">CUMARTESİ AKŞAMI · 74</option></select></div>
@@ -59,8 +59,8 @@
 
   <h2>Robot</h2>
   <div class="row"><label>Model</label><select id="model"></select></div>
-  <div class="row"><label>Omuz kotu</label><input type="range" id="omuz" min="700" max="1500" step="10" value="1000"><span class="val" id="omuz_v">1000</span></div>
-  <div class="row"><label>Ray ekseni z</label><input type="range" id="railz" min="150" max="500" step="10" value="300"><span class="val" id="railz_v">300</span></div>
+  <div class="row"><label>Omuz kotu</label><input type="range" id="omuz" min="700" max="1500" step="10" value="970"><span class="val" id="omuz_v">970</span></div>
+  <div class="row"><label>Ray ekseni z</label><input type="range" id="railz" min="150" max="500" step="10" value="360"><span class="val" id="railz_v">360</span></div>
   <div class="row"><label>Emniyet payı</label><select id="pay"><option value="0.95">%5</option><option value="0.9">%10</option><option value="1">yok</option></select></div>
   <div class="row"><label>Oynatma hızı</label><select id="hiz"><option value="1">×1</option><option value="2" selected>×2</option><option value="4">×4</option><option value="10">×10</option><option value="30">×30</option></select></div>
   <div class="row"><label>Hareket hızı profili</label><select id="hizp"><option value="1">temkinli · 0,6 / ray 0,5 m/s</option><option value="1.6">hızlı · 1,0 / ray 0,8 m/s</option></select></div>
@@ -81,8 +81,8 @@
 </div>
 <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
-<script src="sim.js?v=6"></script>
-<script src="sim2.js?v=6"></script>
-<script src="sim3.js?v=6"></script>
+<script src="sim.js?v=11"></script>
+<script src="sim2.js?v=11"></script>
+<script src="sim3.js?v=11"></script>
 </body>
 </html>

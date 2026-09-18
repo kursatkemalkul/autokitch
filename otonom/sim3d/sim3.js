@@ -22,7 +22,7 @@ function stokAl(st,tip){ const q=st[tip].find(d=>d.k<d.n); if(!q) return null; c
 
 /* ================= ERİŞİM ÖN TESTİ ================= */
 function erisiyorMu(W,carX){ return ikq(W,carX).ok; }
-function gozler(){ return FIR.map((f,g)=>{ const taban=f[0]+100; return {g, tip:g===0?'pide':'lahm', sure:g===0?HIZ.firin.pide:HIZ.firin.lahm, ok:erisiyorMu(V(FIR_X.cx,taban+60,TZ+500),carFor(FIR_X.cx))&&erisiyorMu(V(FIR_X.cx,taban+60,FIR_X.cz+500),carFor(FIR_X.cx)), p:null, doneAt:0}; }); }
+function gozler(){ return FIR.map((f,g)=>{ const taban=f[0]+100; return {g, tip:g===2?'pide':'lahm', sure:g===2?HIZ.firin.pide:HIZ.firin.lahm, /* pafta: göz 1–2 lahmacun · göz 3 pide */ ok:erisiyorMu(V(FIR_X.cx,taban+60,TZ+500),carFor(FIR_X.cx,taban+20,FIR_X.cz))&&erisiyorMu(V(FIR_X.cx,taban+60,FIR_X.cz+500),carFor(FIR_X.cx,taban+20,FIR_X.cz)), p:null, doneAt:0}; }); }
 
 /* ================= ÇİZELGELEYİCİ (tek robot · greedy öncelik) ================= */
 function planla(cfg){
