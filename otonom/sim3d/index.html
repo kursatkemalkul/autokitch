@@ -55,10 +55,11 @@
 <div id="gwrap"><canvas id="gantt"></canvas><div id="kafa"></div></div>
 <div id="ui">
   <h1>AUTOKITCH · 3D Hat Simülasyonu</h1>
-  <div class="sub">Pafta HAT v17 · FR5 yer rayında (1 ya da 2 robot) · her hareket mesafe ve hızdan hesaplanır, erişim ve çarpışma kontrollü.</div>
+  <div class="sub">Pafta HAT v18 · FR5 yer rayında (1 ya da 2 robot) · her hareket mesafe ve hızdan hesaplanır, erişim ve çarpışma kontrollü.</div>
 
   <div class="row"><label>Senaryo</label><select id="sen"><option value="tek">Tek sipariş</option><option value="uc">3 müşteri · 1'er dk arayla</option><option value="aksam" selected>Akşam piki · hafta içi 17–20 · 53 sipariş</option><option value="cmt">Cumartesi akşamı 17–20 · 74 sipariş</option><option value="akis">Sürekli akış · 1 saat (sınır testi)</option></select></div>
   <div class="row"><label>Robot</label><select id="robotN"><option value="1">1 robot · tek FR5 rayda</option><option value="2">2 robot · aynı rayda SOL + SAĞ</option></select></div>
+  <div class="row" id="rafRow" style="display:none"><label>Aktarma gözü</label><select id="rafSec"><option value="hep">var · SOL göze bırakır, SAĞ fırınlar (v18)</option><option value="yok">yok · SOL doğrudan fırına (v17)</option></select></div>
   <div class="row" id="tekRow"><label>Ürün</label><span><select id="urun" style="min-width:110px"><option value="pide">kaşarlı pide</option><option value="lahm">lahmacun</option></select> &nbsp;<input type="checkbox" id="kola" checked> içecek <input type="checkbox" id="tatli" checked> tatlı</span></div>
   <div class="row" id="akisRow"><label>Sipariş aralığı (sn)</label><input type="number" id="aralik" value="120" min="20" max="600" step="10"></div>
   <div class="btns" style="margin-top:8px"><button class="play" id="play">▶ Oynat</button><button id="stop">■</button><select id="hiz" style="min-width:64px"><option value="1">×1</option><option value="2">×2</option><option value="4" selected>×4</option><option value="10">×10</option><option value="30">×30</option></select></div>
@@ -85,8 +86,8 @@
 </div>
 <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
-<script src="sim.js?v=43"></script>
-<script src="sim2.js?v=43"></script>
-<script src="sim3.js?v=43"></script>
+<script src="sim.js?v=53"></script>
+<script src="sim2.js?v=53"></script>
+<script src="sim3.js?v=53"></script>
 </body>
 </html>

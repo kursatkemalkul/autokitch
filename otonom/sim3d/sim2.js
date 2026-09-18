@@ -145,17 +145,23 @@ function G_baslat(B,p,elde){ const P=PRES(), tray=p.tray, ballH={tip:'top',pos:p
 /* pres çevrimi (istasyon işi · robot yok): üst plaka iner · basar · kalkar */
 function G_presCevrim(B,p){ const tray=p.tray; B.bekle('PRES · '+HIZ.pres+' s',HIZ.pres,e=>{ const a=e<.4?e/.4:e>.6?(1-e)/.4:1; S.ustPlakaY=a*172; if(e>.45) tray.icerik='taban'; }); }
 /* G2 · tepsiyi presten al → topping (nozul sabit, robot tepsiyi spiral gezdirir) → fırın (giyotin kapak yolda açılır) */
-function G_topping(B,p,cekilX){ const P=PRES(), cpT=presErisir(B.cur.carX)?B.cur.carX:carPres(), tray=p.tray, noz=p.tip==='pide'?NOZ.kasar:(p.id%2?NOZ.harc:NOZ.harc2), ds=p.tip==='pide'?HIZ.kasar:HIZ.harc, ic=p.tip==='pide'?'kasar':'harc';
+function G_topping(B,p,cekilX,raf){ const P=PRES(), cpT=presErisir(B.cur.carX)?B.cur.carX:carPres(), tray=p.tray, noz=p.tip==='pide'?NOZ.kasar:(p.id%2?NOZ.harc:NOZ.harc2), ds=p.tip==='pide'?HIZ.kasar:HIZ.harc, ic=p.tip==='pide'?'kasar':'harc';
   tepsiAl(B,tray,'pres alt plakası',P.cx,P.plaka+20,P.cz,null,cpT); B.mv('yüksel · tepsi omuz üstünden geçecek',{tcp:V(P.cx,TR,TZ)});
   B.bol('topping'); B.kay('→ topping · '+(p.tip==='pide'?'kaşar haznesi':'harç haznesi'),carFor(noz.x,undefined,undefined,B.yon)); B.mv('omuz üstünden karşıya',{tcp:V(noz.x,TR,TZ)}); B.mv('topping: ağız hizası',{tcp:V(noz.x,T_Y,TZ)}); gir(B,'topping: nozul çıkışının altına',V(noz.x,T_Y,NOZ.z));
   B.elle({ad:(p.tip==='pide'?'KAŞAR':'HARÇ')+' DOZAJI · spiral 2 tur · '+ds+' s',sure:ds,basla:()=>{ tray.icerik=ic; tray.dolu=0; S.akis={x:noz.x,z:NOZ.z,renk:noz.renk}; },fn:e=>{ const th=e*4*Math.PI, rr=110*e; S.tcp.set(noz.x+rr*Math.cos(th),T_Y,NOZ.z+rr*Math.sin(th)); tray.dolu=e; },bitir:()=>{ S.akis=null; tray.dolu=1; }},V(noz.x+110,T_Y,NOZ.z),230);
   B.mv('topping: merkeze',{tcp:V(noz.x,T_Y,NOZ.z)},HIZ.ince); B.mv('topping: çıkar',{tcp:V(noz.x,T_Y,TZ)},HIZ.orta);
+  if(raf){ B.bol('rafa koy'); tepsiKoy(B,tray,'aktarma gözü',NIS.cx,RAF.y,NIS.cz,null,NIS.cx-450*B.yon); return; }   // 2 robot: SOL fırın kolonuna hiç girmez
+  firinaKoy(B,p,cekilX);
+}
+function firinaKoy(B,p,cekilX){ const tray=p.tray;
   B.bol('fırına götür'); const g=p.goz, taban=FIR[g][0]+100; B.kay('→ fırın göz '+(g+1)+' · giyotin kapak yolda açılır',carFor(FIR_X.cx,taban+20,FIR_X.cz,B.yon),null,kapakAnim('fir',g,1));
   B.mv('fırın: kapak kotu',{tcp:V(FIR_X.cx,taban+40,TZ)}); gir(B,'fırın: içeri',V(FIR_X.cx,taban+40,FIR_X.cz)); B.mv('fırın: taşa indir',{tcp:V(FIR_X.cx,taban+20,FIR_X.cz)},HIZ.mikro);
   B.bekle('pim çözülür',HIZ.pim); B.yuk('tepsi fırında','bos',()=>{ S.tasi=null; tray.pos=V(FIR_X.cx,taban+20,FIR_X.cz); }); B.mv('fırın: el çıkar',{tcp:V(FIR_X.cx,taban+20,TZ)},HIZ.orta);
   if(cekilX!==undefined&&cekilX!==null){ B.bol('çekil'); B.kay('nişin önüne çekil · fırın kapağı arkasından kapanır · SAĞ robota fırın kolonu açılır',cekilX,null,kapakAnim('fir',g,0)); }   // 2 robot: SOL iş bitince kendi tarafına döner
   else B.kapak('fırın kapağı kapanır','fir',g,0);
 }
+/* G2b · (2 robot) SAĞ: aktarma gözünden al → fırına koy — aynı duruşta yandaki gözde pişmiş ürün varsa onu da alır (değiş-tokuş) */
+function G_firina(B,p){ tepsiAl(B,p.tray,'aktarma gözü',NIS.cx,RAF.y,NIS.cz,null,NIS.cx-450*B.yon); firinaKoy(B,p,null); }
 /* G3 · fırından al → kesim */
 function G_kesim(B,p){ const tray=p.tray, g=p.goz, taban=FIR[g][0]+100;
   B.kay('→ fırın göz '+(g+1)+' · kapak yolda açılır',carFor(FIR_X.cx,taban+20,FIR_X.cz,B.yon),null,kapakAnim('fir',g,1,null,()=>{ tray.icerik='pismis'; tray.urun=p.tip; }));
