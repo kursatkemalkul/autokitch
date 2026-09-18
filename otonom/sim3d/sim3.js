@@ -182,8 +182,11 @@ function motor(T){ const robotAd=['',''], adim=['','']; let bitti=true, nextT=In
       if(T>=ls+s.sure){ s.fn(1); if(s.bitir) s.bitir(); b.cursor++; b.acc+=s.sure; ls+=s.sure; continue; } s.fn(ease((T-ls)/s.sure)); if(b.tip==='robot'){ robotAd[b.ri||0]=b.ad; adim[b.ri||0]=s.ad; } break; }
     if(b.cursor<b.steps.length) bitti=false; }
   S.ri=0; return {robotAd,adim,bitti,nextT}; }
-function durumYaz(T,m){ const N=OYN.ps.N, satir=i=>`<span style="color:${i?'#ff8c40':'#2997ff'}">${N>1?(i?'SAĞ':'SOL'):'robot'}</span> ${m.robotAd[i]?m.robotAd[i]+' — '+m.adim[i]:'<span style="color:#8a94a4">boşta</span>'}`;
-  step.innerHTML=`<span style="color:#8a94a4">${saat(T)}</span> · `+satir(0)+(N>1?'<br>'+satir(1):''); const sc=$('scrub'); if(sc&&!sc._tut) sc.value=T; $('scrubT').textContent=saat(T)+' / '+saat(OYN.ps.kpi.sure); kafaKoy(T); }
+function durumYaz(T,m){ const ps=OYN.ps, N=ps.N; if(!ps._bit){ ps._bit=ps.plan.filter(b=>b.bitis).map(b=>b.t1).sort((a,b)=>a-b); ps._tes=ps.O.filter(o=>o.teslim).map(o=>o.teslim).sort((a,b)=>a-b); }
+  const say=(a)=>{ let n=0; while(n<a.length&&a[n]<=T) n++; return n; }, urunAd={pide:'pide',lahm:'lahmacun'};
+  const satir=i=>{ const ad=m.robotAd[i]; let ne='<span style="color:#8a94a4">boşta</span>'; if(ad){ const u=ad.match(/#(\d+) ?(pide|lahm)?/), p=u&&ps.P.find(q=>q.id===+u[1]); ne=(p?'#'+p.id+' '+urunAd[p.tip]:ad.split(' · ')[0])+' · '+m.adim[i]; }
+    return `<div><span style="color:${i?'#ff8c40':'#2997ff'}">${N>1?(i?'SAĞ':'SOL'):'ROBOT'}</span> <span style="color:#d5dbe6;font-weight:500">${ne}</span></div>`; };
+  step.innerHTML=`<div><span style="color:#8a94a4">${saat(T)}</span> · ÇIKAN ÜRÜN <b style="color:#3ddc84">${say(ps._bit)}</b> / ${ps.kpi.urun} <span style="color:#8a94a4">· teslim ${say(ps._tes)} / ${ps.kpi.siparis} sipariş</span></div>`+satir(0)+(N>1?satir(1):''); const sc=$('scrub'); if(sc&&!sc._tut) sc.value=T; $('scrubT').textContent=saat(T)+' / '+saat(OYN.ps.kpi.sure); kafaKoy(T); }
 /* zamana git: geriye de gider (baştan T'ye kadar yeniden kurar) */
 function zamanaGit(ps,T){ if(!OYN||OYN.ps!==ps) OYN={ps,T:0,bl:[],son:0}; hazirla(ps); OYN.bl=ps.plan.map(b=>({...b,cursor:0,acc:0})); OYN.T=Math.max(0,Math.min(ps.kpi.sure+3,T)); const m=motor(OYN.T); ciz(); durumYaz(OYN.T,m); return m; }
 function oynat(ps){ dur(); if(!OYN||OYN.ps!==ps||OYN.T>=ps.kpi.sure) zamanaGit(ps,0); OYN.son=performance.now(); $('play').textContent='❚❚ Duraklat';
@@ -250,7 +253,7 @@ function kafaKoy(T){ const k=$('kafa'); if(!k||!GX||GH<20) return; k.style.left=
 /* ================= UI ================= */
 let PLAN=null;
 function cfg(){ return {sen:$('sen').value, urun:$('urun').value, kola:$('kola').checked, tatli:$('tatli').checked, seed:+$('seed').value||1, aralik:+$('aralik').value||120, robot:+$('robotN').value||1}; }
-function planlaUI(){ dur(); const k=+$('hizp').value; HIZ.serbest=600*k; HIZ.orta=400*k; HIZ.ince=200*k; HIZ.mikro=80*k; HIZ.ray=500*k; PLAN=planla(cfg()); OYN=null; kpiYaz(PLAN); gantt(PLAN); zamanaGit(PLAN,0); step.innerHTML='plan hazır · '+PLAN.plan.filter(b=>b.tip==='robot'&&!b.yolver).length+' robot görevi · ▶ ile oynat ya da alttaki çubuğu sürükle'; return PLAN; }
+function planlaUI(){ dur(); const k=+$('hizp').value; HIZ.serbest=600*k; HIZ.orta=400*k; HIZ.ince=200*k; HIZ.mikro=80*k; HIZ.ray=500*k; PLAN=planla(cfg()); OYN=null; kpiYaz(PLAN); gantt(PLAN); zamanaGit(PLAN,0); step.style.height=(18*(1+PLAN.N)+2)+'px'; step.innerHTML='plan hazır · '+PLAN.plan.filter(b=>b.tip==='robot'&&!b.yolver).length+' robot görevi · ▶ ile oynat ya da alttaki çubuğu sürükle'; return PLAN; }
 $('planla').onclick=planlaUI; $('play').onclick=()=>{ if(anim){ dur(); return; } if(!PLAN) planlaUI(); oynat(PLAN); }; $('stop').onclick=()=>{ dur(); if(PLAN) zamanaGit(PLAN,0); };
 $('kontrol').onclick=()=>{ if(!PLAN) planlaUI(); $('kontrol').textContent='taranıyor…'; setTimeout(()=>{ sessizKontrol(PLAN); $('kontrol').textContent='Tüm adımları tara · erişim + çarpışma'; },30); };
 function senUI(){ const v=$('sen').value; $('tekRow').style.display=v==='tek'?'':'none'; $('akisRow').style.display=v==='akis'?'':'none'; }
