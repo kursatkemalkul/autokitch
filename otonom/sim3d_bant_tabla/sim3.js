@@ -12,7 +12,7 @@ function siparisler(cfg){ const o=[], rnd=rng(cfg.seed*7919+13);
   o.sort((a,b)=>a.arr-b.arr); o.forEach((x,i)=>{ x.id=i+1; x.nesneler=[]; x.goz=-1; x.kutuSay=0; x.kolaTeslim=!x.kola; x.tatliTeslim=!x.tatli; x.teslim=null; }); return o; }
 
 /* ================= STOK KONUMLARI (MODÜL B = HAT v19) ================= */
-const OPT={tek:true, wip:8, kutuSure:46, takt:0};   /* wip: makinede aynı anda en çok ürün (hamurdan teslimata · CONWIP) · kutuSure: robot kutulama ağzına vardıktan sonra boş tepsi + açık kutunun yeniden hazır olmasına kadar geçen süre (ileri bakış için) */
+const OPT={tek:true, wip:8, kutuSure:46, takt:0, ic2:false};   /* ic2: içecek + tatlıyı İKİNCİ ROBOT taşır (ana robot yalnız hamur + kutu) → iki robotlu hattın üst sınırı */   /* wip: makinede aynı anda en çok ürün (hamurdan teslimata · CONWIP) · kutuSure: robot kutulama ağzına vardıktan sonra boş tepsi + açık kutunun yeniden hazır olmasına kadar geçen süre (ileri bakış için) */
 function topPos(kolon,sira,k){ const K=KOLON[kolon], kot=K.kotlar[sira], y=kot+15+EL.TOP_R;
   if(kolon==='K1'||(kolon==='K2'&&sira<2)) return V(K.x0+115+130*(k%4), y, 70+135*Math.floor(k/4));
   return V(K.x0+100+105*(k%5), y, 68+91*Math.floor(k/5)); }
@@ -30,6 +30,7 @@ function stokBak(st,tip){ for(;;){ const q=st[tip].find(d=>d.k<d.n); if(!q) retu
    plaka doluyken fırından ürün gelirse SIKIŞMA notu düşer. */
 function planla(cfg){
   S.n=1; const O=siparisler(cfg), stok=stokKur(), plan=[], not=[];
+  if(OPT.ic2) O.forEach(o=>{ o.kolaTeslim=true; o.tatliTeslim=true; });   // ikinci robot içeceği/tatlıyı ürün gelmeden gözüne koyar (engel olmaz)
   const P=[]; O.forEach(o=>o.items.forEach(tip=>P.push({id:P.length+1,o,tip,stage:'bekliyor',faz:{}})));
   const tepsi={tip:'tepsi',raf:0,pos:V(KUT.cx,KUT.trayY,KUT.cz),icerik:''};
   const dolap=qrKapak.map((q,i)=>({i,ri:q.ri,ci:q.ci,o:null,freeAt:0})).sort((a,b)=>a.ri-b.ri||a.ci-b.ci);
