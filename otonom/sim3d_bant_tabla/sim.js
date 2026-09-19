@@ -42,7 +42,8 @@ const carPres=()=>PRES().cx+400;
 /* hızlar · süreler — kaynak/varsayım notu index.html altında */
 let HIZ={serbest:600, orta:400, ince:200, mikro:80, ray:500, ivmeKol:2000, ivmeRay:1000, eklem:150, parmak:0.6, pim:0.8, cekmece:2.8, kapak:1.5, qrkapak:1.5, itici:2.0,
   pres:9, kasar:15, harc:20, pisme:240, kesim:4, sprey:3, kapan:4, musteri:150,
-  gecis:5, bantV:15, plakaGecis:3, katla:15, kutuKoy:1, tablaV:500, tablaZ:1, geriEm:1.5, siyir:1, it:1.2};
+  gecis:5, bantV:15, plakaGecis:3, katla:15, kutuKoy:1, tablaV:500, tablaZ:1, geriEm:1.5, siyir:1, it:1.2,
+  atosaTur:60};   // atosaTur: ÜRETİCİ VERİSİ · Auto Pizza Artisan broşürü ≤ 1 dk / pizza → tabla bir ürünü 60 sn'den hızlı çeviremez (Kemal 15 Eyl + 19 Eyl: kendi dozaj varsayımımla kısaltma)
 
 /* ================= SAHNE ================= */
 const canvas=document.getElementById('c');

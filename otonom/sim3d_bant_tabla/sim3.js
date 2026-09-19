@@ -51,7 +51,9 @@ function planla(cfg){
       const a=bantZaman(eb,BANT.cikis-BANT.giris), eo=Math.max(a,MK.firinBos); if(eo>a+1e-6){ MK.durus.push([a,eo]); MK.durus.sort((x,y)=>x[0]-y[0]); }
       f.bant=[eb,a]; f.doz=[bantZaman(eb,noz.x-150-BANT.giris),bantZaman(eb,noz.x+150-BANT.giris)]; f.firinBek=[a,eo]; f.firin=[eo,eo+firinSure];
       MK.bantSon=eb; MK.presBos=eb; MK.firinBos=eo+girisAralik; }
-    else { const tz=HIZ.tablaZ, v=HIZ.tablaV, doz=p.tip==='pide'?HIZ.kasar:HIZ.harc; let tt=td;
+    else { const tz=HIZ.tablaZ, v=HIZ.tablaV, doz0=p.tip==='pide'?HIZ.kasar:HIZ.harc; let tt=td;
+      /* ATOSA ÜRETİCİ VERİSİ: bir ürün en az atosaTur (60 sn) sürer → hesapla çıkan tur kısaysa fark dozaja eklenir (fırın sırası beklemesi ayrıca eklenir) */
+      const nominal=4*tz+HIZ.pres+Math.abs(noz.x-TAB.pres)/v+doz0+HIZ.geriEm+Math.abs(TAB.firin-noz.x)/v+HIZ.siyir+HIZ.it+(TAB.firin-TAB.pres)/v, doz=doz0+Math.max(0,HIZ.atosaTur-nominal); p.dozSure=doz;
       const ekle=(ad,s)=>{ f[ad]=[tt,tt+s]; tt+=s; };
       ekle('ors',tz); ekle('pres',HIZ.pres); ekle('kalk',tz); ekle('git1',Math.abs(noz.x-TAB.pres)/v); ekle('agiz',tz); ekle('doz',doz); ekle('em',HIZ.geriEm); ekle('in',tz); ekle('git2',Math.abs(TAB.firin-noz.x)/v);
       const bek=Math.max(0,MK.firinBos-(tt+HIZ.siyir+HIZ.it)); ekle('firinBek',bek); ekle('siyir',HIZ.siyir); ekle('it',HIZ.it);
@@ -138,12 +140,15 @@ function makineBlok(p,plan,tepsi){ const f=p.faz, P_=PRES(), st=[], u={tip:'urun
   }
   const b={tip:'makine',ad:'#'+p.id+' '+p.tip+' · makine',t0:p.td,t1:son,steps:st,ref:p,ri:0}; plan.push(b); }
 let PLANLA_bantYol=()=>0;
-/* TAKT kendini ayarlar: 1. geçiş (taktsız) robotun ürün başına saf işini ölçer (hamur + kutu, beklemeler hariç) → 2. geçişte fırına girişler bu aralığa seyreltilir.
-   Böylece kutular robotun yetişebileceği tempoda çıkar: plaka dolu kalmaz, robot kutulama ağzında boş beklemez. */
+/* TAKT kendini ayarlar: 1. geçiş (taktsız) robotun ürün başına saf işini ölçer (hamur + kutu, beklemeler hariç). Sonra fırın giriş aralığı için üç aday denenir
+   (taktsız · saf iş × 1,04 · saf iş × 1,10) ve SIKIŞMASIZ olanlardan ilk 2 saatte en çok ürün çıkaran seçilir. Tablalı hatta tabla turu (Atosa 60 sn) zaten tempoyu verir → çoğu zaman taktsız kazanır;
+   bantlıda kutular robotun yetişebileceği tempoda çıksın diye takt kazanır (plaka dolu kalmaz, robot kutulama ağzında boş beklemez). */
 function planlaOto(cfg){ OPT.takt=0; const p1=planla(cfg); if(p1.kpi.urun<4) return p1;
   const saf=b=>b.steps.reduce((a,s)=>a+(s.ad.indexOf('· bekle')>=0?0:s.sure),0), ort=a=>a.length?a.reduce((x,y)=>x+y,0)/a.length:0;
-  const H=ort(p1.plan.filter(b=>b.tip==='robot'&&b.ad.indexOf('hamur')>=0).map(saf)), K=ort(p1.plan.filter(b=>b.tip==='robot'&&b.bitis).map(saf));
-  OPT.takt=Math.max(FIRIN.adim/(FIRIN.hazne/HIZ.pisme),(H+K)*1.10); const p2=planla(cfg); p2.kpi.takt=OPT.takt; p2.kpi.hamurSure=H; p2.kpi.kutuSure=K; return p2; }
+  const H=ort(p1.plan.filter(b=>b.tip==='robot'&&b.ad.indexOf('hamur')>=0).map(saf)), K=ort(p1.plan.filter(b=>b.tip==='robot'&&b.bitis).map(saf)), taban=FIRIN.adim/(FIRIN.hazne/HIZ.pisme);
+  const puan=ps=>ps.plan.filter(b=>b.bitis&&b.bitisT<=7200).length-(ps.kpi.sayac.sikisma?1e6:0)-ps.kpi.ort/1e5;
+  let en=p1, enT=0; for(const kat of [1.04,1.10]){ const tk=Math.max(taban,(H+K)*kat); if(tk<=taban+0.5) continue; OPT.takt=tk; const ps=planla(cfg); if(puan(ps)>puan(en)+1e-9){ en=ps; enT=tk; } }
+  OPT.takt=enT; en.kpi.takt=enT; en.kpi.hamurSure=H; en.kpi.kutuSure=K; return en; }
 
 /* ================= OYNATICI (zaman tabanlı · bloklar paralel · ileri/geri sarılabilir) ================= */
 let anim=null, OYN=null;
@@ -195,7 +200,7 @@ function kpiYaz(ps){ const k=ps.kpi, e=$('kpi'), T=Math.max(1,k.sure);
     ['Son teslim',saat(k.sure)]].filter(Boolean).map(r=>`<tr><td>${r[0]}</td><td>${r[1]}</td></tr>`).join('')+'</table>';
   h+='<h2>Hat dengesi</h2><table>'+bar('ROBOT',k.robot,k.robot>.85?'#ff5c5c':'#2997ff')+Object.entries(dol).map(([a,v])=>bar(a,v/T)).join('')+'</table>';
   h+='<h2>Robot ne yaptı · ortalama süre</h2><table>'+Object.entries(mak).map(([a,v])=>`<tr><td>${a}</td><td>${fmt(v.reduce((x,y)=>x+y,0)/v.length)} × ${v.length}</td></tr>`).join('')+`<tr><td><b>ürün başına robot</b></td><td><b>${fmt(k.urunSure)}</b> → en fazla ${(3600/Math.max(1,k.urunSure)).toFixed(0)} ürün/saat</td></tr>`
-    +(k.takt?`<tr><td>fırın giriş temposu (takt)</td><td>${k.takt.toFixed(0)} s = hamur ${k.hamurSure.toFixed(0)} + kutu ${k.kutuSure.toFixed(0)} s × 1,10</td></tr>`:'')+`<tr><td>fırın tavanı</td><td>${(3600/(FIRIN.adim/(FIRIN.hazne/HIZ.pisme))).toFixed(0)} ürün/saat (hazne ${FIRIN.hazne} · ${HIZ.pisme} s)</td></tr>`+(TABLA&&k.tur.length?`<tr><td>tabla turu (ortalama)</td><td>${fmt(k.tur.reduce((a,b)=>a+b,0)/k.tur.length)} → en fazla ${(3600/(k.tur.reduce((a,b)=>a+b,0)/k.tur.length)).toFixed(0)} ürün/saat</td></tr>`:'')
+    +(k.hamurSure?`<tr><td>fırın giriş temposu (takt)</td><td>${k.takt?k.takt.toFixed(0)+' s (robot: hamur '+k.hamurSure.toFixed(0)+' + kutu '+k.kutuSure.toFixed(0)+' s)':'yok · tempoyu '+(TABLA?'tabla turu':'robot')+' veriyor'}</td></tr>`:'')+`<tr><td>fırın tavanı</td><td>${(3600/(FIRIN.adim/(FIRIN.hazne/HIZ.pisme))).toFixed(0)} ürün/saat (hazne ${FIRIN.hazne} · ${HIZ.pisme} s)</td></tr>`+(TABLA&&k.tur.length?`<tr><td>tabla turu (ortalama)</td><td>${fmt(k.tur.reduce((a,b)=>a+b,0)/k.tur.length)} → en fazla ${(3600/(k.tur.reduce((a,b)=>a+b,0)/k.tur.length)).toFixed(0)} ürün/saat</td></tr>`:'')
     +`<tr><td>plakada kutu / tepsi bekleme</td><td>${fmt(k.sayac.kutuBek/Math.max(1,k.biten))} / ürün</td></tr><tr><td>sıkışma (plaka doluyken ürün geldi)</td><td><span class="${k.sayac.sikisma?'yok':'ok'}">${k.sayac.sikisma} kez</span></td></tr></table>`;
   const nt=[...new Set(k.not)].slice(0,6); if(k.erisilemeyen) nt.push(k.erisilemeyen+' stok konumu atlandı (kol yetişmiyor)'); if(nt.length) h+=`<div class="amb" style="margin-top:6px">${nt.join(' · ')}</div>`;
   e.innerHTML=h;
