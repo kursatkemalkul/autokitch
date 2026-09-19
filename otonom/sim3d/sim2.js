@@ -26,7 +26,8 @@ function ciz(){
     if(q){ if(o.tip==='tepsi') tepsiGoster(o.mesh,o,q.c,basisQ(q.x.clone().negate(),q.u,q.t.clone().negate())); else { o.mesh.position.copy(q.c); if(o.tip==='kola') yUp(o.mesh,q.t); else if(o.tip!=='top') yUp(o.mesh,q.u); } }
     else { if(o.tip==='tepsi') tepsiGoster(o.mesh,o,o.pos,new THREE.Quaternion()); else { o.mesh.position.copy(o.pos); if(o.yatik) o.mesh.quaternion.copy(QX); else o.mesh.quaternion.set(0,0,0,1); } if(o.tip==='kutu') kutuGoster(o.mesh,o); } });
   // istasyon hareketleri
-  altPlaka.position.set(P.cx,P.plaka-6,P.cz); ustPlaka.position.set(P.cx,P.plaka+230-S.ustPlakaY,P.cz); presAgiz.position.y=(P.y[0]+P.y[1])/2;
+  if(TABLA_VAR&&tablaM){ tablaM.position.set(S.tabla.x,S.tabla.y-7,TAB.z); tablaM.rotation.y=S.tabla.rot||0; const y0=1120, y1=S.tabla.y-14; tablaKol.scale.set(1,Math.max(1,y1-y0),1); tablaKol.position.set(S.tabla.x,(y0+y1)/2,TAB.z); }
+  altPlaka.visible=!TABLA_VAR; altPlaka.position.set(P.cx,P.plaka-6,P.cz); ustPlaka.position.set(P.cx,P.plaka+230-S.ustPlakaY,P.cz); presAgiz.position.y=(P.y[0]+P.y[1])/2;
   bicak.position.y=KES.y[1]+100-S.bicakY; itici.position.set(KUT.cx,KUT.plaka+25,KUT.cz-175+S.itme*KUT.itme);
   Object.entries(KOLON).forEach(([kk,K])=>{ const a=S.cek[kk]||0, m=cekMesh[kk]; m.visible=a>0.02; if(m.visible){ const y=K.kotlar[S.cekI[kk]]; m.scale.z=Math.max(.01,a); m.position.set((K.x0+K.x1)/2,y+(K.tip==='icecek'?17:(K.ic+30)/2),a*K.acik/2); } });
   firinKapak.forEach((kp,i)=>{ const a=S.kapak[i]||0, h=kp.f[1]-kp.f[0]-80; kp.m.position.set(FIR_X.cx,(kp.f[0]+kp.f[1])/2+a*(h+8),9+16*(i%2)); });            // giyotin: hepsi yukarı kayar
@@ -166,6 +167,22 @@ function firinaKoy(B,p,cekilX){ const tray=p.tray;
 }
 /* G2b · (2 robot) SAĞ: aktarma gözünden al → fırına koy — aynı duruşta yandaki gözde pişmiş ürün varsa onu da alır (değiş-tokuş) */
 function G_firina(B,p){ tepsiAl(B,p.tray,'aktarma gözü',NIS.cx,RAF.y,NIS.cz,null,NIS.cx-450*B.yon); firinaKoy(B,p,null); }
+/* ATOSA TABLASI · robotsuz çevrim: tabla pres altında bekler (tepsi üstünde) → pres basar → hazne hazne gider, dozajlar → fırın ucuna gelir → robot bekler
+   Atosa broşürü: bir ürün en fazla 1 dk → tur 60 s'nin altına inmez; kalan süre dozaja eklenir. */
+function G_tablaCevrim(B,p){ const tray=p.tray, noz=p.tip==='pide'?NOZ.kasar:(p.id%2?NOZ.harc:NOZ.harc2), ds=p.tip==='pide'?HIZ.kasar:HIZ.harc, ic=p.tip==='pide'?'kasar':'harc';
+  const v=500, git1=Math.abs(noz.x-PRES_CX)/v, git2=Math.abs(TAB.uc-noz.x)/v, nominal=HIZ.pres+git1+ds+1.5+git2+ (TAB.uc-PRES_CX)/v, doz=ds+Math.max(0,TAB.tur-nominal);
+  B.bekle('PRES · tabla örse basılır · '+HIZ.pres+' s',HIZ.pres,e=>{ const a=e<.4?e/.4:e>.6?(1-e)/.4:1; S.ustPlakaY=a*172; if(e>.45) tray.icerik='taban'; },()=>{ S.ustPlakaY=0; });
+  B.bekle('tabla iner (topping ağzı kotuna)',1,e=>{ S.tabla.y=TAB.presY+(TAB.y-TAB.presY)*e; },()=>{ S.tabla.y=TAB.y; });
+  B.bekle('tabla → '+(p.tip==='pide'?'kaşar':'harç')+' haznesinin altına',git1,e=>{ S.tabla.x=PRES_CX+(noz.x-PRES_CX)*e; });
+  B.bekle((p.tip==='pide'?'KAŞAR':'HARÇ')+' DOZAJI · tabla döner + kayar · '+doz.toFixed(0)+' s',doz,e=>{ S.tabla.rot=e*Math.PI*4; S.tabla.x=noz.x+70*Math.sin(e*Math.PI*2); tray.icerik=ic; tray.dolu=e; S.akis={x:noz.x,z:NOZ.z,renk:noz.renk}; },()=>{ S.akis=null; tray.dolu=1; S.tabla.x=noz.x; });
+  B.bekle('helezon geri emer · klape kapanır',1.5);
+  B.bekle('tabla → fırın ucu (robot bekliyor)',git2,e=>{ S.tabla.x=noz.x+(TAB.uc-noz.x)*e; });
+}
+/* tabla boş döner (robot tepsiyi aldıktan sonra) */
+function G_tablaDonus(B){ B.bekle('tabla pres altına döner (boş)',(TAB.uc-PRES_CX)/500,e=>{ S.tabla.x=TAB.uc+(PRES_CX-TAB.uc)*e; S.tabla.rot=0; },()=>{ S.tabla.x=PRES_CX; }); B.bekle('tabla pres kotuna kalkar',1,e=>{ S.tabla.y=TAB.y+(TAB.presY-TAB.y)*e; },()=>{ S.tabla.y=TAB.presY; }); }
+/* G2t · robot: tabladan al → kapaklı fırın gözüne koy */
+function G_tabladanAl(B,p,cekilX){ tepsiAl(B,p.tray,'tabla (fırın ucu)',TAB.uc,TAB.y,TAB.z,null,carFor(TAB.uc,TAB.y,TAB.z,B.yon));   // kot 1120: el + tepsi topping ağzının (1070–1180) içinde kalır
+  B.mv('yüksel · tepsi omuz üstünden geçecek',{tcp:V(TAB.uc,TR,TZ)}); firinaKoy(B,p,cekilX); }
 /* G3 · fırından al → kesim */
 function G_kesim(B,p){ const tray=p.tray, g=p.goz, taban=FIR[g][0]+100;
   B.kay('→ fırın göz '+(g+1)+' · kapak yolda açılır',carFor(FIR_X.cx,taban+20,FIR_X.cz,B.yon),null,kapakAnim('fir',g,1,null,()=>{ tray.icerik='pismis'; tray.urun=p.tip; }));

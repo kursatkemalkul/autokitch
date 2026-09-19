@@ -26,6 +26,8 @@ const KOLON = {  // çekmeceler 620 × 680 · motorlu 700 strok — hamur: pide 
 function icecekPos(tip,kat,k){ const K=KOLON.KI, y0=K.kotlar[kat]+12; return tip==='kola'?(k<16?V(K.x0+216+116*(k%2), y0+EL.KOLA_H/2, 62+75*Math.floor(k/2)):V(K.x0+100, y0+EL.KOLA_H/2, 62+75*(k-16))):V(K.x1-60-100*Math.floor(k/5), y0+EL.TATLI_H/2, 200+95*(k%5)); }   // kola 3 sütun: önce ortadaki 2 sütun (çekmecenin SAĞ duruşundan da erişilir → SAĞ robot SOL'un bölgesine girmez), sonra en soldaki sütun · tatlı SAĞDA 2 sütun: robot çekmecenin sağında durur, el −x yönünde girer → SAĞ robot kendi bölgesinden alır   // tatlı z ≥ 200: el +x yönünde girerken parmaklar hat yüzüne, dirsek D'ye girmesin
 const NIS={x:[2070,2455], y:[690,1000], z:[-660,0], cx:2262, cz:-450, raf0:702, pitch:50, n:6};
 const RAF={y:925};   // AKTARMA GÖZÜ (pafta v18): nişin en üst gözü (6 boş tepsi rafı 36 aralıkla altında kalır) · SOL robot topping'li tepsiyi soldan bırakır, SAĞ robot sağdan alıp fırına götürür          // K4 üstü: 6 tepsi (v11) · altında kaşar+sucuk deposu 375–675 · en altta soğutma grubu 140–360
+const TABLA_VAR = new URLSearchParams(location.search).get('tabla')==='1';   /* ATOSA TABLASI: tepsiyi pres altından dozaja, oradan fırın ucuna taşır (robot topping'e hiç gitmez) */
+const TAB = {x0:390, x1:2300, uc:2280, presY:1170, y:1100, z:-440, tur:60};   /* ray C modülünün altında · pres altında tepsi 1170 (alt plaka), dozaj + fırın ucunda 1100 (tepsi alınırken bilek 1140+35 < ağız tavanı 1180) · uç 2280: tepsi kenarı 2450 < D modülü 2500 · Atosa: ürün başına ≥ 60 s */
 const T_AGZ=[1070,1180], T_Y=1120, T_BAS=[1183,1317], T_KAS=[1320,1680];
 const HAZNE=[["HARÇ 1",280,1070,0xc06040],["HARÇ 2",280,1350,0xc06040],["KIYMA",140,1560,0x9a5a3a],["KUŞBAŞI",140,1700,0x8a4a3a],["KAŞAR",280,1910,0xffd24a],["SUCUK",180,2140,0xb03a2a]];   // pafta v10 YUVA sırası
 const NOZ={kasar:{x:1910,renk:0xffd24a}, harc:{x:1350,renk:0xb0402a}, harc2:{x:1070,renk:0xb0402a}, z:-310, alt:1183};
@@ -38,6 +40,7 @@ const KUT={x:[3230,3870], y:[430,680], z:[-768,0], cx:3550, cz:-390, plaka:470, 
 const QR ={x:[2895,3900], y:[400,2000], z:[900,1340], kol:[[2910,3390],[3410,3890]], satir:[410,610,810,1010,1210,1410], derin:440, goz_h:190,
   serit:78, kutuX:305, tatliZ:965, kolaZ:1080, kutuZ:1165};
 const KOR=900, DUVAR_X=[0,3900]; let RAY_X=[200,3700];   // dükkân iç 3900 = hat boyu → araba (400) duvara dayanır: merkez 200…3700 · 'ray' seçimiyle değişir
+const PRES_CX=350;
 function PRES(){ const p=+plaka.value; return {x:[53,647], y:[p,p+220], z:[-650,0], cx:350, cz:-440, plaka:p}; }   // pafta v10: ağız 594 × 220, alt kenar plaka kotunda
 const carPres=()=>PRES().cx+400;                                                                          // kol ağza çapraz girer: bilek omuz ekseninden geçmez, ön kol ağız üst kenarına değmez
 /* hızlar — kaynak/varsayım notu index.html altında */
@@ -84,6 +87,9 @@ const cekMesh={};
 Object.entries(KOLON).forEach(([k,K])=>{ K.kotlar.forEach(y=>{ const f=box(K.x1-K.x0-16,K.ic+26,24,K.tip==='icecek'?0x3f7fbf:0x3f9c7a); f.position.set((K.x0+K.x1)/2,y+(K.ic+30)/2,-12); scene.add(f); });
   const a=box(K.x1-K.x0-4,K.tip==='icecek'?30:K.ic+26,K.acik,K.tip==='icecek'?0x6fb0ff:0x5fd3a8,.5); a.visible=false; scene.add(a); cekMesh[k]=a; });
 const altPlaka=silindir(170,170,12,0xa0a6b0,1,32); scene.add(altPlaka);
+let tablaM=null, tablaKol=null, tablaRay=null;
+if(TABLA_VAR){ tablaRay=aabb(TAB.x0-60,TAB.x1+60,1085,1120,TAB.z-30,TAB.z+30,0x2997ff,1);
+  tablaM=silindir(175,175,14,0xcfe2ff,1,40); scene.add(tablaM); tablaKol=silindir(24,24,1,0x8a94a4,1,12); scene.add(tablaKol); }
 const ustPlaka=silindir(145,145,50,0x9aa3b2,1,32); scene.add(ustPlaka);
 const bicak=silindir(150,150,20,0xb0b8c4,.9,32); bicak.position.set(KES.cx,KES.y[1]+100,KES.cz); scene.add(bicak);
 aabb(KUT.cx-200,KUT.cx+200,KUT.plaka-10,KUT.plaka,KUT.cz-200,KUT.cz+200,0x8a94a4,1);
@@ -121,7 +127,7 @@ const temasM=havuz(36,()=>new THREE.Mesh(new THREE.SphereGeometry(22,10,8),new T
 /* ================= DURUM ================= */
 const mkRob=(x)=>({carX:x, tcp:V(x+300,1300,220), t:V(0,0,-1), u:V(0,1,0), yuk:'bos', tasi:null, parmak:70, sonIK:null, temas:[]});
 const ROB=[mkRob(1100),mkRob(3300)];
-const S={ri:0, n:1, cek:{}, cekI:{}, kapak:[0,0,0], qrk:{}, itme:0, ustPlakaY:0, bicakY:0, akis:null, nesne:[]};
+const S={ri:0, n:1, cek:{}, cekI:{}, kapak:[0,0,0], qrk:{}, itme:0, ustPlakaY:0, bicakY:0, akis:null, nesne:[], tabla:{x:PRES_CX, y:1170, rot:0}};
 ['carX','tcp','t','u','yuk','tasi','parmak','sonIK','temas'].forEach(k=>Object.defineProperty(S,k,{get(){ return ROB[S.ri][k]; },set(v){ ROB[S.ri][k]=v; }}));   // S.carX vb. = AKTİF robotun alanı
 Object.keys(KOLON).forEach(k=>{ S.cek[k]=0; S.cekI[k]=0; });
 const $=id=>document.getElementById(id);

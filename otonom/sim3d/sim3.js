@@ -42,7 +42,7 @@ function planla(cfg){
   const O=siparisler(cfg), stok=stokKur(), G=gozler(), plan=[], not=[];
   const tepsiler=[]; for(let i=0;i<NIS.n;i++) tepsiler.push({tip:'tepsi',raf:i,pos:nisPos(i),icerik:'',bos:true});
   const P=[]; O.forEach(o=>o.items.forEach((tip,j)=>P.push({id:P.length+1,o,tip,stage:'bekliyor',readyAt:o.arr,tray:null,goz:-1})));
-  const R_={press:0,topping:0,kesim:0,sprey:0,kutu:0,raf:0};
+  const R_={press:0,topping:0,kesim:0,sprey:0,kutu:0,raf:0,tabla:0};
   const gozTip=tp=>G.filter(g=>(OPT.firinEsnek||g.tip===tp)&&g.ok);   /* firinEsnek: 3 göz de hem pide/pizza hem lahmacun pişirir · süre ürüne göre (Kemal 18 Eyl 2026) */
   if(!gozTip('pide').length) not.push('pide gözü erişilemiyor'); if(!gozTip('lahm').length) not.push('lahmacun gözü erişilemiyor');
   const gozSay={pide:gozTip('pide').length,lahm:gozTip('lahm').length};
@@ -108,7 +108,8 @@ function planla(cfg){
     const cands=[];
     if(zincir&&N===1){ cands.push({pri:-1,p:zincir.p,tip:'START',ready:zincir.p.o.arr,elde:zincir.tray}); zincir=null; } else {
       for(const p of P){ const oo=p.o;
-        if(p.stage==='presde'&&p.readyAt<=t&&R_.topping<=t){ if(N>1){ const g=gozTip(p.tip).find(g=>!g.p), rafBos=R_.raf<=t; if(g||rafBos) cands.push({pri:4,p,g,rafBos,tip:'TOP',ready:p.readyAt}); } else { const g=gozTip(p.tip).find(g=>!g.p); if(g) cands.push({pri:4,p,g,tip:'TOP',ready:p.readyAt}); } }
+        if(p.stage==='presde'&&TABLA_VAR){ if(p.readyAt<=t){ const g=gozTip(p.tip).find(g=>!g.p); if(g) cands.push({pri:4,p,g,tip:'TOP',ready:p.readyAt}); } }
+        else if(p.stage==='presde'&&p.readyAt<=t&&R_.topping<=t){ if(N>1){ const g=gozTip(p.tip).find(g=>!g.p), rafBos=R_.raf<=t; if(g||rafBos) cands.push({pri:4,p,g,rafBos,tip:'TOP',ready:p.readyAt}); } else { const g=gozTip(p.tip).find(g=>!g.p); if(g) cands.push({pri:4,p,g,tip:'TOP',ready:p.readyAt}); } }
         else if(p.stage==='rafta'&&p.readyAt<=t){ const g=gozTip(p.tip).find(g=>!g.p); if(g) cands.push({pri:2.5,p,g,tip:'FIRINA',ready:p.readyAt}); }
         else if(p.stage==='firinda'&&p.readyAt<=t&&R_.kesim<=t&&(!OPT.tut||R_.sprey<=t)) cands.push({pri:3,p,tip:'KES',ready:p.readyAt});
         else if(p.stage==='kesimde'&&p.readyAt<=t&&R_.sprey<=t) cands.push({pri:2,p,tip:'SPR',ready:p.readyAt});
@@ -121,8 +122,10 @@ function planla(cfg){
     benim.sort((a,b)=>a.pri-b.pri||a.ready-b.ready);
     let yapildi=false;
     for(const c of benim){ const cur=kopya(r.cur), B=insaci(cur,r.yon), oc0=isgalDurum(r.cur); let ad='', s=null;
+      if(c.tip==='START'&&TABLA_VAR&&R_.tabla>t) continue;   // tabla hâlâ meşgul / fırın ucunda dolu
       if(c.tip==='START'){ const p=c.p; s=stokBak(stok,p.tip); if(!s){ p.stage='iptal'; not.push('stok bitti: '+p.tip); continue; } p.tray=c.elde||tepsiler.find(x=>x.bos); p.kolon=s.kolon; p.sira=s.sira; p.topPos=s.pos; p.yan=s.yan; p.carPres=s.tek?s.yan:carPres();
         ad='#'+p.id+' '+p.tip+' · başlat (tepsi → pres altı → hamur tepsinin ortasına)'; G_baslat(B,p,!!c.elde); }
+      else if(c.tip==='TOP'&&TABLA_VAR){ const p=c.p; const g=gozTip(p.tip).find(g=>!g.p); if(!g) continue; p.goz=g.g; c.g=g; ad='#'+p.id+' · tabladan al → fırın '+(p.goz+1); G_tabladanAl(B,p,(o&&r.i===0)?NIS.cx-450:null); }
       else if(c.tip==='TOP'){ const p=c.p; c.raf=!!o&&(OPT.raf==='hep'?true:OPT.raf==='yok'?false:(!c.g||(c.rafBos&&o.res.some(q=>q.t1>t+30&&q.t0<t+70&&q.lo<3130)))); if(o&&(c.raf?!c.rafBos:!c.g)) continue;   /* karma: fırın kolonu o sırada SAĞ robotta ise aktarma gözüne bırak, boşsa doğrudan fırına */
         if(c.raf){ ad='#'+p.id+' '+p.tip+' · presten al → topping → aktarma gözü'; G_topping(B,p,null,true); } else { p.goz=c.g.g; ad='#'+p.id+' '+p.tip+' · presten al → topping → fırın '+(p.goz+1); G_topping(B,p,(o&&r.i===0)?NIS.cx-450:null); } }
       else if(c.tip==='FIRINA'){ const p=c.p; p.goz=c.g.g; ad='#'+p.id+' · raftan al → fırın '+(p.goz+1); G_firina(B,p);
@@ -139,7 +142,9 @@ function planla(cfg){
       if(o){ if(r.i===1&&(c.tip==='FIN'||(c.tip==='KES'&&c.fin)||c.tip==='KOLA'||c.tip==='TATLI')&&cur.carX<OPT.evSag-60){ B.bol('çekil'); B.park('kolu topla'); B.kay('kendi tarafına çekil · SOL robota yol aç',OPT.evSag); } }
       const plc=yerlestir(r,B,oc0); if(!plc) continue;
       const b=isle(r,B,plc,ad,c.p||c.o); if(!asil(r,c)) sayac.yardim++; r.is[c.tip]=(r.is[c.tip]||0)+1; if(s) s.q.k++;
+      if(c.tip==='START'&&TABLA_VAR){ const p=c.p; p.tray.bos=false; const C=insaci(istBos()); G_tablaCevrim(C,p); const cb=blok('istasyon','TABLA #'+p.id,b.t1,C.st,p); R_.press=1e12; R_.tabla=1e12; p.stage='presde'; p.readyAt=cb.t1; p.tablaBitis=cb.t1; sayac.start++; if(c.elde) sayac.zincir++; }
       if(c.tip==='START'){ const p=c.p; p.tray.bos=false; sayac.start++; if(s.tek) sayac.tek++; if(c.elde) sayac.zincir++; const C=insaci(istBos()); G_presCevrim(C,p); blok('istasyon','PRES #'+p.id,b.t1,C.st,p); p.stage='presde'; p.readyAt=b.t1+HIZ.pres; R_.press=1e12; }
+      else if(c.tip==='TOP'&&TABLA_VAR){ const p=c.p; c.g.p=p; const al=b.bl.filter(x=>x.ek==='fırına götür'), fb=al.length?al[al.length-1]:b.son; const D=insaci(istBos()); G_tablaDonus(D); const db=blok('istasyon','TABLA dönüş',b.t0+8,D.st,null); R_.tabla=db.t1; R_.press=db.t1; p.stage='firinda'; p.readyAt=fb.t1+c.g.sure; c.g.doneAt=p.readyAt; fb.firin=[fb.t1,p.readyAt,p.goz]; }
       else if(c.tip==='TOP'&&c.raf){ const p=c.p; const tb=b.bl.filter(x=>x.ek==='topping'); R_.press=tb.length?tb[0].t0:b.t0+20; R_.topping=tb.length?tb[tb.length-1].t1:b.t1; R_.raf=1e12; p.stage='rafta'; p.readyAt=b.t1; }
       else if(c.tip==='FIRINA'){ const p=c.p; c.g.p=p; const al=b.bl.filter(x=>x.ek==='fırına götür'), fb=al[al.length-1]||b.son; R_.raf=al.length?al[0].t0:b.t0+10; p.stage='firinda'; p.readyAt=fb.t1+(OPT.firinEsnek?HIZ.firin[p.tip]:c.g.sure); c.g.doneAt=p.readyAt; fb.firin=[fb.t1,p.readyAt,p.goz]; sayac.firina=(sayac.firina||0)+1;
         if(c.takas){ const q=c.takas; G.find(g=>g.g===q.goz).p=null; const C=insaci(istBos()); G_kesimCevrim(C); blok('istasyon','KESİM #'+q.id,b.t1,C.st,q); R_.kesim=1e12; q.stage='kesimde'; q.readyAt=b.t1+HIZ.kesim; sayac.takas=(sayac.takas||0)+1; } }
@@ -209,10 +214,10 @@ function kpiYaz(ps){ const k=ps.kpi, e=$('kpi'), T=Math.max(1,k.sure);
   /* saatlik çıkış (kutusu QR'a konan ürün) */
   const hh=[0,0,0,0], ht=[{pide:0,lahm:0},{pide:0,lahm:0}]; let icS=0; ps.plan.filter(b=>b.bitis).forEach(b=>{ const i=Math.min(3,Math.floor(b.t1/3600)); hh[i]++; if(i<2&&b.ref&&ht[i][b.ref.tip]!==undefined) ht[i][b.ref.tip]++; }); ps.plan.forEach(b=>{ if(b.tip==='robot'&&b.t1<=3600&&(b.ek==="QR'a götür")) icS++; });
   /* robot ne yaptı */
-  const mak={}; ps.plan.filter(b=>b.tip==='robot'&&!b.yolver).forEach(b=>{ const key=b.ad.indexOf('raftan')>=0?'raftan al → fırın (+ değiş-tokuş)':b.ad.indexOf('başlat')>=0?'tepsi + hamur → pres':b.ad.indexOf('topping')>=0?'topping → fırın':b.ad.indexOf('fırından')>=0?'fırın → kesim':b.ad.indexOf('kesimden')>=0?'kesim → sprey':b.ad.indexOf('kutu')>=0?'kutu → QR → tepsi':b.ad.indexOf('içecek')>=0?'içecek → QR':'tatlı → QR'; const gk=key+'#'+(b.ref?(b.ref.id||0):0)+(b.ref&&b.ref.tip?'p':'o'); mak[key]=mak[key]||{}; mak[key][gk]=(mak[key][gk]||0)+(b.t1-b.t0); });
+  const mak={}; ps.plan.filter(b=>b.tip==='robot'&&!b.yolver).forEach(b=>{ const key=b.ad.indexOf('tabladan')>=0?'tabladan al → fırın':b.ad.indexOf('raftan')>=0?'raftan al → fırın (+ değiş-tokuş)':b.ad.indexOf('başlat')>=0?'tepsi + hamur → pres':b.ad.indexOf('topping')>=0?'topping → fırın':b.ad.indexOf('fırından')>=0?'fırın → kesim':b.ad.indexOf('kesimden')>=0?'kesim → sprey':b.ad.indexOf('kutu')>=0?'kutu → QR → tepsi':b.ad.indexOf('içecek')>=0?'içecek → QR':'tatlı → QR'; const gk=key+'#'+(b.ref?(b.ref.id||0):0)+(b.ref&&b.ref.tip?'p':'o'); mak[key]=mak[key]||{}; mak[key][gk]=(mak[key][gk]||0)+(b.t1-b.t0); });
   /* hat dengesi: istasyonun çalıştığı süre / toplam süre */
   const dol={pres:0,topping:0,'fırın 1':0,'fırın 2':0,'fırın 3':0,kesim:0,sprey:0,kutu:0};
-  ps.plan.forEach(b=>{ if(b.tip==='istasyon'){ const d=b.t1-b.t0; if(b.ad.indexOf('PRES')===0) dol.pres+=d; else if(b.ad.indexOf('KESİM')===0) dol.kesim+=d; else dol.sprey+=d; }
+  ps.plan.forEach(b=>{ if(b.tip==='istasyon'){ const d=b.t1-b.t0; if(b.ad.indexOf('PRES')===0) dol.pres+=d; else if(b.ad.indexOf('TABLA')===0) dol.topping+=d; else if(b.ad.indexOf('KESİM')===0) dol.kesim+=d; else dol.sprey+=d; }
     if(b.firin) dol['fırın '+(b.firin[2]+1)]+=b.firin[1]-b.firin[0]; if(b.tip==='robot') b.steps.forEach(st=>{ if(st.ad.indexOf('DOZAJI')>=0) dol.topping+=st.sure; if(st.ad.indexOf('KUTU KAPAĞI')>=0||st.ad.indexOf('İTİCİ')>=0) dol.kutu+=st.sure; }); });
   const bar=(ad,v,renk)=>`<tr><td>${ad}</td><td style="width:58%"><div style="background:#1f242e;border-radius:4px;height:9px;margin-top:4px"><div style="width:${Math.min(100,v*100).toFixed(0)}%;height:9px;border-radius:4px;background:${renk||(v>.85?'#ff5c5c':v>.6?'#ffb340':'#3ddc84')}"></div></div></td><td style="width:44px">${(v*100).toFixed(0)} %</td></tr>`;
   const cok=k.siparis>3;
@@ -243,7 +248,7 @@ function gantt(ps){ const c=$('gantt'), W=Math.max(1200,Math.ceil(ps.kpi.sure/36
   g.font='11px sans-serif'; g.fillStyle='#8a94a4'; rows.forEach((r,i)=>g.fillText(r,4,ry(i)+12));
   for(let h=0;h<=T1/3600;h++){ const xx=x(h*3600); g.strokeStyle='#2a2f3a'; g.beginPath(); g.moveTo(xx,2); g.lineTo(xx,H-14); g.stroke(); g.fillText(saat(h*3600),xx+3,H-3); }
   const renk={START:'#3ddc84',TOP:'#ffb340',FIRINA:'#e0533a',KES:'#ff8c40',SPR:'#c084fc',FIN:'#2997ff',KOLA:'#ff5c5c',TATLI:'#f5e6c8',YOL:'#596273'};
-  ps.plan.forEach(b=>{ if(b.tip==='robot'){ const key=b.yolver?'YOL':b.ad.indexOf('raftan')>=0?'FIRINA':b.ad.indexOf('başlat')>=0?'START':b.ad.indexOf('topping')>=0?'TOP':b.ad.indexOf('fırından')>=0?'KES':b.ad.indexOf('kesimden')>=0?'SPR':b.ad.indexOf('kutu')>=0?'FIN':b.ad.indexOf('içecek')>=0?'KOLA':'TATLI'; g.fillStyle=renk[key]; g.fillRect(x(b.t0),ry(b.ri||0),Math.max(1,x(b.t1)-x(b.t0)),15);
+  ps.plan.forEach(b=>{ if(b.tip==='robot'){ const key=b.yolver?'YOL':b.ad.indexOf('tabladan')>=0?'TOP':b.ad.indexOf('raftan')>=0?'FIRINA':b.ad.indexOf('başlat')>=0?'START':b.ad.indexOf('topping')>=0?'TOP':b.ad.indexOf('fırından')>=0?'KES':b.ad.indexOf('kesimden')>=0?'SPR':b.ad.indexOf('kutu')>=0?'FIN':b.ad.indexOf('içecek')>=0?'KOLA':'TATLI'; g.fillStyle=renk[key]; g.fillRect(x(b.t0),ry(b.ri||0),Math.max(1,x(b.t1)-x(b.t0)),15);
       if(b.firin){ g.fillStyle='#d08060'; g.fillRect(x(b.firin[0]),ry(3+o+b.firin[2]),Math.max(1,x(b.firin[1])-x(b.firin[0])),15); }
       b.steps.forEach(()=>{}); if(key==='TOP'&&!b.firin){ g.fillStyle='#ffb340'; g.fillRect(x(b.t0+15),ry(2+o),Math.max(1,x(b.t1)-x(b.t0+15)),15); } if(b.bitis){ g.fillStyle='#2997ff'; g.fillRect(x(b.t0+8),ry(8+o),Math.max(1,x(b.t0+30)-x(b.t0+8)),15); } }
     else if(b.tip==='istasyon'){ const i=b.ad.indexOf('PRES')===0?1:b.ad.indexOf('KESİM')===0?6:7; g.fillStyle='#4a5568'; g.fillRect(x(b.t0),ry(i+o),Math.max(1,x(b.t1)-x(b.t0)),15); } });

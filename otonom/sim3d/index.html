@@ -60,7 +60,7 @@
   <h1>AUTOKITCH · 3D Hat Simülasyonu</h1>
   <div class="sub">Pafta HAT v19 · tepsili akış (robot her istasyona taşır) · FR5 yer rayında (1 ya da 2 robot) · her hareket mesafe ve hızdan hesaplanır, erişim ve çarpışma kontrollü.</div>
 
-  <div class="row"><label>Hat</label><select id="hat"><option value="robot" selected>ROBOTLU HAT v19 · tepsili · 1 ya da 2 robot</option><option value="bant">BANTLI HAT v6 · pres → bant → fırın</option><option value="tabla">ATOSA TABLALI HAT v2 · tabla arabası</option><option value="karsilastir">KARŞILAŞTIR · üçü yan yana, aynı anda</option></select></div>
+  <div class="row"><label>Hat</label><select id="hat"><option value="robot">ROBOTLU HAT v19 · tepsili · 1 ya da 2 robot</option><option value="bant">BANTLI HAT v6 · pres → bant → fırın</option><option value="tabla">ATOSA TABLALI HAT v2 · tabla arabası</option><option value="robot_tabla">ROBOTLU HAT + ATOSA TABLASI · kapaklı fırın</option><option value="karsilastir">KARŞILAŞTIR · üçü yan yana, aynı anda</option></select></div>
 
   <div class="row"><label>Senaryo</label><select id="sen"><option value="tek">Tek sipariş</option><option value="uc">3 müşteri · 1'er dk arayla</option><option value="aksam" selected>Akşam piki · hafta içi 17–20 · 53 sipariş</option><option value="cmt">Cumartesi akşamı 17–20 · 74 sipariş</option><option value="fullpide">TAM YÜK · 1 saat · yalnız pide</option><option value="fulllahm">TAM YÜK · 1 saat · yalnız lahmacun</option><option value="full">TAM YÜK · 1 saatte kaç çıkar · içeceksiz</option><option value="fullic">TAM YÜK · 1 saat · içecek + tatlı dahil</option><option value="akis">Sürekli akış · 1 saat (sınır testi)</option></select></div>
   <div class="row"><label>Robot</label><select id="robotN"><option value="1">1 robot · tek FR5 rayda</option><option value="2">2 robot · aynı rayda SOL + SAĞ</option></select></div>
@@ -90,9 +90,10 @@
 </div>
 <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
-<script src="sim.js?v=63"></script>
-<script src="sim2.js?v=63"></script>
-<script src="sim3.js?v=63"></script>
-<script>document.getElementById('hat').addEventListener('change',function(){ const v=this.value; if(v==='karsilastir') location.href='../karsilastir/'; else if(v!=='robot') location.href='../sim3d_bant_tabla/?hat='+v; });</script>
+<script src="sim.js?v=67"></script>
+<script src="sim2.js?v=67"></script>
+<script src="sim3.js?v=67"></script>
+<script>if(new URLSearchParams(location.search).get('tabla')==='1'){ document.getElementById('hat').value='robot_tabla'; document.querySelector('#ui .sub').innerHTML='Pafta HAT v19 + <b>ATOSA TABLASI</b> · tepsiyi pres altından dozaja ve fırın ucuna tabla taşır, robot yalnız alır/koyar · kapaklı 3 gözlü fırın · FR5 yer rayında (1 ya da 2 robot).'; } else document.getElementById('hat').value='robot';
+document.getElementById('hat').addEventListener('change',function(){ const v=this.value; if(v==='karsilastir') location.href='../karsilastir/'; else if(v==='robot_tabla') location.href='?tabla=1'; else if(v==='robot') location.href='./'; else location.href='../sim3d_bant_tabla/?hat='+v; });</script>
 </body>
 </html>
