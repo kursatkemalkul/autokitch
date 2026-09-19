@@ -40,7 +40,7 @@
 </head>
 <body>
 <div id="grid">
-  <div class="col" data-k="robot"><div class="hd"><span class="ad" style="color:#2997ff">ROBOTLU HAT v19</span><span class="alt">tepsili · robot her istasyona taşır</span><span class="say" id="s_robot">—</span></div><iframe id="f_robot" title="robotlu hat"></iframe><div class="durum" id="d_robot"></div></div>
+  <div class="col" data-k="robot"><div class="hd"><span class="ad" style="color:#2997ff">ROBOTLU HAT v19</span><span class="alt" id="alt_robot">tepsili · 1 robot</span><span class="say" id="s_robot">—</span></div><iframe id="f_robot" title="robotlu hat"></iframe><div class="durum" id="d_robot"></div></div>
   <div class="col" data-k="bant"><div class="hd"><span class="ad" style="color:#ffb340">BANTLI HAT v6</span><span class="alt">pres → bant → konveyör fırın</span><span class="say" id="s_bant">—</span></div><iframe id="f_bant" title="bantlı hat"></iframe><div class="durum" id="d_bant"></div></div>
   <div class="col" data-k="tabla"><div class="hd"><span class="ad" style="color:#c084fc">ATOSA TABLALI HAT v2</span><span class="alt">tabla arabası · tur ≥ 60 s</span><span class="say" id="s_tabla">—</span></div><iframe id="f_tabla" title="tablalı hat"></iframe><div class="durum" id="d_tabla"></div></div>
 </div>
@@ -57,8 +57,8 @@
       <option value="uc">3 müşteri · 1'er dk arayla</option>
       <option value="tek">Tek sipariş</option>
     </select>
-    <label for="robotN">Robotlu hat</label>
-    <select id="robotN"><option value="1" selected>1 robot</option><option value="2">2 robot</option></select>
+    <label for="robotN">Robotlu hatta</label>
+    <select id="robotN" style="border-color:#2997ff"><option value="1" selected>1 robot · tek FR5 rayda</option><option value="2">2 robot · aynı rayda SOL + SAĞ</option></select>
     <span class="sep"></span>
     <button class="play" id="play">▶ Üçünü birden oynat</button>
     <button id="stop">■ Başa sar</button>
@@ -81,7 +81,7 @@
    Oynatma: her karede her sim'in kendi motor(T) fonksiyonu ORTAK T ile çağrılır → üçü saniyesi saniyesine aynı anda ilerler. */
 const K=['robot','bant','tabla'], URL={robot:'../sim3d/?panel=0', bant:'../sim3d_bant_tabla/?hat=bant&panel=0', tabla:'../sim3d_bant_tabla/?hat=tabla&panel=0'};
 const $=id=>document.getElementById(id), W={}, PS={};
-try{ const v=localStorage.getItem('ak_sen'); if(v&&[...$('sen').options].some(o=>o.value===v)) $('sen').value=v; }catch(e){}   // senaryo üç hatta ortak (tek hat görünümüyle paylaşılır)   // PS: her hattın plan sonucu (sim içinde 'let' ile tanımlı → iframe dışından görünmez, planlaUI() dönüş değerinden alınır)
+try{ const v=localStorage.getItem('ak_sen'); if(v&&[...$('sen').options].some(o=>o.value===v)) $('sen').value=v; const r=localStorage.getItem('ak_robotN'); if(r==='1'||r==='2') $('robotN').value=r; }catch(e){}   // senaryo üç hatta ortak (tek hat görünümüyle paylaşılır)   // PS: her hattın plan sonucu (sim içinde 'let' ile tanımlı → iframe dışından görünmez, planlaUI() dönüş değerinden alınır)
 const el=(w,id)=>w.document.getElementById(id);
 let T=0, anim=null, son=0, sure=600;
 K.forEach(k=>{ $('f_'+k).src=URL[k]; });
@@ -96,6 +96,7 @@ async function kur(){ dur(); $('not').textContent='planlanıyor…';
       el(w,'sen').value=sen; const sd=el(w,'seed'); if(sd) sd.value=1; const rn=el(w,'robotN'); if(rn) rn.value=$('robotN').value;
       w.senUI(); PS[k]=w.planlaUI(); w.resize(); if(w.kameraSigdir) w.kameraSigdir(); else w.kamera('on'); delete w._bit;
     }catch(e){ console.warn(k,e); $('not').textContent=k+' kurulamadı: '+e.message; } }
+  $('alt_robot').textContent='tepsili · '+($('robotN').value==='2'?'2 robot · aynı rayda SOL + SAĞ':'1 robot · robot her istasyona taşır');
   sure=Math.max(...K.filter(acik).map(k=>PS[k]?PS[k].kpi.sure:60), 60);
   $('scrub').max=Math.ceil(sure); $('sonT').textContent=saat(sure); $('not').textContent='';
   git(0); }
@@ -117,7 +118,7 @@ function oynat(){ if(anim) return; if(T>=sure+1) git(0); son=performance.now(); 
 function dur(){ if(anim){ clearInterval(anim); anim=null; } $('play').textContent='▶ Üçünü birden oynat'; }
 $('play').onclick=()=>{ if(anim) dur(); else oynat(); };
 $('stop').onclick=()=>{ dur(); git(0); };
-['sen','robotN'].forEach(id=>$(id).addEventListener('change',()=>{ try{ localStorage.setItem('ak_sen',$('sen').value); }catch(e){} kur(); }));
+['sen','robotN'].forEach(id=>$(id).addEventListener('change',()=>{ try{ localStorage.setItem('ak_sen',$('sen').value); localStorage.setItem('ak_robotN',$('robotN').value); }catch(e){} kur(); }));
 K.forEach(k=>$('g_'+k).addEventListener('change',()=>{ document.querySelector('.col[data-k="'+k+'"]').classList.toggle('kapali',!acik(k));
   setTimeout(()=>{ for(const kk of K){ const w=W[kk]; if(w&&w.resize){ w.resize(); if(w.kameraSigdir) w.kameraSigdir(); } } },60);
   sure=Math.max(...K.filter(acik).map(k2=>PS[k2]?PS[k2].kpi.sure:60), 60); $('scrub').max=Math.ceil(sure); $('sonT').textContent=saat(sure); }));
