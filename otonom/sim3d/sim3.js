@@ -13,7 +13,7 @@ function siparisler(cfg){ const o=[], rnd=rng(cfg.seed*7919+13);
   o.sort((a,b)=>a.arr-b.arr); o.forEach((x,i)=>{ x.id=i+1; x.nesneler=[]; x.goz=-1; x.kutuSay=0; x.kolaTeslim=!x.kola; x.tatliTeslim=!x.tatli; x.teslim=null; }); return o; }
 
 /* ================= STOK KONUMLARI ================= */
-const OPT={tut:true,   /* tut: kesim + spreyde tepsi robotun elinde kalır (bırak-al yok), kutu müsaitse zincirleme kutu + QR */ firinEsnek:true, raf:'yok',   /* 2 robotta aktarma gözü: 'hep' = SOL hep göze bırakır · 'yok' = SOL doğrudan fırına (v17 akışı) · 'karma' = fırın kolonu doluysa göz */ tek:true, zincir:true, firinOnden:95, sagYon:-1, evSol:1300, evSag:3300};   // evSol / evSag: işi olmayan robotun kolunu toplayıp beklediği yer (diğerinin çalışma alanının dışında)   // sagYon: 2 robotta SAĞ robot fırın/kesim/sprey/nişe hangi yandan yanaşır (−1 = sağından: SOL robotun bölgesine girmez)   // firinOnden: fırın gözü bu kadar saniye içinde boşalacaksa sıradaki ürün ŞİMDİ başlatılır (hamur+pres+topping ~100 s sürer; göz boşalmasını bekleyip sonra başlamak fırını boş bekletir)   // tek: çekmece + pres aynı araba konumundan · zincir: sırada ürün varsa tepsi QR'dan doğrudan prese
+const OPT={sagKutu:false, kutu3:false, kutu3Sure:26,   /* kutu3: kutu + QR işini SABİT 3. ROBOT yapar (kutulama ağzı ile QR dolabı arasında, raysız) → ana robot spreyden sonra pideyi kutuya döküp tepsiyi bırakır */ tut:true,   /* tut: kesim + spreyde tepsi robotun elinde kalır (bırak-al yok), kutu müsaitse zincirleme kutu + QR */ firinEsnek:true, raf:'yok',   /* 2 robotta aktarma gözü: 'hep' = SOL hep göze bırakır · 'yok' = SOL doğrudan fırına (v17 akışı) · 'karma' = fırın kolonu doluysa göz */ tek:true, zincir:true, firinOnden:95, sagYon:-1, evSol:1300, evSag:3300};   // evSol / evSag: işi olmayan robotun kolunu toplayıp beklediği yer (diğerinin çalışma alanının dışında)   // sagYon: 2 robotta SAĞ robot fırın/kesim/sprey/nişe hangi yandan yanaşır (−1 = sağından: SOL robotun bölgesine girmez)   // firinOnden: fırın gözü bu kadar saniye içinde boşalacaksa sıradaki ürün ŞİMDİ başlatılır (hamur+pres+topping ~100 s sürer; göz boşalmasını bekleyip sonra başlamak fırını boş bekletir)   // tek: çekmece + pres aynı araba konumundan · zincir: sırada ürün varsa tepsi QR'dan doğrudan prese
 function topPos(kolon,sira,k){ const K=KOLON[kolon], kot=K.kotlar[sira], y=kot+15+EL.TOP_R;
   if(kolon==='K1'||(kolon==='K2'&&sira<2)) return V(K.x0+115+130*(k%4), y, 70+135*Math.floor(k/4));
   return V(K.x0+100+105*(k%5), y, 68+91*Math.floor(k/5)); }   // iç 580 × 640: top merkezleri duvardan ≥ 48
@@ -97,8 +97,11 @@ function planla(cfg){
   function teslimKontrol(o,t1){ if(o.teslim) return; if(P.find(p=>p.o===o&&p.stage!=='bitti'&&p.stage!=='iptal')===undefined&&o.kolaTeslim&&o.tatliTeslim){ o.teslim=t1; const d=dolap.find(d=>d.o===o); if(d){ d.freeAt=t1+HIZ.musteri; plan.push({tip:'musteri',ad:'müşteri '+o.id,t0:d.freeAt,t1:d.freeAt+2,ri:0,ref:o,steps:[{ad:'MÜŞTERİ ALDI · sipariş '+o.id,sure:2,fn:()=>{},bitir:()=>{ o.nesneler.forEach(n=>nesneSil(n)); o.nesneler=[]; }}]}); } } }
   const istBos=()=>({carX:0,tcp:V(0,0,0),t:V(0,0,-1),u:V(0,1,0),yuk:'bos',parmak:70});
   /* kim yapabilir · kimin asıl işi */
-  const yapabilir=(r,c)=>N===1||(r.i===0?(c.tip!=='FIN'&&(OPT.solFirina||c.tip!=='FIRINA')&&((c.tip!=='KOLA'&&c.tip!=='TATLI')||qrKapak[c.o.goz].ci===0)):(c.tip!=='START'&&c.tip!=='TOP'));
-  const asil=(r,c)=>N===1||(r.i===0?(c.tip==='START'||c.tip==='TOP'):(c.tip!=='START'&&c.tip!=='TOP'));
+  /* sagKutu: SAĞ robot YALNIZ kutu + QR yapar (kesim · sprey · içecek · tatlı SOL'a geçer) → sağ robot hep hattın sağ ucunda kalır, fırın kolonunda çakışma olmaz */
+  const yapabilir=(r,c)=>N===1||(OPT.sagKutu ? (r.i===1 ? c.tip==='FIN' : c.tip!=='FIN')
+    : (r.i===0?(c.tip!=='FIN'&&(OPT.solFirina||c.tip!=='FIRINA')&&((c.tip!=='KOLA'&&c.tip!=='TATLI')||qrKapak[c.o.goz].ci===0)):(c.tip!=='START'&&c.tip!=='TOP')));
+  const asil=(r,c)=>N===1||(OPT.sagKutu ? (r.i===1 ? c.tip==='FIN' : c.tip!=='FIN')
+    : (r.i===0?(c.tip==='START'||c.tip==='TOP'):(c.tip!=='START'&&c.tip!=='TOP')));
   let guard=0;
   while(guard++<120000){
     const r=RBT.slice().sort((a,b)=>a.t-b.t||a.i-b.i)[0]; if(!isFinite(r.t)) break; t=r.t; const o=N>1?RBT[1-r.i]:null;
@@ -131,7 +134,7 @@ function planla(cfg){
       else if(c.tip==='FIRINA'){ const p=c.p; p.goz=c.g.g; ad='#'+p.id+' · raftan al → fırın '+(p.goz+1); G_firina(B,p);
         c.takas=R_.kesim<=t?P.filter(q=>q.stage==='firinda'&&q.goz!==p.goz&&q.readyAt<=t+(OPT.takasPay||15)).sort((a,b)=>a.readyAt-b.readyAt)[0]:null;                     // değiş-tokuş: fırının önündeyken yandaki gözdeki pişmişi de al
         if(c.takas){ ad+=' + #'+c.takas.id+' pişmişi al → kesim'; B.bol('pişmişi al → kesim'); G_kesim(B,c.takas); } }
-      else if(c.tip==='KES'&&OPT.tut){ const p=c.p, oo=p.o; c.fin=(N===1||r.i===1)&&R_.kutu<=t&&oo.kolaTeslim&&oo.tatliTeslim&&(oo.icBitis||0)<=t&&!!dolapAl(oo,t); c.zn=(c.fin&&N===1&&OPT.zincir)?startAday(1):null;
+      else if(c.tip==='KES'&&OPT.tut){ const p=c.p, oo=p.o; c.fin=!OPT.kutu3&&(N===1||r.i===1)&&R_.kutu<=t&&oo.kolaTeslim&&oo.tatliTeslim&&(oo.icBitis||0)<=t&&!!dolapAl(oo,t); c.zn=(c.fin&&N===1&&OPT.zincir)?startAday(1):null;
         ad='#'+p.id+' · fırından al → kesim → sprey (tepsi elde)'+(c.fin?' → kutu → QR göz '+(oo.goz+1)+(c.zn?' → tepsi elde kalır (sıradaki #'+c.zn.id+')':' → tepsi nişe'):' → spreyde bırak'); G_kesimTut(B,p,oo,c.fin,!!c.zn); }
       else if(c.tip==='KES'){ ad='#'+c.p.id+' · fırından al → kesim'; G_kesim(B,c.p); }
       else if(c.tip==='SPR'){ ad='#'+c.p.id+' · kesimden al → sprey'; G_sprey(B,c.p); }
@@ -150,7 +153,8 @@ function planla(cfg){
         if(c.takas){ const q=c.takas; G.find(g=>g.g===q.goz).p=null; const C=insaci(istBos()); G_kesimCevrim(C); blok('istasyon','KESİM #'+q.id,b.t1,C.st,q); R_.kesim=1e12; q.stage='kesimde'; q.readyAt=b.t1+HIZ.kesim; sayac.takas=(sayac.takas||0)+1; } }
       else if(c.tip==='TOP'){ const p=c.p; c.g.p=p; const tb=b.bl.filter(x=>x.ek==='topping'); R_.press=tb.length?tb[0].t0:b.t0+20; R_.topping=tb.length?tb[tb.length-1].t1:b.t1; const fb=b.bl.filter(x=>x.ek==='fırına götür').pop()||b.son; p.stage='firinda'; p.readyAt=fb.t1+(OPT.firinEsnek?HIZ.firin[p.tip]:c.g.sure); c.g.doneAt=p.readyAt; fb.firin=[fb.t1,p.readyAt,p.goz]; }
       else if(c.tip==='KES'&&OPT.tut){ const p=c.p, oo=p.o; G.find(g=>g.g===p.goz).p=null; const ks=b.bl.filter(x=>x.ek==='kesim · tepsi elde'), ss=b.bl.filter(x=>x.ek==='sprey · tepsi elde'); R_.kesim=ks.length?ks[ks.length-1].t1:b.t1;
-        if(c.fin){ const kutuSon=b.bl.filter(x=>x.ek==='kutu + QR').pop()||b.son; kutuSon.bitis=1; R_.sprey=ss.length?ss[ss.length-1].t1:b.t1; R_.kutu=kutuSon.t1; p.stage='bitti'; p.bitti=kutuSon.t1; if(c.zn) zincir={p:c.zn,tray:p.tray}; else p.tray.bosAt=b.t1; oo.kutuSay++; teslimKontrol(oo,kutuSon.t1); sayac.tutFin=(sayac.tutFin||0)+1; }
+        if(OPT.kutu3){ const ss2=b.bl.filter(x=>x.ek==='sprey · tepsi elde'), tt=(ss2.length?ss2[ss2.length-1].t1:b.t1)+OPT.kutu3Sure; R_.sprey=ss2.length?ss2[ss2.length-1].t1:b.t1; R_.kutu=tt; p.stage='bitti'; p.bitti=tt; p.tray.bosAt=b.t1; oo.kutuSay++; b.son.bitis=1; b.son.bitisT=tt; teslimKontrol(oo,tt); sayac.kutu3=(sayac.kutu3||0)+1; }
+        else if(c.fin){ const kutuSon=b.bl.filter(x=>x.ek==='kutu + QR').pop()||b.son; kutuSon.bitis=1; R_.sprey=ss.length?ss[ss.length-1].t1:b.t1; R_.kutu=kutuSon.t1; p.stage='bitti'; p.bitti=kutuSon.t1; if(c.zn) zincir={p:c.zn,tray:p.tray}; else p.tray.bosAt=b.t1; oo.kutuSay++; teslimKontrol(oo,kutuSon.t1); sayac.tutFin=(sayac.tutFin||0)+1; }
         else { R_.sprey=1e12; p.stage='spreyde'; p.readyAt=b.t1; sayac.tutBirak=(sayac.tutBirak||0)+1; } }
       else if(c.tip==='KES'){ const p=c.p; G.find(g=>g.g===p.goz).p=null; const C=insaci(istBos()); G_kesimCevrim(C); blok('istasyon','KESİM #'+p.id,b.t1,C.st,p); R_.kesim=1e12; p.stage='kesimde'; p.readyAt=b.t1+HIZ.kesim; }
       else if(c.tip==='SPR'){ const p=c.p; R_.kesim=b.t0+15; const C=insaci(istBos()); G_spreyCevrim(C); blok('istasyon','SPREY #'+p.id,b.t1,C.st,p); R_.sprey=1e12; p.stage='spreyde'; p.readyAt=b.t1+HIZ.sprey; }
