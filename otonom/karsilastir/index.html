@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AUTOKITCH — 3 Hat Karşılaştırma</title>
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+<style>
+  :root{--bg:#0d1016;--panel:#161a22;--line:#2a2f3a;--gray:#8a94a4;--blue:#2997ff;--green:#3ddc84;--red:#ff5c5c;--amber:#ffb340;
+    --font:"SF Pro Display",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;--bar:104px}
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{height:100%;background:var(--bg);color:#e8eaed;font-family:var(--font);font-size:13px;-webkit-font-smoothing:antialiased;overflow:hidden}
+  #grid{position:fixed;left:0;right:0;top:0;bottom:var(--bar);display:flex;gap:2px;background:var(--line)}
+  .col{flex:1 1 0;min-width:0;position:relative;background:var(--bg);display:flex;flex-direction:column}
+  .col.kapali{display:none}
+  .hd{padding:7px 12px 6px;background:#12161d;border-bottom:1px solid var(--line);display:flex;align-items:baseline;gap:10px;white-space:nowrap;overflow:hidden}
+  .hd .ad{font-size:12.5px;font-weight:700;letter-spacing:.01em}
+  .hd .alt{font-size:10.5px;color:var(--gray);overflow:hidden;text-overflow:ellipsis}
+  .say{margin-left:auto;font-size:12px;color:var(--gray);font-variant-numeric:tabular-nums}
+  .say b{font-size:17px;color:var(--green);font-weight:700}
+  .col iframe{flex:1;width:100%;border:0;display:block}
+  .durum{position:absolute;left:0;right:0;bottom:0;padding:5px 12px;background:rgba(13,16,22,.82);font-size:11.5px;color:#c9ccd3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;border-top:1px solid #1f242e}
+  .durum .rb{color:var(--blue);font-weight:600} .durum .mk{color:var(--amber);font-weight:600}
+  #bar{position:fixed;left:0;right:0;bottom:0;height:var(--bar);background:var(--panel);border-top:1px solid var(--line);padding:9px 14px 8px;display:flex;flex-direction:column;gap:8px}
+  .r1{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+  .r2{display:flex;align-items:center;gap:12px}
+  label{color:var(--gray);font-size:11px;letter-spacing:.08em;text-transform:uppercase}
+  select,button{font:inherit;background:#0d1016;color:#fff;border:1px solid var(--line);border-radius:8px;padding:6px 9px;font-size:12.5px;cursor:pointer}
+  select:hover,button:hover{border-color:var(--blue)}
+  button.play{background:var(--blue);border-color:var(--blue);font-weight:700;min-width:132px;padding:8px 14px}
+  #scrub{flex:1;accent-color:var(--blue);height:18px;cursor:grab}
+  #saat{font-variant-numeric:tabular-nums;color:#c9ccd3;white-space:nowrap;font-size:12.5px}
+  .sep{width:1px;height:22px;background:var(--line)}
+  .kut{display:flex;align-items:center;gap:6px;font-size:12px;color:#c9ccd3}
+  .kut input{accent-color:var(--blue)}
+  a{color:var(--blue);text-decoration:none;font-size:12px}
+  .uyari{color:var(--amber);font-size:11.5px}
+  @media(max-width:1100px){#grid{flex-direction:column}}
+</style>
+</head>
+<body>
+<div id="grid">
+  <div class="col" data-k="robot"><div class="hd"><span class="ad" style="color:#2997ff">ROBOTLU HAT v19</span><span class="alt">tepsili · robot her istasyona taşır</span><span class="say" id="s_robot">—</span></div><iframe id="f_robot" title="robotlu hat"></iframe><div class="durum" id="d_robot"></div></div>
+  <div class="col" data-k="bant"><div class="hd"><span class="ad" style="color:#ffb340">BANTLI HAT v6</span><span class="alt">pres → bant → konveyör fırın</span><span class="say" id="s_bant">—</span></div><iframe id="f_bant" title="bantlı hat"></iframe><div class="durum" id="d_bant"></div></div>
+  <div class="col" data-k="tabla"><div class="hd"><span class="ad" style="color:#c084fc">ATOSA TABLALI HAT v2</span><span class="alt">tabla arabası · tur ≥ 60 s</span><span class="say" id="s_tabla">—</span></div><iframe id="f_tabla" title="tablalı hat"></iframe><div class="durum" id="d_tabla"></div></div>
+</div>
+<div id="bar">
+  <div class="r1">
+    <label for="sen">Senaryo</label>
+    <select id="sen">
+      <option value="full" selected>TAM YÜK · 1 saatte kaç çıkar · içeceksiz</option>
+      <option value="fullic">TAM YÜK · içecek + tatlı dahil</option>
+      <option value="fullpide">TAM YÜK · yalnız pide</option>
+      <option value="fulllahm">TAM YÜK · yalnız lahmacun</option>
+      <option value="aksam">Akşam piki · hafta içi 17–20 · 53 sipariş</option>
+      <option value="cmt">Cumartesi akşamı · 74 sipariş</option>
+      <option value="uc">3 müşteri · 1'er dk arayla</option>
+      <option value="tek">Tek sipariş</option>
+    </select>
+    <label for="robotN">Robotlu hat</label>
+    <select id="robotN"><option value="1" selected>1 robot</option><option value="2">2 robot</option></select>
+    <span class="sep"></span>
+    <button class="play" id="play">▶ Üçünü birden oynat</button>
+    <button id="stop">■ Başa sar</button>
+    <label for="hiz">Hız</label>
+    <select id="hiz"><option value="1">×1</option><option value="2">×2</option><option value="4" selected>×4</option><option value="10">×10</option><option value="30">×30</option></select>
+    <span class="sep"></span>
+    <span class="kut"><input type="checkbox" id="g_robot" checked> robotlu</span>
+    <span class="kut"><input type="checkbox" id="g_bant" checked> bantlı</span>
+    <span class="kut"><input type="checkbox" id="g_tabla" checked> tablalı</span>
+    <span class="sep"></span>
+    <a href="../sim3d/">← tek hat görünümü</a>
+    <span id="not" class="uyari"></span>
+  </div>
+  <div class="r2"><span id="saat">17:00:00</span><input type="range" id="scrub" min="0" max="100" step="0.5" value="0"><span id="sonT">—</span></div>
+</div>
+<script>
+/* AUTOKITCH · 3 HAT KARŞILAŞTIRMA — 19 Eyl 2026
+   Üç sim aynı sayfada iframe olarak açılır (her biri kendi motoru: robotlu = tepsili HAT v19, bantlı v6, tablalı v2).
+   Sağ menüleri kapalı (?panel=0), kamera tam karşıdan. Alttaki tek bar üçünü birden sürer: aynı senaryo, aynı tohum, aynı saat.
+   Oynatma: her karede her sim'in kendi motor(T) fonksiyonu ORTAK T ile çağrılır → üçü saniyesi saniyesine aynı anda ilerler. */
+const K=['robot','bant','tabla'], URL={robot:'../sim3d/?panel=0', bant:'../sim3d_bant_tabla/?hat=bant&panel=0', tabla:'../sim3d_bant_tabla/?hat=tabla&panel=0'};
+const $=id=>document.getElementById(id), W={}, PS={};
+try{ const v=localStorage.getItem('ak_sen'); if(v&&[...$('sen').options].some(o=>o.value===v)) $('sen').value=v; }catch(e){}   // senaryo üç hatta ortak (tek hat görünümüyle paylaşılır)   // PS: her hattın plan sonucu (sim içinde 'let' ile tanımlı → iframe dışından görünmez, planlaUI() dönüş değerinden alınır)
+const el=(w,id)=>w.document.getElementById(id);
+let T=0, anim=null, son=0, sure=600;
+K.forEach(k=>{ $('f_'+k).src=URL[k]; });
+const pencere=k=>{ const f=$('f_'+k); try{ return f.contentWindow; }catch(e){ return null; } };
+function bekle(k){ return new Promise(res=>{ const f=$('f_'+k); const bak=()=>{ const w=pencere(k); if(w&&w.motor&&w.kamera&&w.planlaUI&&el(w,'sen')){ W[k]=w; res(w); } else setTimeout(bak,120); }; f.addEventListener('load',bak); bak(); }); }
+const acik=k=>$('g_'+k).checked;
+/* aynı senaryo + aynı tohum ile üçünü de yeniden planla, kamerayı tam karşıya al */
+async function kur(){ dur(); $('not').textContent='planlanıyor…';
+  await Promise.all(K.map(bekle));
+  const sen=$('sen').value;
+  for(const k of K){ const w=W[k]; try{
+      el(w,'sen').value=sen; const sd=el(w,'seed'); if(sd) sd.value=1; const rn=el(w,'robotN'); if(rn) rn.value=$('robotN').value;
+      w.senUI(); PS[k]=w.planlaUI(); w.resize(); if(w.kameraSigdir) w.kameraSigdir(); else w.kamera('on'); delete w._bit;
+    }catch(e){ console.warn(k,e); $('not').textContent=k+' kurulamadı: '+e.message; } }
+  sure=Math.max(...K.filter(acik).map(k=>PS[k]?PS[k].kpi.sure:60), 60);
+  $('scrub').max=Math.ceil(sure); $('sonT').textContent=saat(sure); $('not').textContent='';
+  git(0); }
+function saat(s){ const b=17*3600+Math.max(0,s), h=Math.floor(b/3600)%24, m=Math.floor(b%3600/60), ss=Math.floor(b%60); return h+':'+(m<10?'0':'')+m+':'+(ss<10?'0':'')+ss; }
+/* T anındaki çıkan ürün sayısı (kutusu QR gözüne konan ürün) */
+function bitenler(k){ const w=W[k], ps=PS[k]; if(!ps) return 0; if(!w._bit){ w._bit=ps.plan.filter(b=>b.bitis).map(b=>b.bitisT!==undefined?b.bitisT:b.t1).sort((a,b)=>a-b); } let n=0; while(n<w._bit.length&&w._bit[n]<=T) n++; return n; }
+function yaz(){ for(const k of K){ const w=W[k]; if(!w||!PS[k]) continue;
+    const kpi=PS[k].kpi, n=bitenler(k), saatlik=T>60?(n/T*3600):0;
+    $('s_'+k).innerHTML='<b>'+n+'</b> ürün'+(T>120?' · '+saatlik.toFixed(0)+'/saat':'')+' <span style="color:#5a6473">· robot %'+Math.round(kpi.robot*100)+'</span>';
+    const m=w.motor(T); const rb=(m.robotAd&&m.robotAd[0])?(m.robotAd[0].split(' · ')[0]+' · '+m.adim[0]):'boşta';
+    $('d_'+k).innerHTML='<span class="rb">ROBOT</span> '+rb+(m.makine&&m.makine.length?' &nbsp;<span class="mk">MAKİNE</span> '+m.makine.slice(0,2).join(' · '):'');
+  }
+  $('saat').textContent=saat(T)+' / '+saat(sure); const sc=$('scrub'); if(!sc._tut) sc.value=Math.min(T,sure); }
+function ilerle(){ for(const k of K){ if(W[k]&&PS[k]&&acik(k)) W[k].motor(T); } yaz(); }
+function git(t){ T=Math.max(0,Math.min(sure+2,t)); for(const k of K){ if(W[k]&&PS[k]) W[k].zamanaGit(PS[k],T); } yaz(); }
+/* oynatma: bu sayfa yalnız iframe barındırdığı için requestAnimationFrame çalışmıyor → sabit aralıklı zamanlayıcı (gerçek geçen süre performance.now ile ölçülür) */
+function frame(){ const now=performance.now(), dt=Math.min(0.2,(now-son)/1000); son=now; T+=dt*(+$('hiz').value); if(T>sure+1){ T=sure+1; yaz(); dur(); return; } ilerle(); }
+function oynat(){ if(anim) return; if(T>=sure+1) git(0); son=performance.now(); $('play').textContent='❚❚ Duraklat'; anim=setInterval(frame,1000/60); }
+function dur(){ if(anim){ clearInterval(anim); anim=null; } $('play').textContent='▶ Üçünü birden oynat'; }
+$('play').onclick=()=>{ if(anim) dur(); else oynat(); };
+$('stop').onclick=()=>{ dur(); git(0); };
+['sen','robotN'].forEach(id=>$(id).addEventListener('change',()=>{ try{ localStorage.setItem('ak_sen',$('sen').value); }catch(e){} kur(); }));
+K.forEach(k=>$('g_'+k).addEventListener('change',()=>{ document.querySelector('.col[data-k="'+k+'"]').classList.toggle('kapali',!acik(k));
+  setTimeout(()=>{ for(const kk of K){ const w=W[kk]; if(w&&w.resize){ w.resize(); if(w.kameraSigdir) w.kameraSigdir(); } } },60);
+  sure=Math.max(...K.filter(acik).map(k2=>PS[k2]?PS[k2].kpi.sure:60), 60); $('scrub').max=Math.ceil(sure); $('sonT').textContent=saat(sure); }));
+(function(){ const sc=$('scrub'); let bek=null;
+  const uygula=()=>{ if(bek===null) return; const t=bek; bek=null; git(t); };
+  sc.addEventListener('pointerdown',()=>{ sc._tut=true; sc._calisiyordu=!!anim; dur(); });
+  sc.addEventListener('input',()=>{ const ilk=bek===null; bek=+sc.value; if(ilk) requestAnimationFrame(uygula); });
+  const birak=()=>{ if(!sc._tut) return; sc._tut=false; if(sc._calisiyordu) oynat(); };
+  sc.addEventListener('pointerup',birak); sc.addEventListener('change',birak); })();
+addEventListener('resize',()=>{ for(const k of K){ const w=W[k]; if(w&&w.resize){ w.resize(); if(w.kameraSigdir) w.kameraSigdir(); } } });
+kur();
+</script>
+</body>
+</html>

@@ -40,9 +40,13 @@ function ciz(){
     return `<b style="color:${q.ri?'#ff8c40':'#2997ff'}">${S.n>1?(q.ri?'SAĞ robot':'SOL robot'):'Robot'}</b> · erişim <span class="${k.ok?'ok':'yok'}"><b>${k.ok?'tam':'YOK −'+(k.D-k.maxD).toFixed(0)}</b></span> · temas <span class="${hs.length?'yok':'ok'}"><b>${hs.length?hs.length+' nokta':'yok'}</b></span> ${Object.keys(oz).slice(0,2).join(' · ')}<br><span style="color:#8a94a4">araba x ${ROB[q.ri].carX.toFixed(0)} · yük ${n?n.tip+(n.icerik?' ('+n.icerik+')':''):'boş'}</span>`; }).join('<br>');
   S.ri=ri0;
 }
-function resize(){ const w=innerWidth-(innerWidth>760?380:0), h=innerWidth>760?innerHeight:innerHeight*.45; renderer.setSize(w,h,true); camera.aspect=w/h; camera.updateProjectionMatrix(); }
+function resize(){ const ps=!!window.PANELSIZ, w=innerWidth-((!ps&&innerWidth>760)?380:0), h=(ps||innerWidth>760)?innerHeight:innerHeight*.45; renderer.setSize(w,h,true); camera.aspect=w/h; camera.updateProjectionMatrix(); }   // panel=0 (karşılaştırma penceresi): sağ menü yok, tuval tam ekran
 addEventListener('resize',resize); resize();
 const CAM={iso:[[-1200,2600,5400],[2000,900,0]], on:[[2000,1100,6600],[2000,1000,0]], ust:[[2000,7500,600],[2000,0,400]], yan:[[-4800,1400,600],[1200,900,300]], robot:[[0,1800,2400],[0,1100,100]]};
+/* karşılaştırma penceresi: hattın tamamı kadraja girsin — dar pencerede kamera yatay açıya göre geri çekilir (tam karşıdan) */
+function kameraSigdir(){ const boy=(typeof HAT==='object'&&HAT.boy)?HAT.boy:3900, cx=boy/2;
+  const vf=camera.fov*Math.PI/180, hf=2*Math.atan(Math.tan(vf/2)*camera.aspect), d=(boy*0.55)/Math.tan(hf/2)+380;
+  camera.position.set(cx,1220,d); controls.target.set(cx,1010,-250); controls.update(); }
 function kamera(k){ const c=CAM[k]; if(k==='robot'){ c[0][0]=ROB[0].carX-1500; c[1][0]=ROB[0].carX; } camera.position.set(...c[0]); controls.target.set(...c[1]); controls.update(); }
 kamera('iso');
 document.querySelectorAll('[data-cam]').forEach(b=>b.onclick=()=>kamera(b.dataset.cam));   // menüde düğme yok; kamera fareyle çevrilir

@@ -258,6 +258,10 @@ $('planla').onclick=planlaUI; $('play').onclick=()=>{ if(anim){ dur(); return; }
 $('kontrol').onclick=()=>{ if(!PLAN) planlaUI(); $('kontrol').textContent='taranıyor…'; setTimeout(()=>{ sessizKontrol(PLAN); $('kontrol').textContent='Tüm adımları tara · erişim + çarpışma'; },30); };
 function senUI(){ const v=$('sen').value; $('tekRow').style.display=v==='tek'?'':'none'; $('akisRow').style.display=v==='akis'?'':'none'; }
 ['sen','robotN','aralik','urun','kola','tatli'].forEach(id=>$(id).addEventListener('change',()=>{ senUI(); planlaUI(); })); senUI();
+/* SENARYO ÜÇ HATTA ORTAK: hat değiştirince (robotlu ↔ bantlı ↔ tablalı) ve karşılaştırma ekranına geçince son seçilen senaryo korunur */
+try{ if(!window.PANELSIZ){ const v=localStorage.getItem('ak_sen'); if(v&&[...$('sen').options].some(o=>o.value===v)) $('sen').value=v; } }catch(e){}
+$('sen').addEventListener('change',()=>{ try{ if(!window.PANELSIZ) localStorage.setItem('ak_sen',$('sen').value); }catch(e){} });
+senUI();
 /* oynatma çubuğu: tutup sürükle → o ana gider (geri de) */
 (function(){ const sc=$('scrub'); let bekleyen=null, calisiyordu=false;
   const git=()=>{ if(bekleyen===null) return; const T=bekleyen; bekleyen=null; if(PLAN) zamanaGit(PLAN,T); };

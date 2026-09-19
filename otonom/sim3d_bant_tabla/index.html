@@ -47,9 +47,11 @@
   #scrubwrap span{font-size:12px;color:#c9ccd3;font-variant-numeric:tabular-nums;white-space:nowrap}
   #scrub{flex:1;width:auto;height:18px;cursor:grab}
   @media(max-width:760px){#ui{width:100%;top:auto;height:52%;border-left:0;border-top:1px solid var(--line)} #gwrap,#tut{display:none} #scrubwrap{right:0;bottom:52%}}
+  html.panelsiz #ui,html.panelsiz #tut,html.panelsiz #scrubwrap,html.panelsiz #gwrap{display:none}
 </style>
 </head>
 <body>
+<script>window.PANELSIZ=new URLSearchParams(location.search).get('panel')==='0'; if(window.PANELSIZ) document.documentElement.classList.add('panelsiz');</script>
 <canvas id="c"></canvas>
 <div id="tut" title="Zaman çizelgesi · tutup yukarı çek · çift tıkla aç/kapa"></div>
 <div id="scrubwrap"><span id="scrubT">17:00:00</span><input type="range" id="scrub" min="0" max="100" step="0.5" value="0"></div>
@@ -58,7 +60,7 @@
   <h1>AUTOKITCH · 3D Sim · Bantlı / Tablalı Hat</h1>
   <div class="sub">Pafta BANTLI HAT v6 · ATOSA TABLALI HAT v2 · TEK Fairino FR5 yer rayında · ürün tepsisiz akar, robot yalnız hamur + kutu + içecek taşır · her hareket mesafe ve hızdan hesaplanır, erişim ve çarpışma kontrollü.</div>
 
-  <div class="row"><label>Hat</label><select id="hat"><option value="robot">ROBOTLU HAT v19 · tepsili · 1 ya da 2 robot</option><option value="bant">BANTLI HAT v6 · pres → bant → fırın</option><option value="tabla">ATOSA TABLALI HAT v2 · tabla arabası</option></select></div>
+  <div class="row"><label>Hat</label><select id="hat"><option value="robot">ROBOTLU HAT v19 · tepsili · 1 ya da 2 robot</option><option value="bant">BANTLI HAT v6 · pres → bant → fırın</option><option value="tabla">ATOSA TABLALI HAT v2 · tabla arabası</option><option value="karsilastir">KARŞILAŞTIR · üçü yan yana, aynı anda</option></select></div>
 
   <div class="row"><label>Senaryo</label><select id="sen"><option value="tek">Tek sipariş</option><option value="uc">3 müşteri · 1'er dk arayla</option><option value="aksam">Akşam piki · hafta içi 17–20 · 53 sipariş</option><option value="cmt">Cumartesi akşamı 17–20 · 74 sipariş</option><option value="fullpide">TAM YÜK · 1 saat · yalnız pide</option><option value="fulllahm">TAM YÜK · 1 saat · yalnız lahmacun</option><option value="full" selected>TAM YÜK · 1 saatte kaç çıkar · içeceksiz</option><option value="fullic">TAM YÜK · 1 saat · içecek + tatlı dahil</option><option value="akis">Sürekli akış · 1 saat (sınır testi)</option></select></div>
   <div class="row" id="tekRow"><label>Ürün</label><span><select id="urun" style="min-width:110px"><option value="pide">kaşarlı pide</option><option value="lahm">lahmacun</option></select> &nbsp;<input type="checkbox" id="kola" checked> içecek <input type="checkbox" id="tatli" checked> tatlı</span></div>
@@ -90,8 +92,8 @@
 </div>
 <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
-<script src="sim.js?v=9"></script>
-<script src="sim2.js?v=9"></script>
-<script src="sim3.js?v=9"></script>
+<script src="sim.js?v=13"></script>
+<script src="sim2.js?v=13"></script>
+<script src="sim3.js?v=13"></script>
 </body>
 </html>
