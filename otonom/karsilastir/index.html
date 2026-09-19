@@ -21,6 +21,16 @@
   .col iframe{flex:1;width:100%;border:0;display:block}
   .durum{position:absolute;left:0;right:0;bottom:0;padding:5px 12px;background:rgba(13,16,22,.82);font-size:11.5px;color:#c9ccd3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;border-top:1px solid #1f242e}
   .durum .rb{color:var(--blue);font-weight:600} .durum .mk{color:var(--amber);font-weight:600}
+  .sonuc{position:absolute;left:16px;right:16px;top:50px;background:rgba(11,14,19,.95);border:1px solid #39414f;border-radius:14px;padding:13px 15px 11px;display:none;box-shadow:0 18px 40px rgba(0,0,0,.55)}
+  .sonuc.ac{display:block}
+  .sonuc h3{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray);font-weight:700;margin-bottom:9px}
+  .sonuc .buyuk{font-size:30px;font-weight:800;color:var(--green);line-height:1.05}
+  .sonuc .buyuk small{font-size:12px;font-weight:600;color:var(--gray);letter-spacing:.02em}
+  .sonuc table{width:100%;border-collapse:collapse;font-size:12px;margin-top:9px}
+  .sonuc td{padding:3px 0;border-bottom:1px solid #1c212b;color:#c9ccd3} .sonuc td:last-child{text-align:right;color:#fff;font-variant-numeric:tabular-nums}
+  .sonuc .kapat{position:absolute;right:9px;top:7px;color:var(--gray);cursor:pointer;font-size:16px;line-height:1;padding:3px 7px;border-radius:7px}
+  .sonuc .kapat:hover{background:#1c212b;color:#fff}
+  .sonuc .dip{margin-top:8px;font-size:11.5px;color:var(--amber)}
   #bar{position:fixed;left:0;right:0;bottom:0;height:var(--bar);background:var(--panel);border-top:1px solid var(--line);padding:9px 14px 8px;display:flex;flex-direction:column;gap:8px}
   .r1{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
   .r2{display:flex;align-items:center;gap:12px}
@@ -40,9 +50,9 @@
 </head>
 <body>
 <div id="grid">
-  <div class="col" data-k="robot"><div class="hd"><span class="ad" style="color:#2997ff">ROBOTLU HAT v19</span><span class="alt" id="alt_robot">tepsili · 1 robot</span><span class="say" id="s_robot">—</span></div><iframe id="f_robot" title="robotlu hat"></iframe><div class="durum" id="d_robot"></div></div>
-  <div class="col" data-k="bant"><div class="hd"><span class="ad" style="color:#ffb340">BANTLI HAT v6</span><span class="alt">pres → bant → konveyör fırın</span><span class="say" id="s_bant">—</span></div><iframe id="f_bant" title="bantlı hat"></iframe><div class="durum" id="d_bant"></div></div>
-  <div class="col" data-k="tabla"><div class="hd"><span class="ad" style="color:#c084fc">ATOSA TABLALI HAT v2</span><span class="alt">tabla arabası · tur ≥ 60 s</span><span class="say" id="s_tabla">—</span></div><iframe id="f_tabla" title="tablalı hat"></iframe><div class="durum" id="d_tabla"></div></div>
+  <div class="col" data-k="robot"><div class="hd"><span class="ad" style="color:#2997ff">ROBOTLU HAT v19</span><span class="alt" id="alt_robot">tepsili · 1 robot</span><span class="say" id="s_robot">—</span></div><iframe id="f_robot" title="robotlu hat"></iframe><div class="durum" id="d_robot"></div><div class="sonuc" id="r_robot"></div></div>
+  <div class="col" data-k="bant"><div class="hd"><span class="ad" style="color:#ffb340">BANTLI HAT v6</span><span class="alt">pres → bant → konveyör fırın</span><span class="say" id="s_bant">—</span></div><iframe id="f_bant" title="bantlı hat"></iframe><div class="durum" id="d_bant"></div><div class="sonuc" id="r_bant"></div></div>
+  <div class="col" data-k="tabla"><div class="hd"><span class="ad" style="color:#c084fc">ATOSA TABLALI HAT v2</span><span class="alt">tabla arabası · tur ≥ 60 s</span><span class="say" id="s_tabla">—</span></div><iframe id="f_tabla" title="tablalı hat"></iframe><div class="durum" id="d_tabla"></div><div class="sonuc" id="r_tabla"></div></div>
 </div>
 <div id="bar">
   <div class="r1">
@@ -94,7 +104,7 @@ async function kur(){ dur(); $('not').textContent='planlanıyor…';
   const sen=$('sen').value;
   for(const k of K){ const w=W[k]; try{
       el(w,'sen').value=sen; const sd=el(w,'seed'); if(sd) sd.value=1; const rn=el(w,'robotN'); if(rn) rn.value=$('robotN').value;
-      w.senUI(); PS[k]=w.planlaUI(); w.resize(); if(w.kameraSigdir) w.kameraSigdir(); else w.kamera('on'); delete w._bit;
+      w.senUI(); PS[k]=w.planlaUI(); w.resize(); if(w.kameraSigdir) w.kameraSigdir(); else w.kamera('on'); delete w._bit; $('r_'+k).innerHTML=''; $('r_'+k).classList.remove('ac'); $('r_'+k)._kapali=0;
     }catch(e){ console.warn(k,e); $('not').textContent=k+' kurulamadı: '+e.message; } }
   $('alt_robot').textContent='tepsili · '+($('robotN').value==='2'?'2 robot · aynı rayda SOL + SAĞ':'1 robot · robot her istasyona taşır');
   sure=Math.max(...K.filter(acik).map(k=>PS[k]?PS[k].kpi.sure:60), 60);
@@ -109,7 +119,25 @@ function yaz(){ for(const k of K){ const w=W[k]; if(!w||!PS[k]) continue;
     const m=w.motor(T); const rb=(m.robotAd&&m.robotAd[0])?(m.robotAd[0].split(' · ')[0]+' · '+m.adim[0]):'boşta';
     $('d_'+k).innerHTML='<span class="rb">ROBOT</span> '+rb+(m.makine&&m.makine.length?' &nbsp;<span class="mk">MAKİNE</span> '+m.makine.slice(0,2).join(' · '):'');
   }
-  $('saat').textContent=saat(T)+' / '+saat(sure); const sc=$('scrub'); if(!sc._tut) sc.value=Math.min(T,sure); }
+  $('saat').textContent=saat(T)+' / '+saat(sure); const sc=$('scrub'); if(!sc._tut) sc.value=Math.min(T,sure); sonucGoster(); }
+/* SONUÇ PENCERESİ: her hat kendi son teslimini yapınca o hattın 3D görüntüsünün üstünde açılır (çubuk sona çekilince de) */
+function sonucKur(k){ const ps=PS[k], kpi=ps.kpi, ad={robot:'ROBOTLU HAT v19',bant:'BANTLI HAT v6',tabla:'ATOSA TABLALI HAT v2'}[k];
+  const bit=ps.plan.filter(b=>b.bitis).map(b=>b.bitisT!==undefined?b.bitisT:b.t1), hh=[0,0,0,0]; bit.forEach(t=>hh[Math.min(3,Math.floor(t/3600))]++);
+  const dol=kpi.robotlar?kpi.robotlar.map(x=>Math.round(x*100)).join(' / '):Math.round(kpi.robot*100), N=kpi.N||1;
+  const dk=s=>s>=60?(s/60).toFixed(1)+' dk':Math.round(s)+' s';
+  const dar=(kpi.robot>=0.9)?'darboğaz: ROBOT (%'+Math.round(kpi.robot*100)+' dolu)':(k==='tabla'?'darboğaz: tabla turu 60 s (Atosa)':k==='bant'?'darboğaz: fırın / kutu temposu':'darboğaz: fırın gözleri');
+  const sat=[['Çıkan ürün · 1. / 2. / 3. saat','<b>'+hh[0]+' / '+hh[1]+' / '+hh[2]+'</b>'+(hh[3]?' <span style="color:#8a94a4">/ '+hh[3]+'</span>':'')],
+    ['Teslim edilen',kpi.teslim+' sipariş · '+bit.length+' ürün'],['Ortalama bekleme','<b>'+dk(kpi.ort)+'</b>'],['En uzun bekleme',dk(kpi.max)],
+    ['25 dk üstü bekleyen','<span style="color:'+(kpi.gec?'#ff5c5c':'#3ddc84')+'">'+kpi.gec+' sipariş</span>'],
+    ['Robot doluluğu',(N>1?'SOL / SAĞ ':'')+'%'+dol],['Son teslim',saat(kpi.sure)]];
+  const kart=$('r_'+k); kart.innerHTML='<span class="kapat" title="kapat">✕</span>'
+    +'<h3>'+ad+(N>1?' · 2 robot':'')+' · bitti</h3><div class="buyuk">'+(bit.length?Math.round(bit.length/Math.max(1,kpi.sure)*3600):0)+' <small>ürün / saat ortalama</small></div>'
+    +'<table>'+sat.map(r=>'<tr><td>'+r[0]+'</td><td>'+r[1]+'</td></tr>').join('')+'</table><div class="dip">'+dar+'</div>';
+  kart.querySelector('.kapat').addEventListener('click',()=>{ kart.classList.remove('ac'); kart._kapali=1; });
+  kart._kapali=0; }
+function sonucGoster(){ for(const k of K){ const ps=PS[k], e=$('r_'+k); if(!ps||!e) continue;
+    const bitti=T>=ps.kpi.sure-0.5; if(bitti&&!e.innerHTML) sonucKur(k);
+    e.classList.toggle('ac', bitti&&!e._kapali); if(!bitti) e._kapali=0; } }
 function ilerle(){ for(const k of K){ if(W[k]&&PS[k]&&acik(k)) W[k].motor(T); } yaz(); }
 function git(t){ T=Math.max(0,Math.min(sure+2,t)); for(const k of K){ if(W[k]&&PS[k]) W[k].zamanaGit(PS[k],T); } yaz(); }
 /* oynatma: bu sayfa yalnız iframe barındırdığı için requestAnimationFrame çalışmıyor → sabit aralıklı zamanlayıcı (gerçek geçen süre performance.now ile ölçülür) */
