@@ -48,7 +48,9 @@ function planla(cfg){
   function makineKur(p,td){ const f=p.faz, noz=nozOf(p); p.noz=noz; p.td=td;
     if(!TABLA){ f.pres=[td,td+HIZ.pres]; f.gecis=[f.pres[1],f.pres[1]+HIZ.gecis];
       const eb=Math.max(f.gecis[1],bantZaman(MK.bantSon,FIRIN.adim)); f.bantBek=[f.gecis[1],eb];
-      const a=bantZaman(eb,BANT.cikis-BANT.giris), eo=Math.max(a,MK.firinBos); if(eo>a+1e-6){ MK.durus.push([a,eo]); MK.durus.sort((x,y)=>x[0]-y[0]); }
+      /* fırın sırası: ürün fırın ağzının 350 mm GERİSİNDE bekler (öndeki ürün fırın bandında yavaş gider; ağızda beklerse üst üste binerler) → öndekiyle arası hiçbir an 350'den az olmaz */
+      const a1=bantZaman(eb,BANT.cikis-FIRIN.adim-BANT.giris), kalk=Math.max(a1,MK.firinBos-FIRIN.adim/HIZ.bantV); if(kalk>a1+1e-6){ MK.durus.push([a1,kalk]); MK.durus.sort((x,y)=>x[0]-y[0]); }
+      const a=bantZaman(eb,BANT.cikis-BANT.giris), eo=a;
       f.bant=[eb,a]; f.doz=[bantZaman(eb,noz.x-150-BANT.giris),bantZaman(eb,noz.x+150-BANT.giris)]; f.firinBek=[a,eo]; f.firin=[eo,eo+firinSure];
       MK.bantSon=eb; MK.presBos=eb; MK.firinBos=eo+girisAralik; }
     else { const tz=HIZ.tablaZ, v=HIZ.tablaV, doz0=p.tip==='pide'?HIZ.kasar:HIZ.harc; let tt=td;

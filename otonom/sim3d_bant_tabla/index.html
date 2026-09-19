@@ -79,7 +79,7 @@
   <details class="note"><summary style="cursor:pointer;color:#c9ccd3">Süreler · hızlar · varsayımlar</summary><b>Robot (sim3d · HAT v19 ile aynı):</b> FR5 katalog uç hızı 1 m/s, eklem 180°/s → sim: serbest 0,6 m/s · ağız içi 0,4 · hassas 0,2 · mikro 0,08 · ivme 2 m/s² · eklem sınırı 150°/s · ray 0,5 m/s, ivme 1 m/s² · çekmece 2,8 s (700 strok) · QR kapağı 1,5 · pim 0,8 · parmak 0,6 · omuz 970 · ray ekseni hat yüzünden 360 · erişim payı %5.<br>
 <b>Makine süreleri:</b> pres 9 s (Cuppone Pizzaform 400 taban/saat; Fersah PZP değeri yok → varsayım) · kaşar 15 s (xRobotics xPizza Cube: sos + peynir 30 s → malzeme başı 15 s) · harç 20 s (varsayım) · kesim 4 · sprey 3 · itici 2 · kutu kapağı 4 · müşteri 150 s (varsayım).<br>
 <b>Konveyör fırın (varsayım · özel imalat):</b> hazne 1400, bant 450, ürün adımı 350 → aynı anda 4 ürün · TEK bant hızı: pişme 240 s (pide); lahmacun da aynı hızda geçer → girişler arası en az 60 s → tavan 60 ürün/saat. Lahmacunun 240 s'de pişmesi pilot ister.<br>
-<b>Bantlı hat (varsayım):</b> pres → bant geçişi 5 s (düzenek çözülmedi) · bant hızı 15 mm/s (300 mm başlık / 20 s) · fırın sırası yoksa bütün bant durur · dozaj başlığı 300 geniş (yeniden tasarım).<br>
+<b>Bantlı hat (varsayım):</b> pres → bant geçişi 5 s (düzenek çözülmedi) · bant hızı 15 mm/s (300 mm başlık / 20 s) · fırın sırası yoksa ürün fırın ağzının 350 mm gerisinde durur, bütün bant onunla durur · dozaj başlığı 300 geniş (yeniden tasarım).<br>
 <b>Tablalı hat:</b> ÜRETİCİ VERİSİ → Auto Pizza Artisan broşürü: ≤ 1 dk / pizza. Sim'de tabla bir ürünü <b>60 sn'den hızlı çevirmez</b>; hesapla çıkan tur kısaysa fark dozaj süresine eklenir, fırın sırası beklemesi bunun üstüne gelir. Tek malzemeli ürün için daha kısa bir üretici değeri yok. Tabla hareketleri (varsayım): 500 mm/s · örse iniş / kalkış / ağıza kalkış 1'er s · geri emme 1,5 s · itici iniş 1 + itme 1,2 s · tabla boş döner.<br>
 <b>Kutu:</b> katlama 15 s (varsayım) · bir kutu tepsisi kutulama ağzında bekler; robot tepsiyi QR'a götürürken ya da kutu katlanırken ürün kesme plakasında bekler. Plaka doluyken fırından ürün gelirse SIKIŞMA sayılır.<br>
 <b>Çizelge:</b> tek robot · öncelik: kapalı kutu → QR · içecek / tatlı · hamur. Pres / tabla 22 s içinde boşalacaksa robot sıradaki hamuru şimdiden getirir, ağız önünde bekler. İçecek ve tatlı kutudan önce göze konur (göz düzeni: sol şerit içecek + tatlı, sağ kutu).</details>
@@ -90,8 +90,8 @@
 </div>
 <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
-<script src="sim.js?v=7"></script>
-<script src="sim2.js?v=7"></script>
-<script src="sim3.js?v=7"></script>
+<script src="sim.js?v=8"></script>
+<script src="sim2.js?v=8"></script>
+<script src="sim3.js?v=8"></script>
 </body>
 </html>
