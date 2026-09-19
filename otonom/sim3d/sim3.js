@@ -1,3 +1,4 @@
+/* TAM YÜK sipariş adetleri (75 / 150) bantlı + tablalı sim ile BİREBİR AYNI: aynı tohum + aynı adet → üç hat da aynı saniyede aynı siparişleri alır (karşılaştırma ekranı buna dayanır) */
 /* ================= SİPARİŞLER (eski sim ile aynı model: Yemeksepeti 2023 akşam eğrisi) ================= */
 const SEN={ fullpide:{ad:'TAM YÜK · 1 saat · yalnız pide'}, fulllahm:{ad:'TAM YÜK · 1 saat · yalnız lahmacun'}, full:{ad:'TAM YÜK · 1 saat · içeceksiz'}, fullic:{ad:'TAM YÜK · 1 saat · içecek + tatlı'}, akis:{ad:'Sürekli akış · 1 saat'}, tek:{ad:'Tek sipariş · full detay'}, uc:{ad:'3 müşteri (0 · 60 · 120 s)'}, aksam:{ad:'AKŞAM PİKİ · hafta içi · 17–20 h · 53 sipariş',n:53,egri:[.28,.42,.30]}, cmt:{ad:'CUMARTESİ AKŞAMI · 74 sipariş',n:74,egri:[.28,.42,.30]} };
 function rng(seed){ let s=(seed>>>0)||1; return ()=>{ s=(s*1664525+1013904223)>>>0; return s/4294967296; }; }
@@ -5,8 +6,8 @@ function mkItems(rnd){ if(rnd()<0.65){ const it=['lahm','lahm']; if(rnd()<0.15) 
 function siparisler(cfg){ const o=[], rnd=rng(cfg.seed*7919+13);
   if(cfg.sen==='tek') o.push({arr:0, items:[cfg.urun], kola:cfg.kola, tatli:cfg.tatli});
   else if(cfg.sen==='akis'){ const ar=Math.max(20,cfg.aralik||120); for(let tt=0;tt<3600;tt+=ar) o.push({arr:tt, items:mkItems(rnd), kola:rnd()<0.5, tatli:rnd()<0.25}); }   // 2D hat simülasyonundaki sınır testi
-  else if(cfg.sen==='fullpide'||cfg.sen==='fulllahm'){ for(let k=0;k<80;k++) o.push({arr:0, items:[cfg.sen==='fullpide'?'pide':'lahm'], kola:false, tatli:false}); }
-  else if(cfg.sen==='full'||cfg.sen==='fullic'){ for(let k=0;k<45;k++) o.push({arr:0, items:mkItems(rnd), kola:cfg.sen==='fullic'&&rnd()<0.5, tatli:cfg.sen==='fullic'&&rnd()<0.25}); }   // tam yük: kuyruk hep dolu (45 sipariş t=0'da) · ürün karışımı ve içecek %50 / tatlı %25 akşam modeliyle aynı
+  else if(cfg.sen==='fullpide'||cfg.sen==='fulllahm'){ for(let k=0;k<150;k++) o.push({arr:0, items:[cfg.sen==='fullpide'?'pide':'lahm'], kola:false, tatli:false}); }
+  else if(cfg.sen==='full'||cfg.sen==='fullic'){ for(let k=0;k<75;k++) o.push({arr:0, items:mkItems(rnd), kola:cfg.sen==='fullic'&&rnd()<0.5, tatli:cfg.sen==='fullic'&&rnd()<0.25}); }   // tam yük: kuyruk hep dolu (45 sipariş t=0'da) · ürün karışımı ve içecek %50 / tatlı %25 akşam modeliyle aynı
   else if(cfg.sen==='uc') o.push({arr:0,items:['pide'],kola:true,tatli:false},{arr:60,items:['lahm','lahm'],kola:true,tatli:true},{arr:120,items:['pide'],kola:false,tatli:false});
   else { const Sn=SEN[cfg.sen]; Sn.egri.forEach((pay,i)=>{ const n=Math.round(Sn.n*pay); for(let k=0;k<n;k++) o.push({arr:i*3600+rnd()*3600, items:mkItems(rnd), kola:rnd()<0.5, tatli:rnd()<0.25}); }); }
   o.sort((a,b)=>a.arr-b.arr); o.forEach((x,i)=>{ x.id=i+1; x.nesneler=[]; x.goz=-1; x.kutuSay=0; x.kolaTeslim=!x.kola; x.tatliTeslim=!x.tatli; x.teslim=null; }); return o; }

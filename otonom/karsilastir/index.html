@@ -107,8 +107,9 @@ async function kur(){ dur(); $('not').textContent='planlanıyor…';
       w.senUI(); PS[k]=w.planlaUI(); w.resize(); if(w.kameraSigdir) w.kameraSigdir(); else w.kamera('on'); delete w._bit; $('r_'+k).innerHTML=''; $('r_'+k).classList.remove('ac'); $('r_'+k)._kapali=0;
     }catch(e){ console.warn(k,e); $('not').textContent=k+' kurulamadı: '+e.message; } }
   $('alt_robot').textContent='tepsili · '+($('robotN').value==='2'?'2 robot · aynı rayda SOL + SAĞ':'1 robot · robot her istasyona taşır');
+  const ls=K.filter(k=>PS[k]).map(k=>PS[k].kpi.siparis+'/'+PS[k].kpi.urun); $('not').textContent=(new Set(ls).size>1)?('UYARI: sipariş listeleri farklı → '+ls.join(' · ')):'';
   sure=Math.max(...K.filter(acik).map(k=>PS[k]?PS[k].kpi.sure:60), 60);
-  $('scrub').max=Math.ceil(sure); $('sonT').textContent=saat(sure); $('not').textContent='';
+  $('scrub').max=Math.ceil(sure); $('sonT').textContent=saat(sure);
   git(0); }
 function saat(s){ const b=17*3600+Math.max(0,s), h=Math.floor(b/3600)%24, m=Math.floor(b%3600/60), ss=Math.floor(b%60); return h+':'+(m<10?'0':'')+m+':'+(ss<10?'0':'')+ss; }
 /* T anındaki çıkan ürün sayısı (kutusu QR gözüne konan ürün) */
@@ -127,12 +128,14 @@ function sonucKur(k){ const ps=PS[k], kpi=ps.kpi, ad={robot:'ROBOTLU HAT v19',ba
   const dk=s=>s>=60?(s/60).toFixed(1)+' dk':Math.round(s)+' s';
   const dar=(kpi.robot>=0.9)?'darboğaz: ROBOT (%'+Math.round(kpi.robot*100)+' dolu)':(k==='tabla'?'darboğaz: tabla turu 60 s (Atosa)':k==='bant'?'darboğaz: fırın / kutu temposu':'darboğaz: fırın gözleri');
   const sat=[['Çıkan ürün · 1. / 2. / 3. saat','<b>'+hh[0]+' / '+hh[1]+' / '+hh[2]+'</b>'+(hh[3]?' <span style="color:#8a94a4">/ '+hh[3]+'</span>':'')],
-    ['Teslim edilen',kpi.teslim+' sipariş · '+bit.length+' ürün'],['Ortalama bekleme','<b>'+dk(kpi.ort)+'</b>'],['En uzun bekleme',dk(kpi.max)],
+    ['Sipariş listesi (üçünde aynı)',kpi.siparis+' sipariş · '+kpi.urun+' ürün'],['Teslimi biten',kpi.teslim+' sipariş · '+bit.length+' ürün'],['Ortalama bekleme','<b>'+dk(kpi.ort)+'</b>'],['En uzun bekleme',dk(kpi.max)],
     ['25 dk üstü bekleyen','<span style="color:'+(kpi.gec?'#ff5c5c':'#3ddc84')+'">'+kpi.gec+' sipariş</span>'],
-    ['Robot doluluğu',(N>1?'SOL / SAĞ ':'')+'%'+dol],['Son teslim',saat(kpi.sure)]];
+    ['Robot doluluğu',(N>1?'SOL / SAĞ ':'')+'%'+dol],['Son teslim',saat(kpi.sure)],
+    ['Fırın',k==='robot'?'kapaklı 3 göz · pide 240 s · lahmacun 120 s':'konveyör · 4 ürün · tek hız 240 s'],
+    ['Ürün taşıma',k==='robot'?'robot (6 tepsi dolaşımda)':(k==='bant'?'bant + fırın bandı (tepsisiz)':'tabla arabası (tepsisiz)')]];
   const kart=$('r_'+k); kart.innerHTML='<span class="kapat" title="kapat">✕</span>'
     +'<h3>'+ad+(N>1?' · 2 robot':'')+' · bitti</h3><div class="buyuk">'+(bit.length?Math.round(bit.length/Math.max(1,kpi.sure)*3600):0)+' <small>ürün / saat ortalama</small></div>'
-    +'<table>'+sat.map(r=>'<tr><td>'+r[0]+'</td><td>'+r[1]+'</td></tr>').join('')+'</table><div class="dip">'+dar+'</div>';
+    +'<table>'+sat.map(r=>'<tr><td>'+r[0]+'</td><td>'+r[1]+'</td></tr>').join('')+'</table><div class="dip">'+dar+([...new Set(kpi.not||[])].filter(x=>x.indexOf('SIKI')<0).length?'<br>'+[...new Set(kpi.not)].filter(x=>x.indexOf('SIKI')<0).slice(0,2).join(' · '):'')+'</div>';
   kart.querySelector('.kapat').addEventListener('click',()=>{ kart.classList.remove('ac'); kart._kapali=1; });
   kart._kapali=0; }
 function sonucGoster(){ for(const k of K){ const ps=PS[k], e=$('r_'+k); if(!ps||!e) continue;
