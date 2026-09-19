@@ -126,12 +126,17 @@ function sonucKur(k){ const ps=PS[k], kpi=ps.kpi, ad={robot:'ROBOTLU HAT v19',ba
   const bit=ps.plan.filter(b=>b.bitis).map(b=>b.bitisT!==undefined?b.bitisT:b.t1), hh=[0,0,0,0]; bit.forEach(t=>hh[Math.min(3,Math.floor(t/3600))]++);
   const dol=kpi.robotlar?kpi.robotlar.map(x=>Math.round(x*100)).join(' / '):Math.round(kpi.robot*100), N=kpi.N||1;
   const dk=s=>s>=60?(s/60).toFixed(1)+' dk':Math.round(s)+' s';
-  const dar=(kpi.robot>=0.9)?'darboğaz: ROBOT (%'+Math.round(kpi.robot*100)+' dolu)':(k==='tabla'?'darboğaz: tabla turu 60 s (Atosa)':k==='bant'?'darboğaz: fırın / kutu temposu':'darboğaz: fırın gözleri');
+  /* darboğaz ÖLÇÜMLE: robot doluluğu · fırın doluluğu · (tablalı) tabla turu · (2 robot) ray beklemesi — en yükseği yazılır */
+  let fd=0, goz=4; if(k==='robot'){ goz=(ps.G||[]).filter(g=>g.ok).length||3; let s=0; ps.plan.forEach(b=>{ if(b.firin) s+=b.firin[1]-b.firin[0]; }); fd=s/(goz*Math.max(1,kpi.sure)); }
+  else { let s=0, t=0; ps.P.forEach(p=>{ const f=p.faz; if(f&&f.firin) s+=f.firin[1]-f.firin[0]; if(f&&f.don) t+=f.don[1]-p.td; }); fd=s/(4*Math.max(1,kpi.sure)); if(k==='tabla') var td=t/Math.max(1,kpi.sure); }
+  const ray=(N>1&&kpi.sayac&&kpi.sayac.rayBekleme)?kpi.sayac.rayBekleme/Math.max(1,kpi.sure):0;
+  const aday=[['ROBOT',kpi.robot],['fırın',fd],['ray paylaşımı (iki robot birbirini bekliyor)',ray]]; if(k==='tabla') aday.push(['tabla turu (Atosa 60 s)',td]);
+  aday.sort((a,b)=>b[1]-a[1]); const dar='darboğaz: '+aday[0][0]+' (%'+Math.round(aday[0][1]*100)+' dolu) · fırın %'+Math.round(fd*100);
   const sat=[['Çıkan ürün · 1. / 2. / 3. saat','<b>'+hh[0]+' / '+hh[1]+' / '+hh[2]+'</b>'+(hh[3]?' <span style="color:#8a94a4">/ '+hh[3]+'</span>':'')],
     ['Sipariş listesi (üçünde aynı)',kpi.siparis+' sipariş · '+kpi.urun+' ürün'],['Teslimi biten',kpi.teslim+' sipariş · '+bit.length+' ürün'],['Ortalama bekleme','<b>'+dk(kpi.ort)+'</b>'],['En uzun bekleme',dk(kpi.max)],
     ['25 dk üstü bekleyen','<span style="color:'+(kpi.gec?'#ff5c5c':'#3ddc84')+'">'+kpi.gec+' sipariş</span>'],
     ['Robot doluluğu',(N>1?'SOL / SAĞ ':'')+'%'+dol],['Son teslim',saat(kpi.sure)],
-    ['Fırın',k==='robot'?'kapaklı 3 göz · pide 240 s · lahmacun 120 s':'konveyör · 4 ürün · tek hız 240 s'],
+    ['Fırın',(k==='robot'?goz+' kapaklı göz · pide 240 s · lahmacun 120 s':'konveyör · aynı anda 4 ürün · tek hız 240 s · tavan 60 ürün/saat')+' · %'+Math.round(fd*100)+' dolu'],
     ['Ürün taşıma',k==='robot'?'robot (6 tepsi dolaşımda)':(k==='bant'?'bant + fırın bandı (tepsisiz)':'tabla arabası (tepsisiz)')]];
   const kart=$('r_'+k); kart.innerHTML='<span class="kapat" title="kapat">✕</span>'
     +'<h3>'+ad+(N>1?' · 2 robot':'')+' · bitti</h3><div class="buyuk">'+(bit.length?Math.round(bit.length/Math.max(1,kpi.sure)*3600):0)+' <small>ürün / saat ortalama</small></div>'
