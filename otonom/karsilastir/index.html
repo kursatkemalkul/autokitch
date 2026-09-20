@@ -50,9 +50,9 @@
 </head>
 <body>
 <div id="grid">
-  <div class="col" data-k="robot"><div class="hd"><span class="ad" style="color:#2997ff">ROBOTLU HAT v19</span><span class="alt" id="alt_robot">tepsili · 1 robot</span><span class="say" id="s_robot">—</span></div><iframe id="f_robot" title="robotlu hat"></iframe><div class="durum" id="d_robot"></div><div class="sonuc" id="r_robot"></div></div>
-  <div class="col" data-k="bant"><div class="hd"><span class="ad" style="color:#ffb340">BANTLI HAT v6</span><span class="alt">pres → bant → konveyör fırın</span><span class="say" id="s_bant">—</span></div><iframe id="f_bant" title="bantlı hat"></iframe><div class="durum" id="d_bant"></div><div class="sonuc" id="r_bant"></div></div>
-  <div class="col" data-k="tabla"><div class="hd"><span class="ad" style="color:#c084fc">ATOSA TABLALI HAT v2</span><span class="alt">tabla arabası · tur ≥ 60 s</span><span class="say" id="s_tabla">—</span></div><iframe id="f_tabla" title="tablalı hat"></iframe><div class="durum" id="d_tabla"></div><div class="sonuc" id="r_tabla"></div></div>
+  <div class="col" data-k="tabla"><div class="hd"><span class="ad" style="color:#3ddc84">A · ATOSA TABLALI + KONVEYÖR</span><span class="alt" id="alt_tabla">tabla arabası · konveyör fırın 4 ürün</span><span class="say" id="s_tabla">—</span></div><iframe id="f_tabla" title="A · tablalı + konveyör"></iframe><div class="durum" id="d_tabla"></div><div class="sonuc" id="r_tabla"></div></div>
+  <div class="col" data-k="bant"><div class="hd"><span class="ad" style="color:#ffb340">B · BANTLI + KONVEYÖR</span><span class="alt" id="alt_bant">adımlı bant · konveyör fırın 4 ürün</span><span class="say" id="s_bant">—</span></div><iframe id="f_bant" title="bantlı hat"></iframe><div class="durum" id="d_bant"></div><div class="sonuc" id="r_bant"></div></div>
+  <div class="col" data-k="goz"><div class="hd"><span class="ad" style="color:#c084fc">C · ATOSA + 3 KAPAKLI GÖZ</span><span class="alt">robot kürekle taşır · 1 robot</span><span class="say" id="s_goz">—</span></div><iframe id="f_goz" title="C · tablalı + kapaklı göz"></iframe><div class="durum" id="d_goz"></div><div class="sonuc" id="r_goz"></div></div>
 </div>
 <div id="bar">
   <div class="r1">
@@ -67,17 +67,17 @@
       <option value="uc">3 müşteri · 1'er dk arayla</option>
       <option value="tek">Tek sipariş</option>
     </select>
-    <label for="robotN">Robotlu hatta</label>
-    <select id="robotN" style="border-color:#2997ff"><option value="1" selected>1 robot · tek FR5 rayda</option><option value="2">2 robot · aynı rayda SOL + SAĞ</option></select>
+    <label for="robotN">Robot sayısı<small style="opacity:.7"> (A · B)</small></label>
+    <select id="robotN" style="border-color:#3ddc84"><option value="1" selected>1 robot · tek FR5 rayda</option><option value="2">2 robot · aynı rayda SOL + SAĞ</option></select>
     <span class="sep"></span>
     <button class="play" id="play">▶ Üçünü birden oynat</button>
     <button id="stop">■ Başa sar</button>
     <label for="hiz">Hız</label>
     <select id="hiz"><option value="1">×1</option><option value="2">×2</option><option value="4" selected>×4</option><option value="10">×10</option><option value="30">×30</option></select>
     <span class="sep"></span>
-    <span class="kut"><input type="checkbox" id="g_robot" checked> robotlu</span>
-    <span class="kut"><input type="checkbox" id="g_bant" checked> bantlı</span>
-    <span class="kut"><input type="checkbox" id="g_tabla" checked> tablalı</span>
+    <span class="kut"><input type="checkbox" id="g_tabla" checked> A · tablalı</span>
+    <span class="kut"><input type="checkbox" id="g_bant" checked> B · bantlı</span>
+    <span class="kut"><input type="checkbox" id="g_goz" checked> C · kapaklı göz</span>
     <span class="sep"></span>
     <a href="../sim3d/">← tek hat görünümü</a>
     <span id="not" class="uyari"></span>
@@ -86,10 +86,10 @@
 </div>
 <script>
 /* AUTOKITCH · 3 HAT KARŞILAŞTIRMA — 19 Eyl 2026
-   Üç sim aynı sayfada iframe olarak açılır (her biri kendi motoru: robotlu = tepsili HAT v19, bantlı v6, tablalı v2).
+   Üç sim aynı sayfada iframe olarak açılır: A = Atosa tablalı + konveyör fırın, B = adımlı bant + konveyör fırın, C = Atosa tablalı + 3 kapaklı göz (robot kürekle taşır, tek robot). Elenen kurgular arşivde: robot kollu tepsili hat v19 ../sim3d/ adresinde durur.
    Sağ menüleri kapalı (?panel=0), kamera tam karşıdan. Alttaki tek bar üçünü birden sürer: aynı senaryo, aynı tohum, aynı saat.
    Oynatma: her karede her sim'in kendi motor(T) fonksiyonu ORTAK T ile çağrılır → üçü saniyesi saniyesine aynı anda ilerler. */
-const K=['robot','bant','tabla'], URL={robot:'../sim3d/?panel=0', bant:'../sim3d_bant_tabla/?hat=bant&panel=0', tabla:'../sim3d_bant_tabla/?hat=tabla&panel=0'};
+const K=['tabla','bant','goz'], URL={tabla:'../sim3d_bant_tabla/?hat=tabla&panel=0', bant:'../sim3d_bant_tabla/?hat=bant&panel=0', goz:'../sim3d_bant_tabla/?hat=goz&goz=3&panel=0'};   /* C tek robotla çalışır: robot seçici yalnız A ve B'ye uygulanır */
 const $=id=>document.getElementById(id), W={}, PS={};
 try{ const v=localStorage.getItem('ak_sen'); if(v&&[...$('sen').options].some(o=>o.value===v)) $('sen').value=v; const r=localStorage.getItem('ak_robotN'); if(r==='1'||r==='2') $('robotN').value=r; }catch(e){}   // senaryo üç hatta ortak (tek hat görünümüyle paylaşılır)   // PS: her hattın plan sonucu (sim içinde 'let' ile tanımlı → iframe dışından görünmez, planlaUI() dönüş değerinden alınır)
 const el=(w,id)=>w.document.getElementById(id);
@@ -103,10 +103,11 @@ async function kur(){ dur(); $('not').textContent='planlanıyor…';
   await Promise.all(K.map(bekle));
   const sen=$('sen').value;
   for(const k of K){ const w=W[k]; try{
-      el(w,'sen').value=sen; const sd=el(w,'seed'); if(sd) sd.value=1; const rn=el(w,'robotN'); if(rn) rn.value=$('robotN').value;
+      el(w,'sen').value=sen; const sd=el(w,'seed'); if(sd) sd.value=1; const rn=el(w,'robotN'); if(rn) rn.value=(k==='goz'?'1':$('robotN').value);
       w.senUI(); PS[k]=w.planlaUI(); w.resize(); if(w.kameraSigdir) w.kameraSigdir(); else w.kamera('on'); delete w._bit; $('r_'+k).innerHTML=''; $('r_'+k).classList.remove('ac'); $('r_'+k)._kapali=0;
     }catch(e){ console.warn(k,e); $('not').textContent=k+' kurulamadı: '+e.message; } }
-  $('alt_robot').textContent='tepsili · '+($('robotN').value==='2'?'2 robot · aynı rayda SOL + SAĞ':'1 robot · robot her istasyona taşır');
+  { const iki=$('robotN').value==='2', ek=iki?' · 2 robot (SOL hamur + SAĞ kutu/QR)':' · 1 robot';
+    $('alt_tabla').textContent='tabla arabası · konveyör fırın 4 ürün'+ek; $('alt_bant').textContent='adımlı bant · konveyör fırın 4 ürün'+ek; }
   const ls=K.filter(k=>PS[k]).map(k=>PS[k].kpi.siparis+'/'+PS[k].kpi.urun); $('not').textContent=(new Set(ls).size>1)?('UYARI: sipariş listeleri farklı → '+ls.join(' · ')):'';
   sure=Math.max(...K.filter(acik).map(k=>PS[k]?PS[k].kpi.sure:60), 60);
   $('scrub').max=Math.ceil(sure); $('sonT').textContent=saat(sure);
@@ -122,22 +123,26 @@ function yaz(){ for(const k of K){ const w=W[k]; if(!w||!PS[k]) continue;
   }
   $('saat').textContent=saat(T)+' / '+saat(sure); const sc=$('scrub'); if(!sc._tut) sc.value=Math.min(T,sure); sonucGoster(); }
 /* SONUÇ PENCERESİ: her hat kendi son teslimini yapınca o hattın 3D görüntüsünün üstünde açılır (çubuk sona çekilince de) */
-function sonucKur(k){ const ps=PS[k], kpi=ps.kpi, ad={robot:'ROBOTLU HAT v19',bant:'BANTLI HAT v6',tabla:'ATOSA TABLALI HAT v2'}[k];
+function sonucKur(k){ const ps=PS[k], kpi=ps.kpi, ad={tabla:'A · ATOSA TABLALI + KONVEYÖR',bant:'B · BANTLI + KONVEYÖR',goz:'C · ATOSA + 3 KAPAKLI GÖZ'}[k];
   const bit=ps.plan.filter(b=>b.bitis).map(b=>b.bitisT!==undefined?b.bitisT:b.t1), hh=[0,0,0,0]; bit.forEach(t=>hh[Math.min(3,Math.floor(t/3600))]++);
-  const dol=kpi.robotlar?kpi.robotlar.map(x=>Math.round(x*100)).join(' / '):Math.round(kpi.robot*100), N=kpi.N||1;
+  const N=kpi.N||1, dol=(kpi.robotDoluluk||kpi.robotlar||[kpi.robot||0]).slice(0,N).map(x=>Math.round(x*100)).join(' / ');
   const dk=s=>s>=60?(s/60).toFixed(1)+' dk':Math.round(s)+' s';
   /* darboğaz ÖLÇÜMLE: robot doluluğu · fırın doluluğu · (tablalı) tabla turu · (2 robot) ray beklemesi — en yükseği yazılır */
-  let fd=0, goz=4; if(k==='robot'){ goz=(ps.G||[]).filter(g=>g.ok).length||3; let s=0; ps.plan.forEach(b=>{ if(b.firin) s+=b.firin[1]-b.firin[0]; }); fd=s/(goz*Math.max(1,kpi.sure)); }
-  else { let s=0, t=0; ps.P.forEach(p=>{ const f=p.faz; if(f&&f.firin) s+=f.firin[1]-f.firin[0]; if(f&&f.don) t+=f.don[1]-p.td; }); fd=s/(4*Math.max(1,kpi.sure)); if(k==='tabla') var td=t/Math.max(1,kpi.sure); }
-  const ray=(N>1&&kpi.sayac&&kpi.sayac.rayBekleme)?kpi.sayac.rayBekleme/Math.max(1,kpi.sure):0;
-  const aday=[['ROBOT',kpi.robot],['fırın',fd],['ray paylaşımı (iki robot birbirini bekliyor)',ray]]; if(k==='tabla') aday.push(['tabla turu (Atosa 60 s)',td]);
+  let fd=0, td=0, gozN=(k==='goz')?3:4;
+  { let s=0, t=0; ps.P.forEach(p=>{ const f=p.faz; if(f&&f.firin) s+=f.firin[1]-f.firin[0]; if(f&&f.don) t+=f.don[1]-p.td; });
+    fd=s/(gozN*Math.max(1,kpi.sure)); td=t/Math.max(1,kpi.sure); }
+  const sc=kpi.sayac||{}, ray=(N>1&&(sc.rayBekleme||sc.rayBek))?(sc.rayBekleme||sc.rayBek)/Math.max(1,kpi.sure):0;
+  const dolA=kpi.robotDoluluk||kpi.robotlar||[kpi.robot||0];
+  const aday=[['ROBOT',Math.max.apply(null,dolA.slice(0,N))],['fırın',fd]];
+  if(N>1) aday.push(['ray paylaşımı (iki robot birbirini bekliyor)',ray]);
+  if(k!=='bant') aday.push(['tabla turu (Atosa 60 s)',td]);
   aday.sort((a,b)=>b[1]-a[1]); const dar='darboğaz: '+aday[0][0]+' (%'+Math.round(aday[0][1]*100)+' dolu) · fırın %'+Math.round(fd*100);
   const sat=[['Çıkan ürün · 1. / 2. / 3. saat','<b>'+hh[0]+' / '+hh[1]+' / '+hh[2]+'</b>'+(hh[3]?' <span style="color:#8a94a4">/ '+hh[3]+'</span>':'')],
     ['Sipariş listesi (üçünde aynı)',kpi.siparis+' sipariş · '+kpi.urun+' ürün'],['Teslimi biten',kpi.teslim+' sipariş · '+bit.length+' ürün'],['Ortalama bekleme','<b>'+dk(kpi.ort)+'</b>'],['En uzun bekleme',dk(kpi.max)],
     ['25 dk üstü bekleyen','<span style="color:'+(kpi.gec?'#ff5c5c':'#3ddc84')+'">'+kpi.gec+' sipariş</span>'],
     ['Robot doluluğu',(N>1?'SOL / SAĞ ':'')+'%'+dol],['Son teslim',saat(kpi.sure)],
-    ['Fırın',(k==='robot'?goz+' kapaklı göz · pide 240 s · lahmacun 120 s':'konveyör · aynı anda 4 ürün · tek hız 240 s · tavan 60 ürün/saat')+' · %'+Math.round(fd*100)+' dolu'],
-    ['Ürün taşıma',k==='robot'?'robot (6 tepsi dolaşımda)':(k==='bant'?'bant + fırın bandı (tepsisiz)':'tabla arabası (tepsisiz)')]];
+    ['Fırın',(k==='goz'?'3 kapaklı göz · pide 240 s · lahmacun 120 s · tavan 90 ürün/saat':'konveyör · aynı anda 4 ürün · tek hız 240 s · tavan 60 ürün/saat')+' · %'+Math.round(fd*100)+' dolu'],
+    ['Ürün taşıma',k==='bant'?'bant + fırın bandı (tepsisiz)':(k==='goz'?'tabla + robot küreği (tepsisiz)':'tabla arabası (tepsisiz)')]];
   const kart=$('r_'+k); kart.innerHTML='<span class="kapat" title="kapat">✕</span>'
     +'<h3>'+ad+(N>1?' · 2 robot':'')+' · bitti</h3><div class="buyuk">'+(bit.length?Math.round(bit.length/Math.max(1,kpi.sure)*3600):0)+' <small>ürün / saat ortalama</small></div>'
     +'<table>'+sat.map(r=>'<tr><td>'+r[0]+'</td><td>'+r[1]+'</td></tr>').join('')+'</table><div class="dip">'+dar+([...new Set(kpi.not||[])].filter(x=>x.indexOf('SIKI')<0).length?'<br>'+[...new Set(kpi.not)].filter(x=>x.indexOf('SIKI')<0).slice(0,2).join(' · '):'')+'</div>';
