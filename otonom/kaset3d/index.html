@@ -39,12 +39,12 @@
   <div class="sub">Telefonda aç, <b>AR'de gör</b>'e bas, kamerayı tezgâha tut. Kaset gerçek ölçüsünde görünür; parmakla döndür, yerini değiştir.</div>
 
   <div class="tabs">
-    <div class="tab on" data-m="kaset_pro">Standart kaset</div>
-    <div class="tab" data-m="kasar_pro">Kaşar kabı</div>
+    <div class="tab on" data-m="kaset_v3">Standart kaset</div>
+    <div class="tab" data-m="kasar_v3">Kaşar kabı</div>
     <div class="tab" data-m="kaset">sade kutu</div>
   </div>
 
-  <model-viewer id="mv" src="kaset_pro.glb" ios-src="kaset_pro.usdz" alt="Kaset"
+  <model-viewer id="mv" src="kaset_v3.glb" ios-src="kaset_v3.usdz" alt="Kaset"
     ar ar-modes="webxr scene-viewer quick-look" ar-scale="fixed" ar-placement="floor"
     loading="eager" reveal="auto"
     camera-controls touch-action="pan-y" auto-rotate shadow-intensity="1"
@@ -59,12 +59,12 @@
 
 <script>
 const D = {
-  kaset_pro:{ad:"Standart kaset", w:140, d:400, h:360, brut:20.2, net:14,
-         icerik:"Harç ×4 (43,2 kg) · Kıyma ×1 (6,4 kg) · Kuşbaşı ×1 (5,8 kg)", dolu:"12,5 kg (harç, dolu)",
-         not:"Picnic hopper kurgusu, bizim ölçümüzde: şeffaf huni gövde, altta şeffaf tekne içinde yatay helezon (mil Ø20 · kanat Ø56), ucunda konik çıkış + kaplin, üstte contalı kapak, ön yüzde sarı etiket bandı, iki yanda ayak. Tek kalıp: harç, kıyma ve kuşbaşı aynı kaseti kullanıyor."},
-  kasar_pro:{ad:"Kaşar kabı", w:280, d:400, h:360, brut:40.3, net:28,
-         icerik:"Kaşar ×1 (8,8 kg, 2 günlük) · karıştırıcılı", dolu:"10 kg (dolu)",
-         not:"Aynı kurgu, iki kat geniş gövde. Rendelenmiş kaşar köprü yaptığı için helezonun üstünde dikey karıştırıcı var."},
+  kaset_v3:{ad:"Standart kaset", w:140, d:400, h:360, brut:20.2, net:"12,5",
+         icerik:"Harç ×4 (kaset başı 10,8 kg ≈ 10,3 L) · Kıyma ×1 (6,4 kg) · Kuşbaşı ×1 (5,8 kg)", dolu:"≈ 12 kg (harç, 2 günlük)",
+         not:"Picnic hopper formu, bizim zarfımızda. Gövde sabit kesitli: üstte dik duvar, büyük radyusla içeri dönüp helezon teknesine bağlanır. İki uç plakası aşağı inip ayak olur. Önde şeffaf çıkış tüpü, helezon mil Ø20 · kanat Ø56 · hatve 48. Üstte paslanmaz tel karıştırıcı, önde tutamak + emniyet pimi + ipli halka, arkada haç tahrik kaplinleri, tekne altında saplama. Bu kesitte kullanılabilir hacim 12,5 L çıkıyor (hedef 14 L idi); 2 günlük harç kaset başı 10,3 L olduğu için yetiyor."},
+  kasar_v3:{ad:"Kaşar kabı", w:280, d:400, h:360, brut:40.3, net:"24,3",
+         icerik:"Kaşar ×1 (8,8 kg, 2 günlük · rende kaşar ≈ 20–22 L)", dolu:"≈ 10 kg (dolu)",
+         not:"Aynı form, iki kat geniş. Rendelenmiş kaşar köprü yaptığı için tel karıştırıcı burada şart; karıştırıcı çapı 184 mm. Bu kesitte kullanılabilir hacim 24,3 L (hedef 28 L idi); 2 günlük rende kaşar 20–22 L — sığıyor ama payı dar."},
   kaset:{ad:"Standart kaset · sade kutu", w:140, d:400, h:360, brut:20.2, net:14,
          icerik:"Harç ×4 · Kıyma ×1 · Kuşbaşı ×1", dolu:"12,5 kg",
          not:"Yalnız dış ölçü kutusu — tezgâhta yer kontrolü için."}
@@ -84,7 +84,7 @@ function goster(k){
 }
 document.querySelectorAll('.tab').forEach(t => t.onclick = () => goster(t.dataset.m));
 document.getElementById('arbtn').onclick = () => { if (mv.canActivateAR) mv.activateAR(); else alert("Bu cihaz AR desteklemiyor. iPhone'da Safari, Android'de Chrome ile aç."); };
-goster('kaset_pro');
+goster('kaset_v3');
 </script>
 </body>
 </html>
