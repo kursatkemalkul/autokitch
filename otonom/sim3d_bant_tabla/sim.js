@@ -19,7 +19,7 @@ const EL = {BILEK:100, AVUC:40, PIM:40, PARMAK:90, PARMAK_W:8, PARMAK_H:30, SAP:
   KUTU:320, KUTU_H:45, KOLA_R:33, KOLA_H:115, TATLI_R:45, TATLI_H:60};
 const YUK = { bos:{L:500,P:-20}, tepsi:{L:500,P:-20}, top:{L:232.5,P:0}, kola:{L:242.5,P:0}, tatli:{L:230,P:-15} };
 const HAT = {yuk:2030, derin:830, B_yuk:1060, boy:5300};
-const MOD = [["A · PRESS",0,700,1060,2030],["B · ÇEKMECE",0,2500,0,1060],["C · TOPPING",700,2500,1060,2030],[(new URLSearchParams(location.search).get("hat")==="goz"?"F · 4 GÖZLÜ FIRIN":"F · KONVEYÖR FIRIN"),2500,4000,0,2030],["K · KESME" + (new URLSearchParams(location.search).get("icecek")!=="sol" ? " + İÇECEK" : ""),4000,4600,0,2030],["E · KUTU",4600,5300,0,2030]];
+const MOD = [["A · PRESS",0,700,1060,2030],["B · ÇEKMECE",0,2500,0,1060],["C · TOPPING",700,2500,1060,2030],[(new URLSearchParams(location.search).get("hat")==="goz"?"F · KAPAKLI GÖZ FIRIN":"F · KONVEYÖR FIRIN"),2500,4000,0,2030],["K · KESME" + (new URLSearchParams(location.search).get("icecek")!=="sol" ? " + İÇECEK" : ""),4000,4600,0,2030],["E · KUTU",4600,5300,0,2030]];
 const KOLON = {
   K1:{x0:62.5,  x1:682.5,  kotlar:[167.5,275.5,383.5,491.5,599.5,707.5], ic:75, tip:"pide", acik:700},
   K2:{x0:717.5, x1:1337.5, kotlar:[167.5,275.5,383.5,476.5,569.5,662.5,755.5,848.5], ic:60, tip:"karma", acik:700},
@@ -43,7 +43,7 @@ const TAB  = {ray:[90,(new URLSearchParams(location.search).get('hat')==='goz')?
 const FIRIN_N = Math.max(2,Math.min(6,+(new URLSearchParams(location.search).get('firin'))||4));
 const FIRIN = {x:[2500,2500+FIRIN_N*350+100], hz:[2550,2550+FIRIN_N*350], y:[PK-300,PK+320], hazne:FIRIN_N*350, adim:350};
 /* 4 kapalı göz · ürün çapı 300 → iç 360×360, iç yükseklik 100 (ürün 25 + üst boşluk 75), gövde 165 → 4 göz = 660 mm, taban 700 → üst 1360 (omuz 970: hepsi rahat erişimde) */
-const GOZ_N=Math.max(2,Math.min(6,+(new URLSearchParams(location.search).get('goz'))||4)), GOZ_H=165, GOZ_Y0=700;   /* ?goz=3 ile göz sayısı */
+const GOZ_N=Math.max(2,Math.min(6,+(new URLSearchParams(location.search).get('goz'))||3)), GOZ_H=165, GOZ_Y0=700;   /* C seçeneği 3 göz (4 göz elendi: 3'le aynı çıktı) · ?goz=4 ile denenebilir */
 const FIR = Array.from({length:GOZ_N},(_,i)=>[GOZ_Y0+i*GOZ_H, GOZ_Y0+(i+1)*GOZ_H]);
 const FIR_X = {x:[2600,3250], ic:[2670,3180], cx:2925, cz:EKSEN};
 const KESP = {cx:4300, cz:EKSEN, w:560, d:450};

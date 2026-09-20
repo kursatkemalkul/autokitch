@@ -58,7 +58,7 @@
 <div id="gwrap"><canvas id="gantt"></canvas><div id="kafa"></div></div>
 <div id="ui">
   <h1>AUTOKITCH · 3D Hat Simülasyonu</h1>
-  <div class="sub">Pafta HAT v19 · tepsili akış (robot her istasyona taşır) · FR5 yer rayında (1 ya da 2 robot) · her hareket mesafe ve hızdan hesaplanır, erişim ve çarpışma kontrollü.</div>
+  <div class="sub"><b style="color:#ff8c40">ARŞİV · 20 Eyl 2026'da elendi.</b> Bu sayfadaki kurgular (tepsili HAT v19, + Atosa tablası, açık koridor) kalan üç seçeneğin dışında kaldı — en iyi hali 38 ürün/saat. Güncel seçenekler için Hat menüsünden A · B · C'yi seçin. · Pafta HAT v19 · tepsili akış (robot her istasyona taşır) · FR5 yer rayında (1 ya da 2 robot) · her hareket mesafe ve hızdan hesaplanır, erişim ve çarpışma kontrollü.</div>
 
   <div class="row"><label>Hat</label><select id="hat"><option value="robot">arşiv · ROBOTLU HAT v19 · tepsili · 1 ya da 2 robot</option><option value="robot_tabla">arşiv · ROBOTLU HAT + ATOSA TABLASI</option><option value="robot_acik">arşiv · ROBOTLU HAT · AÇIK KORİDOR</option><option value="tabla">A · ATOSA TABLALI + KONVEYÖR</option><option value="bant">B · BANTLI + KONVEYÖR</option><option value="goz">C · ATOSA + KAPAKLI GÖZ</option><option value="karsilastir">KARŞILAŞTIR · A · B · C yan yana</option></select></div>
 
@@ -90,9 +90,9 @@
 </div>
 <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
-<script src="sim.js?v=76"></script>
-<script src="sim2.js?v=76"></script>
-<script src="sim3.js?v=76"></script>
+<script src="sim.js?v=77"></script>
+<script src="sim2.js?v=77"></script>
+<script src="sim3.js?v=77"></script>
 <script src="../sonuc_kart.js?v=2"></script>
 <script>const _q=new URLSearchParams(location.search);
 if(_q.get('akis')==='acik'){ document.getElementById('hat').value='robot_acik'; document.querySelector('#ui .sub').innerHTML='<b>AÇIK KORİDOR denemesi</b> · pres · dozaj · fırın · kesim+sprey · kutu ağızları aynı derinlikte ve ön yüzleri AÇIK → tepsi ağızdan hiç çıkmaz, robot onu tabla gibi yana kaydırır. Kesim ile sprey tek ağız. <b>Uyarı:</b> çekmece kolonları bugünkü yerinde kalırsa kol onlara çarpıyor.'; } else if(_q.get('tabla')==='1'){ document.getElementById('hat').value='robot_tabla'; document.querySelector('#ui .sub').innerHTML='Pafta HAT v19 + <b>ATOSA TABLASI</b> · tepsiyi pres altından dozaja ve fırın ucuna tabla taşır, robot yalnız alır/koyar · kapaklı 3 gözlü fırın · FR5 yer rayında (1 ya da 2 robot).'; } else document.getElementById('hat').value='robot';
