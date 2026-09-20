@@ -41,14 +41,15 @@
   <div class="sub">Telefonda aç, <b>AR'de gör</b>'e bas, kamerayı tezgâha tut. Kaset gerçek ölçüsünde görünür; parmakla döndür, yerini değiştir.</div>
 
   <div class="tabs">
-    <div class="tab on" data-m="kasar_v4">Kaşar kabı v4</div>
-    <div class="tab" data-m="kasar_v4_dozaj">v4 · dozaj düzeni</div>
+    <div class="tab on" data-m="kasar_v5">Kaşar kabı v5</div>
+    <div class="tab" data-m="kasar_v5_dozaj">v5 · dozaj düzeni</div>
+    <div class="tab" data-m="kasar_v4">v4 (eski · ortadan)</div>
     <div class="tab" data-m="kaset_v3">Standart kaset</div>
     <div class="tab" data-m="kasar_v3">Kaşar v3 (eski)</div>
     <div class="tab" data-m="kaset">sade kutu</div>
   </div>
 
-  <model-viewer id="mv" src="kasar_v4.glb" ios-src="kasar_v4.usdz" alt="Kaset" autoplay animation-name="calis"
+  <model-viewer id="mv" src="kasar_v5.glb" ios-src="kasar_v5.usdz" alt="Kaset" autoplay animation-name="calis"
     ar ar-modes="webxr scene-viewer quick-look" ar-scale="fixed" ar-placement="floor"
     loading="eager" reveal="auto"
     camera-controls touch-action="pan-y" auto-rotate shadow-intensity="1"
@@ -65,6 +66,12 @@
 
 <script>
 const D = {
+  kasar_v5:{ad:"Kaşar kabı v5", w:280, d:325, h:360, brut:32.8, net:"21,0", usdz:"kasar_v5.usdz",
+         icerik:"Kaşar ×1 (8,8 kg, 2 günlük · kısa kesim 0,50 g/mL ile 17,6 L = %84 dolu)", dolu:"≈ 11 kg (dolu)",
+         not:"ÜRETİM / DENEME sürümü. Çıkış UÇTAN, Picnic ve Atosa gibi: helezon kaşarı öne iter, tüpün altındaki 36 × 38 ağızdan düşer. Kap 325 derin: 830'luk modülde arkada standart L tipi redüktöre (NMRV030, 63 mm) yer kalsın diye. Helezon Ø40 / mil Ø14, SAĞ el, hatve 22 → 26 → 30; önden bakınca SAAT YÖNÜNDE döner, pide başına ≈ 7 tur, ≈ 41 dev/dk. Tüpün ilk 32 mm'si kapalı ve çift ağızlı: kaşar yalnız helezon dönünce gelir, darbe sayısı iki katına çıkar. Ağzın üstünde milde 6 çırpıcı pim. Karıştırıcı kafesi R129 + silikon sıyırıcı, helezonun tersine, 6 dev/dk. Önde çeyrek tur yatak kapağı: sökünce helezon öne çekilir. Toplam boy tüp ve kaplinle 439 mm."},
+  kasar_v5_dozaj:{ad:"Kaşar kabı v5 · dozaj düzeni", w:280, d:325, h:360, brut:32.8, net:"21,0", usdz:"kasar_v5.usdz",
+         icerik:"Kap + etek + 2 × NMRV030 redüktör + NEMA23 + tabla Ø340 + pide Ø280", dolu:"kap %84 dolu çizildi (2 günlük 8,8 kg)",
+         not:"Animasyon 12 sn: 10 sn dökme + 2 sn geri dönüş. Tabla pidenin DIŞ kenarında başlar (nozul r 105), 2,5 sn orada döner, sonra içeri yürür, r 20'de biter; 35 dev/dk. Helezon 42 dev/dk, karıştırıcı 6 dev/dk ters yönde. Kaşar ağızdan 197 mm düşer (0,20 sn, 2,0 m/s); ETEK akışı 40 × 50 mm'lik ize toplar, alt ucu pidenin 25 mm üstünde. Arkada iki redüktör 95 mm'ye sığıyor (kaplin 20 + boşluk 6 + gövde 63), motorlar yana uzanıp kabın kendi 280 genişliği içinde kalıyor. Kotlar paftadan: kaset tabanı 1627, tabla dozajda 1440."},
   kasar_v4:{ad:"Kaşar kabı v4", w:280, d:400, h:360, brut:40.3, net:"24,6", usdz:"kasar_v4.usdz",
          icerik:"Kaşar ×1 (8,8 kg, 2 günlük · 0,48 g/mL ile 18,3 L = %75 dolu)", dolu:"≈ 12 kg (dolu)",
          not:"Araştırmaya göre yeniden tasarım. ÇIKIŞ ORTADA, ALTTAN: tabla ekseni kabın tam ortasının altında (pafta HAT_ATOSA_TABLALI v2). Tek milde iki karşılıklı helezon (arka yarı sol el, ön yarı sağ el) kaşarı iki uçtan ortaya iter; hatve 30-40-52 artar, mil konik Ø42→Ø20 — girişin her yerinden çeker. Ortada boğaz 146 mm köprüyle kapalı: ağza kaşar yalnız helezon dönünce gelir. Kesit kadeh: kâse R134, karıştırıcı kafesi R129 tüm kâseyi süpürür, mavi silikon sıyırıcı duvara değer. Helezon önden bakınca SAAT YÖNÜNÜN TERSİNE, karıştırıcı SAAT YÖNÜNDE döner. Önde çeyrek tur yatak kapağı: sökünce helezon öne çekilir."},
@@ -85,7 +92,7 @@ const mv = document.getElementById('mv'), tablo = document.getElementById('tablo
 function goster(k){
   const m = D[k];
   mv.setAttribute('src', k + ".glb"); mv.setAttribute('ios-src', m.usdz || (k + (/_v3$/.test(k) ? "_ar2.usdz" : ".usdz")));
-  kasarGizli = false; kbtn.style.display = (k === 'kasar_v4_dozaj') ? 'block' : 'none'; kbtn.textContent = "Kaşarı gizle — içini gör";
+  kasarGizli = false; kbtn.style.display = /_dozaj$/.test(k) ? 'block' : 'none'; kbtn.textContent = "Kaşarı gizle — içini gör";
   tablo.innerHTML =
     "<tr><td>Ölçü (G × D × Y)</td><td>" + m.w + " × " + m.d + " × " + m.h + " mm</td></tr>" +
     "<tr><td>Brüt hacim</td><td>" + m.brut.toString().replace('.', ',') + " L</td></tr>" +
@@ -101,7 +108,7 @@ kbtn.onclick = () => { const mt = mv.model && mv.model.materials.find(x => x.nam
   kasarGizli = !kasarGizli; mt.setAlphaMode(kasarGizli ? 'BLEND' : 'OPAQUE'); mt.pbrMetallicRoughness.setBaseColorFactor([0.99, 0.82, 0.32, kasarGizli ? 0.0 : 1.0]);
   kbtn.textContent = kasarGizli ? "Kaşarı göster" : "Kaşarı gizle — içini gör"; };
 document.getElementById('arbtn').onclick = () => { if (mv.canActivateAR) mv.activateAR(); else alert("Bu cihaz AR desteklemiyor. iPhone'da Safari, Android'de Chrome ile aç."); };
-goster('kasar_v4');
+goster('kasar_v5');
 </script>
 </body>
 </html>
