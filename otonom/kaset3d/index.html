@@ -17,8 +17,8 @@
   .wrap{max-width:680px;margin:0 auto}
   h1{font-size:26px;font-weight:600}
   .sub{color:var(--gray-l);font-size:14px;margin-top:8px;line-height:1.5}
-  .tabs{display:flex;gap:10px;margin:20px 0 14px}
-  .tab{flex:1;padding:12px 10px;border:1px solid var(--line);border-radius:12px;background:var(--panel);
+  .tabs{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0 14px}
+  .tab{flex:1 1 30%;padding:11px 8px;border:1px solid var(--line);border-radius:12px;background:var(--panel);
        color:#fff;font-size:15px;font-weight:600;text-align:center;cursor:pointer}
   .tab.on{border-color:var(--blue);color:var(--blue)}
   model-viewer{width:100%;height:60vh;min-height:360px;background:#111114;border:1px solid var(--line);
@@ -29,6 +29,8 @@
   td{padding:9px 0;border-bottom:1px solid #2b2b2e;color:var(--gray-l)}
   td:last-child{text-align:right;color:#fff}
   .note{color:var(--gray);font-size:12.5px;margin-top:16px;line-height:1.6}
+  .ikinci{display:none;width:100%;margin-top:10px;padding:12px;border:1px solid var(--line);border-radius:12px;background:var(--panel);color:#fff;font-size:14.5px;font-weight:600;cursor:pointer}
+  .akis{display:block;margin:14px 0 4px;padding:14px;border:1px solid #6b5a1e;border-radius:12px;background:#2a2410;color:#ffd24a;font-size:15px;font-weight:600;text-align:center}
   a{color:var(--blue);text-decoration:none;font-size:14px}
 </style>
 <script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script>
@@ -39,18 +41,22 @@
   <div class="sub">Telefonda aç, <b>AR'de gör</b>'e bas, kamerayı tezgâha tut. Kaset gerçek ölçüsünde görünür; parmakla döndür, yerini değiştir.</div>
 
   <div class="tabs">
-    <div class="tab on" data-m="kaset_v3">Standart kaset</div>
-    <div class="tab" data-m="kasar_v3">Kaşar kabı</div>
+    <div class="tab on" data-m="kasar_v4">Kaşar kabı v4</div>
+    <div class="tab" data-m="kasar_v4_dozaj">v4 · dozaj düzeni</div>
+    <div class="tab" data-m="kaset_v3">Standart kaset</div>
+    <div class="tab" data-m="kasar_v3">Kaşar v3 (eski)</div>
     <div class="tab" data-m="kaset">sade kutu</div>
   </div>
 
-  <model-viewer id="mv" src="kaset_v3.glb" ios-src="kaset_v3_ar2.usdz" alt="Kaset"
+  <model-viewer id="mv" src="kasar_v4.glb" ios-src="kasar_v4.usdz" alt="Kaset" autoplay animation-name="calis"
     ar ar-modes="webxr scene-viewer quick-look" ar-scale="fixed" ar-placement="floor"
     loading="eager" reveal="auto"
     camera-controls touch-action="pan-y" auto-rotate shadow-intensity="1"
     exposure="1.1" camera-orbit="35deg 70deg 1.6m" min-camera-orbit="auto auto 0.6m">
   </model-viewer>
   <button class="ar" id="arbtn">AR'de gör — gerçek boyut</button>
+  <button class="ikinci" id="kasarbtn">Kaşarı gizle — içini gör</button>
+  <a class="akis" href="akis.html">Kaşar akış hesabı + simülasyon →</a>
 
   <table id="tablo"></table>
   <div class="note" id="notu"></div>
@@ -59,6 +65,12 @@
 
 <script>
 const D = {
+  kasar_v4:{ad:"Kaşar kabı v4", w:280, d:400, h:360, brut:40.3, net:"24,6", usdz:"kasar_v4.usdz",
+         icerik:"Kaşar ×1 (8,8 kg, 2 günlük · 0,48 g/mL ile 18,3 L = %75 dolu)", dolu:"≈ 12 kg (dolu)",
+         not:"Araştırmaya göre yeniden tasarım. ÇIKIŞ ORTADA, ALTTAN: tabla ekseni kabın tam ortasının altında (pafta HAT_ATOSA_TABLALI v2). Tek milde iki karşılıklı helezon (arka yarı sol el, ön yarı sağ el) kaşarı iki uçtan ortaya iter; hatve 30-40-52 artar, mil konik Ø42→Ø20 — girişin her yerinden çeker. Ortada boğaz 146 mm köprüyle kapalı: ağza kaşar yalnız helezon dönünce gelir. Kesit kadeh: kâse R134, karıştırıcı kafesi R129 tüm kâseyi süpürür, mavi silikon sıyırıcı duvara değer. Helezon önden bakınca SAAT YÖNÜNÜN TERSİNE, karıştırıcı SAAT YÖNÜNDE döner. Önde çeyrek tur yatak kapağı: sökünce helezon öne çekilir."},
+  kasar_v4_dozaj:{ad:"Kaşar kabı v4 · dozaj düzeni", w:280, d:400, h:360, brut:40.3, net:"24,6", usdz:"kasar_v4.usdz",
+         icerik:"Kap + pimli dağıtıcı + huni + dönen-kayan tabla + pide Ø280", dolu:"kap %75 dolu çizildi (2 günlük 8,8 kg)",
+         not:"Kotlar paftadan: kaset tabanı 1627, dozaj bandı 1490–1624, tabla dozajda 1440. Helezon kaba iş yapar: kaşarı ağza taşır (pide başına yalnız 1–3 tur). İnce işi PİMLİ DAĞITICI yapar: üstünde biriken küçük yığını tarayıp tel tel, sabit akışla döker (devir VARSAYIM) → huni → altında dönen + kayan tablanın üstündeki pideye spiral çizer. Animasyon hızları: helezon 7,5 · karıştırıcı 7,5 (ters) · tabla 30 dev/dk. Gramajı tabla altındaki terazi keser (Middleby US5244020A'daki gibi hızlı + yavaş iki kademe)."},
   kaset_v3:{ad:"Standart kaset", w:140, d:400, h:360, brut:20.2, net:"12,5",
          icerik:"Harç ×4 (kaset başı 10,8 kg ≈ 10,3 L) · Kıyma ×1 (6,4 kg) · Kuşbaşı ×1 (5,8 kg)", dolu:"≈ 12 kg (harç, 2 günlük)",
          not:"Picnic hopper formu, bizim zarfımızda. Gövde sabit kesitli: üstte dik duvar, büyük radyusla içeri dönüp helezon teknesine bağlanır. İki uç plakası aşağı inip ayak olur. Önde şeffaf çıkış tüpü, helezon mil Ø20 · kanat Ø56 · hatve 48. Üstte paslanmaz tel karıştırıcı, önde tutamak + emniyet pimi + ipli halka, arkada haç tahrik kaplinleri, tekne altında saplama. Bu kesitte kullanılabilir hacim 12,5 L çıkıyor (hedef 14 L idi); 2 günlük harç kaset başı 10,3 L olduğu için yetiyor."},
@@ -72,7 +84,8 @@ const D = {
 const mv = document.getElementById('mv'), tablo = document.getElementById('tablo'), notu = document.getElementById('notu');
 function goster(k){
   const m = D[k];
-  mv.setAttribute('src', k + ".glb"); mv.setAttribute('ios-src', k + (/_v3$/.test(k) ? "_ar2.usdz" : ".usdz"));
+  mv.setAttribute('src', k + ".glb"); mv.setAttribute('ios-src', m.usdz || (k + (/_v3$/.test(k) ? "_ar2.usdz" : ".usdz")));
+  kasarGizli = false; kbtn.style.display = (k === 'kasar_v4_dozaj') ? 'block' : 'none'; kbtn.textContent = "Kaşarı gizle — içini gör";
   tablo.innerHTML =
     "<tr><td>Ölçü (G × D × Y)</td><td>" + m.w + " × " + m.d + " × " + m.h + " mm</td></tr>" +
     "<tr><td>Brüt hacim</td><td>" + m.brut.toString().replace('.', ',') + " L</td></tr>" +
@@ -83,8 +96,12 @@ function goster(k){
   document.querySelectorAll('.tab').forEach(t => t.classList.toggle('on', t.dataset.m === k));
 }
 document.querySelectorAll('.tab').forEach(t => t.onclick = () => goster(t.dataset.m));
+let kasarGizli = false; const kbtn = document.getElementById('kasarbtn');
+kbtn.onclick = () => { const mt = mv.model && mv.model.materials.find(x => x.name === 'kasar_dolgu'); if (!mt) return;
+  kasarGizli = !kasarGizli; mt.setAlphaMode(kasarGizli ? 'BLEND' : 'OPAQUE'); mt.pbrMetallicRoughness.setBaseColorFactor([0.99, 0.82, 0.32, kasarGizli ? 0.0 : 1.0]);
+  kbtn.textContent = kasarGizli ? "Kaşarı göster" : "Kaşarı gizle — içini gör"; };
 document.getElementById('arbtn').onclick = () => { if (mv.canActivateAR) mv.activateAR(); else alert("Bu cihaz AR desteklemiyor. iPhone'da Safari, Android'de Chrome ile aç."); };
-goster('kaset_v3');
+goster('kasar_v4');
 </script>
 </body>
 </html>

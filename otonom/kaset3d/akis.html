@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>AUTOKITCH — Kaşar akış hesabı</title>
+<meta name="color-scheme" content="only light">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+<meta name="googlebot" content="noindex, nofollow">
+<style>
+  :root{color-scheme:only light;--black:#000;--panel:#1D1D1F;--line:#333336;--gray:#86868B;--gray-l:#A1A1A6;--blue:#2997FF;--sari:#ffd24a;--yesil:#3ddc84;--kirmizi:#ff6b5e;
+    --font:"SF Pro Display","SF Pro Text",-apple-system,BlinkMacSystemFont,"Helvetica Neue",Helvetica,Arial,sans-serif}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:var(--font);background:var(--black);color:#fff;-webkit-font-smoothing:antialiased;letter-spacing:-.01em;padding:22px 16px 70px}
+  .wrap{max-width:820px;margin:0 auto}
+  h1{font-size:27px;font-weight:600}
+  h2{font-size:13px;font-weight:700;letter-spacing:.09em;color:var(--sari);margin:38px 0 12px;text-transform:uppercase}
+  p,li{color:var(--gray-l);font-size:15px;line-height:1.6}
+  p{margin-top:8px} b{color:#fff;font-weight:600}
+  .sub{color:var(--gray-l);font-size:14.5px;margin-top:8px;line-height:1.55}
+  .chip{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.05em;padding:3px 8px;border-radius:999px;margin-right:6px;vertical-align:1px}
+  .k{background:#10361f;color:var(--yesil)} .v{background:#3a2a10;color:#ffb340} .y{background:#3a1512;color:var(--kirmizi)}
+  .kart{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:16px;margin-top:12px}
+  .karar{display:grid;grid-template-columns:1fr;gap:0}
+  .karar div{padding:11px 0;border-bottom:1px solid #2b2b2e;font-size:15px;color:var(--gray-l);line-height:1.5}
+  .karar div:last-child{border-bottom:0}
+  .karar b{display:block;font-size:12px;letter-spacing:.07em;color:var(--blue);margin-bottom:2px}
+  canvas{width:100%;height:auto;display:block;background:#0c0c0e;border:1px solid var(--line);border-radius:14px}
+  .bar{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+  button,select{font:inherit;font-size:14px;font-weight:600;color:#fff;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:9px 12px;cursor:pointer}
+  button.on{border-color:var(--blue);color:var(--blue)}
+  .hud{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:10px}
+  .hud div{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:10px}
+  .hud span{display:block;font-size:11px;color:var(--gray);letter-spacing:.05em;text-transform:uppercase}
+  .hud b{font-size:19px}
+  @media(max-width:560px){.hud{grid-template-columns:repeat(2,1fr)}}
+  .sl{display:grid;grid-template-columns:150px 1fr 74px;gap:10px;align-items:center;margin-top:9px;font-size:14px;color:var(--gray-l)}
+  .sl output{text-align:right;color:#fff;font-weight:600}
+  input[type=range]{width:100%;accent-color:var(--blue)}
+  table{width:100%;border-collapse:collapse;margin-top:6px;font-size:14px}
+  td,th{padding:9px 6px;border-bottom:1px solid #2b2b2e;color:var(--gray-l);text-align:left;vertical-align:top;line-height:1.45}
+  th{font-size:11px;letter-spacing:.06em;color:var(--gray);text-transform:uppercase;font-weight:700}
+  td:nth-child(2){color:#fff;font-weight:600;white-space:nowrap}
+  a{color:var(--blue);text-decoration:none}
+  .sonuc{font-size:15px;color:#fff;margin-top:10px;line-height:1.55}
+  .uc{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:10px}
+  .uc div{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:10px;font-size:13px;color:var(--gray-l);line-height:1.45;cursor:pointer}
+  .uc div.on{border-color:var(--blue)} .uc b{display:block;font-size:20px;margin-top:4px}
+  @media(max-width:560px){.uc{grid-template-columns:1fr}.sl{grid-template-columns:120px 1fr 64px}}
+  .kucuk{font-size:12.5px;color:var(--gray);line-height:1.6;margin-top:10px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Kaşar akış hesabı</h1>
+  <div class="sub">Rendelenmiş kaşar kabın içinde nasıl davranır, nereden çıkar, helezon nasıl döner. Hesap yayınlanmış ölçülere dayanır; kaynağı olmayan her sayı <span class="chip v">VARSAYIM</span> diye işaretli ve prototipte ölçülecek.
+  <a href="index.html">3D model →</a></div>
+
+  <h2>Karar · 7 satır</h2>
+  <div class="kart karar">
+    <div><b>ÇIKIŞ YERİ</b>Kabın tam ortasında, alttan. Ağız 50 × 45 mm. Tabla ekseni paftada kabın ortasının altında (z −270); v3'teki ön uç tüpü 225 mm öne döküyordu.</div>
+    <div><b>HELEZON</b>Tek milde iki karşılıklı helezon: arka yarı sol el, ön yarı sağ el. İkisi de kaşarı ortaya iter. Önden bakınca saat yönünün tersine döner, pide başına 1–3 tur, 5–17 dev/dk.</div>
+    <div><b>HATVE</b>Uçtan ortaya 30 → 40 → 52 mm artar, mil konik Ø42 → Ø20. Kapasite akış yönünde büyür, kaşar kanat arasında sıkışmaz. Orta çıkış girişi ikiye böldü: her giriş 122 mm ≈ 2 çap.</div>
+    <div><b>KAPALI BOĞAZ</b>Ortada 146 mm köprü boğazın üstünü kapatır. Ağza kaşar yalnız helezon dönünce gelir; durunca kendi kendine dökülmez.</div>
+    <div><b>KESİT + KARIŞTIRICI</b>Kadeh kesit: kâse R134, karıştırıcı kafesi R129 tüm kâseyi süpürür, silikon sıyırıcı duvara değer. Helezonun tersine döner. v3 kesitinde ≈ 6 L kaşar kendi akmıyordu.</div>
+    <div><b>DAĞITICI + TERAZİ</b>Helezon pide başına yalnız 1–3 tur atıyor: tek başına ince dozaj yapamaz. Ağzın altındaki pimli dağıtıcı, üstünde biriken küçük yığını tarayıp tel tel döker; akışı onun devri belirler. Gramajı tabla altındaki terazi keser.</div>
+    <div><b>SICAKLIK</b>Kabin +3 °C kalmalı. Rende peynir 13 °C'ye bir saat çıkınca, geri soğusa bile daha sıkı kekleşiyor.</div>
+  </div>
+
+  <h2>Sim 1 · Kabın içi — yandan kesit</h2>
+  <canvas id="c1" width="760" height="900"></canvas>
+  <div class="bar">
+    <button id="b_oyna" class="on">Durdur</button>
+    <button data-h="1" class="hz on">gerçek zaman</button><button data-h="40" class="hz">hızlı · 2 gün</button>
+    <button id="b_kar" class="on">karıştırıcı açık</button>
+    <button id="b_sifir">baştan</button>
+  </div>
+  <div class="hud">
+    <div><span>çıkan pide</span><b id="h_pide">0</b></div><div><span>kapta kalan</span><b id="h_kg">8,8 kg</b></div>
+    <div><span>anlık akış</span><b id="h_gs">0 g/s</b></div><div><span>helezon</span><b id="h_rpm">0 dev/dk</b></div>
+  </div>
+  <p class="kucuk" id="s1_not"></p>
+
+  <h2>Sim 2 · Pidenin üstü — kaşar ne kadar eşit yayılıyor</h2>
+  <div class="uc" id="modlar">
+    <div data-m="0">yalnız helezon · tek uçtan (v3)<b id="cv0">–</b></div>
+    <div data-m="1">yalnız helezon · iki yandan ortaya<b id="cv1">–</b></div>
+    <div data-m="2" class="on">v4 · helezon + pimli dağıtıcı<b id="cv2">–</b></div>
+  </div>
+  <canvas id="c2" width="760" height="470" style="margin-top:10px"></canvas>
+  <div class="sl"><label>tabla devri</label><input type="range" id="s_trpm" min="10" max="60" value="30"><output id="o_trpm"></output></div>
+  <div class="sl"><label>dökme süresi</label><input type="range" id="s_T" min="6" max="16" value="10"><output id="o_T"></output></div>
+  <div class="sl"><label>topak boyu <span class="chip v">V</span></label><input type="range" id="s_top" min="2" max="12" value="6"><output id="o_top"></output></div>
+  <p class="sonuc" id="s2_sonuc"></p>
+  <p class="kucuk">“Boş” = ortalamanın yarısından az kaşar düşen alan. Kaşarın eriyince ≈ 15 mm yayıldığı kabul edildi <span class="chip v">VARSAYIM</span>; 5 koşunun ortalaması. Küçük olan iyi. Topak boyu ve dağıtıcının topağı kaç tele ayırdığı varsayım; model seçenekleri SIRALAMAK için, mutlak sayı için değil.</p>
+
+  <h2>Kesit · v3 ile v4</h2>
+  <canvas id="c3" width="760" height="470"></canvas>
+  <p class="sonuc" id="s3_sonuc"></p>
+
+  <h2>Helezon hesabı · Roberts formülü</h2>
+  <div class="kart">
+    <div class="sl"><label>dökme yoğunluk <span class="chip k">K</span></label><input type="range" id="s_rho" min="36" max="56" value="48"><output id="o_rho"></output></div>
+    <div class="sl"><label>sürtünme açısı <span class="chip v">V</span></label><input type="range" id="s_fi" min="20" max="45" value="30"><output id="o_fi"></output></div>
+    <div class="sl"><label>kanat doluluğu <span class="chip v">V</span></label><input type="range" id="s_ef" min="30" max="90" value="60"><output id="o_ef"></output></div>
+    <div class="hud" style="margin-top:14px">
+      <div><span>tur başına</span><b id="r_gt">–</b></div><div><span>pide başına</span><b id="r_tur">–</b></div>
+      <div><span>10 sn'de dökmek için</span><b id="r_rpm">–</b></div><div><span>2 günlük kaşar</span><b id="r_L">–</b></div>
+    </div>
+    <p class="kucuk">Vt = π/4 · [(D+2C)² − Dc²] · (p − ts) · verim = 1 / (1 + tan α · tan(φ + α)) · α = atan(p / 2πRe). Son kanat: D 56, mil 20, hatve 52, boşluk 3, kanat 3 mm; iki yan birlikte. Porsiyon 55 g (günde 4,4 kg / 80 pide).</p>
+  </div>
+
+  <h2>Ölçülmüş veri</h2>
+  <table>
+    <tr><th>özellik</th><th>değer</th><th>kaynak</th></tr>
+    <tr><td>Dökme yoğunluk, rende</td><td>0,48 g/mL</td><td>1 cup = 113 g · <a href="https://www.nutritionvalue.org/Cheese%2C_part-skim%2C_low_moisture%2C_mozzarella_nutritional_value.html">USDA SR</a> · <a href="https://www.kingarthurbaking.com/learn/ingredient-weight-chart">King Arthur</a></td></tr>
+    <tr><td>Alt sınır (ince rende)</td><td>0,36 g/mL</td><td>86 g/cup · USDA FDC 170900 — doğrulanamadı</td></tr>
+    <tr><td>Küp doğranmış</td><td>0,56 g/mL</td><td>1 cup = 132 g · USDA SR</td></tr>
+    <tr><td>Katı yoğunluk</td><td>1,10 g/cm³</td><td>18 g / inç³ · USDA SR → kabın %56'sı boşluk</td></tr>
+    <tr><td>Rende kesiti</td><td>2,8 mm · ince 1,6 mm</td><td><a href="https://www.performancefoodservice.com/Products-and-Services/Custom-Solutions/Cheese-Processing">Performance Foodservice</a> · boy yayınlanmamış</td></tr>
+    <tr><td>Sıcaklık → kekleşme</td><td>4 → 13 → 22 °C artıyor</td><td><a href="https://doi.org/10.3168/jds.2012-6314">Banville 2013, J. Dairy Sci.</a> · 4 °C'de kek kolayca dağılıyor</td></tr>
+    <tr><td>Yağ → yapışma</td><td>yağ arttıkça artıyor</td><td><a href="https://doi.org/10.3168/jds.2006-618">Childs 2007</a> · kaşar ≈ %26 yağ (mozzarella ≈ %20) → daha yapışkan beklenir</td></tr>
+    <tr><td>Topaklanma önleyici</td><td>%1–2</td><td>selüloz / patates nişastası · <a href="https://patents.google.com/patent/US20030021873A1/en">US20030021873</a></td></tr>
+    <tr><td>Helezon hacim verimi</td><td>0,55 – 0,76</td><td><a href="https://beltcon.org.za/wp-content/uploads/2024/12/B11-14-Roberts-Paper2.pdf">A.W. Roberts</a> · bu helezon, φ 20–45°</td></tr>
+    <tr><td>Sabit hatve</td><td>yalnız uçtan çeker</td><td><a href="https://www.kwsmfg.com/engineering-guides/screw-conveyor/types-of-screw-feeders/">KWS</a> · <a href="https://www.chemengonline.com/hopper-design-principles/">Hopper Design Principles</a> · çare: konik mil + artan hatve</td></tr>
+    <tr><td>Tek helezon, düşük devir</td><td>kesik kesik döker</td><td><a href="https://www.ptonline.com/articles/how-to-troubleshoot-your-feeder-to-achieve-optimal-performance">Coperion K-Tron</a></td></tr>
+    <tr><td>Peynir kabında köprü</td><td>oluyor</td><td><a href="https://patents.google.com/patent/US5244020A/en">Middleby US5244020A</a> · helezon + karıştırıcı + çıkışta yıldız çark + terazi</td></tr>
+    <tr><td>Ortadan çıkış + köprü</td><td>uygulanmış</td><td><a href="https://patents.google.com/patent/US12508716B2/en">Little Caesars US12508716B2</a> · altında kollu dağıtıcı mil · ABD'de yürürlükte, Türkiye tescili bakılmalı</td></tr>
+    <tr><td>Sanayi hatları</td><td>bant + tırmık</td><td><a href="https://patents.google.com/patent/US20120227865A1/en">QTS</a> · <a href="https://www.refrigeratedfrozenfood.com/articles/84049-waterfall-topping-applicator">Grote</a> · yuvarlak uçlu tırmık peyniri ezmiyor</td></tr>
+  </table>
+
+  <h2>Kaynağı bulunamayanlar</h2>
+  <p><span class="chip y">ÖLÇÜLECEK</span>Kaşarın paslanmaz, POM ve polikarbonat üstündeki sürtünmesi · yığın açısı · yük altında sıkışması · 48 saat bekleyince kekleşmesi · helezon kanadının doluluğu · topak boyu. Bunlar için yayınlanmış sayı çıkmadı.</p>
+
+  <h2>Prototip testi · 4 ölçüm</h2>
+  <div class="kart karar">
+    <div><b>1 · YOĞUNLUK</b>1 litrelik kabı sıkıştırmadan doldur, tart. Beklenen 360–480 g. Kap hacmini bu belirler.</div>
+    <div><b>2 · TUR BAŞINA GRAM</b>3D baskı helezon + şeffaf boru + matkap. 20 tur çevir, her turu tart. Ortalama = doluluk, sapma = dozaj hassasiyeti.</div>
+    <div><b>3 · EĞİK LEVHA</b>Kaşarı POM ve polikarbonat levhaya koy, levhayı kaldır; kaydığı açı = sürtünme açısı. +3 °C ve +12 °C'de tekrarla.</div>
+    <div><b>4 · 48 SAAT</b>Kabı doldur, +3 °C'de 2 gün beklet, karıştırıcıyı çalıştır. Kek dağılıyor mu, karıştırıcı kaç N·m istiyor.</div>
+  </div>
+  <p style="margin-top:22px"><a href="index.html">← 3D model</a> &nbsp;·&nbsp; <a href="../">AUTOKITCH</a></p>
+</div>
+
+<script>
+/* ===================== ORTAK ===================== */
+const $=id=>document.getElementById(id), tr=(x,n=1)=>x.toFixed(n).replace('.',',');
+function rnd32(a){return function(){a|=0;a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
+const PORS=55, KG2=8.8;
+const G={CY:48,RT:31,YC:216,HW:134,RS:129,YD:332,L:390,KOP:73,AGZ:25};
+G.YJ=G.YC-Math.sqrt(G.HW*G.HW-G.RT*G.RT);
+function yari4(y){ if(y<G.CY-G.RT)return 0; if(y<G.CY)return Math.sqrt(Math.max(0,G.RT*G.RT-(y-G.CY)**2)); if(y<G.YJ)return G.RT;
+  if(y<G.YC)return Math.sqrt(Math.max(0,G.HW*G.HW-(y-G.YC)**2)); return G.HW; }
+const G3={CY:72,RT:31,Y1:158,HW:134,YK:245,RS:92};
+function yari3(y){ if(y<G3.CY-G3.RT)return 0; if(y<G3.CY)return Math.sqrt(Math.max(0,G3.RT**2-(y-G3.CY)**2));
+  if(y<G3.Y1){const t=(G3.Y1-y)/(G3.Y1-G3.CY),s=t*t*(3-2*t);return G3.HW-(G3.HW-G3.RT)*s;} return G3.HW; }
+function roberts(D,Dc,p,fi,ts=3,C=3){ const Ro=D/2,Ri=Dc/2, Vt=Math.PI/4*((D+2*C)**2-Dc*Dc)*(p-ts)/1000, Re=2/3*(Ro**3-Ri**3)/(Ro**2-Ri**2),
+  a=Math.atan(p/(2*Math.PI*Re)); return {Vt, eta:1/(1+Math.tan(a)*Math.tan(fi*Math.PI/180+a))}; }
+/* alan tablosu: A(h) = taban → h arası kesit alanı (mm²) */
+const Y0=G.CY-G.RT, AT=[0]; for(let y=Y0;y<352;y++) AT.push(AT[AT.length-1]+2*yari4(y+.5));
+const alan=h=>{const i=Math.max(0,Math.min(AT.length-2,h-Y0)),k=Math.floor(i);return AT[k]+(AT[k+1]-AT[k])*(i-k);};
+function yuk(a){let lo=Y0,hi=352;for(let i=0;i<22;i++){const m=(lo+hi)/2;alan(m)<a?lo=m:hi=m;}return (lo+hi)/2;}
+
+/* ===================== HESAP PANELİ ===================== */
+let RHO=.48, FI=30, EF=.6;
+function gTur(){ const r=roberts(56,20,52,FI); return 2*r.Vt*r.eta*EF*RHO; }
+function hesap(){ RHO=+$('s_rho').value/100; FI=+$('s_fi').value; EF=+$('s_ef').value/100;
+  $('o_rho').textContent=tr(RHO,2)+' g/mL'; $('o_fi').textContent=FI+'°'; $('o_ef').textContent='%'+Math.round(EF*100);
+  const g=gTur(), L=KG2/RHO, V=alan(G.YD)*G.L/1e6-.35;
+  $('r_gt').textContent=tr(g,0)+' g'; $('r_tur').textContent=tr(PORS/g,1)+' tur'; $('r_rpm').textContent=tr(PORS/g/10*60,1)+' dev/dk';
+  $('r_L').innerHTML=tr(L,1)+' L · %'+Math.round(100*L/V); if(window.sim1) sim1.ayar(); }
+['s_rho','s_fi','s_ef'].forEach(i=>$(i).oninput=hesap);
+
+/* ===================== SİM 1 ===================== */
+const sim1=(()=>{ const c=$('c1'),x=c.getContext('2d'),S=1.5,OX=350,OY=582; const Z=z=>OX+z*S, Y=y=>OY-y*S;
+  const N=39,dz=10, kol=[...Array(N)].map((_,i)=>({z:-195+dz*(i+.5),a:0,bos:0}));
+  let oyna=true,hiz=1,artan=true,kar=true,t=0,rot=0,krot=0,drot=0,pide=0,kalan=KG2*1000,faz='dok',fazT=0,dokulen=0,akis=0,rpm=0,kopruVar=false,pideKat=0,parca=[],R=rnd32(3);
+  const doku=[...Array(1500)].map(()=>[R()*400-200,R()*340+15,R()*Math.PI,4+R()*6]);
+  function kanatlar(){ return artan?[[195,165,30,38],[165,125,40,29],[125,73,52,20]]:[[195,154.3,40.7,20],[154.3,113.7,40.7,20],[113.7,73,40.7,20]]; }
+  function hatve(az){ for(const k of kanatlar()) if(az<=k[0]&&az>=k[1]) return k[2]; return artan?52:40.7; }
+  function sifir(){ const a0=KG2*1000/RHO*1000/G.L; kol.forEach(k=>{k.a=Math.min(a0,alan(G.YD));k.bos=0;}); t=0;pide=0;kalan=KG2*1000;faz='dok';fazT=0;dokulen=0;pideKat=0;parca=[];kopruVar=false; }
+  function ayar(){}
+  function adim(dt){ t+=dt; const gt=gTur(); rpm=PORS/gt/10*60;
+    if(faz==='dok'){ const tur=rpm/60*dt; rot+=tur*2*Math.PI; if(kar) krot-=tur*2*Math.PI; drot+=dt*150/60*2*Math.PI;
+      let cikan=0; for(const yon of [-1,1]){ let tas=0; for(const kn of kanatlar()){ const r=roberts(56,kn[3],kn[2],FI), kap=r.Vt*r.eta*EF*1000*tur;   /* mm³ */
+          const ks=kol.filter(k=>k.z*yon>0&&Math.abs(k.z)<=kn[0]&&Math.abs(k.z)>kn[1]); let ist=Math.max(0,kap-tas);
+          for(let g=0;g<2&&ist>1e-6;g++){ const uy=ks.filter(k=>kar?k.a>1:k.bos<bogazA()); if(!uy.length)break; const pay=ist/uy.length;
+            for(const k of uy){ const var_=kar?k.a*dz:(bogazA()-k.bos)*dz, al=Math.min(pay,var_); if(kar)k.a-=al/dz; else k.bos+=al/dz; tas+=al; ist-=al; } } }
+        cikan+=tas; }
+      const gr=cikan/1000*RHO; akis=gr/dt; dokulen+=gr; kalan-=gr; pideKat=dokulen/PORS; kopruVar=!kar&&kol.some(k=>k.bos>=bogazA()-1&&k.a>bogazA());
+      const n=Math.min(8,Math.round(gr*3+R())); for(let i=0;i<n;i++) parca.push({z:(R()-.5)*30,y:G.CY-G.RT,vz:(R()-.5)*30,vy:0});
+      fazT+=dt; if(dokulen>=PORS||fazT>14){ if(dokulen>=PORS*.5)pide++; faz='ara'; fazT=0; } }
+    else { akis=0; fazT+=dt; if(fazT>(hiz>1?.25:2.2)){ faz='dok'; fazT=0; dokulen=0; pideKat=0; } }
+    /* yığın kayması */ const tanF=Math.tan((kar?40:75)*Math.PI/180)*dz;
+    for(let it=0;it<4;it++) for(let i=0;i<N-1;i++){ const A=kol[i],B=kol[i+1],hA=yuk(A.a),hB=yuk(B.a),f=hA-hB; if(Math.abs(f)>tanF){ const d=.2*(Math.abs(f)-tanF)*2*yari4(Math.max(hA,hB)); if(f>0){A.a-=d;B.a+=d;}else{A.a+=d;B.a-=d;} } }
+    for(const p of parca){ p.vy-=9810*dt; p.y+=p.vy*dt; p.z+=p.vz*dt; if(p.y<-20&&p.y>-70){p.vz+=(R()-.5)*900*dt*8;p.vy*=.92;} } parca=parca.filter(p=>p.y>-178&&Math.abs(p.z)<150);
+    if(kalan<30||(!kar&&kopruVar&&akis<.05&&faz==='dok'&&fazT>3)){ /* kap bitti ya da köprü */ } }
+  const bogazA=()=>alan(G.YJ);
+  function ciz(){ x.clearRect(0,0,760,900); x.lineCap='round';
+    /* kaşar */ for(const k of kol){ const h=yuk(k.a); x.fillStyle='#e9b52e'; x.fillRect(Z(k.z-dz/2),Y(h),dz*S+.6,(h-Y0)*S);
+      if(k.bos>1){ const hb=yuk(k.bos); x.fillStyle='#0c0c0e'; x.fillRect(Z(k.z-dz/2),Y(hb),dz*S+.6,(hb-Y0)*S); } }
+    x.save(); x.beginPath(); for(const k of kol){const h=yuk(k.a); x.rect(Z(k.z-dz/2),Y(h),dz*S+.6,(h-(k.bos>1?yuk(k.bos):Y0))*S);} x.clip(); x.strokeStyle='rgba(120,80,0,.55)'; x.lineWidth=1.3;
+    for(const d of doku){ x.beginPath(); x.moveTo(Z(d[0]),Y(d[1])); x.lineTo(Z(d[0]+Math.cos(d[2])*d[3]),Y(d[1]+Math.sin(d[2])*d[3])); x.stroke(); } x.restore();
+    /* gövde */ x.strokeStyle='#9fb4c8'; x.lineWidth=2; x.strokeRect(Z(-200),Y(352),400*S,(352-14)*S); x.fillStyle='rgba(159,180,200,.10)'; x.fillRect(Z(-200),Y(360),400*S,8*S);
+    x.fillStyle='rgba(159,180,200,.35)'; x.fillRect(Z(-200),Y(352),5*S,352*S); x.fillRect(Z(195),Y(352),5*S,352*S);
+    x.strokeStyle='#5d6d7c'; x.setLineDash([5,5]); x.beginPath(); x.moveTo(Z(-195),Y(G.YJ)); x.lineTo(Z(195),Y(G.YJ)); x.stroke(); x.setLineDash([]);
+    x.strokeStyle='#fff'; x.lineWidth=4; x.beginPath(); x.moveTo(Z(-G.KOP),Y(82)); x.lineTo(Z(G.KOP),Y(82)); x.stroke();
+    x.fillStyle='#0c0c0e'; x.fillRect(Z(-G.AGZ),Y(18),2*G.AGZ*S,7*S); x.strokeStyle='#9fb4c8'; x.lineWidth=2; x.strokeRect(Z(-G.AGZ-3),Y(15),3*S,7*S); x.strokeRect(Z(G.AGZ),Y(15),3*S,7*S);
+    /* helezon */ x.strokeStyle='#f2f2ee'; x.lineWidth=5; x.beginPath(); x.moveTo(Z(-204),Y(G.CY)); x.lineTo(Z(206),Y(G.CY)); x.stroke();
+    x.fillStyle='#f2f2ee'; for(const s of [-1,1]){ x.beginPath(); x.moveTo(Z(s*195),Y(G.CY+21)); x.lineTo(Z(s*110),Y(G.CY+10)); x.lineTo(Z(s*110),Y(G.CY-10)); x.lineTo(Z(s*195),Y(G.CY-21)); x.fill(); }
+    for(const s of [-1,1]){ let th=0; x.beginPath(); for(let az=25;az<=195;az+=1){ th+=2*Math.PI/hatve(az); const yy=G.CY+28*Math.sin(th+rot+(s>0?0:Math.PI)); az===25?x.moveTo(Z(s*az),Y(yy)):x.lineTo(Z(s*az),Y(yy)); } x.strokeStyle='#ffffff'; x.lineWidth=3; x.stroke(); }
+    x.strokeStyle='#f2f2ee'; x.lineWidth=4; x.beginPath(); const pa=rot*1; x.moveTo(Z(-18),Y(G.CY+26*Math.sin(pa))); x.lineTo(Z(18),Y(G.CY+26*Math.sin(pa))); x.moveTo(Z(-18),Y(G.CY+26*Math.cos(pa))); x.lineTo(Z(18),Y(G.CY+26*Math.cos(pa))); x.stroke();
+    /* karıştırıcı */ x.strokeStyle=kar?'#c9d3dc':'#565d66'; x.lineWidth=2.4; [[0,129],[Math.PI,129],[Math.PI/2,86],[-Math.PI/2,43]].forEach(([f,r],i)=>{ const yy=G.YC+r*Math.sin(krot+f); x.beginPath(); x.moveTo(Z(-186),Y(yy)); x.lineTo(Z(186),Y(yy)); x.stroke();
+      for(const z of [-186,0,186]){ x.beginPath(); x.moveTo(Z(z),Y(G.YC)); x.lineTo(Z(z),Y(yy)); x.stroke(); } if(i<2){ x.strokeStyle='#2997ff'; x.lineWidth=4; x.beginPath(); x.moveTo(Z(-184),Y(G.YC+133*Math.sin(krot+f))); x.lineTo(Z(184),Y(G.YC+133*Math.sin(krot+f))); x.stroke(); x.strokeStyle=kar?'#c9d3dc':'#565d66'; x.lineWidth=2.4; } });
+    x.lineWidth=5; x.beginPath(); x.moveTo(Z(-206),Y(G.YC)); x.lineTo(Z(262),Y(G.YC)); x.stroke();
+    /* dağıtıcı + huni + tabla */ x.strokeStyle='#9fb4c8'; x.lineWidth=2; x.strokeRect(Z(-36),Y(2),76*S,84*S);
+    x.fillStyle='#f2f2ee'; x.beginPath(); x.arc(Z(0),Y(-42),11*S,0,7); x.fill(); x.strokeStyle='#c9d3dc'; x.lineWidth=3; for(let i=0;i<4;i++){ const a=drot+i*Math.PI/2; x.beginPath(); x.moveTo(Z(11*Math.cos(a)),Y(-42+11*Math.sin(a))); x.lineTo(Z(29*Math.cos(a)),Y(-42+29*Math.sin(a))); x.stroke(); }
+    x.strokeStyle='#c9d3dc'; x.lineWidth=2.5; x.beginPath(); x.moveTo(Z(-38),Y(-82)); x.lineTo(Z(-27),Y(-134)); x.moveTo(Z(38),Y(-82)); x.lineTo(Z(27),Y(-134)); x.stroke();
+    x.fillStyle='#8d949c'; x.fillRect(Z(-100),Y(-187),340*S,12*S); x.fillStyle='#e8d9ae'; x.fillRect(Z(-70),Y(-180),280*S,7*S);
+    x.fillStyle='#f0bd33'; x.fillRect(Z(-58),Y(-180+Math.min(1,pideKat)*5),256*S,Math.min(1,pideKat)*5*S);
+    x.fillStyle='#ffd24a'; for(const p of parca){ x.fillRect(Z(p.z)-2,Y(p.y)-1,5,2.4); }
+    /* etiketler */ x.font='600 12.5px -apple-system,Arial'; x.fillStyle='#a1a1a6'; const et=(s,z,y,zz,yy)=>{ const w=x.measureText(s).width, al=x.textAlign==='right'?Z(z)-w-5:Z(z)-5, renk=x.fillStyle; x.fillStyle='rgba(8,8,10,.78)'; x.fillRect(al,Y(y)-14,w+10,19); x.fillStyle=renk; x.fillText(s,Z(z),Y(y)); if(zz!==undefined){ x.strokeStyle='#55555a'; x.lineWidth=1; x.beginPath(); x.moveTo(Z(z)+2,Y(y)+4); x.lineTo(Z(zz),Y(yy)); x.stroke(); } };
+    x.textAlign='left'; et('ARKA · tahrik',-200,372); x.textAlign='right'; et('ÖN',200,372); x.textAlign='left';
+    et('KÖPRÜ · boğaz kapalı 146 mm',-196,-8,-60,80); et('AĞIZ 50 × 45',34,-6,20,12); et('PİMLİ DAĞITICI · topağı tellere ayırır',48,-40,30,-42); et('HUNİ',48,-112,32,-108);
+    et('PİDE Ø280 · tabla döner + kayar · altında TERAZİ',-196,-160,-66,-178); x.fillStyle=kar?'#c9d3dc':'#ff6b5e'; et(kar?'KARIŞTIRICI · helezonun tersine döner':'KARIŞTIRICI KAPALI',-190,338);
+    x.fillStyle='#fff'; et('sol el → ortaya',-196,-30); x.textAlign='right'; et('ortaya ← sağ el',196,-8); x.textAlign='left';
+    if(kopruVar){ x.fillStyle='#ff6b5e'; x.font='700 15px -apple-system,Arial'; x.fillText('KÖPRÜ: kaşar boğazın üstünde kemer kurdu, helezon boşa dönüyor',Z(-195),Y(330)); }
+    $('h_pide').textContent=pide; $('h_kg').textContent=tr(Math.max(0,kalan)/1000,1)+' kg'; $('h_gs').textContent=tr(akis,1)+' g/s'; $('h_rpm').textContent=faz==='dok'?tr(rpm,1)+' dev/dk':'bekliyor'; }
+  let son=0; function dongu(ms){ const dt=Math.min(.05,(ms-son)/1000||.016); son=ms; if(oyna){ for(let i=0;i<hiz;i++) adim(hiz>1?.05:dt); } ciz(); requestAnimationFrame(dongu); }
+  $('b_oyna').onclick=e=>{oyna=!oyna;e.target.textContent=oyna?'Durdur':'Oynat';e.target.classList.toggle('on',oyna);};
+  document.querySelectorAll('.hz').forEach(b=>b.onclick=()=>{hiz=+b.dataset.h;document.querySelectorAll('.hz').forEach(q=>q.classList.toggle('on',q===b));});
+  $('b_kar').onclick=e=>{kar=!kar;e.target.textContent=kar?'karıştırıcı açık':'karıştırıcı kapalı';e.target.classList.toggle('on',kar);sifir();};
+  $('b_sifir').onclick=sifir; sifir(); requestAnimationFrame(dongu);
+  $('s1_not').innerHTML='Model: kap 10 mm\'lik 39 kolona bölünür; her kanat, Roberts kapasitesi kadarını kendi altındaki kolonlardan alır, fazlası bir sonraki kanada kalır. Yığın, karıştırıcı açıkken 40°, kapalıyken 75° eğimle kayar <span class="chip v">VARSAYIM</span>. Karıştırıcı kapalıyken boğazın üstünde kemer kurulduğu kabul edilir (köprü kuralı + Middleby patenti); gerçekte ne kadar sık olacağını 4. test gösterir. <b>Ölçülen:</b> 8,8 kg kaşardan 157 pide çıkıyor, köprünün üstünde ≈ 130 g kalıyor. Sabit hatveyle de aynı sonuç çıktı: orta çıkış girişi ikiye böldüğü için her giriş 122 mm ≈ 2 helezon çapı, yani KWS kılavuzunun sabit hatve için verdiği sınırın içinde.';
+  return {ayar,sifir,adim,durum:()=>({t,pide,kalan,akis,rpm,kopruVar,faz,h:kol.map(k=>Math.round(yuk(k.a))),kar,artan}),ayarla:(a,k)=>{artan=a;kar=k;sifir();}}; })(); window.SIM1=sim1;
+
+/* ===================== SİM 2 ===================== */
+const sim2=(()=>{ const c=$('c2'),x=c.getContext('2d'); let mod=2; const NG=60,HC=5,RP=140,RK=122, ERI=s=>Math.sqrt(s*s+15*15);   /* eriyince ≈ 15 mm yayılır — VARSAYIM */
+  function kos(m,seed,trpm,T,top){ const R=rnd32(seed), g=new Float32Array(NG*NG), seri=[]; const gt=gTur()*(m===0?.5:1), devir=PORS/gt/T, duty=EF, dt=.01;   /* v3: tek kanat = yarı kapasite → iki kat tur */ let kova=[0,0];
+    const yanlar=m===0?[[0,1]]:[[0,.5],[.5,.5]], w=2*Math.PI*trpm/60, r0=10;
+    const koy=(t,mass,sig,sac)=>{ const tt=Math.min(T,Math.max(0,t)), r=Math.sqrt(r0*r0+(RK*RK-r0*r0)*tt/T), a=w*t; let px=r*Math.cos(a)+sac*(R()+R()+R()-1.5)*2, py=r*Math.sin(a)+sac*(R()+R()+R()-1.5)*2;
+      const i0=Math.floor((px+150)/HC), j0=Math.floor((py+150)/HC), n=Math.ceil(3*sig/HC); let top_=0; const hu=[];
+      for(let i=i0-n;i<=i0+n;i++)for(let j=j0-n;j<=j0+n;j++){ if(i<0||j<0||i>=NG||j>=NG)continue; const dx=(i+.5)*HC-150-px, dy=(j+.5)*HC-150-py, wg=Math.exp(-(dx*dx+dy*dy)/(2*sig*sig)); hu.push([i*NG+j,wg]); top_+=wg; }
+      for(const h of hu) g[h[0]]+=mass*h[1]/top_; };   /* sig = iz + erime yayılması (karekök toplam) */
+    let esik=[top*(.6+.8*R()),top*(.6+.8*R())], tel=0;                       /* topak boyu düzensiz: 0,6–1,4 × */
+    for(let t=0;t<T;t+=dt){ let f=0; yanlar.forEach(([ofs,pay],k)=>{ const ph=(devir*t+ofs)%1, ak=ph<duty?PORS/T*pay/duty:0; f+=ak; kova[k]+=ak*dt;
+        if(m<2) while(kova[k]>=esik[k]){ kova[k]-=esik[k]; koy(t+.2,esik[k],ERI(11),6); esik[k]=top*(.6+.8*R()); } });
+      if(m===2){ tel+=PORS/T*dt; while(tel>=.35){ tel-=.35; koy(t+.2+R()*.1,.35,ERI(8),18); } }     /* dağıtıcı tampondan SABİT hızla tarar: 0,35 g'lık teller */
+      seri.push(m===2?PORS/T:f); }
+    if(m<2) yanlar.forEach((y,k)=>{ if(kova[k]>.05) koy(T,kova[k],ERI(11),6); });
+    let s=0,s2=0,n=0; for(let i=0;i<NG;i++)for(let j=0;j<NG;j++){ const dx=(i+.5)*HC-150,dy=(j+.5)*HC-150; if(dx*dx+dy*dy<=110*110){ const v=g[i*NG+j]; s+=v;s2+=v*v;n++; } }
+    const ort=s/n; let bos=0; for(let i=0;i<NG;i++)for(let j=0;j<NG;j++){ const dx=(i+.5)*HC-150,dy=(j+.5)*HC-150; if(dx*dx+dy*dy<=110*110&&g[i*NG+j]<.5*ort) bos++; }
+    return {g,seri,cv:Math.sqrt(Math.max(0,s2/n-ort*ort))/ort,bos:bos/n,ort,devir}; }
+  function hepsi(){ const trpm=+$('s_trpm').value,T=+$('s_T').value,top=+$('s_top').value; $('o_trpm').textContent=trpm+' dev/dk'; $('o_T').textContent=T+' sn'; $('o_top').textContent=top+' g';
+    const so=[0,1,2].map(m=>{let a=0,b=0;for(let s=1;s<=5;s++){const q=kos(m,s*17,trpm,T,top);a+=q.cv;b+=q.bos;}return {cv:a/5,bos:b/5};}), cv=so.map(q=>q.cv);
+    so.forEach((q,m)=>$('cv'+m).innerHTML='%'+Math.round(q.bos*100)+' boş <span style="font-size:12px;color:#86868b;font-weight:500">· sapma %'+Math.round(q.cv*100)+'</span>');
+    const r=kos(mod,17,trpm,T,top); ciz(r,T); const ad=['Yalnız helezonla, tek uçtan','Yalnız helezonla, iki yandan','Helezon + pimli dağıtıcıyla'][mod];
+    $('s2_sonuc').innerHTML=ad+' pidenin <b>%'+Math.round(so[mod].bos*100)+' kadarı kaşarsız</b> kalıyor (sapma %'+Math.round(cv[mod]*100)+'). Helezon bu dökmede <b>'+tr(r.devir*T,1)+' tur</b> atıyor; tek başına pideye '+Math.max(1,Math.round(PORS/top))+' topak bırakır. Helezon kaba iş yapar (taşır); ince işi <b>dağıtıcı</b> yapar: üstündeki küçük yığını tarayıp tel tel, sabit akışla döker.'; return cv; }
+  function ciz(r,T){ x.clearRect(0,0,760,470); const mx=r.ort*2.6, px=1.45, ox=30, oy=18; const im=x.createImageData(NG,NG);
+    for(let i=0;i<NG;i++)for(let j=0;j<NG;j++){ const v=Math.min(1,r.g[i*NG+j]/mx), k=(j*NG+i)*4, dx=(i+.5)*HC-150,dy=(j+.5)*HC-150, ic=dx*dx+dy*dy<=RP*RP;
+      im.data[k]=ic?232-10*v:12; im.data[k+1]=ic?217-45*v:12; im.data[k+2]=ic?174-150*v:14; im.data[k+3]=255; if(ic&&v>.02){ im.data[k]=250; im.data[k+1]=228-120*v; im.data[k+2]=150-140*v; } }
+    const tmp=document.createElement('canvas'); tmp.width=tmp.height=NG; tmp.getContext('2d').putImageData(im,0,0); x.imageSmoothingEnabled=true; x.drawImage(tmp,ox,oy,300*px,300*px);
+    x.strokeStyle='#caa76a'; x.lineWidth=5; x.beginPath(); x.arc(ox+150*px,oy+150*px,RP*px,0,7); x.stroke();
+    /* akış grafiği */ const gx=500,gy=60,gw=235,gh=300; x.strokeStyle='#333336'; x.lineWidth=1; x.strokeRect(gx,gy,gw,gh); const fm=Math.max(...r.seri,1)*1.15;
+    x.strokeStyle='#ffd24a'; x.lineWidth=1.6; x.beginPath(); r.seri.forEach((f,i)=>{ const X=gx+gw*i/r.seri.length, Yy=gy+gh-gh*f/fm; i?x.lineTo(X,Yy):x.moveTo(X,Yy); }); x.stroke();
+    x.strokeStyle='#2997ff'; x.setLineDash([4,4]); x.beginPath(); const ym=gy+gh-gh*(PORS/T)/fm; x.moveTo(gx,ym); x.lineTo(gx+gw,ym); x.stroke(); x.setLineDash([]);
+    x.fillStyle='#a1a1a6'; x.font='600 12px -apple-system,Arial'; x.fillText('PİDEYE DÜŞEN AKIŞ · g/s',gx,gy-12); x.fillText('0',gx-14,gy+gh); x.fillText(tr(fm,0),gx-22,gy+10); x.fillText('0 sn',gx,gy+gh+16); x.fillText(T+' sn',gx+gw-28,gy+gh+16);
+    x.fillStyle='#2997ff'; x.fillText('ortalama '+tr(PORS/T,1)+' g/s',gx+6,ym-6); x.fillStyle='#a1a1a6'; x.fillText('açık = az kaşar · koyu = çok kaşar',ox,oy+300*px+14); }
+  document.querySelectorAll('#modlar div').forEach(d=>d.onclick=()=>{mod=+d.dataset.m;document.querySelectorAll('#modlar div').forEach(q=>q.classList.toggle('on',q===d));hepsi();});
+  ['s_trpm','s_T','s_top'].forEach(i=>$(i).oninput=hepsi); return {hepsi}; })();
+
+/* ===================== KESİT ===================== */
+(function(){ const c=$('c3'),x=c.getContext('2d'),S=1.05; const olu=(yari,cy,ym,Rs,ox)=>{ let A=0; x.fillStyle='rgba(255,107,94,.55)';
+    for(let y=cy;y<G.YD-.5;y+=.5){ const x0=yari(y),x1=yari(y+.5); if(x1-x0>1e-6){ const eg=Math.atan2(.5,x1-x0)*180/Math.PI, xm=(x0+x1)/2, yy=y+.25;
+        if(eg<60&&Math.hypot(xm,yy-ym)>Rs+6){ const h=Math.min(G.YD-yy,(134-xm)+25); A+=(x1-x0)*h; for(const s of [-1,1]) x.fillRect(ox+s*xm*S-(s>0?0:(x1-x0)*S),425-(yy+h)*S,(x1-x0)*S+.6,h*S); } } } return 2*A*G.L/1e6; };
+  const govde=(yari,ox,ad,cy,ym,Rs)=>{ const L=olu(yari,cy,ym,Rs,ox); x.strokeStyle='#9fb4c8'; x.lineWidth=2; x.beginPath(); for(let y=cy-31;y<=352;y+=1){ const X=ox+yari(y)*S,Yy=425-y*S; y===cy-31?x.moveTo(X,Yy):x.lineTo(X,Yy);} for(let y=352;y>=cy-31;y-=1) x.lineTo(ox-yari(y)*S,425-y*S); x.closePath(); x.stroke();
+    x.strokeStyle='#2997ff'; x.setLineDash([5,4]); x.beginPath(); x.arc(ox,425-ym*S,Rs*S,0,7); x.stroke(); x.setLineDash([]); x.fillStyle='#f2f2ee'; x.beginPath(); x.arc(ox,425-cy*S,28*S,0,7); x.fill(); x.fillStyle='#0c0c0e'; x.beginPath(); x.arc(ox,425-cy*S,10*S,0,7); x.fill();
+    x.fillStyle='#fff'; x.font='700 14px -apple-system,Arial'; x.textAlign='center'; x.fillText(ad,ox,452); return L; };
+  const a=govde(yari3,190,'v3 · omuzlar yatık, süpürülmüyor',72,245,92), b=govde(yari4,570,'v4 · kadeh: kâse = karıştırıcı dairesi',48,216,129);
+  x.textAlign='left'; x.fillStyle='#ff6b5e'; x.font='600 12.5px -apple-system,Arial'; x.fillText('kırmızı = kendi akmayan kaşar',20,20); x.fillStyle='#2997ff'; x.fillText('mavi = karıştırıcının süpürdüğü daire',20,38);
+  $('s3_sonuc').innerHTML='v3 kesitinde duvarı 60°\'den yatık olup karıştırıcının ulaşmadığı yerde <b>≈ '+tr(a,1)+' L</b> kaşar kendi akmıyor (kabın dörtte biri). v4\'te bu <b>'+tr(b,1)+' L</b>: kâse karıştırıcıyla aynı merkezli, sıyırıcı duvara değiyor. Eşik 60° ve yığın 45° <span class="chip v">VARSAYIM</span>.'; })();
+
+hesap(); sim2.hepsi();
+</script>
+</body>
+</html>
