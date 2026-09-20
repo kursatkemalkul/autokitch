@@ -52,7 +52,7 @@
 <div id="grid">
   <div class="col" data-k="tabla"><div class="hd"><span class="ad" style="color:#3ddc84">A · ATOSA TABLALI + KONVEYÖR</span><span class="alt" id="alt_tabla">tabla arabası · konveyör fırın 4 ürün</span><span class="say" id="s_tabla">—</span></div><iframe id="f_tabla" title="A · tablalı + konveyör"></iframe><div class="durum" id="d_tabla"></div><div class="sonuc" id="r_tabla"></div></div>
   <div class="col" data-k="bant"><div class="hd"><span class="ad" style="color:#ffb340">B · BANTLI + KONVEYÖR</span><span class="alt" id="alt_bant">adımlı bant · konveyör fırın 4 ürün</span><span class="say" id="s_bant">—</span></div><iframe id="f_bant" title="bantlı hat"></iframe><div class="durum" id="d_bant"></div><div class="sonuc" id="r_bant"></div></div>
-  <div class="col" data-k="goz"><div class="hd"><span class="ad" style="color:#c084fc">C · ATOSA + 3 KAPAKLI GÖZ</span><span class="alt">robot kürekle taşır · 1 robot</span><span class="say" id="s_goz">—</span></div><iframe id="f_goz" title="C · tablalı + kapaklı göz"></iframe><div class="durum" id="d_goz"></div><div class="sonuc" id="r_goz"></div></div>
+  <div class="col" data-k="goz"><div class="hd"><span class="ad" style="color:#c084fc">C · ROBOT KOLLU</span><span class="alt">robot kürekle taşır · 1 robot</span><span class="say" id="s_goz">—</span></div><iframe id="f_goz" title="C · tablalı + kapaklı göz"></iframe><div class="durum" id="d_goz"></div><div class="sonuc" id="r_goz"></div></div>
 </div>
 <div id="bar">
   <div class="r1">
@@ -77,7 +77,7 @@
     <span class="sep"></span>
     <span class="kut"><input type="checkbox" id="g_tabla" checked> A · tablalı</span>
     <span class="kut"><input type="checkbox" id="g_bant" checked> B · bantlı</span>
-    <span class="kut"><input type="checkbox" id="g_goz" checked> C · kapaklı göz</span>
+    <span class="kut"><input type="checkbox" id="g_goz" checked> C · robot kollu</span>
     <span class="sep"></span>
     <a href="../sim3d/">← tek hat görünümü</a>
     <span id="not" class="uyari"></span>
@@ -86,7 +86,7 @@
 </div>
 <script>
 /* AUTOKITCH · 3 HAT KARŞILAŞTIRMA — 19 Eyl 2026
-   Üç sim aynı sayfada iframe olarak açılır: A = Atosa tablalı + konveyör fırın, B = adımlı bant + konveyör fırın, C = Atosa tablalı + 3 kapaklı göz (robot kürekle taşır, tek robot). Elenen kurgular arşivde: robot kollu tepsili hat v19 ../sim3d/ adresinde durur.
+   Üç sim aynı sayfada iframe olarak açılır: A = Atosa tablalı + konveyör fırın, B = adımlı bant + konveyör fırın, C = robot kollu: Atosa tablası + 3 kapaklı göz, robot ürünü kürekle taşır (tek robot). Elenen kurgular arşivde: robot kollu tepsili hat v19 ../sim3d/ adresinde durur.
    Sağ menüleri kapalı (?panel=0), kamera tam karşıdan. Alttaki tek bar üçünü birden sürer: aynı senaryo, aynı tohum, aynı saat.
    Oynatma: her karede her sim'in kendi motor(T) fonksiyonu ORTAK T ile çağrılır → üçü saniyesi saniyesine aynı anda ilerler. */
 const K=['tabla','bant','goz'], URL={tabla:'../sim3d_bant_tabla/?hat=tabla&panel=0', bant:'../sim3d_bant_tabla/?hat=bant&panel=0', goz:'../sim3d_bant_tabla/?hat=goz&goz=3&panel=0'};   /* C tek robotla çalışır: robot seçici yalnız A ve B'ye uygulanır */
@@ -123,7 +123,7 @@ function yaz(){ for(const k of K){ const w=W[k]; if(!w||!PS[k]) continue;
   }
   $('saat').textContent=saat(T)+' / '+saat(sure); const sc=$('scrub'); if(!sc._tut) sc.value=Math.min(T,sure); sonucGoster(); }
 /* SONUÇ PENCERESİ: her hat kendi son teslimini yapınca o hattın 3D görüntüsünün üstünde açılır (çubuk sona çekilince de) */
-function sonucKur(k){ const ps=PS[k], kpi=ps.kpi, ad={tabla:'A · ATOSA TABLALI + KONVEYÖR',bant:'B · BANTLI + KONVEYÖR',goz:'C · ATOSA + 3 KAPAKLI GÖZ'}[k];
+function sonucKur(k){ const ps=PS[k], kpi=ps.kpi, ad={tabla:'A · ATOSA TABLALI + KONVEYÖR',bant:'B · BANTLI + KONVEYÖR',goz:'C · ROBOT KOLLU'}[k];
   const bit=ps.plan.filter(b=>b.bitis).map(b=>b.bitisT!==undefined?b.bitisT:b.t1), hh=[0,0,0,0]; bit.forEach(t=>hh[Math.min(3,Math.floor(t/3600))]++);
   const N=kpi.N||1, dol=(kpi.robotDoluluk||kpi.robotlar||[kpi.robot||0]).slice(0,N).map(x=>Math.round(x*100)).join(' / ');
   const dk=s=>s>=60?(s/60).toFixed(1)+' dk':Math.round(s)+' s';

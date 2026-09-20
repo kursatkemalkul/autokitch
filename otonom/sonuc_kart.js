@@ -2,7 +2,7 @@
    Karşılaştırma ekranındaki kartın tek hat sayfaları için ortak sürümü: sim3d (robotlu) ve sim3d_bant_tabla (bantlı / tablalı).
    Kullanım: sonucCiz(hat, PLAN)  · hat: 'robot' | 'robot_tabla' | 'bant' | 'tabla'   ·  sonucTemizle() yeni plan kurulunca. */
 (function(){
-  const AD={robot:'ROBOTLU HAT v19', robot_tabla:'ROBOTLU HAT + ATOSA TABLASI', bant:'BANTLI HAT v6', tabla:'ATOSA TABLALI HAT v2'};
+  const AD={robot:'ROBOTLU HAT v19 (arşiv)', robot_tabla:'ROBOTLU HAT + ATOSA TABLASI (arşiv)', bant:'B · BANTLI + KONVEYÖR', tabla:'A · ATOSA TABLALI + KONVEYÖR', goz:'C · ROBOT KOLLU'};
   const css=`#sonuc{position:fixed;left:16px;top:62px;width:min(520px,calc(100vw - 400px));max-height:calc(100vh - 150px);overflow:auto;background:rgba(11,14,19,.96);border:1px solid #39414f;border-radius:14px;padding:13px 15px 11px;display:none;box-shadow:0 18px 40px rgba(0,0,0,.55);z-index:6}
   #sonuc.ac{display:block} #sonuc h3{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#8a94a4;font-weight:700;margin-bottom:9px}
   #sonuc .buyuk{font-size:30px;font-weight:800;color:#3ddc84;line-height:1.05} #sonuc .buyuk small{font-size:12px;font-weight:600;color:#8a94a4;letter-spacing:.02em}

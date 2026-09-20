@@ -58,9 +58,9 @@
 <div id="gwrap"><canvas id="gantt"></canvas><div id="kafa"></div></div>
 <div id="ui">
   <h1>AUTOKITCH · 3D Sim · Bantlı / Tablalı Hat</h1>
-  <div class="sub">Kalan üç seçenek: <b>A</b> Atosa tablalı + konveyör fırın · <b>B</b> bantlı + konveyör fırın · <b>C</b> Atosa tabla + 3 kapaklı göz (robot kürekle taşır) · 1 ya da 2 Fairino FR5 aynı yer rayında (2 robot: SOL yalnız hamur, SAĞ kutu + QR + içecek) · ürün tepsisiz akar, robot taşımaz · her hareket mesafe ve hızdan hesaplanır, erişim ve çarpışma kontrollü.</div>
+  <div class="sub">Kalan üç seçenek: <b>A</b> Atosa tablalı + konveyör fırın · <b>B</b> bantlı + konveyör fırın · <b>C</b> robot kollu (Atosa tablası + 3 kapaklı göz) · 1 ya da 2 Fairino FR5 aynı yer rayında (2 robot: SOL yalnız hamur, SAĞ kutu + QR + içecek) · ürün tepsisiz akar, robot taşımaz · her hareket mesafe ve hızdan hesaplanır, erişim ve çarpışma kontrollü.</div>
 
-  <div class="row"><label>Hat</label><select id="hat"><option value="tabla">A · ATOSA TABLALI + KONVEYÖR · 1 ya da 2 robot</option><option value="bant">B · BANTLI + KONVEYÖR · 1 ya da 2 robot</option><option value="goz">C · ATOSA + KAPAKLI GÖZ · robot kürekle taşır</option><option value="robot">arşiv · ROBOTLU HAT v19 (elendi)</option><option value="karsilastir">KARŞILAŞTIR · üçü yan yana, aynı anda</option></select></div>
+  <div class="row"><label>Hat</label><select id="hat"><option value="tabla">A · ATOSA TABLALI + KONVEYÖR · 1 ya da 2 robot</option><option value="bant">B · BANTLI + KONVEYÖR · 1 ya da 2 robot</option><option value="goz">C · ROBOT KOLLU · Atosa tablası + 3 kapaklı göz</option><option value="robot">arşiv · ROBOTLU HAT v19 (elendi)</option><option value="karsilastir">KARŞILAŞTIR · üçü yan yana, aynı anda</option></select></div>
 
   <div class="row"><label>Robot</label><select id="robotN"><option value="1">1 robot</option><option value="2">2 robot · SOL hamur + SAĞ kutu/QR</option></select></div><div class="row"><label>Senaryo</label><select id="sen"><option value="tek">Tek sipariş</option><option value="uc">3 müşteri · 1'er dk arayla</option><option value="aksam">Akşam piki · hafta içi 17–20 · 53 sipariş</option><option value="cmt">Cumartesi akşamı 17–20 · 74 sipariş</option><option value="fullpide">TAM YÜK · 1 saat · yalnız pide</option><option value="fulllahm">TAM YÜK · 1 saat · yalnız lahmacun</option><option value="full" selected>TAM YÜK · 1 saatte kaç çıkar · içeceksiz</option><option value="fullic">TAM YÜK · 1 saat · içecek + tatlı dahil</option><option value="akis">Sürekli akış · 1 saat (sınır testi)</option></select></div>
   <div class="row" id="tekRow"><label>Ürün</label><span><select id="urun" style="min-width:110px"><option value="pide">kaşarlı pide</option><option value="lahm">lahmacun</option></select> &nbsp;<input type="checkbox" id="kola" checked> içecek <input type="checkbox" id="tatli" checked> tatlı</span></div>
@@ -95,6 +95,6 @@
 <script src="sim.js?v=99"></script>
 <script src="sim2.js?v=99"></script>
 <script src="sim3.js?v=99"></script>
-<script src="../sonuc_kart.js?v=2"></script>
+<script src="../sonuc_kart.js?v=3"></script>
 </body>
 </html>

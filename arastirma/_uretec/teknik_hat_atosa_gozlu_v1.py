@@ -546,7 +546,7 @@ def gozlu():
     P = 1340.0                                               # tabla seyir kotu = firin bandi = kesme plakasi
     T_BAS, T_KAS, T_KPK = (1490.0, 1624.0), (1627.0, 1987.0), (1987.0, 2027.0)
     YUVA = [(u, g, x - 30.0) for u, g, x in YUVA19]           # hazne sirasi 200–1500 → sagda 267'lik teknik bolme
-    baslik("AUTOKITCH  ·  C SEÇENEĞİ  ·  ATOSA TABLALI + 3 KAPAKLI GÖZ  ·  TEKNİK RESİM  v1  ·  HAT 4600 × 2030 × 830",
+    baslik("AUTOKITCH  ·  C SEÇENEĞİ  ·  ROBOT KOLLU  ·  ATOSA TABLASI + 3 KAPAKLI GÖZ  ·  TEKNİK RESİM  v1  ·  HAT 4600 × 2030 × 830",
            "ön · üst · yan görünüş  ·  günde 80 pide + 200 lahmacun  ·  2 gün stok  ·  her istasyon kapalı ürün  ·  ürün tepsisiz: tabla üstünde basılır ve dozajlanır, ROBOT KÜREKLE ALIP GÖZE SÜRER, pişince alıp kesme plakasına bırakır → bıçak · sprey · itici · kutu  ·  TEK Fairino FR5 yer rayında · omuz 970 · ray ekseni hat yüzünden 360  ·  ölçülen kapasite 31 ürün/saat içeceksiz · 26 içecekli (tam yük, 2. saat)  ·  tabla kotları VARSAYIM (Atosa cevabı yok)  ·  ölçüler mm  ·  20 Eylül 2026")
     # A
     kabin(X_A, W_A, H_B, H_MAK, "A · PRES KAFASI · tabla üstüne basar")
