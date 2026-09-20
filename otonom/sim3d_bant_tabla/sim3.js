@@ -35,8 +35,18 @@ function planla(cfg){
   const tepsi={tip:'tepsi',raf:0,pos:V(KUT.cx,KUT.trayY,KUT.cz),icerik:''};
   const dolap=qrKapak.map((q,i)=>({i,ri:q.ri,ci:q.ci,o:null,freeAt:0})).sort((a,b)=>a.ri-b.ri||a.ci-b.ci);
   const dolapAl=(o,t)=>{ if(o.goz>=0) return true; const d=dolap.find(d=>!d.o||d.freeAt<=t); if(!d) return false; d.o=o; d.freeAt=Infinity; o.goz=d.i; return true; };
-  const blok=(tip,ad,t0,steps,ref)=>{ const s=steps.reduce((a,x)=>a+x.sure,0); const b={tip,ad,t0,t1:t0+s,steps,ref,ri:0}; plan.push(b); return b; };
-  const x0=1100, RB={t:0,busy:0,is:{},cur:{carX:x0,tcp:parkTcp(x0),t:V(0,0,-1),u:V(0,1,0),yuk:'bos',parmak:70}};
+  const N=cfg.robot===2?2:1; S.n=N;
+  const blok=(tip,ad,t0,steps,ref,ri)=>{ const s=steps.reduce((a,x)=>a+x.sure,0); const b={tip,ad,t0,t1:t0+s,steps,ref,ri:ri||0}; plan.push(b); return b; };
+  /* 2 ROBOT (Kemal 20 Eyl 2026): SOL robot yalnız hamur (pres/tabla ucu) · SAĞ robot kutu + QR + içecek/tatlı.
+     İkisi aynı rayda: bir robotun görev boyunca süpürdüğü x aralığı diğerininkiyle çakışırsa sonra gelen bekler. */
+  const mkRB=(i,x)=>({i,t:0,busy:0,is:{},res:[],cur:{carX:x,tcp:parkTcp(x),t:V(0,0,-1),u:V(0,1,0),yuk:'bos',parmak:70}});
+  const RBT=[mkRB(0,1100),mkRB(1,4400)], RB=RBT[0];
+  const PAY=450;
+  const xAralik=(B,bas)=>{ let lo=bas,hi=bas; B.st.forEach(st0=>{ if(st0.x1!==undefined){ lo=Math.min(lo,st0.x0,st0.x1); hi=Math.max(hi,st0.x0,st0.x1); } }); return [lo-PAY,hi+PAY]; };
+  const cakAralik=(B,bas)=>{ const [lo,hi]=xAralik(B,bas); return {lo,hi}; };
+  /* görev BAŞLAMADAN önce: diğer robotun aynı anda süpürdüğü aralıkla çakışıyor mu? çakışıyorsa beklenecek an */
+  const cakBekle=(r,B,bas,t0)=>{ if(N<2) return 0; const [lo,hi]=xAralik(B,bas), t1=t0+gecen(B), o=RBT[1-r.i]; let en=0;
+    o.res.forEach(q=>{ if(q.t1>t0+1e-6&&q.t0<t1-1e-6&&q.hi>lo&&q.lo<hi) en=Math.max(en,q.t1); }); return en; };
   const vF=FIRIN.hazne/HIZ.pisme, firinSure=(FIRIN.x[1]-FIRIN.x[0])/vF, girisAralik=Math.max(FIRIN.adim/vF,OPT.takt||0);   /* fırına girişler arası: en az ürün adımı (350 mm) · TAKT verilirse robotun ürün başına işine göre seyreltilir → kutular robotun yetişebileceği aralıkla çıkar */
   const MK={presBos:0, bantSon:-1e9, durus:[], firinBos:0, plakaBos:0, katlaBitis:0, kutuKonT:0, kutuHazir:HIZ.kutuKoy, kuyruk:[], tur:[]};
   MK.katlaBitis=HIZ.katla;                                                                                  // t=0: bir katlanmış kutu tepside hazır, ikincisi katlanıyor
@@ -74,8 +84,8 @@ function planla(cfg){
   const KUTU_X=carFor(KUT.cx,KUT.trayY,KUT.cz,1);
   let guard=0;
   while(guard++<200000){
-    t=RB.t; if(!isFinite(t)) break;
-    const yol=x=>Math.abs(RB.cur.carX-x)/HIZ.ray+2, cands=[];
+    const r=RBT.slice(0,N).reduce((a,b)=>b.t<a.t?b:a); t=r.t; if(!isFinite(t)) break;
+    const yol=x=>Math.abs(r.cur.carX-x)/HIZ.ray+2, cands=[];
     for(const p of P){ if(p.stage==='makinede'&&p.kutudaAt!==undefined&&p.kutudaAt<=t+yol(KUTU_X)){ const oo=p.o; if(oo.kolaTeslim&&oo.tatliTeslim&&(oo.icBitis||0)<=t&&dolapAl(oo,t)) cands.push({pri:1,p,tip:'KUTU',ready:p.kutudaAt}); } }
     for(const oo of O){ if(oo.arr>t||oo.teslim) continue; const ur=P.filter(p=>p.o===oo), yolda=ur.some(p=>p.stage!=='bekliyor'&&p.stage!=='iptal'), acil=ur.some(p=>p.kutudaAt!==undefined&&p.stage==='makinede'&&p.kutudaAt<=t+90)?0:3;
       if(yolda&&oo.kola&&!oo.kolaTeslim&&dolapAl(oo,t)) cands.push({pri:acil,o:oo,tip:'KOLA',ready:oo.arr}); else if(yolda&&oo.tatli&&!oo.tatliTeslim&&(!oo.kola||oo.kolaTeslim)&&dolapAl(oo,t)) cands.push({pri:acil,o:oo,tip:'TATLI',ready:oo.arr}); }
@@ -84,24 +94,31 @@ function planla(cfg){
     let yapildi=false;
     const kutulu=P.find(q=>q.stage==='makinede'&&q.kutudaAt!==undefined), gelSonra=MK.kuyruk.length?MK.kuyruk[0].plakaGelis:Infinity;
     /* İLERİ BAKIŞ: kutu dışı bir iş, sıradaki ürün plakaya gelmeden tepsinin dönmesini geciktirecekse alınmaz (plaka dolu kalır → fırın çıkışı sıkışır) */
-    const gecikir=(B,oo)=>{ if(!kutulu||(oo&&oo===kutulu.o)) return false; const A=t+gecen(B)+Math.abs(B.cur.carX-KUTU_X)/HIZ.ray+2; return A>Math.max(kutulu.kutudaAt,gelSonra-OPT.kutuSure)+0.5; };
-    for(const c of cands){ const cur=kopya(RB.cur), B=insaci(cur,1); let ad='', b=null;
+    const gecikir=(B,oo)=>{ if(N>1&&r.i===0) return false;   /* 2 robotta hamuru SOL robot koyar, kutu tepsisini geciktirmez */
+      if(!kutulu||(oo&&oo===kutulu.o)) return false; const A=t+gecen(B)+Math.abs(B.cur.carX-KUTU_X)/HIZ.ray+2; return A>Math.max(kutulu.kutudaAt,gelSonra-OPT.kutuSure)+0.5; };
+    const benim=c=>N<2||(r.i===0?c.tip==='HAMUR':c.tip!=='HAMUR');
+    for(const c of cands){ if(!benim(c)) continue; const cur=kopya(r.cur), B=insaci(cur,1); let ad='', b=null;
       if(c.tip==='HAMUR'){ const p=c.p, s=stokBak(stok,p.tip); if(!s){ p.stage='iptal'; not.push('stok bitti: '+p.tip); continue; } p.kolon=s.kolon; p.sira=s.sira; p.topPos=s.pos; p.yan=s.yan; p.carPres=s.tek?s.yan:carPres();
-        ad='#'+p.id+' '+p.tip+' · hamur → '+(TABLA?'tabla':'pres'); const td=G_hamur(B,p,t,MK.presBos); if(gecikir(B,null)){ sayac.ertelenen=(sayac.ertelenen||0)+1; continue; } s.q.k++; b=blok('robot',ad,t,B.st,p); makineKur(p,td); kuyrukIsle(); }
-      else if(c.tip==='KUTU'){ const p=c.p, oo=p.o; ad='#'+p.id+' · kutu → QR göz '+(oo.goz+1)+' → tepsi geri'; const z=G_kutu(B,p,oo,tepsi,t,p.kutudaAt); b=blok('robot',ad,t,B.st,p); b.bitis=1; b.bitisT=z.teslimT; p.stage='bitti'; p.bitti=z.teslimT; p.alT=z.alT; oo.kutuSay++; teslimKontrol(oo,z.teslimT); tepsiDondu(z.geriT); }
+        ad='#'+p.id+' '+p.tip+' · hamur → '+(TABLA?'tabla':'pres'); const td=G_hamur(B,p,t,MK.presBos); if(gecikir(B,null)){ sayac.ertelenen=(sayac.ertelenen||0)+1; continue; }
+        { const ck=cakBekle(r,B,cur.carX,t); if(ck>t+1e-6){ r.t=ck; sayac.rayBek=(sayac.rayBek||0)+(ck-t); yapildi=true; break; } } s.q.k++; b=blok('robot',ad,t,B.st,p,r.i); makineKur(p,td); kuyrukIsle(); }
+      else if(c.tip==='KUTU'){ const p=c.p, oo=p.o; ad='#'+p.id+' · kutu → QR göz '+(oo.goz+1)+' → tepsi geri'; const z=G_kutu(B,p,oo,tepsi,t,p.kutudaAt);
+        { const ck=cakBekle(r,B,cur.carX,t); if(ck>t+1e-6){ r.t=ck; sayac.rayBek=(sayac.rayBek||0)+(ck-t); yapildi=true; break; } }
+        b=blok('robot',ad,t,B.st,p,r.i); b.bitis=1; b.bitisT=z.teslimT; p.stage='bitti'; p.bitti=z.teslimT; p.alT=z.alT; oo.kutuSay++; teslimKontrol(oo,z.teslimT); tepsiDondu(z.geriT); }
       else { const oo=c.o, tip=c.tip==='KOLA'?'kola':'tatli', s=stokBak(stok,tip); if(!s){ if(tip==='kola') oo.kolaTeslim=true; else oo.tatliTeslim=true; not.push('stok bitti: '+tip); continue; }
-        oo[tip+'Stok']=s; ad='sipariş '+oo.id+' · '+(tip==='kola'?'içecek':'tatlı')+' → QR göz '+(oo.goz+1); G_icecek(B,oo,tip); if(gecikir(B,oo)){ sayac.ertelenen=(sayac.ertelenen||0)+1; continue; } s.q.k++; b=blok('robot',ad,t,B.st,oo); if(tip==='kola') oo.kolaTeslim=true; else oo.tatliTeslim=true; oo.icBitis=Math.max(oo.icBitis||0,b.t1); b.icecek=1; teslimKontrol(oo,b.t1); }
-      RB.cur=B.cur; RB.busy+=b.t1-b.t0; RB.is[c.tip]=(RB.is[c.tip]||0)+1; RB.t=b.t1; sonBitis=Math.max(sonBitis,b.t1); yapildi=true; break; }
+        oo[tip+'Stok']=s; ad='sipariş '+oo.id+' · '+(tip==='kola'?'içecek':'tatlı')+' → QR göz '+(oo.goz+1); G_icecek(B,oo,tip); if(gecikir(B,oo)){ sayac.ertelenen=(sayac.ertelenen||0)+1; continue; }
+        { const ck=cakBekle(r,B,cur.carX,t); if(ck>t+1e-6){ r.t=ck; sayac.rayBek=(sayac.rayBek||0)+(ck-t); yapildi=true; break; } } s.q.k++; b=blok('robot',ad,t,B.st,oo,r.i); if(tip==='kola') oo.kolaTeslim=true; else oo.tatliTeslim=true; oo.icBitis=Math.max(oo.icBitis||0,b.t1); b.icecek=1; teslimKontrol(oo,b.t1); }
+      r.res.push(Object.assign({t0:b.t0,t1:b.t1},cakAralik(B,cur.carX))); r.cur=B.cur; r.busy+=b.t1-b.t0; r.is[c.tip]=(r.is[c.tip]||0)+1; r.t=b.t1; sonBitis=Math.max(sonBitis,b.t1); yapildi=true; break; }
     if(!yapildi){ const ev=[]; P.forEach(p=>{ if(p.stage==='bekliyor'&&p.o.arr>t) ev.push(p.o.arr); if(p.stage==='makinede'&&p.kutudaAt!==undefined) ev.push(p.kutudaAt-yol(KUTU_X)); }); if(P.some(p=>p.stage==='bekliyor'&&p.o.arr<=t)) ev.push(MK.presBos-22);
       dolap.forEach(d=>{ if(d.freeAt>t&&isFinite(d.freeAt)) ev.push(d.freeAt); }); O.forEach(q=>{ if((q.icBitis||0)>t) ev.push(q.icBitis); });
-      const nx=ev.filter(x=>x>t+1e-6); if(nx.length) RB.t=Math.min(...nx); else if(P.some(p=>p.stage==='makinede'||p.stage==='bekliyor')) RB.t=t+5; else RB.t=Infinity; }
+      if(N>1) RBT.forEach(q=>{ if(q!==r&&isFinite(q.t)&&q.t>t) ev.push(q.t); });
+      const nx=ev.filter(x=>x>t+1e-6); if(nx.length) r.t=Math.min(...nx); else if(P.some(p=>p.stage==='makinede'||p.stage==='bekliyor')) r.t=t+5; else r.t=Infinity; }
   }
   /* ---- makine blokları (ürün yolculuğu · oynatıcı için) ---- */
   P.forEach(p=>{ if(!p.td&&p.td!==0) return; makineBlok(p,plan,tepsi); });
   plan.sort((a,b)=>a.t0-b.t0);
   const teslim=O.filter(o=>o.teslim), bek=teslim.map(o=>o.teslim-o.arr).sort((a,b)=>a-b), ort=bek.length?bek.reduce((a,b)=>a+b,0)/bek.length:0, biten=P.filter(p=>p.stage==='bitti').length;
   plan.forEach(b=>{ if(b.tip!=='musteri') sonBitis=Math.max(sonBitis,b.t1); });
-  const kpi={N:1, siparis:O.length, teslim:teslim.length, urun:P.length, biten, ort, max:bek.length?bek[bek.length-1]:0, gec:bek.filter(b=>b>1500).length, sure:sonBitis, robot:sonBitis?RB.busy/sonBitis:0, isler:RB.is, not,
+  const kpi={N, robotDoluluk:RBT.slice(0,N).map(q=>sonBitis?q.busy/sonBitis:0), robotIs:RBT.slice(0,N).map(q=>q.is), siparis:O.length, teslim:teslim.length, urun:P.length, biten, ort, max:bek.length?bek[bek.length-1]:0, gec:bek.filter(b=>b>1500).length, sure:sonBitis, robot:sonBitis?Math.max(...RBT.slice(0,N).map(q=>q.busy))/sonBitis:0, isler:RB.is, not,
     erisilemeyen:stok.erisilemeyen||0, sayac, tur:MK.tur, urunSure:biten?plan.filter(b=>b.tip==='robot').reduce((a,b)=>a+(b.t1-b.t0),0)/biten:0, O, P};
   return {plan,kpi,tepsi,O,P,N:1,bantYol};
 }
@@ -150,7 +167,8 @@ function planlaOto(cfg){ OPT.takt=0; const p1=planla(cfg); if(p1.kpi.urun<4) ret
   const saf=b=>b.steps.reduce((a,s)=>a+(s.ad.indexOf('· bekle')>=0?0:s.sure),0), ort=a=>a.length?a.reduce((x,y)=>x+y,0)/a.length:0;
   const H=ort(p1.plan.filter(b=>b.tip==='robot'&&b.ad.indexOf('hamur')>=0).map(saf)), K=ort(p1.plan.filter(b=>b.tip==='robot'&&b.bitis).map(saf)), taban=FIRIN.adim/(FIRIN.hazne/HIZ.pisme);
   const puan=ps=>ps.plan.filter(b=>b.bitis&&b.bitisT<=7200).length-(ps.kpi.sayac.sikisma?1e6:0)-ps.kpi.ort/1e5;
-  let en=p1, enT=0; for(const kat of [1.04,1.10]){ const tk=Math.max(taban,(H+K)*kat); if(tk<=taban+0.5) continue; OPT.takt=tk; const ps=planla(cfg); if(puan(ps)>puan(en)+1e-9){ en=ps; enT=tk; } }
+  const isSuresi=(cfg.robot===2)?Math.max(H,K):(H+K);   /* 2 robot: hamur SOL'da, kutu SAĞ'da → paralel, toplanmaz */
+  let en=p1, enT=0; for(const kat of [1.04,1.10]){ const tk=Math.max(taban,isSuresi*kat); if(tk<=taban+0.5) continue; OPT.takt=tk; const ps=planla(cfg); if(puan(ps)>puan(en)+1e-9){ en=ps; enT=tk; } }
   OPT.takt=enT; en.kpi.takt=enT; en.kpi.hamurSure=H; en.kpi.kutuSure=K; return en; }
 
 /* ================= OYNATICI (zaman tabanlı · bloklar paralel · ileri/geri sarılabilir) ================= */
@@ -232,12 +250,12 @@ function kafaKoy(T){ const k=$('kafa'); if(!k||!GX||GH<20) return; k.style.left=
 
 /* ================= UI ================= */
 let PLAN=null;
-function cfg(){ return {sen:$('sen').value, urun:$('urun').value, kola:$('kola').checked, tatli:$('tatli').checked, seed:+$('seed').value||1, aralik:+$('aralik').value||120}; }
+function cfg(){ return {robot:+($('robotN')?$('robotN').value:1), sen:$('sen').value, urun:$('urun').value, kola:$('kola').checked, tatli:$('tatli').checked, seed:+$('seed').value||1, aralik:+$('aralik').value||120}; }
 function planlaUI(){ dur(); PLAN=planlaOto(cfg()); OYN=null; kpiYaz(PLAN); gantt(PLAN); zamanaGit(PLAN,0); step.innerHTML='<div>plan hazır · '+PLAN.plan.filter(b=>b.tip==='robot').length+' robot görevi</div><div style="color:#8a94a4">▶ ile oynat ya da alttaki çubuğu sürükle</div>'; return PLAN; }
 $('planla').onclick=planlaUI; $('play').onclick=()=>{ if(anim){ dur(); return; } if(!PLAN) planlaUI(); oynat(PLAN); }; $('stop').onclick=()=>{ dur(); if(PLAN) zamanaGit(PLAN,0); };
 $('kontrol').onclick=()=>{ if(!PLAN) planlaUI(); $('kontrol').textContent='taranıyor…'; setTimeout(()=>{ sessizKontrol(PLAN); $('kontrol').textContent='Tüm adımları tara · erişim + çarpışma'; },30); };
 function senUI(){ const v=$('sen').value; $('tekRow').style.display=v==='tek'?'':'none'; $('akisRow').style.display=v==='akis'?'':'none'; }
-['sen','aralik','urun','kola','tatli'].forEach(id=>$(id).addEventListener('change',()=>{ senUI(); planlaUI(); })); senUI();
+['sen','robotN','aralik','urun','kola','tatli'].forEach(id=>$(id).addEventListener('change',()=>{ senUI(); planlaUI(); })); senUI();
 /* SENARYO ÜÇ HATTA ORTAK: hat değiştirince (robotlu ↔ bantlı ↔ tablalı) ve karşılaştırma ekranına geçince son seçilen senaryo korunur */
 try{ if(!window.PANELSIZ){ const v=localStorage.getItem('ak_sen'); if(v&&[...$('sen').options].some(o=>o.value===v)) $('sen').value=v; } }catch(e){}
 $('sen').addEventListener('change',()=>{ try{ if(!window.PANELSIZ) localStorage.setItem('ak_sen',$('sen').value); }catch(e){} });

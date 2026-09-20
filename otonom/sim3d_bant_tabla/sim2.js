@@ -19,11 +19,13 @@ function tepsiGoster(g,n,pos,q){ g.position.copy(pos); g.quaternion.copy(q); con
 function urunGoster(g,n){ g.position.copy(n.pos); g.rotation.set(0,n.rot||0,0); const ic=n.icerik||'', ud=g.userData; ud.top.visible=(ic==='top'); ud.taban.visible=(ic==='taban'||ic==='ustlu'||ic==='pismis'); ud.taban.material.color.set(ic==='pismis'?0xd9a45a:0xf0d9a8);
   ud.ust.visible=(ic==='ustlu'||ic==='pismis'); ud.ust.material.color.set(ic==='pismis'?(n.urun==='lahm'?0x8a3a22:0xe0a030):(n.urun==='lahm'?0xb0402a:0xffd24a)); const d=ic==='pismis'?1:Math.max(.06,n.dolu===undefined?1:n.dolu); ud.ust.scale.set(d,1,d); }
 function ciz(){
-  const P=PRES(); ray.position.set(HAT.boy/2,60,railZ()); ROBM[0].hepsi.forEach(m=>{ m.visible=true; }); const q=cizRobot(0);
+  const P=PRES(); ray.position.set(HAT.boy/2,60,railZ()); const RS=[];
+  for(let ri=0;ri<2;ri++){ const vis=ri<(S.n||1); ROBM[ri].hepsi.forEach(m=>{ m.visible=vis; }); if(vis) RS.push(cizRobot(ri)); }
+  S.ri=0; const q=RS[0];
   const QX=new THREE.Quaternion().setFromAxisAngle(V(1,0,0),Math.PI/2);
-  S.nesne.forEach(o=>{ if(!o.mesh) nesneGoster(o); if(!o.mesh) return; const tut=(q.n===o);
+  S.nesne.forEach(o=>{ if(!o.mesh) nesneGoster(o); if(!o.mesh) return; const qq2=RS.find(a=>a.n===o)||q, tut=!!RS.find(a=>a.n===o);
     if(o.tip==='urun'){ urunGoster(o.mesh,o); return; }
-    if(tut){ if(o.tip==='tepsi') tepsiGoster(o.mesh,o,q.c,basisQ(q.x.clone().negate(),q.u,q.t.clone().negate())); else { o.mesh.position.copy(q.c); if(o.tip==='kola') yUp(o.mesh,q.t); else if(o.tip!=='top') yUp(o.mesh,q.u); } }
+    if(tut){ if(o.tip==='tepsi') tepsiGoster(o.mesh,o,qq2.c,basisQ(qq2.x.clone().negate(),qq2.u,qq2.t.clone().negate())); else { o.mesh.position.copy(qq2.c); if(o.tip==='kola') yUp(o.mesh,qq2.t); else if(o.tip!=='top') yUp(o.mesh,qq2.u); } }
     else { if(o.tip==='tepsi') tepsiGoster(o.mesh,o,o.pos,new THREE.Quaternion()); else { o.mesh.position.copy(o.pos); if(o.yatik) o.mesh.quaternion.copy(QX); else o.mesh.quaternion.set(0,0,0,1); } if(o.tip==='kutu') kutuGoster(o.mesh,o); } });
   /* makine hareketleri */
   if(!TABLA) altPlaka.position.set(P.cx,P.plaka-6,P.cz); ustPlaka.position.set(P.cx,P.plaka+230-S.ustPlakaY,P.cz); presAgiz.position.y=(P.y[0]+P.y[1])/2;

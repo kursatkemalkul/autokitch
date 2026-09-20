@@ -106,7 +106,7 @@ function mkRobotM(renk){ const o={}; const ek=m=>{ scene.add(m); return m; };
   o.eklem=[0,0,0].map(()=>ek(new THREE.Mesh(new THREE.SphereGeometry(50,16,12),M(renk)))); o.avucM=ek(silindir(40,40,EL.AVUC,renk)); o.pimM=ek(silindir(10,10,EL.PIM,0xffb340,1,12));
   o.parmakM=[ek(box(EL.PARMAK_W,EL.PARMAK_H,EL.PARMAK,0x7fb8ff)),ek(box(EL.PARMAK_W,EL.PARMAK_H,EL.PARMAK,0x7fb8ff))];
   o.hepsi=[o.araba,o.kaide,o.tabanM,o.ustKol,o.onKol,o.bilekM,o.avucM,o.pimM].concat(o.eklem,o.parmakM); return o; }
-const ROBM=[mkRobotM(0x2997ff)];
+const ROBM=[mkRobotM(0x2997ff),mkRobotM(0xff8c40)];   /* 2. robot (turuncu): hattın sağ ucunda, kutu + QR + içecek */
 function havuz(n,mk){ const a=[]; for(let i=0;i<n;i++){ const g=mk(); g.visible=false; scene.add(g); a.push(g); } return a; }
 function mkKutu(){ const g=new THREE.Group(), K=EL.KUTU, H=EL.KUTU_H, c=0xe0c890; const tb=box(K,4,K,c); tb.position.y=-H/2+2; g.add(tb);
   [[0,K/2-2,K,4],[0,-K/2+2,K,4],[K/2-2,0,4,K],[-K/2+2,0,4,K]].forEach(([x,z,w,d])=>{ const b=box(w,H,d,c); b.position.set(x,0,z); g.add(b); });
@@ -128,7 +128,7 @@ const temasM=havuz(36,()=>new THREE.Mesh(new THREE.SphereGeometry(22,10,8),new T
 
 /* ================= DURUM ================= */
 const mkRob=(x)=>({carX:x, tcp:V(x+300,1300,220), t:V(0,0,-1), u:V(0,1,0), yuk:'bos', tasi:null, parmak:70, sonIK:null, temas:[]});
-const ROB=[mkRob(1100)];
+const ROB=[mkRob(1100),mkRob(4400)];
 const S={ri:0, n:1, cek:{}, cekI:{}, qrk:{}, itme:0, ustPlakaY:0, bicakY:0, akis:null, nesne:[], tabla:{x:TAB.pres,y:PK,rot:0}};
 ['carX','tcp','t','u','yuk','tasi','parmak','sonIK','temas'].forEach(k=>Object.defineProperty(S,k,{get(){ return ROB[S.ri][k]; },set(v){ ROB[S.ri][k]=v; }}));
 Object.keys(KOLON).forEach(k=>{ S.cek[k]=0; S.cekI[k]=0; });
@@ -189,6 +189,9 @@ function orneklem(k){
   else if(n&&n.tip==='tatli'){ for(const uu of [-EL.TATLI_H/2+8,EL.TATLI_H/2-8]) for(let i=0;i<8;i++){ const a=i/8*Math.PI*2; pts.push({p:c.clone().addScaledVector(x,EL.TATLI_R*Math.cos(a)).addScaledVector(t,EL.TATLI_R*Math.sin(a)).addScaledVector(u,uu),r:3,parca:"tatlı"}); } }
   return pts;
 }
+/* 2 robotta diğer robotun arabası + gövdesi engeldir */
+function digerRobotKatilari(){ if(S.n<2) return []; const ox=ROB[1-S.ri].carX, z=railZ();
+  return [{ad:'DİĞER ROBOT arabası',b:[ox-200,ox+200,0,260,z-150,z+150]},{ad:'DİĞER ROBOT gövdesi',b:[ox-100,ox+100,0,tabanY()+60,z-100,z+100]}]; }
 function carpisma(k){
   const sol=solids(), cav=cavities(), hits=[], ax=S.carX, az=railZ(), ust=omuzY()+60;
   for(const q of orneklem(k)){
