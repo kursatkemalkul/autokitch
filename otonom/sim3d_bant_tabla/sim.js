@@ -16,13 +16,17 @@ const EL = {BILEK:100, AVUC:40, PIM:40, PARMAK:90, PARMAK_W:8, PARMAK_H:30, SAP:
   KUTU:320, KUTU_H:45, KOLA_R:33, KOLA_H:115, TATLI_R:45, TATLI_H:60};
 const YUK = { bos:{L:500,P:-20}, tepsi:{L:500,P:-20}, top:{L:232.5,P:0}, kola:{L:242.5,P:0}, tatli:{L:230,P:-15} };
 const HAT = {yuk:2030, derin:830, B_yuk:1060, boy:5300};
-const MOD = [["A · PRESS",0,700,1060,2030],["B · ÇEKMECE",0,2500,0,1060],["C · TOPPING",700,2500,1060,2030],["F · KONVEYÖR FIRIN",2500,4000,0,2030],["K · KESME",4000,4600,0,2030],["E · KUTU",4600,5300,0,2030]];
+const MOD = [["A · PRESS",0,700,1060,2030],["B · ÇEKMECE",0,2500,0,1060],["C · TOPPING",700,2500,1060,2030],["F · KONVEYÖR FIRIN",2500,4000,0,2030],["K · KESME" + (new URLSearchParams(location.search).get("icecek")!=="sol" ? " + İÇECEK" : ""),4000,4600,0,2030],["E · KUTU",4600,5300,0,2030]];
 const KOLON = {
   K1:{x0:62.5,  x1:682.5,  kotlar:[167.5,275.5,383.5,491.5,599.5,707.5], ic:75, tip:"pide", acik:700},
   K2:{x0:717.5, x1:1337.5, kotlar:[167.5,275.5,383.5,476.5,569.5,662.5,755.5,848.5], ic:60, tip:"karma", acik:700},
   K3:{x0:1372.5,x1:1992.5, kotlar:[167.5,260.5,353.5,446.5,539.5,632.5], ic:60, tip:"lahm", acik:700},
   KI:{x0:1372.5,x1:1992.5, kotlar:[725.5,862.5], ic:104, tip:"icecek", acik:700, yanAcik:true}
 };
+/* İÇECEK ÇEKMECESİ SAĞ UÇTA (Kemal 20 Eyl 2026): K·KESME modülünün altına, QR dolabının hemen soluna alındı →
+   2 robotta SAĞ robot içecek için hattın soluna inmez, iki robot birbirini beklemez. ?icecek=sol ile eski yeri. */
+const ICECEK_SAG = new URLSearchParams(location.search).get('icecek')!=='sol';
+if(ICECEK_SAG){ KOLON.KI.x0=3890; KOLON.KI.x1=4510; }
 function icecekPos(tip,kat,k){ const K=KOLON.KI, y0=K.kotlar[kat]+12; return tip==='kola'?(k<16?V(K.x0+216+116*(k%2), y0+EL.KOLA_H/2, 62+75*Math.floor(k/2)):V(K.x0+100, y0+EL.KOLA_H/2, 62+75*(k-16))):V(K.x1-60-100*Math.floor(k/5), y0+EL.TATLI_H/2, 200+95*(k%5)); }
 /* C · TOPPING: 6 hazne tek sıra (pafta: bantlıda v19 yerleri, tablalıda 30 sola) · başlık + hazne kotları */
 const T_BAS = TABLA?[1490,1624]:[1183,1317], T_KAS = TABLA?[1627,1987]:[1320,1680], KAY = TABLA?-30:0;
