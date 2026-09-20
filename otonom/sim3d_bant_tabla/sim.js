@@ -39,7 +39,9 @@ const NOZ = {kasar:{x:1910+KAY,renk:0xffd24a}, harc:{x:1350+KAY,renk:0xb0402a}, 
 const BANT = {x0:640, x1:2500, giris:810, cikis:2500, gen:400};            // bantlı: topping bandı (ürün merkezi 810'da banda iner, 2500'de fırın bandına geçer)
 const TAB  = {ray:[90,(new URLSearchParams(location.search).get('hat')==='goz')?2620:2460], pres:350, firin:(new URLSearchParams(location.search).get('hat')==='goz')?2560:2330, kalk:100};
 /* gözlü hatta tabla ucu TOPPING modülünün (x 2500) dışına çıkar: robot küreği oraya rahat sokar */               // tablalı: tabla arabası (pres altı 350 · fırın ağzı 2330 · dozajda 100 kalkar)
-const FIRIN = {x:[2500,4000], hz:[2550,3950], y:[PK-300,PK+320], hazne:1400, adim:350};
+/* konveyör fırın: aynı anda kaç ürün · ?firin=3 → hazne 1050, hat 350 mm kısalır */
+const FIRIN_N = Math.max(2,Math.min(6,+(new URLSearchParams(location.search).get('firin'))||4));
+const FIRIN = {x:[2500,2500+FIRIN_N*350+100], hz:[2550,2550+FIRIN_N*350], y:[PK-300,PK+320], hazne:FIRIN_N*350, adim:350};
 /* 4 kapalı göz · ürün çapı 300 → iç 360×360, iç yükseklik 100 (ürün 25 + üst boşluk 75), gövde 165 → 4 göz = 660 mm, taban 700 → üst 1360 (omuz 970: hepsi rahat erişimde) */
 const GOZ_N=Math.max(2,Math.min(6,+(new URLSearchParams(location.search).get('goz'))||4)), GOZ_H=165, GOZ_Y0=700;   /* ?goz=3 ile göz sayısı */
 const FIR = Array.from({length:GOZ_N},(_,i)=>[GOZ_Y0+i*GOZ_H, GOZ_Y0+(i+1)*GOZ_H]);
@@ -50,13 +52,16 @@ const QR = {x:[4295,5300], y:[400,2000], z:[900,1340], kol:[[4310,4790],[4810,52
   serit:78, kutuX:305, tatliZ:965, kolaZ:1080, kutuZ:1165};
 const KOR=900, DUVAR_X=[0,5300]; let RAY_X=[200,5100];
 /* GÖZLÜ HAT · konveyör fırın (1500 mm) yerine 650 mm'lik göz kolonu var → kesme, kutu, QR ve içecek 700 mm SOLA kayar, hat 5300 → 4600 */
-const GOZ_DX = GOZ?-700:0;
-if(GOZ){ KESP.cx+=GOZ_DX; KUT.x[0]+=GOZ_DX; KUT.x[1]+=GOZ_DX; KUT.cx+=GOZ_DX;
+const GOZ_DX = GOZ?-700:(FIRIN_N-4)*350;   /* konveyör kısalırsa/uzarsa sağdaki her şey kayar */
+const KAYDIR = GOZ_DX!==0;
+if(KAYDIR){ KESP.cx+=GOZ_DX; KUT.x[0]+=GOZ_DX; KUT.x[1]+=GOZ_DX; KUT.cx+=GOZ_DX;
   QR.x[0]+=GOZ_DX; QR.x[1]+=GOZ_DX; QR.kol.forEach(k=>{ k[0]+=GOZ_DX; k[1]+=GOZ_DX; });
-  KOLON.KI.x0=3320; KOLON.KI.x1=3880;   /* içecek çekmecesi K·KESME modülünün içinde, QR'ın solunda */
+  if(GOZ){ KOLON.KI.x0=3320; KOLON.KI.x1=3880; } else { KOLON.KI.x0+=GOZ_DX; KOLON.KI.x1+=GOZ_DX; }
   HAT.boy+=GOZ_DX; DUVAR_X[1]+=GOZ_DX; RAY_X=[200,5100+GOZ_DX];
-  MOD.length=0; MOD.push(['A · PRESS',0,700,1060,2030],['B · ÇEKMECE',0,2500,0,1060],['C · TOPPING',700,2500,1060,2030],
-    ['F · 4 GÖZLÜ FIRIN',2500,3300,0,2030],['K · KESME + İÇECEK',3300,3900,0,2030],['E · KUTU',3900,4600,0,2030]); }
+  MOD.length=0; const fx=GOZ?3300:(4000+GOZ_DX);
+  MOD.push(['A · PRESS',0,700,1060,2030],['B · ÇEKMECE',0,2500,0,1060],['C · TOPPING',700,2500,1060,2030],
+    [GOZ?('F · '+GOZ_N+' GÖZLÜ FIRIN'):('F · KONVEYÖR FIRIN · '+FIRIN_N+' ÜRÜN'),2500,fx,0,2030],
+    ['K · KESME + İÇECEK',fx,fx+600,0,2030],['E · KUTU',fx+600,fx+1300,0,2030]); }
 function PRES(){ return TABLA?{x:[53,647], y:[PK,PK+220], z:[-650,0], cx:350, cz:EKSEN, plaka:PK}:{x:[53,647], y:[PK,PK+220], z:[-650,0], cx:350, cz:-440, plaka:PK}; }
 const carPres=()=>PRES().cx+400;
 /* hızlar · süreler — kaynak/varsayım notu index.html altında */
