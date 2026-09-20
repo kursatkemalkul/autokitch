@@ -83,7 +83,7 @@ MEVCUT = dict(
         ("K · KESME + SPREY", 4000, 600, 0, 2030, FILL),
         ("E · KUTU", 4600, 700, 0, 2030, FILL),
     ],
-    notlar=["hat dükkâna 1400 mm sığmıyor", "boş hacim 5476 L · %51", "depo (1311 L) hattın dışında"],
+    notlar=["hat dükkâna 1400 mm sığmıyor", "boş hacim 5476 L · %51", "yedek depo (732 L) hattın dışında"],
 )
 
 ALT1 = dict(
@@ -137,15 +137,15 @@ ALT4 = dict(
     kazanc=1130.0,
     moduller=[
         ("A · PRES KAFASI", 0, 700, 1060, 2030, FILL),
-        ("B · ÇEKMECE + 3 GÜN HAMUR", 0, 1970, 0, 1060, SOFT),
+        ("B · ÇEKMECE · 2 GÜN 560 TOP", 0, 1970, 0, 1060, SOFT),
         ("C · TOPPING 2 kat + ÜST DEPO", 700, 1270, 1060, 2030, MOR),
         ("F · KONVEYÖR FIRIN + YAN DEPO", 1970, 1500, 0, 2030, SICAK),
         ("KE · KESME + KUTU + ŞARJÖR DEPO", 3470, 700, 0, 2030, YESIL),
     ],
-    notlar=["depo 1311 L tamamen hat içinde: ayrı depo ihtiyacı SIFIR",
-            "içecek 7 gün 89 L → K altı · kutu 3 gün 378 L → E arkası + üstü",
-            "UPS + pano 268 L → F tabanı · tatlı 71 L · peçete/poşet 89 L · kaset 145 L",
-            "hamur 3 gün açığı 271 L → K1 ve K3'e 7. sıra soğuk çekmece"],
+    notlar=["yedek depo 732 L tamamen hat içinde: ayrı depo ihtiyacı SIFIR",
+            "içecek yedeği 420 kutu 142 L → K altı · kutu 2 gün fazlası 111 L → E arkası",
+            "UPS + pano 268 L → F tabanı · kaşar+sucuk 45 L ve tatlı 61 L soğuk · boş kaset 80 L",
+            "HAMUR 2 GÜN TAM: 20 çekmece 560 top — açık yok, ek çekmece gerekmiyor"],
 )
 
 SIRA = [MEVCUT, ALT1, ALT2, ALT3, ALT4]
@@ -206,7 +206,7 @@ for j, s_ in enumerate([
     "ALT-1 kesme plakasını kutu ağzının üstüne alır — iki modül tek gövde olur, 600 mm kazanılır. Robotun kutu → QR yolu 600 mm kısalır.",
     "ALT-2 altı hazneyi tek sıradan iki kata çıkarır (3 üst + 3 alt). Tabla yine tek kotta gezer, dozaj başlığı tek noktadır; hazne kasetleri önden takılır.",
     "ALT-3 ikisini birleştirir: 4170 mm. Dükkâna 270 mm fazla — ray sol ucu 200'den 0'a çekilirse tam oturur.",
-    "ALT-4 ALT-3'ün üstüne depoyu ekler: yedek içecek, kutu, UPS, pano, tatlı, peçete, poşet, kaset ve 3 günlük hamur açığı hattın kendi boş hacimlerine girer (1311 L / 3972 L).",
+    "ALT-4 ALT-3'ün üstüne yedek depoyu ekler: içecek yedeği, kutu, UPS, pano, kaşar/sucuk, tatlı, peçete, poşet ve boş kaset hattın kendi boş hacimlerine girer (732 L / 3972 L).",
 ]):
     txt(OX, ly + 44 + j * 34, "· " + s_, f11, INK)
 
