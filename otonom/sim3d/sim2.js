@@ -58,7 +58,7 @@ let takip=false; $('takip').onchange=e=>{ takip=e.target.checked; };
 const ROT=(v,ax,a)=>v.clone().applyAxisAngle(ax,a);
 /* döndürme sonrası yön vektörünü temizle: 1e-16 mertebesindeki birikim "tam 300 mm" gibi sınır testlerini rastgele tetikliyordu */
 const TEMIZ=v=>{ const f=x=>Math.abs(x)<1e-9?0:(Math.abs(Math.abs(x)-1)<1e-9?Math.sign(x):x); v.set(f(v.x),f(v.y),f(v.z)); return v; };
-const TR=1300, TZ=220;
+const TR=1300, TZ=AKIS_ACIK?Z_KORIDOR:220;   /* açık koridorda robot tepsiyi ağız derinliğinde tutar: 'ağız hizası / içeri / çıkar' adımları sıfır yol olur */
 /* araba hedefin yanında durur: yon +1 → solunda (kol +x'e uzanır) · yon −1 → sağında (kol −x'e uzanır). Kot + derinlik verilirse 4 pozun (ağız önü / içeri × indir / kaldır) hepsine kol yetişen EN UZAK ofset seçilir;
    tepsi kaide kotunun altındaysa ofset ≥ 280 (tepsi r170 + kaide r100). İstenen yan rayın dışına düşüyorsa öbür yan denenir. */
 const carFor=(x,y,cz,yon)=>{ yon=yon||1; const icinde=c=>c>=RAY_X[0]&&c<=RAY_X[1];

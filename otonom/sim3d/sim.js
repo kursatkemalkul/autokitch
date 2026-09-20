@@ -26,6 +26,10 @@ const KOLON = {  // çekmeceler 620 × 680 · motorlu 700 strok — hamur: pide 
 function icecekPos(tip,kat,k){ const K=KOLON.KI, y0=K.kotlar[kat]+12; return tip==='kola'?(k<16?V(K.x0+216+116*(k%2), y0+EL.KOLA_H/2, 62+75*Math.floor(k/2)):V(K.x0+100, y0+EL.KOLA_H/2, 62+75*(k-16))):V(K.x1-60-100*Math.floor(k/5), y0+EL.TATLI_H/2, 200+95*(k%5)); }   // kola 3 sütun: önce ortadaki 2 sütun (çekmecenin SAĞ duruşundan da erişilir → SAĞ robot SOL'un bölgesine girmez), sonra en soldaki sütun · tatlı SAĞDA 2 sütun: robot çekmecenin sağında durur, el −x yönünde girer → SAĞ robot kendi bölgesinden alır   // tatlı z ≥ 200: el +x yönünde girerken parmaklar hat yüzüne, dirsek D'ye girmesin
 const NIS={x:[2070,2455], y:[690,1000], z:[-660,0], cx:2262, cz:-450, raf0:702, pitch:50, n:6};
 const RAF={y:925};   // AKTARMA GÖZÜ (pafta v18): nişin en üst gözü (6 boş tepsi rafı 36 aralıkla altında kalır) · SOL robot topping'li tepsiyi soldan bırakır, SAĞ robot sağdan alıp fırına götürür          // K4 üstü: 6 tepsi (v11) · altında kaşar+sucuk deposu 375–675 · en altta soğutma grubu 140–360
+/* AÇIK KORİDOR (Kemal 20 Eyl 2026): pres · dozaj · fırın · kesim+sprey · kutu ağızları AYNI derinlikte ve ön yüzleri açık →
+   tepsi ağızdan hiç dışarı çıkmaz, robot onu tabla gibi yana kaydırır. Kesim ile sprey TEK ağız (bıçak + sprey üst üste). ?akis=acik */
+const AKIS_ACIK = new URLSearchParams(location.search).get('akis')==='acik';
+const Z_KORIDOR = -400;
 const TABLA_VAR = new URLSearchParams(location.search).get('tabla')==='1';   /* ATOSA TABLASI: tepsiyi pres altından dozaja, oradan fırın ucuna taşır (robot topping'e hiç gitmez) */
 const TAB = {x0:390, x1:2300, uc:2280, presY:1170, y:1100, z:-440, tur:60};   /* ray C modülünün altında · pres altında tepsi 1170 (alt plaka), dozaj + fırın ucunda 1100 (tepsi alınırken bilek 1140+35 < ağız tavanı 1180) · uç 2280: tepsi kenarı 2450 < D modülü 2500 · Atosa: ürün başına ≥ 60 s */
 const T_AGZ=[1070,1180], T_Y=1120, T_BAS=[1183,1317], T_KAS=[1320,1680];
@@ -41,7 +45,10 @@ const QR ={x:[2895,3900], y:[400,2000], z:[900,1340], kol:[[2910,3390],[3410,389
   serit:78, kutuX:305, tatliZ:965, kolaZ:1080, kutuZ:1165};
 const KOR=900, DUVAR_X=[0,3900]; let RAY_X=[200,3700];   // dükkân iç 3900 = hat boyu → araba (400) duvara dayanır: merkez 200…3700 · 'ray' seçimiyle değişir
 const PRES_CX=350;
-function PRES(){ const p=+plaka.value; return {x:[53,647], y:[p,p+220], z:[-650,0], cx:350, cz:-440, plaka:p}; }   // pafta v10: ağız 594 × 220, alt kenar plaka kotunda
+function PRES(){ const p=+plaka.value; return {x:[53,647], y:[p,p+220], z:[-650,0], cx:350, cz:AKIS_ACIK?Z_KORIDOR:-440, plaka:p}; }
+if(AKIS_ACIK){ NOZ.z=Z_KORIDOR; FIR_X.cz=Z_KORIDOR; KES.cz=Z_KORIDOR; KUT.cz=Z_KORIDOR;
+  YAG.cx=KES.cx; YAG.cz=Z_KORIDOR; YAG.y=[KES.y[0],KES.y[1]]; }   /* sprey kesim ağzının içine alındı: tek durak */
+   // pafta v10: ağız 594 × 220, alt kenar plaka kotunda
 const carPres=()=>PRES().cx+400;                                                                          // kol ağza çapraz girer: bilek omuz ekseninden geçmez, ön kol ağız üst kenarına değmez
 /* hızlar — kaynak/varsayım notu index.html altında */
 let HIZ={serbest:600, orta:400, ince:200, mikro:80, ray:500, ivmeKol:2000, ivmeRay:1000, eklem:150, parmak:0.6, pim:0.8, cekmece:2.8, kapak:1.5, qrkapak:1.5, itici:2.0, pres:9, kasar:15, harc:20, firin:{pide:240, lahm:120}, kesim:4, sprey:3, kapan:4, musteri:150};
