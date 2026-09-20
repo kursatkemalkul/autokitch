@@ -18,7 +18,7 @@ OLCULER (16 Eyl karari): STANDART KASET zarf 140 x 400 x 360 · KASAR KABI zarf 
 Hacim bu dosyada kesitten SAYISAL hesaplanir ve yazdirilir (uydurma yok).
 Cikti: otonom/kaset3d/kaset_v3.glb/.usdz · kasar_v3.glb/.usdz   (onceki surumler silinmez)
 """
-import io, json, math, os, struct, zipfile
+import io, json, math, os, re, struct, zipfile
 from PIL import Image, ImageDraw, ImageFont
 
 OUT = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), "otonom", "kaset3d")
@@ -509,29 +509,75 @@ def glb_yaz(yol, parcalar, dokular):
 
 
 # ======================= USDZ (iOS AR Quick Look) =======================
-def usdz_yaz(yol, kok, parcalar):
-    s = ['#usda 1.0\n(\n    defaultPrim = "%s"\n    metersPerUnit = 1\n    upAxis = "Y"\n)\n\ndef Xform "%s" (kind = "component")\n{\n    def Scope "Mat"\n    {' % (kok, kok)]
+# 20 Eyl 2026 DUZELTME: elle yazilan .usda'da "gobek_kulak_-1" gibi GECERSIZ prim adlari vardi → iPhone "acilamadi" dedi.
+# Artik Pixar'in resmi kutuphanesi (pip install usd-core) ile yaziliyor: ikili .usdc + gomulu PNG dokular,
+# UsdUtils.CreateNewARKitUsdzPackage ile paketlenir ve UsdUtils.ComplianceChecker(arkit=True) ile DENETLENIR.
+def _temiz_ad(a):
+    a = re.sub(r"[^A-Za-z0-9_]", "_", a.replace("-", "e"))          # "-1" → "e1" (eksi)
+    return a if re.match(r"^[A-Za-z_]", a) else "_" + a
+
+
+def usdz_yaz(yol, kok, parcalar, dokular):
+    import shutil, tempfile
+    from pxr import Usd, UsdGeom, UsdShade, Sdf, Gf, Vt, UsdUtils
+    tmp = tempfile.mkdtemp(prefix="ak_usdz_")                        # ASCII yol: USD araclari Turkce karakterli yolda takilmasin
+    usdc = os.path.join(tmp, kok + ".usdc")
+    for k, veri in dokular.items():
+        with open(os.path.join(tmp, k + ".png"), "wb") as f: f.write(veri)
+    st = Usd.Stage.CreateNew(usdc)
+    UsdGeom.SetStageUpAxis(st, UsdGeom.Tokens.y); UsdGeom.SetStageMetersPerUnit(st, 1.0)
+    kokp = UsdGeom.Xform.Define(st, "/" + kok); st.SetDefaultPrim(kokp.GetPrim()); Usd.ModelAPI(kokp.GetPrim()).SetKind("component")
+    mats = {}
     for k, d in MALZEME.items():
-        r = d["renk"] if not d.get("doku") else (0.98, 0.75, 0.09, 1.0)
-        s.append('        def Material "%s"\n        {\n            token outputs:surface.connect = </%s/Mat/%s/S.outputs:surface>\n            def Shader "S"\n            {\n'
-                 '                uniform token info:id = "UsdPreviewSurface"\n                color3f inputs:diffuseColor = (%.3f, %.3f, %.3f)\n                float inputs:opacity = %.2f\n'
-                 '                float inputs:roughness = %.2f\n                float inputs:metallic = %.2f\n                token outputs:surface\n            }\n        }'
-                 % (k, kok, k, r[0], r[1], r[2], r[3], d["ruf"], d["met"]))
-    s.append("    }")
+        yolm = "/%s/Mat/%s" % (kok, k)
+        mat = UsdShade.Material.Define(st, yolm); sh = UsdShade.Shader.Define(st, yolm + "/PBR"); sh.CreateIdAttr("UsdPreviewSurface")
+        r = d["renk"]
+        if d.get("doku"):
+            rd = UsdShade.Shader.Define(st, yolm + "/stOku"); rd.CreateIdAttr("UsdPrimvarReader_float2")
+            rd.CreateInput("varname", Sdf.ValueTypeNames.String).Set("st"); rd.CreateOutput("result", Sdf.ValueTypeNames.Float2)
+            tx = UsdShade.Shader.Define(st, yolm + "/doku"); tx.CreateIdAttr("UsdUVTexture")
+            tx.CreateInput("file", Sdf.ValueTypeNames.Asset).Set(Sdf.AssetPath("./" + d["doku"] + ".png"))
+            tx.CreateInput("st", Sdf.ValueTypeNames.Float2).ConnectToSource(rd.ConnectableAPI(), "result")
+            tx.CreateInput("wrapS", Sdf.ValueTypeNames.Token).Set("clamp"); tx.CreateInput("wrapT", Sdf.ValueTypeNames.Token).Set("clamp")
+            tx.CreateInput("sourceColorSpace", Sdf.ValueTypeNames.Token).Set("sRGB"); tx.CreateOutput("rgb", Sdf.ValueTypeNames.Float3)
+            sh.CreateInput("diffuseColor", Sdf.ValueTypeNames.Color3f).ConnectToSource(tx.ConnectableAPI(), "rgb")
+        else:
+            sh.CreateInput("diffuseColor", Sdf.ValueTypeNames.Color3f).Set(Gf.Vec3f(r[0], r[1], r[2]))
+        sh.CreateInput("opacity", Sdf.ValueTypeNames.Float).Set(float(r[3]))
+        sh.CreateInput("roughness", Sdf.ValueTypeNames.Float).Set(float(d["ruf"])); sh.CreateInput("metallic", Sdf.ValueTypeNames.Float).Set(float(d["met"]))
+        mat.CreateSurfaceOutput().ConnectToSource(sh.ConnectableAPI(), "surface"); mats[k] = mat
+    kullanilan = set()
     for adi, m, mal in parcalar:
-        s.append('    def Mesh "%s" (prepend apiSchemas = ["MaterialBindingAPI"])\n    {\n        rel material:binding = </%s/Mat/%s>\n        int[] faceVertexCounts = [%s]\n'
-                 '        int[] faceVertexIndices = [%s]\n        point3f[] points = [%s]\n        normal3f[] normals = [%s] (interpolation = "vertex")\n        uniform token subdivisionScheme = "none"\n    }'
-                 % (adi, kok, mal, ", ".join("3" for _ in range(len(m.I) // 3)), ", ".join(str(i) for i in m.I),
-                    ", ".join("(%.5f, %.5f, %.5f)" % p for p in m.P), ", ".join("(%.3f, %.3f, %.3f)" % n for n in m.N)))
-    s.append("}\n")
-    data = "\n".join(s).encode("utf-8"); ic = kok + ".usda"
-    with zipfile.ZipFile(yol, "w", zipfile.ZIP_STORED) as zf:
-        zi = zipfile.ZipInfo(ic, date_time=(2026, 9, 20, 0, 0, 0)); zi.compress_type = zipfile.ZIP_STORED
-        head = 30 + len(ic.encode()); pad = (64 - ((zf.fp.tell() + head) % 64)) % 64
-        if 0 < pad < 4: pad += 64
-        if pad: zi.extra = struct.pack("<HH", 0x1986, pad - 4) + b"\x00" * (pad - 4)
-        zf.writestr(zi, data)
-    return len(data)
+        ad = _temiz_ad(adi)
+        while ad in kullanilan: ad += "_"
+        kullanilan.add(ad)
+        me = UsdGeom.Mesh.Define(st, "/%s/%s" % (kok, ad))
+        me.CreatePointsAttr(Vt.Vec3fArray([Gf.Vec3f(*q) for q in m.P]))
+        me.CreateFaceVertexCountsAttr(Vt.IntArray([3] * (len(m.I) // 3))); me.CreateFaceVertexIndicesAttr(Vt.IntArray(list(m.I)))
+        me.CreateNormalsAttr(Vt.Vec3fArray([Gf.Vec3f(*q) for q in m.N])); me.SetNormalsInterpolation(UsdGeom.Tokens.vertex)
+        me.CreateSubdivisionSchemeAttr(UsdGeom.Tokens.none); me.CreateDoubleSidedAttr(not MALZEME[mal].get("tekyuz", False))
+        mn = [min(q[i] for q in m.P) for i in range(3)]; mx = [max(q[i] for q in m.P) for i in range(3)]
+        me.CreateExtentAttr(Vt.Vec3fArray([Gf.Vec3f(*mn), Gf.Vec3f(*mx)]))
+        if m.UV:                                                     # glTF'te v yukaridan asagi, USD'de asagidan yukari
+            UsdGeom.PrimvarsAPI(me).CreatePrimvar("st", Sdf.ValueTypeNames.TexCoord2fArray, UsdGeom.Tokens.vertex).Set(
+                Vt.Vec2fArray([Gf.Vec2f(u[0], 1.0 - u[1]) for u in m.UV]))
+        UsdShade.MaterialBindingAPI.Apply(me.GetPrim()).Bind(mats[mal])
+    st.GetRootLayer().Save()
+    cikti = os.path.join(tmp, kok + ".usdz")
+    if not UsdUtils.CreateNewARKitUsdzPackage(Sdf.AssetPath(usdc), cikti): raise RuntimeError("ARKit paketi olusturulamadi: " + kok)
+    from pxr import UsdValidation
+    geri = Usd.Stage.Open(cikti); prim = len(list(geri.Traverse())) if geri else 0
+    anahtar = set(["UsdzValidators", "UsdUtilsValidators", "UsdGeomValidators", "UsdShadeValidators", "UsdCoreValidators"])
+    secili = [mm for mm in UsdValidation.ValidationRegistry().GetAllValidatorMetadata() if set(mm.GetKeywords()) & anahtar]
+    ctx = UsdValidation.ValidationContext(secili, False)
+    sorun, uyarilar = [], []
+    for e in ctx.Validate(geri):
+        satir = "%s: %s" % (e.GetName(), e.GetMessage())
+        (sorun if e.GetType() == UsdValidation.ValidationErrorType.Error else uyarilar).append(satir)
+    icerik = zipfile.ZipFile(cikti).namelist()
+    for hedef in yol if isinstance(yol, (list, tuple)) else [yol]: shutil.copyfile(cikti, hedef)
+    boy = os.path.getsize(cikti); shutil.rmtree(tmp, ignore_errors=True)
+    return boy, prim, sorun, uyarilar + ["paket icerigi: " + ", ".join(icerik)]
 
 
 # ======================= URET =======================
@@ -543,7 +589,10 @@ if __name__ == "__main__":
         dokular = {"ad": doku_ad(ad, "bu yönde tak  ·  %d × %d × %d mm  ·  %s L" % (W, D, H, ("%.1f" % hacim).replace(".", ",")), ok_sol=True),
                    "montaj": doku_montaj(MONTAJ)}
         b1 = glb_yaz(os.path.join(OUT, dosya + ".glb"), parcalar, dokular)
-        b2 = usdz_yaz(os.path.join(OUT, dosya + ".usdz"), dosya, parcalar)
+        b2, prim, sorun, uyari = usdz_yaz([os.path.join(OUT, dosya + ".usdz"), os.path.join(OUT, dosya + "_ar2.usdz")], dosya, parcalar, dokular)
         ucgen = sum(len(m.I) // 3 for _, m, _ in parcalar)
         print("%s · %d parca · %d ucgen · glb %.0f KB · usdz %.0f KB · KULLANILABILIR HACIM %.1f L (dolum cizgisi ust kenardan 20 mm asagi)"
               % (dosya, len(parcalar), ucgen, b1 / 1024.0, b2 / 1024.0, hacim))
+        print("   USDZ geri acildi: %d prim · USD denetimi (usdz + geometri + malzeme): %s" % (prim, "GECTI (hata yok)" if not sorun else "KALDI"))
+        for x in sorun: print("   HATA:", x)
+        for x in uyari: print("   uyari:", x)

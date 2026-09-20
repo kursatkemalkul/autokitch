@@ -44,7 +44,7 @@
     <div class="tab" data-m="kaset">sade kutu</div>
   </div>
 
-  <model-viewer id="mv" src="kaset_v3.glb" ios-src="kaset_v3.usdz" alt="Kaset"
+  <model-viewer id="mv" src="kaset_v3.glb" ios-src="kaset_v3_ar2.usdz" alt="Kaset"
     ar ar-modes="webxr scene-viewer quick-look" ar-scale="fixed" ar-placement="floor"
     loading="eager" reveal="auto"
     camera-controls touch-action="pan-y" auto-rotate shadow-intensity="1"
@@ -72,7 +72,7 @@ const D = {
 const mv = document.getElementById('mv'), tablo = document.getElementById('tablo'), notu = document.getElementById('notu');
 function goster(k){
   const m = D[k];
-  mv.setAttribute('src', k + ".glb"); mv.setAttribute('ios-src', k + ".usdz");
+  mv.setAttribute('src', k + ".glb"); mv.setAttribute('ios-src', k + (/_v3$/.test(k) ? "_ar2.usdz" : ".usdz"));
   tablo.innerHTML =
     "<tr><td>Ölçü (G × D × Y)</td><td>" + m.w + " × " + m.d + " × " + m.h + " mm</td></tr>" +
     "<tr><td>Brüt hacim</td><td>" + m.brut.toString().replace('.', ',') + " L</td></tr>" +
