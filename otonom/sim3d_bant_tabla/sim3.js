@@ -173,24 +173,26 @@ function planlaOto(cfg){ OPT.takt=0; const p1=planla(cfg); if(p1.kpi.urun<4) ret
 
 /* ================= OYNATICI (zaman tabanlı · bloklar paralel · ileri/geri sarılabilir) ================= */
 let anim=null, OYN=null;
-function hazirla(ps){ const rb=ROB[0], x=1100; rb.carX=x; rb.t.set(0,0,-1); rb.u.set(0,1,0); rb.yuk='bos'; rb.tasi=null; rb.parmak=70; rb.tcp.copy(parkTcp(x)); S.ri=0;
+function hazirla(ps){ [[0,1100],[1,4400]].forEach(([i,x])=>{ const rb=ROB[i]; rb.carX=x; rb.t.set(0,0,-1); rb.u.set(0,1,0); rb.yuk='bos'; rb.tasi=null; rb.parmak=70; rb.tcp.copy(parkTcp(x)); }); S.ri=0;
   Object.keys(KOLON).forEach(k=>{ S.cek[k]=0; S.cekI[k]=0; }); S.qrk={}; S.itme=0; S.akis=null; S.ustPlakaY=0; S.bicakY=0; S.tabla.x=TAB.pres; S.tabla.y=PK; S.tabla.rot=0;
   S.nesne.slice().forEach(n=>nesneSil(n)); Object.values(HAVUZ).forEach(h=>h.forEach(m=>{ m.visible=false; m.userData.sahip=null; }));
   if(ps){ ps.P.forEach(p=>{ if(p.urunN) p.urunN.mesh=null; if(p.kutuN) p.kutuN.mesh=null; }); ps.tepsi.mesh=null; ps.tepsi.icerik=''; ps.tepsi.pos=V(KUT.cx,KUT.trayY,KUT.cz); nesneGoster(ps.tepsi); ps.O.forEach(o=>{ o.nesneler=[]; }); ps.plan.forEach(b=>b.steps.forEach(s=>{ s._basladi=false; })); PLANLA_bantYol=ps.bantYol||(()=>0); }
   log.innerHTML=''; }
 const ease=t=>t<.5?2*t*t:-1+(4-2*t)*t;
 function saat(T){ const b=+($('saat0').value||17)*3600+T; const h=Math.floor(b/3600)%24, m=Math.floor(b%3600/60), s=Math.floor(b%60); return `${h}:${m<10?'0':''}${m}:${s<10?'0':''}${s}`; }
-function motor(T){ let robotAd='', adim='', makine=[], bitti=true, nextT=Infinity;
-  for(const b of OYN.bl){ if(T<b.t0){ bitti=false; nextT=Math.min(nextT,b.t0); continue; } S.ri=0; let ls=b.t0+b.acc;
+function motor(T){ const robotAd=['',''], adim=['','']; let makine=[], bitti=true, nextT=Infinity;
+  for(const b of OYN.bl){ if(T<b.t0){ bitti=false; nextT=Math.min(nextT,b.t0); continue; } S.ri=b.ri||0; let ls=b.t0+b.acc;
     while(b.cursor<b.steps.length){ const s=b.steps[b.cursor]; if(T<ls) break; if(!s._basladi){ if(s.basla) s.basla(); s._basladi=true; }
-      if(T>=ls+s.sure){ s.fn(1); if(s.bitir) s.bitir(); b.cursor++; b.acc+=s.sure; ls+=s.sure; continue; } const e=(T-ls)/s.sure; s.fn(s.lin?e:ease(e)); if(b.tip==='robot'){ robotAd=b.ad; adim=s.ad; } else if(b.tip==='makine'&&s.ad!=='bekliyor') makine.push((b.ref?'#'+b.ref.id+' ':'')+s.ad); break; }
+      if(T>=ls+s.sure){ s.fn(1); if(s.bitir) s.bitir(); b.cursor++; b.acc+=s.sure; ls+=s.sure; continue; } const e=(T-ls)/s.sure; s.fn(s.lin?e:ease(e)); if(b.tip==='robot'){ robotAd[b.ri||0]=b.ad; adim[b.ri||0]=s.ad; } else if(b.tip==='makine'&&s.ad!=='bekliyor') makine.push((b.ref?'#'+b.ref.id+' ':'')+s.ad); break; }
     if(b.cursor<b.steps.length) bitti=false; }
-  return {robotAd:[robotAd],adim:[adim],makine,bitti,nextT}; }
+  S.ri=0; return {robotAd,adim,makine,bitti,nextT}; }
 function durumYaz(T,m){ const ps=OYN.ps; if(!ps._bit){ ps._bit=ps.plan.filter(b=>b.bitis).map(b=>b.bitisT).sort((a,b)=>a-b); ps._tes=ps.O.filter(o=>o.teslim).map(o=>o.teslim).sort((a,b)=>a-b); }
-  const say=(a)=>{ let n=0; while(n<a.length&&a[n]<=T) n++; return n; }, ad=m.robotAd[0]; let ne='<span style="color:#8a94a4">boşta</span>'; if(ad) ne=ad.split(' · ')[0]+' · '+m.adim[0];
-  step.innerHTML=`<div><span style="color:#8a94a4">${saat(T)}</span> · ÇIKAN ÜRÜN <b style="color:#3ddc84">${say(ps._bit)}</b> / ${ps.kpi.urun} <span style="color:#8a94a4">· teslim ${say(ps._tes)} / ${ps.kpi.siparis} sipariş</span></div><div><span style="color:#2997ff">ROBOT</span> <span style="color:#d5dbe6;font-weight:500">${ne}</span></div><div><span style="color:#ffb340">MAKİNE</span> <span style="color:#c9ccd3;font-weight:500">${m.makine.length?m.makine.slice(0,3).join(' · ')+(m.makine.length>3?' · +'+(m.makine.length-3):''):'<span style="color:#8a94a4">boş</span>'}</span></div>`;
+  const say=(a)=>{ let n=0; while(n<a.length&&a[n]<=T) n++; return n; }, N=(ps.kpi&&ps.kpi.N)||1;
+  const satir=i=>{ const ad=m.robotAd[i]; return ad?(ad.split(' · ')[0]+' · '+m.adim[i]):'<span style="color:#8a94a4">boşta</span>'; };
+  const ne=satir(0);
+  step.innerHTML=`<div><span style="color:#8a94a4">${saat(T)}</span> · ÇIKAN ÜRÜN <b style="color:#3ddc84">${say(ps._bit)}</b> / ${ps.kpi.urun} <span style="color:#8a94a4">· teslim ${say(ps._tes)} / ${ps.kpi.siparis} sipariş</span></div><div><span style="color:#2997ff">${N>1?'SOL':'ROBOT'}</span> <span style="color:#d5dbe6;font-weight:500">${ne}</span></div>${N>1?`<div><span style="color:#ff8c40">SAĞ</span> <span style="color:#d5dbe6;font-weight:500">${satir(1)}</span></div>`:''}<div><span style="color:#ffb340">MAKİNE</span> <span style="color:#c9ccd3;font-weight:500">${m.makine.length?m.makine.slice(0,3).join(' · ')+(m.makine.length>3?' · +'+(m.makine.length-3):''):'<span style="color:#8a94a4">boş</span>'}</span></div>`;
   const sc=$('scrub'); if(sc&&!sc._tut) sc.value=T; $('scrubT').textContent=saat(T)+' / '+saat(OYN.ps.kpi.sure); kafaKoy(T); }
-function zamanaGit(ps,T){ if(!OYN||OYN.ps!==ps) OYN={ps,T:0,bl:[],son:0}; hazirla(ps); OYN.bl=ps.plan.map(b=>({...b,cursor:0,acc:0})); OYN.T=Math.max(0,Math.min(ps.kpi.sure+3,T)); const m=motor(OYN.T); ciz(); durumYaz(OYN.T,m); return m; }
+function zamanaGit(ps,T){ if(!OYN||OYN.ps!==ps) OYN={ps,T:0,bl:[],son:0}; hazirla(ps); OYN.bl=ps.plan.map(b=>({...b,cursor:0,acc:0})); OYN.T=Math.max(0,Math.min(ps.kpi.sure+3,T)); const m=motor(OYN.T); ciz(); durumYaz(OYN.T,m); if(window.sonucCiz) sonucCiz(HATTIP,ps,OYN.T); return m; }
 function oynat(ps){ dur(); if(!OYN||OYN.ps!==ps||OYN.T>=ps.kpi.sure) zamanaGit(ps,0); OYN.son=performance.now(); $('play').textContent='❚❚ Duraklat';
   function frame(now){ const dt=Math.min(0.1,(now-OYN.son)/1000); OYN.son=now; OYN.T+=dt*(+hiz.value); const m=motor(OYN.T); ciz(); durumYaz(OYN.T,m);
     if(!m.robotAd[0]&&!m.makine.length&&isFinite(m.nextT)&&m.nextT-OYN.T>3&&(+hiz.value)<10) OYN.T=m.nextT-1;
@@ -251,7 +253,7 @@ function kafaKoy(T){ const k=$('kafa'); if(!k||!GX||GH<20) return; k.style.left=
 /* ================= UI ================= */
 let PLAN=null;
 function cfg(){ return {robot:+($('robotN')?$('robotN').value:1), sen:$('sen').value, urun:$('urun').value, kola:$('kola').checked, tatli:$('tatli').checked, seed:+$('seed').value||1, aralik:+$('aralik').value||120}; }
-function planlaUI(){ dur(); PLAN=planlaOto(cfg()); OYN=null; kpiYaz(PLAN); gantt(PLAN); zamanaGit(PLAN,0); step.innerHTML='<div>plan hazır · '+PLAN.plan.filter(b=>b.tip==='robot').length+' robot görevi</div><div style="color:#8a94a4">▶ ile oynat ya da alttaki çubuğu sürükle</div>'; return PLAN; }
+function planlaUI(){ dur(); if(window.sonucTemizle) sonucTemizle(); PLAN=planlaOto(cfg()); OYN=null; kpiYaz(PLAN); gantt(PLAN); zamanaGit(PLAN,0); step.innerHTML='<div>plan hazır · '+PLAN.plan.filter(b=>b.tip==='robot').length+' robot görevi</div><div style="color:#8a94a4">▶ ile oynat ya da alttaki çubuğu sürükle</div>'; return PLAN; }
 $('planla').onclick=planlaUI; $('play').onclick=()=>{ if(anim){ dur(); return; } if(!PLAN) planlaUI(); oynat(PLAN); }; $('stop').onclick=()=>{ dur(); if(PLAN) zamanaGit(PLAN,0); };
 $('kontrol').onclick=()=>{ if(!PLAN) planlaUI(); $('kontrol').textContent='taranıyor…'; setTimeout(()=>{ sessizKontrol(PLAN); $('kontrol').textContent='Tüm adımları tara · erişim + çarpışma'; },30); };
 function senUI(){ const v=$('sen').value; $('tekRow').style.display=v==='tek'?'':'none'; $('akisRow').style.display=v==='akis'?'':'none'; }

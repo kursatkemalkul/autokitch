@@ -206,7 +206,7 @@ function durumYaz(T,m){ const ps=OYN.ps, N=ps.N; if(!ps._bit){ ps._bit=ps.plan.f
     return `<div><span style="color:${i?'#ff8c40':'#2997ff'}">${N>1?(i?'SAĞ':'SOL'):'ROBOT'}</span> <span style="color:#d5dbe6;font-weight:500">${ne}</span></div>`; };
   step.innerHTML=`<div><span style="color:#8a94a4">${saat(T)}</span> · ÇIKAN ÜRÜN <b style="color:#3ddc84">${say(ps._bit)}</b> / ${ps.kpi.urun} <span style="color:#8a94a4">· teslim ${say(ps._tes)} / ${ps.kpi.siparis} sipariş</span></div>`+satir(0)+(N>1?satir(1):''); const sc=$('scrub'); if(sc&&!sc._tut) sc.value=T; $('scrubT').textContent=saat(T)+' / '+saat(OYN.ps.kpi.sure); kafaKoy(T); }
 /* zamana git: geriye de gider (baştan T'ye kadar yeniden kurar) */
-function zamanaGit(ps,T){ if(!OYN||OYN.ps!==ps) OYN={ps,T:0,bl:[],son:0}; hazirla(ps); OYN.bl=ps.plan.map(b=>({...b,cursor:0,acc:0})); OYN.T=Math.max(0,Math.min(ps.kpi.sure+3,T)); const m=motor(OYN.T); ciz(); durumYaz(OYN.T,m); return m; }
+function zamanaGit(ps,T){ if(!OYN||OYN.ps!==ps) OYN={ps,T:0,bl:[],son:0}; hazirla(ps); OYN.bl=ps.plan.map(b=>({...b,cursor:0,acc:0})); OYN.T=Math.max(0,Math.min(ps.kpi.sure+3,T)); const m=motor(OYN.T); ciz(); durumYaz(OYN.T,m); if(window.sonucCiz) sonucCiz((new URLSearchParams(location.search).get('tabla')==='1'?'robot_tabla':'robot'),ps,OYN.T); return m; }
 function oynat(ps){ dur(); if(!OYN||OYN.ps!==ps||OYN.T>=ps.kpi.sure) zamanaGit(ps,0); OYN.son=performance.now(); $('play').textContent='❚❚ Duraklat';
   function frame(now){ const dt=Math.min(0.1,(now-OYN.son)/1000); OYN.son=now; OYN.T+=dt*(+hiz.value); const m=motor(OYN.T); ciz(); durumYaz(OYN.T,m);
     if(!m.robotAd[0]&&!m.robotAd[1]&&isFinite(m.nextT)&&m.nextT-OYN.T>3&&(+hiz.value)<10) OYN.T=m.nextT-1;                          // herkes boşta: ileri sar
@@ -271,7 +271,7 @@ function kafaKoy(T){ const k=$('kafa'); if(!k||!GX||GH<20) return; k.style.left=
 /* ================= UI ================= */
 let PLAN=null;
 function cfg(){ return {sen:$('sen').value, urun:$('urun').value, kola:$('kola').checked, tatli:$('tatli').checked, seed:+$('seed').value||1, aralik:+$('aralik').value||120, robot:+$('robotN').value||1}; }
-function planlaUI(){ dur(); const k=+$('hizp').value; HIZ.serbest=600*k; HIZ.orta=400*k; HIZ.ince=200*k; HIZ.mikro=80*k; HIZ.ray=500*k; PLAN=planla(cfg()); OYN=null; kpiYaz(PLAN); gantt(PLAN); zamanaGit(PLAN,0); step.style.height=(18*(1+PLAN.N)+2)+'px'; step.innerHTML='plan hazır · '+PLAN.plan.filter(b=>b.tip==='robot'&&!b.yolver).length+' robot görevi · ▶ ile oynat ya da alttaki çubuğu sürükle'; return PLAN; }
+function planlaUI(){ dur(); if(window.sonucTemizle) sonucTemizle(); const k=+$('hizp').value; HIZ.serbest=600*k; HIZ.orta=400*k; HIZ.ince=200*k; HIZ.mikro=80*k; HIZ.ray=500*k; PLAN=planla(cfg()); OYN=null; kpiYaz(PLAN); gantt(PLAN); zamanaGit(PLAN,0); step.style.height=(18*(1+PLAN.N)+2)+'px'; step.innerHTML='plan hazır · '+PLAN.plan.filter(b=>b.tip==='robot'&&!b.yolver).length+' robot görevi · ▶ ile oynat ya da alttaki çubuğu sürükle'; return PLAN; }
 $('planla').onclick=planlaUI; $('play').onclick=()=>{ if(anim){ dur(); return; } if(!PLAN) planlaUI(); oynat(PLAN); }; $('stop').onclick=()=>{ dur(); if(PLAN) zamanaGit(PLAN,0); };
 $('kontrol').onclick=()=>{ if(!PLAN) planlaUI(); $('kontrol').textContent='taranıyor…'; setTimeout(()=>{ sessizKontrol(PLAN); $('kontrol').textContent='Tüm adımları tara · erişim + çarpışma'; },30); };
 function senUI(){ const v=$('sen').value; $('tekRow').style.display=v==='tek'?'':'none'; $('akisRow').style.display=v==='akis'?'':'none'; }
