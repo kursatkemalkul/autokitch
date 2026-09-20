@@ -41,7 +41,7 @@ const TAB  = {ray:[90,(new URLSearchParams(location.search).get('hat')==='goz')?
 /* gözlü hatta tabla ucu TOPPING modülünün (x 2500) dışına çıkar: robot küreği oraya rahat sokar */               // tablalı: tabla arabası (pres altı 350 · fırın ağzı 2330 · dozajda 100 kalkar)
 const FIRIN = {x:[2500,4000], hz:[2550,3950], y:[PK-300,PK+320], hazne:1400, adim:350};
 /* 4 kapalı göz · ürün çapı 300 → iç 360×360, iç yükseklik 100 (ürün 25 + üst boşluk 75), gövde 165 → 4 göz = 660 mm, taban 700 → üst 1360 (omuz 970: hepsi rahat erişimde) */
-const GOZ_N=4, GOZ_H=165, GOZ_Y0=700;
+const GOZ_N=Math.max(2,Math.min(6,+(new URLSearchParams(location.search).get('goz'))||4)), GOZ_H=165, GOZ_Y0=700;   /* ?goz=3 ile göz sayısı */
 const FIR = Array.from({length:GOZ_N},(_,i)=>[GOZ_Y0+i*GOZ_H, GOZ_Y0+(i+1)*GOZ_H]);
 const FIR_X = {x:[2600,3250], ic:[2670,3180], cx:2925, cz:EKSEN};
 const KESP = {cx:4300, cz:EKSEN, w:560, d:450};
