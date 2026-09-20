@@ -29,7 +29,7 @@ const KOLON = {
 /* İÇECEK ÇEKMECESİ SAĞ UÇTA (Kemal 20 Eyl 2026): K·KESME modülünün altına, QR dolabının hemen soluna alındı →
    2 robotta SAĞ robot içecek için hattın soluna inmez, iki robot birbirini beklemez. ?icecek=sol ile eski yeri. */
 const ICECEK_SAG = new URLSearchParams(location.search).get('icecek')!=='sol';
-if(ICECEK_SAG){ KOLON.KI.x0=3890; KOLON.KI.x1=4510; }
+if(ICECEK_SAG){ KOLON.KI.x0=4020; KOLON.KI.x1=4580; }   /* K·KESME modülünün (4000–4600) İÇİNDE: istasyon = kapalı ürün kuralı, modül sınırını kesmez */
 function icecekPos(tip,kat,k){ const K=KOLON.KI, y0=K.kotlar[kat]+12; return tip==='kola'?(k<16?V(K.x0+216+116*(k%2), y0+EL.KOLA_H/2, 62+75*Math.floor(k/2)):V(K.x0+100, y0+EL.KOLA_H/2, 62+75*(k-16))):V(K.x1-60-100*Math.floor(k/5), y0+EL.TATLI_H/2, 200+95*(k%5)); }
 /* C · TOPPING: 6 hazne tek sıra (pafta: bantlıda v19 yerleri, tablalıda 30 sola) · başlık + hazne kotları */
 const T_BAS = TABLA?[1490,1624]:[1183,1317], T_KAS = TABLA?[1627,1987]:[1320,1680], KAY = TABLA?-30:0;
