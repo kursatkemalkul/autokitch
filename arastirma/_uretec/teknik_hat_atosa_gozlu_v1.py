@@ -125,7 +125,7 @@ YUZ0 = 167.5
 HH = {"hamur": 75.0, "lahm": 60.0, "icecek": 241.0}
 AD = {"hamur": "TAZE PİDE", "lahm": "LAHMACUN", "icecek": "İÇECEK + TATLI · 2 katlı çekmece"}
 CAP = {"hamur": (20, "top"), "lahm": (35, "top"), "icecek": (0, "180 kutu 330 ml + 14 tatlı · 2,6 gün")}
-KOLON = [[(6, "hamur")], [(2, "hamur"), (6, "lahm")], [(7, "lahm")]]   # C: icecek cekmecesi K modulune tasindi
+KOLON = [[(6, "hamur")], [(2, "hamur"), (6, "lahm")], [(6, "lahm"), (1, "icecek")]]
 KOLON_AD = ("K1", "K2", "K3")
 H_B, H_MAK = 1060.0, 2030.0
 X_A, W_A, X_C, W_C, W_B = 0.0, 700.0, 700.0, 1800.0, 2500.0
@@ -287,16 +287,10 @@ def ciz_F(P, taban_parcalar):
 
 
 def ciz_K(P):
-    kabin(X_K, W_K, 0.0, H_MAK, "K · KESME · SPREY · İÇECEK DEPOSU")
+    kabin(X_K, W_K, 0.0, H_MAK, "K · KESME · SPREY")
     kapak(X_K, 33.0, W_K - 33.0, 123.0, P - 60.0)
     kesik(X_K, 60.0, 300.0, 140.0, 330.0, "YAĞ KARTUŞU", INK, "4 L × 2 · ısıtma")
     kesik(X_K, 320.0, 540.0, 140.0, 330.0, "K KARTI", INK, "tahrik")
-    # C secenegi: icecek + tatli cekmecesi K modulunde (QR dolabinin hemen solunda) — 2 katli
-    for kat, (ky0, ky1) in enumerate(((725.0, 829.0), (862.0, 966.0))):
-        d.rectangle([fx(X_K + 20), fy(ky1), fx(X_K + W_K - 20), fy(ky0)], fill=EVC, outline=DOLAP, width=2)
-        txt(fx(X_K + W_K / 2), fy((ky0 + ky1) / 2),
-            ("İÇECEK ÇEKMECESİ · 180 kutu 330 ml" if kat == 0 else "TATLI ÇEKMECESİ · 14 kap"), f7, DOLAP, "mm")
-    txt(fx(X_K + W_K / 2), fy(1000.0), "x 3320–3880 · sağ robot QR'a giderken yanından alır (ray yolu sıfır)", f7, DOLAP, "mm")
     d.rectangle([fx(X_K + 20), fy(P), fx(X_K + W_K - 20), fy(P - 14.0)], fill=EVC, outline=BUZ, width=2)
     txt(fx(X_K + W_K / 2), fy(P - 34.0), "KESME PLAKASI 560 × 450 · kot %s" % sayi(P), f7, BUZ, "mm")
     d.rectangle([fx(X_K + 24), fy(P + 50.0), fx(X_K + 64), fy(P + 2.0)], fill=BG, outline=INK, width=2)
@@ -305,7 +299,7 @@ def ciz_K(P):
     d.ellipse([fx(X_K + 520) - 6, fy(P + 120.0) - 6, fx(X_K + 520) + 6, fy(P + 120.0) + 6], fill=RED)
     txt(fx(X_K + 520), fy(P + 150.0), "SPREY", f7, RED, "mm")
     kapak(X_K, 33.0, W_K - 33.0, P + 355.0, 2028.0, "BOŞ")
-    modul_etiketi(X_K, W_K, "MODÜL K · KESME + İÇECEK", "600 × 830 × 2030 · içecek/tatlı çekmecesi 725–966")
+    modul_etiketi(X_K, W_K, "MODÜL K · KESME", "600 × 830 × 2030")
     olcu_h(fx(X_K), fx(X_K + W_K), fy(H_MAK) - 26, sayi(W_K), f11, INK)
 
 

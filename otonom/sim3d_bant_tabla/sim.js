@@ -19,7 +19,7 @@ const EL = {BILEK:100, AVUC:40, PIM:40, PARMAK:90, PARMAK_W:8, PARMAK_H:30, SAP:
   KUTU:320, KUTU_H:45, KOLA_R:33, KOLA_H:115, TATLI_R:45, TATLI_H:60};
 const YUK = { bos:{L:500,P:-20}, tepsi:{L:500,P:-20}, top:{L:232.5,P:0}, kola:{L:242.5,P:0}, tatli:{L:230,P:-15} };
 const HAT = {yuk:2030, derin:830, B_yuk:1060, boy:5300};
-const MOD = [["A · PRESS",0,700,1060,2030],["B · ÇEKMECE",0,2500,0,1060],["C · TOPPING",700,2500,1060,2030],[(new URLSearchParams(location.search).get("hat")==="goz"?"F · KAPAKLI GÖZ FIRIN":"F · KONVEYÖR FIRIN"),2500,4000,0,2030],["K · KESME" + (new URLSearchParams(location.search).get("icecek")!=="sol" ? " + İÇECEK" : ""),4000,4600,0,2030],["E · KUTU",4600,5300,0,2030]];
+const MOD = [["A · PRESS",0,700,1060,2030],["B · ÇEKMECE",0,2500,0,1060],["C · TOPPING",700,2500,1060,2030],[(new URLSearchParams(location.search).get("hat")==="goz"?"F · KAPAKLI GÖZ FIRIN":"F · KONVEYÖR FIRIN"),2500,4000,0,2030],["K · KESME" + (new URLSearchParams(location.search).get("icecek")==="sag" ? " + İÇECEK" : ""),4000,4600,0,2030],["E · KUTU",4600,5300,0,2030]];
 const KOLON = {
   K1:{x0:62.5,  x1:682.5,  kotlar:[167.5,275.5,383.5,491.5,599.5,707.5], ic:75, tip:"pide", acik:700},
   K2:{x0:717.5, x1:1337.5, kotlar:[167.5,275.5,383.5,476.5,569.5,662.5,755.5,848.5], ic:60, tip:"karma", acik:700},
@@ -28,8 +28,8 @@ const KOLON = {
 };
 /* İÇECEK ÇEKMECESİ SAĞ UÇTA (Kemal 20 Eyl 2026): K·KESME modülünün altına, QR dolabının hemen soluna alındı →
    2 robotta SAĞ robot içecek için hattın soluna inmez, iki robot birbirini beklemez. ?icecek=sol ile eski yeri. */
-const ICECEK_SAG = new URLSearchParams(location.search).get('icecek')!=='sol';
-if(ICECEK_SAG){ KOLON.KI.x0=4020; KOLON.KI.x1=4580; }   /* K·KESME modülünün (4000–4600) İÇİNDE: istasyon = kapalı ürün kuralı, modül sınırını kesmez */
+const ICECEK_SAG = new URLSearchParams(location.search).get('icecek')==='sag';   /* Kemal 20 Eyl: sağa taşıma tek robotta kazanç vermiyor → VARSAYILAN ESKİ YER (K3 üstü). ?icecek=sag ile denenebilir (2 robotta 56→58) */
+if(ICECEK_SAG){ KOLON.KI.x0=4020; KOLON.KI.x1=4580; }   /* yalnız ?icecek=sag ile */   /* K·KESME modülünün (4000–4600) İÇİNDE: istasyon = kapalı ürün kuralı, modül sınırını kesmez */
 function icecekPos(tip,kat,k){ const K=KOLON.KI, y0=K.kotlar[kat]+12; return tip==='kola'?(k<16?V(K.x0+216+116*(k%2), y0+EL.KOLA_H/2, 62+75*Math.floor(k/2)):V(K.x0+100, y0+EL.KOLA_H/2, 62+75*(k-16))):V(K.x1-60-100*Math.floor(k/5), y0+EL.TATLI_H/2, 200+95*(k%5)); }
 /* C · TOPPING: 6 hazne tek sıra (pafta: bantlıda v19 yerleri, tablalıda 30 sola) · başlık + hazne kotları */
 const T_BAS = TABLA?[1490,1624]:[1183,1317], T_KAS = TABLA?[1627,1987]:[1320,1680], KAY = TABLA?-30:0;
@@ -56,12 +56,12 @@ const GOZ_DX = GOZ?-700:(FIRIN_N-4)*350;   /* konveyör kısalırsa/uzarsa sağd
 const KAYDIR = GOZ_DX!==0;
 if(KAYDIR){ KESP.cx+=GOZ_DX; KUT.x[0]+=GOZ_DX; KUT.x[1]+=GOZ_DX; KUT.cx+=GOZ_DX;
   QR.x[0]+=GOZ_DX; QR.x[1]+=GOZ_DX; QR.kol.forEach(k=>{ k[0]+=GOZ_DX; k[1]+=GOZ_DX; });
-  if(GOZ){ KOLON.KI.x0=3320; KOLON.KI.x1=3880; } else { KOLON.KI.x0+=GOZ_DX; KOLON.KI.x1+=GOZ_DX; }
+  if(ICECEK_SAG){ if(GOZ){ KOLON.KI.x0=3320; KOLON.KI.x1=3880; } else { KOLON.KI.x0+=GOZ_DX; KOLON.KI.x1+=GOZ_DX; } }
   HAT.boy+=GOZ_DX; DUVAR_X[1]+=GOZ_DX; RAY_X=[200,5100+GOZ_DX];
   MOD.length=0; const fx=GOZ?3300:(4000+GOZ_DX);
   MOD.push(['A · PRESS',0,700,1060,2030],['B · ÇEKMECE',0,2500,0,1060],['C · TOPPING',700,2500,1060,2030],
     [GOZ?('F · '+GOZ_N+' GÖZLÜ FIRIN'):('F · KONVEYÖR FIRIN · '+FIRIN_N+' ÜRÜN'),2500,fx,0,2030],
-    ['K · KESME + İÇECEK',fx,fx+600,0,2030],['E · KUTU',fx+600,fx+1300,0,2030]); }
+    [(ICECEK_SAG?'K · KESME + İÇECEK':'K · KESME'),fx,fx+600,0,2030],['E · KUTU',fx+600,fx+1300,0,2030]); }
 function PRES(){ return TABLA?{x:[53,647], y:[PK,PK+220], z:[-650,0], cx:350, cz:EKSEN, plaka:PK}:{x:[53,647], y:[PK,PK+220], z:[-650,0], cx:350, cz:-440, plaka:PK}; }
 const carPres=()=>PRES().cx+400;
 /* hızlar · süreler — kaynak/varsayım notu index.html altında */
