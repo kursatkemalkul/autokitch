@@ -12,7 +12,7 @@ function siparisler(cfg){ const o=[], rnd=rng(cfg.seed*7919+13);
   o.sort((a,b)=>a.arr-b.arr); o.forEach((x,i)=>{ x.id=i+1; x.nesneler=[]; x.goz=-1; x.kutuSay=0; x.kolaTeslim=!x.kola; x.tatliTeslim=!x.tatli; x.teslim=null; }); return o; }
 
 /* ================= STOK KONUMLARI (MODÜL B = HAT v19) ================= */
-const OPT={tek:true, wip:8, kutuSure:46, takt:0, ic2:false};   /* ic2: içecek + tatlıyı İKİNCİ ROBOT taşır (ana robot yalnız hamur + kutu) → iki robotlu hattın üst sınırı */   /* wip: makinede aynı anda en çok ürün (hamurdan teslimata · CONWIP) · kutuSure: robot kutulama ağzına vardıktan sonra boş tepsi + açık kutunun yeniden hazır olmasına kadar geçen süre (ileri bakış için) */
+const OPT={cikarSol:false, tek:true, wip:8, kutuSure:46, takt:0, ic2:false};   /* ic2: içecek + tatlıyı İKİNCİ ROBOT taşır (ana robot yalnız hamur + kutu) → iki robotlu hattın üst sınırı */   /* wip: makinede aynı anda en çok ürün (hamurdan teslimata · CONWIP) · kutuSure: robot kutulama ağzına vardıktan sonra boş tepsi + açık kutunun yeniden hazır olmasına kadar geçen süre (ileri bakış için) */
 function topPos(kolon,sira,k){ const K=KOLON[kolon], kot=K.kotlar[sira], y=kot+15+EL.TOP_R;
   if(kolon==='K1'||(kolon==='K2'&&sira<2)) return V(K.x0+115+130*(k%4), y, 70+135*Math.floor(k/4));
   return V(K.x0+100+105*(k%5), y, 68+91*Math.floor(k/5)); }
@@ -49,6 +49,9 @@ function planla(cfg){
     o.res.forEach(q=>{ if(q.t1>t0+1e-6&&q.t0<t1-1e-6&&q.hi>lo&&q.lo<hi) en=Math.max(en,q.t1); }); return en; };
   const vF=FIRIN.hazne/HIZ.pisme, firinSure=(FIRIN.x[1]-FIRIN.x[0])/vF, girisAralik=Math.max(FIRIN.adim/vF,OPT.takt||0);   /* fırına girişler arası: en az ürün adımı (350 mm) · TAKT verilirse robotun ürün başına işine göre seyreltilir → kutular robotun yetişebileceği aralıkla çıkar */
   const MK={presBos:0, bantSon:-1e9, durus:[], firinBos:0, plakaBos:0, katlaBitis:0, kutuKonT:0, kutuHazir:HIZ.kutuKoy, kuyruk:[], tur:[]};
+  const G=GOZ?FIR.map((f,g)=>({g,p:null})):[];   /* 4 kapalı göz · her ürüne kendi süresi (pide 240 / lahmacun 120) */
+  const pisme=tip=>GOZ?(tip==='pide'?HIZ.firinPide:HIZ.firinLahm):HIZ.pisme;
+  MK.tablaBos=0;   /* gözlü hatta tabla, robot ürünü alana kadar fırın ucunda dolu bekler */
   MK.katlaBitis=HIZ.katla;                                                                                  // t=0: bir katlanmış kutu tepside hazır, ikincisi katlanıyor
   let t=0, sonBitis=0; const sayac={sikisma:0,presBek:0,kutuBek:0};
   /* bant: t0 anından sonra bandın mm kadar ilerlediği an (duruşlar atlanır) · iki an arasında bandın aldığı yol */
@@ -69,16 +72,23 @@ function planla(cfg){
       const nominal=4*tz+HIZ.pres+Math.abs(noz.x-TAB.pres)/v+doz0+HIZ.geriEm+Math.abs(TAB.firin-noz.x)/v+HIZ.siyir+HIZ.it+(TAB.firin-TAB.pres)/v, doz=doz0+Math.max(0,HIZ.atosaTur-nominal); p.dozSure=doz;
       const ekle=(ad,s)=>{ f[ad]=[tt,tt+s]; tt+=s; };
       ekle('ors',tz); ekle('pres',HIZ.pres); ekle('kalk',tz); ekle('git1',Math.abs(noz.x-TAB.pres)/v); ekle('agiz',tz); ekle('doz',doz); ekle('em',HIZ.geriEm); ekle('in',tz); ekle('git2',Math.abs(TAB.firin-noz.x)/v);
+      if(GOZ){ f.hazir=tt; p.stage='tabladaHazir'; p.readyAt=tt; MK.presBos=1e12; MK.tablaBos=1e12; return; }   /* tabla fırın ucunda robotu bekler */
       const bek=Math.max(0,MK.firinBos-(tt+HIZ.siyir+HIZ.it)); ekle('firinBek',bek); ekle('siyir',HIZ.siyir); ekle('it',HIZ.it);
       f.firin=[tt,tt+firinSure]; MK.firinBos=tt+girisAralik; f.don=[tt,tt+(TAB.firin-TAB.pres)/v]; MK.presBos=f.don[1]; MK.tur.push(MK.presBos-td); }
     p.plakaGelis=f.firin[1]+HIZ.plakaGecis; p.stage='makinede'; MK.kuyruk.push(p); }
+  /* GÖZLÜ HAT · robot ürünü kesme plakasına bıraktı → gerisi makine (bıçak · sprey · itici · kutu kapağı) */
+  function plakayaKondu(p,tBirak){ const f=p.faz; f.plaka=[tBirak,tBirak];
+    const bas=Math.max(tBirak,MK.plakaBos); if(bas>tBirak+0.05) sayac.sikisma++;
+    f.kes=[bas,bas+HIZ.kesim]; f.sprey=[f.kes[1],f.kes[1]+HIZ.sprey];
+    const it0=Math.max(f.sprey[1],MK.kutuHazir||0); f.kutuBek=[f.sprey[1],it0]; f.kutuIt=[it0,it0+HIZ.itici]; f.kapan=[f.kutuIt[1],f.kutuIt[1]+HIZ.kapan];
+    sayac.kutuBek+=it0-f.sprey[1]; p.kutuKonT=MK.kutuKonT; p.kutudaAt=f.kapan[1]; MK.plakaBos=f.kutuIt[1]; MK.kutuHazir=null; p.stage='makinede'; }
   /* fırından çıkanlar: plaka → kesim → sprey → (açık kutu tepside hazırsa) kutuya it → kapak. Tepsinin dönüş anı bilinmiyorsa (kapalı kutu hâlâ robotu bekliyor) sıradaki ürün çözülemez. */
   function kuyrukIsle(){ while(MK.kuyruk.length&&MK.kutuHazir!==null){ const p=MK.kuyruk.shift(), f=p.faz, gel=p.plakaGelis;
       if(MK.plakaBos>gel+0.05){ sayac.sikisma++; not.push('SIKIŞMA: #'+p.id+' fırın çıkışında '+(MK.plakaBos-gel).toFixed(0)+' sn bekledi (plaka dolu)'); }
       const bas=Math.max(gel,MK.plakaBos); f.plaka=[f.firin[1],f.firin[1]+HIZ.plakaGecis]; f.kes=[bas,bas+HIZ.kesim]; f.sprey=[f.kes[1],f.kes[1]+HIZ.sprey];
       const it0=Math.max(f.sprey[1],MK.kutuHazir); f.kutuBek=[f.sprey[1],it0]; f.kutuIt=[it0,it0+HIZ.itici]; f.kapan=[f.kutuIt[1],f.kutuIt[1]+HIZ.kapan]; sayac.kutuBek+=it0-f.sprey[1];
       p.kutuKonT=MK.kutuKonT; p.kutudaAt=f.kapan[1]; MK.plakaBos=f.kutuIt[1]; MK.kutuHazir=null; } }
-  function tepsiDondu(geriT){ MK.kutuKonT=Math.max(geriT,MK.katlaBitis); MK.kutuHazir=MK.kutuKonT+HIZ.kutuKoy; MK.katlaBitis=MK.kutuKonT+HIZ.katla; kuyrukIsle(); }
+  function tepsiDondu(geriT){ MK.kutuKonT=Math.max(geriT,MK.katlaBitis); MK.kutuHazir=MK.kutuKonT+HIZ.kutuKoy; MK.katlaBitis=MK.kutuKonT+HIZ.katla; if(!GOZ) kuyrukIsle(); }
   function teslimKontrol(o,t1){ if(o.teslim) return; if(P.find(p=>p.o===o&&p.stage!=='bitti'&&p.stage!=='iptal')===undefined&&o.kolaTeslim&&o.tatliTeslim){ o.teslim=t1; const d=dolap.find(d=>d.o===o); if(d){ d.freeAt=t1+HIZ.musteri; plan.push({tip:'musteri',ad:'müşteri '+o.id,t0:d.freeAt,t1:d.freeAt+2,ri:0,ref:o,steps:[{ad:'MÜŞTERİ ALDI · sipariş '+o.id,sure:2,fn:()=>{},bitir:()=>{ o.nesneler.forEach(n=>nesneSil(n)); o.nesneler=[]; }}]}); } } }
   const kopya=c=>({carX:c.carX,tcp:c.tcp.clone(),t:c.t.clone(),u:c.u.clone(),yuk:c.yuk,parmak:c.parmak});
   const KUTU_X=carFor(KUT.cx,KUT.trayY,KUT.cz,1);
@@ -89,18 +99,39 @@ function planla(cfg){
     for(const p of P){ if(p.stage==='makinede'&&p.kutudaAt!==undefined&&p.kutudaAt<=t+yol(KUTU_X)){ const oo=p.o; if(oo.kolaTeslim&&oo.tatliTeslim&&(oo.icBitis||0)<=t&&dolapAl(oo,t)) cands.push({pri:1,p,tip:'KUTU',ready:p.kutudaAt}); } }
     for(const oo of O){ if(oo.arr>t||oo.teslim) continue; const ur=P.filter(p=>p.o===oo), yolda=ur.some(p=>p.stage!=='bekliyor'&&p.stage!=='iptal'), acil=ur.some(p=>p.kutudaAt!==undefined&&p.stage==='makinede'&&p.kutudaAt<=t+90)?0:3;
       if(yolda&&oo.kola&&!oo.kolaTeslim&&dolapAl(oo,t)) cands.push({pri:acil,o:oo,tip:'KOLA',ready:oo.arr}); else if(yolda&&oo.tatli&&!oo.tatliTeslim&&(!oo.kola||oo.kolaTeslim)&&dolapAl(oo,t)) cands.push({pri:acil,o:oo,tip:'TATLI',ready:oo.arr}); }
-    if(MK.presBos<=t+22&&P.filter(q=>q.stage==='makinede').length<OPT.wip){ const p=P.find(p=>p.stage==='bekliyor'&&p.o.arr<=t); if(p) cands.push({pri:6,p,tip:'HAMUR',ready:p.o.arr}); }
+    if(GOZ){
+      /* gözden çıkar → kesme plakası (en acil: ürün gözde bekliyor) */
+      P.forEach(p=>{ if(p.stage!=='firinda') return; const bosGel=Math.max(p.readyAt,MK.plakaBos);
+        if(bosGel<=t+yol(carFor(FIR_X.cx,FIR[p.goz][0]+30,FIR_X.cz,1))+30) cands.push({pri:1.5,p,tip:'CIKAR',ready:bosGel}); });
+      /* tabladan al → boş göze koy */
+      P.forEach(p=>{ if(p.stage!=='tabladaHazir') return; if(!G.some(g=>!g.p)) return;
+        if(p.readyAt<=t+yol(carFor(TAB.firin,PK,EKSEN,1))+30) cands.push({pri:0.5,p,tip:'FIRINA',ready:p.readyAt}); });   /* tabla dolu kaldıkça pres de kilitli → en öncelikli iş */
+    }
+    const wipSay=P.filter(q=>['makinede','tabladaHazir','firinda'].indexOf(q.stage)>=0).length;
+    if(MK.presBos<=t+22&&wipSay<OPT.wip){ const p=P.find(p=>p.stage==='bekliyor'&&p.o.arr<=t); if(p) cands.push({pri:6,p,tip:'HAMUR',ready:p.o.arr}); }
     cands.sort((a,b)=>a.pri-b.pri||a.ready-b.ready);
     let yapildi=false;
     const kutulu=P.find(q=>q.stage==='makinede'&&q.kutudaAt!==undefined), gelSonra=MK.kuyruk.length?MK.kuyruk[0].plakaGelis:Infinity;
     /* İLERİ BAKIŞ: kutu dışı bir iş, sıradaki ürün plakaya gelmeden tepsinin dönmesini geciktirecekse alınmaz (plaka dolu kalır → fırın çıkışı sıkışır) */
     const gecikir=(B,oo)=>{ if(N>1&&r.i===0) return false;   /* 2 robotta hamuru SOL robot koyar, kutu tepsisini geciktirmez */
       if(!kutulu||(oo&&oo===kutulu.o)) return false; const A=t+gecen(B)+Math.abs(B.cur.carX-KUTU_X)/HIZ.ray+2; return A>Math.max(kutulu.kutudaAt,gelSonra-OPT.kutuSure)+0.5; };
-    const benim=c=>N<2||(r.i===0?c.tip==='HAMUR':c.tip!=='HAMUR');
+    /* 2 robot iş bölümü — gözlü hatta CIKAR sağdadır (kesme plakası x 4300 sağ uçta): SOL hamur + fırına koyma, SAĞ gözden alma + kutu + içecek */
+    const solIs=c=>GOZ?(c.tip==='HAMUR'||c.tip==='FIRINA'||(OPT.cikarSol&&c.tip==='CIKAR')):(c.tip==='HAMUR');
+    const benim=c=>N<2||(r.i===0?solIs(c):!solIs(c));
     for(const c of cands){ if(!benim(c)) continue; const cur=kopya(r.cur), B=insaci(cur,1); let ad='', b=null;
       if(c.tip==='HAMUR'){ const p=c.p, s=stokBak(stok,p.tip); if(!s){ p.stage='iptal'; not.push('stok bitti: '+p.tip); continue; } p.kolon=s.kolon; p.sira=s.sira; p.topPos=s.pos; p.yan=s.yan; p.carPres=s.tek?s.yan:carPres();
         ad='#'+p.id+' '+p.tip+' · hamur → '+(TABLA?'tabla':'pres'); const td=G_hamur(B,p,t,MK.presBos); if(gecikir(B,null)){ sayac.ertelenen=(sayac.ertelenen||0)+1; continue; }
         { const ck=cakBekle(r,B,cur.carX,t); if(ck>t+1e-6){ r.t=ck; sayac.rayBek=(sayac.rayBek||0)+(ck-t); yapildi=true; break; } } s.q.k++; b=blok('robot',ad,t,B.st,p,r.i); makineKur(p,td); kuyrukIsle(); }
+      else if(c.tip==='FIRINA'){ const p=c.p, g=G.find(g=>!g.p); if(!g) continue; p.goz=g.g;
+        ad='#'+p.id+' '+p.tip+' · tabladan al → göz '+(g.g+1); const z=G_gozeKoy(B,p,t,p.readyAt);
+        { const ck=cakBekle(r,B,cur.carX,t); if(ck>t+1e-6){ r.t=ck; sayac.rayBek=(sayac.rayBek||0)+(ck-t); yapildi=true; break; } }
+        b=blok('robot',ad,t,B.st,p,r.i); g.p=p; const f=p.faz, v=HIZ.tablaV;
+        f.don=[z,z+(TAB.firin-TAB.pres)/v]; MK.presBos=f.don[1]; MK.tablaBos=f.don[1]; MK.tur.push(f.don[1]-p.td);
+        f.firin=[z,z+pisme(p.tip)]; p.stage='firinda'; p.readyAt=f.firin[1]; }
+      else if(c.tip==='CIKAR'){ const p=c.p; ad='#'+p.id+' · göz '+(p.goz+1)+' → kesme plakası';
+        const hazir=Math.max(p.readyAt,MK.plakaBos), z=G_gozdenAl(B,p,t,hazir);
+        { const ck=cakBekle(r,B,cur.carX,t); if(ck>t+1e-6){ r.t=ck; sayac.rayBek=(sayac.rayBek||0)+(ck-t); yapildi=true; break; } }
+        b=blok('robot',ad,t,B.st,p,r.i); const gz=G.find(x=>x.p===p); if(gz) gz.p=null; plakayaKondu(p,z); }
       else if(c.tip==='KUTU'){ const p=c.p, oo=p.o; ad='#'+p.id+' · kutu → QR göz '+(oo.goz+1)+' → tepsi geri'; const z=G_kutu(B,p,oo,tepsi,t,p.kutudaAt);
         { const ck=cakBekle(r,B,cur.carX,t); if(ck>t+1e-6){ r.t=ck; sayac.rayBek=(sayac.rayBek||0)+(ck-t); yapildi=true; break; } }
         b=blok('robot',ad,t,B.st,p,r.i); b.bitis=1; b.bitisT=z.teslimT; p.stage='bitti'; p.bitti=z.teslimT; p.alT=z.alT; oo.kutuSay++; teslimKontrol(oo,z.teslimT); tepsiDondu(z.geriT); }
@@ -108,8 +139,11 @@ function planla(cfg){
         oo[tip+'Stok']=s; ad='sipariş '+oo.id+' · '+(tip==='kola'?'içecek':'tatlı')+' → QR göz '+(oo.goz+1); G_icecek(B,oo,tip); if(gecikir(B,oo)){ sayac.ertelenen=(sayac.ertelenen||0)+1; continue; }
         { const ck=cakBekle(r,B,cur.carX,t); if(ck>t+1e-6){ r.t=ck; sayac.rayBek=(sayac.rayBek||0)+(ck-t); yapildi=true; break; } } s.q.k++; b=blok('robot',ad,t,B.st,oo,r.i); if(tip==='kola') oo.kolaTeslim=true; else oo.tatliTeslim=true; oo.icBitis=Math.max(oo.icBitis||0,b.t1); b.icecek=1; teslimKontrol(oo,b.t1); }
       r.res.push(Object.assign({t0:b.t0,t1:b.t1},cakAralik(B,cur.carX))); r.cur=B.cur; r.busy+=b.t1-b.t0; r.is[c.tip]=(r.is[c.tip]||0)+1; r.t=b.t1; sonBitis=Math.max(sonBitis,b.t1); yapildi=true; break; }
-    if(!yapildi){ const ev=[]; P.forEach(p=>{ if(p.stage==='bekliyor'&&p.o.arr>t) ev.push(p.o.arr); if(p.stage==='makinede'&&p.kutudaAt!==undefined) ev.push(p.kutudaAt-yol(KUTU_X)); }); if(P.some(p=>p.stage==='bekliyor'&&p.o.arr<=t)) ev.push(MK.presBos-22);
+    if(!yapildi){ const ev=[]; P.forEach(p=>{ if(p.stage==='bekliyor'&&p.o.arr>t) ev.push(p.o.arr); if(p.stage==='makinede'&&p.kutudaAt!==undefined) ev.push(p.kutudaAt-yol(KUTU_X));
+      if(GOZ&&(p.stage==='firinda'||p.stage==='tabladaHazir')) ev.push(p.readyAt); });
+    if(GOZ&&MK.plakaBos>t) ev.push(MK.plakaBos); { if(P.some(p=>p.stage==='bekliyor'&&p.o.arr<=t)) ev.push(MK.presBos-22);
       dolap.forEach(d=>{ if(d.freeAt>t&&isFinite(d.freeAt)) ev.push(d.freeAt); }); O.forEach(q=>{ if((q.icBitis||0)>t) ev.push(q.icBitis); });
+      }
       if(N>1) RBT.forEach(q=>{ if(q!==r&&isFinite(q.t)&&q.t>t) ev.push(q.t); });
       const nx=ev.filter(x=>x>t+1e-6); if(nx.length) r.t=Math.min(...nx); else if(P.some(p=>p.stage==='makinede'||p.stage==='bekliyor')) r.t=t+5; else r.t=Infinity; }
   }
@@ -123,6 +157,7 @@ function planla(cfg){
   return {plan,kpi,tepsi,O,P,N:1,bantYol};
 }
 /* ürünün makine içindeki yolculuğu → oynatıcı adımları (doğrusal zaman · lin) */
+const pismeSn=tip=>GOZ?(tip==='pide'?HIZ.firinPide:HIZ.firinLahm):HIZ.pisme;
 function makineBlok(p,plan,tepsi){ const f=p.faz, P_=PRES(), st=[], u={tip:'urun',pos:V(P_.cx,PK,P_.cz),icerik:'top',dolu:0,urun:p.tip,rot:0}; p.urunN=u; let son=p.td;
   const adim=(ar,ad,fn,basla,bitir)=>{ if(!ar) return; if(ar[0]>son+1e-6) st.push({ad:'bekliyor',sure:ar[0]-son,lin:true,fn:()=>{}}); if(ar[1]-ar[0]>1e-6){ st.push({ad,sure:ar[1]-ar[0],lin:true,fn:fn||(()=>{}),basla,bitir}); } else { if(basla||bitir) st.push({ad,sure:0.001,lin:true,fn:()=>{},basla,bitir}); } son=Math.max(son,ar[1]); };
   const presFn=e=>{ const a=e<.4?e/.4:e>.6?(1-e)/.4:1; S.ustPlakaY=a*190; if(e>.45) u.icerik='taban'; }, goster=()=>{ u.icerik='top'; u.dolu=0; u.rot=0; u.pos.set(P_.cx,PK,P_.cz); nesneGoster(u); };
@@ -144,13 +179,15 @@ function makineBlok(p,plan,tepsi){ const f=p.faz, P_=PRES(), st=[], u={tip:'urun
     adim(f.doz,(p.tip==='pide'?'KAŞAR':'HARÇ')+' DOZAJI · tabla döner + kayar',e=>{ tb.rot=e*Math.PI*4; tb.x=noz.x+60*Math.sin(e*Math.PI*2); tb.y=PK+TAB.kalk; u.icerik='ustlu'; u.dolu=e; tasi(); S.akis={x:noz.x,z:EKSEN,renk,y0:PK+TAB.kalk+12,sahip:u}; },null,()=>{ u.dolu=1; tb.x=noz.x; if(S.akis&&S.akis.sahip===u) S.akis=null; });
     adim(f.em,'helezon geri emer · klape kapanır'); adim(f.in,'tabla iner',e=>{ tb.y=PK+TAB.kalk*(1-e); tasi(); });
     adim(f.git2,'tabla → fırın ağzı',e=>{ tb.x=noz.x+(TAB.firin-noz.x)*e; tb.y=PK; tasi(); });
-    adim(f.firinBek,'fırın sırası bekleniyor'); adim(f.siyir,'itici iner (ürünün arkasına)');
-    adim(f.it,'itici ürünü fırın bandına iter',e=>{ u.pos.set(TAB.firin+(FIRIN.x[0]-TAB.firin)*e,PK,EKSEN); });
-    plan.push({tip:'makine',ad:'tabla dönüşü #'+p.id,t0:f.don[0],t1:f.don[1],ri:0,ref:p,steps:[{ad:'tabla pres altına döner (boş)',sure:f.don[1]-f.don[0],lin:true,fn:e=>{ tb.x=TAB.firin+(TAB.pres-TAB.firin)*e; tb.y=PK; tb.rot=0; }}]});
+    if(GOZ){ adim(f.hazir?[f.hazir,f.hazir]:null,'tabla fırın ucunda · robot bekleniyor'); }
+    else { adim(f.firinBek,'fırın sırası bekleniyor'); adim(f.siyir,'itici iner (ürünün arkasına)');
+    adim(f.it,'itici ürünü fırın bandına iter',e=>{ u.pos.set(TAB.firin+(FIRIN.x[0]-TAB.firin)*e,PK,EKSEN); }); }
+    if(f.don) plan.push({tip:'makine',ad:'tabla dönüşü #'+p.id,t0:f.don[0],t1:f.don[1],ri:0,ref:p,steps:[{ad:'tabla pres altına döner (boş)',sure:f.don[1]-f.don[0],lin:true,fn:e=>{ tb.x=TAB.firin+(TAB.pres-TAB.firin)*e; tb.y=PK; tb.rot=0; }}]});
   }
-  adim(f.firin,'KONVEYÖR FIRIN · '+HIZ.pisme+' s',e=>{ u.pos.set(FIRIN.x[0]+(FIRIN.x[1]-FIRIN.x[0])*e,PK,EKSEN); if(e>.72) u.icerik='pismis'; },null,()=>{ u.icerik='pismis'; });
+  if(GOZ){ if(f.firin) adim(f.firin,'GÖZ '+((p.goz||0)+1)+' · '+Math.round(pismeSn(p.tip))+' s pişiyor',e=>{ if(e>.72) u.icerik='pismis'; },null,()=>{ u.icerik='pismis'; }); }
+  else adim(f.firin,'KONVEYÖR FIRIN · '+HIZ.pisme+' s',e=>{ u.pos.set(FIRIN.x[0]+(FIRIN.x[1]-FIRIN.x[0])*e,PK,EKSEN); if(e>.72) u.icerik='pismis'; },null,()=>{ u.icerik='pismis'; });
   if(f.plaka){
-    adim(f.plaka,'fırın çıkışı → kesme plakası',e=>{ u.pos.set(FIRIN.x[1]+(KESP.cx-FIRIN.x[1])*e,PK,EKSEN); });
+    if(!GOZ) adim(f.plaka,'fırın çıkışı → kesme plakası',e=>{ u.pos.set(FIRIN.x[1]+(KESP.cx-FIRIN.x[1])*e,PK,EKSEN); }); else son=Math.max(son,f.plaka[1]);
     adim(f.kes,'YILDIZ BIÇAK · '+HIZ.kesim+' s',e=>{ const a=e<.5?e*2:2-e*2; S.bicakY=a*200; },null,()=>{ S.bicakY=0; });
     adim(f.sprey,'TEREYAĞI SPREYİ · '+HIZ.sprey+' s'); adim(f.kutuBek,'kutu / tepsi bekleniyor');
     const kN={tip:'kutu',pos:V(KUT.cx,KUT.trayY+5+EL.KUTU_H/2,KUT.cz),kapali:false,kapanma:0,icerik:''}; p.kutuN=kN;

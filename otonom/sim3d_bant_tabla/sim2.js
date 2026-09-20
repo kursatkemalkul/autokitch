@@ -29,6 +29,7 @@ function ciz(){
     else { if(o.tip==='tepsi') tepsiGoster(o.mesh,o,o.pos,new THREE.Quaternion()); else { o.mesh.position.copy(o.pos); if(o.yatik) o.mesh.quaternion.copy(QX); else o.mesh.quaternion.set(0,0,0,1); } if(o.tip==='kutu') kutuGoster(o.mesh,o); } });
   /* makine hareketleri */
   if(!TABLA) altPlaka.position.set(P.cx,P.plaka-6,P.cz); ustPlaka.position.set(P.cx,P.plaka+230-S.ustPlakaY,P.cz); presAgiz.position.y=(P.y[0]+P.y[1])/2;
+  if(GOZ) firinKapak.forEach(q=>{ const a=S.kapak[q.g]||0; q.m.position.set(FIR_X.cx, q.f[0]+20+(q.f[1]-q.f[0]-40)/2 + a*(q.f[1]-q.f[0]-26), -8); });
   bicak.position.set(KESP.cx,PK+230-S.bicakY,KESP.cz); itici.position.set(KESP.cx-200+S.itme*(KUT.cx-KESP.cx),PK+30,KESP.cz);
   if(TABLA){ tablaM.position.set(S.tabla.x,S.tabla.y-6,EKSEN); tablaM.rotation.y=S.tabla.rot||0; const y0=1120, y1=S.tabla.y-12; tablaKol.scale.set(1,Math.max(1,y1-y0),1); tablaKol.position.set(S.tabla.x,(y0+y1)/2,EKSEN); }
   Object.entries(KOLON).forEach(([kk,K])=>{ const a=S.cek[kk]||0, m=cekMesh[kk]; m.visible=a>0.02; if(m.visible){ const y=K.kotlar[S.cekI[kk]]; m.scale.z=Math.max(.01,a); m.position.set((K.x0+K.x1)/2,y+(K.tip==='icecek'?17:(K.ic+30)/2),a*K.acik/2); } });
@@ -149,6 +150,36 @@ function G_hamur(B,p,t0,hazirAt){ const P=PRES(), ballH={tip:'top',pos:p.topPos.
   B.parmak('parmaklar açılır · top '+(TABLA?'tablada':'alt plakada'),120,()=>{ nesneSil(ballH); }); const birakT=t0+gecen(B);
   B.mv('el ağızdan çıkar',{tcp:V(P.cx,by,120)},HIZ.orta); B.parmak('parmaklar 70',70); B.yuk('boş el','bos');
   return birakT; }
+/* ---- GÖZLÜ HAT (?hat=goz) · robot kürekle taşır ----
+   G_gozeKoy : tabla fırın ucunda bekler → robot kürekle ürünü alır → göz kapağı açılır → taşa sürer → kürek çekilir → kapak kapanır
+   G_gozdenAl: kapak açılır → kürek taşın üstüne girer → pişmiş ürünü alır → kesme plakasına bırakır (gerisi makine) */
+function G_gozeKoy(B,p,t0,hazirAt){ const g=p.goz, f=FIR[g], taban=f[0]+30, ag=(f[0]+f[1])/2, u=p.urunN;
+  B.tasima('taşıma pozu'); B.kay('→ tabla · fırın ucu',carFor(TAB.firin,PK,EKSEN,1)); B.mv('kürek tabla kotuna',{tcp:V(TAB.firin,PK+8,TZ)});
+  const bek=hazirAt-(t0+gecen(B)); if(bek>0.05) B.bekle('tabla dozajı bitiriyor · bekle',bek+0.3);
+  gir(B,'kürek tablanın altına sürülür',V(TAB.firin,PK+8,EKSEN),HIZ.ince);
+  B.bekle('ürün küreğe sıyrılır',HIZ.siyir,null,()=>{ if(u) u.kurek=true; });
+  B.yuk('ürün kürekte','tepsi',()=>{ if(u) S.tasi=u; });
+  B.mv('kürek kalkar',{tcp:V(TAB.firin,PK+40,EKSEN)},HIZ.mikro); B.mv('kürek çıkar',{tcp:V(TAB.firin,PK+40,TZ)},HIZ.orta);
+  B.bol('fırına koy'); B.kay('→ fırın göz '+(g+1)+' · kapak yolda açılır',carFor(FIR_X.cx,taban,FIR_X.cz,1),null,kapakAnim('fir',g,1));
+  B.mv('göz ağzı hizası',{tcp:V(FIR_X.cx,taban+25,TZ)}); gir(B,'kürek göze girer',V(FIR_X.cx,taban+25,FIR_X.cz));
+  B.mv('kürek taşa iner',{tcp:V(FIR_X.cx,taban+8,FIR_X.cz)},HIZ.mikro);
+  { const a=B.snap(), b=a.tcp.clone(); b.z=TZ;
+    B.elle({ad:'kürek geri çekilir · ürün taşın üstünde kalır',sure:1.6,fn:e=>{ S.tcp.lerpVectors(a.tcp,b,e); if(e>.5&&u&&u.kurek){ u.kurek=false; S.tasi=null; u.pos.set(FIR_X.cx,taban+12,FIR_X.cz); } }},b,0); }
+  B.yuk('boş kürek','bos',()=>{ S.tasi=null; });
+  B.kapak('fırın kapağı kapanır','fir',g,0);
+  return t0+gecen(B); }
+function G_gozdenAl(B,p,t0,hazirAt){ const g=p.goz, f=FIR[g], taban=f[0]+30, u=p.urunN;
+  B.tasima('taşıma pozu'); B.kay('→ fırın göz '+(g+1)+' · kapak yolda açılır',carFor(FIR_X.cx,taban,FIR_X.cz,1),null,kapakAnim('fir',g,1,null,()=>{ if(u){ u.icerik='pismis'; } }));
+  const bek=hazirAt-(t0+gecen(B)); if(bek>0.05) B.bekle('ürün pişiyor · bekle',bek+0.3);
+  B.mv('göz ağzı hizası',{tcp:V(FIR_X.cx,taban+8,TZ)}); gir(B,'kürek ürünün altına sürülür',V(FIR_X.cx,taban+8,FIR_X.cz),HIZ.ince);
+  B.bekle('ürün küreğe alınır',HIZ.siyir); B.yuk('pişmiş ürün kürekte','tepsi',()=>{ if(u) S.tasi=u; });
+  B.mv('kürek kalkar',{tcp:V(FIR_X.cx,taban+35,FIR_X.cz)},HIZ.mikro); B.mv('kürek çıkar',{tcp:V(FIR_X.cx,taban+35,TZ)},HIZ.orta,null,kapakAnim('fir',g,0));
+  B.bol('kesme plakasına'); B.kay('→ kesme plakası',carFor(KESP.cx,PK,KESP.cz,1)); B.mv('plaka hizası',{tcp:V(KESP.cx,PK+30,TZ)});
+  gir(B,'kürek plakanın üstüne',V(KESP.cx,PK+12,KESP.cz),HIZ.ince);
+  { const a=B.snap(), b=a.tcp.clone(); b.z=TZ;
+    B.elle({ad:'kürek geri çekilir · ürün plakada kalır',sure:1.6,fn:e=>{ S.tcp.lerpVectors(a.tcp,b,e); if(e>.5&&S.tasi===u){ S.tasi=null; if(u) u.pos.set(KESP.cx,PK+6,KESP.cz); } }},b,0); }
+  B.yuk('boş kürek','bos',()=>{ S.tasi=null; });
+  return t0+gecen(B); }
 /* G2 · KUTU: kutulama ağzında bekleyen tepsi + kapalı kutu → QR gözü SAĞ bölme → tepsi ağza geri */
 function G_kutu(B,p,o,tray,t0,hazirAt){ const cy=KUT.trayY;
   B.tasima('taşıma pozu'); B.kay('→ kutulama ağzı',carFor(KUT.cx,cy,KUT.cz,1)); B.mv('kutulama: ağız hizası',{tcp:V(KUT.cx,cy,TZ)});
