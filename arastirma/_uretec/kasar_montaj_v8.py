@@ -7,7 +7,7 @@ Katılar kasar_cad_v8'den birebir alınır (ayrı model YOK) → otonom/kaset3d/
 import math, os, sys
 import cadquery as cq
 import kasar_cad_v8 as V
-from kaset_3d_v3 import Mesh, MM, doku_ad, doku_montaj, etiket_yuzu, OUT
+from kaset_3d_v3 import Mesh, MM, doku_ad, doku_montaj, etiket_yuzu, usdz_yaz, OUT
 
 BASLA, ADIM_SURE, HAREKET = 1.4, 1.6, 0.72      # sn · adım süresi · hareketin adım içindeki payı
 
@@ -76,5 +76,19 @@ if __name__ == "__main__":
                "montaj": doku_montaj(["HELEZONU|ÖNDEN SÜR", "YATAK KAPAĞI|ÇEYREK TUR", "KAFES · MİL|TOPUZ · PİM", "TAPAYI ÇIKAR|YUVAYA SÜR"])}
     b = V.glb_yaz(os.path.join(OUT, "kasar_v8_montaj.glb"), par, dokular)
     print("kasar_v8_montaj.glb · %d parca · %d adim · %.1f sn · %.0f KB" % (len(par), len(ADIMLAR), sure, b / 1024.0))
+
+    # ---- AYNI ANİMASYON USDZ'YE (iPhone AR) ----
+    anim = {}
+    for i, (ad_, parcalar, off, tur, ayri) in enumerate(ADIMLAR):
+        t0 = BASLA + i * ADIM_SURE; tL = ADIM_SURE * HAREKET
+        kt0, kt1 = (t0, t0 + tL * 0.55) if ayri else (t0, t0 + tL)
+        at0, at1 = (t0 + tL * 0.55, t0 + tL) if ayri else (t0, t0 + tL)
+        anlar = sorted(set([0.0, kt0, at0, sure] + [kt0 + (kt1 - kt0) * k / 4.0 for k in range(5)] + [at0 + (at1 - at0) * k / 4.0 for k in range(5)]))
+        keys = [(t, tuple(c * MM * (1.0 - ease(t, kt0, kt1)) for c in off), -360.0 * tur * (1.0 - ease(t, at0, at1))) for t in anlar]
+        for p_ in parcalar: anim[p_] = dict(pivot=(0.0, V.CY * MM, 0.0) if tur else None, keys=keys)
+    b2, prim, sorun, uyari = usdz_yaz([os.path.join(OUT, "kasar_v8_montaj.usdz")], "kasar_v8_montaj",
+                                      [(a_, m_, mal_) for a_, m_, mal_, g_ in par], dokular, anim=anim, fps=30.0, sure=sure)
+    print("kasar_v8_montaj.usdz · %.0f KB · %d prim · USD denetimi: %s" % (b2 / 1024.0, prim, "GECTI" if not sorun else "KALDI"))
+    for x in sorun: print("   HATA:", x)
     for i, (ad, p, o, t, a) in enumerate(ADIMLAR):
         print("  %2d  %5.1f sn  %-48s %d parca" % (i + 1, BASLA + i * ADIM_SURE, ad, len(p)))

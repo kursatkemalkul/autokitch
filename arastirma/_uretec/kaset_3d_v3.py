@@ -517,7 +517,10 @@ def _temiz_ad(a):
     return a if re.match(r"^[A-Za-z_]", a) else "_" + a
 
 
-def usdz_yaz(yol, kok, parcalar, dokular):
+def usdz_yaz(yol, kok, parcalar, dokular, anim=None, fps=30.0, sure=0.0):
+    """anim: {parca_adi: dict(pivot=(x,y,z) ya da None, keys=[(saniye, (tx,ty,tz), rotZ_derece), ...])}
+    verilirse USDZ ANİMASYONLU çıkar (iPhone Quick Look zaman aralığını kendi oynatır). Anahtar kare seyrek olabilir,
+    USD aralarını doğrusal dolduruyor. anim=None ise dosya eskisi gibi durağan."""
     import shutil, tempfile
     from pxr import Usd, UsdGeom, UsdShade, Sdf, Gf, Vt, UsdUtils
     tmp = tempfile.mkdtemp(prefix="ak_usdz_")                        # ASCII yol: USD araclari Turkce karakterli yolda takilmasin
@@ -527,6 +530,8 @@ def usdz_yaz(yol, kok, parcalar, dokular):
     st = Usd.Stage.CreateNew(usdc)
     UsdGeom.SetStageUpAxis(st, UsdGeom.Tokens.y); UsdGeom.SetStageMetersPerUnit(st, 1.0)
     kokp = UsdGeom.Xform.Define(st, "/" + kok); st.SetDefaultPrim(kokp.GetPrim()); Usd.ModelAPI(kokp.GetPrim()).SetKind("component")
+    if anim:
+        st.SetTimeCodesPerSecond(fps); st.SetFramesPerSecond(fps); st.SetStartTimeCode(0.0); st.SetEndTimeCode(sure * fps)
     mats = {}
     for k, d in MALZEME.items():
         yolm = "/%s/Mat/%s" % (kok, k)
@@ -562,6 +567,16 @@ def usdz_yaz(yol, kok, parcalar, dokular):
             UsdGeom.PrimvarsAPI(me).CreatePrimvar("st", Sdf.ValueTypeNames.TexCoord2fArray, UsdGeom.Tokens.vertex).Set(
                 Vt.Vec2fArray([Gf.Vec2f(u[0], 1.0 - u[1]) for u in m.UV]))
         UsdShade.MaterialBindingAPI.Apply(me.GetPrim()).Bind(mats[mal])
+        if anim and adi in anim:                                  # ops SIRAYLA uygulanir: -pivot -> rotZ -> +pivot -> ofset
+            A = anim[adi]; pv = A.get("pivot"); rop = None
+            if pv:
+                me.AddTranslateOp(opSuffix="pivotIn").Set(Gf.Vec3d(-pv[0], -pv[1], -pv[2]))
+                rop = me.AddRotateZOp()
+                me.AddTranslateOp(opSuffix="pivotOut").Set(Gf.Vec3d(pv[0], pv[1], pv[2]))
+            top = me.AddTranslateOp(opSuffix="ofset")
+            for ts, tr, rz in A["keys"]:
+                tc = ts * fps; top.Set(Gf.Vec3d(tr[0], tr[1], tr[2]), tc)
+                if rop is not None: rop.Set(float(rz), tc)
     st.GetRootLayer().Save()
     cikti = os.path.join(tmp, kok + ".usdz")
     if not UsdUtils.CreateNewARKitUsdzPackage(Sdf.AssetPath(usdc), cikti): raise RuntimeError("ARKit paketi olusturulamadi: " + kok)
