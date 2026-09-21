@@ -33,6 +33,12 @@
   .ikinci{display:none;width:100%;margin-top:10px;padding:12px;border:1px solid var(--line);border-radius:12px;background:var(--panel);color:#fff;font-size:14.5px;font-weight:600;cursor:pointer}
   .akis{display:block;margin:14px 0 4px;padding:14px;border:1px solid #6b5a1e;border-radius:12px;background:#2a2410;color:#ffd24a;font-size:15px;font-weight:600;text-align:center}
   a{color:var(--blue);text-decoration:none;font-size:14px}
+  .arsiv{margin:-4px 0 14px;border:1px solid var(--line);border-radius:12px;background:#151517;padding:12px 14px}
+  .arsiv summary{color:var(--gray-l);font-size:14px;font-weight:600;cursor:pointer;list-style:none}
+  .arsiv summary::-webkit-details-marker{display:none}
+  .arsiv summary::before{content:"▸ ";color:var(--gray)}
+  .arsiv[open] summary::before{content:"▾ "}
+  .arsiv .tab{font-size:14px;font-weight:500;flex:1 1 44%}
 </style>
 <script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script>
 </head>
@@ -44,12 +50,19 @@
   <div class="tabs">
     <div class="tab on" data-m="kasar_v6">Kaşar kabı v6 · üretim</div>
     <div class="tab" data-m="kasar_v6_dozaj">v6 · dozaj düzeni</div>
-    <div class="tab" data-m="kasar_v5">v5 (eski · görsel)</div>
-    <div class="tab" data-m="kasar_v4">v4 (eski · ortadan)</div>
     <div class="tab" data-m="kaset_v3">Standart kaset</div>
-    <div class="tab" data-m="kasar_v3">Kaşar v3 (eski)</div>
-    <div class="tab" data-m="kaset">sade kutu</div>
   </div>
+
+  <details class="arsiv">
+    <summary>Eski sürümler · arşiv</summary>
+    <div class="tabs" style="margin:12px 0 2px">
+      <div class="tab" data-m="kasar_v5">Kaşar v5 · görsel</div>
+      <div class="tab" data-m="kasar_v4">Kaşar v4 · ortadan</div>
+      <div class="tab" data-m="kasar_v3">Kaşar v3</div>
+      <div class="tab" data-m="kaset">sade kutu</div>
+    </div>
+    <div class="note" style="margin-top:10px">Bunlar yalnız kayıt için duruyor, üretime gitmez. Eski akış sayfaları: <a href="akis_v5.html">akış v5</a> · <a href="akis_v4.html">akış v4</a></div>
+  </details>
 
   <model-viewer id="mv" src="kasar_v6.glb" ios-src="kasar_v6.usdz" alt="Kaset" autoplay animation-name="calis"
     ar ar-modes="webxr scene-viewer quick-look" ar-scale="fixed" ar-placement="floor"
