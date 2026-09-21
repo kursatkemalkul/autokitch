@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>AUTOKITCH — Kaşar akış hesabı v8</title>
+<title>AUTOKITCH — Kaşar akış hesabı v7</title>
 <meta name="color-scheme" content="only light">
 <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
 <meta name="googlebot" content="noindex, nofollow">
@@ -44,7 +44,7 @@
 </head>
 <body>
 <div class="wrap">
-  <h1>Kaşar akış hesabı · v8</h1>
+  <h1>Kaşar akış hesabı · v7</h1>
   <div class="sub">Üretip deneyeceğin sürüm: çıkış uçtan, kap 280 × 325 × 360, kısa kesim pidelik peynir, porsiyon 55 g, dağıtıcı ve terazi yok. Kaynağı olmayan her sayı <span class="chip v">VARSAYIM</span> işaretli; deneme ile değişir.
   <a href="index.html">3D model + parça listesi →</a> &nbsp; <a href="akis_v5.html">eski v5 →</a></div>
 
@@ -116,12 +116,11 @@
     <p class="kucuk">Vt = π/4 · [(D+2C)² − Dc²] · (p − ts) · verim = 1 / (1 + tan α · tan(φ + α)) · α = atan(p / 2πRe). D 40, boşluk C 2, kanat ts 3 mm. Kapasite arkadan öne artıyor: kaşar kanat arasında sıkışmaz. Kanat aralığı 19–27 mm = parça boyunun 1,9–2,7 katı; mil–tekne arası 14 mm = parça kalınlığının 3,5 katı (CEMA eşiği 1,75–4,5).</p>
   </div>
 
-  <h2>Üretim modeli v8 · denetimler</h2>
+  <h2>Üretim modeli v7 · denetimler</h2>
   <div class="kart karar">
-    <div><b>KATI MODEL</b>43 parça, her biri ayrı geçerli katı (CadQuery / OpenCascade). Parça başına STEP + STL ve SolidWorks'te montaj olarak açılan MONTAJ.step bilgisayarda: <b>AUTOKITCH &#92; arastirma &#92; 3_TOPPING &#92; kasar_kabi_v8</b></div>
+    <div><b>KATI MODEL</b>43 parça, her biri ayrı geçerli katı (CadQuery / OpenCascade). Parça başına STEP + STL ve SolidWorks'te montaj olarak açılan MONTAJ.step bilgisayarda: <b>AUTOKITCH &#92; arastirma &#92; 3_TOPPING &#92; kasar_kabi_v7</b></div>
     <div><b>ÇAKIŞMA TARAMASI</b>Her parça çifti için ortak hacim hesaplandı: <b>iç içe geçen parça yok</b>. Helezon ve karıştırıcı 30°, 60°, 90°, 135° döndürülüp sabit parçalara karşı yeniden tarandı: temiz.</div>
     <div><b>v7 · KONİK KÖK GERİ KONDU</b>v6'da helezon baştan sona düz Ø16 çizilmişti; v5'te olan 60 mm'lik konik kök (Ø26 → Ø16) CadQuery ile yeniden kurulumda düşmüştü. Kemal fark etti, geri kondu. Kapasite arkada <b>15,8</b>, kök bitiminde <b>20,5</b>, B'de 23,6, C'de <b>26,3 mL/tur</b>: boşluk akış yönünde sürekli büyüyor, sıkışma olmuyor. Sabit kesitli helezon yükü yalnız arkadan çeker (<a href="https://www.kwsmfg.com/engineering-guides/screw-conveyor/screw-conveyor-capacity/">KWS</a>); konik kök + artan hatve bunu mil boyuna yayar. Doğrulama: parçanın mil gövdesi <b>23 649 mm³</b> ölçüldü, analitik koni hesabıyla birebir. Kanat yüksekliği arkada 7 mm, kök bitiminden sonra 12 mm.</div>
-    <div><b>SÜREKLİ HATVE</b>Kanat basamaklı değil: hatve z ile doğrusal 22,00 → 30,17 mm. Süpürme kullanılmadı — dört kenar eğrisi (iç/dış × üst/alt) ve aralarındaki ruled yüzeyler dikilip katıya çevrildi, altı yüzlü tek katı. Toplam dönüş 11,75 tur = 47 çeyrek tur: bölme yerleri kare çubuğa tam oturuyor. Ölçüldü: katının üstünde, θ=0 ışınında ardışık turlar arası mesafe tasarım hatvesiyle <b>0,06 mm</b> içinde aynı. Bölünmemiş tek parça hâli de export edildi (307 mm).</div>
     <div><b>KANAT DENETİMİ</b>Basılacak üçgen ağında her 5 mm'lik dilimde kanat ucu ölçüldü: 65 dilimin 65'inde Ø40. İlk denemede OpenCascade “geçerli” dediği katıda kanatları düşürmüş, değişken hatveli süpürmede de kanat yarıçapını 20 → 13 mm çökertmişti; bu denetim yakaladı. Helezon o yüzden tek hatveli 4 segmente bölündü.</div>
     <div><b>KALDIRILANLAR</b>Ağız altındaki menteşeli kapak (yay + menteşe + kol + makinede pim: 5 parça ve peynir tuzağı; kapalı tüp zaten tutuyor) · silikon sıyırıcılar · uyarı etiketleri · asma deliği (o bölge hazne).</div>
   </div>
@@ -143,7 +142,7 @@
 
   <h2>Deneme için yapılacaklar</h2>
   <div class="kart karar">
-    <div><b>1 · YAP</b>Parça listesi 3D sayfasında, dosyalar kasar_kabi_v8 klasöründe. Baskı: helezon A-B-C-D, göbekler, kavramalar, tüp, yatak kapağı, örümcekler, kovan, topuz, tapa. Kesim / freze: iki uç plakası, kapak. Hazır al: 8 × 8 kare çubuk, Ø6 çubuk, M6 saplama, kulp, pimler, vidalar. Gövde: PC ısıl form ya da baskı.</div>
+    <div><b>1 · YAP</b>Parça listesi 3D sayfasında, dosyalar kasar_kabi_v7 klasöründe. Baskı: helezon A-B-C-D, göbekler, kavramalar, tüp, yatak kapağı, örümcekler, kovan, topuz, tapa. Kesim / freze: iki uç plakası, kapak. Hazır al: 8 × 8 kare çubuk, Ø6 çubuk, M6 saplama, kulp, pimler, vidalar. Gövde: PC ısıl form ya da baskı.</div>
     <div><b>2 · ÖLÇ</b>Peynirin parça boyu · 1 litresinin ağırlığı · helezonu 20 tur çevir, her turu tart → tur başına gram ve sapması. Bu üç sayı sayfadaki sürgülere girince devirler kendiliğinden çıkar.</div>
     <div><b>3 · AYARLA</b>Helezon devri = 55 ÷ (tur başına gram) ÷ 10 × 60. Tabla devri = helezon × 0,83. Oran 2,0 ya da 3,0'a denk gelirse tablayı %10 kaydır.</div>
     <div><b>4 · BAK</b>Pideye düşen kaşarın fotoğrafını çek. Topak topaksa pimleri sıklaştır; kenar fazla inceyse dış bekleme süresini uzat. 48 saat +3 °C'de bekletip karıştırıcıyı tekrar dene.</div>
@@ -171,9 +170,7 @@ const $=id=>document.getElementById(id), tr=(x,n=1)=>x.toFixed(n).replace(".",",
 function rnd32(a){return function(){a|=0;a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
 const PORS=55, KG2=8.8, TD=10, MP=0.176;
 const G={CY:40,RT:22,YC:195,HW:134,RS:127,YD:332,L:309,ZB:-154.5,ZF:154.5}; G.YJ=G.YC-Math.sqrt(G.HW*G.HW-G.RT*G.RT);
-const KAN=[[-148,-37,0],[-37,69,0],[69,156,0]];   /* yalnız gösterim bölgeleri — hatve artık bölgeye değil z'ye bağlı */
-/* v8: hatve SÜREKLİ artar — z ile doğrusal 22,00 → 30,17 mm · toplam 11,75 tur (47 çeyrek tur: bölme yerleri kare çubuğa otursun) */
-const KZ0=-148, KZ1=156, HP0=22.0, HP1=30.174, KH=(HP1-HP0)/(KZ1-KZ0), hatveZ=z=>HP0+KH*(Math.min(Math.max(z,KZ0),KZ1)-KZ0);
+const KAN=[[-148,-38,22],[-38,66,26],[66,154.5,30]];
 /* v7: arkada 60 mm KONİK KÖK — mil çapı z=-151'de Ø26, z=-91'de Ø16, sonra sabit */
 const KOK_Z0=-91, KOK_Z1=-151, mil=z=>z>=KOK_Z0?16:Math.min(26,16+10*(KOK_Z0-z)/(KOK_Z0-KOK_Z1));
 const milOrt=(z0,z1)=>{let t=0,k=0;for(let z=z0;z<z1;z+=2){t+=mil(z);k++;}return t/k;};
@@ -187,15 +184,13 @@ function yuk(a){let lo=Y0,hi=352;for(let i=0;i<22;i++){const m=(lo+hi)/2;alan(m)
 
 /* ---------- HESAP ---------- */
 let RHO=.5, FI=30, EF=.6;
-const kapZ=z=>{const r=roberts(40,mil(z),hatveZ(z),FI);return r.Vt*r.eta;};
-const kapOrt=(z0,z1)=>{let t=0,k=0;for(let z=z0;z<z1;z+=2){t+=kapZ(z);k++;}return t/k;};
-const kapSon=()=>{const r=roberts(40,16,hatveZ(KZ1),FI);return r.Vt*r.eta;}, kapUc=()=>{const r=roberts(40,16,36,FI,2);return r.Vt*r.eta;};
+const kapSon=()=>{const r=roberts(40,16,30,FI);return r.Vt*r.eta;}, kapUc=()=>{const r=roberts(40,16,36,FI,2);return r.Vt*r.eta;};
 const gTur=()=>kapSon()*EF*RHO, nHel=()=>PORS/gTur()/TD*60;
 function hesap(){ RHO=+$("s_rho").value/100; FI=+$("s_fi").value; EF=+$("s_ef").value/100;
   $("o_rho").textContent=tr(RHO,2)+" g/mL"; $("o_fi").textContent=FI+"°"; $("o_ef").textContent="%"+Math.round(EF*100);
   const g=gTur(), L=KG2/RHO, V=alan(G.YD)*G.L/1e6-.12, n=nHel();
   $("r_gt").textContent=tr(g,1)+" g"; $("r_tur").textContent=tr(PORS/g,1)+" tur"; $("r_rpm").textContent=Math.round(n)+" · "+Math.round(n*.83)+" dev/dk"; $("r_L").textContent=tr(L,1)+" L · %"+Math.round(100*L/V);
-  KAN.forEach((k,i)=>{$("k"+i).textContent=tr(kapOrt(k[0],k[1]),1)+" mL/tur";}); $("k3").textContent=tr(kapUc(),1)+" mL/tur · doluluk "+tr(kapSon()*EF/kapUc(),2);
+  KAN.forEach((k,i)=>{const r=roberts(40,milOrt(k[0],k[1]),k[2],FI);$("k"+i).textContent=tr(r.Vt*r.eta,1)+" mL/tur";}); $("k3").textContent=tr(kapUc(),1)+" mL/tur · doluluk "+tr(kapSon()*EF/kapUc(),2);
   if(window.SIM2) SIM2.hepsi(); }
 ["s_rho","s_fi","s_ef"].forEach(i=>$(i).oninput=hesap);
 
@@ -207,11 +202,11 @@ const sim1=(()=>{ const c=$("c1"),x=c.getContext("2d"),S=1.13,OX=300,OY=455; con
   function sifir(){ const a0=KG2*1000/RHO*1000/G.L; kol.forEach(k=>{k.a=Math.min(a0,alan(G.YD));k.bos=0;}); t=0;pide=0;kalan=KG2*1000;faz="dok";fazT=0;dok=0;kat=0;parca=[];kopru=false; }
   function adim(dt){ t+=dt; const n=nHel();
     if(faz==="dok"){ const tur=n/60*dt; rot+=tur*2*Math.PI; if(kar) krot+=dt*6/60*2*Math.PI; let tas=0;
-      for(const kn of KAN){ const kap=kapOrt(kn[0],kn[1])*EF*1000*tur; let ist=Math.max(0,kap-tas);
+      for(const kn of KAN){ const r=roberts(40,milOrt(kn[0],kn[1]),kn[2],FI), kap=r.Vt*r.eta*EF*1000*tur; let ist=Math.max(0,kap-tas);
         const ks=kol.filter(k=>k.z>=kn[0]-5&&k.z<kn[1]);
         for(let g=0;g<2&&ist>1e-6;g++){ const uy=ks.filter(k=>kar?k.a>1:k.bos<bogazA()); if(!uy.length)break;
           /* v7: pay eşit değil — her kolon KENDİ z'sindeki kanat boşluğu kadar çeker (konik kök arkayı kısar) */
-          const w=uy.map(k=>kapZ(k.z)), W=w.reduce((a,b)=>a+b,0), ist0=ist;
+          const w=uy.map(k=>{const rl=roberts(40,mil(k.z),kn[2],FI);return rl.Vt*rl.eta;}), W=w.reduce((a,b)=>a+b,0), ist0=ist;
           for(let q=0;q<uy.length;q++){ const k=uy[q], pay=ist0*w[q]/W, v=kar?k.a*dz:(bogazA()-k.bos)*dz, al=Math.min(pay,v); if(kar)k.a-=al/dz; else k.bos+=al/dz; tas+=al; ist-=al; } } }
       const gr=tas/1000*RHO; akis=gr/dt; dok+=gr; kalan-=gr; kat=dok/PORS; kopru=!kar&&kol.some(k=>k.bos>=bogazA()-1&&k.a>bogazA());
       const m=Math.min(6,Math.round(gr*2.5+R())); for(let i=0;i<m;i++) parca.push({z:196+R()*33,y:G.CY-G.RT,vy:0});
@@ -234,7 +229,7 @@ const sim1=(()=>{ const c=$("c1"),x=c.getContext("2d"),S=1.13,OX=300,OY=455; con
     x.moveTo(Z(-180),Y(G.CY+13)); x.lineTo(Z(KOK_Z1),Y(G.CY+13)); x.lineTo(Z(KOK_Z0),Y(G.CY+8)); x.lineTo(Z(233),Y(G.CY+8));
     x.lineTo(Z(233),Y(G.CY-8)); x.lineTo(Z(KOK_Z0),Y(G.CY-8)); x.lineTo(Z(KOK_Z1),Y(G.CY-13)); x.lineTo(Z(-180),Y(G.CY-13)); x.closePath(); x.fill();
     x.strokeStyle="#f2f2ee"; x.lineWidth=6; x.beginPath(); x.moveTo(Z(233),Y(G.CY)); x.lineTo(Z(253),Y(G.CY)); x.stroke();
-    const hat=z=>z<=KZ1?hatveZ(z):36; let th=0; x.strokeStyle="#fff"; x.lineWidth=2.6; x.beginPath();
+    const hat=z=>{for(const k of KAN) if(z>=k[0]&&z<=k[1]+5) return k[2]; return 36;}; let th=0; x.strokeStyle="#fff"; x.lineWidth=2.6; x.beginPath();
     for(let z=-148;z<=156;z+=1){ th+=2*Math.PI/hat(z); const yy=G.CY+20*Math.sin(th-rot); z===-148?x.moveTo(Z(z),Y(yy)):x.lineTo(Z(z),Y(yy)); } x.stroke();
     for(const f of [0,Math.PI]){ let t2=th; x.beginPath(); for(let z=156;z<=194;z+=1){ t2+=2*Math.PI/36; const yy=G.CY+20*Math.sin(t2-rot+f); z===156?x.moveTo(Z(z),Y(yy)):x.lineTo(Z(z),Y(yy)); } x.stroke(); }
     x.strokeStyle="#c9d3dc"; x.lineWidth=2; [201,212.5,224].forEach((z,i)=>{ const a=-rot+i*.96; x.beginPath(); x.moveTo(Z(z),Y(G.CY-19*Math.sin(a))); x.lineTo(Z(z),Y(G.CY+19*Math.sin(a))); x.stroke(); });
@@ -246,7 +241,7 @@ const sim1=(()=>{ const c=$("c1"),x=c.getContext("2d"),S=1.13,OX=300,OY=455; con
     /* tabla + pide */ x.fillStyle="#8d949c"; x.fillRect(Z(212.5-170),Y(-187),340*S,12*S); x.fillStyle="#e8d9ae"; x.fillRect(Z(212.5-140),Y(-179),280*S,8*S); x.fillStyle="#f0bd33"; x.fillRect(Z(212.5-125),Y(-179+Math.min(1,kat)*4),250*S,Math.min(1,kat)*4*S);
     x.fillStyle="#ffd24a"; for(const p of parca) x.fillRect(Z(p.z)-2,Y(p.y)-1,4,2.4);
     x.font="600 12.5px -apple-system,Arial"; const et=(s,z,y,zz,yy,sag)=>{ x.textAlign=sag?"right":"left"; const w=x.measureText(s).width, al=sag?Z(z)-w-5:Z(z)-5, rk=x.fillStyle; x.fillStyle="rgba(8,8,10,.78)"; x.fillRect(al,Y(y)-14,w+10,19); x.fillStyle=rk; x.fillText(s,Z(z),Y(y)); if(zz!==undefined){ x.strokeStyle="#55555a"; x.lineWidth=1; x.beginPath(); x.moveTo(Z(z)+(sag?-2:2),Y(y)+4); x.lineTo(Z(zz),Y(yy)); x.stroke(); } x.textAlign="left"; };
-    x.fillStyle="#a1a1a6"; et("ARKA · 2 × NMRV030 (63 mm)",-258,376); et("ÖN",150,376); et("HATVE SÜREKLİ ARTAR 22 → 30 · arkada konik kök Ø26 → Ø16",-148,-2);
+    x.fillStyle="#a1a1a6"; et("ARKA · 2 × NMRV030 (63 mm)",-258,376); et("ÖN",150,376); et("A · hatve 22 · konik kök Ø26 → Ø16",-148,-2); et("B · 26",-30,-2); et("C · 30",74,-2);
     et("TÜP · 32 mm kapalı · çift ağızlı",404,86,215,64,true); et("AĞIZ 36 × 38 + pimler",404,40,228,18,true); et("ETEK 156 mm",404,-60,241,-60,true); et("197 mm · 0,20 sn · 2,0 m/s",404,-100,undefined,undefined,true);
     et("PİDE Ø280 · tabla dıştan içe yürür",60,-205); x.fillStyle=kar?"#c9d3dc":"#ff6b5e"; et(kar?"KARIŞTIRICI · helezonun tersine, 6 dev/dk":"KARIŞTIRICI KAPALI",-150,338);
     x.fillStyle="#fff"; et("HELEZON sağ el → öne iter · önden bakınca saat yönünde",-150,-24);
@@ -296,7 +291,7 @@ const sim2=(()=>{ const c=$("c2"),x=c.getContext("2d"), NG=58,HC=5,L=NG*HC/2, ER
   const govde=(yr,ox,ad,cy,rt,ym,Rs,rk)=>{ const A=olu(yr,cy,ym,Rs,ox); x.strokeStyle="#9fb4c8"; x.lineWidth=2; x.beginPath(); for(let y=cy-rt;y<=352;y+=1){ const X=ox+yr(y)*S,Yy=425-y*S; y===cy-rt?x.moveTo(X,Yy):x.lineTo(X,Yy);} for(let y=352;y>=cy-rt;y-=1) x.lineTo(ox-yr(y)*S,425-y*S); x.closePath(); x.stroke();
     x.strokeStyle="#2997ff"; x.setLineDash([5,4]); x.beginPath(); x.arc(ox,425-ym*S,Rs*S,0,7); x.stroke(); x.setLineDash([]); x.fillStyle="#f2f2ee"; x.beginPath(); x.arc(ox,425-cy*S,rk*S,0,7); x.fill(); x.fillStyle="#0c0c0e"; x.beginPath(); x.arc(ox,425-cy*S,rk*.35*S,0,7); x.fill();
     x.fillStyle="#fff"; x.font="700 14px -apple-system,Arial"; x.textAlign="center"; x.fillText(ad,ox,452); return A; };
-  const a=govde(yari3,190,"v3 · omuzlar yatık, süpürülmüyor",72,31,245,92,28)*2*390/1e6, b=govde(yari,570,"v8 · kâse = karıştırıcı dairesi",40,22,195,130,20)*2*309/1e6;
+  const a=govde(yari3,190,"v3 · omuzlar yatık, süpürülmüyor",72,31,245,92,28)*2*390/1e6, b=govde(yari,570,"v7 · kâse = karıştırıcı dairesi",40,22,195,130,20)*2*309/1e6;
   x.textAlign="left"; x.fillStyle="#ff6b5e"; x.font="600 12.5px -apple-system,Arial"; x.fillText("kırmızı = kendi akmayan kaşar",20,20); x.fillStyle="#2997ff"; x.fillText("mavi = karıştırıcının süpürdüğü daire",20,38);
   $("s3_sonuc").innerHTML="Peynir kendi akmaz, dik olmayan her duvarda birikir; tek karıştırıcı yalnız bir daire süpürür. Ölü bölgesi olmayan en büyük kesit bu yüzden <b>dik duvar + karıştırıcıyla aynı merkezli yarım daire</b>: kadeh. v3 kesitinde ≈ "+tr(a,1)+" L kaşar kendi akmıyordu; v6/v7 kesitinde "+tr(b,1)+" L (örümcek gözleri kâseye 4 mm). Eşik 60° <span class=\"chip v\">VARSAYIM</span>."; })();
 
