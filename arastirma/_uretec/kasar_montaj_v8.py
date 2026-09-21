@@ -109,28 +109,5 @@ if __name__ == "__main__":
     b3, prim3, sorun3, _u = usdz_yaz([os.path.join(OUT, ONEK + "_calis.usdz")], ONEK + "_calis", calis, dokular, anim=anim2, fps=30.0, sure=D_)
     print(ONEK + "_calis.usdz · %.0f KB · %d hareketli parca · USD denetimi: %s" % (b3 / 1024.0, len(anim2), "GECTI" if not sorun3 else "KALDI"))
 
-    # ---- ADIM ADIM AR: iPhone'un AR görüntüleyicisinde sarma çubuğu YOK ve siteler ekleyemiyor → her adımın DURAĞAN hâli ayrı USDZ ----
-    # k. dosya: 1..k adımların parçaları YERİNDE, sonrakiler geliş konumunda bekliyor (dönüşler dahil) — ofset/dönüş ağa gömülür.
-    def donustur(m, off, tur, pivot):
-        a = -2.0 * math.pi * tur; ca, sa = math.cos(a), math.sin(a); y = Mesh(); y.I = list(m.I); y.UV = m.UV
-        for (px, py, pz), (nx, ny, nz) in zip(m.P, m.N):
-            dx, dy = px - pivot[0], py - pivot[1]
-            y.P.append((pivot[0] + ca * dx - sa * dy + off[0] * MM, pivot[1] + sa * dx + ca * dy + off[1] * MM, pz + off[2] * MM))
-            y.N.append((ca * nx - sa * ny, sa * nx + ca * ny, nz))
-        return y
-    hangi_adim = {}
-    for i, (ad_, parcalar, off, tur, ayri) in enumerate(ADIMLAR):
-        for p_ in parcalar: hangi_adim[p_] = i
-    top = 0
-    for k in range(1, len(ADIMLAR) + 1):
-        L = []
-        for a_, m_, mal_, _g in par:
-            i = hangi_adim.get(a_, 0)
-            if i < k: L.append((a_, m_, mal_))
-            else:
-                _ad, _p, off, tur, _ay = ADIMLAR[i]; L.append((a_, donustur(m_, off, tur, (0.0, V.CY * MM, 0.0)), mal_))
-        bk, _pr, sk, _uy = usdz_yaz([os.path.join(OUT, "%s_adim_%02d.usdz" % (ONEK, k))], "%s_adim_%02d" % (ONEK, k), L, dokular)
-        assert not sk, sk; top += bk
-    print("%s_adim_01..%02d.usdz · toplam %.1f MB" % (ONEK, len(ADIMLAR), top / 1048576.0))
     for i, (ad, p, o, t, a) in enumerate(ADIMLAR):
         print("  %2d  %5.1f sn  %-48s %d parca" % (i + 1, BASLA + i * ADIM_SURE, ad, len(p)))

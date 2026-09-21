@@ -91,7 +91,6 @@
     exposure="1.1" camera-orbit="35deg 70deg 1.6m" min-camera-orbit="auto auto 0.6m">
   </model-viewer>
   <button class="ar" id="arbtn">AR'de gör — gerçek boyut</button>
-  <button class="ikinci" id="aradim">AR'de gör — yalnız bu adım</button>
   <button class="ikinci" id="kasarbtn">Dolguyu gizle — içini gör</button>
   <a class="akis" href="akis.html">Kaşar akış hesabı + simülasyon →</a>
 
@@ -120,13 +119,13 @@ const D = {
          not:"Kaşar kabıyla AYNI mimari, 140 genişlik: uç plakaları, 4 saplama, tahrik göbeği + haç kavrama, bayonet yatak kapağı, topuz + kilit pimi ortak. FARKLAR — kıymalı harç kendi akmaz, yapışır, beklerken su salar: (1) HELEZON büyük ve yavaş: Ø56, mil Ø18, hatve sürekli 36 → 48,5 mm; ≈ 21 dev/dk, uç hızı 0,06 m/s — et ezilmesin, ısınmasın. Tüp içinde tek ağız, ağzın üstüne kadar sürer; çırpıcı pim yok. (2) Kafes yerine BESLEME ROTORU: iki paslanmaz sıyırıcı lama 15 × 3, duvara 2,4 mm, 20° eğik; eti helezon boğazına iter ve salınan suyu geri karıştırır. (3) AĞIZ aşağı bakan 30 × 30 kısa meme: harç ip gibi iner; tüpün ilk 35 mm'si kapalı, macunla dolu durduğu için su damlamaz; doz sonunda helezon çeyrek tur geri alınır. Drenaj yok. Ölçüldü: 41 katı geçerli, iç içe geçen yok, kanat her yerde Ø56, hatve katının üstünde tasarımla 0,15 mm içinde. DOLULUK 0,40 VARSAYIM — macunda gerçek değer ancak denemeyle bulunur."},
   kiyma_v1_montaj:{ad:"Kıyma kaseti v1 · montaj animasyonu", w:140, d:325, h:360, brut:16.4, net:"10,8", usdz:"kiyma_v1_montaj.usdz", adim:"kiyma",
          icerik:"41 parça · 18 adım · 33 saniye", dolu:"—",
-         not:"Kaşar kabıyla aynı sıra; tek fark 12. adım: kafes yerine iki sıyırıcı lamalı besleme rotoru üstten iner. Adıma dokununca animasyon o ana atlar; çubukla ileri geri sarabilirsin. AR'de animasyon kendi kendine döner; iPhone'un AR ekranında sarma çubuğu olmadığı için istediğin adımda durup alttaki 'yalnız bu adım' düğmesiyle o adımı AR'de açabilirsin."},
+         not:"Kaşar kabıyla aynı sıra; tek fark 12. adım: kafes yerine iki sıyırıcı lamalı besleme rotoru üstten iner. Adıma dokununca animasyon o ana atlar; çubukla ileri geri sarabilirsin. AR'de animasyon kendi kendine döner."},
   kiyma_v1_dozaj:{ad:"Kıyma kaseti v1 · dozaj düzeni", w:140, d:325, h:360, brut:16.4, net:"10,8", usdz:"kiyma_v1_calis.usdz", bom:"kiyma_v1",
          icerik:"Kaset + 2 redüktör (DİKEY dizili) + yaylı tahrik yuvaları + konum pimleri + raylar + tepsi + pide", dolu:"kap %59 dolu çizildi",
          not:"Makine tarafı yalnız YERLEŞİM içindir. 140'lık kasette iki NMRV030 yana bakarsa komşu kasetin arkasına taşıyor; o yüzden 90° çevrili, üstteki motor yukarı, alttaki aşağı bakıyor — alttaki motorun indiği yer makinede henüz ayrılmadı, AÇIK İŞ. Meme ile pide arası 48 mm çizildi: macun ipi uzun düşerse kopar; tepsiyi robot bu yüksekliğe getirmeli. Animasyon: helezon ≈ 20 dev/dk, rotor 4 dev/dk ters."},
   kasar_v8_montaj:{ad:"Kaşar kabı v8 · montaj animasyonu", w:280, d:325, h:360, brut:32.8, net:"20,6", usdz:"kasar_v8_montaj.usdz", adim:"kasar",
          icerik:"43 parça · 18 adım · 33 saniye", dolu:"—",
-         not:"Her parça KENDİ takılma yönünden geliyor: gövde ve ön plaka önden, saplamalar arkadan, karıştırıcı kafesi üstten, helezon dönerek önden. Yatak kapağı önce itiliyor sonra çeyrek tur dönüyor. Adıma dokununca animasyon o ana atlar; çubukla ileri geri sarabilirsin. AR'de animasyon kendi kendine döner; iPhone'un AR ekranında sarma çubuğu olmadığı için istediğin adımda durup alttaki 'yalnız bu adım' düğmesiyle o adımı AR'de açabilirsin. Katılar üretim modelinin kendisi — ayrı bir çizim değil."},
+         not:"Her parça KENDİ takılma yönünden geliyor: gövde ve ön plaka önden, saplamalar arkadan, karıştırıcı kafesi üstten, helezon dönerek önden. Yatak kapağı önce itiliyor sonra çeyrek tur dönüyor. Adıma dokununca animasyon o ana atlar; çubukla ileri geri sarabilirsin. AR'de animasyon kendi kendine döner. Katılar üretim modelinin kendisi — ayrı bir çizim değil."},
   kasar_v8:{ad:"Kaşar kabı v8 · üretim modeli", w:280, d:325, h:360, brut:32.8, net:"20,6", usdz:"kasar_v8_calis.usdz", bom:"kasar_v8",
          icerik:"Kaşar ×1 (8,8 kg, 2 günlük · 0,50 g/mL ile 17,6 L = %85 dolu)", dolu:"≈ 12 kg (dolu)",
          not:"v7'den TEK FARK: kanadın hatvesi artık BASAMAKLI değil, SÜREKLİ artıyor — 22,00 mm'den 30,17 mm'ye, mil boyunca doğrusal. Kanat üçgen ağ değil, tam yüzeyden kurulu tek katı (dört kenar eğrisi + aralarında ruled yüzeyler, dikilip katıya çevrildi). Toplam dönüş 11,75 tur = 47 çeyrek tur seçildi ki bölme yerleri kare çubuğa tam otursun. Ölçüldü: katının kendi üstünde, θ=0 ışınında ardışık turlar arası mesafe tasarım hatvesiyle 0,06 mm içinde aynı. Bölünmüş 3 parçanın yanında BÖLÜNMEMİŞ tek parça da export edildi (307 mm, 89 cm³ — 310 mm'lik yazıcı ya da torna için). GERÇEK KATI MODEL: 43 parça; delikler, kanallar ve geçme boşlukları gerçek; iç içe geçen parça yok. Arkada 60 mm konik mil kökü Ø26 → Ø16. Gövde plakaların 4 mm kanalına oturur, 4 saplama sıkar. Karıştırıcı mili topuzdaki kilit pimi çekilince öne çıkar."},
@@ -173,17 +172,9 @@ const ADIMS = {kasar: [[1.4,"Arka plaka tezgâha konur"],[3.0,"Gövde arka plaka
                kiyma: [[1.4,"Arka plaka tezgâha konur"],[3.0,"Gövde arka plakanın 4 mm kanalına sürülür"],[4.6,"Ön plaka öne geçirilir"],[6.2,"4 saplama arkadan geçirilir"],[7.8,"Kör somunlar sıkılır"],[9.4,"Kulp üst saplamalara vidalanır"],[11.0,"2 tahrik göbeği İÇERİDEN takılır"],[12.6,"Haç kavramalar arkadan geçer, yaylı pim kilitler"],[14.2,"HELEZON önden sürülür — 4 segment kare çubuğa dizili, dönerek girer"],[15.8,"Çıkış tüpü ön plakaya 2 × M4 ile"],[17.4,"Yatak kapağı itilir, sonra ÇEYREK TUR döner"],[19.0,"Besleme rotoru ÜSTTEN indirilir — 2 sıyırıcı lama"],[20.6,"Kare mil önden rotor göbeklerinin içinden geçer"],[22.2,"Ön kovan takılır"],[23.8,"Topuz mile geçer, setuskur sıkılır"],[25.4,"Kilit pimi TEĞET geçer — mili delmez"],[27.0,"Kapak gövde ağzına oturur"],[28.6,"Taşıma tapası memeye takılır"]]};
 let ADIM = ADIMS.kasar;
 const kutu = document.getElementById('adimlar');
-/* iPhone'un AR görüntüleyicisinde sarma çubuğu YOK ve siteler ekleyemiyor. Çözüm: her adımın durağan hâli ayrı USDZ;
-   sayfada istediğin adıma gel, bu düğme AR'de tam o adımı açar (1..k takılı, sonrakiler dışarıda bekler). */
-const abtn = document.getElementById('aradim');
-abtn.onclick = () => { if(!adimli) return; const kk = Math.max(0, sonAdim) + 1, onek = simdiKey.replace('_montaj', ''), eski = mv.getAttribute('ios-src');
-  mv.setAttribute('ios-src', onek + '_adim_' + String(kk).padStart(2, '0') + '.usdz');
-  if (mv.canActivateAR) mv.activateAR(); else alert("Bu cihaz AR desteklemiyor. iPhone'da Safari, Android'de Chrome ile aç.");
-  setTimeout(() => mv.setAttribute('ios-src', eski), 4000); };
 function adimKur(){ kutu.innerHTML = ADIM.map((a,i)=>'<div class="ad" data-t="'+a[0]+'"><b>'+(i+1)+'</b><span>'+a[1]+'</span></div>').join('');
   kutu.querySelectorAll('.ad').forEach(e=>e.onclick=()=>{ git(+e.dataset.t - 0.25); mv.play(); oply.textContent='Durdur'; }); }
 const oyn = document.getElementById('oynat'), obar = document.getElementById('o_bar'), osure = document.getElementById('o_sure'), oply = document.getElementById('o_play');
-let simdiKey = 'kasar_v8';
 let SURE = -1, adimli = false, sonAdim = -1, suruyor = false;                 // süre modelden OKUNUR: 'load' olayi model degisince tetiklenmiyor, o yuzden surekli yoklaniyor
 const yaz2 = t => osure.textContent = t.toFixed(1).replace('.', ',') + ' / ' + SURE.toFixed(1).replace('.', ',');
 
@@ -204,15 +195,13 @@ setInterval(()=>{ const d = mv.duration || 0;
   if(!suruyor){ obar.value = t; yaz2(t); }
   if(!adimli) return;
   let k = 0; for(let i=0;i<ADIM.length;i++) if(t >= ADIM[i][0] - 0.05) k = i;
-  if(k !== sonAdim){ sonAdim = k; kutu.querySelectorAll('.ad').forEach((e,i)=>e.classList.toggle('simdi', i===k));
-    abtn.textContent = "AR'de gör — yalnız bu adım (" + (k + 1) + " / " + ADIM.length + ")"; } }, 150);
+  if(k !== sonAdim){ sonAdim = k; kutu.querySelectorAll('.ad').forEach((e,i)=>e.classList.toggle('simdi', i===k)); } }, 150);
 function goster(k){
   const m = D[k];
   mv.setAttribute('src', k + ".glb"); mv.setAttribute('ios-src', m.usdz || (k + (/_v3$/.test(k) ? "_ar2.usdz" : ".usdz")));
   kasarGizli = false; kbtn.style.display = /_dozaj$/.test(k) ? 'block' : 'none'; document.getElementById('bom').style.display = m.bom ? 'block' : 'none';
   if(m.bom){ const B = BOMS[m.bom]; document.getElementById('bom_b').textContent = B.b; document.getElementById('bom_t').innerHTML = B.t; document.getElementById('bom_n').textContent = B.n; }
   if(m.adim){ ADIM = ADIMS[m.adim]; adimKur(); }
-  simdiKey = k; abtn.style.display = m.adim ? 'block' : 'none';
   kutu.style.display = m.adim ? 'block' : 'none'; adimli = !!m.adim; sonAdim = -1; SURE = -1;   // SURE = -1 → çubuk yeni modelin süresini alsın
   setTimeout(() => { try { mv.currentTime = 0; mv.play(); oply.textContent = 'Durdur'; } catch(e){} }, 350);
   mv.setAttribute('camera-orbit', m.adim ? '50deg 72deg 2.45m' : '35deg 70deg 1.6m');   // montajda parçalar dışarıda başlıyor, geniş çerçeve kbtn.textContent = "Dolguyu gizle — içini gör";
