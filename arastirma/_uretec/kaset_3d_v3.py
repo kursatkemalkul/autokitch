@@ -567,16 +567,15 @@ def usdz_yaz(yol, kok, parcalar, dokular, anim=None, fps=30.0, sure=0.0):
             UsdGeom.PrimvarsAPI(me).CreatePrimvar("st", Sdf.ValueTypeNames.TexCoord2fArray, UsdGeom.Tokens.vertex).Set(
                 Vt.Vec2fArray([Gf.Vec2f(u[0], 1.0 - u[1]) for u in m.UV]))
         UsdShade.MaterialBindingAPI.Apply(me.GetPrim()).Bind(mats[mal])
-        if anim and adi in anim:                                  # ops SIRAYLA uygulanir: -pivot -> rotZ -> +pivot -> ofset
-            A = anim[adi]; pv = A.get("pivot"); rop = None
-            if pv:
-                me.AddTranslateOp(opSuffix="pivotIn").Set(Gf.Vec3d(-pv[0], -pv[1], -pv[2]))
-                rop = me.AddRotateZOp()
-                me.AddTranslateOp(opSuffix="pivotOut").Set(Gf.Vec3d(pv[0], pv[1], pv[2]))
-            top = me.AddTranslateOp(opSuffix="ofset")
+        if anim and adi in anim:
+            # TEK matris op'u, HER KAREDE örnek. Neden: iPhone (RealityKit) dönüşümü yalnız YAZILI zaman örneklerinde okuyup arasını
+            # konum + kuaterniyon olarak kendi dolduruyor → seyrek anahtarla çok turlu dönüş (0° → −2520° ≡ 0°) hiç dönmüyor / yalpalıyor,
+            # eksen dışı pivot dönüşünde parça yay yerine kiriş çiziyordu. Sık örnekle ikisi de kayboluyor.
+            A = anim[adi]; pv = A.get("pivot") or (0.0, 0.0, 0.0); top = me.AddTransformOp()
+            Pn = Gf.Matrix4d().SetTranslate(Gf.Vec3d(-pv[0], -pv[1], -pv[2])); Pp = Gf.Matrix4d().SetTranslate(Gf.Vec3d(pv[0], pv[1], pv[2]))
             for ts, tr, rz in A["keys"]:
-                tc = ts * fps; top.Set(Gf.Vec3d(tr[0], tr[1], tr[2]), tc)
-                if rop is not None: rop.Set(float(rz), tc)
+                R = Gf.Matrix4d().SetRotate(Gf.Rotation(Gf.Vec3d(0, 0, 1), float(rz))); T = Gf.Matrix4d().SetTranslate(Gf.Vec3d(tr[0], tr[1], tr[2]))
+                top.Set(Pn * R * Pp * T, ts * fps)                     # satır-vektör düzeni: soldaki önce uygulanır
     st.GetRootLayer().Save()
     cikti = os.path.join(tmp, kok + ".usdz")
     if not UsdUtils.CreateNewARKitUsdzPackage(Sdf.AssetPath(usdc), cikti): raise RuntimeError("ARKit paketi olusturulamadi: " + kok)

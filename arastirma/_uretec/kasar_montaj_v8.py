@@ -89,7 +89,8 @@ if __name__ == "__main__":
         t0 = BASLA + i * ADIM_SURE; tL = ADIM_SURE * HAREKET
         kt0, kt1 = (t0, t0 + tL * 0.55) if ayri else (t0, t0 + tL)
         at0, at1 = (t0 + tL * 0.55, t0 + tL) if ayri else (t0, t0 + tL)
-        anlar = sorted(set([0.0, kt0, at0, sure] + [kt0 + (kt1 - kt0) * k / 4.0 for k in range(5)] + [at0 + (at1 - at0) * k / 4.0 for k in range(5)]))
+        kare = lambda a, b: [a + j / 30.0 for j in range(int(round((b - a) * 30.0)) + 1)] + [b]      # hareket penceresinde HER KARE (iPhone arayı kendi doldurmasın)
+        anlar = sorted(set([0.0, sure] + kare(kt0, kt1) + kare(at0, at1)))
         keys = [(t, tuple(c * MM * (1.0 - ease(t, kt0, kt1)) for c in off), -360.0 * tur * (1.0 - ease(t, at0, at1))) for t in anlar]
         for p_ in parcalar:
             if p_ in set(a_ for a_, m_, mal_, g_ in par): anim[p_] = dict(pivot=(0.0, V.CY * MM, 0.0) if tur else None, keys=keys)
@@ -102,7 +103,7 @@ if __name__ == "__main__":
     T_, D_ = 10.0, 12.0; grp = {p_["ad"]: p_["grup"] for p_ in V.PARCALAR}; anim2 = {}
     for g_ in ("helezon", "karistirici"):
         tur_ = GRUP_CALIS[g_]["aci"](T_); tur_ = float(round(tur_)) if abs(round(tur_)) >= 1 else math.copysign(1.0, tur_)
-        keys_ = [(0.0, (0, 0, 0), 0.0), (T_, (0, 0, 0), 360.0 * tur_), (D_, (0, 0, 0), 360.0 * tur_)]
+        keys_ = [(j / 30.0, (0, 0, 0), 360.0 * tur_ * (j / 30.0) / T_) for j in range(int(T_ * 30) + 1)] + [(D_, (0, 0, 0), 360.0 * tur_)]   # her kare
         for a_, g2 in grp.items():
             if g2 == g_: anim2[a_] = dict(pivot=GRUP_CALIS[g_]["pivot"], keys=keys_)
     calis = [(a_, m_, mal_) for a_, m_, mal_, _ in par if a_ != "tasima_tapasi"]
