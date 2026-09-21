@@ -28,7 +28,7 @@ ADIMLAR = [
     ("HELEZON önden sürülür (4 segment kare çubuğa dizili)", ["helezon_cekirdek", "helezon_A", "helezon_B", "helezon_C", "helezon_D"], (0, 0, 430), -2.0, False),
     ("Çıkış tüpü ön plakaya 2 × M4 ile",    ["cikis_tupu", "vida_tup_a", "vida_tup_b"],       (0, 0, 240),   0.0, False),
     ("Yatak kapağı itilir, ÇEYREK TUR döner", ["yatak_kapagi"],                               (0, 0, 130),   0.25, True),
-    ("Besleme rotoru ÜSTTEN indirilir (2 sıyırıcı lama)" if "kiyma" in MODUL else "Karıştırıcı kafesi ÜSTTEN indirilir", ["orumcek_arka", "orumcek_orta", "orumcek_on", "cubuk_0", "cubuk_1", "cubuk_2", "cubuk_3"], (0, 430, 0), 0.0, False),
+    ("Besleme rotoru ÜSTTEN indirilir (2 sıyırıcı lama)" if "kasar" not in MODUL else "Karıştırıcı kafesi ÜSTTEN indirilir", ["orumcek_arka", "orumcek_orta", "orumcek_on", "cubuk_0", "cubuk_1", "cubuk_2", "cubuk_3"], (0, 430, 0), 0.0, False),
     ("Kare mil önden kafesin içinden geçer", ["kar_mil"],                                     (0, 0, 420),   0.0, False),
     ("Ön kovan takılır",                    ["on_kovan"],                                     (0, 0, 150),   0.0, False),
     ("Topuz mile geçer, setuskur sıkılır",  ["topuz", "setuskur"],                            (0, 0, 190),   0.0, False),
@@ -78,8 +78,8 @@ def kur():
 if __name__ == "__main__":
     par, sure = kur()
     V_ = V.v4.hacim_L(V.Y_DOLUM)
-    dokular = {"ad": doku_ad("KIYMA KASETİ" if "kiyma" in MODUL else "KAŞAR KABI", "bu yönde tak  ·  %d × 325 × 360 mm" % V.W + "  ·  %s L  ·  çıkış ÖNDE alttan" % ("%.1f" % V_).replace(".", ","), ok_sol=True),
-               "montaj": doku_montaj(["HELEZONU|ÖNDEN SÜR", "YATAK KAPAĞI|ÇEYREK TUR", ("ROTOR" if "kiyma" in MODUL else "KAFES") + " · MİL|TOPUZ · PİM", "TAPAYI ÇIKAR|YUVAYA SÜR"])}
+    dokular = {"ad": doku_ad("KIYMA KASETİ" if "kiyma" in MODUL else "KUŞBAŞI KASETİ" if "kusbasi" in MODUL else "KAŞAR KABI", "bu yönde tak  ·  %d × 325 × 360 mm" % V.W + "  ·  %s L  ·  çıkış ÖNDE alttan" % ("%.1f" % V_).replace(".", ","), ok_sol=True),
+               "montaj": doku_montaj(["HELEZONU|ÖNDEN SÜR", "YATAK KAPAĞI|ÇEYREK TUR", ("ROTOR" if "kasar" not in MODUL else "KAFES") + " · MİL|TOPUZ · PİM", "TAPAYI ÇIKAR|YUVAYA SÜR"])}
     b = V.glb_yaz(os.path.join(OUT, ONEK + "_montaj.glb"), par, dokular)
     print(ONEK + "_montaj.glb · %d parca · %d adim · %.1f sn · %.0f KB" % (len(par), len(ADIMLAR), sure, b / 1024.0))
 
