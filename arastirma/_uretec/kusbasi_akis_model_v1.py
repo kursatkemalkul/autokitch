@@ -123,6 +123,11 @@ def r_t_k(t):
     return son
 
 
+def tabla_tur(t, n_tabla=35.0):
+    """kuşbaşında tabla SABİT devirde döner (taneler serpiliyor, şerit yok)"""
+    return n_tabla * t / 60.0
+
+
 def halka_profili(rt, n=80000, seed=2):
     R = random.Random(seed); ax, az = G["AGIZ"][0] / 2.0, G["AGIZ"][1] / 2.0; m = [0] * (NB_H + 6)
     for k in range(n):

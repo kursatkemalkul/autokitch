@@ -4,7 +4,7 @@ Sayılar kusbasi_akis_model_v1.G ile AYNI olmak zorunda — üreteç çalışır
 import io, os
 
 U = os.path.dirname(os.path.abspath(__file__))
-s = io.open(os.path.join(U, "kiyma_cad_v1.py"), encoding="utf-8").read(); n = [0]
+s = io.open(os.path.join(U, "kiyma_cad_v2.py"), encoding="utf-8").read(); n = [0]
 def rep(a, b, hepsi=False):
     global s
     assert a in s, "BULUNAMADI: " + a[:110]
@@ -13,7 +13,7 @@ def blok(bas, son, yeni):
     global s
     i = s.index(bas); j = s.index(son, i + len(bas)); s = s[:i] + yeni + s[j:]; n[0] += 1
 
-for a, b in (("kiyma_kaseti_v1", "kusbasi_kaseti_v1"), ("KIYMA_KASETI_v1", "KUSBASI_KASETI_v1"), ("kiyma_v1", "kusbasi_v1"), ("kiyma_cad_v1", "kusbasi_cad_v1")):
+for a, b in (("kiyma_kaseti_v2", "kusbasi_kaseti_v1"), ("KIYMA_KASETI_v2", "KUSBASI_KASETI_v1"), ("kiyma_v2", "kusbasi_v1"), ("kiyma_cad_v2", "kusbasi_cad_v1"), ("kiyma_akis_model_v1 as AM", "kusbasi_akis_model_v1 as AM")):
     s = s.replace(a, b)
 
 i = s.index('"""'); j = s.index('"""', i + 3) + 3
@@ -33,7 +33,7 @@ UYARI: baskı parça yalnız DENEME içindir; çiğ et teması = 304/316 + POM-C
 """''' + s[j:]
 
 # ---- sabitler ----
-rep("CY, RT, YC, RB, RF, Y_UST, Y_DOLUM = 52.0, 30.0, 150.0, 67.0, 8.0, 352.0, 332.0", "CY, RT, YC, RB, RF, Y_UST, Y_DOLUM = 60.0, 36.0, 177.0, 67.0, 8.0, 352.0, 332.0")
+rep("CY, RT, YC, RB, RF, Y_UST, Y_DOLUM = 60.0, 30.0, 158.0, 67.0, 8.0, 352.0, 332.0", "CY, RT, YC, RB, RF, Y_UST, Y_DOLUM = 60.0, 36.0, 177.0, 67.0, 8.0, 352.0, 332.0")
 rep("R_MIL, R_KANAT, KARE = 9.0, 28.0, 8.0", "R_MIL, R_KANAT, KARE = 8.0, 34.0, 8.0")
 rep("KOK_Z0, KOK_Z1, R_KOK = -91.0, -151.0, 15.0", "KOK_Z0, KOK_Z1, R_KOK = -91.0, -151.0, 14.0")
 rep("KAN_Z0, KAN_Z1, HATVE0, TUR = -148.0, 156.0, 36.0, 7.25", "KAN_Z0, KAN_Z1, HATVE0, TUR = -148.0, 156.0, 40.0, 6.75")
@@ -69,7 +69,7 @@ rep("aci=lambda t: -3.4 * min(t, T_DOK) / T_DOK)", "aci=lambda t: -2.1 * min(t, 
 rep("-0.187, 0.213)", "-0.187, 0.210)")
 
 # ---- web modeli: hesap satırı + küpler ----
-blok("    Vt = math.pi / 4.0 * ((2 * R_KANAT + 4.0) ** 2", "    dokular = {", '''    import kusbasi_akis_model_v1 as KM                                    # CAD ile HESAP aynı sayıları mı kullanıyor?
+blok("    Gm = AM.G ", "    dokular = {", '''    import kusbasi_akis_model_v1 as KM                                    # CAD ile HESAP aynı sayıları mı kullanıyor?
     Gm = KM.G; esit = dict(RT=RT, R_MIL=R_MIL, R_KOK=R_KOK, P0=HATVE0, ESIK=ESIK_Y, T=4.0)
     for k_, v_ in esit.items(): assert abs(Gm[k_] - v_) < 1e-6, "model ile CAD ayni degil: %s %s != %s" % (k_, Gm[k_], v_)
     assert abs(Gm["P1"] - HATVE1) < 0.05 and abs(Gm["AGIZ"][0] - 2 * AG_X) < 1e-6 and abs(Gm["AGIZ"][1] - (AG_Z1 - AG_Z0)) < 1e-6 and abs(Gm["TIKAC"] + Gm["ESIK"] - (AG_Z0 - UC_Z1)) < 1e-6
@@ -77,7 +77,7 @@ blok("    Vt = math.pi / 4.0 * ((2 * R_KANAT + 4.0) ** 2", "    dokular = {", ''
     print("MODEL = CAD · on uc %.1f mL/tur (Roberts) · doluluk 0,60 VARSAYIM → %.0f g/tur · 145 g = %.2f tur · %.0f dev/dk" % (q_on, g_tur, 145.0 / g_tur, 145.0 / g_tur * 6.0))
 ''')
 rep('doku_ad("KIYMA KASETİ",', 'doku_ad("KUŞBAŞI KASETİ",')
-blok("    rnd = random.Random(11); ks = Mesh()", "    b3 = glb_yaz(", '''    rnd = random.Random(11); ks = Mesh(); d_k = 10.0
+blok("    # pide üstünde GERÇEKTE oluşan şey", "    b3 = glb_yaz(", '''    rnd = random.Random(11); ks = Mesh(); d_k = 10.0
     for i in range(137):                                                                       # pide üstünde 137 küp (145 g · d 10)
         rr = 118.0 * math.sqrt(rnd.random()); a = rnd.uniform(0, 2 * math.pi); x, z = xt + rr * math.cos(a), zc + rr * math.sin(a)
         ks.ekle(kutu((x - d_k / 2) * MM, (x + d_k / 2) * MM, (y_pide + 0.3) * MM, (y_pide + 0.3 + d_k * 0.8) * MM, (z - d_k / 2) * MM, (z + d_k / 2) * MM))

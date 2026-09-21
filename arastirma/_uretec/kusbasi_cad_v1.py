@@ -29,6 +29,8 @@ from OCP.TopExp import TopExp_Explorer
 import kaset_3d_v4 as v4
 from kaset_3d_v3 import Mesh, MM, kutu, doku_ad, doku_montaj, etiket_yuzu, MALZEME, usdz_yaz, OUT
 from kasar_akis_model_v2 import YASA, T_DOK, r_t
+import kusbasi_akis_model_v1 as AM                                     # ürünün kendi akış modeli: tabla yasası + hesap sayıları buradan
+R0 = AM.r_t_k(0.0)                                                   # doz başında ağzın pide merkezine uzaklığı
 RHO = 0.80                                                           # kıymalı harç g/mL · VARSAYIM (çiğ kıyma USDA ≈ 0,95; tartılacak)
 KG2 = 5.8                                                            # 2 günlük (pafta HAT v19)
 MALZEME.setdefault('kusbasi', dict(renk=(0.55, 0.17, 0.16, 1.0), met=0.0, ruf=0.85))
@@ -41,7 +43,7 @@ URETIM = os.path.join(KOK, "arastirma", "3_TOPPING", "kusbasi_kaseti_v1")
 W, D, H = 140.0, 325.0, 360.0
 TP, ET, OYUK = 8.0, 3.0, 4.0
 ZF, ZB = D / 2, -D / 2; ZFI, ZBI = ZF - TP, ZB + TP                 # plaka dış / iç yüzleri
-CY, RT, YC, RB, RF, Y_UST, Y_DOLUM = 60.0, 36.0, 177.0, 67.0, 8.0, 352.0, 332.0      # tekne Ø60 · kâse R67 = rotor dairesi
+CY, RT, YC, RB, RF, Y_UST, Y_DOLUM = 60.0, 36.0, 177.0, 67.0, 8.0, 352.0, 332.0      # v2: alt mil ekseni 140 sınıfında ORTAK (60) · üst eksen = 60 + 28 + 5 + 65
 R_MIL, R_KANAT, KARE = 8.0, 34.0, 8.0                                # helezon mili Ø16 · kanat Ø40 · kare çekirdek 8 × 8
 KOK_Z0, KOK_Z1, R_KOK = -91.0, -151.0, 14.0                          # v7: ARKADA 60 mm KONİK MİL KÖKÜ Ø16 → Ø26 (v5'te vardı, v6'da düşmüştü)
 MUYLU, MUYLU_D = 22.0, 22.4                                          # göbek muylusu / plaka deliği
@@ -338,7 +340,7 @@ def makine():
     for s in (1, -1):
         ekle("M_konum_pimi_%s" % ("a" if s > 0 else "b"), silz(s * 55.0, 70.0, 5.0, ZB - 95, ZB + 6.0), "celik")
         ekle("M_ray_%s" % ("a" if s > 0 else "b"), kut(min(s * 40, s * 70), max(s * 40, s * 70), -6.0, 0.0, ZB - 40, ZF + 120), "koyu")
-    xt = -YASA["r_dis"]
+    xt = -R0
     ekle("M_tabla", sily(xt, zc, 170.0, y_tabla - 12, y_tabla), "celik", "tabla"); ekle("M_pide", sily(xt, zc, 140.0, y_tabla, y_pide), "hamur", "tabla")
     ekle("M_kolon", sily(xt, zc, 20.0, y_tabla - 70, y_tabla - 12), "koyu", "kolon")
     return zc, y_pide, xt
@@ -359,10 +361,10 @@ def ag(wp, tol=0.12, aci=0.35):
 
 # ---------------- GLB (gruplar + dönme + kayma) ----------------
 DONGU, DT = 12.0, 0.1
-_kay = lambda t: ((YASA["r_dis"] - r_t(t)) * MM if t <= T_DOK else (YASA["r_dis"] - YASA["r_ic"]) * MM * (DONGU - t) / (DONGU - T_DOK), 0.0, 0.0)
+_kay = lambda t: ((R0 - AM.r_t_k(t)) * MM if t <= T_DOK else (R0 - AM.r_t_k(T_DOK)) * MM * (DONGU - t) / (DONGU - T_DOK), 0.0, 0.0)
 GRUP = {"helezon": dict(pivot=(0, CY * MM, 0), eksen="z", aci=lambda t: -2.1 * min(t, T_DOK) / T_DOK),
         "karistirici": dict(pivot=(0, YC * MM, 0), eksen="z", aci=lambda t: 0.67 * min(t, T_DOK) / T_DOK),
-        "tabla": dict(pivot=(-YASA["r_dis"] * MM, -0.187, 0.210), eksen="y", aci=lambda t: 7.0 * t / DONGU, kay=_kay),
+        "tabla": dict(pivot=(-R0 * MM, -0.187, 0.210), eksen="y", aci=lambda t: AM.tabla_tur(t), kay=_kay),
         "kolon": dict(pivot=(0, 0, 0), eksen="y", aci=lambda t: 0.0, kay=_kay)}
 
 

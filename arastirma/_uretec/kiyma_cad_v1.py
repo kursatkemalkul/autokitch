@@ -32,6 +32,8 @@ from OCP.TopExp import TopExp_Explorer
 import kaset_3d_v4 as v4
 from kaset_3d_v3 import Mesh, MM, kutu, doku_ad, doku_montaj, etiket_yuzu, MALZEME, usdz_yaz, OUT
 from kasar_akis_model_v2 import YASA, T_DOK, r_t
+import kiyma_akis_model_v1 as AM                                     # ürünün kendi akış modeli: tabla yasası + hesap sayıları buradan
+R0 = AM.r_t_k(0.0)                                                   # doz başında ağzın pide merkezine uzaklığı
 RHO = 1.0                                                            # kıymalı harç g/mL · VARSAYIM (çiğ kıyma USDA ≈ 0,95; tartılacak)
 KG2 = 6.4                                                            # 2 günlük (pafta HAT v19)
 MALZEME.setdefault('kiyma', dict(renk=(0.62, 0.27, 0.22, 1.0), met=0.0, ruf=0.85))
@@ -338,7 +340,7 @@ def makine():
     for s in (1, -1):
         ekle("M_konum_pimi_%s" % ("a" if s > 0 else "b"), silz(s * 55.0, 70.0, 5.0, ZB - 95, ZB + 6.0), "celik")
         ekle("M_ray_%s" % ("a" if s > 0 else "b"), kut(min(s * 40, s * 70), max(s * 40, s * 70), -6.0, 0.0, ZB - 40, ZF + 120), "koyu")
-    xt = -YASA["r_dis"]
+    xt = -R0
     ekle("M_tabla", sily(xt, zc, 170.0, y_tabla - 12, y_tabla), "celik", "tabla"); ekle("M_pide", sily(xt, zc, 140.0, y_tabla, y_pide), "hamur", "tabla")
     ekle("M_kolon", sily(xt, zc, 20.0, y_tabla - 70, y_tabla - 12), "koyu", "kolon")
     return zc, y_pide, xt
@@ -359,10 +361,10 @@ def ag(wp, tol=0.12, aci=0.35):
 
 # ---------------- GLB (gruplar + dönme + kayma) ----------------
 DONGU, DT = 12.0, 0.1
-_kay = lambda t: ((YASA["r_dis"] - r_t(t)) * MM if t <= T_DOK else (YASA["r_dis"] - YASA["r_ic"]) * MM * (DONGU - t) / (DONGU - T_DOK), 0.0, 0.0)
+_kay = lambda t: ((R0 - AM.r_t_k(t)) * MM if t <= T_DOK else (R0 - AM.r_t_k(T_DOK)) * MM * (DONGU - t) / (DONGU - T_DOK), 0.0, 0.0)
 GRUP = {"helezon": dict(pivot=(0, CY * MM, 0), eksen="z", aci=lambda t: -3.4 * min(t, T_DOK) / T_DOK),
         "karistirici": dict(pivot=(0, YC * MM, 0), eksen="z", aci=lambda t: 0.67 * min(t, T_DOK) / T_DOK),
-        "tabla": dict(pivot=(-YASA["r_dis"] * MM, -0.187, 0.213), eksen="y", aci=lambda t: 7.0 * t / DONGU, kay=_kay),
+        "tabla": dict(pivot=(-R0 * MM, -0.187, 0.213), eksen="y", aci=lambda t: AM.tabla_tur(t), kay=_kay),
         "kolon": dict(pivot=(0, 0, 0), eksen="y", aci=lambda t: 0.0, kay=_kay)}
 
 
@@ -545,9 +547,11 @@ if __name__ == "__main__":
     # ---- web modeli ----
     V = v4.hacim_L(Y_DOLUM); yd = v4.dolum_kotu(KG2 / RHO)
     print("HACIM %.1f L (ic boy %.0f) · %.1f kg @ %.2f → dolum kotu y %.0f (%%%.0f)" % (V, D - 2 * TP, KG2, RHO, yd, 100 * KG2 / RHO / V))
+    Gm = AM.G                                                               # CAD ile HESAP aynı sayıları mı kullanıyor?
+    for k_, v_ in dict(RT=RT, R_MIL=R_MIL, R_KOK=R_KOK, P0=HATVE0, T=3.0).items(): assert abs(Gm[k_] - v_) < 1e-6, "model ile CAD ayni degil: %s %s != %s" % (k_, Gm[k_], v_)
+    assert abs(Gm["P1"] - HATVE1) < 0.05 and abs(AM.AGIZ[0] - 2 * AG_X) < 1e-6 and abs(AM.AGIZ[1] - (AG_Z1 - AG_Z0)) < 1e-6 and abs(AM.RHO - RHO) < 1e-9 and abs(AM.KG2 - KG2) < 1e-9
     Vt = math.pi / 4.0 * ((2 * R_KANAT + 4.0) ** 2 - (2 * R_MIL) ** 2) * (HATVE1 - 3.0) / 1000.0
-    print("HELEZON: uc hatve %.1f · kuramsal %.0f mL/tur · doluluk 0,40 VARSAYIM → %.0f g/tur · 160 g = %.1f tur · 10 sn'de %.0f dev/dk · uc hizi %.3f m/s"
-          % (HATVE1, Vt, Vt * 0.4 * RHO, 160.0 / (Vt * 0.4 * RHO), 160.0 / (Vt * 0.4 * RHO) * 6.0, math.pi * 2 * R_KANAT / 1000.0 * (160.0 / (Vt * 0.4 * RHO) * 6.0) / 60.0))
+    print("MODEL = CAD · uc hatve %.1f · kuramsal %.0f mL/tur · doluluk 0,40 VARSAYIM → %.0f g/tur · 160 g = %.1f tur · %.0f dev/dk" % (HATVE1, Vt, Vt * 0.4 * RHO, 160.0 / (Vt * 0.4 * RHO), 160.0 / (Vt * 0.4 * RHO) * 6.0))
     dokular = {"ad": doku_ad("KIYMA KASETİ", "bu yönde tak  ·  140 × 325 × 360 mm  ·  %s L  ·  çıkış ÖNDE alttan" % ("%.1f" % V).replace(".", ","), ok_sol=True),
                "montaj": doku_montaj(["HELEZONU|ÖNDEN SÜR", "YATAK KAPAĞI|ÇEYREK TUR", "ROTOR · MİL|TOPUZ · PİM", "TAPAYI ÇIKAR|YUVAYA SÜR"])}
     def etiketler():
@@ -563,12 +567,16 @@ if __name__ == "__main__":
     print("   usdz %.0f KB · %d prim · USD denetimi: %s" % (b2 / 1024.0, prim, "GECTI" if not sorun else "KALDI")); [print("   HATA:", x) for x in sorun]
     n0 = len(PARCALAR); zc, y_pide, xt = makine()
     doz = kap_ag + [(p["ad"], ag(p["wp"]), p["mal"], p["grup"]) for p in PARCALAR[n0:]]
-    rnd = random.Random(11); ks = Mesh()
-    for i in range(420):                                                                   # pide üstünde harç
-        rr = 118.0 * math.sqrt(rnd.random()); a = rnd.uniform(0, 2 * math.pi); x, z = xt + rr * math.cos(a), zc + rr * math.sin(a)
-        b = rnd.uniform(0, math.pi); dx, dz = 6 * math.cos(b), 6 * math.sin(b); nx_, nz_ = -4 * math.sin(b), 4 * math.cos(b); y = y_pide + rnd.uniform(0.3, 3)
-        ks.quad(((x - dx - nx_) * MM, y * MM, (z - dz - nz_) * MM), ((x + dx - nx_) * MM, y * MM, (z + dz - nz_) * MM), ((x + dx + nx_) * MM, y * MM, (z + dz + nz_) * MM), ((x - dx + nx_) * MM, y * MM, (z - dz + nz_) * MM), (0, 1, 0))
-    doz.append(("harc_pide_ustu", ks.duzelt(), "kiyma", "tabla"))
+    # pide üstünde GERÇEKTE oluşan şey: 30 × 30 meme 10 sn'de yalnız 178 mm şerit serer (süreklilik: şerit hızı = yüzey hızı).
+    # Eskiden buraya pideyi kaplayan 420 pul çiziliyordu — hesabın göstermediği bir kaplamayı gösteriyordu, kaldırıldı.
+    ks = Mesh(); sp = AM._SP; adim_ = max(1, len(sp) // 40)
+    for i in range(0, len(sp) - adim_, adim_):
+        (t0_, r0_, th0_), (t1_, r1_, th1_) = sp[i], sp[i + adim_]; tm = (th0_ + th1_) / 2.0; rm = (r0_ + r1_) / 2.0; boy = rm * (th1_ - th0_) + 1.0
+        kx, kz = xt + rm * math.cos(tm), zc + rm * math.sin(tm)                             # pide çerçevesinde şeridin ekseni (tabla −θ döndüğü için iz +θ'ya uzar)
+        b = kut(-AM.AGIZ[0] / 2, AM.AGIZ[0] / 2, y_pide + 0.2, y_pide + 0.2 + AM.AGIZ[1] * 0.55, -boy / 2, boy / 2)
+        b = cq.Workplane(obj=b.val().rotate(cq.Vector(0, 0, 0), cq.Vector(0, 1, 0), -math.degrees(tm)).translate(cq.Vector(kx, 0, kz)))
+        ks.ekle(ag(b))
+    doz.append(("harc_seridi", ks, "kiyma", "tabla"))
     doz.append(("harc_ipi", ag(sily(0.0, zc, 11.0, y_pide + 2.0, Y_AGIZ)), "kiyma", None))                       # memeden inen macun ipi
     dolgu = v4.kasar_dolgu(yd); doz.append(("kiyma_dolgu", dolgu, "kiyma_dolgu", None))
     b3 = glb_yaz(os.path.join(OUT, "kiyma_v1_dozaj.glb"), doz, dokular)

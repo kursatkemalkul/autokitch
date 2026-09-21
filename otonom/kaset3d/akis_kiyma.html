@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="tr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AUTOKITCH — Kıyma akış hesabı v1</title><meta name="robots" content="noindex, nofollow"><meta name="color-scheme" content="only light">
+<style>
+ :root{--line:#333336;--gray:#86868B;--gl:#A1A1A6;--blue:#2997FF;--sari:#ffd24a;--font:-apple-system,"SF Pro Text","Helvetica Neue",Arial,sans-serif}
+ *{margin:0;padding:0;box-sizing:border-box} body{font-family:var(--font);background:#000;color:#fff;padding:22px 18px 70px;letter-spacing:-.01em;-webkit-font-smoothing:antialiased}
+ .w{max-width:820px;margin:0 auto} h1{font-size:26px;font-weight:600} h2{font-size:13px;letter-spacing:.09em;color:var(--sari);margin:34px 0 10px;text-transform:uppercase}
+ p{color:var(--gl);font-size:14.5px;line-height:1.6;margin-top:8px} b{color:#fff} a{color:var(--blue);text-decoration:none}
+ .kart{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px;margin-top:12px} .kart div{background:#1D1D1F;border:1px solid var(--line);border-radius:12px;padding:12px 14px;color:var(--gl);font-size:13px;line-height:1.45}
+ .kart b{display:block;font-size:21px;margin-bottom:3px} table{width:100%;border-collapse:collapse;margin-top:12px;font-size:13.5px} th{color:var(--gray);font-weight:600;text-align:left;padding:7px 6px;border-bottom:1px solid var(--line);font-size:12px}
+ td{padding:8px 6px;border-bottom:1px solid #232326;color:var(--gl)} .v{display:inline-block;background:#3a2a10;color:var(--sari);border-radius:6px;padding:1px 6px;font-size:11px;font-weight:700}
+ .kutu{background:#3a1512;border:1px solid #7a2a24;border-radius:12px;padding:13px 15px;margin-top:12px;color:#f7dcd8;font-size:14px;line-height:1.55} .tasir{overflow-x:auto}
+</style></head><body><div class="w">
+<a href="index.html">← 3D model</a>
+<h1 style="margin-top:10px">Kıyma akış hesabı · v1</h1>
+<p>Kıymalı harç tane değil <b>macun</b>: serpilmez, memeden <b>şerit</b> olarak çıkar. Bu yüzden kaşar ve kuşbaşındaki “dönen tablaya serpme” hesabı burada geçerli değil. Geçerli olan iki satırlık süreklilik: <b>şeridin çıkış hızı = altındaki hamurun yüzey hızı</b> ve <b>şerit kesiti × serilen boy = doz hacmi</b>.</p>
+<div class="kutu"><b>SONUÇ — bu kaset dozu verir ama pideyi KAPLAYAMAZ.</b> 160 g harcın pideyi tam kaplaması için <b>3,26 mm</b>'lik katman gerekir. Şimdiki 30 × 30 meme 10 saniyede yalnız <b>178 mm</b> şerit serer: pidenin <b>%11</b>'i. Karışımdaki parçalar (≈ 5 mm <span class="v">VARSAYIM</span>) yüzünden şerit 10 mm'den ince olamaz; o zaman <b>meme ne kadar geniş olursa olsun en çok %33</b> kaplanır. Tam kaplama için serilen harcın <b>3,1 kat yayılması</b> gerekir: bir <b>yayıcı</b> (sıyırma bıçağı ya da rulo) ya da elle yayma. Spiral tek başına yetmez.</div>
+
+<h2>1 · Sayılar</h2>
+<div class="kart"><div><b>160 g</b>pide başına · 20 pide/gün · 2 gün 6,4 kg</div><div><b>16,0 mL/s</b>10 saniyelik dozda akış</div><div><b>3,26 mm</b>tam kaplama için katman</div><div><b>17,8 mm/s</b>şimdiki memeden çıkış hızı</div></div>
+
+<h2>2 · Meme seçenekleri</h2>
+<div class="tasir"><table><tr><th>meme</th><th>çıkış hızı</th><th>10 sn'de serilen boy</th><th>pidede kapladığı</th></tr><tr><td>şimdiki meme 30 × 30</td><td>17,8 mm/s</td><td>178 mm</td><td><b>%11</b></td></tr><tr><td>yarık 60 × 10</td><td>26,7 mm/s</td><td>267 mm</td><td><b>%33</b></td></tr><tr><td>yarık 90 × 10</td><td>17,8 mm/s</td><td>178 mm</td><td><b>%33</b></td></tr><tr><td>kuramsal 60 × 3,3 (parça geçmez)</td><td>81,8 mm/s</td><td>818 mm</td><td><b>%100</b></td></tr></table></div>
+<p>Son satır kuramsal: o incelikte yarıktan soğan ve domates parçaları geçmez.</p>
+
+<h2>3 · Tabla nasıl dönmeli</h2>
+<p>Kaşar ve kuşbaşında tabla 35 dev/dk döner. Macunda bu <b>yanlış</b>: r 105'te yüzey hızı 385 mm/s, şerit hızının <b>22 katı</b> — şerit kopar ya da sıvanır. Süreklilik için tabla, ağız dıştayken ≈ 1,6, içteyken ≈ 5,7 dev/dk dönmeli; 10 saniyede toplam <b>0,27 tur</b>. 3D dozaj animasyonu artık bunu gösteriyor: yavaş dönen tabla ve pidenin üstünde 178 mm'lik tek şerit.</p>
+
+<h2>4 · Helezon</h2>
+<p>Kuramsal 117 mL/tur · doluluk 0,40 <span class="v">VARSAYIM</span> → 47 g/tur · 160 g = 3,4 tur · ≈ 21 dev/dk. Macunda Roberts formülü geçerli değil (o tane malzeme için); doluluk ve etin vidayla birlikte dönüp dönmediği ancak denemeyle bulunur.</p>
+
+<h2>5 · Seçenekler · karar senin</h2>
+<p><b>A · Yayıcı ekle (makine tarafı):</b> memenin arkasında, hamurun 3–4 mm üstünde sabit bir sıyırma bıçağı; tabla dönerken şeridi yayar. Pizza sosu makinelerindeki kepçe mantığı. Parçalı harçta hamuru yırtma riski var, denenmeli.<br><b>B · Piston / pompa satın al</b> ve yaymayı yine ayrı çöz — doz doğruluğu artar ama kaplama sorunu aynı kalır.<br><b>C · Kıymalıyı elle yay</b> (makine yalnız dozu verir). Lahmacun harcı için aynı sorun daha ağır: 110 g harç 1,8 mm katman demek.</p>
+</div></body></html>
