@@ -155,26 +155,33 @@ const kutu = document.getElementById('adimlar');
 kutu.innerHTML = ADIM.map((a,i)=>'<div class="ad" data-t="'+a[0]+'"><b>'+(i+1)+'</b><span>'+a[1]+'</span></div>').join('');
 kutu.querySelectorAll('.ad').forEach(e=>e.onclick=()=>{ git(+e.dataset.t - 0.25); mv.play(); oply.textContent='Durdur'; });
 const oyn = document.getElementById('oynat'), obar = document.getElementById('o_bar'), osure = document.getElementById('o_sure'), oply = document.getElementById('o_play');
-const SURE = 32.8; let sonAdim = -1, suruyor = false;
-const yaz2 = t => osure.textContent = t.toFixed(1).replace('.', ',') + ' / 32,8';
+let SURE = -1, adimli = false, sonAdim = -1, suruyor = false;                 // süre modelden OKUNUR: 'load' olayi model degisince tetiklenmiyor, o yuzden surekli yoklaniyor
+const yaz2 = t => osure.textContent = t.toFixed(1).replace('.', ',') + ' / ' + SURE.toFixed(1).replace('.', ',');
+
 function git(t){ t = Math.max(0, Math.min(SURE, t)); try{ mv.currentTime = t; }catch(e){} obar.value = t; yaz2(t); }
 oply.onclick = () => { if(mv.paused){ mv.play(); oply.textContent='Durdur'; } else { mv.pause(); oply.textContent='Oynat'; } };
 obar.oninput = () => { suruyor = true; mv.pause(); oply.textContent='Oynat'; git(+obar.value); };
 obar.onchange = () => { suruyor = false; };
-document.getElementById('o_geri').onclick = () => { mv.pause(); oply.textContent='Oynat';
-  const t = mv.currentTime || 0; let h = 0; for(const a of ADIM) if(a[0] < t - 0.3) h = a[0]; git(h); };
-document.getElementById('o_ileri').onclick = () => { mv.pause(); oply.textContent='Oynat';
-  const t = mv.currentTime || 0; let h = SURE; for(let i=ADIM.length-1;i>=0;i--) if(ADIM[i][0] > t + 0.05) h = ADIM[i][0]; git(h); };
-setInterval(()=>{ if(kutu.style.display!=='block') return; const t = mv.currentTime || 0;
+document.getElementById('o_geri').onclick = () => { mv.pause(); oply.textContent='Oynat'; const t = mv.currentTime || 0;
+  let h = Math.max(0, t - 1);                                                  // montajda önceki ADIM, öbürlerinde 1 sn geri
+  if(adimli){ h = 0; for(const a of ADIM) if(a[0] < t - 0.3) h = a[0]; } git(h); };
+document.getElementById('o_ileri').onclick = () => { mv.pause(); oply.textContent='Oynat'; const t = mv.currentTime || 0;
+  let h = Math.min(SURE, t + 1);
+  if(adimli){ h = SURE; for(let i=ADIM.length-1;i>=0;i--) if(ADIM[i][0] > t + 0.05) h = ADIM[i][0]; } git(h); };
+setInterval(()=>{ const d = mv.duration || 0;
+  if(Math.abs(d - SURE) > 0.01){ SURE = d; obar.max = d.toFixed(2); oyn.style.display = d > 0.1 ? 'flex' : 'none';
+    oply.textContent = mv.paused ? 'Oynat' : 'Durdur'; suruyor = false; sonAdim = -1; yaz2(mv.currentTime || 0); }
+  if(oyn.style.display === 'none') return; const t = mv.currentTime || 0;
   if(!suruyor){ obar.value = t; yaz2(t); }
+  if(!adimli) return;
   let k = 0; for(let i=0;i<ADIM.length;i++) if(t >= ADIM[i][0] - 0.05) k = i;
   if(k !== sonAdim){ sonAdim = k; kutu.querySelectorAll('.ad').forEach((e,i)=>e.classList.toggle('simdi', i===k)); } }, 150);
 function goster(k){
   const m = D[k];
   mv.setAttribute('src', k + ".glb"); mv.setAttribute('ios-src', m.usdz || (k + (/_v3$/.test(k) ? "_ar2.usdz" : ".usdz")));
   kasarGizli = false; kbtn.style.display = /_dozaj$/.test(k) ? 'block' : 'none'; document.getElementById('bom').style.display = m.bom ? 'block' : 'none';
-  kutu.style.display = m.adim ? 'block' : 'none'; oyn.style.display = m.adim ? 'flex' : 'none'; sonAdim = -1;
-  if(m.adim){ oply.textContent = 'Durdur'; obar.value = 0; }
+  kutu.style.display = m.adim ? 'block' : 'none'; adimli = !!m.adim; sonAdim = -1; SURE = -1;   // SURE = -1 → çubuk yeni modelin süresini alsın
+  setTimeout(() => { try { mv.currentTime = 0; mv.play(); oply.textContent = 'Durdur'; } catch(e){} }, 350);
   mv.setAttribute('camera-orbit', m.adim ? '50deg 72deg 2.45m' : '35deg 70deg 1.6m');   // montajda parçalar dışarıda başlıyor, geniş çerçeve kbtn.textContent = "Kaşarı gizle — içini gör";
   tablo.innerHTML =
     "<tr><td>Ölçü (G × D × Y)</td><td>" + m.w + " × " + m.d + " × " + m.h + " mm</td></tr>" +
