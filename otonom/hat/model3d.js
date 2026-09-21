@@ -1,5 +1,5 @@
-// AUTOKITCH · hat/model3d.js — gerçek üretim modelini gösterir, üstüne gelince parça PARLAR, tıklayınca sayfası açılır.
-// model-viewer'ın materialFromPoint'i malzeme adını verir; her birim kendi malzemesini taşır (hat_montaj_v4.py),
+// AUTOKITCH · hat/model3d.js — gerçek üretim modelini gösterir; üstüne gelince ETİKET açılır, tıklayınca sayfası açılır.
+// model-viewer'ın materialFromPoint'i malzeme adını verir; her birim kendi malzemesini taşır (hat_montaj_v5.py),
 // eşleşme durum.json'daki "mal" alanından kurulur. Ayrı bir tıklama katmanı yok — model neyse o.
 //
 // İKİ TUZAK (ikisi de ölçülerek bulundu):
@@ -7,25 +7,17 @@
 //    Eleman koordinatı verilince seçim rect.top kadar kayıyor — "tam üstündeyim ama seçmiyor".
 //  2 model-viewer'ın 'load' olayı ve mv.model geç geliyor (~13 sn) → yoklayarak kurulur.
 (function () {
-  const VURGU = [1.0, 0.72, 0.16, 1.0];           // parlayan birim
-  const SOLUK = 0.14;                              // seçim varken ötekiler
-  const ZARF = 0.055;                              // henüz modellenmemiş kutular: bağlam olarak dursun, önde durmasın
+  // Kemal (22 Eyl): "üstüne gelince parlamasın yanmasın, diğerleri şeffaflaşmasın, gerek yok."
+  // Model HER ZAMAN kendi hâlinde durur: hiçbir renk/alfa değiştirilmez. Üstüne gelince yalnız ETİKET açılır,
+  // imleç el olur, tıklayınca sayfası açılır.
 
   window.model3d = function (opt) {
     const mv = document.getElementById(opt.mv), etiket = document.getElementById(opt.etiket);
-    let BIRIM = {}, ASIL = {}, GRUP = {}, secili = null, kilit = null, gercekVar = false, ici = false;
+    let BIRIM = {}, ASIL = {}, GRUP = {}, secili = null, kilit = null, gercekVar = false;
 
     const anahtar = ad => ad.split('__')[0];                        // M<modül>_<kod>__<ton> → birim anahtarı
     const gercek = b => b && b.durum && b.durum.indexOf('GERCEK') === 0;
     function grupAnahtari(b) { return opt.grup === 'modul' ? b.modul : b.kod; }
-
-    function boya(m, renk, alfa) {
-      const c = renk ? renk.slice() : ASIL[m.name].slice();
-      if (alfa != null) c[3] = alfa;
-      if (ici && !renk && m.name.indexOf('__cam') > 0) c[3] = 0.28;   // "içini gör": PC gövde saydamlaşır
-      m.pbrMetallicRoughness.setBaseColorFactor(c);
-      m.setAlphaMode(c[3] >= 0.999 ? 'OPAQUE' : 'BLEND');
-    }
 
     function kur() {
       if (!mv.model) return;
@@ -33,11 +25,7 @@
       gercekVar = Object.keys(BIRIM).some(k => gercek(BIRIM[k]));
       mv.model.materials.forEach(m => {
         const b = BIRIM[anahtar(m.name)];
-        const f = m.pbrMetallicRoughness.baseColorFactor;
-        let a = f[3];
-        if (b && !gercek(b)) a = Math.min(a, ZARF);                 // kutu / katalog: soluk bağlam
-        ASIL[m.name] = [f[0], f[1], f[2], a];
-        boya(m, null);
+        ASIL[m.name] = 1;                                           // yalnız "kuruldu" işareti; renge dokunulmuyor
         if (!b) return;
         const k = grupAnahtari(b);
         (GRUP[k] = GRUP[k] || { birimler: [], mat: [] }).mat.push(m);
@@ -49,13 +37,6 @@
     function vurgula(k) {
       if (secili === k) return;
       secili = k;
-      mv.model.materials.forEach(m => {
-        if (!ASIL[m.name]) return;
-        const b = BIRIM[anahtar(m.name)];
-        if (!k) { boya(m, null); return; }
-        if (b && grupAnahtari(b) === k) boya(m, VURGU);
-        else boya(m, null, Math.min(ASIL[m.name][3], SOLUK));
-      });
       const g = k && GRUP[k];
       if (etiket) { etiket.innerHTML = g ? opt.yazi(g) : ''; etiket.style.display = g ? 'block' : 'none'; }
       document.querySelectorAll('[data-k]').forEach(e => e.classList.toggle('on', e.dataset.k === k));
@@ -91,7 +72,7 @@
       veri(birimler) { birimler.forEach(b => { BIRIM[b.mal] = b; }); kur(); },
       sec(k) { kilit = k; vurgula(k); },
       birak() { kilit = null; vurgula(null); },
-      icini(ac) { ici = ac; const s = secili; secili = null; vurgula(s); }
+      icini() {}                                                  // eski arayüz korunuyor (sayfa çağırıyorsa kırılmasın)
     };
   };
 })();
