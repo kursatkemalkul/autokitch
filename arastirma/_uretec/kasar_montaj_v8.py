@@ -10,6 +10,7 @@ import importlib
 MODUL = sys.argv[1] if len(sys.argv) > 1 else "kasar_cad_v8"          # kullanım: python kasar_montaj_v8.py [üreteç modülü] [çıktı öneki]
 ONEK = sys.argv[2] if len(sys.argv) > 2 else "kasar_v8"
 V = importlib.import_module(MODUL)
+GRUP_CALIS = dict(V.GRUP)                                            # kur() V.GRUP'u montaj gruplarıyla ezer; çalışma animasyonu için aslını sakla
 from kaset_3d_v3 import Mesh, MM, doku_ad, doku_montaj, etiket_yuzu, usdz_yaz, OUT
 
 BASLA, ADIM_SURE, HAREKET = 1.4, 1.6, 0.72      # sn · adım süresi · hareketin adım içindeki payı
@@ -96,5 +97,40 @@ if __name__ == "__main__":
                                       [(a_, m_, mal_) for a_, m_, mal_, g_ in par], dokular, anim=anim, fps=30.0, sure=sure)
     print(ONEK + "_montaj.usdz · %.0f KB · %d prim · USD denetimi: %s" % (b2 / 1024.0, prim, "GECTI" if not sorun else "KALDI"))
     for x in sorun: print("   HATA:", x)
+    # ---- ÇALIŞMA ANİMASYONU USDZ (üretim / dozaj sekmelerinin iPhone AR dosyası): helezon + karıştırıcı/rotor döner ----
+    # Quick Look animasyonu DÖNGÜYE alır → tur sayısı TAM olmalı ki başa sararken sıçramasın (kıymada −3,4 → −3 tur; yalnız görsel).
+    T_, D_ = 10.0, 12.0; grp = {p_["ad"]: p_["grup"] for p_ in V.PARCALAR}; anim2 = {}
+    for g_ in ("helezon", "karistirici"):
+        tur_ = GRUP_CALIS[g_]["aci"](T_); tur_ = float(round(tur_)) if abs(round(tur_)) >= 1 else math.copysign(1.0, tur_)
+        keys_ = [(0.0, (0, 0, 0), 0.0), (T_, (0, 0, 0), 360.0 * tur_), (D_, (0, 0, 0), 360.0 * tur_)]
+        for a_, g2 in grp.items():
+            if g2 == g_: anim2[a_] = dict(pivot=GRUP_CALIS[g_]["pivot"], keys=keys_)
+    calis = [(a_, m_, mal_) for a_, m_, mal_, _ in par if a_ != "tasima_tapasi"]
+    b3, prim3, sorun3, _u = usdz_yaz([os.path.join(OUT, ONEK + "_calis.usdz")], ONEK + "_calis", calis, dokular, anim=anim2, fps=30.0, sure=D_)
+    print(ONEK + "_calis.usdz · %.0f KB · %d hareketli parca · USD denetimi: %s" % (b3 / 1024.0, len(anim2), "GECTI" if not sorun3 else "KALDI"))
+
+    # ---- ADIM ADIM AR: iPhone'un AR görüntüleyicisinde sarma çubuğu YOK ve siteler ekleyemiyor → her adımın DURAĞAN hâli ayrı USDZ ----
+    # k. dosya: 1..k adımların parçaları YERİNDE, sonrakiler geliş konumunda bekliyor (dönüşler dahil) — ofset/dönüş ağa gömülür.
+    def donustur(m, off, tur, pivot):
+        a = -2.0 * math.pi * tur; ca, sa = math.cos(a), math.sin(a); y = Mesh(); y.I = list(m.I); y.UV = m.UV
+        for (px, py, pz), (nx, ny, nz) in zip(m.P, m.N):
+            dx, dy = px - pivot[0], py - pivot[1]
+            y.P.append((pivot[0] + ca * dx - sa * dy + off[0] * MM, pivot[1] + sa * dx + ca * dy + off[1] * MM, pz + off[2] * MM))
+            y.N.append((ca * nx - sa * ny, sa * nx + ca * ny, nz))
+        return y
+    hangi_adim = {}
+    for i, (ad_, parcalar, off, tur, ayri) in enumerate(ADIMLAR):
+        for p_ in parcalar: hangi_adim[p_] = i
+    top = 0
+    for k in range(1, len(ADIMLAR) + 1):
+        L = []
+        for a_, m_, mal_, _g in par:
+            i = hangi_adim.get(a_, 0)
+            if i < k: L.append((a_, m_, mal_))
+            else:
+                _ad, _p, off, tur, _ay = ADIMLAR[i]; L.append((a_, donustur(m_, off, tur, (0.0, V.CY * MM, 0.0)), mal_))
+        bk, _pr, sk, _uy = usdz_yaz([os.path.join(OUT, "%s_adim_%02d.usdz" % (ONEK, k))], "%s_adim_%02d" % (ONEK, k), L, dokular)
+        assert not sk, sk; top += bk
+    print("%s_adim_01..%02d.usdz · toplam %.1f MB" % (ONEK, len(ADIMLAR), top / 1048576.0))
     for i, (ad, p, o, t, a) in enumerate(ADIMLAR):
         print("  %2d  %5.1f sn  %-48s %d parca" % (i + 1, BASLA + i * ADIM_SURE, ad, len(p)))
