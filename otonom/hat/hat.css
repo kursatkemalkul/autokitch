@@ -30,9 +30,9 @@ figure{margin:12px 0}figure img{width:100%;display:block;border:1px solid var(--
 .foot{max-width:var(--maxw);margin:0 auto;padding:18px 20px 40px;font-size:12px;color:var(--mut);border-top:1px solid var(--line)}
 
 /* ---- 3B üretim modeli sayfaları (model3d.js) — sade, modele odaklı ---- */
-.m3{position:relative;margin:14px 0 0;border:1px solid #e3e6ea;border-radius:14px;overflow:hidden;background:#f7f8fa}
-.m3 model-viewer{display:block;width:100%;height:68vh;min-height:420px;background:#f7f8fa;--poster-color:transparent}
-.m3 .ip{position:absolute;left:14px;bottom:12px;color:#8a9199;font-size:12px;pointer-events:none}
+.m3{position:relative;margin:14px 0 0;border:1px solid #d7dce2;border-radius:14px;overflow:hidden;background:#15181d}
+.m3 model-viewer{display:block;width:100%;height:68vh;min-height:420px;background:#15181d;--poster-color:transparent}   /* koyu zemin: beyaz POM · paslanmaz · seffaf PC ancak boyle okunuyor */
+.m3 .ip{position:absolute;left:14px;bottom:12px;color:#6d7682;font-size:12px;pointer-events:none}
 .m3 .et{position:absolute;left:14px;top:14px;display:none;max-width:62%;padding:10px 13px;border-radius:11px;
         background:rgba(255,255,255,.94);border:1px solid #dfe3e8;box-shadow:0 4px 18px rgba(20,26,34,.09);pointer-events:none}
 .m3 .et b{display:block;font-size:14.5px;color:#1d2430;line-height:1.3}

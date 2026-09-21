@@ -17,7 +17,8 @@
       mv.model.materials.forEach(m => {
         const f = m.pbrMetallicRoughness.baseColorFactor;
         ASIL[m.name] = [f[0], f[1], f[2], f[3]];
-        const b = BIRIM[m.name]; if (!b) return;
+        const b = BIRIM[m.name.split("__")[0]]; if (!b) return;    // ad: M<modul>_<kod>__<ton> -> birim anahtari "__" oncesi
+        if (!b.durum || b.durum.indexOf("GERCEK") !== 0) { ASIL[m.name][3] = Math.min(ASIL[m.name][3], 0.10); boya(m, null); }   // kutu/katalog SOLUK: gercek modeller one ciksin
         (GRUP[grupAnahtari(b)] = GRUP[grupAnahtari(b)] || { birimler: [], mat: [] }).mat.push(m);
         GRUP[grupAnahtari(b)].birimler.push(b);
       });
@@ -51,9 +52,10 @@
     }
 
     function noktada(ev) {
-      const r = mv.getBoundingClientRect();
-      const m = mv.materialFromPoint(ev.clientX - r.left, ev.clientY - r.top);
-      const b = m && BIRIM[m.name];
+      // DIKKAT: model-viewer materialFromPoint PENCERE koordinati bekler (icerde kendi getBoundingClientRect'ini cikariyor).
+      // Eleman koordinati verilince imlec rect.top kadar kayiyordu — "tam ustundeyim ama secmiyor" sorunu buydu.
+      const m = mv.materialFromPoint(ev.clientX, ev.clientY);
+      const b = m && BIRIM[m.name.split("__")[0]];
       return b ? grupAnahtari(b) : null;
     }
 
