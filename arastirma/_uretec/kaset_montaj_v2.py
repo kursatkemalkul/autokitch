@@ -27,7 +27,7 @@ ADIMLAR = [
     ("2 ALT saplama arkadan geçirilir (gövdenin dışından)",        ["saplama_0", "saplama_1"],                            (0, 0, -300), 0.0, False, {}),
     ("Alt saplamalara arkadan pul + kör somun",                    ["pul_arka_0", "pul_arka_1", "somun_arka_0", "somun_arka_1"], (0, 0, -150), 0.0, False, {}),
     ("Önden pul + kör somun: alt saplamalar sıkılır",              ["pul_on_0", "pul_on_1", "somun_on_0", "somun_on_1"],  (0, 0, 150),  0.0, False, {}),
-    ("2 ÜST saplama KULPUN ayağına dibe kadar vidalanır (saplama döner)", ["saplama_2", "saplama_3"],                     (0, 0, -120), 4.0, False, dict(pivot="kendi", tasi=8)),
+    ("2 ÜST saplama KULPUN ayağına dibe kadar vidalanır (saplama döner)", ["saplama_2", "saplama_3"],                     (0, 0, -120), 4.0, False, dict(pivot="kendi", tasi="kulp")),
     ("Kulp + 2 saplama ÖNDEN plakalardan geçirilir",               ["kulp"],                                              (0, 0, KULP_BEKLE), 0.0, False, {}),
     ("Arkadan pul + kör somun: kulp ayakları ön plakaya çekilir",  ["pul_arka_2", "pul_arka_3", "somun_arka_2", "somun_arka_3"], (0, 0, -150), 0.0, False, {}),
     ("2 tahrik göbeği (O-ringi kanalında) İÇERİDEN takılır",       ["gobek_helezon", "gobek_karistirici", "oring_gobek_helezon", "oring_gobek_karistirici"], (0, 0, 190), 0.0, False, {}),
@@ -62,7 +62,7 @@ def hareket(i, parca):
     if ek.get("pivot") == "kendi": x, y = V.SAPLAMA[int(parca.rsplit("_", 1)[1])]; pivot = (x, y, 0.0)
     else: pivot = (0.0, V.CY, 0.0) if tur else None
     kaymalar = [(off, kt0, kt1)]
-    if "tasi" in ek: j = ek["tasi"]; jt0, jt1, _a, _b = pencere(j); kaymalar.append((ADIMLAR[j][2], jt0, jt1)); P.append((jt0, jt1))
+    if "tasi" in ek: j = [k_ for k_, a_ in enumerate(ADIMLAR) if ek["tasi"] in a_[1]][0]; jt0, jt1, _a, _b = pencere(j); kaymalar.append((ADIMLAR[j][2], jt0, jt1)); P.append((jt0, jt1))
     kay = lambda t, K=kaymalar: tuple(sum(o[c] * (1.0 - ease(t, a, b)) for o, a, b in K) for c in range(3))
     don = lambda t, a=at0, b=at1, n=tur: n * (1.0 - ease(t, a, b))
     return pivot, kay, don, P
@@ -71,6 +71,7 @@ def hareket(i, parca):
 def kur():
     V.kap()
     var = set(p["ad"] for p in V.PARCALAR) | set(["etiket_ad", "etiket_montaj", "etiket_ad_arka", "etiket_montaj_arka"])
+    ADIMLAR[:] = [a for a in ADIMLAR if any(p in var for p in a[1])]      # üreteçte olmayan parçanın adımı düşer (ör. kapak kalktı) → boş adım kalmaz
     sure = BASLA + len(ADIMLAR) * ADIM_SURE + 2.6
     V.DONGU, V.DT = sure, 0.1
     GR, hangi, H = {}, {}, {}

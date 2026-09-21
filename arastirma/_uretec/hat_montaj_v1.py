@@ -54,8 +54,8 @@ def birim(kod, ad, mod, durum, x, y, z, mal="kutu", kaynak="", sayfa=""):
     B.append(dict(kod=kod, ad=ad, modul=mod, durum=durum, x=x, y=y, z=z, mal=mal, kaynak=kaynak, sayfa=sayfa))
 
 # --- C · TOPPING: dozaj kasetleri (GERÇEK olanlar burada) ---
-KASET_CAD = {"KAŞAR KABI": ("kasar_cad_v9", "Kaşar kabı v9", "kaset3d/index.html"), "KIYMA": ("kiyma_cad_v4", "Kıyma kaseti v4", "kaset3d/index.html"),
-             "KUŞBAŞI": ("kusbasi_cad_v3", "Kuşbaşı kaseti v3", "kaset3d/index.html"), "SUCUK": ("sucuk_cad_v2", "Küp sucuk kaseti v2", "kaset3d/index.html")}
+KASET_CAD = {"KAŞAR KABI": ("kasar_cad_v10", "Kaşar kabı v10", "kaset3d/index.html"), "KIYMA": ("kiyma_cad_v5", "Kıyma kaseti v5", "kaset3d/index.html"),
+             "KUŞBAŞI": ("kusbasi_cad_v4", "Kuşbaşı kaseti v4", "kaset3d/index.html"), "SUCUK": ("sucuk_cad_v3", "Küp sucuk kaseti v3", "kaset3d/index.html")}
 YUVA_V1 = [("HARÇ 1", 280.0, 370.0), ("HARÇ 2", 280.0, 650.0), ("KIYMA", 140.0, 860.0), ("KUŞBAŞI", 140.0, 1000.0),
            ("KAŞAR KABI", 280.0, 1210.0), ("SUCUK", 140.0, 1420.0)]        # v19'da sucuk 180'lik DİLİMLEYİCİYDİ; Kemal 21 Eyl'de küp sucuk kasetine geçti → 140 (kaşarın bitişine yaslandı: 1350–1490, sağda 40 mm serbest kaldı)
 for urun, gw, xc in YUVA_V1:
@@ -118,7 +118,7 @@ def kutu_kat(b):
     return cq.Workplane("XY").box(x1 - x0, y1 - y0, z1 - z0, centered=False).translate((x0, y0, z0))
 
 
-DIS = ("govde", "plaka_arka", "plaka_on", "kapak", "kulp", "cikis_tupu", "yatak_kapagi", "conta_arka", "conta_on") + tuple("saplama_%d" % i for i in range(4)) + ("somun_arka_0", "somun_arka_1", "somun_arka_2", "somun_arka_3", "somun_on_0", "somun_on_1", "topuz", "kilit_pimi")
+DIS = ("govde", "plaka_arka", "plaka_on", "kulp", "cikis_tupu", "yatak_kapagi", "conta_arka", "conta_on") + tuple("saplama_%d" % i for i in range(4)) + ("somun_arka_0", "somun_arka_1", "somun_arka_2", "somun_arka_3", "somun_on_0", "somun_on_1", "topuz", "kilit_pimi")
 
 
 def kaset_parcalari(modul):

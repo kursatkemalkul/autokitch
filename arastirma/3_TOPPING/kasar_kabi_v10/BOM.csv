@@ -1,0 +1,32 @@
+﻿dosya;parça;adet;malzeme · yöntem;görevi;zarf mm;hacim cm3
+govde;Gövde · kadeh kesit + ağız dudağı;1;PC 3 mm ısıl form · ya da 304 sac 1 mm (kanal 1,4 olur) · ya da baskı;iki plakanın 4 mm kanalına oturur · kanal dibinde 1,5 mm silikon CONTA (saplamalar sıkınca 1,0'a ezilir);274 × 337 × 315;761.6
+plaka_arka;Arka uç plakası;1;PC / POM / HDPE 8 mm · CNC freze;kanal 3,4 × 4 · 2 yatak Ø22,4 · 4 saplama Ø6,5 · 2 konum pimi Ø10,2;280 × 352 × 8;758.2
+plaka_on;Ön uç plakası;1;PC / POM / HDPE 8 mm · CNC freze;kanal · tüp geçişi Ø44 + fatura Ø50.4 × 3 (dibinde O-ring) · yatak Ø22,4 · 2 × M4 insert yuvası Ø5,6 × 6,5;280 × 352 × 8;748.9
+saplama_0;Saplama M6 × 343 (alt);2;A2 · iki ucu 16 mm diş, gövdesi düz Ø6;plaka deliği Ø6,5'ten geçer · iki ucunda pul + kör somun · gövdenin DIŞINDA (gıdaya değmez);6 × 6 × 343;9.5
+somun_arka_0;Kör somun M6;6;A2 · DIN 1587;arka 4 + ön alt 2 · kubbeli: diş ucu açıkta kalmaz, el kesmez;12 × 10 × 12;0.6
+saplama_2;Saplama M6 × 348 (üst);2;A2 · iki ucu 16 mm diş, gövdesi düz Ø6;ön ucu KULPUN ayağına dibe kadar vidalanır (14 mm) · arka ucunda pul + kör somun · dolum çizgisinin üstünde;6 × 6 × 348;9.7
+kulp;Kulp 192 mm · kaynaklı;1;AISI 304 · 2 dolu ayak Ø14 (taban flanşı Ø20) + Ø10 çubuk TIG kaynak · ayakta M6 × 14 KÖR diş;ÜST iki saplama önce kulpa dibe kadar vidalanır, sonra kulp + saplamalar önden geçirilir, arkadan somun sıkılır;212 × 20 × 46;28.3
+helezon_A;Helezon segmenti A;1;SLS PA12 ya da PETG baskı (seri üretimde tek parça POM);hatve 22.00 → 25.00 · arkada 60 mm KONİK KÖK Ø26 → Ø16 · boy 114 mm · kare delik 8,3;41 × 41 × 117;37.5
+helezon_B;Helezon segmenti B;1;SLS PA12 ya da PETG baskı (seri üretimde tek parça POM);hatve 25.00 → 27.84 · boy 106 mm · kare delik 8,3;41 × 41 × 110;26.8
+helezon_C;Helezon segmenti C;1;SLS PA12 ya da PETG baskı (seri üretimde tek parça POM);hatve 27.84 → 30.17 · θ tam 12 tur · boy 87 mm · kare delik 8,3;42 × 42 × 91;21.0
+helezon_D;Helezon segmenti D;1;SLS PA12 ya da PETG baskı (seri üretimde tek parça POM);tüp içi ÇİFT AĞIZ hatve 36 + 6 çırpıcı pim + ön muylu Ø12 · boy 97 mm · kare delik 8,3;42 × 42 × 100;22.2
+helezon_cekirdek;Kare çubuk 8 × 8 × 394;1;AISI 304 · yalnız boya kesilir;torku segmentlere taşır, mili sertleştirir;8 × 8 × 394;25.2
+gobek_helezon;Tahrik göbeği;2;POM torna ya da baskı;içeriden takılır: flanş Ø32 + muylu Ø22 (O-ring kanalı 3,3 × 2) + kare yuva 8,3 × 12;32 × 32 × 23;6.4
+kavrama_helezon;Haç kavrama;2;POM ya da baskı;arkadan göbeğin kare başına geçer · makinedeki yaylı yuvaya oturur;36 × 36 × 18;8.6
+yayli_pim_helezon;Yaylı pim Ø4 × 26;2;A2 · ISO 8752;kavramayı göbeğe kilitler;26 × 4 × 4;0.3
+cikis_tupu;Çıkış tüpü;1;PC / PETG şeffaf · baskı ya da torna + freze;iç Ø44 · ön plakaya faturalı + 2 × M4 · alt ağız 36 × 38 + bilezik · 3 bayonet TIRNAĞI 8 × 4 × 3,2 (tüple tek parça) · plakaya geçme 1,3 + O-ring;82 × 62 × 85;46.0
+vida_tup_a;Vida M4 × 12 silindir başlı;2;A2 · DIN 912;tüp flanşını ön plakaya bağlar;7 × 7 × 13;0.2
+yatak_kapagi;Yatak kapağı (bayonet);1;POM / PETG baskı;İT → 35° ÇEVİR → KLİK (tümsek 0,25 + cep + dayama · içindeki O-ring hem conta hem yay) · ön muyluyu Ø12,4 yatakta taşır · sökünce helezon öne çekilir;58 × 58 × 30;28.6
+tasima_tapasi;Taşıma tapası;1;TPU 95A baskı;kap makine dışındayken ağız bileziğine takılır · makineye sürmeden çıkarılır;65 × 14 × 47;9.9
+kar_mil;Kare çubuk 8 × 8 × 368;1;AISI 304;karıştırıcı mili · öne çekilip çıkarılır;8 × 8 × 368;23.6
+orumcek_arka;Örümcek göbek;3;PETG / PA12 baskı (seri üretimde kaynaklı paslanmaz);4 kol: çubukları R124 / 124 / 86 / 43'te tutar · kare delik 8,3;260 × 140 × 18;56.2
+cubuk_0;Çubuk Ø6 × 292;4;AISI 304 · taşlanmış;örümceklere sıkı geçer · kaşarı süpürür;6 × 6 × 292;8.3
+on_kovan;Ön kovan;1;POM / baskı;arka yüzünde Ø28,4 × 2 LABİRENT havşası (ön örümcek göbeği girer → ürün mile sürünemez) · içeriden takılır · plakada döner · mil içinden kayar · teğet pim deliği;32 × 32 × 25;7.3
+topuz;Topuz;1;POM / baskı;kare mile M4 setuskurla sabit · eteği kovanın üstüne geçer;36 × 36 × 55;47.8
+setuskur;Setuskur M4 × 6;1;A2 · DIN 913;topuzu mile sabitler;4 × 6 × 4;0.1
+kilit_pimi;Halkalı kilit pimi Ø4 × 44;1;A2 · standart;topuz eteği + kovandan TEĞET geçer (mili delmeden) · çekince mil öne çıkar;61 × 18 × 4;0.7
+conta_arka;Gövde contası (gövde kesitinde);2;FDA silikon 60 ShA levha 1,5 mm · su jeti / bıçak kesim;plaka kanalının dibine oturur · 1,5 → 1,0 mm ezilir · gövde–plaka birleşimini sızdırmaz yapar;274 × 337 × 1;2.4
+insert_a;Dişli insert M4 × 6 (ısıyla / presle çakma);2;pirinç ya da A2;ön plakada · tüp vidası plastiğe değil METALE sıkılır: sök-tak dişi yemez;6 × 6 × 6;0.1
+oring_tup;O-ring 45 × 2;2;FDA silikon / EPDM 70 ShA;1 adet ön plakadaki tüp faturasının dibinde · 1 adet yatak kapağının içinde (hem conta hem bayonetin YAYI);49 × 49 × 2;0.4
+oring_gobek_helezon;O-ring 18 × 2,5;3;FDA silikon / EPDM 70 ShA;2 tahrik göbeği + ön kovan muylusundaki kanalda · plaka deliğinden sızıntıyı keser (≤ 42 dev/dk);22 × 22 × 2;0.3
+pul_arka_0;Pul M6 · Ø12 × 1,6;6;A2 · DIN 125;plastik plakada somunun yükünü yayar · arka 4 + ön alt 2;12 × 12 × 2;0.1
