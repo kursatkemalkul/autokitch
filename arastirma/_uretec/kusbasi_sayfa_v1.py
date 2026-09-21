@@ -16,7 +16,7 @@ fig, axs = plt.subplots(1, 3, figsize=(12, 4.3), facecolor="#000")
 for ax, d in zip(axs, (10.0, 12.0, 15.0)):
     R = random.Random(3); N = int(round(KM.PORS / KM.kup(d))); w = 2 * math.pi * 35.0 / 60.0; xs, zs = [], []
     for k in range(N):
-        t = T_DOK * (k + R.random()) / N; r = r_t(t); a = -w * t
+        t = T_DOK * (k + R.random()) / N; r = KM.r_t_k(t); a = -w * t
         x = r + R.uniform(-G["AGIZ"][0] / 2, G["AGIZ"][0] / 2) + R.gauss(0, 4); z = R.uniform(-G["AGIZ"][1] / 2, G["AGIZ"][1] / 2) + R.gauss(0, 4)
         xs.append(x * math.cos(a) - z * math.sin(a)); zs.append(x * math.sin(a) + z * math.cos(a))
     ax.set_facecolor("#000"); ax.add_patch(plt.Circle((0, 0), PIDE_R, color="#e8d9ae")); ax.add_patch(plt.Circle((0, 0), PIDE_R - KENAR, color="#dcc98f"))
@@ -35,6 +35,9 @@ doz = "".join("<tr><td>%s</td><td><b>%s g</b></td><td>%s tur</td><td>%s dev/dk</
 bel = "".join("<tr><td><b>%d mm</b></td><td>%s</td><td>± %s küp</td><td><b>± %%%s</b></td><td>%%%s</td></tr>" % (x["d"], tr(x["nk"]), tr(x["sig"], 2), tr(x["yuzde"]), tr(x["bir"])) for x in S["belirsizlik"])
 dag = "".join("<tr><td><b>%d mm</b></td><td>%d</td><td>%s</td><td>%%%d</td><td>%%%d</td><td><b>%%%s</b></td></tr>" % (x["d"], x["N"], tr(x["ort"]), x["cv"], x["poisson"], tr(x["bos"])) for x in S["dagilim"])
 D0 = [x for x in S["doz"] if abs(x["etaF"] - 0.6) < 1e-9][0]
+tar = "".join("<tr%s><td><b>r %d</b>%s</td><td>%%%d</td><td>%%%s</td></tr>" % (' style="background:#15243a"' if x["secilen"] else "", x["r_max"], " ← seçilen" if x["secilen"] else "", x["cv"], tr(x["tas"])) for x in S["yasa_tarama"])
+obk = "".join("<tr><td>%s</td><td><b>%%%s</b></td></tr>" % (x["ad"], tr(x["bos"])) for x in S["obek"])
+ist = " · ".join("r %d: %s sn" % (x["r"], tr(x["sn"], 2)) for x in S["yasa"]["ist"] if x["sn"] >= 0.05)
 
 H = u'''<!DOCTYPE html>
 <html lang="tr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -88,6 +91,14 @@ H = u'''<!DOCTYPE html>
 <div class="tasir"><table><tr><th>küp</th><th>adet</th><th>hücre başına</th><th>sapma</th><th>rastgele serpmenin sınırı</th><th>boş hücre</th></tr>__DAG__</table></div>
 <p>Sapma her boyda rastgele serpmenin sınırında: <b>makine elinden geleni yapıyor</b>, boşluğu belirleyen küp sayısı. 10 mm'de hücrelerin %10'u boş, 15 mm'de yarısından fazlası. Düzgün görünen pide için de küçük küp gerekiyor.</p>
 
+<h2>7b · Tabla her yere eşit veriyor mu · “pat diye” dökerse ne olur</h2>
+<p>Hesap şu kurguyla yapıldı: helezon doz boyunca <b>sabit hızla</b> döner (sabit gram/saniye), tabla dönerken ağız pidenin <b>dışından içine</b> yürür. Her halkaya cm² başına aynı gram düşmesi için ağzın her yarıçapta ne kadar oyalanacağı <b>çözüldü</b> (negatif olmayan en küçük kareler, scipy).</p>
+<p>Kaşarın hareket yasası burada tutmadı: kaşar eriyip ≈ 13 mm yayılıyor, küp yayılmıyor. Kaşar yasasıyla halkalar arası sapma <b>%__ECV__</b> (en dış halka ortalamanın %__EDIS__'i). Kuşbaşı için çözülen yasayla <b>%__YCV__</b> (en dış halka %__YDIS__).</p>
+<div class="tasir"><table><tr><th>ağız merkezi en dışta</th><th>halkalar arası sapma</th><th>kenar payına (r &gt; 125) taşan</th></tr>__TAR__</table></div>
+<p>Bu bir <b>takas</b>: ağız 48 mm geniş olduğu için en dış halkayı doldurmak, bir kısmını kenar payına taşırmadan olmuyor. Oyalanma süreleri: __IST__.</p>
+<div class="tasir"><table><tr><th>aynı 145 g nasıl düşerse (küp 10 mm)</th><th>pidede boş hücre</th></tr>__OBK__</table></div>
+<div class="kutu"><b>“Pat diye” dökmek olmaz — sayı da bunu söylüyor:</b> sürekli akışta pidenin ≈ %13'ü boş, iki öbekte yarısı. Sürekliliği sağlayan şey <b>eşik + tıkaç</b>; bu kasetin <b>en kritik ve henüz denenmemiş</b> parçası. Denemede ilk bakılacak şey: küpler tek tek mi düşüyor, tur başına öbek öbek mi.</div>
+
 <h2>8 · Tork</h2>
 <p>Çalışma torku ≈ <b>__TORK__ N·m</b> (yatak __YATAK__ kg + hazne basıncı, sürtünme __F__ N). Redüktör 24 N·m veriyor; tehlike çalışma değil <b>sıkışma</b>. Sürücüde akım sınırı ≈ 3 N·m olmalı ki sinir parçası sıkışırsa baskı kanat kırılmasın, motor dursun.</p>
 
@@ -100,6 +111,7 @@ rp = {"__LITRE__": tr(G["KG2"] / G["RHO"], 2) if False else tr(S["giris"]["KG2"]
       "__BOGAZ__": "%d" % (2 * G["RT"]), "__AGX__": "%d" % G["AGIZ"][0], "__AGZ__": "%d" % G["AGIZ"][1], "__KANAL__": "%d" % (G["RT"] - G["R_MIL"]), "__KANALK__": "%d" % (G["RT"] - G["R_KOK"]),
       "__P0__": "%d" % G["P0"], "__P1__": tr(G["P1"]), "__HB__": "%d" % (G["P0"] - G["T"]), "__LAMA__": tr(G["LAMA_DUVAR"]), "__ROTOR__": "%d" % G["ROTOR_BOSLUK"],
       "__TANE__": tane, "__KAP__": kap, "__DUY__": duy, "__DOZ__": doz, "__TIK__": "%d" % (G["TIKAC"] + G["ESIK"]), "__JAN__": tr(S["janssen"], 2), "__BEL__": bel, "__DAG__": dag,
+      "__TAR__": tar, "__OBK__": obk, "__IST__": ist, "__ECV__": "%d" % S["yasa"]["eski"]["cv"], "__EDIS__": "%d" % S["yasa"]["eski"]["profil"][-1], "__YCV__": "%d" % S["yasa"]["yeni"]["cv"], "__YDIS__": "%d" % S["yasa"]["yeni"]["profil"][-1],
       "__TORK__": tr(S["tork"]["T"], 2), "__YATAK__": tr(S["tork"]["yatak"], 2), "__F__": tr(S["tork"]["F"])}
 for a, b in rp.items(): H = H.replace(a, b)
 assert "__" not in H.replace("__main__", ""), [x for x in H.split() if "__" in x][:5]
