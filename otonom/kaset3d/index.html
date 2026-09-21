@@ -39,6 +39,10 @@
   .arsiv summary::before{content:"▸ ";color:var(--gray)}
   .arsiv[open] summary::before{content:"▾ "}
   .arsiv .tab{font-size:14px;font-weight:500;flex:1 1 44%}
+  #adimlar{display:none;margin-top:14px;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+  .ad{display:flex;gap:10px;padding:10px 13px;border-bottom:1px solid #232326;color:var(--gray-l);font-size:14px;cursor:pointer;line-height:1.35}
+  .ad:last-child{border-bottom:0} .ad b{color:var(--gray);font-weight:600;min-width:22px}
+  .ad.simdi{background:#15243a;color:#fff} .ad.simdi b{color:var(--blue)}
 </style>
 <script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script>
 </head>
@@ -49,6 +53,7 @@
 
   <div class="tabs">
     <div class="tab on" data-m="kasar_v8">Kaşar kabı v8 · üretim</div>
+    <div class="tab" data-m="kasar_v8_montaj">v8 · montaj</div>
     <div class="tab" data-m="kasar_v8_dozaj">v8 · dozaj düzeni</div>
     <div class="tab" data-m="kaset_v3">Standart kaset</div>
   </div>
@@ -76,6 +81,7 @@
   <button class="ikinci" id="kasarbtn">Kaşarı gizle — içini gör</button>
   <a class="akis" href="akis.html">Kaşar akış hesabı + simülasyon →</a>
 
+  <div id="adimlar"></div>
   <table id="tablo"></table>
   <div class="note" id="notu"></div>
   <div id="bom" style="display:none">
@@ -88,6 +94,9 @@
 
 <script>
 const D = {
+  kasar_v8_montaj:{ad:"Kaşar kabı v8 · montaj animasyonu", w:280, d:325, h:360, brut:32.8, net:"20,6", usdz:"kasar_v8.usdz", adim:true,
+         icerik:"43 parça · 18 adım · 33 saniye", dolu:"—",
+         not:"Her parça KENDİ takılma yönünden geliyor: gövde ve ön plaka önden, saplamalar arkadan, karıştırıcı kafesi üstten, helezon dönerek önden. Yatak kapağı önce itiliyor sonra çeyrek tur dönüyor. Aşağıdaki adıma dokununca animasyon o ana atlar. Katılar üretim modelinin kendisi — ayrı bir çizim değil."},
   kasar_v8:{ad:"Kaşar kabı v8 · üretim modeli", w:280, d:325, h:360, brut:32.8, net:"20,6", usdz:"kasar_v8.usdz", bom:true,
          icerik:"Kaşar ×1 (8,8 kg, 2 günlük · 0,50 g/mL ile 17,6 L = %85 dolu)", dolu:"≈ 12 kg (dolu)",
          not:"v7'den TEK FARK: kanadın hatvesi artık BASAMAKLI değil, SÜREKLİ artıyor — 22,00 mm'den 30,17 mm'ye, mil boyunca doğrusal. Kanat üçgen ağ değil, tam yüzeyden kurulu tek katı (dört kenar eğrisi + aralarında ruled yüzeyler, dikilip katıya çevrildi). Toplam dönüş 11,75 tur = 47 çeyrek tur seçildi ki bölme yerleri kare çubuğa tam otursun. Ölçüldü: katının kendi üstünde, θ=0 ışınında ardışık turlar arası mesafe tasarım hatvesiyle 0,06 mm içinde aynı. Bölünmüş 3 parçanın yanında BÖLÜNMEMİŞ tek parça da export edildi (307 mm, 89 cm³ — 310 mm'lik yazıcı ya da torna için). GERÇEK KATI MODEL: 43 parça; delikler, kanallar ve geçme boşlukları gerçek; iç içe geçen parça yok. Arkada 60 mm konik mil kökü Ø26 → Ø16. Gövde plakaların 4 mm kanalına oturur, 4 saplama sıkar. Karıştırıcı mili topuzdaki kilit pimi çekilince öne çıkar."},
@@ -129,10 +138,20 @@ const D = {
          not:"Yalnız dış ölçü kutusu — tezgâhta yer kontrolü için."}
 };
 const mv = document.getElementById('mv'), tablo = document.getElementById('tablo'), notu = document.getElementById('notu');
+const ADIM = [[1.4,"Arka plaka tezgâha konur"],[3.0,"Gövde arka plakanın 4 mm kanalına sürülür"],[4.6,"Ön plaka öne geçirilir"],[6.2,"4 saplama arkadan geçirilir"],[7.8,"Kör somunlar sıkılır"],[9.4,"Kulp üst saplamalara vidalanır"],[11.0,"2 tahrik göbeği İÇERİDEN takılır"],[12.6,"Haç kavramalar arkadan geçer, yaylı pim kilitler"],[14.2,"HELEZON önden sürülür — 4 segment kare çubuğa dizili, dönerek girer"],[15.8,"Çıkış tüpü ön plakaya 2 × M4 ile"],[17.4,"Yatak kapağı itilir, sonra ÇEYREK TUR döner"],[19.0,"Karıştırıcı kafesi ÜSTTEN indirilir"],[20.6,"Kare mil önden kafesin içinden geçer"],[22.2,"Ön kovan takılır"],[23.8,"Topuz mile geçer, setuskur sıkılır"],[25.4,"Kilit pimi TEĞET geçer — mili delmez"],[27.0,"Kapak gövde ağzına oturur"],[28.6,"Taşıma tapası ağıza takılır"]];
+const kutu = document.getElementById('adimlar');
+kutu.innerHTML = ADIM.map((a,i)=>'<div class="ad" data-t="'+a[0]+'"><b>'+(i+1)+'</b><span>'+a[1]+'</span></div>').join('');
+kutu.querySelectorAll('.ad').forEach(e=>e.onclick=()=>{ try{ mv.currentTime = +e.dataset.t - 0.25; mv.play(); }catch(x){} });
+let sonAdim = -1;
+setInterval(()=>{ if(kutu.style.display!=='block') return; const t = mv.currentTime || 0;
+  let k = 0; for(let i=0;i<ADIM.length;i++) if(t >= ADIM[i][0] - 0.05) k = i;
+  if(k !== sonAdim){ sonAdim = k; kutu.querySelectorAll('.ad').forEach((e,i)=>e.classList.toggle('simdi', i===k)); } }, 150);
 function goster(k){
   const m = D[k];
   mv.setAttribute('src', k + ".glb"); mv.setAttribute('ios-src', m.usdz || (k + (/_v3$/.test(k) ? "_ar2.usdz" : ".usdz")));
-  kasarGizli = false; kbtn.style.display = /_dozaj$/.test(k) ? 'block' : 'none'; document.getElementById('bom').style.display = m.bom ? 'block' : 'none'; kbtn.textContent = "Kaşarı gizle — içini gör";
+  kasarGizli = false; kbtn.style.display = /_dozaj$/.test(k) ? 'block' : 'none'; document.getElementById('bom').style.display = m.bom ? 'block' : 'none';
+  kutu.style.display = m.adim ? 'block' : 'none'; sonAdim = -1;
+  mv.setAttribute('camera-orbit', m.adim ? '50deg 72deg 2.45m' : '35deg 70deg 1.6m');   // montajda parçalar dışarıda başlıyor, geniş çerçeve kbtn.textContent = "Kaşarı gizle — içini gör";
   tablo.innerHTML =
     "<tr><td>Ölçü (G × D × Y)</td><td>" + m.w + " × " + m.d + " × " + m.h + " mm</td></tr>" +
     "<tr><td>Brüt hacim</td><td>" + m.brut.toString().replace('.', ',') + " L</td></tr>" +

@@ -1,0 +1,80 @@
+# -*- coding: utf-8 -*-
+"""AUTOKITCH · KAŞAR KABI v8 — MONTAJ ANİMASYONU
+Kemal: "bunu nasıl montajlıyorsun, içine vida nasıl giriyor, nereye takılıyor, kapak nasıl kapanıyor — tüm parçalar için."
+Her parça KENDİ takılma yönünden gelir; helezon dönerek girer, yatak kapağı önce itilir sonra çeyrek tur döner.
+Katılar kasar_cad_v8'den birebir alınır (ayrı model YOK) → otonom/kaset3d/kasar_v8_montaj.glb
+"""
+import math, os, sys
+import cadquery as cq
+import kasar_cad_v8 as V
+from kaset_3d_v3 import Mesh, MM, doku_ad, doku_montaj, etiket_yuzu, OUT
+
+BASLA, ADIM_SURE, HAREKET = 1.4, 1.6, 0.72      # sn · adım süresi · hareketin adım içindeki payı
+
+# (adım adı, parça adları, geliş yönü mm, tur, önce-it-sonra-döndür)
+ADIMLAR = [
+    ("Arka plaka tezgâha konur",            ["plaka_arka"],                                   (0, 0, 0),     0.0, False),
+    ("Gövde arka plakanın kanalına sürülür", ["govde", "etiket_ad", "etiket_montaj", "etiket_ad_arka", "etiket_montaj_arka"], (0, 0, 300), 0.0, False),
+    ("Ön plaka öne geçirilir",              ["plaka_on"],                                     (0, 0, 340),   0.0, False),
+    ("4 saplama arkadan geçirilir",         ["saplama_0", "saplama_1", "saplama_2", "saplama_3"], (0, 0, -300), 0.0, False),
+    ("Kör somunlar sıkılır",                ["somun_arka_0", "somun_arka_1", "somun_arka_2", "somun_arka_3", "somun_on_0", "somun_on_1"], (0, 0, -150), 0.0, False),
+    ("Kulp üst saplamalara vidalanır",      ["kulp"],                                         (0, 0, 220),   0.0, False),
+    ("2 tahrik göbeği İÇERİDEN takılır",    ["gobek_helezon", "gobek_karistirici"],           (0, 0, 190),   0.0, False),
+    ("Haç kavramalar arkadan geçer, pim kilitler", ["kavrama_helezon", "kavrama_karistirici", "yayli_pim_helezon", "yayli_pim_karistirici"], (0, 0, -170), 0.0, False),
+    ("HELEZON önden sürülür (4 segment kare çubuğa dizili)", ["helezon_cekirdek", "helezon_A", "helezon_B", "helezon_C", "helezon_D"], (0, 0, 430), -2.0, False),
+    ("Çıkış tüpü ön plakaya 2 × M4 ile",    ["cikis_tupu", "vida_tup_a", "vida_tup_b"],       (0, 0, 240),   0.0, False),
+    ("Yatak kapağı itilir, ÇEYREK TUR döner", ["yatak_kapagi"],                               (0, 0, 130),   0.25, True),
+    ("Karıştırıcı kafesi ÜSTTEN indirilir", ["orumcek_arka", "orumcek_orta", "orumcek_on", "cubuk_0", "cubuk_1", "cubuk_2", "cubuk_3"], (0, 430, 0), 0.0, False),
+    ("Kare mil önden kafesin içinden geçer", ["kar_mil"],                                     (0, 0, 420),   0.0, False),
+    ("Ön kovan takılır",                    ["on_kovan"],                                     (0, 0, 150),   0.0, False),
+    ("Topuz mile geçer, setuskur sıkılır",  ["topuz", "setuskur"],                            (0, 0, 190),   0.0, False),
+    ("Kilit pimi TEĞET geçer (mili delmez)", ["kilit_pimi"],                                  (190, 0, 0),   0.0, False),
+    ("Kapak gövde ağzına oturur",           ["kapak"],                                        (0, 300, 0),   0.0, False),
+    ("Taşıma tapası ağıza takılır",         ["tasima_tapasi"],                                (0, -200, 0),  0.0, False),
+]
+
+
+def ease(t, t0, t1):
+    if t <= t0: return 0.0
+    if t >= t1: return 1.0
+    u = (t - t0) / (t1 - t0); return u * u * (3.0 - 2.0 * u)
+
+
+def kur():
+    V.kap()
+    sure = BASLA + len(ADIMLAR) * ADIM_SURE + 2.6
+    V.DONGU, V.DT = sure, 0.1
+    GR, hangi = {}, {}
+    for i, (ad, parcalar, off, tur, ayri) in enumerate(ADIMLAR):
+        g = "a%02d" % i; t0 = BASLA + i * ADIM_SURE; tL = ADIM_SURE * HAREKET
+        if ayri: kt0, kt1, at0, at1 = t0, t0 + tL * 0.55, t0 + tL * 0.55, t0 + tL
+        else:    kt0, kt1, at0, at1 = t0, t0 + tL, t0, t0 + tL
+        GR[g] = dict(pivot=(0, V.CY * MM, 0) if tur else (0, 0, 0), eksen="z",
+                     aci=(lambda t, a=at0, b=at1, n=tur: n * (1.0 - ease(t, a, b))),
+                     kay=(lambda t, a=kt0, b=kt1, o=off: tuple(c * MM * (1.0 - ease(t, a, b)) for c in o)))
+        for p in parcalar: hangi[p] = g
+    V.GRUP = GR
+
+    # etiketler (gövdeyle birlikte hareket etsin)
+    e0, e1 = (V.Y_UST - 56) * MM, (V.Y_UST - 8) * MM; ez = (V.D / 2 - V.TP - 6) * MM; xo = (V.RB + V.ET + 0.4) * MM
+    EK = [("etiket_ad", etiket_yuzu(-xo, e0, e1, -ez, ez, -1), "etiket_ad"),
+          ("etiket_montaj", etiket_yuzu(xo, e0, e1, ez, -ez, 1), "etiket_montaj")]
+    for adi, xx, nx in (("etiket_ad_arka", -xo + 0.0002, 1), ("etiket_montaj_arka", xo - 0.0002, -1)):
+        ar = Mesh(); ar.quad((xx, e0, -ez), (xx, e0, ez), (xx, e1, ez), (xx, e1, -ez), (nx, 0, 0)); EK.append((adi, ar.duzelt(), "sari_arka"))
+
+    par = [(p["ad"], V.ag(p["wp"]), p["mal"], hangi.get(p["ad"])) for p in V.PARCALAR] + \
+          [(a, m, mal, hangi.get(a)) for a, m, mal in EK]
+    eksik = [p["ad"] for p in V.PARCALAR if p["ad"] not in hangi]
+    assert not eksik, "adimi olmayan parca: %s" % eksik
+    return par, sure
+
+
+if __name__ == "__main__":
+    par, sure = kur()
+    V_ = V.v4.hacim_L(V.Y_DOLUM)
+    dokular = {"ad": doku_ad("KAŞAR KABI", "bu yönde tak  ·  280 × 325 × 360 mm  ·  %s L  ·  çıkış ÖNDE alttan" % ("%.1f" % V_).replace(".", ","), ok_sol=True),
+               "montaj": doku_montaj(["HELEZONU|ÖNDEN SÜR", "YATAK KAPAĞI|ÇEYREK TUR", "KAFES · MİL|TOPUZ · PİM", "TAPAYI ÇIKAR|YUVAYA SÜR"])}
+    b = V.glb_yaz(os.path.join(OUT, "kasar_v8_montaj.glb"), par, dokular)
+    print("kasar_v8_montaj.glb · %d parca · %d adim · %.1f sn · %.0f KB" % (len(par), len(ADIMLAR), sure, b / 1024.0))
+    for i, (ad, p, o, t, a) in enumerate(ADIMLAR):
+        print("  %2d  %5.1f sn  %-48s %d parca" % (i + 1, BASLA + i * ADIM_SURE, ad, len(p)))
