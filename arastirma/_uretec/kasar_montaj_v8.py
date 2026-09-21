@@ -78,7 +78,7 @@ def kur():
 if __name__ == "__main__":
     par, sure = kur()
     V_ = V.v4.hacim_L(V.Y_DOLUM)
-    dokular = {"ad": doku_ad("KIYMA KASETİ" if "kiyma" in MODUL else "KUŞBAŞI KASETİ" if "kusbasi" in MODUL else "KAŞAR KABI", "bu yönde tak  ·  %d × 325 × 360 mm" % V.W + "  ·  %s L  ·  çıkış ÖNDE alttan" % ("%.1f" % V_).replace(".", ","), ok_sol=True),
+    dokular = {"ad": doku_ad("KIYMA KASETİ" if "kiyma" in MODUL else "KUŞBAŞI KASETİ" if "kusbasi" in MODUL else "KÜP SUCUK KASETİ" if "sucuk" in MODUL else "KAŞAR KABI", "bu yönde tak  ·  %d × 325 × 360 mm" % V.W + "  ·  %s L  ·  çıkış ÖNDE alttan" % ("%.1f" % V_).replace(".", ","), ok_sol=True),
                "montaj": doku_montaj(["HELEZONU|ÖNDEN SÜR", "YATAK KAPAĞI|ÇEYREK TUR", ("ROTOR" if "kasar" not in MODUL else "KAFES") + " · MİL|TOPUZ · PİM", "TAPAYI ÇIKAR|YUVAYA SÜR"])}
     b = V.glb_yaz(os.path.join(OUT, ONEK + "_montaj.glb"), par, dokular)
     print(ONEK + "_montaj.glb · %d parca · %d adim · %.1f sn · %.0f KB" % (len(par), len(ADIMLAR), sure, b / 1024.0))

@@ -5,8 +5,9 @@ import importlib, io, json, math, os, re, struct, subprocess, sys
 U = os.path.dirname(os.path.abspath(__file__)); KOK = os.path.dirname(os.path.dirname(U)); K3 = os.path.join(KOK, "otonom", "kaset3d"); sys.path.insert(0, U); os.chdir(U)
 CANLI = "--canli" in sys.argv; SITE = "https://industrialproductdesigner.com/autokitch/otonom/kaset3d/"
 KASET = [dict(ad="KAŞAR KABI v8", cad="kasar_cad_v8", onek="kasar_v8", klasor="kasar_kabi_v8", model=None, kg=8.8, akis="akis.html"),
-         dict(ad="KIYMA KASETİ v2", cad="kiyma_cad_v2", onek="kiyma_v2", klasor="kiyma_kaseti_v2", model="kiyma_akis_model_v1", kg=6.4, akis="akis_kiyma.html"),
-         dict(ad="KUŞBAŞI KASETİ v1", cad="kusbasi_cad_v1", onek="kusbasi_v1", klasor="kusbasi_kaseti_v1", model="kusbasi_akis_model_v1", kg=5.8, akis="akis_kusbasi.html")]
+         dict(ad="KIYMA KASETİ v3", cad="kiyma_cad_v3", onek="kiyma_v3", klasor="kiyma_kaseti_v3", model="kiyma_akis_model_v2", kg=6.4, akis="akis_kiyma.html"),
+         dict(ad="KUŞBAŞI KASETİ v2", cad="kusbasi_cad_v2", onek="kusbasi_v2", klasor="kusbasi_kaseti_v2", model="kusbasi_akis_model_v2", kg=5.8, akis="akis_kusbasi.html"),
+         dict(ad="KÜP SUCUK KASETİ v1", cad="sucuk_cad_v1", onek="sucuk_v1", klasor="sucuk_kaseti_v1", model="sucuk_akis_model_v1", kg=2.8, akis="akis_sucuk.html")]
 SONUC = []
 def m(kaset, no, madde, gecti, ayrinti=""): SONUC.append((kaset, no, madde, bool(gecti), ayrinti))
 
@@ -97,17 +98,24 @@ for K in KASET:
             if kod != 200: kotu.append("%s → %s" % (f, kod))
         m(ad, "G1", "canlı sitede bütün dosyalar açılıyor", not kotu, "; ".join(kotu) or "%d dosya 200" % (len(dosyalar) + 1))
 
-# ---------- H · "ORTAK PARÇA" iddiası doğru mu: aynı parçadan üç kasete de basılabilir mi ----------
-ORTAK3 = ["gobek_helezon", "kavrama_helezon", "yayli_pim_helezon", "gobek_karistirici", "kavrama_karistirici", "on_kovan", "topuz", "setuskur", "kilit_pimi", "kar_mil", "helezon_cekirdek"]
-fark = [a_ for a_ in ORTAK3 if max(K_["hacim"][a_] for K_ in KASET) - min(K_["hacim"][a_] for K_ in KASET) > 0.5]
-m("ÜÇ KASET BİRLİKTE", "H1", "üç kasette ORTAK denen %d parça gerçekten birebir aynı (hacim farkı < 0,5 mm³)" % len(ORTAK3), not fark, ", ".join(fark))
-ROTOR = ["orumcek_arka", "orumcek_orta", "orumcek_on", "cubuk_0", "cubuk_1", "kapak", "kulp", "saplama_0", "saplama_2", "somun_arka_0"]
-fark = [a_ for a_ in ROTOR if abs(KASET[1]["hacim"][a_] - KASET[2]["hacim"][a_]) > 0.5]
-m("ÜÇ KASET BİRLİKTE", "H2", "kıyma ile kuşbaşında ORTAK denen rotor + kapak + kulp + saplamalar birebir aynı (gövde ve plakalar FARKLI — tekne çapı başka)", not fark, ", ".join(fark) or "%d parça" % len(ROTOR))
-yuk = ["%s %g / %g" % (K_["ad"].split()[0], importlib.import_module(K_["cad"]).CY, importlib.import_module(K_["cad"]).YC) for K_ in KASET]
-m("ÜÇ KASET BİRLİKTE", "H3", "140 sınıfında ALT mil ekseni ortak (üst eksen ürüne bağlı: rotor–kanat aralığı kuralı)", importlib.import_module(KASET[1]["cad"]).CY == importlib.import_module(KASET[2]["cad"]).CY, " · ".join(yuk))
+# ---------- H · "ORTAK" iddiaları doğru mu: aynı dosyadan basılan parça gerçekten birebir aynı mı (hacim farkı < 0,5 mm³) ----------
+ORTAK4 = ["gobek_helezon", "kavrama_helezon", "yayli_pim_helezon", "gobek_karistirici", "kavrama_karistirici", "on_kovan", "topuz", "setuskur", "kilit_pimi", "kar_mil", "helezon_cekirdek"]
+fark = [a_ for a_ in ORTAK4 if max(K_["hacim"][a_] for K_ in KASET) - min(K_["hacim"][a_] for K_ in KASET) > 0.5]
+m("KASETLER BİRLİKTE", "H1", "dört kasette (kaşar dahil) ORTAK denen %d parça birebir aynı" % len(ORTAK4), not fark, ", ".join(fark))
+K140 = KASET[1:]; GOVDE = ["govde", "plaka_arka", "plaka_on", "kapak", "kulp", "yatak_kapagi", "kar_mil", "helezon_cekirdek"] + ["saplama_%d" % i_ for i_ in range(4)] + ["somun_arka_%d" % i_ for i_ in range(4)] + ["somun_on_0", "somun_on_1", "vida_tup_a", "vida_tup_b"]
+fark = [a_ for a_ in GOVDE if max(K_["hacim"][a_] for K_ in K140) - min(K_["hacim"][a_] for K_ in K140) > 0.5]
+m("KASETLER BİRLİKTE", "H2", "ORTAK GÖVDE: kıyma = kuşbaşı = küp sucuk kasetinde gövde + iki uç plakası + kapak + kulp + yatak kapağı + saplamalar birebir aynı", not fark, ", ".join(fark) or "%d parça" % len(GOVDE))
+fark = [a_ for a_ in KASET[2]["hacim"] if abs(KASET[2]["hacim"][a_] - KASET[3]["hacim"].get(a_, -1)) > 0.5] + [a_ for a_ in KASET[3]["hacim"] if a_ not in KASET[2]["hacim"]]
+m("KASETLER BİRLİKTE", "H3", "küp sucuk kaseti = kuşbaşı kaseti: BÜTÜN parçalar birebir aynı (aynı dosyadan basılır)", not fark, ", ".join(fark) or "%d / %d parça" % (len(KASET[3]["hacim"]), len(KASET[2]["hacim"])))
+eks_ = [(importlib.import_module(K_["cad"]).CY, importlib.import_module(K_["cad"]).YC, importlib.import_module(K_["cad"]).RT) for K_ in K140]
+m("KASETLER BİRLİKTE", "H5", "140 sınıfında iki mil ekseni ve tekne çapı üç kasette aynı (makinedeki tahrik yuvaları ortak)", len(set(eks_)) == 1, " · ".join("%s %g / %g / Ø%g" % (K_["ad"].split()[0], e[0], e[1], 2 * e[2]) for K_, e in zip(K140, eks_)))
+# tuzak: varsayılan argüman ürün sabitini dondurur → her tane modeli KENDİ sürtünmesiyle hesaplamalı
+for K_ in (KASET[2], KASET[3]):
+    AM_ = importlib.import_module(K_["model"]); MM_ = getattr(AM_, "M", AM_); G_ = MM_.G; q_m = MM_.kapasite(1.0)[4]
+    q_fi = MM_.kapasite(1.0, MM_.FI_S)[4]; q_kus = MM_.kapasite(1.0, math.degrees(math.atan(0.35)))[4]
+    m(K_["ad"], "H6", "kapasite ürünün KENDİ sürtünme açısıyla hesaplanıyor (varsayılan argüman tuzağı yok)", abs(q_m - q_fi) < 1e-6 and (abs(MM_.MU - 0.35) < 1e-9 or abs(q_m - q_kus) > 0.5), "μ %.2f → %.1f mL/tur (μ 0,35 olsaydı %.1f)" % (MM_.MU, q_m, q_kus))
 h_ = io.open(os.path.join(K3, "index.html"), encoding="utf-8").read(); eksik_ = [k_ for k_ in set(re.findall(r'data-m="([^"]+)"', h_)) if ("  %s:{" % k_) not in h_ or not os.path.exists(os.path.join(K3, k_ + ".glb"))]
-m("ÜÇ KASET BİRLİKTE", "H4", "sayfadaki HER sekmenin (arşiv dahil) kaydı ve model dosyası var", not eksik_, ", ".join(eksik_) or "%d sekme" % len(set(re.findall(r'data-m="([^"]+)"', h_))))
+m("KASETLER BİRLİKTE", "H4", "sayfadaki HER sekmenin (arşiv dahil) kaydı ve model dosyası var", not eksik_, ", ".join(eksik_) or "%d sekme" % len(set(re.findall(r'data-m="([^"]+)"', h_))))
 
 gec = sum(1 for s_ in SONUC if s_[3]); print("\nKASET KONTROL LİSTESİ · %d / %d GEÇTİ\n" % (gec, len(SONUC)))
 onc = None
