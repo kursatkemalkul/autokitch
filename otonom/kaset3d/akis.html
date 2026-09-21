@@ -125,7 +125,33 @@
     <div><b>KALDIRILANLAR</b>Ağız altındaki menteşeli kapak (yay + menteşe + kol + makinede pim: 5 parça ve peynir tuzağı; kapalı tüp zaten tutuyor) · silikon sıyırıcılar · uyarı etiketleri · asma deliği (o bölge hazne).</div>
   </div>
   <table style="margin-top:12px"><tr><th>ölçülen çalışma boşluğu</th><th>değer</th><th>ne</th></tr><tr><td>orumcek orta (kol aşağı) ↔ helezon B</td><td>5,25 mm</td><td>örümcek gözü ↔ helezon kanadı (5,25)</td></tr><tr><td>helezon A ↔ govde</td><td>2,00 mm</td><td>kanat ↔ tekne (tasarım 2,0)</td></tr><tr><td>helezon D ↔ cikis tupu</td><td>2,00 mm</td><td>kanat / pim ↔ tüp (2,0)</td></tr><tr><td>helezon C ↔ plaka on</td><td>2,33 mm</td><td>kanat ↔ ön plaka deliği (2,0)</td></tr><tr><td>helezon A ↔ helezon B</td><td>0,00 mm</td><td>segment eki: miller uç uca yaslanır (0)</td></tr><tr><td>helezon D ↔ yatak kapagi</td><td>0,20 mm</td><td>ön muylu ↔ yatak (0,2)</td></tr><tr><td>helezon A ↔ gobek helezon</td><td>0,50 mm</td><td>helezon arkası ↔ göbek flanşı (0,5)</td></tr><tr><td>gobek helezon ↔ plaka arka</td><td>0,00 mm</td><td>muylu ↔ plaka deliği (0,2)</td></tr><tr><td>on kovan ↔ plaka on</td><td>0,00 mm</td><td>kovan ↔ plaka deliği (0,2)</td></tr><tr><td>orumcek orta ↔ govde</td><td>4,25 mm</td><td>örümcek gözü ↔ kâse (4,25)</td></tr><tr><td>cubuk 0 ↔ govde</td><td>7,00 mm</td><td>çubuk ↔ kâse (7,0)</td></tr><tr><td>orumcek arka ↔ gobek karistirici</td><td>1,00 mm</td><td>örümcek ↔ göbek flanşı (1,0)</td></tr><tr><td>orumcek on ↔ on kovan</td><td>1,00 mm</td><td>örümcek ↔ kovan flanşı (1,0)</td></tr><tr><td>topuz ↔ plaka on</td><td>1,00 mm</td><td>topuz ↔ plaka (1,0)</td></tr><tr><td>topuz ↔ on kovan</td><td>0,25 mm</td><td>topuz eteği ↔ kovan (0,25)</td></tr><tr><td>kapak ↔ govde</td><td>0,00 mm</td><td>kapak çıtası ↔ gövde (0,5)</td></tr><tr><td>tasima tapasi ↔ cikis tupu</td><td>0,20 mm</td><td>tapa ↔ bilezik (0,2)</td></tr></table>
-  <p class="kucuk">0,00 mm = iki parça bilerek birbirine yaslanıyor (flanş plakaya, kapak gövdeye, segment segmente). Geçme kuralı: dönen parça / delik +0,4 çap · kare çubuk / kare delik +0,3 · Ø6 çubuk sıkı geçme. Baskıda ilk parçayla geçmeyi dene; yazıcıya göre ±0,1 oynar.</p>
+  <p class="kucuk">0,00 mm = iki parça bilerek birbirine yaslanıyor (flanş plakaya, kapak gövdeye, segment segmente). Geçme kuralı: dönen parça / delik +0,4 çap · kare çubuk / kare delik +0,3 · Ø6 çubuk sıkı geçme. Baskıda ilk parçayla geçmeyi dene; yazıcıya göre ±0,1 oynar.</p><h2>v5 → v7 · benim değiştirdiklerim</h2>
+  <p class="kucuk">Kemal konik kökün düştüğünü yakalayınca v5'in 107 parçası v7'nin 56 parçasıyla tek tek karşılaştırıldı. Aşağıdakiler v5'te başka türlüydü. Bunların hiçbiri Kemal'in kararı değil, benim kararım — itiraz olursa geri alınır.</p>
+  <table>
+    <tr><th>ne</th><th>v5</th><th>v7</th><th>neden · sonuç</th></tr>
+    <tr><td>Konik mil kökü</td><td>60 mm · Ø26 → Ø14</td><td>60 mm · Ø26 → Ø16</td><td>v6'da düşmüştü, v7'de geri kondu. <b>Düzeltildi.</b></td></tr>
+    <tr><td>Karıştırıcı çubuk yarıçapı</td><td>R129 + duvara değen 2 silikon sıyırıcı</td><td>R124 · sıyırıcı yok</td><td>Baskı parçaya boşluk gerekti. <b>Duvarda 7 mm süpürülmeyen bant kalıyor</b> — kaşar orada tutunabilir. Açık iş.</td></tr>
+    <tr><td>Kanat hatvesi</td><td>SÜREKLİ değişen (22 → 30 arası her noktada farklı)</td><td>Basamaklı: 22 · 26 · 30 · 36</td><td><b>Yapamadım</b> — OpenCascade değişken hatveli süpürmede kanat yarıçapını 20 → 13 mm çökertiyor. Hatve sıçraması tam segment ekine denk geliyor.</td></tr>
+    <tr><td>Kanat başlangıcı</td><td>z −155</td><td>z −148</td><td>Göbek flanşına 1 mm boşluk. Arkada 7 mm daha ölü bölge.</td></tr>
+    <tr><td>Gövde ağzındaki flanş</td><td>Çepeçevre 12 mm kenar flanşı vardı</td><td>Yok · kapak iki çıtayla oturuyor</td><td>3 mm PC kabuğun üst kenarı desteksiz kaldı. <b>Gövde sac yerine PC olursa burası zayıf.</b></td></tr>
+    <tr><td>Uç plakası kalınlığı</td><td>5 mm</td><td>8 mm</td><td>Gövde kanalı 4 mm derin. İç boy 315 → 309, hacim 21,0 → 20,6 L.</td></tr>
+    <tr><td>Kap çekme kulpu</td><td>Ön plakada · y 300 · 124 mm</td><td>Üst saplamalarda · y 340 · 192 mm</td><td>Saplamalar zaten oradaydı, ayrı ayak gerekmedi.</td></tr>
+    <tr><td>Çırpıcı pimler</td><td>6 × silindirik Ø4</td><td>6 × konik Ø6 → Ø3,8</td><td>Baskıda desteksiz çıksın diye.</td></tr>
+    <tr><td>Karıştırıcının ön göbeği</td><td>Plakaya 2 vidayla</td><td>İçeriden geçen kovan · vidasız</td><td>Parça sayısı azaldı; sökmek için mil öne çekiliyor.</td></tr>
+  </table>
+
+  <h2>Yapamadıklarım · açık işler</h2>
+  <div class="kart">
+    <div><b>SÜREKLİ HATVE</b>Yapamadım. Kanat 4 sabit hatveli segment. Gerçek makinede hatve sıçraması segment ekinde küçük bir basamak demek.</div>
+    <div><b>GERÇEK PARÇACIK SİMÜLASYONU</b>Yok. Sim 1 kabı 31 kolona bölen bir akış modeli, Sim 2 iki boyutlu bir dökülme haritası. Kaşarın köprü yapıp yapmayacağını hesap değil <b>deneme</b> söyler.</div>
+    <div><b>BASKI GEÇMELERİ</b>Tasarım değerleriyle kuruldu (+0,4 / +0,3 mm), hiçbiri basılıp denenmedi. Yazıcıya göre ±0,1 oynar.</div>
+    <div><b>GÖVDENİN İMALAT YOLU</b>Karar verilmedi. 280 × 325 × 360 tek parça çoğu yazıcıya sığmaz: PC ısıl form, 304 sac ya da parçalı baskı — seçim Kemal'in.</div>
+    <div><b>SOLIDWORKS DOSYASI</b>STEP var, SLDPRT/SLDASM'ye çevrilmedi. SolidWorks açılıp denenmedi de.</div>
+    <div><b>MAKİNE TARAFI</b>Etek, raylar, konum pimleri, yaylı tahrik yuvaları yalnız yerleşim için çizildi — üretim parçası değil, ölçüleri bağlayıcı değil.</div>
+    <div><b>PAFTA VE HAT SİMİ</b>v7'ye göre güncellenmedi; kaşar kabı paftada hâlâ eski yerinde.</div>
+  </div>
+
+  
 
   <h2>Motor ve derinlik bütçesi</h2>
   <table>
