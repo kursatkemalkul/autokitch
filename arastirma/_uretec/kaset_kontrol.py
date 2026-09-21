@@ -4,10 +4,10 @@ Bir kaset eklenince / değişince bu betik çalıştırılır; KALDI varsa yayı
 import importlib, io, json, math, os, re, struct, subprocess, sys
 U = os.path.dirname(os.path.abspath(__file__)); KOK = os.path.dirname(os.path.dirname(U)); K3 = os.path.join(KOK, "otonom", "kaset3d"); sys.path.insert(0, U); os.chdir(U)
 CANLI = "--canli" in sys.argv; SITE = "https://industrialproductdesigner.com/autokitch/otonom/kaset3d/"
-KASET = [dict(ad="KAŞAR KABI v8", cad="kasar_cad_v8", onek="kasar_v8", klasor="kasar_kabi_v8", model=None, kg=8.8, akis="akis.html"),
-         dict(ad="KIYMA KASETİ v3", cad="kiyma_cad_v3", onek="kiyma_v3", klasor="kiyma_kaseti_v3", model="kiyma_akis_model_v2", kg=6.4, akis="akis_kiyma.html"),
-         dict(ad="KUŞBAŞI KASETİ v2", cad="kusbasi_cad_v2", onek="kusbasi_v2", klasor="kusbasi_kaseti_v2", model="kusbasi_akis_model_v2", kg=5.8, akis="akis_kusbasi.html"),
-         dict(ad="KÜP SUCUK KASETİ v1", cad="sucuk_cad_v1", onek="sucuk_v1", klasor="sucuk_kaseti_v1", model="sucuk_akis_model_v1", kg=2.8, akis="akis_sucuk.html")]
+KASET = [dict(ad="KAŞAR KABI v9", cad="kasar_cad_v9", onek="kasar_v9", klasor="kasar_kabi_v9", model=None, kg=8.8, akis="akis.html"),
+         dict(ad="KIYMA KASETİ v4", cad="kiyma_cad_v4", onek="kiyma_v4", klasor="kiyma_kaseti_v4", model="kiyma_akis_model_v2", kg=6.4, akis="akis_kiyma.html"),
+         dict(ad="KUŞBAŞI KASETİ v3", cad="kusbasi_cad_v3", onek="kusbasi_v3", klasor="kusbasi_kaseti_v3", model="kusbasi_akis_model_v2", kg=5.8, akis="akis_kusbasi.html"),
+         dict(ad="KÜP SUCUK KASETİ v2", cad="sucuk_cad_v2", onek="sucuk_v2", klasor="sucuk_kaseti_v2", model="sucuk_akis_model_v1", kg=2.8, akis="akis_sucuk.html")]
 SONUC = []
 def m(kaset, no, madde, gecti, ayrinti=""): SONUC.append((kaset, no, madde, bool(gecti), ayrinti))
 
@@ -41,6 +41,24 @@ for K in KASET:
     m(ad, "B4", "helezon ön plakadaki delikten çıkarılabilir (kanat Ø < delik Ø)", V.R_KANAT < V.RT, "Ø%.0f < Ø%.0f" % (2 * V.R_KANAT, 2 * V.RT))
     hac = V.v4.hacim_L(V.Y_DOLUM); rho = V.RHO; dol = 100 * K["kg"] / rho / hac
     m(ad, "B5", "2 günlük stok sığıyor, doluluk ≤ %90", dol <= 90.0, "%.1f kg = %.1f L / %.1f L = %%%.0f" % (K["kg"], K["kg"] / rho, hac, dol))
+    # ---------- J · BİRLEŞİM DETAYLARI (Kemal: "çubuk nasıl takılıyor, kulp nasıl takılıyor, kapak nasıl klik ediyor") ----------
+    import cadquery as cq, kaset_birlesim_v1 as BR
+    S = {p["ad"]: p["wp"].val() for p in P}; adlar = set(S)
+    gerek = ["conta_arka", "conta_on", "insert_a", "insert_b", "oring_tup", "oring_kapak", "oring_gobek_helezon", "oring_gobek_karistirici", "oring_on_kovan"] + ["pul_arka_%d" % i_ for i_ in range(4)] + ["pul_on_0", "pul_on_1"]
+    eks = [a_ for a_ in gerek if a_ not in adlar]; m(ad, "J1", "her ıslak birleşimde conta / O-ring, her somunun altında pul, tüp vidasında metal insert VAR", not eks, ", ".join(eks) or "%d parça" % len(gerek))
+    sb = S["saplama_2"].BoundingBox(); gir = sb.zmax - V.ZF; d_k = S["saplama_2"].distance(S["kulp"]); v_k = S["saplama_2"].intersect(S["kulp"]).Volume()
+    m(ad, "J2", "üst saplama kulpun ayağına 14 mm girer ve DİBE dayanır (dipte kilitlenir → arka somun sıkılırken dönmez), iç içe geçme yok", abs(gir - 14.0) < 0.05 and d_k < 0.02 and v_k < 1.0, "giriş %.1f mm · mesafe %.2f · ortak hacim %.2f" % (gir, d_k, v_k))
+    sd = S["saplama_0"].Volume(); duz = math.pi * 9.0 * (S["saplama_0"].BoundingBox().zlen); sm = S["somun_arka_0"].BoundingBox()
+    m(ad, "J3", "saplamanın uçlarında diş bölgesi modelde var (düz çubuk değil) · somun kubbeli kör somun (boy 12)", sd < duz - 80.0 and abs(sm.zlen - 12.0) < 0.05, "saplama %.0f < düz %.0f mm³ · somun boyu %.1f" % (sd, duz, sm.zlen))
+    eksen = (cq.Vector(0, V.CY, 0), cq.Vector(0, V.CY, 1)); kapak = S["yatak_kapagi"]; tup = S["cikis_tupu"]
+    v_kilit = kapak.intersect(tup).Volume(); d_kilit = kapak.distance(tup)
+    m(ad, "J4", "KİLİTLİ konumda kapak tüple iç içe geçmiyor ve tırnak cebin tabanına OTURUYOR (mesafe 0)", v_kilit < 0.05 and d_kilit < 0.02, "ortak hacim %.3f · mesafe %.3f" % (v_kilit, d_kilit))
+    acik = kapak.rotate(eksen[0], eksen[1], BR.KILIT_ACI); v_cik = max(acik.translate(cq.Vector(0, 0, dz)).intersect(tup).Volume() for dz in (0.0, 2.0, 5.0, 8.0, 11.0, 14.0))
+    m(ad, "J5", "kapak %g° geri çevrilince tırnaklar giriş kanalına hizalanır: kapak eksenel olarak ÇEKİLİP ÇIKAR (0–14 mm boyunca takılma yok)" % BR.KILIT_ACI, v_cik < 0.05, "en büyük ortak hacim %.3f mm³" % v_cik)
+    yari = kapak.rotate(eksen[0], eksen[1], 5.0); v_tumsek = yari.intersect(tup).Volume(); v_itili = yari.translate(cq.Vector(0, 0, -(BR.Z_TUMSEK - BR.Z_CEP) + 0.001)).intersect(tup).Volume()
+    m(ad, "J6", "KLİK: kapak İTİLMEDEN çevrilirse tırnak TÜMSEĞE takılır (kendiliğinden açılmaz); %.2f mm itilince geçer" % (BR.Z_TUMSEK - BR.Z_CEP), v_tumsek > 0.3 and v_itili < 0.05, "itilmeden %.2f mm³ takılıyor · itilince %.3f" % (v_tumsek, v_itili))
+    donus = [kapak.rotate(eksen[0], eksen[1], a_).translate(cq.Vector(0, 0, -(BR.Z_TUMSEK - BR.Z_CEP) + 0.001)).intersect(tup).Volume() for a_ in (8.0, 12.0, 18.0, 24.0, 30.0)]
+    m(ad, "J7", "itili tutulurken 0° → %g° arası dönüş serbest (halka kanalında takılma yok)" % BR.KILIT_ACI, max(donus) < 0.05, "en büyük ortak hacim %.3f mm³" % max(donus))
     # ---------- C · ÜRETİM DOSYALARI ----------
     ur = os.path.join(KOK, "arastirma", "3_TOPPING", K["klasor"]); eks = [p["ad"] for p in P if not (os.path.exists(os.path.join(ur, "step", p["ad"] + ".step")) and os.path.exists(os.path.join(ur, "stl", p["ad"] + ".stl")))]
     m(ad, "C1", "her parçanın STEP + STL dosyası var", not eks, "%d parça%s" % (len(P), (" · eksik: " + ", ".join(eks)) if eks else ""))
@@ -99,12 +117,12 @@ for K in KASET:
         m(ad, "G1", "canlı sitede bütün dosyalar açılıyor", not kotu, "; ".join(kotu) or "%d dosya 200" % (len(dosyalar) + 1))
 
 # ---------- H · "ORTAK" iddiaları doğru mu: aynı dosyadan basılan parça gerçekten birebir aynı mı (hacim farkı < 0,5 mm³) ----------
-ORTAK4 = ["gobek_helezon", "kavrama_helezon", "yayli_pim_helezon", "gobek_karistirici", "kavrama_karistirici", "on_kovan", "topuz", "setuskur", "kilit_pimi", "kar_mil", "helezon_cekirdek"]
+ORTAK4 = ["oring_gobek_helezon", "oring_on_kovan", "pul_arka_0", "pul_on_0", "somun_arka_0", "somun_on_0", "insert_a", "gobek_helezon", "kavrama_helezon", "yayli_pim_helezon", "gobek_karistirici", "kavrama_karistirici", "on_kovan", "topuz", "setuskur", "kilit_pimi", "kar_mil", "helezon_cekirdek"]
 fark = [a_ for a_ in ORTAK4 if max(K_["hacim"][a_] for K_ in KASET) - min(K_["hacim"][a_] for K_ in KASET) > 0.5]
 m("KASETLER BİRLİKTE", "H1", "dört kasette (kaşar dahil) ORTAK denen %d parça birebir aynı" % len(ORTAK4), not fark, ", ".join(fark))
-K140 = KASET[1:]; GOVDE = ["govde", "plaka_arka", "plaka_on", "kapak", "kulp", "yatak_kapagi", "kar_mil", "helezon_cekirdek"] + ["saplama_%d" % i_ for i_ in range(4)] + ["somun_arka_%d" % i_ for i_ in range(4)] + ["somun_on_0", "somun_on_1", "vida_tup_a", "vida_tup_b"]
+K140 = KASET[1:]; GOVDE = ["govde", "plaka_arka", "plaka_on", "kapak", "kulp", "yatak_kapagi", "kar_mil", "helezon_cekirdek", "conta_arka", "conta_on", "oring_tup", "oring_kapak", "insert_a", "insert_b"] + ["saplama_%d" % i_ for i_ in range(4)] + ["somun_arka_%d" % i_ for i_ in range(4)] + ["somun_on_0", "somun_on_1", "vida_tup_a", "vida_tup_b"]
 fark = [a_ for a_ in GOVDE if max(K_["hacim"][a_] for K_ in K140) - min(K_["hacim"][a_] for K_ in K140) > 0.5]
-m("KASETLER BİRLİKTE", "H2", "ORTAK GÖVDE: kıyma = kuşbaşı = küp sucuk kasetinde gövde + iki uç plakası + kapak + kulp + yatak kapağı + saplamalar birebir aynı", not fark, ", ".join(fark) or "%d parça" % len(GOVDE))
+m("KASETLER BİRLİKTE", "H2", "ORTAK GÖVDE: kıyma = kuşbaşı = küp sucuk kasetinde gövde + iki uç plakası + kapak + kulp + yatak kapağı + saplamalar + contalar + O-ringler birebir aynı", not fark, ", ".join(fark) or "%d parça" % len(GOVDE))
 fark = [a_ for a_ in KASET[2]["hacim"] if abs(KASET[2]["hacim"][a_] - KASET[3]["hacim"].get(a_, -1)) > 0.5] + [a_ for a_ in KASET[3]["hacim"] if a_ not in KASET[2]["hacim"]]
 m("KASETLER BİRLİKTE", "H3", "küp sucuk kaseti = kuşbaşı kaseti: BÜTÜN parçalar birebir aynı (aynı dosyadan basılır)", not fark, ", ".join(fark) or "%d / %d parça" % (len(KASET[3]["hacim"]), len(KASET[2]["hacim"])))
 eks_ = [(importlib.import_module(K_["cad"]).CY, importlib.import_module(K_["cad"]).YC, importlib.import_module(K_["cad"]).RT) for K_ in K140]
