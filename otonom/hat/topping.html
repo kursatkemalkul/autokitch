@@ -1,82 +1,111 @@
-<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>3 · TOPPING — malzeme dozajı</title><link rel="stylesheet" href="hat.css"></head><body>
-<div class="top"><div class="in"><div class="crumb"><a href="../">Store</a><span>›</span><a href="index.html">HAT</a><span>›</span><a href="makine.html">Makine</a><span>›</span><b>3 · TOPPING</b></div><div><a href="../">← Store</a></div></div></div>
-<div class="wrap"><h1>3 · TOPPING — malzeme dozajı<span class="tag" style="background:#8e5bd6">1800 × 830 × 970</span></h1>
-<div class="card" style="border-left:4px solid #2456c8;background:#f4f7fd;margin:0 0 14px"><b style="color:#2456c8">22 EYLÜL 2026 · ÜZERİNDE ÇALIŞILAN İSTASYON</b><br>
-İstasyon istasyon ilerliyoruz; sıradaki TOPPING. Kaset tarafı <b>gerçek üretim modeline</b> döndü (4 kaset, her parça · delik · geçme · tolerans çizilmiş, STEP hazır). Kabin, tahrik ve pano hâlâ <b>ölçü kutusu</b>.<br>
-<a href="../kaset3d/"><b>KASETLER — 3D / AR ↗</b></a> &nbsp;·&nbsp; <a href="../hat3d/"><b>MAKİNE ANA MONTAJI ↗</b></a> &nbsp;·&nbsp; <a href="../kaset3d/akis.html">kaşar akış hesabı</a> · <a href="../kaset3d/akis_kiyma.html">kıyma</a> · <a href="../kaset3d/akis_kusbasi.html">kuşbaşı</a> · <a href="../kaset3d/akis_sucuk.html">küp sucuk</a></div>
-<p class="lead">Atosa (Yindu) tipi dozaj ünitesi, tabla yok — tepsiyi robot tutar. Tek gövdede 6 kaset yuvası yan yana; her kaset kapalı bir üründür, önden takılır, arkadaki yaylı kavramaya oturur. Kasetin içinde <b>sürekli hatveli helezon</b> ve <b>besleme rotoru</b> var; ürünü gramajla pidenin üstüne döker.</p>
+<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>3 · TOPPING — 3B üretim modeli</title><link rel="stylesheet" href="hat.css?v=3">
+<script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script><script src="model3d.js?v=3"></script></head><body>
+<div class="top"><div class="in"><div class="crumb"><a href="../">Store</a><span>&rsaquo;</span><a href="index.html">HAT</a><span>&rsaquo;</span><a href="makine.html">Makine</a><span>&rsaquo;</span><b>3 · TOPPING</b></div><div><a href="makine.html">&larr; Makine</a></div></div></div>
+<div class="wrap"><h1>3 &middot; TOPPING &mdash; 3B üretim modeli<span class="tag" style="background:#8e5bd6">1800 &times; 830 &times; 970</span></h1>
+<p class="lead">Dozaj modülünün tamamı. <b>Üstüne gel</b> &mdash; birim parlar. <b>Kasete tıkla</b> &mdash; o kasetin kendi modeli, AR'si ve montaj animasyonu açılır.</p>
 
-<h2>1 · Ne yapar · çalışma senaryosu</h2><div class="card"><ol class="steps">
-<li>Robot pideyi TOPPING'in <b>ağzına</b> (1740 × 110, kot 1070–1180) sürer; tepsi yok, tabanı robot tutar.</li>
+<div class="m3">
+  <model-viewer id="mv" src="../hat3d/modul_C.glb" ios-src="../hat3d/modul_C.usdz" alt="TOPPING modülü üretim modeli"
+      camera-controls touch-action="pan-y" shadow-intensity="0.6" exposure="1.0" environment-image="neutral"
+      camera-orbit="18deg 83deg 3.1m" camera-target="1.6m 1.48m -0.14m" field-of-view="30deg" min-field-of-view="5deg"
+      ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
+  <div class="et" id="et"></div>
+  <button class="ar" onclick="document.getElementById('mv').activateAR()">AR'de gör</button>
+  <div class="ip">sürükle: döndür &middot; tekerlek: yakınlaştır &middot; üstüne gel: birim &middot; tıkla: aç</div>
+</div>
+<div class="secim" id="secim"></div>
+<p class="note" id="ozet"></p>
+
+<h2>1 &middot; Ne yapar</h2><div class="card"><ol class="steps">
+<li>Robot pideyi TOPPING'in <b>ağzına</b> (1740 &times; 110, kot 1070&ndash;1180) sürer; tepsi yok, tabanı robot tutar.</li>
 <li>Sıradaki kasetin helezonu döner. Gramaj = <b>mil açısı</b>: kaşar 7,9 g/tur, kıyma 68 g/tur, kuşbaşı 68 g/tur, küp sucuk 53 g/tur. Helezon durunca akış durur.</li>
-<li>Aynı anda <b>besleme rotoru</b> ters yönde yavaş döner (≈ 4 dev/dk): iki sıyırıcı lama hazne duvarını sıyırıp ürünü helezon boğazına iter. Olmazsa ürün duvarda köprü yapar, vida boşa döner.</li>
-<li>Ürün çıkış tüpünden aşağı bakan ağza iner. Kuşbaşı ve küp sucukta tüp tabanındaki <b>6 mm eşik + tıkaç</b> akışı sürekli yapar (yoksa pideye "pat" diye iki öbek düşer).</li>
-<li>Pide dolarken dıştan içe yürür; dağılımı <b>her ürün için ayrı çözülmüş</b> bir hareket yasası belirler (kaşarınki eriyip yayıldığı için başka, kuşbaşınınki tane serpildiği için başka).</li>
-<li>Kaset boşalınca eleman öndeki kulptan çeker, doldurur, geri sürer. Kaset <b>kapaksız</b>: +3 °C kapalı kabinin içinde duruyor, ağzında yalnız taşıma tapası var.</li>
+<li>Aynı anda <b>besleme rotoru</b> ters yönde yavaş döner (&asymp; 4 dev/dk): iki sıyırıcı lama hazne duvarını sıyırıp ürünü helezon boğazına iter.</li>
+<li>Ürün çıkış tüpünden aşağı bakan ağza iner. Kuşbaşı ve küp sucukta tüp tabanındaki <b>6 mm eşik + tıkaç</b> akışı sürekli yapar.</li>
+<li>Pide dolarken dıştan içe yürür; dağılımı <b>her ürün için ayrı çözülmüş</b> bir hareket yasası belirler.</li>
+<li>Kaset boşalınca eleman öndeki kulptan çeker, doldurur, geri sürer. Kaset <b>kapaksız</b>: +3 °C kapalı kabinin içinde.</li>
 </ol></div>
 
-<h2>2 · Kasetler — durum tablosu</h2><div class="card"><table>
+<h2>2 &middot; Kasetler</h2><div class="card"><table>
 <tr><th>Yuva</th><th style="width:96px">Ölçü</th><th>Hesap (doluluk varsayımıyla)</th><th style="width:118px">Durum</th></tr>
-<tr><td><b>HARÇ 1</b> · lahmacun</td><td>280 × 360 × 325</td><td>hesabı yok — <b>yayma sorunu</b>: 110 g harç 1,8 mm'lik katman demek, meme tek başına pideyi kaplamıyor</td><td><span class="st ac">BAŞLANMADI</span></td></tr>
-<tr><td><b>HARÇ 2</b> · pizza sosu</td><td>280 × 360 × 325</td><td>aynı sorun; karar: yap / satın al</td><td><span class="st ac">BAŞLANMADI</span></td></tr>
-<tr><td><b>KIYMA</b> · v5</td><td>140 × 360 × 325</td><td>vida Ø68, hatve 36→48,5 · <b>68 g/tur</b> · 160 g = 2,4 tur · 14 dev/dk · 6,4 kg = %60 dolu</td><td><span class="st on">MODEL TAM</span><br><span class="st ac">İŞLEV EKSİK</span></td></tr>
-<tr><td><b>KUŞBAŞI</b> · v4</td><td>140 × 360 × 325</td><td>vida Ø68, hatve 40→50,5 · <b>68,2 g/tur</b> · 145 g = 2,12 tur · 13 dev/dk · 5,8 kg = %68 dolu · küp 10 mm</td><td><span class="st on">TAM</span></td></tr>
-<tr><td><b>KAŞAR KABI</b> · v10</td><td>280 × 360 × 325</td><td>vida Ø40, hatve sürekli 22→30,17 (11,75 tur) · <b>7,9 g/tur</b> · 42 dev/dk · 8,8 kg = %85 dolu</td><td><span class="st on">TAM</span></td></tr>
-<tr><td><b>KÜP SUCUK</b> · v3</td><td>140 × 360 × 325</td><td>kuşbaşı kasetinin <b>birebir aynısı</b> (55/55 parça) · <b>53,2 g/tur</b> · 70 g = 1,32 tur · 8 dev/dk · 2,8 kg = %44 dolu · küp 8 mm</td><td><span class="st on">TAM</span></td></tr>
-</table><p class="note">"MODEL TAM" = 55–57 parçanın hepsi gerçek katı, çakışma yok, üretim STEP'i basılı. "İŞLEV EKSİK" = kaset dozu doğru veriyor ama işi bitmiyor (aşağıda T1).</p></div>
+<tr><td><b>HARÇ 1</b> &middot; lahmacun</td><td>280 &times; 360 &times; 325</td><td>hesabı yok &mdash; <b>yayma sorunu</b>: 110 g harç 1,8 mm'lik katman demek, meme tek başına pideyi kaplamıyor</td><td><span class="st ac">BAŞLANMADI</span></td></tr>
+<tr><td><b>HARÇ 2</b> &middot; pizza sosu</td><td>280 &times; 360 &times; 325</td><td>aynı sorun; karar: yap / satın al</td><td><span class="st ac">BAŞLANMADI</span></td></tr>
+<tr><td><b>KIYMA</b> &middot; v5</td><td>140 &times; 360 &times; 325</td><td>vida Ø68, hatve 36&rarr;48,5 &middot; <b>68 g/tur</b> &middot; 160 g = 2,4 tur &middot; 14 dev/dk &middot; 6,4 kg = %60 dolu</td><td><span class="st on">MODEL TAM</span><br><span class="st ac">İŞLEV EKSİK</span></td></tr>
+<tr><td><b>KUŞBAŞI</b> &middot; v4</td><td>140 &times; 360 &times; 325</td><td>vida Ø68, hatve 40&rarr;50,5 &middot; <b>68,2 g/tur</b> &middot; 145 g = 2,12 tur &middot; 13 dev/dk &middot; 5,8 kg = %68 dolu &middot; küp 10 mm</td><td><span class="st on">TAM</span></td></tr>
+<tr><td><b>KAŞAR KABI</b> &middot; v10</td><td>280 &times; 360 &times; 325</td><td>vida Ø40, hatve sürekli 22&rarr;30,17 (11,75 tur) &middot; <b>7,9 g/tur</b> &middot; 42 dev/dk &middot; 8,8 kg = %85 dolu</td><td><span class="st on">TAM</span></td></tr>
+<tr><td><b>KÜP SUCUK</b> &middot; v3</td><td>140 &times; 360 &times; 325</td><td>kuşbaşı kasetinin <b>birebir aynısı</b> (55/55 parça) &middot; <b>53,2 g/tur</b> &middot; 70 g = 1,32 tur &middot; 8 dev/dk &middot; 2,8 kg = %44 dolu &middot; küp 8 mm</td><td><span class="st on">TAM</span></td></tr>
+</table><p class="note">"MODEL TAM" = 55&ndash;57 parçanın hepsi gerçek katı, çakışma yok, üretim STEP'i basılı. "İŞLEV EKSİK" = kaset dozu doğru veriyor ama işi bitmiyor (aşağıda T1).</p></div>
 
-<h2>3 · Özellikler · karar özeti</h2><div class="card"><div class="kv">
+<h2>3 &middot; Özellikler</h2><div class="card"><div class="kv">
 <b>Ortak gövde 140</b><span>kıyma = kuşbaşı = küp sucuk kasetinde gövde, iki uç plakası, kulp, yatak kapağı, saplamalar <b>birebir aynı</b> (hacimle doğrulanıyor). Alt mil ekseni 60, üst 164, tekne Ø72. Kaşar 280 sınıfı, ayrı gövde.</span>
 <b>Kapak</b><span>YOK (Kemal, 22 Eyl: TOPPING'de de yok). Yerine gövde ağzında <b>içe 8 mm bükme dudak</b>: kenar keskin kalmaz, ağız esnemez, elle tutulacak yer olur.</span>
 <b>Helezon</b><span>hatve SÜREKLİ artıyor (basamaklı değil): kapasite öne doğru büyür, ürün yalnız arkadan değil boyunca çekilir. 4 segment, kare çubuğa dizili; bölünmemiş tek parça hâli de export ediliyor.</span>
-<b>Besleme rotoru</b><span>3 göbek + 2 sıyırıcı lama 15 × 3 × 292, <b>kaynaklı tek parça</b> (vida/pim yok — çiğ ette aralık bakteri yuvası). Kıymada lama duvara 2,4 mm (macun süpürülsün), kuşbaşı/sucukta 19 mm (küp sıkışmasın).</span>
-<b>Yatak kapağı</b><span>bayonet: <b>it → 35° çevir → klik</b>. Tüpte 3 tırnak, kapakta giriş → halka → 0,25 mm tümsek → cep + dayama. İçindeki O-ring hem conta hem yay. Kilit yönü helezonun dönüş yönü → çalışırken açılmaz.</span>
-<b>Sızdırmazlık</b><span>gövde–plaka silikon conta · 2 tahrik göbeği + ön kovan muylusunda O-ring 18 × 2,5 · tüp faturasında O-ring · tüp vidası plastiğe değil <b>metal insert</b>'e · ön kovanda Ø28,4 × 2 <b>labirent</b> havşası (ürün kare mile sürünemez).</span>
-<b>Kaset derinliği</b><span>325 (dördü de aynı). Modül 830 → kasetin arkasında <b>505 mm</b> boş: iki redüktör + kavrama yuvası oraya oturuyor.</span>
-<b>Stok</b><span>her şey 2 günlük; 2 günde bir tedarik. Küp sucuk kabı %44 dolu — istenirse 4 gün de sığar.</span>
-<b>Malzeme</b><span>DENEME parçası baskı (PETG / PA12). ÜRETİM: çiğ et teması <b>304 / 316 + POM-C talaşlı</b>, Ra ≤ 0,8 — katman izi bakteri tutar.</span>
-<b>Kontrol</b><span>her kaset değişikliğinden sonra otomatik kontrol listesi: <b>148 madde, 4 kaset</b>. Geometri, üretim dosyaları, animasyon = hesap, AR, sayfa, ortak parça iddiaları, birleşimler ve kapak düzenlemesi modelin üstünde ölçülüyor. KALDI varsa yayınlanmıyor.</span>
+<b>Besleme rotoru</b><span>3 göbek + 2 sıyırıcı lama 15 &times; 3 &times; 292, <b>kaynaklı tek parça</b> (vida/pim yok &mdash; çiğ ette aralık bakteri yuvası). Kıymada lama duvara 2,4 mm, kuşbaşı/sucukta 19 mm.</span>
+<b>Yatak kapağı</b><span>bayonet: <b>it &rarr; 35° çevir &rarr; klik</b>. Tüpte 3 tırnak, kapakta giriş &rarr; halka &rarr; 0,25 mm tümsek &rarr; cep + dayama. İçindeki O-ring hem conta hem yay.</span>
+<b>Sızdırmazlık</b><span>gövde&ndash;plaka silikon conta &middot; 2 tahrik göbeği + ön kovan muylusunda O-ring 18 &times; 2,5 &middot; tüp faturasında O-ring &middot; tüp vidası metal insert'e &middot; ön kovanda Ø28,4 &times; 2 <b>labirent</b>.</span>
+<b>Kaset derinliği</b><span>325 (dördü de aynı). Modül 830 &rarr; kasetin arkasında <b>505 mm</b> boş: iki redüktör + kavrama yuvası oraya oturuyor.</span>
+<b>Malzeme</b><span>DENEME parçası baskı (PETG / PA12). ÜRETİM: çiğ et teması <b>304 / 316 + POM-C talaşlı</b>, Ra &le; 0,8.</span>
+<b>Kontrol</b><span>her kaset değişikliğinden sonra otomatik kontrol listesi: <b>148 madde, 4 kaset</b>. KALDI varsa yayınlanmıyor.</span>
 </div></div>
 
-<h2>4 · Teknik resimler</h2>
-<figure><img src="img/BIRLESIM_DETAYLARI_v1.png" alt="Birleşim detayları: saplama–plaka, kulp, bayonet klik" loading="lazy"><figcaption>Birleşim detayları v1 — saplama → plaka (pul + kör somun) · kulpun içi (M6 × 14 kör diş) · yatak kapağının klik kanalı</figcaption></figure>
-<figure><img src="img/HAT_2KOL_v19_teknik.png" alt="HAT 2 kol teknik resim v19" loading="lazy"><figcaption>HAT v19 — genel yerleşim (geçerli pafta). TOPPING = modül C, B'nin üstünde. Kaset ölçüleri bu paftadan okunuyor.</figcaption></figure>
-<div class="thumbs">
-<a href="../kaset3d/" target="_blank"><img src="img/ist3_topping_detay_v27.png" loading="lazy"><span>KASETLER — 3D / AR (gerçek model) ↗</span></a>
-<a href="../hat3d/" target="_blank"><img src="img/hat_dis_kapak_gorunus_v2.png" loading="lazy"><span>MAKİNE ANA MONTAJI — 3D / AR ↗</span></a>
-<a href="img/ist3_topping_detay_v27.png" target="_blank"><img src="img/ist3_topping_detay_v27.png" loading="lazy"><span>ESKİ v27 — Picnic tipi kap (terk edildi)</span></a>
-<a href="img/ist3_topping_detay_v25.png" target="_blank"><img src="img/ist3_topping_detay_v25.png" loading="lazy"><span>ESKİ v25 — çatal + L raf yerleşimi</span></a>
-</div>
+<h2>4 &middot; Teknik resim</h2>
+<figure><img src="img/BIRLESIM_DETAYLARI_v1.png" alt="Birleşim detayları" loading="lazy"><figcaption>Birleşim detayları v1 &mdash; saplama &rarr; plaka (pul + kör somun) &middot; kulpun içi (M6 &times; 14 kör diş) &middot; yatak kapağının klik kanalı</figcaption></figure>
 
-<h2>5 · Tedarikçiler · fiyatlar</h2><div class="card"><table>
+<h2>5 &middot; Tedarikçiler</h2><div class="card"><table>
 <tr><th>Tedarikçi / ürün</th><th>Ne</th><th style="width:160px">Fiyat / durum</th></tr>
-<tr><td><b>Atosa (Yindu)</b></td><td>çok hazneli dozaj ünitesi — kurgunun referansı (tabla yok sürümü)</td><td>mekanizması belgelenmemiş; teklif bekleniyor</td></tr>
-<tr><td><b>Fillpack</b></td><td>kavanoz dolum makinesi</td><td>10.000 USD FOB (verilen teklif) — bizim gramaja uygun değil</td></tr>
-<tr><td><b>Kaset parçaları · üretim</b></td><td>304/316 sac + POM-C talaşlı; helezon POM-C, rotor kaynaklı 304</td><td>yerli CNC / torna — 55 parça × 4 kaset</td></tr>
-<tr><td><b>Kaset parçaları · deneme</b></td><td>PETG / PA12 baskı, aynı STEP'ten</td><td>kendi yazıcımız</td></tr>
-<tr><td><b>Redüktör</b></td><td>NMRV030 sınıfı ×2 / kaset · kasetin arkasındaki 505 mm'ye</td><td>katalog</td></tr>
-<tr><td><b>O-ring · insert · bağlantı</b></td><td>O-ring 18 × 2,5 ×3 + tüp çapında ×2 · M4 insert ×2 · pul/kör somun M6 ×6 · silikon levha 1,5</td><td>standart</td></tr>
-</table><p class="note">Bu gramajda hazır cihaz yok. Yol: kaseti kendimiz basıp akış testi (soğuk küp sucuk · kaşar · kıyma) → tutan mekanizma paslanmaz büyütülmüş hâliyle yaptırılır.</p></div>
-
-<h2>6 · Soru işaretleri · açık konular</h2><div class="card"><table>
-<tr><th style="width:44px">#</th><th>Problem</th><th style="width:118px">Durum</th><th>Çözüm / not</th></tr>
-<tr><td><b>T1</b></td><td><b>Kıyma pideyi KAPLAYAMIYOR</b> — doz doğru ama 10 sn'de 178 mm şerit çıkıyor, pidenin %11'i. Meme ne kadar geniş olursa olsun tavan %33 (en iri parça sınırı)</td><td><span class="st ac">KARAR BEKLİYOR</span></td><td>yayıcı (sıyırma bıçağı / rulo) ya da elle yayma. Harçta daha ağır: 110 g = 1,8 mm katman. Tedarikçiye de soruldu</td></tr>
-<tr><td><b>T2</b></td><td>Harç kasetleri ×2 — yapalım mı satın alalım mı</td><td><span class="st ac">KARAR BEKLİYOR</span></td><td>T1 çözülmeden yapılmaz</td></tr>
-<tr><td><b>T3</b></td><td>Ölçülmemiş varsayımlar: küp boyu (kuşbaşı 10 · sucuk 8 mm), dökme yoğunluklar, sürtünme, kıymada doluluk 0,40</td><td><span class="st ac">ÖLÇÜM BEKLİYOR</span></td><td>Kemal numune ölçünce sayılar güncellenir; model kendi yeniden hesaplar</td></tr>
-<tr><td><b>T4</b></td><td>Eşik + tıkaç akışı (kuşbaşı/sucuk) denenmedi — süreklilik buna bağlı</td><td><span class="st ac">AÇIK</span></td><td>tıkaç eşiği aşmazsa eşik 6 → 3 mm</td></tr>
-<tr><td><b>T5</b></td><td>Bayonetteki tümseğin el kuvveti hesaplanmadı</td><td><span class="st ac">AÇIK</span></td><td>basılıp denenecek</td></tr>
-<tr><td><b>T6</b></td><td>O-ring ölçüleri genel kuraldan alındı</td><td><span class="st ac">AÇIK</span></td><td>katalogdan teyit</td></tr>
-<tr><td><b>T7</b></td><td>140'lık kasette kulp el açıklığı 82 mm — dar</td><td><span class="st ac">AÇIK</span></td><td>kulp öne uzatılabilir</td></tr>
-<tr><td><b>T8</b></td><td>Makine tarafı: kabin, robot ağzı, 6 tahrik grubu, soğutma, sürücü kartları, ana pano, UPS</td><td><span class="st ac">KUTU</span></td><td>hepsi ölçü kutusu; sıradaki iş bunları gerçek modele çevirmek</td></tr>
-<tr><td><b>T9</b></td><td>Küp sucuk soğukta yağdan birbirine yapışabilir</td><td><span class="st on">ÖNERİ VAR</span></td><td>rotor bunun için var; denemede bakılacak</td></tr>
+<tr><td><b>Atosa (Yindu)</b></td><td>çok hazneli dozaj ünitesi &mdash; kurgunun referansı</td><td>mekanizması belgelenmemiş; teklif bekleniyor</td></tr>
+<tr><td><b>Fillpack</b></td><td>kavanoz dolum makinesi</td><td>10.000 USD FOB &mdash; bizim gramaja uygun değil</td></tr>
+<tr><td><b>Kaset parçaları &middot; üretim</b></td><td>304/316 sac + POM-C talaşlı; helezon POM-C, rotor kaynaklı 304</td><td>yerli CNC / torna &mdash; 55 parça &times; 4 kaset</td></tr>
+<tr><td><b>Redüktör</b></td><td>NMRV030 sınıfı &times;2 / kaset</td><td>katalog</td></tr>
+<tr><td><b>O-ring &middot; insert &middot; bağlantı</b></td><td>O-ring 18 &times; 2,5 &times;3 + tüp çapında &times;2 &middot; M4 insert &times;2 &middot; pul/kör somun M6 &times;6</td><td>standart</td></tr>
 </table></div>
 
-<h2>7 · Sürüm geçmişi</h2><ul class="ver">
-<li><b>22 Eyl · KAPAK YOK</b> — kaşar v10 · kıyma v5 · kuşbaşı v4 · küp sucuk v3: kapak kalktı, ağız dudağı geldi; rotor kaynaklı tek parça; ön kovanda labirent. Kontrol 148/148</li>
-<li><b>22 Eyl · BİRLEŞİM DETAYLARI</b> — kaşar v9 · kıyma v4 · kuşbaşı v3 · sucuk v2: dişli saplama + pul + kör somun, kaynaklı kulp, klikli bayonet, contalar, M4 insert</li>
-<li><b>22 Eyl · ORTAK GÖVDE 140</b> — kıyma v3 · kuşbaşı v2 · küp sucuk v1: üç kaset aynı hazne; küp sucuk kuşbaşı kasetinin aynısı, hesabı yeniden kuruldu</li>
-<li><b>22 Eyl</b> — kuşbaşı v1: tabla hareket yasası kuşbaşı için ayrı çözüldü (NNLS); kıyma v1–v2: kaplama sorunu bulundu</li>
-<li><b>21 Eyl</b> — kaşar kabı v6 → v8: sürekli hatveli kanat tam yüzeyden kuruldu, konik mil kökü</li>
-<li>5 Eyl ve öncesi (v24–v27): Picnic tipi kap, çatal + L raf, revolver — <b>terk edildi</b></li>
+<h2>6 &middot; Açık konular</h2><div class="card"><table>
+<tr><th style="width:44px">#</th><th>Problem</th><th style="width:118px">Durum</th><th>Çözüm / not</th></tr>
+<tr><td><b>T1</b></td><td><b>Kıyma pideyi KAPLAYAMIYOR</b> &mdash; doz doğru ama 10 sn'de 178 mm şerit, pidenin %11'i. Tavan %33</td><td><span class="st ac">KARAR BEKLİYOR</span></td><td>yayıcı ya da elle yayma. Harçta daha ağır</td></tr>
+<tr><td><b>T2</b></td><td>Harç kasetleri &times;2 &mdash; yap / satın al</td><td><span class="st ac">KARAR BEKLİYOR</span></td><td>T1 çözülmeden yapılmaz</td></tr>
+<tr><td><b>T3</b></td><td>Ölçülmemiş varsayımlar: küp boyu, dökme yoğunluk, sürtünme, doluluk</td><td><span class="st ac">ÖLÇÜM BEKLİYOR</span></td><td>numune ölçülünce model kendi yeniden hesaplar</td></tr>
+<tr><td><b>T4</b></td><td>Eşik + tıkaç akışı denenmedi</td><td><span class="st ac">AÇIK</span></td><td>tutmazsa eşik 6 &rarr; 3 mm</td></tr>
+<tr><td><b>T5</b></td><td>Bayonet tümseğinin el kuvveti hesaplanmadı</td><td><span class="st ac">AÇIK</span></td><td>basılıp denenecek</td></tr>
+<tr><td><b>T6</b></td><td>O-ring ölçüleri genel kuraldan</td><td><span class="st ac">AÇIK</span></td><td>katalogdan teyit</td></tr>
+<tr><td><b>T7</b></td><td>140'lık kasette kulp el açıklığı 82 mm &mdash; dar</td><td><span class="st ac">AÇIK</span></td><td>kulp öne uzatılabilir</td></tr>
+<tr><td><b>T8</b></td><td>Kabin, robot ağzı, 6 tahrik grubu, soğutma, pano, UPS</td><td><span class="st ac">KUTU</span></td><td>sıradaki iş: gerçek modele çevirmek</td></tr>
+</table></div>
+
+<h2>7 &middot; Sürüm geçmişi</h2><ul class="ver">
+<li><b>22 Eyl &middot; KAPAK YOK</b> &mdash; kaşar v10 &middot; kıyma v5 &middot; kuşbaşı v4 &middot; küp sucuk v3: kapak kalktı, ağız dudağı geldi; rotor kaynaklı tek parça; ön kovanda labirent. Kontrol 148/148</li>
+<li><b>22 Eyl &middot; BİRLEŞİM DETAYLARI</b> &mdash; dişli saplama + pul + kör somun, kaynaklı kulp, klikli bayonet, contalar, M4 insert</li>
+<li><b>22 Eyl &middot; ORTAK GÖVDE 140</b> &mdash; üç kaset aynı hazne; küp sucuk kuşbaşı kasetinin aynısı</li>
+<li>21 Eyl &mdash; kaşar kabı v8: sürekli hatveli kanat tam yüzeyden, konik mil kökü</li>
+<li>5 Eyl ve öncesi (v24&ndash;v27): Picnic tipi kap, çatal + L raf &mdash; <b>terk edildi</b></li>
 </ul>
-</div><div class="foot">AUTOKITCH · HAT · Yol C canlı tasarım defteri · kaynak: arastirma/_uretec (kaset üreteçleri, kontrol listesi), FULL_MAKINE (HAT v19) · 22 Eyl 2026</div></body></html>
+</div><div class="foot">AUTOKITCH &middot; HAT &middot; Yol C canlı tasarım defteri &middot; model: hat_montaj_v2.py + kaset üreteçleri &middot; 22 Eyl 2026</div>
+
+<script>
+const ROZET = {GERCEK:['rz-g','gerçek model'], GERCEK_PARCA:['rz-g','kısmen gerçek'], KUTU:['rz-k','kutu'], KATALOG:['rz-c','katalog']};
+const M = model3d({
+  mv:'mv', etiket:'et', grup:'kod',
+  hedef: g => g.birimler[0].sayfa ? '../' + g.birimler[0].sayfa : '',
+  yazi: g => {
+    const b = g.birimler[0], rz = ROZET[b.durum];
+    return '<b>' + b.ad + '</b><span>' + b.olcu.join(' × ') + ' mm · <span class="rozet ' + rz[0] + '">' + rz[1] + '</span>' +
+           (b.sayfa ? '<br>tıkla → kendi modeli · AR · animasyon' : (b.kaynak ? '<br>' + b.kaynak : '')) + '</span>';
+  }
+});
+fetch('../hat3d/durum.json?v=2').then(r => r.json()).then(D => {
+  const C = D.birim.filter(b => b.modul === 'C');
+  M.veri(C);
+  const kaset = C.filter(b => b.kod.indexOf('KASET_') === 0);
+  document.getElementById('secim').innerHTML = kaset.map(b => {
+    const rz = ROZET[b.durum];
+    return '<a href="' + (b.sayfa ? '../' + b.sayfa : '#') + '" data-k="' + b.kod + '"' + (b.sayfa ? '' : ' class="yok"') + '>' +
+      b.ad.replace(' (KARAR: yap / satın al)','') + '<span>' + b.olcu.join(' × ') + ' mm · ' + rz[1] + '</span></a>';
+  }).join('');
+  document.querySelectorAll('.secim a').forEach(a => {
+    a.onmouseenter = () => M.sec(a.dataset.k); a.onmouseleave = () => M.birak();
+    if (a.classList.contains('yok')) a.onclick = e => e.preventDefault();
+  });
+  const g = C.filter(b => b.durum.indexOf('GERCEK') === 0).length;
+  document.getElementById('ozet').innerHTML = '<b>' + g + ' / ' + C.length + ' birim gerçek üretim modeli.</b> ' +
+    'Kabin, tahrik grupları, soğutma ve pano hâlâ ölçü kutusu. Ölçü kaynağı: ' + D.hat.pafta + '.';
+});
+</script></body></html>

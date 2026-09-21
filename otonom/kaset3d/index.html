@@ -369,7 +369,7 @@ kbtn.onclick = () => { const mt = mv.model && mv.model.materials.find(x => /_dol
   mt.pbrMetallicRoughness.setBaseColorFactor([c[0], c[1], c[2], kasarGizli ? 0.0 : 1.0]);
   kbtn.textContent = kasarGizli ? "Dolguyu göster" : "Dolguyu gizle — içini gör"; };
 document.getElementById('arbtn').onclick = () => { if (mv.canActivateAR) mv.activateAR(); else alert("Bu cihaz AR desteklemiyor. iPhone'da Safari, Android'de Chrome ile aç."); };
-goster('kasar_v8');
+goster((new URLSearchParams(location.search).get('k') && D[new URLSearchParams(location.search).get('k')]) ? new URLSearchParams(location.search).get('k') : 'kasar_v10');   // ?k=... derin baglanti (TOPPING sayfasindan kaset secimi)
 </script>
 </body>
 </html>
