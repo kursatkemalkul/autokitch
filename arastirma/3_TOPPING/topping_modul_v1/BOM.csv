@@ -1,0 +1,32 @@
+﻿dosya;parça;adet;malzeme · yöntem;görevi;zarf mm
+dis_taban;Dış taban sacı;1;304 1,5 mm · lazer + abkant;modülün tabanı, alttaki B modülüne oturur;1800 × 2 × 830
+dis_tavan;Dış tavan sacı;1;304 1,5 mm · lazer + abkant;"üst kapak; soğutma grubu buraya oturur";1800 × 2 × 830
+dis_yan_sol;Dış yan sac;2;304 1,5 mm · lazer + abkant;komşu modüle cıvatalanır (lego birleşim);2 × 967 × 830
+dis_arka;Dış arka sac;1;304 1,5 mm;"kuru bölmenin arkası; kablo rakorları burada";1797 × 967 × 2
+on_cerceve;Ön çerçeve sacı;1;304 1,5 mm · lazer;robot ağzı 1740 × 110 · kaset kapağı açıklığı · teknik bant servis açıklığı;1797 × 967 × 2
+pu_taban;PU yalıtım paneli 60 mm;4;poliüretan 60 · λ 0,022 W/mK;"soğuk hücreyi sarar; ısı kaybı hesabı topping_hesap_v1";1740 × 60 × 490
+pu_arka;PU arka bölme paneli 60 mm;1;poliüretan 60;SOĞUK / KURU ayırıcı: motorlar bunun arkasında kalır;1620 × 400 × 65
+ic_kabuk;İç kabuk (soğuk hücre);1;304 1,0 mm · bükme, köşeler kaynaklı-taşlanmış;"gıda bölgesi: köşe R ≥ 6, yıkanabilir; 6 meme yarığı + 12 mil geçişi";1620 × 400 × 425
+on_kapak;Ön kapak · sandviç;1;1,5 sac + 17 PU + 1,5 sac · 2 menteşe + mıknatıslı kilit;"kaset ağzını kapatır; açılınca 6 kaset önden çekilir";1632 × 412 × 14
+kapak_contasi;Kapak contası;1;manyetik buzdolabı contası;"kapağın arka yüzünde; yalıtım panelinin ön yüzüne basar";1624 × 404 × 6
+mentese_0;Menteşe;2;paslanmaz, gömme;kapak alttan menteşeli: açılınca tezgâh gibi öne yatar;30 × 4 × 14
+_bom_kilavuz;Yuva ayırıcı lama 3 × 60 × 325;7;304 lama, iç kabuğa kaynaklı;"kasetin iki yanını kılavuzlar; kaset ile arasında 2 mm boşluk";0 × 0 × 0
+_bom_ray;Taban rayı;6;304 bükme, meme yarığı açık;"kaset üstünde kayar; altındaki yarıktan meme geçer";0 × 0 × 0
+_bom_pim;Konum pimi Ø10;12;304 taşlanmış;kaset arkada iki pimle merkezlenir → kavrama hizalanır;0 × 0 × 0
+_bom_huni;Dozaj hunisi;6;304 1,0 mm, çekip çıkarılır;"memeden çıkanı aşağıdaki robot ağzına yönlendirir; yıkamak için sökülür";0 × 0 × 0
+_bom_soket;Yaylı haç soketi;12;POM-C + paslanmaz yay;"kaset takılınca haç kavramaya oturur; yay kursu 14 mm, diş kaçarsa kaset zorlanmaz";0 × 0 × 0
+_bom_mil;Tahrik mili Ø22;12;AISI 304 taşlanmış;"yalıtımlı bölmeden geçer; soğuk tarafta soket, kuru tarafta redüktör";0 × 0 × 0
+_bom_kovan;Yataklı-keçeli kovan;12;POM-C gövde + yatak ×2 + keçe 22×35×7;"mili bölmeden SIZDIRMAZ geçirir; soğuk hücreye nem girmez";0 × 0 × 0
+_bom_red;Planet redüktör i = 10;12;PLF60/PLE60 sınıfı · eş eksenli;sonsuz vida DEĞİL: girişi dik olduğu için motor yana taşıyordu;0 × 0 × 0
+_bom_motor;NEMA23 kapalı çevrim step 1,2 N·m;12;sürücüsüyle birlikte;"dozaj = mil açısı; kapalı çevrim adım kaçırmayı yakalar";0 × 0 × 0
+evaporator;Evaporatör;1;lamelli, paslanmaz karter;"soğuk hücrenin üst-arkasında; hesaplanan yük 78 W, seçim 118 W";860 × 100 × 110
+fan_0;Evaporatör fanı Ø150;2;24 V eksenel, 12 W;havayı kasetlerin üstünden geçirir;110 × 110 × 50
+hava_kanali;Hava kanalı saci;1;304 1,0 mm delikli;soğuk havayı kaset sırasının üstüne dağıtır, doğrudan üflemez;1614 × 4 × 361
+sogutma_grubu;Soğutma grubu ⅕ HP;1;hermetik, hava soğutmalı;"teknik bantta, önden servis; +3 °C'de 250–350 W verir";300 × 220 × 220
+pano_kutusu;Ana pano kutusu;1;304 · önden kapaklı, IP54;"PLC + ana şalter + röleler; ekran yok, tablet";400 × 240 × 250
+ups;UPS 500 VA;1;hat içi;elektrik kesintisinde kaset konumları ve saat korunur;220 × 150 × 190
+guc_kaynagi;Güç kaynağı 24 V 154 W;1;DIN raya;aynı anda en çok 2 mil döner;160 × 100 × 100
+din_ray;DIN ray 35 mm;1;standart;sürücü kartları burada;460 × 15 × 7
+surucu_0;Step sürücü kartı;12;kapalı çevrim, 24 V;her mile bir sürücü: 6 kaset × 2;34 × 75 × 95
+agiz_cercevesi;Robot ağzı çerçevesi;1;304 1,5 mm bükme;"1740 × 110 açıklık; kenarları kıvrık, robot çarparsa zarar vermez";1740 × 122 × 29
+damlama_teknesi;Damlama teknesi;1;304 1,0 mm, öne eğimli, çekmeceli;"hunilerden damlayanı toplar; öne çekilip boşaltılır";1360 × 26 × 166
