@@ -1,16 +1,17 @@
 <!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>3 · TOPPING — 3B üretim modeli</title><link rel="stylesheet" href="hat.css?v=4">
-<script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script><script src="model3d.js?v=5"></script></head><body>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script><script src="model3d.js?v=8"></script></head><body>
 <div class="top"><div class="in"><div class="crumb"><a href="../">Store</a><span>&rsaquo;</span><a href="index.html">HAT</a><span>&rsaquo;</span><a href="makine.html">Makine</a><span>&rsaquo;</span><b>3 · TOPPING</b></div><div><a href="makine.html">&larr; Makine</a></div></div></div>
 <div class="wrap"><h1>3 &middot; TOPPING &mdash; 3B üretim modeli<span class="tag" style="background:#8e5bd6">1800 &times; 830 &times; 970</span></h1>
 <p class="lead">Dozaj modülünün tamamı. <b>Üstüne gel</b> &mdash; birim parlar. <b>Kasete tıkla</b> &mdash; o kasetin kendi modeli, AR'si ve montaj animasyonu açılır.</p>
 
 <div class="m3">
-  <model-viewer id="mv" src="../hat3d/modul_C.glb?v=3" ios-src="../hat3d/modul_C.usdz?v=3" alt="TOPPING modülü üretim modeli"
+  <model-viewer id="mv" src="../hat3d/modul_C.glb?v=4" ios-src="../hat3d/modul_C.usdz?v=4" alt="TOPPING modülü üretim modeli"
       camera-controls touch-action="pan-y" shadow-intensity="0.6" exposure="1.0" environment-image="neutral"
       camera-orbit="16deg 82deg 2.3m" camera-target="1.56m 1.5m -0.14m" field-of-view="30deg" min-field-of-view="5deg"
       ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
   <div class="et" id="et"></div>
   <button class="ar" onclick="document.getElementById('mv').activateAR()">AR'de gör</button>
+  <button class="ar" id="ic" style="right:110px;color:#1d2430">İçini gör</button>
   <div class="ip">sürükle: döndür &middot; tekerlek: yakınlaştır &middot; üstüne gel: birim &middot; tıkla: aç</div>
 </div>
 <div class="secim" id="secim"></div>
@@ -108,4 +109,10 @@ fetch('../hat3d/durum.json?v=2').then(r => r.json()).then(D => {
   document.getElementById('ozet').innerHTML = '<b>' + g + ' / ' + C.length + ' birim gerçek üretim modeli.</b> ' +
     'Kabin, tahrik grupları, soğutma ve pano hâlâ ölçü kutusu. Ölçü kaynağı: ' + D.hat.pafta + '.';
 });
+document.getElementById('ic').onclick = function () {
+  this.dataset.on = this.dataset.on ? '' : '1';
+  this.textContent = this.dataset.on ? 'Katı gör' : 'İçini gör';
+  this.style.color = this.dataset.on ? '#2456c8' : '#1d2430';
+  M.icini(!!this.dataset.on);
+};
 </script></body></html>
