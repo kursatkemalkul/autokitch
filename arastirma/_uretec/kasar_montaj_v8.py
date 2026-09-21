@@ -6,7 +6,10 @@ Katılar kasar_cad_v8'den birebir alınır (ayrı model YOK) → otonom/kaset3d/
 """
 import math, os, sys
 import cadquery as cq
-import kasar_cad_v8 as V
+import importlib
+MODUL = sys.argv[1] if len(sys.argv) > 1 else "kasar_cad_v8"          # kullanım: python kasar_montaj_v8.py [üreteç modülü] [çıktı öneki]
+ONEK = sys.argv[2] if len(sys.argv) > 2 else "kasar_v8"
+V = importlib.import_module(MODUL)
 from kaset_3d_v3 import Mesh, MM, doku_ad, doku_montaj, etiket_yuzu, usdz_yaz, OUT
 
 BASLA, ADIM_SURE, HAREKET = 1.4, 1.6, 0.72      # sn · adım süresi · hareketin adım içindeki payı
@@ -24,7 +27,7 @@ ADIMLAR = [
     ("HELEZON önden sürülür (4 segment kare çubuğa dizili)", ["helezon_cekirdek", "helezon_A", "helezon_B", "helezon_C", "helezon_D"], (0, 0, 430), -2.0, False),
     ("Çıkış tüpü ön plakaya 2 × M4 ile",    ["cikis_tupu", "vida_tup_a", "vida_tup_b"],       (0, 0, 240),   0.0, False),
     ("Yatak kapağı itilir, ÇEYREK TUR döner", ["yatak_kapagi"],                               (0, 0, 130),   0.25, True),
-    ("Karıştırıcı kafesi ÜSTTEN indirilir", ["orumcek_arka", "orumcek_orta", "orumcek_on", "cubuk_0", "cubuk_1", "cubuk_2", "cubuk_3"], (0, 430, 0), 0.0, False),
+    ("Besleme rotoru ÜSTTEN indirilir (2 sıyırıcı lama)" if "kiyma" in MODUL else "Karıştırıcı kafesi ÜSTTEN indirilir", ["orumcek_arka", "orumcek_orta", "orumcek_on", "cubuk_0", "cubuk_1", "cubuk_2", "cubuk_3"], (0, 430, 0), 0.0, False),
     ("Kare mil önden kafesin içinden geçer", ["kar_mil"],                                     (0, 0, 420),   0.0, False),
     ("Ön kovan takılır",                    ["on_kovan"],                                     (0, 0, 150),   0.0, False),
     ("Topuz mile geçer, setuskur sıkılır",  ["topuz", "setuskur"],                            (0, 0, 190),   0.0, False),
@@ -42,6 +45,7 @@ def ease(t, t0, t1):
 
 def kur():
     V.kap()
+    var = set(p["ad"] for p in V.PARCALAR) | set(["etiket_ad", "etiket_montaj", "etiket_ad_arka", "etiket_montaj_arka"])
     sure = BASLA + len(ADIMLAR) * ADIM_SURE + 2.6
     V.DONGU, V.DT = sure, 0.1
     GR, hangi = {}, {}
@@ -52,7 +56,8 @@ def kur():
         GR[g] = dict(pivot=(0, V.CY * MM, 0) if tur else (0, 0, 0), eksen="z",
                      aci=(lambda t, a=at0, b=at1, n=tur: n * (1.0 - ease(t, a, b))),
                      kay=(lambda t, a=kt0, b=kt1, o=off: tuple(c * MM * (1.0 - ease(t, a, b)) for c in o)))
-        for p in parcalar: hangi[p] = g
+        for p in parcalar:
+            if p in var: hangi[p] = g                       # üreteçte olmayan parça adı (ör. kıymada cubuk_2/3) atlanır
     V.GRUP = GR
 
     # etiketler (gövdeyle birlikte hareket etsin)
@@ -72,10 +77,10 @@ def kur():
 if __name__ == "__main__":
     par, sure = kur()
     V_ = V.v4.hacim_L(V.Y_DOLUM)
-    dokular = {"ad": doku_ad("KAŞAR KABI", "bu yönde tak  ·  280 × 325 × 360 mm  ·  %s L  ·  çıkış ÖNDE alttan" % ("%.1f" % V_).replace(".", ","), ok_sol=True),
-               "montaj": doku_montaj(["HELEZONU|ÖNDEN SÜR", "YATAK KAPAĞI|ÇEYREK TUR", "KAFES · MİL|TOPUZ · PİM", "TAPAYI ÇIKAR|YUVAYA SÜR"])}
-    b = V.glb_yaz(os.path.join(OUT, "kasar_v8_montaj.glb"), par, dokular)
-    print("kasar_v8_montaj.glb · %d parca · %d adim · %.1f sn · %.0f KB" % (len(par), len(ADIMLAR), sure, b / 1024.0))
+    dokular = {"ad": doku_ad("KIYMA KASETİ" if "kiyma" in MODUL else "KAŞAR KABI", "bu yönde tak  ·  %d × 325 × 360 mm" % V.W + "  ·  %s L  ·  çıkış ÖNDE alttan" % ("%.1f" % V_).replace(".", ","), ok_sol=True),
+               "montaj": doku_montaj(["HELEZONU|ÖNDEN SÜR", "YATAK KAPAĞI|ÇEYREK TUR", ("ROTOR" if "kiyma" in MODUL else "KAFES") + " · MİL|TOPUZ · PİM", "TAPAYI ÇIKAR|YUVAYA SÜR"])}
+    b = V.glb_yaz(os.path.join(OUT, ONEK + "_montaj.glb"), par, dokular)
+    print(ONEK + "_montaj.glb · %d parca · %d adim · %.1f sn · %.0f KB" % (len(par), len(ADIMLAR), sure, b / 1024.0))
 
     # ---- AYNI ANİMASYON USDZ'YE (iPhone AR) ----
     anim = {}
@@ -85,10 +90,11 @@ if __name__ == "__main__":
         at0, at1 = (t0 + tL * 0.55, t0 + tL) if ayri else (t0, t0 + tL)
         anlar = sorted(set([0.0, kt0, at0, sure] + [kt0 + (kt1 - kt0) * k / 4.0 for k in range(5)] + [at0 + (at1 - at0) * k / 4.0 for k in range(5)]))
         keys = [(t, tuple(c * MM * (1.0 - ease(t, kt0, kt1)) for c in off), -360.0 * tur * (1.0 - ease(t, at0, at1))) for t in anlar]
-        for p_ in parcalar: anim[p_] = dict(pivot=(0.0, V.CY * MM, 0.0) if tur else None, keys=keys)
-    b2, prim, sorun, uyari = usdz_yaz([os.path.join(OUT, "kasar_v8_montaj.usdz")], "kasar_v8_montaj",
+        for p_ in parcalar:
+            if p_ in set(a_ for a_, m_, mal_, g_ in par): anim[p_] = dict(pivot=(0.0, V.CY * MM, 0.0) if tur else None, keys=keys)
+    b2, prim, sorun, uyari = usdz_yaz([os.path.join(OUT, ONEK + "_montaj.usdz")], ONEK + "_montaj",
                                       [(a_, m_, mal_) for a_, m_, mal_, g_ in par], dokular, anim=anim, fps=30.0, sure=sure)
-    print("kasar_v8_montaj.usdz · %.0f KB · %d prim · USD denetimi: %s" % (b2 / 1024.0, prim, "GECTI" if not sorun else "KALDI"))
+    print(ONEK + "_montaj.usdz · %.0f KB · %d prim · USD denetimi: %s" % (b2 / 1024.0, prim, "GECTI" if not sorun else "KALDI"))
     for x in sorun: print("   HATA:", x)
     for i, (ad, p, o, t, a) in enumerate(ADIMLAR):
         print("  %2d  %5.1f sn  %-48s %d parca" % (i + 1, BASLA + i * ADIM_SURE, ad, len(p)))
