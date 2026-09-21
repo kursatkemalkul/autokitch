@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>AUTOKITCH — Makine ana montajı</title>
+<meta name="color-scheme" content="only light">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+<meta name="googlebot" content="noindex, nofollow">
+<style>
+  :root{color-scheme:only light;
+    --black:#000;--panel:#1D1D1F;--line:#333336;--gray:#86868B;--gray-l:#A1A1A6;--blue:#2997FF;--yesil:#30D158;--sari:#FFD60A;
+    --font:"SF Pro Display","SF Pro Text",-apple-system,BlinkMacSystemFont,"Helvetica Neue",Helvetica,Arial,sans-serif}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:var(--font);background:var(--black);color:#fff;-webkit-font-smoothing:antialiased;letter-spacing:-.01em;padding:22px 18px 60px}
+  .wrap{max-width:680px;margin:0 auto}
+  h1{font-size:26px;font-weight:600}
+  .sub{color:var(--gray-l);font-size:14px;margin-top:8px;line-height:1.5}
+  model-viewer{width:100%;height:62vh;min-height:380px;background:#111114;border:1px solid var(--line);border-radius:16px;margin-top:16px;--poster-color:transparent}
+  .ar{display:block;width:100%;margin-top:12px;padding:15px;border:0;border-radius:12px;background:var(--blue);color:#fff;font-size:16px;font-weight:600;text-align:center;cursor:pointer}
+  .tabs{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 0}
+  .tab{flex:1 1 30%;padding:11px 8px;border:1px solid var(--line);border-radius:12px;background:var(--panel);color:#fff;font-size:14.5px;font-weight:600;text-align:center;cursor:pointer}
+  .tab.on{border-color:var(--blue);color:var(--blue)}
+  .ilerle{margin-top:18px;border:1px solid var(--line);border-radius:14px;background:var(--panel);padding:14px 15px}
+  .ilerle b{font-size:17px}
+  .cubuk{display:flex;height:9px;border-radius:5px;overflow:hidden;margin:11px 0 9px;background:#2b2b2e}
+  .cubuk i{display:block}
+  .anah{display:flex;flex-wrap:wrap;gap:12px;color:var(--gray-l);font-size:12.5px}
+  .anah s{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:5px;vertical-align:-1px}
+  .grup{margin:22px 0 8px;color:var(--gray);font-size:12px;font-weight:600;letter-spacing:.09em;text-transform:uppercase}
+  .sat{display:flex;align-items:flex-start;gap:10px;padding:11px 13px;border:1px solid var(--line);border-radius:11px;background:#151517;margin-bottom:7px}
+  .sat s{flex:0 0 8px;height:8px;border-radius:3px;margin-top:6px;text-decoration:none}
+  .sat u{flex:1;text-decoration:none}
+  .sat .ad{font-size:14.5px;font-weight:600;line-height:1.35}
+  .sat .k{color:var(--gray);font-size:12.5px;margin-top:3px;line-height:1.45}
+  .sat .o{color:var(--gray-l);font-size:12px;font-variant-numeric:tabular-nums;white-space:nowrap;margin-top:3px}
+  .sat a{font-size:12.5px}
+  .note{color:var(--gray);font-size:12.5px;margin-top:20px;line-height:1.65}
+  a{color:var(--blue);text-decoration:none;font-size:14px}
+  .geri{display:inline-block;margin-bottom:14px}
+</style>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script>
+</head>
+<body>
+<div class="wrap">
+  <a class="geri" href="../index.html">← AUTOKITCH</a>
+  <h1>Makine — ana montaj</h1>
+  <div class="sub">Hattın tamamı tek modelde. <b>Beyaz</b> olanlar gerçek üretim modeli (parçaları, delikleri, geçmeleri çizilmiş). <b>Şeffaf</b> olanlar henüz yalnız ölçü kutusu — sırayla gerçek modele çevriliyor. Ölçüler <b>HAT&nbsp;v19</b> teknik resminden okunuyor, elle yazılmıyor.</div>
+
+  <model-viewer id="mv" src="hat_v1.glb" ios-src="hat_v1.usdz" alt="AUTOKITCH hat ana montajı"
+      camera-controls touch-action="pan-y" shadow-intensity="0.7" exposure="1.05" environment-image="neutral"
+      camera-orbit="38deg 72deg 7.5m" camera-target="1.95m 1m -0.4m" field-of-view="30deg" min-field-of-view="8deg" ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
+  <button class="ar" id="arbtn">AR'de gör — makineyi dükkâna koy</button>
+  <div class="tabs">
+    <div class="tab on" data-g="hepsi">Hepsi</div>
+    <div class="tab" data-g="ic">Kabukları gizle</div>
+    <div class="tab" data-g="gercek">Yalnız gerçek modeller</div>
+  </div>
+
+  <div class="ilerle">
+    <b id="ilerle_b">—</b>
+    <div class="cubuk" id="cubuk"></div>
+    <div class="anah">
+      <span><s style="background:#F5F5F0"></s>gerçek üretim modeli</span>
+      <span><s style="background:#6E7681"></s>kutu (modellenmedi)</span>
+      <span><s style="background:#4A5058"></s>katalog (satın alınan)</span>
+    </div>
+  </div>
+
+  <div id="liste"></div>
+
+  <div class="note" id="notu"></div>
+</div>
+
+<script>
+const mv = document.getElementById('mv');
+document.getElementById('arbtn').onclick = () => mv.activateAR();
+
+const RENK = {GERCEK:'#F5F5F0', GERCEK_PARCA:'#C9D6C0', KUTU:'#6E7681', KATALOG:'#4A5058'};
+const ETIKET = {GERCEK:'gerçek model', GERCEK_PARCA:'kısmen gerçek', KUTU:'kutu', KATALOG:'katalog'};
+const MODUL_AD = {A:'Modül A · pres kolonu', B:'Modül B · çekmeceler', C:'Modül C · topping (dozaj)', D:'Modül D · fırın kolonu', E:'Modül E · kutulama', '-':'Robotlar (hattın önünde)'};
+
+fetch('durum.json?v=1').then(r => r.json()).then(D => {
+  const n = D.birim.length, g = D.birim.filter(b => b.durum.startsWith('GERCEK')).length;
+  document.getElementById('ilerle_b').textContent = g + ' / ' + n + ' birim gerçek model  ·  %' + Math.round(100*g/n);
+  const say = {}; D.birim.forEach(b => say[b.durum] = (say[b.durum]||0)+1);
+  document.getElementById('cubuk').innerHTML = ['GERCEK','GERCEK_PARCA','KATALOG','KUTU'].filter(k=>say[k])
+      .map(k => '<i style="width:'+(100*say[k]/n)+'%;background:'+RENK[k]+'"></i>').join('');
+
+  const sira = ['C','B','A','D','E','-'], L = document.getElementById('liste');
+  sira.forEach(m => {
+    const bs = D.birim.filter(b => b.modul === m); if (!bs.length) return;
+    const kutu = bs.filter(b => b.durum === 'KUTU').length;
+    L.insertAdjacentHTML('beforeend', '<div class="grup">' + MODUL_AD[m] + ' — ' + bs.length + ' birim' + (kutu ? ', ' + kutu + ' tanesi kutu' : '') + '</div>');
+    const tek = {};                                                   // aynı satırdan 12 tane varsa tek satırda topla
+    bs.forEach(b => { const k = b.ad + '|' + b.durum + '|' + b.olcu.join('x'); (tek[k] = tek[k] || []).push(b); });
+    Object.values(tek).forEach(gr => {
+      const b = gr[0], ad = b.ad + (gr.length > 1 ? '  ×' + gr.length : '');
+      L.insertAdjacentHTML('beforeend',
+        '<div class="sat"><s style="background:' + RENK[b.durum] + '"></s><u>' +
+        '<div class="ad">' + ad + '</div>' +
+        '<div class="o">' + b.olcu.join(' × ') + ' mm' + (b.parca ? '  ·  ' + b.parca + ' dış parça' : '') + '  ·  ' + ETIKET[b.durum] + '</div>' +
+        (b.kaynak ? '<div class="k">' + b.kaynak + '</div>' : '') +
+        (b.sayfa ? '<div style="margin-top:5px"><a href="../' + b.sayfa + '">parçalarını gör →</a></div>' : '') +
+        '</u></div>');
+    });
+  });
+  document.getElementById('notu').innerHTML =
+    'Hat ' + D.hat.w + ' × ' + D.hat.h + ' × ' + D.hat.d + ' mm  ·  ölçülerin kaynağı: ' + D.hat.pafta + ' teknik resmi.<br>' +
+    'Bu sayfadaki model üretecin kendi çıktısı: <b>hat_montaj_v1.py</b>. Aynı üreteç SolidWorks için <b>HAT_v1_YERLESIM.step</b> dosyasını da yazıyor — ' +
+    'her birim adıyla ayrı katı, montaj olarak açılır. Bir birim gerçek modele dönünce kütükte tek satır değişiyor, model · STEP · bu sayfa birlikte güncelleniyor.<br>' +
+    'Kasetler burada yalnız DIŞ kabuğuyla duruyor (makine modeli ağırlaşmasın); iç parçalarının tamamı kendi sayfasında.';
+});
+
+// --- görünüm anahtarları: malzeme saydamlığıyla ---
+const KABUK = ['kabin','soguk','sicak'], KUTUM = ['kutu','katalog','robot'];
+function gorunum(g){
+  const M = {}; mv.model && mv.model.materials.forEach(m => M[m.name] = m);
+  const ayar = (ad, a) => { const m = M[ad]; if(!m) return;
+    const c = m.pbrMetallicRoughness.baseColorFactor.slice(); c[3] = a;
+    m.setAlphaMode(a >= 0.999 ? 'OPAQUE' : 'BLEND'); m.pbrMetallicRoughness.setBaseColorFactor(c); };
+  const VAR = {kabin:0.13, soguk:0.28, sicak:0.32, kutu:0.30, katalog:0.55, robot:0.75, pom:1};
+  Object.keys(VAR).forEach(ad => {
+    let a = VAR[ad];
+    if (g === 'ic'     && KABUK.includes(ad)) a = 0.02;
+    if (g === 'gercek' && ad !== 'pom')       a = KUTUM.includes(ad) || KABUK.includes(ad) ? 0.04 : a;
+    ayar(ad, a);
+  });
+}
+document.querySelectorAll('.tab').forEach(t => t.onclick = () => {
+  document.querySelectorAll('.tab').forEach(x => x.classList.remove('on')); t.classList.add('on'); gorunum(t.dataset.g);
+});
+mv.addEventListener('load', () => gorunum('hepsi'));
+</script>
+</body>
+</html>
