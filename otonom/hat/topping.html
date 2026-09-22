@@ -5,7 +5,7 @@
 <p class="lead">Dozaj modülünün tamamı &mdash; kabin, yalıtım, 6 kaset yuvası, 12 tahrik, soğutma ve pano. Modelde <b>ön kapak açık</b> gösteriliyor, yoksa kasetler görünmezdi. <b>Üstüne gel</b> &mdash; adı ve ölçüsü çıkar. <b>Kasete çift tıkla</b> &mdash; o kasetin kendi modeli, AR'si ve montaj animasyonu açılır. Modelin altındaki çubuktan <b>kesit</b> alabilir (X/Y/Z) ve iki noktaya tıklayıp <b>ölçü</b> çıkarabilirsin.</p>
 
 <div class="m3">
-  <model-viewer id="mv" loading="eager" src="../hat3d/modul_C.glb?v=12" ios-src="../hat3d/modul_C.usdz?v=12" alt="TOPPING modülü üretim modeli"
+  <model-viewer id="mv" loading="eager" src="../hat3d/modul_C.glb?v=13" ios-src="../hat3d/modul_C.usdz?v=13" alt="TOPPING modülü üretim modeli"
       camera-controls touch-action="pan-y" shadow-intensity="0.6" exposure="1.0" environment-image="neutral"
       camera-orbit="26deg 72deg 3.3m" camera-target="1.6m 1.52m -0.36m" field-of-view="30deg" min-field-of-view="5deg"
       ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
@@ -98,7 +98,7 @@ const M = model3d({
            (b.sayfa ? '<br>tıkla → kendi modeli · AR · animasyon' : (b.kaynak ? '<br>' + b.kaynak : '')) + '</span>';
   }
 });
-fetch('../hat3d/durum.json?v=11').then(r => r.json()).then(D => {
+fetch('../hat3d/durum.json?v=12').then(r => r.json()).then(D => {
   const C = D.birim.filter(b => b.modul === 'C');
   M.veri(C);
   const kaset = C.filter(b => b.kod.indexOf('KASET_') === 0);

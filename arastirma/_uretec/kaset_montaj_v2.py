@@ -41,6 +41,7 @@ ADIMLAR = [
     ("Topuz mile geçer, setuskur sıkılır",                         ["topuz", "setuskur"],                                 (0, 0, 190),  0.0, False, {}),
     ("Kilit pimi TEĞET geçer (mili delmez)",                       ["kilit_pimi"],                                        (190, 0, 0),  0.0, False, {}),
     ("Kapak gövde ağzına oturur",                                  ["kapak"],                                             (0, 300, 0),  0.0, False, {}),
+    ("Duckbill valf boru ucuna geçer",                             ["duckbill_valf"],                                     (0, -160, 0), 0.0, False, {}),
     ("Taşıma tapası ağıza takılır",                                ["tasima_tapasi"],                                     (0, -200, 0), 0.0, False, {}),
 ]
 
@@ -126,7 +127,7 @@ if __name__ == "__main__":
         keys_ = [(j / 30.0, (0, 0, 0), 360.0 * tur_ * (j / 30.0) / T_) for j in range(int(T_ * 30) + 1)] + [(D_, (0, 0, 0), 360.0 * tur_)]   # her kare
         for a_, g2 in grp.items():
             if g2 == g_: anim2[a_] = dict(pivot=GRUP_CALIS[g_]["pivot"], keys=keys_)
-    calis = [(a_, m_, mal_) for a_, m_, mal_, _ in par if a_ != "tasima_tapasi"]
+    calis = [(a_, m_, mal_) for a_, m_, mal_, _ in par if a_ != "tasima_tapasi"]   # valf makinede TAKILI kalır, tapa çıkar
     b3, prim3, sorun3, _u = usdz_yaz([os.path.join(OUT, ONEK + "_calis.usdz")], ONEK + "_calis", calis, dokular, anim=anim2, fps=30.0, sure=D_)
     print(ONEK + "_calis.usdz · %.0f KB · %d hareketli parca · USD denetimi: %s" % (b3 / 1024.0, len(anim2), "GECTI" if not sorun3 else "KALDI"))
 

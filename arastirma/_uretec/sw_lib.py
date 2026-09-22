@@ -42,7 +42,11 @@ def saveas(doc, path):
     e = VARIANT(pythoncom.VT_BYREF | pythoncom.VT_I4, 0); w = VARIANT(pythoncom.VT_BYREF | pythoncom.VT_I4, 0)
     ok = doc.Extension.SaveAs3(path, 0, 1, NUL, NUL, e, w); return bool(ok) and e.value == 0
 def png(doc, path, view, wpx=1800, hpx=1100):
-    doc.ShowNamedView2(view, 7 if view == "*Isometric" else 1); mcall(doc, "ViewZoomtofit2")
+    # HATA DUZELTMESI (10 Eyl 2026): ikinci parametre gorunus KIMLIGI; sabit 1 verilince
+    # "*Right"/"*Top" istense bile hep ONDEN goruntu aliniyordu.
+    VID = {"*Front": 1, "*Back": 2, "*Left": 3, "*Right": 4, "*Top": 5, "*Bottom": 6,
+           "*Isometric": 7, "*Dimetric": 8, "*Trimetric": 9}
+    doc.ShowNamedView2(view, VID.get(view, 1)); mcall(doc, "ViewZoomtofit2")
     for k in range(4):                      # boş (bembeyaz) görüntü gelirse bekleyip yeniden al
         time.sleep(1.5); doc.SaveBMP(path, wpx, hpx); im = Image.open(path); im.save(path)
         if im.convert("L").getextrema()[0] < 250: return
@@ -178,7 +182,7 @@ T_DIS, T_IC, H, D, Y0 = 1.5, 1.0, 1970.0, 840.0, 120.0
 ZK = -(D - 20)          # −820 kasa arkası
 ZF0, ZF1 = 38.5, 40.0   # ön yüz sac düzlemi
 
-def shell(st, p, W, foot, y0=Y0):
+def shell(st, p, W, foot, y0=Y0, izgara=None, plint_y=None):
     """dış kabuk 1,5 (yan×2, üst, arka, alt) + plint (bükme sac U, 20 içeride) veya 4 ayak"""
     st.box(p+"dis_yan_sol", 0, T_DIS, y0, H, ZK, 0); st.box(p+"dis_yan_sag", W-T_DIS, W, y0, H, ZK, 0)
     st.box(p+"dis_ust", T_DIS, W-T_DIS, H-T_DIS, H, ZK, 0); st.box(p+"dis_arka", T_DIS, W-T_DIS, y0, H-T_DIS, ZK, ZK+T_DIS)
@@ -187,17 +191,22 @@ def shell(st, p, W, foot, y0=Y0):
         for i, (ax, az) in enumerate([(60, -40), (W-140, -40), (60, ZK+140), (W-140, ZK+140)], 1):
             st.box(p+"ayak_%d" % i, ax, ax+80, 0, Y0, az-80, az)
     else:   # plint: U profil (ön + 2 yan) 1,5 + arka plaka + 4 ayar ayağı M12
-        st.prism_y(p+"plint_U", [(20, ZK+20), (20, 20), (W-20, 20), (W-20, ZK+20), (W-21.5, ZK+20), (W-21.5, 18.5), (21.5, 18.5), (21.5, ZK+20)], 10, y0)
-        st.box(p+"plint_arka", 21.5, W-21.5, 10, y0, ZK+20, ZK+21.5)
-        for i, (ax, az) in enumerate([(40, -40), (W-60, -40), (40, ZK+60), (W-60, ZK+60)], 1):
-            st.cyl_y(p+"ayar_ayagi_%d" % i, ax+10, az-10, 25, 0, 12)     # Ø50 taban
-            st.cyl_y(p+"ayar_mil_%d" % i, ax+10, az-10, 6, 12, 40)        # M12 mil
+        # izgara verilirse yariklar plint sacinin KENDISINE acilir (ayri panel = sahte izgara idi)
+        # plint_y verilirse plint govdeden BAGIMSIZ yukseklikte olur (TOPPING: govde 158, plint 120)
+        py = plint_y or y0
+        st.prism_y(p+"plint_U", [(20, ZK+20), (20, 20), (W-20, 20), (W-20, ZK+20), (W-21.5, ZK+20), (W-21.5, 18.5), (21.5, 18.5), (21.5, ZK+20)], 10, py, izgara or ())
+        st.box(p+"plint_arka", 21.5, W-21.5, 10, py, ZK+20, ZK+21.5)
+        # AYAR AYAKLARI ARTIK ORTAK PARCA: _ortak/AYAK_AYAR_M12, montajda 4 ornek (bkz. AYAK_YERI)
+
+def AYAK_YERI(W):
+    """ayar ayaklarinin (x, z) merkezleri — shell() plint modunda 4 adet"""
+    return [(50.0, -50.0), (W-50.0, -50.0), (50.0, ZK+50.0), (W-50.0, ZK+50.0)]
 
 def sove_L(st, p, W, y0, y1, side=30.0):
     st.prism_y(p+"sove_sol", [(0, ZF1), (0, ZF0), (side-T_DIS, ZF0), (side-T_DIS, 0), (side, 0), (side, ZF1)], y0, y1)
     st.prism_y(p+"sove_sag", [(W, ZF1), (W, ZF0), (W-side+T_DIS, ZF0), (W-side+T_DIS, 0), (W-side, 0), (W-side, ZF1)], y0, y1)
 
-def door_C(st, p, x0, x1, y0, y1, hinge="side", kulp=True):
+def door_C(st, p, x0, x1, y0, y1, hinge="side", kulp=False):   # Kemal kuralı: kulp/girinti YOK, yüzey düz
     """bükme sac kapak 1,5: ön plaka + 20 mm yan dönüşler; gömme kulp oyuğu; menteşe ×2 (yan) veya alt pivot + 2 gazlı amortisör (klape)"""
     cuts = []
     if kulp:
@@ -237,20 +246,20 @@ def pano(st, p, x0, x1, y0, y1, z0, z1):
     for i in range(2): st.box(p+"pano_surucu_%d" % (i+1), x0+30+i*90, x0+100+i*90, yy-270, yy-140, zb, zb+130)
     for i in range(2): st.box(p+"pano_kontaktor_%d" % (i+1), x0+230+i*55, x0+275+i*55, yy-230, yy-150, zb, zb+80)
     st.box(p+"pano_klemens_rayi", x0+30, x1-30, y0+40, y0+47.5, zb, zb+35)
-    st.box(p+"pano_kablo_kanali", x0+30, x1-30, y0+55, y0+95, zb, zb+40)
+    st.box(p+"pano_kablo_kanali", x0+30, x1-30, y0+100, y0+140, zb, zb+40)
 
-def insulated_cell(st, p, W, ycell0, ycell1, pu, ytop_single=None, pu_back=None, y0=Y0, top_pu=True):
+def insulated_cell(st, p, W, ycell0, ycell1, pu, ytop_single=None, pu_back=None, y0=Y0, top_pu=True, ze=0.0):
     """PU + iç kabuk 1,0: yan×2, arka, taban, tavan (soğuk/sıcak hücre)"""
     pb = pu if pu_back is None else pu_back
     xi0, xi1 = T_DIS+pu+T_IC, W-T_DIS-pu-T_IC; zi = ZK+T_DIS+pb+T_IC
     ytek = ytop_single if ytop_single else (ycell1+T_IC+pu+T_IC if top_pu else ycell1+T_IC)
-    st.box(p+"pu_yan_sol", T_DIS, T_DIS+pu, y0+T_DIS, ytek, ZK+T_DIS, 0); st.box(p+"pu_yan_sag", W-T_DIS-pu, W-T_DIS, y0+T_DIS, ytek, ZK+T_DIS, 0)
+    st.box(p+"pu_yan_sol", T_DIS, T_DIS+pu, y0+T_DIS, ytek, ZK+T_DIS, ze); st.box(p+"pu_yan_sag", W-T_DIS-pu, W-T_DIS, y0+T_DIS, ytek, ZK+T_DIS, ze)
     st.box(p+"pu_arka", T_DIS+pu, W-T_DIS-pu, y0+T_DIS, ytek, ZK+T_DIS, ZK+T_DIS+pb)
-    st.box(p+"pu_alt", T_DIS+pu, W-T_DIS-pu, y0+T_DIS, ycell0-T_IC, zi-T_IC, 0)
-    if top_pu: st.box(p+"pu_tavan", T_DIS+pu, W-T_DIS-pu, ycell1+T_IC, ytek-T_IC, zi-T_IC, 0); st.box(p+"teknik_taban", T_DIS+pu, W-T_DIS-pu, ytek-T_IC, ytek, zi-T_IC, 0)
-    st.box(p+"ic_yan_sol", xi0-T_IC, xi0, ycell0-T_IC, ycell1+T_IC, zi-T_IC, 0); st.box(p+"ic_yan_sag", xi1, xi1+T_IC, ycell0-T_IC, ycell1+T_IC, zi-T_IC, 0)
-    st.box(p+"ic_arka", xi0, xi1, ycell0-T_IC, ycell1+T_IC, zi-T_IC, zi); st.box(p+"ic_alt", xi0, xi1, ycell0-T_IC, ycell0, zi, 0)
-    st.box(p+"ic_tavan", xi0, xi1, ycell1, ycell1+T_IC, zi, 0)
+    st.box(p+"pu_alt", T_DIS+pu, W-T_DIS-pu, y0+T_DIS, ycell0-T_IC, zi-T_IC, ze)
+    if top_pu: st.box(p+"pu_tavan", T_DIS+pu, W-T_DIS-pu, ycell1+T_IC, ytek-T_IC, zi-T_IC, ze); st.box(p+"teknik_taban", T_DIS+pu, W-T_DIS-pu, ytek-T_IC, ytek, zi-T_IC, ze)
+    st.box(p+"ic_yan_sol", xi0-T_IC, xi0, ycell0-T_IC, ycell1+T_IC, zi-T_IC, ze); st.box(p+"ic_yan_sag", xi1, xi1+T_IC, ycell0-T_IC, ycell1+T_IC, zi-T_IC, ze)
+    st.box(p+"ic_arka", xi0, xi1, ycell0-T_IC, ycell1+T_IC, zi-T_IC, zi); st.box(p+"ic_alt", xi0, xi1, ycell0-T_IC, ycell0, zi, ze)
+    st.box(p+"ic_tavan", xi0, xi1, ycell1, ycell1+T_IC, zi, ze)
     return xi0, xi1, zi
 
 def cooling_unit(st, p, x0, y0, z0, kind="kompresor"):
