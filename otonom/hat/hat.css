@@ -36,6 +36,7 @@ figure{margin:12px 0}figure img{width:100%;display:block;border:1px solid var(--
     width:100vw;margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw)}
 .m3 model-viewer{display:block;width:100%;height:calc(100vh - 208px);min-height:460px;background:#15181d;--poster-color:transparent}   /* koyu zemin: beyaz POM · paslanmaz · seffaf PC ancak boyle okunuyor */
 .m3 .ip{position:absolute;left:22px;bottom:12px;color:#6d7682;font-size:12px;pointer-events:none}
+.m3ar .ip{position:static;flex:1 1 100%;margin:0;color:#6d7682;font-size:11.5px;line-height:1.35}
 .m3 .et{position:absolute;left:22px;top:14px;display:none;max-width:62%;padding:10px 13px;border-radius:11px;
         background:rgba(255,255,255,.94);border:1px solid #dfe3e8;box-shadow:0 4px 18px rgba(20,26,34,.09);pointer-events:none}
 .m3 .et b{display:block;font-size:14.5px;color:#1d2430;line-height:1.3}
@@ -71,3 +72,12 @@ figure{margin:12px 0}figure img{width:100%;display:block;border:1px solid var(--
 .m3olc circle{fill:#4f86ff;stroke:#fff;stroke-width:2}
 .m3olc text{fill:#fff;font:700 10px system-ui,sans-serif;text-anchor:middle}
 .m3olc text.ol{fill:#dce8ff;font:700 13px system-ui,sans-serif;paint-order:stroke;stroke:#15181d;stroke-width:4;stroke-linejoin:round}
+
+@media (max-width:760px){
+  .m3ar{gap:8px 12px;padding:9px 14px}
+  .m3ar button{padding:5px 9px;font-size:12px}
+  .m3ar input[type=range]{flex:1 1 120px;width:auto;min-width:110px}
+  .m3ar .deg,.m3ar .snc{min-width:0;font-size:11.5px}
+  .m3ar .ip{font-size:11px}
+  .m3 model-viewer{height:calc(100vh - 260px);min-height:380px}
+}

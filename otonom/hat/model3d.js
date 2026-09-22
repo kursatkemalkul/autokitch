@@ -145,12 +145,14 @@
       gO.appendChild(sonucYazi);
       cubuk.appendChild(gO);
 
+      const ip = kap.querySelector('.ip');                    // "sürükle: döndür ..." yazısı çubuğun içine girer;
+      if (ip) cubuk.appendChild(ip);                          // mutlak konumdayken mobilde düğmelerin üstüne biniyordu
       kap.appendChild(cubuk);
 
       svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
       svg.setAttribute('class', 'm3olc');
       kap.appendChild(svg);
-      mv.addEventListener('camera-change', cizgiTazele);
+      mv.addEventListener('camera-change', () => { kesitTazele(); cizgiTazele(); });
       window.addEventListener('resize', olcCiz);
 
       if (!sc) { gK.classList.add('yok'); gK.title = 'kesit bu tarayıcıda açılamadı'; }
@@ -170,28 +172,31 @@
     // Z'de kayma küçük olduğu için kesit az çok tutuyordu, X ve Y'de düzlem modelin tamamen dışında kalıyordu.
     // Çözüm: sınırları parçaların matrixWorld'ünden hesapla. model-viewer'ın kendi gölge düzlemi ADSIZ mesh,
     // onu dışarıda bırakmak gerekiyor — yoksa kutu şişiyor.
-    let DBB = null;
+    // Model DÜNYADA sabit değil: model-viewer modeli bir "target" grubunun içine koyup kaydırıyor
+    // (bu modülde −1,60 / −1,52 / +0,25 m) ve SAĞ TIK PAN bu ofseti değiştiriyor. Kesme düzlemi dünya
+    // koordinatında olduğu için pan yapınca kesit yüzeyi modelin içinde ileri geri kayıyordu
+    // (Kemal: "sağ clickle hareket ederken kesitin yüzeyi ileri geri gidiyor").
+    // Çözüm: sınır kutusu HER SEFERİNDE model bbox + güncel target ofseti olarak hesaplanıyor ve
+    // camera-change'te düzlem tazeleniyor → kesit modele yapışık kalıyor, yalnız alt çubuktan değişiyor.
     function dunyaKutu() {
-      if (DBB) return DBB;
       const sc = SAHNE(mv);
-      if (!sc) return null;
-      sc.updateMatrixWorld(true);
-      const mn = [Infinity, Infinity, Infinity], mx = [-Infinity, -Infinity, -Infinity];
-      let n = 0;
-      sc.traverse(o => {
-        if (!o.isMesh || !o.geometry || !o.name) return;          // adsız = gölge düzlemi vb.
-        if (!o.geometry.boundingBox) o.geometry.computeBoundingBox();
-        const g = o.geometry.boundingBox, e = o.matrixWorld.elements;
-        n++;
-        for (let i = 0; i < 8; i++) {
-          const x = (i & 1) ? g.max.x : g.min.x, y = (i & 2) ? g.max.y : g.min.y, z = (i & 4) ? g.max.z : g.min.z;
-          const w = [e[0] * x + e[4] * y + e[8] * z + e[12], e[1] * x + e[5] * y + e[9] * z + e[13], e[2] * x + e[6] * y + e[10] * z + e[14]];
-          for (let k = 0; k < 3; k++) { if (w[k] < mn[k]) mn[k] = w[k]; if (w[k] > mx[k]) mx[k] = w[k]; }
-        }
-      });
-      if (!n || !isFinite(mn[0])) return null;
-      DBB = { min: { x: mn[0], y: mn[1], z: mn[2] }, max: { x: mx[0], y: mx[1], z: mx[2] } };
-      return DBB;
+      if (!sc || !sc.boundingBox) return null;
+      const b = sc.boundingBox;
+      if (!isFinite(b.min.x)) return null;
+      const t = (sc.target && sc.target.position) || { x: 0, y: 0, z: 0 };
+      return { min: { x: b.min.x + t.x, y: b.min.y + t.y, z: b.min.z + t.z },
+               max: { x: b.max.x + t.x, y: b.max.y + t.y, z: b.max.z + t.z } };
+    }
+
+    // camera-change'te YALNIZ düzlemin sayısı güncellenir; malzemelere dokunulmaz
+    // (needsUpdate her karede shader'ı yeniden derletirdi).
+    function kesitTazele() {
+      if (!eksen) return;
+      const bb = dunyaKutu();
+      if (!bb) return;
+      const a0 = bb.min[eksen], a1 = bb.max[eksen];
+      duzlem.normal[eksen] = -yon;
+      duzlem.constant = yon * (a0 + (a1 - a0) * (kaydirici.value / 1000));
     }
 
     // Renderer'ı sahnedeki ilk mesh'in onBeforeRender kancasıyla yakalıyoruz. Kanca ancak bir KARE
@@ -243,6 +248,8 @@
       rendererKanca();
       kesitUygula();
     }
+
+    function eksenSec(a) { eksen = a; cubukTazele(); kesitKur(); }
 
     // ------------------------------------------------------------------ ÖLÇÜ
     function olcNokta(ev) {
