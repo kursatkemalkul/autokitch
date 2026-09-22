@@ -133,10 +133,20 @@
    "birim": "TOPPING_MODUL",
    "grup": "SABIT",
    "mal": "sac",
-   "hacim_m3": 0.009413376000000001,
-   "kutle_kg": 74.36567040000001,
+   "hacim_m3": 0.002084505,
+   "kutle_kg": 16.4675895,
    "kaynak": "olculdu",
    "not_": "CAD hacmi x sac yogunlugu"
+  },
+  {
+   "ad": "on_kapak_pu",
+   "birim": "TOPPING_MODUL",
+   "grup": "SABIT",
+   "mal": "pu",
+   "hacim_m3": 0.007328871000000001,
+   "kutle_kg": 0.29315484,
+   "kaynak": "olculdu",
+   "not_": "CAD hacmi x pu yogunlugu"
   },
   {
    "ad": "kapak_contasi",
@@ -1384,9 +1394,9 @@
    "grup": "SABIT",
    "mal": "bakir",
    "hacim_m3": 0.01008,
-   "kutle_kg": 90.3168,
-   "kaynak": "olculdu",
-   "not_": "CAD hacmi x bakir yogunlugu"
+   "kutle_kg": 7.0,
+   "kaynak": "katalog sinifi",
+   "not_": "400x180x190 fanli unit cooler · alu lamel + bakir boru, ici BOS — masif bakir degil"
   },
   {
    "ad": "fan_0",
@@ -1394,9 +1404,9 @@
    "grup": "SABIT",
    "mal": "motor",
    "hacim_m3": 0.0015707963267948969,
-   "kutle_kg": 12.409290981679685,
-   "kaynak": "olculdu",
-   "not_": "CAD hacmi x motor yogunlugu"
+   "kutle_kg": 1.2,
+   "kaynak": "katalog sinifi",
+   "not_": "Ø200 eksenel fan 24 V"
   },
   {
    "ad": "hava_perdesi",
@@ -1414,17 +1424,17 @@
    "grup": "SABIT",
    "mal": "motor",
    "hacim_m3": 0.014520000000000002,
-   "kutle_kg": 114.70800000000001,
-   "kaynak": "olculdu",
-   "not_": "CAD hacmi x motor yogunlugu"
+   "kutle_kg": 26.0,
+   "kaynak": "katalog sinifi",
+   "not_": "1/5 HP hermetik hava sogutmali kondenser unitesi · sinif tipigi (Embraco/Tecumseh boyu)"
   },
   {
    "ad": "pano_kutusu",
    "birim": "TOPPING_MODUL",
    "grup": "SABIT",
    "mal": "sac",
-   "hacim_m3": 0.024,
-   "kutle_kg": 189.6,
+   "hacim_m3": 0.0007600169999999996,
+   "kutle_kg": 6.004134299999996,
    "kaynak": "olculdu",
    "not_": "CAD hacmi x sac yogunlugu"
   },
@@ -1434,9 +1444,9 @@
    "grup": "SABIT",
    "mal": "koyu",
    "hacim_m3": 0.00627,
-   "kutle_kg": 49.533,
-   "kaynak": "olculdu",
-   "not_": "CAD hacmi x koyu yogunlugu"
+   "kutle_kg": 8.5,
+   "kaynak": "katalog sinifi",
+   "not_": "500 VA hat ici UPS (aku dahil)"
   },
   {
    "ad": "guc_kaynagi",
@@ -1444,9 +1454,9 @@
    "grup": "SABIT",
    "mal": "sac",
    "hacim_m3": 0.0015999999999999996,
-   "kutle_kg": 12.639999999999997,
-   "kaynak": "olculdu",
-   "not_": "CAD hacmi x sac yogunlugu"
+   "kutle_kg": 0.9,
+   "kaynak": "katalog sinifi",
+   "not_": "24 V 154 W DIN ray guc kaynagi"
   },
   {
    "ad": "din_ray",
@@ -3439,44 +3449,1694 @@
    "not_": "CAD hacmi x malzeme yogunlugu"
   },
   {
-   "ad": "KIYMA__helezon_A",
+   "ad": "KIYMA__helezon_A_d00",
    "birim": "KASET_KIYMA",
    "grup": "HELEZON_KIYMA",
    "mal": "pom",
-   "hacim_m3": 6.293341980716145e-05,
-   "kutle_kg": 0.08873612192809764,
+   "hacim_m3": 1.4776293930279333e-06,
+   "kutle_kg": 0.002083457444169386,
    "kaynak": "olculdu",
-   "not_": "CAD hacmi x malzeme yogunlugu"
+   "not_": "helezon kanadi dilimi (carpisma icin)"
   },
   {
-   "ad": "KIYMA__helezon_B",
+   "ad": "KIYMA__helezon_A_d01",
    "birim": "KASET_KIYMA",
    "grup": "HELEZON_KIYMA",
    "mal": "pom",
-   "hacim_m3": 5.283651610492358e-05,
-   "kutle_kg": 0.07449948770794225,
+   "hacim_m3": 2.0269783835255516e-06,
+   "kutle_kg": 0.0028580395207710276,
    "kaynak": "olculdu",
-   "not_": "CAD hacmi x malzeme yogunlugu"
+   "not_": "helezon kanadi dilimi (carpisma icin)"
   },
   {
-   "ad": "KIYMA__helezon_C",
+   "ad": "KIYMA__helezon_A_d02",
    "birim": "KASET_KIYMA",
    "grup": "HELEZON_KIYMA",
    "mal": "pom",
-   "hacim_m3": 4.9314853798651004e-05,
-   "kutle_kg": 0.06953394385609792,
+   "hacim_m3": 2.2788553216012874e-06,
+   "kutle_kg": 0.0032131860034578155,
    "kaynak": "olculdu",
-   "not_": "CAD hacmi x malzeme yogunlugu"
+   "not_": "helezon kanadi dilimi (carpisma icin)"
   },
   {
-   "ad": "KIYMA__helezon_D",
+   "ad": "KIYMA__helezon_A_d03",
    "birim": "KASET_KIYMA",
    "grup": "HELEZON_KIYMA",
    "mal": "pom",
-   "hacim_m3": 4.0147334026118865e-05,
-   "kutle_kg": 0.0566077409768276,
+   "hacim_m3": 2.2291701491245937e-06,
+   "kutle_kg": 0.0031431299102656772,
    "kaynak": "olculdu",
-   "not_": "CAD hacmi x malzeme yogunlugu"
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_A_d04",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 2.1778161733079166e-06,
+   "kutle_kg": 0.0030707208043641624,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_A_d05",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 2.1273162468949253e-06,
+   "kutle_kg": 0.0029995159081218446,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_A_d06",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 2.0776731492887213e-06,
+   "kutle_kg": 0.002929519140497097,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_A_d07",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 2.0288806256297195e-06,
+   "kutle_kg": 0.0028607216821379044,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_A_d08",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.980947742837039e-06,
+   "kutle_kg": 0.002793136317400225,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_A_d09",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.933870005766551e-06,
+   "kutle_kg": 0.002726756708130837,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_A_d10",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.8876523619295012e-06,
+   "kutle_kg": 0.002661589830320597,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_A_d11",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.842293803731312e-06,
+   "kutle_kg": 0.00259763426326115,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_A_d12",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.7977921786799807e-06,
+   "kutle_kg": 0.0025348869719387726,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_A_d13",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.754157018151008e-06,
+   "kutle_kg": 0.002473361395592921,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_A_d14",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.7113818643956937e-06,
+   "kutle_kg": 0.0024130484287979283,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_A_d15",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.6694683019701724e-06,
+   "kutle_kg": 0.002353950305777943,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_A_d16",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.6284221119008134e-06,
+   "kutle_kg": 0.002296075177780147,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_A_d17",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.5882383217432675e-06,
+   "kutle_kg": 0.002239416033658007,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_A_d18",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.5489239094119652e-06,
+   "kutle_kg": 0.002183982712270871,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_A_d19",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.5104735671055557e-06,
+   "kutle_kg": 0.0021297677296188335,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_A_d20",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.4728916194930446e-06,
+   "kutle_kg": 0.002076777183485193,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_A_d21",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.4361820885182323e-06,
+   "kutle_kg": 0.0020250167448107076,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_A_d22",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.4003383875817215e-06,
+   "kutle_kg": 0.0019744771264902272,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_A_d23",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.3653678049714038e-06,
+   "kutle_kg": 0.0019251686050096794,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_A_d24",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.3440162686941447e-06,
+   "kutle_kg": 0.0018950629388587439,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_A_d25",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.3415384665700358e-06,
+   "kutle_kg": 0.0018915692378637505,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_A_d26",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.3391821531385113e-06,
+   "kutle_kg": 0.0018882468359253009,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_A_d27",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.3368581223375521e-06,
+   "kutle_kg": 0.0018849699524959484,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_A_d28",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.3345498081279811e-06,
+   "kutle_kg": 0.0018817152294604534,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_A_d29",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.3322533485282973e-06,
+   "kutle_kg": 0.0018784772214248992,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_A_d30",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.3299663594543675e-06,
+   "kutle_kg": 0.0018752525668306581,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_A_d31",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.3276944047600158e-06,
+   "kutle_kg": 0.0018720491107116224,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_A_d32",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.3254320824498348e-06,
+   "kutle_kg": 0.001868859236254267,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_A_d33",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.3231835304012402e-06,
+   "kutle_kg": 0.0018656887778657487,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_A_d34",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.3209453100697078e-06,
+   "kutle_kg": 0.001862532887198288,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_A_d35",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.3187183754084728e-06,
+   "kutle_kg": 0.0018593929093259466,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_A_d36",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.3165050827249484e-06,
+   "kutle_kg": 0.0018562721666421772,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_A_d37",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.3143009548855602e-06,
+   "kutle_kg": 0.0018531643463886398,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_A_d38",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.0709568611888383e-06,
+   "kutle_kg": 0.001510049174276262,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_A_d39",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 3.0227365271740676e-07,
+   "kutle_kg": 0.00042620585033154354,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_B_d00",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 5.191226795007374e-08,
+   "kutle_kg": 7.319629780960397e-05,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_B_d01",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 7.411337004078629e-07,
+   "kutle_kg": 0.0010449985175750866,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_B_d02",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.2422063006494502e-06,
+   "kutle_kg": 0.0017515108839157246,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_B_d03",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.3057488364104302e-06,
+   "kutle_kg": 0.0018411058593387065,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_B_d04",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.3036026446777271e-06,
+   "kutle_kg": 0.0018380797289955953,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_B_d05",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.3014631729192526e-06,
+   "kutle_kg": 0.0018350630738161462,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_B_d06",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.2993355869509678e-06,
+   "kutle_kg": 0.0018320631776008647,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_B_d07",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.2972225206942329e-06,
+   "kutle_kg": 0.0018290837541788682,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_B_d08",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.2951183353185975e-06,
+   "kutle_kg": 0.0018261168527992225,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_B_d09",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.2930228978035404e-06,
+   "kutle_kg": 0.001823162285902992,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_B_d10",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.2909383148264063e-06,
+   "kutle_kg": 0.0018202230239052328,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_B_d11",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.288866449640725e-06,
+   "kutle_kg": 0.001817301693993422,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_B_d12",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.2868043872589844e-06,
+   "kutle_kg": 0.001814394186035168,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_B_d13",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.2847490475256552e-06,
+   "kutle_kg": 0.001811496157011174,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_B_d14",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.2827076959156431e-06,
+   "kutle_kg": 0.0018086178512410568,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_B_d15",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.280679980585213e-06,
+   "kutle_kg": 0.0018057587726251505,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_B_d16",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.2786515700420656e-06,
+   "kutle_kg": 0.0018028987137593125,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_B_d17",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.2766397727888511e-06,
+   "kutle_kg": 0.0018000620796322802,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_B_d18",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.2746421431461281e-06,
+   "kutle_kg": 0.0017972454218360408,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_B_d19",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.2726473532645697e-06,
+   "kutle_kg": 0.0017944327681030433,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_B_d20",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.2706640489092922e-06,
+   "kutle_kg": 0.001791636308962102,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_B_d21",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.2686921746695618e-06,
+   "kutle_kg": 0.001788855966284082,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_B_d22",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.2667267052791768e-06,
+   "kutle_kg": 0.0017860846544436393,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_B_d23",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.2647760976624627e-06,
+   "kutle_kg": 0.0017833342977040725,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_B_d24",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.262829861612152e-06,
+   "kutle_kg": 0.0017805901048731343,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_B_d25",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.2608958304648061e-06,
+   "kutle_kg": 0.0017778631209553765,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_B_d26",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.2589713047515099e-06,
+   "kutle_kg": 0.001775149539699629,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_B_d27",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.257050875800055e-06,
+   "kutle_kg": 0.0017724417348780775,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_B_d28",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.2551474706861084e-06,
+   "kutle_kg": 0.001769757933667413,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_B_d29",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.2532517176647375e-06,
+   "kutle_kg": 0.0017670849219072798,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_B_d30",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.251357897681872e-06,
+   "kutle_kg": 0.0017644146357314395,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_B_d31",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.2494801892121605e-06,
+   "kutle_kg": 0.0017617670667891463,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_B_d32",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.247611215249039e-06,
+   "kutle_kg": 0.0017591318135011449,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_B_d33",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.245746705241023e-06,
+   "kutle_kg": 0.0017565028543898424,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_B_d34",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.2438948617079249e-06,
+   "kutle_kg": 0.001753891755008174,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_B_d35",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.2420503202227253e-06,
+   "kutle_kg": 0.0017512909515140427,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_B_d36",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.2402153724066837e-06,
+   "kutle_kg": 0.001748703675093424,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_B_d37",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.2383876971529644e-06,
+   "kutle_kg": 0.0017461266529856798,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_B_d38",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.236568230257115e-06,
+   "kutle_kg": 0.0017435612046625322,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_B_d39",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.2347604143487122e-06,
+   "kutle_kg": 0.0017410121842316843,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_B_d40",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.2329587919911827e-06,
+   "kutle_kg": 0.0017384718967075677,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_B_d41",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.2311640752151936e-06,
+   "kutle_kg": 0.0017359413460534229,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_B_d42",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.0325375220228072e-06,
+   "kutle_kg": 0.0014558779060521582,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_B_d43",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 3.4250722235224616e-07,
+   "kutle_kg": 0.00048293518351666707,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_C_d00",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 6.510233744033057e-08,
+   "kutle_kg": 9.179429579086611e-05,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_C_d01",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 7.561281582143347e-07,
+   "kutle_kg": 0.001066140703082212,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_C_d02",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.174467607686662e-06,
+   "kutle_kg": 0.0016559993268381932,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_C_d03",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.2239201679041349e-06,
+   "kutle_kg": 0.0017257274367448302,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_C_d04",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.2221696658468022e-06,
+   "kutle_kg": 0.001723259228843991,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_C_d05",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.2204254670865563e-06,
+   "kutle_kg": 0.0017207999085920443,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_C_d06",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.2186901598489962e-06,
+   "kutle_kg": 0.0017183531253870848,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_C_d07",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.2169638834633718e-06,
+   "kutle_kg": 0.0017159190756833543,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_C_d08",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.2152446644519086e-06,
+   "kutle_kg": 0.0017134949768771912,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_C_d09",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.2135326849148478e-06,
+   "kutle_kg": 0.0017110810857299355,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_C_d10",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.2118285202003096e-06,
+   "kutle_kg": 0.0017086782134824365,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_C_d11",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.2101335708638579e-06,
+   "kutle_kg": 0.0017062883349180395,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_C_d12",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.208445166873858e-06,
+   "kutle_kg": 0.0017039076852921396,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_C_d13",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.2067630931405995e-06,
+   "kutle_kg": 0.0017015359613282454,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_C_d14",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.2050914261678952e-06,
+   "kutle_kg": 0.0016991789108967321,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_C_d15",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.2034267495193101e-06,
+   "kutle_kg": 0.0016968317168222272,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_C_d16",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.2017660479867704e-06,
+   "kutle_kg": 0.0016944901276613462,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_C_d17",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.2001166115687764e-06,
+   "kutle_kg": 0.0016921644223119748,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_C_d18",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.1984744439759518e-06,
+   "kutle_kg": 0.001689848966006092,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_C_d19",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.1968373898966233e-06,
+   "kutle_kg": 0.0016875407197542388,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_C_d20",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.195208801060278e-06,
+   "kutle_kg": 0.0016852444094949922,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_C_d21",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.1935873552884334e-06,
+   "kutle_kg": 0.001682958170956691,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_C_d22",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.1919726746398408e-06,
+   "kutle_kg": 0.0016806814712421755,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_C_d23",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.1903663495853255e-06,
+   "kutle_kg": 0.0016784165529153089,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_C_d24",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.1887653996827845e-06,
+   "kutle_kg": 0.001676159213552726,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_C_d25",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.1871732482271778e-06,
+   "kutle_kg": 0.0016739142800003208,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_C_d26",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.1855866228578986e-06,
+   "kutle_kg": 0.001671677138229637,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_C_d27",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.1840063254799913e-06,
+   "kutle_kg": 0.0016694489189267878,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_C_d28",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.1824361155877607e-06,
+   "kutle_kg": 0.0016672349229787426,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_C_d29",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.1808704190373532e-06,
+   "kutle_kg": 0.001665027290842668,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_C_d30",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.1793101013135995e-06,
+   "kutle_kg": 0.0016628272428521754,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_C_d31",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.1777598630560318e-06,
+   "kutle_kg": 0.0016606414069090048,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_C_d32",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.1762146464911548e-06,
+   "kutle_kg": 0.0016584626515525284,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_C_d33",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.1746754217534371e-06,
+   "kutle_kg": 0.0016562923446723464,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_C_d34",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.1731442097270158e-06,
+   "kutle_kg": 0.0016541333357150923,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_C_d35",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.1716189043700116e-06,
+   "kutle_kg": 0.0016519826551617163,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_C_d36",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.1701004684917986e-06,
+   "kutle_kg": 0.001649841660573436,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_C_d37",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.1685877217227802e-06,
+   "kutle_kg": 0.00164770868762912,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_C_d38",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.1670820613342547e-06,
+   "kutle_kg": 0.0016455857064812992,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_C_d39",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.165583637408368e-06,
+   "kutle_kg": 0.001643472928745799,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_C_d40",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.1640900087898527e-06,
+   "kutle_kg": 0.0016413669123936923,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_C_d41",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.1225737950065835e-06,
+   "kutle_kg": 0.0015828290509592828,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_C_d42",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 7.75507119441099e-07,
+   "kutle_kg": 0.0010934650384119497,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_C_d43",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 7.907284744376957e-08,
+   "kutle_kg": 0.00011149271489571509,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_D_d00",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 4.6697292620865e-09,
+   "kutle_kg": 6.584318259541966e-06,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_D_d01",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 3.1033483295760416e-07,
+   "kutle_kg": 0.0004375721144702219,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_D_d02",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.025756796817239e-06,
+   "kutle_kg": 0.001446317083512307,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_D_d03",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.2893566454847756e-06,
+   "kutle_kg": 0.0018179928701335336,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_D_d04",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.2966092221541441e-06,
+   "kutle_kg": 0.0018282190032373432,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_D_d05",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.2966105104632061e-06,
+   "kutle_kg": 0.0018282208197531206,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_D_d06",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.2966164034526814e-06,
+   "kutle_kg": 0.0018282291288682809,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_D_d07",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.296615400135347e-06,
+   "kutle_kg": 0.0018282277141908393,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_D_d08",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.2966107036133973e-06,
+   "kutle_kg": 0.0018282210920948902,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_D_d09",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.296610300813609e-06,
+   "kutle_kg": 0.0018282205241471885,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_D_d10",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.296614841963422e-06,
+   "kutle_kg": 0.001828226927168425,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_D_d11",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.2966167314623602e-06,
+   "kutle_kg": 0.0018282295913619278,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_D_d12",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.2966113084619145e-06,
+   "kutle_kg": 0.0018282219449312995,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_D_d13",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.2966082832695224e-06,
+   "kutle_kg": 0.0018282176794100265,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_D_d14",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.2966243188671408e-06,
+   "kutle_kg": 0.0018282402896026685,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_D_d15",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.2966211249224104e-06,
+   "kutle_kg": 0.0018282357861405987,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_D_d16",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.2965973479009002e-06,
+   "kutle_kg": 0.0018282022605402694,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_D_d17",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.3011640773310297e-06,
+   "kutle_kg": 0.001834641349036752,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_D_d18",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.2966132318851058e-06,
+   "kutle_kg": 0.0018282246569579993,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_D_d19",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.2966084309508983e-06,
+   "kutle_kg": 0.0018282178876407667,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_D_d20",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.2966145643708631e-06,
+   "kutle_kg": 0.001828226535762917,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_D_d21",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.296616691808869e-06,
+   "kutle_kg": 0.0018282295354505051,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_D_d22",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.2966124495300357e-06,
+   "kutle_kg": 0.0018282235538373502,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_D_d23",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.2966096638593073e-06,
+   "kutle_kg": 0.0018282196260416233,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_D_d24",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.2966128439620224e-06,
+   "kutle_kg": 0.0018282241099864516,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_D_d25",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.2966168209744265e-06,
+   "kutle_kg": 0.0018282297175739415,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_D_d26",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.2966140843817925e-06,
+   "kutle_kg": 0.0018282258589783274,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_D_d27",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.2966082072154282e-06,
+   "kutle_kg": 0.0018282175721737537,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_D_d28",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.296614253880971e-06,
+   "kutle_kg": 0.001828226097972169,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_D_d29",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.2751311219229775e-06,
+   "kutle_kg": 0.0017979348819113982,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_D_d30",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 9.500659277451676e-07,
+   "kutle_kg": 0.0013395929581206862,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_D_d31",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 5.491133073786964e-07,
+   "kutle_kg": 0.000774249763403962,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_D_d32",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 4.712770709538988e-07,
+   "kutle_kg": 0.0006645006700449973,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_D_d33",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 2.827433388230813e-07,
+   "kutle_kg": 0.0003986681077405446,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_D_d34",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 2.827433388230813e-07,
+   "kutle_kg": 0.0003986681077405446,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_D_d35",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 2.827433388230813e-07,
+   "kutle_kg": 0.0003986681077405446,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_D_d36",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 2.827433388230813e-07,
+   "kutle_kg": 0.0003986681077405446,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_D_d37",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 2.827433388230813e-07,
+   "kutle_kg": 0.0003986681077405446,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_D_d38",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 2.827433388230813e-07,
+   "kutle_kg": 0.0003986681077405446,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_D_d39",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 2.827433388230813e-07,
+   "kutle_kg": 0.0003986681077405446,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KIYMA__helezon_D_d40",
+   "birim": "KASET_KIYMA",
+   "grup": "HELEZON_KIYMA",
+   "mal": "pom",
+   "hacim_m3": 1.8668702620436724e-07,
+   "kutle_kg": 0.0002632287069481578,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
   },
   {
    "ad": "KIYMA__helezon_cekirdek",
@@ -3979,44 +5639,1704 @@
    "not_": "CAD hacmi x malzeme yogunlugu"
   },
   {
-   "ad": "KUŞBAŞI__helezon_A",
+   "ad": "KUŞBAŞI__helezon_A_d00",
    "birim": "KASET_KUŞBAŞI",
    "grup": "HELEZON_KUŞBAŞI",
    "mal": "pom",
-   "hacim_m3": 5.37594082056225e-05,
-   "kutle_kg": 0.07580076556992772,
+   "hacim_m3": 1.2533583404084334e-06,
+   "kutle_kg": 0.001767235259975891,
    "kaynak": "olculdu",
-   "not_": "CAD hacmi x malzeme yogunlugu"
+   "not_": "helezon kanadi dilimi (carpisma icin)"
   },
   {
-   "ad": "KUŞBAŞI__helezon_B",
+   "ad": "KUŞBAŞI__helezon_A_d01",
    "birim": "KASET_KUŞBAŞI",
    "grup": "HELEZON_KUŞBAŞI",
    "mal": "pom",
-   "hacim_m3": 4.3856260157433616e-05,
-   "kutle_kg": 0.0618373268219814,
+   "hacim_m3": 1.7630365241637383e-06,
+   "kutle_kg": 0.002485881499070871,
    "kaynak": "olculdu",
-   "not_": "CAD hacmi x malzeme yogunlugu"
+   "not_": "helezon kanadi dilimi (carpisma icin)"
   },
   {
-   "ad": "KUŞBAŞI__helezon_C",
+   "ad": "KUŞBAŞI__helezon_A_d02",
    "birim": "KASET_KUŞBAŞI",
    "grup": "HELEZON_KUŞBAŞI",
    "mal": "pom",
-   "hacim_m3": 4.4942066618462324e-05,
-   "kutle_kg": 0.06336831393203188,
+   "hacim_m3": 2.0005917325370164e-06,
+   "kutle_kg": 0.002820834342877193,
    "kaynak": "olculdu",
-   "not_": "CAD hacmi x malzeme yogunlugu"
+   "not_": "helezon kanadi dilimi (carpisma icin)"
   },
   {
-   "ad": "KUŞBAŞI__helezon_D",
+   "ad": "KUŞBAŞI__helezon_A_d03",
    "birim": "KASET_KUŞBAŞI",
    "grup": "HELEZON_KUŞBAŞI",
    "mal": "pom",
-   "hacim_m3": 1.6918573779560146e-05,
-   "kutle_kg": 0.023855189029179807,
+   "hacim_m3": 1.9548451591179526e-06,
+   "kutle_kg": 0.0027563316743563133,
    "kaynak": "olculdu",
-   "not_": "CAD hacmi x malzeme yogunlugu"
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_A_d04",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.9071231239211033e-06,
+   "kutle_kg": 0.0026890436047287557,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_A_d05",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.8602713167181447e-06,
+   "kutle_kg": 0.0026229825565725843,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_A_d06",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.8142909134652385e-06,
+   "kutle_kg": 0.002558150187985986,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_A_d07",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.769180000253238e-06,
+   "kutle_kg": 0.002494543800357066,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_A_d08",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.7249424733449336e-06,
+   "kutle_kg": 0.0024321688874163563,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_A_d09",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.6815764697103826e-06,
+   "kutle_kg": 0.0023710228222916393,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_A_d10",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.6390847385349335e-06,
+   "kutle_kg": 0.0023111094813342563,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_A_d11",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.5974665874071526e-06,
+   "kutle_kg": 0.002252427888244085,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_A_d12",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.5567220222259682e-06,
+   "kutle_kg": 0.002194978051338615,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_A_d13",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.5168549334168261e-06,
+   "kutle_kg": 0.0021387654561177247,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_A_d14",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.4778623059208555e-06,
+   "kutle_kg": 0.002083785851348406,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_A_d15",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.4397464661017943e-06,
+   "kutle_kg": 0.0020300425172035297,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_A_d16",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.402508612585651e-06,
+   "kutle_kg": 0.001977537143745768,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_A_d17",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.366147835835644e-06,
+   "kutle_kg": 0.0019262684485282582,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_A_d18",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.330667034477471e-06,
+   "kutle_kg": 0.0018762405186132341,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_A_d19",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.2960637742838522e-06,
+   "kutle_kg": 0.0018274499217402318,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_A_d20",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.2623414193459752e-06,
+   "kutle_kg": 0.0017799014012778252,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_A_d21",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.2295002281905837e-06,
+   "kutle_kg": 0.001733595321748723,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_A_d22",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.1975385507573216e-06,
+   "kutle_kg": 0.0016885293565678235,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_A_d23",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.1664599538295511e-06,
+   "kutle_kg": 0.001644708534899667,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_A_d24",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.1474389295225345e-06,
+   "kutle_kg": 0.0016178888906267736,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_A_d25",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.1455971902143528e-06,
+   "kutle_kg": 0.0016152920382022373,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_A_d26",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.1439312541528662e-06,
+   "kutle_kg": 0.0016129430683555414,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_A_d27",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.1422712636931636e-06,
+   "kutle_kg": 0.0016106024818073608,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_A_d28",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.1406212997934545e-06,
+   "kutle_kg": 0.0016082760327087709,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_A_d29",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.1389738292676976e-06,
+   "kutle_kg": 0.0016059530992674537,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_A_d30",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.137334523245856e-06,
+   "kutle_kg": 0.0016036416777766571,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_A_d31",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.135702435841844e-06,
+   "kutle_kg": 0.001601340434537,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_A_d32",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.134076271236883e-06,
+   "kutle_kg": 0.001599047542444005,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_A_d33",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.1324575511846985e-06,
+   "kutle_kg": 0.001596765147170425,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_A_d34",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.1308441976725481e-06,
+   "kutle_kg": 0.001594490318718293,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_A_d35",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.1292381660067221e-06,
+   "kutle_kg": 0.0015922258140694781,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_A_d36",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.1276385461505483e-06,
+   "kutle_kg": 0.001589970350072273,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_A_d37",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.0713878702809764e-06,
+   "kutle_kg": 0.0015106568970961766,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_A_d38",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 6.40921006405042e-07,
+   "kutle_kg": 0.0009036986190311092,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_A_d39",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 5.357824061081446e-08,
+   "kutle_kg": 7.554531926124839e-05,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_B_d00",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 6.404511959103799e-08,
+   "kutle_kg": 9.030361862336356e-05,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_B_d01",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 6.706847566925453e-07,
+   "kutle_kg": 0.0009456655069364889,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_B_d02",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.0746272006407002e-06,
+   "kutle_kg": 0.0015152243529033872,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_B_d03",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.1204744651251954e-06,
+   "kutle_kg": 0.0015798689958265255,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_B_d04",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.1189100531460386e-06,
+   "kutle_kg": 0.0015776631749359145,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_B_d05",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.1173501003862118e-06,
+   "kutle_kg": 0.0015754636415445586,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_B_d06",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.1157976503331475e-06,
+   "kutle_kg": 0.001573274686969738,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_B_d07",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.1142517701301704e-06,
+   "kutle_kg": 0.0015710949958835402,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_B_d08",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.1127113909661529e-06,
+   "kutle_kg": 0.0015689230612622755,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_B_d09",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.1111763959279613e-06,
+   "kutle_kg": 0.0015667587182584255,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_B_d10",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.1096479004711767e-06,
+   "kutle_kg": 0.0015646035396643591,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_B_d11",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.1081265068575724e-06,
+   "kutle_kg": 0.001562458374669177,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_B_d12",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.1066093096064645e-06,
+   "kutle_kg": 0.001560319126545115,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_B_d13",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.105097846164945e-06,
+   "kutle_kg": 0.0015581879630925726,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_B_d14",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.1035953478027751e-06,
+   "kutle_kg": 0.0015560694404019128,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_B_d15",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.1020953843527767e-06,
+   "kutle_kg": 0.0015539544919374153,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_B_d16",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.1006008946097131e-06,
+   "kutle_kg": 0.0015518472613996956,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_B_d17",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.0991155987567767e-06,
+   "kutle_kg": 0.0015497529942470553,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_B_d18",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.0976335687661986e-06,
+   "kutle_kg": 0.00154766333196034,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_B_d19",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.0961572326748602e-06,
+   "kutle_kg": 0.001545581698071553,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_B_d20",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.0946874604584703e-06,
+   "kutle_kg": 0.001543509319246443,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_B_d21",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.0932222013429462e-06,
+   "kutle_kg": 0.0015414433038935542,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_B_d22",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.091764029935227e-06,
+   "kutle_kg": 0.00153938728220867,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_B_d23",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.0903102528037782e-06,
+   "kutle_kg": 0.0015373374564533273,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_B_d24",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.0888625878673975e-06,
+   "kutle_kg": 0.0015352962488930305,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_B_d25",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.0874206276326927e-06,
+   "kutle_kg": 0.0015332630849620966,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_B_d26",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.0859820690526032e-06,
+   "kutle_kg": 0.0015312347173641705,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_B_d27",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.0845522701575388e-06,
+   "kutle_kg": 0.0015292187009221297,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_B_d28",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.0831266995043256e-06,
+   "kutle_kg": 0.001527208646301099,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_B_d29",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.081704134357187e-06,
+   "kutle_kg": 0.0015252028294436336,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_B_d30",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.0802901241099745e-06,
+   "kutle_kg": 0.0015232090749950642,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_B_d31",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.0788804213630404e-06,
+   "kutle_kg": 0.001521221394121887,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_B_d32",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.0774748177166272e-06,
+   "kutle_kg": 0.0015192394929804444,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_B_d33",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.076076003225365e-06,
+   "kutle_kg": 0.0015172671645477646,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_B_d34",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.0746817554982619e-06,
+   "kutle_kg": 0.0015153012752525492,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_B_d35",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.0732930137500071e-06,
+   "kutle_kg": 0.00151334314938751,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_B_d36",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.0719086444484875e-06,
+   "kutle_kg": 0.0015113911886723674,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_B_d37",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.0705300918235872e-06,
+   "kutle_kg": 0.001509447429471258,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_B_d38",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.069157365217406e-06,
+   "kutle_kg": 0.0015075118849565423,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_B_d39",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.0677881008910045e-06,
+   "kutle_kg": 0.0015055812222563164,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_B_d40",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 9.974035301342294e-07,
+   "kutle_kg": 0.0014063389774892634,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_B_d41",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 5.537070304371427e-07,
+   "kutle_kg": 0.0007807269129163711,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_B_d42",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 3.4711034117333164e-08,
+   "kutle_kg": 4.894255810543976e-05,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_C_d00",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 6.231708158381683e-08,
+   "kutle_kg": 8.786708503318173e-05,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_C_d01",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 6.418165745482184e-07,
+   "kutle_kg": 0.0009049613701129879,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_C_d02",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.0174955058938736e-06,
+   "kutle_kg": 0.0014346686633103618,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_C_d03",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.0617394557531275e-06,
+   "kutle_kg": 0.0014970526326119097,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_C_d04",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.0603991436761758e-06,
+   "kutle_kg": 0.001495162792583408,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_C_d05",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.0590620577293297e-06,
+   "kutle_kg": 0.001493277501398355,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_C_d06",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.0577302743304184e-06,
+   "kutle_kg": 0.00149139968680589,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_C_d07",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.0564046811229916e-06,
+   "kutle_kg": 0.001489530600383418,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_C_d08",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.0550830800661796e-06,
+   "kutle_kg": 0.0014876671428933133,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_C_d09",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.0537662837226205e-06,
+   "kutle_kg": 0.001485810460048895,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_C_d10",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.052453404311227e-06,
+   "kutle_kg": 0.0014839593000788302,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_C_d11",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.0511465382780873e-06,
+   "kutle_kg": 0.001482116618972103,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_C_d12",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.0498447179227956e-06,
+   "kutle_kg": 0.0014802810522711418,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_C_d13",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.0485459554995882e-06,
+   "kutle_kg": 0.0014784497972544193,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_C_d14",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.0472519322532385e-06,
+   "kutle_kg": 0.0014766252244770663,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_C_d15",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.0459655341644755e-06,
+   "kutle_kg": 0.0014748114031719105,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_C_d16",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.0446809874085914e-06,
+   "kutle_kg": 0.001473000192246114,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_C_d17",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.043399608453234e-06,
+   "kutle_kg": 0.0014711934479190601,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_C_d18",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.0421266515853948e-06,
+   "kutle_kg": 0.0014693985787354066,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_C_d19",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.0408567823621654e-06,
+   "kutle_kg": 0.0014676080631306533,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_C_d20",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.0395901858494593e-06,
+   "kutle_kg": 0.0014658221620477377,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_C_d21",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.0383293685514296e-06,
+   "kutle_kg": 0.0014640444096575157,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_C_d22",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.0370724974663696e-06,
+   "kutle_kg": 0.0014622722214275813,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_C_d23",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.0358198732434683e-06,
+   "kutle_kg": 0.0014605060212732903,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_C_d24",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.0345730076280157e-06,
+   "kutle_kg": 0.0014587479407555022,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_C_d25",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.0333287563624941e-06,
+   "kutle_kg": 0.0014569935464711168,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_C_d26",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.0320903083339773e-06,
+   "kutle_kg": 0.001455247334750908,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_C_d27",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.0308558338310032e-06,
+   "kutle_kg": 0.0014535067257017145,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_C_d28",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.0296238308723725e-06,
+   "kutle_kg": 0.0014517696015300453,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_C_d29",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.0283992175088413e-06,
+   "kutle_kg": 0.0014500428966874662,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_C_d30",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.0271784509756077e-06,
+   "kutle_kg": 0.0014483216158756068,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_C_d31",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.0259590606853665e-06,
+   "kutle_kg": 0.0014466022755663668,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_C_d32",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.0247461397693366e-06,
+   "kutle_kg": 0.0014448920570747645,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_C_d33",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.0235384995697262e-06,
+   "kutle_kg": 0.001443189284393314,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_C_d34",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.0223325014577038e-06,
+   "kutle_kg": 0.0014414888270553622,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_C_d35",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.0211320942822208e-06,
+   "kutle_kg": 0.0014397962529379314,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_C_d36",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.0199359338857893e-06,
+   "kutle_kg": 0.001438109666778963,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_C_d37",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.0187435808422159e-06,
+   "kutle_kg": 0.0014364284489875245,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_C_d38",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.0175555472678365e-06,
+   "kutle_kg": 0.0014347533216476495,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_C_d39",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.0163708132488058e-06,
+   "kutle_kg": 0.0014330828466808162,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_C_d40",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.0151910406046267e-06,
+   "kutle_kg": 0.0014314193672525235,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_C_d41",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.014015834059879e-06,
+   "kutle_kg": 0.0014297623260244295,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_C_d42",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.0128431094989577e-06,
+   "kutle_kg": 0.0014281087843935304,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_C_d43",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 9.804244179617146e-07,
+   "kutle_kg": 0.0013823984293260176,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_C_d44",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 6.832479765510782e-07,
+   "kutle_kg": 0.0009633796469370202,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_C_d45",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 8.703842275767714e-08,
+   "kutle_kg": 0.00012272417608832477,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_D_d00",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.6501648252986296e-08,
+   "kutle_kg": 2.3267324036710678e-05,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_D_d01",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 3.881581230575597e-07,
+   "kutle_kg": 0.0005473029535111592,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_D_d02",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 9.49574622612158e-07,
+   "kutle_kg": 0.0013389002178831428,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_D_d03",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.1408417478850593e-06,
+   "kutle_kg": 0.0016085868645179335,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_D_d04",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.1408438199069436e-06,
+   "kutle_kg": 0.0016085897860687905,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_D_d05",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.140841754642281e-06,
+   "kutle_kg": 0.0016085868740456162,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_D_d06",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.0479384442947072e-06,
+   "kutle_kg": 0.001477593206455537,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_D_d07",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 6.510771812010326e-07,
+   "kutle_kg": 0.000918018825493456,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_D_d08",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 3.465540526210664e-07,
+   "kutle_kg": 0.0004886412141957037,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_D_d09",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 3.304298245743642e-07,
+   "kutle_kg": 0.00046590605264985353,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_D_d10",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 3.304298245743642e-07,
+   "kutle_kg": 0.00046590605264985353,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_D_d11",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 3.304298245743642e-07,
+   "kutle_kg": 0.00046590605264985353,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_D_d12",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 3.304298245743642e-07,
+   "kutle_kg": 0.00046590605264985353,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_D_d13",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 3.304298245743642e-07,
+   "kutle_kg": 0.00046590605264985353,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_D_d14",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 3.304298245743642e-07,
+   "kutle_kg": 0.00046590605264985353,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_D_d15",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 3.304298245743642e-07,
+   "kutle_kg": 0.00046590605264985353,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_D_d16",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 3.304298245743642e-07,
+   "kutle_kg": 0.00046590605264985353,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_D_d17",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 3.304298245743642e-07,
+   "kutle_kg": 0.00046590605264985353,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_D_d18",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 3.304298245743642e-07,
+   "kutle_kg": 0.00046590605264985353,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_D_d19",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 3.304298245743642e-07,
+   "kutle_kg": 0.00046590605264985353,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_D_d20",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 3.304298245743643e-07,
+   "kutle_kg": 0.00046590605264985364,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_D_d21",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 3.304298245743643e-07,
+   "kutle_kg": 0.00046590605264985364,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_D_d22",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 3.304298245743643e-07,
+   "kutle_kg": 0.00046590605264985364,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_D_d23",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 3.304298245743643e-07,
+   "kutle_kg": 0.00046590605264985364,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_D_d24",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 3.304298245743643e-07,
+   "kutle_kg": 0.00046590605264985364,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_D_d25",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 3.304298245743643e-07,
+   "kutle_kg": 0.00046590605264985364,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_D_d26",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 3.3042982457436417e-07,
+   "kutle_kg": 0.0004659060526498535,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_D_d27",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 3.3042982457436417e-07,
+   "kutle_kg": 0.0004659060526498535,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_D_d28",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 3.3042982457436417e-07,
+   "kutle_kg": 0.0004659060526498535,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_D_d29",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 3.304298245743642e-07,
+   "kutle_kg": 0.00046590605264985353,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_D_d30",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 3.304298245743642e-07,
+   "kutle_kg": 0.00046590605264985353,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_D_d31",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 3.304298245743643e-07,
+   "kutle_kg": 0.00046590605264985364,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_D_d32",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 3.755205515591879e-07,
+   "kutle_kg": 0.0005294839776984549,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_D_d33",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 2.8274333882308234e-07,
+   "kutle_kg": 0.0003986681077405461,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_D_d34",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 2.8274333882308234e-07,
+   "kutle_kg": 0.0003986681077405461,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_D_d35",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 2.8274333882308234e-07,
+   "kutle_kg": 0.0003986681077405461,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_D_d36",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 2.8274333882308234e-07,
+   "kutle_kg": 0.0003986681077405461,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_D_d37",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 2.8274333882308234e-07,
+   "kutle_kg": 0.0003986681077405461,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_D_d38",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 2.8274333882308234e-07,
+   "kutle_kg": 0.0003986681077405461,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_D_d39",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 2.8274333882308234e-07,
+   "kutle_kg": 0.0003986681077405461,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KUŞBAŞI__helezon_D_d40",
+   "birim": "KASET_KUŞBAŞI",
+   "grup": "HELEZON_KUŞBAŞI",
+   "mal": "pom",
+   "hacim_m3": 1.4163237608679956e-07,
+   "kutle_kg": 0.0001997016502823874,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
   },
   {
    "ad": "KUŞBAŞI__helezon_cekirdek",
@@ -4519,44 +7839,954 @@
    "not_": "CAD hacmi x malzeme yogunlugu"
   },
   {
-   "ad": "KAŞAR_KABI__helezon_A",
+   "ad": "KAŞAR_KABI__helezon_A_d00",
    "birim": "KASET_KAŞAR_KABI",
    "grup": "HELEZON_KAŞAR_KABI",
    "mal": "pom",
-   "hacim_m3": 3.7520251431554335e-05,
-   "kutle_kg": 0.05290355451849161,
+   "hacim_m3": 1.0303020307043226e-06,
+   "kutle_kg": 0.0014527258632930948,
    "kaynak": "olculdu",
-   "not_": "CAD hacmi x malzeme yogunlugu"
+   "not_": "helezon kanadi dilimi (carpisma icin)"
   },
   {
-   "ad": "KAŞAR_KABI__helezon_B",
+   "ad": "KAŞAR_KABI__helezon_A_d01",
    "birim": "KASET_KAŞAR_KABI",
    "grup": "HELEZON_KAŞAR_KABI",
    "mal": "pom",
-   "hacim_m3": 2.6841857108477738e-05,
-   "kutle_kg": 0.03784701852295361,
+   "hacim_m3": 1.2660193567931146e-06,
+   "kutle_kg": 0.0017850872930782915,
    "kaynak": "olculdu",
-   "not_": "CAD hacmi x malzeme yogunlugu"
+   "not_": "helezon kanadi dilimi (carpisma icin)"
   },
   {
-   "ad": "KAŞAR_KABI__helezon_C",
+   "ad": "KAŞAR_KABI__helezon_A_d02",
    "birim": "KASET_KAŞAR_KABI",
    "grup": "HELEZON_KAŞAR_KABI",
    "mal": "pom",
-   "hacim_m3": 2.1008568080374587e-05,
-   "kutle_kg": 0.02962208099332817,
+   "hacim_m3": 1.3149288569136247e-06,
+   "kutle_kg": 0.0018540496882482108,
    "kaynak": "olculdu",
-   "not_": "CAD hacmi x malzeme yogunlugu"
+   "not_": "helezon kanadi dilimi (carpisma icin)"
   },
   {
-   "ad": "KAŞAR_KABI__helezon_D",
+   "ad": "KAŞAR_KABI__helezon_A_d03",
    "birim": "KASET_KAŞAR_KABI",
    "grup": "HELEZON_KAŞAR_KABI",
    "mal": "pom",
-   "hacim_m3": 2.2169580005747045e-05,
-   "kutle_kg": 0.031259107808103336,
+   "hacim_m3": 1.2792577910801398e-06,
+   "kutle_kg": 0.001803753485422997,
    "kaynak": "olculdu",
-   "not_": "CAD hacmi x malzeme yogunlugu"
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KAŞAR_KABI__helezon_A_d04",
+   "birim": "KASET_KAŞAR_KABI",
+   "grup": "HELEZON_KAŞAR_KABI",
+   "mal": "pom",
+   "hacim_m3": 1.2439591161810067e-06,
+   "kutle_kg": 0.0017539823538152194,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KAŞAR_KABI__helezon_A_d05",
+   "birim": "KASET_KAŞAR_KABI",
+   "grup": "HELEZON_KAŞAR_KABI",
+   "mal": "pom",
+   "hacim_m3": 1.209221682751402e-06,
+   "kutle_kg": 0.0017050025726794767,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KAŞAR_KABI__helezon_A_d06",
+   "birim": "KASET_KAŞAR_KABI",
+   "grup": "HELEZON_KAŞAR_KABI",
+   "mal": "pom",
+   "hacim_m3": 1.1750480927457333e-06,
+   "kutle_kg": 0.001656817810771484,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KAŞAR_KABI__helezon_A_d07",
+   "birim": "KASET_KAŞAR_KABI",
+   "grup": "HELEZON_KAŞAR_KABI",
+   "mal": "pom",
+   "hacim_m3": 1.1414394988696823e-06,
+   "kutle_kg": 0.001609429693406252,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KAŞAR_KABI__helezon_A_d08",
+   "birim": "KASET_KAŞAR_KABI",
+   "grup": "HELEZON_KAŞAR_KABI",
+   "mal": "pom",
+   "hacim_m3": 1.1083948732387102e-06,
+   "kutle_kg": 0.0015628367712665814,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KAŞAR_KABI__helezon_A_d09",
+   "birim": "KASET_KAŞAR_KABI",
+   "grup": "HELEZON_KAŞAR_KABI",
+   "mal": "pom",
+   "hacim_m3": 1.0759189978549151e-06,
+   "kutle_kg": 0.0015170457869754304,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KAŞAR_KABI__helezon_A_d10",
+   "birim": "KASET_KAŞAR_KABI",
+   "grup": "HELEZON_KAŞAR_KABI",
+   "mal": "pom",
+   "hacim_m3": 1.0440085929891489e-06,
+   "kutle_kg": 0.0014720521161146998,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KAŞAR_KABI__helezon_A_d11",
+   "birim": "KASET_KAŞAR_KABI",
+   "grup": "HELEZON_KAŞAR_KABI",
+   "mal": "pom",
+   "hacim_m3": 1.0126679504568824e-06,
+   "kutle_kg": 0.0014278618101442042,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KAŞAR_KABI__helezon_A_d12",
+   "birim": "KASET_KAŞAR_KABI",
+   "grup": "HELEZON_KAŞAR_KABI",
+   "mal": "pom",
+   "hacim_m3": 9.818971007058882e-07,
+   "kutle_kg": 0.0013844749119953023,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KAŞAR_KABI__helezon_A_d13",
+   "birim": "KASET_KAŞAR_KABI",
+   "grup": "HELEZON_KAŞAR_KABI",
+   "mal": "pom",
+   "hacim_m3": 9.516954703736702e-07,
+   "kutle_kg": 0.001341890613226875,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KAŞAR_KABI__helezon_A_d14",
+   "birim": "KASET_KAŞAR_KABI",
+   "grup": "HELEZON_KAŞAR_KABI",
+   "mal": "pom",
+   "hacim_m3": 9.220672929270009e-07,
+   "kutle_kg": 0.0013001148830270712,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KAŞAR_KABI__helezon_A_d15",
+   "birim": "KASET_KAŞAR_KABI",
+   "grup": "HELEZON_KAŞAR_KABI",
+   "mal": "pom",
+   "hacim_m3": 8.930099914888922e-07,
+   "kutle_kg": 0.0012591440879993379,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KAŞAR_KABI__helezon_A_d16",
+   "birim": "KASET_KAŞAR_KABI",
+   "grup": "HELEZON_KAŞAR_KABI",
+   "mal": "pom",
+   "hacim_m3": 8.645269594773842e-07,
+   "kutle_kg": 0.0012189830128631117,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KAŞAR_KABI__helezon_A_d17",
+   "birim": "KASET_KAŞAR_KABI",
+   "grup": "HELEZON_KAŞAR_KABI",
+   "mal": "pom",
+   "hacim_m3": 8.366187617524101e-07,
+   "kutle_kg": 0.0011796324540708982,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KAŞAR_KABI__helezon_A_d18",
+   "birim": "KASET_KAŞAR_KABI",
+   "grup": "HELEZON_KAŞAR_KABI",
+   "mal": "pom",
+   "hacim_m3": 8.092845119317786e-07,
+   "kutle_kg": 0.0011410911618238077,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KAŞAR_KABI__helezon_A_d19",
+   "birim": "KASET_KAŞAR_KABI",
+   "grup": "HELEZON_KAŞAR_KABI",
+   "mal": "pom",
+   "hacim_m3": 7.825283964848553e-07,
+   "kutle_kg": 0.001103365039043646,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KAŞAR_KABI__helezon_A_d20",
+   "birim": "KASET_KAŞAR_KABI",
+   "grup": "HELEZON_KAŞAR_KABI",
+   "mal": "pom",
+   "hacim_m3": 7.563479641516139e-07,
+   "kutle_kg": 0.0010664506294537756,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KAŞAR_KABI__helezon_A_d21",
+   "birim": "KASET_KAŞAR_KABI",
+   "grup": "HELEZON_KAŞAR_KABI",
+   "mal": "pom",
+   "hacim_m3": 7.307463512397057e-07,
+   "kutle_kg": 0.0010303523552479851,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KAŞAR_KABI__helezon_A_d22",
+   "birim": "KASET_KAŞAR_KABI",
+   "grup": "HELEZON_KAŞAR_KABI",
+   "mal": "pom",
+   "hacim_m3": 7.05724148266691e-07,
+   "kutle_kg": 0.0009950710490560343,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KAŞAR_KABI__helezon_A_d23",
+   "birim": "KASET_KAŞAR_KABI",
+   "grup": "HELEZON_KAŞAR_KABI",
+   "mal": "pom",
+   "hacim_m3": 6.812802065753616e-07,
+   "kutle_kg": 0.0009606050912712598,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KAŞAR_KABI__helezon_A_d24",
+   "birim": "KASET_KAŞAR_KABI",
+   "grup": "HELEZON_KAŞAR_KABI",
+   "mal": "pom",
+   "hacim_m3": 6.665660074025127e-07,
+   "kutle_kg": 0.000939858070437543,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KAŞAR_KABI__helezon_A_d25",
+   "birim": "KASET_KAŞAR_KABI",
+   "grup": "HELEZON_KAŞAR_KABI",
+   "mal": "pom",
+   "hacim_m3": 6.655084862453957e-07,
+   "kutle_kg": 0.000938366965606008,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KAŞAR_KABI__helezon_A_d26",
+   "birim": "KASET_KAŞAR_KABI",
+   "grup": "HELEZON_KAŞAR_KABI",
+   "mal": "pom",
+   "hacim_m3": 6.645579099577787e-07,
+   "kutle_kg": 0.000937026653040468,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KAŞAR_KABI__helezon_A_d27",
+   "birim": "KASET_KAŞAR_KABI",
+   "grup": "HELEZON_KAŞAR_KABI",
+   "mal": "pom",
+   "hacim_m3": 6.636130858019848e-07,
+   "kutle_kg": 0.0009356944509807985,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KAŞAR_KABI__helezon_A_d28",
+   "birim": "KASET_KAŞAR_KABI",
+   "grup": "HELEZON_KAŞAR_KABI",
+   "mal": "pom",
+   "hacim_m3": 6.626722963559238e-07,
+   "kutle_kg": 0.0009343679378618525,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KAŞAR_KABI__helezon_A_d29",
+   "birim": "KASET_KAŞAR_KABI",
+   "grup": "HELEZON_KAŞAR_KABI",
+   "mal": "pom",
+   "hacim_m3": 6.617384561066983e-07,
+   "kutle_kg": 0.0009330512231104446,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KAŞAR_KABI__helezon_A_d30",
+   "birim": "KASET_KAŞAR_KABI",
+   "grup": "HELEZON_KAŞAR_KABI",
+   "mal": "pom",
+   "hacim_m3": 6.608085008699619e-07,
+   "kutle_kg": 0.0009317399862266464,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KAŞAR_KABI__helezon_A_d31",
+   "birim": "KASET_KAŞAR_KABI",
+   "grup": "HELEZON_KAŞAR_KABI",
+   "mal": "pom",
+   "hacim_m3": 6.598843105649544e-07,
+   "kutle_kg": 0.0009304368778965857,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KAŞAR_KABI__helezon_A_d32",
+   "birim": "KASET_KAŞAR_KABI",
+   "grup": "HELEZON_KAŞAR_KABI",
+   "mal": "pom",
+   "hacim_m3": 6.589656422715064e-07,
+   "kutle_kg": 0.000929141555602824,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KAŞAR_KABI__helezon_A_d33",
+   "birim": "KASET_KAŞAR_KABI",
+   "grup": "HELEZON_KAŞAR_KABI",
+   "mal": "pom",
+   "hacim_m3": 6.580509732661609e-07,
+   "kutle_kg": 0.0009278518723052869,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KAŞAR_KABI__helezon_A_d34",
+   "birim": "KASET_KAŞAR_KABI",
+   "grup": "HELEZON_KAŞAR_KABI",
+   "mal": "pom",
+   "hacim_m3": 6.57142791472745e-07,
+   "kutle_kg": 0.0009265713359765704,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KAŞAR_KABI__helezon_A_d35",
+   "birim": "KASET_KAŞAR_KABI",
+   "grup": "HELEZON_KAŞAR_KABI",
+   "mal": "pom",
+   "hacim_m3": 6.562385211577584e-07,
+   "kutle_kg": 0.0009252963148324395,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KAŞAR_KABI__helezon_A_d36",
+   "birim": "KASET_KAŞAR_KABI",
+   "grup": "HELEZON_KAŞAR_KABI",
+   "mal": "pom",
+   "hacim_m3": 6.553396278538729e-07,
+   "kutle_kg": 0.0009240288752739608,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KAŞAR_KABI__helezon_A_d37",
+   "birim": "KASET_KAŞAR_KABI",
+   "grup": "HELEZON_KAŞAR_KABI",
+   "mal": "pom",
+   "hacim_m3": 6.544461071482818e-07,
+   "kutle_kg": 0.0009227690110790774,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KAŞAR_KABI__helezon_A_d38",
+   "birim": "KASET_KAŞAR_KABI",
+   "grup": "HELEZON_KAŞAR_KABI",
+   "mal": "pom",
+   "hacim_m3": 6.535564547173408e-07,
+   "kutle_kg": 0.0009215146011514505,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KAŞAR_KABI__helezon_A_d39",
+   "birim": "KASET_KAŞAR_KABI",
+   "grup": "HELEZON_KAŞAR_KABI",
+   "mal": "pom",
+   "hacim_m3": 6.526729091235621e-07,
+   "kutle_kg": 0.0009202688018642225,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KAŞAR_KABI__helezon_A_d40",
+   "birim": "KASET_KAŞAR_KABI",
+   "grup": "HELEZON_KAŞAR_KABI",
+   "mal": "pom",
+   "hacim_m3": 6.517932176273058e-07,
+   "kutle_kg": 0.0009190284368545013,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KAŞAR_KABI__helezon_A_d41",
+   "birim": "KASET_KAŞAR_KABI",
+   "grup": "HELEZON_KAŞAR_KABI",
+   "mal": "pom",
+   "hacim_m3": 6.509187131780543e-07,
+   "kutle_kg": 0.0009177953855810566,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KAŞAR_KABI__helezon_A_d42",
+   "birim": "KASET_KAŞAR_KABI",
+   "grup": "HELEZON_KAŞAR_KABI",
+   "mal": "pom",
+   "hacim_m3": 6.500491476202968e-07,
+   "kutle_kg": 0.0009165692981446186,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KAŞAR_KABI__helezon_A_d43",
+   "birim": "KASET_KAŞAR_KABI",
+   "grup": "HELEZON_KAŞAR_KABI",
+   "mal": "pom",
+   "hacim_m3": 6.491837406022514e-07,
+   "kutle_kg": 0.0009153490742491745,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KAŞAR_KABI__helezon_A_d44",
+   "birim": "KASET_KAŞAR_KABI",
+   "grup": "HELEZON_KAŞAR_KABI",
+   "mal": "pom",
+   "hacim_m3": 6.151352568151027e-07,
+   "kutle_kg": 0.0008673407121092948,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KAŞAR_KABI__helezon_A_d45",
+   "birim": "KASET_KAŞAR_KABI",
+   "grup": "HELEZON_KAŞAR_KABI",
+   "mal": "pom",
+   "hacim_m3": 1.8875607511753777e-07,
+   "kutle_kg": 0.00026614606591572826,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KAŞAR_KABI__helezon_B_d00",
+   "birim": "KASET_KAŞAR_KABI",
+   "grup": "HELEZON_KAŞAR_KABI",
+   "mal": "pom",
+   "hacim_m3": 1.0773934163842201e-07,
+   "kutle_kg": 0.00015191247171017502,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KAŞAR_KABI__helezon_B_d01",
+   "birim": "KASET_KAŞAR_KABI",
+   "grup": "HELEZON_KAŞAR_KABI",
+   "mal": "pom",
+   "hacim_m3": 5.068397375655609e-07,
+   "kutle_kg": 0.0007146440299674409,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KAŞAR_KABI__helezon_B_d42",
+   "birim": "KASET_KAŞAR_KABI",
+   "grup": "HELEZON_KAŞAR_KABI",
+   "mal": "pom",
+   "hacim_m3": 4.5736728679821206e-07,
+   "kutle_kg": 0.000644887874385479,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KAŞAR_KABI__helezon_B_d43",
+   "birim": "KASET_KAŞAR_KABI",
+   "grup": "HELEZON_KAŞAR_KABI",
+   "mal": "pom",
+   "hacim_m3": 4.6901160916180994e-08,
+   "kutle_kg": 6.61306368918152e-05,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KAŞAR_KABI__helezon_C_d00",
+   "birim": "KASET_KAŞAR_KABI",
+   "grup": "HELEZON_KAŞAR_KABI",
+   "mal": "pom",
+   "hacim_m3": 7.900872864080378e-08,
+   "kutle_kg": 0.00011140230738353333,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KAŞAR_KABI__helezon_C_d01",
+   "birim": "KASET_KAŞAR_KABI",
+   "grup": "HELEZON_KAŞAR_KABI",
+   "mal": "pom",
+   "hacim_m3": 4.695498792088981e-07,
+   "kutle_kg": 0.0006620653296845462,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KAŞAR_KABI__helezon_C_d35",
+   "birim": "KASET_KAŞAR_KABI",
+   "grup": "HELEZON_KAŞAR_KABI",
+   "mal": "pom",
+   "hacim_m3": 2.939338566922334e-07,
+   "kutle_kg": 0.0004144467379360491,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KAŞAR_KABI__helezon_C_d36",
+   "birim": "KASET_KAŞAR_KABI",
+   "grup": "HELEZON_KAŞAR_KABI",
+   "mal": "pom",
+   "hacim_m3": 3.614256213056631e-09,
+   "kutle_kg": 5.09610126040985e-06,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KAŞAR_KABI__helezon_D_d00",
+   "birim": "KASET_KAŞAR_KABI",
+   "grup": "HELEZON_KAŞAR_KABI",
+   "mal": "pom",
+   "hacim_m3": 4.7599773264145934e-08,
+   "kutle_kg": 6.711568030244576e-05,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KAŞAR_KABI__helezon_D_d01",
+   "birim": "KASET_KAŞAR_KABI",
+   "grup": "HELEZON_KAŞAR_KABI",
+   "mal": "pom",
+   "hacim_m3": 5.279073786152105e-07,
+   "kutle_kg": 0.0007443494038474469,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KAŞAR_KABI__helezon_D_d02",
+   "birim": "KASET_KAŞAR_KABI",
+   "grup": "HELEZON_KAŞAR_KABI",
+   "mal": "pom",
+   "hacim_m3": 8.416199913828458e-07,
+   "kutle_kg": 0.0011866841878498124,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KAŞAR_KABI__helezon_D_d03",
+   "birim": "KASET_KAŞAR_KABI",
+   "grup": "HELEZON_KAŞAR_KABI",
+   "mal": "pom",
+   "hacim_m3": 8.88063068166201e-07,
+   "kutle_kg": 0.0012521689261143433,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KAŞAR_KABI__helezon_D_d04",
+   "birim": "KASET_KAŞAR_KABI",
+   "grup": "HELEZON_KAŞAR_KABI",
+   "mal": "pom",
+   "hacim_m3": 8.880629222606501e-07,
+   "kutle_kg": 0.0012521687203875167,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KAŞAR_KABI__helezon_D_d05",
+   "birim": "KASET_KAŞAR_KABI",
+   "grup": "HELEZON_KAŞAR_KABI",
+   "mal": "pom",
+   "hacim_m3": 8.880611298468157e-07,
+   "kutle_kg": 0.0012521661930840102,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KAŞAR_KABI__helezon_D_d06",
+   "birim": "KASET_KAŞAR_KABI",
+   "grup": "HELEZON_KAŞAR_KABI",
+   "mal": "pom",
+   "hacim_m3": 8.880636603356077e-07,
+   "kutle_kg": 0.0012521697610732069,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KAŞAR_KABI__helezon_D_d07",
+   "birim": "KASET_KAŞAR_KABI",
+   "grup": "HELEZON_KAŞAR_KABI",
+   "mal": "pom",
+   "hacim_m3": 8.880633698369772e-07,
+   "kutle_kg": 0.001252169351470138,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KAŞAR_KABI__helezon_D_d08",
+   "birim": "KASET_KAŞAR_KABI",
+   "grup": "HELEZON_KAŞAR_KABI",
+   "mal": "pom",
+   "hacim_m3": 8.880612401787003e-07,
+   "kutle_kg": 0.0012521663486519674,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KAŞAR_KABI__helezon_D_d09",
+   "birim": "KASET_KAŞAR_KABI",
+   "grup": "HELEZON_KAŞAR_KABI",
+   "mal": "pom",
+   "hacim_m3": 8.880614991816686e-07,
+   "kutle_kg": 0.0012521667138461526,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KAŞAR_KABI__helezon_D_d10",
+   "birim": "KASET_KAŞAR_KABI",
+   "grup": "HELEZON_KAŞAR_KABI",
+   "mal": "pom",
+   "hacim_m3": 8.880639704961924e-07,
+   "kutle_kg": 0.0012521701983996313,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KAŞAR_KABI__helezon_D_d11",
+   "birim": "KASET_KAŞAR_KABI",
+   "grup": "HELEZON_KAŞAR_KABI",
+   "mal": "pom",
+   "hacim_m3": 8.88062933776974e-07,
+   "kutle_kg": 0.0012521687366255335,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KAŞAR_KABI__helezon_D_d12",
+   "birim": "KASET_KAŞAR_KABI",
+   "grup": "HELEZON_KAŞAR_KABI",
+   "mal": "pom",
+   "hacim_m3": 8.88061163831168e-07,
+   "kutle_kg": 0.0012521662410019468,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KAŞAR_KABI__helezon_D_d13",
+   "birim": "KASET_KAŞAR_KABI",
+   "grup": "HELEZON_KAŞAR_KABI",
+   "mal": "pom",
+   "hacim_m3": 8.880634710028036e-07,
+   "kutle_kg": 0.0012521694941139531,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KAŞAR_KABI__helezon_D_d14",
+   "birim": "KASET_KAŞAR_KABI",
+   "grup": "HELEZON_KAŞAR_KABI",
+   "mal": "pom",
+   "hacim_m3": 8.880623300797388e-07,
+   "kutle_kg": 0.0012521678854124317,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KAŞAR_KABI__helezon_D_d15",
+   "birim": "KASET_KAŞAR_KABI",
+   "grup": "HELEZON_KAŞAR_KABI",
+   "mal": "pom",
+   "hacim_m3": 8.716507483097191e-07,
+   "kutle_kg": 0.0012290275551167038,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KAŞAR_KABI__helezon_D_d16",
+   "birim": "KASET_KAŞAR_KABI",
+   "grup": "HELEZON_KAŞAR_KABI",
+   "mal": "pom",
+   "hacim_m3": 6.020810117427751e-07,
+   "kutle_kg": 0.0008489342265573129,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KAŞAR_KABI__helezon_D_d17",
+   "birim": "KASET_KAŞAR_KABI",
+   "grup": "HELEZON_KAŞAR_KABI",
+   "mal": "pom",
+   "hacim_m3": 3.431042162664745e-07,
+   "kutle_kg": 0.00048377694493572905,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KAŞAR_KABI__helezon_D_d18",
+   "birim": "KASET_KAŞAR_KABI",
+   "grup": "HELEZON_KAŞAR_KABI",
+   "mal": "pom",
+   "hacim_m3": 4.6840394493168023e-07,
+   "kutle_kg": 0.0006604495623536691,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KAŞAR_KABI__helezon_D_d19",
+   "birim": "KASET_KAŞAR_KABI",
+   "grup": "HELEZON_KAŞAR_KABI",
+   "mal": "pom",
+   "hacim_m3": 5.894774366884916e-07,
+   "kutle_kg": 0.0008311631857307731,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KAŞAR_KABI__helezon_D_d20",
+   "birim": "KASET_KAŞAR_KABI",
+   "grup": "HELEZON_KAŞAR_KABI",
+   "mal": "pom",
+   "hacim_m3": 3.6522394758447784e-07,
+   "kutle_kg": 0.0005149657660941138,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KAŞAR_KABI__helezon_D_d21",
+   "birim": "KASET_KAŞAR_KABI",
+   "grup": "HELEZON_KAŞAR_KABI",
+   "mal": "pom",
+   "hacim_m3": 3.304298245743643e-07,
+   "kutle_kg": 0.00046590605264985364,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KAŞAR_KABI__helezon_D_d22",
+   "birim": "KASET_KAŞAR_KABI",
+   "grup": "HELEZON_KAŞAR_KABI",
+   "mal": "pom",
+   "hacim_m3": 3.422841370002225e-07,
+   "kutle_kg": 0.0004826206331703137,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KAŞAR_KABI__helezon_D_d23",
+   "birim": "KASET_KAŞAR_KABI",
+   "grup": "HELEZON_KAŞAR_KABI",
+   "mal": "pom",
+   "hacim_m3": 5.681165868894756e-07,
+   "kutle_kg": 0.0008010443875141606,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KAŞAR_KABI__helezon_D_d24",
+   "birim": "KASET_KAŞAR_KABI",
+   "grup": "HELEZON_KAŞAR_KABI",
+   "mal": "pom",
+   "hacim_m3": 5.125781116521568e-07,
+   "kutle_kg": 0.0007227351374295411,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KAŞAR_KABI__helezon_D_d25",
+   "birim": "KASET_KAŞAR_KABI",
+   "grup": "HELEZON_KAŞAR_KABI",
+   "mal": "pom",
+   "hacim_m3": 3.3055651741350426e-07,
+   "kutle_kg": 0.000466084689553041,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KAŞAR_KABI__helezon_D_d26",
+   "birim": "KASET_KAŞAR_KABI",
+   "grup": "HELEZON_KAŞAR_KABI",
+   "mal": "pom",
+   "hacim_m3": 3.304298245743643e-07,
+   "kutle_kg": 0.00046590605264985364,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KAŞAR_KABI__helezon_D_d27",
+   "birim": "KASET_KAŞAR_KABI",
+   "grup": "HELEZON_KAŞAR_KABI",
+   "mal": "pom",
+   "hacim_m3": 4.1688915948578995e-07,
+   "kutle_kg": 0.0005878137148749639,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KAŞAR_KABI__helezon_D_d28",
+   "birim": "KASET_KAŞAR_KABI",
+   "grup": "HELEZON_KAŞAR_KABI",
+   "mal": "pom",
+   "hacim_m3": 5.986886070797553e-07,
+   "kutle_kg": 0.000844150935982455,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KAŞAR_KABI__helezon_D_d29",
+   "birim": "KASET_KAŞAR_KABI",
+   "grup": "HELEZON_KAŞAR_KABI",
+   "mal": "pom",
+   "hacim_m3": 4.0752763001512407e-07,
+   "kutle_kg": 0.0005746139583213249,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KAŞAR_KABI__helezon_D_d30",
+   "birim": "KASET_KAŞAR_KABI",
+   "grup": "HELEZON_KAŞAR_KABI",
+   "mal": "pom",
+   "hacim_m3": 3.304298245743643e-07,
+   "kutle_kg": 0.00046590605264985364,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KAŞAR_KABI__helezon_D_d31",
+   "birim": "KASET_KAŞAR_KABI",
+   "grup": "HELEZON_KAŞAR_KABI",
+   "mal": "pom",
+   "hacim_m3": 3.8546460400249693e-07,
+   "kutle_kg": 0.0005435050916435207,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KAŞAR_KABI__helezon_D_d32",
+   "birim": "KASET_KAŞAR_KABI",
+   "grup": "HELEZON_KAŞAR_KABI",
+   "mal": "pom",
+   "hacim_m3": 3.004348594581313e-07,
+   "kutle_kg": 0.00042361315183596517,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KAŞAR_KABI__helezon_D_d33",
+   "birim": "KASET_KAŞAR_KABI",
+   "grup": "HELEZON_KAŞAR_KABI",
+   "mal": "pom",
+   "hacim_m3": 2.8274333882308223e-07,
+   "kutle_kg": 0.00039866810774054595,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KAŞAR_KABI__helezon_D_d34",
+   "birim": "KASET_KAŞAR_KABI",
+   "grup": "HELEZON_KAŞAR_KABI",
+   "mal": "pom",
+   "hacim_m3": 2.8274333882308223e-07,
+   "kutle_kg": 0.00039866810774054595,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KAŞAR_KABI__helezon_D_d35",
+   "birim": "KASET_KAŞAR_KABI",
+   "grup": "HELEZON_KAŞAR_KABI",
+   "mal": "pom",
+   "hacim_m3": 2.8274333882308223e-07,
+   "kutle_kg": 0.00039866810774054595,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KAŞAR_KABI__helezon_D_d36",
+   "birim": "KASET_KAŞAR_KABI",
+   "grup": "HELEZON_KAŞAR_KABI",
+   "mal": "pom",
+   "hacim_m3": 2.8274333882308223e-07,
+   "kutle_kg": 0.00039866810774054595,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KAŞAR_KABI__helezon_D_d37",
+   "birim": "KASET_KAŞAR_KABI",
+   "grup": "HELEZON_KAŞAR_KABI",
+   "mal": "pom",
+   "hacim_m3": 2.8274333882308223e-07,
+   "kutle_kg": 0.00039866810774054595,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KAŞAR_KABI__helezon_D_d38",
+   "birim": "KASET_KAŞAR_KABI",
+   "grup": "HELEZON_KAŞAR_KABI",
+   "mal": "pom",
+   "hacim_m3": 2.8274333882308223e-07,
+   "kutle_kg": 0.00039866810774054595,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KAŞAR_KABI__helezon_D_d39",
+   "birim": "KASET_KAŞAR_KABI",
+   "grup": "HELEZON_KAŞAR_KABI",
+   "mal": "pom",
+   "hacim_m3": 2.8274333882308223e-07,
+   "kutle_kg": 0.00039866810774054595,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KAŞAR_KABI__helezon_D_d40",
+   "birim": "KASET_KAŞAR_KABI",
+   "grup": "HELEZON_KAŞAR_KABI",
+   "mal": "pom",
+   "hacim_m3": 2.2746240816491703e-08,
+   "kutle_kg": 3.20721995512533e-05,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
   },
   {
    "ad": "KAŞAR_KABI__helezon_cekirdek",
@@ -5079,44 +9309,1704 @@
    "not_": "CAD hacmi x malzeme yogunlugu"
   },
   {
-   "ad": "KÜP_SUCUK__helezon_A",
+   "ad": "KÜP_SUCUK__helezon_A_d00",
    "birim": "KASET_KÜP_SUCUK",
    "grup": "HELEZON_KÜP_SUCUK",
    "mal": "pom",
-   "hacim_m3": 5.375940820562255e-05,
-   "kutle_kg": 0.07580076556992779,
+   "hacim_m3": 1.2533583404084342e-06,
+   "kutle_kg": 0.0017672352599758922,
    "kaynak": "olculdu",
-   "not_": "CAD hacmi x malzeme yogunlugu"
+   "not_": "helezon kanadi dilimi (carpisma icin)"
   },
   {
-   "ad": "KÜP_SUCUK__helezon_B",
+   "ad": "KÜP_SUCUK__helezon_A_d01",
    "birim": "KASET_KÜP_SUCUK",
    "grup": "HELEZON_KÜP_SUCUK",
    "mal": "pom",
-   "hacim_m3": 4.38562601574336e-05,
-   "kutle_kg": 0.06183732682198138,
+   "hacim_m3": 1.7630365241637347e-06,
+   "kutle_kg": 0.002485881499070866,
    "kaynak": "olculdu",
-   "not_": "CAD hacmi x malzeme yogunlugu"
+   "not_": "helezon kanadi dilimi (carpisma icin)"
   },
   {
-   "ad": "KÜP_SUCUK__helezon_C",
+   "ad": "KÜP_SUCUK__helezon_A_d02",
    "birim": "KASET_KÜP_SUCUK",
    "grup": "HELEZON_KÜP_SUCUK",
    "mal": "pom",
-   "hacim_m3": 4.494206661846234e-05,
-   "kutle_kg": 0.06336831393203189,
+   "hacim_m3": 2.000591732537011e-06,
+   "kutle_kg": 0.0028208343428771853,
    "kaynak": "olculdu",
-   "not_": "CAD hacmi x malzeme yogunlugu"
+   "not_": "helezon kanadi dilimi (carpisma icin)"
   },
   {
-   "ad": "KÜP_SUCUK__helezon_D",
+   "ad": "KÜP_SUCUK__helezon_A_d03",
    "birim": "KASET_KÜP_SUCUK",
    "grup": "HELEZON_KÜP_SUCUK",
    "mal": "pom",
-   "hacim_m3": 1.6918573779560146e-05,
-   "kutle_kg": 0.023855189029179807,
+   "hacim_m3": 1.9548451591179463e-06,
+   "kutle_kg": 0.002756331674356304,
    "kaynak": "olculdu",
-   "not_": "CAD hacmi x malzeme yogunlugu"
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_A_d04",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.9071231239211012e-06,
+   "kutle_kg": 0.0026890436047287527,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_A_d05",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.8602713167181445e-06,
+   "kutle_kg": 0.002622982556572584,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_A_d06",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.8142909134652406e-06,
+   "kutle_kg": 0.002558150187985989,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_A_d07",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.7691800002532375e-06,
+   "kutle_kg": 0.002494543800357065,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_A_d08",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.724942473344935e-06,
+   "kutle_kg": 0.002432168887416358,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_A_d09",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.6815764697103926e-06,
+   "kutle_kg": 0.0023710228222916536,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_A_d10",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.6390847385349418e-06,
+   "kutle_kg": 0.002311109481334268,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_A_d11",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.5974665874071435e-06,
+   "kutle_kg": 0.0022524278882440725,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_A_d12",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.5567220222259908e-06,
+   "kutle_kg": 0.002194978051338647,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_A_d13",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.516854933416857e-06,
+   "kutle_kg": 0.0021387654561177685,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_A_d14",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.4778623059208477e-06,
+   "kutle_kg": 0.0020837858513483953,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_A_d15",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.4397464661017443e-06,
+   "kutle_kg": 0.0020300425172034594,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_A_d16",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.4025086125856714e-06,
+   "kutle_kg": 0.0019775371437457966,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_A_d17",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.3661478358356458e-06,
+   "kutle_kg": 0.0019262684485282606,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_A_d18",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.3306670344774755e-06,
+   "kutle_kg": 0.0018762405186132404,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_A_d19",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.2960637742838546e-06,
+   "kutle_kg": 0.001827449921740235,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_A_d20",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.2623414193459767e-06,
+   "kutle_kg": 0.0017799014012778271,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_A_d21",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.2295002281905852e-06,
+   "kutle_kg": 0.0017335953217487252,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_A_d22",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.1975385507573178e-06,
+   "kutle_kg": 0.001688529356567818,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_A_d23",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.1664599538295649e-06,
+   "kutle_kg": 0.0016447085348996865,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_A_d24",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.147438929522546e-06,
+   "kutle_kg": 0.0016178888906267898,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_A_d25",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.1455971902143775e-06,
+   "kutle_kg": 0.0016152920382022722,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_A_d26",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.1439312541528967e-06,
+   "kutle_kg": 0.0016129430683555844,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_A_d27",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.1422712636931776e-06,
+   "kutle_kg": 0.0016106024818073803,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_A_d28",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.14062129979347e-06,
+   "kutle_kg": 0.0016082760327087928,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_A_d29",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.1389738292677048e-06,
+   "kutle_kg": 0.0016059530992674638,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_A_d30",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.1373345210914104e-06,
+   "kutle_kg": 0.0016036416747388887,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_A_d31",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.1357024356424785e-06,
+   "kutle_kg": 0.0016013404342558948,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_A_d32",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.1340762712368822e-06,
+   "kutle_kg": 0.001599047542444004,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_A_d33",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.1324575511847127e-06,
+   "kutle_kg": 0.0015967651471704449,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_A_d34",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.1308441976725412e-06,
+   "kutle_kg": 0.001594490318718283,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_A_d35",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.1292381660067234e-06,
+   "kutle_kg": 0.00159222581406948,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_A_d36",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.1276385461505534e-06,
+   "kutle_kg": 0.0015899703500722802,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_A_d37",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.071387870280979e-06,
+   "kutle_kg": 0.0015106568970961803,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_A_d38",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 6.40921006405042e-07,
+   "kutle_kg": 0.0009036986190311092,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_A_d39",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 5.3578240610814466e-08,
+   "kutle_kg": 7.55453192612484e-05,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_B_d00",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 6.404511959104134e-08,
+   "kutle_kg": 9.030361862336829e-05,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_B_d01",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 6.706847566925541e-07,
+   "kutle_kg": 0.0009456655069365013,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_B_d02",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.0746272006406951e-06,
+   "kutle_kg": 0.00151522435290338,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_B_d03",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.1204744651251954e-06,
+   "kutle_kg": 0.0015798689958265255,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_B_d04",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.1189100531460295e-06,
+   "kutle_kg": 0.0015776631749359015,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_B_d05",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.1173501003861949e-06,
+   "kutle_kg": 0.0015754636415445348,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_B_d06",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.1157976503331384e-06,
+   "kutle_kg": 0.0015732746869697252,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_B_d07",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.1142517701301695e-06,
+   "kutle_kg": 0.001571094995883539,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_B_d08",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.1127113909661501e-06,
+   "kutle_kg": 0.0015689230612622716,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_B_d09",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.1111763959279674e-06,
+   "kutle_kg": 0.0015667587182584342,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_B_d10",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.1096479004711786e-06,
+   "kutle_kg": 0.001564603539664362,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_B_d11",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.1081265068575766e-06,
+   "kutle_kg": 0.0015624583746691831,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_B_d12",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.1066093096064562e-06,
+   "kutle_kg": 0.0015603191265451033,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_B_d13",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.105097846164944e-06,
+   "kutle_kg": 0.0015581879630925711,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_B_d14",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.103595347802774e-06,
+   "kutle_kg": 0.0015560694404019115,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_B_d15",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.1020953843527752e-06,
+   "kutle_kg": 0.001553954491937413,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_B_d16",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.1006008946097125e-06,
+   "kutle_kg": 0.0015518472613996945,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_B_d17",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.099115598756776e-06,
+   "kutle_kg": 0.001549752994247054,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_B_d18",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.0976335687661981e-06,
+   "kutle_kg": 0.0015476633319603393,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_B_d19",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.0961572326748615e-06,
+   "kutle_kg": 0.0015455816980715546,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_B_d20",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.0946874604584806e-06,
+   "kutle_kg": 0.0015435093192464576,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_B_d21",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.093222201342951e-06,
+   "kutle_kg": 0.0015414433038935611,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_B_d22",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.0917640299352444e-06,
+   "kutle_kg": 0.0015393872822086945,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_B_d23",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.09031025280378e-06,
+   "kutle_kg": 0.0015373374564533297,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_B_d24",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.0888625936421293e-06,
+   "kutle_kg": 0.0015352962570354023,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_B_d25",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.08742062504824e-06,
+   "kutle_kg": 0.0015332630813180183,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_B_d26",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.0859820690526115e-06,
+   "kutle_kg": 0.0015312347173641822,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_B_d27",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.0845522701575285e-06,
+   "kutle_kg": 0.0015292187009221152,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_B_d28",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.0831266995043355e-06,
+   "kutle_kg": 0.001527208646301113,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_B_d29",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.0817041343572155e-06,
+   "kutle_kg": 0.001525202829443674,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_B_d30",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.080290124109944e-06,
+   "kutle_kg": 0.001523209074995021,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_B_d31",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.0788804213630377e-06,
+   "kutle_kg": 0.001521221394121883,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_B_d32",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.0774748177166056e-06,
+   "kutle_kg": 0.001519239492980414,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_B_d33",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.076075989708279e-06,
+   "kutle_kg": 0.0015172671454886733,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_B_d34",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.074681757076321e-06,
+   "kutle_kg": 0.0015153012774776124,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_B_d35",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.0732930137500097e-06,
+   "kutle_kg": 0.0015133431493875138,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_B_d36",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.07190864444849e-06,
+   "kutle_kg": 0.0015113911886723709,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_B_d37",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.0705300918235864e-06,
+   "kutle_kg": 0.0015094474294712569,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_B_d38",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.069157365217409e-06,
+   "kutle_kg": 0.0015075118849565466,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_B_d39",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.0677881008910086e-06,
+   "kutle_kg": 0.001505581222256322,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_B_d40",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 9.974035168654993e-07,
+   "kutle_kg": 0.001406338958780354,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_B_d41",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 5.53707036052138e-07,
+   "kutle_kg": 0.0007807269208335146,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_B_d42",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 3.471103411733319e-08,
+   "kutle_kg": 4.89425581054398e-05,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_C_d00",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 6.231708158374644e-08,
+   "kutle_kg": 8.786708503308248e-05,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_C_d01",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 6.41816574548021e-07,
+   "kutle_kg": 0.0009049613701127096,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_C_d02",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.0174955058938359e-06,
+   "kutle_kg": 0.0014346686633103086,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_C_d03",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.0617394557531307e-06,
+   "kutle_kg": 0.0014970526326119143,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_C_d04",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.0603991436761347e-06,
+   "kutle_kg": 0.00149516279258335,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_C_d05",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.0590620577293674e-06,
+   "kutle_kg": 0.0014932775013984081,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_C_d06",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.0577302743303788e-06,
+   "kutle_kg": 0.0014913996868058342,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_C_d07",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.0564046811230246e-06,
+   "kutle_kg": 0.0014895306003834647,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_C_d08",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.0550830784799065e-06,
+   "kutle_kg": 0.0014876671406566682,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_C_d09",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.053766285472527e-06,
+   "kutle_kg": 0.001485810462516263,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_C_d10",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.0524534051151558e-06,
+   "kutle_kg": 0.0014839593012123697,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_C_d11",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.0511465382780805e-06,
+   "kutle_kg": 0.0014821166189720935,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_C_d12",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.0498447179227988e-06,
+   "kutle_kg": 0.0014802810522711464,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_C_d13",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.0485459554995872e-06,
+   "kutle_kg": 0.0014784497972544178,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_C_d14",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.0472519322532375e-06,
+   "kutle_kg": 0.0014766252244770648,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_C_d15",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.0459655341644806e-06,
+   "kutle_kg": 0.0014748114031719176,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_C_d16",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.0446809874085885e-06,
+   "kutle_kg": 0.0014730001922461098,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_C_d17",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.0433996049892812e-06,
+   "kutle_kg": 0.0014711934430348865,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_C_d18",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.0421266566485575e-06,
+   "kutle_kg": 0.0014693985858744661,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_C_d19",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.040856780837968e-06,
+   "kutle_kg": 0.001467608060981535,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_C_d20",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.0395901858494616e-06,
+   "kutle_kg": 0.001465822162047741,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_C_d21",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.0383293685514175e-06,
+   "kutle_kg": 0.0014640444096574987,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_C_d22",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.0370724974663737e-06,
+   "kutle_kg": 0.001462272221427587,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_C_d23",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.0358198732434693e-06,
+   "kutle_kg": 0.0014605060212732918,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_C_d24",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.0345730076280068e-06,
+   "kutle_kg": 0.0014587479407554896,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_C_d25",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.033328756362508e-06,
+   "kutle_kg": 0.001456993546471136,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_C_d26",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.032090308333953e-06,
+   "kutle_kg": 0.0014552473347508737,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_C_d27",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.0308558338310053e-06,
+   "kutle_kg": 0.0014535067257017175,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_C_d28",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.0296238308724171e-06,
+   "kutle_kg": 0.0014517696015301082,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_C_d29",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.0283992175088165e-06,
+   "kutle_kg": 0.0014500428966874312,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_C_d30",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.0271784509756105e-06,
+   "kutle_kg": 0.0014483216158756107,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_C_d31",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.0259590606853658e-06,
+   "kutle_kg": 0.001446602275566366,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_C_d32",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.0247461397693375e-06,
+   "kutle_kg": 0.0014448920570747658,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_C_d33",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.023538499569729e-06,
+   "kutle_kg": 0.0014431892843933178,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_C_d34",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.0223325014577055e-06,
+   "kutle_kg": 0.0014414888270553646,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_C_d35",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.0211320942822174e-06,
+   "kutle_kg": 0.0014397962529379266,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_C_d36",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.0199359338857946e-06,
+   "kutle_kg": 0.0014381096667789705,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_C_d37",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.0187435808422118e-06,
+   "kutle_kg": 0.0014364284489875186,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_C_d38",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.0175555472678403e-06,
+   "kutle_kg": 0.0014347533216476549,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_C_d39",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.016370813248799e-06,
+   "kutle_kg": 0.0014330828466808066,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_C_d40",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.01519104060462e-06,
+   "kutle_kg": 0.0014314193672525144,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_C_d41",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.0140158340598899e-06,
+   "kutle_kg": 0.0014297623260244446,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_C_d42",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.0128431094989514e-06,
+   "kutle_kg": 0.0014281087843935215,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_C_d43",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 9.804244179617518e-07,
+   "kutle_kg": 0.00138239842932607,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_C_d44",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 6.83247976551265e-07,
+   "kutle_kg": 0.0009633796469372836,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_C_d45",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 8.703842275775833e-08,
+   "kutle_kg": 0.00012272417608843924,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_D_d00",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.6501648252987468e-08,
+   "kutle_kg": 2.3267324036712328e-05,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_D_d01",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 3.8815812305755083e-07,
+   "kutle_kg": 0.0005473029535111467,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_D_d02",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 9.495746226121601e-07,
+   "kutle_kg": 0.0013389002178831456,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_D_d03",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.1408417478850784e-06,
+   "kutle_kg": 0.0016085868645179604,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_D_d04",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.1408438199069253e-06,
+   "kutle_kg": 0.0016085897860687647,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_D_d05",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.1408417546422574e-06,
+   "kutle_kg": 0.001608586874045583,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_D_d06",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.047938444294722e-06,
+   "kutle_kg": 0.001477593206455558,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_D_d07",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 6.510771812010332e-07,
+   "kutle_kg": 0.0009180188254934568,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_D_d08",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 3.465540526210666e-07,
+   "kutle_kg": 0.0004886412141957039,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_D_d09",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 3.304298245743643e-07,
+   "kutle_kg": 0.00046590605264985364,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_D_d10",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 3.304298245743643e-07,
+   "kutle_kg": 0.00046590605264985364,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_D_d11",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 3.304298245743643e-07,
+   "kutle_kg": 0.00046590605264985364,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_D_d12",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 3.304298245743643e-07,
+   "kutle_kg": 0.00046590605264985364,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_D_d13",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 3.304298245743643e-07,
+   "kutle_kg": 0.00046590605264985364,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_D_d14",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 3.304298245743643e-07,
+   "kutle_kg": 0.00046590605264985364,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_D_d15",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 3.304298245743643e-07,
+   "kutle_kg": 0.00046590605264985364,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_D_d16",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 3.304298245743643e-07,
+   "kutle_kg": 0.00046590605264985364,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_D_d17",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 3.304298245743643e-07,
+   "kutle_kg": 0.00046590605264985364,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_D_d18",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 3.304298245743643e-07,
+   "kutle_kg": 0.00046590605264985364,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_D_d19",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 3.304298245743643e-07,
+   "kutle_kg": 0.00046590605264985364,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_D_d20",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 3.304298245743643e-07,
+   "kutle_kg": 0.00046590605264985364,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_D_d21",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 3.304298245743643e-07,
+   "kutle_kg": 0.00046590605264985364,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_D_d22",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 3.304298245743643e-07,
+   "kutle_kg": 0.00046590605264985364,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_D_d23",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 3.304298245743643e-07,
+   "kutle_kg": 0.00046590605264985364,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_D_d24",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 3.304298245743643e-07,
+   "kutle_kg": 0.00046590605264985364,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_D_d25",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 3.304298245743643e-07,
+   "kutle_kg": 0.00046590605264985364,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_D_d26",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 3.304298245743643e-07,
+   "kutle_kg": 0.00046590605264985364,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_D_d27",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 3.304298245743643e-07,
+   "kutle_kg": 0.00046590605264985364,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_D_d28",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 3.304298245743643e-07,
+   "kutle_kg": 0.00046590605264985364,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_D_d29",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 3.304298245743643e-07,
+   "kutle_kg": 0.00046590605264985364,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_D_d30",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 3.304298245743643e-07,
+   "kutle_kg": 0.00046590605264985364,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_D_d31",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 3.304298245743643e-07,
+   "kutle_kg": 0.00046590605264985364,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_D_d32",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 3.755205515591879e-07,
+   "kutle_kg": 0.0005294839776984549,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_D_d33",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 2.8274333882308234e-07,
+   "kutle_kg": 0.0003986681077405461,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_D_d34",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 2.8274333882308234e-07,
+   "kutle_kg": 0.0003986681077405461,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_D_d35",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 2.8274333882308234e-07,
+   "kutle_kg": 0.0003986681077405461,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_D_d36",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 2.8274333882308234e-07,
+   "kutle_kg": 0.0003986681077405461,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_D_d37",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 2.8274333882308234e-07,
+   "kutle_kg": 0.0003986681077405461,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_D_d38",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 2.8274333882308234e-07,
+   "kutle_kg": 0.0003986681077405461,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_D_d39",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 2.8274333882308234e-07,
+   "kutle_kg": 0.0003986681077405461,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
+  },
+  {
+   "ad": "KÜP_SUCUK__helezon_D_d40",
+   "birim": "KASET_KÜP_SUCUK",
+   "grup": "HELEZON_KÜP_SUCUK",
+   "mal": "pom",
+   "hacim_m3": 1.4163237608679956e-07,
+   "kutle_kg": 0.0001997016502823874,
+   "kaynak": "olculdu",
+   "not_": "helezon kanadi dilimi (carpisma icin)"
   },
   {
    "ad": "KÜP_SUCUK__helezon_cekirdek",
@@ -5678,7 +11568,7 @@
   "ARABA": 15.016,
   "HELEZON_HARÇ_1": 0.416,
   "HELEZON_HARÇ_2": 0.416,
-  "HELEZON_KAŞAR_KABI": 0.375,
+  "HELEZON_KAŞAR_KABI": 0.311,
   "HELEZON_KIYMA": 0.513,
   "HELEZON_KUŞBAŞI": 0.448,
   "HELEZON_KÜP_SUCUK": 0.448,
@@ -5688,7 +11578,7 @@
   "KARISTIRICI_KIYMA": 0.621,
   "KARISTIRICI_KUŞBAŞI": 0.592,
   "KARISTIRICI_KÜP_SUCUK": 0.592,
-  "SABIT": 798.42,
+  "SABIT": 321.212,
   "TABLA": 5.111
  }
 }
