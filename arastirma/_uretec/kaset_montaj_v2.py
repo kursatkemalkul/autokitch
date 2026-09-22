@@ -41,6 +41,13 @@ ADIMLAR = [
     ("Topuz mile geçer, setuskur sıkılır",                         ["topuz", "setuskur"],                                 (0, 0, 190),  0.0, False, {}),
     ("Kilit pimi TEĞET geçer (mili delmez)",                       ["kilit_pimi"],                                        (190, 0, 0),  0.0, False, {}),
     ("Kapak gövde ağzına oturur",                                  ["kapak"],                                             (0, 300, 0),  0.0, False, {}),
+    ("Karıştırıcı paletleri alt mile geçer",                       ["karistirici_paleti_A", "karistirici_paleti_B", "karistirici_paleti_C"], (0, 0, -170), 0.0, False, {}),
+    ("Hazne dip rakoru takılır",                                   ["hazne_rakoru"],                                      (0, 0, 120), 0.0, False, {}),
+    ("Pompa gövdesi ön plakaya cıvatalanır",                       ["pompa_govdesi"],                                     (0, 0, 150), 0.0, False, {}),
+    ("Rotor + 3 makara mile geçer",                                ["pompa_rotoru", "makara_A", "makara_B", "makara_C"],  (0, 0, 150), 0.0, False, {}),
+    ("Hortum yatağa yerleşir (emiş · pompa · basma)",              ["pompa_hortumu", "emis_hortumu", "basma_hortumu"],    (0, -120, 90), 0.0, False, {}),
+    ("Pompa kapağı kapanır",                                       ["pompa_kapagi"],                                      (0, 0, 180), 0.0, False, {}),
+    ("Nozzle borusu ön plakaya bağlanır",                          ["nozzle_borusu"],                                     (0, -160, 60), 0.0, False, {}),
     ("Duckbill valf boru ucuna geçer",                             ["duckbill_valf"],                                     (0, -160, 0), 0.0, False, {}),
     ("Taşıma tapası ağıza takılır",                                ["tasima_tapasi"],                                     (0, -200, 0), 0.0, False, {}),
 ]

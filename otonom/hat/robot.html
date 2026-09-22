@@ -2,7 +2,7 @@
 <div class="top"><div class="in"><div class="crumb"><a href="../">Store</a><span>›</span><a href="index.html">HAT</a><span>›</span><a href="makine.html">Makine</a><span>›</span><a href="makine.html">Makine</a><span>›</span><b>ROBOT</b></div><div><a href="../">← Store</a></div></div></div>
 <div class="wrap"><h1>ROBOT — ray + kol + uçlar<span class="tag" style="background:#2456c8">16–20 kg · menzil ≥ 142</span></h1><p class="lead">Tek kol, 300 cm ray, üç uç: tepsi eli, pençe, çatal. Pideye dokunmaz; pide press'ten kutuya kadar tepsidedir. Modelin altındaki çubuktan <b>kesit</b> alabilir (X/Y/Z) ve iki noktaya tıklayıp <b>ölçü</b> çıkarabilirsin.</p>
 <div class="m3">
-  <model-viewer id="mv" loading="eager" src="../hat3d/modul_R.glb?v=13" ios-src="../hat3d/modul_R.usdz?v=13" alt="ROBOT — 2 × kobot"
+  <model-viewer id="mv" loading="eager" src="../hat3d/modul_R.glb?v=14" ios-src="../hat3d/modul_R.usdz?v=14" alt="ROBOT — 2 × kobot"
       camera-controls touch-action="pan-y" shadow-intensity="0.6" exposure="1.0" environment-image="neutral"
       camera-orbit="20deg 80deg 5.2m" camera-target="2.2m 0.6m 0.38m" field-of-view="30deg" min-field-of-view="5deg"
       ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
@@ -25,7 +25,7 @@ const M = model3d({
     return '<b>' + b.ad + '</b><span>' + b.olcu.join(' \u00d7 ') + ' mm \u00b7 <span class="rozet ' + rz[0] + '">' + rz[1] + '</span>' +
       (b.kaynak ? '<br>' + b.kaynak : '') + '</span>'; }
 });
-fetch('../hat3d/durum.json?v=12').then(r => r.json()).then(D => {
+fetch('../hat3d/durum.json?v=13').then(r => r.json()).then(D => {
   const L = D.birim.filter(b => b.modul === MODUL && b.kod.indexOf('_KABIN') < 0); M.veri(L);   // kabin zarfi modele girmiyor, listede de olmasin
   const tek = {}; L.forEach(b => { const k = b.ad + '|' + b.durum; (tek[k] = tek[k] || []).push(b); });
   document.getElementById('secim').innerHTML = Object.values(tek).map(gr => {

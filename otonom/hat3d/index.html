@@ -50,7 +50,7 @@
   <h1>Makine — ana montaj</h1>
   <div class="sub">Hattın tamamı tek modelde. <b>Beyaz</b> olanlar gerçek üretim modeli (parçaları, delikleri, geçmeleri çizilmiş). <b>Şeffaf</b> olanlar henüz yalnız ölçü kutusu — sırayla gerçek modele çevriliyor. Ölçüler <b>HAT&nbsp;v19</b> teknik resminden okunuyor, elle yazılmıyor.</div>
 
-  <model-viewer id="mv" src="hat_v12.glb?v=13" ios-src="hat_v12.usdz?v=13" alt="AUTOKITCH hat ana montajı"
+  <model-viewer id="mv" src="hat_v13.glb?v=14" ios-src="hat_v13.usdz?v=14" alt="AUTOKITCH hat ana montajı"
       camera-controls touch-action="pan-y" shadow-intensity="0.7" exposure="1.05" environment-image="neutral"
       camera-orbit="38deg 72deg 7.5m" camera-target="1.95m 1m -0.4m" field-of-view="30deg" min-field-of-view="8deg" ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
   <button class="ar" id="arbtn">AR'de gör — makineyi dükkâna koy</button>
@@ -83,7 +83,7 @@ const RENK = {GERCEK:'#F5F5F0', GERCEK_PARCA:'#C9D6C0', KUTU:'#6E7681', KATALOG:
 const ETIKET = {GERCEK:'gerçek model', GERCEK_PARCA:'kısmen gerçek', KUTU:'kutu', KATALOG:'katalog'};
 const MODUL_AD = {A:'Modül A · pres kolonu', B:'Modül B · çekmeceler', C:'Modül C · topping (dozaj)', D:'Modül D · fırın kolonu', E:'Modül E · kutulama', '-':'Robotlar (hattın önünde)'};
 
-fetch('durum.json?v=12').then(r => r.json()).then(D => {
+fetch('durum.json?v=13').then(r => r.json()).then(D => {
   const n = D.birim.length, g = D.birim.filter(b => b.durum.startsWith('GERCEK')).length;
   document.getElementById('ilerle_b').textContent = g + ' / ' + n + ' birim gerçek model  ·  %' + Math.round(100*g/n);
   const say = {}; D.birim.forEach(b => say[b.durum] = (say[b.durum]||0)+1);
