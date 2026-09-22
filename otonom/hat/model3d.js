@@ -164,6 +164,36 @@
       if (!eksen) degerYazi.textContent = '—';
     }
 
+    // KESİTİN KOORDİNATI — ölçülerek bulunan tuzak (Kemal: "sadece Z düzgün çalışıyor"):
+    // scene.boundingBox modelin KENDİ (GLB) koordinatını verir, ama kesme düzlemi DÜNYA koordinatında
+    // uygulanır. model-viewer modeli sahneye yerleştirirken kaydırıyor: bu modülde x −1,60 · y −1,52 · z +0,25 m.
+    // Z'de kayma küçük olduğu için kesit az çok tutuyordu, X ve Y'de düzlem modelin tamamen dışında kalıyordu.
+    // Çözüm: sınırları parçaların matrixWorld'ünden hesapla. model-viewer'ın kendi gölge düzlemi ADSIZ mesh,
+    // onu dışarıda bırakmak gerekiyor — yoksa kutu şişiyor.
+    let DBB = null;
+    function dunyaKutu() {
+      if (DBB) return DBB;
+      const sc = SAHNE(mv);
+      if (!sc) return null;
+      sc.updateMatrixWorld(true);
+      const mn = [Infinity, Infinity, Infinity], mx = [-Infinity, -Infinity, -Infinity];
+      let n = 0;
+      sc.traverse(o => {
+        if (!o.isMesh || !o.geometry || !o.name) return;          // adsız = gölge düzlemi vb.
+        if (!o.geometry.boundingBox) o.geometry.computeBoundingBox();
+        const g = o.geometry.boundingBox, e = o.matrixWorld.elements;
+        n++;
+        for (let i = 0; i < 8; i++) {
+          const x = (i & 1) ? g.max.x : g.min.x, y = (i & 2) ? g.max.y : g.min.y, z = (i & 4) ? g.max.z : g.min.z;
+          const w = [e[0] * x + e[4] * y + e[8] * z + e[12], e[1] * x + e[5] * y + e[9] * z + e[13], e[2] * x + e[6] * y + e[10] * z + e[14]];
+          for (let k = 0; k < 3; k++) { if (w[k] < mn[k]) mn[k] = w[k]; if (w[k] > mx[k]) mx[k] = w[k]; }
+        }
+      });
+      if (!n || !isFinite(mn[0])) return null;
+      DBB = { min: { x: mn[0], y: mn[1], z: mn[2] }, max: { x: mx[0], y: mx[1], z: mx[2] } };
+      return DBB;
+    }
+
     // Renderer'ı sahnedeki ilk mesh'in onBeforeRender kancasıyla yakalıyoruz. Kanca ancak bir KARE
     // çizilince çalışır; sekme arka plandayken kare çizilmiyor, o yüzden "bekle ve vazgeç" yanlıştı
     // (kesit "açılamadı" deyip kapanıyordu). Artık kanca R'yi yakaladığı anda bekleyen kesiti kendisi uyguluyor.
@@ -199,10 +229,10 @@
     }
 
     function kesitKur() {
-      const sc = SAHNE(mv);
-      if (!sc || !sc.boundingBox) return;
+      const bb = dunyaKutu();
+      if (!bb) return;
       if (eksen) {
-        const bb = sc.boundingBox, a0 = bb.min[eksen], a1 = bb.max[eksen];
+        const a0 = bb.min[eksen], a1 = bb.max[eksen];
         const v = a0 + (a1 - a0) * (kaydirici.value / 1000);
         duzlem.normal = { x: 0, y: 0, z: 0 };
         duzlem.normal[eksen] = -yon;                       // yon=+1 → düzlemin ALTINDA kalan görünür
