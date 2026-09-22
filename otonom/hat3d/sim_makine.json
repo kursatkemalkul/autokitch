@@ -1,0 +1,141 @@
+{
+ "modul": {
+  "w": 1800.0,
+  "y": 970.0,
+  "d": 830.0,
+  "agz": [
+   10.0,
+   120.0
+  ],
+  "kas": [
+   260.0,
+   620.0
+  ]
+ },
+ "tabla": {
+  "cap": 340.0,
+  "rpm": 35.0,
+  "doz_sn": 10.0,
+  "r_dis": 105.0,
+  "r_ic": 20.0,
+  "t_dis": 2.5,
+  "t_ic": 0.3,
+  "x_doz_hiz": 8.5,
+  "x_gecis_hiz": 200.0,
+  "strok": [
+   220.0,
+   1520.0
+  ],
+  "istasyon_x": 1520.0,
+  "eksen_z": -170.0,
+  "pivot": [
+   900.0,
+   0.0,
+   -170.0
+  ],
+  "baslangic_x": 900.0
+ },
+ "x": {
+  "motor": "NEMA23 kapalı çevrim step 1,2 N·m",
+  "tahrik": "GT3 20 diş kasnak",
+  "mm_tur": 60.0,
+  "cozunurluk_mm": 0.01875,
+  "home_x": 1520.0,
+  "limit": [
+   205.0,
+   1535.0
+  ]
+ },
+ "donus": {
+  "motor": "NEMA23 pancake 57×57×41 · i=1",
+  "tork_nm": 0.9,
+  "gereken_nm": 0.169
+ },
+ "yuvalar": [
+  {
+   "ad": "HARÇ 1",
+   "kod": "HARÇ_1",
+   "urun": "Lahmacun harcı",
+   "x": 397.5,
+   "genislik": 280,
+   "helezon_rpm": 26.0,
+   "doz_g": 110.0,
+   "cad": "harc_cad_v4",
+   "mil_helezon_y": 300.0,
+   "mil_karistirici_y": 455.0,
+   "pompa": true
+  },
+  {
+   "ad": "HARÇ 2",
+   "kod": "HARÇ_2",
+   "urun": "Pizza sosu",
+   "x": 682.5,
+   "genislik": 280,
+   "helezon_rpm": 26.0,
+   "doz_g": 80.0,
+   "cad": "harc_cad_v4",
+   "mil_helezon_y": 300.0,
+   "mil_karistirici_y": 455.0,
+   "pompa": true
+  },
+  {
+   "ad": "KIYMA",
+   "kod": "KIYMA",
+   "urun": "Kıyma",
+   "x": 897.5,
+   "genislik": 140,
+   "helezon_rpm": 14.0,
+   "doz_g": 160.0,
+   "cad": "kiyma_cad_v9",
+   "mil_helezon_y": 320.0,
+   "mil_karistirici_y": 424.0,
+   "pompa": false
+  },
+  {
+   "ad": "KUŞBAŞI",
+   "kod": "KUŞBAŞI",
+   "urun": "Kuşbaşı",
+   "x": 1042.5,
+   "genislik": 140,
+   "helezon_rpm": 13.0,
+   "doz_g": 145.0,
+   "cad": "kusbasi_cad_v8",
+   "mil_helezon_y": 320.0,
+   "mil_karistirici_y": 424.0,
+   "pompa": false
+  },
+  {
+   "ad": "KAŞAR KABI",
+   "kod": "KAŞAR_KABI",
+   "urun": "Kaşar",
+   "x": 1257.5,
+   "genislik": 280,
+   "helezon_rpm": 42.0,
+   "doz_g": 100.0,
+   "cad": "kasar_cad_v14",
+   "mil_helezon_y": 300.0,
+   "mil_karistirici_y": 455.0,
+   "pompa": false
+  },
+  {
+   "ad": "KÜP SUCUK",
+   "kod": "KÜP_SUCUK",
+   "urun": "Küp sucuk",
+   "x": 1472.5,
+   "genislik": 140,
+   "helezon_rpm": 8.0,
+   "doz_g": 70.0,
+   "cad": "sucuk_cad_v7",
+   "mil_helezon_y": 320.0,
+   "mil_karistirici_y": 424.0,
+   "pompa": false
+  }
+ ],
+ "pide": {
+  "yaricap": 140.0,
+  "kenar": 15.0,
+  "ust_y": 120.0,
+  "tepsi_k": 12.0,
+  "hamur_k": 8.0
+ }
+}
