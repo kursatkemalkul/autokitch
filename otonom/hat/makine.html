@@ -5,7 +5,7 @@
 <p class="lead">Hattın tamamı tek modelde. <b>Üstüne gel</b> &mdash; adı çıkar. <b>Çift tıkla</b> &mdash; o istasyonun kendi modeli açılır. Modelin altındaki çubuktan <b>kesit</b> alabilir (X/Y/Z) ve iki noktaya tıklayıp <b>ölçü</b> çıkarabilirsin.</p>
 
 <div class="m3">
-  <model-viewer id="mv" loading="eager" src="../hat3d/hat_v15.glb?v=16" ios-src="../hat3d/hat_v15.usdz?v=16" alt="AUTOKITCH hat üretim modeli"
+  <model-viewer id="mv" loading="eager" src="../hat3d/hat_v16.glb?v=17" ios-src="../hat3d/hat_v16.usdz?v=17" alt="AUTOKITCH hat üretim modeli"
       camera-controls touch-action="pan-y" shadow-intensity="0.6" exposure="1.0" environment-image="neutral"
       camera-orbit="34deg 72deg 7.4m" camera-target="1.95m 1m -0.4m" field-of-view="30deg" min-field-of-view="6deg"
       ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
@@ -57,7 +57,7 @@ const M = model3d({
   }
 });
 
-fetch('../hat3d/durum.json?v=15').then(r => r.json()).then(D => {
+fetch('../hat3d/durum.json?v=16').then(r => r.json()).then(D => {
   M.veri(D.birim);
   const mod = {}; D.birim.forEach(b => (mod[b.modul] = mod[b.modul] || []).push(b));
   document.getElementById('secim').innerHTML = ['B','A','C','D','E','-'].filter(k => mod[k]).map(k => {

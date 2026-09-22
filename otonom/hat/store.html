@@ -2,7 +2,7 @@
 <div class="top"><div class="in"><div class="crumb"><a href="../">Store</a><span>›</span><a href="index.html">HAT</a><span>›</span><a href="makine.html">Makine</a><span>›</span><a href="makine.html">Makine</a><span>›</span><b>1 · STORE</b></div><div><a href="../">← Store</a></div></div></div>
 <div class="wrap"><h1>1 · STORE — soğuk depo<span class="tag" style="background:#5b8def">140 × 84 × 197</span></h1><p class="lead">Dükkânın 3 günlük tüm soğuk stoku tek kasada: hamur topları, içecek, tatlı ve donmuş TOPPING kapları. Hamur mahalle fırınından hazır gelir (220 g), yoğurma yok. Tam çekmeceli kapaksız kasa; robot çekmeceyi pençeyle çeker. Modelin altındaki çubuktan <b>kesit</b> alabilir (X/Y/Z) ve iki noktaya tıklayıp <b>ölçü</b> çıkarabilirsin.</p>
 <div class="m3">
-  <model-viewer id="mv" loading="eager" src="../hat3d/modul_B.glb?v=16" ios-src="../hat3d/modul_B.usdz?v=16" alt="1 · STORE — çekmeceler"
+  <model-viewer id="mv" loading="eager" src="../hat3d/modul_B.glb?v=17" ios-src="../hat3d/modul_B.usdz?v=17" alt="1 · STORE — çekmeceler"
       camera-controls touch-action="pan-y" shadow-intensity="0.6" exposure="1.0" environment-image="neutral"
       camera-orbit="20deg 80deg 4.2m" camera-target="1.25m 0.55m -0.2m" field-of-view="30deg" min-field-of-view="5deg"
       ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
@@ -50,7 +50,7 @@ const M = model3d({
     return '<b>' + b.ad + '</b><span>' + b.olcu.join(' \u00d7 ') + ' mm \u00b7 <span class="rozet ' + rz[0] + '">' + rz[1] + '</span>' +
       (b.kaynak ? '<br>' + b.kaynak : '') + '</span>'; }
 });
-fetch('../hat3d/durum.json?v=15').then(r => r.json()).then(D => {
+fetch('../hat3d/durum.json?v=16').then(r => r.json()).then(D => {
   const L = D.birim.filter(b => b.modul === MODUL && b.kod.indexOf('_KABIN') < 0); M.veri(L);   // kabin zarfi modele girmiyor, listede de olmasin
   const tek = {}; L.forEach(b => { const k = b.ad + '|' + b.durum; (tek[k] = tek[k] || []).push(b); });
   document.getElementById('secim').innerHTML = Object.values(tek).map(gr => {
