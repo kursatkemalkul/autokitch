@@ -1,17 +1,17 @@
-<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>3 · TOPPING — 3B üretim modeli</title><link rel="stylesheet" href="hat.css?v=5">
-<script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script><script src="model3d.js?v=10"></script></head><body>
+<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>3 · TOPPING — 3B üretim modeli</title><link rel="stylesheet" href="hat.css?v=7">
+<script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script><script src="model3d.js?v=14"></script></head><body>
 <div class="top"><div class="in"><div class="crumb"><a href="../">Store</a><span>&rsaquo;</span><a href="index.html">HAT</a><span>&rsaquo;</span><a href="makine.html">Makine</a><span>&rsaquo;</span><b>3 · TOPPING</b></div><div><a href="makine.html">&larr; Makine</a></div></div></div>
 <div class="wrap"><h1>3 &middot; TOPPING &mdash; 3B üretim modeli<span class="tag" style="background:#8e5bd6">1800 &times; 830 &times; 970</span></h1>
-<p class="lead">Dozaj modülünün tamamı &mdash; kabin, yalıtım, 6 kaset yuvası, 12 tahrik, soğutma ve pano. Modelde <b>ön kapak açık</b> gösteriliyor, yoksa kasetler görünmezdi. <b>Üstüne gel</b> &mdash; adı ve ölçüsü çıkar. <b>Kasete tıkla</b> &mdash; o kasetin kendi modeli, AR'si ve montaj animasyonu açılır.</p>
+<p class="lead">Dozaj modülünün tamamı &mdash; kabin, yalıtım, 6 kaset yuvası, 12 tahrik, soğutma ve pano. Modelde <b>ön kapak açık</b> gösteriliyor, yoksa kasetler görünmezdi. <b>Üstüne gel</b> &mdash; adı ve ölçüsü çıkar. <b>Kasete çift tıkla</b> &mdash; o kasetin kendi modeli, AR'si ve montaj animasyonu açılır. Modelin altındaki çubuktan <b>kesit</b> alabilir (X/Y/Z) ve iki noktaya tıklayıp <b>ölçü</b> çıkarabilirsin.</p>
 
 <div class="m3">
-  <model-viewer id="mv" src="../hat3d/modul_C.glb?v=7" ios-src="../hat3d/modul_C.usdz?v=7" alt="TOPPING modülü üretim modeli"
+  <model-viewer id="mv" loading="eager" src="../hat3d/modul_C.glb?v=8" ios-src="../hat3d/modul_C.usdz?v=8" alt="TOPPING modülü üretim modeli"
       camera-controls touch-action="pan-y" shadow-intensity="0.6" exposure="1.0" environment-image="neutral"
       camera-orbit="26deg 74deg 3.1m" camera-target="1.6m 1.52m -0.25m" field-of-view="30deg" min-field-of-view="5deg"
       ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
   <div class="et" id="et"></div>
   <button class="ar" onclick="document.getElementById('mv').activateAR()">AR'de gör</button>
-  <div class="ip">sürükle: döndür &middot; tekerlek: yakınlaştır &middot; üstüne gel: birim &middot; tıkla: aç</div>
+  <div class="ip">sürükle: döndür &middot; tekerlek: yakınlaştır &middot; üstüne gel: birim &middot; çift tıkla: aç &middot; alttan kesit + ölçü</div>
 </div>
 <div class="secim" id="secim"></div>
 <p class="note" id="ozet"></p>
@@ -94,7 +94,7 @@ const M = model3d({
            (b.sayfa ? '<br>tıkla → kendi modeli · AR · animasyon' : (b.kaynak ? '<br>' + b.kaynak : '')) + '</span>';
   }
 });
-fetch('../hat3d/durum.json?v=6').then(r => r.json()).then(D => {
+fetch('../hat3d/durum.json?v=7').then(r => r.json()).then(D => {
   const C = D.birim.filter(b => b.modul === 'C');
   M.veri(C);
   const kaset = C.filter(b => b.kod.indexOf('KASET_') === 0);

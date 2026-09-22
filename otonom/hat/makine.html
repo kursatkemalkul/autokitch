@@ -1,17 +1,17 @@
-<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>MAKİNE — 3B üretim modeli</title><link rel="stylesheet" href="hat.css?v=5">
-<script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script><script src="model3d.js?v=10"></script></head><body>
+<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>MAKİNE — 3B üretim modeli</title><link rel="stylesheet" href="hat.css?v=7">
+<script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script><script src="model3d.js?v=14"></script></head><body>
 <div class="top"><div class="in"><div class="crumb"><a href="../">Store</a><span>&rsaquo;</span><a href="index.html">HAT</a><span>&rsaquo;</span><b>Makine</b></div><div><a href="index.html">&larr; HAT</a></div></div></div>
 <div class="wrap"><h1>MAKİNE &mdash; 3B üretim modeli<span class="tag" style="background:#d94a3a">3900 &times; 830 &times; 2030</span></h1>
-<p class="lead">Hattın tamamı tek modelde. <b>Üstüne gel</b> &mdash; adı çıkar. <b>Tıkla</b> &mdash; o istasyonun kendi modeli açılır.</p>
+<p class="lead">Hattın tamamı tek modelde. <b>Üstüne gel</b> &mdash; adı çıkar. <b>Çift tıkla</b> &mdash; o istasyonun kendi modeli açılır. Modelin altındaki çubuktan <b>kesit</b> alabilir (X/Y/Z) ve iki noktaya tıklayıp <b>ölçü</b> çıkarabilirsin.</p>
 
 <div class="m3">
-  <model-viewer id="mv" src="../hat3d/hat_v6.glb" ios-src="../hat3d/hat_v6.usdz" alt="AUTOKITCH hat üretim modeli"
+  <model-viewer id="mv" loading="eager" src="../hat3d/hat_v7.glb?v=8" ios-src="../hat3d/hat_v7.usdz?v=8" alt="AUTOKITCH hat üretim modeli"
       camera-controls touch-action="pan-y" shadow-intensity="0.6" exposure="1.0" environment-image="neutral"
       camera-orbit="34deg 72deg 7.4m" camera-target="1.95m 1m -0.4m" field-of-view="30deg" min-field-of-view="6deg"
       ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
   <div class="et" id="et"></div>
   <button class="ar" onclick="document.getElementById('mv').activateAR()">AR'de gör</button>
-  <div class="ip">sürükle: döndür &middot; tekerlek: yakınlaştır &middot; üstüne gel: istasyon &middot; tıkla: aç</div>
+  <div class="ip">sürükle: döndür &middot; tekerlek: yakınlaştır &middot; üstüne gel: istasyon &middot; çift tıkla: aç &middot; alttan kesit + ölçü</div>
 </div>
 <div class="secim" id="secim"></div>
 <p class="note" id="ozet"></p>
@@ -57,7 +57,7 @@ const M = model3d({
   }
 });
 
-fetch('../hat3d/durum.json?v=6').then(r => r.json()).then(D => {
+fetch('../hat3d/durum.json?v=7').then(r => r.json()).then(D => {
   M.veri(D.birim);
   const mod = {}; D.birim.forEach(b => (mod[b.modul] = mod[b.modul] || []).push(b));
   document.getElementById('secim').innerHTML = ['B','A','C','D','E','-'].filter(k => mod[k]).map(k => {

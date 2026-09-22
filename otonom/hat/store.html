@@ -1,14 +1,14 @@
-<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>1 · STORE — soğuk depo</title><link rel="stylesheet" href="hat.css?v=5"><script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script><script src="model3d.js?v=10"></script></head><body>
+<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>1 · STORE — soğuk depo</title><link rel="stylesheet" href="hat.css?v=7"><script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script><script src="model3d.js?v=14"></script></head><body>
 <div class="top"><div class="in"><div class="crumb"><a href="../">Store</a><span>›</span><a href="index.html">HAT</a><span>›</span><a href="makine.html">Makine</a><span>›</span><a href="makine.html">Makine</a><span>›</span><b>1 · STORE</b></div><div><a href="../">← Store</a></div></div></div>
-<div class="wrap"><h1>1 · STORE — soğuk depo<span class="tag" style="background:#5b8def">140 × 84 × 197</span></h1><p class="lead">Dükkânın 3 günlük tüm soğuk stoku tek kasada: hamur topları, içecek, tatlı ve donmuş TOPPING kapları. Hamur mahalle fırınından hazır gelir (220 g), yoğurma yok. Tam çekmeceli kapaksız kasa; robot çekmeceyi pençeyle çeker.</p>
+<div class="wrap"><h1>1 · STORE — soğuk depo<span class="tag" style="background:#5b8def">140 × 84 × 197</span></h1><p class="lead">Dükkânın 3 günlük tüm soğuk stoku tek kasada: hamur topları, içecek, tatlı ve donmuş TOPPING kapları. Hamur mahalle fırınından hazır gelir (220 g), yoğurma yok. Tam çekmeceli kapaksız kasa; robot çekmeceyi pençeyle çeker. Modelin altındaki çubuktan <b>kesit</b> alabilir (X/Y/Z) ve iki noktaya tıklayıp <b>ölçü</b> çıkarabilirsin.</p>
 <div class="m3">
-  <model-viewer id="mv" src="../hat3d/modul_B.glb" ios-src="../hat3d/modul_B.usdz" alt="1 · STORE — çekmeceler"
+  <model-viewer id="mv" loading="eager" src="../hat3d/modul_B.glb?v=8" ios-src="../hat3d/modul_B.usdz?v=8" alt="1 · STORE — çekmeceler"
       camera-controls touch-action="pan-y" shadow-intensity="0.6" exposure="1.0" environment-image="neutral"
       camera-orbit="20deg 80deg 4.2m" camera-target="1.25m 0.55m -0.2m" field-of-view="30deg" min-field-of-view="5deg"
       ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
   <div class="et" id="et"></div>
   <button class="ar" onclick="document.getElementById('mv').activateAR()">AR'de gör</button>
-  <div class="ip">sürükle: döndür · üstüne gel: birim · tıkla: aç</div>
+  <div class="ip">sürükle: döndür · üstüne gel: birim · çift tıkla: aç &middot; alttan kesit + ölçü</div>
 </div>
 <div class="secim" id="secim"></div>
 <p class="note" id="ozet"></p>
@@ -50,7 +50,7 @@ const M = model3d({
     return '<b>' + b.ad + '</b><span>' + b.olcu.join(' \u00d7 ') + ' mm \u00b7 <span class="rozet ' + rz[0] + '">' + rz[1] + '</span>' +
       (b.kaynak ? '<br>' + b.kaynak : '') + '</span>'; }
 });
-fetch('../hat3d/durum.json?v=6').then(r => r.json()).then(D => {
+fetch('../hat3d/durum.json?v=7').then(r => r.json()).then(D => {
   const L = D.birim.filter(b => b.modul === MODUL && b.kod.indexOf('_KABIN') < 0); M.veri(L);   // kabin zarfi modele girmiyor, listede de olmasin
   const tek = {}; L.forEach(b => { const k = b.ad + '|' + b.durum; (tek[k] = tek[k] || []).push(b); });
   document.getElementById('secim').innerHTML = Object.values(tek).map(gr => {
