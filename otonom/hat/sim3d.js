@@ -54,11 +54,29 @@ async function kur(kutu) {
   const g1 = new THREE.DirectionalLight(0xffffff, 1.0); g1.position.set(1.4, 2.2, 1.6); sahne.add(g1);
   const g2 = new THREE.DirectionalLight(0xffffff, 0.35); g2.position.set(-1.2, 1.0, -1.4); sahne.add(g2);
 
-  const M = await (await fetch('../hat3d/sim_makine.json?v=1')).json();
+  const M = await (await fetch('../hat3d/sim_makine.json?v=2')).json();
   K.kur(M, izle);
-  const glb = await new GLTFLoader().loadAsync('../hat3d/sim_topping_v1.glb?v=1');
-  const kok = glb.scene, G = {};
-  kok.traverse(o => { if (o.name && !o.name.includes('.')) G[o.name] = o; });
+
+  // ASIL ÜRETİM MODELİ — sayfanın gösterdiği dosyanın ta kendisi (aynı URL → tarayıcı önbelleğinden
+  // gelir, ikinci indirme yok). Kemal: "neden başka bir model geliyor, direkt modeli çalıştır."
+  // Ayrı/kaba sim modeli KALDIRILDI. hat_montaj_v17 hareket eden paketleri AYRI DÜĞÜM yazıyor:
+  //     TOPPING_MODUL__celik__ARABA · TOPPING_MODUL__sac__TABLA · KASET_KIYMA__pom__HELEZON
+  // Malzeme adları değişmedi, o yüzden model-viewer sayfası bundan etkilenmiyor.
+  const glb = await new GLTFLoader().loadAsync('../hat3d/modul_C.glb?v=18');
+  const kok = glb.scene;
+  const OFS = M.ofset;                                  // JSON ölçüleri modül-yerel, GLB makine koordinatında
+  const mak = p => [p[0] + OFS[0], p[1] + OFS[1], p[2] + OFS[2]];
+
+  const G = {};
+  const agalar = []; kok.traverse(o => { if (o.isMesh) agalar.push(o); });
+  for (const o of agalar) {
+    const s = (o.name || '').split('__');
+    if (s.length < 3) continue;                         // 2 parçalı ad = sabit gövde, etiket vb.
+    const g = s[2];
+    const ad = (g === 'HELEZON' || g === 'KARISTIRICI') ? g + '_' + s[0].replace(/^KASET_/, '') : g;
+    (G[ad] = G[ad] || new THREE.Group()).add(o);        // .add eski ebeveynden çıkarır; ağlar dünya koordinatında
+  }
+  if (!G.ARABA || !G.TABLA) throw new Error('modul_C.glb hareketli paket taşımıyor — hat_montaj_v17 ile üretilmeli');
 
   function pivotla(obj, p) {
     const t = new THREE.Group();
@@ -67,15 +85,27 @@ async function kur(kutu) {
     kok.add(t); t.add(obj); return t;
   }
   const ARABA = new THREE.Group(); kok.add(ARABA);
-  const P = M.tabla.pivot;
-  const TABLA = pivotla(G.TABLA, P), TEPSI = pivotla(G.TEPSI, P), PIDE = pivotla(G.PIDE, P);
+  const P = mak(M.tabla.pivot);
+
+  // TEPSİ + PİDE modülün parçası değil (robot getirir) — ölçüleri sim_makine.json'dan, uydurma yok:
+  // tabla Ø340 · tepsi 12 mm · hamur 8 mm · pide üst yüzü y=120 (ağız zonunun tavanı).
+  function disk(r, kal, ym, renk, ruf) {
+    const m = new THREE.Mesh(new THREE.CylinderGeometry(r * MM, r * MM, kal * MM, 72),
+                             new THREE.MeshStandardMaterial({ color: renk, roughness: ruf, metalness: ruf < 0.5 ? 0.75 : 0.05 }));
+    m.position.set(P[0] * MM, ym * MM, P[2] * MM); kok.add(m); return m;
+  }
+  const yPide = M.pide.ust_y + OFS[1], yTepsi = yPide - M.pide.hamur_k;
+  const tepsiAg = disk(M.tabla.cap / 2, M.pide.tepsi_k, yTepsi - M.pide.tepsi_k / 2, 0xb9c0c8, 0.35);
+  const pideAg  = disk(M.pide.yaricap, M.pide.hamur_k, yPide - M.pide.hamur_k / 2, 0xe8d6ad, 0.9);
+
+  const TABLA = pivotla(G.TABLA, P), TEPSI = pivotla(tepsiAg, P), PIDE = pivotla(pideAg, P);
   ARABA.add(TABLA, TEPSI, PIDE, G.ARABA);
 
   const MILLER = {};
   for (const y of M.yuvalar)
     for (const [ad, kot] of [['HELEZON', y.mil_helezon_y], ['KARISTIRICI', y.mil_karistirici_y]]) {
       const g = G[ad + '_' + y.kod];
-      if (g) MILLER[ad + '_' + y.kod] = pivotla(g, [y.x, kot, 0]);
+      if (g) MILLER[ad + '_' + y.kod] = pivotla(g, mak([y.x, kot, 0]));
     }
   sahne.add(kok);
 
@@ -86,14 +116,14 @@ async function kur(kutu) {
   izGeo.setAttribute('color', new THREE.BufferAttribute(new Float32Array(IZ_N * 3), 3));
   izGeo.setDrawRange(0, 0);
   const iz = new THREE.Points(izGeo, new THREE.PointsMaterial({ size: 0.009, vertexColors: true, sizeAttenuation: true }));
-  iz.position.copy(G.PIDE.position);                    // pide ile birlikte döner
+  iz.position.copy(pideAg.position);                    // pide ile birlikte döner
   PIDE.add(iz);
   let izAdet = 0;
   const izTemizle = () => { izAdet = 0; izGeo.setDrawRange(0, 0); };
   function izEkle(r, aciDer, renk) {
     if (izAdet >= IZ_N) return;
     const a = THREE.MathUtils.degToRad(-aciDer);        // pide döndüğü için iz ters yönde birikir
-    const py = (M.pide.ust_y + 1.5) * MM;
+    const py = (M.pide.ust_y + OFS[1] + 1.5) * MM;
     const p = izGeo.attributes.position.array, c = izGeo.attributes.color.array, i = izAdet * 3;
     p[i] = (P[0] + r * Math.cos(a)) * MM; p[i + 1] = py; p[i + 2] = (P[2] + r * Math.sin(a)) * MM;
     const col = new THREE.Color(renk); c[i] = col.r; c[i + 1] = col.g; c[i + 2] = col.b;
@@ -107,9 +137,9 @@ async function kur(kutu) {
   ip.visible = false; kok.add(ip);
 
   // ---------- kamera ----------
-  const TBY = M.pide.ust_y * MM, TBZ = M.tabla.eksen_z * MM;
-  kon.target.set(M.tabla.baslangic_x * MM, TBY + 0.20, TBZ - 0.10);
-  kam.position.set(M.tabla.baslangic_x * MM + 0.75, TBY + 0.95, TBZ + 2.30);
+  const TBY = (M.pide.ust_y + OFS[1]) * MM, TBZ = M.tabla.eksen_z * MM, TBX = (M.tabla.baslangic_x + OFS[0]) * MM;
+  kon.target.set(TBX, TBY + 0.20, TBZ - 0.10);
+  kam.position.set(TBX + 0.75, TBY + 0.95, TBZ + 2.30);
   let TAKIP = true;
   function boyut() {
     const r = yer.getBoundingClientRect();
@@ -197,14 +227,14 @@ async function kur(kutu) {
     // dozlanırken: memeden inen ip + pide üstünde biriken iz
     ip.visible = dozlaniyor;
     if (dozlaniyor) {
-      const ust = 252 * MM, alt = (M.pide.ust_y + 2) * MM;
-      ip.position.set(y.x * MM, (ust + alt) / 2, M.tabla.eksen_z * MM + M.tabla.r_ic * MM);
+      const ust = (252 + OFS[1]) * MM, alt = (M.pide.ust_y + OFS[1] + 2) * MM;
+      ip.position.set((y.x + OFS[0]) * MM, (ust + alt) / 2, M.tabla.eksen_z * MM + M.tabla.r_ic * MM);
       ip.scale.y = (ust - alt) / 1;
       izEkle(r, K.EKSEN.TABLA, dozRenk);
     }
 
     if (TAKIP) {
-      const hx = K.EKSEN.X * MM, dx = hx - kon.target.x;
+      const hx = (K.EKSEN.X + OFS[0]) * MM, dx = hx - kon.target.x;
       if (Math.abs(dx) > 1e-5) { const u = Math.min(1, dt * 6); kon.target.x += dx * u; kam.position.x += dx * u; }
     }
     q('.simp-d').innerHTML =
