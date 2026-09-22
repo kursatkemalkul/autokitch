@@ -47,22 +47,28 @@ YOGUNLUK = {
 # ---------------------------------------------------------------- katalog kutleleri (kg)
 # Not: bunlar parca SECILINCE gercek katalog degeriyle degistirilecek. Simdilik sinif tipik degeri.
 KATALOG_KUTLE = [
-    # (ad basi,                 kutle kg, kaynak)
-    ("motor_",                  1.20, "katalog"),      # NEMA23 kapali cevrim step ~1,2 kg
-    ("reduktor_",               1.10, "VARSAYIM"),     # planet i=10 NEMA23 sinifi
-    ("donus_motoru",            0.70, "VARSAYIM"),     # NEMA23 pancake 41 mm
-    ("kizak_blogu_",            0.17, "katalog"),      # HGH15CA ~0,17 kg
-    ("ray_x_",                  0.00, "olculdu"),      # ray celik, hacimden dogru cikar
-    ("doner_yatak",             2.50, "VARSAYIM"),     # Ø340 ince kesit yatak
-    ("x_motoru",                1.20, "katalog"),
+    # (ad basi,                 kutle kg, kaynak, not)
+    ("kizak_blogu_",            0.18, "katalog",
+     "HIWIN HGH15CA · Linear_Guideway-E-1.pdf s.41: W34 H28 L61,4 · agirlik 0,18 kg · C 14,7 kN C0 23,47 kN"),
+    ("motor_",                  1.20, "katalog",
+     "NEMA23 kapali cevrim step 57x57x76 · 1,2 N·m sinifi"),
+    ("donus_motoru",            0.50, "katalog sinifi",
+     "NEMA23 pancake 57x57x41 · katalogda 0,6 N·m / 0,88 A · kutle gövde boyundan (57x57x56 = 0,7 kg) olceklendi"),
+    ("doner_yatak",             2.50, "hesaplandi",
+     "ic Ø70 dis Ø160 H20 celik halka: pi/4*(0,160^2-0,070^2)*0,020*7850 = 2,55 kg, yatak yollari dusulunce ~2,5"),
+    ("reduktor_",               1.10, "VARSAYIM",
+     "planet redüktör i=10 NEMA23 sinifi — PLF60/PLE60 katalogu ile DOGRULANACAK"),
+    ("x_motoru",                1.20, "katalog",
+     "NEMA23 kapali cevrim step 1,2 N·m"),
 ]
 
 
 def katalog_kutle(ad):
-    for bas, kg, kaynak in KATALOG_KUTLE:
+    for k in KATALOG_KUTLE:
+        bas, kg, kaynak, aciklama = k
         if ad.startswith(bas) and kg > 0:
-            return kg, kaynak
-    return None, None
+            return kg, kaynak, aciklama
+    return None, None, None
 
 
 # ---------------------------------------------------------------- hareketli paket ayrimi (hat_montaj_v18 ile AYNI)
@@ -103,11 +109,11 @@ def kur():
         V, F = ag(sh)
         if not len(F): continue
         h = hacim(sh)
-        kg, kaynak = katalog_kutle(p["ad"])
+        kg, kaynak, aciklama = katalog_kutle(p["ad"])
         if kg is None:
-            kg, kaynak = h * YOGUNLUK.get(p["mal"], 7900.0), "olculdu"
+            kg, kaynak, aciklama = h * YOGUNLUK.get(p["mal"], 7900.0), "olculdu", "CAD hacmi x %s yogunlugu" % p["mal"]
         parcalar.append(dict(ad=p["ad"], birim="TOPPING_MODUL", grup=grup_modul(p["ad"]),
-                             mal=p["mal"], hacim_m3=h, kutle_kg=kg, kaynak=kaynak, V=V, F=F))
+                             mal=p["mal"], hacim_m3=h, kutle_kg=kg, kaynak=kaynak, not_=aciklama, V=V, F=F))
 
     # ---- 2) KASETLER — her biri kendi yuvasina tasinir
     import importlib
@@ -127,7 +133,7 @@ def kur():
             h = hacim(sh)
             parcalar.append(dict(ad="%s__%s" % (k, p["ad"]), birim="KASET_" + k, grup=grup,
                                  mal=p["mal"], hacim_m3=h, kutle_kg=h * YOGUNLUK.get(p["mal"], 7900.0),
-                                 kaynak="olculdu", V=V, F=F))
+                                 kaynak="olculdu", not_="CAD hacmi x malzeme yogunlugu", V=V, F=F))
             n += 1
         print("  kaset %-12s %3d parca" % (ad, n))
 
