@@ -90,7 +90,7 @@ export function dxHesap(r) {
 export async function dozla(yuvaKodu) {
   const y = MAKINE.yuvalar.find(v => v.kod === yuvaKodu);
   const T = MAKINE.tabla;
-  IZ({ satir: 'dozla', mesaj: `▶ ${y.urun} dozu başlıyor — ${y.doz_g} g`, urun: y.urun, faz: 'basla' });
+  IZ({ satir: 'dozla', mesaj: `▶ ${y.urun} dozu başlıyor — ${y.doz_g} g`, urun: y.urun, kod: y.kod, faz: 'basla' });
 
   // 1) araba dozaj başlangıcına: ağız pidenin DIŞ kenarında olacak
   const x0 = y.x - dxHesap(T.r_dis);
@@ -102,7 +102,7 @@ export async function dozla(yuvaKodu) {
   if (!y.pompa) motorAc('KARISTIRICI_' + y.kod, 4);
 
   // 3) DOZ: tabla sabit hızda dönerken araba yasaya göre içeri kayar → ağız pide üstünde spiral çizer
-  IZ({ satir: 'dozSpiral', mesaj: `dozaj — tabla ${T.rpm} dev/dk, araba ${T.x_doz_hiz} mm/s içeri`, faz: 'doz' });
+  IZ({ satir: 'dozSpiral', mesaj: `dozaj — tabla ${T.rpm} dev/dk, araba ${T.x_doz_hiz} mm/s içeri`, kod: y.kod, faz: 'doz' });
   await spiral(y);
 
   // 4) mil durur; helezonda çeyrek tur GERİ (damlamayı keser), pompada duckbill kendisi kapatır
@@ -147,7 +147,7 @@ export async function urunYap(adimlar) {
   const t0 = performance.now();
   IZ({ satir: 'urunYap', mesaj: `═ ÜRETİM BAŞLADI — ${adimlar.length} doz`, faz: 'basla' });
 
-  IZ({ satir: 'tepsiAl', mesaj: 'robot tepsiyi istasyona bırakıyor (x = ' + MAKINE.x.home_x + ')' });
+  IZ({ satir: 'tepsiAl', mesaj: 'robot BOŞ tepsiyi istasyona bırakıyor (x = ' + MAKINE.x.home_x + ')', yeniTepsi: true });
   await homeAra();
   await bekle(0.6);
 

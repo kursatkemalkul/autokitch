@@ -1,10 +1,11 @@
-<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>3 · TOPPING — 3B üretim modeli</title><link rel="stylesheet" href="hat.css?v=9">
-<script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script><script src="model3d.js?v=16"></script></head><body>
+<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>3 · TOPPING — 3B üretim modeli</title><link rel="stylesheet" href="hat.css?v=10">
+<script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script>
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script><script src="model3d.js?v=16"></script></head><body>
 <div class="top"><div class="in"><div class="crumb"><a href="../">Store</a><span>&rsaquo;</span><a href="index.html">HAT</a><span>&rsaquo;</span><a href="makine.html">Makine</a><span>&rsaquo;</span><b>3 · TOPPING</b></div><div><a href="makine.html">&larr; Makine</a></div></div></div>
 <div class="wrap"><h1>3 &middot; TOPPING &mdash; 3B üretim modeli<span class="tag" style="background:#8e5bd6">1800 &times; 830 &times; 970</span></h1>
 <p class="lead">Dozaj modülünün tamamı &mdash; kabin, yalıtım, 6 kaset yuvası, 12 tahrik, soğutma ve pano. Modelde <b>ön kapak açık</b> gösteriliyor, yoksa kasetler görünmezdi. <b>Üstüne gel</b> &mdash; adı ve ölçüsü çıkar. <b>Kasete çift tıkla</b> &mdash; o kasetin kendi modeli, AR'si ve montaj animasyonu açılır. Modelin altındaki çubuktan <b>kesit</b> alabilir (X/Y/Z) ve iki noktaya tıklayıp <b>ölçü</b> çıkarabilirsin.</p>
 
-<p class="lead" style="margin:-6px 0 14px"><a href="sim.html" style="display:inline-block;padding:10px 16px;border-radius:10px;background:#2f7d4f;color:#fff;font-weight:700;text-decoration:none">▶ CANLI SİMÜLASYON — ürün seç, makineyi çalıştır, kodu izle</a> <span style="color:#8a9199;font-size:13.5px">&nbsp; tepsi tablada dönerken araba kasetin altında kayıyor; sağdaki panelde makineyi yöneten kodun hangi satırının çalıştığı görünüyor.</span></p>
+<p class="lead" style="margin:-6px 0 14px"><button class="simbtn" id="simac">▶ CANLI SİMÜLASYON</button> <span style="color:#8a9199;font-size:13.5px">&nbsp; sayfadan çıkmadan açılır: ürünü seç, makine çalışsın; sağdaki panelde hangi kod satırının çalıştığı, hangi motorun yandığı ve eksen değerleri görünür. Kasetin helezonu, karıştırıcısı ve pompası gerçekten döner; dozlanan ürün pidenin üstünde birikir.</span></p>
 <div class="m3">
   <model-viewer id="mv" loading="eager" src="../hat3d/modul_C.glb?v=17" ios-src="../hat3d/modul_C.usdz?v=17" alt="TOPPING modülü üretim modeli"
       camera-controls touch-action="pan-y" shadow-intensity="0.6" exposure="1.0" environment-image="neutral"
@@ -151,4 +152,11 @@ fetch('../hat3d/durum.json?v=16').then(r => r.json()).then(D => {
     'Kabin, tahrik grupları, soğutma ve pano hâlâ ölçü kutusu. Ölçü kaynağı: ' + D.hat.pafta + '.';
 });
 
+
+// ── canlı simülasyon: aynı kutunun içinde açılır, sağdan panel kayar (sim3d.js)
+document.getElementById('simac').onclick = async function () {
+  const m = await import('./sim3d.js?v=2');
+  await m.ac(document.querySelector('.m3'), this);
+  this.textContent = document.querySelector('.m3').classList.contains('sim-on') ? '■ SİMÜLASYONU KAPAT' : '▶ CANLI SİMÜLASYON';
+};
 </script></body></html>

@@ -81,3 +81,37 @@ figure{margin:12px 0}figure img{width:100%;display:block;border:1px solid var(--
   .m3ar .ip{font-size:11px}
   .m3 model-viewer{height:calc(100vh - 260px);min-height:380px}
 }
+
+/* ---- sayfa içi canlı simülasyon (sim3d.js) ---- */
+.m3.sim-on model-viewer,.m3.sim-on .et,.m3.sim-on .ar{display:none}
+.m3.sim-on .m3ar{display:none}
+.m3 .simv{display:none;position:relative;width:100%;height:calc(100vh - 208px);min-height:460px;background:#15181d}
+.m3 .simv canvas{display:block}
+.m3 .simp{display:none;position:absolute;right:0;top:0;bottom:0;width:430px;max-width:92vw;z-index:6;
+          background:rgba(20,24,30,.97);border-left:1px solid #2a3039;backdrop-filter:blur(6px)}
+.m3 .simp-b{position:absolute;inset:0;display:flex;flex-direction:column;overflow:hidden}
+.m3 .simp h4{margin:0;padding:12px 16px 9px;color:#8d97a4;font-size:11px;letter-spacing:.07em;text-transform:uppercase;font-weight:600;border-bottom:1px solid #222831}
+.m3 .simp-u{display:flex;flex-wrap:wrap;gap:6px;padding:11px 16px}
+.m3 .simp-u button{flex:1 1 calc(50% - 3px);padding:8px 6px;border:1px solid #2e3541;border-radius:8px;background:#1f242d;color:#c3cad3;font:600 12.5px/1.2 inherit;cursor:pointer}
+.m3 .simp-u button:hover{border-color:#4a5563;color:#eef2f6}
+.m3 .simp-u button.on{border-color:#4f86ff;background:#26344d;color:#dce8ff}
+.m3 .simp-c{display:flex;gap:7px;padding:0 16px 11px}
+.m3 .simp-c button{flex:1;padding:10px;border:0;border-radius:8px;font:700 13px/1 inherit;cursor:pointer}
+.m3 .simp-c .bas{background:#2f7d4f;color:#fff}.m3 .simp-c .bas:disabled{background:#2a3038;color:#69727e;cursor:default}
+.m3 .simp-c .dur{background:#7d2f2f;color:#fff}
+.m3 .simp-d{padding:0 16px 10px;color:#9aa4b2;font-size:12px;font-variant-numeric:tabular-nums}
+.m3 .simp-d .sat{display:flex;justify-content:space-between;border-bottom:1px solid #1e242c;padding:3px 0}
+.m3 .simp-d .sat b{color:#e6ecf3;font-weight:600}
+.m3 .simp-m{display:flex;flex-wrap:wrap;gap:4px;padding:0 16px 11px}
+.m3 .simp-m span{padding:2px 7px;border-radius:5px;background:#1f242d;color:#69727e;font-size:10.5px;border:1px solid #262c36}
+.m3 .simp-m span.on{background:#1b3a28;color:#6ee7a0;border-color:#2f6b45}
+.m3 .simp-k{flex:1;overflow:auto;background:#0f1319;border-top:1px solid #222831;padding:7px 0 30px}
+.m3 .simp-k pre{margin:0;font:11px/1.5 "SF Mono",Menlo,Consolas,monospace;color:#7d8794;white-space:pre}
+.m3 .simp-k .l{display:block;padding:0 16px}
+.m3 .simp-k .l.ak{background:#1d2f4d;color:#cfe0ff}
+.m3 .simp-k .l.ak::before{content:"▶ ";color:#4f86ff;margin-left:-14px}
+.m3 .simp-l{height:118px;overflow:auto;border-top:1px solid #222831;padding:7px 16px;font:11px/1.65 "SF Mono",Menlo,Consolas,monospace;color:#8d97a4}
+.m3 .simp-l div{white-space:pre-wrap}.m3 .simp-l .y{color:#6ee7a0}.m3 .simp-l .b{color:#dce8ff}
+.simbtn{display:inline-block;padding:11px 18px;border:0;border-radius:10px;background:#2f7d4f;color:#fff;font:700 14px/1 inherit;cursor:pointer}
+.simbtn:disabled{background:#4a5260;cursor:default}
+@media (max-width:760px){.m3 .simp{width:100%;max-width:100%}.m3 .simv{height:calc(100vh - 260px)}}
