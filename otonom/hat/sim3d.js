@@ -7,7 +7,7 @@
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
-import * as K from './makine_kodu.js?v=3';
+import * as K from './makine_kodu.js?v=4';
 
 const MM = 0.001;
 const URUN_RENK = {                                   // dozlanan ürünün pide üstündeki rengi
@@ -54,7 +54,7 @@ async function kur(kutu) {
   const g1 = new THREE.DirectionalLight(0xffffff, 1.0); g1.position.set(1.4, 2.2, 1.6); sahne.add(g1);
   const g2 = new THREE.DirectionalLight(0xffffff, 0.35); g2.position.set(-1.2, 1.0, -1.4); sahne.add(g2);
 
-  const M = await (await fetch('../hat3d/sim_makine.json?v=2')).json();
+  const M = await (await fetch('../hat3d/sim_makine.json?v=3')).json();
   K.kur(M, izle);
 
   // ASIL ÜRETİM MODELİ — sayfanın gösterdiği dosyanın ta kendisi (aynı URL → tarayıcı önbelleğinden
@@ -62,17 +62,20 @@ async function kur(kutu) {
   // Ayrı/kaba sim modeli KALDIRILDI. hat_montaj_v17 hareket eden paketleri AYRI DÜĞÜM yazıyor:
   //     TOPPING_MODUL__celik__ARABA · TOPPING_MODUL__sac__TABLA · KASET_KIYMA__pom__HELEZON
   // Malzeme adları değişmedi, o yüzden model-viewer sayfası bundan etkilenmiyor.
-  const glb = await new GLTFLoader().loadAsync('../hat3d/modul_C.glb?v=18');
+  const glb = await new GLTFLoader().loadAsync('../hat3d/modul_C.glb?v=19');
   const kok = glb.scene;
   const OFS = M.ofset;                                  // JSON ölçüleri modül-yerel, GLB makine koordinatında
   const mak = p => [p[0] + OFS[0], p[1] + OFS[1], p[2] + OFS[2]];
 
+  const HAREKETLI = new Set(['ARABA', 'TABLA', 'HELEZON', 'KARISTIRICI']);
   const G = {};
   const agalar = []; kok.traverse(o => { if (o.isMesh) agalar.push(o); });
   for (const o of agalar) {
     const s = (o.name || '').split('__');
     if (s.length < 3) continue;                         // 2 parçalı ad = sabit gövde, etiket vb.
     const g = s[2];
+    if (!HAREKETLI.has(g)) continue;                    // tanımadığın eki SABİT say (yoksa etiket düğümü
+                                                        //  sahte gruba düşüp sahneden kayboluyordu)
     const ad = (g === 'HELEZON' || g === 'KARISTIRICI') ? g + '_' + s[0].replace(/^KASET_/, '') : g;
     (G[ad] = G[ad] || new THREE.Group()).add(o);        // .add eski ebeveynden çıkarır; ağlar dünya koordinatında
   }
@@ -89,10 +92,13 @@ async function kur(kutu) {
 
   // TEPSİ + PİDE modülün parçası değil (robot getirir) — ölçüleri sim_makine.json'dan, uydurma yok:
   // tabla Ø340 · tepsi 12 mm · hamur 8 mm · pide üst yüzü y=120 (ağız zonunun tavanı).
+  // DİKKAT: pivotla() nesnenin position'ını EZİYOR (GLB ağları 0'da durur, dünya koordinatı geometrinin
+  // içindedir). O yüzden diskin yerini de GEOMETRİYE gömüyoruz — yoksa pide tablanın altına düşer.
   function disk(r, kal, ym, renk, ruf) {
-    const m = new THREE.Mesh(new THREE.CylinderGeometry(r * MM, r * MM, kal * MM, 72),
-                             new THREE.MeshStandardMaterial({ color: renk, roughness: ruf, metalness: ruf < 0.5 ? 0.75 : 0.05 }));
-    m.position.set(P[0] * MM, ym * MM, P[2] * MM); kok.add(m); return m;
+    const g = new THREE.CylinderGeometry(r * MM, r * MM, kal * MM, 72);
+    g.translate(P[0] * MM, ym * MM, P[2] * MM);
+    const m = new THREE.Mesh(g, new THREE.MeshStandardMaterial({ color: renk, roughness: ruf, metalness: ruf < 0.5 ? 0.75 : 0.05 }));
+    kok.add(m); return m;
   }
   const yPide = M.pide.ust_y + OFS[1], yTepsi = yPide - M.pide.hamur_k;
   const tepsiAg = disk(M.tabla.cap / 2, M.pide.tepsi_k, yTepsi - M.pide.tepsi_k / 2, 0xb9c0c8, 0.35);
@@ -101,40 +107,102 @@ async function kur(kutu) {
   const TABLA = pivotla(G.TABLA, P), TEPSI = pivotla(tepsiAg, P), PIDE = pivotla(pideAg, P);
   ARABA.add(TABLA, TEPSI, PIDE, G.ARABA);
 
+  // MOTOR ADI -> döndürülecek grup. Pompalı kasette ÜST mil (YC) pompa rotoru, ALT mil (CY) hazne paleti;
+  // vidalı kasette tam tersi. Eskiden ikisi de "helezon = dozaj" sayılıyordu → pompa hiç dönmüyor, hazne
+  // paleti doz hızıyla dönüyordu (Kemal: "sos kasetlerinin parçaları eksenleri kayık, bir yerlerde dönüyor").
   const MILLER = {};
-  for (const y of M.yuvalar)
-    for (const [ad, kot] of [['HELEZON', y.mil_helezon_y], ['KARISTIRICI', y.mil_karistirici_y]]) {
-      const g = G[ad + '_' + y.kod];
-      if (g) MILLER[ad + '_' + y.kod] = pivotla(g, mak([y.x, kot, 0]));
+  for (const y of M.yuvalar) {
+    const KOT = { HELEZON: y.mil_helezon_y, KARISTIRICI: y.mil_karistirici_y };
+    for (const [gAd, motor] of [[y.grup_doz, (y.pompa ? 'POMPA_' : 'HELEZON_') + y.kod],
+                                [y.grup_karis, 'KARISTIRICI_' + y.kod]]) {
+      const g = G[gAd + '_' + y.kod];
+      if (g) MILLER[motor] = pivotla(g, mak([y.x, KOT[gAd], 0]));
     }
+  }
   sahne.add(kok);
 
-  // ---------- dozlanan ürün: pidenin üstünde biriken spiral iz ----------
-  const IZ_N = 6000;
-  const izGeo = new THREE.BufferGeometry();
-  izGeo.setAttribute('position', new THREE.BufferAttribute(new Float32Array(IZ_N * 3), 3));
-  izGeo.setAttribute('color', new THREE.BufferAttribute(new Float32Array(IZ_N * 3), 3));
-  izGeo.setDrawRange(0, 0);
-  const iz = new THREE.Points(izGeo, new THREE.PointsMaterial({ size: 0.009, vertexColors: true, sizeAttenuation: true }));
-  iz.position.copy(pideAg.position);                    // pide ile birlikte döner
-  PIDE.add(iz);
-  let izAdet = 0;
-  const izTemizle = () => { izAdet = 0; izGeo.setDrawRange(0, 0); };
-  function izEkle(r, aciDer, renk) {
-    if (izAdet >= IZ_N) return;
-    const a = THREE.MathUtils.degToRad(-aciDer);        // pide döndüğü için iz ters yönde birikir
-    const py = (M.pide.ust_y + OFS[1] + 1.5) * MM;
-    const p = izGeo.attributes.position.array, c = izGeo.attributes.color.array, i = izAdet * 3;
-    p[i] = (P[0] + r * Math.cos(a)) * MM; p[i + 1] = py; p[i + 2] = (P[2] + r * Math.sin(a)) * MM;
-    const col = new THREE.Color(renk); c[i] = col.r; c[i + 1] = col.g; c[i + 2] = col.b;
-    izAdet++; izGeo.setDrawRange(0, izAdet);
-    izGeo.attributes.position.needsUpdate = izGeo.attributes.color.needsUpdate = true;
+  // ---------- GERÇEKÇİ DÖKÜLME ----------
+  // Ürün ağızdan çıkar, SERBEST DÜŞER, pideye çarpınca durur ve orada YIĞILIR. Uydurma sayı yok:
+  //   çıkış hızı = debi / kesit  (sim_makine.json · cikis_hiz — sos 52 · kıyma 19 · kuşbaşı 7 mm/s)
+  //   parça boyu = köprüleme kuralı D >= 3 x parça -> parça = D/3  (kuşbaşı 17,3 · küp sucuk 14,0 mm)
+  //   düşme yolu = ağız y 160 -> pide üstü y 120 = 40 mm,  yerçekimi 9810 mm/s²
+  const YER = 9810, YOGUNLUK = 1.05e-3;                 // mm/s² · g/mm³ [V]
+  const UCAN_N = 1200, YIGIN_N = 14000;
+  const HB_A = 72, HB_R = 20;                           // yığın yükseklik haritası: açı x yarıçap gözü
+  const hMap = new Float32Array(HB_A * HB_R);
+  const DR = M.pide.yaricap / HB_R, DA = 2 * Math.PI / HB_A;
+
+  function parcaKur(n) {
+    const g = new THREE.BoxGeometry(1, 0.62, 1);        // yassı tane: ürün pideye yayılır, bilye gibi durmaz
+    const im = new THREE.InstancedMesh(g, new THREE.MeshStandardMaterial({ roughness: 0.82, metalness: 0.02 }), n);
+    im.instanceMatrix.setUsage(THREE.DynamicDrawUsage);
+    im.frustumCulled = false; im.count = 0;
+    return im;
+  }
+  const ucanAg = parcaKur(UCAN_N); kok.add(ucanAg);     // havadakiler — dünya uzayında düşer
+  const yiginAg = parcaKur(YIGIN_N); PIDE.add(yiginAg); // pideye konanlar — pide ile birlikte döner
+  const ucanlar = [];
+  let yiginAdet = 0, birikim = 0;
+  const MT = new THREE.Matrix4(), MQ = new THREE.Quaternion(), MV = new THREE.Vector3(), MS = new THREE.Vector3();
+  const YEKS = new THREE.Vector3(0, 1, 0), RENK = new THREE.Color();
+
+  function dokumTemizle() {
+    ucanlar.length = 0; yiginAdet = 0; birikim = 0;
+    hMap.fill(0); ucanAg.count = 0; yiginAg.count = 0;
   }
 
-  // ---------- dozlanırken memeden inen ürün ipi ----------
-  const ipGeo = new THREE.CylinderGeometry(0.008, 0.008, 1, 10);
-  const ip = new THREE.Mesh(ipGeo, new THREE.MeshStandardMaterial({ color: 0xf2d98a, roughness: 0.85 }));
-  ip.visible = false; kok.add(ip);
+  function tane(m, i, x, y, z, d, aci, renk) {
+    MV.set(x, y, z); MQ.setFromAxisAngle(YEKS, aci); MS.set(d, d, d);
+    m.setMatrixAt(i, MT.compose(MV, MQ, MS));
+    m.setColorAt(i, RENK.setHex(renk));
+  }
+
+  function dokumKare(dt, y) {
+    // --- ağızdan yeni parça çıkar (kütle korunur: g/s bölü parça kütlesi = parça/s)
+    if (y) {
+      const d = y.parca_mm, mp = d * d * d * 0.62 * YOGUNLUK;        // g/parça
+      birikim += (y.doz_g / M.tabla.doz_sn) * dt / mp;
+      const rA = Math.max(1, y.cikis_cap / 2 - d / 2);
+      while (birikim >= 1 && ucanlar.length < UCAN_N) {
+        birikim--;
+        const t = Math.random() * 2 * Math.PI, rr = rA * Math.sqrt(Math.random());
+        ucanlar.push({ x: y.x + OFS[0] + rr * Math.cos(t), y: y.agiz_y + OFS[1], z: y.agiz_z + rr * Math.sin(t),
+                       vx: (Math.random() - 0.5) * 6, vy: -y.cikis_hiz, vz: (Math.random() - 0.5) * 6,
+                       d: d * (0.8 + 0.4 * Math.random()), a: Math.random() * 6.28, renk: dozRenk });
+      }
+      if (birikim > 60) birikim = 60;                                 // kare atlarsa kuyruk şişmesin
+    }
+    // --- düşüş + pideye konma
+    const cx = K.EKSEN.X + OFS[0];
+    const ac = THREE.MathUtils.degToRad(K.EKSEN.TABLA), ct = Math.cos(ac), st = Math.sin(ac);
+    for (let i = ucanlar.length - 1; i >= 0; i--) {
+      const p = ucanlar[i];
+      p.vy -= YER * dt; p.x += p.vx * dt; p.y += p.vy * dt; p.z += p.vz * dt;
+      const ox = p.x - cx, oz = p.z - P[2];
+      const u = ox * ct - oz * st, w = ox * st + oz * ct;             // pide yereli (yığın pideye sabit)
+      const rr = Math.hypot(u, w);
+      const ri = Math.min(HB_R - 1, Math.floor(rr / DR));
+      const ai = ((Math.floor((Math.atan2(w, u) + Math.PI) / DA) % HB_A) + HB_A) % HB_A;
+      const gz = ai * HB_R + ri;
+      const yuzey = rr <= M.pide.yaricap ? yPide + hMap[gz] : -1e6;   // pidenin dışına düşen kaybolur
+      if (p.y - p.d / 2 > yuzey) continue;
+      ucanlar.splice(i, 1);
+      if (rr > M.pide.yaricap || yiginAdet >= YIGIN_N) continue;
+      tane(yiginAg, yiginAdet, u * MM, (yuzey + p.d * 0.31 - P[1]) * MM, w * MM, p.d * MM, p.a, p.renk);
+      yiginAdet++; yiginAg.count = yiginAdet;
+      yiginAg.instanceMatrix.needsUpdate = true;
+      if (yiginAg.instanceColor) yiginAg.instanceColor.needsUpdate = true;
+      hMap[gz] = Math.min(28, hMap[gz] + (p.d * p.d * p.d * 0.62) / (DA * (ri * DR + DR / 2) * DR));
+    }
+    // --- havadakileri çiz
+    for (let i = 0; i < ucanlar.length; i++) {
+      const p = ucanlar[i];
+      tane(ucanAg, i, p.x * MM, p.y * MM, p.z * MM, p.d * MM, p.a, p.renk);
+    }
+    ucanAg.count = ucanlar.length;
+    ucanAg.instanceMatrix.needsUpdate = true;
+    if (ucanAg.instanceColor) ucanAg.instanceColor.needsUpdate = true;
+  }
 
   // ---------- kamera ----------
   const TBY = (M.pide.ust_y + OFS[1]) * MM, TBZ = M.tabla.eksen_z * MM, TBX = (M.tabla.baslangic_x + OFS[0]) * MM;
@@ -149,7 +217,7 @@ async function kur(kutu) {
   addEventListener('resize', boyut);
 
   // ---------- kod paneli ----------
-  const kaynak = await (await fetch('./makine_kodu.js?v=3')).text();
+  const kaynak = await (await fetch('./makine_kodu.js?v=4')).text();
   const sat = kaynak.split('\n'), ISARET = {};
   sat.forEach((s, i) => { const m = s.match(/\/\*@(\w+)\*\//); if (m) ISARET[m[1]] = i; });
   q('.simp-k pre').innerHTML = sat.map((s, i) =>
@@ -159,7 +227,11 @@ async function kur(kutu) {
     const i = ISARET[ad]; if (i === undefined) return;
     if (sonS !== null) q(`.simp-k [data-i="${sonS}"]`)?.classList.remove('ak');
     const e = q(`.simp-k [data-i="${i + 1}"]`) || q(`.simp-k [data-i="${i}"]`);
-    if (e) { e.classList.add('ak'); sonS = +e.dataset.i; e.scrollIntoView({ block: 'center', behavior: 'smooth' }); }
+    if (e) {                                            // DİKKAT: scrollIntoView SAYFANIN kendisini kaydırıyordu
+      e.classList.add('ak'); sonS = +e.dataset.i;       // (Kemal: "beni sürekli sayfada aşağı kaydırıyor").
+      const kk = q('.simp-k');                          // yalnız kod kutusunun kendi kaydırmasını oynat.
+      kk.scrollTop = e.offsetTop - kk.clientHeight / 2 + e.offsetHeight / 2;
+    }
   }
 
   let dozRenk = 0xf2d98a, dozlaniyor = false;
@@ -168,11 +240,11 @@ async function kur(kutu) {
     if (o.satir) vurgula(o.satir);
     if (o.kod) dozRenk = URUN_RENK[o.kod] || 0xf2d98a;
     if (o.faz === 'doz') {
-      dozlaniyor = true; ip.material.color.setHex(dozRenk);
+      dozlaniyor = true;
       dozT0 = performance.now(); dozY = M.yuvalar.find(v => v.kod === o.kod) || null;
     }
     if (o.faz === 'bitti' || o.faz === 'basla') dozlaniyor = false;
-    if (o.yeniTepsi) { izTemizle(); dozY = null; }
+    if (o.yeniTepsi) { dokumTemizle(); dozY = null; }
     if (o.mesaj) log(o.mesaj, o.faz === 'bitti' ? 'y' : (o.faz === 'basla' ? 'b' : ''));
   }
 
@@ -190,7 +262,7 @@ async function kur(kutu) {
   q('.simp-u button').click();
   q('.bas').onclick = async () => {
     if (!secili.length) return;
-    q('.bas').disabled = true; izTemizle();
+    q('.bas').disabled = true; dokumTemizle();
     try { await K.urunYap(secili); } finally { q('.bas').disabled = false; }
   };
   q('.dur').onclick = () => { K.durdur(); log('DUR basıldı', 'b'); };
@@ -221,17 +293,13 @@ async function kur(kutu) {
       if (m) MILLER[ad].rotation.z = THREE.MathUtils.degToRad(m.aci || 0);
     }
 
-    const y = M.yuvalar.reduce((p, v) => Math.abs(v.x - K.EKSEN.X) < Math.abs(p.x - K.EKSEN.X) ? v : p);
+    // Dökülen yuvayı MAKİNE KODU söyler. Eskiden "en yakın yuva" alınıyordu; araba dozaj boyunca kaydığı
+    // için yarı yolda komşu kaset daha yakın kalıyor ve ürün ÖBÜR kasetten dökülüyordu
+    // (Kemal: "yan yana olan iki kasetten biri bitince öbüründen döküldü").
+    const dok = K.DOZ_YUVA ? M.yuvalar.find(v => v.kod === K.DOZ_YUVA) : null;
+    const y = dok || M.yuvalar.reduce((p, v) => Math.abs(v.x - K.EKSEN.X) < Math.abs(p.x - K.EKSEN.X) ? v : p);
     const r = Math.hypot(y.x - K.EKSEN.X, M.tabla.r_ic);
-
-    // dozlanırken: memeden inen ip + pide üstünde biriken iz
-    ip.visible = dozlaniyor;
-    if (dozlaniyor) {
-      const ust = (252 + OFS[1]) * MM, alt = (M.pide.ust_y + OFS[1] + 2) * MM;
-      ip.position.set((y.x + OFS[0]) * MM, (ust + alt) / 2, M.tabla.eksen_z * MM + M.tabla.r_ic * MM);
-      ip.scale.y = (ust - alt) / 1;
-      izEkle(r, K.EKSEN.TABLA, dozRenk);
-    }
+    dokumKare(dt, dok);
 
     if (TAKIP) {
       const hx = (K.EKSEN.X + OFS[0]) * MM, dx = hx - kon.target.x;

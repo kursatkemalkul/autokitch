@@ -26,7 +26,7 @@
    220.0,
    1520.0
   ],
-  "istasyon_x": 1520.0,
+  "istasyon_x": 220.0,
   "eksen_z": -170.0,
   "pivot": [
    900.0,
@@ -40,7 +40,7 @@
   "tahrik": "GT3 20 diş kasnak",
   "mm_tur": 60.0,
   "cozunurluk_mm": 0.01875,
-  "home_x": 1520.0,
+  "home_x": 220.0,
   "limit": [
    205.0,
    1535.0
@@ -63,7 +63,14 @@
    "cad": "harc_cad_v4",
    "mil_helezon_y": 300.0,
    "mil_karistirici_y": 455.0,
-   "pompa": true
+   "pompa": true,
+   "grup_doz": "KARISTIRICI",
+   "grup_karis": "HELEZON",
+   "agiz_y": 160.0,
+   "agiz_z": -150.0,
+   "cikis_cap": 16.0,
+   "cikis_hiz": 52.10434085621491,
+   "parca_mm": 5.333333333333333
   },
   {
    "ad": "HARÇ 2",
@@ -76,7 +83,14 @@
    "cad": "harc_cad_v4",
    "mil_helezon_y": 300.0,
    "mil_karistirici_y": 455.0,
-   "pompa": true
+   "pompa": true,
+   "grup_doz": "KARISTIRICI",
+   "grup_karis": "HELEZON",
+   "agiz_y": 160.0,
+   "agiz_z": -150.0,
+   "cikis_cap": 16.0,
+   "cikis_hiz": 37.89406607724721,
+   "parca_mm": 5.333333333333333
   },
   {
    "ad": "KIYMA",
@@ -89,7 +103,14 @@
    "cad": "kiyma_cad_v9",
    "mil_helezon_y": 320.0,
    "mil_karistirici_y": 424.0,
-   "pompa": false
+   "pompa": false,
+   "grup_doz": "HELEZON",
+   "grup_karis": "KARISTIRICI",
+   "agiz_y": 160.0,
+   "agiz_z": -149.5,
+   "cikis_cap": 32.0,
+   "cikis_hiz": 18.947033038623605,
+   "parca_mm": 10.666666666666666
   },
   {
    "ad": "KUŞBAŞI",
@@ -102,7 +123,14 @@
    "cad": "kusbasi_cad_v8",
    "mil_helezon_y": 320.0,
    "mil_karistirici_y": 424.0,
-   "pompa": false
+   "pompa": false,
+   "grup_doz": "HELEZON",
+   "grup_karis": "KARISTIRICI",
+   "agiz_y": 160.0,
+   "agiz_z": -152.5,
+   "cikis_cap": 52.0,
+   "cikis_hiz": 6.502532048758397,
+   "parca_mm": 17.333333333333332
   },
   {
    "ad": "KAŞAR KABI",
@@ -115,7 +143,14 @@
    "cad": "kasar_cad_v14",
    "mil_helezon_y": 300.0,
    "mil_karistirici_y": 455.0,
-   "pompa": false
+   "pompa": false,
+   "grup_doz": "HELEZON",
+   "grup_karis": "KARISTIRICI",
+   "agiz_y": 160.0,
+   "agiz_z": -150.0,
+   "cikis_cap": 44.0,
+   "cikis_hiz": 6.263481996239208,
+   "parca_mm": 14.666666666666666
   },
   {
    "ad": "KÜP SUCUK",
@@ -128,7 +163,14 @@
    "cad": "sucuk_cad_v7",
    "mil_helezon_y": 320.0,
    "mil_karistirici_y": 424.0,
-   "pompa": false
+   "pompa": false,
+   "grup_doz": "HELEZON",
+   "grup_karis": "KARISTIRICI",
+   "agiz_y": 160.0,
+   "agiz_z": -152.5,
+   "cikis_cap": 42.0,
+   "cikis_hiz": 4.811944898698058,
+   "parca_mm": 14.0
   }
  ],
  "ofset": [

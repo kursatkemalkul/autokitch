@@ -11,6 +11,7 @@
 export const EKSEN = { X: 0, TABLA: 0 };          // canlı eksen değerleri (X mm · TABLA derece)
 export const MOTOR = {};                           // çalışan motorlar: {ad: {rpm, baslangic}}
 export let MAKINE = null;                          // sim_makine.json
+export let DOZ_YUVA = null;                        // o an dozlayan yuva (yoksa null)
 let IZ = () => {};                                 // panel geri çağırması
 let DUR = false;
 
@@ -99,17 +100,23 @@ export async function dozla(yuvaKodu) {
   // 2) tabla dönmeye başlar, kasetin mili dönmeye başlar
   motorAc('TABLA', T.rpm);
   motorAc(y.pompa ? 'POMPA_' + y.kod : 'HELEZON_' + y.kod, y.helezon_rpm);
-  if (!y.pompa) motorAc('KARISTIRICI_' + y.kod, 4);
+  // Karıştırıcı POMPALI kasette de döner: harç/sos çöker ve ayrışır, dozdan önce karışması gerekiyor.
+  // (Pompalı kasette bu mil ALTTAKİ hazne paletidir, vidalıda ÜSTTEKİ karıştırıcıdır — sim_makine.json
+  //  her yuva için grup_doz / grup_karis alanlarıyla hangisinin hangisi olduğunu söylüyor.)
+  motorAc('KARISTIRICI_' + y.kod, 4);
 
   // 3) DOZ: tabla sabit hızda dönerken araba yasaya göre içeri kayar → ağız pide üstünde spiral çizer
   IZ({ satir: 'dozSpiral', mesaj: `dozaj — tabla ${T.rpm} dev/dk, araba ${T.x_doz_hiz} mm/s içeri`, kod: y.kod, faz: 'doz' });
+  DOZ_YUVA = y.kod;                                  // sahne ürünü BU yuvadan döksün, en yakından değil
   await spiral(y);
 
   // 4) mil durur; helezonda çeyrek tur GERİ (damlamayı keser), pompada duckbill kendisi kapatır
   motorKapat(y.pompa ? 'POMPA_' + y.kod : 'HELEZON_' + y.kod);
-  if (!y.pompa) { motorKapat('KARISTIRICI_' + y.kod); IZ({ satir: 'geriAl', mesaj: 'helezon ¼ tur GERİ — meme damlamasın' }); await bekle(0.35); }
+  motorKapat('KARISTIRICI_' + y.kod);
+  if (!y.pompa) { IZ({ satir: 'geriAl', mesaj: 'helezon ¼ tur GERİ — meme damlamasın' }); await bekle(0.35); }
   else IZ({ satir: 'geriAl', mesaj: 'pompa durdu — duckbill valf kendi elastikliğiyle kapandı' });
   motorKapat('TABLA');
+  DOZ_YUVA = null;
   IZ({ satir: 'dozla', mesaj: `✔ ${y.urun} tamam · ${y.doz_g} g`, faz: 'bitti' });
 }
 
@@ -136,7 +143,7 @@ export const RECETE = {
   kasarli:   { ad: 'Kaşarlı pide',    adim: ['KAŞAR_KABI'] },
   kiymali:   { ad: 'Kıymalı pide',    adim: ['KIYMA'] },
   kusbasili: { ad: 'Kuşbaşılı pide',  adim: ['KUŞBAŞI'] },
-  sucuklu:   { ad: 'Sucuklu pide',    adim: ['KÜP_SUCUK', 'KAŞAR_KABI'] },
+  sucuklu:   { ad: 'Sucuklu pide',    adim: ['KAŞAR_KABI', 'KÜP_SUCUK'] },   // kaşar ALTA: eriyip sucuğu tutar
   lahmacun:  { ad: 'Lahmacun',        adim: ['HARÇ_1'] },
   pizza:     { ad: 'Pizza',           adim: ['HARÇ_2', 'KAŞAR_KABI', 'KÜP_SUCUK'] },
 };
