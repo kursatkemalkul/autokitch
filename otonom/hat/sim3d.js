@@ -7,7 +7,7 @@
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
-import * as K from './makine_kodu.js?v=5';
+import * as K from './makine_kodu.js?v=6';
 
 const MM = 0.001;
 const URUN_RENK = {                                   // dozlanan ürünün pide üstündeki rengi
@@ -62,7 +62,7 @@ async function kur(kutu) {
   // Ayrı/kaba sim modeli KALDIRILDI. hat_montaj_v17 hareket eden paketleri AYRI DÜĞÜM yazıyor:
   //     TOPPING_MODUL__celik__ARABA · TOPPING_MODUL__sac__TABLA · KASET_KIYMA__pom__HELEZON
   // Malzeme adları değişmedi, o yüzden model-viewer sayfası bundan etkilenmiyor.
-  const glb = await new GLTFLoader().loadAsync('../hat3d/modul_C.glb?v=29');
+  const glb = await new GLTFLoader().loadAsync('../hat3d/modul_C.glb?v=30');
   const kok = glb.scene;
   const OFS = M.ofset;                                  // JSON ölçüleri modül-yerel, GLB makine koordinatında
   const mak = p => [p[0] + OFS[0], p[1] + OFS[1], p[2] + OFS[2]];
@@ -226,7 +226,7 @@ async function kur(kutu) {
   addEventListener('resize', boyut);
 
   // ---------- kod paneli ----------
-  const kaynak = await (await fetch('./makine_kodu.js?v=5')).text();
+  const kaynak = await (await fetch('./makine_kodu.js?v=6')).text();
   const sat = kaynak.split('\n'), ISARET = {};
   sat.forEach((s, i) => { const m = s.match(/\/\*@(\w+)\*\//); if (m) ISARET[m[1]] = i; });
   q('.simp-k pre').innerHTML = sat.map((s, i) =>

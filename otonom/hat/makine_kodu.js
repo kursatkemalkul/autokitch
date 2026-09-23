@@ -165,6 +165,11 @@ export async function aktar() {
   await eksenGit(MAKINE.tabla.aktarma_x, 'gecis');
   IZ({ satir: 'aktar', mesaj: 'pide banda geçti — tabla boş (sensör doğruluyor)', aktarildi: true });
   await bekle(0.5);
+  // Tabla BOŞTA HEP AÇICININ ALTINDA bekler: robotun hamur topunu bırakacağı yer orası,
+  // açma da orada olduğu için sonraki çevrim beklemeden başlar (Kemal: "tabla her zaman
+  // presin altında beklesin, işi bitince oraya dönsün").
+  IZ({ satir: 'aktar', mesaj: 'tabla açıcının altına dönüyor — park' });
+  await eksenGit(MAKINE.tabla.acici_x, 'gecis');
 }
 
 export const RECETE = {
