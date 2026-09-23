@@ -54,7 +54,7 @@ async function kur(kutu) {
   const g1 = new THREE.DirectionalLight(0xffffff, 1.0); g1.position.set(1.4, 2.2, 1.6); sahne.add(g1);
   const g2 = new THREE.DirectionalLight(0xffffff, 0.35); g2.position.set(-1.2, 1.0, -1.4); sahne.add(g2);
 
-  const M = await (await fetch('../hat3d/sim_makine.json?v=5')).json();
+  const M = await (await fetch('../hat3d/sim_makine.json?v=6')).json();
   K.kur(M, izle);
 
   // ASIL ÜRETİM MODELİ — sayfanın gösterdiği dosyanın ta kendisi (aynı URL → tarayıcı önbelleğinden
@@ -62,7 +62,7 @@ async function kur(kutu) {
   // Ayrı/kaba sim modeli KALDIRILDI. hat_montaj_v17 hareket eden paketleri AYRI DÜĞÜM yazıyor:
   //     TOPPING_MODUL__celik__ARABA · TOPPING_MODUL__sac__TABLA · KASET_KIYMA__pom__HELEZON
   // Malzeme adları değişmedi, o yüzden model-viewer sayfası bundan etkilenmiyor.
-  const glb = await new GLTFLoader().loadAsync('../hat3d/modul_C.glb?v=31');
+  const glb = await new GLTFLoader().loadAsync('../hat3d/modul_C.glb?v=32');
   const kok = glb.scene;
   const OFS = M.ofset;                                  // JSON ölçüleri modül-yerel, GLB makine koordinatında
   const mak = p => [p[0] + OFS[0], p[1] + OFS[1], p[2] + OFS[2]];
