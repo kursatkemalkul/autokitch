@@ -139,6 +139,34 @@ async function spiral(y) {
 //  4 · ÜRÜN — reçete sırayla dozlanır
 // ──────────────────────────────────────────────────────────────────────────────────────────────
 
+/*@ac*/
+// AÇICI — konili döner kafa. Hamuru EZEREK değil YUVARLAYARAK açar; bu yüzden 40-160 N
+// yeter (düz pres 3-12 kN isterdi ve o yük tablanın yatağına binerdi).
+// Açma anında TABLA KİLİTLENİR: konilerin artık torku 3-5 N·m, tabla motorunun tutma
+// torku 0,9 N·m — motor tutamaz, ayar bileziğindeki burca pim girer.
+export async function ac() {
+  const A = MAKINE.acici;
+  await eksenGit(MAKINE.tabla.acici_x, 'gecis');
+  IZ({ satir: 'ac', mesaj: 'tabla kilitlendi · açıcı iniyor', faz: 'acma' });
+  await bekle(A.in_sn);
+  motorAc('ACICI', 60);
+  IZ({ satir: 'ac', mesaj: `koniler dönüyor — hamur açılıyor (${A.ac_sn} s)`, acildi: true });
+  await bekle(A.ac_sn);
+  motorKapat('ACICI');
+  IZ({ satir: 'ac', mesaj: 'hamur açıldı Ø280 · kafa kalkıyor, kilit çözüldü' });
+  await bekle(A.kalk_sn);
+}
+
+/*@aktar*/
+// BANDA AKTARMA — tepsi yok, pideyi köprü alır. Araba sağa gider, pidenin ön kenarı
+// köprüye çıkar, fırın bandı çeker. Ek motor ve sensör yok.
+export async function aktar() {
+  IZ({ satir: 'aktar', mesaj: 'pide fırın bandına aktarılıyor', faz: 'aktar' });
+  await eksenGit(MAKINE.tabla.aktarma_x, 'gecis');
+  IZ({ satir: 'aktar', mesaj: 'pide banda geçti — tabla boş (sensör doğruluyor)', aktarildi: true });
+  await bekle(0.5);
+}
+
 export const RECETE = {
   kasarli:   { ad: 'Kaşarlı pide',    adim: ['KAŞAR_KABI'] },
   kiymali:   { ad: 'Kıymalı pide',    adim: ['KIYMA'] },
@@ -154,17 +182,18 @@ export async function urunYap(adimlar) {
   const t0 = performance.now();
   IZ({ satir: 'urunYap', mesaj: `═ ÜRETİM BAŞLADI — ${adimlar.length} doz`, faz: 'basla' });
 
-  IZ({ satir: 'tepsiAl', mesaj: 'robot BOŞ tepsiyi istasyona bırakıyor (x = ' + MAKINE.x.home_x + ')', yeniTepsi: true });
+  // v20 · TEPSİ YOK. Robot hamur TOPUNU doğrudan çalışma diskine bırakır; açıcı orada açar.
+  IZ({ satir: 'hamurAl', mesaj: 'robot hamur TOPUNU açıcıya bırakıyor (x = ' + MAKINE.tabla.acici_x + ')', yeniTepsi: true });
   await homeAra();
-  await bekle(0.6);
+  await bekle(0.4);
+  await ac();                                        // konili açıcı hamuru Ø280'e açar
 
   for (const kod of adimlar) {
     if (DUR) break;
     await dozla(kod);                                // ← her doz için aynı yordam
   }
 
-  IZ({ satir: 'tepsiVer', mesaj: 'robot tepsiyi alıyor — fırına' });
-  await eksenGit(MAKINE.tabla.istasyon_x, 'gecis');
+  await aktar();                                     // pide fırın bandına
   const sn = (performance.now() - t0) / 1000;
   IZ({ satir: 'urunYap', mesaj: `═ BİTTİ — ${sn.toFixed(1)} s · saatte ${Math.round(3600 / sn)} tepsi`, faz: 'bitti', sure: sn });
   return sn;

@@ -23,10 +23,12 @@
   "x_doz_hiz": 8.5,
   "x_gecis_hiz": 200.0,
   "strok": [
-   220.0,
-   1520.0
+   -350.0,
+   1627.0
   ],
-  "istasyon_x": 220.0,
+  "istasyon_x": -350.0,
+  "acici_x": -350.0,
+  "aktarma_x": 1627.0,
   "eksen_z": -170.0,
   "pivot": [
    900.0,
@@ -40,10 +42,10 @@
   "tahrik": "GT3 20 diş kasnak",
   "mm_tur": 60.0,
   "cozunurluk_mm": 0.01875,
-  "home_x": 220.0,
+  "home_x": -350.0,
   "limit": [
-   205.0,
-   1535.0
+   -380.0,
+   1660.0
   ]
  },
  "donus": {
@@ -180,9 +182,26 @@
  ],
  "pide": {
   "yaricap": 140.0,
-  "kenar": 15.0,
-  "ust_y": 120.0,
-  "tepsi_k": 12.0,
-  "hamur_k": 8.0
+  "kenar": 0.0,
+  "disk_ust": 108.0,
+  "ust_y": 116.0,
+  "tepsi_k": 0.0,
+  "hamur_k": 8.0,
+  "top_r": 49.0
+ },
+ "acici": {
+  "x": -350.0,
+  "park_y": 1200.0,
+  "calisma_y": 1128.0,
+  "in_sn": 0.8,
+  "ac_sn": 3.0,
+  "kalk_sn": 0.6,
+  "not_": "konili doner acici · olculer VARSAYIM, tedarikciden gelecek"
+ },
+ "aktarma": {
+  "x": 1627.0,
+  "kopru_x": 1700.0,
+  "kopru_y": 108.3,
+  "bant_hiz": 120.0
  }
 }

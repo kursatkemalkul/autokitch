@@ -200,7 +200,12 @@ eski = '''        ekle("dis_yan_" + s, kut(x, x + SAC, SAC, Y - SAC, 0, -D), "sa
 yeni = '''        # v20: tabla iki uctan da modulden CIKIYOR — solda aciciya (modul A),
         # sagda firin bandina. Iki yan sacta da tabla yuksekliginde yarik var.
         _ys = kut(x, x + SAC, SAC, Y - SAC, 0, -D)
-        _ys = _ys.cut(kut(x - 1.0, x + SAC + 1.0, 92.0, 130.0, -170.0 - 190.0, -170.0 + 190.0))
+        # DUZELTME: once iki ayri delik acilmisti (tabla 92-130 ve mekanizma 1-66);
+        # arada 66-92 DOLU kaliyordu ve tam oraya DONER YATAK (58,5-80,8) ile
+        # AYAR BILEZIGI (80,8-86) denk geliyordu — tabla soldaki aciciya GECEMIYORDU.
+        # Artik modulun alt bandi iki uctan da TEK PARCA acik: araba plakasi,
+        # yatak, bilezik, gobek, tabla ve disk serbest gecer.
+        _ys = _ys.cut(kut(x - 1.0, x + SAC + 1.0, 1.0, 132.0, -510.0, 0.0))
         ekle("dis_yan_" + s, _ys, "sac",'''
 assert eski in s, "yan sac bulunamadi"
 s = s.replace(eski, yeni, 1)
