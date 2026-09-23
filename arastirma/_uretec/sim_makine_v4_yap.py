@@ -52,5 +52,13 @@ yeni = ("""        # v4 · TEPSI YOK. Hamur dogrudan CALISMA DISKININ ustunde (d
 assert eski in s
 s = s.replace(eski, yeni, 1)
 
+
+eski = """    Xc, ZT = 900.0, TC.ZK[0] + 30.0"""
+yeni = """    # v4: tabla artik PARK KONUMUNDA ciziliyor (acicinin alti). Sayiyi burada
+    # tekrar yazmiyoruz — CAD'in cizdigi yerden okunuyor ki ikisi ayrilmasin.
+    Xc, ZT = TC.XC_TABLA, TC.ZK[0] + 30.0"""
+assert eski in s
+s = s.replace(eski, yeni, 1)
+
 io.open(os.path.join(U, "sim_makine_v4.py"), "w", encoding="utf-8").write(s)
 print("sim_makine_v4.py yazildi · hamur topu yaricapi %.1f mm" % RTOP)

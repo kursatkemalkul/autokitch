@@ -62,7 +62,9 @@ def kur():
             AGZ_Z[p["ad"][len("dozaj_kovani_"):]] = (b.zmin + b.zmax) / 2.0
     AGIZ_Y = TC.AGZ[1] + H.DUSME                                  # kovanin alt ucu = urunun serbest kaldigi kot
     TB = H.S["tabla"]
-    Xc, ZT = 900.0, TC.ZK[0] + 30.0
+    # v4: tabla artik PARK KONUMUNDA ciziliyor (acicinin alti). Sayiyi burada
+    # tekrar yazmiyoruz — CAD'in cizdigi yerden okunuyor ki ikisi ayrilmasin.
+    Xc, ZT = TC.XC_TABLA, TC.ZK[0] + 30.0
     ofs = modul_ofseti()
 
     # --- MAKINE TANIMI (kontrol yazilimi bunu okur) ---

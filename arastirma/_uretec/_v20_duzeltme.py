@@ -67,27 +67,11 @@ EK.append((
 # ------------------------------------------------------------------ 4) X TAHRIKI SOL UCA TASINDI
 EK.append((
     '''io.open(os.path.join(U, "topping_cad_v20.py"), "w", encoding="utf-8").write(s)''',
-    '''# ---- X TAHRIKI SOL UCA TASINIYOR
-# Motor ve kaidesi x 1690-1780'de, yani ARTIK URUN CIKISININ tam ortasindaydi.
-# Aktarma koprusu ve askilari oraya giriyor. Cikis sag uctan oldugu icin tahrik
-# sol uca aliniyor; avara kasnak da saga geciyor. Kayis duzeni degismiyor.
-_D2 = [
- ('silz(1735.0, 31.0, 9.55, -364.5, -355.5).cut(silz(1735.0, 31.0, 4.1, -366.0, -354.0))',
-  'silz(-465.0, 31.0, 9.55, -364.5, -355.5).cut(silz(-465.0, 31.0, 4.1, -366.0, -354.0))'),
- ('.translate(cq.Vector(1735.0, 41.5, -360.0))',
-  '.translate(cq.Vector(-465.0, 41.5, -360.0))'),
- ('kut(1690.0, 1780.0, 20.5, 38.0, -400.0, -320.0).cut(kut(1700.0, 1770.0, 19.5, 39.0, -392.0, -328.0))',
-  'kut(-510.0, -420.0, 20.5, 38.0, -400.0, -320.0).cut(kut(-500.0, -430.0, 19.5, 39.0, -392.0, -328.0))'),
- ('silz(35.0, 31.0, 9.55, -364.5, -355.5)',
-  'silz(1750.0, 31.0, 9.55, -364.5, -355.5)'),
- ('kut(20.0, 44.0, 20.5, 45.0, -385.0, -335.0).cut(silz(35.0, 31.0, 12.0, -372.0, -348.0))',
-  'kut(1735.0, 1759.0, 20.5, 45.0, -385.0, -335.0).cut(silz(1750.0, 31.0, 12.0, -372.0, -348.0))'),
- ('kut(52.0, 1686.0, 26.5, 35.5, zc_ - 1.5, zc_ + 1.5)',
-  'kut(-448.0, 1733.0, 26.5, 35.5, zc_ - 1.5, zc_ + 1.5)'),
-]
-for _e, _y in _D2:
-    assert _e in s, "X TAHRIK BULUNAMADI -> " + _e[:60]
-    s = s.replace(_e, _y, 1)
+    '''# ---- X TAHRIKI SAG UCTA KALIYOR
+# Once sol uca tasinmisti (sag uc urun cikisi oldugu icin). Ama TABLANIN PARK YERI
+# de sol uc — araba orada duruyor ve kayis koluyla motora carpiyor (olculdu: 12.619
+# + 1.286 + 425 mm3). Tahrik yerinde birakildi; aktarma koprusu motorun z bandina
+# (-400..-320) girmiyor (kopru -315..-25), cakisma yok.
 
 # ---- YAN SACLARDA MEKANIZMA GECISI
 # Ray, tekne, kirisler ve enerji zinciri artik iki yandan da disari cikiyor.

@@ -156,14 +156,13 @@ D.append((
               "pide tabladan buna çıkar, fırın bandı buradan çeker. Üst yüzü çalışma diskinin "
               "0,3 mm üstünde. FIRIN BANDI ŞARTI: bıçak burunlu, yüzeyi y 108,3 ± 1, burnu "
               "modül yüzünden en çok 5 mm içeride [bant seçilince doğrulanacak]"))
-    # ASKI: kopru ASAGIDAN degil YUKARIDAN tasinir. Alttan destek koyacak yer yok —
-    # araba oradan geciyor. Askilar tablanin Ø340 yolunun disinda (z -345 ve z +5).
-    for i_, zb in enumerate((-350.0, 5.0)):
-        ekle("kopru_askisi_%d" % i_, kut(AKT_X0 + 10.0, AKT_X1 - 15.0, AKT_Y, 245.0, zb, zb + 10.0)
-             .union(kut(AKT_X0, AKT_X1 - 15.0, AKT_Y, AKT_Y + 25.0, zb, zb + 10.0)), "sac",
-             bom=("Köprü askısı", 2, "304 10 mm lama · üstten iç kabuğa cıvatalı",
-                  "köprüyü YUKARIDAN taşır; altta destek koyacak yer yok, araba oradan geçiyor. "
-                  "Tablanın Ø340 yolunun dışında (z -350 ve z +5)") if i_ == 0 else None)
+    # KOPRU DUVARA CIVATALI: aski gerekmiyor. Kopru x 1700-1800 arasinda ve sag yan
+    # sac 1798,5'te — koprunun 360 mm'lik arka kenari bastan basa duvara baglanir.
+    # Askilar denenmisti ama arkadaki aski X TAHRIK MOTORUNUN z bandina (-400..-320)
+    # giriyordu; motor da sag uctan tasinamiyor cunku tablanin PARK YERI sol uc.
+    ekle("kopru_lamasi", kut(1780.0, 1798.5, AKT_Y - 3.0, AKT_Y + 45.0, AKT_Z0, AKT_Z1), "sac",
+         bom=("Köprü bağlama laması 360 × 48 × 5", 1, "304 · sağ yan saca 8 × M6",
+              "köprüyü duvara bağlar; askı yok — altta destek koyacak yer yok, araba oradan geçiyor"))
     ekle("cikis_yarigi_contasi", kut(1792.0, 1798.5, 92.0, 130.0, AKT_Z0 - 10.0, AKT_Z1 + 10.0)
          .cut(kut(1791.0, 1799.5, AKT_Y - 4.0, 126.0, AKT_Z0 - 2.0, AKT_Z1 + 2.0)), "silikon",
          bom=("Çıkış yarığı çerçevesi + fırça", 1, "304 çerçeve + gıda tipi fırça sızdırmaz",
@@ -191,6 +190,20 @@ D.append((
         _ab = _ab.cut(sily(Xc + 92.0 * math.cos(a_), ZT + 92.0 * math.sin(a_), 7.0, 80.0, 87.0))
     ekle("ayar_bilezigi", _ab, "celik",'''))
 
+# ============================================================ 8 · TABLA PARK KONUMUNDA CIZILIYOR
+# Tabla strokun ORTASINDA (x 900) cizilmisti; park yeri artik EN SOL — acicinin alti.
+# Kemal: "ulan tabla tam ortada, en solda baslamali."
+# Bu yalniz CIZIM konumu; strok, dozaj ve yasa degismiyor. Sim de buradan okuyor.
+D.append((
+    """    Xc = 900.0                                                                  # modelde tablanın çizildiği konum (strok x 220…1520)""",
+    """    Xc = XC_TABLA                                                               # v20: modelde PARK KONUMUNDA çizilir (açıcının altı, strok x -350…1627)"""))
+
+# tabla cizim konumu MODUL SEVIYESINDE sabit olsun ki sim de ayni yerden okusun
+D.append((
+    """KASET_CAD = {""",
+    """XC_TABLA = -350.0          # tablanin CIZILDIGI yer = PARK KONUMU (acicinin alti)
+KASET_CAD = {"""))
+
 for e, y in D:
     assert e in s, "BULUNAMADI -> " + e[:80]
     s = s.replace(e, y, 1)
@@ -210,27 +223,11 @@ yeni = '''        # v20: tabla iki uctan da modulden CIKIYOR — solda aciciya (
 assert eski in s, "yan sac bulunamadi"
 s = s.replace(eski, yeni, 1)
 
-# ---- X TAHRIKI SOL UCA TASINIYOR
-# Motor ve kaidesi x 1690-1780'de, yani ARTIK URUN CIKISININ tam ortasindaydi.
-# Aktarma koprusu ve askilari oraya giriyor. Cikis sag uctan oldugu icin tahrik
-# sol uca aliniyor; avara kasnak da saga geciyor. Kayis duzeni degismiyor.
-_D2 = [
- ('silz(1735.0, 31.0, 9.55, -364.5, -355.5).cut(silz(1735.0, 31.0, 4.1, -366.0, -354.0))',
-  'silz(-465.0, 31.0, 9.55, -364.5, -355.5).cut(silz(-465.0, 31.0, 4.1, -366.0, -354.0))'),
- ('.translate(cq.Vector(1735.0, 41.5, -360.0))',
-  '.translate(cq.Vector(-465.0, 41.5, -360.0))'),
- ('kut(1690.0, 1780.0, 20.5, 38.0, -400.0, -320.0).cut(kut(1700.0, 1770.0, 19.5, 39.0, -392.0, -328.0))',
-  'kut(-510.0, -420.0, 20.5, 38.0, -400.0, -320.0).cut(kut(-500.0, -430.0, 19.5, 39.0, -392.0, -328.0))'),
- ('silz(35.0, 31.0, 9.55, -364.5, -355.5)',
-  'silz(1750.0, 31.0, 9.55, -364.5, -355.5)'),
- ('kut(20.0, 44.0, 20.5, 45.0, -385.0, -335.0).cut(silz(35.0, 31.0, 12.0, -372.0, -348.0))',
-  'kut(1735.0, 1759.0, 20.5, 45.0, -385.0, -335.0).cut(silz(1750.0, 31.0, 12.0, -372.0, -348.0))'),
- ('kut(52.0, 1686.0, 26.5, 35.5, zc_ - 1.5, zc_ + 1.5)',
-  'kut(-448.0, 1733.0, 26.5, 35.5, zc_ - 1.5, zc_ + 1.5)'),
-]
-for _e, _y in _D2:
-    assert _e in s, "X TAHRIK BULUNAMADI -> " + _e[:60]
-    s = s.replace(_e, _y, 1)
+# ---- X TAHRIKI SAG UCTA KALIYOR
+# Once sol uca tasinmisti (sag uc urun cikisi oldugu icin). Ama TABLANIN PARK YERI
+# de sol uc — araba orada duruyor ve kayis koluyla motora carpiyordu (olculdu:
+# 12.619 + 1.286 + 425 mm3). Tahrik yerinde birakildi; aktarma koprusu motorun
+# z bandina (-400..-320) girmiyor (kopru -315..-25), cakisma yok.
 
 # ---- YAN SACLARDA MEKANIZMA GECISI
 # Ray, tekne, kirisler ve enerji zinciri artik iki yandan da disari cikiyor.

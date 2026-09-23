@@ -65,6 +65,7 @@ for _ad, _g in zip(_ADLAR, _GEN):
     YUVA.append((_ad, _X, _X + _g + BOSLUK, _g)); _X += _g + BOSLUK
 _X += BOLME
 # v6: sınıf değil YUVA bazlı — HARÇ yuvaları kaşarla aynı gövdeyi kullanıyor ama borusu ve valfi başka.
+XC_TABLA = -350.0          # tablanin CIZILDIGI yer = PARK KONUMU (acicinin alti)
 KASET_CAD = {"HARÇ 1": "harc_cad_v4", "HARÇ 2": "harc_cad_v4", "KIYMA": "kiyma_cad_v9",
              "KUŞBAŞI": "kusbasi_cad_v8", "KAŞAR KABI": "kasar_cad_v14", "KÜP SUCUK": "sucuk_cad_v7"}
 
@@ -522,7 +523,7 @@ def modul():
     # v9'a kadar 9 adet yer tutucu bloktu; parçaların hiçbiri birbirine bağlanmıyordu. Şema: X ekseni
     # KAYIŞ tahrikli tek araba, DÖNÜŞ ekseni araba plakasının altındaki pancake motorla EŞ EKSENLİ doğrudan.
     TB = H.S["tabla"]
-    Xc = 900.0                                                                  # modelde tablanın çizildiği konum (strok x 220…1520)
+    Xc = XC_TABLA                                                               # v20: modelde PARK KONUMUNDA çizilir (açıcının altı, strok x -350…1627)
     ZT = ZK[0] + 30.0                                                           # tabla ekseni (nozzle'dan z'de 20 mm geride)
     RT_ = TB["cap"] / 2.0
 
@@ -612,20 +613,20 @@ def modul():
          "üstünde r = 10'da 2 × Ø8 pim; göbeğin altındaki burçlara girer — rijit kaplin YOK, tabla düşeyde ayrılabiliyor"))
 
     # --- 8b.5 X TAHRİK ZİNCİRİ ---
-    ekle("x_tahrik_kasnagi", silz(-465.0, 31.0, 9.55, -364.5, -355.5).cut(silz(-465.0, 31.0, 4.1, -366.0, -354.0)), "celik",
+    ekle("x_tahrik_kasnagi", silz(1735.0, 31.0, 9.55, -364.5, -355.5).cut(silz(1735.0, 31.0, 4.1, -366.0, -354.0)), "celik",
          bom=("GT3 kasnak 20 diş", 1, "PD 19,099 → çevre TAM 60,00 mm/tur · sıkma bilezikli (setuskur yok)", "x motorunun milinde"))
-    _mg = nema23()["govde"].rotate(cq.Vector(0, 0, 0), cq.Vector(1, 0, 0), 90.0).translate(cq.Vector(-465.0, 41.5, -360.0))
+    _mg = nema23()["govde"].rotate(cq.Vector(0, 0, 0), cq.Vector(1, 0, 0), 90.0).translate(cq.Vector(1735.0, 41.5, -360.0))
     ekle("x_motoru", cq.Workplane(obj=_mg), "motor",
          bom=("X motoru · NEMA23 kapalı çevrim step", 1, "57 × 57 × 76 · 1,2 N·m · 24 V · mil AŞAĞI",
               "sağ uçta: tablanın en sağ konumu x 1690'da biter, motor 1706,5'te başlar · 200 dev/dk @200 mm/s, gereken 0,212 N·m → ~3 kat pay"))
-    ekle("x_motor_kaidesi", kut(-510.0, -420.0, 20.5, 38.0, -400.0, -320.0).cut(kut(-500.0, -430.0, 19.5, 39.0, -392.0, -328.0)), "sac",
+    ekle("x_motor_kaidesi", kut(1690.0, 1780.0, 20.5, 38.0, -400.0, -320.0).cut(kut(1700.0, 1770.0, 19.5, 39.0, -392.0, -328.0)), "sac",
          bom=("X motor kaidesi", 1, "304 8 mm bükme L · tekneye 4 × M8, z yuvalı", "kayış hizası buradan ayarlanır"))
-    ekle("avara_kasnak", silz(1750.0, 31.0, 9.55, -364.5, -355.5), "celik",
+    ekle("avara_kasnak", silz(35.0, 31.0, 9.55, -364.5, -355.5), "celik",
          bom=("Avara kasnak GT3 20 diş", 1, "flanşlı · içinde 2 × 625-2RS paslanmaz rulman", "sol uçta; gergi bunun braketinde"))
-    ekle("avara_gergi_braketi", kut(1735.0, 1759.0, 20.5, 45.0, -385.0, -335.0).cut(silz(1750.0, 31.0, 12.0, -372.0, -348.0)), "celik",
+    ekle("avara_gergi_braketi", kut(20.0, 44.0, 20.5, 45.0, -385.0, -335.0).cut(silz(35.0, 31.0, 12.0, -372.0, -348.0)), "celik",
          bom=("Avara + gergi braketi", 1, "304 10 mm · 16 mm yuvalı 2 × M8 + M6 itme vidası + kontra", "GERGİ BURADAN — tabla sağ uca çekilince ağızdan elle erişilir"))
     for i_, zc_ in enumerate((-350.45, -369.55)):
-        ekle("x_kayisi_%d" % i_, kut(-448.0, 1733.0, 26.5, 35.5, zc_ - 1.5, zc_ + 1.5), "koyu",
+        ekle("x_kayisi_%d" % i_, kut(52.0, 1686.0, 26.5, 35.5, zc_ - 1.5, zc_ + 1.5), "koyu",
              bom=("X kayışı GT3-9 açık uçlu ~3460 mm", 1, "çelik kordlu poliüretan", "iki koşu; TEPSİ GÖLGESİNİN (z 0…−340) DIŞINDA — ürün düzleminin altında tahrik elemanı yok") if i_ == 0 else None)
     kol = kut(Xc - 150.0, Xc + 150.0, 38.5, 48.5, -385.0, -315.0).union(kut(Xc - 20.0, Xc + 20.0, 40.0, 48.5, -365.0, -355.0))
     ekle("kayis_kolu", kol, "celik", bom=("Kayış kolu · L", 1, "304 10 mm bükme · plakaya 4 × M8 + Ø6 pim",
@@ -702,14 +703,13 @@ def modul():
               "pide tabladan buna çıkar, fırın bandı buradan çeker. Üst yüzü çalışma diskinin "
               "0,3 mm üstünde. FIRIN BANDI ŞARTI: bıçak burunlu, yüzeyi y 108,3 ± 1, burnu "
               "modül yüzünden en çok 5 mm içeride [bant seçilince doğrulanacak]"))
-    # ASKI: kopru ASAGIDAN degil YUKARIDAN tasinir. Alttan destek koyacak yer yok —
-    # araba oradan geciyor. Askilar tablanin Ø340 yolunun disinda (z -345 ve z +5).
-    for i_, zb in enumerate((-350.0, 5.0)):
-        ekle("kopru_askisi_%d" % i_, kut(AKT_X0 + 10.0, AKT_X1 - 15.0, AKT_Y, 245.0, zb, zb + 10.0)
-             .union(kut(AKT_X0, AKT_X1 - 15.0, AKT_Y, AKT_Y + 25.0, zb, zb + 10.0)), "sac",
-             bom=("Köprü askısı", 2, "304 10 mm lama · üstten iç kabuğa cıvatalı",
-                  "köprüyü YUKARIDAN taşır; altta destek koyacak yer yok, araba oradan geçiyor. "
-                  "Tablanın Ø340 yolunun dışında (z -350 ve z +5)") if i_ == 0 else None)
+    # KOPRU DUVARA CIVATALI: aski gerekmiyor. Kopru x 1700-1800 arasinda ve sag yan
+    # sac 1798,5'te — koprunun 360 mm'lik arka kenari bastan basa duvara baglanir.
+    # Askilar denenmisti ama arkadaki aski X TAHRIK MOTORUNUN z bandina (-400..-320)
+    # giriyordu; motor da sag uctan tasinamiyor cunku tablanin PARK YERI sol uc.
+    ekle("kopru_lamasi", kut(1780.0, 1798.5, AKT_Y - 3.0, AKT_Y + 45.0, AKT_Z0, AKT_Z1), "sac",
+         bom=("Köprü bağlama laması 360 × 48 × 5", 1, "304 · sağ yan saca 8 × M6",
+              "köprüyü duvara bağlar; askı yok — altta destek koyacak yer yok, araba oradan geçiyor"))
     ekle("cikis_yarigi_contasi", kut(1792.0, 1798.5, 92.0, 130.0, AKT_Z0 - 10.0, AKT_Z1 + 10.0)
          .cut(kut(1791.0, 1799.5, AKT_Y - 4.0, 126.0, AKT_Z0 - 2.0, AKT_Z1 + 2.0)), "silikon",
          bom=("Çıkış yarığı çerçevesi + fırça", 1, "304 çerçeve + gıda tipi fırça sızdırmaz",
