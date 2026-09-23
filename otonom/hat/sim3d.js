@@ -62,7 +62,7 @@ async function kur(kutu) {
   // Ayrı/kaba sim modeli KALDIRILDI. hat_montaj_v17 hareket eden paketleri AYRI DÜĞÜM yazıyor:
   //     TOPPING_MODUL__celik__ARABA · TOPPING_MODUL__sac__TABLA · KASET_KIYMA__pom__HELEZON
   // Malzeme adları değişmedi, o yüzden model-viewer sayfası bundan etkilenmiyor.
-  const glb = await new GLTFLoader().loadAsync('../hat3d/modul_C.glb?v=26');
+  const glb = await new GLTFLoader().loadAsync('../hat3d/modul_C.glb?v=27');
   const kok = glb.scene;
   const OFS = M.ofset;                                  // JSON ölçüleri modül-yerel, GLB makine koordinatında
   const mak = p => [p[0] + OFS[0], p[1] + OFS[1], p[2] + OFS[2]];
