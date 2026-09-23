@@ -7,7 +7,7 @@
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
-import * as K from './makine_kodu.js?v=6';
+import * as K from './makine_kodu.js?v=7';
 
 const MM = 0.001;
 const URUN_RENK = {                                   // dozlanan ürünün pide üstündeki rengi
@@ -54,7 +54,7 @@ async function kur(kutu) {
   const g1 = new THREE.DirectionalLight(0xffffff, 1.0); g1.position.set(1.4, 2.2, 1.6); sahne.add(g1);
   const g2 = new THREE.DirectionalLight(0xffffff, 0.35); g2.position.set(-1.2, 1.0, -1.4); sahne.add(g2);
 
-  const M = await (await fetch('../hat3d/sim_makine.json?v=6')).json();
+  const M = await (await fetch('../hat3d/sim_makine.json?v=7')).json();
   K.kur(M, izle);
 
   // ASIL ÜRETİM MODELİ — sayfanın gösterdiği dosyanın ta kendisi (aynı URL → tarayıcı önbelleğinden
@@ -62,12 +62,15 @@ async function kur(kutu) {
   // Ayrı/kaba sim modeli KALDIRILDI. hat_montaj_v17 hareket eden paketleri AYRI DÜĞÜM yazıyor:
   //     TOPPING_MODUL__celik__ARABA · TOPPING_MODUL__sac__TABLA · KASET_KIYMA__pom__HELEZON
   // Malzeme adları değişmedi, o yüzden model-viewer sayfası bundan etkilenmiyor.
-  const glb = await new GLTFLoader().loadAsync('../hat3d/modul_C.glb?v=32');
+  const glb = await new GLTFLoader().loadAsync('../hat3d/modul_C.glb?v=33');
   const kok = glb.scene;
   const OFS = M.ofset;                                  // JSON ölçüleri modül-yerel, GLB makine koordinatında
   const mak = p => [p[0] + OFS[0], p[1] + OFS[1], p[2] + OFS[2]];
 
-  const HAREKETLI = new Set(['ARABA', 'TABLA', 'HELEZON', 'KARISTIRICI']);
+  // v21: AÇICI ve BANT da hareketli. Koniler kendi eksenlerinde döner, kafa dikeyde
+  // iner-kalkar, bant silindirleri döner, pide bandın üstünde fırına gider.
+  const HAREKETLI = new Set(['ARABA', 'TABLA', 'HELEZON', 'KARISTIRICI',
+                             'ACICI', 'KONI_ON', 'KONI_ARKA', 'BANT_BURUN', 'BANT_TAHRIK']);
   const G = {};
   const agalar = []; kok.traverse(o => { if (o.isMesh) agalar.push(o); });
   for (const o of agalar) {
@@ -115,6 +118,39 @@ async function kur(kutu) {
   const TABLA = pivotla(G.TABLA, P), PIDE = pivotla(pideAg, P), TOP = pivotla(topAg, P);
   ARABA.add(TABLA, PIDE, TOP, G.ARABA);
   PIDE.visible = false;                                    // açılana kadar ortada yalnız top var
+
+  // ---------- AÇICI ----------
+  // Kafa dikeyde iner-kalkar; iki koni KENDİ EKSENLERİNDE döner. Koninin tepesi
+  // tablanın ekseninde olduğu için koni hiç kaymadan yuvarlanır — modelde de öyle.
+  const AC = M.acici, AKT = M.aktarma;
+  const ACGRUP = new THREE.Group(); kok.add(ACGRUP);
+  if (G.ACICI) ACGRUP.add(G.ACICI);
+  const acAci = THREE.MathUtils.degToRad(AC.yarim_aci);
+  const KONI = {};
+  for (const [ad, yon] of [['KONI_ON', 1], ['KONI_ARKA', -1]]) {
+    if (!G[ad]) continue;
+    const tepe = mak([AC.x, AC.tepe_y, M.tabla.eksen_z]);   // koninin tepe noktası = tabla ekseni
+    const t = new THREE.Group();
+    t.position.set(tepe[0] * MM, tepe[1] * MM, tepe[2] * MM);
+    G[ad].position.set(-tepe[0] * MM, -tepe[1] * MM, -tepe[2] * MM);
+    t.add(G[ad]); ACGRUP.add(t);
+    // koni ekseni: yatayla yarım açı kadar yukarı, ±z yönünde
+    KONI[ad] = { g: t, eks: new THREE.Vector3(0, Math.sin(acAci), yon * Math.cos(acAci)).normalize(), aci: 0, yon };
+  }
+  ACGRUP.position.y = AC.kalkis * MM;                       // park: yukarıda
+
+  // ---------- FIRIN BANDI ----------
+  const RULO = {};
+  for (const [ad, rx, ry] of [['BANT_BURUN', AKT.bant_burun_x, AKT.bant_y - 1.5 - AKT.burun_r],
+                              ['BANT_TAHRIK', AKT.bant_son_x, AKT.bant_y - 1.5 - AKT.tahrik_r]]) {
+    if (!G[ad]) continue;
+    RULO[ad] = { g: pivotla(G[ad], mak([rx, ry, 0])), r: ad === 'BANT_BURUN' ? AKT.burun_r : AKT.tahrik_r, aci: 0 };
+  }
+  // BANTTAKİ PİDE: aktarma anında tabladan ayrılır, banda iner ve fırına doğru gider
+  const bantPideAg = disk(M.pide.yaricap, M.pide.hamur_k, 0, 0xe8d6ad, 0.9);
+  bantPideAg.geometry.translate(-P[0] * MM, 0, -P[2] * MM);   // geometriyi merkeze al
+  bantPideAg.visible = false; kok.add(bantPideAg);
+  let bantPideX = 0, bantCalisiyor = false;
 
   // MOTOR ADI -> döndürülecek grup. Pompalı kasette ÜST mil (YC) pompa rotoru, ALT mil (CY) hazne paleti;
   // vidalı kasette tam tersi. Eskiden ikisi de "helezon = dozaj" sayılıyordu → pompa hiç dönmüyor, hazne
@@ -226,7 +262,7 @@ async function kur(kutu) {
   addEventListener('resize', boyut);
 
   // ---------- kod paneli ----------
-  const kaynak = await (await fetch('./makine_kodu.js?v=6')).text();
+  const kaynak = await (await fetch('./makine_kodu.js?v=7')).text();
   const sat = kaynak.split('\n'), ISARET = {};
   sat.forEach((s, i) => { const m = s.match(/\/\*@(\w+)\*\//); if (m) ISARET[m[1]] = i; });
   q('.simp-k pre').innerHTML = sat.map((s, i) =>
@@ -246,6 +282,8 @@ async function kur(kutu) {
   let dozRenk = 0xf2d98a, dozlaniyor = false;
   let dozT0 = 0, dozY = null;
   let acilma = -1;                                         // -1 kapalı · 0..1 açılma ilerlemesi
+  let kafa = -1;                                           // -1 park · 0 iniyor · 1 aşağıda · 2 kalkıyor
+  let kafaU = 1;                                           // 0 = aşağıda, 1 = parkta
   function izle(o) {
     if (o.satir) vurgula(o.satir);
     if (o.kod) dozRenk = URUN_RENK[o.kod] || 0xf2d98a;
@@ -257,8 +295,15 @@ async function kur(kutu) {
     // v20 · HAMUR: yeni çevrimde TOP gelir, açıcı onu Ø280 pideye çevirir,
     // aktarmada pide banda geçer ve tabla boş kalır.
     if (o.yeniTepsi) { dokumTemizle(); dozY = null; acilma = -1; TOP.visible = true; TOP.scale.setScalar(1); PIDE.visible = false; }
+    if (o.faz === 'acma') kafa = 0;                        // kafa iniyor
     if (o.acildi) acilma = 0;
-    if (o.aktarildi) { PIDE.visible = false; TOP.visible = false; dokumTemizle(); }
+    if (o.satir === 'ac' && o.mesaj && o.mesaj.indexOf('kalkıyor') >= 0) kafa = 2;   // kafa kalkıyor
+    if (o.aktarildi) {
+      // pide tabladan BANDA geçer: aynı yerde doğar, bant hızıyla fırına gider
+      PIDE.visible = false; TOP.visible = false; dokumTemizle();
+      bantPideX = AKT.bant_burun_x; bantCalisiyor = true;
+      bantPideAg.visible = true;
+    }
     if (o.mesaj) log(o.mesaj, o.faz === 'bitti' ? 'y' : (o.faz === 'basla' ? 'b' : ''));
   }
 
@@ -302,6 +347,30 @@ async function kur(kutu) {
     ARABA.position.x = (K.EKSEN.X - M.tabla.baslangic_x) * MM;
     const a = THREE.MathUtils.degToRad(K.EKSEN.TABLA);
     TABLA.rotation.y = PIDE.rotation.y = TOP.rotation.y = a;
+
+    // ---- AÇICI: kafa iner/kalkar, koniler kendi eksenlerinde döner ----
+    if (kafa === 0) { kafaU = Math.max(0, kafaU - dt / M.acici.in_sn); if (kafaU <= 0) kafa = 1; }
+    else if (kafa === 2) { kafaU = Math.min(1, kafaU + dt / M.acici.kalk_sn); if (kafaU >= 1) kafa = -1; }
+    ACGRUP.position.y = M.acici.kalkis * kafaU * MM;
+    const koniDon = (acilma >= 0 && acilma < 1);
+    for (const ad in KONI) {
+      const k = KONI[ad];
+      if (koniDon) k.aci += k.yon * M.acici.koni_rpm * 6 * THREE.MathUtils.DEG2RAD * dt;
+      k.g.quaternion.setFromAxisAngle(k.eks, k.aci);
+    }
+
+    // ---- FIRIN BANDI: silindirler döner, pide bandın üstünde fırına gider ----
+    if (bantCalisiyor) {
+      bantPideX += AKT.bant_hiz * dt;
+      bantPideAg.position.set((bantPideX + OFS[0]) * MM, (AKT.bant_y + M.pide.hamur_k / 2 + OFS[1]) * MM,
+                              M.tabla.eksen_z * MM);
+      for (const ad in RULO) {
+        const r = RULO[ad];
+        r.aci -= AKT.bant_hiz / r.r * dt;                  // v = w·r → w = v/r
+        r.g.rotation.z = r.aci;
+      }
+      if (bantPideX > AKT.bant_son_x + 200) { bantCalisiyor = false; bantPideAg.visible = false; }
+    }
 
     // AÇILMA: top yassılaşıp kaybolurken pide diski büyür (koniler yuvarlayarak açıyor)
     if (acilma >= 0 && acilma < 1) {

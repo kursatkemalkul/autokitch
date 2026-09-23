@@ -46,9 +46,17 @@ yeni = ("""        # v4 · TEPSI YOK. Hamur dogrudan CALISMA DISKININ ustunde (d
         # Top yaricapi UYDURMA DEGIL: acilmis pidenin hacminden geliyor (V = pi r^2 h).
         pide=dict(yaricap=140.0, kenar=0.0, disk_ust=108.0, ust_y=108.0 + H.HAMUR_K,
                   tepsi_k=0.0, hamur_k=H.HAMUR_K, top_r=%.1f),
-        acici=dict(x=-350.0, park_y=1200.0, calisma_y=1128.0, in_sn=0.8, ac_sn=3.0, kalk_sn=0.6,
-                   not_="konili doner acici · olculer VARSAYIM, tedarikciden gelecek"),
-        aktarma=dict(x=1637.0, bant_burun_x=1815.0, bant_y=106.0, bant_hiz=120.0),""" % round(RTOP, 1))
+        # ACICI · gercek uretim modeli (topping_cad_v21). Sim buradan okur.
+        #   tepe = calisma diski ustu + pide kalinligi · boy = pidenin yaricapi
+        #   yarim aci arctan(45/140) = 17,82 derece -> koni kaymadan yuvarlanir
+        #   koni devri = tabla devri / sin(yarim aci)  (kayma sifir sarti)
+        acici=dict(x=-350.0, tepe_y=116.0, boy=140.0, taban_r=45.0, yarim_aci=17.82,
+                   kalkis=60.0, in_sn=0.8, ac_sn=3.0, kalk_sn=0.6,
+                   koni_rpm=round(35.0 / __import__("math").sin(__import__("math").radians(17.82)), 1),
+                   not_="iki koni ters yonde doner; teget kuvvetler birbirini goturur"),
+        # BANT · bicak burunlu aktarma. Diskin kenari 1807'de, burun 1815'te -> 8 mm bosluk.
+        aktarma=dict(x=1637.0, bant_burun_x=1815.0, bant_son_x=2195.0, bant_y=106.0,
+                     bant_hiz=120.0, burun_r=10.0, tahrik_r=30.0),""" % round(RTOP, 1))
 assert eski in s
 s = s.replace(eski, yeni, 1)
 
