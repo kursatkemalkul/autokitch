@@ -27,7 +27,7 @@ KOK = os.path.dirname(os.path.dirname(U))
 OUT = os.path.join(KOK, "otonom", "hat3d", "fizik")
 os.makedirs(OUT, exist_ok=True)
 
-import topping_cad_v19 as TC
+import topping_cad_v21 as TC
 import topping_hesap_v5 as H
 
 # ---------------------------------------------------------------- malzeme yogunluklari (kg/m3)
@@ -88,6 +88,14 @@ KATALOG_KUTLE = [
     ("guc_kaynagi",             1.00, "katalog",
      "MEAN WELL NDR-240-24 · 24 V 240 W · GERCEK CAD · kutle uretici spec sayfasindan "
      "(NDR-240-SPEC.PDF, PACKING satiri 1 kg)"),
+    # v16 · ACICI ve BANT parcalari (topping_cad_v21)
+    ("acici_motoru_",           1.00, "katalog", "STP-MTR-23079 · acici konisi tahriki (GERCEK CAD)"),
+    ("acici_reduktoru_",        0.90, "katalog", "SureGear PGCN23-1025 sinifi planet · i = 5"),
+    ("bant_motoru",             1.00, "katalog", "STP-MTR-23079 · bant tahriki (GERCEK CAD)"),
+    # PTFE kapli cam elyaf orgu: yogunluk ~1,5 g/cm3. "koyu" (7900) yogunlugu ile
+    # hesaplansa 3 kat agir cikardi.
+    ("bant",                    0.60, "katalog sinifi",
+     "PTFE kapli cam elyaf orgu 1,5 mm · cevre ~886 x 290 geniş x 1,5 = 385 cm3 x 1,5 g/cm3"),
     ("x_motoru",                1.00, "katalog",
      "AutomationDirect STP-MTR-23079 · NEMA23 · 1,95 N·m tutma · 2,8 A (GERCEK CAD)"),
 ]
