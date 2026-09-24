@@ -5,7 +5,7 @@
 <p class="lead">Hattın tamamı tek modelde. <b>Üstüne gel</b> &mdash; adı çıkar. <b>Çift tıkla</b> &mdash; o istasyonun kendi modeli açılır. Modelin altındaki çubuktan <b>kesit</b> alabilir (X/Y/Z) ve iki noktaya tıklayıp <b>ölçü</b> çıkarabilirsin.</p>
 
 <div class="m3">
-  <model-viewer id="mv" loading="eager" src="../hat3d/hat_v35.glb?v=35" ios-src="../hat3d/hat_v35.usdz?v=35" alt="AUTOKITCH hat üretim modeli"
+  <model-viewer id="mv" loading="eager" src="../hat3d/hat_v36.glb?v=36" ios-src="../hat3d/hat_v36.usdz?v=36" alt="AUTOKITCH hat üretim modeli"
       camera-controls touch-action="pan-y" shadow-intensity="0.6" exposure="1.0" environment-image="neutral"
       camera-orbit="30deg 74deg 9.6m" camera-target="2.65m 1m -0.4m" field-of-view="30deg" min-field-of-view="6deg"
       ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
@@ -27,6 +27,7 @@
 <h2>2 &middot; Özellikler</h2><div class="card"><div class="kv">
 <b>Modül standardı</b><span>hepsi <b>830 derin</b>, hat yüksekliği 2030. A AÇICI 700 &middot; C TOPPING 1800 &middot; F FIRIN 1500 &middot; K KESME + SPREY 600 &middot; E KUTU 700. B ÇEKMECELER 2500 × 1060, A ile C'nin altında</span>
 <b>Toplam hat</b><span>5300 &times; 830 &times; 2030 mm</span>
+<b>Çekmece modülü</b><span>B gerçek üretim modeli: 21 contalı motorlu çekmece (ray + kayış + motor + reed), K4 soğutma + depo + niş, K1 üstü kart bölmesi · <a href="store.html">1 · STORE</a></span>
 <b>Taban hizası</b><span>A, C, F, K istasyonları <b>1060</b>'ta başlar, altları ayrı taban dolabı. E kutu katlama 0&ndash;2030 tek parça</span>
 <b>Süreç kotu</b><span>TOPPING modelinden ölçülür: disk 1168 &middot; fırın bandı 1166 (290 geniş, eksen z −170) &middot; kesme plakası 1164 &middot; kutu tepsisi 1104</span>
 <b>Robot</b><span>tek Fairino FR5, yer rayında, omuz 970, erişim 779 &middot; QR teslim dolabı koridorun karşısında</span>
@@ -39,13 +40,14 @@
 <figure><img src="img/HAT_ATOSA_TABLALI_v7_teknik.png" alt="HAT ATOSA TABLALI teknik resim v7" loading="lazy"><figcaption>HAT ATOSA TABLALI v7 &mdash; 3B modelin yerleşim kaynağı (düşey kotlar modelde TOPPING'e göre: süreç 1168)</figcaption></figure>
 
 <h2>4 &middot; Sürüm geçmişi</h2><ul class="ver">
-<li><b>MONTAJ v35 (24 Eyl) &middot; GEÇERLİ</b>: yerleşim ATOSA TABLALI v7 (5300); A, C, F, K tabanları 1060'ta hizalı, E tek parça; süreç kotu 1168 (TOPPING'e göre); K'deki yedek kutular kaldırıldı; tek FR5 + QR dolabı</li>
+<li><b>MONTAJ v36 (24 Eyl) &middot; GEÇERLİ</b>: B çekmece modülü gerçek üretim modeli (store_cad_v1), her çekmece ayrı birim</li>
+<li>MONTAJ v35 (24 Eyl): yerleşim ATOSA TABLALI v7 (5300); A, C, F, K tabanları 1060'ta hizalı, E tek parça; süreç kotu 1168 (TOPPING'e göre); K'deki yedek kutular kaldırıldı; tek FR5 + QR dolabı</li>
 <li>HAT v19 (18 Eyl): 2 kol, ray yok, hat 3900; çekmeceler tabanda tek modül, PRESS + TOPPING üstünde; fırın 3 hazne; TOPPING 6 kaset yuvası</li>
 <li>HAT v14&ndash;v18: 2 kol seçeneği, tabla/bant karşılaştırması, aktarma gözü (iptal)</li>
 <li>HAT v51 (6 Eyl): PACK v4 &mdash; <b>eski 4200 mm'lik tepsili hat</b></li>
 </ul>
 </div>
-<div class="foot">AUTOKITCH &middot; HAT &middot; Yol C canlı tasarım defteri &middot; model: arastirma/_uretec/hat_montaj_v35.py &middot; 24 Eyl 2026</div>
+<div class="foot">AUTOKITCH &middot; HAT &middot; Yol C canlı tasarım defteri &middot; model: arastirma/_uretec/hat_montaj_v36.py &middot; 24 Eyl 2026</div>
 
 <script>
 const SAYFA = {A:'press.html', B:'store.html', C:'topping.html', D:'oven.html', K:'oven.html', E:'pack.html', '-':'robot.html'};
@@ -60,7 +62,7 @@ const M = model3d({
   }
 });
 
-fetch('../hat3d/durum.json?v=35').then(r => r.json()).then(D => {
+fetch('../hat3d/durum.json?v=36').then(r => r.json()).then(D => {
   M.veri(D.birim);
   const mod = {}; D.birim.forEach(b => (mod[b.modul] = mod[b.modul] || []).push(b));
   document.getElementById('secim').innerHTML = ['B','A','C','D','K','E','-'].filter(k => mod[k]).map(k => {
