@@ -1,0 +1,839 @@
+﻿parça (model adı);kalem;adet;tanım / ürün;not / ölçü;birim;tür
+plint_on_1.5;Plint ön sacı;1;304 1,5 · 60 geride;;B_KASA;ÜRETİM
+ayak_0;Ayarlı ayak Elesa+Ganter LV.A-SST · M12;6;paslanmaz AISI 304 · taban Ø40;elesa-ganter.com LV.A-SST;B_KASA;SATIN ALMA
+ayak_1;ayak;0;304 · lazer / lama;alt gövde → Elesa LV.A-SST;B_KASA;ALT
+ayak_2;ayak;0;304 · lazer / lama;alt gövde → Elesa LV.A-SST;B_KASA;ALT
+ayak_3;ayak;0;304 · lazer / lama;alt gövde → Elesa LV.A-SST;B_KASA;ALT
+ayak_4;ayak;0;304 · lazer / lama;alt gövde → Elesa LV.A-SST;B_KASA;ALT
+ayak_5;ayak;0;304 · lazer / lama;alt gövde → Elesa LV.A-SST;B_KASA;ALT
+yan_dis_sac_sol;Yan dış sac 1,5;2;304 lazer + büküm;;B_KASA;ÜRETİM
+yan_pu_sol;yan pu;0;PU köpük (gövdeyle birlikte enjeksiyon);alt gövde → PU köpük gövde;B_KASA;ALT
+yan_ic_sac_sol;yan ic sac;1;304 sac · lazer + büküm;zarf 1.0 × 878.5 × 788.5;B_KASA;ÜRETİM
+yan_on_donus_sol;yan on donus;1;304 sac · lazer + büküm;zarf 28.5 × 977.0 × 1.5;B_KASA;ÜRETİM
+yan_dis_sac_sag;yan dis sac;0;304 sac · lazer + büküm;alt gövde → Yan dış sac 1,5 (× 2);B_KASA;ALT
+yan_pu_sag;yan pu;0;PU köpük (gövdeyle birlikte enjeksiyon);alt gövde → PU köpük gövde;B_KASA;ALT
+yan_ic_sac_sag;yan ic sac;1;304 sac · lazer + büküm;zarf 1.0 × 878.5 × 788.5;B_KASA;ÜRETİM
+yan_on_donus_sag;yan on donus;1;304 sac · lazer + büküm;zarf 28.5 × 977.0 × 1.5;B_KASA;ÜRETİM
+tavan_dis_sac;Tavan dış sacı;1;304 1,5 · A ve C bunun üstüne oturur;;B_KASA;ÜRETİM
+tavan_pu_57.5;PU köpük gövde;1;40 kg/m³ enjeksiyon · sac kabuk içine;yan 27,5 · tavan 57,5 · arka 37,5 · taban 39;B_KASA;ÜRETİM
+tavan_ic_sac;tavan ic sac;1;304 sac · lazer + büküm;zarf 2440.0 × 1.0 × 788.5;B_KASA;ÜRETİM
+tavan_on_donus;tavan on donus;1;304 sac · lazer + büküm;zarf 2440.0 × 58.5 × 1.5;B_KASA;ÜRETİM
+taban_dis_sac;taban dis sac;1;304 sac · lazer + büküm;zarf 2497.0 × 1.5 × 830.0;B_KASA;ÜRETİM
+taban_pu;taban pu;0;PU köpük (gövdeyle birlikte enjeksiyon);alt gövde → PU köpük gövde;B_KASA;ALT
+taban_ic_sac;taban ic sac;1;304 sac · lazer + büküm;zarf 2440.0 × 1.0 × 788.5;B_KASA;ÜRETİM
+taban_vent_kovani;Yoğuşturucu hava çıkış kovanı;1;304 1,0 · PU'yu kapatır;sıcak hava plinte;B_SOGUTMA;ÜRETİM
+taban_on_donus;taban on donus;1;304 sac · lazer + büküm;zarf 2440.0 × 40.0 × 1.5;B_KASA;ÜRETİM
+arka_dis_sac;arka dis sac;1;304 sac · lazer + büküm;zarf 2497.0 × 977.0 × 1.5;B_KASA;ÜRETİM
+arka_pu_37.5;arka pu 37.5;0;PU köpük (gövdeyle birlikte enjeksiyon);alt gövde → PU köpük gövde;B_KASA;ALT
+arka_ic_sac;arka ic sac;1;304 sac · lazer + büküm;zarf 2440.0 × 878.5 × 1.0;B_KASA;ÜRETİM
+bolme_0_sac_a;bolme 0 sac;1;304 sac · lazer + büküm;zarf 1.0 × 878.5 × 734.0;B_KASA;ÜRETİM
+bolme_0_pu;bolme 0 pu;0;PU köpük (gövdeyle birlikte enjeksiyon);alt gövde → PU köpük gövde;B_KASA;ALT
+bolme_0_sac_b;bolme 0 sac;1;304 sac · lazer + büküm;zarf 1.0 × 878.5 × 734.0;B_KASA;ÜRETİM
+bolme_1_sac_a;bolme 1 sac;1;304 sac · lazer + büküm;zarf 1.0 × 878.5 × 734.0;B_KASA;ÜRETİM
+bolme_1_pu;bolme 1 pu;0;PU köpük (gövdeyle birlikte enjeksiyon);alt gövde → PU köpük gövde;B_KASA;ALT
+bolme_1_sac_b;bolme 1 sac;1;304 sac · lazer + büküm;zarf 1.0 × 878.5 × 734.0;B_KASA;ÜRETİM
+bolme_2_sac_a;bolme 2 sac;1;304 sac · lazer + büküm;zarf 1.0 × 878.5 × 734.0;B_KASA;ÜRETİM
+bolme_2_pu;bolme 2 pu;0;PU köpük (gövdeyle birlikte enjeksiyon);alt gövde → PU köpük gövde;B_KASA;ALT
+bolme_2_sac_b;bolme 2 sac;1;304 sac · lazer + büküm;zarf 1.0 × 878.5 × 734.0;B_KASA;ÜRETİM
+k1_teknik_raf_sac_alt;k1 teknik raf sac alt;1;304 sac · lazer + büküm;zarf 620.0 × 1.0 × 734.0;B_KASA;ÜRETİM
+k1_teknik_raf_pu_38;k1 teknik raf pu;0;PU köpük (gövdeyle birlikte enjeksiyon);alt gövde → PU köpük gövde;B_KASA;ALT
+k1_teknik_raf_sac_ust;k1 teknik raf sac ust;1;304 sac · lazer + büküm;zarf 620.0 × 1.0 × 734.0;B_KASA;ÜRETİM
+pano_montaj_plakasi;Pano montaj plakası 2 mm;1;galvaniz;;B_ELEKTRIK;ÜRETİM
+din_ray;DIN ray TS35 × 7,5;1;;;B_ELEKTRIK;SATIN ALMA
+plc_S7-1200_1214C;PLC Siemens S7-1200 CPU 1214C DC/DC/DC;1;6ES7214-1AG40-0XB0 · 14 DI · 10 DQ · PROFINET/Modbus TCP;110 × 100 × 75;B_ELEKTRIK;SATIN ALMA
+plc_SM1221_DI16_a;PLC genişleme SM1221 DI16;1;6ES7221-1BH32-0XB0;45 × 100 × 75 · 42 reed + 21 röle;B_ELEKTRIK;SATIN ALMA
+plc_SM1221_DI16_b;PLC genişleme SM1221 DI16;0;6ES7221-1BH32-0XB0;alt gövde → SM1221;B_ELEKTRIK;ALT
+plc_SM1222_DQ16;PLC genişleme SM1222 DQ16;1;6ES7222-1BH32-0XB0;45 × 100 × 75 · 42 reed + 21 röle;B_ELEKTRIK;SATIN ALMA
+guc_kaynagi_NDR-240-24;Güç kaynağı Mean Well NDR-240-24;1;24 V 10 A · DIN;63 × 125,2 × 113,5;B_ELEKTRIK;SATIN ALMA
+surucu_EM-324C;DC motor sürücü Electromen EM-324C + DIN taban;1;10–35 V · 4 A · akım sınırı · NPN/PNP;72 genişlik taban [yükseklik/derinlik VARSAYIM];B_ELEKTRIK;SATIN ALMA
+role_01;Seçici röle Phoenix Contact PLC-RSC-24DC/21;21;6,2 mm · 1 değiştirici · 24 V bobin;hangi çekmecenin motoru sürücüye bağlanacak [boyut VARSAYIM];B_ELEKTRIK;SATIN ALMA
+role_02;role;0;;alt gövde → Phoenix PLC-RSC;B_ELEKTRIK;ALT
+role_03;role;0;;alt gövde → Phoenix PLC-RSC;B_ELEKTRIK;ALT
+role_04;role;0;;alt gövde → Phoenix PLC-RSC;B_ELEKTRIK;ALT
+role_05;role;0;;alt gövde → Phoenix PLC-RSC;B_ELEKTRIK;ALT
+role_06;role;0;;alt gövde → Phoenix PLC-RSC;B_ELEKTRIK;ALT
+role_07;role;0;;alt gövde → Phoenix PLC-RSC;B_ELEKTRIK;ALT
+role_08;role;0;;alt gövde → Phoenix PLC-RSC;B_ELEKTRIK;ALT
+role_09;role;0;;alt gövde → Phoenix PLC-RSC;B_ELEKTRIK;ALT
+role_10;role;0;;alt gövde → Phoenix PLC-RSC;B_ELEKTRIK;ALT
+role_11;role;0;;alt gövde → Phoenix PLC-RSC;B_ELEKTRIK;ALT
+role_12;role;0;;alt gövde → Phoenix PLC-RSC;B_ELEKTRIK;ALT
+role_13;role;0;;alt gövde → Phoenix PLC-RSC;B_ELEKTRIK;ALT
+role_14;role;0;;alt gövde → Phoenix PLC-RSC;B_ELEKTRIK;ALT
+role_15;role;0;;alt gövde → Phoenix PLC-RSC;B_ELEKTRIK;ALT
+role_16;role;0;;alt gövde → Phoenix PLC-RSC;B_ELEKTRIK;ALT
+role_17;role;0;;alt gövde → Phoenix PLC-RSC;B_ELEKTRIK;ALT
+role_18;role;0;;alt gövde → Phoenix PLC-RSC;B_ELEKTRIK;ALT
+role_19;role;0;;alt gövde → Phoenix PLC-RSC;B_ELEKTRIK;ALT
+role_20;role;0;;alt gövde → Phoenix PLC-RSC;B_ELEKTRIK;ALT
+role_21;role;0;;alt gövde → Phoenix PLC-RSC;B_ELEKTRIK;ALT
+klemens_blogu;Klemens bloğu;1;Phoenix UT 2,5 · 21 motor + 42 sensör + güç;kalan genişlik;B_ELEKTRIK;SATIN ALMA
+kablo_kanali_K1;Kablo kanalı 40 × 25;4;PVC perfore + kapak;dikey her kolonda + üstte yatay;B_KABLO;SATIN ALMA
+kablo_kanali_K2;kablo kanali K2;0;PVC;alt gövde → kablo kanalı;B_KABLO;ALT
+kablo_kanali_K3;kablo kanali K3;0;PVC;alt gövde → kablo kanalı;B_KABLO;ALT
+kablo_kanali_ust;kablo kanali ust;0;PVC;alt gövde → kablo kanalı;B_KABLO;ALT
+evaporator_K1;Evaporatör roll-bond levha;3;alüminyum 1,5 + kanal · ölçüye üretim;arka duvara yapışık · 310 × 530..650;B_SOGUTMA;ÜRETİM
+fan_K1;Fan ebm-papst 4414 FNH;3;24 V · 119 × 119 × 25;evaporatör önünde, havayı kolon içine basar;B_SOGUTMA;SATIN ALMA
+evaporator_K2;evaporator K2;0;alüminyum;alt gövde → roll-bond evaporatör;B_SOGUTMA;ALT
+fan_K2;fan K2;0;;alt gövde → ebm-papst 4414 FNH;B_SOGUTMA;ALT
+evaporator_K3;evaporator K3;0;alüminyum;alt gövde → roll-bond evaporatör;B_SOGUTMA;ALT
+fan_K3;fan K3;0;;alt gövde → ebm-papst 4414 FNH;B_SOGUTMA;ALT
+sogutma_grubu_taban;Yoğuşturucu ünite Secop CU KLF4.0CND R290;1;314H6008 · 335 W @ −10/25 °C · 1/6 HP · 15,2 kg;272 × 350 × 450 · secop.com datasheet;B_SOGUTMA;SATIN ALMA
+sogutma_grubu_kondenser;sogutma grubu kondenser;0;;alt gövde → Secop CU KLF4.0CND;B_SOGUTMA;ALT
+sogutma_grubu_fan;sogutma grubu fan;0;;alt gövde → Secop CU KLF4.0CND;B_SOGUTMA;ALT
+sogutma_grubu_kompresor;sogutma grubu kompresor;0;;alt gövde → Secop CU KLF4.0CND;B_SOGUTMA;ALT
+k4_ara_sac_alt;k4 ara sac alt;1;304 sac · lazer + büküm;zarf 400.0 × 1.0 × 734.0;B_SOGUTMA;ÜRETİM
+k4_ara_pu;k4 ara pu;0;PU köpük (gövdeyle birlikte enjeksiyon);alt gövde → PU köpük gövde;B_SOGUTMA;ALT
+k4_ara_sac_ust;k4 ara sac ust;1;304 sac · lazer + büküm;zarf 400.0 × 1.0 × 734.0;B_SOGUTMA;ÜRETİM
+k4_depo_GN11_0;GN 1/1-150 kap;2;304 · EN 631;kaşar blok / sucuk (içerik VARSAYIM);B_DEPO;SATIN ALMA
+k4_depo_GN11_1;k4 depo GN11;0;304 sac · lazer + büküm;alt gövde → GN 1/1;B_DEPO;ALT
+k4_depo_raf;k4 depo raf;1;304 sac · lazer + büküm;zarf 400.0 × 1.5 × 734.0;B_DEPO;ÜRETİM
+k4_nis_raf;k4 nis raf;1;304 sac · lazer + büküm;zarf 400.0 × 1.5 × 734.0;B_TEMIZLIK;ÜRETİM
+bidon_5L_0;Temizlik bidonu 5 L;2;deterjan / dezenfektan;;B_TEMIZLIK;SATIN ALMA
+bidon_5L_1;bidon 5L;0;;alt gövde → bidon;B_TEMIZLIK;ALT
+k4_kapak_sogutma_dis_sac;Yoğuşturucu bölmesi kapağı;1;304 1,5 · yalıtımsız · ızgaralı hava penceresi;hava önden girer, tabandan plinte çıkar;B_SOGUTMA;ÜRETİM
+k4_kapak_depo_dis_sac_1.5;k4 kapak depo dis sac 1.5;1;304 sac · lazer + büküm;zarf 430.0 × 316.0 × 40.0;B_DEPO;ÜRETİM
+k4_kapak_depo_pu;k4 kapak depo pu;0;PU köpük (gövdeyle birlikte enjeksiyon);alt gövde → kapak katmanı;B_DEPO;ALT
+k4_kapak_depo_ic_sac_1.0;k4 kapak depo ic sac 1.0;0;304 sac · lazer + büküm;alt gövde → kapak katmanı;B_DEPO;ALT
+k4_kapak_depo_fitil;Fitil · geçmeli manyetik profil 21 × 18,5;1;PVC + şerit mıknatıs · kapak iç sacının 6,4'lük kanalına geçer · aletsiz sökülür;çevre 1404 mm · köşeler gönye kaynaklı;B_DEPO;SATIN ALMA
+k4_kapak_nis_dis_sac_1.5;k4 kapak nis dis sac 1.5;1;304 sac · lazer + büküm;zarf 430.0 × 257.5 × 40.0;B_TEMIZLIK;ÜRETİM
+k4_kapak_nis_pu;k4 kapak nis pu;0;PU köpük (gövdeyle birlikte enjeksiyon);alt gövde → kapak katmanı;B_TEMIZLIK;ALT
+k4_kapak_nis_ic_sac_1.0;k4 kapak nis ic sac 1.0;0;304 sac · lazer + büküm;alt gövde → kapak katmanı;B_TEMIZLIK;ALT
+k4_kapak_nis_fitil;Fitil · geçmeli manyetik profil 21 × 18,5;1;PVC + şerit mıknatıs · kapak iç sacının 6,4'lük kanalına geçer · aletsiz sökülür;çevre 1287 mm · köşeler gönye kaynaklı;B_TEMIZLIK;SATIN ALMA
+k4_izgara_00;k4 izgara;1;304 lama;zarf 360.0 × 8.0 × 1.5;B_SOGUTMA;ÜRETİM
+k4_izgara_01;k4 izgara;1;304 lama;zarf 360.0 × 8.0 × 1.5;B_SOGUTMA;ÜRETİM
+k4_izgara_02;k4 izgara;1;304 lama;zarf 360.0 × 8.0 × 1.5;B_SOGUTMA;ÜRETİM
+k4_izgara_03;k4 izgara;1;304 lama;zarf 360.0 × 8.0 × 1.5;B_SOGUTMA;ÜRETİM
+k4_izgara_04;k4 izgara;1;304 lama;zarf 360.0 × 8.0 × 1.5;B_SOGUTMA;ÜRETİM
+k4_izgara_05;k4 izgara;1;304 lama;zarf 360.0 × 8.0 × 1.5;B_SOGUTMA;ÜRETİM
+k4_izgara_06;k4 izgara;1;304 lama;zarf 360.0 × 8.0 × 1.5;B_SOGUTMA;ÜRETİM
+k4_izgara_07;k4 izgara;1;304 lama;zarf 360.0 × 8.0 × 1.5;B_SOGUTMA;ÜRETİM
+k4_izgara_08;k4 izgara;1;304 lama;zarf 360.0 × 8.0 × 1.5;B_SOGUTMA;ÜRETİM
+k4_izgara_09;k4 izgara;1;304 lama;zarf 360.0 × 8.0 × 1.5;B_SOGUTMA;ÜRETİM
+k4_izgara_10;k4 izgara;1;304 lama;zarf 360.0 × 8.0 × 1.5;B_SOGUTMA;ÜRETİM
+k4_izgara_11;k4 izgara;1;304 lama;zarf 360.0 × 8.0 × 1.5;B_SOGUTMA;ÜRETİM
+k4_izgara_12;k4 izgara;1;304 lama;zarf 360.0 × 8.0 × 1.5;B_SOGUTMA;ÜRETİM
+k4_izgara_13;k4 izgara;1;304 lama;zarf 360.0 × 8.0 × 1.5;B_SOGUTMA;ÜRETİM
+k1_teknik_kapak_dis_sac_1.5;k1 teknik kapak dis sac 1.5;1;304 sac · lazer + büküm;zarf 650.0 × 181.5 × 40.0;B_ELEKTRIK;ÜRETİM
+k1_teknik_kapak_pu;k1 teknik kapak pu;0;PU köpük (gövdeyle birlikte enjeksiyon);alt gövde → kapak katmanı;B_ELEKTRIK;ALT
+k1_teknik_kapak_ic_sac_1.0;k1 teknik kapak ic sac 1.0;0;304 sac · lazer + büküm;alt gövde → kapak katmanı;B_ELEKTRIK;ALT
+k2_ust_panel_dis_sac_1.5;k2 ust panel dis sac 1.5;1;304 sac · lazer + büküm;zarf 650.0 × 55.5 × 40.0;B_KASA;ÜRETİM
+k2_ust_panel_pu;k2 ust panel pu;0;PU köpük (gövdeyle birlikte enjeksiyon);alt gövde → kapak katmanı;B_KASA;ALT
+k2_ust_panel_ic_sac_1.0;k2 ust panel ic sac 1.0;0;304 sac · lazer + büküm;alt gövde → kapak katmanı;B_KASA;ALT
+on_cerceve_saci_1.0;Ön çerçeve sacı 1,0;1;304 lazer kesim · 25 açıklık;fitil buna basar;B_KASA;ÜRETİM
+CEK_K1_hamur_1_on_dis_sac_1.5;Çekmece önü 40 · kulpsuz;1;dış 304 1,5 bükme + PU 37,5 köpük + iç 304 1,0 (fitil kanallı);650 × 105;CEK_K1_hamur_1;ÜRETİM
+CEK_K1_hamur_1_on_pu;on pu;0;PU köpük (gövdeyle birlikte enjeksiyon);alt gövde → çekmece önü / kapak katmanı;CEK_K1_hamur_1;ALT
+CEK_K1_hamur_1_on_ic_sac_1.0;on ic sac 1.0;0;304 sac · lazer + büküm;alt gövde → çekmece önü / kapak katmanı;CEK_K1_hamur_1;ALT
+CEK_K1_hamur_1_on_fitil;Fitil · geçmeli manyetik profil 21 × 18,5;1;PVC + şerit mıknatıs · kapak iç sacının 6,4'lük kanalına geçer · aletsiz sökülür;çevre 1422 mm · köşeler gönye kaynaklı;CEK_K1_hamur_1;SATIN ALMA
+CEK_K1_hamur_1_kutu_U_1.0;Çekmece kutusu U 1,0;1;304 lazer + 2 büküm;560 × 60 × 530;CEK_K1_hamur_1;ÜRETİM
+CEK_K1_hamur_1_kutu_arka_1.0;kutu arka 1.0;0;304 sac · lazer + büküm;alt gövde → çekmece kutusu;CEK_K1_hamur_1;ALT
+CEK_K1_hamur_1_kutu_on_1.0;kutu on 1.0;0;304 sac · lazer + büküm;alt gövde → çekmece kutusu;CEK_K1_hamur_1;ALT
+CEK_K1_hamur_1_on_baglanti_sol;Ön bağlantı köşesi;2;304 2 mm büküm · öne 2 × M5 perçin somun;ön yüz ayar yuvalı;CEK_K1_hamur_1;ÜRETİM
+CEK_K1_hamur_1_on_baglanti_sag;on baglanti;0;304 · lazer / lama;alt gövde → ön bağlantı köşesi;CEK_K1_hamur_1;ALT
+CEK_K1_hamur_1_ray_adaptor_sol;Ray adaptör lamı 6 mm;2;304 lama · kutuya punta;ray iç profiline 4 × M4;CEK_K1_hamur_1;ÜRETİM
+CEK_K1_hamur_1_ray_adaptor_sag;ray adaptor;0;304 · lazer / lama;alt gövde → ray adaptör lamı;CEK_K1_hamur_1;ALT
+CEK_K1_hamur_1_ray_dis_sol;Teleskopik ray Accuride DZ3832-0070;2;700 · tam çekilir · 45,7 × 12,7 · 45–50 kg (çift);kolon yan duvarına 4 × M5;CEK_K1_hamur_1;SATIN ALMA
+CEK_K1_hamur_1_ray_ic_sol;ray ic;0;304 · lazer / lama;alt gövde → Accuride DZ3832-0070 (iç profil);CEK_K1_hamur_1;ALT
+CEK_K1_hamur_1_ray_dis_sag;ray dis;0;304 · lazer / lama;alt gövde → Accuride DZ3832-0070;CEK_K1_hamur_1;ALT
+CEK_K1_hamur_1_ray_ic_sag;ray ic;0;304 · lazer / lama;alt gövde → Accuride DZ3832-0070 (iç profil);CEK_K1_hamur_1;ALT
+CEK_K1_hamur_1_motor_kasnagi;GT3 kasnak 30 diş · 6 mm · flanşlı;1;alüminyum · delik Ø8 H7 + düz;PD 28,65 · çevre 90 mm;CEK_K1_hamur_1;SATIN ALMA
+CEK_K1_hamur_1_motor_mili;motor mili;0;304 · lazer / lama;alt gövde → Transmotec PD3665;CEK_K1_hamur_1;ALT
+CEK_K1_hamur_1_motor_gobegi;motor gobegi;0;304 · lazer / lama;alt gövde → Transmotec PD3665;CEK_K1_hamur_1;ALT
+CEK_K1_hamur_1_motor_reduktor;Motor Transmotec PD3665-24-51-BFEC;1;24 V · planet 51:1 · 127 d/dk · 0,853 N·m · manyetik enkoder · EMC filtreli;Ø36 × 115,5 + enkoder · datasheet: transmotec.com PD3665;CEK_K1_hamur_1;SATIN ALMA
+CEK_K1_hamur_1_motor_govde;motor govde;0;;alt gövde → Transmotec PD3665;CEK_K1_hamur_1;ALT
+CEK_K1_hamur_1_enkoder_kapagi;enkoder kapagi;0;;alt gövde → Transmotec PD3665;CEK_K1_hamur_1;ALT
+CEK_K1_hamur_1_m12_soket;M12 4 pin soket + kablo;1;motor + enkoder tek soket · kasada sabit;kablo dikey kanala;CEK_K1_hamur_1;SATIN ALMA
+CEK_K1_hamur_1_motor_braketi;Motor braketi 3 mm;1;304 lazer + büküm · 4 × M3 (Ø31) + arka duvara 2 × M5;kasnak hizası buradan;CEK_K1_hamur_1;ÜRETİM
+CEK_K1_hamur_1_avara;GT3 avara 30 diş · 6 mm · çift rulman;1;alüminyum · 2 × 625-2RS;ön çerçevenin 17 mm arkası;CEK_K1_hamur_1;SATIN ALMA
+CEK_K1_hamur_1_avara_mili;avara mili;1;304 · lazer / lama;zarf 12.2 × 5.0 × 5.0;CEK_K1_hamur_1;ÜRETİM
+CEK_K1_hamur_1_avara_kolu;Avara kolu 3 mm;1;304 büküm · ön çerçevenin arkasına 2 × M4 perçin somun;kayış gergisi burada: 8 mm yuvalı;CEK_K1_hamur_1;ÜRETİM
+CEK_K1_hamur_1_kayis_GT3;Kayış GT3 6 mm kapalı çevrim;1;~1482 mm (494 diş) · çelik kordlu;tedarikçi boyu doğrulayacak;CEK_K1_hamur_1;SATIN ALMA
+CEK_K1_hamur_1_kayis_cenesi;Kayış çenesi + kolu;1;304 · kutunun yan duvarına kaynaklı · dişli çene 2 × M3;kutunun arkasından kasnağa uzanır (strok için);CEK_K1_hamur_1;ÜRETİM
+CEK_K1_hamur_1_miknatis_ayagi;miknatis ayagi;1;304 · lazer / lama;zarf 6.3 × 2.3 × 28.6;CEK_K1_hamur_1;ÜRETİM
+CEK_K1_hamur_1_miknatis_57135;Mıknatıs Littelfuse 57135-000;1;AlNiCo 5 · flanşlı 28,57 × 19,05 × 6,35;çenenin üstünde;CEK_K1_hamur_1;SATIN ALMA
+CEK_K1_hamur_1_reed_kapali;Reed sensör Littelfuse 59135-010;2;NO · flanşlı 28,57 × 19,05 × 6,35;KAPALI + AÇIK konum · PLC girişine;CEK_K1_hamur_1;SATIN ALMA
+CEK_K1_hamur_1_reed_acik;reed acik;0;;alt gövde → Littelfuse 59135;CEK_K1_hamur_1;ALT
+CEK_K1_hamur_1_sensor_lami;sensor lami;1;304 · lazer / lama;zarf 6.3 × 2.0 × 705.0;CEK_K1_hamur_1;ÜRETİM
+CEK_K1_hamur_1_tepsi;Tepsi · 20 çukur Ø100;1;gıda silikonu 10 mm · çukur 7 · kalıp döküm;530 × 520;CEK_K1_hamur_1;ÜRETİM
+CEK_K1_hamur_2_on_dis_sac_1.5;Çekmece önü 40 · kulpsuz;1;dış 304 1,5 bükme + PU 37,5 köpük + iç 304 1,0 (fitil kanallı);650 × 105;CEK_K1_hamur_2;ÜRETİM
+CEK_K1_hamur_2_on_pu;on pu;0;PU köpük (gövdeyle birlikte enjeksiyon);alt gövde → çekmece önü / kapak katmanı;CEK_K1_hamur_2;ALT
+CEK_K1_hamur_2_on_ic_sac_1.0;on ic sac 1.0;0;304 sac · lazer + büküm;alt gövde → çekmece önü / kapak katmanı;CEK_K1_hamur_2;ALT
+CEK_K1_hamur_2_on_fitil;Fitil · geçmeli manyetik profil 21 × 18,5;1;PVC + şerit mıknatıs · kapak iç sacının 6,4'lük kanalına geçer · aletsiz sökülür;çevre 1422 mm · köşeler gönye kaynaklı;CEK_K1_hamur_2;SATIN ALMA
+CEK_K1_hamur_2_kutu_U_1.0;Çekmece kutusu U 1,0;1;304 lazer + 2 büküm;560 × 60 × 530;CEK_K1_hamur_2;ÜRETİM
+CEK_K1_hamur_2_kutu_arka_1.0;kutu arka 1.0;0;304 sac · lazer + büküm;alt gövde → çekmece kutusu;CEK_K1_hamur_2;ALT
+CEK_K1_hamur_2_kutu_on_1.0;kutu on 1.0;0;304 sac · lazer + büküm;alt gövde → çekmece kutusu;CEK_K1_hamur_2;ALT
+CEK_K1_hamur_2_on_baglanti_sol;Ön bağlantı köşesi;2;304 2 mm büküm · öne 2 × M5 perçin somun;ön yüz ayar yuvalı;CEK_K1_hamur_2;ÜRETİM
+CEK_K1_hamur_2_on_baglanti_sag;on baglanti;0;304 · lazer / lama;alt gövde → ön bağlantı köşesi;CEK_K1_hamur_2;ALT
+CEK_K1_hamur_2_ray_adaptor_sol;Ray adaptör lamı 6 mm;2;304 lama · kutuya punta;ray iç profiline 4 × M4;CEK_K1_hamur_2;ÜRETİM
+CEK_K1_hamur_2_ray_adaptor_sag;ray adaptor;0;304 · lazer / lama;alt gövde → ray adaptör lamı;CEK_K1_hamur_2;ALT
+CEK_K1_hamur_2_ray_dis_sol;Teleskopik ray Accuride DZ3832-0070;2;700 · tam çekilir · 45,7 × 12,7 · 45–50 kg (çift);kolon yan duvarına 4 × M5;CEK_K1_hamur_2;SATIN ALMA
+CEK_K1_hamur_2_ray_ic_sol;ray ic;0;304 · lazer / lama;alt gövde → Accuride DZ3832-0070 (iç profil);CEK_K1_hamur_2;ALT
+CEK_K1_hamur_2_ray_dis_sag;ray dis;0;304 · lazer / lama;alt gövde → Accuride DZ3832-0070;CEK_K1_hamur_2;ALT
+CEK_K1_hamur_2_ray_ic_sag;ray ic;0;304 · lazer / lama;alt gövde → Accuride DZ3832-0070 (iç profil);CEK_K1_hamur_2;ALT
+CEK_K1_hamur_2_motor_kasnagi;GT3 kasnak 30 diş · 6 mm · flanşlı;1;alüminyum · delik Ø8 H7 + düz;PD 28,65 · çevre 90 mm;CEK_K1_hamur_2;SATIN ALMA
+CEK_K1_hamur_2_motor_mili;motor mili;0;304 · lazer / lama;alt gövde → Transmotec PD3665;CEK_K1_hamur_2;ALT
+CEK_K1_hamur_2_motor_gobegi;motor gobegi;0;304 · lazer / lama;alt gövde → Transmotec PD3665;CEK_K1_hamur_2;ALT
+CEK_K1_hamur_2_motor_reduktor;Motor Transmotec PD3665-24-51-BFEC;1;24 V · planet 51:1 · 127 d/dk · 0,853 N·m · manyetik enkoder · EMC filtreli;Ø36 × 115,5 + enkoder · datasheet: transmotec.com PD3665;CEK_K1_hamur_2;SATIN ALMA
+CEK_K1_hamur_2_motor_govde;motor govde;0;;alt gövde → Transmotec PD3665;CEK_K1_hamur_2;ALT
+CEK_K1_hamur_2_enkoder_kapagi;enkoder kapagi;0;;alt gövde → Transmotec PD3665;CEK_K1_hamur_2;ALT
+CEK_K1_hamur_2_m12_soket;M12 4 pin soket + kablo;1;motor + enkoder tek soket · kasada sabit;kablo dikey kanala;CEK_K1_hamur_2;SATIN ALMA
+CEK_K1_hamur_2_motor_braketi;Motor braketi 3 mm;1;304 lazer + büküm · 4 × M3 (Ø31) + arka duvara 2 × M5;kasnak hizası buradan;CEK_K1_hamur_2;ÜRETİM
+CEK_K1_hamur_2_avara;GT3 avara 30 diş · 6 mm · çift rulman;1;alüminyum · 2 × 625-2RS;ön çerçevenin 17 mm arkası;CEK_K1_hamur_2;SATIN ALMA
+CEK_K1_hamur_2_avara_mili;avara mili;1;304 · lazer / lama;zarf 12.2 × 5.0 × 5.0;CEK_K1_hamur_2;ÜRETİM
+CEK_K1_hamur_2_avara_kolu;Avara kolu 3 mm;1;304 büküm · ön çerçevenin arkasına 2 × M4 perçin somun;kayış gergisi burada: 8 mm yuvalı;CEK_K1_hamur_2;ÜRETİM
+CEK_K1_hamur_2_kayis_GT3;Kayış GT3 6 mm kapalı çevrim;1;~1482 mm (494 diş) · çelik kordlu;tedarikçi boyu doğrulayacak;CEK_K1_hamur_2;SATIN ALMA
+CEK_K1_hamur_2_kayis_cenesi;Kayış çenesi + kolu;1;304 · kutunun yan duvarına kaynaklı · dişli çene 2 × M3;kutunun arkasından kasnağa uzanır (strok için);CEK_K1_hamur_2;ÜRETİM
+CEK_K1_hamur_2_miknatis_ayagi;miknatis ayagi;1;304 · lazer / lama;zarf 6.3 × 2.3 × 28.6;CEK_K1_hamur_2;ÜRETİM
+CEK_K1_hamur_2_miknatis_57135;Mıknatıs Littelfuse 57135-000;1;AlNiCo 5 · flanşlı 28,57 × 19,05 × 6,35;çenenin üstünde;CEK_K1_hamur_2;SATIN ALMA
+CEK_K1_hamur_2_reed_kapali;Reed sensör Littelfuse 59135-010;2;NO · flanşlı 28,57 × 19,05 × 6,35;KAPALI + AÇIK konum · PLC girişine;CEK_K1_hamur_2;SATIN ALMA
+CEK_K1_hamur_2_reed_acik;reed acik;0;;alt gövde → Littelfuse 59135;CEK_K1_hamur_2;ALT
+CEK_K1_hamur_2_sensor_lami;sensor lami;1;304 · lazer / lama;zarf 6.3 × 2.0 × 705.0;CEK_K1_hamur_2;ÜRETİM
+CEK_K1_hamur_2_tepsi;Tepsi · 20 çukur Ø100;1;gıda silikonu 10 mm · çukur 7 · kalıp döküm;530 × 520;CEK_K1_hamur_2;ÜRETİM
+CEK_K1_hamur_3_on_dis_sac_1.5;Çekmece önü 40 · kulpsuz;1;dış 304 1,5 bükme + PU 37,5 köpük + iç 304 1,0 (fitil kanallı);650 × 105;CEK_K1_hamur_3;ÜRETİM
+CEK_K1_hamur_3_on_pu;on pu;0;PU köpük (gövdeyle birlikte enjeksiyon);alt gövde → çekmece önü / kapak katmanı;CEK_K1_hamur_3;ALT
+CEK_K1_hamur_3_on_ic_sac_1.0;on ic sac 1.0;0;304 sac · lazer + büküm;alt gövde → çekmece önü / kapak katmanı;CEK_K1_hamur_3;ALT
+CEK_K1_hamur_3_on_fitil;Fitil · geçmeli manyetik profil 21 × 18,5;1;PVC + şerit mıknatıs · kapak iç sacının 6,4'lük kanalına geçer · aletsiz sökülür;çevre 1422 mm · köşeler gönye kaynaklı;CEK_K1_hamur_3;SATIN ALMA
+CEK_K1_hamur_3_kutu_U_1.0;Çekmece kutusu U 1,0;1;304 lazer + 2 büküm;560 × 60 × 530;CEK_K1_hamur_3;ÜRETİM
+CEK_K1_hamur_3_kutu_arka_1.0;kutu arka 1.0;0;304 sac · lazer + büküm;alt gövde → çekmece kutusu;CEK_K1_hamur_3;ALT
+CEK_K1_hamur_3_kutu_on_1.0;kutu on 1.0;0;304 sac · lazer + büküm;alt gövde → çekmece kutusu;CEK_K1_hamur_3;ALT
+CEK_K1_hamur_3_on_baglanti_sol;Ön bağlantı köşesi;2;304 2 mm büküm · öne 2 × M5 perçin somun;ön yüz ayar yuvalı;CEK_K1_hamur_3;ÜRETİM
+CEK_K1_hamur_3_on_baglanti_sag;on baglanti;0;304 · lazer / lama;alt gövde → ön bağlantı köşesi;CEK_K1_hamur_3;ALT
+CEK_K1_hamur_3_ray_adaptor_sol;Ray adaptör lamı 6 mm;2;304 lama · kutuya punta;ray iç profiline 4 × M4;CEK_K1_hamur_3;ÜRETİM
+CEK_K1_hamur_3_ray_adaptor_sag;ray adaptor;0;304 · lazer / lama;alt gövde → ray adaptör lamı;CEK_K1_hamur_3;ALT
+CEK_K1_hamur_3_ray_dis_sol;Teleskopik ray Accuride DZ3832-0070;2;700 · tam çekilir · 45,7 × 12,7 · 45–50 kg (çift);kolon yan duvarına 4 × M5;CEK_K1_hamur_3;SATIN ALMA
+CEK_K1_hamur_3_ray_ic_sol;ray ic;0;304 · lazer / lama;alt gövde → Accuride DZ3832-0070 (iç profil);CEK_K1_hamur_3;ALT
+CEK_K1_hamur_3_ray_dis_sag;ray dis;0;304 · lazer / lama;alt gövde → Accuride DZ3832-0070;CEK_K1_hamur_3;ALT
+CEK_K1_hamur_3_ray_ic_sag;ray ic;0;304 · lazer / lama;alt gövde → Accuride DZ3832-0070 (iç profil);CEK_K1_hamur_3;ALT
+CEK_K1_hamur_3_motor_kasnagi;GT3 kasnak 30 diş · 6 mm · flanşlı;1;alüminyum · delik Ø8 H7 + düz;PD 28,65 · çevre 90 mm;CEK_K1_hamur_3;SATIN ALMA
+CEK_K1_hamur_3_motor_mili;motor mili;0;304 · lazer / lama;alt gövde → Transmotec PD3665;CEK_K1_hamur_3;ALT
+CEK_K1_hamur_3_motor_gobegi;motor gobegi;0;304 · lazer / lama;alt gövde → Transmotec PD3665;CEK_K1_hamur_3;ALT
+CEK_K1_hamur_3_motor_reduktor;Motor Transmotec PD3665-24-51-BFEC;1;24 V · planet 51:1 · 127 d/dk · 0,853 N·m · manyetik enkoder · EMC filtreli;Ø36 × 115,5 + enkoder · datasheet: transmotec.com PD3665;CEK_K1_hamur_3;SATIN ALMA
+CEK_K1_hamur_3_motor_govde;motor govde;0;;alt gövde → Transmotec PD3665;CEK_K1_hamur_3;ALT
+CEK_K1_hamur_3_enkoder_kapagi;enkoder kapagi;0;;alt gövde → Transmotec PD3665;CEK_K1_hamur_3;ALT
+CEK_K1_hamur_3_m12_soket;M12 4 pin soket + kablo;1;motor + enkoder tek soket · kasada sabit;kablo dikey kanala;CEK_K1_hamur_3;SATIN ALMA
+CEK_K1_hamur_3_motor_braketi;Motor braketi 3 mm;1;304 lazer + büküm · 4 × M3 (Ø31) + arka duvara 2 × M5;kasnak hizası buradan;CEK_K1_hamur_3;ÜRETİM
+CEK_K1_hamur_3_avara;GT3 avara 30 diş · 6 mm · çift rulman;1;alüminyum · 2 × 625-2RS;ön çerçevenin 17 mm arkası;CEK_K1_hamur_3;SATIN ALMA
+CEK_K1_hamur_3_avara_mili;avara mili;1;304 · lazer / lama;zarf 12.2 × 5.0 × 5.0;CEK_K1_hamur_3;ÜRETİM
+CEK_K1_hamur_3_avara_kolu;Avara kolu 3 mm;1;304 büküm · ön çerçevenin arkasına 2 × M4 perçin somun;kayış gergisi burada: 8 mm yuvalı;CEK_K1_hamur_3;ÜRETİM
+CEK_K1_hamur_3_kayis_GT3;Kayış GT3 6 mm kapalı çevrim;1;~1482 mm (494 diş) · çelik kordlu;tedarikçi boyu doğrulayacak;CEK_K1_hamur_3;SATIN ALMA
+CEK_K1_hamur_3_kayis_cenesi;Kayış çenesi + kolu;1;304 · kutunun yan duvarına kaynaklı · dişli çene 2 × M3;kutunun arkasından kasnağa uzanır (strok için);CEK_K1_hamur_3;ÜRETİM
+CEK_K1_hamur_3_miknatis_ayagi;miknatis ayagi;1;304 · lazer / lama;zarf 6.3 × 2.3 × 28.6;CEK_K1_hamur_3;ÜRETİM
+CEK_K1_hamur_3_miknatis_57135;Mıknatıs Littelfuse 57135-000;1;AlNiCo 5 · flanşlı 28,57 × 19,05 × 6,35;çenenin üstünde;CEK_K1_hamur_3;SATIN ALMA
+CEK_K1_hamur_3_reed_kapali;Reed sensör Littelfuse 59135-010;2;NO · flanşlı 28,57 × 19,05 × 6,35;KAPALI + AÇIK konum · PLC girişine;CEK_K1_hamur_3;SATIN ALMA
+CEK_K1_hamur_3_reed_acik;reed acik;0;;alt gövde → Littelfuse 59135;CEK_K1_hamur_3;ALT
+CEK_K1_hamur_3_sensor_lami;sensor lami;1;304 · lazer / lama;zarf 6.3 × 2.0 × 705.0;CEK_K1_hamur_3;ÜRETİM
+CEK_K1_hamur_3_tepsi;Tepsi · 20 çukur Ø100;1;gıda silikonu 10 mm · çukur 7 · kalıp döküm;530 × 520;CEK_K1_hamur_3;ÜRETİM
+CEK_K1_hamur_4_on_dis_sac_1.5;Çekmece önü 40 · kulpsuz;1;dış 304 1,5 bükme + PU 37,5 köpük + iç 304 1,0 (fitil kanallı);650 × 105;CEK_K1_hamur_4;ÜRETİM
+CEK_K1_hamur_4_on_pu;on pu;0;PU köpük (gövdeyle birlikte enjeksiyon);alt gövde → çekmece önü / kapak katmanı;CEK_K1_hamur_4;ALT
+CEK_K1_hamur_4_on_ic_sac_1.0;on ic sac 1.0;0;304 sac · lazer + büküm;alt gövde → çekmece önü / kapak katmanı;CEK_K1_hamur_4;ALT
+CEK_K1_hamur_4_on_fitil;Fitil · geçmeli manyetik profil 21 × 18,5;1;PVC + şerit mıknatıs · kapak iç sacının 6,4'lük kanalına geçer · aletsiz sökülür;çevre 1422 mm · köşeler gönye kaynaklı;CEK_K1_hamur_4;SATIN ALMA
+CEK_K1_hamur_4_kutu_U_1.0;Çekmece kutusu U 1,0;1;304 lazer + 2 büküm;560 × 60 × 530;CEK_K1_hamur_4;ÜRETİM
+CEK_K1_hamur_4_kutu_arka_1.0;kutu arka 1.0;0;304 sac · lazer + büküm;alt gövde → çekmece kutusu;CEK_K1_hamur_4;ALT
+CEK_K1_hamur_4_kutu_on_1.0;kutu on 1.0;0;304 sac · lazer + büküm;alt gövde → çekmece kutusu;CEK_K1_hamur_4;ALT
+CEK_K1_hamur_4_on_baglanti_sol;Ön bağlantı köşesi;2;304 2 mm büküm · öne 2 × M5 perçin somun;ön yüz ayar yuvalı;CEK_K1_hamur_4;ÜRETİM
+CEK_K1_hamur_4_on_baglanti_sag;on baglanti;0;304 · lazer / lama;alt gövde → ön bağlantı köşesi;CEK_K1_hamur_4;ALT
+CEK_K1_hamur_4_ray_adaptor_sol;Ray adaptör lamı 6 mm;2;304 lama · kutuya punta;ray iç profiline 4 × M4;CEK_K1_hamur_4;ÜRETİM
+CEK_K1_hamur_4_ray_adaptor_sag;ray adaptor;0;304 · lazer / lama;alt gövde → ray adaptör lamı;CEK_K1_hamur_4;ALT
+CEK_K1_hamur_4_ray_dis_sol;Teleskopik ray Accuride DZ3832-0070;2;700 · tam çekilir · 45,7 × 12,7 · 45–50 kg (çift);kolon yan duvarına 4 × M5;CEK_K1_hamur_4;SATIN ALMA
+CEK_K1_hamur_4_ray_ic_sol;ray ic;0;304 · lazer / lama;alt gövde → Accuride DZ3832-0070 (iç profil);CEK_K1_hamur_4;ALT
+CEK_K1_hamur_4_ray_dis_sag;ray dis;0;304 · lazer / lama;alt gövde → Accuride DZ3832-0070;CEK_K1_hamur_4;ALT
+CEK_K1_hamur_4_ray_ic_sag;ray ic;0;304 · lazer / lama;alt gövde → Accuride DZ3832-0070 (iç profil);CEK_K1_hamur_4;ALT
+CEK_K1_hamur_4_motor_kasnagi;GT3 kasnak 30 diş · 6 mm · flanşlı;1;alüminyum · delik Ø8 H7 + düz;PD 28,65 · çevre 90 mm;CEK_K1_hamur_4;SATIN ALMA
+CEK_K1_hamur_4_motor_mili;motor mili;0;304 · lazer / lama;alt gövde → Transmotec PD3665;CEK_K1_hamur_4;ALT
+CEK_K1_hamur_4_motor_gobegi;motor gobegi;0;304 · lazer / lama;alt gövde → Transmotec PD3665;CEK_K1_hamur_4;ALT
+CEK_K1_hamur_4_motor_reduktor;Motor Transmotec PD3665-24-51-BFEC;1;24 V · planet 51:1 · 127 d/dk · 0,853 N·m · manyetik enkoder · EMC filtreli;Ø36 × 115,5 + enkoder · datasheet: transmotec.com PD3665;CEK_K1_hamur_4;SATIN ALMA
+CEK_K1_hamur_4_motor_govde;motor govde;0;;alt gövde → Transmotec PD3665;CEK_K1_hamur_4;ALT
+CEK_K1_hamur_4_enkoder_kapagi;enkoder kapagi;0;;alt gövde → Transmotec PD3665;CEK_K1_hamur_4;ALT
+CEK_K1_hamur_4_m12_soket;M12 4 pin soket + kablo;1;motor + enkoder tek soket · kasada sabit;kablo dikey kanala;CEK_K1_hamur_4;SATIN ALMA
+CEK_K1_hamur_4_motor_braketi;Motor braketi 3 mm;1;304 lazer + büküm · 4 × M3 (Ø31) + arka duvara 2 × M5;kasnak hizası buradan;CEK_K1_hamur_4;ÜRETİM
+CEK_K1_hamur_4_avara;GT3 avara 30 diş · 6 mm · çift rulman;1;alüminyum · 2 × 625-2RS;ön çerçevenin 17 mm arkası;CEK_K1_hamur_4;SATIN ALMA
+CEK_K1_hamur_4_avara_mili;avara mili;1;304 · lazer / lama;zarf 12.2 × 5.0 × 5.0;CEK_K1_hamur_4;ÜRETİM
+CEK_K1_hamur_4_avara_kolu;Avara kolu 3 mm;1;304 büküm · ön çerçevenin arkasına 2 × M4 perçin somun;kayış gergisi burada: 8 mm yuvalı;CEK_K1_hamur_4;ÜRETİM
+CEK_K1_hamur_4_kayis_GT3;Kayış GT3 6 mm kapalı çevrim;1;~1482 mm (494 diş) · çelik kordlu;tedarikçi boyu doğrulayacak;CEK_K1_hamur_4;SATIN ALMA
+CEK_K1_hamur_4_kayis_cenesi;Kayış çenesi + kolu;1;304 · kutunun yan duvarına kaynaklı · dişli çene 2 × M3;kutunun arkasından kasnağa uzanır (strok için);CEK_K1_hamur_4;ÜRETİM
+CEK_K1_hamur_4_miknatis_ayagi;miknatis ayagi;1;304 · lazer / lama;zarf 6.3 × 2.3 × 28.6;CEK_K1_hamur_4;ÜRETİM
+CEK_K1_hamur_4_miknatis_57135;Mıknatıs Littelfuse 57135-000;1;AlNiCo 5 · flanşlı 28,57 × 19,05 × 6,35;çenenin üstünde;CEK_K1_hamur_4;SATIN ALMA
+CEK_K1_hamur_4_reed_kapali;Reed sensör Littelfuse 59135-010;2;NO · flanşlı 28,57 × 19,05 × 6,35;KAPALI + AÇIK konum · PLC girişine;CEK_K1_hamur_4;SATIN ALMA
+CEK_K1_hamur_4_reed_acik;reed acik;0;;alt gövde → Littelfuse 59135;CEK_K1_hamur_4;ALT
+CEK_K1_hamur_4_sensor_lami;sensor lami;1;304 · lazer / lama;zarf 6.3 × 2.0 × 705.0;CEK_K1_hamur_4;ÜRETİM
+CEK_K1_hamur_4_tepsi;Tepsi · 20 çukur Ø100;1;gıda silikonu 10 mm · çukur 7 · kalıp döküm;530 × 520;CEK_K1_hamur_4;ÜRETİM
+CEK_K1_hamur_5_on_dis_sac_1.5;Çekmece önü 40 · kulpsuz;1;dış 304 1,5 bükme + PU 37,5 köpük + iç 304 1,0 (fitil kanallı);650 × 105;CEK_K1_hamur_5;ÜRETİM
+CEK_K1_hamur_5_on_pu;on pu;0;PU köpük (gövdeyle birlikte enjeksiyon);alt gövde → çekmece önü / kapak katmanı;CEK_K1_hamur_5;ALT
+CEK_K1_hamur_5_on_ic_sac_1.0;on ic sac 1.0;0;304 sac · lazer + büküm;alt gövde → çekmece önü / kapak katmanı;CEK_K1_hamur_5;ALT
+CEK_K1_hamur_5_on_fitil;Fitil · geçmeli manyetik profil 21 × 18,5;1;PVC + şerit mıknatıs · kapak iç sacının 6,4'lük kanalına geçer · aletsiz sökülür;çevre 1422 mm · köşeler gönye kaynaklı;CEK_K1_hamur_5;SATIN ALMA
+CEK_K1_hamur_5_kutu_U_1.0;Çekmece kutusu U 1,0;1;304 lazer + 2 büküm;560 × 60 × 530;CEK_K1_hamur_5;ÜRETİM
+CEK_K1_hamur_5_kutu_arka_1.0;kutu arka 1.0;0;304 sac · lazer + büküm;alt gövde → çekmece kutusu;CEK_K1_hamur_5;ALT
+CEK_K1_hamur_5_kutu_on_1.0;kutu on 1.0;0;304 sac · lazer + büküm;alt gövde → çekmece kutusu;CEK_K1_hamur_5;ALT
+CEK_K1_hamur_5_on_baglanti_sol;Ön bağlantı köşesi;2;304 2 mm büküm · öne 2 × M5 perçin somun;ön yüz ayar yuvalı;CEK_K1_hamur_5;ÜRETİM
+CEK_K1_hamur_5_on_baglanti_sag;on baglanti;0;304 · lazer / lama;alt gövde → ön bağlantı köşesi;CEK_K1_hamur_5;ALT
+CEK_K1_hamur_5_ray_adaptor_sol;Ray adaptör lamı 6 mm;2;304 lama · kutuya punta;ray iç profiline 4 × M4;CEK_K1_hamur_5;ÜRETİM
+CEK_K1_hamur_5_ray_adaptor_sag;ray adaptor;0;304 · lazer / lama;alt gövde → ray adaptör lamı;CEK_K1_hamur_5;ALT
+CEK_K1_hamur_5_ray_dis_sol;Teleskopik ray Accuride DZ3832-0070;2;700 · tam çekilir · 45,7 × 12,7 · 45–50 kg (çift);kolon yan duvarına 4 × M5;CEK_K1_hamur_5;SATIN ALMA
+CEK_K1_hamur_5_ray_ic_sol;ray ic;0;304 · lazer / lama;alt gövde → Accuride DZ3832-0070 (iç profil);CEK_K1_hamur_5;ALT
+CEK_K1_hamur_5_ray_dis_sag;ray dis;0;304 · lazer / lama;alt gövde → Accuride DZ3832-0070;CEK_K1_hamur_5;ALT
+CEK_K1_hamur_5_ray_ic_sag;ray ic;0;304 · lazer / lama;alt gövde → Accuride DZ3832-0070 (iç profil);CEK_K1_hamur_5;ALT
+CEK_K1_hamur_5_motor_kasnagi;GT3 kasnak 30 diş · 6 mm · flanşlı;1;alüminyum · delik Ø8 H7 + düz;PD 28,65 · çevre 90 mm;CEK_K1_hamur_5;SATIN ALMA
+CEK_K1_hamur_5_motor_mili;motor mili;0;304 · lazer / lama;alt gövde → Transmotec PD3665;CEK_K1_hamur_5;ALT
+CEK_K1_hamur_5_motor_gobegi;motor gobegi;0;304 · lazer / lama;alt gövde → Transmotec PD3665;CEK_K1_hamur_5;ALT
+CEK_K1_hamur_5_motor_reduktor;Motor Transmotec PD3665-24-51-BFEC;1;24 V · planet 51:1 · 127 d/dk · 0,853 N·m · manyetik enkoder · EMC filtreli;Ø36 × 115,5 + enkoder · datasheet: transmotec.com PD3665;CEK_K1_hamur_5;SATIN ALMA
+CEK_K1_hamur_5_motor_govde;motor govde;0;;alt gövde → Transmotec PD3665;CEK_K1_hamur_5;ALT
+CEK_K1_hamur_5_enkoder_kapagi;enkoder kapagi;0;;alt gövde → Transmotec PD3665;CEK_K1_hamur_5;ALT
+CEK_K1_hamur_5_m12_soket;M12 4 pin soket + kablo;1;motor + enkoder tek soket · kasada sabit;kablo dikey kanala;CEK_K1_hamur_5;SATIN ALMA
+CEK_K1_hamur_5_motor_braketi;Motor braketi 3 mm;1;304 lazer + büküm · 4 × M3 (Ø31) + arka duvara 2 × M5;kasnak hizası buradan;CEK_K1_hamur_5;ÜRETİM
+CEK_K1_hamur_5_avara;GT3 avara 30 diş · 6 mm · çift rulman;1;alüminyum · 2 × 625-2RS;ön çerçevenin 17 mm arkası;CEK_K1_hamur_5;SATIN ALMA
+CEK_K1_hamur_5_avara_mili;avara mili;1;304 · lazer / lama;zarf 12.2 × 5.0 × 5.0;CEK_K1_hamur_5;ÜRETİM
+CEK_K1_hamur_5_avara_kolu;Avara kolu 3 mm;1;304 büküm · ön çerçevenin arkasına 2 × M4 perçin somun;kayış gergisi burada: 8 mm yuvalı;CEK_K1_hamur_5;ÜRETİM
+CEK_K1_hamur_5_kayis_GT3;Kayış GT3 6 mm kapalı çevrim;1;~1482 mm (494 diş) · çelik kordlu;tedarikçi boyu doğrulayacak;CEK_K1_hamur_5;SATIN ALMA
+CEK_K1_hamur_5_kayis_cenesi;Kayış çenesi + kolu;1;304 · kutunun yan duvarına kaynaklı · dişli çene 2 × M3;kutunun arkasından kasnağa uzanır (strok için);CEK_K1_hamur_5;ÜRETİM
+CEK_K1_hamur_5_miknatis_ayagi;miknatis ayagi;1;304 · lazer / lama;zarf 6.3 × 2.3 × 28.6;CEK_K1_hamur_5;ÜRETİM
+CEK_K1_hamur_5_miknatis_57135;Mıknatıs Littelfuse 57135-000;1;AlNiCo 5 · flanşlı 28,57 × 19,05 × 6,35;çenenin üstünde;CEK_K1_hamur_5;SATIN ALMA
+CEK_K1_hamur_5_reed_kapali;Reed sensör Littelfuse 59135-010;2;NO · flanşlı 28,57 × 19,05 × 6,35;KAPALI + AÇIK konum · PLC girişine;CEK_K1_hamur_5;SATIN ALMA
+CEK_K1_hamur_5_reed_acik;reed acik;0;;alt gövde → Littelfuse 59135;CEK_K1_hamur_5;ALT
+CEK_K1_hamur_5_sensor_lami;sensor lami;1;304 · lazer / lama;zarf 6.3 × 2.0 × 705.0;CEK_K1_hamur_5;ÜRETİM
+CEK_K1_hamur_5_tepsi;Tepsi · 20 çukur Ø100;1;gıda silikonu 10 mm · çukur 7 · kalıp döküm;530 × 520;CEK_K1_hamur_5;ÜRETİM
+CEK_K1_hamur_6_on_dis_sac_1.5;Çekmece önü 40 · kulpsuz;1;dış 304 1,5 bükme + PU 37,5 köpük + iç 304 1,0 (fitil kanallı);650 × 105;CEK_K1_hamur_6;ÜRETİM
+CEK_K1_hamur_6_on_pu;on pu;0;PU köpük (gövdeyle birlikte enjeksiyon);alt gövde → çekmece önü / kapak katmanı;CEK_K1_hamur_6;ALT
+CEK_K1_hamur_6_on_ic_sac_1.0;on ic sac 1.0;0;304 sac · lazer + büküm;alt gövde → çekmece önü / kapak katmanı;CEK_K1_hamur_6;ALT
+CEK_K1_hamur_6_on_fitil;Fitil · geçmeli manyetik profil 21 × 18,5;1;PVC + şerit mıknatıs · kapak iç sacının 6,4'lük kanalına geçer · aletsiz sökülür;çevre 1422 mm · köşeler gönye kaynaklı;CEK_K1_hamur_6;SATIN ALMA
+CEK_K1_hamur_6_kutu_U_1.0;Çekmece kutusu U 1,0;1;304 lazer + 2 büküm;560 × 60 × 530;CEK_K1_hamur_6;ÜRETİM
+CEK_K1_hamur_6_kutu_arka_1.0;kutu arka 1.0;0;304 sac · lazer + büküm;alt gövde → çekmece kutusu;CEK_K1_hamur_6;ALT
+CEK_K1_hamur_6_kutu_on_1.0;kutu on 1.0;0;304 sac · lazer + büküm;alt gövde → çekmece kutusu;CEK_K1_hamur_6;ALT
+CEK_K1_hamur_6_on_baglanti_sol;Ön bağlantı köşesi;2;304 2 mm büküm · öne 2 × M5 perçin somun;ön yüz ayar yuvalı;CEK_K1_hamur_6;ÜRETİM
+CEK_K1_hamur_6_on_baglanti_sag;on baglanti;0;304 · lazer / lama;alt gövde → ön bağlantı köşesi;CEK_K1_hamur_6;ALT
+CEK_K1_hamur_6_ray_adaptor_sol;Ray adaptör lamı 6 mm;2;304 lama · kutuya punta;ray iç profiline 4 × M4;CEK_K1_hamur_6;ÜRETİM
+CEK_K1_hamur_6_ray_adaptor_sag;ray adaptor;0;304 · lazer / lama;alt gövde → ray adaptör lamı;CEK_K1_hamur_6;ALT
+CEK_K1_hamur_6_ray_dis_sol;Teleskopik ray Accuride DZ3832-0070;2;700 · tam çekilir · 45,7 × 12,7 · 45–50 kg (çift);kolon yan duvarına 4 × M5;CEK_K1_hamur_6;SATIN ALMA
+CEK_K1_hamur_6_ray_ic_sol;ray ic;0;304 · lazer / lama;alt gövde → Accuride DZ3832-0070 (iç profil);CEK_K1_hamur_6;ALT
+CEK_K1_hamur_6_ray_dis_sag;ray dis;0;304 · lazer / lama;alt gövde → Accuride DZ3832-0070;CEK_K1_hamur_6;ALT
+CEK_K1_hamur_6_ray_ic_sag;ray ic;0;304 · lazer / lama;alt gövde → Accuride DZ3832-0070 (iç profil);CEK_K1_hamur_6;ALT
+CEK_K1_hamur_6_motor_kasnagi;GT3 kasnak 30 diş · 6 mm · flanşlı;1;alüminyum · delik Ø8 H7 + düz;PD 28,65 · çevre 90 mm;CEK_K1_hamur_6;SATIN ALMA
+CEK_K1_hamur_6_motor_mili;motor mili;0;304 · lazer / lama;alt gövde → Transmotec PD3665;CEK_K1_hamur_6;ALT
+CEK_K1_hamur_6_motor_gobegi;motor gobegi;0;304 · lazer / lama;alt gövde → Transmotec PD3665;CEK_K1_hamur_6;ALT
+CEK_K1_hamur_6_motor_reduktor;Motor Transmotec PD3665-24-51-BFEC;1;24 V · planet 51:1 · 127 d/dk · 0,853 N·m · manyetik enkoder · EMC filtreli;Ø36 × 115,5 + enkoder · datasheet: transmotec.com PD3665;CEK_K1_hamur_6;SATIN ALMA
+CEK_K1_hamur_6_motor_govde;motor govde;0;;alt gövde → Transmotec PD3665;CEK_K1_hamur_6;ALT
+CEK_K1_hamur_6_enkoder_kapagi;enkoder kapagi;0;;alt gövde → Transmotec PD3665;CEK_K1_hamur_6;ALT
+CEK_K1_hamur_6_m12_soket;M12 4 pin soket + kablo;1;motor + enkoder tek soket · kasada sabit;kablo dikey kanala;CEK_K1_hamur_6;SATIN ALMA
+CEK_K1_hamur_6_motor_braketi;Motor braketi 3 mm;1;304 lazer + büküm · 4 × M3 (Ø31) + arka duvara 2 × M5;kasnak hizası buradan;CEK_K1_hamur_6;ÜRETİM
+CEK_K1_hamur_6_avara;GT3 avara 30 diş · 6 mm · çift rulman;1;alüminyum · 2 × 625-2RS;ön çerçevenin 17 mm arkası;CEK_K1_hamur_6;SATIN ALMA
+CEK_K1_hamur_6_avara_mili;avara mili;1;304 · lazer / lama;zarf 12.2 × 5.0 × 5.0;CEK_K1_hamur_6;ÜRETİM
+CEK_K1_hamur_6_avara_kolu;Avara kolu 3 mm;1;304 büküm · ön çerçevenin arkasına 2 × M4 perçin somun;kayış gergisi burada: 8 mm yuvalı;CEK_K1_hamur_6;ÜRETİM
+CEK_K1_hamur_6_kayis_GT3;Kayış GT3 6 mm kapalı çevrim;1;~1482 mm (494 diş) · çelik kordlu;tedarikçi boyu doğrulayacak;CEK_K1_hamur_6;SATIN ALMA
+CEK_K1_hamur_6_kayis_cenesi;Kayış çenesi + kolu;1;304 · kutunun yan duvarına kaynaklı · dişli çene 2 × M3;kutunun arkasından kasnağa uzanır (strok için);CEK_K1_hamur_6;ÜRETİM
+CEK_K1_hamur_6_miknatis_ayagi;miknatis ayagi;1;304 · lazer / lama;zarf 6.3 × 2.3 × 28.6;CEK_K1_hamur_6;ÜRETİM
+CEK_K1_hamur_6_miknatis_57135;Mıknatıs Littelfuse 57135-000;1;AlNiCo 5 · flanşlı 28,57 × 19,05 × 6,35;çenenin üstünde;CEK_K1_hamur_6;SATIN ALMA
+CEK_K1_hamur_6_reed_kapali;Reed sensör Littelfuse 59135-010;2;NO · flanşlı 28,57 × 19,05 × 6,35;KAPALI + AÇIK konum · PLC girişine;CEK_K1_hamur_6;SATIN ALMA
+CEK_K1_hamur_6_reed_acik;reed acik;0;;alt gövde → Littelfuse 59135;CEK_K1_hamur_6;ALT
+CEK_K1_hamur_6_sensor_lami;sensor lami;1;304 · lazer / lama;zarf 6.3 × 2.0 × 705.0;CEK_K1_hamur_6;ÜRETİM
+CEK_K1_hamur_6_tepsi;Tepsi · 20 çukur Ø100;1;gıda silikonu 10 mm · çukur 7 · kalıp döküm;530 × 520;CEK_K1_hamur_6;ÜRETİM
+CEK_K2_hamur_1_on_dis_sac_1.5;Çekmece önü 40 · kulpsuz;1;dış 304 1,5 bükme + PU 37,5 köpük + iç 304 1,0 (fitil kanallı);650 × 105;CEK_K2_hamur_1;ÜRETİM
+CEK_K2_hamur_1_on_pu;on pu;0;PU köpük (gövdeyle birlikte enjeksiyon);alt gövde → çekmece önü / kapak katmanı;CEK_K2_hamur_1;ALT
+CEK_K2_hamur_1_on_ic_sac_1.0;on ic sac 1.0;0;304 sac · lazer + büküm;alt gövde → çekmece önü / kapak katmanı;CEK_K2_hamur_1;ALT
+CEK_K2_hamur_1_on_fitil;Fitil · geçmeli manyetik profil 21 × 18,5;1;PVC + şerit mıknatıs · kapak iç sacının 6,4'lük kanalına geçer · aletsiz sökülür;çevre 1422 mm · köşeler gönye kaynaklı;CEK_K2_hamur_1;SATIN ALMA
+CEK_K2_hamur_1_kutu_U_1.0;Çekmece kutusu U 1,0;1;304 lazer + 2 büküm;560 × 60 × 530;CEK_K2_hamur_1;ÜRETİM
+CEK_K2_hamur_1_kutu_arka_1.0;kutu arka 1.0;0;304 sac · lazer + büküm;alt gövde → çekmece kutusu;CEK_K2_hamur_1;ALT
+CEK_K2_hamur_1_kutu_on_1.0;kutu on 1.0;0;304 sac · lazer + büküm;alt gövde → çekmece kutusu;CEK_K2_hamur_1;ALT
+CEK_K2_hamur_1_on_baglanti_sol;Ön bağlantı köşesi;2;304 2 mm büküm · öne 2 × M5 perçin somun;ön yüz ayar yuvalı;CEK_K2_hamur_1;ÜRETİM
+CEK_K2_hamur_1_on_baglanti_sag;on baglanti;0;304 · lazer / lama;alt gövde → ön bağlantı köşesi;CEK_K2_hamur_1;ALT
+CEK_K2_hamur_1_ray_adaptor_sol;Ray adaptör lamı 6 mm;2;304 lama · kutuya punta;ray iç profiline 4 × M4;CEK_K2_hamur_1;ÜRETİM
+CEK_K2_hamur_1_ray_adaptor_sag;ray adaptor;0;304 · lazer / lama;alt gövde → ray adaptör lamı;CEK_K2_hamur_1;ALT
+CEK_K2_hamur_1_ray_dis_sol;Teleskopik ray Accuride DZ3832-0070;2;700 · tam çekilir · 45,7 × 12,7 · 45–50 kg (çift);kolon yan duvarına 4 × M5;CEK_K2_hamur_1;SATIN ALMA
+CEK_K2_hamur_1_ray_ic_sol;ray ic;0;304 · lazer / lama;alt gövde → Accuride DZ3832-0070 (iç profil);CEK_K2_hamur_1;ALT
+CEK_K2_hamur_1_ray_dis_sag;ray dis;0;304 · lazer / lama;alt gövde → Accuride DZ3832-0070;CEK_K2_hamur_1;ALT
+CEK_K2_hamur_1_ray_ic_sag;ray ic;0;304 · lazer / lama;alt gövde → Accuride DZ3832-0070 (iç profil);CEK_K2_hamur_1;ALT
+CEK_K2_hamur_1_motor_kasnagi;GT3 kasnak 30 diş · 6 mm · flanşlı;1;alüminyum · delik Ø8 H7 + düz;PD 28,65 · çevre 90 mm;CEK_K2_hamur_1;SATIN ALMA
+CEK_K2_hamur_1_motor_mili;motor mili;0;304 · lazer / lama;alt gövde → Transmotec PD3665;CEK_K2_hamur_1;ALT
+CEK_K2_hamur_1_motor_gobegi;motor gobegi;0;304 · lazer / lama;alt gövde → Transmotec PD3665;CEK_K2_hamur_1;ALT
+CEK_K2_hamur_1_motor_reduktor;Motor Transmotec PD3665-24-51-BFEC;1;24 V · planet 51:1 · 127 d/dk · 0,853 N·m · manyetik enkoder · EMC filtreli;Ø36 × 115,5 + enkoder · datasheet: transmotec.com PD3665;CEK_K2_hamur_1;SATIN ALMA
+CEK_K2_hamur_1_motor_govde;motor govde;0;;alt gövde → Transmotec PD3665;CEK_K2_hamur_1;ALT
+CEK_K2_hamur_1_enkoder_kapagi;enkoder kapagi;0;;alt gövde → Transmotec PD3665;CEK_K2_hamur_1;ALT
+CEK_K2_hamur_1_m12_soket;M12 4 pin soket + kablo;1;motor + enkoder tek soket · kasada sabit;kablo dikey kanala;CEK_K2_hamur_1;SATIN ALMA
+CEK_K2_hamur_1_motor_braketi;Motor braketi 3 mm;1;304 lazer + büküm · 4 × M3 (Ø31) + arka duvara 2 × M5;kasnak hizası buradan;CEK_K2_hamur_1;ÜRETİM
+CEK_K2_hamur_1_avara;GT3 avara 30 diş · 6 mm · çift rulman;1;alüminyum · 2 × 625-2RS;ön çerçevenin 17 mm arkası;CEK_K2_hamur_1;SATIN ALMA
+CEK_K2_hamur_1_avara_mili;avara mili;1;304 · lazer / lama;zarf 12.2 × 5.0 × 5.0;CEK_K2_hamur_1;ÜRETİM
+CEK_K2_hamur_1_avara_kolu;Avara kolu 3 mm;1;304 büküm · ön çerçevenin arkasına 2 × M4 perçin somun;kayış gergisi burada: 8 mm yuvalı;CEK_K2_hamur_1;ÜRETİM
+CEK_K2_hamur_1_kayis_GT3;Kayış GT3 6 mm kapalı çevrim;1;~1482 mm (494 diş) · çelik kordlu;tedarikçi boyu doğrulayacak;CEK_K2_hamur_1;SATIN ALMA
+CEK_K2_hamur_1_kayis_cenesi;Kayış çenesi + kolu;1;304 · kutunun yan duvarına kaynaklı · dişli çene 2 × M3;kutunun arkasından kasnağa uzanır (strok için);CEK_K2_hamur_1;ÜRETİM
+CEK_K2_hamur_1_miknatis_ayagi;miknatis ayagi;1;304 · lazer / lama;zarf 6.4 × 2.3 × 28.6;CEK_K2_hamur_1;ÜRETİM
+CEK_K2_hamur_1_miknatis_57135;Mıknatıs Littelfuse 57135-000;1;AlNiCo 5 · flanşlı 28,57 × 19,05 × 6,35;çenenin üstünde;CEK_K2_hamur_1;SATIN ALMA
+CEK_K2_hamur_1_reed_kapali;Reed sensör Littelfuse 59135-010;2;NO · flanşlı 28,57 × 19,05 × 6,35;KAPALI + AÇIK konum · PLC girişine;CEK_K2_hamur_1;SATIN ALMA
+CEK_K2_hamur_1_reed_acik;reed acik;0;;alt gövde → Littelfuse 59135;CEK_K2_hamur_1;ALT
+CEK_K2_hamur_1_sensor_lami;sensor lami;1;304 · lazer / lama;zarf 6.4 × 2.0 × 705.0;CEK_K2_hamur_1;ÜRETİM
+CEK_K2_hamur_1_tepsi;Tepsi · 20 çukur Ø100;1;gıda silikonu 10 mm · çukur 7 · kalıp döküm;530 × 520;CEK_K2_hamur_1;ÜRETİM
+CEK_K2_hamur_2_on_dis_sac_1.5;Çekmece önü 40 · kulpsuz;1;dış 304 1,5 bükme + PU 37,5 köpük + iç 304 1,0 (fitil kanallı);650 × 105;CEK_K2_hamur_2;ÜRETİM
+CEK_K2_hamur_2_on_pu;on pu;0;PU köpük (gövdeyle birlikte enjeksiyon);alt gövde → çekmece önü / kapak katmanı;CEK_K2_hamur_2;ALT
+CEK_K2_hamur_2_on_ic_sac_1.0;on ic sac 1.0;0;304 sac · lazer + büküm;alt gövde → çekmece önü / kapak katmanı;CEK_K2_hamur_2;ALT
+CEK_K2_hamur_2_on_fitil;Fitil · geçmeli manyetik profil 21 × 18,5;1;PVC + şerit mıknatıs · kapak iç sacının 6,4'lük kanalına geçer · aletsiz sökülür;çevre 1422 mm · köşeler gönye kaynaklı;CEK_K2_hamur_2;SATIN ALMA
+CEK_K2_hamur_2_kutu_U_1.0;Çekmece kutusu U 1,0;1;304 lazer + 2 büküm;560 × 60 × 530;CEK_K2_hamur_2;ÜRETİM
+CEK_K2_hamur_2_kutu_arka_1.0;kutu arka 1.0;0;304 sac · lazer + büküm;alt gövde → çekmece kutusu;CEK_K2_hamur_2;ALT
+CEK_K2_hamur_2_kutu_on_1.0;kutu on 1.0;0;304 sac · lazer + büküm;alt gövde → çekmece kutusu;CEK_K2_hamur_2;ALT
+CEK_K2_hamur_2_on_baglanti_sol;Ön bağlantı köşesi;2;304 2 mm büküm · öne 2 × M5 perçin somun;ön yüz ayar yuvalı;CEK_K2_hamur_2;ÜRETİM
+CEK_K2_hamur_2_on_baglanti_sag;on baglanti;0;304 · lazer / lama;alt gövde → ön bağlantı köşesi;CEK_K2_hamur_2;ALT
+CEK_K2_hamur_2_ray_adaptor_sol;Ray adaptör lamı 6 mm;2;304 lama · kutuya punta;ray iç profiline 4 × M4;CEK_K2_hamur_2;ÜRETİM
+CEK_K2_hamur_2_ray_adaptor_sag;ray adaptor;0;304 · lazer / lama;alt gövde → ray adaptör lamı;CEK_K2_hamur_2;ALT
+CEK_K2_hamur_2_ray_dis_sol;Teleskopik ray Accuride DZ3832-0070;2;700 · tam çekilir · 45,7 × 12,7 · 45–50 kg (çift);kolon yan duvarına 4 × M5;CEK_K2_hamur_2;SATIN ALMA
+CEK_K2_hamur_2_ray_ic_sol;ray ic;0;304 · lazer / lama;alt gövde → Accuride DZ3832-0070 (iç profil);CEK_K2_hamur_2;ALT
+CEK_K2_hamur_2_ray_dis_sag;ray dis;0;304 · lazer / lama;alt gövde → Accuride DZ3832-0070;CEK_K2_hamur_2;ALT
+CEK_K2_hamur_2_ray_ic_sag;ray ic;0;304 · lazer / lama;alt gövde → Accuride DZ3832-0070 (iç profil);CEK_K2_hamur_2;ALT
+CEK_K2_hamur_2_motor_kasnagi;GT3 kasnak 30 diş · 6 mm · flanşlı;1;alüminyum · delik Ø8 H7 + düz;PD 28,65 · çevre 90 mm;CEK_K2_hamur_2;SATIN ALMA
+CEK_K2_hamur_2_motor_mili;motor mili;0;304 · lazer / lama;alt gövde → Transmotec PD3665;CEK_K2_hamur_2;ALT
+CEK_K2_hamur_2_motor_gobegi;motor gobegi;0;304 · lazer / lama;alt gövde → Transmotec PD3665;CEK_K2_hamur_2;ALT
+CEK_K2_hamur_2_motor_reduktor;Motor Transmotec PD3665-24-51-BFEC;1;24 V · planet 51:1 · 127 d/dk · 0,853 N·m · manyetik enkoder · EMC filtreli;Ø36 × 115,5 + enkoder · datasheet: transmotec.com PD3665;CEK_K2_hamur_2;SATIN ALMA
+CEK_K2_hamur_2_motor_govde;motor govde;0;;alt gövde → Transmotec PD3665;CEK_K2_hamur_2;ALT
+CEK_K2_hamur_2_enkoder_kapagi;enkoder kapagi;0;;alt gövde → Transmotec PD3665;CEK_K2_hamur_2;ALT
+CEK_K2_hamur_2_m12_soket;M12 4 pin soket + kablo;1;motor + enkoder tek soket · kasada sabit;kablo dikey kanala;CEK_K2_hamur_2;SATIN ALMA
+CEK_K2_hamur_2_motor_braketi;Motor braketi 3 mm;1;304 lazer + büküm · 4 × M3 (Ø31) + arka duvara 2 × M5;kasnak hizası buradan;CEK_K2_hamur_2;ÜRETİM
+CEK_K2_hamur_2_avara;GT3 avara 30 diş · 6 mm · çift rulman;1;alüminyum · 2 × 625-2RS;ön çerçevenin 17 mm arkası;CEK_K2_hamur_2;SATIN ALMA
+CEK_K2_hamur_2_avara_mili;avara mili;1;304 · lazer / lama;zarf 12.2 × 5.0 × 5.0;CEK_K2_hamur_2;ÜRETİM
+CEK_K2_hamur_2_avara_kolu;Avara kolu 3 mm;1;304 büküm · ön çerçevenin arkasına 2 × M4 perçin somun;kayış gergisi burada: 8 mm yuvalı;CEK_K2_hamur_2;ÜRETİM
+CEK_K2_hamur_2_kayis_GT3;Kayış GT3 6 mm kapalı çevrim;1;~1482 mm (494 diş) · çelik kordlu;tedarikçi boyu doğrulayacak;CEK_K2_hamur_2;SATIN ALMA
+CEK_K2_hamur_2_kayis_cenesi;Kayış çenesi + kolu;1;304 · kutunun yan duvarına kaynaklı · dişli çene 2 × M3;kutunun arkasından kasnağa uzanır (strok için);CEK_K2_hamur_2;ÜRETİM
+CEK_K2_hamur_2_miknatis_ayagi;miknatis ayagi;1;304 · lazer / lama;zarf 6.4 × 2.3 × 28.6;CEK_K2_hamur_2;ÜRETİM
+CEK_K2_hamur_2_miknatis_57135;Mıknatıs Littelfuse 57135-000;1;AlNiCo 5 · flanşlı 28,57 × 19,05 × 6,35;çenenin üstünde;CEK_K2_hamur_2;SATIN ALMA
+CEK_K2_hamur_2_reed_kapali;Reed sensör Littelfuse 59135-010;2;NO · flanşlı 28,57 × 19,05 × 6,35;KAPALI + AÇIK konum · PLC girişine;CEK_K2_hamur_2;SATIN ALMA
+CEK_K2_hamur_2_reed_acik;reed acik;0;;alt gövde → Littelfuse 59135;CEK_K2_hamur_2;ALT
+CEK_K2_hamur_2_sensor_lami;sensor lami;1;304 · lazer / lama;zarf 6.4 × 2.0 × 705.0;CEK_K2_hamur_2;ÜRETİM
+CEK_K2_hamur_2_tepsi;Tepsi · 20 çukur Ø100;1;gıda silikonu 10 mm · çukur 7 · kalıp döküm;530 × 520;CEK_K2_hamur_2;ÜRETİM
+CEK_K2_lahm_1_on_dis_sac_1.5;Çekmece önü 40 · kulpsuz;1;dış 304 1,5 bükme + PU 37,5 köpük + iç 304 1,0 (fitil kanallı);650 × 90;CEK_K2_lahm_1;ÜRETİM
+CEK_K2_lahm_1_on_pu;on pu;0;PU köpük (gövdeyle birlikte enjeksiyon);alt gövde → çekmece önü / kapak katmanı;CEK_K2_lahm_1;ALT
+CEK_K2_lahm_1_on_ic_sac_1.0;on ic sac 1.0;0;304 sac · lazer + büküm;alt gövde → çekmece önü / kapak katmanı;CEK_K2_lahm_1;ALT
+CEK_K2_lahm_1_on_fitil;Fitil · geçmeli manyetik profil 21 × 18,5;1;PVC + şerit mıknatıs · kapak iç sacının 6,4'lük kanalına geçer · aletsiz sökülür;çevre 1392 mm · köşeler gönye kaynaklı;CEK_K2_lahm_1;SATIN ALMA
+CEK_K2_lahm_1_kutu_U_1.0;Çekmece kutusu U 1,0;1;304 lazer + 2 büküm;560 × 45 × 550;CEK_K2_lahm_1;ÜRETİM
+CEK_K2_lahm_1_kutu_arka_1.0;kutu arka 1.0;0;304 sac · lazer + büküm;alt gövde → çekmece kutusu;CEK_K2_lahm_1;ALT
+CEK_K2_lahm_1_kutu_on_1.0;kutu on 1.0;0;304 sac · lazer + büküm;alt gövde → çekmece kutusu;CEK_K2_lahm_1;ALT
+CEK_K2_lahm_1_on_baglanti_sol;Ön bağlantı köşesi;2;304 2 mm büküm · öne 2 × M5 perçin somun;ön yüz ayar yuvalı;CEK_K2_lahm_1;ÜRETİM
+CEK_K2_lahm_1_on_baglanti_sag;on baglanti;0;304 · lazer / lama;alt gövde → ön bağlantı köşesi;CEK_K2_lahm_1;ALT
+CEK_K2_lahm_1_ray_adaptor_sol;Ray adaptör lamı 6 mm;2;304 lama · kutuya punta;ray iç profiline 4 × M4;CEK_K2_lahm_1;ÜRETİM
+CEK_K2_lahm_1_ray_adaptor_sag;ray adaptor;0;304 · lazer / lama;alt gövde → ray adaptör lamı;CEK_K2_lahm_1;ALT
+CEK_K2_lahm_1_ray_dis_sol;Teleskopik ray Accuride DZ3832-0070;2;700 · tam çekilir · 45,7 × 12,7 · 45–50 kg (çift);kolon yan duvarına 4 × M5;CEK_K2_lahm_1;SATIN ALMA
+CEK_K2_lahm_1_ray_ic_sol;ray ic;0;304 · lazer / lama;alt gövde → Accuride DZ3832-0070 (iç profil);CEK_K2_lahm_1;ALT
+CEK_K2_lahm_1_ray_dis_sag;ray dis;0;304 · lazer / lama;alt gövde → Accuride DZ3832-0070;CEK_K2_lahm_1;ALT
+CEK_K2_lahm_1_ray_ic_sag;ray ic;0;304 · lazer / lama;alt gövde → Accuride DZ3832-0070 (iç profil);CEK_K2_lahm_1;ALT
+CEK_K2_lahm_1_motor_kasnagi;GT3 kasnak 30 diş · 6 mm · flanşlı;1;alüminyum · delik Ø8 H7 + düz;PD 28,65 · çevre 90 mm;CEK_K2_lahm_1;SATIN ALMA
+CEK_K2_lahm_1_motor_mili;motor mili;0;304 · lazer / lama;alt gövde → Transmotec PD3665;CEK_K2_lahm_1;ALT
+CEK_K2_lahm_1_motor_gobegi;motor gobegi;0;304 · lazer / lama;alt gövde → Transmotec PD3665;CEK_K2_lahm_1;ALT
+CEK_K2_lahm_1_motor_reduktor;Motor Transmotec PD3665-24-51-BFEC;1;24 V · planet 51:1 · 127 d/dk · 0,853 N·m · manyetik enkoder · EMC filtreli;Ø36 × 115,5 + enkoder · datasheet: transmotec.com PD3665;CEK_K2_lahm_1;SATIN ALMA
+CEK_K2_lahm_1_motor_govde;motor govde;0;;alt gövde → Transmotec PD3665;CEK_K2_lahm_1;ALT
+CEK_K2_lahm_1_enkoder_kapagi;enkoder kapagi;0;;alt gövde → Transmotec PD3665;CEK_K2_lahm_1;ALT
+CEK_K2_lahm_1_m12_soket;M12 4 pin soket + kablo;1;motor + enkoder tek soket · kasada sabit;kablo dikey kanala;CEK_K2_lahm_1;SATIN ALMA
+CEK_K2_lahm_1_motor_braketi;Motor braketi 3 mm;1;304 lazer + büküm · 4 × M3 (Ø31) + arka duvara 2 × M5;kasnak hizası buradan;CEK_K2_lahm_1;ÜRETİM
+CEK_K2_lahm_1_avara;GT3 avara 30 diş · 6 mm · çift rulman;1;alüminyum · 2 × 625-2RS;ön çerçevenin 17 mm arkası;CEK_K2_lahm_1;SATIN ALMA
+CEK_K2_lahm_1_avara_mili;avara mili;1;304 · lazer / lama;zarf 12.2 × 5.0 × 5.0;CEK_K2_lahm_1;ÜRETİM
+CEK_K2_lahm_1_avara_kolu;Avara kolu 3 mm;1;304 büküm · ön çerçevenin arkasına 2 × M4 perçin somun;kayış gergisi burada: 8 mm yuvalı;CEK_K2_lahm_1;ÜRETİM
+CEK_K2_lahm_1_kayis_GT3;Kayış GT3 6 mm kapalı çevrim;1;~1482 mm (494 diş) · çelik kordlu;tedarikçi boyu doğrulayacak;CEK_K2_lahm_1;SATIN ALMA
+CEK_K2_lahm_1_kayis_cenesi;Kayış çenesi + kolu;1;304 · kutunun yan duvarına kaynaklı · dişli çene 2 × M3;kutunun arkasından kasnağa uzanır (strok için);CEK_K2_lahm_1;ÜRETİM
+CEK_K2_lahm_1_miknatis_ayagi;miknatis ayagi;1;304 · lazer / lama;zarf 6.4 × 2.3 × 28.6;CEK_K2_lahm_1;ÜRETİM
+CEK_K2_lahm_1_miknatis_57135;Mıknatıs Littelfuse 57135-000;1;AlNiCo 5 · flanşlı 28,57 × 19,05 × 6,35;çenenin üstünde;CEK_K2_lahm_1;SATIN ALMA
+CEK_K2_lahm_1_reed_kapali;Reed sensör Littelfuse 59135-010;2;NO · flanşlı 28,57 × 19,05 × 6,35;KAPALI + AÇIK konum · PLC girişine;CEK_K2_lahm_1;SATIN ALMA
+CEK_K2_lahm_1_reed_acik;reed acik;0;;alt gövde → Littelfuse 59135;CEK_K2_lahm_1;ALT
+CEK_K2_lahm_1_sensor_lami;sensor lami;1;304 · lazer / lama;zarf 6.4 × 2.0 × 705.0;CEK_K2_lahm_1;ÜRETİM
+CEK_K2_lahm_1_tepsi;Tepsi · 36 çukur Ø80;1;gıda silikonu 10 mm · çukur 7 · kalıp döküm;530 × 540;CEK_K2_lahm_1;ÜRETİM
+CEK_K2_lahm_2_on_dis_sac_1.5;Çekmece önü 40 · kulpsuz;1;dış 304 1,5 bükme + PU 37,5 köpük + iç 304 1,0 (fitil kanallı);650 × 90;CEK_K2_lahm_2;ÜRETİM
+CEK_K2_lahm_2_on_pu;on pu;0;PU köpük (gövdeyle birlikte enjeksiyon);alt gövde → çekmece önü / kapak katmanı;CEK_K2_lahm_2;ALT
+CEK_K2_lahm_2_on_ic_sac_1.0;on ic sac 1.0;0;304 sac · lazer + büküm;alt gövde → çekmece önü / kapak katmanı;CEK_K2_lahm_2;ALT
+CEK_K2_lahm_2_on_fitil;Fitil · geçmeli manyetik profil 21 × 18,5;1;PVC + şerit mıknatıs · kapak iç sacının 6,4'lük kanalına geçer · aletsiz sökülür;çevre 1392 mm · köşeler gönye kaynaklı;CEK_K2_lahm_2;SATIN ALMA
+CEK_K2_lahm_2_kutu_U_1.0;Çekmece kutusu U 1,0;1;304 lazer + 2 büküm;560 × 45 × 550;CEK_K2_lahm_2;ÜRETİM
+CEK_K2_lahm_2_kutu_arka_1.0;kutu arka 1.0;0;304 sac · lazer + büküm;alt gövde → çekmece kutusu;CEK_K2_lahm_2;ALT
+CEK_K2_lahm_2_kutu_on_1.0;kutu on 1.0;0;304 sac · lazer + büküm;alt gövde → çekmece kutusu;CEK_K2_lahm_2;ALT
+CEK_K2_lahm_2_on_baglanti_sol;Ön bağlantı köşesi;2;304 2 mm büküm · öne 2 × M5 perçin somun;ön yüz ayar yuvalı;CEK_K2_lahm_2;ÜRETİM
+CEK_K2_lahm_2_on_baglanti_sag;on baglanti;0;304 · lazer / lama;alt gövde → ön bağlantı köşesi;CEK_K2_lahm_2;ALT
+CEK_K2_lahm_2_ray_adaptor_sol;Ray adaptör lamı 6 mm;2;304 lama · kutuya punta;ray iç profiline 4 × M4;CEK_K2_lahm_2;ÜRETİM
+CEK_K2_lahm_2_ray_adaptor_sag;ray adaptor;0;304 · lazer / lama;alt gövde → ray adaptör lamı;CEK_K2_lahm_2;ALT
+CEK_K2_lahm_2_ray_dis_sol;Teleskopik ray Accuride DZ3832-0070;2;700 · tam çekilir · 45,7 × 12,7 · 45–50 kg (çift);kolon yan duvarına 4 × M5;CEK_K2_lahm_2;SATIN ALMA
+CEK_K2_lahm_2_ray_ic_sol;ray ic;0;304 · lazer / lama;alt gövde → Accuride DZ3832-0070 (iç profil);CEK_K2_lahm_2;ALT
+CEK_K2_lahm_2_ray_dis_sag;ray dis;0;304 · lazer / lama;alt gövde → Accuride DZ3832-0070;CEK_K2_lahm_2;ALT
+CEK_K2_lahm_2_ray_ic_sag;ray ic;0;304 · lazer / lama;alt gövde → Accuride DZ3832-0070 (iç profil);CEK_K2_lahm_2;ALT
+CEK_K2_lahm_2_motor_kasnagi;GT3 kasnak 30 diş · 6 mm · flanşlı;1;alüminyum · delik Ø8 H7 + düz;PD 28,65 · çevre 90 mm;CEK_K2_lahm_2;SATIN ALMA
+CEK_K2_lahm_2_motor_mili;motor mili;0;304 · lazer / lama;alt gövde → Transmotec PD3665;CEK_K2_lahm_2;ALT
+CEK_K2_lahm_2_motor_gobegi;motor gobegi;0;304 · lazer / lama;alt gövde → Transmotec PD3665;CEK_K2_lahm_2;ALT
+CEK_K2_lahm_2_motor_reduktor;Motor Transmotec PD3665-24-51-BFEC;1;24 V · planet 51:1 · 127 d/dk · 0,853 N·m · manyetik enkoder · EMC filtreli;Ø36 × 115,5 + enkoder · datasheet: transmotec.com PD3665;CEK_K2_lahm_2;SATIN ALMA
+CEK_K2_lahm_2_motor_govde;motor govde;0;;alt gövde → Transmotec PD3665;CEK_K2_lahm_2;ALT
+CEK_K2_lahm_2_enkoder_kapagi;enkoder kapagi;0;;alt gövde → Transmotec PD3665;CEK_K2_lahm_2;ALT
+CEK_K2_lahm_2_m12_soket;M12 4 pin soket + kablo;1;motor + enkoder tek soket · kasada sabit;kablo dikey kanala;CEK_K2_lahm_2;SATIN ALMA
+CEK_K2_lahm_2_motor_braketi;Motor braketi 3 mm;1;304 lazer + büküm · 4 × M3 (Ø31) + arka duvara 2 × M5;kasnak hizası buradan;CEK_K2_lahm_2;ÜRETİM
+CEK_K2_lahm_2_avara;GT3 avara 30 diş · 6 mm · çift rulman;1;alüminyum · 2 × 625-2RS;ön çerçevenin 17 mm arkası;CEK_K2_lahm_2;SATIN ALMA
+CEK_K2_lahm_2_avara_mili;avara mili;1;304 · lazer / lama;zarf 12.2 × 5.0 × 5.0;CEK_K2_lahm_2;ÜRETİM
+CEK_K2_lahm_2_avara_kolu;Avara kolu 3 mm;1;304 büküm · ön çerçevenin arkasına 2 × M4 perçin somun;kayış gergisi burada: 8 mm yuvalı;CEK_K2_lahm_2;ÜRETİM
+CEK_K2_lahm_2_kayis_GT3;Kayış GT3 6 mm kapalı çevrim;1;~1482 mm (494 diş) · çelik kordlu;tedarikçi boyu doğrulayacak;CEK_K2_lahm_2;SATIN ALMA
+CEK_K2_lahm_2_kayis_cenesi;Kayış çenesi + kolu;1;304 · kutunun yan duvarına kaynaklı · dişli çene 2 × M3;kutunun arkasından kasnağa uzanır (strok için);CEK_K2_lahm_2;ÜRETİM
+CEK_K2_lahm_2_miknatis_ayagi;miknatis ayagi;1;304 · lazer / lama;zarf 6.4 × 2.3 × 28.6;CEK_K2_lahm_2;ÜRETİM
+CEK_K2_lahm_2_miknatis_57135;Mıknatıs Littelfuse 57135-000;1;AlNiCo 5 · flanşlı 28,57 × 19,05 × 6,35;çenenin üstünde;CEK_K2_lahm_2;SATIN ALMA
+CEK_K2_lahm_2_reed_kapali;Reed sensör Littelfuse 59135-010;2;NO · flanşlı 28,57 × 19,05 × 6,35;KAPALI + AÇIK konum · PLC girişine;CEK_K2_lahm_2;SATIN ALMA
+CEK_K2_lahm_2_reed_acik;reed acik;0;;alt gövde → Littelfuse 59135;CEK_K2_lahm_2;ALT
+CEK_K2_lahm_2_sensor_lami;sensor lami;1;304 · lazer / lama;zarf 6.4 × 2.0 × 705.0;CEK_K2_lahm_2;ÜRETİM
+CEK_K2_lahm_2_tepsi;Tepsi · 36 çukur Ø80;1;gıda silikonu 10 mm · çukur 7 · kalıp döküm;530 × 540;CEK_K2_lahm_2;ÜRETİM
+CEK_K2_lahm_3_on_dis_sac_1.5;Çekmece önü 40 · kulpsuz;1;dış 304 1,5 bükme + PU 37,5 köpük + iç 304 1,0 (fitil kanallı);650 × 90;CEK_K2_lahm_3;ÜRETİM
+CEK_K2_lahm_3_on_pu;on pu;0;PU köpük (gövdeyle birlikte enjeksiyon);alt gövde → çekmece önü / kapak katmanı;CEK_K2_lahm_3;ALT
+CEK_K2_lahm_3_on_ic_sac_1.0;on ic sac 1.0;0;304 sac · lazer + büküm;alt gövde → çekmece önü / kapak katmanı;CEK_K2_lahm_3;ALT
+CEK_K2_lahm_3_on_fitil;Fitil · geçmeli manyetik profil 21 × 18,5;1;PVC + şerit mıknatıs · kapak iç sacının 6,4'lük kanalına geçer · aletsiz sökülür;çevre 1392 mm · köşeler gönye kaynaklı;CEK_K2_lahm_3;SATIN ALMA
+CEK_K2_lahm_3_kutu_U_1.0;Çekmece kutusu U 1,0;1;304 lazer + 2 büküm;560 × 45 × 550;CEK_K2_lahm_3;ÜRETİM
+CEK_K2_lahm_3_kutu_arka_1.0;kutu arka 1.0;0;304 sac · lazer + büküm;alt gövde → çekmece kutusu;CEK_K2_lahm_3;ALT
+CEK_K2_lahm_3_kutu_on_1.0;kutu on 1.0;0;304 sac · lazer + büküm;alt gövde → çekmece kutusu;CEK_K2_lahm_3;ALT
+CEK_K2_lahm_3_on_baglanti_sol;Ön bağlantı köşesi;2;304 2 mm büküm · öne 2 × M5 perçin somun;ön yüz ayar yuvalı;CEK_K2_lahm_3;ÜRETİM
+CEK_K2_lahm_3_on_baglanti_sag;on baglanti;0;304 · lazer / lama;alt gövde → ön bağlantı köşesi;CEK_K2_lahm_3;ALT
+CEK_K2_lahm_3_ray_adaptor_sol;Ray adaptör lamı 6 mm;2;304 lama · kutuya punta;ray iç profiline 4 × M4;CEK_K2_lahm_3;ÜRETİM
+CEK_K2_lahm_3_ray_adaptor_sag;ray adaptor;0;304 · lazer / lama;alt gövde → ray adaptör lamı;CEK_K2_lahm_3;ALT
+CEK_K2_lahm_3_ray_dis_sol;Teleskopik ray Accuride DZ3832-0070;2;700 · tam çekilir · 45,7 × 12,7 · 45–50 kg (çift);kolon yan duvarına 4 × M5;CEK_K2_lahm_3;SATIN ALMA
+CEK_K2_lahm_3_ray_ic_sol;ray ic;0;304 · lazer / lama;alt gövde → Accuride DZ3832-0070 (iç profil);CEK_K2_lahm_3;ALT
+CEK_K2_lahm_3_ray_dis_sag;ray dis;0;304 · lazer / lama;alt gövde → Accuride DZ3832-0070;CEK_K2_lahm_3;ALT
+CEK_K2_lahm_3_ray_ic_sag;ray ic;0;304 · lazer / lama;alt gövde → Accuride DZ3832-0070 (iç profil);CEK_K2_lahm_3;ALT
+CEK_K2_lahm_3_motor_kasnagi;GT3 kasnak 30 diş · 6 mm · flanşlı;1;alüminyum · delik Ø8 H7 + düz;PD 28,65 · çevre 90 mm;CEK_K2_lahm_3;SATIN ALMA
+CEK_K2_lahm_3_motor_mili;motor mili;0;304 · lazer / lama;alt gövde → Transmotec PD3665;CEK_K2_lahm_3;ALT
+CEK_K2_lahm_3_motor_gobegi;motor gobegi;0;304 · lazer / lama;alt gövde → Transmotec PD3665;CEK_K2_lahm_3;ALT
+CEK_K2_lahm_3_motor_reduktor;Motor Transmotec PD3665-24-51-BFEC;1;24 V · planet 51:1 · 127 d/dk · 0,853 N·m · manyetik enkoder · EMC filtreli;Ø36 × 115,5 + enkoder · datasheet: transmotec.com PD3665;CEK_K2_lahm_3;SATIN ALMA
+CEK_K2_lahm_3_motor_govde;motor govde;0;;alt gövde → Transmotec PD3665;CEK_K2_lahm_3;ALT
+CEK_K2_lahm_3_enkoder_kapagi;enkoder kapagi;0;;alt gövde → Transmotec PD3665;CEK_K2_lahm_3;ALT
+CEK_K2_lahm_3_m12_soket;M12 4 pin soket + kablo;1;motor + enkoder tek soket · kasada sabit;kablo dikey kanala;CEK_K2_lahm_3;SATIN ALMA
+CEK_K2_lahm_3_motor_braketi;Motor braketi 3 mm;1;304 lazer + büküm · 4 × M3 (Ø31) + arka duvara 2 × M5;kasnak hizası buradan;CEK_K2_lahm_3;ÜRETİM
+CEK_K2_lahm_3_avara;GT3 avara 30 diş · 6 mm · çift rulman;1;alüminyum · 2 × 625-2RS;ön çerçevenin 17 mm arkası;CEK_K2_lahm_3;SATIN ALMA
+CEK_K2_lahm_3_avara_mili;avara mili;1;304 · lazer / lama;zarf 12.2 × 5.0 × 5.0;CEK_K2_lahm_3;ÜRETİM
+CEK_K2_lahm_3_avara_kolu;Avara kolu 3 mm;1;304 büküm · ön çerçevenin arkasına 2 × M4 perçin somun;kayış gergisi burada: 8 mm yuvalı;CEK_K2_lahm_3;ÜRETİM
+CEK_K2_lahm_3_kayis_GT3;Kayış GT3 6 mm kapalı çevrim;1;~1482 mm (494 diş) · çelik kordlu;tedarikçi boyu doğrulayacak;CEK_K2_lahm_3;SATIN ALMA
+CEK_K2_lahm_3_kayis_cenesi;Kayış çenesi + kolu;1;304 · kutunun yan duvarına kaynaklı · dişli çene 2 × M3;kutunun arkasından kasnağa uzanır (strok için);CEK_K2_lahm_3;ÜRETİM
+CEK_K2_lahm_3_miknatis_ayagi;miknatis ayagi;1;304 · lazer / lama;zarf 6.4 × 2.3 × 28.6;CEK_K2_lahm_3;ÜRETİM
+CEK_K2_lahm_3_miknatis_57135;Mıknatıs Littelfuse 57135-000;1;AlNiCo 5 · flanşlı 28,57 × 19,05 × 6,35;çenenin üstünde;CEK_K2_lahm_3;SATIN ALMA
+CEK_K2_lahm_3_reed_kapali;Reed sensör Littelfuse 59135-010;2;NO · flanşlı 28,57 × 19,05 × 6,35;KAPALI + AÇIK konum · PLC girişine;CEK_K2_lahm_3;SATIN ALMA
+CEK_K2_lahm_3_reed_acik;reed acik;0;;alt gövde → Littelfuse 59135;CEK_K2_lahm_3;ALT
+CEK_K2_lahm_3_sensor_lami;sensor lami;1;304 · lazer / lama;zarf 6.4 × 2.0 × 705.0;CEK_K2_lahm_3;ÜRETİM
+CEK_K2_lahm_3_tepsi;Tepsi · 36 çukur Ø80;1;gıda silikonu 10 mm · çukur 7 · kalıp döküm;530 × 540;CEK_K2_lahm_3;ÜRETİM
+CEK_K2_lahm_4_on_dis_sac_1.5;Çekmece önü 40 · kulpsuz;1;dış 304 1,5 bükme + PU 37,5 köpük + iç 304 1,0 (fitil kanallı);650 × 90;CEK_K2_lahm_4;ÜRETİM
+CEK_K2_lahm_4_on_pu;on pu;0;PU köpük (gövdeyle birlikte enjeksiyon);alt gövde → çekmece önü / kapak katmanı;CEK_K2_lahm_4;ALT
+CEK_K2_lahm_4_on_ic_sac_1.0;on ic sac 1.0;0;304 sac · lazer + büküm;alt gövde → çekmece önü / kapak katmanı;CEK_K2_lahm_4;ALT
+CEK_K2_lahm_4_on_fitil;Fitil · geçmeli manyetik profil 21 × 18,5;1;PVC + şerit mıknatıs · kapak iç sacının 6,4'lük kanalına geçer · aletsiz sökülür;çevre 1392 mm · köşeler gönye kaynaklı;CEK_K2_lahm_4;SATIN ALMA
+CEK_K2_lahm_4_kutu_U_1.0;Çekmece kutusu U 1,0;1;304 lazer + 2 büküm;560 × 45 × 550;CEK_K2_lahm_4;ÜRETİM
+CEK_K2_lahm_4_kutu_arka_1.0;kutu arka 1.0;0;304 sac · lazer + büküm;alt gövde → çekmece kutusu;CEK_K2_lahm_4;ALT
+CEK_K2_lahm_4_kutu_on_1.0;kutu on 1.0;0;304 sac · lazer + büküm;alt gövde → çekmece kutusu;CEK_K2_lahm_4;ALT
+CEK_K2_lahm_4_on_baglanti_sol;Ön bağlantı köşesi;2;304 2 mm büküm · öne 2 × M5 perçin somun;ön yüz ayar yuvalı;CEK_K2_lahm_4;ÜRETİM
+CEK_K2_lahm_4_on_baglanti_sag;on baglanti;0;304 · lazer / lama;alt gövde → ön bağlantı köşesi;CEK_K2_lahm_4;ALT
+CEK_K2_lahm_4_ray_adaptor_sol;Ray adaptör lamı 6 mm;2;304 lama · kutuya punta;ray iç profiline 4 × M4;CEK_K2_lahm_4;ÜRETİM
+CEK_K2_lahm_4_ray_adaptor_sag;ray adaptor;0;304 · lazer / lama;alt gövde → ray adaptör lamı;CEK_K2_lahm_4;ALT
+CEK_K2_lahm_4_ray_dis_sol;Teleskopik ray Accuride DZ3832-0070;2;700 · tam çekilir · 45,7 × 12,7 · 45–50 kg (çift);kolon yan duvarına 4 × M5;CEK_K2_lahm_4;SATIN ALMA
+CEK_K2_lahm_4_ray_ic_sol;ray ic;0;304 · lazer / lama;alt gövde → Accuride DZ3832-0070 (iç profil);CEK_K2_lahm_4;ALT
+CEK_K2_lahm_4_ray_dis_sag;ray dis;0;304 · lazer / lama;alt gövde → Accuride DZ3832-0070;CEK_K2_lahm_4;ALT
+CEK_K2_lahm_4_ray_ic_sag;ray ic;0;304 · lazer / lama;alt gövde → Accuride DZ3832-0070 (iç profil);CEK_K2_lahm_4;ALT
+CEK_K2_lahm_4_motor_kasnagi;GT3 kasnak 30 diş · 6 mm · flanşlı;1;alüminyum · delik Ø8 H7 + düz;PD 28,65 · çevre 90 mm;CEK_K2_lahm_4;SATIN ALMA
+CEK_K2_lahm_4_motor_mili;motor mili;0;304 · lazer / lama;alt gövde → Transmotec PD3665;CEK_K2_lahm_4;ALT
+CEK_K2_lahm_4_motor_gobegi;motor gobegi;0;304 · lazer / lama;alt gövde → Transmotec PD3665;CEK_K2_lahm_4;ALT
+CEK_K2_lahm_4_motor_reduktor;Motor Transmotec PD3665-24-51-BFEC;1;24 V · planet 51:1 · 127 d/dk · 0,853 N·m · manyetik enkoder · EMC filtreli;Ø36 × 115,5 + enkoder · datasheet: transmotec.com PD3665;CEK_K2_lahm_4;SATIN ALMA
+CEK_K2_lahm_4_motor_govde;motor govde;0;;alt gövde → Transmotec PD3665;CEK_K2_lahm_4;ALT
+CEK_K2_lahm_4_enkoder_kapagi;enkoder kapagi;0;;alt gövde → Transmotec PD3665;CEK_K2_lahm_4;ALT
+CEK_K2_lahm_4_m12_soket;M12 4 pin soket + kablo;1;motor + enkoder tek soket · kasada sabit;kablo dikey kanala;CEK_K2_lahm_4;SATIN ALMA
+CEK_K2_lahm_4_motor_braketi;Motor braketi 3 mm;1;304 lazer + büküm · 4 × M3 (Ø31) + arka duvara 2 × M5;kasnak hizası buradan;CEK_K2_lahm_4;ÜRETİM
+CEK_K2_lahm_4_avara;GT3 avara 30 diş · 6 mm · çift rulman;1;alüminyum · 2 × 625-2RS;ön çerçevenin 17 mm arkası;CEK_K2_lahm_4;SATIN ALMA
+CEK_K2_lahm_4_avara_mili;avara mili;1;304 · lazer / lama;zarf 12.2 × 5.0 × 5.0;CEK_K2_lahm_4;ÜRETİM
+CEK_K2_lahm_4_avara_kolu;Avara kolu 3 mm;1;304 büküm · ön çerçevenin arkasına 2 × M4 perçin somun;kayış gergisi burada: 8 mm yuvalı;CEK_K2_lahm_4;ÜRETİM
+CEK_K2_lahm_4_kayis_GT3;Kayış GT3 6 mm kapalı çevrim;1;~1482 mm (494 diş) · çelik kordlu;tedarikçi boyu doğrulayacak;CEK_K2_lahm_4;SATIN ALMA
+CEK_K2_lahm_4_kayis_cenesi;Kayış çenesi + kolu;1;304 · kutunun yan duvarına kaynaklı · dişli çene 2 × M3;kutunun arkasından kasnağa uzanır (strok için);CEK_K2_lahm_4;ÜRETİM
+CEK_K2_lahm_4_miknatis_ayagi;miknatis ayagi;1;304 · lazer / lama;zarf 6.4 × 2.3 × 28.6;CEK_K2_lahm_4;ÜRETİM
+CEK_K2_lahm_4_miknatis_57135;Mıknatıs Littelfuse 57135-000;1;AlNiCo 5 · flanşlı 28,57 × 19,05 × 6,35;çenenin üstünde;CEK_K2_lahm_4;SATIN ALMA
+CEK_K2_lahm_4_reed_kapali;Reed sensör Littelfuse 59135-010;2;NO · flanşlı 28,57 × 19,05 × 6,35;KAPALI + AÇIK konum · PLC girişine;CEK_K2_lahm_4;SATIN ALMA
+CEK_K2_lahm_4_reed_acik;reed acik;0;;alt gövde → Littelfuse 59135;CEK_K2_lahm_4;ALT
+CEK_K2_lahm_4_sensor_lami;sensor lami;1;304 · lazer / lama;zarf 6.4 × 2.0 × 705.0;CEK_K2_lahm_4;ÜRETİM
+CEK_K2_lahm_4_tepsi;Tepsi · 36 çukur Ø80;1;gıda silikonu 10 mm · çukur 7 · kalıp döküm;530 × 540;CEK_K2_lahm_4;ÜRETİM
+CEK_K2_lahm_5_on_dis_sac_1.5;Çekmece önü 40 · kulpsuz;1;dış 304 1,5 bükme + PU 37,5 köpük + iç 304 1,0 (fitil kanallı);650 × 90;CEK_K2_lahm_5;ÜRETİM
+CEK_K2_lahm_5_on_pu;on pu;0;PU köpük (gövdeyle birlikte enjeksiyon);alt gövde → çekmece önü / kapak katmanı;CEK_K2_lahm_5;ALT
+CEK_K2_lahm_5_on_ic_sac_1.0;on ic sac 1.0;0;304 sac · lazer + büküm;alt gövde → çekmece önü / kapak katmanı;CEK_K2_lahm_5;ALT
+CEK_K2_lahm_5_on_fitil;Fitil · geçmeli manyetik profil 21 × 18,5;1;PVC + şerit mıknatıs · kapak iç sacının 6,4'lük kanalına geçer · aletsiz sökülür;çevre 1392 mm · köşeler gönye kaynaklı;CEK_K2_lahm_5;SATIN ALMA
+CEK_K2_lahm_5_kutu_U_1.0;Çekmece kutusu U 1,0;1;304 lazer + 2 büküm;560 × 45 × 550;CEK_K2_lahm_5;ÜRETİM
+CEK_K2_lahm_5_kutu_arka_1.0;kutu arka 1.0;0;304 sac · lazer + büküm;alt gövde → çekmece kutusu;CEK_K2_lahm_5;ALT
+CEK_K2_lahm_5_kutu_on_1.0;kutu on 1.0;0;304 sac · lazer + büküm;alt gövde → çekmece kutusu;CEK_K2_lahm_5;ALT
+CEK_K2_lahm_5_on_baglanti_sol;Ön bağlantı köşesi;2;304 2 mm büküm · öne 2 × M5 perçin somun;ön yüz ayar yuvalı;CEK_K2_lahm_5;ÜRETİM
+CEK_K2_lahm_5_on_baglanti_sag;on baglanti;0;304 · lazer / lama;alt gövde → ön bağlantı köşesi;CEK_K2_lahm_5;ALT
+CEK_K2_lahm_5_ray_adaptor_sol;Ray adaptör lamı 6 mm;2;304 lama · kutuya punta;ray iç profiline 4 × M4;CEK_K2_lahm_5;ÜRETİM
+CEK_K2_lahm_5_ray_adaptor_sag;ray adaptor;0;304 · lazer / lama;alt gövde → ray adaptör lamı;CEK_K2_lahm_5;ALT
+CEK_K2_lahm_5_ray_dis_sol;Teleskopik ray Accuride DZ3832-0070;2;700 · tam çekilir · 45,7 × 12,7 · 45–50 kg (çift);kolon yan duvarına 4 × M5;CEK_K2_lahm_5;SATIN ALMA
+CEK_K2_lahm_5_ray_ic_sol;ray ic;0;304 · lazer / lama;alt gövde → Accuride DZ3832-0070 (iç profil);CEK_K2_lahm_5;ALT
+CEK_K2_lahm_5_ray_dis_sag;ray dis;0;304 · lazer / lama;alt gövde → Accuride DZ3832-0070;CEK_K2_lahm_5;ALT
+CEK_K2_lahm_5_ray_ic_sag;ray ic;0;304 · lazer / lama;alt gövde → Accuride DZ3832-0070 (iç profil);CEK_K2_lahm_5;ALT
+CEK_K2_lahm_5_motor_kasnagi;GT3 kasnak 30 diş · 6 mm · flanşlı;1;alüminyum · delik Ø8 H7 + düz;PD 28,65 · çevre 90 mm;CEK_K2_lahm_5;SATIN ALMA
+CEK_K2_lahm_5_motor_mili;motor mili;0;304 · lazer / lama;alt gövde → Transmotec PD3665;CEK_K2_lahm_5;ALT
+CEK_K2_lahm_5_motor_gobegi;motor gobegi;0;304 · lazer / lama;alt gövde → Transmotec PD3665;CEK_K2_lahm_5;ALT
+CEK_K2_lahm_5_motor_reduktor;Motor Transmotec PD3665-24-51-BFEC;1;24 V · planet 51:1 · 127 d/dk · 0,853 N·m · manyetik enkoder · EMC filtreli;Ø36 × 115,5 + enkoder · datasheet: transmotec.com PD3665;CEK_K2_lahm_5;SATIN ALMA
+CEK_K2_lahm_5_motor_govde;motor govde;0;;alt gövde → Transmotec PD3665;CEK_K2_lahm_5;ALT
+CEK_K2_lahm_5_enkoder_kapagi;enkoder kapagi;0;;alt gövde → Transmotec PD3665;CEK_K2_lahm_5;ALT
+CEK_K2_lahm_5_m12_soket;M12 4 pin soket + kablo;1;motor + enkoder tek soket · kasada sabit;kablo dikey kanala;CEK_K2_lahm_5;SATIN ALMA
+CEK_K2_lahm_5_motor_braketi;Motor braketi 3 mm;1;304 lazer + büküm · 4 × M3 (Ø31) + arka duvara 2 × M5;kasnak hizası buradan;CEK_K2_lahm_5;ÜRETİM
+CEK_K2_lahm_5_avara;GT3 avara 30 diş · 6 mm · çift rulman;1;alüminyum · 2 × 625-2RS;ön çerçevenin 17 mm arkası;CEK_K2_lahm_5;SATIN ALMA
+CEK_K2_lahm_5_avara_mili;avara mili;1;304 · lazer / lama;zarf 12.2 × 5.0 × 5.0;CEK_K2_lahm_5;ÜRETİM
+CEK_K2_lahm_5_avara_kolu;Avara kolu 3 mm;1;304 büküm · ön çerçevenin arkasına 2 × M4 perçin somun;kayış gergisi burada: 8 mm yuvalı;CEK_K2_lahm_5;ÜRETİM
+CEK_K2_lahm_5_kayis_GT3;Kayış GT3 6 mm kapalı çevrim;1;~1482 mm (494 diş) · çelik kordlu;tedarikçi boyu doğrulayacak;CEK_K2_lahm_5;SATIN ALMA
+CEK_K2_lahm_5_kayis_cenesi;Kayış çenesi + kolu;1;304 · kutunun yan duvarına kaynaklı · dişli çene 2 × M3;kutunun arkasından kasnağa uzanır (strok için);CEK_K2_lahm_5;ÜRETİM
+CEK_K2_lahm_5_miknatis_ayagi;miknatis ayagi;1;304 · lazer / lama;zarf 6.4 × 2.3 × 28.6;CEK_K2_lahm_5;ÜRETİM
+CEK_K2_lahm_5_miknatis_57135;Mıknatıs Littelfuse 57135-000;1;AlNiCo 5 · flanşlı 28,57 × 19,05 × 6,35;çenenin üstünde;CEK_K2_lahm_5;SATIN ALMA
+CEK_K2_lahm_5_reed_kapali;Reed sensör Littelfuse 59135-010;2;NO · flanşlı 28,57 × 19,05 × 6,35;KAPALI + AÇIK konum · PLC girişine;CEK_K2_lahm_5;SATIN ALMA
+CEK_K2_lahm_5_reed_acik;reed acik;0;;alt gövde → Littelfuse 59135;CEK_K2_lahm_5;ALT
+CEK_K2_lahm_5_sensor_lami;sensor lami;1;304 · lazer / lama;zarf 6.4 × 2.0 × 705.0;CEK_K2_lahm_5;ÜRETİM
+CEK_K2_lahm_5_tepsi;Tepsi · 36 çukur Ø80;1;gıda silikonu 10 mm · çukur 7 · kalıp döküm;530 × 540;CEK_K2_lahm_5;ÜRETİM
+CEK_K2_lahm_6_on_dis_sac_1.5;Çekmece önü 40 · kulpsuz;1;dış 304 1,5 bükme + PU 37,5 köpük + iç 304 1,0 (fitil kanallı);650 × 90;CEK_K2_lahm_6;ÜRETİM
+CEK_K2_lahm_6_on_pu;on pu;0;PU köpük (gövdeyle birlikte enjeksiyon);alt gövde → çekmece önü / kapak katmanı;CEK_K2_lahm_6;ALT
+CEK_K2_lahm_6_on_ic_sac_1.0;on ic sac 1.0;0;304 sac · lazer + büküm;alt gövde → çekmece önü / kapak katmanı;CEK_K2_lahm_6;ALT
+CEK_K2_lahm_6_on_fitil;Fitil · geçmeli manyetik profil 21 × 18,5;1;PVC + şerit mıknatıs · kapak iç sacının 6,4'lük kanalına geçer · aletsiz sökülür;çevre 1392 mm · köşeler gönye kaynaklı;CEK_K2_lahm_6;SATIN ALMA
+CEK_K2_lahm_6_kutu_U_1.0;Çekmece kutusu U 1,0;1;304 lazer + 2 büküm;560 × 45 × 550;CEK_K2_lahm_6;ÜRETİM
+CEK_K2_lahm_6_kutu_arka_1.0;kutu arka 1.0;0;304 sac · lazer + büküm;alt gövde → çekmece kutusu;CEK_K2_lahm_6;ALT
+CEK_K2_lahm_6_kutu_on_1.0;kutu on 1.0;0;304 sac · lazer + büküm;alt gövde → çekmece kutusu;CEK_K2_lahm_6;ALT
+CEK_K2_lahm_6_on_baglanti_sol;Ön bağlantı köşesi;2;304 2 mm büküm · öne 2 × M5 perçin somun;ön yüz ayar yuvalı;CEK_K2_lahm_6;ÜRETİM
+CEK_K2_lahm_6_on_baglanti_sag;on baglanti;0;304 · lazer / lama;alt gövde → ön bağlantı köşesi;CEK_K2_lahm_6;ALT
+CEK_K2_lahm_6_ray_adaptor_sol;Ray adaptör lamı 6 mm;2;304 lama · kutuya punta;ray iç profiline 4 × M4;CEK_K2_lahm_6;ÜRETİM
+CEK_K2_lahm_6_ray_adaptor_sag;ray adaptor;0;304 · lazer / lama;alt gövde → ray adaptör lamı;CEK_K2_lahm_6;ALT
+CEK_K2_lahm_6_ray_dis_sol;Teleskopik ray Accuride DZ3832-0070;2;700 · tam çekilir · 45,7 × 12,7 · 45–50 kg (çift);kolon yan duvarına 4 × M5;CEK_K2_lahm_6;SATIN ALMA
+CEK_K2_lahm_6_ray_ic_sol;ray ic;0;304 · lazer / lama;alt gövde → Accuride DZ3832-0070 (iç profil);CEK_K2_lahm_6;ALT
+CEK_K2_lahm_6_ray_dis_sag;ray dis;0;304 · lazer / lama;alt gövde → Accuride DZ3832-0070;CEK_K2_lahm_6;ALT
+CEK_K2_lahm_6_ray_ic_sag;ray ic;0;304 · lazer / lama;alt gövde → Accuride DZ3832-0070 (iç profil);CEK_K2_lahm_6;ALT
+CEK_K2_lahm_6_motor_kasnagi;GT3 kasnak 30 diş · 6 mm · flanşlı;1;alüminyum · delik Ø8 H7 + düz;PD 28,65 · çevre 90 mm;CEK_K2_lahm_6;SATIN ALMA
+CEK_K2_lahm_6_motor_mili;motor mili;0;304 · lazer / lama;alt gövde → Transmotec PD3665;CEK_K2_lahm_6;ALT
+CEK_K2_lahm_6_motor_gobegi;motor gobegi;0;304 · lazer / lama;alt gövde → Transmotec PD3665;CEK_K2_lahm_6;ALT
+CEK_K2_lahm_6_motor_reduktor;Motor Transmotec PD3665-24-51-BFEC;1;24 V · planet 51:1 · 127 d/dk · 0,853 N·m · manyetik enkoder · EMC filtreli;Ø36 × 115,5 + enkoder · datasheet: transmotec.com PD3665;CEK_K2_lahm_6;SATIN ALMA
+CEK_K2_lahm_6_motor_govde;motor govde;0;;alt gövde → Transmotec PD3665;CEK_K2_lahm_6;ALT
+CEK_K2_lahm_6_enkoder_kapagi;enkoder kapagi;0;;alt gövde → Transmotec PD3665;CEK_K2_lahm_6;ALT
+CEK_K2_lahm_6_m12_soket;M12 4 pin soket + kablo;1;motor + enkoder tek soket · kasada sabit;kablo dikey kanala;CEK_K2_lahm_6;SATIN ALMA
+CEK_K2_lahm_6_motor_braketi;Motor braketi 3 mm;1;304 lazer + büküm · 4 × M3 (Ø31) + arka duvara 2 × M5;kasnak hizası buradan;CEK_K2_lahm_6;ÜRETİM
+CEK_K2_lahm_6_avara;GT3 avara 30 diş · 6 mm · çift rulman;1;alüminyum · 2 × 625-2RS;ön çerçevenin 17 mm arkası;CEK_K2_lahm_6;SATIN ALMA
+CEK_K2_lahm_6_avara_mili;avara mili;1;304 · lazer / lama;zarf 12.2 × 5.0 × 5.0;CEK_K2_lahm_6;ÜRETİM
+CEK_K2_lahm_6_avara_kolu;Avara kolu 3 mm;1;304 büküm · ön çerçevenin arkasına 2 × M4 perçin somun;kayış gergisi burada: 8 mm yuvalı;CEK_K2_lahm_6;ÜRETİM
+CEK_K2_lahm_6_kayis_GT3;Kayış GT3 6 mm kapalı çevrim;1;~1482 mm (494 diş) · çelik kordlu;tedarikçi boyu doğrulayacak;CEK_K2_lahm_6;SATIN ALMA
+CEK_K2_lahm_6_kayis_cenesi;Kayış çenesi + kolu;1;304 · kutunun yan duvarına kaynaklı · dişli çene 2 × M3;kutunun arkasından kasnağa uzanır (strok için);CEK_K2_lahm_6;ÜRETİM
+CEK_K2_lahm_6_miknatis_ayagi;miknatis ayagi;1;304 · lazer / lama;zarf 6.4 × 2.3 × 28.6;CEK_K2_lahm_6;ÜRETİM
+CEK_K2_lahm_6_miknatis_57135;Mıknatıs Littelfuse 57135-000;1;AlNiCo 5 · flanşlı 28,57 × 19,05 × 6,35;çenenin üstünde;CEK_K2_lahm_6;SATIN ALMA
+CEK_K2_lahm_6_reed_kapali;Reed sensör Littelfuse 59135-010;2;NO · flanşlı 28,57 × 19,05 × 6,35;KAPALI + AÇIK konum · PLC girişine;CEK_K2_lahm_6;SATIN ALMA
+CEK_K2_lahm_6_reed_acik;reed acik;0;;alt gövde → Littelfuse 59135;CEK_K2_lahm_6;ALT
+CEK_K2_lahm_6_sensor_lami;sensor lami;1;304 · lazer / lama;zarf 6.4 × 2.0 × 705.0;CEK_K2_lahm_6;ÜRETİM
+CEK_K2_lahm_6_tepsi;Tepsi · 36 çukur Ø80;1;gıda silikonu 10 mm · çukur 7 · kalıp döküm;530 × 540;CEK_K2_lahm_6;ÜRETİM
+CEK_K3_lahm_1_on_dis_sac_1.5;Çekmece önü 40 · kulpsuz;1;dış 304 1,5 bükme + PU 37,5 köpük + iç 304 1,0 (fitil kanallı);650 × 90;CEK_K3_lahm_1;ÜRETİM
+CEK_K3_lahm_1_on_pu;on pu;0;PU köpük (gövdeyle birlikte enjeksiyon);alt gövde → çekmece önü / kapak katmanı;CEK_K3_lahm_1;ALT
+CEK_K3_lahm_1_on_ic_sac_1.0;on ic sac 1.0;0;304 sac · lazer + büküm;alt gövde → çekmece önü / kapak katmanı;CEK_K3_lahm_1;ALT
+CEK_K3_lahm_1_on_fitil;Fitil · geçmeli manyetik profil 21 × 18,5;1;PVC + şerit mıknatıs · kapak iç sacının 6,4'lük kanalına geçer · aletsiz sökülür;çevre 1392 mm · köşeler gönye kaynaklı;CEK_K3_lahm_1;SATIN ALMA
+CEK_K3_lahm_1_kutu_U_1.0;Çekmece kutusu U 1,0;1;304 lazer + 2 büküm;560 × 45 × 550;CEK_K3_lahm_1;ÜRETİM
+CEK_K3_lahm_1_kutu_arka_1.0;kutu arka 1.0;0;304 sac · lazer + büküm;alt gövde → çekmece kutusu;CEK_K3_lahm_1;ALT
+CEK_K3_lahm_1_kutu_on_1.0;kutu on 1.0;0;304 sac · lazer + büküm;alt gövde → çekmece kutusu;CEK_K3_lahm_1;ALT
+CEK_K3_lahm_1_on_baglanti_sol;Ön bağlantı köşesi;2;304 2 mm büküm · öne 2 × M5 perçin somun;ön yüz ayar yuvalı;CEK_K3_lahm_1;ÜRETİM
+CEK_K3_lahm_1_on_baglanti_sag;on baglanti;0;304 · lazer / lama;alt gövde → ön bağlantı köşesi;CEK_K3_lahm_1;ALT
+CEK_K3_lahm_1_ray_adaptor_sol;Ray adaptör lamı 6 mm;2;304 lama · kutuya punta;ray iç profiline 4 × M4;CEK_K3_lahm_1;ÜRETİM
+CEK_K3_lahm_1_ray_adaptor_sag;ray adaptor;0;304 · lazer / lama;alt gövde → ray adaptör lamı;CEK_K3_lahm_1;ALT
+CEK_K3_lahm_1_ray_dis_sol;Teleskopik ray Accuride DZ3832-0070;2;700 · tam çekilir · 45,7 × 12,7 · 45–50 kg (çift);kolon yan duvarına 4 × M5;CEK_K3_lahm_1;SATIN ALMA
+CEK_K3_lahm_1_ray_ic_sol;ray ic;0;304 · lazer / lama;alt gövde → Accuride DZ3832-0070 (iç profil);CEK_K3_lahm_1;ALT
+CEK_K3_lahm_1_ray_dis_sag;ray dis;0;304 · lazer / lama;alt gövde → Accuride DZ3832-0070;CEK_K3_lahm_1;ALT
+CEK_K3_lahm_1_ray_ic_sag;ray ic;0;304 · lazer / lama;alt gövde → Accuride DZ3832-0070 (iç profil);CEK_K3_lahm_1;ALT
+CEK_K3_lahm_1_motor_kasnagi;GT3 kasnak 30 diş · 6 mm · flanşlı;1;alüminyum · delik Ø8 H7 + düz;PD 28,65 · çevre 90 mm;CEK_K3_lahm_1;SATIN ALMA
+CEK_K3_lahm_1_motor_mili;motor mili;0;304 · lazer / lama;alt gövde → Transmotec PD3665;CEK_K3_lahm_1;ALT
+CEK_K3_lahm_1_motor_gobegi;motor gobegi;0;304 · lazer / lama;alt gövde → Transmotec PD3665;CEK_K3_lahm_1;ALT
+CEK_K3_lahm_1_motor_reduktor;Motor Transmotec PD3665-24-51-BFEC;1;24 V · planet 51:1 · 127 d/dk · 0,853 N·m · manyetik enkoder · EMC filtreli;Ø36 × 115,5 + enkoder · datasheet: transmotec.com PD3665;CEK_K3_lahm_1;SATIN ALMA
+CEK_K3_lahm_1_motor_govde;motor govde;0;;alt gövde → Transmotec PD3665;CEK_K3_lahm_1;ALT
+CEK_K3_lahm_1_enkoder_kapagi;enkoder kapagi;0;;alt gövde → Transmotec PD3665;CEK_K3_lahm_1;ALT
+CEK_K3_lahm_1_m12_soket;M12 4 pin soket + kablo;1;motor + enkoder tek soket · kasada sabit;kablo dikey kanala;CEK_K3_lahm_1;SATIN ALMA
+CEK_K3_lahm_1_motor_braketi;Motor braketi 3 mm;1;304 lazer + büküm · 4 × M3 (Ø31) + arka duvara 2 × M5;kasnak hizası buradan;CEK_K3_lahm_1;ÜRETİM
+CEK_K3_lahm_1_avara;GT3 avara 30 diş · 6 mm · çift rulman;1;alüminyum · 2 × 625-2RS;ön çerçevenin 17 mm arkası;CEK_K3_lahm_1;SATIN ALMA
+CEK_K3_lahm_1_avara_mili;avara mili;1;304 · lazer / lama;zarf 12.2 × 5.0 × 5.0;CEK_K3_lahm_1;ÜRETİM
+CEK_K3_lahm_1_avara_kolu;Avara kolu 3 mm;1;304 büküm · ön çerçevenin arkasına 2 × M4 perçin somun;kayış gergisi burada: 8 mm yuvalı;CEK_K3_lahm_1;ÜRETİM
+CEK_K3_lahm_1_kayis_GT3;Kayış GT3 6 mm kapalı çevrim;1;~1482 mm (494 diş) · çelik kordlu;tedarikçi boyu doğrulayacak;CEK_K3_lahm_1;SATIN ALMA
+CEK_K3_lahm_1_kayis_cenesi;Kayış çenesi + kolu;1;304 · kutunun yan duvarına kaynaklı · dişli çene 2 × M3;kutunun arkasından kasnağa uzanır (strok için);CEK_K3_lahm_1;ÜRETİM
+CEK_K3_lahm_1_miknatis_ayagi;miknatis ayagi;1;304 · lazer / lama;zarf 6.3 × 2.3 × 28.6;CEK_K3_lahm_1;ÜRETİM
+CEK_K3_lahm_1_miknatis_57135;Mıknatıs Littelfuse 57135-000;1;AlNiCo 5 · flanşlı 28,57 × 19,05 × 6,35;çenenin üstünde;CEK_K3_lahm_1;SATIN ALMA
+CEK_K3_lahm_1_reed_kapali;Reed sensör Littelfuse 59135-010;2;NO · flanşlı 28,57 × 19,05 × 6,35;KAPALI + AÇIK konum · PLC girişine;CEK_K3_lahm_1;SATIN ALMA
+CEK_K3_lahm_1_reed_acik;reed acik;0;;alt gövde → Littelfuse 59135;CEK_K3_lahm_1;ALT
+CEK_K3_lahm_1_sensor_lami;sensor lami;1;304 · lazer / lama;zarf 6.3 × 2.0 × 705.0;CEK_K3_lahm_1;ÜRETİM
+CEK_K3_lahm_1_tepsi;Tepsi · 36 çukur Ø80;1;gıda silikonu 10 mm · çukur 7 · kalıp döküm;530 × 540;CEK_K3_lahm_1;ÜRETİM
+CEK_K3_lahm_2_on_dis_sac_1.5;Çekmece önü 40 · kulpsuz;1;dış 304 1,5 bükme + PU 37,5 köpük + iç 304 1,0 (fitil kanallı);650 × 90;CEK_K3_lahm_2;ÜRETİM
+CEK_K3_lahm_2_on_pu;on pu;0;PU köpük (gövdeyle birlikte enjeksiyon);alt gövde → çekmece önü / kapak katmanı;CEK_K3_lahm_2;ALT
+CEK_K3_lahm_2_on_ic_sac_1.0;on ic sac 1.0;0;304 sac · lazer + büküm;alt gövde → çekmece önü / kapak katmanı;CEK_K3_lahm_2;ALT
+CEK_K3_lahm_2_on_fitil;Fitil · geçmeli manyetik profil 21 × 18,5;1;PVC + şerit mıknatıs · kapak iç sacının 6,4'lük kanalına geçer · aletsiz sökülür;çevre 1392 mm · köşeler gönye kaynaklı;CEK_K3_lahm_2;SATIN ALMA
+CEK_K3_lahm_2_kutu_U_1.0;Çekmece kutusu U 1,0;1;304 lazer + 2 büküm;560 × 45 × 550;CEK_K3_lahm_2;ÜRETİM
+CEK_K3_lahm_2_kutu_arka_1.0;kutu arka 1.0;0;304 sac · lazer + büküm;alt gövde → çekmece kutusu;CEK_K3_lahm_2;ALT
+CEK_K3_lahm_2_kutu_on_1.0;kutu on 1.0;0;304 sac · lazer + büküm;alt gövde → çekmece kutusu;CEK_K3_lahm_2;ALT
+CEK_K3_lahm_2_on_baglanti_sol;Ön bağlantı köşesi;2;304 2 mm büküm · öne 2 × M5 perçin somun;ön yüz ayar yuvalı;CEK_K3_lahm_2;ÜRETİM
+CEK_K3_lahm_2_on_baglanti_sag;on baglanti;0;304 · lazer / lama;alt gövde → ön bağlantı köşesi;CEK_K3_lahm_2;ALT
+CEK_K3_lahm_2_ray_adaptor_sol;Ray adaptör lamı 6 mm;2;304 lama · kutuya punta;ray iç profiline 4 × M4;CEK_K3_lahm_2;ÜRETİM
+CEK_K3_lahm_2_ray_adaptor_sag;ray adaptor;0;304 · lazer / lama;alt gövde → ray adaptör lamı;CEK_K3_lahm_2;ALT
+CEK_K3_lahm_2_ray_dis_sol;Teleskopik ray Accuride DZ3832-0070;2;700 · tam çekilir · 45,7 × 12,7 · 45–50 kg (çift);kolon yan duvarına 4 × M5;CEK_K3_lahm_2;SATIN ALMA
+CEK_K3_lahm_2_ray_ic_sol;ray ic;0;304 · lazer / lama;alt gövde → Accuride DZ3832-0070 (iç profil);CEK_K3_lahm_2;ALT
+CEK_K3_lahm_2_ray_dis_sag;ray dis;0;304 · lazer / lama;alt gövde → Accuride DZ3832-0070;CEK_K3_lahm_2;ALT
+CEK_K3_lahm_2_ray_ic_sag;ray ic;0;304 · lazer / lama;alt gövde → Accuride DZ3832-0070 (iç profil);CEK_K3_lahm_2;ALT
+CEK_K3_lahm_2_motor_kasnagi;GT3 kasnak 30 diş · 6 mm · flanşlı;1;alüminyum · delik Ø8 H7 + düz;PD 28,65 · çevre 90 mm;CEK_K3_lahm_2;SATIN ALMA
+CEK_K3_lahm_2_motor_mili;motor mili;0;304 · lazer / lama;alt gövde → Transmotec PD3665;CEK_K3_lahm_2;ALT
+CEK_K3_lahm_2_motor_gobegi;motor gobegi;0;304 · lazer / lama;alt gövde → Transmotec PD3665;CEK_K3_lahm_2;ALT
+CEK_K3_lahm_2_motor_reduktor;Motor Transmotec PD3665-24-51-BFEC;1;24 V · planet 51:1 · 127 d/dk · 0,853 N·m · manyetik enkoder · EMC filtreli;Ø36 × 115,5 + enkoder · datasheet: transmotec.com PD3665;CEK_K3_lahm_2;SATIN ALMA
+CEK_K3_lahm_2_motor_govde;motor govde;0;;alt gövde → Transmotec PD3665;CEK_K3_lahm_2;ALT
+CEK_K3_lahm_2_enkoder_kapagi;enkoder kapagi;0;;alt gövde → Transmotec PD3665;CEK_K3_lahm_2;ALT
+CEK_K3_lahm_2_m12_soket;M12 4 pin soket + kablo;1;motor + enkoder tek soket · kasada sabit;kablo dikey kanala;CEK_K3_lahm_2;SATIN ALMA
+CEK_K3_lahm_2_motor_braketi;Motor braketi 3 mm;1;304 lazer + büküm · 4 × M3 (Ø31) + arka duvara 2 × M5;kasnak hizası buradan;CEK_K3_lahm_2;ÜRETİM
+CEK_K3_lahm_2_avara;GT3 avara 30 diş · 6 mm · çift rulman;1;alüminyum · 2 × 625-2RS;ön çerçevenin 17 mm arkası;CEK_K3_lahm_2;SATIN ALMA
+CEK_K3_lahm_2_avara_mili;avara mili;1;304 · lazer / lama;zarf 12.2 × 5.0 × 5.0;CEK_K3_lahm_2;ÜRETİM
+CEK_K3_lahm_2_avara_kolu;Avara kolu 3 mm;1;304 büküm · ön çerçevenin arkasına 2 × M4 perçin somun;kayış gergisi burada: 8 mm yuvalı;CEK_K3_lahm_2;ÜRETİM
+CEK_K3_lahm_2_kayis_GT3;Kayış GT3 6 mm kapalı çevrim;1;~1482 mm (494 diş) · çelik kordlu;tedarikçi boyu doğrulayacak;CEK_K3_lahm_2;SATIN ALMA
+CEK_K3_lahm_2_kayis_cenesi;Kayış çenesi + kolu;1;304 · kutunun yan duvarına kaynaklı · dişli çene 2 × M3;kutunun arkasından kasnağa uzanır (strok için);CEK_K3_lahm_2;ÜRETİM
+CEK_K3_lahm_2_miknatis_ayagi;miknatis ayagi;1;304 · lazer / lama;zarf 6.3 × 2.3 × 28.6;CEK_K3_lahm_2;ÜRETİM
+CEK_K3_lahm_2_miknatis_57135;Mıknatıs Littelfuse 57135-000;1;AlNiCo 5 · flanşlı 28,57 × 19,05 × 6,35;çenenin üstünde;CEK_K3_lahm_2;SATIN ALMA
+CEK_K3_lahm_2_reed_kapali;Reed sensör Littelfuse 59135-010;2;NO · flanşlı 28,57 × 19,05 × 6,35;KAPALI + AÇIK konum · PLC girişine;CEK_K3_lahm_2;SATIN ALMA
+CEK_K3_lahm_2_reed_acik;reed acik;0;;alt gövde → Littelfuse 59135;CEK_K3_lahm_2;ALT
+CEK_K3_lahm_2_sensor_lami;sensor lami;1;304 · lazer / lama;zarf 6.3 × 2.0 × 705.0;CEK_K3_lahm_2;ÜRETİM
+CEK_K3_lahm_2_tepsi;Tepsi · 36 çukur Ø80;1;gıda silikonu 10 mm · çukur 7 · kalıp döküm;530 × 540;CEK_K3_lahm_2;ÜRETİM
+CEK_K3_lahm_3_on_dis_sac_1.5;Çekmece önü 40 · kulpsuz;1;dış 304 1,5 bükme + PU 37,5 köpük + iç 304 1,0 (fitil kanallı);650 × 90;CEK_K3_lahm_3;ÜRETİM
+CEK_K3_lahm_3_on_pu;on pu;0;PU köpük (gövdeyle birlikte enjeksiyon);alt gövde → çekmece önü / kapak katmanı;CEK_K3_lahm_3;ALT
+CEK_K3_lahm_3_on_ic_sac_1.0;on ic sac 1.0;0;304 sac · lazer + büküm;alt gövde → çekmece önü / kapak katmanı;CEK_K3_lahm_3;ALT
+CEK_K3_lahm_3_on_fitil;Fitil · geçmeli manyetik profil 21 × 18,5;1;PVC + şerit mıknatıs · kapak iç sacının 6,4'lük kanalına geçer · aletsiz sökülür;çevre 1392 mm · köşeler gönye kaynaklı;CEK_K3_lahm_3;SATIN ALMA
+CEK_K3_lahm_3_kutu_U_1.0;Çekmece kutusu U 1,0;1;304 lazer + 2 büküm;560 × 45 × 550;CEK_K3_lahm_3;ÜRETİM
+CEK_K3_lahm_3_kutu_arka_1.0;kutu arka 1.0;0;304 sac · lazer + büküm;alt gövde → çekmece kutusu;CEK_K3_lahm_3;ALT
+CEK_K3_lahm_3_kutu_on_1.0;kutu on 1.0;0;304 sac · lazer + büküm;alt gövde → çekmece kutusu;CEK_K3_lahm_3;ALT
+CEK_K3_lahm_3_on_baglanti_sol;Ön bağlantı köşesi;2;304 2 mm büküm · öne 2 × M5 perçin somun;ön yüz ayar yuvalı;CEK_K3_lahm_3;ÜRETİM
+CEK_K3_lahm_3_on_baglanti_sag;on baglanti;0;304 · lazer / lama;alt gövde → ön bağlantı köşesi;CEK_K3_lahm_3;ALT
+CEK_K3_lahm_3_ray_adaptor_sol;Ray adaptör lamı 6 mm;2;304 lama · kutuya punta;ray iç profiline 4 × M4;CEK_K3_lahm_3;ÜRETİM
+CEK_K3_lahm_3_ray_adaptor_sag;ray adaptor;0;304 · lazer / lama;alt gövde → ray adaptör lamı;CEK_K3_lahm_3;ALT
+CEK_K3_lahm_3_ray_dis_sol;Teleskopik ray Accuride DZ3832-0070;2;700 · tam çekilir · 45,7 × 12,7 · 45–50 kg (çift);kolon yan duvarına 4 × M5;CEK_K3_lahm_3;SATIN ALMA
+CEK_K3_lahm_3_ray_ic_sol;ray ic;0;304 · lazer / lama;alt gövde → Accuride DZ3832-0070 (iç profil);CEK_K3_lahm_3;ALT
+CEK_K3_lahm_3_ray_dis_sag;ray dis;0;304 · lazer / lama;alt gövde → Accuride DZ3832-0070;CEK_K3_lahm_3;ALT
+CEK_K3_lahm_3_ray_ic_sag;ray ic;0;304 · lazer / lama;alt gövde → Accuride DZ3832-0070 (iç profil);CEK_K3_lahm_3;ALT
+CEK_K3_lahm_3_motor_kasnagi;GT3 kasnak 30 diş · 6 mm · flanşlı;1;alüminyum · delik Ø8 H7 + düz;PD 28,65 · çevre 90 mm;CEK_K3_lahm_3;SATIN ALMA
+CEK_K3_lahm_3_motor_mili;motor mili;0;304 · lazer / lama;alt gövde → Transmotec PD3665;CEK_K3_lahm_3;ALT
+CEK_K3_lahm_3_motor_gobegi;motor gobegi;0;304 · lazer / lama;alt gövde → Transmotec PD3665;CEK_K3_lahm_3;ALT
+CEK_K3_lahm_3_motor_reduktor;Motor Transmotec PD3665-24-51-BFEC;1;24 V · planet 51:1 · 127 d/dk · 0,853 N·m · manyetik enkoder · EMC filtreli;Ø36 × 115,5 + enkoder · datasheet: transmotec.com PD3665;CEK_K3_lahm_3;SATIN ALMA
+CEK_K3_lahm_3_motor_govde;motor govde;0;;alt gövde → Transmotec PD3665;CEK_K3_lahm_3;ALT
+CEK_K3_lahm_3_enkoder_kapagi;enkoder kapagi;0;;alt gövde → Transmotec PD3665;CEK_K3_lahm_3;ALT
+CEK_K3_lahm_3_m12_soket;M12 4 pin soket + kablo;1;motor + enkoder tek soket · kasada sabit;kablo dikey kanala;CEK_K3_lahm_3;SATIN ALMA
+CEK_K3_lahm_3_motor_braketi;Motor braketi 3 mm;1;304 lazer + büküm · 4 × M3 (Ø31) + arka duvara 2 × M5;kasnak hizası buradan;CEK_K3_lahm_3;ÜRETİM
+CEK_K3_lahm_3_avara;GT3 avara 30 diş · 6 mm · çift rulman;1;alüminyum · 2 × 625-2RS;ön çerçevenin 17 mm arkası;CEK_K3_lahm_3;SATIN ALMA
+CEK_K3_lahm_3_avara_mili;avara mili;1;304 · lazer / lama;zarf 12.2 × 5.0 × 5.0;CEK_K3_lahm_3;ÜRETİM
+CEK_K3_lahm_3_avara_kolu;Avara kolu 3 mm;1;304 büküm · ön çerçevenin arkasına 2 × M4 perçin somun;kayış gergisi burada: 8 mm yuvalı;CEK_K3_lahm_3;ÜRETİM
+CEK_K3_lahm_3_kayis_GT3;Kayış GT3 6 mm kapalı çevrim;1;~1482 mm (494 diş) · çelik kordlu;tedarikçi boyu doğrulayacak;CEK_K3_lahm_3;SATIN ALMA
+CEK_K3_lahm_3_kayis_cenesi;Kayış çenesi + kolu;1;304 · kutunun yan duvarına kaynaklı · dişli çene 2 × M3;kutunun arkasından kasnağa uzanır (strok için);CEK_K3_lahm_3;ÜRETİM
+CEK_K3_lahm_3_miknatis_ayagi;miknatis ayagi;1;304 · lazer / lama;zarf 6.3 × 2.3 × 28.6;CEK_K3_lahm_3;ÜRETİM
+CEK_K3_lahm_3_miknatis_57135;Mıknatıs Littelfuse 57135-000;1;AlNiCo 5 · flanşlı 28,57 × 19,05 × 6,35;çenenin üstünde;CEK_K3_lahm_3;SATIN ALMA
+CEK_K3_lahm_3_reed_kapali;Reed sensör Littelfuse 59135-010;2;NO · flanşlı 28,57 × 19,05 × 6,35;KAPALI + AÇIK konum · PLC girişine;CEK_K3_lahm_3;SATIN ALMA
+CEK_K3_lahm_3_reed_acik;reed acik;0;;alt gövde → Littelfuse 59135;CEK_K3_lahm_3;ALT
+CEK_K3_lahm_3_sensor_lami;sensor lami;1;304 · lazer / lama;zarf 6.3 × 2.0 × 705.0;CEK_K3_lahm_3;ÜRETİM
+CEK_K3_lahm_3_tepsi;Tepsi · 36 çukur Ø80;1;gıda silikonu 10 mm · çukur 7 · kalıp döküm;530 × 540;CEK_K3_lahm_3;ÜRETİM
+CEK_K3_lahm_4_on_dis_sac_1.5;Çekmece önü 40 · kulpsuz;1;dış 304 1,5 bükme + PU 37,5 köpük + iç 304 1,0 (fitil kanallı);650 × 90;CEK_K3_lahm_4;ÜRETİM
+CEK_K3_lahm_4_on_pu;on pu;0;PU köpük (gövdeyle birlikte enjeksiyon);alt gövde → çekmece önü / kapak katmanı;CEK_K3_lahm_4;ALT
+CEK_K3_lahm_4_on_ic_sac_1.0;on ic sac 1.0;0;304 sac · lazer + büküm;alt gövde → çekmece önü / kapak katmanı;CEK_K3_lahm_4;ALT
+CEK_K3_lahm_4_on_fitil;Fitil · geçmeli manyetik profil 21 × 18,5;1;PVC + şerit mıknatıs · kapak iç sacının 6,4'lük kanalına geçer · aletsiz sökülür;çevre 1392 mm · köşeler gönye kaynaklı;CEK_K3_lahm_4;SATIN ALMA
+CEK_K3_lahm_4_kutu_U_1.0;Çekmece kutusu U 1,0;1;304 lazer + 2 büküm;560 × 45 × 550;CEK_K3_lahm_4;ÜRETİM
+CEK_K3_lahm_4_kutu_arka_1.0;kutu arka 1.0;0;304 sac · lazer + büküm;alt gövde → çekmece kutusu;CEK_K3_lahm_4;ALT
+CEK_K3_lahm_4_kutu_on_1.0;kutu on 1.0;0;304 sac · lazer + büküm;alt gövde → çekmece kutusu;CEK_K3_lahm_4;ALT
+CEK_K3_lahm_4_on_baglanti_sol;Ön bağlantı köşesi;2;304 2 mm büküm · öne 2 × M5 perçin somun;ön yüz ayar yuvalı;CEK_K3_lahm_4;ÜRETİM
+CEK_K3_lahm_4_on_baglanti_sag;on baglanti;0;304 · lazer / lama;alt gövde → ön bağlantı köşesi;CEK_K3_lahm_4;ALT
+CEK_K3_lahm_4_ray_adaptor_sol;Ray adaptör lamı 6 mm;2;304 lama · kutuya punta;ray iç profiline 4 × M4;CEK_K3_lahm_4;ÜRETİM
+CEK_K3_lahm_4_ray_adaptor_sag;ray adaptor;0;304 · lazer / lama;alt gövde → ray adaptör lamı;CEK_K3_lahm_4;ALT
+CEK_K3_lahm_4_ray_dis_sol;Teleskopik ray Accuride DZ3832-0070;2;700 · tam çekilir · 45,7 × 12,7 · 45–50 kg (çift);kolon yan duvarına 4 × M5;CEK_K3_lahm_4;SATIN ALMA
+CEK_K3_lahm_4_ray_ic_sol;ray ic;0;304 · lazer / lama;alt gövde → Accuride DZ3832-0070 (iç profil);CEK_K3_lahm_4;ALT
+CEK_K3_lahm_4_ray_dis_sag;ray dis;0;304 · lazer / lama;alt gövde → Accuride DZ3832-0070;CEK_K3_lahm_4;ALT
+CEK_K3_lahm_4_ray_ic_sag;ray ic;0;304 · lazer / lama;alt gövde → Accuride DZ3832-0070 (iç profil);CEK_K3_lahm_4;ALT
+CEK_K3_lahm_4_motor_kasnagi;GT3 kasnak 30 diş · 6 mm · flanşlı;1;alüminyum · delik Ø8 H7 + düz;PD 28,65 · çevre 90 mm;CEK_K3_lahm_4;SATIN ALMA
+CEK_K3_lahm_4_motor_mili;motor mili;0;304 · lazer / lama;alt gövde → Transmotec PD3665;CEK_K3_lahm_4;ALT
+CEK_K3_lahm_4_motor_gobegi;motor gobegi;0;304 · lazer / lama;alt gövde → Transmotec PD3665;CEK_K3_lahm_4;ALT
+CEK_K3_lahm_4_motor_reduktor;Motor Transmotec PD3665-24-51-BFEC;1;24 V · planet 51:1 · 127 d/dk · 0,853 N·m · manyetik enkoder · EMC filtreli;Ø36 × 115,5 + enkoder · datasheet: transmotec.com PD3665;CEK_K3_lahm_4;SATIN ALMA
+CEK_K3_lahm_4_motor_govde;motor govde;0;;alt gövde → Transmotec PD3665;CEK_K3_lahm_4;ALT
+CEK_K3_lahm_4_enkoder_kapagi;enkoder kapagi;0;;alt gövde → Transmotec PD3665;CEK_K3_lahm_4;ALT
+CEK_K3_lahm_4_m12_soket;M12 4 pin soket + kablo;1;motor + enkoder tek soket · kasada sabit;kablo dikey kanala;CEK_K3_lahm_4;SATIN ALMA
+CEK_K3_lahm_4_motor_braketi;Motor braketi 3 mm;1;304 lazer + büküm · 4 × M3 (Ø31) + arka duvara 2 × M5;kasnak hizası buradan;CEK_K3_lahm_4;ÜRETİM
+CEK_K3_lahm_4_avara;GT3 avara 30 diş · 6 mm · çift rulman;1;alüminyum · 2 × 625-2RS;ön çerçevenin 17 mm arkası;CEK_K3_lahm_4;SATIN ALMA
+CEK_K3_lahm_4_avara_mili;avara mili;1;304 · lazer / lama;zarf 12.2 × 5.0 × 5.0;CEK_K3_lahm_4;ÜRETİM
+CEK_K3_lahm_4_avara_kolu;Avara kolu 3 mm;1;304 büküm · ön çerçevenin arkasına 2 × M4 perçin somun;kayış gergisi burada: 8 mm yuvalı;CEK_K3_lahm_4;ÜRETİM
+CEK_K3_lahm_4_kayis_GT3;Kayış GT3 6 mm kapalı çevrim;1;~1482 mm (494 diş) · çelik kordlu;tedarikçi boyu doğrulayacak;CEK_K3_lahm_4;SATIN ALMA
+CEK_K3_lahm_4_kayis_cenesi;Kayış çenesi + kolu;1;304 · kutunun yan duvarına kaynaklı · dişli çene 2 × M3;kutunun arkasından kasnağa uzanır (strok için);CEK_K3_lahm_4;ÜRETİM
+CEK_K3_lahm_4_miknatis_ayagi;miknatis ayagi;1;304 · lazer / lama;zarf 6.3 × 2.3 × 28.6;CEK_K3_lahm_4;ÜRETİM
+CEK_K3_lahm_4_miknatis_57135;Mıknatıs Littelfuse 57135-000;1;AlNiCo 5 · flanşlı 28,57 × 19,05 × 6,35;çenenin üstünde;CEK_K3_lahm_4;SATIN ALMA
+CEK_K3_lahm_4_reed_kapali;Reed sensör Littelfuse 59135-010;2;NO · flanşlı 28,57 × 19,05 × 6,35;KAPALI + AÇIK konum · PLC girişine;CEK_K3_lahm_4;SATIN ALMA
+CEK_K3_lahm_4_reed_acik;reed acik;0;;alt gövde → Littelfuse 59135;CEK_K3_lahm_4;ALT
+CEK_K3_lahm_4_sensor_lami;sensor lami;1;304 · lazer / lama;zarf 6.3 × 2.0 × 705.0;CEK_K3_lahm_4;ÜRETİM
+CEK_K3_lahm_4_tepsi;Tepsi · 36 çukur Ø80;1;gıda silikonu 10 mm · çukur 7 · kalıp döküm;530 × 540;CEK_K3_lahm_4;ÜRETİM
+CEK_K3_lahm_5_on_dis_sac_1.5;Çekmece önü 40 · kulpsuz;1;dış 304 1,5 bükme + PU 37,5 köpük + iç 304 1,0 (fitil kanallı);650 × 90;CEK_K3_lahm_5;ÜRETİM
+CEK_K3_lahm_5_on_pu;on pu;0;PU köpük (gövdeyle birlikte enjeksiyon);alt gövde → çekmece önü / kapak katmanı;CEK_K3_lahm_5;ALT
+CEK_K3_lahm_5_on_ic_sac_1.0;on ic sac 1.0;0;304 sac · lazer + büküm;alt gövde → çekmece önü / kapak katmanı;CEK_K3_lahm_5;ALT
+CEK_K3_lahm_5_on_fitil;Fitil · geçmeli manyetik profil 21 × 18,5;1;PVC + şerit mıknatıs · kapak iç sacının 6,4'lük kanalına geçer · aletsiz sökülür;çevre 1392 mm · köşeler gönye kaynaklı;CEK_K3_lahm_5;SATIN ALMA
+CEK_K3_lahm_5_kutu_U_1.0;Çekmece kutusu U 1,0;1;304 lazer + 2 büküm;560 × 45 × 550;CEK_K3_lahm_5;ÜRETİM
+CEK_K3_lahm_5_kutu_arka_1.0;kutu arka 1.0;0;304 sac · lazer + büküm;alt gövde → çekmece kutusu;CEK_K3_lahm_5;ALT
+CEK_K3_lahm_5_kutu_on_1.0;kutu on 1.0;0;304 sac · lazer + büküm;alt gövde → çekmece kutusu;CEK_K3_lahm_5;ALT
+CEK_K3_lahm_5_on_baglanti_sol;Ön bağlantı köşesi;2;304 2 mm büküm · öne 2 × M5 perçin somun;ön yüz ayar yuvalı;CEK_K3_lahm_5;ÜRETİM
+CEK_K3_lahm_5_on_baglanti_sag;on baglanti;0;304 · lazer / lama;alt gövde → ön bağlantı köşesi;CEK_K3_lahm_5;ALT
+CEK_K3_lahm_5_ray_adaptor_sol;Ray adaptör lamı 6 mm;2;304 lama · kutuya punta;ray iç profiline 4 × M4;CEK_K3_lahm_5;ÜRETİM
+CEK_K3_lahm_5_ray_adaptor_sag;ray adaptor;0;304 · lazer / lama;alt gövde → ray adaptör lamı;CEK_K3_lahm_5;ALT
+CEK_K3_lahm_5_ray_dis_sol;Teleskopik ray Accuride DZ3832-0070;2;700 · tam çekilir · 45,7 × 12,7 · 45–50 kg (çift);kolon yan duvarına 4 × M5;CEK_K3_lahm_5;SATIN ALMA
+CEK_K3_lahm_5_ray_ic_sol;ray ic;0;304 · lazer / lama;alt gövde → Accuride DZ3832-0070 (iç profil);CEK_K3_lahm_5;ALT
+CEK_K3_lahm_5_ray_dis_sag;ray dis;0;304 · lazer / lama;alt gövde → Accuride DZ3832-0070;CEK_K3_lahm_5;ALT
+CEK_K3_lahm_5_ray_ic_sag;ray ic;0;304 · lazer / lama;alt gövde → Accuride DZ3832-0070 (iç profil);CEK_K3_lahm_5;ALT
+CEK_K3_lahm_5_motor_kasnagi;GT3 kasnak 30 diş · 6 mm · flanşlı;1;alüminyum · delik Ø8 H7 + düz;PD 28,65 · çevre 90 mm;CEK_K3_lahm_5;SATIN ALMA
+CEK_K3_lahm_5_motor_mili;motor mili;0;304 · lazer / lama;alt gövde → Transmotec PD3665;CEK_K3_lahm_5;ALT
+CEK_K3_lahm_5_motor_gobegi;motor gobegi;0;304 · lazer / lama;alt gövde → Transmotec PD3665;CEK_K3_lahm_5;ALT
+CEK_K3_lahm_5_motor_reduktor;Motor Transmotec PD3665-24-51-BFEC;1;24 V · planet 51:1 · 127 d/dk · 0,853 N·m · manyetik enkoder · EMC filtreli;Ø36 × 115,5 + enkoder · datasheet: transmotec.com PD3665;CEK_K3_lahm_5;SATIN ALMA
+CEK_K3_lahm_5_motor_govde;motor govde;0;;alt gövde → Transmotec PD3665;CEK_K3_lahm_5;ALT
+CEK_K3_lahm_5_enkoder_kapagi;enkoder kapagi;0;;alt gövde → Transmotec PD3665;CEK_K3_lahm_5;ALT
+CEK_K3_lahm_5_m12_soket;M12 4 pin soket + kablo;1;motor + enkoder tek soket · kasada sabit;kablo dikey kanala;CEK_K3_lahm_5;SATIN ALMA
+CEK_K3_lahm_5_motor_braketi;Motor braketi 3 mm;1;304 lazer + büküm · 4 × M3 (Ø31) + arka duvara 2 × M5;kasnak hizası buradan;CEK_K3_lahm_5;ÜRETİM
+CEK_K3_lahm_5_avara;GT3 avara 30 diş · 6 mm · çift rulman;1;alüminyum · 2 × 625-2RS;ön çerçevenin 17 mm arkası;CEK_K3_lahm_5;SATIN ALMA
+CEK_K3_lahm_5_avara_mili;avara mili;1;304 · lazer / lama;zarf 12.2 × 5.0 × 5.0;CEK_K3_lahm_5;ÜRETİM
+CEK_K3_lahm_5_avara_kolu;Avara kolu 3 mm;1;304 büküm · ön çerçevenin arkasına 2 × M4 perçin somun;kayış gergisi burada: 8 mm yuvalı;CEK_K3_lahm_5;ÜRETİM
+CEK_K3_lahm_5_kayis_GT3;Kayış GT3 6 mm kapalı çevrim;1;~1482 mm (494 diş) · çelik kordlu;tedarikçi boyu doğrulayacak;CEK_K3_lahm_5;SATIN ALMA
+CEK_K3_lahm_5_kayis_cenesi;Kayış çenesi + kolu;1;304 · kutunun yan duvarına kaynaklı · dişli çene 2 × M3;kutunun arkasından kasnağa uzanır (strok için);CEK_K3_lahm_5;ÜRETİM
+CEK_K3_lahm_5_miknatis_ayagi;miknatis ayagi;1;304 · lazer / lama;zarf 6.3 × 2.3 × 28.6;CEK_K3_lahm_5;ÜRETİM
+CEK_K3_lahm_5_miknatis_57135;Mıknatıs Littelfuse 57135-000;1;AlNiCo 5 · flanşlı 28,57 × 19,05 × 6,35;çenenin üstünde;CEK_K3_lahm_5;SATIN ALMA
+CEK_K3_lahm_5_reed_kapali;Reed sensör Littelfuse 59135-010;2;NO · flanşlı 28,57 × 19,05 × 6,35;KAPALI + AÇIK konum · PLC girişine;CEK_K3_lahm_5;SATIN ALMA
+CEK_K3_lahm_5_reed_acik;reed acik;0;;alt gövde → Littelfuse 59135;CEK_K3_lahm_5;ALT
+CEK_K3_lahm_5_sensor_lami;sensor lami;1;304 · lazer / lama;zarf 6.3 × 2.0 × 705.0;CEK_K3_lahm_5;ÜRETİM
+CEK_K3_lahm_5_tepsi;Tepsi · 36 çukur Ø80;1;gıda silikonu 10 mm · çukur 7 · kalıp döküm;530 × 540;CEK_K3_lahm_5;ÜRETİM
+CEK_K3_lahm_6_on_dis_sac_1.5;Çekmece önü 40 · kulpsuz;1;dış 304 1,5 bükme + PU 37,5 köpük + iç 304 1,0 (fitil kanallı);650 × 90;CEK_K3_lahm_6;ÜRETİM
+CEK_K3_lahm_6_on_pu;on pu;0;PU köpük (gövdeyle birlikte enjeksiyon);alt gövde → çekmece önü / kapak katmanı;CEK_K3_lahm_6;ALT
+CEK_K3_lahm_6_on_ic_sac_1.0;on ic sac 1.0;0;304 sac · lazer + büküm;alt gövde → çekmece önü / kapak katmanı;CEK_K3_lahm_6;ALT
+CEK_K3_lahm_6_on_fitil;Fitil · geçmeli manyetik profil 21 × 18,5;1;PVC + şerit mıknatıs · kapak iç sacının 6,4'lük kanalına geçer · aletsiz sökülür;çevre 1392 mm · köşeler gönye kaynaklı;CEK_K3_lahm_6;SATIN ALMA
+CEK_K3_lahm_6_kutu_U_1.0;Çekmece kutusu U 1,0;1;304 lazer + 2 büküm;560 × 45 × 550;CEK_K3_lahm_6;ÜRETİM
+CEK_K3_lahm_6_kutu_arka_1.0;kutu arka 1.0;0;304 sac · lazer + büküm;alt gövde → çekmece kutusu;CEK_K3_lahm_6;ALT
+CEK_K3_lahm_6_kutu_on_1.0;kutu on 1.0;0;304 sac · lazer + büküm;alt gövde → çekmece kutusu;CEK_K3_lahm_6;ALT
+CEK_K3_lahm_6_on_baglanti_sol;Ön bağlantı köşesi;2;304 2 mm büküm · öne 2 × M5 perçin somun;ön yüz ayar yuvalı;CEK_K3_lahm_6;ÜRETİM
+CEK_K3_lahm_6_on_baglanti_sag;on baglanti;0;304 · lazer / lama;alt gövde → ön bağlantı köşesi;CEK_K3_lahm_6;ALT
+CEK_K3_lahm_6_ray_adaptor_sol;Ray adaptör lamı 6 mm;2;304 lama · kutuya punta;ray iç profiline 4 × M4;CEK_K3_lahm_6;ÜRETİM
+CEK_K3_lahm_6_ray_adaptor_sag;ray adaptor;0;304 · lazer / lama;alt gövde → ray adaptör lamı;CEK_K3_lahm_6;ALT
+CEK_K3_lahm_6_ray_dis_sol;Teleskopik ray Accuride DZ3832-0070;2;700 · tam çekilir · 45,7 × 12,7 · 45–50 kg (çift);kolon yan duvarına 4 × M5;CEK_K3_lahm_6;SATIN ALMA
+CEK_K3_lahm_6_ray_ic_sol;ray ic;0;304 · lazer / lama;alt gövde → Accuride DZ3832-0070 (iç profil);CEK_K3_lahm_6;ALT
+CEK_K3_lahm_6_ray_dis_sag;ray dis;0;304 · lazer / lama;alt gövde → Accuride DZ3832-0070;CEK_K3_lahm_6;ALT
+CEK_K3_lahm_6_ray_ic_sag;ray ic;0;304 · lazer / lama;alt gövde → Accuride DZ3832-0070 (iç profil);CEK_K3_lahm_6;ALT
+CEK_K3_lahm_6_motor_kasnagi;GT3 kasnak 30 diş · 6 mm · flanşlı;1;alüminyum · delik Ø8 H7 + düz;PD 28,65 · çevre 90 mm;CEK_K3_lahm_6;SATIN ALMA
+CEK_K3_lahm_6_motor_mili;motor mili;0;304 · lazer / lama;alt gövde → Transmotec PD3665;CEK_K3_lahm_6;ALT
+CEK_K3_lahm_6_motor_gobegi;motor gobegi;0;304 · lazer / lama;alt gövde → Transmotec PD3665;CEK_K3_lahm_6;ALT
+CEK_K3_lahm_6_motor_reduktor;Motor Transmotec PD3665-24-51-BFEC;1;24 V · planet 51:1 · 127 d/dk · 0,853 N·m · manyetik enkoder · EMC filtreli;Ø36 × 115,5 + enkoder · datasheet: transmotec.com PD3665;CEK_K3_lahm_6;SATIN ALMA
+CEK_K3_lahm_6_motor_govde;motor govde;0;;alt gövde → Transmotec PD3665;CEK_K3_lahm_6;ALT
+CEK_K3_lahm_6_enkoder_kapagi;enkoder kapagi;0;;alt gövde → Transmotec PD3665;CEK_K3_lahm_6;ALT
+CEK_K3_lahm_6_m12_soket;M12 4 pin soket + kablo;1;motor + enkoder tek soket · kasada sabit;kablo dikey kanala;CEK_K3_lahm_6;SATIN ALMA
+CEK_K3_lahm_6_motor_braketi;Motor braketi 3 mm;1;304 lazer + büküm · 4 × M3 (Ø31) + arka duvara 2 × M5;kasnak hizası buradan;CEK_K3_lahm_6;ÜRETİM
+CEK_K3_lahm_6_avara;GT3 avara 30 diş · 6 mm · çift rulman;1;alüminyum · 2 × 625-2RS;ön çerçevenin 17 mm arkası;CEK_K3_lahm_6;SATIN ALMA
+CEK_K3_lahm_6_avara_mili;avara mili;1;304 · lazer / lama;zarf 12.2 × 5.0 × 5.0;CEK_K3_lahm_6;ÜRETİM
+CEK_K3_lahm_6_avara_kolu;Avara kolu 3 mm;1;304 büküm · ön çerçevenin arkasına 2 × M4 perçin somun;kayış gergisi burada: 8 mm yuvalı;CEK_K3_lahm_6;ÜRETİM
+CEK_K3_lahm_6_kayis_GT3;Kayış GT3 6 mm kapalı çevrim;1;~1482 mm (494 diş) · çelik kordlu;tedarikçi boyu doğrulayacak;CEK_K3_lahm_6;SATIN ALMA
+CEK_K3_lahm_6_kayis_cenesi;Kayış çenesi + kolu;1;304 · kutunun yan duvarına kaynaklı · dişli çene 2 × M3;kutunun arkasından kasnağa uzanır (strok için);CEK_K3_lahm_6;ÜRETİM
+CEK_K3_lahm_6_miknatis_ayagi;miknatis ayagi;1;304 · lazer / lama;zarf 6.3 × 2.3 × 28.6;CEK_K3_lahm_6;ÜRETİM
+CEK_K3_lahm_6_miknatis_57135;Mıknatıs Littelfuse 57135-000;1;AlNiCo 5 · flanşlı 28,57 × 19,05 × 6,35;çenenin üstünde;CEK_K3_lahm_6;SATIN ALMA
+CEK_K3_lahm_6_reed_kapali;Reed sensör Littelfuse 59135-010;2;NO · flanşlı 28,57 × 19,05 × 6,35;KAPALI + AÇIK konum · PLC girişine;CEK_K3_lahm_6;SATIN ALMA
+CEK_K3_lahm_6_reed_acik;reed acik;0;;alt gövde → Littelfuse 59135;CEK_K3_lahm_6;ALT
+CEK_K3_lahm_6_sensor_lami;sensor lami;1;304 · lazer / lama;zarf 6.3 × 2.0 × 705.0;CEK_K3_lahm_6;ÜRETİM
+CEK_K3_lahm_6_tepsi;Tepsi · 36 çukur Ø80;1;gıda silikonu 10 mm · çukur 7 · kalıp döküm;530 × 540;CEK_K3_lahm_6;ÜRETİM
+CEK_K3_icecek_1_on_dis_sac_1.5;Çekmece önü 40 · kulpsuz;1;dış 304 1,5 bükme + PU 37,5 köpük + iç 304 1,0 (fitil kanallı);650 × 271;CEK_K3_icecek_1;ÜRETİM
+CEK_K3_icecek_1_on_pu;on pu;0;PU köpük (gövdeyle birlikte enjeksiyon);alt gövde → çekmece önü / kapak katmanı;CEK_K3_icecek_1;ALT
+CEK_K3_icecek_1_on_ic_sac_1.0;on ic sac 1.0;0;304 sac · lazer + büküm;alt gövde → çekmece önü / kapak katmanı;CEK_K3_icecek_1;ALT
+CEK_K3_icecek_1_on_fitil;Fitil · geçmeli manyetik profil 21 × 18,5;1;PVC + şerit mıknatıs · kapak iç sacının 6,4'lük kanalına geçer · aletsiz sökülür;çevre 1754 mm · köşeler gönye kaynaklı;CEK_K3_icecek_1;SATIN ALMA
+CEK_K3_icecek_1_kutu_U_1.0;Çekmece kutusu U 1,0;1;304 lazer + 2 büküm;560 × 226 × 660;CEK_K3_icecek_1;ÜRETİM
+CEK_K3_icecek_1_kutu_arka_1.0;kutu arka 1.0;0;304 sac · lazer + büküm;alt gövde → çekmece kutusu;CEK_K3_icecek_1;ALT
+CEK_K3_icecek_1_kutu_on_1.0;kutu on 1.0;0;304 sac · lazer + büküm;alt gövde → çekmece kutusu;CEK_K3_icecek_1;ALT
+CEK_K3_icecek_1_on_baglanti_sol;Ön bağlantı köşesi;2;304 2 mm büküm · öne 2 × M5 perçin somun;ön yüz ayar yuvalı;CEK_K3_icecek_1;ÜRETİM
+CEK_K3_icecek_1_on_baglanti_sag;on baglanti;0;304 · lazer / lama;alt gövde → ön bağlantı köşesi;CEK_K3_icecek_1;ALT
+CEK_K3_icecek_1_ray_adaptor_sol;Ray adaptör lamı 6 mm;2;304 lama · kutuya punta;ray iç profiline 4 × M4;CEK_K3_icecek_1;ÜRETİM
+CEK_K3_icecek_1_ray_adaptor_sag;ray adaptor;0;304 · lazer / lama;alt gövde → ray adaptör lamı;CEK_K3_icecek_1;ALT
+CEK_K3_icecek_1_ray_dis_sol;Teleskopik ray Accuride DZ3832-0070;2;700 · tam çekilir · 45,7 × 12,7 · 45–50 kg (çift);kolon yan duvarına 4 × M5;CEK_K3_icecek_1;SATIN ALMA
+CEK_K3_icecek_1_ray_ic_sol;ray ic;0;304 · lazer / lama;alt gövde → Accuride DZ3832-0070 (iç profil);CEK_K3_icecek_1;ALT
+CEK_K3_icecek_1_ray_dis_sag;ray dis;0;304 · lazer / lama;alt gövde → Accuride DZ3832-0070;CEK_K3_icecek_1;ALT
+CEK_K3_icecek_1_ray_ic_sag;ray ic;0;304 · lazer / lama;alt gövde → Accuride DZ3832-0070 (iç profil);CEK_K3_icecek_1;ALT
+CEK_K3_icecek_1_motor_kasnagi;GT3 kasnak 30 diş · 6 mm · flanşlı;1;alüminyum · delik Ø8 H7 + düz;PD 28,65 · çevre 90 mm;CEK_K3_icecek_1;SATIN ALMA
+CEK_K3_icecek_1_motor_mili;motor mili;0;304 · lazer / lama;alt gövde → Transmotec PD3665;CEK_K3_icecek_1;ALT
+CEK_K3_icecek_1_motor_gobegi;motor gobegi;0;304 · lazer / lama;alt gövde → Transmotec PD3665;CEK_K3_icecek_1;ALT
+CEK_K3_icecek_1_motor_reduktor;Motor Transmotec PD3665-24-51-BFEC;1;24 V · planet 51:1 · 127 d/dk · 0,853 N·m · manyetik enkoder · EMC filtreli;Ø36 × 115,5 + enkoder · datasheet: transmotec.com PD3665;CEK_K3_icecek_1;SATIN ALMA
+CEK_K3_icecek_1_motor_govde;motor govde;0;;alt gövde → Transmotec PD3665;CEK_K3_icecek_1;ALT
+CEK_K3_icecek_1_enkoder_kapagi;enkoder kapagi;0;;alt gövde → Transmotec PD3665;CEK_K3_icecek_1;ALT
+CEK_K3_icecek_1_m12_soket;M12 4 pin soket + kablo;1;motor + enkoder tek soket · kasada sabit;kablo dikey kanala;CEK_K3_icecek_1;SATIN ALMA
+CEK_K3_icecek_1_motor_braketi;Motor braketi 3 mm;1;304 lazer + büküm · 4 × M3 (Ø31) + arka duvara 2 × M5;kasnak hizası buradan;CEK_K3_icecek_1;ÜRETİM
+CEK_K3_icecek_1_avara;GT3 avara 30 diş · 6 mm · çift rulman;1;alüminyum · 2 × 625-2RS;ön çerçevenin 17 mm arkası;CEK_K3_icecek_1;SATIN ALMA
+CEK_K3_icecek_1_avara_mili;avara mili;1;304 · lazer / lama;zarf 12.2 × 5.0 × 5.0;CEK_K3_icecek_1;ÜRETİM
+CEK_K3_icecek_1_avara_kolu;Avara kolu 3 mm;1;304 büküm · ön çerçevenin arkasına 2 × M4 perçin somun;kayış gergisi burada: 8 mm yuvalı;CEK_K3_icecek_1;ÜRETİM
+CEK_K3_icecek_1_kayis_GT3;Kayış GT3 6 mm kapalı çevrim;1;~1482 mm (494 diş) · çelik kordlu;tedarikçi boyu doğrulayacak;CEK_K3_icecek_1;SATIN ALMA
+CEK_K3_icecek_1_kayis_cenesi;Kayış çenesi + kolu;1;304 · kutunun yan duvarına kaynaklı · dişli çene 2 × M3;kutunun arkasından kasnağa uzanır (strok için);CEK_K3_icecek_1;ÜRETİM
+CEK_K3_icecek_1_miknatis_ayagi;miknatis ayagi;1;304 · lazer / lama;zarf 6.3 × 2.3 × 28.6;CEK_K3_icecek_1;ÜRETİM
+CEK_K3_icecek_1_miknatis_57135;Mıknatıs Littelfuse 57135-000;1;AlNiCo 5 · flanşlı 28,57 × 19,05 × 6,35;çenenin üstünde;CEK_K3_icecek_1;SATIN ALMA
+CEK_K3_icecek_1_reed_kapali;Reed sensör Littelfuse 59135-010;2;NO · flanşlı 28,57 × 19,05 × 6,35;KAPALI + AÇIK konum · PLC girişine;CEK_K3_icecek_1;SATIN ALMA
+CEK_K3_icecek_1_reed_acik;reed acik;0;;alt gövde → Littelfuse 59135;CEK_K3_icecek_1;ALT
+CEK_K3_icecek_1_sensor_lami;sensor lami;1;304 · lazer / lama;zarf 6.3 × 2.0 × 705.0;CEK_K3_icecek_1;ÜRETİM
+CEK_K3_icecek_1_ara_raf_1.5;ara raf 1.5;1;304 sac · lazer + büküm;zarf 558.0 × 1.5 × 658.0;CEK_K3_icecek_1;ÜRETİM
+CEK_K3_icecek_1_hizalama_saci_0;hizalama saci;1;304 sac · lazer + büküm;zarf 554.0 × 1.5 × 641.0;CEK_K3_icecek_1;ÜRETİM
+CEK_K3_icecek_1_hizalama_saci_1;hizalama saci;1;304 sac · lazer + büküm;zarf 554.0 × 1.5 × 641.0;CEK_K3_icecek_1;ÜRETİM

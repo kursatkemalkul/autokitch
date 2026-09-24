@@ -2,7 +2,7 @@
 <div class="top"><div class="in"><div class="crumb"><a href="../">Store</a><span>›</span><a href="index.html">HAT</a><span>›</span><a href="makine.html">Makine</a><span>›</span><a href="makine.html">Makine</a><span>›</span><b>1 · STORE</b></div><div><a href="../">← Store</a></div></div></div>
 <div class="wrap"><h1>1 · STORE — soğuk depo<span class="tag" style="background:#5b8def">2500 × 830 × 1060</span></h1><p class="lead">Dükkânın 3 günlük tüm soğuk stoku tek kasada: hamur topları, içecek, tatlı ve donmuş TOPPING kapları. Hamur mahalle fırınından hazır gelir (220 g), yoğurma yok. Tam çekmeceli kapaksız kasa; robot çekmeceyi pençeyle çeker. Modelin altındaki çubuktan <b>kesit</b> alabilir (X/Y/Z) ve iki noktaya tıklayıp <b>ölçü</b> çıkarabilirsin.</p>
 <div class="m3">
-  <model-viewer id="mv" loading="eager" src="../hat3d/modul_B.glb?v=36" ios-src="../hat3d/modul_B.usdz?v=36" alt="1 · STORE — çekmeceler"
+  <model-viewer id="mv" loading="eager" src="../hat3d/modul_B.glb?v=37" ios-src="../hat3d/modul_B.usdz?v=37" alt="1 · STORE — çekmeceler" autoplay
       camera-controls touch-action="pan-y" shadow-intensity="0.6" exposure="1.0" environment-image="neutral"
       camera-orbit="20deg 80deg 4.2m" camera-target="1.25m 0.55m -0.2m" field-of-view="30deg" min-field-of-view="5deg"
       ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
@@ -12,8 +12,15 @@
 </div>
 <div class="secim" id="secim"></div>
 <p class="note" id="ozet"></p>
-<div class="card" style="border-left:4px solid #2456c8;background:#f4f7fd;margin:0 0 14px"><b style="color:#2456c8">24 EYLÜL 2026 · ÇEKMECE MODÜLÜ GERÇEK ÜRETİM MODELİ (store_cad_v1)</b><br>
-Yukarıdaki 3B model artık ölçü kutusu değil: A ve C'nin altındaki 2500 &times; 830 &times; 1060 modül. <b>21 contalı, motorlu çekmece</b>: K1 6 pide · K2 2 pide + 6 lahmacun · K3 6 lahmacun + 2 katlı içecek. Her çekmecede kulpsuz 40'lık PU ön, manyetik conta, 2 teleskopik ray, GT3 kayış + 24 V redüktörlü motor + enkoder, reed sensör. <b>K4</b>: altta ⅓ HP soğutma grubu (ızgaralı kapak), ortada kaşar/sucuk deposu, üstte temizlik nişi. K1'in üstünde kuru teknik bölme (B kartı + 21 sürücü). Pide 160 top, lahmacun 432 top (2 gün). Çekmece stroku 640; açılınca arka sıra top ön yüzün önüne çıkar.
+<div class="card" style="border-left:4px solid #2456c8;background:#f4f7fd;margin:0 0 14px"><b style="color:#2456c8">24 EYLÜL 2026 · ÇEKMECE MODÜLÜ v2 — ÜRETİLEBİLİR, STANDART PARÇALI (store_cad_v2)</b><br>
+Yukarıdaki modelde çekmeceler <b>sırayla açılıp kapanıyor</b>: tam çalışma hızında, 628 mm strok 3,3 sn. Alttan <b>kesit</b> alırsan içini görürsün.
+<ol class="steps" style="margin:8px 0 6px">
+<li><b>Nasıl çalışır:</b> ana PC Modbus TCP ile PLC'ye "şu çekmece" der. PLC o çekmecenin <b>seçici rölesini</b> çeker, tek motor sürücüsü o motoru döndürür (aynı anda tek çekmece hareket eder). Motor kasnağı GT3 kayışı çeker, kayış çekmecenin <b>yan yüzündeki çeneye</b> kenetli. Çene AÇIK reed sensörüne gelince sürücü durur ve PLC robota "açık" der, robot kolunu ancak o zaman sokar. Kapanışta motor ters döner, KAPALI sensörü doğrular. Sıkışırsa sürücünün akım sınırı keser.</li>
+<li><b>Motor nerede:</b> kasada sabit, çekmecenin arkasındaki boşlukta. Kayış hattı <b>yan duvarda</b>, ürünün altında değil. Kablo motor başına tek M12 soketle arka dikey kanala, oradan üstteki yatay kanalla K1 üstündeki panoya gider.</li>
+<li><b>Fitil:</b> her soğuk kapakta (21 çekmece + K4 depo ve niş) geçmeli manyetik profil 21 × 18,5. Kapak iç sacındaki 6,4'lük kanala aletsiz geçer, sökülüp yıkanır.</li>
+<li><b>Tam açılma:</b> çekmece açılınca tepsinin arka sıra topları ön yüzün 34–64 mm önüne çıkar, robot her topa üstten erişir.</li>
+</ol>
+<b>Standart ürünler:</b> motor Transmotec PD3665-24-51-BFEC · ray Accuride DZ3832-0070 · reed Littelfuse 59135 + 57135 · PLC Siemens S7-1200 1214C · güç Mean Well NDR-240-24 · sürücü Electromen EM-324C · röle Phoenix PLC-RSC · soğutma Secop CU KLF4.0CND R290 · fan ebm-papst 4414 FNH · ayak Elesa LV.A-SST. Parça listesi: <a href="../../arastirma/1_STORE_v5/BOM_OZET.csv">BOM_OZET.csv</a> (kalem toplamları) · <a href="../../arastirma/1_STORE_v5/BOM.csv">BOM.csv</a> (her parça).<br>
 Aşağıdaki açıklama metinleri 14 Eylül'ün 4200 mm'lik tepsili hattından kalmadır, güncel değildir.</div>
 <h2>3B model — çekmeceye tıkla</h2><p class="note">Dolabın SolidWorks modelinden basitleştirilmiş görünüm. Çekmecenin üstüne gelince kırmızı olur; tıklayınca <a href="cekmece.html">çekmece tahrik sistemi</a> sayfası açılır.</p><div class="scene" id="s3"></div><script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script><script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script><script src="scene.js"></script><script>(function(){var el=document.getElementById("s3"),kuruldu=false;function kur(){if(kuruldu)return;kuruldu=true;buildScene(el,[
  {id:'zemin',name:'',color:'#eef1f5',boxes:[[-20,0,-2,180,84,2]]},
@@ -50,7 +57,7 @@ const M = model3d({
     return '<b>' + b.ad + '</b><span>' + b.olcu.join(' \u00d7 ') + ' mm \u00b7 <span class="rozet ' + rz[0] + '">' + rz[1] + '</span>' +
       (b.kaynak ? '<br>' + b.kaynak : '') + '</span>'; }
 });
-fetch('../hat3d/durum.json?v=36').then(r => r.json()).then(D => {
+fetch('../hat3d/durum.json?v=37').then(r => r.json()).then(D => {
   const L = D.birim.filter(b => b.modul === MODUL && b.kod.indexOf('_KABIN') < 0); M.veri(L);   // kabin zarfi modele girmiyor, listede de olmasin
   const tek = {}; L.forEach(b => { const k = b.ad + '|' + b.durum; (tek[k] = tek[k] || []).push(b); });
   document.getElementById('secim').innerHTML = Object.values(tek).map(gr => {
