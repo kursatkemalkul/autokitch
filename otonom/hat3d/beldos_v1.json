@@ -1,0 +1,951 @@
+{
+ "surum": "beldos_cad_v1 · 25.09.2026 12:40",
+ "kaynak_etiketleri": {
+  "B": "broşürde yazan ölçü",
+  "Ö": "broşürün ölçekli çiziminden",
+  "F": "fotoğraftan oranla",
+  "H": "broşür verisinden hesap",
+  "V": "VARSAYIM",
+  "BİZİM": "Beldos'ta yok · bizim"
+ },
+ "minifill": {
+  "ad": "Beldos Mini-fill Electro-pneumatic 260 W",
+  "glb": "beldos_minifill_ep_v1.glb",
+  "kb": 916,
+  "toplam": {
+   "x": 477,
+   "y": 386,
+   "z": 630
+  },
+  "hazne_L": 17.3,
+  "agiz_ucu_z": 20.0,
+  "cikis_agzi_z": 197.8,
+  "parcalar": [
+   {
+    "ad": "guc_unitesi_sol_govde",
+    "etiket": "Güç ünitesi sol gövde",
+    "kaynak": "B+Ö",
+    "malzeme": "beyaz",
+    "hareket": false,
+    "not_": "pompa cebi önden ve üstten açık; cep tabanı 135 [F]"
+   },
+   {
+    "ad": "guc_unitesi_sag_govde",
+    "etiket": "Güç ünitesi sağ gövde",
+    "kaynak": "Ö",
+    "malzeme": "beyaz",
+    "hareket": false,
+    "not_": "ekran gövdesi; eğik panel 55→189 mm derinlikte, 121→197 mm yükseklikte"
+   },
+   {
+    "ad": "siyah_taban",
+    "etiket": "Siyah taban",
+    "kaynak": "Ö",
+    "malzeme": "siyah",
+    "hareket": false,
+    "not_": ""
+   },
+   {
+    "ad": "ayak_1",
+    "etiket": "Ayak 1",
+    "kaynak": "Ö+V",
+    "malzeme": "siyah",
+    "hareket": false,
+    "not_": "yükseklik ölçekten, yer VARSAYIM"
+   },
+   {
+    "ad": "ayak_2",
+    "etiket": "Ayak 2",
+    "kaynak": "Ö+V",
+    "malzeme": "siyah",
+    "hareket": false,
+    "not_": "yükseklik ölçekten, yer VARSAYIM"
+   },
+   {
+    "ad": "ayak_3",
+    "etiket": "Ayak 3",
+    "kaynak": "Ö+V",
+    "malzeme": "siyah",
+    "hareket": false,
+    "not_": "yükseklik ölçekten, yer VARSAYIM"
+   },
+   {
+    "ad": "ayak_4",
+    "etiket": "Ayak 4",
+    "kaynak": "Ö+V",
+    "malzeme": "siyah",
+    "hareket": false,
+    "not_": "yükseklik ölçekten, yer VARSAYIM"
+   },
+   {
+    "ad": "logo_paneli",
+    "etiket": "Logo paneli",
+    "kaynak": "Ö",
+    "malzeme": "beyaz",
+    "hareket": false,
+    "not_": "ön yüzde kabartma 'mini-fill' paneli"
+   },
+   {
+    "ad": "kule_topuzu",
+    "etiket": "Kule topuzu",
+    "kaynak": "Ö+V",
+    "malzeme": "siyah",
+    "hareket": false,
+    "not_": "üstü 228 [B]; işlevi (kilit / hava çıkışı) VARSAYIM"
+   },
+   {
+    "ad": "dokunmatik_panel_plakasi",
+    "etiket": "Dokunmatik panel plakası",
+    "kaynak": "Ö",
+    "malzeme": "fircali",
+    "hareket": false,
+    "not_": "eğim 29.6°"
+   },
+   {
+    "ad": "dokunmatik_ekran",
+    "etiket": "Dokunmatik ekran",
+    "kaynak": "Ö",
+    "malzeme": "ekran",
+    "hareket": false,
+    "not_": ""
+   },
+   {
+    "ad": "ekran_tusu_00",
+    "etiket": "Ekran tuşu 00",
+    "kaynak": "F",
+    "malzeme": "ekran_tus",
+    "hareket": false,
+    "not_": ""
+   },
+   {
+    "ad": "ekran_tusu_01",
+    "etiket": "Ekran tuşu 01",
+    "kaynak": "F",
+    "malzeme": "ekran_tus",
+    "hareket": false,
+    "not_": ""
+   },
+   {
+    "ad": "ekran_tusu_02",
+    "etiket": "Ekran tuşu 02",
+    "kaynak": "F",
+    "malzeme": "ekran_tus",
+    "hareket": false,
+    "not_": ""
+   },
+   {
+    "ad": "ekran_tusu_10",
+    "etiket": "Ekran tuşu 10",
+    "kaynak": "F",
+    "malzeme": "ekran_tus",
+    "hareket": false,
+    "not_": ""
+   },
+   {
+    "ad": "ekran_tusu_11",
+    "etiket": "Ekran tuşu 11",
+    "kaynak": "F",
+    "malzeme": "ekran_tus",
+    "hareket": false,
+    "not_": ""
+   },
+   {
+    "ad": "ekran_tusu_12",
+    "etiket": "Ekran tuşu 12",
+    "kaynak": "F",
+    "malzeme": "ekran_tus",
+    "hareket": false,
+    "not_": ""
+   },
+   {
+    "ad": "ekran_tusu_20",
+    "etiket": "Ekran tuşu 20",
+    "kaynak": "F",
+    "malzeme": "ekran_tus",
+    "hareket": false,
+    "not_": ""
+   },
+   {
+    "ad": "ekran_tusu_21",
+    "etiket": "Ekran tuşu 21",
+    "kaynak": "F",
+    "malzeme": "ekran_tus",
+    "hareket": false,
+    "not_": ""
+   },
+   {
+    "ad": "ekran_tusu_22",
+    "etiket": "Ekran tuşu 22",
+    "kaynak": "F",
+    "malzeme": "ekran_tus",
+    "hareket": false,
+    "not_": ""
+   },
+   {
+    "ad": "kavrama_diski",
+    "etiket": "Kavrama diski",
+    "kaynak": "Ö+V",
+    "malzeme": "paslanmaz",
+    "hareket": false,
+    "not_": "pompa tahrik kavraması: yer plandan [Ö], çap VARSAYIM"
+   },
+   {
+    "ad": "hava_girisi_rakor",
+    "etiket": "Hava girişi rakor",
+    "kaynak": "V",
+    "malzeme": "mavi",
+    "hareket": false,
+    "not_": "basınçlı hava girişi 6 bar (kompresör 1,5 kW · 24 L · 196 L/dk ayrı [B]); yeri VARSAYIM"
+   },
+   {
+    "ad": "pompa_blogu_seffaf",
+    "etiket": "Pompa bloğu şeffaf",
+    "kaynak": "B+Ö+F",
+    "malzeme": "pc",
+    "hareket": false,
+    "not_": "149 genişlik [B], 77 yükseklik [Ö], 148 derinlik [F]"
+   },
+   {
+    "ad": "rotor_1_2lob",
+    "etiket": "Rotor 1 (2 loblu)",
+    "kaynak": "B+V",
+    "malzeme": "pom",
+    "hareket": true,
+    "not_": "broşür: 2 loblu dişli takımı, parçacık ≤ 15 mm [B]; profil VARSAYIM"
+   },
+   {
+    "ad": "rotor_1_mili",
+    "etiket": "Rotor 1 mili",
+    "kaynak": "V",
+    "malzeme": "paslanmaz",
+    "hareket": true,
+    "not_": ""
+   },
+   {
+    "ad": "rotor_2_2lob",
+    "etiket": "Rotor 2 (2 loblu)",
+    "kaynak": "B+V",
+    "malzeme": "pom",
+    "hareket": true,
+    "not_": "broşür: 2 loblu dişli takımı, parçacık ≤ 15 mm [B]; profil VARSAYIM"
+   },
+   {
+    "ad": "rotor_2_mili",
+    "etiket": "Rotor 2 mili",
+    "kaynak": "V",
+    "malzeme": "paslanmaz",
+    "hareket": true,
+    "not_": ""
+   },
+   {
+    "ad": "kelebek_vida_1",
+    "etiket": "Kelebek vida 1",
+    "kaynak": "F",
+    "malzeme": "paslanmaz",
+    "hareket": false,
+    "not_": ""
+   },
+   {
+    "ad": "kelebek_vida_2",
+    "etiket": "Kelebek vida 2",
+    "kaynak": "F",
+    "malzeme": "paslanmaz",
+    "hareket": false,
+    "not_": ""
+   },
+   {
+    "ad": "cikis_agzi_bilezigi",
+    "etiket": "Çıkış ağzı bileziği",
+    "kaynak": "Ö",
+    "malzeme": "pc",
+    "hareket": false,
+    "not_": "Ø39, bloktan 18 mm çıkar"
+   },
+   {
+    "ad": "cikis_tc_flansi",
+    "etiket": "Çıkış TC flanşı",
+    "kaynak": "F",
+    "malzeme": "paslanmaz",
+    "hareket": false,
+    "not_": "1,5\" TC ferrule Ø50,5"
+   },
+   {
+    "ad": "cikis_tc_kelepcesi",
+    "etiket": "Çıkış TC kelepçesi",
+    "kaynak": "F",
+    "malzeme": "paslanmaz",
+    "hareket": false,
+    "not_": ""
+   },
+   {
+    "ad": "cikis_tc_kanadi",
+    "etiket": "Çıkış TC kanadı",
+    "kaynak": "F",
+    "malzeme": "paslanmaz",
+    "hareket": false,
+    "not_": ""
+   },
+   {
+    "ad": "hazne_15L",
+    "etiket": "Hazne 15 L",
+    "kaynak": "B+Ö",
+    "malzeme": "pp",
+    "hareket": false,
+    "not_": "Ø256 [B], blok altından 495 [B]; koni/omuz profili [Ö]"
+   },
+   {
+    "ad": "hazne_bayonet_bilezigi",
+    "etiket": "Hazne bayonet bileziği",
+    "kaynak": "Ö",
+    "malzeme": "pp",
+    "hareket": false,
+    "not_": ""
+   },
+   {
+    "ad": "hazne_kapagi",
+    "etiket": "Hazne kapağı",
+    "kaynak": "Ö",
+    "malzeme": "pp",
+    "hareket": false,
+    "not_": ""
+   },
+   {
+    "ad": "kapak_kubbesi",
+    "etiket": "Kapak kubbesi",
+    "kaynak": "Ö",
+    "malzeme": "pp",
+    "hareket": false,
+    "not_": "üstü blok altından 495 [B]"
+   },
+   {
+    "ad": "agiz_ucu",
+    "etiket": "Ağız ucu",
+    "kaynak": "F",
+    "malzeme": "pom",
+    "hareket": false,
+    "not_": "ekran görüntüsü + broşür s.3 fotoğrafı; toplam ≈ 335 mm, boru Ø32 alındı"
+   },
+   {
+    "ad": "agiz_halkasi",
+    "etiket": "Ağız halkası",
+    "kaynak": "F",
+    "malzeme": "pom",
+    "hareket": false,
+    "not_": "ekran görüntüsü + broşür s.3 fotoğrafı; toplam ≈ 335 mm, boru Ø32 alındı"
+   },
+   {
+    "ad": "agiz_alt_borusu",
+    "etiket": "Ağız alt borusu",
+    "kaynak": "F",
+    "malzeme": "paslanmaz",
+    "hareket": false,
+    "not_": "ekran görüntüsü + broşür s.3 fotoğrafı; toplam ≈ 335 mm, boru Ø32 alındı"
+   },
+   {
+    "ad": "agiz_manson",
+    "etiket": "Ağız manşon",
+    "kaynak": "F",
+    "malzeme": "pom",
+    "hareket": false,
+    "not_": "ekran görüntüsü + broşür s.3 fotoğrafı; toplam ≈ 335 mm, boru Ø32 alındı"
+   },
+   {
+    "ad": "agiz_manson_bilezigi",
+    "etiket": "Ağız manşon bileziği",
+    "kaynak": "F",
+    "malzeme": "paslanmaz",
+    "hareket": false,
+    "not_": "ekran görüntüsü + broşür s.3 fotoğrafı; toplam ≈ 335 mm, boru Ø32 alındı"
+   },
+   {
+    "ad": "agiz_pnomatik_silindiri",
+    "etiket": "Ağız pnömatik silindiri",
+    "kaynak": "F",
+    "malzeme": "paslanmaz",
+    "hareket": false,
+    "not_": "ekran görüntüsü + broşür s.3 fotoğrafı; toplam ≈ 335 mm, boru Ø32 alındı"
+   },
+   {
+    "ad": "agiz_silindir_kapagi",
+    "etiket": "Ağız silindir kapağı",
+    "kaynak": "F",
+    "malzeme": "paslanmaz",
+    "hareket": false,
+    "not_": "ekran görüntüsü + broşür s.3 fotoğrafı; toplam ≈ 335 mm, boru Ø32 alındı"
+   },
+   {
+    "ad": "agiz_hava_rakoru",
+    "etiket": "Ağız hava rakoru",
+    "kaynak": "F",
+    "malzeme": "siyah",
+    "hareket": false,
+    "not_": "ekran görüntüsü + broşür s.3 fotoğrafı; toplam ≈ 335 mm, boru Ø32 alındı"
+   },
+   {
+    "ad": "baglanti_borusu",
+    "etiket": "Bağlantı borusu",
+    "kaynak": "F",
+    "malzeme": "paslanmaz",
+    "hareket": false,
+    "not_": "Ø20 [V]; eğim 58° [F]"
+   },
+   {
+    "ad": "hava_hortumu_kirmizi",
+    "etiket": "Hava hortumu kırmızı",
+    "kaynak": "F+V",
+    "malzeme": "kirmizi",
+    "hareket": false,
+    "not_": "ağız pnömatiğinin 2 hattı; güzergâh VARSAYIM"
+   },
+   {
+    "ad": "hava_hortumu_siyah",
+    "etiket": "Hava hortumu siyah",
+    "kaynak": "F+V",
+    "malzeme": "siyah",
+    "hareket": false,
+    "not_": "ağız pnömatiğinin 2 hattı; güzergâh VARSAYIM"
+   }
+  ]
+ },
+ "uno": {
+  "ad": "Beldos Beltop UNO 275 · çekirdek (sehpasız)",
+  "glb": "beldos_uno275_v1.glb",
+  "kb": 590,
+  "toplam": {
+   "x": 764,
+   "y": 384,
+   "z": 604,
+   "zmin": -74.5,
+   "zmax": 530.0
+  },
+  "kaide_H": 158.5,
+  "eksen_z": 38.5,
+  "hazne_L": 24.5,
+  "strok": 71.1,
+  "pnomatik_strok_hesap": 76.0,
+  "silinen": [
+   {
+    "ad": "4 ayak (lastik uçlu)",
+    "kaynak": "Ö",
+    "not_": "kaide köşelerinde; yerden 0 → ~30"
+   },
+   {
+    "ad": "alt taban sacı 483 × 313",
+    "kaynak": "B",
+    "not_": "broşür ölçüsü; köşeleri yuvarlak"
+   },
+   {
+    "ad": "büküm sac gövde (eğik sağ yan, elmas delikli)",
+    "kaynak": "Ö",
+    "not_": "yerden 30 → 158,5; sağ yanı eğik"
+   },
+   {
+    "ad": "üst tabla + 'BELTOP UNO' etiketi",
+    "kaynak": "F",
+    "not_": "valf bloğu ve kasa buna oturuyordu → yerine BİZİM bağlantı plakası"
+   },
+   {
+    "ad": "yan kanat rayları (plandaki 2 kulak, cıvatalı)",
+    "kaynak": "Ö",
+    "not_": "313 genişliğin uçları"
+   },
+   {
+    "ad": "valf bloğu kilit kolu (siyah)",
+    "kaynak": "F",
+    "not_": "bloğu sac tablaya kilitliyordu"
+   }
+  ],
+  "parcalar": [
+   {
+    "ad": "hazne_25L_konik",
+    "etiket": "Hazne 25 L konik",
+    "kaynak": "B+Ö",
+    "malzeme": "paslanmaz",
+    "hareket": false,
+    "not_": "ağız Ø384 [B]; silindir Ø358 × 149, koni Ø358→Ø64 × 245 [Ö]; hacim hesabı aşağıda"
+   },
+   {
+    "ad": "hazne_agiz_kivrimi",
+    "etiket": "Hazne ağız kıvrımı",
+    "kaynak": "B+Ö",
+    "malzeme": "paslanmaz",
+    "hareket": false,
+    "not_": "Ø384 × 4,4; üstü kaideden 530 → yerden 688,5 ≈ 690 [B]"
+   },
+   {
+    "ad": "hazne_kaynak_bandi",
+    "etiket": "Hazne kaynak bandı",
+    "kaynak": "Ö",
+    "malzeme": "paslanmaz",
+    "hareket": false,
+    "not_": ""
+   },
+   {
+    "ad": "hazne_tc_kelepcesi_2.5in",
+    "etiket": "Hazne TC kelepçesi 2,5\"",
+    "kaynak": "Ö+F",
+    "malzeme": "paslanmaz",
+    "hareket": false,
+    "not_": "2,5\" TC; Ø91 [Ö]"
+   },
+   {
+    "ad": "hazne_kelepce_kelebegi",
+    "etiket": "Hazne kelepçe kelebeği",
+    "kaynak": "F",
+    "malzeme": "paslanmaz",
+    "hareket": false,
+    "not_": ""
+   },
+   {
+    "ad": "hazne_contasi",
+    "etiket": "Hazne contası",
+    "kaynak": "F",
+    "malzeme": "kirmizi",
+    "hareket": false,
+    "not_": "fotoğrafta kırmızı conta"
+   },
+   {
+    "ad": "valf_blogu",
+    "etiket": "Valf bloğu",
+    "kaynak": "Ö+V",
+    "malzeme": "paslanmaz",
+    "hareket": false,
+    "not_": "82 × 72,6 [Ö]; derinlik 82 VARSAYIM (fotoğrafta küp)"
+   },
+   {
+    "ad": "doner_valf_rotoru",
+    "etiket": "Döner valf rotoru",
+    "kaynak": "B+V",
+    "malzeme": "pom",
+    "hareket": true,
+    "not_": "broşür: 'rotation cylinder' [B]; T delik: emişte üst↔sağ, 90° dönünce sağ↔sol [V]"
+   },
+   {
+    "ad": "valf_topuzu",
+    "etiket": "Valf topuzu",
+    "kaynak": "F",
+    "malzeme": "siyah",
+    "hareket": true,
+    "not_": ""
+   },
+   {
+    "ad": "valf_topuzu_isareti",
+    "etiket": "Valf topuzu işareti",
+    "kaynak": "V",
+    "malzeme": "beyaz",
+    "hareket": true,
+    "not_": ""
+   },
+   {
+    "ad": "valf_dondurme_aktuatoru",
+    "etiket": "Valf döndürme eyleyicisi",
+    "kaynak": "V",
+    "malzeme": "aluminyum",
+    "hareket": false,
+    "not_": "valfi 90° çeviren pnömatik döner eyleyici; arkada, görünmüyor → VARSAYIM"
+   },
+   {
+    "ad": "cikis_borusu",
+    "etiket": "Çıkış borusu",
+    "kaynak": "Ö",
+    "malzeme": "paslanmaz",
+    "hareket": false,
+    "not_": "Ø36 [Ö]"
+   },
+   {
+    "ad": "cikis_tc_ferrule",
+    "etiket": "Çıkış TC ferrule",
+    "kaynak": "F",
+    "malzeme": "paslanmaz",
+    "hareket": false,
+    "not_": ""
+   },
+   {
+    "ad": "cikis_tc_kelepcesi",
+    "etiket": "Çıkış TC kelepçesi",
+    "kaynak": "Ö",
+    "malzeme": "paslanmaz",
+    "hareket": false,
+    "not_": "Ø59 × 21 [Ö]; sol ucu 685 ölçüsünün başı"
+   },
+   {
+    "ad": "cikis_tc_kelebegi",
+    "etiket": "Çıkış TC kelebeği",
+    "kaynak": "Ö",
+    "malzeme": "paslanmaz",
+    "hareket": false,
+    "not_": ""
+   },
+   {
+    "ad": "agiz_90_derece",
+    "etiket": "Ağız 90°",
+    "kaynak": "B+F",
+    "malzeme": "paslanmaz",
+    "hareket": false,
+    "not_": "broşür seçeneği 'nozzle 90°' [B]; Ø36, dirsek R45 fotoğraftan [F]"
+   },
+   {
+    "ad": "agiz_ucu",
+    "etiket": "Ağız ucu",
+    "kaynak": "F",
+    "malzeme": "pom",
+    "hareket": false,
+    "not_": ""
+   },
+   {
+    "ad": "urun_silindiri_bilezigi",
+    "etiket": "Ürün silindiri bileziği",
+    "kaynak": "F",
+    "malzeme": "paslanmaz",
+    "hareket": false,
+    "not_": ""
+   },
+   {
+    "ad": "urun_silindiri_D52",
+    "etiket": "Ürün silindiri Ø52",
+    "kaynak": "B+Ö",
+    "malzeme": "saydam_celik",
+    "hareket": false,
+    "not_": "Ø52 (30–151 ml) [B]; boy [Ö]; içi görünsün diye SAYDAM çizildi (gerçekte paslanmaz)"
+   },
+   {
+    "ad": "urun_silindiri_kapagi",
+    "etiket": "Ürün silindiri kapağı",
+    "kaynak": "Ö",
+    "malzeme": "paslanmaz",
+    "hareket": false,
+    "not_": ""
+   },
+   {
+    "ad": "mil_korugu",
+    "etiket": "Mil körüğü",
+    "kaynak": "Ö",
+    "malzeme": "siyah",
+    "hareket": false,
+    "not_": "çizimdeki basamaklı koni; siyah körük, mil kavraması içinden geçer [F]"
+   },
+   {
+    "ad": "urun_pistonu",
+    "etiket": "Ürün pistonu",
+    "kaynak": "H",
+    "malzeme": "pom",
+    "hareket": true,
+    "not_": "strok 71.1 mm = 151 ml / (π/4·52²) [H]"
+   },
+   {
+    "ad": "urun_mili",
+    "etiket": "Ürün mili",
+    "kaynak": "V",
+    "malzeme": "paslanmaz",
+    "hareket": true,
+    "not_": ""
+   },
+   {
+    "ad": "mil_kavramasi",
+    "etiket": "Mil kavraması",
+    "kaynak": "V",
+    "malzeme": "paslanmaz",
+    "hareket": true,
+    "not_": ""
+   },
+   {
+    "ad": "pnomatik_mil_D12",
+    "etiket": "Pnömatik mil Ø12",
+    "kaynak": "V",
+    "malzeme": "paslanmaz",
+    "hareket": true,
+    "not_": ""
+   },
+   {
+    "ad": "kasa_oluk_saci",
+    "etiket": "Kasa oluk sacı",
+    "kaynak": "Ö+F",
+    "malzeme": "fircali",
+    "hareket": false,
+    "not_": "ürün silindiri açık olukta yatar (fotoğraf)"
+   },
+   {
+    "ad": "kasa_kutu_saci",
+    "etiket": "Kasa kutu sacı",
+    "kaynak": "Ö",
+    "malzeme": "kabuk",
+    "hareket": false,
+    "not_": "içi görünsün diye SAYDAM çizildi (gerçekte paslanmaz sac)"
+   },
+   {
+    "ad": "etiket_paneli",
+    "etiket": "Etiket paneli",
+    "kaynak": "Ö",
+    "malzeme": "siyah",
+    "hareket": false,
+    "not_": "'BELDOS 275' paneli"
+   },
+   {
+    "ad": "etiket_kirmizi_cizgi",
+    "etiket": "Etiket kırmızı çizgi",
+    "kaynak": "F",
+    "malzeme": "kirmizi",
+    "hareket": false,
+    "not_": ""
+   },
+   {
+    "ad": "hizli_sokme_pimi",
+    "etiket": "Hızlı sökme pimi",
+    "kaynak": "F",
+    "malzeme": "siyah",
+    "hareket": false,
+    "not_": ""
+   },
+   {
+    "ad": "hiz_ayar_topuzu",
+    "etiket": "Hız ayar topuzu",
+    "kaynak": "F+V",
+    "malzeme": "siyah",
+    "hareket": false,
+    "not_": "'adjust the speed' [B]; yeri VARSAYIM"
+   },
+   {
+    "ad": "pnomatik_silindir_D32",
+    "etiket": "Pnömatik silindir Ø32",
+    "kaynak": "H+V",
+    "malzeme": "aluminyum",
+    "hareket": false,
+    "not_": "Ø32: 29 L/dk ÷ 30 = 0,97 L/çevrim → çift etkili Ø32 × 76 mm [H]; gövde boyu VARSAYIM"
+   },
+   {
+    "ad": "pnomatik_on_bogaz",
+    "etiket": "Pnömatik ön boğaz",
+    "kaynak": "V",
+    "malzeme": "aluminyum",
+    "hareket": false,
+    "not_": ""
+   },
+   {
+    "ad": "pnomatik_arka_mafsal",
+    "etiket": "Pnömatik arka mafsal",
+    "kaynak": "V",
+    "malzeme": "aluminyum",
+    "hareket": false,
+    "not_": ""
+   },
+   {
+    "ad": "pnomatik_arka_ayak",
+    "etiket": "Pnömatik arka ayak",
+    "kaynak": "V",
+    "malzeme": "fircali",
+    "hareket": false,
+    "not_": ""
+   },
+   {
+    "ad": "pnomatik_on_ayak",
+    "etiket": "Pnömatik ön ayak",
+    "kaynak": "V",
+    "malzeme": "fircali",
+    "hareket": false,
+    "not_": ""
+   },
+   {
+    "ad": "hacim_ayar_topuzu",
+    "etiket": "Hacim ayar topuzu",
+    "kaynak": "Ö",
+    "malzeme": "siyah",
+    "hareket": false,
+    "not_": "Ø63 × 24 tırtıllı [Ö]; 'adjust the volume' [B]"
+   },
+   {
+    "ad": "hacim_ayar_mili",
+    "etiket": "Hacim ayar mili",
+    "kaynak": "Ö+V",
+    "malzeme": "paslanmaz",
+    "hareket": false,
+    "not_": "ucu 685 ölçüsünün sonu; iç mekanizma VARSAYIM"
+   },
+   {
+    "ad": "hacim_ayar_dayamasi",
+    "etiket": "Hacim ayar dayaması",
+    "kaynak": "V",
+    "malzeme": "paslanmaz",
+    "hareket": false,
+    "not_": ""
+   },
+   {
+    "ad": "sartlandirici_govde",
+    "etiket": "Şartlandırıcı gövde",
+    "kaynak": "Ö",
+    "malzeme": "siyah",
+    "hareket": false,
+    "not_": ""
+   },
+   {
+    "ad": "sartlandirici_ayar_topuzu",
+    "etiket": "Şartlandırıcı ayar topuzu",
+    "kaynak": "Ö",
+    "malzeme": "siyah",
+    "hareket": false,
+    "not_": "üstü kaideden 160 [Ö]"
+   },
+   {
+    "ad": "sartlandirici_filtre_kabi",
+    "etiket": "Şartlandırıcı filtre kabı",
+    "kaynak": "Ö+V",
+    "malzeme": "saydam_celik",
+    "hareket": false,
+    "not_": ""
+   },
+   {
+    "ad": "sartlandirici_manometre",
+    "etiket": "Şartlandırıcı manometre",
+    "kaynak": "Ö",
+    "malzeme": "beyaz",
+    "hareket": false,
+    "not_": ""
+   },
+   {
+    "ad": "hava_giris_rakoru",
+    "etiket": "Hava giriş rakoru",
+    "kaynak": "Ö",
+    "malzeme": "siyah",
+    "hareket": false,
+    "not_": ""
+   },
+   {
+    "ad": "hava_hortumu_kirmizi",
+    "etiket": "Hava hortumu kırmızı",
+    "kaynak": "F",
+    "malzeme": "kirmizi",
+    "hareket": false,
+    "not_": "fotoğraftaki kırmızı hortum; bağlantı noktaları VARSAYIM"
+   },
+   {
+    "ad": "baglanti_plakasi_BIZIM",
+    "etiket": "Bağlantı plakası (BİZİM)",
+    "kaynak": "BİZİM",
+    "malzeme": "bizim",
+    "hareket": false,
+    "not_": "Beldos'ta yok: sac kaidenin üst tablası yerine 8 mm düz plaka; ölçü VARSAYIM"
+   }
+  ]
+ },
+ "denetim": [
+  {
+   "ad": "güç ünitesi boyu (x)",
+   "olcu": 477.0,
+   "hedef": 477.0,
+   "tol": 1.0,
+   "kaynak": "B",
+   "sonuc": "GEÇTİ"
+  },
+  {
+   "ad": "güç ünitesi derinliği (y, arka rakor hariç)",
+   "olcu": 296.0,
+   "hedef": 296.0,
+   "tol": 1.0,
+   "kaynak": "B",
+   "sonuc": "GEÇTİ"
+  },
+  {
+   "ad": "güç ünitesi yüksekliği (z, topuz dahil)",
+   "olcu": 228.0,
+   "hedef": 228.0,
+   "tol": 0.5,
+   "kaynak": "B",
+   "sonuc": "GEÇTİ"
+  },
+  {
+   "ad": "pompa bloğu genişliği",
+   "olcu": 149.0,
+   "hedef": 149.0,
+   "tol": 0.5,
+   "kaynak": "B",
+   "sonuc": "GEÇTİ"
+  },
+  {
+   "ad": "hazne çapı (kapak hariç gövde)",
+   "olcu": 256.0,
+   "hedef": 256.0,
+   "tol": 0.5,
+   "kaynak": "B",
+   "sonuc": "GEÇTİ"
+  },
+  {
+   "ad": "hazne + blok yüksekliği (blok altından kubbe tepesine)",
+   "olcu": 495.5,
+   "hedef": 495.0,
+   "tol": 1.0,
+   "kaynak": "B",
+   "sonuc": "GEÇTİ"
+  },
+  {
+   "ad": "15 L hazne iç hacmi (bilezikten kapağa, L)",
+   "olcu": 17.3,
+   "hedef": 15.0,
+   "tol": 2.5,
+   "kaynak": "H",
+   "sonuc": "GEÇTİ"
+  },
+  {
+   "ad": "boy: ağız kelepçesi → hacim ayar mili (685 · hazne ağzı hariç)",
+   "olcu": 685.0,
+   "hedef": 685.0,
+   "tol": 2.0,
+   "kaynak": "B",
+   "sonuc": "GEÇTİ"
+  },
+  {
+   "ad": "hazne ağzının 685'in solundan taşması (çizimde 34)",
+   "olcu": 32.4,
+   "hedef": 34.0,
+   "tol": 3.0,
+   "kaynak": "Ö",
+   "sonuc": "GEÇTİ"
+  },
+  {
+   "ad": "hazne ağız çapı (384)",
+   "olcu": 384.0,
+   "hedef": 384.0,
+   "tol": 0.5,
+   "kaynak": "B",
+   "sonuc": "GEÇTİ"
+  },
+  {
+   "ad": "hazne üstü + silinen kaide 158,5 (690)",
+   "olcu": 688.5,
+   "hedef": 690.0,
+   "tol": 2.0,
+   "kaynak": "B",
+   "sonuc": "GEÇTİ"
+  },
+  {
+   "ad": "ağız ekseni + silinen kaide (197)",
+   "olcu": 197.0,
+   "hedef": 197.0,
+   "tol": 0.1,
+   "kaynak": "B",
+   "sonuc": "GEÇTİ"
+  },
+  {
+   "ad": "konik hazne iç hacmi (koni + silindir, L)",
+   "olcu": 24.5,
+   "hedef": 25.0,
+   "tol": 1.5,
+   "kaynak": "H",
+   "sonuc": "GEÇTİ"
+  },
+  {
+   "ad": "ürün pistonu strok (Ø52 · 151 ml)",
+   "olcu": 71.1,
+   "hedef": 71.1,
+   "tol": 0.2,
+   "kaynak": "H",
+   "sonuc": "GEÇTİ"
+  },
+  {
+   "ad": "pnömatik strok hesabı (Ø32 · 0,97 L/çevrim)",
+   "olcu": 76.0,
+   "hedef": 76.0,
+   "tol": 3.0,
+   "kaynak": "H",
+   "sonuc": "GEÇTİ"
+  }
+ ]
+}
