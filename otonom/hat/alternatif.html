@@ -1,0 +1,82 @@
+<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ALTERNATİF A1 · ROBOTSUZ</title><link rel="stylesheet" href="hat.css?v=10"><script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script>
+<style>
+.zc{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;padding:10px 16px;background:#1b1f26;border-top:1px solid #2a3039}
+.zc button{border:1px solid #39424f;background:#232932;color:#cfd6df;border-radius:8px;padding:6px 11px;font:600 12.5px system-ui,sans-serif;cursor:pointer}
+.zc input[type=range]{flex:1 1 220px;accent-color:#4f86ff}.zc .sn{color:#8d97a4;font:600 12px system-ui,sans-serif;font-variant-numeric:tabular-nums;min-width:64px}
+.adim{display:flex;flex-wrap:wrap;gap:6px;padding:0 16px 12px;background:#1b1f26}
+.adim button{border:1px solid #2f3742;background:#1f252d;color:#aab4c0;border-radius:999px;padding:4px 10px;font:600 11.5px system-ui,sans-serif;cursor:pointer}
+.adim button.ak{border-color:#e0a31c;background:#3a2f14;color:#ffd978}
+.anlat{padding:8px 16px 14px;background:#1b1f26;color:#dce3ea;font:14px/1.45 system-ui,sans-serif;min-height:42px}.anlat b{color:#ffd978}
+table.t{width:100%;border-collapse:collapse;font-size:13.5px}table.t td,table.t th{border-bottom:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}
+.iyi{color:#178a56;font-weight:600}.kotu{color:#b42318;font-weight:600}
+</style></head><body>
+<div class="top"><div class="in"><div class="crumb"><a href="../">Store</a><span>›</span><a href="index.html">HAT</a><span>›</span><a href="makine.html">Makine</a><span>›</span><b>ALTERNATİF A1</b></div><div><a href="makine.html">← Makine (geçerli v45)</a></div></div></div>
+<div class="wrap"><h1>ALTERNATİF A1 — ROBOTSUZ MAKİNE<span class="tag" style="background:#c47c18">öneri · kavram</span></h1>
+<p class="lead"><b>Sen olsan ne yapardın?</b> Robotu kaldırırdım. Bugünkü makinede tek Fairino FR5, 4,9 m'lik yer rayında üç iş yapıyor: çekmeceden hamur topunu açıcıya, kutuyu kutu modülünden QR dolabına, içeceği dolaba taşıyor. Simülasyonda hattın <b>darboğazı bu robot</b> (saatte 41–55 ürün). Robotun yerine her biri 1–2 eksenli, katalog parçalı <b>üç basit makine</b> koyardım. Açıcı, TOPPING, fırın, kesme ve kutu modülü <b>aynen kalıyor</b>. Geçerli makine hâlâ montaj v45; bu sayfa senin onayını bekleyen bir öneri.</p>
+<div class="m3">
+  <model-viewer id="mv" loading="eager" src="../hat3d/alt1_v1.glb?v=1" alt="Alternatif A1 · robotsuz makine" autoplay
+      camera-controls touch-action="pan-y" shadow-intensity="0.5" exposure="1.0" environment-image="neutral"
+      camera-orbit="28deg 70deg 8.6m" camera-target="2.8m 1m 0m" field-of-view="30deg" min-field-of-view="5deg" min-camera-orbit="auto auto 0.3m"></model-viewer>
+  <div class="zc"><button id="oy">duraklat</button><input id="tz" type="range" min="0" max="30" step="0.05" value="0"><span class="sn" id="sn">0,0 / 30 sn</span></div>
+  <div class="adim" id="adim"></div>
+  <div class="anlat" id="anlat"></div>
+</div>
+
+<h2>1 · Robotun üç işi, üç basit makine</h2>
+<div class="card"><div class="kv">
+<b>TOP OTOMATI</b><span>Çekmece modülünün yerine, <b>aynı gövde</b> (2500 × 830 × 1060, soğuk). Çekmece yok: 6 kat × 5 = <b>30 bantlı şerit</b>. Vending makinelerindeki bantlı şerit gibi çalışır, her şeridin küçük bir motoru var. Kapasite 16 × 10 = <b>160 pide</b> + 22 × 20 = <b>440 lahmacun</b> topu, yani 2 gün (160 + 432 gerekiyor). Sol uçta 2 eksenli <b>asansör</b> (igus ZLW dikey 1000 + yatay 560) topu şeridin ucundan kabına alır. Kap tavandaki yaylı kapaktan çıkar, açıcının sol boşluğuna gelir, <b>itici</b> (strok 230) topu tablaya sürer. Bir top ≈ 8 s, saatte ≈ 450 top. Operatör kapakları açıp şeritleri önden doldurur.</span>
+<b>ÇIKIŞ ÇATALI</b><span>Kutu modülünün önünde. Robot çatalının aynı hareketini yapar: 3 diş tepsinin aralıklarından girer, 55 mm kaldırır, kutuyu 456 mm dışarı, dolabın rafına taşır. igus ZLW eksen + SMC kılavuzlu silindir + NEMA 23 (kutu modülüyle aynı motor).</span>
+<b>DÖNER TESLİM DOLABI</b><span>Kutu modülünün önünde, 830 × 820 × 2030. <b>8 raflı dikey döner raf (paternoster)</b>, raflar askıda olduğu için hep yatay kalır. Kutu arka kolda yüklenir, raf yukarı çıkarken üstteki soğuk <b>içecek otomatı</b> (3 tepsi × 6 spiral × 10 = 180 kutu) içeceği rafın bardaklığına bırakır. Raf ön kola döner, müşteri kapağının önüne iner, kapak QR ile açılır.</span>
+<b>AYNEN KALAN</b><span>A açıcı · C TOPPING v2 · F fırın · K kesme + sprey · E kutu (montaj v45). Robot, yer rayı, koridor, karşıdaki QR dolabı ve 25 motorlu çekmece kalkar.</span>
+</div></div>
+
+<h2>2 · Bugünkü makineyle karşılaştırma</h2>
+<div class="card"><table class="t"><tr><th style="width:24%">Konu</th><th>Bugün (montaj v45)</th><th>A1 robotsuz</th></tr>
+<tr><td>Kapladığı alan</td><td>5430 × 2170 = <b>11,8 m²</b> (hat + robot koridoru 800 + QR dolabı)</td><td class="iyi">5430 × 830 + 830 × 820 = <b>5,2 m²</b> (−6,6 m²)</td></tr>
+<tr><td>Darboğaz · saatte ürün</td><td>robot · 41–55 (simde ölçüldü)</td><td class="iyi">fırın · ≈ 60 (4 ürün × 4 dk, pişme süresi VARSAYIM) · TOPPING pizzada 72, lahmacunda 120</td></tr>
+<tr><td>Hamur topu</td><td>motorlu çekmece açılır, robot alır, açıcının ağzından bırakır</td><td>şerit ilerler, top kaba düşer, asansör + itici tablaya koyar</td></tr>
+<tr><td>Kutu → müşteri</td><td>robot çatalla alır, koridoru geçip QR gözüne koyar</td><td>çıkış çatalı dolabın rafına koyar, raf müşteri kapağına döner</td></tr>
+<tr><td>İçecek</td><td>soğuk çekmeceden robot alır</td><td>dolabın üstündeki soğuk içecek otomatı rafa bırakır</td></tr>
+<tr><td>Hassas eksen</td><td>robot 6 eksen + ray 1</td><td class="iyi">asansör 2 + itici 1 + çatal 1 + dolap 1 (step / redüktörlü motor)</td></tr>
+<tr><td>Basit motor</td><td>25 çekmece motoru</td><td>30 şerit motoru + 18 spiral motoru</td></tr>
+<tr><td>Güvenlik</td><td>dükkânda kobot + robot bölgesi, risk analizi ağır</td><td class="iyi">makine kapalı gövde; hareketli parçalar içeride</td></tr>
+<tr><td>Teslim gözü</td><td>12 göz (QR dolabı)</td><td class="kotu">8 raf (yoğun saatte az olabilir; 10 raf için hesap gerek)</td></tr>
+<tr><td>Maliyet kalemi</td><td colspan="2">Kalkanlar, hat sayfasındaki eski bantlara göre: kobot kol 600 bin – 1,8 mln TL · ray 150–300 bin TL · teslim dolabı 60–400 bin TL. Gelenler katalog eksenleri, şerit motorları, paternoster ve vending modülü. Teklif yok, rakam yazmıyorum.</td></tr>
+</table></div>
+
+<h2>3 · Riskler · pilotta denenecekler</h2>
+<div class="card"><table class="t"><tr><th style="width:34%">Risk</th><th>Not</th></tr>
+<tr><td>Hamur topu bantta 2 gün</td><td>Yapışma ve yassılaşma. Bölmeli (cleat'li) PU bant, un ya da yağ. Pilotta 48 saat denenecek.</td></tr>
+<tr><td>Şerit ucundan kaba düşüş</td><td>Top ≤ 30 mm düşüyor. Şekli bozulur mu, açıcı toparlar mı? Pilotta denenecek.</td></tr>
+<tr><td>Tavan kapağından soğuk kaçağı</td><td>Yaylı klape + ısıtmalı çerçeve (yoğuşma). Kapak yalnız asansör geçerken açık (≈ 2 s).</td></tr>
+<tr><td>Açıcı kafası</td><td>Top 80 mm yüksek, kafa 60 mm kalkınca koninin altında 68 mm boşluk kalıyor. Kafa <b>90</b>'a kalkmalı. Bugünkü hatta da aynı sorun var (ana animasyonda bulundu).</td></tr>
+<tr><td>Operatör dolumu</td><td>600 top, 30 şerit, iki günde bir. Tahmin 20–30 dk (VARSAYIM).</td></tr>
+<tr><td>Teslim gözü 8</td><td>Bugün 12 göz. Paternosterde raf aralığını 330 mm'ye indirirsek 10 raf sığar mı, hesaplanacak.</td></tr>
+</table></div>
+<div class="card" style="border-left:4px solid #c47c18;background:#fdf7ee"><b style="color:#a2600a">ARA SEÇENEK A1-b</b> · Robot yalnız hamur taşısın, kutuyu çatal + döner dolap alsın. O zaman robot açıcının önüne <b>sabit</b> konur, ray ve koridor yine kalkar. Top otomatı gerekmez, çekmeceler kalır.</div>
+
+<h2>4 · Teknik resim</h2>
+<figure><a href="img/ALT_A1_ROBOTSUZ_v1_teknik.png" target="_blank"><img src="img/ALT_A1_ROBOTSUZ_v1_teknik.png" alt="Alternatif A1 teknik resim" loading="lazy"></a><figcaption>ALT A1 ROBOTSUZ v1: ön görünüş, üst görünüş (bugün / A1 alan karşılaştırması), top otomatı ve döner dolap kesitleri, yeni parçalar. Kavram ölçüleri.</figcaption></figure>
+<p class="note">Model: arastirma/_uretec/alt_robotsuz_cad_v1.py (yeni parçalar) + alt_montaj_v1.py (hat_v45'ten türetilir) → otonom/hat3d/alt1_v1.glb · resim: teknik_alt_robotsuz_v1.py · 26 Eyl 2026. Geçerli makine ve paftası (v45 / v12) değişmedi.</p>
+</div>
+<script>
+const ADIM = [
+  [0.0, 'ŞERİT', 'Top otomatında seçilen şerit bir adım ilerler; baştaki top şeridin sol ucundan asansörün kabına düşer.'],
+  [2.2, 'ASANSÖR', 'Kap, şeridin z konumundan tabla eksenine geçer, sonra dikey eksen onu tavandaki yaylı kapaktan açıcının sol boşluğuna çıkarır (≈ 3 s).'],
+  [6.2, 'İTİCİ', 'İtici topu kaptan açıcının altındaki tablaya sürer. Buradan sonrası bugünkü makineyle aynı: açıcı → TOPPING → fırın → kesme → kutu.'],
+  [12.0, 'ÇIKIŞ ÇATALI', 'Kapağı kapanmış kutu: çatal tepsinin aralıklarından girer, 55 mm kaldırır.'],
+  [14.3, 'DOLABA', 'Çatal kutuyu 456 mm dışarı, döner dolabın arka koldaki rafına taşır, bırakır, geri çekilir.'],
+  [17.0, 'İÇECEK', 'Raf yukarı çıkar. Üstteki içecek otomatının oluğunun altından geçerken içecek bardaklığa düşer.'],
+  [22.0, 'MÜŞTERİ', 'Raf ön kola geçip iner, müşteri kapağının önünde durur; kapak QR ile açılır.'],
+];
+const mv = document.getElementById('mv'), oy = document.getElementById('oy'), tz = document.getElementById('tz'), sn = document.getElementById('sn'), adim = document.getElementById('adim'), anlat = document.getElementById('anlat');
+adim.innerHTML = ADIM.map((a, i) => '<button data-i="' + i + '">' + (i + 1) + ' · ' + a[1] + '</button>').join('');
+const btn = [...adim.querySelectorAll('button')];
+function goster(t) { let k = 0; ADIM.forEach((a, i) => { if (t >= a[0] - 0.01) k = i; }); btn.forEach((b, i) => b.classList.toggle('ak', i === k)); anlat.innerHTML = '<b>' + (k + 1) + ' · ' + ADIM[k][1] + '</b> — ' + ADIM[k][2]; sn.textContent = t.toFixed(1).replace('.', ',') + ' / 30 sn'; }
+btn.forEach(b => b.onclick = () => { const t = ADIM[+b.dataset.i][0]; mv.currentTime = t; tz.value = t; goster(t); mv.play(); oy.textContent = 'duraklat'; });
+tz.oninput = () => { mv.pause(); oy.textContent = 'oynat'; mv.currentTime = parseFloat(tz.value); goster(parseFloat(tz.value)); };
+oy.onclick = () => { if (mv.paused) { mv.play(); oy.textContent = 'duraklat'; } else { mv.pause(); oy.textContent = 'oynat'; } };
+setInterval(() => { if (!mv.paused && mv.loaded) { tz.value = mv.currentTime; goster(mv.currentTime); } }, 150);
+goster(0);
+</script>
+</body></html>
