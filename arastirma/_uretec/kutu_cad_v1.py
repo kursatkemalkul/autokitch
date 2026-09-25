@@ -1196,12 +1196,22 @@ def _tur(ad):
                                                   "Destek B", "KFL", "LM12", "Alüminyum profil", "DIN ray", "Klemens", "Kablo kanalı", "UHMW", "Pizza kutusu", "FR5")) else "ÜRETİM"
 
 
+# toplam adedi ilk örnekte yazılmış satın alma kalemlerinin DİĞER örnekleri: BOM.csv'de listelenir, özette sayılmaz
+ALT_KURAL = [r"^ayak_[1-3]$", r"^kilavuz_(sag|arka)_uhmw$", r"^kalip_ayagi_[1-3]$", r"^kalip_taragi_on_z_[1-3]$",
+             r"^kopru_kilavuz_mili_1$", r"^kol_yatagi_1$", r"^parmak_yatagi_1$", r"^asansor_ust_yatak$",
+             r"^guc_48V_NDR-240-48_b$", r"^surucu_STP-DRV-4830_[1-6]$", r"^din_rayi_1$", r"^kablo_kanali_(1|dikey_alt|dikey_ust)$"]
+
+
 def bom_yaz(klasor):
+    """BOM.csv = modeldeki her parça · BOM_OZET.csv = kalem bazında TOPLAM (her örnek kendi adedini taşır, toplanır)"""
+    import re as _re
     os.makedirs(klasor, exist_ok=True)
     satir = []
     for p in PARCALAR:
-        if p["grup"] in ("PIZZA", "K_ITICI", "SABIT_REF") or p["grup"].startswith("B_"):
+        if p["grup"] in ("PIZZA", "K_ITICI", "SABIT_REF", "CATAL") or p["grup"].startswith("B_"):
             continue
+        if any(_re.search(k, p["ad"]) for k in ALT_KURAL):
+            satir.append((p["ad"], p["ad"].replace("_", " "), 0, "", "aynı kalemin eşi — adet ilk örnekte", "ALT")); continue
         if p["bom"]:
             ad, adet, tanim, not_ = p["bom"]
             if adet == 0 and not tanim:
@@ -1209,8 +1219,8 @@ def bom_yaz(klasor):
             satir.append((p["ad"], ad, adet, tanim, not_, _tur(ad)))
         else:
             bb = p["wp"].val().BoundingBox()
-            tanim = {"sac": "304 sac · lazer + büküm", "kabuk": "304 sac 1,5 · lazer + büküm (dış kabuk)", "aluminyum": "alüminyum 6082 · CNC", "celik": "304 / S235 · lazer / torna", "uhmw": "UHMW-PE", "plastik": "",
-                     "motor": "", "kart": "", "karton_yigin": ""}.get(p["mal"], p["mal"])
+            tanim = {"sac": "304 sac · lazer + büküm", "kabuk": "304 sac 1,5 · lazer + büküm (dış kabuk)", "aluminyum": "alüminyum 6082 · CNC",
+                     "celik": "304 / S235 · lazer / torna", "uhmw": "UHMW-PE", "plastik": "", "motor": "", "kart": "", "karton_yigin": ""}.get(p["mal"], p["mal"])
             satir.append((p["ad"], p["ad"].replace("_", " "), 1, tanim, "zarf %.1f × %.1f × %.1f" % (bb.xlen, bb.ylen, bb.zlen), "ÜRETİM"))
     with io.open(os.path.join(klasor, "BOM.csv"), "w", encoding="utf-8-sig", newline="") as f:
         w = csv.writer(f, delimiter=";")
@@ -1221,12 +1231,8 @@ def bom_yaz(klasor):
     for pad, ad, adet, tanim, not_, tur in satir:
         if tur == "ALT":
             continue
-        key = ad if tur == "SATIN ALMA" else ad
-        if tur == "SATIN ALMA":
-            top[key] = max(top.get(key, 0), int(adet)) if isinstance(adet, int) else 1
-        else:
-            top[key] = top.get(key, 0) + (int(adet) if isinstance(adet, int) else 1)
-        bil.setdefault(key, (tanim, not_, tur))
+        top[ad] = top.get(ad, 0) + int(adet)
+        bil.setdefault(ad, (tanim, not_, tur))
     with io.open(os.path.join(klasor, "BOM_OZET.csv"), "w", encoding="utf-8-sig", newline="") as f:
         w = csv.writer(f, delimiter=";")
         w.writerow(["tür", "kalem", "toplam adet", "tanım / ürün", "not / kaynak"])
@@ -1234,6 +1240,9 @@ def bom_yaz(klasor):
             w.writerow([bil[k][2], k, top[k], bil[k][0], bil[k][1]])
     sa = sum(1 for k in top if bil[k][2] == "SATIN ALMA")
     print("BOM: %d parca satiri · %d kalem (%d satin alma · %d uretim)" % (len(satir), len(top), sa, len(top) - sa))
+    for k in sorted(top):
+        if bil[k][2] == "SATIN ALMA":
+            print("   %4d  %s" % (top[k], k))
 
 
 # ---------------------------------------------------------------- MODÜL ----------------------------------------------------------------
