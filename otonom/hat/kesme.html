@@ -1,0 +1,100 @@
+<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>4b · KESME + SPREY</title><link rel="stylesheet" href="hat.css?v=10"><script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script>
+<style>
+.zc{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;padding:10px 16px;background:#1b1f26;border-top:1px solid #2a3039}
+.zc button{border:1px solid #39424f;background:#232932;color:#cfd6df;border-radius:8px;padding:6px 11px;font:600 12.5px system-ui,sans-serif;cursor:pointer}
+.zc input[type=range]{flex:1 1 220px;accent-color:#4f86ff}
+.zc .sn{color:#8d97a4;font:600 12px system-ui,sans-serif;font-variant-numeric:tabular-nums;min-width:64px}
+.adim{display:flex;flex-wrap:wrap;gap:6px;padding:0 16px 12px;background:#1b1f26}
+.adim button{border:1px solid #2f3742;background:#1f252d;color:#aab4c0;border-radius:999px;padding:4px 10px;font:600 11.5px system-ui,sans-serif;cursor:pointer}
+.adim button.ak{border-color:#e0a31c;background:#3a2f14;color:#ffd978}
+.anlat{padding:8px 16px 14px;background:#1b1f26;color:#dce3ea;font:14px/1.45 system-ui,sans-serif;min-height:42px}
+.anlat b{color:#ffd978}
+table.t{width:100%;border-collapse:collapse;font-size:13.5px}table.t td,table.t th{border-bottom:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}
+</style></head><body>
+<div class="top"><div class="in"><div class="crumb"><a href="../">Store</a><span>›</span><a href="index.html">HAT</a><span>›</span><a href="makine.html">Makine</a><span>›</span><b>4b · KESME + SPREY</b></div><div><a href="makine.html">← Makine</a></div></div></div>
+<div class="wrap"><h1>4b · KESME + SPREY — K istasyonu v1<span class="tag" style="background:#d94a3a">600 × 830 × 2030</span></h1>
+<p class="lead">Fırından çıkan ürünü alır, pideye sadeyağ püskürtür, 6 dilim keser ve kutu modülüne sürer. <b>Kesme ve sprey aynı yerde, aynı kafada:</b> nozül bıçak yıldızının göbeğinde. Parçalar katalog ürünü (Festo, Spraying Systems, Interroll, igus, SMC, Siemens) ya da çizimle üretilecek 304 sac. Animasyon kutu modülüyle aynı saatte döner (20 s): ürün 8,5 s'de kutuya itilir.</p>
+<div class="m3">
+  <model-viewer id="mv" loading="eager" src="../hat3d/kesme_v1.glb?v=1" alt="K · kesme + sprey istasyonu — çalışma döngüsü" autoplay
+      camera-controls touch-action="pan-y" shadow-intensity="0.5" exposure="1.0" environment-image="neutral"
+      camera-orbit="28deg 70deg 2.3m" camera-target="0.32m 1.28m -0.3m" field-of-view="30deg" min-field-of-view="5deg" min-camera-orbit="auto auto 0.3m"></model-viewer>
+  <div class="zc"><button id="oy">duraklat</button><input id="tz" type="range" min="0" max="20" step="0.05" value="0"><span class="sn" id="sn">0,0 / 20 sn</span></div>
+  <div class="adim" id="adim"></div>
+  <div class="anlat" id="anlat"></div>
+</div>
+
+<div class="card" style="border-left:4px solid #2456c8;background:#f4f7fd;margin:14px 0"><b style="color:#2456c8">26 EYLÜL 2026 · K İSTASYONU ÜRETİM MODELİ v1 (kesme_cad_v1)</b><br>
+<b>Neden bant:</b> fırın bandı PTFE (kayganlık ≈ 0,15), düz çelik plaka ≈ 0,35. Ürün plakaya geçerken ağırlığının ≈ %70'i hâlâ fırın bandındayken durur, arka kenarı fırının içinde kalır. Plakadan vazgeçildi: kesme yeri kısa bir <b>PU bant</b> (üstü 1164, fırın bandının 2 mm altı). İki bant arası aktarma güvenilir, çünkü iki bant da tahrikli. Aynı ilkeyi Q-T-S PC5000 otomatik pizza kesici kullanıyor (poliüretan bantlı konveyör, dakikada 40 pizza).<br>
+<b>Neden bıçak bandı kesmiyor:</b> bıçak alt dayamada bandın 0,5 mm üstünde duruyor ("bıçak izi yeter"). Kesim yükünü bandın altındaki 6 mm paslanmaz kayma tablası taşıyor.<br>
+<b>Neden itici kısa stroklu:</b> 600 mm'lik modüle 575 mm stroklu eksen sığmıyor (eksen gövdesi strok + araba + uçlar ≈ 800). Kesimden sonra bant ürünü 200 mm taşıyor, itici geri kalan 360 mm'yi itiyor: eksen 575 mm'ye sığdı.<br>
+<b>Neden çit:</b> kutu modülü ürünü 36 mm içeride (z −206) istiyor. Ürün bantla giderken 20°'lik sabit çit onu kaydırıyor. İkinci motor gerekmiyor.</div>
+
+<h2>1 · Makine — ne nerede</h2>
+<div class="card"><div class="kv">
+<b>K bandı</b><span>Gıda PU bant 2 mm, 400 geniş (VARSAYIM: Ammeraal / Habasit sınıfı). Tahrik <b>Interroll RollerDrive EC5000 AI 24 V Ø50</b>: motor rulonun içinde, dışarıda motor yok. Avara Ø30, gergi cıvatalı. 6 mm kayma tablası + 2 kiriş kesim yükünü taşır. Bant sonunda ölü plaka ve kutu modülünün köprüsü.</span>
+<b>Kesici</b><span><b>Festo DGRF-C-63-125</b> Clean Design kılavuzlu silindir: paslanmaz kılavuz milleri, 6 bar'da 1870 N. Kafa iki kirişli köprüye asılı. Yıldız bıçak Ø296 × 6 (sertleştirilmiş paslanmaz, 3 kelebek somunla aletsiz sökülür, bulaşık makinesinde yıkanır; Q-T-S bıçak seti sınıfı). Bıçakları Ø316 koruma halkası çevreler. Halka hem el koruması hem sprey perdesi.</span>
+<b>Sprey (aynı kafa)</b><span><b>Spraying Systems PulsaJet AA10000AUH-104210</b> gıda sürümü (FDA + EC 1935/2004), 24 V, PWM. Kafa plakasıyla boyunduruk arasında yatay duruyor. Dirsek ve göbekteki <b>UniJet + TG tam koni 90°</b> nozülü (çek valfli, damlatmaz). Nozülde silikon ısıtıcı ceket var (45 °C). Aynı parçalarla tereyağı püskürten sistem: Spraying Systems vaka E4058 (tereyağı tüketimi %25 azalmış).</span>
+<b>Tereyağı sistemi</b><span>Isıtmalı basınçlı tank 3 L (AISI 316, ceketli, seviye sensörlü, 1,5 bar hava). Isıtmalı Ø6 hortum. Tank taban dolabının arkasında, kompresörün üstünde. <b>Sadeyağ</b> öneriliyor: tereyağının süt katıları nozülü tıkar. 45 °C: yağ 32–35 °C'de tamamen erir, fazla ısınınca ayrışır (vaka E4058'in uyarısı).</span>
+<b>İtici</b><span><b>igus drylin ZLW-1040</b> dişli kayışlı eksen (yağsız, strok 365) + AutomationDirect STP-MTR-23079 (kutu modülüyle aynı motor). <b>SMC MGPM20-60</b> kılavuzlu silindir iticiyi 60 mm kaldırır. Kol arkadan gelir; yalnız itme çubuğu ile POM yüz kutu modülünün penceresine girer (110 mm).</span>
+<b>Pano (taban arkası)</b><span>Siemens S7-1200 1214C + SM1222 · STP-DRV-4830 · Mean Well NDR-240-24 / -48 · Pilz PNOZ s3 (kapı kilidi + acil stop) · PWM sprey sürücüsü · 2 sıcaklık kontrolcüsü. Üst bölmenin arkasında Festo MS4 şartlandırıcı + VUVG valf adası (4 × 5/2).</span>
+<b>Hava</b><span>Kompresör (TOPPING'le ortak, K tabanında) hattından T ile. Kesim başına <span class="h" data-k="hava_NL_kesim"></span> NL. Saatte 60 ürünle ≈ 5 NL/dk; kompresör 43 L/dk.</span>
+<b>Taban</b><span>Önde içecek yedeği 5 koli (120 kutu, soğutmasız, 4. gün için). Arkada kompresör (TOPPING'in), üstünde tereyağı tankı ve pano.</span>
+<b>Güvenlik</b><span>Üst kapı polikarbonat pencereli ve kilitli (Schmersal AZM 40 sınıfı): kapı açılınca kesici ve itici durur. Önde acil stop var.</span>
+<b>Malzeme listesi</b><span><a href="../../arastirma/4_KESME_v1/BOM_OZET.csv">BOM_OZET.csv</a> (kalem toplamları) · <a href="../../arastirma/4_KESME_v1/BOM.csv">BOM.csv</a> (modeldeki her parça). Ölçüsü kataloğundan teyit edilmeyenler BOM'da [V] ile işaretli.</span>
+</div></div>
+
+<h2>2 · Hesap (modelden)</h2>
+<div class="card"><div class="kv" id="hes"></div></div>
+<h2>3 · Denetim</h2>
+<div class="card"><table class="t" id="den"><tr><th>Kontrol</th><th style="width:110px">Sonuç</th></tr></table>
+<p class="note" id="cak"></p></div>
+
+<h2>4 · Açık noktalar</h2>
+<div class="card"><table class="t"><tr><th style="width:34%">Konu</th><th style="width:110px">Durum</th><th>Not</th></tr>
+<tr><td>Kesme kuvveti</td><td><span class="st ac">PİLOT</span></td><td>Yayınlanmış bir N/mm değeri bulunamadı. Tahmin 1–3 N/mm × 798 mm bıçak = 0,8–2,4 kN. Ø63 silindir 1870 N veriyor, yani 2,3 N/mm'ye kadar yeter. Gerçek pide ve pizza kenarıyla pres testi yapılacak; 1,5 kN'u geçerse Ø80 kullanılacak (DSBF-C-80, 3016 N).</td></tr>
+<tr><td>Sprey dozu ve deseni</td><td><span class="st ac">PİLOT</span></td><td>Pide başına 8 g ve 7 g/s debi VARSAYIM (araştırmada tahmin 5–15 g). Tam koni merkezde daha yoğun püskürtür. Pide kenarı istenirse içi boş koni (TX) takılabilir.</td></tr>
+<tr><td>Bant sıcaklığı</td><td><span class="st on">TEYİT</span></td><td>Ürün 90–95 °C geliyor. PU bant sürekli ≈ 80 °C'ye kadar dayanıyor ama ürün bantta 8 s kalıyor. Üreticiye sorulacak.</td></tr>
+<tr><td>Hangi ürüne sprey</td><td><span class="st on">KARAR</span></td><td>Modelde yalnız pideye sprey var; pizza ve lahmacunda yok. Lahmacun kesilsin mi? Sen karar ver.</td></tr>
+<tr><td>Parça ölçüleri</td><td><span class="st on">TEYİT</span></td><td>DGRF-C gövdesi, ZLW-1040 profili, MGPM20, PulsaJet gövdesi ve tank ölçüleri katalog sınıfına göre alındı, üretici STEP'iyle teyit edilecek. İndirme izni sende.</td></tr>
+</table></div>
+
+<h2>5 · Sürüm geçmişi</h2><ul class="ver">
+<li><b>v1 (26 Eyl 2026):</b> ilk üretim modeli: K bandı, kesici + sprey aynı kafada, 20° çit, kısa stroklu itici, tereyağı tankı, pano, güvenlik. Ana montaj v45'te; ana montajın tam animasyonunda ürün buradan geçiyor.</li>
+<li>Önceki (pafta v7–v11): kesme plakası 560 × 450 + itici + yıldız bıçak + sprey kutu olarak.</li></ul>
+</div>
+<div class="foot">AUTOKITCH · HAT · model: arastirma/_uretec/kesme_cad_v1.py · 26 Eyl 2026</div>
+<script>
+const ADIM = [
+  [0.3, 'GELİŞ', 'Ürün fırın bandından K bandına geçer (iki bant da tahrikli). Bant onu kesme merkezine getirir; fotosel ön kenarı x 450\'de görünce durur.'],
+  [2.6, 'SPREY', 'Yalnız pide: bıçak yıldızının göbeğindeki nozül 45 °C sadeyağ püskürtür (8 g, 1,1 s). Kafa yukarıda, nozül pideden 143 mm, 90° koni Ø286 kaplar. Bıçaklar ışınlara paralel olduğu için gölgeleri %1–3.'],
+  [4.0, 'İNİŞ', 'Kafa hızlı iner: 95 mm, 0,6 s.'],
+  [4.6, 'KESİM', 'Son 30 mm yavaş iner (37,5 mm/s), 6 bıçak birlikte keser. Bıçak bandın 0,5 mm üstünde mekanik dayamada durur.'],
+  [5.7, 'KALKIŞ', 'Kafa 0,8 s\'de kalkar. Koruma halkası bıçakları çevreler.'],
+  [6.8, 'ÇİT', 'Bant ürünü 200 mm taşır, 20° çit 36 mm içeri kaydırır (kutunun ekseni). İtici yukarıdan, ürünün üstünden geri gelir.'],
+  [7.95, 'İTİCİ İNER', 'İtici ürünün arkasına 60 mm iner (SMC kılavuzlu silindir).'],
+  [8.5, 'İTME', 'igus ekseni iticiyi 360 mm sürer, ürün köprüden kutuya kayar. Yol ve zaman kutu modülünün beklediğiyle aynı; itici kutu modülüne 110 mm girer.'],
+  [10.3, 'DÖNÜŞ', 'İtici kutu modülünden çıkar, kalkar ve bekleme yerine döner. Sonraki ürün 20 s sonra gelir.'],
+];
+const mv = document.getElementById('mv'), oy = document.getElementById('oy'), tz = document.getElementById('tz'), sn = document.getElementById('sn'), adim = document.getElementById('adim'), anlat = document.getElementById('anlat');
+adim.innerHTML = ADIM.map((a, i) => '<button data-i="' + i + '">' + (i + 1) + ' · ' + a[1] + '</button>').join('');
+const btn = [...adim.querySelectorAll('button')];
+function goster(t) { let k = 0; ADIM.forEach((a, i) => { if (t >= a[0] - 0.01) k = i; }); btn.forEach((b, i) => b.classList.toggle('ak', i === k)); anlat.innerHTML = '<b>' + (k + 1) + ' · ' + ADIM[k][1] + '</b> — ' + ADIM[k][2]; sn.textContent = t.toFixed(1).replace('.', ',') + ' / 20 sn'; }
+btn.forEach(b => b.onclick = () => { const t = ADIM[+b.dataset.i][0]; mv.currentTime = t; tz.value = t; goster(t); mv.play(); oy.textContent = 'duraklat'; });
+tz.oninput = () => { mv.pause(); oy.textContent = 'oynat'; mv.currentTime = parseFloat(tz.value); goster(parseFloat(tz.value)); };
+oy.onclick = () => { if (mv.paused) { mv.play(); oy.textContent = 'duraklat'; } else { mv.pause(); oy.textContent = 'oynat'; } };
+setInterval(() => { if (!mv.paused && mv.loaded) { tz.value = mv.currentTime; goster(mv.currentTime); } }, 150);
+goster(0);
+fetch('../hat3d/kesme_v1.json?v=1').then(r => r.json()).then(D => {
+  const H = D.hesap, f = (v, n = 1) => (+v).toFixed(n).replace('.', ',');
+  document.querySelectorAll('.h').forEach(e => e.textContent = f(H[e.dataset.k]));
+  document.getElementById('hes').innerHTML =
+    `<b>Kesme</b><span>bıçak kenarı ${f(H.bicak_kenar_mm, 0)} mm · gereken kuvvet ${f(H.kuvvet_kN[0])}–${f(H.kuvvet_kN[1])} kN (1–3 N/mm, VARSAYIM) · silindir ${f(H.silindir_N, 0)} N · yavaş kesim ${f(H.kesim_hiz)} mm/s</span>` +
+    `<b>Hava</b><span>kesim başına ${f(H.hava_NL_kesim)} NL (Ø63 × 125, çift etkili, 6 bar) · saatte 60 ürünle ${f(H.hava_NL_dk_60h)} NL/dk</span>` +
+    `<b>Tereyağı</b><span>pide başına 8 g (VARSAYIM) · günde ${f(H.yag_g_gun, 0)} g (80 pide) · 2 gün ${f(H.yag_L_2gun, 2)} L → tank 3 L · sprey ${f(H.sprey_sn, 2)} s · koni ürün üstünde r ${f(H.koni_r_mm, 0)} mm</span>` +
+    `<b>İtme</b><span>360 mm · 1,6 s · tepe hız ${f(H.itme_vmax, 0)} mm/s (kutu modülünün zamanı)</span>`;
+  document.getElementById('den').innerHTML += D.denetim.map(d => '<tr><td>' + d.ad + (d.deger ? ' · ' + d.deger : '') + '</td><td><span class="st ' + (d.sonuc === 'GEÇTİ' ? 'ok' : 'ac') + '">' + d.sonuc + '</span></td></tr>').join('');
+  const c = D.cakisma || {};
+  if (c.makine !== undefined) document.getElementById('cak').innerHTML = `<b>Çakışma taraması</b> (eşik 1 mm³): makine × makine 201 an (0,1 s) → <b>${c.makine}</b> · ürün yolu fırın bandından kutuya kadar (0,05 s) → <b>${c.urun}</b> · itici × kutu modülünün bütün parçaları + katlanan karton (8,3–11,4 s) → <b>${c.itici_E}</b>. ${D.surum}`;
+});
+</script>
+</body></html>

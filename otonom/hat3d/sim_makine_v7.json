@@ -1,0 +1,592 @@
+{
+ "surum": "sim_makine_v7 · TOPPING v2 (UNO'lu) · topping_uno_cad_v5 · topping_v2_hesap_v1",
+ "ofset": [
+  700.0,
+  1060.0,
+  0.0
+ ],
+ "hesap": {
+  "pide_r": 140.0,
+  "r_kap": 125.0,
+  "a_kap": 49087.385212340516,
+  "pide_ust": 116.0,
+  "yog": {
+   "SOS": 1.05,
+   "HARC": 1.0476190476190477,
+   "KIYMA": 1.0526315789473684,
+   "KUSBASI": 0.8529411764705882,
+   "KASAR": 0.4,
+   "SUCUK": 0.59
+  },
+  "rpm_yayici": 30.0,
+  "rampa_sn": 0.25,
+  "rpm_nokta": 35.0,
+  "r_ic": 20.0,
+  "serit": 0.8,
+  "tur_uno": 6.0,
+  "hava_sil": 32.0,
+  "hava_bar": 6.0,
+  "valf_sn": 0.2,
+  "kesme_valf_sn": 0.05,
+  "piston_min": 10.0,
+  "akis_n": 0.3
+ },
+ "istasyon": [
+  {
+   "kod": "SOS",
+   "ad": "Pizza sosu",
+   "tip": "YAYICI",
+   "x": 210.0,
+   "renk": "0xc0392b",
+   "taraf": 0,
+   "sil": 52.0,
+   "strok_max": 71.1,
+   "grup_piston": "PISTON_SOS",
+   "grup_valf": "VALF_SOS",
+   "piston": [
+    210.0,
+    298.5,
+    -436.0
+   ],
+   "valf": [
+    210.0,
+    298.5,
+    -387.0
+   ],
+   "bar_r": [
+    10.0,
+    121.0
+   ],
+   "bar_alt": 122.0,
+   "agiz_z": -170.0,
+   "yarik": [
+    [
+     10.0,
+     2.0
+    ],
+    [
+     30.0,
+     2.457481351690877
+    ],
+    [
+     60.0,
+     2.798551833432083
+    ],
+    [
+     90.0,
+     3.01960729695421
+    ],
+    [
+     121.0,
+     3.1919218714427267
+    ]
+   ],
+   "parca_mm": 6.0
+  },
+  {
+   "kod": "HARC",
+   "ad": "Lahmacun harcı",
+   "tip": "YAYICI",
+   "x": 560.0,
+   "renk": "0xa8402f",
+   "taraf": 0,
+   "sil": 52.0,
+   "strok_max": 71.1,
+   "grup_piston": "PISTON_HARC",
+   "grup_valf": "VALF_HARC",
+   "piston": [
+    560.0,
+    298.5,
+    -436.0
+   ],
+   "valf": [
+    560.0,
+    298.5,
+    -387.0
+   ],
+   "bar_r": [
+    10.0,
+    121.0
+   ],
+   "bar_alt": 122.0,
+   "agiz_z": -170.0,
+   "yarik": [
+    [
+     10.0,
+     6.0
+    ],
+    [
+     30.0,
+     7.372444055072631
+    ],
+    [
+     60.0,
+     8.39565550029625
+    ],
+    [
+     90.0,
+     9.05882189086263
+    ],
+    [
+     121.0,
+     9.57576561432818
+    ]
+   ],
+   "parca_mm": 6.0
+  },
+  {
+   "kod": "KIYMA",
+   "ad": "Kıyma",
+   "tip": "NOKTA",
+   "x": 895.0,
+   "renk": "0x9c4a3a",
+   "taraf": 1,
+   "sil": 70.0,
+   "strok_max": 71.5,
+   "grup_piston": "PISTON_KIYMA",
+   "grup_valf": "VALF_KIYMA",
+   "piston": [
+    895.0,
+    298.5,
+    -436.0
+   ],
+   "valf": [
+    895.0,
+    298.5,
+    -387.0
+   ],
+   "ic": 33.0,
+   "agiz_y": 156.0,
+   "agiz_z": -170.0,
+   "parca_mm": 11.0
+  },
+  {
+   "kod": "KUSBASI",
+   "ad": "Kuşbaşı",
+   "tip": "NOKTA",
+   "x": 1105.0,
+   "renk": "0x8c3f34",
+   "taraf": -1,
+   "sil": 70.0,
+   "strok_max": 71.5,
+   "grup_piston": "PISTON_KUSBASI",
+   "grup_valf": "VALF_KUSBASI",
+   "piston": [
+    1105.0,
+    298.5,
+    -436.0
+   ],
+   "valf": [
+    1105.0,
+    298.5,
+    -387.0
+   ],
+   "ic": 33.0,
+   "agiz_y": 156.0,
+   "agiz_z": -170.0,
+   "parca_mm": 11.0
+  },
+  {
+   "kod": "KASAR",
+   "ad": "Kaşar (rende)",
+   "tip": "KASET",
+   "x": 1361.0,
+   "renk": "0xf2d98a",
+   "taraf": -1,
+   "ic": 45.0,
+   "agiz_y": 156.0,
+   "agiz_z": -150.0,
+   "parca_mm": 15.0,
+   "g_tur": 14.285714285714286,
+   "rpm": 42.0,
+   "grup_helezon": "HELEZON_KASAR",
+   "grup_karis": "KARISTIRICI_KASAR",
+   "helezon": [
+    1361.0,
+    300.0,
+    0.0
+   ],
+   "karis": [
+    1361.0,
+    455.0,
+    0.0
+   ]
+  },
+  {
+   "kod": "SUCUK",
+   "ad": "Küp sucuk",
+   "tip": "KASET",
+   "x": 1593.0,
+   "renk": "0x8f2f2f",
+   "taraf": -1,
+   "ic": 42.0,
+   "agiz_y": 156.0,
+   "agiz_z": -150.0,
+   "parca_mm": 14.0,
+   "g_tur": 52.5,
+   "rpm": 8.0,
+   "grup_helezon": "HELEZON_SUCUK",
+   "grup_karis": "KARISTIRICI_SUCUK",
+   "helezon": [
+    1593.0,
+    320.0,
+    0.0
+   ],
+   "karis": [
+    1593.0,
+    424.0,
+    0.0
+   ]
+  }
+ ],
+ "recete": {
+  "pizza": {
+   "ad": "Pizza",
+   "doz": {
+    "SOS": 80.0,
+    "KASAR": 100.0,
+    "SUCUK": 70.0
+   },
+   "kaynak": "V · sim v1"
+  },
+  "lahmacun": {
+   "ad": "Lahmacun",
+   "doz": {
+    "HARC": 110.0
+   },
+   "kaynak": "K · stok 14 Eyl"
+  },
+  "kasarli": {
+   "ad": "Kaşarlı pide",
+   "doz": {
+    "KASAR": 130.0
+   },
+   "kaynak": "K · stok 14 Eyl"
+  },
+  "kiymali": {
+   "ad": "Kıymalı pide",
+   "doz": {
+    "KIYMA": 160.0
+   },
+   "kaynak": "K · stok 14 Eyl"
+  },
+  "kusbasili": {
+   "ad": "Kuşbaşılı pide",
+   "doz": {
+    "KUSBASI": 145.0
+   },
+   "kaynak": "K · stok 14 Eyl"
+  },
+  "sucuklu": {
+   "ad": "Sucuklu pide",
+   "doz": {
+    "KASAR": 90.0,
+    "SUCUK": 70.0
+   },
+   "kaynak": "K · stok 14 Eyl"
+  }
+ },
+ "karisik": {
+  "et": {
+   "KIYMA": 160.0,
+   "KUSBASI": 145.0,
+   "SUCUK": 70.0
+  },
+  "kasar": [
+   130.0,
+   90.0
+  ],
+  "sos": 80.0,
+  "kural": "seçilen etler tek porsiyonu paylaşır (her biri dozunun 1/n'i) · kaşar etle 90 g, yalnız 130 g · sos 80 g [V — Kemal onayına]"
+ },
+ "kontrol": {
+  "pizza": {
+   "sure": 50.16,
+   "sira": [
+    "SOS",
+    "KASAR",
+    "SUCUK"
+   ],
+   "hesap": {
+    "SOS": {
+     "ml": 76.19,
+     "alan": 2123.717,
+     "strok": 35.876,
+     "strok_orani": 0.505,
+     "hava_N": 482.549,
+     "urun_bar": 2.272,
+     "sure": 2.0,
+     "tur": 1.0,
+     "aci": 360.0,
+     "rampa_aci": 45.0,
+     "debi": 38.095,
+     "piston_hiz": 17.938,
+     "katman": 1.552,
+     "kenar_ivme_g": 0.141,
+     "duz_yarik_oran": 12.5
+    },
+    "KASAR": {
+     "sure": 10.0,
+     "tur": 5.833,
+     "aci": 2100.0,
+     "r_dis": 107.0,
+     "r_ic": 20.0,
+     "serit": 36.0,
+     "hatve_dis": 8.851,
+     "hatve_ic": 47.353,
+     "seyrek_r": 26.307,
+     "debi": 25.0,
+     "katman": 5.093,
+     "cikis_hiz": 15.719,
+     "parca_max": 15.0,
+     "kenar_ivme_g": 0.171,
+     "yuzey_hiz_dis": 392.175,
+     "x_hiz_max": 27.623,
+     "helezon_rpm": 42.0,
+     "helezon_tur": 7.0
+    },
+    "SUCUK": {
+     "sure": 10.0,
+     "tur": 5.833,
+     "aci": 2100.0,
+     "r_dis": 108.2,
+     "r_ic": 20.0,
+     "serit": 33.6,
+     "hatve_dis": 8.957,
+     "hatve_ic": 48.46,
+     "seyrek_r": 28.845,
+     "debi": 11.864,
+     "katman": 2.417,
+     "cikis_hiz": 8.564,
+     "parca_max": 14.0,
+     "kenar_ivme_g": 0.171,
+     "yuzey_hiz_dis": 396.574,
+     "x_hiz_max": 28.268,
+     "helezon_rpm": 8.0,
+     "helezon_tur": 1.333
+    }
+   }
+  },
+  "lahmacun": {
+   "sure": 29.92,
+   "sira": [
+    "HARC"
+   ],
+   "hesap": {
+    "HARC": {
+     "ml": 105.0,
+     "alan": 2123.717,
+     "strok": 49.442,
+     "strok_orani": 0.695,
+     "hava_N": 482.549,
+     "urun_bar": 2.272,
+     "sure": 2.0,
+     "tur": 1.0,
+     "aci": 360.0,
+     "rampa_aci": 45.0,
+     "debi": 52.5,
+     "piston_hiz": 24.721,
+     "katman": 2.139,
+     "kenar_ivme_g": 0.141,
+     "duz_yarik_oran": 12.5
+    }
+   }
+  },
+  "kasarli": {
+   "sure": 39.99,
+   "sira": [
+    "KASAR"
+   ],
+   "hesap": {
+    "KASAR": {
+     "sure": 13.0,
+     "tur": 7.583,
+     "aci": 2730.0,
+     "r_dis": 107.0,
+     "r_ic": 20.0,
+     "serit": 36.0,
+     "hatve_dis": 6.808,
+     "hatve_ic": 36.425,
+     "seyrek_r": 20.236,
+     "debi": 25.0,
+     "katman": 6.621,
+     "cikis_hiz": 15.719,
+     "parca_max": 15.0,
+     "kenar_ivme_g": 0.171,
+     "yuzey_hiz_dis": 392.175,
+     "x_hiz_max": 21.248,
+     "helezon_rpm": 42.0,
+     "helezon_tur": 9.1
+    }
+   }
+  },
+  "kiymali": {
+   "sure": 38.46,
+   "sira": [
+    "KIYMA"
+   ],
+   "hesap": {
+    "KIYMA": {
+     "ml": 152.0,
+     "alan": 3848.451,
+     "strok": 39.496,
+     "strok_orani": 0.552,
+     "hava_N": 482.549,
+     "urun_bar": 1.254,
+     "sure": 10.286,
+     "tur": 6.0,
+     "aci": 2160.0,
+     "r_dis": 111.8,
+     "r_ic": 20.0,
+     "serit": 26.4,
+     "hatve_dis": 9.019,
+     "hatve_ic": 50.413,
+     "seyrek_r": 38.192,
+     "debi": 14.778,
+     "katman": 3.097,
+     "cikis_hiz": 17.278,
+     "parca_max": 11.0,
+     "kenar_ivme_g": 0.171,
+     "yuzey_hiz_dis": 409.768,
+     "x_hiz_max": 29.408,
+     "piston_hiz": 3.84
+    }
+   }
+  },
+  "kusbasili": {
+   "sure": 37.55,
+   "sira": [
+    "KUSBASI"
+   ],
+   "hesap": {
+    "KUSBASI": {
+     "ml": 170.0,
+     "alan": 3848.451,
+     "strok": 44.174,
+     "strok_orani": 0.618,
+     "hava_N": 482.549,
+     "urun_bar": 1.254,
+     "sure": 10.286,
+     "tur": 6.0,
+     "aci": 2160.0,
+     "r_dis": 111.8,
+     "r_ic": 20.0,
+     "serit": 26.4,
+     "hatve_dis": 9.019,
+     "hatve_ic": 50.413,
+     "seyrek_r": 38.192,
+     "debi": 16.528,
+     "katman": 3.463,
+     "cikis_hiz": 19.324,
+     "parca_max": 11.0,
+     "kenar_ivme_g": 0.171,
+     "yuzey_hiz_dis": 409.768,
+     "x_hiz_max": 29.408,
+     "piston_hiz": 4.295
+    }
+   }
+  },
+  "sucuklu": {
+   "sure": 46.11,
+   "sira": [
+    "KASAR",
+    "SUCUK"
+   ],
+   "hesap": {
+    "KASAR": {
+     "sure": 9.0,
+     "tur": 5.25,
+     "aci": 1890.0,
+     "r_dis": 107.0,
+     "r_ic": 20.0,
+     "serit": 36.0,
+     "hatve_dis": 9.834,
+     "hatve_ic": 52.614,
+     "seyrek_r": 29.23,
+     "debi": 25.0,
+     "katman": 4.584,
+     "cikis_hiz": 15.719,
+     "parca_max": 15.0,
+     "kenar_ivme_g": 0.171,
+     "yuzey_hiz_dis": 392.175,
+     "x_hiz_max": 30.692,
+     "helezon_rpm": 42.0,
+     "helezon_tur": 6.3
+    },
+    "SUCUK": {
+     "sure": 10.0,
+     "tur": 5.833,
+     "aci": 2100.0,
+     "r_dis": 108.2,
+     "r_ic": 20.0,
+     "serit": 33.6,
+     "hatve_dis": 8.957,
+     "hatve_ic": 48.46,
+     "seyrek_r": 28.845,
+     "debi": 11.864,
+     "katman": 2.417,
+     "cikis_hiz": 8.564,
+     "parca_max": 14.0,
+     "kenar_ivme_g": 0.171,
+     "yuzey_hiz_dis": 396.574,
+     "x_hiz_max": 28.268,
+     "helezon_rpm": 8.0,
+     "helezon_tur": 1.333
+    }
+   }
+  }
+ },
+ "tabla": {
+  "cap": 340.0,
+  "eksen_z": -170.0,
+  "pivot": [
+   -350.0,
+   0.0,
+   -170.0
+  ],
+  "baslangic_x": -350.0,
+  "x_gecis_hiz": 200.0,
+  "rampa_x": 0.3,
+  "acici_x": -350.0,
+  "aktarma_x": 1637.0
+ },
+ "x": {
+  "motor": "NEMA23 kapalı çevrim step 1,2 N·m",
+  "tahrik": "GT3 20 diş kasnak",
+  "mm_tur": 60.0,
+  "cozunurluk_mm": 0.01875,
+  "home_x": -350.0,
+  "limit": [
+   -380.0,
+   1660.0
+  ]
+ },
+ "pide": {
+  "yaricap": 140.0,
+  "disk_ust": 108.0,
+  "ust_y": 116.0,
+  "hamur_k": 8.0,
+  "top_r": 49.0
+ },
+ "acici": {
+  "x": -350.0,
+  "tepe_y": 116.0,
+  "boy": 140.0,
+  "taban_r": 45.0,
+  "yarim_aci": 17.82,
+  "kalkis": 60.0,
+  "in_sn": 0.8,
+  "ac_sn": 3.0,
+  "kalk_sn": 0.6,
+  "koni_rpm": 114.4
+ },
+ "aktarma": {
+  "x": 1637.0,
+  "bant_burun_x": 1815.0,
+  "bant_son_x": 2195.0,
+  "bant_y": 106.0,
+  "bant_hiz": 120.0,
+  "burun_r": 10.0,
+  "tahrik_r": 30.0
+ }
+}

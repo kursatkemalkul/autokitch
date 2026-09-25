@@ -1,48 +1,87 @@
-<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>TOPPING v2 · UNO'lu</title><link rel="stylesheet" href="hat.css?v=11"><script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script><script src="model3d.js?v=16"></script>
-<style>.m3 model-viewer{height:min(76vh,700px);min-height:400px}table.t{width:100%;border-collapse:collapse;font-size:13.5px}table.t td,table.t th{border-bottom:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}table.t th{color:var(--mut);font-size:12.5px}</style></head><body>
+<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>TOPPING v2 · UNO'lu</title><link rel="stylesheet" href="hat.css?v=11"><script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script>
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script><script src="model3d.js?v=16"></script>
+<style>.m3 model-viewer{height:min(76vh,700px);min-height:400px}table.t{width:100%;border-collapse:collapse;font-size:13.5px}table.t td,table.t th{border-bottom:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}table.t th{color:var(--mut);font-size:12.5px}.bul{border-left:4px solid #c47c18;background:#fdf7ee}</style></head><body>
 <div class="top"><div class="in"><div class="crumb"><a href="../">Store</a><span>›</span><a href="index.html">HAT</a><span>›</span><a href="topping.html">3 · TOPPING</a><span>›</span><b>TOPPING v2 · UNO'lu</b></div><div><a href="topping.html">← TOPPING v1</a></div></div></div>
-<div class="wrap"><h1>TOPPING v2 — UNO'lu<span class="tag" style="background:#2456c8">öneri · 3B</span></h1>
-<p class="lead">Mevcut TOPPING "v1" sayılıyor. v2'de sos, harç, kıyma ve kuşbaşı birer <b>Beltop UNO çekirdeğiyle</b> dozlanıyor; kaşar ve küp sucuk bizim kasetlerde kalıyor. UNO parçaları <a href="beldos.html">Beldos sayfasındaki UNO modelinin</a> aynısı. Pnömatik korunuyor; kompresör K modülünün taban dolabında, hava hattı modelde mavi. Parçaya dokununca adı ve kaynağı çıkar. Ön kapak modelde yok, içi görünsün diye.</p>
+<div class="wrap"><h1>TOPPING v2 — UNO'lu<span class="tag" style="background:#2456c8">model v5 · hesaplı</span></h1>
+<p class="lead">Sos, harç, kıyma ve kuşbaşı birer <b>Beltop UNO çekirdeğiyle</b> dozlanıyor; kaşar ve küp sucuk bizim kasetlerde. UNO parçaları <a href="beldos.html">Beldos sayfasındaki UNO modelinin</a> aynısı. Parçaya dokununca adı ve kaynağı çıkar. Ön kapak modelde yok, içi görünsün diye.</p>
+<p class="lead" style="margin:-6px 0 14px"><button class="simbtn" id="simac">▶ CANLI SİMÜLASYON</button> <span style="color:#8a9199;font-size:13.5px">&nbsp; sayfadan çıkmadan açılır. Sağdaki panelden ürünü seç, <b>seçince başlar</b>. Karışık için malzemeleri işaretle. Panelde her istasyonun hesabı (gram → ml, piston stroku, tabla turu, süre, katman), canlı eksen değerleri, yanan motor/valf ve o an çalışan kod satırı görünür. UNO pistonu ve döner valfi, kasetin helezonu ve karıştırıcısı modelde gerçekten hareket eder.</span></p>
 <div class="m3">
-  <model-viewer id="mv" loading="eager" src="../hat3d/topping_uno_v4.glb?v=4" alt="TOPPING v2 — 4 UNO çekirdeği + 2 kaset + hava tesisatı" autoplay
+  <model-viewer id="mv" loading="eager" src="../hat3d/topping_uno_v5.glb?v=5" alt="TOPPING v2 — 4 UNO çekirdeği + 2 kaset + hava tesisatı" autoplay
       camera-controls touch-action="pan-y" shadow-intensity="0.5" exposure="1.05" environment-image="neutral"
       camera-orbit="-28deg 68deg auto" field-of-view="30deg" min-field-of-view="5deg" min-camera-orbit="auto auto 0.2m"></model-viewer>
   <div class="et" id="et"></div>
   <div class="ip">sürükle: döndür · parçaya dokun: adı · alttan kesit + ölçü</div>
 </div>
-<div class="card"><table class="t"><tr><th>İstasyon</th><th>Ne</th><th>Hazne (2 gün)</th><th>Silindir</th><th>Ağız</th></tr>
-<tr><td>SOS</td><td>UNO çekirdeği</td><td>15 L (varsayım, günlük miktar yok)</td><td>Ø52</td><td>Beldos spreader başlığı · boru 133 · yarık 3</td></tr>
-<tr><td>HARÇ</td><td>UNO çekirdeği</td><td>45 L (43,2 kg gerek)</td><td>Ø52</td><td>Beldos spreader başlığı · boru 133 · yarık 6</td></tr>
-<tr><td>KIYMA</td><td>UNO çekirdeği</td><td>8 L (6,1 L gerek)</td><td>Ø70 (160 g ≈ 152 ml &gt; Ø52'nin 151 ml'si)</td><td>yuvarlak Ø36 · ucu 1216</td></tr>
-<tr><td>KUŞBAŞI</td><td>UNO çekirdeği</td><td>8 L (6,8 L gerek)</td><td>Ø70</td><td>yuvarlak Ø36 · ucu 1216</td></tr>
-<tr><td>KAŞAR</td><td>bizim rende kaseti</td><td>8,8 kg</td><td>—</td><td>Ø44 boru</td></tr>
-<tr><td>KÜP SUCUK</td><td>bizim kaset</td><td>2,8 kg</td><td>—</td><td>Ø42 boru</td></tr></table>
-<p class="note">Toplam genişlik 1764 mm, modül 1800. Tavan yalnız sos ve harç üstünde 1968'e yükseliyor; teknik bant kıyma–sucuk üstünde kalıyor.</p></div>
-<h2>Sos ve harç ağzı · Beldos spreader başlığı (v3)</h2>
-<div class="card"><div class="kv">
-<b>Parçalar</b><span>Beldos'un sitesindeki spreader attachment görseliyle aynı: TC kelepçeli giriş → dik boru, yanında braketli <b>havalı kesme valfi</b> (damlatmaz, hava hortumlu) → <b>üçgen dağıtıcı gövde</b> → altı yarıklı <b>yatay dağıtıcı boru</b>, iki ucu beyaz tapalı. Ölçüler görselden oranla, varsayım. (v2'deki düz bıçak yerine.)</span>
-<b>Bizde</b><span>Dağıtıcı boru tabla ekseninde (z −170), x yönünde, merkezden kenara 125 mm (kenarda 15 mm boş). Ağzı pideden 6 mm yukarıda. Tabla merkezini bıçağın iç ucuna getirir, dozaj boyunca yalnız döner; x kayması yok. Animasyonda tabla basma sırasında bir tur dönüyor.</span>
-<b>Yarık</b><span>sos 3 mm · harç 6 mm (parçacık için) · ölçüler varsayım; Beldos'un bıçak boyları ve yarıkları sorulacak.</span>
-<b>Taşıyıcı raf (v4)</b><span>Kalın PU yalıtım tabanı kalktı; UNO'lar, hazneler ve kasetler 3 mm AISI 304 rafın üstünde (önü ve arkası 40 mm aşağı bükülü, kiriş gibi çalışır). Yük: dolu hazneler + 4 UNO + 2 kaset = 154 kg → sehim 3,4 mm (açıklık 1620, L/477), gerilme 92 MPa, emniyet 2,3. Ağızlar ve kaset boruları raftaki deliklerden iner; kaşar ve sucuk için raftan pideye kısa iniş borusu var. Spreader artık rafın altında serbest.</span>
-<b>Kıyma · kuşbaşı</b><span>yuvarlak Ø36 ağız (serpme); küp yassı ağızda sıkışır.</span>
+
+<h2>Dozaj hesabı · ne kadar döker, tabla ne kadar döner</h2>
+<div class="card"><p style="margin-top:0">Pizza tablada açıcıdan çıkıp <b>sos yayıcısının altına</b> gelir: tabla merkezi yarıklı borunun iç ucunun tam altında durur, x'te kaymaz. Sos UNO'su açıcı çalışırken emmiştir. Döner valf ağıza döner, tabla 0,25 s'de 30 dev/dk'ya çıkar (bu sırada kesme valfi kapalı, sos akmaz). Sonra kesme valfi açılır, piston strokunu bitirirken tabla <b>tam 1 tur</b> döner (2,0 s), valf kapanır, tabla durur. Bütün sayılar <code>topping_v2_hesap_v1.py</code> dosyasından geliyor; model ve simülasyon aynı dosyayı okuyor.</p>
+<table class="t" id="hes"><tr><th>İstasyon</th><th>Doz</th><th>Makine</th><th>Tabla</th><th>Süre</th><th>Katman</th></tr></table>
+<p class="note" id="hesnot"></p></div>
+<div class="card bul"><b style="color:#a2600a">HESAPTAN ÇIKAN 4 BULGU</b><div class="kv" style="margin-top:8px">
+<b>1 · Düz yarık olmaz</b><span>Dönen tablada r yarıçapındaki halka her turda 2πr·dr kadar alan geçirir. Yarık düz olursa borunun her milimetresi aynı debiyi verir ve merkez kenardan <b>12,5 kat kalın</b> kaplanır. Çözüm modelde: yarık <b>kama</b> şeklinde, debi yarıçapla orantılı. Sosta 2,0 → 3,2 mm, harçta 6,0 → 9,6 mm (r 10 → 121). Profil sos için akış indeksi n = 0,3 varsayımıyla hesaplandı (VARSAYIM). Yarık değiştirilebilir alt lamda olacak; pilotta sosla ayarlanır.</span>
+<b>2 · Kıyma ve kuşbaşı pistonu çok yavaş</b><span>6 turluk spiralde (10,3 s) kıyma pistonu 3,8 mm/s, kuşbaşı pistonu 4,3 mm/s ilerliyor. Standart pnömatik silindir 10 mm/s'nin altında takılıp kayabilir. Pilotta denenecek; olmazsa servo sürüm (Unifiller 1000si sınıfı) kullanılır.</span>
+<b>3 · Kıyma tablanın SAĞINDAN dozlanıyor</b><span>Tabla kıyma ağzının solunda dururken pidenin kenarı harç borusunun altına giriyor (boru pideden 6 mm yukarıda, kıyma şeridi 4–7 mm). Kıymada tabla ağzın sağında duruyor. Engel denetimi 8/8 geçti.</span>
+<b>4 · Kuşbaşı parçası en çok 11 mm</b><span>UNO yuvarlak ağzı iç Ø33. Köprüleme kuralına göre (ağız ≥ 3 × parça) en büyük parça 11 mm. Kuşbaşı daha iri doğranırsa ağız Ø52'ye büyümeli.</span>
 </div></div>
-<h2>Hava tesisatı</h2><p class="note">Valf adası 12 × 5/2 (2 spreader kesme valfi eklendi) · kuru bölmenin solunda, evaporatörün yanında. Ana montaj v42'de: <a href="makine.html">Makine</a>.</p>
+
+<h2>İstasyonlar</h2>
+<div class="card"><table class="t"><tr><th>İstasyon</th><th>Ne</th><th>Hazne (2 gün)</th><th>Silindir</th><th>Ağız</th></tr>
+<tr><td>SOS</td><td>UNO çekirdeği</td><td>15 L (varsayım, günlük miktar yok)</td><td>Ø52</td><td>Beldos spreader başlığı · boru 133 · <b>kama yarık 2,0 → 3,2</b></td></tr>
+<tr><td>HARÇ</td><td>UNO çekirdeği</td><td>45 L (43,2 kg gerek)</td><td>Ø52</td><td>Beldos spreader başlığı · boru 133 · <b>kama yarık 6,0 → 9,6</b></td></tr>
+<tr><td>KIYMA</td><td>UNO çekirdeği</td><td>8 L (6,1 L gerek)</td><td>Ø70 (160 g ≈ 152 ml &gt; Ø52'nin 151 ml'si)</td><td>yuvarlak iç Ø33 · ucu pideden 40</td></tr>
+<tr><td>KUŞBAŞI</td><td>UNO çekirdeği</td><td>8 L (6,8 L gerek)</td><td>Ø70</td><td>yuvarlak iç Ø33 · ucu pideden 40</td></tr>
+<tr><td>KAŞAR</td><td>bizim rende kaseti</td><td>8,8 kg</td><td>—</td><td>Ø45 iniş borusu</td></tr>
+<tr><td>KÜP SUCUK</td><td>bizim kaset</td><td>2,8 kg</td><td>—</td><td>Ø42 iniş borusu</td></tr></table>
+<p class="note">Toplam genişlik 1764 mm, modül 1800. Tavan yalnız sos ve harç üstünde 1968'e yükseliyor; teknik bant kıyma–sucuk üstünde kalıyor.</p></div>
+<h2>Sos ve harç ağzı · Beldos spreader başlığı</h2>
 <div class="card"><div class="kv">
-<b>Kompresör</b><span>JUN-AIR OF302-15B · yağsız · 15 L tank · 380 × 380 × 510 · 25 kg · 7 bar'da 43 L/dk · 65 dB. Yeri: <b>K modülünün taban dolabı</b> (boş). Hat saatte ~100 L hava harcıyor, kompresör saatte birkaç dakika çalışır.</span>
+<b>Parçalar</b><span>Beldos'un sitesindeki spreader attachment görseliyle aynı: TC kelepçeli giriş → dik boru, yanında braketli <b>havalı kesme valfi</b> (damlatmaz) → <b>üçgen dağıtıcı gövde</b> (borunun boyunca basıncı eşitler) → altı yarıklı <b>yatay dağıtıcı boru</b>, iki ucu beyaz tapalı. Ölçüler görselden oranla, varsayım.</span>
+<b>Bizde</b><span>Dağıtıcı boru tabla ekseninde (z −170), x yönünde, merkezden kenara 125 mm (kenarda 15 mm boş). Ağzı pideden 6 mm yukarıda. Tabla merkezini borunun iç ucuna getirir, dozaj boyunca yalnız döner.</span>
+<b>Yarık (v5)</b><span>kama: debi ∝ r → düzgün katman (sos 1,55 mm, harç 2,14 mm). Beldos'a boru boyu, yarık ve değiştirilebilir lam sorulacak.</span>
+<b>Taşıyıcı raf</b><span>UNO'lar, hazneler ve kasetler 3 mm AISI 304 rafın üstünde (önü ve arkası 40 mm aşağı bükülü). Yük 154 kg → sehim 3,4 mm (L/477), gerilme 92 MPa, emniyet 2,3.</span>
+</div></div>
+<h2>Hava tesisatı</h2>
+<div class="card"><div class="kv">
+<b>Kompresör</b><span>JUN-AIR OF302-15B · yağsız · 15 L tank · 380 × 380 × 510 · 25 kg · 7 bar'da 43 L/dk · 65 dB. Yeri: K modülünün taban dolabı, arkada. K istasyonunun kesicisi de bu hattan beslenir (kesim başına 5,1 NL).</span>
 <b>Ana hat</b><span>Ø10 PU: K tabanı → F tabanının arka köşesindeki kanal (z −790, kot 1040) → TOPPING'e sağ alttan girer.</span>
-<b>Şartlandırıcı</b><span>filtre + regülatör + ana vana · TOPPING kuru bölmesi, sağ.</span>
-<b>Valf adası</b><span>10 × 5/2 elektro-valf: 4 piston + 4 döner valf + açıcı + yedek · kuru bölme, üstte.</span>
-<b>Hortumlar</b><span>Ø6: hava silindirlerine kuru bölmede; döner valf eyleyicilerine yalıtımdaki keçeli geçiş bloğundan soğuk hücreye; açıcının Z silindirine sol duvardan A modülüne.</span>
+<b>Valf adası</b><span>12 × 5/2 elektro-valf: 4 piston + 4 döner valf + 2 spreader kesme valfi + açıcı + yedek · kuru bölmede.</span>
 </div></div>
 <h2>Teknik resim</h2><figure><img src="img/TOPPING_MONTAJ_v2_teknik.png?v=1" alt="TOPPING montaj paftası v2" loading="lazy"><figcaption>TOPPING montaj paftası v2 · ön, üst, harç istasyonundan yan kesit</figcaption></figure>
 <h2>Denetim</h2><div class="card"><table class="t" id="den"><tr><th>Kontrol</th><th>Sonuç</th></tr></table></div>
-<p class="note">Model: arastirma/_uretec/topping_uno_cad_v4.py → otonom/hat3d/topping_uno_v4.glb (v1–v3 duruyor) · ana montaj: hat_montaj_v43 · <span id="sur"></span></p>
+<h2>Sürüm geçmişi</h2><ul class="ver">
+<li><b>v5 (26 Eyl 2026):</b> dozaj hesabı (topping_v2_hesap_v1) + canlı simülasyon (makine_kodu_v2.js · sim3d_v2.js). Yayıcı yarığı kama; kaşar/sucuk helezon ve karıştırıcısı ayrı döner parça. Ana montaj v45.</li>
+<li>v4 (25 Eyl): kalın PU taban yerine 3 mm taşıyıcı raf.</li>
+<li>v3 (25 Eyl): Beldos spreader başlığı. · v2: düz kaplama bıçağı. · v1: UNO'lu TOPPING önerisi.</li></ul>
+<p class="note">Model: arastirma/_uretec/topping_uno_cad_v5.py → otonom/hat3d/topping_uno_v5.glb · hesap: topping_v2_hesap_v1.py · simülasyon: sim_makine_v7.py → sim_makine_v7.json · ana montaj: hat_montaj_v45 · <span id="sur"></span></p>
 </div>
 <script>
-fetch('../hat3d/topping_uno_v4.json?v=4').then(r => r.json()).then(D => {
+fetch('../hat3d/topping_uno_v5.json?v=5').then(r => r.json()).then(D => {
   const M = model3d({mv: 'mv', etiket: 'et', grup: 'kod', hedef: () => '', yazi: g => { const b = g.birimler[0]; return '<b>' + b.ad.replace(/_/g, ' ') + '</b><span>' + (b.not_ || '') + '</span>'; }});
   M.veri(D.parcalar.map(p => ({mal: p.ad, kod: p.ad, ad: p.ad, not_: p.not_, durum: ''})));
   document.getElementById('den').innerHTML += D.denetim.map(d => '<tr><td>' + d.ad + '</td><td><span class="st ' + (d.sonuc === 'GEÇTİ' ? 'ok' : 'ac') + '">' + d.sonuc + '</span></td></tr>').join('');
   document.getElementById('sur').textContent = D.surum;
 });
+fetch('../hat3d/sim_makine_v7.json?v=1').then(r => r.json()).then(S => {
+  const f = (v, n = 1) => (+v).toFixed(n).replace('.', ',');
+  const I = Object.fromEntries(S.istasyon.map(i => [i.kod, i]));
+  let h = '';
+  for (const [k, u] of Object.entries(S.kontrol)) {
+    h += `<tr><td colspan="6" style="background:#f4f7fd;font-weight:700">${S.recete[k].ad} <span style="font-weight:400;color:#6b7280">· çevrim ${f(u.sure)} s (açıcıdan açıcıya) · saatte ${Math.round(3600 / u.sure)} · kaynak ${S.recete[k].kaynak}</span></td></tr>`;
+    for (const s of u.sira) {
+      const x = u.hesap[s], i = I[s], g = S.recete[k].doz[s];
+      const mak = i.tip === 'YAYICI' ? `UNO Ø${i.sil} · strok ${f(x.strok)} mm (%${Math.round(100 * x.strok_orani)}) · piston ${f(x.piston_hiz)} mm/s`
+        : i.tip === 'NOKTA' ? `UNO Ø${i.sil} · strok ${f(x.strok)} mm · piston ${f(x.piston_hiz, 2)} mm/s · şerit ${f(x.serit)}`
+        : `helezon ${i.rpm} dev/dk × ${f(x.helezon_tur)} tur · şerit ${f(x.serit)}`;
+      const tab = i.tip === 'YAYICI' ? `30 dev/dk · <b>tam 1 tur (360°)</b>` : `35 dev/dk · ${f(x.tur, 2)} tur spiral · r ${f(x.r_dis, 0)} → ${f(x.r_ic, 0)}`;
+      h += `<tr><td>${i.ad}</td><td>${f(g, 0)} g = ${f(x.ml)} ml</td><td>${mak}</td><td>${tab}</td><td>${f(x.sure)} s</td><td>${f(x.katman, 2)} mm</td></tr>`;
+    }
+  }
+  document.getElementById('hes').innerHTML += h;
+  document.getElementById('hesnot').innerHTML = 'Spiralde ağız pidenin dışından içe iner, r² zamanla doğrusal azalır (eşit alan hızı). Tabla 35 dev/dk: pidenin kenarında 0,17 g; küp sucuğun kaymaması için sürtünme ≥ 0,17 yeter. Yayıcıda 30 dev/dk (0,14 g). Karışık: ' + S.karisik.kural + '. Çevrim süresine açıcı (4,4 s), geçişler (200 mm/s) ve aktarma dahil; fırın, kesme ve kutu hariç.';
+});
+document.getElementById('simac').onclick = async function () {
+  const m = await import('./sim3d_v2.js?v=1');
+  await m.ac(document.querySelector('.m3'), this);
+  this.textContent = document.querySelector('.m3').classList.contains('sim-on') ? '■ SİMÜLASYONU KAPAT' : '▶ CANLI SİMÜLASYON';
+};
 </script></body></html>

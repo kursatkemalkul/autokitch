@@ -1,17 +1,21 @@
 <!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>MAKİNE — 3B üretim modeli</title><link rel="stylesheet" href="hat.css?v=10">
-<script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script><script src="model3d.js?v=16"></script></head><body>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script><script src="model3d.js?v=16"></script>
+<style>.zc{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;padding:10px 16px;background:#1b1f26;border-top:1px solid #2a3039}.zc button{border:1px solid #39424f;background:#232932;color:#cfd6df;border-radius:8px;padding:6px 11px;font:600 12.5px system-ui,sans-serif;cursor:pointer}.zc input[type=range]{flex:1 1 220px;accent-color:#4f86ff}.zc .sn{color:#8d97a4;font:600 12px system-ui,sans-serif;font-variant-numeric:tabular-nums;min-width:70px}.adim{display:flex;flex-wrap:wrap;gap:6px;padding:0 16px 12px;background:#1b1f26}.adim button{border:1px solid #2f3742;background:#1f252d;color:#aab4c0;border-radius:999px;padding:4px 10px;font:600 11.5px system-ui,sans-serif;cursor:pointer}.adim button.ak{border-color:#e0a31c;background:#3a2f14;color:#ffd978}.anlat{padding:8px 16px 14px;background:#1b1f26;color:#dce3ea;font:14px/1.45 system-ui,sans-serif;min-height:42px}.anlat b{color:#ffd978}</style></head><body>
 <div class="top"><div class="in"><div class="crumb"><a href="../">Store</a><span>&rsaquo;</span><a href="index.html">HAT</a><span>&rsaquo;</span><b>Makine</b></div><div><a href="index.html">&larr; HAT</a></div></div></div>
 <div class="wrap"><h1>MAKİNE &mdash; 3B üretim modeli<span class="tag" style="background:#d94a3a">5430 &times; 830 &times; 2030</span></h1>
 <p class="lead">Hattın tamamı tek modelde. <b>Üstüne gel</b> &mdash; adı çıkar. <b>Çift tıkla</b> &mdash; o istasyonun kendi modeli açılır. Modelin altındaki çubuktan <b>kesit</b> alabilir (X/Y/Z) ve iki noktaya tıklayıp <b>ölçü</b> çıkarabilirsin.</p>
 
 <div class="m3">
-  <model-viewer id="mv" loading="eager" src="../hat3d/hat_v44.glb?v=44" ios-src="../hat3d/hat_v44.usdz?v=44" alt="AUTOKITCH hat üretim modeli"
+  <model-viewer id="mv" loading="eager" src="../hat3d/hat_v45.glb?v=45" ios-src="../hat3d/hat_v45.usdz?v=45" alt="AUTOKITCH hat üretim modeli" autoplay
       camera-controls touch-action="pan-y" shadow-intensity="0.6" exposure="1.0" environment-image="neutral"
       camera-orbit="30deg 74deg 9.8m" camera-target="2.72m 1m -0.4m" field-of-view="30deg" min-field-of-view="6deg"
       ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
   <div class="et" id="et"></div>
   <button class="ar" onclick="document.getElementById('mv').activateAR()">AR'de gör</button>
   <div class="ip">sürükle: döndür &middot; tekerlek: yakınlaştır &middot; üstüne gel: istasyon &middot; çift tıkla: aç &middot; alttan kesit + ölçü</div>
+  <div class="zc"><button id="oy">duraklat</button><input id="tz" type="range" min="0" max="84" step="0.05" value="0"><span class="sn" id="sn">0,0 / 84 sn</span></div>
+  <div class="adim" id="adim"></div>
+  <div class="anlat" id="anlat"></div>
 </div>
 <div class="secim" id="secim"></div>
 <p class="note" id="ozet"></p>
@@ -29,21 +33,22 @@
 <b>Toplam hat</b><span>5430 &times; 830 &times; 2030 mm (pafta v8)</span>
 <b>Çekmece modülü</b><span>B gerçek üretim modeli v2: 21 fitilli motorlu çekmece (Transmotec motor + GT3 kayış yan bantta + Accuride ray + açık/kapalı reed), K4 Secop soğutma + depo + niş, K1 üstünde S7-1200 pano · <a href="store.html">1 · STORE</a></span>
 <b>Kutu modülü</b><span>E gerçek üretim modeli v3: standart 32 × 32 × 4,2 kutu, 567'lik şarjör, itici, zımba kalıbı, köprü, piston, devirme parmağı, U flap katlayıcı, kapak kolu, pano · 7 NEMA 23 · <a href="pack.html">5 · PACK</a></span>
-<b>Animasyon</b><span>ana montaj durağan. Hareket istasyon sayfalarında oynar: <a href="store.html">1 · STORE</a> (çekmeceler, üç parçalı ray) · <a href="pack.html">5 · PACK</a> (blank → kutu → pizza → kapak)</span>
+<b>Animasyon</b><span><b>1 tam döngü (84 s):</b> bir pizza (sos 80 g · kaşar 100 g · küp sucuk 70 g) çekmeceden QR dolabına gidiyor. Her hareket makinenin kendi kinematiğinden geliyor; fırın hızlandırıldı (gerçekte ~4 dk). Robot hâlâ ölçü kutusu, gerçek kol modeli yok. İstasyon sayfaları kendi döngülerini oynatıyor: <a href="store.html">1 · STORE</a> · <a href="topping_v2.html">TOPPING v2 canlı simülasyon</a> · <a href="kesme.html">4b · KESME</a> · <a href="pack.html">5 · PACK</a></span>
 <b>Taban hizası</b><span>Üst: A, C, F, K istasyonları <b>1060</b>'ta başlar, bantlar 1168'de. Alt: bütün gövdeler yerden <b>123</b>'te başlar (en alt çekmecenin 3 mm altı), altları ayak + süpürgelik (60 geride). E kutu katlama tek parça</span>
 <b>Süreç kotu</b><span>TOPPING modelinden ölçülür: disk 1168 &middot; fırın bandı 1166 (290 geniş, eksen z −170) &middot; kesme plakası 1164 &middot; kutu tepsisi 1104</span>
 <b>Robot</b><span>tek Fairino FR5, yer rayında, omuz 970, erişim 779 &middot; QR teslim dolabı koridorun karşısında</span>
-<b>Ölçü kaynağı</b><span>HAT ATOSA TABLALI v8 teknik resmi (25 Eyl, montaj v41 ile eşit) + TOPPING üretim modeli (topping_cad_v22) + E kutu modülü (kutu_cad_v3, 830) + B çekmece modülü (store_cad_v4)</span>
+<b>Ölçü kaynağı</b><span>HAT ATOSA TABLALI v12 teknik resmi (26 Eyl, montaj v45 ile eşit) · K kesme_cad_v1 + TOPPING üretim modeli (topping_cad_v22) + E kutu modülü (kutu_cad_v3, 830) + B çekmece modülü (store_cad_v4)</span>
 <b>Kontrol</b><span>üreteç çalışırken: süreç kotu CAD'den ölçülür &middot; taban hizası denetlenir &middot; hiçbir birim hat zarfını aşamaz &middot; TOPPING ile fırın/kesme/kutu arasındaki kesişimler raporlanır</span>
 </div></div>
 
 <h2>3 &middot; Teknik resim</h2>
-<figure><a href="img/HAT_ATOSA_TABLALI_v11_teknik.png" target="_blank"><img src="img/HAT_ATOSA_TABLALI_v11_teknik.png" alt="HAT ATOSA TABLALI teknik resim v11" loading="lazy"></a><figcaption>HAT ATOSA TABLALI v11 (25 Eyl) &mdash; model v44 ile aynı: çekmece modülü tam kaplayan kapaklarla (aralar 3 mm), içecek tek kat, K4'te kaşar + sucuk deposu; fırın tabanında bulaşık makinesi + temizlik + 4 günlük pizza kutusu yedeği, arkada robot kutusu + ana pano + UPS; kesme tabanında içecek yedeği, arkada kompresör. Önceki (v10): TOPPING v2 (4 UNO çekirdeği havalı + sos/harç spreader + kaşar/küp sucuk kaseti + 3 mm taşıyıcı raf), valf adası ve şartlandırıcı kuru bölmede, kompresör K tabanında (yeri açık). Büyük hali için resme tıkla.</figcaption></figure>
-<div class="thumbs"><a href="img/HAT_ATOSA_TABLALI_v10_teknik.png" target="_blank"><img src="img/HAT_ATOSA_TABLALI_v10_teknik.png" loading="lazy"><span>v10 · 25 Eyl</span></a><a href="img/HAT_ATOSA_TABLALI_v8_teknik.png" target="_blank"><img src="img/HAT_ATOSA_TABLALI_v8_teknik.png" loading="lazy"><span>v8 · 25 Eyl</span></a><a href="img/HAT_ATOSA_TABLALI_v7_teknik.png" target="_blank"><img src="img/HAT_ATOSA_TABLALI_v7_teknik.png" loading="lazy"><span>v7 · 24 Eyl</span></a></div>
+<figure><a href="img/HAT_ATOSA_TABLALI_v12_teknik.png" target="_blank"><img src="img/HAT_ATOSA_TABLALI_v12_teknik.png" alt="HAT ATOSA TABLALI teknik resim v12" loading="lazy"></a><figcaption>HAT ATOSA TABLALI v12 (26 Eyl) &mdash; model v45 ile aynı: K istasyonu gerçek model (K bandı, kesici + sprey aynı kafada, 20° çit, kısa stroklu itici, taban arkasında tereyağı tankı + pano), TOPPING yayıcısında kama yarık. <a href="../../arastirma/FULL_MAKINE/HAT_ATOSA_TABLALI_v12.pdf">PDF</a>. Önceki (v11): çekmece modülü tam kaplayan kapaklarla (aralar 3 mm), içecek tek kat, K4'te kaşar + sucuk deposu; fırın tabanında bulaşık makinesi + temizlik + 4 günlük pizza kutusu yedeği, arkada robot kutusu + ana pano + UPS; kesme tabanında içecek yedeği, arkada kompresör. Önceki (v10): TOPPING v2 (4 UNO çekirdeği havalı + sos/harç spreader + kaşar/küp sucuk kaseti + 3 mm taşıyıcı raf), valf adası ve şartlandırıcı kuru bölmede, kompresör K tabanında (yeri açık). Büyük hali için resme tıkla.</figcaption></figure>
+<div class="thumbs"><a href="img/HAT_ATOSA_TABLALI_v11_teknik.png" target="_blank"><img src="img/HAT_ATOSA_TABLALI_v11_teknik.png" loading="lazy"><span>v11 · 25 Eyl</span></a><a href="img/HAT_ATOSA_TABLALI_v10_teknik.png" target="_blank"><img src="img/HAT_ATOSA_TABLALI_v10_teknik.png" loading="lazy"><span>v10 · 25 Eyl</span></a><a href="img/HAT_ATOSA_TABLALI_v8_teknik.png" target="_blank"><img src="img/HAT_ATOSA_TABLALI_v8_teknik.png" loading="lazy"><span>v8 · 25 Eyl</span></a><a href="img/HAT_ATOSA_TABLALI_v7_teknik.png" target="_blank"><img src="img/HAT_ATOSA_TABLALI_v7_teknik.png" loading="lazy"><span>v7 · 24 Eyl</span></a></div>
 
 <h2>4 &middot; Sürüm geçmişi</h2><ul class="ver">
 <li><b>PAFTA v8 (25 Eyl)</b>: teknik resim modele eşitlendi — hat 5430 (E 830 kutu katlama), alt taban çizgisi 123, süreç 1168, TOPPING iç kotları ve 2 kaset, B çekmece modülü v4, K'de yedek kutu yok. v7 aşağıda duruyor</li>
-<li><b>MONTAJ v44 (25 Eyl) &middot; GEÇERLİ</b>: ALT KISIM yeniden. Çekmece modülü (store_cad_v5) tam kaplayan kapaklarla kapalı ve temiz görünüyor: kolonlar arası 3 mm, her kolon 126'dan 1057'ye. Soğukta her şey 2 günlük: pide 160, lahmacun 432, içecek 160 (tek kat, yaylı itici, robot her kutuya erişir), tatlı 30; K4'te Secop'un arkasında pano, üstünde kaşar + sucuk deposu (4 günün 2. yarısı) ve 2 dar içecek çekmecesi. Fırın tabanı: önde bulaşık makinesi (MEIKO M-iClean US), temizlik, 553'lük pizza kutusu yedeği (şarjörle 4 gün); arkada makine deterjanı, robot kontrol kutusu, ana pano, UPS. Kesme tabanı: önde soğutmasız içecek yedeği (120 kutu, toplam 4 gün), arkada kompresör + yağ + K kartı; kesmenin üst bölmesi boşaldı.</li>
+<li><b>MONTAJ v45 (26 Eyl) &middot; GEÇERLİ</b>: K KESME + SPREY gerçek üretim modeli oldu (kesme_cad_v1, 146 parça): fırın bandından ürünü alan PU bant (RollerDrive), aynı kafada Festo DGRF-C kesici + yıldız bıçak Ø296 ve göbeğinde PulsaJet tereyağı nozülü, 20° çit, igus eksenli itici, taban arkasında 3 L ısıtmalı tereyağı tankı + pano, önde içecek yedeği. TOPPING v2 yayıcısında kama yarık, UNO pistonu/valfi ve kaset milleri ayrı parça. <b>Ana montaja 1 tam animasyon:</b> çekmece → robot → açıcı → sos (tam 1 tur) → kaşar → sucuk → fırın → kesme → kutu → QR dolabı (84 s). Ayrıntı: <a href="kesme.html">4b · KESME</a> · <a href="topping_v2.html">TOPPING v2</a>.</li>
+<li><b>MONTAJ v44 (25 Eyl)</b>: ALT KISIM yeniden. Çekmece modülü (store_cad_v5) tam kaplayan kapaklarla kapalı ve temiz görünüyor: kolonlar arası 3 mm, her kolon 126'dan 1057'ye. Soğukta her şey 2 günlük: pide 160, lahmacun 432, içecek 160 (tek kat, yaylı itici, robot her kutuya erişir), tatlı 30; K4'te Secop'un arkasında pano, üstünde kaşar + sucuk deposu (4 günün 2. yarısı) ve 2 dar içecek çekmecesi. Fırın tabanı: önde bulaşık makinesi (MEIKO M-iClean US), temizlik, 553'lük pizza kutusu yedeği (şarjörle 4 gün); arkada makine deterjanı, robot kontrol kutusu, ana pano, UPS. Kesme tabanı: önde soğutmasız içecek yedeği (120 kutu, toplam 4 gün), arkada kompresör + yağ + K kartı; kesmenin üst bölmesi boşaldı.</li>
 <li><b>MONTAJ v43 (25 Eyl)</b>: TOPPING'in altındaki 134 mm'lik PU yalıtım tabanı kalktı; yerine 3 mm paslanmaz taşıyıcı raf (önü ve arkası 40 mm bükülü). Yük 154 kg → sehim 3,4 mm, emniyet 2,3. Kaşar ve sucuk boruları raftan sarkan iniş borusuyla pideye iniyor.</li>
 <li>MONTAJ v42 (25 Eyl): TOPPING v2 (UNO'lu) ana montajda: sos · harç · kıyma · kuşbaşı Beltop UNO çekirdeğiyle (sos ve harçta Beldos spreader başlığı), kaşar ve küp sucuk bizim kasetlerle; tabla mekanizması v1'den. Hava: kompresör K taban dolabında, Ø10 ana hat F tabanının arkasından TOPPING'e, valf adası kuru bölmede. Ayrıntı: <a href="topping_v2.html">TOPPING v2</a>. Önceki TOPPING (v1) kendi sayfasında duruyor.</li>
 <li>MONTAJ v41 (25 Eyl): TOPPING'de yalnız kaşar ve küp sucuk kaseti; Codex'in Isaac deneyindeki parçaları (kaşar v15 helezon B·C·D + tüp, sucuk V2 helezon D + tüp) 3B olarak yerinde, aday. Harç 1–2, kıyma, kuşbaşı şimdilik çıkarıldı. Ray ve tabla aynı (Isaac deneyi eski v13'te)</li>
@@ -58,10 +63,10 @@
 <li>HAT v51 (6 Eyl): PACK v4 &mdash; <b>eski 4200 mm'lik tepsili hat</b></li>
 </ul>
 </div>
-<div class="foot">AUTOKITCH &middot; HAT &middot; Yol C canlı tasarım defteri &middot; model: arastirma/_uretec/hat_montaj_v44.py &middot; 25 Eyl 2026</div>
+<div class="foot">AUTOKITCH &middot; HAT &middot; Yol C canlı tasarım defteri &middot; model: arastirma/_uretec/hat_montaj_v45.py &middot; 26 Eyl 2026</div>
 
 <script>
-const SAYFA = {A:'press.html', B:'store.html', C:'topping.html', D:'oven.html', K:'oven.html', E:'pack.html', '-':'robot.html'};
+const SAYFA = {A:'press.html', B:'store.html', C:'topping.html', D:'oven.html', K:'kesme.html', E:'pack.html', '-':'robot.html'};
 const AD = {A:'MODÜL A · AÇICI', B:'MODÜL B · ÇEKMECELER', C:'MODÜL C · TOPPING', D:'MODÜL F · FIRIN', K:'MODÜL K · KESME + SPREY', E:'MODÜL E · KUTU', '-':'ROBOT + QR DOLABI'};
 
 const M = model3d({
@@ -73,8 +78,9 @@ const M = model3d({
   }
 });
 
-fetch('../hat3d/durum.json?v=43').then(r => r.json()).then(D => {
+fetch('../hat3d/durum.json?v=45').then(r => r.json()).then(D => {
   M.veri(D.birim);
+  animasyon(D.animasyon);
   const mod = {}; D.birim.forEach(b => (mod[b.modul] = mod[b.modul] || []).push(b));
   document.getElementById('secim').innerHTML = ['B','A','C','D','K','E','-'].filter(k => mod[k]).map(k => {
     const ger = mod[k].filter(b => b.durum.indexOf('GERCEK') === 0).length;
@@ -88,4 +94,20 @@ fetch('../hat3d/durum.json?v=43').then(r => r.json()).then(D => {
     '<b>' + g + ' / ' + D.birim.length + ' birim gerçek üretim modeli</b> (%' + Math.round(100*g/D.birim.length) + ').' +
     ' Gerisi ölçü kutusu — sırayla gerçeğe çevriliyor. Hat ' + D.hat.w + ' × ' + D.hat.d + ' × ' + D.hat.h + ' mm, kaynak: ' + D.hat.pafta + '.';
 });
+function animasyon(A) {
+  if (!A) return;
+  const mv = document.getElementById('mv'), oy = document.getElementById('oy'), tz = document.getElementById('tz'), sn = document.getElementById('sn'),
+        adim = document.getElementById('adim'), anlat = document.getElementById('anlat'), T = A.sure;
+  tz.max = T;
+  adim.innerHTML = A.adim.map((a, i) => '<button data-i="' + i + '">' + (i + 1) + ' · ' + a.ad + '</button>').join('');
+  const btn = [...adim.querySelectorAll('button')];
+  const f = v => v.toFixed(1).replace('.', ',');
+  function goster(t) { let k = 0; A.adim.forEach((a, i) => { if (t >= a.t - 0.01) k = i; }); btn.forEach((b, i) => b.classList.toggle('ak', i === k));
+    anlat.innerHTML = '<b>' + (k + 1) + ' · ' + A.adim[k].ad + '</b> — ' + A.adim[k].not_; sn.textContent = f(t) + ' / ' + T.toFixed(0) + ' sn'; }
+  btn.forEach(b => b.onclick = () => { const t = A.adim[+b.dataset.i].t; mv.currentTime = t; tz.value = t; goster(t); mv.play(); oy.textContent = 'duraklat'; });
+  tz.oninput = () => { mv.pause(); oy.textContent = 'oynat'; mv.currentTime = parseFloat(tz.value); goster(parseFloat(tz.value)); };
+  oy.onclick = () => { if (mv.paused) { mv.play(); oy.textContent = 'duraklat'; } else { mv.pause(); oy.textContent = 'oynat'; } };
+  setInterval(() => { if (!mv.paused && mv.loaded) { tz.value = mv.currentTime; goster(mv.currentTime); } }, 150);
+  goster(0);
+}
 </script></body></html>
