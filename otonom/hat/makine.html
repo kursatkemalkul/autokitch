@@ -5,7 +5,7 @@
 <p class="lead">Hattın tamamı tek modelde. <b>Üstüne gel</b> &mdash; adı çıkar. <b>Çift tıkla</b> &mdash; o istasyonun kendi modeli açılır. Modelin altındaki çubuktan <b>kesit</b> alabilir (X/Y/Z) ve iki noktaya tıklayıp <b>ölçü</b> çıkarabilirsin.</p>
 
 <div class="m3">
-  <model-viewer id="mv" loading="eager" src="../hat3d/hat_v40.glb?v=40" ios-src="../hat3d/hat_v40.usdz?v=40" alt="AUTOKITCH hat üretim modeli"
+  <model-viewer id="mv" loading="eager" src="../hat3d/hat_v41.glb?v=41" ios-src="../hat3d/hat_v41.usdz?v=41" alt="AUTOKITCH hat üretim modeli"
       camera-controls touch-action="pan-y" shadow-intensity="0.6" exposure="1.0" environment-image="neutral"
       camera-orbit="30deg 74deg 9.8m" camera-target="2.72m 1m -0.4m" field-of-view="30deg" min-field-of-view="6deg"
       ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
@@ -41,18 +41,19 @@
 <figure><img src="img/HAT_ATOSA_TABLALI_v7_teknik.png" alt="HAT ATOSA TABLALI teknik resim v7" loading="lazy"><figcaption>HAT ATOSA TABLALI v7 &mdash; 3B modelin yerleşim kaynağı (düşey kotlar modelde TOPPING'e göre: süreç 1168)</figcaption></figure>
 
 <h2>4 &middot; Sürüm geçmişi</h2><ul class="ver">
-<li><b>MONTAJ v40 (25 Eyl) &middot; GEÇERLİ</b>: alt taban çizgisi 123 — en alt çekmecenin altındaki boş bant kalktı; STORE, F ve K taban dolapları ve kutu modülü aynı çizgide başlıyor (store_cad_v4, kutu_cad_v3). Kutu modülünün asansör tahriki tabanın altına indi, şarjör 567 kutu korundu. Ana montaj animasyonsuz; animasyon istasyon sayfalarında</li>
+<li><b>MONTAJ v41 (25 Eyl) &middot; GEÇERLİ</b>: TOPPING'de yalnız kaşar ve küp sucuk kaseti; Codex'in Isaac deneyindeki parçaları (kaşar v15 helezon B·C·D + tüp, sucuk V2 helezon D + tüp) 3B olarak yerinde, aday. Harç 1–2, kıyma, kuşbaşı şimdilik çıkarıldı. Ray ve tabla aynı (Isaac deneyi eski v13'te)</li>
+<li>MONTAJ v40 (25 Eyl): alt taban çizgisi 123 — en alt çekmecenin altındaki boş bant kalktı; STORE, F ve K taban dolapları ve kutu modülü aynı çizgide başlıyor (store_cad_v4, kutu_cad_v3). Kutu modülünün asansör tahriki tabanın altına indi, şarjör 567 kutu korundu. Ana montaj animasyonsuz; animasyon istasyon sayfalarında</li>
 <li>MONTAJ v39 (25 Eyl): çekmece rayı üç parçalı teleskop (store_cad_v3). Açılan çekmece artık rayda taşınıyor, havada kalmıyor: dış parça sabit, ara parça yarı yol, iç parça çekmeceyle gelir</li>
 <li>MONTAJ v38 (25 Eyl): E kutu katlama modülü gerçek üretim modeli (kutu_cad_v2, 11 birim, 830 genişlik → hat 5430) ve çalışma animasyonu artık ana montajda; çekmeceler + kutu modülü ortak 40 sn döngü. SolidWorks STEP çıktısı kaldırıldı</li>
 <li>MONTAJ v37 (24 Eyl): B çekmece modülü v2 — fitil profili, yan kayış, standart ürünler, çalışma animasyonu (store sayfası)</li>
 <li>MONTAJ v36 (24 Eyl): B çekmece modülü gerçek üretim modeli (store_cad_v1), her çekmece ayrı birim</li>
 <li>MONTAJ v35 (24 Eyl): yerleşim ATOSA TABLALI v7 (5300); A, C, F, K tabanları 1060'ta hizalı, E tek parça; süreç kotu 1168 (TOPPING'e göre); K'deki yedek kutular kaldırıldı; tek FR5 + QR dolabı</li>
-<li>HAT v19 (18 Eyl): 2 kol, ray yok, hat 3900; çekmeceler tabanda tek modül, PRESS + TOPPING üstünde; fırın 3 hazne; TOPPING 6 kaset yuvası</li>
+<li>HAT v19 (18 Eyl): 2 kol, ray yok, hat 3900; çekmeceler tabanda tek modül, PRESS + TOPPING üstünde; fırın 3 hazne; TOPPING 6 kaset yuvası (şimdilik 2 kaset takılı: kaşar + küp sucuk)</li>
 <li>HAT v14&ndash;v18: 2 kol seçeneği, tabla/bant karşılaştırması, aktarma gözü (iptal)</li>
 <li>HAT v51 (6 Eyl): PACK v4 &mdash; <b>eski 4200 mm'lik tepsili hat</b></li>
 </ul>
 </div>
-<div class="foot">AUTOKITCH &middot; HAT &middot; Yol C canlı tasarım defteri &middot; model: arastirma/_uretec/hat_montaj_v40.py &middot; 25 Eyl 2026</div>
+<div class="foot">AUTOKITCH &middot; HAT &middot; Yol C canlı tasarım defteri &middot; model: arastirma/_uretec/hat_montaj_v41.py &middot; 25 Eyl 2026</div>
 
 <script>
 const SAYFA = {A:'press.html', B:'store.html', C:'topping.html', D:'oven.html', K:'oven.html', E:'pack.html', '-':'robot.html'};
@@ -67,7 +68,7 @@ const M = model3d({
   }
 });
 
-fetch('../hat3d/durum.json?v=40').then(r => r.json()).then(D => {
+fetch('../hat3d/durum.json?v=41').then(r => r.json()).then(D => {
   M.veri(D.birim);
   const mod = {}; D.birim.forEach(b => (mod[b.modul] = mod[b.modul] || []).push(b));
   document.getElementById('secim').innerHTML = ['B','A','C','D','K','E','-'].filter(k => mod[k]).map(k => {

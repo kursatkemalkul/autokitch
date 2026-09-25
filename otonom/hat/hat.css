@@ -95,6 +95,7 @@ figure{margin:12px 0}figure img{width:100%;display:block;border:1px solid var(--
 .m3 .simp-u button{flex:1 1 calc(50% - 3px);padding:8px 6px;border:1px solid #2e3541;border-radius:8px;background:#1f242d;color:#c3cad3;font:600 12.5px/1.2 inherit;cursor:pointer}
 .m3 .simp-u button:hover{border-color:#4a5563;color:#eef2f6}
 .m3 .simp-u button.on{border-color:#4f86ff;background:#26344d;color:#dce8ff}
+.m3 .simp-u button:disabled,.m3 .simp-u button:disabled:hover{opacity:.35;cursor:not-allowed;border-color:#2e3541;color:#c3cad3}
 .m3 .simp-c{display:flex;gap:7px;padding:0 16px 11px}
 .m3 .simp-c button{flex:1;padding:10px;border:0;border-radius:8px;font:700 13px/1 inherit;cursor:pointer}
 .m3 .simp-c .bas{background:#2f7d4f;color:#fff}.m3 .simp-c .bas:disabled{background:#2a3038;color:#69727e;cursor:default}

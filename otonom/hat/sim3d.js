@@ -62,7 +62,7 @@ async function kur(kutu) {
   // Ayrı/kaba sim modeli KALDIRILDI. hat_montaj_v17 hareket eden paketleri AYRI DÜĞÜM yazıyor:
   //     TOPPING_MODUL__celik__ARABA · TOPPING_MODUL__sac__TABLA · KASET_KIYMA__pom__HELEZON
   // Malzeme adları değişmedi, o yüzden model-viewer sayfası bundan etkilenmiyor.
-  const glb = await new GLTFLoader().loadAsync('../hat3d/modul_C.glb?v=33');
+  const glb = await new GLTFLoader().loadAsync('../hat3d/modul_C.glb?v=41');
   const kok = glb.scene;
   const OFS = M.ofset;                                  // JSON ölçüleri modül-yerel, GLB makine koordinatında
   const mak = p => [p[0] + OFS[0], p[1] + OFS[1], p[2] + OFS[2]];
@@ -308,9 +308,17 @@ async function kur(kutu) {
   }
 
   // ---------- ürün düğmeleri ----------
+  // montaj v41 (Kemal 25 Eyl): modelde yalnız kaşar + küp sucuk kaseti var, diğer 4 kaset şimdilik çıkarıldı.
+  // Kaseti modelde olmayan ürün boş yuvadan doz veriyormuş gibi görünmesin → düğmesi pasif (kontrol kodu aynı).
+  const kasetVar = kod => !!(G['HELEZON_' + kod] || G['KARISTIRICI_' + kod]);
   let secili = [];
   for (const [k, r] of Object.entries(K.RECETE)) {
     const b = document.createElement('button'); b.textContent = r.ad;
+    const eksik = r.adim.filter(kod => !kasetVar(kod));
+    if (eksik.length) {
+      b.disabled = true;
+      b.title = 'kaset şimdilik modelde yok: ' + eksik.join(', ').replace(/_/g, ' ');
+    }
     b.onclick = () => {
       secili = r.adim.slice();
       panel.querySelectorAll('.simp-u button').forEach(x => x.classList.toggle('on', x === b));
@@ -318,7 +326,8 @@ async function kur(kutu) {
     };
     q('.simp-u').appendChild(b);
   }
-  q('.simp-u button').click();
+  const ilkUrun = q('.simp-u button:not([disabled])');
+  if (ilkUrun) ilkUrun.click();
   q('.bas').onclick = async () => {
     if (!secili.length) return;
     q('.bas').disabled = true; dokumTemizle();

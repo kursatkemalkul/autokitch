@@ -1,13 +1,13 @@
-<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>3 · TOPPING — 3B üretim modeli</title><link rel="stylesheet" href="hat.css?v=10">
+<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>3 · TOPPING — 3B üretim modeli</title><link rel="stylesheet" href="hat.css?v=11">
 <script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script>
 <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script><script src="model3d.js?v=16"></script></head><body>
 <div class="top"><div class="in"><div class="crumb"><a href="../">Store</a><span>&rsaquo;</span><a href="index.html">HAT</a><span>&rsaquo;</span><a href="makine.html">Makine</a><span>&rsaquo;</span><b>3 · TOPPING</b></div><div><a href="makine.html">&larr; Makine</a></div></div></div>
 <div class="wrap"><h1>3 &middot; TOPPING &mdash; 3B üretim modeli<span class="tag" style="background:#8e5bd6">1800 &times; 830 &times; 970</span></h1>
-<p class="lead">Dozaj modülünün tamamı &mdash; kabin, yalıtım, 6 kaset yuvası, 12 tahrik, soğutma ve pano. Modelde <b>ön kapak açık</b> gösteriliyor, yoksa kasetler görünmezdi. <b>Üstüne gel</b> &mdash; adı ve ölçüsü çıkar. <b>Kasete çift tıkla</b> &mdash; o kasetin kendi modeli, AR'si ve montaj animasyonu açılır. Modelin altındaki çubuktan <b>kesit</b> alabilir (X/Y/Z) ve iki noktaya tıklayıp <b>ölçü</b> çıkarabilirsin.</p>
+<p class="lead">Dozaj modülünün tamamı &mdash; kabin, yalıtım, 6 kaset yuvası, 12 tahrik, soğutma ve pano. Şimdilik <b>2 kaset takılı</b>: kaşar kabı ve küp sucuk. Modelde <b>ön kapak açık</b> gösteriliyor, yoksa kasetler görünmezdi. <b>Üstüne gel</b> &mdash; adı ve ölçüsü çıkar. <b>Kasete çift tıkla</b> &mdash; o kasetin kendi modeli, AR'si ve montaj animasyonu açılır. Modelin altındaki çubuktan <b>kesit</b> alabilir (X/Y/Z) ve iki noktaya tıklayıp <b>ölçü</b> çıkarabilirsin.</p>
 
 <p class="lead" style="margin:-6px 0 14px"><button class="simbtn" id="simac">▶ CANLI SİMÜLASYON</button> <span style="color:#8a9199;font-size:13.5px">&nbsp; sayfadan çıkmadan açılır: ürünü seç, makine çalışsın; sağdaki panelde hangi kod satırının çalıştığı, hangi motorun yandığı ve eksen değerleri görünür. Kasetin helezonu, karıştırıcısı ve pompası gerçekten döner; dozlanan ürün pidenin üstünde birikir.</span></p>
 <div class="m3">
-  <model-viewer id="mv" loading="eager" src="../hat3d/modul_C.glb?v=33" ios-src="../hat3d/modul_C.usdz?v=33" alt="TOPPING modülü üretim modeli"
+  <model-viewer id="mv" loading="eager" src="../hat3d/modul_C.glb?v=41" ios-src="../hat3d/modul_C.usdz?v=41" alt="TOPPING modülü üretim modeli"
       camera-controls touch-action="pan-y" shadow-intensity="0.6" exposure="1.0" environment-image="neutral"
       camera-orbit="26deg 72deg 3.3m" camera-target="1.6m 1.52m -0.36m" field-of-view="30deg" min-field-of-view="5deg"
       ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
@@ -17,24 +17,29 @@
 </div>
 <div class="secim" id="secim"></div>
 <p class="note" id="ozet"></p>
+<div class="card" style="border-left:4px solid #2456c8;background:#f4f7fd;margin:0 0 14px"><b style="color:#2456c8">25 EYLÜL 2026 · MONTAJ v41 — ISAAC'TEKİ İKİ KASET</b><br>
+Modelde şimdilik yalnız <b>kaşar kabı</b> ve <b>küp sucuk</b> kaseti var: Isaac Sim'deki kaşar + sucuk deneyinin kasetleri. Codex'in değiştirdiği parçalar 3B dosyalarından olduğu gibi alındı. <b>Kaşar:</b> helezon B, C, D ve çıkış tüpü; D'de hatve 36 → 60, kanat sonu 194 → 211, 6 çırpıcı pim yok. <b>Sucuk:</b> helezon D, kanadı 170 → 196; çıkış tüpünde 6 mm eşik yok. Codex'in kendi notuna göre ikisi de <b>aday</b>, üretime serbest değil. Harç 1–2, kıyma ve kuşbaşı kasetleri şimdilik modelden çıkarıldı, yuvaları duruyor; simülasyonda bu ürünlerin düğmesi pasif.<br>
+<b>Ray ve tabla değişmedi:</b> Isaac deneyi 22 Eylül'ün eski modelinde (v13) koştu. Buradaki ray (strok 1987) ve çalışma diski daha yeni.<br>
+<b>Isaac hesabı bu modele bağlanmadı:</b> hesap eski geometride yapıldı; orada pide tepsi üstünde ve 10 mm yukarıda. Gıda katsayıları da doğrulanmadı. Kaşar dozu (burada 100 g, orada 55 g), vida ve tabla devirleri buradaki simülasyondan farklı.
+</div>
 
 <h2>1 &middot; Ne yapar</h2><div class="card"><ol class="steps">
 <li>Robot pideyi TOPPING'in <b>ağzına</b> (1740 &times; 110, kot 1070&ndash;1180) sürer; tepsi yok, tabanı robot tutar.</li>
 <li>Sıradaki kasetin helezonu döner. Gramaj = <b>mil açısı</b>: kaşar 7,9 g/tur, kıyma 68 g/tur, kuşbaşı 68 g/tur, küp sucuk 53 g/tur. Helezon durunca akış durur.</li>
 <li>Aynı anda <b>besleme rotoru</b> ters yönde yavaş döner (&asymp; 4 dev/dk): iki sıyırıcı lama hazne duvarını sıyırıp ürünü helezon boğazına iter.</li>
-<li>Ürün çıkış tüpünden aşağı bakan ağza iner. Kuşbaşı ve küp sucukta tüp tabanındaki <b>6 mm eşik + tıkaç</b> akışı sürekli yapar.</li>
+<li>Ürün çıkış tüpünden aşağı bakan ağza iner. Kuşbaşı ve küp sucukta tüp tabanındaki <b>6 mm eşik + tıkaç</b> akışı sürekli yapar (Codex'in sucuk adayında eşik yok, kanat ağza kadar uzadı).</li>
 <li>Pide dolarken dıştan içe yürür; dağılımı <b>her ürün için ayrı çözülmüş</b> bir hareket yasası belirler.</li>
 <li>Kaset boşalınca eleman öndeki kulptan çeker, doldurur, geri sürer. Kaset <b>kapaksız</b>: +3 °C kapalı kabinin içinde.</li>
 </ol></div>
 
 <h2>2 &middot; Kasetler</h2><div class="card"><table>
 <tr><th>Yuva</th><th style="width:96px">Ölçü</th><th>Hesap (doluluk varsayımıyla)</th><th style="width:118px">Durum</th></tr>
-<tr><td><b>HARÇ 1</b> &middot; lahmacun</td><td>280 &times; 360 &times; 325</td><td>hesabı yok &mdash; <b>yayma sorunu</b>: 110 g harç 1,8 mm'lik katman demek, meme tek başına pideyi kaplamıyor</td><td><span class="st ac">BAŞLANMADI</span></td></tr>
-<tr><td><b>HARÇ 2</b> &middot; pizza sosu</td><td>280 &times; 360 &times; 325</td><td>aynı sorun; karar: yap / satın al</td><td><span class="st ac">BAŞLANMADI</span></td></tr>
-<tr><td><b>KIYMA</b> &middot; v5</td><td>140 &times; 360 &times; 325</td><td>vida Ø68, hatve 36&rarr;48,5 &middot; <b>68 g/tur</b> &middot; 160 g = 2,4 tur &middot; 14 dev/dk &middot; 6,4 kg = %60 dolu</td><td><span class="st on">MODEL TAM</span><br><span class="st ac">İŞLEV EKSİK</span></td></tr>
-<tr><td><b>KUŞBAŞI</b> &middot; v4</td><td>140 &times; 360 &times; 325</td><td>vida Ø68, hatve 40&rarr;50,5 &middot; <b>68,2 g/tur</b> &middot; 145 g = 2,12 tur &middot; 13 dev/dk &middot; 5,8 kg = %68 dolu &middot; küp 10 mm</td><td><span class="st on">TAM</span></td></tr>
-<tr><td><b>KAŞAR KABI</b> &middot; v10</td><td>280 &times; 360 &times; 325</td><td>vida Ø40, hatve sürekli 22&rarr;30,17 (11,75 tur) &middot; <b>7,9 g/tur</b> &middot; 42 dev/dk &middot; 8,8 kg = %85 dolu</td><td><span class="st on">TAM</span></td></tr>
-<tr><td><b>KÜP SUCUK</b> &middot; v3</td><td>140 &times; 360 &times; 325</td><td>kuşbaşı kasetinin <b>birebir aynısı</b> (55/55 parça) &middot; <b>53,2 g/tur</b> &middot; 70 g = 1,32 tur &middot; 8 dev/dk &middot; 2,8 kg = %44 dolu &middot; küp 8 mm</td><td><span class="st on">TAM</span></td></tr>
+<tr><td><b>HARÇ 1</b> &middot; lahmacun</td><td>280 &times; 360 &times; 325</td><td>hesabı yok &mdash; <b>yayma sorunu</b>: 110 g harç 1,8 mm'lik katman demek, meme tek başına pideyi kaplamıyor</td><td><span class="st ac">BAŞLANMADI</span><br><span class="st ac">MODELDE YOK (v41)</span></td></tr>
+<tr><td><b>HARÇ 2</b> &middot; pizza sosu</td><td>280 &times; 360 &times; 325</td><td>aynı sorun; karar: yap / satın al</td><td><span class="st ac">BAŞLANMADI</span><br><span class="st ac">MODELDE YOK (v41)</span></td></tr>
+<tr><td><b>KIYMA</b> &middot; v5</td><td>140 &times; 360 &times; 325</td><td>vida Ø68, hatve 36&rarr;48,5 &middot; <b>68 g/tur</b> &middot; 160 g = 2,4 tur &middot; 14 dev/dk &middot; 6,4 kg = %60 dolu</td><td><span class="st on">MODEL TAM</span><br><span class="st ac">İŞLEV EKSİK</span><br><span class="st ac">MODELDE YOK (v41)</span></td></tr>
+<tr><td><b>KUŞBAŞI</b> &middot; v4</td><td>140 &times; 360 &times; 325</td><td>vida Ø68, hatve 40&rarr;50,5 &middot; <b>68,2 g/tur</b> &middot; 145 g = 2,12 tur &middot; 13 dev/dk &middot; 5,8 kg = %68 dolu &middot; küp 10 mm</td><td><span class="st on">TAM</span><br><span class="st ac">MODELDE YOK (v41)</span></td></tr>
+<tr><td><b>KAŞAR KABI</b> &middot; v14 + Codex v15 parçaları</td><td>280 &times; 360 &times; 325</td><td>vida Ø40, hatve sürekli 22&rarr;30,17 (11,75 tur) &middot; <b>7,9 g/tur</b> &middot; 42 dev/dk &middot; 8,8 kg = %85 dolu &middot; <b>Codex v15:</b> uç helezon D hatve 60, kanat sonu 211, çırpıcı pim yok (deneyde 32 dev/dk, 55 g)</td><td><span class="st on">MODELDE</span><br><span class="st ac">ADAY · ÜRETİME SERBEST DEĞİL</span></td></tr>
+<tr><td><b>KÜP SUCUK</b> &middot; v7 + Codex V2 parçaları</td><td>140 &times; 360 &times; 325</td><td>kuşbaşı kasetinin <b>birebir aynısı</b> (55/55 parça) &middot; <b>53,2 g/tur</b> &middot; 70 g = 1,32 tur &middot; 8 dev/dk &middot; 2,8 kg = %44 dolu &middot; küp 8 mm &middot; <b>Codex V2:</b> uç kanat 196 (ağza kadar), tüpte eşik yok</td><td><span class="st on">MODELDE</span><br><span class="st ac">ADAY · ÜRETİME SERBEST DEĞİL</span></td></tr>
 </table><p class="note">"MODEL TAM" = 55&ndash;57 parçanın hepsi gerçek katı, çakışma yok, üretim STEP'i basılı. "İŞLEV EKSİK" = kaset dozu doğru veriyor ama işi bitmiyor (aşağıda T1).</p></div>
 
 <h2>3 &middot; HARÇ / SOS ÜNİTESİ v2 — VİDA YOK</h2><div class="card"><div class="kv">
@@ -105,6 +110,7 @@ Boru artık <b>y 250</b>'de, yani yalıtımın üst yüzünde bitiyor. Yalıtım
 </table></div>
 
 <h2>8 &middot; Sürüm geçmişi</h2><ul class="ver">
+<li><b>25 Eyl &middot; MONTAJ v41 · ISAAC / CODEX KASETLERİ</b> — Kemal: "Codex'in Isaac'teki kasetlerini 3D olarak al, kendine yerleştir; fazla kasetleri şimdilik sil; ray ve tablada değişen var mı bak." Kaşar (v14 + Codex v15 helezon B·C·D + çıkış tüpü) ve küp sucuk (v7 + Codex V2 helezon D + çıkış tüpü) STEP'ten olduğu gibi yerinde. Harç 1–2, kıyma, kuşbaşı modelden çıktı; yuvalar ve etiketleri duruyor. Ray ve tabla bizim v22, çünkü Isaac deneyi eski v13'teydi. Önceki model: modul_C v33.</li>
 <li><b>22 Eyl &middot; TABLA TAM ÜRETİM MODELİ</b> — Kemal: "bu tabla nasıl xyz'de hareket ediyor, nasıl dönüyor kendi etrafında — bunu her şeyiyle üretime yönelik çiz, motoruna kadar vidasına kadar." 9 yer tutucu blok yerine 188 parçalık gerçek mekanizma: tekne + kiriş merdiveni + HGR15 + 4 blok + araba plakası + döner yatak + ayar bileziği + göbek + tabla + pancake motor + lokma + GT3 kayış zinciri + apron + çatı + çekmece + enerji zinciri + 5 sensör + tamponlar.</li>
 <li><b>22 Eyl &middot; NOZZLE YALITIM DELİĞİNE OTURDU + İKİ PARÇA SİLİNDİ</b> — Kemal: "yuvarlak parçalar neden yalıtımdan da aşağıya gidip saçma sapan uzun kalıyor? Yalıtımın üst kısmında kes, yalıtıma aynı çapta delik aç · yalıtımın altındaki gri parçayı sil · ön yüzeyde havada uçan sacı da sil." Boru 90 mm kısaldı, uzun yarık yerine tek yuvarlak delik + dozaj kovanı geldi, iki parça silindi.</li>
 <li><b>22 Eyl &middot; DÖNER TABLA</b> — Kemal: "şimdi altına Atosa gibi tabla yapacağız ama nasıl olacak? Her kasetin çıkış yerine denk gelecek, ona göre kendini ayarlayıp dönerken ilerleyecek." İki eksenli tabla eklendi (x arabası + Ø340 tabla, 35 dev/dk). Yasa kasetlerin akış modellerinden alındı, yeniden uydurulmadı.</li>
@@ -121,7 +127,7 @@ Boru artık <b>y 250</b>'de, yani yalıtımın üst yüzünde bitiyor. Yalıtım
 <li>21 Eyl &mdash; kaşar kabı v8: sürekli hatveli kanat tam yüzeyden, konik mil kökü</li>
 <li>5 Eyl ve öncesi (v24&ndash;v27): Picnic tipi kap, çatal + L raf &mdash; <b>terk edildi</b></li>
 </ul>
-</div><div class="foot">AUTOKITCH &middot; HAT &middot; Yol C canlı tasarım defteri &middot; model: hat_montaj_v2.py + kaset üreteçleri &middot; 22 Eyl 2026</div>
+</div><div class="foot">AUTOKITCH &middot; HAT &middot; Yol C canlı tasarım defteri &middot; model: hat_montaj_v41.py + kaset üreteçleri + Codex STEP parçaları &middot; 25 Eyl 2026</div>
 
 <script>
 const ROZET = {GERCEK:['rz-g','gerçek model'], GERCEK_MODUL:['rz-g','gerçek model'], GERCEK_MODUL:['rz-g','gerçek model'], GERCEK_PARCA:['rz-g','kısmen gerçek'], KUTU:['rz-k','kutu'], KATALOG:['rz-c','katalog']};
@@ -134,7 +140,7 @@ const M = model3d({
            (b.sayfa ? '<br>tıkla → kendi modeli · AR · animasyon' : (b.kaynak ? '<br>' + b.kaynak : '')) + '</span>';
   }
 });
-fetch('../hat3d/durum.json?v=16').then(r => r.json()).then(D => {
+fetch('../hat3d/durum.json?v=41').then(r => r.json()).then(D => {
   const C = D.birim.filter(b => b.modul === 'C');
   M.veri(C);
   const kaset = C.filter(b => b.kod.indexOf('KASET_') === 0);
@@ -155,7 +161,7 @@ fetch('../hat3d/durum.json?v=16').then(r => r.json()).then(D => {
 
 // ── canlı simülasyon: aynı kutunun içinde açılır, sağdan panel kayar (sim3d.js)
 document.getElementById('simac').onclick = async function () {
-  const m = await import('./sim3d.js?v=9');
+  const m = await import('./sim3d.js?v=10');
   await m.ac(document.querySelector('.m3'), this);
   this.textContent = document.querySelector('.m3').classList.contains('sim-on') ? '■ SİMÜLASYONU KAPAT' : '▶ CANLI SİMÜLASYON';
 };
