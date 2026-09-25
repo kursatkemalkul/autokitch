@@ -5,7 +5,7 @@
 <p class="lead">Hattın tamamı tek modelde. <b>Üstüne gel</b> &mdash; adı çıkar. <b>Çift tıkla</b> &mdash; o istasyonun kendi modeli açılır. Modelin altındaki çubuktan <b>kesit</b> alabilir (X/Y/Z) ve iki noktaya tıklayıp <b>ölçü</b> çıkarabilirsin.</p>
 
 <div class="m3">
-  <model-viewer id="mv" loading="eager" src="../hat3d/hat_v42.glb?v=42" ios-src="../hat3d/hat_v42.usdz?v=42" alt="AUTOKITCH hat üretim modeli"
+  <model-viewer id="mv" loading="eager" src="../hat3d/hat_v43.glb?v=43" ios-src="../hat3d/hat_v43.usdz?v=43" alt="AUTOKITCH hat üretim modeli"
       camera-controls touch-action="pan-y" shadow-intensity="0.6" exposure="1.0" environment-image="neutral"
       camera-orbit="30deg 74deg 9.8m" camera-target="2.72m 1m -0.4m" field-of-view="30deg" min-field-of-view="6deg"
       ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
@@ -43,7 +43,8 @@
 
 <h2>4 &middot; Sürüm geçmişi</h2><ul class="ver">
 <li><b>PAFTA v8 (25 Eyl)</b>: teknik resim modele eşitlendi — hat 5430 (E 830 kutu katlama), alt taban çizgisi 123, süreç 1168, TOPPING iç kotları ve 2 kaset, B çekmece modülü v4, K'de yedek kutu yok. v7 aşağıda duruyor</li>
-<li><b>MONTAJ v42 (25 Eyl) &middot; GEÇERLİ</b>: TOPPING v2 (UNO'lu) ana montajda: sos · harç · kıyma · kuşbaşı Beltop UNO çekirdeğiyle (sos ve harçta Beldos spreader başlığı), kaşar ve küp sucuk bizim kasetlerle; tabla mekanizması v1'den. Hava: kompresör K taban dolabında, Ø10 ana hat F tabanının arkasından TOPPING'e, valf adası kuru bölmede. Ayrıntı: <a href="topping_v2.html">TOPPING v2</a>. Önceki TOPPING (v1) kendi sayfasında duruyor.</li>
+<li><b>MONTAJ v43 (25 Eyl) &middot; GEÇERLİ</b>: TOPPING'in altındaki 134 mm'lik PU yalıtım tabanı kalktı; yerine 3 mm paslanmaz taşıyıcı raf (önü ve arkası 40 mm bükülü). Yük 154 kg → sehim 3,4 mm, emniyet 2,3. Kaşar ve sucuk boruları raftan sarkan iniş borusuyla pideye iniyor.</li>
+<li>MONTAJ v42 (25 Eyl): TOPPING v2 (UNO'lu) ana montajda: sos · harç · kıyma · kuşbaşı Beltop UNO çekirdeğiyle (sos ve harçta Beldos spreader başlığı), kaşar ve küp sucuk bizim kasetlerle; tabla mekanizması v1'den. Hava: kompresör K taban dolabında, Ø10 ana hat F tabanının arkasından TOPPING'e, valf adası kuru bölmede. Ayrıntı: <a href="topping_v2.html">TOPPING v2</a>. Önceki TOPPING (v1) kendi sayfasında duruyor.</li>
 <li>MONTAJ v41 (25 Eyl): TOPPING'de yalnız kaşar ve küp sucuk kaseti; Codex'in Isaac deneyindeki parçaları (kaşar v15 helezon B·C·D + tüp, sucuk V2 helezon D + tüp) 3B olarak yerinde, aday. Harç 1–2, kıyma, kuşbaşı şimdilik çıkarıldı. Ray ve tabla aynı (Isaac deneyi eski v13'te)</li>
 <li>MONTAJ v40 (25 Eyl): alt taban çizgisi 123 — en alt çekmecenin altındaki boş bant kalktı; STORE, F ve K taban dolapları ve kutu modülü aynı çizgide başlıyor (store_cad_v4, kutu_cad_v3). Kutu modülünün asansör tahriki tabanın altına indi, şarjör 567 kutu korundu. Ana montaj animasyonsuz; animasyon istasyon sayfalarında</li>
 <li>MONTAJ v39 (25 Eyl): çekmece rayı üç parçalı teleskop (store_cad_v3). Açılan çekmece artık rayda taşınıyor, havada kalmıyor: dış parça sabit, ara parça yarı yol, iç parça çekmeceyle gelir</li>
@@ -56,7 +57,7 @@
 <li>HAT v51 (6 Eyl): PACK v4 &mdash; <b>eski 4200 mm'lik tepsili hat</b></li>
 </ul>
 </div>
-<div class="foot">AUTOKITCH &middot; HAT &middot; Yol C canlı tasarım defteri &middot; model: arastirma/_uretec/hat_montaj_v42.py &middot; 25 Eyl 2026</div>
+<div class="foot">AUTOKITCH &middot; HAT &middot; Yol C canlı tasarım defteri &middot; model: arastirma/_uretec/hat_montaj_v43.py &middot; 25 Eyl 2026</div>
 
 <script>
 const SAYFA = {A:'press.html', B:'store.html', C:'topping.html', D:'oven.html', K:'oven.html', E:'pack.html', '-':'robot.html'};
@@ -71,7 +72,7 @@ const M = model3d({
   }
 });
 
-fetch('../hat3d/durum.json?v=42').then(r => r.json()).then(D => {
+fetch('../hat3d/durum.json?v=43').then(r => r.json()).then(D => {
   M.veri(D.birim);
   const mod = {}; D.birim.forEach(b => (mod[b.modul] = mod[b.modul] || []).push(b));
   document.getElementById('secim').innerHTML = ['B','A','C','D','K','E','-'].filter(k => mod[k]).map(k => {
