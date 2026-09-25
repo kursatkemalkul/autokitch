@@ -1,42 +1,120 @@
-<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>5 · PACK — kutu açıcı</title><link rel="stylesheet" href="hat.css?v=10"><script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script><script src="model3d.js?v=16"></script></head><body>
-<div class="top"><div class="in"><div class="crumb"><a href="../">Store</a><span>›</span><a href="index.html">HAT</a><span>›</span><a href="makine.html">Makine</a><span>›</span><a href="makine.html">Makine</a><span>›</span><b>5 · PACK</b></div><div><a href="../">← Store</a></div></div></div>
-<div class="wrap"><h1>5 · PACK — kutu açıcı<span class="tag" style="background:#d9b43a">70 × 84 × 197</span></h1><p class="lead">Üstten beslemeli kutu açıcı: açık kutu yığını üstte (84 cm = 525 kutu), alttan vakumla çekilir, kalıptan 1 vuruşta açılır, plakaya yükselir; pide kayar, kapak kapanır, robot alır. Modelin altındaki çubuktan <b>kesit</b> alabilir (X/Y/Z) ve iki noktaya tıklayıp <b>ölçü</b> çıkarabilirsin.</p>
+<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>5 · PACK — kutu katlama</title><link rel="stylesheet" href="hat.css?v=10"><script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script>
+<style>
+.zc{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;padding:10px 16px;background:#1b1f26;border-top:1px solid #2a3039}
+.zc button{border:1px solid #39424f;background:#232932;color:#cfd6df;border-radius:8px;padding:6px 11px;font:600 12.5px system-ui,sans-serif;cursor:pointer}
+.zc button:hover{border-color:#4a5563;color:#fff}
+.zc button.ak{border-color:#4f86ff;background:#26344d;color:#dce8ff}
+.zc input[type=range]{flex:1 1 220px;accent-color:#4f86ff}
+.zc .sn{color:#8d97a4;font:600 12px system-ui,sans-serif;font-variant-numeric:tabular-nums;min-width:64px}
+.adim{display:flex;flex-wrap:wrap;gap:6px;padding:0 16px 12px;background:#1b1f26}
+.adim button{border:1px solid #2f3742;background:#1f252d;color:#aab4c0;border-radius:999px;padding:4px 10px;font:600 11.5px system-ui,sans-serif;cursor:pointer}
+.adim button.ak{border-color:#e0a31c;background:#3a2f14;color:#ffd978}
+.anlat{padding:8px 16px 14px;background:#1b1f26;color:#dce3ea;font:14px/1.45 system-ui,sans-serif;min-height:42px}
+.anlat b{color:#ffd978}
+table.t td,table.t th{vertical-align:top}
+</style></head><body>
+<div class="top"><div class="in"><div class="crumb"><a href="../">Store</a><span>›</span><a href="index.html">HAT</a><span>›</span><a href="makine.html">Makine</a><span>›</span><b>5 · PACK</b></div><div><a href="../">← Store</a></div></div></div>
+<div class="wrap"><h1>5 · PACK — kutu katlama modülü v1<span class="tag" style="background:#d9b43a">830 × 830 × 2030</span></h1>
+<p class="lead">Standart pizza kutusunu (32 × 32 × 4,2 cm, E-dalga) düz açılımdan katlar, pizzayı alır, kapağını kapatıp bastırır. Robot kutuyu tepsinin aralıklarından çatalla alır. 7 step motorlu. Her parça ya katalog ürünü ya da çizimle üretilecek sac ya da alüminyum. Modelde her hareket gerçek zamanında oynar; aşağıdaki adımlardan birine basınca model o ana gider.</p>
 <div class="m3">
-  <model-viewer id="mv" loading="eager" src="../hat3d/modul_E.glb?v=33" ios-src="../hat3d/modul_E.usdz?v=33" alt="5 · PACK — kutulama"
-      camera-controls touch-action="pan-y" shadow-intensity="0.6" exposure="1.0" environment-image="neutral"
-      camera-orbit="20deg 80deg 3.6m" camera-target="3.55m 1.0m -0.4m" field-of-view="30deg" min-field-of-view="5deg"
-      ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
-  <div class="et" id="et"></div>
-  <button class="ar" onclick="document.getElementById('mv').activateAR()">AR'de gör</button>
-  <div class="ip">sürükle: döndür · üstüne gel: birim · çift tıkla: aç &middot; alttan kesit + ölçü</div>
+  <model-viewer id="mv" loading="eager" src="../hat3d/kutu_modulu_v1.glb?v=3" alt="E · kutu katlama modülü — çalışma döngüsü" autoplay
+      camera-controls touch-action="pan-y" shadow-intensity="0.5" exposure="1.0" environment-image="neutral"
+      camera-orbit="32deg 66deg 2.6m" camera-target="0.42m 1.2m -0.3m" field-of-view="30deg" min-field-of-view="5deg" min-camera-orbit="auto auto 0.3m"></model-viewer>
+  <div class="zc"><button id="oy">duraklat</button><input id="tz" type="range" min="0" max="20" step="0.05" value="0"><span class="sn" id="sn">0,0 / 20 sn</span></div>
+  <div class="adim" id="adim"></div>
+  <div class="anlat" id="anlat"></div>
 </div>
-<div class="secim" id="secim"></div>
-<p class="note" id="ozet"></p>
-<div class="card" style="border-left:4px solid #2456c8;background:#f4f7fd;margin:0 0 14px"><b style="color:#2456c8">22 EYLÜL 2026 · MODEL GÜNCEL, METİN ESKİ</b><br>
-Yukarıdaki 3B model <b>HAT v19</b>'a göre güncel. Bu istasyonun birimleri henüz <b>ölçü kutusu</b> — sırası gelince gerçek üretim modeline çevrilecek (örnek: <a href="topping.html"><b>3 · TOPPING</b></a>).
-Aşağıdaki açıklama metinleri 14 Eylül'ün 4200 mm'lik tepsili hattından kalmadır, güncel değildir.</div>
-<h2>1 · Ne yapar · çalışma senaryosu</h2><div class="card"><ol class="steps"><li>AL: plunger 48 cm yukarı çıkar, 6 vantuz yığının en alt kutusuna yapışır.</li><li>İN: eksen aşağı; blank tutucu raylardan bükülerek sıyrılır, plakaya yatar.</li><li>KATLA: taban 4 cm pencereden çekilir; 4 duvar kırımdan kalkar, köşe tırnakları plowla yan duvarın içine kıvrılır. Kapak plakada düz kalır.</li><li>YÜKSEL: eksen 4 cm yukarı; kutu plakaya oturur (z 60). HAZIR.</li><li>PİDE: robot tepsiyi ön duvarın üstünde eğer, 4 parça kutuya kayar.</li><li>KAPAK: 3 flap parmağı flapları 90° kaldırır; U kol kapağı 180° çevirir; flaplar ve ön dil içeri girer.</li><li>VER: eksen 6 cm daha kalkar; robot pençe yanlardan tutar, teslim dolabına götürür. Çevrim ≈ 15 sn.</li></ol></div><h2>2 · Özellikler · karar özeti</h2><div class="card"><div class="kv"><b>Kutu</b><span>32×32×4 köşe tırnaklı tepsi tipi; blank 40×76, E-dalga 1,6 mm, 115 g (TR standart 24–40 kare; 33'lük kalıp da olur: 41×78)</span><b>Şarjör</b><span>84 cm (z 104–188) = 525 kutu; 80 pide: 3 gün 38 cm garanti · 5 gün 64 hedef · dolu 6,6 gün; 7 gün 90 sığmaz</span><b>Dikey eksen</b><span>bilyalı vida 1605 + 2 ray, NEMA 23, strok 48, 25 cm/s, ≥ 500 N; plunger 31,6 + 6 vantuz Ø40; vakum pompası 24 V 30 L/dk (kompresör yok)</span><b>Kalıp</b><span>pencere 32,5, duvar 4,5, köşe plowları; arka: orta ray + 3 flap parmağı (servo) + U kol (24 V redüktör)</span><b>Zonlar</b><span>plint 12 / pano 18 / step+vakum 15 / boyunduruk 10 / kalıp 5 / yükleme 44 / şarjör 84 / üst 9 = 197</span><b>Vantuz payı</b><span>dolu yığın 60 kg: gerek 257 N, vantuz 528 N → pilot 40 cm ile başlar</span><b>Saçet seti</b><span>peçete + ıslak mendil + pul biber: mekanizma SIFIR — eleman kutu demetlerini şarjöre sürerken setleri kutunun içine koyar; v2 opsiyonu otomatik düşürücü (friction feeder)</span><b>Maliyet</b><span>eksen + vakum + kalıp + kapak kolu gövdesi ≈ 40–60 bin TL (entegratör imalatı)</span></div></div><h2>3 · Teknik resimler</h2><figure><img src="img/kutu_istasyonu_teknik_v4.png" alt="PACK v4 — üstten beslemeli kutu açıcı (6 Eyl 2026)" loading="lazy"><figcaption>PACK v4 — üstten beslemeli kutu açıcı (6 Eyl 2026)</figcaption></figure><div class="thumbs"><a href="img/kutu_istasyonu_teknik_v3.png" target="_blank"><img src="img/kutu_istasyonu_teknik_v3.png" loading="lazy"><span>v3 şarjör 116 (eleman katlar)</span></a></div><h2>4 · Tedarikçiler · fiyatlar</h2><div class="card"><table><tr><th>Tedarikçi / ürün</th><th>Ne</th><th style="width:150px">Fiyat / durum</th></tr><tr><td><b>Kutu üreticisi</b></td><td>özel bıçak kalıbı, köşe tırnaklı, baskılı</td><td>yerli oluklu mukavva</td></tr><tr><td><b>Vantuz + vakum pompası</b></td><td>6 × Ø40 körüklü, 24 V diyafram</td><td>Schmalz / Çin</td></tr><tr><td><b>Lineer eksen</b></td><td>bilyalı vida 1605 + NEMA 23</td><td>yerli</td></tr><tr><td><b>Kutu açma makinesi (referans)</b></td><td>Çin pnömatik pizza kutusu makinesi</td><td>video referansı</td></tr></table></div><h2>5 · Soru işaretleri · açık konular</h2><div class="card"><table><tr><th style="width:44px">#</th><th>Problem</th><th style="width:110px">Durum</th><th>Çözüm / not</th></tr><tr><td><b>K5</b></td><td>Kutular üstte, altta katlansın, 3–7 gün</td><td><span class="st on">ÖNERİ VAR</span></td><td>v4 tasarımı</td></tr><tr><td><b>K2</b></td><td>Şarjörden kutu gelmezse / çift</td><td><span class="st on">ÖNERİ VAR</span></td><td>blank sensörü, 2. çekme, kalınlık sensörü</td></tr><tr><td><b>K3</b></td><td>Kapak tam kapanmazsa</td><td><span class="st on">ÖNERİ VAR</span></td><td>sensör + robot pençe yedek</td></tr><tr><td><b>P-T1</b></td><td>İtici dilimleri dağıtır</td><td><span class="st ok">ÇÖZÜLDÜ</span></td><td>tepsi eğilir, kesim izli iner</td></tr><tr><td><b>—</b></td><td>Blank bıçak kalıbı · flap kapanma güvenilirliği · vantuz pilotu</td><td><span class="st ac">AÇIK</span></td><td>pilot</td></tr></table></div><h2>6 · Sürüm geçmişi</h2><ul class="ver"><li>v4 (6 Eyl): üstten beslemeli kutu açıcı, vakum plunger + kalıp</li><li>v3 (4 Eyl): şarjör 116 (eleman katlar), bıçak yıldızı yatay</li><li>v1–v2 (Ağu): kesim + kutu istasyonu</li></ul></div><div class="foot">AUTOKITCH · HAT · Yol C canlı tasarım defteri · kaynak: arastirma/ (DUZEN.md, PROBLEMLER.md, paftalar) · 7 Eyl 2026</div><script>
-const MODUL = "E";
-const ROZET = {GERCEK:['rz-g','ger\u00e7ek model'], GERCEK_MODUL:['rz-g','ger\u00e7ek model'], GERCEK_PARCA:['rz-g','k\u0131smen ger\u00e7ek'], KUTU:['rz-k','kutu'], KATALOG:['rz-c','katalog']};
-const M = model3d({
-  mv:'mv', etiket:'et', grup:'kod',
-  hedef: g => g.birimler[0].sayfa ? '../' + g.birimler[0].sayfa : '',
-  yazi: g => { const b = g.birimler[0], rz = ROZET[b.durum];
-    return '<b>' + b.ad + '</b><span>' + b.olcu.join(' \u00d7 ') + ' mm \u00b7 <span class="rozet ' + rz[0] + '">' + rz[1] + '</span>' +
-      (b.kaynak ? '<br>' + b.kaynak : '') + '</span>'; }
-});
-fetch('../hat3d/durum.json?v=16').then(r => r.json()).then(D => {
-  const L = D.birim.filter(b => b.modul === MODUL && b.kod.indexOf('_KABIN') < 0); M.veri(L);   // kabin zarfi modele girmiyor, listede de olmasin
-  const tek = {}; L.forEach(b => { const k = b.ad + '|' + b.durum; (tek[k] = tek[k] || []).push(b); });
-  document.getElementById('secim').innerHTML = Object.values(tek).map(gr => {
-    const b = gr[0], rz = ROZET[b.durum];
-    return '<a href="' + (b.sayfa ? '../' + b.sayfa : '#') + '" data-k="' + b.kod + '"' + (b.sayfa ? '' : ' class="yok"') + '>' +
-      b.ad + (gr.length > 1 ? ' \u00d7' + gr.length : '') + '<span>' + b.olcu.join(' \u00d7 ') + ' mm \u00b7 ' + rz[1] + '</span></a>';
-  }).join('');
-  document.querySelectorAll('.secim a').forEach(a => { a.onmouseenter = () => M.sec(a.dataset.k); a.onmouseleave = () => M.birak();
-    if (a.classList.contains('yok')) a.onclick = e => e.preventDefault(); });
-  const g = L.filter(b => b.durum.indexOf('GERCEK') === 0).length;
-  document.getElementById('ozet').innerHTML = '<b>' + g + ' / ' + L.length + ' birim ger\u00e7ek \u00fcretim modeli.</b> \u00d6l\u00e7\u00fc kayna\u011f\u0131: ' + D.hat.pafta + '.';
-});
+
+<div class="card" style="border-left:4px solid #2456c8;background:#f4f7fd;margin:14px 0"><b style="color:#2456c8">25 EYLÜL 2026 · E KUTU KATLAMA MODÜLÜ v1 (kutu_cad_v1)</b><br>
+<b>Standart kutu:</b> 32 × 32 × 4,2 cm E-dalga pizza kutusu, 100'lük paketle satılıyor (<a href="https://www.ambalajpazari.com/pizza-kutusu-32x32x4-2-cm-100-adet-192" target="_blank">AmbalajPazarı</a>; <a href="https://www.bekarambalaj.com/urun/pizza-kutusu-32x32x4-cm-100-adet/" target="_blank">Bekar Ambalaj</a> 32×32×4: 100 adet 16 kg). Dizilimi "Amerikan kapama". <a href="https://en.wikipedia.org/wiki/Pizza_box" target="_blank">Wikipedia</a>'ya göre standart tip bu: yan duvarlara bağlı flaplar ön duvarın içine katlanıyor. Katlama sırası <a href="https://patents.google.com/patent/US4441626A/en" target="_blank">US 4441626 A</a> patentinden alındı.<br>
+<b>Açılım (hesap):</b> 804 × 404 mm. Taban 320 · yan duvar 42 · dış ön 42 · iç ön 40 · kilit dili 10 · arka duvar 44 · kapak 312 × 315 · kapak flapları 36. Üreticinin bıçak çizimi gelince bu ölçüler güncellenecek.<br>
+<b>Neden 830:</b> 804'lük açılım 700'lük modülün içine (~697) boyuna sığmıyor. Derinliğe yatırınca şarjör ile katlama yeri aynı izdüşümde kalıyor; blank şarjörden kalıba çıkarken kalıba ve tepsiye çarpıyor. Şarjörü üste koymak da mümkün değil: kapak dönerken 1560'a kadar yer kaplıyor, üstte yalnız ≈ 250–280 kutuluk yer kalıyor (1,5 gün, 2 gün kuralını tutmuyor). Modül 830 olunca açılım x boyunca yatıyor, şarjör arkaya, katlama öne geçiyor ve blank üstten itilerek geliyor. <b>Hat 5300 → 5430 mm</b> oluyor. Pafta ve montaja işlemek senin onayını bekliyor.</div>
+
+<h2>1 · Kutu nasıl katlanır (standart sıra)</h2>
+<div class="card"><ol class="steps">
+<li><b>Yan duvarlar kalkar.</b> Uçlarındaki köşe tırnakları 90° içe döner. Bunu yapacak köşe kıvırıcısı henüz AÇIK (bkz. 4).</li>
+<li><b>Ön dış duvar kalkar.</b> Ardından iç panel üstten kıvrılıp içeri iner. Köşe tırnakları iki ön panelin arasında kalır, iç panelin 2 kilit dili tabandaki yarıklara girer. Kutu yapıştırmasız kilitlenir.</li>
+<li><b>Arka duvar kalkar.</b> Bu duvar kapağın menteşesidir.</li>
+<li><b>Kapağın 3 flapı 90° katlanır.</b> Kapak kapanınca iki yan flap yan duvarların, ön flap iç ön panelin içine girer.</li>
+</ol></div>
+
+<h2>2 · Makine — ne nerede</h2>
+<div class="card"><div class="kv">
+<b>Şarjör (arka, alt)</b><span>804 × 404 yığın, 908 mm = <b>567 kutu</b> (1,6 mm) / 504 (1,8 mm). Asansörde Tr16×4 trapez vida var (kendinden kilitli: elektrik kesilince yığın düşmez), 2:1 GT3 kayış ve NEMA 23 ile döner, yığını 2 HIWIN HGR15 ray taşır. Fotosel yığının üstünü hep 1149,6'da tutar. Şarjör <b>sağ yan kapaktan</b> (hattın ucu) dolar.</span>
+<b>Besleyici (itici)</b><span>2 HGR15 ray (1500 kotunda, dik kapağın üstünde), GT3 kayış ve NEMA 23 (önde). İtici çubuğun alt kenarı 1150,2'de, kapı eşiği 1148,8'de. Çubuk yalnız en üstteki blankı yakalar, 2. blank eşikte kalır. Strok 411 mm, 1,2 sn.</span>
+<b>Kalıp + tepsi</b><span>4 çubuklu tepsi (robot çatalının 3 dişi aralardan girer), arka yan ray, ön tarak (4 diş) ve ön ray. Yan duvarlar rayların iç üst köşesinden dönerek kalkar. Ön ray 20 mm alçak olduğu için ön dış duvar, yan duvarlardan ve köşe tırnaklarından sonra kalkar.</span>
+<b>Köprü</b><span>Pizza yolu. Katlama sırasında 30 mm aşağıda durur; ön paneller serbest kalıp dik kalkabilsin diye. Pizza gelirken kalıp kotuna (1149,5) çıkar. SFU1605, NEMA 23 ve 2 × LM12UU ile çalışır.</span>
+<b>Piston</b><span>296 × 296 kafa, SFU1610 vida (üstten BK12, sabit–serbest), 2 HGR15 ray ve NEMA 23. Üç iş yapar: tabanı 45,6 mm kalıba basar, 2. vuruşta kilit dillerini yarıklara iter, son vuruşta kapağı kapatıp bastırır.</span>
+<b>Devirme parmağı</b><span>NEMA 23 + SureGear 10:1. Dik duran iç ön paneli 140°'lik dönüşle kutunun içine devirir.</span>
+<b>Kapak</b><span>Kapak masası, U flap katlayıcı (SFU1605 + NEMA 23; 37,6 mm kalkar, 3 flapı birden katlar) ve kapak kolu (NEMA 23 + SureGear 10:1, R 166, POM makaralı). Kol kapağı pizza gelene kadar 85°'de dik tutar, sonra 100°'ye yatırır.</span>
+<b>Pano (üst arka)</b><span>Siemens S7-1200 1214C + SM1221 DI16 + SM1222 DQ16, 7 × AutomationDirect SureStep STP-DRV-4830, Mean Well NDR-240-24 + 2 × NDR-240-48.</span>
+<b>Sensörler</b><span>3 × Omron E3Z-D62 (yığın üstü, blank var, kutu dolu) ve 7 × Omron E2E-X2D1-N (eksen sıfırları).</span>
+<b>Malzeme listesi</b><span><a href="../../arastirma/5_PACK_v1/BOM_OZET.csv">BOM_OZET.csv</a> (kalem toplamları, satın alma / üretim) · <a href="../../arastirma/5_PACK_v1/BOM.csv">BOM.csv</a> (modeldeki her parça). Üretici STEP'leri (HIWIN ray/araba, SureStep motor/sürücü, SureGear redüktör, Mean Well) modelde birebir kullanıldı. Vida, yatak, sensör ve PLC katalog ölçüsüyle modellendi.</span>
+<b>Kaynaklar</b><span><a href="https://www.automationdirect.com/adc/shopping/catalog/motion_control/stepper_systems/single_shaft_stepper_motors/stp-mtr-23079" target="_blank">STP-MTR-23079</a> (1,95 N·m) · <a href="https://www.automationdirect.com/adc/shopping/catalog/motion_control/stepper_systems/stepper_drives/stp-drv-4830" target="_blank">STP-DRV-4830</a> (3 A, 12–48 V) · <a href="http://www.adcpn.com/pn/PGCN23-1025" target="_blank">SureGear PGCN23-1025</a> · HIWIN HGR15/HGH15CA (TraceParts) · <a href="https://fluxelectronix.com/shop/sfu1610-ball-screw-nut/" target="_blank">SFU1610 somun</a> (Ø48 × 57) · <a href="https://us.misumi-ec.com/vona2/detail/221000095199/?HissuCode=BK12" target="_blank">BK12</a> · <a href="https://www.sirosilo.com/products/pizza-box-folding-machine/" target="_blank">endüstriyel pizza kutusu makinesi</a> (çalışma ilkesi karşılaştırması: 2051 × 1400 × 2120, 580 kg, 15–20 kutu/dk, basınçlı hava).</span>
+</div></div>
+
+<h2>3 · Denetim (modelden ölçüldü)</h2>
+<div class="card"><div class="kv">
+<b>Kapalı kutu</b><span>322,4 × 323,2 × 45,6 mm. Kilit dilleri tepsinin cebinde 6,4 mm aşağı iner.</span>
+<b>Düz açılım kalıpta</b><span>804 × 404 mm, ön yüzün 4 mm içinde. Modülden taşmıyor.</span>
+<b>Süre</b><span>Blanktan kapağı dik hazır kutuya <b>7,6 sn</b> (sim varsayımı 15). Kapak kapatma + bastırma <b>2,0 sn</b> (sim 3). Tam döngü 20 sn.</span>
+<b>Asansör</b><span>Tam yığın 101 kg → motor torku 0,90 N·m (STP-MTR-23079 tutma torku 1,95).</span>
+<b>Piston</b><span>1800 d/dk'da ≈ 170 N itme (katlama için 50–100 N gerekiyor, tahmin). Hız 300 mm/s. Vida kritik devri ≈ 2760 d/dk, burkulma sınırı ≈ 3,5 kN.</span>
+<b>Çakışma taraması</b><span id="tarama">217 parça. <b>Makine × makine:</b> döngü boyunca 201 an (0,1 sn aralık), 0 çakışma. <b>Kutu × makine:</b> 6 duruş anı (düz · katlı · flaplar · dik kapak · kapalı · çatalda) ve katlanırken 40 geçiş anı, 0 çakışma. <b>Pizza yolu</b> (K plakası → köprü → kutu → robot): 25 an, 0 çakışma. Eşik 1 mm³. Kartonun kendi panelleri birbirine karşı taranmıyor: kilit dili yarığa girerken 0,3 sn tabanın içinden geçiyor görünür, gerçekte dil esneyip yarığa kayar.</span>
+</div></div>
+
+<h2>4 · Sorunlar · çözümler</h2>
+<div class="card"><table class="t"><tr><th style="width:34%">Sorun</th><th style="width:110px">Durum</th><th>Çözüm / not</th></tr>
+<tr><td>700'lük modüle sığmıyor</td><td><span class="st on">KARAR</span></td><td>830 × 830. Hat 5300 → 5430 mm. Onaylarsan pafta v8 ve montaj v38'e işlenecek. Hattın boyu sabit kalsın dersen K'nın 600 → 470'e daraltılması incelenebilir.</td></tr>
+<tr><td>Düz blankın yan duvarı ön yüzden 31,5 mm taşıyordu</td><td><span class="st ok">ÇÖZÜLDÜ</span></td><td>Kutu ekseni z −206 (hattın ürün ekseni −170). <b>K için şart:</b> itici pizzayı K plakası üstünde 36 mm içeri kaydırıp sonra düz iter (2 eksenli itici). Bıçak genişliği ≤ 300, strok ≈ 660; itici E'ye 105 mm girer. K henüz modellenmedi, bu şart K tasarımına not edildi.</td></tr>
+<tr><td>İç ön panel köprüye yatıyordu (270° dönmesi gerekirdi)</td><td><span class="st ok">ÇÖZÜLDÜ</span></td><td>Köprü katlamada 30 mm aşağıda. Panel dik kalkar, parmak devirir, yerçekimi içeri düşürür, 2. vuruş kilitler.</td></tr>
+<tr><td>Piston dudağı ilk vuruşta paneli ezecekti</td><td><span class="st ok">ÇÖZÜLDÜ</span></td><td>Dudak kaldırıldı, yerine üstten dönen devirme parmağı kondu.</td></tr>
+<tr><td>Kayış çenesi strok sonunda avara kasnağına giriyordu</td><td><span class="st ok">ÇÖZÜLDÜ</span></td><td>Tahrik kasnağı öne, avara arkaya alındı. Kasnaklar arası 446,6 mm, 411 strokta 15 mm pay kalıyor.</td></tr>
+<tr><td>Piston vidasının alt yatağı hareket yolundaydı</td><td><span class="st ok">ÇÖZÜLDÜ</span></td><td>Vida üstten BK12 ile tutuluyor, altı serbest. Burkulma 3,5 kN ≫ 170 N; kritik devir 2760 > 1800 d/dk.</td></tr>
+<tr><td>Robotun "çarparak kapatma" seçeneği</td><td><span class="st ac">ÖNERİLMEZ</span></td><td>Kapak menteşesi +x'te, robot kutuyu +z'ye çekiyor. Düz çekişte kapağı döndüren kuvvet oluşmuyor. Olması için robot kutuyu +x'e ≈ 350 mm sürüp bir çubuğun altından geçirmeli. Bu robota ≈ 2–3 sn ekler (robot zaten darboğaz, %93–96) ve flaplar bastırılmadan kalır. Kapatmayı ek motor olmadan piston yapıyor.</td></tr>
+<tr><td>Çift blank beslemesi, eğri blank</td><td><span class="st on">PİLOT</span></td><td>Kapı eşiği 1148,8, itici alt kenarı 1150,2, yığın üstü fotoseli. Pilotta eğri blank sorun çıkarırsa iticiye 2 vantuz eklenir.</td></tr>
+<tr><td><b>Köşe tırnaklarını içe çeviren eleman</b></td><td><span class="st ac">AÇIK</span></td><td>Modelde tırnaklar dönüyor görünüyor ama bunu yapan parça yok. Sabit köşe plow'larını ve askılarını modele koydum; askılar yükselen tırnakların, plow'lar kapak flaplarının yoluna düştü (geçiş taraması), çıkardım. Seçenekler: (a) ön ve arka rayların köşelerine eğik takoz (motorsuz, açısı pilotta bulunur) · (b) 2 küçük döner kıvırıcı (+1 motor). Sıra (yan duvar → tırnak → ön duvar) ön rayın 20 mm alçaklığıyla zaten sağlanıyor.</td></tr>
+<tr><td>7 eksen, PLC'de 4 darbe çıkışı (PTO)</td><td><span class="st ok">ÇÖZÜLDÜ</span></td><td>Aynı anda en çok 3 eksen dönüyor (zaman çizelgesi). Sürücüler PTO'yu enable ile paylaşıyor.</td></tr>
+<tr><td>2 gün stok kuralı</td><td><span class="st on">BİLGİ</span></td><td>1,6 mm kartonda 567 kutu: her ürüne 1 kutu (280/gün) sayılsa bile 2,0 gün. 1,8 mm kartonda 504 kutu = 1,8 gün. Sim'deki "3 lahmacun 1 kutu" kuralıyla (~170/gün) ≈ 3 gün.</td></tr>
+<tr><td>Şarjör sağ yandan doluyor</td><td><span class="st on">KURULUM</span></td><td>Hattın sağ ucunda ≥ 450 mm boşluk gerekli. Önden dolum için kapı eşiğinin menteşeli olması gerekir (v2 seçeneği).</td></tr>
+<tr><td>Pizza 44 mm düşüyor (köprü 1149,5 → taban 1105,6)</td><td><span class="st on">PİLOT</span></td><td>Dilimli pizzada dilimler kayar mı, pilotta bakılacak.</td></tr>
+<tr><td>Açılım ölçüsü hesapla bulundu</td><td><span class="st ac">AÇIK</span></td><td>Üreticiden bıçak çizimi istenecek (AmbalajPazarı ya da yerel oluklu mukavva üreticisi). Kalıp rayları ±5 mm ayarlı yapılacak.</td></tr>
+</table></div>
+
+<h2>5 · Sürüm geçmişi</h2><ul class="ver">
+<li><b>v1 (25 Eyl 2026):</b> standart kutu, 830 modül, alttan şarjör + üstten itmeli besleme + zımba kalıbı + köprü + devirme parmağı + U flap katlayıcı + kapak kolu. Çalışma animasyonu. Çakışma taraması 0 (makine 201 an · kutu 46 an · pizza 25 an).</li>
+<li>v4 (6 Eyl): üstten beslemeli kutu açıcı, vakumlu plunger + kalıp (eski; blank 400 × 760 varsayımı) — <a href="img/kutu_istasyonu_teknik_v4.png" target="_blank">eski pafta v4</a>.</li>
+<li>v3 (4 Eyl) · v1–v2 (Ağu): kesim + kutu istasyonu.</li>
+</ul></div>
+<div class="foot">AUTOKITCH · HAT · Yol C canlı tasarım defteri · model: arastirma/_uretec/kutu_cad_v1.py · 25 Eyl 2026</div>
+<script>
+const ADIM = [
+  [0.5, 'BESLEME', 'İtici en üstteki blankı şarjörden kalıbın üstüne sürer (411 mm, 1,2 sn). 2. blank kapı eşiğinde kalır.'],
+  [2.7, 'ZIMBA', 'Piston tabanı 45,6 mm kalıba basar. Yan duvarlar kalkar, köşe tırnakları içe döner, ön dış duvar ve arka duvar (menteşe) kalkar. Kapak masada düz kayar.'],
+  [4.0, 'DEVİRME', 'Piston yukarıda. Parmak dik duran iç ön paneli kutunun içine devirir; panel yerçekimiyle içeri düşer.'],
+  [5.0, 'KİLİT', '2. vuruş: iç panel dış duvara yapışır, köşe tırnakları iki panelin arasında kalır, kilit dilleri tabandaki yarıklardan tepsinin cebine iner.'],
+  [5.8, 'KÖPRÜ', 'Köprü 30 mm kalkar. Pizza yolu kalıp kotunda (1149,5).'],
+  [6.4, 'FLAP', 'U çerçeve 37,6 mm kalkar, kapağın 3 flapını 90° katlar.'],
+  [6.8, 'KAPAK DİK', 'Kol kapağı 85°\'ye kaldırır. KUTU HAZIR: blanktan 7,6 sn.'],
+  [8.5, 'PİZZA', 'K iticisi pizzayı plakada 36 mm içeri kaydırır, köprüden kutuya sürer; pizza tabana düşer.'],
+  [10.9, 'YATIR', 'Piston dik kapağın üstünde bekler, kol kapağı 100°\'ye yatırır.'],
+  [11.2, 'KAPAT', 'Piston kapağı kapatıp bastırır: yan flaplar yan duvarların, ön flap iç panelin içine girer (2,0 sn).'],
+  [13.9, 'ROBOT', 'FR5 çatalı tepsinin aralıklarından girer, kutuyu 55 mm kaldırır, ağızdan çeker (QR dolabına).'],
+];
+const mv = document.getElementById('mv'), oy = document.getElementById('oy'), tz = document.getElementById('tz'), sn = document.getElementById('sn'),
+      adim = document.getElementById('adim'), anlat = document.getElementById('anlat');
+adim.innerHTML = ADIM.map((a, i) => '<button data-i="' + i + '">' + (i + 1) + ' · ' + a[1] + '</button>').join('');
+const btn = [...adim.querySelectorAll('button')];
+function goster(t) {
+  let k = 0; ADIM.forEach((a, i) => { if (t >= a[0] - 0.01) k = i; });
+  btn.forEach((b, i) => b.classList.toggle('ak', i === k));
+  anlat.innerHTML = '<b>' + (k + 1) + ' · ' + ADIM[k][1] + '</b> — ' + ADIM[k][2];
+  sn.textContent = t.toFixed(1).replace('.', ',') + ' / 20 sn';
+}
+btn.forEach(b => b.onclick = () => { const t = ADIM[+b.dataset.i][0]; mv.currentTime = t; tz.value = t; goster(t); mv.play(); oy.textContent = 'duraklat'; });
+tz.oninput = () => { mv.pause(); oy.textContent = 'oynat'; mv.currentTime = parseFloat(tz.value); goster(parseFloat(tz.value)); };
+oy.onclick = () => { if (mv.paused) { mv.play(); oy.textContent = 'duraklat'; } else { mv.pause(); oy.textContent = 'oynat'; } };
+setInterval(() => { if (!mv.paused && mv.loaded) { tz.value = mv.currentTime; goster(mv.currentTime); } }, 150);
+goster(0);
 </script>
 </body></html>
