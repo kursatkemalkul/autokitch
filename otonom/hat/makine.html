@@ -5,7 +5,7 @@
 <p class="lead">Hattın tamamı tek modelde. <b>Üstüne gel</b> &mdash; adı çıkar. <b>Çift tıkla</b> &mdash; o istasyonun kendi modeli açılır. Modelin altındaki çubuktan <b>kesit</b> alabilir (X/Y/Z) ve iki noktaya tıklayıp <b>ölçü</b> çıkarabilirsin.</p>
 
 <div class="m3">
-  <model-viewer id="mv" loading="eager" src="../hat3d/hat_v38.glb?v=38" ios-src="../hat3d/hat_v38.usdz?v=38" alt="AUTOKITCH hat üretim modeli" autoplay
+  <model-viewer id="mv" loading="eager" src="../hat3d/hat_v39.glb?v=39" ios-src="../hat3d/hat_v39.usdz?v=39" alt="AUTOKITCH hat üretim modeli" autoplay
       camera-controls touch-action="pan-y" shadow-intensity="0.6" exposure="1.0" environment-image="neutral"
       camera-orbit="30deg 74deg 9.8m" camera-target="2.72m 1m -0.4m" field-of-view="30deg" min-field-of-view="6deg"
       ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
@@ -29,7 +29,7 @@
 <b>Toplam hat</b><span>5430 &times; 830 &times; 2030 mm (pafta v7: 5300 — E 830 için pafta v8 onayını bekliyor)</span>
 <b>Çekmece modülü</b><span>B gerçek üretim modeli v2: 21 fitilli motorlu çekmece (Transmotec motor + GT3 kayış yan bantta + Accuride ray + açık/kapalı reed), K4 Secop soğutma + depo + niş, K1 üstünde S7-1200 pano · <a href="store.html">1 · STORE</a></span>
 <b>Kutu modülü</b><span>E gerçek üretim modeli v2: standart 32 × 32 × 4,2 kutu, 567'lik şarjör, itici, zımba kalıbı, köprü, piston, devirme parmağı, U flap katlayıcı, kapak kolu, pano · 7 NEMA 23 · <a href="pack.html">5 · PACK</a></span>
-<b>Animasyon</b><span>model açılınca çalışır (40 sn): çekmeceler sırayla açılıp kapanır, kutu modülü iki tur blank → kutu → pizza → kapak</span>
+<b>Animasyon</b><span>model açılınca çalışır (40 sn): çekmeceler sırayla açılıp kapanır (üç parçalı ray birlikte uzar), kutu modülü iki tur blank → kutu → pizza → kapak</span>
 <b>Taban hizası</b><span>A, C, F, K istasyonları <b>1060</b>'ta başlar, altları ayrı taban dolabı. E kutu katlama 0&ndash;2030 tek parça</span>
 <b>Süreç kotu</b><span>TOPPING modelinden ölçülür: disk 1168 &middot; fırın bandı 1166 (290 geniş, eksen z −170) &middot; kesme plakası 1164 &middot; kutu tepsisi 1104</span>
 <b>Robot</b><span>tek Fairino FR5, yer rayında, omuz 970, erişim 779 &middot; QR teslim dolabı koridorun karşısında</span>
@@ -41,7 +41,8 @@
 <figure><img src="img/HAT_ATOSA_TABLALI_v7_teknik.png" alt="HAT ATOSA TABLALI teknik resim v7" loading="lazy"><figcaption>HAT ATOSA TABLALI v7 &mdash; 3B modelin yerleşim kaynağı (düşey kotlar modelde TOPPING'e göre: süreç 1168)</figcaption></figure>
 
 <h2>4 &middot; Sürüm geçmişi</h2><ul class="ver">
-<li><b>MONTAJ v38 (25 Eyl) &middot; GEÇERLİ</b>: E kutu katlama modülü gerçek üretim modeli (kutu_cad_v2, 11 birim, 830 genişlik → hat 5430) ve çalışma animasyonu artık ana montajda; çekmeceler + kutu modülü ortak 40 sn döngü. SolidWorks STEP çıktısı kaldırıldı</li>
+<li><b>MONTAJ v39 (25 Eyl) &middot; GEÇERLİ</b>: çekmece rayı üç parçalı teleskop (store_cad_v3). Açılan çekmece artık rayda taşınıyor, havada kalmıyor: dış parça sabit, ara parça yarı yol, iç parça çekmeceyle gelir</li>
+<li>MONTAJ v38 (25 Eyl): E kutu katlama modülü gerçek üretim modeli (kutu_cad_v2, 11 birim, 830 genişlik → hat 5430) ve çalışma animasyonu artık ana montajda; çekmeceler + kutu modülü ortak 40 sn döngü. SolidWorks STEP çıktısı kaldırıldı</li>
 <li>MONTAJ v37 (24 Eyl): B çekmece modülü v2 — fitil profili, yan kayış, standart ürünler, çalışma animasyonu (store sayfası)</li>
 <li>MONTAJ v36 (24 Eyl): B çekmece modülü gerçek üretim modeli (store_cad_v1), her çekmece ayrı birim</li>
 <li>MONTAJ v35 (24 Eyl): yerleşim ATOSA TABLALI v7 (5300); A, C, F, K tabanları 1060'ta hizalı, E tek parça; süreç kotu 1168 (TOPPING'e göre); K'deki yedek kutular kaldırıldı; tek FR5 + QR dolabı</li>
@@ -50,7 +51,7 @@
 <li>HAT v51 (6 Eyl): PACK v4 &mdash; <b>eski 4200 mm'lik tepsili hat</b></li>
 </ul>
 </div>
-<div class="foot">AUTOKITCH &middot; HAT &middot; Yol C canlı tasarım defteri &middot; model: arastirma/_uretec/hat_montaj_v38.py &middot; 25 Eyl 2026</div>
+<div class="foot">AUTOKITCH &middot; HAT &middot; Yol C canlı tasarım defteri &middot; model: arastirma/_uretec/hat_montaj_v39.py &middot; 25 Eyl 2026</div>
 
 <script>
 const SAYFA = {A:'press.html', B:'store.html', C:'topping.html', D:'oven.html', K:'oven.html', E:'pack.html', '-':'robot.html'};
@@ -65,7 +66,7 @@ const M = model3d({
   }
 });
 
-fetch('../hat3d/durum.json?v=38').then(r => r.json()).then(D => {
+fetch('../hat3d/durum.json?v=39').then(r => r.json()).then(D => {
   M.veri(D.birim);
   const mod = {}; D.birim.forEach(b => (mod[b.modul] = mod[b.modul] || []).push(b));
   document.getElementById('secim').innerHTML = ['B','A','C','D','K','E','-'].filter(k => mod[k]).map(k => {
