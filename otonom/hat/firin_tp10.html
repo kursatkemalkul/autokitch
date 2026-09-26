@@ -1,0 +1,85 @@
+<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>F · GERÇEK FIRIN DENEMESİ · Sveba Dahlen TP10</title><link rel="stylesheet" href="hat.css?v=10">
+<script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script>
+<style>.zc{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;padding:10px 16px;background:#1b1f26;border-top:1px solid #2a3039}.zc button{border:1px solid #39424f;background:#232932;color:#cfd6df;border-radius:8px;padding:6px 11px;font:600 12.5px system-ui,sans-serif;cursor:pointer}.zc input[type=range]{flex:1 1 220px;accent-color:#4f86ff}.zc .sn{color:#8d97a4;font:600 12px system-ui,sans-serif;font-variant-numeric:tabular-nums;min-width:70px}.adim{display:flex;flex-wrap:wrap;gap:6px;padding:0 16px 12px;background:#1b1f26}.adim button{border:1px solid #2f3742;background:#1f252d;color:#aab4c0;border-radius:999px;padding:4px 10px;font:600 11.5px system-ui,sans-serif;cursor:pointer}.adim button.ak{border-color:#e0a31c;background:#3a2f14;color:#ffd978}.anlat{padding:8px 16px 14px;background:#1b1f26;color:#dce3ea;font:14px/1.45 system-ui,sans-serif;min-height:42px}.anlat b{color:#ffd978}
+table.t{width:100%;border-collapse:collapse;font-size:13.5px}table.t td,table.t th{border-bottom:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}.iyi{color:#178a56;font-weight:600}.kotu{color:#b42318;font-weight:600}.m3b model-viewer{height:420px}</style></head><body>
+<div class="top"><div class="in"><div class="crumb"><a href="../">Store</a><span>&rsaquo;</span><a href="index.html">HAT</a><span>&rsaquo;</span><a href="makine.html">Makine</a><span>&rsaquo;</span><b>F · TP10 denemesi</b></div><div><a href="makine.html">&larr; Makine (geçerli v47)</a></div></div></div>
+<div class="wrap"><h1>F · GERÇEK FIRIN DENEMESİ — Sveba Dahlen TP10<span class="tag" style="background:#1f6feb">ayrı sürüm · geri alınabilir</span></h1>
+<p class="lead">Özel fırın kutusunun yerine <b>gerçek bir katalog fırını</b>: Sveba Dahlen TP Infinity TP10 (İsveç, Middleby grubu). Kızılötesi, fansız, 400 °C, 9,5 kW. Hattın montajına uyarlandı: giriş bandı, iki çit, destek sacları ve komşu istasyonlarda küçük değişiklikler. <b>Ana makine (v47) değişmedi</b>; bu sayfa ve modeli ayrı dosyalar. Geri almak için makine sayfasındaki kartı kaldırmak yeter.</p>
+
+<div class="m3">
+  <model-viewer id="mv" loading="eager" src="../hat3d/hat_tp10_v1.glb?v=1" ios-src="../hat3d/hat_tp10_v1.usdz?v=1" alt="AUTOKITCH hat · F = Sveba Dahlen TP10 (deneme)" autoplay
+      camera-controls touch-action="pan-y" shadow-intensity="0.6" exposure="1.0" environment-image="neutral"
+      camera-orbit="24deg 72deg 5.2m" camera-target="3.2m 1.15m -0.4m" field-of-view="30deg" min-field-of-view="6deg" min-camera-orbit="auto auto 0.3m"
+      ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
+  <div class="zc"><button id="oy">duraklat</button><input id="tz" type="range" min="0" max="84" step="0.05" value="0"><span class="sn" id="sn">0,0 / 84 sn</span></div>
+  <div class="adim" id="adim"></div>
+  <div class="anlat" id="anlat"></div>
+</div>
+
+<h2>1 &middot; Kaç ürünlük, bize uyuyor mu</h2>
+<div class="card"><p><b>Aynı anda ≈3 ürün.</b> Isıtılan boy ≈892 mm (föy: 0,34 m² ÷ 381 mm bant), ürün adımı 310 mm (Ø300 + 10) → 2,9 ürün. Bant tek şerit: 381 mm'ye iki Ø300 sığmaz. Bandın tamamında (1450) en çok 4 ürün durur.</p>
+<table class="t"><tr><th>Tam yük · hat simülasyonu</th><th>1. saat<br>(boş hattan)</th><th>2. saat</th><th>fırın doluluğu</th><th>ilk ürün</th></tr>
+<tr><td>Şu anki model · özel fırın, hazne 1400 · 3,5 dk</td><td>46,3</td><td>51,7</td><td>%74</td><td>6,5 dk</td></tr>
+<tr><td><b>TP10 · 3,5 dk</b></td><td class="kotu">43,0</td><td class="kotu">49,3</td><td>%93</td><td>8,2 dk</td></tr>
+<tr><td>TP10 · 3¼ dk</td><td>45,7</td><td class="iyi">52,0</td><td>%92</td><td>7,8 dk</td></tr>
+<tr><td>TP10 · 2¾ dk</td><td>47,3</td><td class="iyi">53,0</td><td>%80</td><td>7,6 dk</td></tr>
+<tr><td>TP10 · 4 dk</td><td class="kotu">37,0</td><td class="kotu">43,0</td><td>%93</td><td>9,0 dk</td></tr></table>
+<p class="note">Sipariş 20 sn'de bir (hattın yetişemeyeceği hız), 3 farklı sipariş akışının ortalaması, ürün/saat. Kaynak: tablalı hat simülasyonu (otonom/sim_karsi · motor.js), yalnız fırın ölçüleri değişti. Pişme süresi VARSAYIM (Kemal 15 Eyl: 3,5 dk); kızılötesi fırınlarda lahmacun/pizza için 2–3 dk kaynakları var, pide için yok → denenmeli.</p>
+<p><b>Hüküm:</b> 3,5 dk'da hattı saatte ≈2–3 ürün yavaşlatır (fırın darboğaz olur, doluluk %93). Pişme 3¼ dk'ya inerse bugünkü fırınla eşit. Cumartesi tepesi (≈59/sa) ikisine de yetmez. Kurallardaki “fırında aynı anda 4 ürün” maddesini karşılamıyor (≈3).</p></div>
+
+<h2>2 &middot; TP10 tek başına (katalog hali)</h2>
+<div class="m3 m3b"><model-viewer id="mv2" loading="eager" src="../hat3d/firin_tp10_v1.glb?v=1" ios-src="../hat3d/firin_tp10_v1.usdz?v=1" alt="Sveba Dahlen TP10 (katalog hali, ayaklı + çıkış plakalı)"
+      camera-controls touch-action="pan-y" shadow-intensity="0.6" exposure="1.0" environment-image="neutral" camera-orbit="28deg 70deg 3.4m" field-of-view="30deg" ar ar-modes="webxr scene-viewer quick-look"></model-viewer></div>
+<div class="card"><div class="kv">
+<b>Föyde yazan</b><span>toplam 1550 (uç kutuları dahil) · derinlik 730 · yükseklik 599–637 (ayak 82–120) · bant 381 × 1450 · iç yükseklik 85 · pişirme alanı 0,34 m² · 9,5 kW · 25 A · 160 kg · 400 °C · giriş/çıkış plakası en çok 390 · istiflenebilir (TP20 = 2 kat)</span>
+<b>Föy çiziminden (≈)</b><span>gövde ≈960 × 517 · uç kutuları ≈295 × 237 × 167, <b>ekran tarafında yan kutu</b> (bandın uçları açık) · tünel ≈406 geniş · bant ekseni ekransız yüzden ≈283 · bant üstü gövde altından ≈210 · ekran ≈189 × 151 — üreticiden teyit gerekir</span>
+<b>Modelde VARSAYIM</b><span>iç yerleşim (ısıtıcı panelleri, yalıtım, kırıntı tepsisi) · bant ucu rulosu Ø40 · konveyör rayları — Sveba'dan STEP istenmeli</span>
+<b>Kaynak</b><span><a href="https://sveba.com/sites/default/files/2024-02/TP%20Pizza-Series_990004-002_EN.pdf" target="_blank">Sveba Dahlen broşür 990004-002 (Ocak 2024)</a> · <a href="https://sveba.com/en/products/ovens/tunnel-pizza-oven-tp-infinity" target="_blank">ürün sayfası</a> · 87 fırın kaydı tarandı; 830 derinliğe sığıp tek şeritte 4 ürün alan katalog fırını çıkmadı</span>
+</div></div>
+
+<h2>3 &middot; Hatta uyarlama (yalnız bu sürümde)</h2>
+<div class="card"><table class="t"><tr><th style="width:22%">Yer</th><th>Değişiklik</th><th style="width:28%">Neden</th></tr>
+<tr><td>F · TP10</td><td>x 2514–4064 · ayaksız · ekran ve uç kutuları <b>arkada</b> (servis tarafı) · bant üstü 1166 · gövde 956–1473</td><td>bant hat yüzüne en yakın: eksen −283 (ekran önde olsa −447)</td></tr>
+<tr><td>F · taban dolabı</td><td>üstü 1060 → <b>956</b> · pizza kutusu yedeği 553 → 505 (3,8 gün)</td><td>bant 1166'da kalsın diye gövde altı 956</td></tr>
+<tr><td>F · giriş bandı (bizim)</td><td>70 mm · PTFE 320 · Ø20 burun (disk kenarına 2 mm) · NEMA23 STP-MTR-23079 + GT2 · TOPPING çıkış çerçevesine iki konsolla</td><td>TOPPING'in 420 mm'lik aktarma bandı TP10 bandının yerine düşüyordu</td></tr>
+<tr><td>F · giriş çiti 20°</td><td>POM 10 × 25 · ürünü −170'ten −249'a iter (ön kenar −99, tünel duvarına 20 mm)</td><td>TP10 bandı hattın ürün ekseninden 113 mm geride</td></tr>
+<tr><td>F · çıkış çiti 20°</td><td>ürünü −249'dan −170'e geri alır (K bıçağının ekseni)</td><td>K kesimi hat ekseninde</td></tr>
+<tr><td>F · destek sacları</td><td>giriş + çıkış · 2 mm PTFE kaplı · üstü 1166</td><td>kayma sırasında ürünün banttan taşan kenarını taşır</td></tr>
+<tr><td>F · arka sac + davlumbaz</td><td>arka sac 956–1483 · davlumbaz 1483'ten</td><td>istasyon kapalı ürün</td></tr>
+<tr><td>C · TOPPING</td><td>aktarma bandı çıkar · X motoru kaidesinin sağ üst köşesi pahlanır (28 × 20)</td><td>TOPPING X tahriki F'ye 80 mm taşıyor; TP10 bant ucu sarımına değiyordu</td></tr>
+<tr><td>K · kesme</td><td>bant yan levhaları 10 → 18'den · itici motoru eksenin sağ ucuna · sol sacta ürün penceresi −485'e + uç kutusu cebi</td><td>TP10 bandı K'ye 14 mm, sağ uç kutusu arkada 64 mm giriyor</td></tr>
+</table>
+<p class="note">Ürün seviyesinde F'de kalan boş boy 1430 mm (TOPPING X tahriki ↔ K bant levhaları), TP10 bandı 1450 mm — bu yüzden iki komşuya da küçük dokunuş gerekti. Denetim: gerçek katı kesişimi (TOPPING + aktarma konumundaki tabla + K + hava hattı + F kutuları + kendi arasında) ve ürün yolu taraması (Ø280 ve Ø300 zarf, 10 mm adım) <span id="denetim">—</span>.</p></div>
+
+<h2>4 &middot; Açık konular · karar</h2>
+<div class="card"><table class="t"><tr><th style="width:34%">Konu</th><th>Not</th></tr>
+<tr><td>Kapasite</td><td>aynı anda ≈3 ürün; 3,5 dk'da 49,3/sa (bugün 51,7). Çözüm: pişme ≤ 3¼ dk (denenmeli) ya da TP20 (2 kat, 18,2 kW, 275 kg; katlar arası asansör gerekir)</td></tr>
+<tr><td>İstasyon tabanı kuralı 1060</td><td>F'de 956'ya iniyor (kural değişikliği sayılır — senin kararın)</td></tr>
+<tr><td>Pizza kutusu 4 gün</td><td>505 kutu → 3,8 gün; 48 kutu başka yere</td></tr>
+<tr><td>Üreticiden istenecek</td><td>gerilim (föyde yok), bandın gövde altından kotu, gövde boyu, iç yerleşim, STEP modeli, PLC/Modbus arayüzü, bant ters dönebilir mi</td></tr>
+<tr><td>Tabladan banda aktarma</td><td>tabla ürünü itmiyor; ürün tabla kenarından ~30 mm içeride duruyor (mevcut TOPPING tasarımında da açık). Ayrıca mevcut modelde aktarma konumunda disk, çıkış çerçevesinin alt çubuğuna ve eski bant burnuna değiyor</td></tr>
+</table></div>
+
+<h2>5 &middot; Teknik resim</h2>
+<figure><a href="img/FIRIN_TP10_v2_teknik.png" target="_blank"><img src="img/FIRIN_TP10_v2_teknik.png" alt="F fırın denemesi · Sveba Dahlen TP10 · teknik resim v2" loading="lazy"></a><figcaption>FIRIN TP10 v2 (26 Eyl): ön görünüş · üst görünüş (ürün yolu ve çitler) · yan kesit · parça listesi · komşu uyarlamaları. Ölçüler 3B modelden. v1'e göre düzeltme: uç kutuları bandı sarmaz, ekran tarafında yan kutudur. <a href="../../arastirma/FULL_MAKINE/FIRIN_TP10_v2_teknik.pdf">PDF</a>.</figcaption></figure>
+<p class="note">Model: arastirma/_uretec/firin_tp10_cad_v1.py (TP10 + uyarlama parçaları) · hat_montaj_tp10_v1.py (hat_montaj_v47'den türetilir) · yolculuk_tp10_v1.py · resim: teknik_firin_tp10_v2.py · 26 Eyl 2026. Geçerli makine (v47) ve paftası (v13) değişmedi.</p>
+</div>
+<script>
+fetch('../hat3d/durum_tp10_v1.json?v=1').then(r => r.json()).then(D => { animasyon(D.animasyon); if (D.tp10_denetim) document.getElementById('denetim').textContent = D.tp10_denetim; });
+function animasyon(A) {
+  if (!A) return;
+  const mv = document.getElementById('mv'), oy = document.getElementById('oy'), tz = document.getElementById('tz'), sn = document.getElementById('sn'),
+        adim = document.getElementById('adim'), anlat = document.getElementById('anlat'), T = A.sure;
+  tz.max = T;
+  adim.innerHTML = A.adim.map((a, i) => '<button data-i="' + i + '">' + (i + 1) + ' · ' + a.ad + '</button>').join('');
+  const btn = [...adim.querySelectorAll('button')];
+  const f = v => v.toFixed(1).replace('.', ',');
+  function goster(t) { let k = 0; A.adim.forEach((a, i) => { if (t >= a.t - 0.01) k = i; }); btn.forEach((b, i) => b.classList.toggle('ak', i === k));
+    anlat.innerHTML = '<b>' + (k + 1) + ' · ' + A.adim[k].ad + '</b> — ' + A.adim[k].not_; sn.textContent = f(t) + ' / ' + T.toFixed(0) + ' sn'; }
+  btn.forEach(b => b.onclick = () => { const t = A.adim[+b.dataset.i].t; mv.currentTime = t; tz.value = t; goster(t); mv.play(); oy.textContent = 'duraklat'; });
+  tz.oninput = () => { mv.pause(); oy.textContent = 'oynat'; mv.currentTime = parseFloat(tz.value); goster(parseFloat(tz.value)); };
+  oy.onclick = () => { if (mv.paused) { mv.play(); oy.textContent = 'duraklat'; } else { mv.pause(); oy.textContent = 'oynat'; } };
+  setInterval(() => { if (!mv.paused && mv.loaded) { tz.value = mv.currentTime; goster(mv.currentTime); } }, 150);
+  goster(0);
+}
+</script></body></html>
