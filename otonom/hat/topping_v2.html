@@ -80,7 +80,7 @@ fetch('../hat3d/sim_makine_v7.json?v=1').then(r => r.json()).then(S => {
   document.getElementById('hesnot').innerHTML = 'Spiralde ağız pidenin dışından içe iner, r² zamanla doğrusal azalır (eşit alan hızı). Tabla 35 dev/dk: pidenin kenarında 0,17 g; küp sucuğun kaymaması için sürtünme ≥ 0,17 yeter. Yayıcıda 30 dev/dk (0,14 g). Karışık: ' + S.karisik.kural + '. Çevrim süresine açıcı (4,4 s), geçişler (200 mm/s) ve aktarma dahil; fırın, kesme ve kutu hariç.';
 });
 document.getElementById('simac').onclick = async function () {
-  const m = await import('./sim3d_v2.js?v=1');
+  const m = await import('./sim3d_v2.js?v=2');
   await m.ac(document.querySelector('.m3'), this);
   this.textContent = document.querySelector('.m3').classList.contains('sim-on') ? '■ SİMÜLASYONU KAPAT' : '▶ CANLI SİMÜLASYON';
 };

@@ -6,7 +6,7 @@
 <p class="lead">Hattın tamamı tek modelde. <b>Üstüne gel</b> &mdash; adı çıkar. <b>Çift tıkla</b> &mdash; o istasyonun kendi modeli açılır. Modelin altındaki çubuktan <b>kesit</b> alabilir (X/Y/Z) ve iki noktaya tıklayıp <b>ölçü</b> çıkarabilirsin.</p>
 
 <div class="m3">
-  <model-viewer id="mv" loading="eager" src="../hat3d/hat_v45.glb?v=45" ios-src="../hat3d/hat_v45.usdz?v=45" alt="AUTOKITCH hat üretim modeli" autoplay
+  <model-viewer id="mv" loading="eager" src="../hat3d/hat_v47.glb?v=47" ios-src="../hat3d/hat_v47.usdz?v=47" alt="AUTOKITCH hat üretim modeli" autoplay
       camera-controls touch-action="pan-y" shadow-intensity="0.6" exposure="1.0" environment-image="neutral"
       camera-orbit="30deg 74deg 9.8m" camera-target="2.72m 1m -0.4m" field-of-view="30deg" min-field-of-view="6deg"
       ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
@@ -18,7 +18,6 @@
   <div class="anlat" id="anlat"></div>
 </div>
 <div class="secim" id="secim"></div>
-<div class="card" style="border-left:4px solid #c47c18;background:#fdf7ee;margin:12px 0"><b style="color:#a2600a">ALTERNATİF A1 · ROBOTSUZ (öneri, 26 Eyl)</b> — "Sen olsan ne yapardın?" Robotu, rayı, koridoru ve QR dolabını kaldırıp işini üç basit makineye veren kavram: top otomatı, çıkış çatalı, döner teslim dolabı. Alan 11,8 → 5,2 m². <a href="alternatif.html">3B model + karşılaştırma →</a></div>
 <p class="note" id="ozet"></p>
 
 <h2>1 &middot; Ne yapar</h2><div class="card">
@@ -38,17 +37,19 @@
 <b>Taban hizası</b><span>Üst: A, C, F, K istasyonları <b>1060</b>'ta başlar, bantlar 1168'de. Alt: bütün gövdeler yerden <b>123</b>'te başlar (en alt çekmecenin 3 mm altı), altları ayak + süpürgelik (60 geride). E kutu katlama tek parça</span>
 <b>Süreç kotu</b><span>TOPPING modelinden ölçülür: disk 1168 &middot; fırın bandı 1166 (290 geniş, eksen z −170) &middot; kesme plakası 1164 &middot; kutu tepsisi 1104</span>
 <b>Robot</b><span>tek Fairino FR5, yer rayında, omuz 970, erişim 779 &middot; QR teslim dolabı koridorun karşısında</span>
-<b>Ölçü kaynağı</b><span>HAT ATOSA TABLALI v12 teknik resmi (26 Eyl, montaj v45 ile eşit) · K kesme_cad_v1 + TOPPING üretim modeli (topping_cad_v22) + E kutu modülü (kutu_cad_v3, 830) + B çekmece modülü (store_cad_v4)</span>
+<b>Ölçü kaynağı</b><span>HAT ATOSA TABLALI v13 teknik resmi (26 Eyl, montaj v47 ile eşit) · K kesme_cad_v1 + TOPPING üretim modeli (topping_cad_v23) + E kutu modülü (kutu_cad_v3, 830) + B çekmece modülü (store_cad_v4)</span>
 <b>Kontrol</b><span>üreteç çalışırken: süreç kotu CAD'den ölçülür &middot; taban hizası denetlenir &middot; hiçbir birim hat zarfını aşamaz &middot; TOPPING ile fırın/kesme/kutu arasındaki kesişimler raporlanır</span>
 </div></div>
 
 <h2>3 &middot; Teknik resim</h2>
-<figure><a href="img/HAT_ATOSA_TABLALI_v12_teknik.png" target="_blank"><img src="img/HAT_ATOSA_TABLALI_v12_teknik.png" alt="HAT ATOSA TABLALI teknik resim v12" loading="lazy"></a><figcaption>HAT ATOSA TABLALI v12 (26 Eyl) &mdash; model v45 ile aynı: K istasyonu gerçek model (K bandı, kesici + sprey aynı kafada, 20° çit, kısa stroklu itici, taban arkasında tereyağı tankı + pano), TOPPING yayıcısında kama yarık. <a href="../../arastirma/FULL_MAKINE/HAT_ATOSA_TABLALI_v12.pdf">PDF</a>. Önceki (v11): çekmece modülü tam kaplayan kapaklarla (aralar 3 mm), içecek tek kat, K4'te kaşar + sucuk deposu; fırın tabanında bulaşık makinesi + temizlik + 4 günlük pizza kutusu yedeği, arkada robot kutusu + ana pano + UPS; kesme tabanında içecek yedeği, arkada kompresör. Önceki (v10): TOPPING v2 (4 UNO çekirdeği havalı + sos/harç spreader + kaşar/küp sucuk kaseti + 3 mm taşıyıcı raf), valf adası ve şartlandırıcı kuru bölmede, kompresör K tabanında (yeri açık). Büyük hali için resme tıkla.</figcaption></figure>
+<figure><a href="img/HAT_ATOSA_TABLALI_v13_teknik.png" target="_blank"><img src="img/HAT_ATOSA_TABLALI_v13_teknik.png" alt="HAT ATOSA TABLALI teknik resim v13" loading="lazy"></a><figcaption>HAT ATOSA TABLALI v13 (26 Eyl) &mdash; model v47 ile aynı: aktarma bandının motoru bandın arkasına alındı, açıcı kafası dışında ön yüzden taşan parça kalmadı, TOPPING çıkış yarığı 44 mm. <a href="../../arastirma/FULL_MAKINE/HAT_ATOSA_TABLALI_v13.pdf">PDF</a>. Önceki (v12): K istasyonu gerçek model (K bandı, kesici + sprey aynı kafada, 20° çit, kısa stroklu itici, taban arkasında tereyağı tankı + pano), TOPPING yayıcısında kama yarık. Önceki (v11): çekmece modülü tam kaplayan kapaklarla (aralar 3 mm), içecek tek kat, K4'te kaşar + sucuk deposu; fırın tabanında bulaşık makinesi + temizlik + 4 günlük pizza kutusu yedeği, arkada robot kutusu + ana pano + UPS; kesme tabanında içecek yedeği, arkada kompresör. Önceki (v10): TOPPING v2 (4 UNO çekirdeği havalı + sos/harç spreader + kaşar/küp sucuk kaseti + 3 mm taşıyıcı raf), valf adası ve şartlandırıcı kuru bölmede, kompresör K tabanında (yeri açık). Büyük hali için resme tıkla.</figcaption></figure>
 <div class="thumbs"><a href="img/HAT_ATOSA_TABLALI_v11_teknik.png" target="_blank"><img src="img/HAT_ATOSA_TABLALI_v11_teknik.png" loading="lazy"><span>v11 · 25 Eyl</span></a><a href="img/HAT_ATOSA_TABLALI_v10_teknik.png" target="_blank"><img src="img/HAT_ATOSA_TABLALI_v10_teknik.png" loading="lazy"><span>v10 · 25 Eyl</span></a><a href="img/HAT_ATOSA_TABLALI_v8_teknik.png" target="_blank"><img src="img/HAT_ATOSA_TABLALI_v8_teknik.png" loading="lazy"><span>v8 · 25 Eyl</span></a><a href="img/HAT_ATOSA_TABLALI_v7_teknik.png" target="_blank"><img src="img/HAT_ATOSA_TABLALI_v7_teknik.png" loading="lazy"><span>v7 · 24 Eyl</span></a></div>
 
 <h2>4 &middot; Sürüm geçmişi</h2><ul class="ver">
 <li><b>PAFTA v8 (25 Eyl)</b>: teknik resim modele eşitlendi — hat 5430 (E 830 kutu katlama), alt taban çizgisi 123, süreç 1168, TOPPING iç kotları ve 2 kaset, B çekmece modülü v4, K'de yedek kutu yok. v7 aşağıda duruyor</li>
-<li><b>MONTAJ v45 (26 Eyl) &middot; GEÇERLİ</b>: K KESME + SPREY gerçek üretim modeli oldu (kesme_cad_v1, 146 parça): fırın bandından ürünü alan PU bant (RollerDrive), aynı kafada Festo DGRF-C kesici + yıldız bıçak Ø296 ve göbeğinde PulsaJet tereyağı nozülü, 20° çit, igus eksenli itici, taban arkasında 3 L ısıtmalı tereyağı tankı + pano, önde içecek yedeği. TOPPING v2 yayıcısında kama yarık, UNO pistonu/valfi ve kaset milleri ayrı parça. <b>Ana montaja 1 tam animasyon:</b> çekmece → robot → açıcı → sos (tam 1 tur) → kaşar → sucuk → fırın → kesme → kutu → QR dolabı (84 s). Ayrıntı: <a href="kesme.html">4b · KESME</a> · <a href="topping_v2.html">TOPPING v2</a>.</li>
+<li><b>MONTAJ v47 (26 Eyl) &middot; GEÇERLİ</b>: ÖN YÜZDEN TAŞAN PARÇALAR İÇERİDE. Fırının önündeki köşede görünen parça TOPPING aktarma bandının motoruydu: makinenin ön yüzünün 78 mm önünde, havada ve 90° ters dönük duruyordu. Artık bandın arkasında, tahrik makarasıyla aynı eksende. Bandın ön yan sacı, makara mil uçları ve fire sileceği de ön yüzün (z 0) içine alındı. TOPPING çıkış yarığı 24 mm'den 44 mm'ye açıldı (küp sucuklu en yüksek ürün 28,5 mm, üst çubuk küplerin içinden geçiyordu). Yer tutucu fırın bandı TOPPING tahrik makarasının içinden başlıyordu, düzeldi. Hamur topu tablada 5,7 mm havada duruyordu, oturdu. Montaj artık ön yüzü ve en yüksek ürünün geçişini her çalışmada denetliyor. Açık: açıcı kafası ön yüzden 180 mm taşıyor (kavram kararı).</li>
+<li><b>MONTAJ v46 (26 Eyl)</b>: ANİMASYON DÜZELTMESİ. Dönen parçalar (tabla, açıcı konileri, UNO valfi, kaşar ve sucuk kaseti milleri, aktarma bandı makaraları) artık kendi ekseninde duran ayrı parça. Önce hattın başlangıç noktasına göre döndürülüp ötelemeyle geri getiriliyordu; kareler arasında öteleme düz, dönüş yay boyunca ara değerlendiği için eksenlerinden savruluyorlardı (ölçüldü: bant burun makarası 350 mm, koniler 96 mm, valf 94 mm → şimdi en çok 2 mm). Aktarma ucundaki sabit sensör, adı "tabla" ile başladığı için tablayla birlikte 2 m yarıçapla dönüyordu, sabitlendi. Animasyon 30 kare/s. Geometri v45 ile aynı (pafta v12 geçerli).</li>
+<li><b>MONTAJ v45 (26 Eyl)</b>: K KESME + SPREY gerçek üretim modeli oldu (kesme_cad_v1, 146 parça): fırın bandından ürünü alan PU bant (RollerDrive), aynı kafada Festo DGRF-C kesici + yıldız bıçak Ø296 ve göbeğinde PulsaJet tereyağı nozülü, 20° çit, igus eksenli itici, taban arkasında 3 L ısıtmalı tereyağı tankı + pano, önde içecek yedeği. TOPPING v2 yayıcısında kama yarık, UNO pistonu/valfi ve kaset milleri ayrı parça. <b>Ana montaja 1 tam animasyon:</b> çekmece → robot → açıcı → sos (tam 1 tur) → kaşar → sucuk → fırın → kesme → kutu → QR dolabı (84 s). Ayrıntı: <a href="kesme.html">4b · KESME</a> · <a href="topping_v2.html">TOPPING v2</a>.</li>
 <li><b>MONTAJ v44 (25 Eyl)</b>: ALT KISIM yeniden. Çekmece modülü (store_cad_v5) tam kaplayan kapaklarla kapalı ve temiz görünüyor: kolonlar arası 3 mm, her kolon 126'dan 1057'ye. Soğukta her şey 2 günlük: pide 160, lahmacun 432, içecek 160 (tek kat, yaylı itici, robot her kutuya erişir), tatlı 30; K4'te Secop'un arkasında pano, üstünde kaşar + sucuk deposu (4 günün 2. yarısı) ve 2 dar içecek çekmecesi. Fırın tabanı: önde bulaşık makinesi (MEIKO M-iClean US), temizlik, 553'lük pizza kutusu yedeği (şarjörle 4 gün); arkada makine deterjanı, robot kontrol kutusu, ana pano, UPS. Kesme tabanı: önde soğutmasız içecek yedeği (120 kutu, toplam 4 gün), arkada kompresör + yağ + K kartı; kesmenin üst bölmesi boşaldı.</li>
 <li><b>MONTAJ v43 (25 Eyl)</b>: TOPPING'in altındaki 134 mm'lik PU yalıtım tabanı kalktı; yerine 3 mm paslanmaz taşıyıcı raf (önü ve arkası 40 mm bükülü). Yük 154 kg → sehim 3,4 mm, emniyet 2,3. Kaşar ve sucuk boruları raftan sarkan iniş borusuyla pideye iniyor.</li>
 <li>MONTAJ v42 (25 Eyl): TOPPING v2 (UNO'lu) ana montajda: sos · harç · kıyma · kuşbaşı Beltop UNO çekirdeğiyle (sos ve harçta Beldos spreader başlığı), kaşar ve küp sucuk bizim kasetlerle; tabla mekanizması v1'den. Hava: kompresör K taban dolabında, Ø10 ana hat F tabanının arkasından TOPPING'e, valf adası kuru bölmede. Ayrıntı: <a href="topping_v2.html">TOPPING v2</a>. Önceki TOPPING (v1) kendi sayfasında duruyor.</li>
@@ -64,7 +65,7 @@
 <li>HAT v51 (6 Eyl): PACK v4 &mdash; <b>eski 4200 mm'lik tepsili hat</b></li>
 </ul>
 </div>
-<div class="foot">AUTOKITCH &middot; HAT &middot; Yol C canlı tasarım defteri &middot; model: arastirma/_uretec/hat_montaj_v45.py &middot; 26 Eyl 2026</div>
+<div class="foot">AUTOKITCH &middot; HAT &middot; Yol C canlı tasarım defteri &middot; model: arastirma/_uretec/hat_montaj_v47.py &middot; 26 Eyl 2026</div>
 
 <script>
 const SAYFA = {A:'press.html', B:'store.html', C:'topping.html', D:'oven.html', K:'kesme.html', E:'pack.html', '-':'robot.html'};
@@ -79,7 +80,7 @@ const M = model3d({
   }
 });
 
-fetch('../hat3d/durum.json?v=45').then(r => r.json()).then(D => {
+fetch('../hat3d/durum.json?v=47').then(r => r.json()).then(D => {
   M.veri(D.birim);
   animasyon(D.animasyon);
   const mod = {}; D.birim.forEach(b => (mod[b.modul] = mod[b.modul] || []).push(b));

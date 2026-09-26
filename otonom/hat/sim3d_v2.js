@@ -58,7 +58,7 @@ async function kur(kutu) {
   K.kur(M, izle);
   const OFS = M.ofset, mak = p => [p[0] + OFS[0], p[1] + OFS[1], p[2] + OFS[2]];
 
-  const glb = await new GLTFLoader().loadAsync('../hat3d/modul_C.glb?v=45');
+  const glb = await new GLTFLoader().loadAsync('../hat3d/modul_C.glb?v=47');
   const kok = glb.scene;
   const G = {};
   const agalar = []; kok.traverse(o => { if (o.isMesh) agalar.push(o); });
