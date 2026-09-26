@@ -12,10 +12,10 @@
 table.t{width:100%;border-collapse:collapse;font-size:13.5px}table.t td,table.t th{border-bottom:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}
 </style></head><body>
 <div class="top"><div class="in"><div class="crumb"><a href="../">Store</a><span>›</span><a href="index.html">HAT</a><span>›</span><a href="makine.html">Makine</a><span>›</span><b>4b · KESME + SPREY</b></div><div><a href="makine.html">← Makine</a></div></div></div>
-<div class="wrap"><h1>4b · KESME + SPREY — K istasyonu v1<span class="tag" style="background:#d94a3a">600 × 830 × 2030</span></h1>
+<div class="wrap"><div class="card" style="border-left:4px solid #178a56;background:#eefaf3;margin:14px 0"><b style="color:#0f6e42">v2 (27 Eyl 2026) · ÖN KAPAKLAR YOK.</b> Kemal: <i>"kesme kısmına kapak koymuşsun, kapak vs yok şu anda — önce sistemleri tam görelim."</i> kesme_cad_v2: taban kapısı, PC pencereli üst kapı, kulplar, AZM kilit ve ön acil stop kaldırıldı; bant, kesici + sprey kafası, çit, itici, tank, pano aynı. Denetim 22/22, çakışma 0. Ayrıca fırın 79 mm öne alındı: ürün K'ye −170'te düz gelir, F'nin K giriş çiti kalktı (<a href="oven.html#one">oven.html 1c</a>). Ana montaj v51.</div><h1>4b · KESME + SPREY — K istasyonu v1<span class="tag" style="background:#d94a3a">600 × 830 × 2030</span></h1>
 <p class="lead">Fırından çıkan ürünü alır, pideye sadeyağ püskürtür, 6 dilim keser ve kutu modülüne sürer. <b>Kesme ve sprey aynı yerde, aynı kafada:</b> nozül bıçak yıldızının göbeğinde. Parçalar katalog ürünü (Festo, Spraying Systems, Interroll, igus, SMC, Siemens) ya da çizimle üretilecek 304 sac. Animasyon kutu modülüyle aynı saatte döner (20 s): ürün 8,5 s'de kutuya itilir.</p>
 <div class="m3">
-  <model-viewer id="mv" loading="eager" src="../hat3d/kesme_v1.glb?v=1" alt="K · kesme + sprey istasyonu — çalışma döngüsü" autoplay
+  <model-viewer id="mv" loading="eager" src="../hat3d/kesme_v2.glb?v=2" alt="K · kesme + sprey istasyonu — çalışma döngüsü" autoplay
       camera-controls touch-action="pan-y" shadow-intensity="0.5" exposure="1.0" environment-image="neutral"
       camera-orbit="28deg 70deg 2.3m" camera-target="0.32m 1.28m -0.3m" field-of-view="30deg" min-field-of-view="5deg" min-camera-orbit="auto auto 0.3m"></model-viewer>
   <div class="zc"><button id="oy">duraklat</button><input id="tz" type="range" min="0" max="20" step="0.05" value="0"><span class="sn" id="sn">0,0 / 20 sn</span></div>
@@ -36,11 +36,11 @@ table.t{width:100%;border-collapse:collapse;font-size:13.5px}table.t td,table.t 
 <b>Sprey (aynı kafa)</b><span><b>Spraying Systems PulsaJet AA10000AUH-104210</b> gıda sürümü (FDA + EC 1935/2004), 24 V, PWM. Kafa plakasıyla boyunduruk arasında yatay duruyor. Dirsek ve göbekteki <b>UniJet + TG tam koni 90°</b> nozülü (çek valfli, damlatmaz). Nozülde silikon ısıtıcı ceket var (45 °C). Aynı parçalarla tereyağı püskürten sistem: Spraying Systems vaka E4058 (tereyağı tüketimi %25 azalmış).</span>
 <b>Tereyağı sistemi</b><span>Isıtmalı basınçlı tank 3 L (AISI 316, ceketli, seviye sensörlü, 1,5 bar hava). Isıtmalı Ø6 hortum. Tank taban dolabının arkasında (kompresör 26 Eyl'de fırının üstüne taşındı). <b>Sadeyağ</b> öneriliyor: tereyağının süt katıları nozülü tıkar. 45 °C: yağ 32–35 °C'de tamamen erir, fazla ısınınca ayrışır (vaka E4058'in uyarısı).</span>
 <b>İtici</b><span><b>igus drylin ZLW-1040</b> dişli kayışlı eksen (yağsız, strok 365) + AutomationDirect STP-MTR-23079 (kutu modülüyle aynı motor). <b>SMC MGPM20-60</b> kılavuzlu silindir iticiyi 60 mm kaldırır. Kol arkadan gelir; yalnız itme çubuğu ile POM yüz kutu modülünün penceresine girer (110 mm).</span>
-<b>Pano (taban arkası)</b><span>Siemens S7-1200 1214C + SM1222 · STP-DRV-4830 · Mean Well NDR-240-24 / -48 · Pilz PNOZ s3 (kapı kilidi + acil stop) · PWM sprey sürücüsü · 2 sıcaklık kontrolcüsü. Üst bölmenin arkasında Festo MS4 şartlandırıcı + VUVG valf adası (4 × 5/2).</span>
+<b>Pano (taban arkası)</b><span>Siemens S7-1200 1214C + SM1222 · STP-DRV-4830 · Mean Well NDR-240-24 / -48 · Pilz PNOZ s3 (acil stop; kapı kilidi kapaklarla) · PWM sprey sürücüsü · 2 sıcaklık kontrolcüsü. Üst bölmenin arkasında Festo MS4 şartlandırıcı + VUVG valf adası (4 × 5/2).</span>
 <b>Hava</b><span>Kompresör (TOPPING'in, <b>fırının üstünde</b> — montaj v48) hattından T ile: dal K besleme hattının tepesine gelir. Kesim başına <span class="h" data-k="hava_NL_kesim"></span> NL. Saatte 60 ürünle ≈ 5 NL/dk; kompresör 43 L/dk.</span>
 <b>Taban</b><span>Önde içecek yedeği 5 koli (120 kutu, soğutmasız, 4. gün için). Arkada tereyağı tankı ve pano (kompresör v48'de fırının üstüne taşındı; kural 4 istisnası).</span>
-<b>Güvenlik</b><span>Üst kapı polikarbonat pencereli ve kilitli (Schmersal AZM 40 sınıfı): kapı açılınca kesici ve itici durur. Önde acil stop var.</span>
-<b>Malzeme listesi</b><span><a href="../../arastirma/4_KESME_v1/BOM_OZET.csv">BOM_OZET.csv</a> (kalem toplamları) · <a href="../../arastirma/4_KESME_v1/BOM.csv">BOM.csv</a> (modeldeki her parça). Ölçüsü kataloğundan teyit edilmeyenler BOM'da [V] ile işaretli.</span>
+<b>Güvenlik</b><span><b>v2 (Kemal 27 Eyl): şimdilik kapak yok</b> — taban kapısı, PC pencereli üst kapı, kulplar, AZM kilit ve ön acil stop kaldırıldı; ön yüz açık. Kapaklar konunca kilit (AZM 40 sınıfı) + acil stop birlikte gelir: kapı açılınca kesici ve itici durur.</span>
+<b>Malzeme listesi</b><span><a href="../../arastirma/4_KESME_v2/BOM_OZET.csv">BOM_OZET.csv</a> (kalem toplamları) · <a href="../../arastirma/4_KESME_v2/BOM.csv">BOM.csv</a> (modeldeki her parça). Ölçüsü kataloğundan teyit edilmeyenler BOM'da [V] ile işaretli.</span>
 </div></div>
 
 <h2>2 · Hesap (modelden)</h2>
@@ -62,7 +62,7 @@ table.t{width:100%;border-collapse:collapse;font-size:13.5px}table.t td,table.t 
 <li><b>v1 (26 Eyl 2026):</b> ilk üretim modeli: K bandı, kesici + sprey aynı kafada, 20° çit, kısa stroklu itici, tereyağı tankı, pano, güvenlik. Ana montaj v45'te; ana montajın tam animasyonunda ürün buradan geçiyor.</li>
 <li>Önceki (pafta v7–v11): kesme plakası 560 × 450 + itici + yıldız bıçak + sprey kutu olarak.</li></ul>
 </div>
-<div class="foot">AUTOKITCH · HAT · model: arastirma/_uretec/kesme_cad_v1.py · 26 Eyl 2026</div>
+<div class="foot">AUTOKITCH · HAT · model: arastirma/_uretec/kesme_cad_v2.py (v1 + ön kapaklar yok) · 27 Eyl 2026</div>
 <script>
 const ADIM = [
   [0.3, 'GELİŞ', 'Ürün fırın bandından K bandına geçer (iki bant da tahrikli). Bant onu kesme merkezine getirir; fotosel ön kenarı x 450\'de görünce durur.'],
@@ -84,7 +84,7 @@ tz.oninput = () => { mv.pause(); oy.textContent = 'oynat'; mv.currentTime = pars
 oy.onclick = () => { if (mv.paused) { mv.play(); oy.textContent = 'duraklat'; } else { mv.pause(); oy.textContent = 'oynat'; } };
 setInterval(() => { if (!mv.paused && mv.loaded) { tz.value = mv.currentTime; goster(mv.currentTime); } }, 150);
 goster(0);
-fetch('../hat3d/kesme_v1.json?v=1').then(r => r.json()).then(D => {
+fetch('../hat3d/kesme_v2.json?v=2').then(r => r.json()).then(D => {
   const H = D.hesap, f = (v, n = 1) => (+v).toFixed(n).replace('.', ',');
   document.querySelectorAll('.h').forEach(e => e.textContent = f(H[e.dataset.k]));
   document.getElementById('hes').innerHTML =
