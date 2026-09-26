@@ -1,0 +1,83 @@
+<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KK · KESME + SPREY + KUTU tek istasyon · basit kavram v1</title><link rel="stylesheet" href="hat.css?v=10">
+<script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script>
+<style>.zc{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;padding:10px 16px;background:#1b1f26;border-top:1px solid #2a3039}.zc button{border:1px solid #39424f;background:#232932;color:#cfd6df;border-radius:8px;padding:6px 11px;font:600 12.5px system-ui,sans-serif;cursor:pointer}.zc input[type=range]{flex:1 1 220px;accent-color:#4f86ff}.zc .sn{color:#8d97a4;font:600 12px system-ui,sans-serif;font-variant-numeric:tabular-nums;min-width:64px}
+.adim{display:flex;flex-wrap:wrap;gap:6px;padding:10px 16px;background:#1b1f26}.adim button{border:1px solid #39424f;background:#232932;color:#cfd6df;border-radius:8px;padding:5px 9px;font:600 12px system-ui,sans-serif;cursor:pointer}.adim button.ak{border-color:#4f86ff;background:#26344d;color:#dce8ff}
+.anlat{padding:10px 16px 14px;background:#1b1f26;color:#cfd6df;font:14px/1.5 system-ui,sans-serif;border-radius:0 0 12px 12px}
+table.t{width:100%;border-collapse:collapse;font-size:13.5px}table.t td,table.t th{border-bottom:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}.iyi{color:#178a56;font-weight:600}.kotu{color:#b42318;font-weight:600}</style></head><body>
+<div class="top"><div class="in"><div class="crumb"><a href="../">Store</a><span>&rsaquo;</span><a href="index.html">HAT</a><span>&rsaquo;</span><a href="makine.html">Makine</a><span>&rsaquo;</span><b>KK · tek istasyon denemesi</b></div><div><a href="makine.html">&larr; Makine (geçerli v50)</a></div></div></div>
+<div class="wrap"><div class="card" style="border-left:4px solid #b7791f;background:#fff8e8;margin:12px 0"><b style="color:#8a5a0a">DENEME · BASİT KAVRAM MODELİ (27 Eyl 2026).</b> Kemal: <i>"daha basit bir modelle mantığını animasyon yap hızlıca, kafama yatarsa doğru bir modellemesini yaparsın."</i> Ana makine v50 değişmedi. Parçalar prizma/silindir; ölçüler E (kutu_cad_v3) ve K (kesme_cad_v1) modellerinden.</div>
+<h1>KK · KESME + SPREY + KUTU KATLAMA tek istasyonda <span class="tag" style="background:#b7791f">830 · basit v1</span></h1>
+<p class="lead"><b>Fikir:</b> K modülü (600) kalkar, işi E'nin içine girer. E'nin kutu mekanizması aynen kalır. Üstüne üç şey: kalıp bölgesinin üstünde x boyunca <b>geri çekilen burunlu bant</b> (ürün bantta kesilir, burun geri kaçınca olduğu yerde kutuya iner), E piston kafasının içinde <b>geri çekilen bıçak yıldızı + PulsaJet nozülü</b>, tereyağı tankı alt dolapta. İstasyon 830 (= E), hat <b>5430 → 4830</b>.</p>
+
+<div class="m3">
+  <model-viewer id="mv" loading="eager" src="../hat3d/kk_basit_v1.glb?v=1" alt="KK basit kavram modeli · kesme + sprey + kutu katlama tek istasyonda" autoplay
+      camera-controls touch-action="pan-y" shadow-intensity="0.6" exposure="1.0" environment-image="neutral"
+      camera-orbit="32deg 68deg 3.4m" camera-target="0.38m 1.15m -0.32m" field-of-view="30deg" min-field-of-view="6deg" min-camera-orbit="auto auto 0.3m"></model-viewer>
+  <div class="zc"><button id="oy">duraklat</button><input id="tz" type="range" min="0" max="20" step="0.05" value="0"><span class="sn" id="sn">0,0 / 20 sn</span></div>
+  <div class="adim" id="adim"></div>
+  <div class="anlat" id="anlat"></div>
+</div>
+<p class="note">Kabuk saydam. Sol taraftaki saydam blok fırının (F) son 300 mm'si ve bandı (referans). Mavi: çit. Turuncu: robot çatalı. Kutu sarımsı: karton. Sarı koni: sprey (yalnız sprey anında).</p>
+
+<h2>1 &middot; Ne değişiyor, ne kalıyor</h2>
+<div class="card"><table class="t"><tr><th style="width:26%">Parça</th><th>KK'da</th><th style="width:30%">Kaynak / durum</th></tr>
+<tr><td>K modülü (600)</td><td class="kotu">kalkar</td><td>bant, DGRF-C kesici, itici, çit, tank hepsi E'nin içine taşınır</td></tr>
+<tr><td>E kutu mekanizması</td><td class="iyi">aynen</td><td>şarjör arkada (567 kutu, 2 gün), itici 411, kalıp, piston kafası, parmak, U çerçeve, kol, robot çatalı önden (kutu_cad_v3)</td></tr>
+<tr><td>Kutu tabanı kotu</td><td>1104 → <b>1090</b></td><td>bant (1164) kutu duvarlarının (üstü 1133,6) üstünden geçsin; burun altı 1150 → pay 16,4. Süreç zinciri: fırın 1166 → bant 1164 → kutu 1090 (düşme 72; E'de 46)</td></tr>
+<tr><td>Bant</td><td><b>geri çekilen burunlu</b> (drop loader)</td><td>PU bant 366 geniş, kuyrukta Interroll RollerDrive EC5000 Ø50 tahrik, burun bıçak ağzı Ø10, burun arabası MGN12 minyatür raylarda 342 mm gider, bant fazlası dansçı makarada (aşağı-yukarı 342). Burun tahriki (GT3 kayış + NEMA23) basit modelde yok</td></tr>
+<tr><td>Kesme</td><td>E kafasının içinde bıçak yıldızı</td><td>Ø296 · 6 bıçak · 45 yüksek; kafa plakasının yarıklarından SMC CDQ2B50-50 ile 46 mm çıkar; kesim BANTTA (K'nin kanıtlı yöntemi: ağız bandın 0,5 üstünde, altında sac plaka), kutunun içinde değil</td></tr>
+<tr><td>Sprey</td><td>kafanın ortasında</td><td>PulsaJet AA10000AUH-104210 + UniJet TG; ürün kutuya indikten SONRA, kafa 150 mm üstten püskürtür → mist kutunun içinde kalır, K'deki Ø316 koruma halkasına gerek yok</td></tr>
+<tr><td>Giriş çiti</td><td>bandın arka kenarında 20°</td><td>ürün fırından −249'da gelir, kutu ekseni −206: 43 mm kayma (bugün K girişinde 79 + K'de 36)</td></tr>
+<tr><td>Tereyağı tankı 3 L</td><td>alt dolapta</td><td>E'nin 123–1066 arası boş; ısıtmalı hortum kafaya (basit modelde kısa)</td></tr>
+</table></div>
+
+<h2>2 &middot; Çevrim (20 sn, E'nin saatiyle)</h2>
+<div class="card"><table class="t" id="cevrim"><tr><th style="width:9%">sn</th><th style="width:22%">adım</th><th>ne olur</th></tr></table>
+<p class="note">Kutu, ürün fırından çıkmadan ÖNCE katlanır (bant o sırada geri çekilmiş, kafa serbest). Fırın çıkış zamanı belli (pişme 3,5 dk), sıra buna göre kurulur. Ürün geldikten sonra kesme + düşürme + sprey + kapak + robot ≈ 13 sn.</p></div>
+
+<h2>3 &middot; Ölçü kontrolü (basit model, modelden ölçüldü)</h2>
+<div class="card"><table class="t" id="kontrol"><tr><th>Ölçü</th><th style="width:14%">değer</th><th style="width:22%">hedef</th></tr></table></div>
+
+<h2>4 &middot; Basit modelde OLMAYANLAR (doğru modelde yapılacak)</h2>
+<div class="card"><ul>
+<li>Kutunun kapak flapları, köşe tırnakları, iç ön panel + kilit dilleri, parmak, U çerçeve, 2. vuruş (hepsi E v3'te var, aynen alınır).</li>
+<li>Bıçak kasetinin kafaya birleşimi: yarıklı plaka, kılavuz pimler, bayonet ile alttan sökülüp yıkanması; bıçak silindirinin gerçek STEP'i.</li>
+<li>Burun arabasının tahriki, bandın dönüş kolu ve gergisi, dansçı kılavuzu; bant sonu ölü plaka; sensörler.</li>
+<li>Kesme kuvvetinin kafa vidasına etkisi (statik tutma ≈ 1,1 kN, bıçak silindiri 1,2 kN), kafa sehimi → bıçak payı 0,5 mm yerine 1 mm.</li>
+<li>Gerçek katı çakışma taraması (E'deki gibi 201 an) ve ürün yolu süpürmesi.</li>
+</ul></div>
+
+<h2>5 &middot; Riskler</h2>
+<div class="card"><table class="t"><tr><th style="width:34%">Konu</th><th>Not</th></tr>
+<tr><td>Burun ↔ kutu duvarı</td><td>16 mm (kutu 14 aşağı alındı). Burun bıçak ağzı Ø10 → bant sarımı sıkı, PU bant için uygun [V]</td></tr>
+<tr><td>Ürünün kutuya inişi</td><td>drop loader ilkesi (burun geri, bant ileri, ürün yerinde): paketlemede standart, ±5 mm; pide 72 mm düşer (E'de 46). Pilot testi</td></tr>
+<tr><td>Kafa vidası kesme yükü</td><td>1,2 kN pnömatik bıçak kuvveti kafaya biner; vida statik tutma 1,1 kN → kuvvet düşürülür (bıçak silindiri CDQ2B40, 750 N) ya da kafaya mekanik dayama</td></tr>
+<tr><td>Fırın ekseni</td><td>bu tasarım fırın −249 / hat −170 sorununu değiştirmez; KK bandı 43 mm çitle iner</td></tr>
+<tr><td>Hijyen</td><td>bıçak kaseti kafadan aletsiz sökülmeli; bant, çit, kafa yıkanır</td></tr>
+</table></div>
+
+<p class="note">Model: arastirma/_uretec/kk_basit_v1.py → otonom/hat3d/kk_basit_v1.glb + kk_basit_v1.json · 27 Eyl 2026. Kaynak ölçüler: kutu_cad_v3 (E), kesme_cad_v1 (K), firin_tp10_cad_v4 (F). Bu sayfa deneme; makine v50 ve sayfaları değişmedi.</p>
+</div>
+<script>
+fetch('../hat3d/kk_basit_v1.json?v=1').then(r => r.json()).then(D => {
+  animasyon(D.animasyon);
+  const c = document.getElementById('cevrim'); D.animasyon.adim.forEach((a, i) => { const tr = document.createElement('tr'); tr.innerHTML = '<td>' + a.t.toFixed(1).replace('.', ',') + '</td><td><b>' + (i + 1) + ' · ' + a.ad + '</b></td><td>' + a.not_ + '</td>'; c.appendChild(tr); });
+  const k = document.getElementById('kontrol'); (D.kontrol || []).forEach(x => { const tr = document.createElement('tr'); tr.innerHTML = '<td>' + x.ad + '</td><td><b>' + String(x.deger).replace('.', ',') + '</b></td><td>' + x.hedef + '</td>'; k.appendChild(tr); });
+});
+function animasyon(A) {
+  if (!A) return;
+  const mv = document.getElementById('mv'), oy = document.getElementById('oy'), tz = document.getElementById('tz'), sn = document.getElementById('sn'),
+        adim = document.getElementById('adim'), anlat = document.getElementById('anlat'), T = A.sure;
+  tz.max = T;
+  adim.innerHTML = A.adim.map((a, i) => '<button data-i="' + i + '">' + (i + 1) + ' · ' + a.ad + '</button>').join('');
+  const btn = [...adim.querySelectorAll('button')];
+  const f = v => v.toFixed(1).replace('.', ',');
+  function goster(t) { let k = 0; A.adim.forEach((a, i) => { if (t >= a.t - 0.01) k = i; }); btn.forEach((b, i) => b.classList.toggle('ak', i === k));
+    anlat.innerHTML = '<b>' + (k + 1) + ' · ' + A.adim[k].ad + '</b> — ' + A.adim[k].not_; sn.textContent = f(t) + ' / ' + T.toFixed(0) + ' sn'; }
+  btn.forEach(b => b.onclick = () => { const t = A.adim[+b.dataset.i].t; mv.currentTime = t; tz.value = t; goster(t); mv.play(); oy.textContent = 'duraklat'; });
+  tz.oninput = () => { mv.pause(); oy.textContent = 'oynat'; mv.currentTime = parseFloat(tz.value); goster(parseFloat(tz.value)); };
+  oy.onclick = () => { if (mv.paused) { mv.play(); oy.textContent = 'duraklat'; } else { mv.pause(); oy.textContent = 'oynat'; } };
+  setInterval(() => { if (!mv.paused && mv.loaded) { tz.value = mv.currentTime; goster(mv.currentTime); } }, 150);
+  goster(0);
+}
+</script></body></html>
