@@ -1,0 +1,2804 @@
+{
+ "surum": "topping_uno_cad_v8 · 26.09.2026 19:07",
+ "grup": {
+  "SABIT": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "TABLA": [
+   210.0,
+   1168.0,
+   -170.0
+  ],
+  "VALF_SOS": [
+   210.0,
+   1358.5,
+   -387.0
+  ],
+  "PISTON_SOS": [
+   210.0,
+   1358.5,
+   -436.0
+  ],
+  "VALF_HARC": [
+   560.0,
+   1358.5,
+   -387.0
+  ],
+  "PISTON_HARC": [
+   560.0,
+   1358.5,
+   -436.0
+  ],
+  "VALF_KIYMA": [
+   895.0,
+   1358.5,
+   -387.0
+  ],
+  "PISTON_KIYMA": [
+   895.0,
+   1358.5,
+   -436.0
+  ],
+  "VALF_KUSBASI": [
+   1105.0,
+   1358.5,
+   -387.0
+  ],
+  "PISTON_KUSBASI": [
+   1105.0,
+   1358.5,
+   -436.0
+  ],
+  "HELEZON_KASAR": [
+   1361.0,
+   1360.0,
+   0.0
+  ],
+  "KARISTIRICI_KASAR": [
+   1361.0,
+   1515.0,
+   0.0
+  ],
+  "HELEZON_SUCUK": [
+   1610.0,
+   1380.0,
+   0.0
+  ],
+  "KARISTIRICI_SUCUK": [
+   1610.0,
+   1484.0,
+   0.0
+  ]
+ },
+ "parcalar": [
+  {
+   "ad": "kabin_taban_saci",
+   "kaynak": "V",
+   "not_": "",
+   "mal": "fircali"
+  },
+  {
+   "ad": "kabin_arka_saci",
+   "kaynak": "V",
+   "not_": "",
+   "mal": "kabuk"
+  },
+  {
+   "ad": "kabin_ust_saci",
+   "kaynak": "V",
+   "not_": "",
+   "mal": "kabuk"
+  },
+  {
+   "ad": "kabin_sol_duvar_PU",
+   "kaynak": "V",
+   "not_": "sac + PU 60 · v7: 1277'den başlar (altı mekanizma bölgesi: tabla park/aktarmada duvar hizasını geçer; alt yanlar topping_cad'in sacı)",
+   "mal": "pu"
+  },
+  {
+   "ad": "kabin_sag_duvar_PU",
+   "kaynak": "V",
+   "not_": "v7: 1277'den başlar (disk aktarmada 2507'ye kadar çıkar)",
+   "mal": "pu"
+  },
+  {
+   "ad": "tasiyici_raf_3mm",
+   "kaynak": "H",
+   "not_": "AISI 304 · 3 mm · yük 154 kg · sehim 3,4 mm · emniyet 2,3 · ağız delikleri · v6: kaset delikleri öne açık U-yarık (Ø60)",
+   "mal": "paslanmaz"
+  },
+  {
+   "ad": "raf_on_bukumu",
+   "kaynak": "H",
+   "not_": "40 mm aşağı büküm (rafın kirişi) · v6: kaset yarıklarında 60 çentik",
+   "mal": "paslanmaz"
+  },
+  {
+   "ad": "kasar_inis_borusu",
+   "kaynak": "H",
+   "not_": "kaset borusunun devamı: üstü 1305 — kaset borusu (dış Ø50) 1312'de biter, iç içe geçmez (v5'te 5 mm geçiyordu, kaset öne çekilemezdi) · pideye 40 mm kalana iner",
+   "mal": "paslanmaz"
+  },
+  {
+   "ad": "kasar_inis_hunisi",
+   "kaynak": "H",
+   "not_": "huni iç Ø45→Ø58 · 1305–1311 · kaset borusunun altındaki 1 mm boşluğu ve 4 mm yanal payı örter → kaset öne çekilirken boruya takılmaz",
+   "mal": "paslanmaz"
+  },
+  {
+   "ad": "sucuk_inis_borusu",
+   "kaynak": "H",
+   "not_": "kaset borusunun devamı: üstü 1305 — kaset borusu (dış Ø48) 1312'de biter, iç içe geçmez (v5'te 5 mm geçiyordu, kaset öne çekilemezdi) · pideye 40 mm kalana iner",
+   "mal": "paslanmaz"
+  },
+  {
+   "ad": "sucuk_inis_hunisi",
+   "kaynak": "H",
+   "not_": "huni iç Ø42→Ø58 · 1305–1311 · kaset borusunun altındaki 1 mm boşluğu ve 4 mm yanal payı örter → kaset öne çekilirken boruya takılmaz",
+   "mal": "paslanmaz"
+  },
+  {
+   "ad": "raf_arka_bukumu",
+   "kaynak": "H",
+   "not_": "",
+   "mal": "paslanmaz"
+  },
+  {
+   "ad": "teknik_bant_sogutma_grubu",
+   "kaynak": "Ö",
+   "not_": "pafta v9 teknik bant · ZARF",
+   "mal": "zarf"
+  },
+  {
+   "ad": "teknik_bant_pano_PLC",
+   "kaynak": "Ö",
+   "not_": "pafta v9 teknik bant · ZARF",
+   "mal": "zarf"
+  },
+  {
+   "ad": "teknik_bant_guc_kaynagi",
+   "kaynak": "Ö",
+   "not_": "pafta v9 teknik bant · ZARF",
+   "mal": "zarf"
+  },
+  {
+   "ad": "teknik_bant_UPS",
+   "kaynak": "Ö",
+   "not_": "pafta v9 teknik bant · ZARF",
+   "mal": "zarf"
+  },
+  {
+   "ad": "tabla_diski",
+   "kaynak": "Ö",
+   "not_": "Ø340 · merkezi sos bıçağının iç ucunda · dozajda 1 tur",
+   "mal": "tabla"
+  },
+  {
+   "ad": "pide",
+   "kaynak": "Ö",
+   "not_": "",
+   "mal": "hamur"
+  },
+  {
+   "ad": "pide_isareti",
+   "kaynak": "V",
+   "not_": "dönüşü göstermek için işaret",
+   "mal": "silikon"
+  },
+  {
+   "ad": "sos__valf_blogu",
+   "kaynak": "Ö+V",
+   "not_": "UNO modeli (beldos_cad_v1) · 82 × 72,6 [Ö]; derinlik 82 VARSAYIM (fotoğrafta küp)",
+   "mal": "paslanmaz"
+  },
+  {
+   "ad": "sos__doner_valf_rotoru",
+   "kaynak": "B+V",
+   "not_": "UNO modeli (beldos_cad_v1) · broşür: 'rotation cylinder' [B]; T delik: emişte üst↔sağ, 90° dönünce sağ↔sol [V]",
+   "mal": "pom"
+  },
+  {
+   "ad": "sos__valf_topuzu",
+   "kaynak": "F",
+   "not_": "UNO modeli (beldos_cad_v1) · ",
+   "mal": "siyah"
+  },
+  {
+   "ad": "sos__valf_topuzu_isareti",
+   "kaynak": "V",
+   "not_": "UNO modeli (beldos_cad_v1) · ",
+   "mal": "pom"
+  },
+  {
+   "ad": "sos__valf_dondurme_aktuatoru",
+   "kaynak": "V",
+   "not_": "UNO modeli (beldos_cad_v1) · valfi 90° çeviren pnömatik döner eyleyici; arkada, görünmüyor → VARSAYIM",
+   "mal": "aluminyum"
+  },
+  {
+   "ad": "sos__cikis_borusu",
+   "kaynak": "Ö",
+   "not_": "UNO modeli (beldos_cad_v1) · Ø36 [Ö]",
+   "mal": "paslanmaz"
+  },
+  {
+   "ad": "sos__cikis_tc_ferrule",
+   "kaynak": "F",
+   "not_": "UNO modeli (beldos_cad_v1) · ",
+   "mal": "paslanmaz"
+  },
+  {
+   "ad": "sos__cikis_tc_kelepcesi",
+   "kaynak": "Ö",
+   "not_": "UNO modeli (beldos_cad_v1) · Ø59 × 21 [Ö]; sol ucu 685 ölçüsünün başı",
+   "mal": "paslanmaz"
+  },
+  {
+   "ad": "sos__cikis_tc_kelebegi",
+   "kaynak": "Ö",
+   "not_": "UNO modeli (beldos_cad_v1) · ",
+   "mal": "paslanmaz"
+  },
+  {
+   "ad": "sos__agiz_90_derece",
+   "kaynak": "B+F",
+   "not_": "UNO modeli (beldos_cad_v1) · broşür seçeneği 'nozzle 90°' [B]; Ø36, dirsek R45 fotoğraftan [F]",
+   "mal": "paslanmaz"
+  },
+  {
+   "ad": "sos__urun_silindiri_bilezigi",
+   "kaynak": "F",
+   "not_": "UNO modeli (beldos_cad_v1) · ",
+   "mal": "paslanmaz"
+  },
+  {
+   "ad": "sos__urun_silindiri_D52",
+   "kaynak": "B+Ö",
+   "not_": "UNO modeli (beldos_cad_v1) · Ø52 (30–151 ml) [B]; boy [Ö]; içi görünsün diye SAYDAM çizildi (gerçekte paslanmaz)",
+   "mal": "saydam_celik"
+  },
+  {
+   "ad": "sos__urun_silindiri_kapagi",
+   "kaynak": "Ö",
+   "not_": "UNO modeli (beldos_cad_v1) · ",
+   "mal": "paslanmaz"
+  },
+  {
+   "ad": "sos__urun_pistonu",
+   "kaynak": "H",
+   "not_": "UNO modeli (beldos_cad_v1) · strok 71.1 mm = 151 ml / (π/4·52²) [H]",
+   "mal": "pom"
+  },
+  {
+   "ad": "sos__urun_mili",
+   "kaynak": "V",
+   "not_": "UNO modeli (beldos_cad_v1) · ",
+   "mal": "paslanmaz"
+  },
+  {
+   "ad": "sos__mil_kavramasi",
+   "kaynak": "V",
+   "not_": "UNO modeli (beldos_cad_v1) · ",
+   "mal": "paslanmaz"
+  },
+  {
+   "ad": "sos__pnomatik_mil_D12",
+   "kaynak": "V",
+   "not_": "UNO modeli (beldos_cad_v1) · ",
+   "mal": "paslanmaz"
+  },
+  {
+   "ad": "sos__pnomatik_silindir_D32",
+   "kaynak": "H+V",
+   "not_": "UNO modeli (beldos_cad_v1) · Ø32: 29 L/dk ÷ 30 = 0,97 L/çevrim → çift etkili Ø32 × 76 mm [H]; gövde boyu VARSAYIM",
+   "mal": "aluminyum"
+  },
+  {
+   "ad": "sos__pnomatik_on_bogaz",
+   "kaynak": "V",
+   "not_": "UNO modeli (beldos_cad_v1) · ",
+   "mal": "aluminyum"
+  },
+  {
+   "ad": "sos__pnomatik_arka_mafsal",
+   "kaynak": "V",
+   "not_": "UNO modeli (beldos_cad_v1) · ",
+   "mal": "aluminyum"
+  },
+  {
+   "ad": "sos__pnomatik_on_ayak",
+   "kaynak": "V",
+   "not_": "UNO modeli (beldos_cad_v1) · ",
+   "mal": "fircali"
+  },
+  {
+   "ad": "sos_spreader_giris_kelepcesi",
+   "kaynak": "F",
+   "not_": "Beldos spreader attachment · 1,5\" TC kelepçe",
+   "mal": "paslanmaz"
+  },
+  {
+   "ad": "sos_spreader_kelepce_kanadi",
+   "kaynak": "F",
+   "not_": "",
+   "mal": "paslanmaz"
+  },
+  {
+   "ad": "sos_spreader_dik_boru",
+   "kaynak": "F",
+   "not_": "",
+   "mal": "paslanmaz"
+  },
+  {
+   "ad": "sos_spreader_kesme_valfi_govde",
+   "kaynak": "F",
+   "not_": "havalı kesme valfi (drip-free) · beyaz gövde, görselden",
+   "mal": "pom"
+  },
+  {
+   "ad": "sos_spreader_kesme_valfi_kapak",
+   "kaynak": "F",
+   "not_": "",
+   "mal": "pom"
+  },
+  {
+   "ad": "sos_spreader_valf_braketi",
+   "kaynak": "F",
+   "not_": "",
+   "mal": "paslanmaz"
+  },
+  {
+   "ad": "sos_spreader_valf_kelepcesi",
+   "kaynak": "F",
+   "not_": "",
+   "mal": "paslanmaz"
+  },
+  {
+   "ad": "sos_spreader_valf_mili",
+   "kaynak": "V",
+   "not_": "",
+   "mal": "celik"
+  },
+  {
+   "ad": "sos_spreader_hava_rakoru",
+   "kaynak": "F",
+   "not_": "",
+   "mal": "siyah"
+  },
+  {
+   "ad": "sos_spreader_ucgen_dagitici",
+   "kaynak": "F",
+   "not_": "görseldeki üçgen sac gövde · kalınlık 16 [V]",
+   "mal": "paslanmaz"
+  },
+  {
+   "ad": "sos_spreader_dagitici_boru",
+   "kaynak": "H",
+   "not_": "altı KAMA yarıklı: r 10→121 mm'de 2.0→3.2 mm (q ∝ r, topping_v2_hesap_v1) · boy 133 · alt yüzü 1182 (pideden 6)",
+   "mal": "paslanmaz"
+  },
+  {
+   "ad": "sos_spreader_uc_tapasi",
+   "kaynak": "F",
+   "not_": "beyaz tapa (görselde)",
+   "mal": "pom"
+  },
+  {
+   "ad": "sos_spreader_merkez_tapasi",
+   "kaynak": "V",
+   "not_": "",
+   "mal": "pom"
+  },
+  {
+   "ad": "sos_spreader_hava_hortumu",
+   "kaynak": "V",
+   "not_": "kesme valfine hava · cepten kovanla soğuk hücreye, oradan geçiş bloğuna ve valf adasına",
+   "mal": "hortum_mavi"
+  },
+  {
+   "ad": "sos_hazne_boynu",
+   "kaynak": "Ö",
+   "not_": "",
+   "mal": "paslanmaz"
+  },
+  {
+   "ad": "sos_tc_kelepce_hazne",
+   "kaynak": "Ö",
+   "not_": "",
+   "mal": "paslanmaz"
+  },
+  {
+   "ad": "sos_hazne_bizim",
+   "kaynak": "H",
+   "not_": "bizim soğuk hazne 220 × 440 · üstü 1737",
+   "mal": "paslanmaz"
+  },
+  {
+   "ad": "sos_mil_gecis_kovani",
+   "kaynak": "V",
+   "not_": "mil yalıtımdan keçeli kovanla geçer; UNO'nun mil kavraması (Ø20) strok boyunca bu duvarın içinden geçiyor → AÇIK SORUN",
+   "mal": "pom"
+  },
+  {
+   "ad": "harc__valf_blogu",
+   "kaynak": "Ö+V",
+   "not_": "UNO modeli (beldos_cad_v1) · 82 × 72,6 [Ö]; derinlik 82 VARSAYIM (fotoğrafta küp)",
+   "mal": "paslanmaz"
+  },
+  {
+   "ad": "harc__doner_valf_rotoru",
+   "kaynak": "B+V",
+   "not_": "UNO modeli (beldos_cad_v1) · broşür: 'rotation cylinder' [B]; T delik: emişte üst↔sağ, 90° dönünce sağ↔sol [V]",
+   "mal": "pom"
+  },
+  {
+   "ad": "harc__valf_topuzu",
+   "kaynak": "F",
+   "not_": "UNO modeli (beldos_cad_v1) · ",
+   "mal": "siyah"
+  },
+  {
+   "ad": "harc__valf_topuzu_isareti",
+   "kaynak": "V",
+   "not_": "UNO modeli (beldos_cad_v1) · ",
+   "mal": "pom"
+  },
+  {
+   "ad": "harc__valf_dondurme_aktuatoru",
+   "kaynak": "V",
+   "not_": "UNO modeli (beldos_cad_v1) · valfi 90° çeviren pnömatik döner eyleyici; arkada, görünmüyor → VARSAYIM",
+   "mal": "aluminyum"
+  },
+  {
+   "ad": "harc__cikis_borusu",
+   "kaynak": "Ö",
+   "not_": "UNO modeli (beldos_cad_v1) · Ø36 [Ö]",
+   "mal": "paslanmaz"
+  },
+  {
+   "ad": "harc__cikis_tc_ferrule",
+   "kaynak": "F",
+   "not_": "UNO modeli (beldos_cad_v1) · ",
+   "mal": "paslanmaz"
+  },
+  {
+   "ad": "harc__cikis_tc_kelepcesi",
+   "kaynak": "Ö",
+   "not_": "UNO modeli (beldos_cad_v1) · Ø59 × 21 [Ö]; sol ucu 685 ölçüsünün başı",
+   "mal": "paslanmaz"
+  },
+  {
+   "ad": "harc__cikis_tc_kelebegi",
+   "kaynak": "Ö",
+   "not_": "UNO modeli (beldos_cad_v1) · ",
+   "mal": "paslanmaz"
+  },
+  {
+   "ad": "harc__agiz_90_derece",
+   "kaynak": "B+F",
+   "not_": "UNO modeli (beldos_cad_v1) · broşür seçeneği 'nozzle 90°' [B]; Ø36, dirsek R45 fotoğraftan [F]",
+   "mal": "paslanmaz"
+  },
+  {
+   "ad": "harc__urun_silindiri_bilezigi",
+   "kaynak": "F",
+   "not_": "UNO modeli (beldos_cad_v1) · ",
+   "mal": "paslanmaz"
+  },
+  {
+   "ad": "harc__urun_silindiri_D52",
+   "kaynak": "B+Ö",
+   "not_": "UNO modeli (beldos_cad_v1) · Ø52 (30–151 ml) [B]; boy [Ö]; içi görünsün diye SAYDAM çizildi (gerçekte paslanmaz)",
+   "mal": "saydam_celik"
+  },
+  {
+   "ad": "harc__urun_silindiri_kapagi",
+   "kaynak": "Ö",
+   "not_": "UNO modeli (beldos_cad_v1) · ",
+   "mal": "paslanmaz"
+  },
+  {
+   "ad": "harc__urun_pistonu",
+   "kaynak": "H",
+   "not_": "UNO modeli (beldos_cad_v1) · strok 71.1 mm = 151 ml / (π/4·52²) [H]",
+   "mal": "pom"
+  },
+  {
+   "ad": "harc__urun_mili",
+   "kaynak": "V",
+   "not_": "UNO modeli (beldos_cad_v1) · ",
+   "mal": "paslanmaz"
+  },
+  {
+   "ad": "harc__mil_kavramasi",
+   "kaynak": "V",
+   "not_": "UNO modeli (beldos_cad_v1) · ",
+   "mal": "paslanmaz"
+  },
+  {
+   "ad": "harc__pnomatik_mil_D12",
+   "kaynak": "V",
+   "not_": "UNO modeli (beldos_cad_v1) · ",
+   "mal": "paslanmaz"
+  },
+  {
+   "ad": "harc__pnomatik_silindir_D32",
+   "kaynak": "H+V",
+   "not_": "UNO modeli (beldos_cad_v1) · Ø32: 29 L/dk ÷ 30 = 0,97 L/çevrim → çift etkili Ø32 × 76 mm [H]; gövde boyu VARSAYIM",
+   "mal": "aluminyum"
+  },
+  {
+   "ad": "harc__pnomatik_on_bogaz",
+   "kaynak": "V",
+   "not_": "UNO modeli (beldos_cad_v1) · ",
+   "mal": "aluminyum"
+  },
+  {
+   "ad": "harc__pnomatik_arka_mafsal",
+   "kaynak": "V",
+   "not_": "UNO modeli (beldos_cad_v1) · ",
+   "mal": "aluminyum"
+  },
+  {
+   "ad": "harc__pnomatik_on_ayak",
+   "kaynak": "V",
+   "not_": "UNO modeli (beldos_cad_v1) · ",
+   "mal": "fircali"
+  },
+  {
+   "ad": "harc_spreader_giris_kelepcesi",
+   "kaynak": "F",
+   "not_": "Beldos spreader attachment · 1,5\" TC kelepçe",
+   "mal": "paslanmaz"
+  },
+  {
+   "ad": "harc_spreader_kelepce_kanadi",
+   "kaynak": "F",
+   "not_": "",
+   "mal": "paslanmaz"
+  },
+  {
+   "ad": "harc_spreader_dik_boru",
+   "kaynak": "F",
+   "not_": "",
+   "mal": "paslanmaz"
+  },
+  {
+   "ad": "harc_spreader_kesme_valfi_govde",
+   "kaynak": "F",
+   "not_": "havalı kesme valfi (drip-free) · beyaz gövde, görselden",
+   "mal": "pom"
+  },
+  {
+   "ad": "harc_spreader_kesme_valfi_kapak",
+   "kaynak": "F",
+   "not_": "",
+   "mal": "pom"
+  },
+  {
+   "ad": "harc_spreader_valf_braketi",
+   "kaynak": "F",
+   "not_": "",
+   "mal": "paslanmaz"
+  },
+  {
+   "ad": "harc_spreader_valf_kelepcesi",
+   "kaynak": "F",
+   "not_": "",
+   "mal": "paslanmaz"
+  },
+  {
+   "ad": "harc_spreader_valf_mili",
+   "kaynak": "V",
+   "not_": "",
+   "mal": "celik"
+  },
+  {
+   "ad": "harc_spreader_hava_rakoru",
+   "kaynak": "F",
+   "not_": "",
+   "mal": "siyah"
+  },
+  {
+   "ad": "harc_spreader_ucgen_dagitici",
+   "kaynak": "F",
+   "not_": "görseldeki üçgen sac gövde · kalınlık 16 [V]",
+   "mal": "paslanmaz"
+  },
+  {
+   "ad": "harc_spreader_dagitici_boru",
+   "kaynak": "H",
+   "not_": "altı KAMA yarıklı: r 10→121 mm'de 6.0→9.6 mm (q ∝ r, topping_v2_hesap_v1) · boy 133 · alt yüzü 1182 (pideden 6)",
+   "mal": "paslanmaz"
+  },
+  {
+   "ad": "harc_spreader_uc_tapasi",
+   "kaynak": "F",
+   "not_": "beyaz tapa (görselde)",
+   "mal": "pom"
+  },
+  {
+   "ad": "harc_spreader_merkez_tapasi",
+   "kaynak": "V",
+   "not_": "",
+   "mal": "pom"
+  },
+  {
+   "ad": "harc_spreader_hava_hortumu",
+   "kaynak": "V",
+   "not_": "kesme valfine hava · cepten kovanla soğuk hücreye, oradan geçiş bloğuna ve valf adasına",
+   "mal": "hortum_mavi"
+  },
+  {
+   "ad": "harc_hazne_boynu",
+   "kaynak": "Ö",
+   "not_": "",
+   "mal": "paslanmaz"
+  },
+  {
+   "ad": "harc_tc_kelepce_hazne",
+   "kaynak": "Ö",
+   "not_": "",
+   "mal": "paslanmaz"
+  },
+  {
+   "ad": "harc_hazne_bizim",
+   "kaynak": "H",
+   "not_": "bizim soğuk hazne 440 × 440 · üstü 1832",
+   "mal": "paslanmaz"
+  },
+  {
+   "ad": "harc_mil_gecis_kovani",
+   "kaynak": "V",
+   "not_": "mil yalıtımdan keçeli kovanla geçer; UNO'nun mil kavraması (Ø20) strok boyunca bu duvarın içinden geçiyor → AÇIK SORUN",
+   "mal": "pom"
+  },
+  {
+   "ad": "kiyma__valf_blogu",
+   "kaynak": "Ö+V",
+   "not_": "UNO modeli (beldos_cad_v1) · 82 × 72,6 [Ö]; derinlik 82 VARSAYIM (fotoğrafta küp)",
+   "mal": "paslanmaz"
+  },
+  {
+   "ad": "kiyma__doner_valf_rotoru",
+   "kaynak": "B+V",
+   "not_": "UNO modeli (beldos_cad_v1) · broşür: 'rotation cylinder' [B]; T delik: emişte üst↔sağ, 90° dönünce sağ↔sol [V]",
+   "mal": "pom"
+  },
+  {
+   "ad": "kiyma__valf_topuzu",
+   "kaynak": "F",
+   "not_": "UNO modeli (beldos_cad_v1) · ",
+   "mal": "siyah"
+  },
+  {
+   "ad": "kiyma__valf_topuzu_isareti",
+   "kaynak": "V",
+   "not_": "UNO modeli (beldos_cad_v1) · ",
+   "mal": "pom"
+  },
+  {
+   "ad": "kiyma__valf_dondurme_aktuatoru",
+   "kaynak": "V",
+   "not_": "UNO modeli (beldos_cad_v1) · valfi 90° çeviren pnömatik döner eyleyici; arkada, görünmüyor → VARSAYIM",
+   "mal": "aluminyum"
+  },
+  {
+   "ad": "kiyma__cikis_borusu",
+   "kaynak": "Ö",
+   "not_": "UNO modeli (beldos_cad_v1) · Ø36 [Ö]",
+   "mal": "paslanmaz"
+  },
+  {
+   "ad": "kiyma__cikis_tc_ferrule",
+   "kaynak": "F",
+   "not_": "UNO modeli (beldos_cad_v1) · ",
+   "mal": "paslanmaz"
+  },
+  {
+   "ad": "kiyma__cikis_tc_kelepcesi",
+   "kaynak": "Ö",
+   "not_": "UNO modeli (beldos_cad_v1) · Ø59 × 21 [Ö]; sol ucu 685 ölçüsünün başı",
+   "mal": "paslanmaz"
+  },
+  {
+   "ad": "kiyma__cikis_tc_kelebegi",
+   "kaynak": "Ö",
+   "not_": "UNO modeli (beldos_cad_v1) · ",
+   "mal": "paslanmaz"
+  },
+  {
+   "ad": "kiyma__agiz_90_derece",
+   "kaynak": "B+F",
+   "not_": "UNO modeli (beldos_cad_v1) · broşür seçeneği 'nozzle 90°' [B]; Ø36, dirsek R45 fotoğraftan [F]",
+   "mal": "paslanmaz"
+  },
+  {
+   "ad": "kiyma__urun_silindiri_bilezigi",
+   "kaynak": "F",
+   "not_": "UNO modeli (beldos_cad_v1) · ",
+   "mal": "paslanmaz"
+  },
+  {
+   "ad": "kiyma__urun_silindiri_kapagi",
+   "kaynak": "Ö",
+   "not_": "UNO modeli (beldos_cad_v1) · ",
+   "mal": "paslanmaz"
+  },
+  {
+   "ad": "kiyma__urun_mili",
+   "kaynak": "V",
+   "not_": "UNO modeli (beldos_cad_v1) · ",
+   "mal": "paslanmaz"
+  },
+  {
+   "ad": "kiyma__mil_kavramasi",
+   "kaynak": "V",
+   "not_": "UNO modeli (beldos_cad_v1) · ",
+   "mal": "paslanmaz"
+  },
+  {
+   "ad": "kiyma__pnomatik_mil_D12",
+   "kaynak": "V",
+   "not_": "UNO modeli (beldos_cad_v1) · ",
+   "mal": "paslanmaz"
+  },
+  {
+   "ad": "kiyma__pnomatik_silindir_D32",
+   "kaynak": "H+V",
+   "not_": "UNO modeli (beldos_cad_v1) · Ø32: 29 L/dk ÷ 30 = 0,97 L/çevrim → çift etkili Ø32 × 76 mm [H]; gövde boyu VARSAYIM",
+   "mal": "aluminyum"
+  },
+  {
+   "ad": "kiyma__pnomatik_on_bogaz",
+   "kaynak": "V",
+   "not_": "UNO modeli (beldos_cad_v1) · ",
+   "mal": "aluminyum"
+  },
+  {
+   "ad": "kiyma__pnomatik_arka_mafsal",
+   "kaynak": "V",
+   "not_": "UNO modeli (beldos_cad_v1) · ",
+   "mal": "aluminyum"
+  },
+  {
+   "ad": "kiyma__pnomatik_on_ayak",
+   "kaynak": "V",
+   "not_": "UNO modeli (beldos_cad_v1) · ",
+   "mal": "fircali"
+  },
+  {
+   "ad": "kiyma__urun_silindiri_D70",
+   "kaynak": "B",
+   "not_": "Beldos Ø70 silindir seçeneği (100–275 ml) · doz 152 ml > Ø52'nin 151 ml'si",
+   "mal": "saydam_celik"
+  },
+  {
+   "ad": "kiyma__urun_pistonu_D70",
+   "kaynak": "H",
+   "not_": "",
+   "mal": "pom"
+  },
+  {
+   "ad": "kiyma_agiz_uzatmasi",
+   "kaynak": "H",
+   "not_": "UNO 90° ağzının ucundan pideye iniş: 48 mm uzatma · uç 1216 (pideden 40)",
+   "mal": "paslanmaz"
+  },
+  {
+   "ad": "kiyma_hazne_boynu",
+   "kaynak": "Ö",
+   "not_": "",
+   "mal": "paslanmaz"
+  },
+  {
+   "ad": "kiyma_tc_kelepce_hazne",
+   "kaynak": "Ö",
+   "not_": "",
+   "mal": "paslanmaz"
+  },
+  {
+   "ad": "kiyma_hazne_bizim",
+   "kaynak": "H",
+   "not_": "bizim soğuk hazne 190 × 440 · üstü 1667",
+   "mal": "paslanmaz"
+  },
+  {
+   "ad": "kiyma_mil_gecis_kovani",
+   "kaynak": "V",
+   "not_": "mil yalıtımdan keçeli kovanla geçer; UNO'nun mil kavraması (Ø20) strok boyunca bu duvarın içinden geçiyor → AÇIK SORUN",
+   "mal": "pom"
+  },
+  {
+   "ad": "kusbasi__valf_blogu",
+   "kaynak": "Ö+V",
+   "not_": "UNO modeli (beldos_cad_v1) · 82 × 72,6 [Ö]; derinlik 82 VARSAYIM (fotoğrafta küp)",
+   "mal": "paslanmaz"
+  },
+  {
+   "ad": "kusbasi__doner_valf_rotoru",
+   "kaynak": "B+V",
+   "not_": "UNO modeli (beldos_cad_v1) · broşür: 'rotation cylinder' [B]; T delik: emişte üst↔sağ, 90° dönünce sağ↔sol [V]",
+   "mal": "pom"
+  },
+  {
+   "ad": "kusbasi__valf_topuzu",
+   "kaynak": "F",
+   "not_": "UNO modeli (beldos_cad_v1) · ",
+   "mal": "siyah"
+  },
+  {
+   "ad": "kusbasi__valf_topuzu_isareti",
+   "kaynak": "V",
+   "not_": "UNO modeli (beldos_cad_v1) · ",
+   "mal": "pom"
+  },
+  {
+   "ad": "kusbasi__valf_dondurme_aktuatoru",
+   "kaynak": "V",
+   "not_": "UNO modeli (beldos_cad_v1) · valfi 90° çeviren pnömatik döner eyleyici; arkada, görünmüyor → VARSAYIM",
+   "mal": "aluminyum"
+  },
+  {
+   "ad": "kusbasi__cikis_borusu",
+   "kaynak": "Ö",
+   "not_": "UNO modeli (beldos_cad_v1) · Ø36 [Ö]",
+   "mal": "paslanmaz"
+  },
+  {
+   "ad": "kusbasi__cikis_tc_ferrule",
+   "kaynak": "F",
+   "not_": "UNO modeli (beldos_cad_v1) · ",
+   "mal": "paslanmaz"
+  },
+  {
+   "ad": "kusbasi__cikis_tc_kelepcesi",
+   "kaynak": "Ö",
+   "not_": "UNO modeli (beldos_cad_v1) · Ø59 × 21 [Ö]; sol ucu 685 ölçüsünün başı",
+   "mal": "paslanmaz"
+  },
+  {
+   "ad": "kusbasi__cikis_tc_kelebegi",
+   "kaynak": "Ö",
+   "not_": "UNO modeli (beldos_cad_v1) · ",
+   "mal": "paslanmaz"
+  },
+  {
+   "ad": "kusbasi__agiz_90_derece",
+   "kaynak": "B+F",
+   "not_": "UNO modeli (beldos_cad_v1) · broşür seçeneği 'nozzle 90°' [B]; Ø36, dirsek R45 fotoğraftan [F]",
+   "mal": "paslanmaz"
+  },
+  {
+   "ad": "kusbasi__urun_silindiri_bilezigi",
+   "kaynak": "F",
+   "not_": "UNO modeli (beldos_cad_v1) · ",
+   "mal": "paslanmaz"
+  },
+  {
+   "ad": "kusbasi__urun_silindiri_kapagi",
+   "kaynak": "Ö",
+   "not_": "UNO modeli (beldos_cad_v1) · ",
+   "mal": "paslanmaz"
+  },
+  {
+   "ad": "kusbasi__urun_mili",
+   "kaynak": "V",
+   "not_": "UNO modeli (beldos_cad_v1) · ",
+   "mal": "paslanmaz"
+  },
+  {
+   "ad": "kusbasi__mil_kavramasi",
+   "kaynak": "V",
+   "not_": "UNO modeli (beldos_cad_v1) · ",
+   "mal": "paslanmaz"
+  },
+  {
+   "ad": "kusbasi__pnomatik_mil_D12",
+   "kaynak": "V",
+   "not_": "UNO modeli (beldos_cad_v1) · ",
+   "mal": "paslanmaz"
+  },
+  {
+   "ad": "kusbasi__pnomatik_silindir_D32",
+   "kaynak": "H+V",
+   "not_": "UNO modeli (beldos_cad_v1) · Ø32: 29 L/dk ÷ 30 = 0,97 L/çevrim → çift etkili Ø32 × 76 mm [H]; gövde boyu VARSAYIM",
+   "mal": "aluminyum"
+  },
+  {
+   "ad": "kusbasi__pnomatik_on_bogaz",
+   "kaynak": "V",
+   "not_": "UNO modeli (beldos_cad_v1) · ",
+   "mal": "aluminyum"
+  },
+  {
+   "ad": "kusbasi__pnomatik_arka_mafsal",
+   "kaynak": "V",
+   "not_": "UNO modeli (beldos_cad_v1) · ",
+   "mal": "aluminyum"
+  },
+  {
+   "ad": "kusbasi__pnomatik_on_ayak",
+   "kaynak": "V",
+   "not_": "UNO modeli (beldos_cad_v1) · ",
+   "mal": "fircali"
+  },
+  {
+   "ad": "kusbasi__urun_silindiri_D70",
+   "kaynak": "B",
+   "not_": "Beldos Ø70 silindir seçeneği (100–275 ml) · doz 170 ml > Ø52'nin 151 ml'si",
+   "mal": "saydam_celik"
+  },
+  {
+   "ad": "kusbasi__urun_pistonu_D70",
+   "kaynak": "H",
+   "not_": "",
+   "mal": "pom"
+  },
+  {
+   "ad": "kusbasi_agiz_uzatmasi",
+   "kaynak": "H",
+   "not_": "UNO 90° ağzının ucundan pideye iniş: 48 mm uzatma · uç 1216 (pideden 40)",
+   "mal": "paslanmaz"
+  },
+  {
+   "ad": "kusbasi_hazne_boynu",
+   "kaynak": "Ö",
+   "not_": "",
+   "mal": "paslanmaz"
+  },
+  {
+   "ad": "kusbasi_tc_kelepce_hazne",
+   "kaynak": "Ö",
+   "not_": "",
+   "mal": "paslanmaz"
+  },
+  {
+   "ad": "kusbasi_hazne_bizim",
+   "kaynak": "H",
+   "not_": "bizim soğuk hazne 190 × 440 · üstü 1667",
+   "mal": "paslanmaz"
+  },
+  {
+   "ad": "kusbasi_mil_gecis_kovani",
+   "kaynak": "V",
+   "not_": "mil yalıtımdan keçeli kovanla geçer; UNO'nun mil kavraması (Ø20) strok boyunca bu duvarın içinden geçiyor → AÇIK SORUN",
+   "mal": "pom"
+  },
+  {
+   "ad": "kasar_cad_v14__govde",
+   "kaynak": "B",
+   "not_": "KAŞAR KABI (montaj v41'deki gibi, Codex parçaları dahil)",
+   "mal": "cam"
+  },
+  {
+   "ad": "kasar_cad_v14__plaka_arka",
+   "kaynak": "B",
+   "not_": "KAŞAR KABI (montaj v41'deki gibi, Codex parçaları dahil)",
+   "mal": "cam"
+  },
+  {
+   "ad": "kasar_cad_v14__plaka_on",
+   "kaynak": "B",
+   "not_": "KAŞAR KABI (montaj v41'deki gibi, Codex parçaları dahil)",
+   "mal": "cam"
+  },
+  {
+   "ad": "kasar_cad_v14__saplama_0",
+   "kaynak": "B",
+   "not_": "KAŞAR KABI (montaj v41'deki gibi, Codex parçaları dahil)",
+   "mal": "celik"
+  },
+  {
+   "ad": "kasar_cad_v14__somun_arka_0",
+   "kaynak": "B",
+   "not_": "KAŞAR KABI (montaj v41'deki gibi, Codex parçaları dahil)",
+   "mal": "celik"
+  },
+  {
+   "ad": "kasar_cad_v14__somun_on_0",
+   "kaynak": "B",
+   "not_": "KAŞAR KABI (montaj v41'deki gibi, Codex parçaları dahil)",
+   "mal": "celik"
+  },
+  {
+   "ad": "kasar_cad_v14__saplama_1",
+   "kaynak": "B",
+   "not_": "KAŞAR KABI (montaj v41'deki gibi, Codex parçaları dahil)",
+   "mal": "celik"
+  },
+  {
+   "ad": "kasar_cad_v14__somun_arka_1",
+   "kaynak": "B",
+   "not_": "KAŞAR KABI (montaj v41'deki gibi, Codex parçaları dahil)",
+   "mal": "celik"
+  },
+  {
+   "ad": "kasar_cad_v14__somun_on_1",
+   "kaynak": "B",
+   "not_": "KAŞAR KABI (montaj v41'deki gibi, Codex parçaları dahil)",
+   "mal": "celik"
+  },
+  {
+   "ad": "kasar_cad_v14__saplama_2",
+   "kaynak": "B",
+   "not_": "KAŞAR KABI (montaj v41'deki gibi, Codex parçaları dahil)",
+   "mal": "celik"
+  },
+  {
+   "ad": "kasar_cad_v14__somun_arka_2",
+   "kaynak": "B",
+   "not_": "KAŞAR KABI (montaj v41'deki gibi, Codex parçaları dahil)",
+   "mal": "celik"
+  },
+  {
+   "ad": "kasar_cad_v14__saplama_3",
+   "kaynak": "B",
+   "not_": "KAŞAR KABI (montaj v41'deki gibi, Codex parçaları dahil)",
+   "mal": "celik"
+  },
+  {
+   "ad": "kasar_cad_v14__somun_arka_3",
+   "kaynak": "B",
+   "not_": "KAŞAR KABI (montaj v41'deki gibi, Codex parçaları dahil)",
+   "mal": "celik"
+  },
+  {
+   "ad": "kasar_cad_v14__kulp",
+   "kaynak": "B",
+   "not_": "KAŞAR KABI (montaj v41'deki gibi, Codex parçaları dahil)",
+   "mal": "celik"
+  },
+  {
+   "ad": "kasar_cad_v14__helezon_A",
+   "kaynak": "B",
+   "not_": "KAŞAR KABI (montaj v41'deki gibi, Codex parçaları dahil) · döner: HELEZON_KASAR",
+   "mal": "pom"
+  },
+  {
+   "ad": "kasar_cad_v14__helezon_B",
+   "kaynak": "B",
+   "not_": "KAŞAR KABI (montaj v41'deki gibi, Codex parçaları dahil) · döner: HELEZON_KASAR",
+   "mal": "pom"
+  },
+  {
+   "ad": "kasar_cad_v14__helezon_C",
+   "kaynak": "B",
+   "not_": "KAŞAR KABI (montaj v41'deki gibi, Codex parçaları dahil) · döner: HELEZON_KASAR",
+   "mal": "pom"
+  },
+  {
+   "ad": "kasar_cad_v14__helezon_D",
+   "kaynak": "B",
+   "not_": "KAŞAR KABI (montaj v41'deki gibi, Codex parçaları dahil) · döner: HELEZON_KASAR",
+   "mal": "pom"
+  },
+  {
+   "ad": "kasar_cad_v14__helezon_cekirdek",
+   "kaynak": "B",
+   "not_": "KAŞAR KABI (montaj v41'deki gibi, Codex parçaları dahil) · döner: HELEZON_KASAR",
+   "mal": "celik"
+  },
+  {
+   "ad": "kasar_cad_v14__gobek_helezon",
+   "kaynak": "B",
+   "not_": "KAŞAR KABI (montaj v41'deki gibi, Codex parçaları dahil) · döner: HELEZON_KASAR",
+   "mal": "pom"
+  },
+  {
+   "ad": "kasar_cad_v14__kavrama_helezon",
+   "kaynak": "B",
+   "not_": "KAŞAR KABI (montaj v41'deki gibi, Codex parçaları dahil) · döner: HELEZON_KASAR",
+   "mal": "pom"
+  },
+  {
+   "ad": "kasar_cad_v14__yayli_pim_helezon",
+   "kaynak": "B",
+   "not_": "KAŞAR KABI (montaj v41'deki gibi, Codex parçaları dahil) · döner: HELEZON_KASAR",
+   "mal": "celik"
+  },
+  {
+   "ad": "kasar_cad_v14__gobek_karistirici",
+   "kaynak": "B",
+   "not_": "KAŞAR KABI (montaj v41'deki gibi, Codex parçaları dahil) · döner: KARISTIRICI_KASAR",
+   "mal": "pom"
+  },
+  {
+   "ad": "kasar_cad_v14__kavrama_karistirici",
+   "kaynak": "B",
+   "not_": "KAŞAR KABI (montaj v41'deki gibi, Codex parçaları dahil) · döner: KARISTIRICI_KASAR",
+   "mal": "pom"
+  },
+  {
+   "ad": "kasar_cad_v14__yayli_pim_karistirici",
+   "kaynak": "B",
+   "not_": "KAŞAR KABI (montaj v41'deki gibi, Codex parçaları dahil) · döner: KARISTIRICI_KASAR",
+   "mal": "celik"
+  },
+  {
+   "ad": "kasar_cad_v14__cikis_tupu",
+   "kaynak": "B",
+   "not_": "KAŞAR KABI (montaj v41'deki gibi, Codex parçaları dahil)",
+   "mal": "cam"
+  },
+  {
+   "ad": "kasar_cad_v14__vida_tup_a",
+   "kaynak": "B",
+   "not_": "KAŞAR KABI (montaj v41'deki gibi, Codex parçaları dahil)",
+   "mal": "celik"
+  },
+  {
+   "ad": "kasar_cad_v14__vida_tup_b",
+   "kaynak": "B",
+   "not_": "KAŞAR KABI (montaj v41'deki gibi, Codex parçaları dahil)",
+   "mal": "celik"
+  },
+  {
+   "ad": "kasar_cad_v14__yatak_kapagi",
+   "kaynak": "B",
+   "not_": "KAŞAR KABI (montaj v41'deki gibi, Codex parçaları dahil)",
+   "mal": "pom"
+  },
+  {
+   "ad": "kasar_cad_v14__kar_mil",
+   "kaynak": "B",
+   "not_": "KAŞAR KABI (montaj v41'deki gibi, Codex parçaları dahil) · döner: KARISTIRICI_KASAR",
+   "mal": "celik"
+  },
+  {
+   "ad": "kasar_cad_v14__orumcek_arka",
+   "kaynak": "B",
+   "not_": "KAŞAR KABI (montaj v41'deki gibi, Codex parçaları dahil) · döner: KARISTIRICI_KASAR",
+   "mal": "pom"
+  },
+  {
+   "ad": "kasar_cad_v14__orumcek_orta",
+   "kaynak": "B",
+   "not_": "KAŞAR KABI (montaj v41'deki gibi, Codex parçaları dahil) · döner: KARISTIRICI_KASAR",
+   "mal": "pom"
+  },
+  {
+   "ad": "kasar_cad_v14__orumcek_on",
+   "kaynak": "B",
+   "not_": "KAŞAR KABI (montaj v41'deki gibi, Codex parçaları dahil) · döner: KARISTIRICI_KASAR",
+   "mal": "pom"
+  },
+  {
+   "ad": "kasar_cad_v14__cubuk_0",
+   "kaynak": "B",
+   "not_": "KAŞAR KABI (montaj v41'deki gibi, Codex parçaları dahil) · döner: KARISTIRICI_KASAR",
+   "mal": "celik"
+  },
+  {
+   "ad": "kasar_cad_v14__cubuk_1",
+   "kaynak": "B",
+   "not_": "KAŞAR KABI (montaj v41'deki gibi, Codex parçaları dahil) · döner: KARISTIRICI_KASAR",
+   "mal": "celik"
+  },
+  {
+   "ad": "kasar_cad_v14__cubuk_2",
+   "kaynak": "B",
+   "not_": "KAŞAR KABI (montaj v41'deki gibi, Codex parçaları dahil) · döner: KARISTIRICI_KASAR",
+   "mal": "celik"
+  },
+  {
+   "ad": "kasar_cad_v14__cubuk_3",
+   "kaynak": "B",
+   "not_": "KAŞAR KABI (montaj v41'deki gibi, Codex parçaları dahil) · döner: KARISTIRICI_KASAR",
+   "mal": "celik"
+  },
+  {
+   "ad": "kasar_cad_v14__on_kovan",
+   "kaynak": "B",
+   "not_": "KAŞAR KABI (montaj v41'deki gibi, Codex parçaları dahil) · döner: KARISTIRICI_KASAR",
+   "mal": "pom"
+  },
+  {
+   "ad": "kasar_cad_v14__topuz",
+   "kaynak": "B",
+   "not_": "KAŞAR KABI (montaj v41'deki gibi, Codex parçaları dahil) · döner: KARISTIRICI_KASAR",
+   "mal": "pom"
+  },
+  {
+   "ad": "kasar_cad_v14__setuskur",
+   "kaynak": "B",
+   "not_": "KAŞAR KABI (montaj v41'deki gibi, Codex parçaları dahil) · döner: KARISTIRICI_KASAR",
+   "mal": "celik"
+  },
+  {
+   "ad": "kasar_cad_v14__kilit_pimi",
+   "kaynak": "B",
+   "not_": "KAŞAR KABI (montaj v41'deki gibi, Codex parçaları dahil) · döner: KARISTIRICI_KASAR",
+   "mal": "celik"
+  },
+  {
+   "ad": "kasar_cad_v14__conta_arka",
+   "kaynak": "B",
+   "not_": "KAŞAR KABI (montaj v41'deki gibi, Codex parçaları dahil)",
+   "mal": "silikon"
+  },
+  {
+   "ad": "kasar_cad_v14__conta_on",
+   "kaynak": "B",
+   "not_": "KAŞAR KABI (montaj v41'deki gibi, Codex parçaları dahil)",
+   "mal": "silikon"
+  },
+  {
+   "ad": "kasar_cad_v14__insert_a",
+   "kaynak": "B",
+   "not_": "KAŞAR KABI (montaj v41'deki gibi, Codex parçaları dahil)",
+   "mal": "celik"
+  },
+  {
+   "ad": "kasar_cad_v14__insert_b",
+   "kaynak": "B",
+   "not_": "KAŞAR KABI (montaj v41'deki gibi, Codex parçaları dahil)",
+   "mal": "celik"
+  },
+  {
+   "ad": "kasar_cad_v14__oring_tup",
+   "kaynak": "B",
+   "not_": "KAŞAR KABI (montaj v41'deki gibi, Codex parçaları dahil)",
+   "mal": "silikon"
+  },
+  {
+   "ad": "kasar_cad_v14__oring_kapak",
+   "kaynak": "B",
+   "not_": "KAŞAR KABI (montaj v41'deki gibi, Codex parçaları dahil)",
+   "mal": "silikon"
+  },
+  {
+   "ad": "kasar_cad_v14__oring_gobek_helezon",
+   "kaynak": "B",
+   "not_": "KAŞAR KABI (montaj v41'deki gibi, Codex parçaları dahil) · döner: HELEZON_KASAR",
+   "mal": "silikon"
+  },
+  {
+   "ad": "kasar_cad_v14__oring_gobek_karistirici",
+   "kaynak": "B",
+   "not_": "KAŞAR KABI (montaj v41'deki gibi, Codex parçaları dahil) · döner: KARISTIRICI_KASAR",
+   "mal": "silikon"
+  },
+  {
+   "ad": "kasar_cad_v14__oring_on_kovan",
+   "kaynak": "B",
+   "not_": "KAŞAR KABI (montaj v41'deki gibi, Codex parçaları dahil) · döner: KARISTIRICI_KASAR",
+   "mal": "silikon"
+  },
+  {
+   "ad": "kasar_cad_v14__pul_arka_0",
+   "kaynak": "B",
+   "not_": "KAŞAR KABI (montaj v41'deki gibi, Codex parçaları dahil)",
+   "mal": "celik"
+  },
+  {
+   "ad": "kasar_cad_v14__pul_on_0",
+   "kaynak": "B",
+   "not_": "KAŞAR KABI (montaj v41'deki gibi, Codex parçaları dahil)",
+   "mal": "celik"
+  },
+  {
+   "ad": "kasar_cad_v14__pul_arka_1",
+   "kaynak": "B",
+   "not_": "KAŞAR KABI (montaj v41'deki gibi, Codex parçaları dahil)",
+   "mal": "celik"
+  },
+  {
+   "ad": "kasar_cad_v14__pul_on_1",
+   "kaynak": "B",
+   "not_": "KAŞAR KABI (montaj v41'deki gibi, Codex parçaları dahil)",
+   "mal": "celik"
+  },
+  {
+   "ad": "kasar_cad_v14__pul_arka_2",
+   "kaynak": "B",
+   "not_": "KAŞAR KABI (montaj v41'deki gibi, Codex parçaları dahil)",
+   "mal": "celik"
+  },
+  {
+   "ad": "kasar_cad_v14__pul_arka_3",
+   "kaynak": "B",
+   "not_": "KAŞAR KABI (montaj v41'deki gibi, Codex parçaları dahil)",
+   "mal": "celik"
+  },
+  {
+   "ad": "mil_kasar_cad_v14_helezon",
+   "kaynak": "Ö",
+   "not_": "Ø22 · kovanda keçeli · ucunda boydan boya pim kanalı 3,2 × 11,5 (haç yuvası 8,5 kayar) + segman kanalı d2 21 × 1,3 (v7)",
+   "mal": "celik"
+  },
+  {
+   "ad": "kovan_kasar_cad_v14_helezon",
+   "kaynak": "Ö",
+   "not_": "",
+   "mal": "pom"
+  },
+  {
+   "ad": "reduktor_kasar_cad_v14_helezon",
+   "kaynak": "B",
+   "not_": "SureGear PGCN23-1025 (katalog STEP)",
+   "mal": "motor"
+  },
+  {
+   "ad": "motor_kasar_cad_v14_helezon",
+   "kaynak": "B",
+   "not_": "AutomationDirect STP-MTR-23079 (katalog STEP)",
+   "mal": "motor"
+  },
+  {
+   "ad": "motor_kablosu_kasar_cad_v14_helezon",
+   "kaynak": "B",
+   "not_": "",
+   "mal": "koyu"
+  },
+  {
+   "ad": "mil_kasar_cad_v14_rotor",
+   "kaynak": "Ö",
+   "not_": "Ø22 · kovanda keçeli · ucunda boydan boya pim kanalı 3,2 × 11,5 (haç yuvası 8,5 kayar) + segman kanalı d2 21 × 1,3 (v7)",
+   "mal": "celik"
+  },
+  {
+   "ad": "kovan_kasar_cad_v14_rotor",
+   "kaynak": "Ö",
+   "not_": "",
+   "mal": "pom"
+  },
+  {
+   "ad": "reduktor_kasar_cad_v14_rotor",
+   "kaynak": "B",
+   "not_": "SureGear PGCN23-1025 (katalog STEP)",
+   "mal": "motor"
+  },
+  {
+   "ad": "motor_kasar_cad_v14_rotor",
+   "kaynak": "B",
+   "not_": "AutomationDirect STP-MTR-23079 (katalog STEP)",
+   "mal": "motor"
+  },
+  {
+   "ad": "motor_kablosu_kasar_cad_v14_rotor",
+   "kaynak": "B",
+   "not_": "",
+   "mal": "koyu"
+  },
+  {
+   "ad": "sucuk_cad_v7__govde",
+   "kaynak": "B",
+   "not_": "KÜP SUCUK (montaj v41'deki gibi, Codex parçaları dahil)",
+   "mal": "cam"
+  },
+  {
+   "ad": "sucuk_cad_v7__plaka_arka",
+   "kaynak": "B",
+   "not_": "KÜP SUCUK (montaj v41'deki gibi, Codex parçaları dahil)",
+   "mal": "cam"
+  },
+  {
+   "ad": "sucuk_cad_v7__plaka_on",
+   "kaynak": "B",
+   "not_": "KÜP SUCUK (montaj v41'deki gibi, Codex parçaları dahil)",
+   "mal": "cam"
+  },
+  {
+   "ad": "sucuk_cad_v7__saplama_0",
+   "kaynak": "B",
+   "not_": "KÜP SUCUK (montaj v41'deki gibi, Codex parçaları dahil)",
+   "mal": "celik"
+  },
+  {
+   "ad": "sucuk_cad_v7__somun_arka_0",
+   "kaynak": "B",
+   "not_": "KÜP SUCUK (montaj v41'deki gibi, Codex parçaları dahil)",
+   "mal": "celik"
+  },
+  {
+   "ad": "sucuk_cad_v7__somun_on_0",
+   "kaynak": "B",
+   "not_": "KÜP SUCUK (montaj v41'deki gibi, Codex parçaları dahil)",
+   "mal": "celik"
+  },
+  {
+   "ad": "sucuk_cad_v7__saplama_1",
+   "kaynak": "B",
+   "not_": "KÜP SUCUK (montaj v41'deki gibi, Codex parçaları dahil)",
+   "mal": "celik"
+  },
+  {
+   "ad": "sucuk_cad_v7__somun_arka_1",
+   "kaynak": "B",
+   "not_": "KÜP SUCUK (montaj v41'deki gibi, Codex parçaları dahil)",
+   "mal": "celik"
+  },
+  {
+   "ad": "sucuk_cad_v7__somun_on_1",
+   "kaynak": "B",
+   "not_": "KÜP SUCUK (montaj v41'deki gibi, Codex parçaları dahil)",
+   "mal": "celik"
+  },
+  {
+   "ad": "sucuk_cad_v7__saplama_2",
+   "kaynak": "B",
+   "not_": "KÜP SUCUK (montaj v41'deki gibi, Codex parçaları dahil)",
+   "mal": "celik"
+  },
+  {
+   "ad": "sucuk_cad_v7__somun_arka_2",
+   "kaynak": "B",
+   "not_": "KÜP SUCUK (montaj v41'deki gibi, Codex parçaları dahil)",
+   "mal": "celik"
+  },
+  {
+   "ad": "sucuk_cad_v7__saplama_3",
+   "kaynak": "B",
+   "not_": "KÜP SUCUK (montaj v41'deki gibi, Codex parçaları dahil)",
+   "mal": "celik"
+  },
+  {
+   "ad": "sucuk_cad_v7__somun_arka_3",
+   "kaynak": "B",
+   "not_": "KÜP SUCUK (montaj v41'deki gibi, Codex parçaları dahil)",
+   "mal": "celik"
+  },
+  {
+   "ad": "sucuk_cad_v7__kulp",
+   "kaynak": "B",
+   "not_": "KÜP SUCUK (montaj v41'deki gibi, Codex parçaları dahil)",
+   "mal": "celik"
+  },
+  {
+   "ad": "sucuk_cad_v7__helezon_A",
+   "kaynak": "B",
+   "not_": "KÜP SUCUK (montaj v41'deki gibi, Codex parçaları dahil) · döner: HELEZON_SUCUK",
+   "mal": "pom"
+  },
+  {
+   "ad": "sucuk_cad_v7__helezon_B",
+   "kaynak": "B",
+   "not_": "KÜP SUCUK (montaj v41'deki gibi, Codex parçaları dahil) · döner: HELEZON_SUCUK",
+   "mal": "pom"
+  },
+  {
+   "ad": "sucuk_cad_v7__helezon_C",
+   "kaynak": "B",
+   "not_": "KÜP SUCUK (montaj v41'deki gibi, Codex parçaları dahil) · döner: HELEZON_SUCUK",
+   "mal": "pom"
+  },
+  {
+   "ad": "sucuk_cad_v7__helezon_D",
+   "kaynak": "B",
+   "not_": "KÜP SUCUK (montaj v41'deki gibi, Codex parçaları dahil) · döner: HELEZON_SUCUK",
+   "mal": "pom"
+  },
+  {
+   "ad": "sucuk_cad_v7__helezon_cekirdek",
+   "kaynak": "B",
+   "not_": "KÜP SUCUK (montaj v41'deki gibi, Codex parçaları dahil) · döner: HELEZON_SUCUK",
+   "mal": "celik"
+  },
+  {
+   "ad": "sucuk_cad_v7__gobek_helezon",
+   "kaynak": "B",
+   "not_": "KÜP SUCUK (montaj v41'deki gibi, Codex parçaları dahil) · döner: HELEZON_SUCUK",
+   "mal": "pom"
+  },
+  {
+   "ad": "sucuk_cad_v7__kavrama_helezon",
+   "kaynak": "B",
+   "not_": "KÜP SUCUK (montaj v41'deki gibi, Codex parçaları dahil) · döner: HELEZON_SUCUK",
+   "mal": "pom"
+  },
+  {
+   "ad": "sucuk_cad_v7__yayli_pim_helezon",
+   "kaynak": "B",
+   "not_": "KÜP SUCUK (montaj v41'deki gibi, Codex parçaları dahil) · döner: HELEZON_SUCUK",
+   "mal": "celik"
+  },
+  {
+   "ad": "sucuk_cad_v7__gobek_karistirici",
+   "kaynak": "B",
+   "not_": "KÜP SUCUK (montaj v41'deki gibi, Codex parçaları dahil) · döner: KARISTIRICI_SUCUK",
+   "mal": "pom"
+  },
+  {
+   "ad": "sucuk_cad_v7__kavrama_karistirici",
+   "kaynak": "B",
+   "not_": "KÜP SUCUK (montaj v41'deki gibi, Codex parçaları dahil) · döner: KARISTIRICI_SUCUK",
+   "mal": "pom"
+  },
+  {
+   "ad": "sucuk_cad_v7__yayli_pim_karistirici",
+   "kaynak": "B",
+   "not_": "KÜP SUCUK (montaj v41'deki gibi, Codex parçaları dahil) · döner: KARISTIRICI_SUCUK",
+   "mal": "celik"
+  },
+  {
+   "ad": "sucuk_cad_v7__cikis_tupu",
+   "kaynak": "B",
+   "not_": "KÜP SUCUK (montaj v41'deki gibi, Codex parçaları dahil)",
+   "mal": "cam"
+  },
+  {
+   "ad": "sucuk_cad_v7__vida_tup_a",
+   "kaynak": "B",
+   "not_": "KÜP SUCUK (montaj v41'deki gibi, Codex parçaları dahil)",
+   "mal": "celik"
+  },
+  {
+   "ad": "sucuk_cad_v7__vida_tup_b",
+   "kaynak": "B",
+   "not_": "KÜP SUCUK (montaj v41'deki gibi, Codex parçaları dahil)",
+   "mal": "celik"
+  },
+  {
+   "ad": "sucuk_cad_v7__yatak_kapagi",
+   "kaynak": "B",
+   "not_": "KÜP SUCUK (montaj v41'deki gibi, Codex parçaları dahil)",
+   "mal": "pom"
+  },
+  {
+   "ad": "sucuk_cad_v7__kar_mil",
+   "kaynak": "B",
+   "not_": "KÜP SUCUK (montaj v41'deki gibi, Codex parçaları dahil) · döner: KARISTIRICI_SUCUK",
+   "mal": "celik"
+  },
+  {
+   "ad": "sucuk_cad_v7__orumcek_arka",
+   "kaynak": "B",
+   "not_": "KÜP SUCUK (montaj v41'deki gibi, Codex parçaları dahil) · döner: KARISTIRICI_SUCUK",
+   "mal": "pom"
+  },
+  {
+   "ad": "sucuk_cad_v7__orumcek_orta",
+   "kaynak": "B",
+   "not_": "KÜP SUCUK (montaj v41'deki gibi, Codex parçaları dahil) · döner: KARISTIRICI_SUCUK",
+   "mal": "pom"
+  },
+  {
+   "ad": "sucuk_cad_v7__orumcek_on",
+   "kaynak": "B",
+   "not_": "KÜP SUCUK (montaj v41'deki gibi, Codex parçaları dahil) · döner: KARISTIRICI_SUCUK",
+   "mal": "pom"
+  },
+  {
+   "ad": "sucuk_cad_v7__cubuk_0",
+   "kaynak": "B",
+   "not_": "KÜP SUCUK (montaj v41'deki gibi, Codex parçaları dahil) · döner: KARISTIRICI_SUCUK",
+   "mal": "celik"
+  },
+  {
+   "ad": "sucuk_cad_v7__cubuk_1",
+   "kaynak": "B",
+   "not_": "KÜP SUCUK (montaj v41'deki gibi, Codex parçaları dahil) · döner: KARISTIRICI_SUCUK",
+   "mal": "celik"
+  },
+  {
+   "ad": "sucuk_cad_v7__on_kovan",
+   "kaynak": "B",
+   "not_": "KÜP SUCUK (montaj v41'deki gibi, Codex parçaları dahil) · döner: KARISTIRICI_SUCUK",
+   "mal": "pom"
+  },
+  {
+   "ad": "sucuk_cad_v7__topuz",
+   "kaynak": "B",
+   "not_": "KÜP SUCUK (montaj v41'deki gibi, Codex parçaları dahil) · döner: KARISTIRICI_SUCUK",
+   "mal": "pom"
+  },
+  {
+   "ad": "sucuk_cad_v7__setuskur",
+   "kaynak": "B",
+   "not_": "KÜP SUCUK (montaj v41'deki gibi, Codex parçaları dahil) · döner: KARISTIRICI_SUCUK",
+   "mal": "celik"
+  },
+  {
+   "ad": "sucuk_cad_v7__kilit_pimi",
+   "kaynak": "B",
+   "not_": "KÜP SUCUK (montaj v41'deki gibi, Codex parçaları dahil) · döner: KARISTIRICI_SUCUK",
+   "mal": "celik"
+  },
+  {
+   "ad": "sucuk_cad_v7__conta_arka",
+   "kaynak": "B",
+   "not_": "KÜP SUCUK (montaj v41'deki gibi, Codex parçaları dahil)",
+   "mal": "silikon"
+  },
+  {
+   "ad": "sucuk_cad_v7__conta_on",
+   "kaynak": "B",
+   "not_": "KÜP SUCUK (montaj v41'deki gibi, Codex parçaları dahil)",
+   "mal": "silikon"
+  },
+  {
+   "ad": "sucuk_cad_v7__insert_a",
+   "kaynak": "B",
+   "not_": "KÜP SUCUK (montaj v41'deki gibi, Codex parçaları dahil)",
+   "mal": "celik"
+  },
+  {
+   "ad": "sucuk_cad_v7__insert_b",
+   "kaynak": "B",
+   "not_": "KÜP SUCUK (montaj v41'deki gibi, Codex parçaları dahil)",
+   "mal": "celik"
+  },
+  {
+   "ad": "sucuk_cad_v7__oring_tup",
+   "kaynak": "B",
+   "not_": "KÜP SUCUK (montaj v41'deki gibi, Codex parçaları dahil)",
+   "mal": "silikon"
+  },
+  {
+   "ad": "sucuk_cad_v7__oring_kapak",
+   "kaynak": "B",
+   "not_": "KÜP SUCUK (montaj v41'deki gibi, Codex parçaları dahil)",
+   "mal": "silikon"
+  },
+  {
+   "ad": "sucuk_cad_v7__oring_gobek_helezon",
+   "kaynak": "B",
+   "not_": "KÜP SUCUK (montaj v41'deki gibi, Codex parçaları dahil) · döner: HELEZON_SUCUK",
+   "mal": "silikon"
+  },
+  {
+   "ad": "sucuk_cad_v7__oring_gobek_karistirici",
+   "kaynak": "B",
+   "not_": "KÜP SUCUK (montaj v41'deki gibi, Codex parçaları dahil) · döner: KARISTIRICI_SUCUK",
+   "mal": "silikon"
+  },
+  {
+   "ad": "sucuk_cad_v7__oring_on_kovan",
+   "kaynak": "B",
+   "not_": "KÜP SUCUK (montaj v41'deki gibi, Codex parçaları dahil) · döner: KARISTIRICI_SUCUK",
+   "mal": "silikon"
+  },
+  {
+   "ad": "sucuk_cad_v7__pul_arka_0",
+   "kaynak": "B",
+   "not_": "KÜP SUCUK (montaj v41'deki gibi, Codex parçaları dahil)",
+   "mal": "celik"
+  },
+  {
+   "ad": "sucuk_cad_v7__pul_on_0",
+   "kaynak": "B",
+   "not_": "KÜP SUCUK (montaj v41'deki gibi, Codex parçaları dahil)",
+   "mal": "celik"
+  },
+  {
+   "ad": "sucuk_cad_v7__pul_arka_1",
+   "kaynak": "B",
+   "not_": "KÜP SUCUK (montaj v41'deki gibi, Codex parçaları dahil)",
+   "mal": "celik"
+  },
+  {
+   "ad": "sucuk_cad_v7__pul_on_1",
+   "kaynak": "B",
+   "not_": "KÜP SUCUK (montaj v41'deki gibi, Codex parçaları dahil)",
+   "mal": "celik"
+  },
+  {
+   "ad": "sucuk_cad_v7__pul_arka_2",
+   "kaynak": "B",
+   "not_": "KÜP SUCUK (montaj v41'deki gibi, Codex parçaları dahil)",
+   "mal": "celik"
+  },
+  {
+   "ad": "sucuk_cad_v7__pul_arka_3",
+   "kaynak": "B",
+   "not_": "KÜP SUCUK (montaj v41'deki gibi, Codex parçaları dahil)",
+   "mal": "celik"
+  },
+  {
+   "ad": "mil_sucuk_cad_v7_helezon",
+   "kaynak": "Ö",
+   "not_": "Ø22 · kovanda keçeli · ucunda boydan boya pim kanalı 3,2 × 11,5 (haç yuvası 8,5 kayar) + segman kanalı d2 21 × 1,3 (v7)",
+   "mal": "celik"
+  },
+  {
+   "ad": "kovan_sucuk_cad_v7_helezon",
+   "kaynak": "Ö",
+   "not_": "",
+   "mal": "pom"
+  },
+  {
+   "ad": "reduktor_sucuk_cad_v7_helezon",
+   "kaynak": "B",
+   "not_": "SureGear PGCN23-1025 (katalog STEP)",
+   "mal": "motor"
+  },
+  {
+   "ad": "motor_sucuk_cad_v7_helezon",
+   "kaynak": "B",
+   "not_": "AutomationDirect STP-MTR-23079 (katalog STEP)",
+   "mal": "motor"
+  },
+  {
+   "ad": "motor_kablosu_sucuk_cad_v7_helezon",
+   "kaynak": "B",
+   "not_": "",
+   "mal": "koyu"
+  },
+  {
+   "ad": "mil_sucuk_cad_v7_rotor",
+   "kaynak": "Ö",
+   "not_": "Ø22 · kovanda keçeli · ucunda boydan boya pim kanalı 3,2 × 11,5 (haç yuvası 8,5 kayar) + segman kanalı d2 21 × 1,3 (v7)",
+   "mal": "celik"
+  },
+  {
+   "ad": "kovan_sucuk_cad_v7_rotor",
+   "kaynak": "Ö",
+   "not_": "",
+   "mal": "pom"
+  },
+  {
+   "ad": "reduktor_sucuk_cad_v7_rotor",
+   "kaynak": "B",
+   "not_": "SureGear PGCN23-1025 (katalog STEP)",
+   "mal": "motor"
+  },
+  {
+   "ad": "motor_sucuk_cad_v7_rotor",
+   "kaynak": "B",
+   "not_": "AutomationDirect STP-MTR-23079 (katalog STEP)",
+   "mal": "motor"
+  },
+  {
+   "ad": "motor_kablosu_sucuk_cad_v7_rotor",
+   "kaynak": "B",
+   "not_": "",
+   "mal": "koyu"
+  },
+  {
+   "ad": "yuva_kasar_kilavuz_sol",
+   "kaynak": "H",
+   "not_": "304 köşebent 4 × 20 · kaset plakalarını yanal 0,5 mm boşlukla güder · önde 30 mm 10° giriş pahı · rafa 3 × M4 havşa · önde mandal dili penceresi",
+   "mal": "paslanmaz"
+  },
+  {
+   "ad": "yuva_kasar_arka_dayama_sol",
+   "kaynak": "H",
+   "not_": "arka plaka alt köşesi buna dayanır (z -525) → kavrama derinliği sabit · kılavuzla tek parça bükme · kör somunlara değmez",
+   "mal": "paslanmaz"
+  },
+  {
+   "ad": "yuva_kasar_kilavuz_sag",
+   "kaynak": "H",
+   "not_": "304 köşebent 4 × 20 · kaset plakalarını yanal 0,5 mm boşlukla güder · önde 30 mm 10° giriş pahı · rafa 3 × M4 havşa",
+   "mal": "paslanmaz"
+  },
+  {
+   "ad": "yuva_kasar_arka_dayama_sag",
+   "kaynak": "H",
+   "not_": "arka plaka alt köşesi buna dayanır (z -525) → kavrama derinliği sabit · kılavuzla tek parça bükme · kör somunlara değmez",
+   "mal": "paslanmaz"
+  },
+  {
+   "ad": "yuva_kasar_mandal_govdesi",
+   "kaynak": "H",
+   "not_": "mandal yuvası POM 19 × 34 × 34 · U kanal (duvar 2,5) · kılavuza 2 × M4 · pim iki yan duvarda",
+   "mal": "pom"
+  },
+  {
+   "ad": "yuva_kasar_mandal_dili",
+   "kaynak": "H",
+   "not_": "kayar dil POM 18,5 × 10 × 8 + kol 4 × 42 · plakayı 4,5 mm örter · ucu 45° rampa (takarken plaka dili sola iter) · yay geri iter · kol 5 mm sola basılınca kaset serbest (v7)",
+   "mal": "pom"
+  },
+  {
+   "ad": "yuva_kasar_mandal_yayi",
+   "kaynak": "K",
+   "not_": "Century Spring 66644SCS · 316 · tel 0,41 · Ø4,78 · serbest 21,34 · 0,33 N/mm · en çok 9,12 sıkışma [katalog] · takılı 17,3 (ön yük 4,0 = 1,3 N) · açıkta 12,3 (9,0 sıkışma)",
+   "mal": "celik"
+  },
+  {
+   "ad": "yuva_kasar_mandal_pimi",
+   "kaynak": "K",
+   "not_": "Pim ISO 8734 3 m6 × 18 A1: iki yan duvara sıkı geçme, dil üstünde kayar (0,5 içeride)",
+   "mal": "celik"
+  },
+  {
+   "ad": "yuva_kasar_helezon_hac_yuvasi",
+   "kaynak": "H",
+   "not_": "POM Ø48 × 15,5 · önünde 36,5 × 8,5 haç yarığı 8 derin (kaset haçı 7,0 girer, dipte 1) · milde pimle kayar (sert durak 8,5; kaset en çok 7,0 + 0,5 iter) · 4 katalog yay öne iter · PLC yavaş çevirir, haç oturur (KLİK) · tork: 4 çubuk yüzü 7 × 4,75, 3 Nm'de 1,8 MPa (POM 20)",
+   "mal": "pom"
+  },
+  {
+   "ad": "yuva_kasar_helezon_yay_0",
+   "kaynak": "K",
+   "not_": "Century Spring 66644SCS · 316 · tel 0,41 · Ø4,78 · serbest 21,34 · 0,33 N/mm · en çok 9,12 mm sıkışma [katalog] · takılı 20,1 (ön yük 1,24 = 0,41 N; 4 yay 1,6 N) · 8,0 geri çekilmede 12,1 (9,2 sıkışma) — gösterim: kovan",
+   "mal": "celik"
+  },
+  {
+   "ad": "yuva_kasar_helezon_yay_1",
+   "kaynak": "K",
+   "not_": "Century Spring 66644SCS · 316 · tel 0,41 · Ø4,78 · serbest 21,34 · 0,33 N/mm · en çok 9,12 mm sıkışma [katalog] · takılı 20,1 (ön yük 1,24 = 0,41 N; 4 yay 1,6 N) · 8,0 geri çekilmede 12,1 (9,2 sıkışma) — gösterim: kovan",
+   "mal": "celik"
+  },
+  {
+   "ad": "yuva_kasar_helezon_yay_2",
+   "kaynak": "K",
+   "not_": "Century Spring 66644SCS · 316 · tel 0,41 · Ø4,78 · serbest 21,34 · 0,33 N/mm · en çok 9,12 mm sıkışma [katalog] · takılı 20,1 (ön yük 1,24 = 0,41 N; 4 yay 1,6 N) · 8,0 geri çekilmede 12,1 (9,2 sıkışma) — gösterim: kovan",
+   "mal": "celik"
+  },
+  {
+   "ad": "yuva_kasar_helezon_yay_3",
+   "kaynak": "K",
+   "not_": "Century Spring 66644SCS · 316 · tel 0,41 · Ø4,78 · serbest 21,34 · 0,33 N/mm · en çok 9,12 mm sıkışma [katalog] · takılı 20,1 (ön yük 1,24 = 0,41 N; 4 yay 1,6 N) · 8,0 geri çekilmede 12,1 (9,2 sıkışma) — gösterim: kovan",
+   "mal": "celik"
+  },
+  {
+   "ad": "yuva_kasar_helezon_yay_tablasi",
+   "kaynak": "H",
+   "not_": "yay tablası 304 · Ø48 × 1 · milin segmanına oturur, milyle döner · 4 yay pilotu Ø3,6 × 4 (yay iç Ø3,96) · kovan sert durakta (8,5) buna 1,9 kala durur",
+   "mal": "paslanmaz"
+  },
+  {
+   "ad": "yuva_kasar_helezon_segmani",
+   "kaynak": "K",
+   "not_": "Segman DIN 471 A22 × 1,2 (kanal d2 21,0 · m 1,3) · kovan yüzüne 0,3",
+   "mal": "celik"
+  },
+  {
+   "ad": "yuva_kasar_helezon_kavrama_pimi",
+   "kaynak": "K",
+   "not_": "Pim ISO 8734 3 m6 × 45 A1 (kovanda 1,5 içeride): kovanı mile bağlar (tork), mildeki 3,2 × 11,5 kanalda kayar (sert durak 8,5)",
+   "mal": "celik"
+  },
+  {
+   "ad": "yuva_kasar_rotor_hac_yuvasi",
+   "kaynak": "H",
+   "not_": "POM Ø48 × 15,5 · önünde 36,5 × 8,5 haç yarığı 8 derin (kaset haçı 7,0 girer, dipte 1) · milde pimle kayar (sert durak 8,5; kaset en çok 7,0 + 0,5 iter) · 4 katalog yay öne iter · PLC yavaş çevirir, haç oturur (KLİK) · tork: 4 çubuk yüzü 7 × 4,75, 3 Nm'de 1,8 MPa (POM 20)",
+   "mal": "pom"
+  },
+  {
+   "ad": "yuva_kasar_rotor_yay_0",
+   "kaynak": "K",
+   "not_": "Century Spring 66644SCS · 316 · tel 0,41 · Ø4,78 · serbest 21,34 · 0,33 N/mm · en çok 9,12 mm sıkışma [katalog] · takılı 20,1 (ön yük 1,24 = 0,41 N; 4 yay 1,6 N) · 8,0 geri çekilmede 12,1 (9,2 sıkışma) — gösterim: kovan",
+   "mal": "celik"
+  },
+  {
+   "ad": "yuva_kasar_rotor_yay_1",
+   "kaynak": "K",
+   "not_": "Century Spring 66644SCS · 316 · tel 0,41 · Ø4,78 · serbest 21,34 · 0,33 N/mm · en çok 9,12 mm sıkışma [katalog] · takılı 20,1 (ön yük 1,24 = 0,41 N; 4 yay 1,6 N) · 8,0 geri çekilmede 12,1 (9,2 sıkışma) — gösterim: kovan",
+   "mal": "celik"
+  },
+  {
+   "ad": "yuva_kasar_rotor_yay_2",
+   "kaynak": "K",
+   "not_": "Century Spring 66644SCS · 316 · tel 0,41 · Ø4,78 · serbest 21,34 · 0,33 N/mm · en çok 9,12 mm sıkışma [katalog] · takılı 20,1 (ön yük 1,24 = 0,41 N; 4 yay 1,6 N) · 8,0 geri çekilmede 12,1 (9,2 sıkışma) — gösterim: kovan",
+   "mal": "celik"
+  },
+  {
+   "ad": "yuva_kasar_rotor_yay_3",
+   "kaynak": "K",
+   "not_": "Century Spring 66644SCS · 316 · tel 0,41 · Ø4,78 · serbest 21,34 · 0,33 N/mm · en çok 9,12 mm sıkışma [katalog] · takılı 20,1 (ön yük 1,24 = 0,41 N; 4 yay 1,6 N) · 8,0 geri çekilmede 12,1 (9,2 sıkışma) — gösterim: kovan",
+   "mal": "celik"
+  },
+  {
+   "ad": "yuva_kasar_rotor_yay_tablasi",
+   "kaynak": "H",
+   "not_": "yay tablası 304 · Ø48 × 1 · milin segmanına oturur, milyle döner · 4 yay pilotu Ø3,6 × 4 (yay iç Ø3,96) · kovan sert durakta (8,5) buna 1,9 kala durur",
+   "mal": "paslanmaz"
+  },
+  {
+   "ad": "yuva_kasar_rotor_segmani",
+   "kaynak": "K",
+   "not_": "Segman DIN 471 A22 × 1,2 (kanal d2 21,0 · m 1,3) · kovan yüzüne 0,3",
+   "mal": "celik"
+  },
+  {
+   "ad": "yuva_kasar_rotor_kavrama_pimi",
+   "kaynak": "K",
+   "not_": "Pim ISO 8734 3 m6 × 45 A1 (kovanda 1,5 içeride): kovanı mile bağlar (tork), mildeki 3,2 × 11,5 kanalda kayar (sert durak 8,5)",
+   "mal": "celik"
+  },
+  {
+   "ad": "yuva_sucuk_kilavuz_sol",
+   "kaynak": "H",
+   "not_": "304 köşebent 4 × 20 · kaset plakalarını yanal 0,5 mm boşlukla güder · önde 30 mm 10° giriş pahı · rafa 3 × M4 havşa · önde mandal dili penceresi",
+   "mal": "paslanmaz"
+  },
+  {
+   "ad": "yuva_sucuk_arka_dayama_sol",
+   "kaynak": "H",
+   "not_": "arka plaka alt köşesi buna dayanır (z -525) → kavrama derinliği sabit · kılavuzla tek parça bükme · kör somunlara değmez",
+   "mal": "paslanmaz"
+  },
+  {
+   "ad": "yuva_sucuk_kilavuz_sag",
+   "kaynak": "H",
+   "not_": "304 köşebent 4 × 20 · kaset plakalarını yanal 0,5 mm boşlukla güder · önde 30 mm 10° giriş pahı · rafa 3 × M4 havşa",
+   "mal": "paslanmaz"
+  },
+  {
+   "ad": "yuva_sucuk_arka_dayama_sag",
+   "kaynak": "H",
+   "not_": "arka plaka alt köşesi buna dayanır (z -525) → kavrama derinliği sabit · kılavuzla tek parça bükme · kör somunlara değmez",
+   "mal": "paslanmaz"
+  },
+  {
+   "ad": "yuva_sucuk_mandal_govdesi",
+   "kaynak": "H",
+   "not_": "mandal yuvası POM 19 × 34 × 34 · U kanal (duvar 2,5) · kılavuza 2 × M4 · pim iki yan duvarda",
+   "mal": "pom"
+  },
+  {
+   "ad": "yuva_sucuk_mandal_dili",
+   "kaynak": "H",
+   "not_": "kayar dil POM 18,5 × 10 × 8 + kol 4 × 42 · plakayı 4,5 mm örter · ucu 45° rampa (takarken plaka dili sola iter) · yay geri iter · kol 5 mm sola basılınca kaset serbest (v7)",
+   "mal": "pom"
+  },
+  {
+   "ad": "yuva_sucuk_mandal_yayi",
+   "kaynak": "K",
+   "not_": "Century Spring 66644SCS · 316 · tel 0,41 · Ø4,78 · serbest 21,34 · 0,33 N/mm · en çok 9,12 sıkışma [katalog] · takılı 17,3 (ön yük 4,0 = 1,3 N) · açıkta 12,3 (9,0 sıkışma)",
+   "mal": "celik"
+  },
+  {
+   "ad": "yuva_sucuk_mandal_pimi",
+   "kaynak": "K",
+   "not_": "Pim ISO 8734 3 m6 × 18 A1: iki yan duvara sıkı geçme, dil üstünde kayar (0,5 içeride)",
+   "mal": "celik"
+  },
+  {
+   "ad": "yuva_sucuk_helezon_hac_yuvasi",
+   "kaynak": "H",
+   "not_": "POM Ø48 × 15,5 · önünde 36,5 × 8,5 haç yarığı 8 derin (kaset haçı 7,0 girer, dipte 1) · milde pimle kayar (sert durak 8,5; kaset en çok 7,0 + 0,5 iter) · 4 katalog yay öne iter · PLC yavaş çevirir, haç oturur (KLİK) · tork: 4 çubuk yüzü 7 × 4,75, 3 Nm'de 1,8 MPa (POM 20)",
+   "mal": "pom"
+  },
+  {
+   "ad": "yuva_sucuk_helezon_yay_0",
+   "kaynak": "K",
+   "not_": "Century Spring 66644SCS · 316 · tel 0,41 · Ø4,78 · serbest 21,34 · 0,33 N/mm · en çok 9,12 mm sıkışma [katalog] · takılı 20,1 (ön yük 1,24 = 0,41 N; 4 yay 1,6 N) · 8,0 geri çekilmede 12,1 (9,2 sıkışma) — gösterim: kovan",
+   "mal": "celik"
+  },
+  {
+   "ad": "yuva_sucuk_helezon_yay_1",
+   "kaynak": "K",
+   "not_": "Century Spring 66644SCS · 316 · tel 0,41 · Ø4,78 · serbest 21,34 · 0,33 N/mm · en çok 9,12 mm sıkışma [katalog] · takılı 20,1 (ön yük 1,24 = 0,41 N; 4 yay 1,6 N) · 8,0 geri çekilmede 12,1 (9,2 sıkışma) — gösterim: kovan",
+   "mal": "celik"
+  },
+  {
+   "ad": "yuva_sucuk_helezon_yay_2",
+   "kaynak": "K",
+   "not_": "Century Spring 66644SCS · 316 · tel 0,41 · Ø4,78 · serbest 21,34 · 0,33 N/mm · en çok 9,12 mm sıkışma [katalog] · takılı 20,1 (ön yük 1,24 = 0,41 N; 4 yay 1,6 N) · 8,0 geri çekilmede 12,1 (9,2 sıkışma) — gösterim: kovan",
+   "mal": "celik"
+  },
+  {
+   "ad": "yuva_sucuk_helezon_yay_3",
+   "kaynak": "K",
+   "not_": "Century Spring 66644SCS · 316 · tel 0,41 · Ø4,78 · serbest 21,34 · 0,33 N/mm · en çok 9,12 mm sıkışma [katalog] · takılı 20,1 (ön yük 1,24 = 0,41 N; 4 yay 1,6 N) · 8,0 geri çekilmede 12,1 (9,2 sıkışma) — gösterim: kovan",
+   "mal": "celik"
+  },
+  {
+   "ad": "yuva_sucuk_helezon_yay_tablasi",
+   "kaynak": "H",
+   "not_": "yay tablası 304 · Ø48 × 1 · milin segmanına oturur, milyle döner · 4 yay pilotu Ø3,6 × 4 (yay iç Ø3,96) · kovan sert durakta (8,5) buna 1,9 kala durur",
+   "mal": "paslanmaz"
+  },
+  {
+   "ad": "yuva_sucuk_helezon_segmani",
+   "kaynak": "K",
+   "not_": "Segman DIN 471 A22 × 1,2 (kanal d2 21,0 · m 1,3) · kovan yüzüne 0,3",
+   "mal": "celik"
+  },
+  {
+   "ad": "yuva_sucuk_helezon_kavrama_pimi",
+   "kaynak": "K",
+   "not_": "Pim ISO 8734 3 m6 × 45 A1 (kovanda 1,5 içeride): kovanı mile bağlar (tork), mildeki 3,2 × 11,5 kanalda kayar (sert durak 8,5)",
+   "mal": "celik"
+  },
+  {
+   "ad": "yuva_sucuk_rotor_hac_yuvasi",
+   "kaynak": "H",
+   "not_": "POM Ø48 × 15,5 · önünde 36,5 × 8,5 haç yarığı 8 derin (kaset haçı 7,0 girer, dipte 1) · milde pimle kayar (sert durak 8,5; kaset en çok 7,0 + 0,5 iter) · 4 katalog yay öne iter · PLC yavaş çevirir, haç oturur (KLİK) · tork: 4 çubuk yüzü 7 × 4,75, 3 Nm'de 1,8 MPa (POM 20)",
+   "mal": "pom"
+  },
+  {
+   "ad": "yuva_sucuk_rotor_yay_0",
+   "kaynak": "K",
+   "not_": "Century Spring 66644SCS · 316 · tel 0,41 · Ø4,78 · serbest 21,34 · 0,33 N/mm · en çok 9,12 mm sıkışma [katalog] · takılı 20,1 (ön yük 1,24 = 0,41 N; 4 yay 1,6 N) · 8,0 geri çekilmede 12,1 (9,2 sıkışma) — gösterim: kovan",
+   "mal": "celik"
+  },
+  {
+   "ad": "yuva_sucuk_rotor_yay_1",
+   "kaynak": "K",
+   "not_": "Century Spring 66644SCS · 316 · tel 0,41 · Ø4,78 · serbest 21,34 · 0,33 N/mm · en çok 9,12 mm sıkışma [katalog] · takılı 20,1 (ön yük 1,24 = 0,41 N; 4 yay 1,6 N) · 8,0 geri çekilmede 12,1 (9,2 sıkışma) — gösterim: kovan",
+   "mal": "celik"
+  },
+  {
+   "ad": "yuva_sucuk_rotor_yay_2",
+   "kaynak": "K",
+   "not_": "Century Spring 66644SCS · 316 · tel 0,41 · Ø4,78 · serbest 21,34 · 0,33 N/mm · en çok 9,12 mm sıkışma [katalog] · takılı 20,1 (ön yük 1,24 = 0,41 N; 4 yay 1,6 N) · 8,0 geri çekilmede 12,1 (9,2 sıkışma) — gösterim: kovan",
+   "mal": "celik"
+  },
+  {
+   "ad": "yuva_sucuk_rotor_yay_3",
+   "kaynak": "K",
+   "not_": "Century Spring 66644SCS · 316 · tel 0,41 · Ø4,78 · serbest 21,34 · 0,33 N/mm · en çok 9,12 mm sıkışma [katalog] · takılı 20,1 (ön yük 1,24 = 0,41 N; 4 yay 1,6 N) · 8,0 geri çekilmede 12,1 (9,2 sıkışma) — gösterim: kovan",
+   "mal": "celik"
+  },
+  {
+   "ad": "yuva_sucuk_rotor_yay_tablasi",
+   "kaynak": "H",
+   "not_": "yay tablası 304 · Ø48 × 1 · milin segmanına oturur, milyle döner · 4 yay pilotu Ø3,6 × 4 (yay iç Ø3,96) · kovan sert durakta (8,5) buna 1,9 kala durur",
+   "mal": "paslanmaz"
+  },
+  {
+   "ad": "yuva_sucuk_rotor_segmani",
+   "kaynak": "K",
+   "not_": "Segman DIN 471 A22 × 1,2 (kanal d2 21,0 · m 1,3) · kovan yüzüne 0,3",
+   "mal": "celik"
+  },
+  {
+   "ad": "yuva_sucuk_rotor_kavrama_pimi",
+   "kaynak": "K",
+   "not_": "Pim ISO 8734 3 m6 × 45 A1 (kovanda 1,5 içeride): kovanı mile bağlar (tork), mildeki 3,2 × 11,5 kanalda kayar (sert durak 8,5)",
+   "mal": "celik"
+  },
+  {
+   "ad": "yalitim_blogu",
+   "kaynak": "Ö",
+   "not_": "v6 TEK BLOK PU 60 (sac kaplı) · dışı 1620 × 751 × 526 düz · soğuk oda A tavan 1968 / B 1680 · teknik cep arkaya açık · 4 kaset kovanı + 4 UNO kovanı + geçiş bloğu delikleri",
+   "mal": "pu"
+  },
+  {
+   "ad": "on_fitil",
+   "kaynak": "H",
+   "not_": "manyetik fitil 21 × 18,5 (sıkışınca 15) kanallı alüminyum profilde · L ağzın çevresi · v8: alt şerit 1325–1455 arasında KESİK (aktarma iticisinin kolsuz silindiri ön düzlemi keser; ön kapak yok — Kemal) · çekmece fitiliyle aynı profil",
+   "mal": "silikon"
+  },
+  {
+   "ad": "sartlandirici_filtre_regulator",
+   "kaynak": "V",
+   "not_": "filtre + regülatör + ana vana · 7 bar",
+   "mal": "aluminyum"
+  },
+  {
+   "ad": "sartlandirici_manometre",
+   "kaynak": "V",
+   "not_": "",
+   "mal": "pom"
+  },
+  {
+   "ad": "valf_adasi_12x5_2",
+   "kaynak": "V",
+   "not_": "12 × 5/2 elektro-valf: 4 piston + 4 döner valf + 2 spreader kesme valfi + açıcı + yedek",
+   "mal": "aluminyum"
+  },
+  {
+   "ad": "valf_bobini_1",
+   "kaynak": "V",
+   "not_": "",
+   "mal": "siyah"
+  },
+  {
+   "ad": "valf_bobini_2",
+   "kaynak": "V",
+   "not_": "",
+   "mal": "siyah"
+  },
+  {
+   "ad": "valf_bobini_3",
+   "kaynak": "V",
+   "not_": "",
+   "mal": "siyah"
+  },
+  {
+   "ad": "valf_bobini_4",
+   "kaynak": "V",
+   "not_": "",
+   "mal": "siyah"
+  },
+  {
+   "ad": "valf_bobini_5",
+   "kaynak": "V",
+   "not_": "",
+   "mal": "siyah"
+  },
+  {
+   "ad": "valf_bobini_6",
+   "kaynak": "V",
+   "not_": "",
+   "mal": "siyah"
+  },
+  {
+   "ad": "valf_bobini_7",
+   "kaynak": "V",
+   "not_": "",
+   "mal": "siyah"
+  },
+  {
+   "ad": "valf_bobini_8",
+   "kaynak": "V",
+   "not_": "",
+   "mal": "siyah"
+  },
+  {
+   "ad": "valf_bobini_9",
+   "kaynak": "V",
+   "not_": "",
+   "mal": "siyah"
+  },
+  {
+   "ad": "valf_bobini_10",
+   "kaynak": "V",
+   "not_": "",
+   "mal": "siyah"
+  },
+  {
+   "ad": "valf_bobini_11",
+   "kaynak": "V",
+   "not_": "",
+   "mal": "siyah"
+  },
+  {
+   "ad": "valf_bobini_12",
+   "kaynak": "V",
+   "not_": "",
+   "mal": "siyah"
+  },
+  {
+   "ad": "gecis_blogu_yalitim",
+   "kaynak": "V",
+   "not_": "hortumların soğuk hücreye geçtiği keçeli blok",
+   "mal": "pom"
+  },
+  {
+   "ad": "hava_ana_hatti_D10",
+   "kaynak": "V",
+   "not_": "Ø10 PU · K tabanı → F tabanı arka köşe kanalı → TOPPING sağ alt",
+   "mal": "hava_ana"
+  },
+  {
+   "ad": "hava_hatti_sartlandirici_ada",
+   "kaynak": "V",
+   "not_": "evaporatörün altından, kaset motorlarının üstünden geçer",
+   "mal": "hava_ana"
+  },
+  {
+   "ad": "hava_hatti_acici_D6",
+   "kaynak": "V",
+   "not_": "açıcının Ø32 Z silindirine (modül A) · 2 hat",
+   "mal": "hortum_mavi"
+  },
+  {
+   "ad": "sos_hortum_silindir_1",
+   "kaynak": "V",
+   "not_": "",
+   "mal": "hortum_mavi"
+  },
+  {
+   "ad": "sos_hortum_silindir_2",
+   "kaynak": "V",
+   "not_": "",
+   "mal": "hortum_siyah"
+  },
+  {
+   "ad": "sos_hortum_doner_valf_1",
+   "kaynak": "V",
+   "not_": "",
+   "mal": "hortum_mavi"
+  },
+  {
+   "ad": "sos_hortum_doner_valf_2",
+   "kaynak": "V",
+   "not_": "",
+   "mal": "hortum_siyah"
+  },
+  {
+   "ad": "harc_hortum_silindir_1",
+   "kaynak": "V",
+   "not_": "",
+   "mal": "hortum_mavi"
+  },
+  {
+   "ad": "harc_hortum_silindir_2",
+   "kaynak": "V",
+   "not_": "",
+   "mal": "hortum_siyah"
+  },
+  {
+   "ad": "harc_hortum_doner_valf_1",
+   "kaynak": "V",
+   "not_": "",
+   "mal": "hortum_mavi"
+  },
+  {
+   "ad": "harc_hortum_doner_valf_2",
+   "kaynak": "V",
+   "not_": "",
+   "mal": "hortum_siyah"
+  },
+  {
+   "ad": "kiyma_hortum_silindir_1",
+   "kaynak": "V",
+   "not_": "",
+   "mal": "hortum_mavi"
+  },
+  {
+   "ad": "kiyma_hortum_silindir_2",
+   "kaynak": "V",
+   "not_": "",
+   "mal": "hortum_siyah"
+  },
+  {
+   "ad": "kiyma_hortum_doner_valf_1",
+   "kaynak": "V",
+   "not_": "",
+   "mal": "hortum_mavi"
+  },
+  {
+   "ad": "kiyma_hortum_doner_valf_2",
+   "kaynak": "V",
+   "not_": "",
+   "mal": "hortum_siyah"
+  },
+  {
+   "ad": "kusbasi_hortum_silindir_1",
+   "kaynak": "V",
+   "not_": "",
+   "mal": "hortum_mavi"
+  },
+  {
+   "ad": "kusbasi_hortum_silindir_2",
+   "kaynak": "V",
+   "not_": "",
+   "mal": "hortum_siyah"
+  },
+  {
+   "ad": "kusbasi_hortum_doner_valf_1",
+   "kaynak": "V",
+   "not_": "",
+   "mal": "hortum_mavi"
+  },
+  {
+   "ad": "kusbasi_hortum_doner_valf_2",
+   "kaynak": "V",
+   "not_": "",
+   "mal": "hortum_siyah"
+  },
+  {
+   "ad": "baglam_F_tabani",
+   "kaynak": "Ö",
+   "not_": "modül F taban dolabı (bağlam)",
+   "mal": "hayalet"
+  },
+  {
+   "ad": "baglam_K_tabani",
+   "kaynak": "Ö",
+   "not_": "modül K taban dolabı · boş (Kemal 24 Eyl: yedek kutu yok)",
+   "mal": "hayalet"
+  },
+  {
+   "ad": "baglam_A_modulu",
+   "kaynak": "Ö",
+   "not_": "modül A açıcı (bağlam)",
+   "mal": "hayalet"
+  },
+  {
+   "ad": "kompresor_JUNAIR_OF302_15B_tank",
+   "kaynak": "B",
+   "not_": "JUN-AIR OF302-15B · yağsız · 15 L · 380 × 380 × 510 · 25 kg · 43 L/dk @ 7 bar · 65 dB",
+   "mal": "kompresor"
+  },
+  {
+   "ad": "kompresor_JUNAIR_OF302_15B_motor",
+   "kaynak": "B",
+   "not_": "",
+   "mal": "kompresor"
+  },
+  {
+   "ad": "kompresor_cikis_vanasi",
+   "kaynak": "V",
+   "not_": "",
+   "mal": "siyah"
+  }
+ ],
+ "denetim": [
+  {
+   "ad": "SOS haznesi tavanın altında (1737 < 1968)",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "SOS haznesi soğuk hücrede z (-560…-120)",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "SOS UNO hava silindiri kuru bölmede (z -811…-672)",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "SOS ürün silindiri soğukta (z -552)",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "SOS UNO ağzı tabla ekseninde (z -170.0)",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "HARC haznesi tavanın altında (1832 < 1968)",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "HARC haznesi soğuk hücrede z (-560…-120)",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "HARC UNO hava silindiri kuru bölmede (z -811…-672)",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "HARC ürün silindiri soğukta (z -552)",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "HARC UNO ağzı tabla ekseninde (z -170.0)",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "KIYMA haznesi tavanın altında (1667 < 1680)",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "KIYMA haznesi soğuk hücrede z (-560…-120)",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "KIYMA UNO hava silindiri kuru bölmede (z -811…-672)",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "KIYMA ürün silindiri soğukta (z -552)",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "KIYMA UNO ağzı tabla ekseninde (z -170.0)",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "KUSBASI haznesi tavanın altında (1667 < 1680)",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "KUSBASI haznesi soğuk hücrede z (-560…-120)",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "KUSBASI UNO hava silindiri kuru bölmede (z -811…-672)",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "KUSBASI ürün silindiri soğukta (z -552)",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "KUSBASI UNO ağzı tabla ekseninde (z -170.0)",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "UNO'lar kasetlere değmiyor (kuşbaşı valf topuzu 1172 < kaşar yuvası 1220)",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "sos valf eyleyicisi sol duvara değmiyor (119 > 90)",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "SOS spreader borusu yarıçap boyunca (x 202…335, boy 133)",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "SOS spreader borusu pideden 6 mm yukarıda",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "sos_spreader_giris_kelepcesi rafa girmiyor",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "sos_spreader_kelepce_kanadi rafa girmiyor",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "sos_spreader_dik_boru rafa girmiyor",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "sos_spreader_kesme_valfi_govde rafa girmiyor",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "sos_spreader_kesme_valfi_kapak rafa girmiyor",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "sos_spreader_valf_braketi rafa girmiyor",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "sos_spreader_valf_kelepcesi rafa girmiyor",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "sos_spreader_valf_mili rafa girmiyor",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "sos_spreader_hava_rakoru rafa girmiyor",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "sos_spreader_ucgen_dagitici rafa girmiyor",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "sos_spreader_dagitici_boru rafa girmiyor",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "sos_spreader_uc_tapasi rafa girmiyor",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "sos_spreader_merkez_tapasi rafa girmiyor",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "HARC spreader borusu yarıçap boyunca (x 552…685, boy 133)",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "HARC spreader borusu pideden 6 mm yukarıda",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "harc_spreader_giris_kelepcesi rafa girmiyor",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "harc_spreader_kelepce_kanadi rafa girmiyor",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "harc_spreader_dik_boru rafa girmiyor",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "harc_spreader_kesme_valfi_govde rafa girmiyor",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "harc_spreader_kesme_valfi_kapak rafa girmiyor",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "harc_spreader_valf_braketi rafa girmiyor",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "harc_spreader_valf_kelepcesi rafa girmiyor",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "harc_spreader_valf_mili rafa girmiyor",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "harc_spreader_hava_rakoru rafa girmiyor",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "harc_spreader_ucgen_dagitici rafa girmiyor",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "harc_spreader_dagitici_boru rafa girmiyor",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "harc_spreader_uc_tapasi rafa girmiyor",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "harc_spreader_merkez_tapasi rafa girmiyor",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "SOS kama yarık: merkez 2.0 → kenar 3.2 mm (hesap q ∝ r)",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "HARC kama yarık: merkez 6.0 → kenar 9.6 mm (hesap q ∝ r)",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "kaset döner grubu dolu: HELEZON_KASAR (18 parça)",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "kaset döner grubu dolu: KARISTIRICI_KASAR (26 parça)",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "kaset döner grubu dolu: HELEZON_SUCUK (18 parça)",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "kaset döner grubu dolu: KARISTIRICI_SUCUK (24 parça)",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "harç spreader'ı kıyma istasyonuna değmiyor (695 < 938)",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "rafa hiçbir parça girmiyor (delikler ağız ve boruları geçiriyor)",
+   "sonuc": "GEÇTİ",
+   "deger": "0"
+  },
+  {
+   "ad": "kasetler modül içinde (x 1221…1680)",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "valf adası + şartlandırıcı kuru bölmede",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "hortumlar kaset motorlarına değmiyor",
+   "sonuc": "GEÇTİ",
+   "deger": "0 çakışma"
+  },
+  {
+   "ad": "KASAR yuvası kasete girmiyor (24 parça)",
+   "sonuc": "GEÇTİ",
+   "deger": "0"
+  },
+  {
+   "ad": "KASAR kaseti plakalarıyla rafa oturuyor (plaka altı 1320 = raf 1320)",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "KASAR kılavuz dudakları plakaya 0,5 mm (0.5 / 0.5)",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "KASAR mandal dili plakanın ÖNÜNDE (z -199.5 ≥ plaka önü -200), plakayı 4.5 mm örtüyor ≥ 4,0",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "KASAR mandal kolu sola 7.5 mm kayabilir ≥ 5,0 (dil plakadan çıkar)",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "KASAR arka dayama plakanın arka yüzünde (z -525)",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "KASAR haç çubukları yuvada 7.0 mm (7,0 · v7 katalog yayına göre)",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "KASAR haç yuvası geri çekilebilir: yay tablasına 10.4 mm ≥ 8,5 sert durak + 1,9",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "KASAR yay takılı boy 20.1: ön yük 1.24 ≥ 1,0 · 8,0 geri çekilmede sıkışma 9.24 ≤ 9,12 (66644SCS)",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "KASAR mandal yayı takılı 17.3: ön yük 4.0 (1.3 N) · 5 mm açılınca sıkışma 9.0 ≤ 9,12",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "KASAR segman kanalı DIN 471: genişlik 1.3 = 1,3 · segman kanalda · kovan yüzüne 0.4",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "KASAR mil ucu (−545) haç kavramasının arkasında ≥ 1 mm",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "KASAR yuva parçaları birbirine / makineye girmiyor (24 parça)",
+   "sonuc": "GEÇTİ",
+   "deger": "[]"
+  },
+  {
+   "ad": "SUCUK yuvası kasete girmiyor (24 parça)",
+   "sonuc": "GEÇTİ",
+   "deger": "0"
+  },
+  {
+   "ad": "SUCUK kaseti plakalarıyla rafa oturuyor (plaka altı 1320 = raf 1320)",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "SUCUK kılavuz dudakları plakaya 0,5 mm (0.5 / 0.5)",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "SUCUK mandal dili plakanın ÖNÜNDE (z -199.5 ≥ plaka önü -200), plakayı 4.5 mm örtüyor ≥ 4,0",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "SUCUK mandal kolu sola 7.5 mm kayabilir ≥ 5,0 (dil plakadan çıkar)",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "SUCUK arka dayama plakanın arka yüzünde (z -525)",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "SUCUK haç çubukları yuvada 7.0 mm (7,0 · v7 katalog yayına göre)",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "SUCUK haç yuvası geri çekilebilir: yay tablasına 10.4 mm ≥ 8,5 sert durak + 1,9",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "SUCUK yay takılı boy 20.1: ön yük 1.24 ≥ 1,0 · 8,0 geri çekilmede sıkışma 9.24 ≤ 9,12 (66644SCS)",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "SUCUK mandal yayı takılı 17.3: ön yük 4.0 (1.3 N) · 5 mm açılınca sıkışma 9.0 ≤ 9,12",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "SUCUK segman kanalı DIN 471: genişlik 1.3 = 1,3 · segman kanalda · kovan yüzüne 0.4",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "SUCUK mil ucu (−545) haç kavramasının arkasında ≥ 1 mm",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "SUCUK yuva parçaları birbirine / makineye girmiyor (24 parça)",
+   "sonuc": "GEÇTİ",
+   "deger": "[]"
+  },
+  {
+   "ad": "kaşar sağ kılavuzu–sucuk mandalı boşluğu 10.5 ≥ 10 · kaşar plakası–sucuk plakası 39 ≥ 30",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "sucuk sağ kılavuzu–sağ duvar boşluğu 25.5 ≥ 20",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "kuşbaşı valf topuzu–kaşar mandalı boşluğu 25 ≥ 20",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "ön fitil alt şeridi 1325–1455 arasında kesik (itici geçidi) · hacim 0 = 0",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "kabin yan PU duvarları 1277'den başlıyor (mekanizma bölgesi serbest)",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "KAŞAR KABI çıkış borusu altı (1312) iniş hunisinin üstünde (1311), iç içe DEĞİL",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "KÜP SUCUK çıkış borusu altı (1312) iniş hunisinin üstünde (1311), iç içe DEĞİL",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "yalıtım tek blok, dışı düz (x 90…1710 · y 1277…2028 · z -630…-104)",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "eski parçalı yalıtım kalktı",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "yalıtım bloğuna hiçbir parça girmiyor (kovanlar deliklerinde)",
+   "sonuc": "GEÇTİ",
+   "deger": "0"
+  },
+  {
+   "ad": "KASAR kaseti öne çekilirken (0–430 mm) hiçbir parçaya değmiyor",
+   "sonuc": "GEÇTİ",
+   "deger": "0 bulgu []"
+  },
+  {
+   "ad": "SUCUK kaseti öne çekilirken (0–430 mm) hiçbir parçaya değmiyor",
+   "sonuc": "GEÇTİ",
+   "deger": "0 bulgu []"
+  }
+ ]
+}
