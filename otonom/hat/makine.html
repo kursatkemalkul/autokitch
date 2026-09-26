@@ -83,7 +83,7 @@ const M = model3d({
 });
 
 fetch('../hat3d/durum.json?v=48').then(r => r.json()).then(D => {
-  if (D.firin_denetim) document.getElementById('fdenetim').textContent = D.firin_denetim;
+  const _fd = (D.hat && D.hat.firin_denetim) || D.firin_denetim; if (_fd) document.getElementById('fdenetim').textContent = _fd;
   M.veri(D.birim);
   animasyon(D.animasyon);
   const mod = {}; D.birim.forEach(b => (mod[b.modul] = mod[b.modul] || []).push(b));

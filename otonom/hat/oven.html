@@ -55,7 +55,7 @@ const M = model3d({
       (b.kaynak ? '<br>' + b.kaynak : '') + '</span>'; }
 });
 fetch('../hat3d/durum.json?v=48').then(r => r.json()).then(D => {
-  if (D.firin_denetim) document.getElementById('fdenetim').textContent = D.firin_denetim;
+  const _fd = (D.hat && D.hat.firin_denetim) || D.firin_denetim; if (_fd) document.getElementById('fdenetim').textContent = _fd;
   const L = D.birim.filter(b => b.modul === MODUL && b.kod.indexOf('_KABIN') < 0); M.veri(L);   // kabin zarfi modele girmiyor, listede de olmasin
   const tek = {}; L.forEach(b => { const k = b.ad + '|' + b.durum; (tek[k] = tek[k] || []).push(b); });
   document.getElementById('secim').innerHTML = Object.values(tek).map(gr => {
