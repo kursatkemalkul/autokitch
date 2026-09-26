@@ -6,7 +6,7 @@
 <p class="lead">Hattın tamamı tek modelde. <b>Üstüne gel</b> &mdash; adı çıkar. <b>Çift tıkla</b> &mdash; o istasyonun kendi modeli açılır. Modelin altındaki çubuktan <b>kesit</b> alabilir (X/Y/Z) ve iki noktaya tıklayıp <b>ölçü</b> çıkarabilirsin.</p>
 
 <div class="m3">
-  <model-viewer id="mv" loading="eager" src="../hat3d/hat_v47.glb?v=47" ios-src="../hat3d/hat_v47.usdz?v=47" alt="AUTOKITCH hat üretim modeli" autoplay
+  <model-viewer id="mv" loading="eager" src="../hat3d/hat_v48.glb?v=48" ios-src="../hat3d/hat_v48.usdz?v=48" alt="AUTOKITCH hat üretim modeli" autoplay
       camera-controls touch-action="pan-y" shadow-intensity="0.6" exposure="1.0" environment-image="neutral"
       camera-orbit="30deg 74deg 9.8m" camera-target="2.72m 1m -0.4m" field-of-view="30deg" min-field-of-view="6deg"
       ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
@@ -19,27 +19,27 @@
 </div>
 <div class="secim" id="secim"></div>
 <p class="note" id="ozet"></p>
-<div class="card" style="border-left:4px solid #1f6feb;background:#eef4fd;margin:12px 0"><b style="color:#0b4fa8">DENEME · GERÇEK FIRIN v2: TP10 kesiti, gövde 1500'e uzatılmış (ayrı sürüm, 26 Eyl akşam)</b> — Sveba Dahlen TP10'un kesiti aynen, gövde 960 → 1500: bant gövde dışına çıkmaz, ısıtılan 1316, aynı anda 4 ürün. Tam yükte 51,7/sa = bugünkü model (darboğaz robot). Giriş bandı fırının ön odasında, K bandında giriş çiti; K'nin parçaları değişmez. Ana makine değişmedi. <a href="firin_tp10.html">3B model + son kontrol + pafta v3 →</a></div>
+<div class="card" style="border-left:4px solid #178a56;background:#eefaf3;margin:12px 0"><b style="color:#0f6e42">MONTAJ v48 (26 Eyl gece): GERÇEK FIRIN ANA MAKİNEDE.</b> Sveba Dahlen TP10 kesitli, gövdesi 1500'e uzatılmış kızılötesi konveyör fırın (aynı anda 4 ürün, boş bant yok) — Kemal'in kabulüyle v2 denemesi ana montaja taşındı. Fırının üstünde havalı raf: pizza kutusu yedeği 55 + TOPPING kompresörü (kural 4'ün tek istisnası). TOPPING teknesi artık 2500'de bitiyor (v24), kaset yuvaları ve yalıtım bloğu yeniden (v6). Kutu yedeği 4 güne tamamlandı. <a href="oven.html">4 · FIRIN →</a> · <a href="topping_v2.html">TOPPING v2 →</a></div>
 
 <h2>1 &middot; Ne yapar</h2><div class="card">
 <p>Makine = beş istasyon + tek robot. Sıra: ÇEKMECE (hamur topu) &rarr; A AÇICI (konili açıcı, hamur tablada açılır) &rarr; C TOPPING (tabla 6 haznenin altından geçer) &rarr; F KONVEYÖR FIRIN &rarr; K KESME + SPREY &rarr; E KUTU &rarr; QR teslim dolabı. Ürün <b>tepsisiz</b> akar: tabladan fırın bandına, banttan kesme plakasına, oradan kutuya.</p>
 <ol class="steps">
-<li><b>Taban hizası:</b> A, C, F ve K istasyonlarının tabanı aynı kotta (1060). Altları taban dolabı: A ile C'nin altında çekmeceler, F'nin altında pano + UPS + bulaşık makinesi, K'nin altında yağ kartuşu + kart. E (kutu katlama) kesilmez, yerden tavana tek parça. Alt taraf da hizalı: bütün gövdeler yerden 123'te başlar, altları ayak + içeri çekik süpürgelik.</li>
+<li><b>Taban hizası:</b> A, C ve K istasyonlarının tabanı aynı kotta (1060); F fırınının gövde altı 956 (bant 1166 için — F istisnası, 26 Eyl). Altları taban dolabı: A ile C'nin altında çekmeceler, F'nin altında pano + UPS + bulaşık makinesi + pizza kutusu yedeği, K'nin altında yağ tankı + kart. Fırının üstünde kompresör + kutu yedeğinin kalanı. E (kutu katlama) kesilmez, yerden tavana tek parça. Alt taraf da hizalı: bütün gövdeler yerden 123'te başlar, altları ayak + içeri çekik süpürgelik.</li>
 <li><b>Süreç kotu:</b> çalışma diski 1168 &rarr; fırın bandı 1166 &rarr; kesme plakası 1164 &rarr; kutu ağzı ~1149. Ürün her geçişte hafifçe <b>aşağı</b> iner, hiçbir kenara çarpmaz.</li>
 <li><b>Robot:</b> tek Fairino FR5, hattın önündeki yer rayında (x 200&ndash;5100). Hamur topunu, kutuyu ve içeceği taşır; kaseti eleman önden takar.</li>
 </ol></div>
 
 <h2>2 &middot; Özellikler</h2><div class="card"><div class="kv">
 <b>Modül standardı</b><span>hepsi <b>830 derin</b>, hat yüksekliği 2030. A AÇICI 700 &middot; C TOPPING 1800 &middot; F FIRIN 1500 &middot; K KESME + SPREY 600 &middot; E KUTU <b>830</b> (v38; pafta v8'de de 830). B ÇEKMECELER 2500 × 1060, A ile C'nin altında</span>
-<b>Toplam hat</b><span>5430 &times; 830 &times; 2030 mm (pafta v8)</span>
+<b>Toplam hat</b><span>5430 &times; 830 &times; 2030 mm (pafta v8 · montaj v48)</span>
 <b>Çekmece modülü</b><span>B gerçek üretim modeli v2: 21 fitilli motorlu çekmece (Transmotec motor + GT3 kayış yan bantta + Accuride ray + açık/kapalı reed), K4 Secop soğutma + depo + niş, K1 üstünde S7-1200 pano · <a href="store.html">1 · STORE</a></span>
 <b>Kutu modülü</b><span>E gerçek üretim modeli v3: standart 32 × 32 × 4,2 kutu, 567'lik şarjör, itici, zımba kalıbı, köprü, piston, devirme parmağı, U flap katlayıcı, kapak kolu, pano · 7 NEMA 23 · <a href="pack.html">5 · PACK</a></span>
 <b>Animasyon</b><span><b>1 tam döngü (84 s):</b> bir pizza (sos 80 g · kaşar 100 g · küp sucuk 70 g) çekmeceden QR dolabına gidiyor. Her hareket makinenin kendi kinematiğinden geliyor; fırın hızlandırıldı (gerçekte ~4 dk). Robot hâlâ ölçü kutusu, gerçek kol modeli yok. İstasyon sayfaları kendi döngülerini oynatıyor: <a href="store.html">1 · STORE</a> · <a href="topping_v2.html">TOPPING v2 canlı simülasyon</a> · <a href="kesme.html">4b · KESME</a> · <a href="pack.html">5 · PACK</a></span>
 <b>Taban hizası</b><span>Üst: A, C, F, K istasyonları <b>1060</b>'ta başlar, bantlar 1168'de. Alt: bütün gövdeler yerden <b>123</b>'te başlar (en alt çekmecenin 3 mm altı), altları ayak + süpürgelik (60 geride). E kutu katlama tek parça</span>
-<b>Süreç kotu</b><span>TOPPING modelinden ölçülür: disk 1168 &middot; fırın bandı 1166 (290 geniş, eksen z −170) &middot; kesme plakası 1164 &middot; kutu tepsisi 1104</span>
+<b>Süreç kotu</b><span>TOPPING modelinden ölçülür: disk 1168 &middot; fırın bandı 1166 (TP10 tel örgü 381 geniş, eksen z −283; ürün fırında −249, K bandında çitle −170'e döner) &middot; kesme plakası 1164 &middot; kutu tepsisi 1104</span>
 <b>Robot</b><span>tek Fairino FR5, yer rayında, omuz 970, erişim 779 &middot; QR teslim dolabı koridorun karşısında</span>
-<b>Ölçü kaynağı</b><span>HAT ATOSA TABLALI v13 teknik resmi (26 Eyl, montaj v47 ile eşit) · K kesme_cad_v1 + TOPPING üretim modeli (topping_cad_v23) + E kutu modülü (kutu_cad_v3, 830) + B çekmece modülü (store_cad_v4)</span>
-<b>Kontrol</b><span>üreteç çalışırken: süreç kotu CAD'den ölçülür &middot; taban hizası denetlenir &middot; hiçbir birim hat zarfını aşamaz &middot; TOPPING ile fırın/kesme/kutu arasındaki kesişimler raporlanır</span>
+<b>Ölçü kaynağı</b><span>HAT ATOSA TABLALI v13 teknik resmi (26 Eyl, v47) + fırın paftası FIRIN_TP10 v3 (v48) · F firin_tp10_cad_v3 · K kesme_cad_v1 · TOPPING topping_cad_v24 + topping_uno_cad_v6 · E kutu_cad_v3 · B store_cad_v5</span>
+<b>Kontrol</b><span>üreteç çalışırken: süreç kotu CAD'den ölçülür &middot; taban hizası denetlenir &middot; hiçbir birim hat zarfını aşamaz &middot; fırın + uyarlama parçaları komşularıyla GERÇEK KATI kesişimiyle taranır, ürün yolu Ø280/Ø300 zarfla taranır, TOPPING sabit parçalarının 2500'ü geçmediği denetlenir: <span id="fdenetim">—</span></span>
 </div></div>
 
 <h2>3 &middot; Teknik resim</h2>
@@ -48,7 +48,8 @@
 
 <h2>4 &middot; Sürüm geçmişi</h2><ul class="ver">
 <li><b>PAFTA v8 (25 Eyl)</b>: teknik resim modele eşitlendi — hat 5430 (E 830 kutu katlama), alt taban çizgisi 123, süreç 1168, TOPPING iç kotları ve 2 kaset, B çekmece modülü v4, K'de yedek kutu yok. v7 aşağıda duruyor</li>
-<li><b>MONTAJ v47 (26 Eyl) &middot; GEÇERLİ</b>: ÖN YÜZDEN TAŞAN PARÇALAR İÇERİDE. Fırının önündeki köşede görünen parça TOPPING aktarma bandının motoruydu: makinenin ön yüzünün 78 mm önünde, havada ve 90° ters dönük duruyordu. Artık bandın arkasında, tahrik makarasıyla aynı eksende. Bandın ön yan sacı, makara mil uçları ve fire sileceği de ön yüzün (z 0) içine alındı. TOPPING çıkış yarığı 24 mm'den 44 mm'ye açıldı (küp sucuklu en yüksek ürün 28,5 mm, üst çubuk küplerin içinden geçiyordu). Yer tutucu fırın bandı TOPPING tahrik makarasının içinden başlıyordu, düzeldi. Hamur topu tablada 5,7 mm havada duruyordu, oturdu. Montaj artık ön yüzü ve en yüksek ürünün geçişini her çalışmada denetliyor. Açık: açıcı kafası ön yüzden 180 mm taşıyor (kavram kararı).</li>
+<li><b>MONTAJ v48 (26 Eyl gece) &middot; GEÇERLİ</b>: GERÇEK FIRIN. F = Sveba Dahlen TP10 kesitli, gövdesi 1500'e uzatılmış kızılötesi konveyör fırın (firin_tp10_cad_v3: ön oda 64 + uç duvarları 60, ısıtılan 1316 = 4 ürün, bant 2568–3996 gövde içinde, tahrik + gergi teknik bölmede; giriş bandı ön odada, çıkış ölü plakası, K bandında 20° giriş çiti; taban dolabı 956, pizza yedeği 505 + fırın üstünde 55). Kompresör K tabanından fırın üstündeki havalı rafa (kural 4 istisnası), ana hat fırın üstünden TOPPING sağ dış sacındaki rakora, K'ye dal. TOPPING v24: X motoru sol uca, avara sağa, kayış kelepçeleri arabanın sol yarısına → tekne 2500'de biter (v47'de 85 mm fırına giriyordu, zon muafiyeti gizliyordu). TOPPING v2 v6: kaset plakaları için kılavuz köşebentler, arka dayama, yaylı ön mandal (klik), her milde yaylı HAÇ yuvası (kasetin haç kavraması oturur), raf U-yarıkları, iniş borusu huni; yalıtım tek blok + ön fitil. Sim: tam yükte 46,3 / 51,7 = önceki. Denetim: gerçek katı kesişimi + ürün yolu TEMİZ.</li>
+<li><b>MONTAJ v47 (26 Eyl)</b>: ÖN YÜZDEN TAŞAN PARÇALAR İÇERİDE. Fırının önündeki köşede görünen parça TOPPING aktarma bandının motoruydu: makinenin ön yüzünün 78 mm önünde, havada ve 90° ters dönük duruyordu. Artık bandın arkasında, tahrik makarasıyla aynı eksende. Bandın ön yan sacı, makara mil uçları ve fire sileceği de ön yüzün (z 0) içine alındı. TOPPING çıkış yarığı 24 mm'den 44 mm'ye açıldı (küp sucuklu en yüksek ürün 28,5 mm, üst çubuk küplerin içinden geçiyordu). Yer tutucu fırın bandı TOPPING tahrik makarasının içinden başlıyordu, düzeldi. Hamur topu tablada 5,7 mm havada duruyordu, oturdu. Montaj artık ön yüzü ve en yüksek ürünün geçişini her çalışmada denetliyor. Açık: açıcı kafası ön yüzden 180 mm taşıyor (kavram kararı).</li>
 <li><b>MONTAJ v46 (26 Eyl)</b>: ANİMASYON DÜZELTMESİ. Dönen parçalar (tabla, açıcı konileri, UNO valfi, kaşar ve sucuk kaseti milleri, aktarma bandı makaraları) artık kendi ekseninde duran ayrı parça. Önce hattın başlangıç noktasına göre döndürülüp ötelemeyle geri getiriliyordu; kareler arasında öteleme düz, dönüş yay boyunca ara değerlendiği için eksenlerinden savruluyorlardı (ölçüldü: bant burun makarası 350 mm, koniler 96 mm, valf 94 mm → şimdi en çok 2 mm). Aktarma ucundaki sabit sensör, adı "tabla" ile başladığı için tablayla birlikte 2 m yarıçapla dönüyordu, sabitlendi. Animasyon 30 kare/s. Geometri v45 ile aynı (pafta v12 geçerli).</li>
 <li><b>MONTAJ v45 (26 Eyl)</b>: K KESME + SPREY gerçek üretim modeli oldu (kesme_cad_v1, 146 parça): fırın bandından ürünü alan PU bant (RollerDrive), aynı kafada Festo DGRF-C kesici + yıldız bıçak Ø296 ve göbeğinde PulsaJet tereyağı nozülü, 20° çit, igus eksenli itici, taban arkasında 3 L ısıtmalı tereyağı tankı + pano, önde içecek yedeği. TOPPING v2 yayıcısında kama yarık, UNO pistonu/valfi ve kaset milleri ayrı parça. <b>Ana montaja 1 tam animasyon:</b> çekmece → robot → açıcı → sos (tam 1 tur) → kaşar → sucuk → fırın → kesme → kutu → QR dolabı (84 s). Ayrıntı: <a href="kesme.html">4b · KESME</a> · <a href="topping_v2.html">TOPPING v2</a>.</li>
 <li><b>MONTAJ v44 (25 Eyl)</b>: ALT KISIM yeniden. Çekmece modülü (store_cad_v5) tam kaplayan kapaklarla kapalı ve temiz görünüyor: kolonlar arası 3 mm, her kolon 126'dan 1057'ye. Soğukta her şey 2 günlük: pide 160, lahmacun 432, içecek 160 (tek kat, yaylı itici, robot her kutuya erişir), tatlı 30; K4'te Secop'un arkasında pano, üstünde kaşar + sucuk deposu (4 günün 2. yarısı) ve 2 dar içecek çekmecesi. Fırın tabanı: önde bulaşık makinesi (MEIKO M-iClean US), temizlik, 553'lük pizza kutusu yedeği (şarjörle 4 gün); arkada makine deterjanı, robot kontrol kutusu, ana pano, UPS. Kesme tabanı: önde soğutmasız içecek yedeği (120 kutu, toplam 4 gün), arkada kompresör + yağ + K kartı; kesmenin üst bölmesi boşaldı.</li>
@@ -81,7 +82,8 @@ const M = model3d({
   }
 });
 
-fetch('../hat3d/durum.json?v=47').then(r => r.json()).then(D => {
+fetch('../hat3d/durum.json?v=48').then(r => r.json()).then(D => {
+  if (D.firin_denetim) document.getElementById('fdenetim').textContent = D.firin_denetim;
   M.veri(D.birim);
   animasyon(D.animasyon);
   const mod = {}; D.birim.forEach(b => (mod[b.modul] = mod[b.modul] || []).push(b));

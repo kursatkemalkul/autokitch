@@ -2,11 +2,11 @@
 <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script><script src="model3d.js?v=16"></script>
 <style>.m3 model-viewer{height:min(76vh,700px);min-height:400px}table.t{width:100%;border-collapse:collapse;font-size:13.5px}table.t td,table.t th{border-bottom:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}table.t th{color:var(--mut);font-size:12.5px}.bul{border-left:4px solid #c47c18;background:#fdf7ee}</style></head><body>
 <div class="top"><div class="in"><div class="crumb"><a href="../">Store</a><span>›</span><a href="index.html">HAT</a><span>›</span><a href="topping.html">3 · TOPPING</a><span>›</span><b>TOPPING v2 · UNO'lu</b></div><div><a href="topping.html">← TOPPING v1</a></div></div></div>
-<div class="wrap"><h1>TOPPING v2 — UNO'lu<span class="tag" style="background:#2456c8">model v5 · hesaplı</span></h1>
-<p class="lead">Sos, harç, kıyma ve kuşbaşı birer <b>Beltop UNO çekirdeğiyle</b> dozlanıyor; kaşar ve küp sucuk bizim kasetlerde. UNO parçaları <a href="beldos.html">Beldos sayfasındaki UNO modelinin</a> aynısı. Parçaya dokununca adı ve kaynağı çıkar. Ön kapak modelde yok, içi görünsün diye.</p>
+<div class="wrap"><h1>TOPPING v2 — UNO'lu<span class="tag" style="background:#2456c8">model v6 · yuvalar + yalıtım</span></h1>
+<p class="lead">Sos, harç, kıyma ve kuşbaşı birer <b>Beltop UNO çekirdeğiyle</b> dozlanıyor; kaşar ve küp sucuk bizim kasetlerde. UNO parçaları <a href="beldos.html">Beldos sayfasındaki UNO modelinin</a> aynısı. Parçaya dokununca adı ve kaynağı çıkar. Ön kapak modelde yok, içi görünsün diye (kapaklar en son; ağzın çevresinde fitil var). <b>v6 (26 Eyl gece):</b> kaset yuvaları tam mühendislik (kılavuz · arka dayama · yaylı mandal · haç yuvası), yalıtım tek blok, ön fitil; mekanizma teknesi 2500'de biter (v24).</p>
 <p class="lead" style="margin:-6px 0 14px"><button class="simbtn" id="simac">▶ CANLI SİMÜLASYON</button> <span style="color:#8a9199;font-size:13.5px">&nbsp; sayfadan çıkmadan açılır. Sağdaki panelden ürünü seç, <b>seçince başlar</b>. Karışık için malzemeleri işaretle. Panelde her istasyonun hesabı (gram → ml, piston stroku, tabla turu, süre, katman), canlı eksen değerleri, yanan motor/valf ve o an çalışan kod satırı görünür. UNO pistonu ve döner valfi, kasetin helezonu ve karıştırıcısı modelde gerçekten hareket eder.</span></p>
 <div class="m3">
-  <model-viewer id="mv" loading="eager" src="../hat3d/topping_uno_v5.glb?v=5" alt="TOPPING v2 — 4 UNO çekirdeği + 2 kaset + hava tesisatı" autoplay
+  <model-viewer id="mv" loading="eager" src="../hat3d/topping_uno_v6.glb?v=6" alt="TOPPING v2 — 4 UNO çekirdeği + 2 kaset + hava tesisatı" autoplay
       camera-controls touch-action="pan-y" shadow-intensity="0.5" exposure="1.05" environment-image="neutral"
       camera-orbit="-28deg 68deg auto" field-of-view="30deg" min-field-of-view="5deg" min-camera-orbit="auto auto 0.2m"></model-viewer>
   <div class="et" id="et"></div>
@@ -32,30 +32,50 @@
 <tr><td>KUŞBAŞI</td><td>UNO çekirdeği</td><td>8 L (6,8 L gerek)</td><td>Ø70</td><td>yuvarlak iç Ø33 · ucu pideden 40</td></tr>
 <tr><td>KAŞAR</td><td>bizim rende kaseti</td><td>8,8 kg</td><td>—</td><td>Ø45 iniş borusu</td></tr>
 <tr><td>KÜP SUCUK</td><td>bizim kaset</td><td>2,8 kg</td><td>—</td><td>Ø42 iniş borusu</td></tr></table>
-<p class="note">Toplam genişlik 1764 mm, modül 1800. Tavan yalnız sos ve harç üstünde 1968'e yükseliyor; teknik bant kıyma–sucuk üstünde kalıyor.</p></div>
+<p class="note">Toplam genişlik 1764 mm, modül 1800. Soğuk oda tavanı sos ve harç üstünde 1968, kıyma–sucuk üstünde 1680 (üstünde teknik cep); yalıtım dıştan tek düz blok (v6). Sucuk kaseti v6'da 13 mm sağa (1539–1681).</p></div>
 <h2>Sos ve harç ağzı · Beldos spreader başlığı</h2>
 <div class="card"><div class="kv">
 <b>Parçalar</b><span>Beldos'un sitesindeki spreader attachment görseliyle aynı: TC kelepçeli giriş → dik boru, yanında braketli <b>havalı kesme valfi</b> (damlatmaz) → <b>üçgen dağıtıcı gövde</b> (borunun boyunca basıncı eşitler) → altı yarıklı <b>yatay dağıtıcı boru</b>, iki ucu beyaz tapalı. Ölçüler görselden oranla, varsayım.</span>
 <b>Bizde</b><span>Dağıtıcı boru tabla ekseninde (z −170), x yönünde, merkezden kenara 125 mm (kenarda 15 mm boş). Ağzı pideden 6 mm yukarıda. Tabla merkezini borunun iç ucuna getirir, dozaj boyunca yalnız döner.</span>
 <b>Yarık (v5)</b><span>kama: debi ∝ r → düzgün katman (sos 1,55 mm, harç 2,14 mm). Beldos'a boru boyu, yarık ve değiştirilebilir lam sorulacak.</span>
-<b>Taşıyıcı raf</b><span>UNO'lar, hazneler ve kasetler 3 mm AISI 304 rafın üstünde (önü ve arkası 40 mm aşağı bükülü). Yük 154 kg → sehim 3,4 mm (L/477), gerilme 92 MPa, emniyet 2,3.</span>
+<b>Taşıyıcı raf</b><span>UNO'lar, hazneler ve kasetler 3 mm AISI 304 rafın üstünde (önü ve arkası 40 mm aşağı bükülü). Yük 154 kg → sehim 3,4 mm (L/477), gerilme 92 MPa, emniyet 2,3. v6: kaset delikleri öne açık U-yarık, ön bükümde 60'lık çentik (kaset öne çekilirken tüpü raftan sıyrılır).</span>
 </div></div>
+<h2>Kaset yuvaları (v6) · vida yok, aletsiz tak-çıkar</h2>
+<div class="card"><div class="kv">
+<b>Kaset nasıl oturur</b><span>Kasetin ayağı <b>ön ve arka plakalarıdır</b> (280 / 140 × 352 × 8): plaka altları rafa (1320) oturur, gövde 15 / 21 mm yukarıda. Ölçüldü: gövde, plakalar, saplamalar, kör somunlar, topuz, tüp yatak kapağı — yuva bunların hiçbirine değmez.</span>
+<b>Kılavuz</b><span>her plakanın iki yanında 304 köşebent 4 × 20 (rafa 3 × M4 havşa): plakayı 0,5 mm yanal boşlukla güder; ön 30 mm 10° dışa açık (giriş pahı). Kaset öne çekilip arkaya itilir, başka hizalama gerekmez.</span>
+<b>Arka dayama</b><span>kılavuzla tek parça bükme: arka plakanın alt köşeleri z −525'te dayanır → kavrama derinliği hep aynı; kör somunlara (−538,6) değmez.</span>
+<b>Ön mandal (KLİK)</b><span>SOL kılavuzun önünde POM U-gövde (19 × 34 × 32); içinde x'te <b>kayar dil</b> (20 × 8 × 6, Ø3 pim üstünde, Ø3 yay) plakanın ön-alt köşesini 6 mm örter. Kaset takılırken plakanın alt köşesi dilin 45° rampasına basar, dil 6 mm sola kayar, plaka geçince yay dili geri iter — KLİK, kaset kilitli (0,5 mm boşluk). Çıkarmak için gövdenin üstünden çıkan kol baş parmakla 6,5 mm sola basılır, kaset kulpundan öne çekilir. Sağda yer yoktu (sucuk mandalı duvara 10 mm kalıyordu), iki mandal solda.</span>
+<b>Haç yuvası (tahrik)</b><span>kasetin arkasında kendi <b>haç kavraması</b> var (Ø26 + 36 × 8 haç, z −543,5…−533,5, yaylı pimle göbeğe kilitli). Makine tarafında her tahrik milinde (helezon + karıştırıcı) POM Ø48 × 18 <b>yaylı kayar kovan</b>: önünde 36,5 × 8,5 haç yarığı 10,5 derin, haç 9,5 mm girer (dipte 1 mm). Kovan mile boydan boya Ø3 pimle bağlı (tork), pim mildeki 3,2 × 14 kanalda kayar → strok 10,5. Arkasında 45°'lerde 4 cep, 4 baskı yayı Ø5 × 24,5; yaylar milin segmanına (DIN 471 22) oturan Ø48 × 1 <b>yay tablasına</b> dayanır — kovan, yaylar, tabla, pim hepsi milyle döner, sürtünen yüzey yok. Kaset takılırken haç hizalı değilse çubuklar kovanı 9,5 geri iter, PLC mili yavaş çevirir, yarık hizalanınca yaylar kovanı öne iter, haç oturur (klik). Mil Ø22 −545'te biter (haçın 1,5 arkasında), kovanda keçeli. İlk taslakta (yay kovanın içinde, mil bileziğine dayalı) yayın dayanağı yoktu ve yay + pim kasete giriyordu — denetim yakaladı, tasarım değişti.</span>
+<b>Boşluklar (ölçüldü)</b><span>kuşbaşı valf topuzu – kaşar mandalı 25 · kaşar sağ kılavuzu – sucuk mandalı 10,5 · kaşar plakası – sucuk plakası 39 (sucuk 13 mm sağa alındı) · sucuk sağ kılavuzu – sağ duvar 25,5. Kulplar üstte olduğu için yandan tutma gerekmez.</span>
+<b>İniş borusu</b><span>v5'te kasetin çıkış borusu (dış Ø50 / Ø48, altı 1312) makinenin iniş borusuna 5 mm iç içe giriyordu — kaset öne çekilemezdi. v6: iniş borusunun üstü 1305, üstünde huni 1305–1311 (iç Ø45→58): kaset borusu hunininin 1 mm üstünde biter, 4 mm yanal pay; öne çekilirken takılmaz, ürün huniden boruya iner.</span>
+<b>Denetim (topping_uno_cad_v6, gerçek katı kesişimi)</b><span>yuva parçaları kasete girmiyor · yuva parçaları birbirine ve makineye girmiyor · plaka altı = raf · kılavuz 0,5 · mandal dili plakanın önünde ve 6 mm örtüyor · kol 7,5 sola kayabilir · dayama −525 · haç 9,5 mm yuvada · kovan tablaya 10,5 çekilebilir · mil ucu haçın arkasında · boşluklar · kaset borusu huninin üstünde · kaset 10 mm adımlarla 430 mm öne çekilirken hiçbir parçaya değmiyor.</span>
+</div></div>
+<div class="thumbs"><a href="img/topping_v6_yuva_kasar_arka.jpg" target="_blank"><img src="img/topping_v6_yuva_kasar_arka.jpg" loading="lazy"><span>kaşar · arkadan: haç kovanları (Ø48), 4 yay, yay tablası, kovan Ø60 (yalıtım gizli)</span></a><a href="img/topping_v6_yuva_mandal.jpg" target="_blank"><img src="img/topping_v6_yuva_mandal.jpg" loading="lazy"><span>kaşar · önden: sol kılavuz, mandal gövdesi + kol, plaka</span></a><a href="img/topping_v6_yuva_huni.jpg" target="_blank"><img src="img/topping_v6_yuva_huni.jpg" loading="lazy"><span>kaşar · alttan: iniş borusu + huni, üstünde kaset borusunun ağzı (raf gizli)</span></a><a href="img/topping_v6_yuva_sucuk_arka.jpg" target="_blank"><img src="img/topping_v6_yuva_sucuk_arka.jpg" loading="lazy"><span>sucuk · arkadan: haç kovanları, sağ duvara 25,5</span></a></div><p class="note">Görüntüler topping_uno_v6.glb'den (Blender, yalıtım bloğu ve kabin gizlenerek). Modeli yukarıda döndürüp kesit alabilirsin.</p>
+<h2>Yalıtım tek blok + ön fitil (v6)</h2>
+<div class="card"><div class="kv">
+<b>Blok</b><span>v5'te beş parça (A tavanı 1968, B tavanı 1680, basamak, iki arka panel) girintili çıkıntılıydı. v6: dışı düz tek PU blok 90–1710 × 1277–2028 × −104…−630; içinde soğuk oda (A tavan 1968 · B tavan 1680 — harç haznesi 1832'ye çıktığı, kıyma–sucuk üstünde soğutma grubu / pano / güç / UPS durduğu için iki kot), arkaya açık teknik cep (850–1710 × 1740–2012), 4 kaset kovanı + 4 UNO mil kovanı + geçiş bloğu delikleri.</span>
+<b>Ön fitil</b><span>soğuk odanın L ağzının çevresinde çekmecelerdeki manyetik profil (21 × 18,5, sıkışınca 15) kanallı alüminyum profilde; ön kapaklar kapanınca buna basar. <b>Ön kapaklar en son</b> (Kemal).</span>
+</div></div>
+<h2>Mekanizma teknesi 2500'de biter (topping_cad_v24)</h2>
+<div class="card"><p style="margin:0">v23'te tekne, üç kiriş, X motoru ve kaidesi TOPPING'in sağ duvarını 85 mm geçip fırının alanına giriyordu (kutu fırının "zon" muafiyeti gizliyordu). v24: X motoru + tahrik kasnağı sol uca (−560, park tarafı; enerji zinciri kanalının 11 mm solunda), avara + gergi sağ uca (1650), kayış kelepçeleri arabanın sol yarısına (Xc −130 · −50) → aktarmada kelepçe 1607'de biter, tekne/kirişler 1795'te (duvar 1798,5). Sağ tampon kayış koluna vurur (limit Xc 1650 = aktarma + 13), limit+ sensörü 1647, kayış 4480. Modülün kendi denetimi: zarf, ön yüz, ürün geçişi, çakışma TEMİZ; kaset yuva boşlukları ve tahrik eksenleri aynı.</p></div>
 <h2>Hava tesisatı</h2>
 <div class="card"><div class="kv">
-<b>Kompresör</b><span>JUN-AIR OF302-15B · yağsız · 15 L tank · 380 × 380 × 510 · 25 kg · 7 bar'da 43 L/dk · 65 dB. Yeri: K modülünün taban dolabı, arkada. K istasyonunun kesicisi de bu hattan beslenir (kesim başına 5,1 NL).</span>
-<b>Ana hat</b><span>Ø10 PU: K tabanı → F tabanının arka köşesindeki kanal (z −790, kot 1040) → TOPPING'e sağ alttan girer.</span>
+<b>Kompresör</b><span>JUN-AIR OF302-15B · yağsız · 15 L tank · 380 × 380 × 510 · 25 kg · 7 bar'da 43 L/dk · 65 dB. Yeri (v48, Kemal 26 Eyl): <b>fırının üstündeki havalı raf</b>, ön yarı, kutu yedeğinin yanı — kural 4'ün tek istisnası (K tabanında kompresör yok). K istasyonunun kesicisi de bu hattan beslenir (kesim başına 5,1 NL).</span>
+<b>Ana hat</b><span>Ø10 PU (v48): fırın üstündeki kompresörden y 2000 / z −415'te sola → TOPPING sağ dış sacındaki rakordan (Ø14) teknik cebe → kuru bölmeye iner → şartlandırıcının sol yüzü. K'ye dal: fırın üstünden arkaya, K besleme hattının tepesine (x 4160, y 1700).</span>
 <b>Valf adası</b><span>12 × 5/2 elektro-valf: 4 piston + 4 döner valf + 2 spreader kesme valfi + açıcı + yedek · kuru bölmede.</span>
 </div></div>
 <h2>Teknik resim</h2><figure><img src="img/TOPPING_MONTAJ_v2_teknik.png?v=1" alt="TOPPING montaj paftası v2" loading="lazy"><figcaption>TOPPING montaj paftası v2 · ön, üst, harç istasyonundan yan kesit</figcaption></figure>
 <h2>Denetim</h2><div class="card"><table class="t" id="den"><tr><th>Kontrol</th><th>Sonuç</th></tr></table></div>
 <h2>Sürüm geçmişi</h2><ul class="ver">
+<li><b>v6 (26 Eyl 2026 gece):</b> kaset yuvaları tam mühendislik (kılavuz köşebent + arka dayama + solda kayar yaylı mandal + her milde 4 yaylı haç kovanı, raf U-yarığı, iniş hunisi), yalıtım tek blok + ön fitil, sucuk 13 mm sağa; mekanizma v24 (tekne 2500'de biter). Ana montaj v48.</li>
 <li><b>v5 (26 Eyl 2026):</b> dozaj hesabı (topping_v2_hesap_v1) + canlı simülasyon (makine_kodu_v2.js · sim3d_v2.js). Yayıcı yarığı kama; kaşar/sucuk helezon ve karıştırıcısı ayrı döner parça. Ana montaj v45.</li>
 <li>v4 (25 Eyl): kalın PU taban yerine 3 mm taşıyıcı raf.</li>
 <li>v3 (25 Eyl): Beldos spreader başlığı. · v2: düz kaplama bıçağı. · v1: UNO'lu TOPPING önerisi.</li></ul>
-<p class="note">Model: arastirma/_uretec/topping_uno_cad_v5.py → otonom/hat3d/topping_uno_v5.glb · hesap: topping_v2_hesap_v1.py · simülasyon: sim_makine_v7.py → sim_makine_v7.json · ana montaj: hat_montaj_v45 · <span id="sur"></span></p>
+<p class="note">Model: arastirma/_uretec/topping_uno_cad_v6.py → otonom/hat3d/topping_uno_v6.glb · mekanizma: topping_cad_v24.py · hesap: topping_v2_hesap_v1.py · simülasyon: sim_makine_v7.py → sim_makine_v7.json · ana montaj: hat_montaj_v48 · <span id="sur"></span></p>
 </div>
 <script>
-fetch('../hat3d/topping_uno_v5.json?v=5').then(r => r.json()).then(D => {
+fetch('../hat3d/topping_uno_v6.json?v=6').then(r => r.json()).then(D => {
   const M = model3d({mv: 'mv', etiket: 'et', grup: 'kod', hedef: () => '', yazi: g => { const b = g.birimler[0]; return '<b>' + b.ad.replace(/_/g, ' ') + '</b><span>' + (b.not_ || '') + '</span>'; }});
   M.veri(D.parcalar.map(p => ({mal: p.ad, kod: p.ad, ad: p.ad, not_: p.not_, durum: ''})));
   document.getElementById('den').innerHTML += D.denetim.map(d => '<tr><td>' + d.ad + '</td><td><span class="st ' + (d.sonuc === 'GEÇTİ' ? 'ok' : 'ac') + '">' + d.sonuc + '</span></td></tr>').join('');
