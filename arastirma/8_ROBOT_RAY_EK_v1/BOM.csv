@@ -1,0 +1,27 @@
+﻿parça (model adı);birim;kalem;adet;tanım / ürün;not / kaynak;tür
+oluk_tabani;ROBOT_ZINCIR_OLUGU;Zincir oluğu U profil AISI 304 2 mm (taban + 2 yan);1;4900 × 90 × 57 · 2 parça (2450) · kanal ağzı 30 × 36;üretim (abkant);ÜRETİM
+oluk_yan_robot;ROBOT_ZINCIR_OLUGU;oluk yan robot;0;;aynı kalemin eşi ya da alt parça · zarf 4900 × 55 × 2;ALT
+oluk_yan_koridor;ROBOT_ZINCIR_OLUGU;oluk yan koridor;0;;aynı kalemin eşi ya da alt parça · zarf 4900 × 55 × 2;ALT
+oluk_uc_duvari_sol;ROBOT_ZINCIR_OLUGU;Oluk uç kapağı 2 mm;2;86 × 55;üretim;ÜRETİM
+oluk_uc_duvari_sag;ROBOT_ZINCIR_OLUGU;oluk uc duvari sag;0;;aynı kalemin eşi ya da alt parça · zarf 2 × 55 × 86;ALT
+oluk_kapagi_0;ROBOT_ZINCIR_OLUGU;Oluk kapağı 3 mm gözyaşı desenli AISI 304 (üstüne basılır);3;815 × 90;üretim · 2 × M5 havşa;ÜRETİM
+oluk_kapagi_1;ROBOT_ZINCIR_OLUGU;oluk kapagi 1;0;;aynı kalemin eşi ya da alt parça · zarf 815 × 3 × 90;ALT
+oluk_kapagi_2;ROBOT_ZINCIR_OLUGU;oluk kapagi 2;0;;aynı kalemin eşi ya da alt parça · zarf 815 × 3 × 90;ALT
+enerji_zinciri;ROBOT_ENERJI_ZINCIRI;Enerji zinciri igus E2 sınıfı · iç 28 × 50 · dış 40 × 64 · R 150;1;boy 2875 (strok yarısı 2350 + πR 471 + 2 × 25 pay);VARSAYIM ölçü · igus.com.tr seçim (uzun yol, üst kol desteği gerekir);SATIN ALMA
+zincir_sabit_uc_braketi;ROBOT_ENERJI_ZINCIRI;Zincir bağlantı braketi (sabit uç, oluk tabanına 2 × M6);1;40 × 44 × 80;igus KMA sınıfı VARSAYIM;SATIN ALMA
+zincir_hareketli_uc_braketi;ROBOT_ENERJI_ZINCIRI;Zincir hareketli uç braketi + kaide kolu 6 mm;1;robot kaidesine 4 × M8;üretim (lazer + büküm);ÜRETİM
+kanal_tabani;ZEMIN_KANALI;Zemin kanalı AISI 304 2 mm (taban + yanlar + uçlar + ayırıcı);1;80 × 60 × 510 · şapaya gömülü;üretim;ÜRETİM
+kanal_yan_sol;ZEMIN_KANALI;kanal yan sol;0;;aynı kalemin eşi ya da alt parça · zarf 2 × 55 × 510;ALT
+kanal_yan_sag;ZEMIN_KANALI;kanal yan sag;0;;aynı kalemin eşi ya da alt parça · zarf 2 × 55 × 510;ALT
+kanal_uc_hat;ZEMIN_KANALI;kanal uc hat;0;;aynı kalemin eşi ya da alt parça · zarf 76 × 55 × 2;ALT
+kanal_uc_qr;ZEMIN_KANALI;kanal uc qr;0;;aynı kalemin eşi ya da alt parça · zarf 76 × 55 × 2;ALT
+kanal_ayirici;ZEMIN_KANALI;Kanal ayırıcı 2 mm (robot kablosu | ana pano güç/veri — EMC ayrımı);1;;üretim · güç/veri kabloları modellenmedi;ÜRETİM
+kanal_kapagi_koridor;ZEMIN_KANALI;Kanal kapağı 3 mm gözyaşı desenli (koridor, üstüne basılır);1;80 × 95;üretim;ÜRETİM
+kanal_kapagi_QR_alti;ZEMIN_KANALI;Kanal kapağı 3 mm (QR altı) · Ø40 + Ø30 rakor delikli;1;80 × 330;üretim;ÜRETİM
+robot_kablosu_standart_4m;ROBOT_KABLOSU;Fairino robot kablosu (standart, robotla gelir);1;4 m · güç + haberleşme tek kablo · Ø26 dairesel konnektör;inluxrobotics.eu FR5 · çap VARSAYIM Ø20;SATIN ALMA
+robot_kablosu_uzatma_A;ROBOT_KABLOSU;Fairino uzatma kablosu 11 m;1;standart kabloyla toplam 15 m;inluxrobotics.eu (Fairino Extension Cable 11 m);SATIN ALMA
+robot_kablosu_uzatma_B;ROBOT_KABLOSU;robot kablosu uzatma B;0;;aynı kalemin eşi ya da alt parça · zarf 57 × 108 × 93;ALT
+uzatma_konnektoru;ROBOT_KABLOSU;Kablo birleşimi (Ø26 dairesel konnektör çifti) · oluk içinde;1;zarf Ø34 × 110;VARSAYIM zarf;ALT
+robot_kablosu_kangal;ROBOT_KABLOSU;Kablo kangalı (uzatmanın artanı) · QR alt bölmesi · 4 cırt bant;1;10.07 sarım × Ø250 · 7.91 m · yük. 201;hesap (bu dosya);ALT
+kablo_kelepcesi_0;ROBOT_KABLOSU;Kablo kelepçesi (robot kaidesine);2;Ø21;katalog;SATIN ALMA
+kablo_kelepcesi_1;ROBOT_KABLOSU;kablo kelepcesi 1;0;;aynı kalemin eşi ya da alt parça · zarf 30 × 20 × 34;ALT

@@ -1,0 +1,211 @@
+﻿parça (model adı);birim;kalem;adet;tanım / ürün;not / kaynak;tür
+ayar_ayagi_0;QR_GOVDE;Ayar ayağı M10 düşük profil (17 mm);6;paslanmaz taban Ø40 · ±5 ayar;VARSAYIM · katalogdan seçilecek;SATIN ALMA
+ayar_ayagi_1;QR_GOVDE;ayar ayagi 1;0;;aynı kalemin eşi ya da alt parça · zarf 40 × 17 × 40;ALT
+ayar_ayagi_2;QR_GOVDE;ayar ayagi 2;0;;aynı kalemin eşi ya da alt parça · zarf 40 × 17 × 40;ALT
+ayar_ayagi_3;QR_GOVDE;ayar ayagi 3;0;;aynı kalemin eşi ya da alt parça · zarf 40 × 17 × 40;ALT
+ayar_ayagi_4;QR_GOVDE;ayar ayagi 4;0;;aynı kalemin eşi ya da alt parça · zarf 40 × 17 × 40;ALT
+ayar_ayagi_5;QR_GOVDE;ayar ayagi 5;0;;aynı kalemin eşi ya da alt parça · zarf 40 × 17 × 40;ALT
+taban_plakasi_3;QR_GOVDE;Taban plakası 3 mm DKP (boyalı);1;860 × 520 · Ø40 robot kablosu + Ø30 güç/veri geçişi (lastik rakorlu);üretim;ÜRETİM
+yan_sac_sol;QR_GOVDE;Yan sac 1,5 mm DKP (boyalı);2;520 × 2028;üretim;ÜRETİM
+yan_sac_sag;QR_GOVDE;yan sac sag;0;;aynı kalemin eşi ya da alt parça · zarf 2 × 2028 × 520;ALT
+tavan_sac;QR_GOVDE;Tavan sacı 2 mm DKP;1;860 × 520;üretim;ÜRETİM
+alt_raf_3;QR_GOVDE;Raf 3 mm DKP (alt + üst);2;857 × 517;üretim;ÜRETİM
+ust_raf_3;QR_GOVDE;ust raf 3;0;;aynı kalemin eşi ya da alt parça · zarf 857 × 3 × 517;ALT
+robot_yuzu_goz_saci;QR_GOVDE;Robot yüzü sacı 1,5 mm · 12 kapak ağzı 340 × 182;1;857 × 1206;üretim (lazer);ÜRETİM
+musteri_yuzu_goz_saci;QR_GOVDE;Müşteri yüzü sacı 1,5 mm · 12 kapı ağzı 378 × 188;1;857 × 1206;üretim (lazer);ÜRETİM
+musteri_alt_panel;QR_GOVDE;Müşteri alt paneli 1,5 mm (kapalı);1;857 × 427;üretim;ÜRETİM
+musteri_ust_panel;QR_GOVDE;Müşteri üst paneli 1,5 mm · ekran + okuyucu + PIN pencereleri;1;857 × 395;üretim (lazer);ÜRETİM
+servis_kapagi_alt;QR_GOVDE;Servis kapağı 1,5 mm · yarık ızgara 30 × 70 (alt 8 · üst 7) + fan deliği Ø116;2;855 × 425 (alt) + 855 × 393 (üst);üretim (lazer + büküm);ÜRETİM
+servis_kilidi_alt;QR_GOVDE;Çeyrek dönüş kilit (anahtarlı) Ø22;2;servis kapakları;VARSAYIM · katalog (ör. kabin kilidi sınıfı);SATIN ALMA
+servis_kapagi_ust;QR_GOVDE;servis kapagi ust;0;;aynı kalemin eşi ya da alt parça · zarf 855 × 393 × 2;ALT
+servis_kilidi_ust;QR_GOVDE;servis kilidi ust;0;;aynı kalemin eşi ya da alt parça · zarf 22 × 22 × 30;ALT
+servis_mentesesi_0;QR_GOVDE;Gizli menteşe (servis kapağı);4;2 kapak × 2;VARSAYIM · katalog;SATIN ALMA
+servis_mentesesi_1;QR_GOVDE;servis mentesesi 1;0;;aynı kalemin eşi ya da alt parça · zarf 18 × 40 × 18;ALT
+servis_mentesesi_2;QR_GOVDE;servis mentesesi 2;0;;aynı kalemin eşi ya da alt parça · zarf 18 × 40 × 18;ALT
+servis_mentesesi_3;QR_GOVDE;servis mentesesi 3;0;;aynı kalemin eşi ya da alt parça · zarf 18 × 40 × 18;ALT
+goz_00_kasasi;QR_GOZLER;Göz kasası AISI 304 1 mm (iki ucu açık tüp);12;380 × 190 × 440 dış;üretim (büküm + punta);ÜRETİM
+goz_00_isitici_ped;QR_GOZLER;Silikon ısıtıcı ped 340 × 400 · 60 W · NTC + aşırı ısı termostatı;12;taban 60 °C (SERVİS_TESLİM v4);VARSAYIM güç: hesap A × h × ΔT;SATIN ALMA
+goz_00_taban_plakasi;QR_GOZLER;Göz tabanı alüminyum 3 mm (ısı yayıcı);12;378 × 438;üretim;ÜRETİM
+goz_00_robot_kapagi;QR_GOZLER;Robot kapağı 10 mm (AISI 304 çift cidar + yalıtım);12;336 × 170 · içeri-yukarı açılır (90°);üretim · VARSAYIM kalınlık;ÜRETİM
+goz_00_kapak_mili;QR_GOZLER;Kapak mili Ø6 paslanmaz;12;boy 342;üretim;ÜRETİM
+goz_00_mil_yatagi;QR_GOZLER;Mil yatağı (POM burç);12;;üretim;ÜRETİM
+goz_00_kapak_motoru;QR_GOZLER;Dik açılı sonsuz vidalı mini redüktörlü motor 24 V;12;zarf 32 × 48 × 36 · çıkış mili kapak miline;VARSAYIM · ürün seçilecek;SATIN ALMA
+goz_00_kapak_sensoru;QR_GOZLER;Kapak kapalı sensörü (endüktif / reed);12;;VARSAYIM;SATIN ALMA
+goz_00_musteri_kapisi;QR_GOZLER;Müşteri kapısı 14 mm (AISI 304 çift cidar + yalıtım) · numaralı;12;376 × 186;üretim · VARSAYIM kalınlık;ÜRETİM
+goz_00_mentese_0;QR_GOZLER;Gizli menteşe (müşteri kapısı);24;12 kapı × 2;VARSAYIM · katalog;SATIN ALMA
+goz_00_mentese_1;QR_GOZLER;goz 00 mentese 1;0;;aynı kalemin eşi ya da alt parça · zarf 20 × 30 × 16;ALT
+goz_00_elektrikli_mandal;QR_GOZLER;Elektrikli mandal 24 V (it-aç, geri bildirimli);12;zarf 20 × 55 × 24 · sütunlar arası 30 mm boşlukta;VARSAYIM · kilit dolabı mandalı sınıfı;SATIN ALMA
+goz_00_karsilik;QR_GOZLER;goz 00 karsilik;0;;aynı kalemin eşi ya da alt parça · zarf 12 × 35 × 6;ALT
+goz_01_kasasi;QR_GOZLER;goz 01 kasasi;0;;aynı kalemin eşi ya da alt parça · zarf 380 × 190 × 440;ALT
+goz_01_isitici_ped;QR_GOZLER;goz 01 isitici ped;0;;aynı kalemin eşi ya da alt parça · zarf 340 × 2 × 400;ALT
+goz_01_taban_plakasi;QR_GOZLER;goz 01 taban plakasi;0;;aynı kalemin eşi ya da alt parça · zarf 378 × 3 × 438;ALT
+goz_01_robot_kapagi;QR_GOZLER;goz 01 robot kapagi;0;;aynı kalemin eşi ya da alt parça · zarf 336 × 170 × 10;ALT
+goz_01_kapak_mili;QR_GOZLER;goz 01 kapak mili;0;;aynı kalemin eşi ya da alt parça · zarf 342 × 6 × 6;ALT
+goz_01_mil_yatagi;QR_GOZLER;goz 01 mil yatagi;0;;aynı kalemin eşi ya da alt parça · zarf 6 × 12 × 12;ALT
+goz_01_kapak_motoru;QR_GOZLER;goz 01 kapak motoru;0;;aynı kalemin eşi ya da alt parça · zarf 32 × 48 × 36;ALT
+goz_01_kapak_sensoru;QR_GOZLER;goz 01 kapak sensoru;0;;aynı kalemin eşi ya da alt parça · zarf 14 × 10 × 10;ALT
+goz_01_musteri_kapisi;QR_GOZLER;goz 01 musteri kapisi;0;;aynı kalemin eşi ya da alt parça · zarf 376 × 186 × 14;ALT
+goz_01_mentese_0;QR_GOZLER;goz 01 mentese 0;0;;aynı kalemin eşi ya da alt parça · zarf 20 × 30 × 16;ALT
+goz_01_mentese_1;QR_GOZLER;goz 01 mentese 1;0;;aynı kalemin eşi ya da alt parça · zarf 20 × 30 × 16;ALT
+goz_01_elektrikli_mandal;QR_GOZLER;goz 01 elektrikli mandal;0;;aynı kalemin eşi ya da alt parça · zarf 20 × 55 × 24;ALT
+goz_01_karsilik;QR_GOZLER;goz 01 karsilik;0;;aynı kalemin eşi ya da alt parça · zarf 12 × 35 × 6;ALT
+goz_10_kasasi;QR_GOZLER;goz 10 kasasi;0;;aynı kalemin eşi ya da alt parça · zarf 380 × 190 × 440;ALT
+goz_10_isitici_ped;QR_GOZLER;goz 10 isitici ped;0;;aynı kalemin eşi ya da alt parça · zarf 340 × 2 × 400;ALT
+goz_10_taban_plakasi;QR_GOZLER;goz 10 taban plakasi;0;;aynı kalemin eşi ya da alt parça · zarf 378 × 3 × 438;ALT
+goz_10_robot_kapagi;QR_GOZLER;goz 10 robot kapagi;0;;aynı kalemin eşi ya da alt parça · zarf 336 × 170 × 10;ALT
+goz_10_kapak_mili;QR_GOZLER;goz 10 kapak mili;0;;aynı kalemin eşi ya da alt parça · zarf 342 × 6 × 6;ALT
+goz_10_mil_yatagi;QR_GOZLER;goz 10 mil yatagi;0;;aynı kalemin eşi ya da alt parça · zarf 6 × 12 × 12;ALT
+goz_10_kapak_motoru;QR_GOZLER;goz 10 kapak motoru;0;;aynı kalemin eşi ya da alt parça · zarf 32 × 48 × 36;ALT
+goz_10_kapak_sensoru;QR_GOZLER;goz 10 kapak sensoru;0;;aynı kalemin eşi ya da alt parça · zarf 14 × 10 × 10;ALT
+goz_10_musteri_kapisi;QR_GOZLER;goz 10 musteri kapisi;0;;aynı kalemin eşi ya da alt parça · zarf 376 × 186 × 14;ALT
+goz_10_mentese_0;QR_GOZLER;goz 10 mentese 0;0;;aynı kalemin eşi ya da alt parça · zarf 20 × 30 × 16;ALT
+goz_10_mentese_1;QR_GOZLER;goz 10 mentese 1;0;;aynı kalemin eşi ya da alt parça · zarf 20 × 30 × 16;ALT
+goz_10_elektrikli_mandal;QR_GOZLER;goz 10 elektrikli mandal;0;;aynı kalemin eşi ya da alt parça · zarf 20 × 55 × 24;ALT
+goz_10_karsilik;QR_GOZLER;goz 10 karsilik;0;;aynı kalemin eşi ya da alt parça · zarf 12 × 35 × 6;ALT
+goz_11_kasasi;QR_GOZLER;goz 11 kasasi;0;;aynı kalemin eşi ya da alt parça · zarf 380 × 190 × 440;ALT
+goz_11_isitici_ped;QR_GOZLER;goz 11 isitici ped;0;;aynı kalemin eşi ya da alt parça · zarf 340 × 2 × 400;ALT
+goz_11_taban_plakasi;QR_GOZLER;goz 11 taban plakasi;0;;aynı kalemin eşi ya da alt parça · zarf 378 × 3 × 438;ALT
+goz_11_robot_kapagi;QR_GOZLER;goz 11 robot kapagi;0;;aynı kalemin eşi ya da alt parça · zarf 336 × 170 × 10;ALT
+goz_11_kapak_mili;QR_GOZLER;goz 11 kapak mili;0;;aynı kalemin eşi ya da alt parça · zarf 342 × 6 × 6;ALT
+goz_11_mil_yatagi;QR_GOZLER;goz 11 mil yatagi;0;;aynı kalemin eşi ya da alt parça · zarf 6 × 12 × 12;ALT
+goz_11_kapak_motoru;QR_GOZLER;goz 11 kapak motoru;0;;aynı kalemin eşi ya da alt parça · zarf 32 × 48 × 36;ALT
+goz_11_kapak_sensoru;QR_GOZLER;goz 11 kapak sensoru;0;;aynı kalemin eşi ya da alt parça · zarf 14 × 10 × 10;ALT
+goz_11_musteri_kapisi;QR_GOZLER;goz 11 musteri kapisi;0;;aynı kalemin eşi ya da alt parça · zarf 376 × 186 × 14;ALT
+goz_11_mentese_0;QR_GOZLER;goz 11 mentese 0;0;;aynı kalemin eşi ya da alt parça · zarf 20 × 30 × 16;ALT
+goz_11_mentese_1;QR_GOZLER;goz 11 mentese 1;0;;aynı kalemin eşi ya da alt parça · zarf 20 × 30 × 16;ALT
+goz_11_elektrikli_mandal;QR_GOZLER;goz 11 elektrikli mandal;0;;aynı kalemin eşi ya da alt parça · zarf 20 × 55 × 24;ALT
+goz_11_karsilik;QR_GOZLER;goz 11 karsilik;0;;aynı kalemin eşi ya da alt parça · zarf 12 × 35 × 6;ALT
+goz_20_kasasi;QR_GOZLER;goz 20 kasasi;0;;aynı kalemin eşi ya da alt parça · zarf 380 × 190 × 440;ALT
+goz_20_isitici_ped;QR_GOZLER;goz 20 isitici ped;0;;aynı kalemin eşi ya da alt parça · zarf 340 × 2 × 400;ALT
+goz_20_taban_plakasi;QR_GOZLER;goz 20 taban plakasi;0;;aynı kalemin eşi ya da alt parça · zarf 378 × 3 × 438;ALT
+goz_20_robot_kapagi;QR_GOZLER;goz 20 robot kapagi;0;;aynı kalemin eşi ya da alt parça · zarf 336 × 170 × 10;ALT
+goz_20_kapak_mili;QR_GOZLER;goz 20 kapak mili;0;;aynı kalemin eşi ya da alt parça · zarf 342 × 6 × 6;ALT
+goz_20_mil_yatagi;QR_GOZLER;goz 20 mil yatagi;0;;aynı kalemin eşi ya da alt parça · zarf 6 × 12 × 12;ALT
+goz_20_kapak_motoru;QR_GOZLER;goz 20 kapak motoru;0;;aynı kalemin eşi ya da alt parça · zarf 32 × 48 × 36;ALT
+goz_20_kapak_sensoru;QR_GOZLER;goz 20 kapak sensoru;0;;aynı kalemin eşi ya da alt parça · zarf 14 × 10 × 10;ALT
+goz_20_musteri_kapisi;QR_GOZLER;goz 20 musteri kapisi;0;;aynı kalemin eşi ya da alt parça · zarf 376 × 186 × 14;ALT
+goz_20_mentese_0;QR_GOZLER;goz 20 mentese 0;0;;aynı kalemin eşi ya da alt parça · zarf 20 × 30 × 16;ALT
+goz_20_mentese_1;QR_GOZLER;goz 20 mentese 1;0;;aynı kalemin eşi ya da alt parça · zarf 20 × 30 × 16;ALT
+goz_20_elektrikli_mandal;QR_GOZLER;goz 20 elektrikli mandal;0;;aynı kalemin eşi ya da alt parça · zarf 20 × 55 × 24;ALT
+goz_20_karsilik;QR_GOZLER;goz 20 karsilik;0;;aynı kalemin eşi ya da alt parça · zarf 12 × 35 × 6;ALT
+goz_21_kasasi;QR_GOZLER;goz 21 kasasi;0;;aynı kalemin eşi ya da alt parça · zarf 380 × 190 × 440;ALT
+goz_21_isitici_ped;QR_GOZLER;goz 21 isitici ped;0;;aynı kalemin eşi ya da alt parça · zarf 340 × 2 × 400;ALT
+goz_21_taban_plakasi;QR_GOZLER;goz 21 taban plakasi;0;;aynı kalemin eşi ya da alt parça · zarf 378 × 3 × 438;ALT
+goz_21_robot_kapagi;QR_GOZLER;goz 21 robot kapagi;0;;aynı kalemin eşi ya da alt parça · zarf 336 × 170 × 10;ALT
+goz_21_kapak_mili;QR_GOZLER;goz 21 kapak mili;0;;aynı kalemin eşi ya da alt parça · zarf 342 × 6 × 6;ALT
+goz_21_mil_yatagi;QR_GOZLER;goz 21 mil yatagi;0;;aynı kalemin eşi ya da alt parça · zarf 6 × 12 × 12;ALT
+goz_21_kapak_motoru;QR_GOZLER;goz 21 kapak motoru;0;;aynı kalemin eşi ya da alt parça · zarf 32 × 48 × 36;ALT
+goz_21_kapak_sensoru;QR_GOZLER;goz 21 kapak sensoru;0;;aynı kalemin eşi ya da alt parça · zarf 14 × 10 × 10;ALT
+goz_21_musteri_kapisi;QR_GOZLER;goz 21 musteri kapisi;0;;aynı kalemin eşi ya da alt parça · zarf 376 × 186 × 14;ALT
+goz_21_mentese_0;QR_GOZLER;goz 21 mentese 0;0;;aynı kalemin eşi ya da alt parça · zarf 20 × 30 × 16;ALT
+goz_21_mentese_1;QR_GOZLER;goz 21 mentese 1;0;;aynı kalemin eşi ya da alt parça · zarf 20 × 30 × 16;ALT
+goz_21_elektrikli_mandal;QR_GOZLER;goz 21 elektrikli mandal;0;;aynı kalemin eşi ya da alt parça · zarf 20 × 55 × 24;ALT
+goz_21_karsilik;QR_GOZLER;goz 21 karsilik;0;;aynı kalemin eşi ya da alt parça · zarf 12 × 35 × 6;ALT
+goz_30_kasasi;QR_GOZLER;goz 30 kasasi;0;;aynı kalemin eşi ya da alt parça · zarf 380 × 190 × 440;ALT
+goz_30_isitici_ped;QR_GOZLER;goz 30 isitici ped;0;;aynı kalemin eşi ya da alt parça · zarf 340 × 2 × 400;ALT
+goz_30_taban_plakasi;QR_GOZLER;goz 30 taban plakasi;0;;aynı kalemin eşi ya da alt parça · zarf 378 × 3 × 438;ALT
+goz_30_robot_kapagi;QR_GOZLER;goz 30 robot kapagi;0;;aynı kalemin eşi ya da alt parça · zarf 336 × 170 × 10;ALT
+goz_30_kapak_mili;QR_GOZLER;goz 30 kapak mili;0;;aynı kalemin eşi ya da alt parça · zarf 342 × 6 × 6;ALT
+goz_30_mil_yatagi;QR_GOZLER;goz 30 mil yatagi;0;;aynı kalemin eşi ya da alt parça · zarf 6 × 12 × 12;ALT
+goz_30_kapak_motoru;QR_GOZLER;goz 30 kapak motoru;0;;aynı kalemin eşi ya da alt parça · zarf 32 × 48 × 36;ALT
+goz_30_kapak_sensoru;QR_GOZLER;goz 30 kapak sensoru;0;;aynı kalemin eşi ya da alt parça · zarf 14 × 10 × 10;ALT
+goz_30_musteri_kapisi;QR_GOZLER;goz 30 musteri kapisi;0;;aynı kalemin eşi ya da alt parça · zarf 376 × 186 × 14;ALT
+goz_30_mentese_0;QR_GOZLER;goz 30 mentese 0;0;;aynı kalemin eşi ya da alt parça · zarf 20 × 30 × 16;ALT
+goz_30_mentese_1;QR_GOZLER;goz 30 mentese 1;0;;aynı kalemin eşi ya da alt parça · zarf 20 × 30 × 16;ALT
+goz_30_elektrikli_mandal;QR_GOZLER;goz 30 elektrikli mandal;0;;aynı kalemin eşi ya da alt parça · zarf 20 × 55 × 24;ALT
+goz_30_karsilik;QR_GOZLER;goz 30 karsilik;0;;aynı kalemin eşi ya da alt parça · zarf 12 × 35 × 6;ALT
+goz_31_kasasi;QR_GOZLER;goz 31 kasasi;0;;aynı kalemin eşi ya da alt parça · zarf 380 × 190 × 440;ALT
+goz_31_isitici_ped;QR_GOZLER;goz 31 isitici ped;0;;aynı kalemin eşi ya da alt parça · zarf 340 × 2 × 400;ALT
+goz_31_taban_plakasi;QR_GOZLER;goz 31 taban plakasi;0;;aynı kalemin eşi ya da alt parça · zarf 378 × 3 × 438;ALT
+goz_31_robot_kapagi;QR_GOZLER;goz 31 robot kapagi;0;;aynı kalemin eşi ya da alt parça · zarf 336 × 170 × 10;ALT
+goz_31_kapak_mili;QR_GOZLER;goz 31 kapak mili;0;;aynı kalemin eşi ya da alt parça · zarf 342 × 6 × 6;ALT
+goz_31_mil_yatagi;QR_GOZLER;goz 31 mil yatagi;0;;aynı kalemin eşi ya da alt parça · zarf 6 × 12 × 12;ALT
+goz_31_kapak_motoru;QR_GOZLER;goz 31 kapak motoru;0;;aynı kalemin eşi ya da alt parça · zarf 32 × 48 × 36;ALT
+goz_31_kapak_sensoru;QR_GOZLER;goz 31 kapak sensoru;0;;aynı kalemin eşi ya da alt parça · zarf 14 × 10 × 10;ALT
+goz_31_musteri_kapisi;QR_GOZLER;goz 31 musteri kapisi;0;;aynı kalemin eşi ya da alt parça · zarf 376 × 186 × 14;ALT
+goz_31_mentese_0;QR_GOZLER;goz 31 mentese 0;0;;aynı kalemin eşi ya da alt parça · zarf 20 × 30 × 16;ALT
+goz_31_mentese_1;QR_GOZLER;goz 31 mentese 1;0;;aynı kalemin eşi ya da alt parça · zarf 20 × 30 × 16;ALT
+goz_31_elektrikli_mandal;QR_GOZLER;goz 31 elektrikli mandal;0;;aynı kalemin eşi ya da alt parça · zarf 20 × 55 × 24;ALT
+goz_31_karsilik;QR_GOZLER;goz 31 karsilik;0;;aynı kalemin eşi ya da alt parça · zarf 12 × 35 × 6;ALT
+goz_40_kasasi;QR_GOZLER;goz 40 kasasi;0;;aynı kalemin eşi ya da alt parça · zarf 380 × 190 × 440;ALT
+goz_40_isitici_ped;QR_GOZLER;goz 40 isitici ped;0;;aynı kalemin eşi ya da alt parça · zarf 340 × 2 × 400;ALT
+goz_40_taban_plakasi;QR_GOZLER;goz 40 taban plakasi;0;;aynı kalemin eşi ya da alt parça · zarf 378 × 3 × 438;ALT
+goz_40_robot_kapagi;QR_GOZLER;goz 40 robot kapagi;0;;aynı kalemin eşi ya da alt parça · zarf 336 × 170 × 10;ALT
+goz_40_kapak_mili;QR_GOZLER;goz 40 kapak mili;0;;aynı kalemin eşi ya da alt parça · zarf 342 × 6 × 6;ALT
+goz_40_mil_yatagi;QR_GOZLER;goz 40 mil yatagi;0;;aynı kalemin eşi ya da alt parça · zarf 6 × 12 × 12;ALT
+goz_40_kapak_motoru;QR_GOZLER;goz 40 kapak motoru;0;;aynı kalemin eşi ya da alt parça · zarf 32 × 48 × 36;ALT
+goz_40_kapak_sensoru;QR_GOZLER;goz 40 kapak sensoru;0;;aynı kalemin eşi ya da alt parça · zarf 14 × 10 × 10;ALT
+goz_40_musteri_kapisi;QR_GOZLER;goz 40 musteri kapisi;0;;aynı kalemin eşi ya da alt parça · zarf 376 × 186 × 14;ALT
+goz_40_mentese_0;QR_GOZLER;goz 40 mentese 0;0;;aynı kalemin eşi ya da alt parça · zarf 20 × 30 × 16;ALT
+goz_40_mentese_1;QR_GOZLER;goz 40 mentese 1;0;;aynı kalemin eşi ya da alt parça · zarf 20 × 30 × 16;ALT
+goz_40_elektrikli_mandal;QR_GOZLER;goz 40 elektrikli mandal;0;;aynı kalemin eşi ya da alt parça · zarf 20 × 55 × 24;ALT
+goz_40_karsilik;QR_GOZLER;goz 40 karsilik;0;;aynı kalemin eşi ya da alt parça · zarf 12 × 35 × 6;ALT
+goz_41_kasasi;QR_GOZLER;goz 41 kasasi;0;;aynı kalemin eşi ya da alt parça · zarf 380 × 190 × 440;ALT
+goz_41_isitici_ped;QR_GOZLER;goz 41 isitici ped;0;;aynı kalemin eşi ya da alt parça · zarf 340 × 2 × 400;ALT
+goz_41_taban_plakasi;QR_GOZLER;goz 41 taban plakasi;0;;aynı kalemin eşi ya da alt parça · zarf 378 × 3 × 438;ALT
+goz_41_robot_kapagi;QR_GOZLER;goz 41 robot kapagi;0;;aynı kalemin eşi ya da alt parça · zarf 336 × 170 × 10;ALT
+goz_41_kapak_mili;QR_GOZLER;goz 41 kapak mili;0;;aynı kalemin eşi ya da alt parça · zarf 342 × 6 × 6;ALT
+goz_41_mil_yatagi;QR_GOZLER;goz 41 mil yatagi;0;;aynı kalemin eşi ya da alt parça · zarf 6 × 12 × 12;ALT
+goz_41_kapak_motoru;QR_GOZLER;goz 41 kapak motoru;0;;aynı kalemin eşi ya da alt parça · zarf 32 × 48 × 36;ALT
+goz_41_kapak_sensoru;QR_GOZLER;goz 41 kapak sensoru;0;;aynı kalemin eşi ya da alt parça · zarf 14 × 10 × 10;ALT
+goz_41_musteri_kapisi;QR_GOZLER;goz 41 musteri kapisi;0;;aynı kalemin eşi ya da alt parça · zarf 376 × 186 × 14;ALT
+goz_41_mentese_0;QR_GOZLER;goz 41 mentese 0;0;;aynı kalemin eşi ya da alt parça · zarf 20 × 30 × 16;ALT
+goz_41_mentese_1;QR_GOZLER;goz 41 mentese 1;0;;aynı kalemin eşi ya da alt parça · zarf 20 × 30 × 16;ALT
+goz_41_elektrikli_mandal;QR_GOZLER;goz 41 elektrikli mandal;0;;aynı kalemin eşi ya da alt parça · zarf 20 × 55 × 24;ALT
+goz_41_karsilik;QR_GOZLER;goz 41 karsilik;0;;aynı kalemin eşi ya da alt parça · zarf 12 × 35 × 6;ALT
+goz_50_kasasi;QR_GOZLER;goz 50 kasasi;0;;aynı kalemin eşi ya da alt parça · zarf 380 × 190 × 440;ALT
+goz_50_isitici_ped;QR_GOZLER;goz 50 isitici ped;0;;aynı kalemin eşi ya da alt parça · zarf 340 × 2 × 400;ALT
+goz_50_taban_plakasi;QR_GOZLER;goz 50 taban plakasi;0;;aynı kalemin eşi ya da alt parça · zarf 378 × 3 × 438;ALT
+goz_50_robot_kapagi;QR_GOZLER;goz 50 robot kapagi;0;;aynı kalemin eşi ya da alt parça · zarf 336 × 170 × 10;ALT
+goz_50_kapak_mili;QR_GOZLER;goz 50 kapak mili;0;;aynı kalemin eşi ya da alt parça · zarf 342 × 6 × 6;ALT
+goz_50_mil_yatagi;QR_GOZLER;goz 50 mil yatagi;0;;aynı kalemin eşi ya da alt parça · zarf 6 × 12 × 12;ALT
+goz_50_kapak_motoru;QR_GOZLER;goz 50 kapak motoru;0;;aynı kalemin eşi ya da alt parça · zarf 32 × 48 × 36;ALT
+goz_50_kapak_sensoru;QR_GOZLER;goz 50 kapak sensoru;0;;aynı kalemin eşi ya da alt parça · zarf 14 × 10 × 10;ALT
+goz_50_musteri_kapisi;QR_GOZLER;goz 50 musteri kapisi;0;;aynı kalemin eşi ya da alt parça · zarf 376 × 186 × 14;ALT
+goz_50_mentese_0;QR_GOZLER;goz 50 mentese 0;0;;aynı kalemin eşi ya da alt parça · zarf 20 × 30 × 16;ALT
+goz_50_mentese_1;QR_GOZLER;goz 50 mentese 1;0;;aynı kalemin eşi ya da alt parça · zarf 20 × 30 × 16;ALT
+goz_50_elektrikli_mandal;QR_GOZLER;goz 50 elektrikli mandal;0;;aynı kalemin eşi ya da alt parça · zarf 20 × 55 × 24;ALT
+goz_50_karsilik;QR_GOZLER;goz 50 karsilik;0;;aynı kalemin eşi ya da alt parça · zarf 12 × 35 × 6;ALT
+goz_51_kasasi;QR_GOZLER;goz 51 kasasi;0;;aynı kalemin eşi ya da alt parça · zarf 380 × 190 × 440;ALT
+goz_51_isitici_ped;QR_GOZLER;goz 51 isitici ped;0;;aynı kalemin eşi ya da alt parça · zarf 340 × 2 × 400;ALT
+goz_51_taban_plakasi;QR_GOZLER;goz 51 taban plakasi;0;;aynı kalemin eşi ya da alt parça · zarf 378 × 3 × 438;ALT
+goz_51_robot_kapagi;QR_GOZLER;goz 51 robot kapagi;0;;aynı kalemin eşi ya da alt parça · zarf 336 × 170 × 10;ALT
+goz_51_kapak_mili;QR_GOZLER;goz 51 kapak mili;0;;aynı kalemin eşi ya da alt parça · zarf 342 × 6 × 6;ALT
+goz_51_mil_yatagi;QR_GOZLER;goz 51 mil yatagi;0;;aynı kalemin eşi ya da alt parça · zarf 6 × 12 × 12;ALT
+goz_51_kapak_motoru;QR_GOZLER;goz 51 kapak motoru;0;;aynı kalemin eşi ya da alt parça · zarf 32 × 48 × 36;ALT
+goz_51_kapak_sensoru;QR_GOZLER;goz 51 kapak sensoru;0;;aynı kalemin eşi ya da alt parça · zarf 14 × 10 × 10;ALT
+goz_51_musteri_kapisi;QR_GOZLER;goz 51 musteri kapisi;0;;aynı kalemin eşi ya da alt parça · zarf 376 × 186 × 14;ALT
+goz_51_mentese_0;QR_GOZLER;goz 51 mentese 0;0;;aynı kalemin eşi ya da alt parça · zarf 20 × 30 × 16;ALT
+goz_51_mentese_1;QR_GOZLER;goz 51 mentese 1;0;;aynı kalemin eşi ya da alt parça · zarf 20 × 30 × 16;ALT
+goz_51_elektrikli_mandal;QR_GOZLER;goz 51 elektrikli mandal;0;;aynı kalemin eşi ya da alt parça · zarf 20 × 55 × 24;ALT
+goz_51_karsilik;QR_GOZLER;goz 51 karsilik;0;;aynı kalemin eşi ya da alt parça · zarf 12 × 35 × 6;ALT
+goz_dikmesi_00;QR_GOZLER;Göz taşıyıcı dikme lama 10 × 20 (delikli);8;boy 1200;üretim;ÜRETİM
+goz_dikmesi_01;QR_GOZLER;goz dikmesi 01;0;;aynı kalemin eşi ya da alt parça · zarf 10 × 1200 × 20;ALT
+goz_dikmesi_10;QR_GOZLER;goz dikmesi 10;0;;aynı kalemin eşi ya da alt parça · zarf 10 × 1200 × 20;ALT
+goz_dikmesi_11;QR_GOZLER;goz dikmesi 11;0;;aynı kalemin eşi ya da alt parça · zarf 10 × 1200 × 20;ALT
+goz_dikmesi_20;QR_GOZLER;goz dikmesi 20;0;;aynı kalemin eşi ya da alt parça · zarf 10 × 1200 × 20;ALT
+goz_dikmesi_21;QR_GOZLER;goz dikmesi 21;0;;aynı kalemin eşi ya da alt parça · zarf 10 × 1200 × 20;ALT
+goz_dikmesi_30;QR_GOZLER;goz dikmesi 30;0;;aynı kalemin eşi ya da alt parça · zarf 10 × 1200 × 20;ALT
+goz_dikmesi_31;QR_GOZLER;goz dikmesi 31;0;;aynı kalemin eşi ya da alt parça · zarf 10 × 1200 × 20;ALT
+robot_kontrol_kutusu_REZERV;QR_ROBOT_KONTROL;Fairino FR5 kontrol kutusu (robotla gelir);1;REZERV 475 × 423 × 268 (proje sabiti) · Fairino kompakt kutu 245 × 180 × 89 olabilir;montaj v56 D_ROBOT_KONTROL notu · Fairino'ya teyit;SATIN ALMA
+ana_pano_400x350x250;QR_ANA_PANO;Ana pano (PLC · ana şalter · sigortalar) 400 × 350 × 250;1;kapak robot tarafına (servis kapağından);ölçü proje sabiti · içerik ayrı pafta;SATIN ALMA
+ana_pano_ayak_rayi_0;QR_ANA_PANO;Pano taşıyıcı ray 30 × 5;2;boy 200;üretim;ÜRETİM
+ana_pano_ayak_rayi_1;QR_ANA_PANO;ana pano ayak rayi 1;0;;aynı kalemin eşi ya da alt parça · zarf 30 × 5 × 200;ALT
+ups_APC_BX500CI;QR_UPS;UPS APC Back-UPS BX500CI 500 VA / 300 W;1;115 × 185 × 213 · yalnız PLC + modem + QR kilitleri (ısıtıcılar HARİÇ);schneider-electric.com BX500CI;SATIN ALMA
+ups_altligi;QR_UPS;ups altligi;0;;aynı kalemin eşi ya da alt parça · zarf 105 × 5 × 180;ALT
+kart_plakasi_ayak;QR_KILIT_KARTI;kart plakasi ayak;0;;aynı kalemin eşi ya da alt parça · zarf 285 × 3 × 40;ALT
+kart_montaj_plakasi;QR_KILIT_KARTI;Montaj plakası 3 mm galvaniz (L ayaklı);1;285 × 387;üretim;ÜRETİM
+kilit_karti_PCB;QR_KILIT_KARTI;QR kilit / kapak / ısıtıcı kartı (12 motor sürücü + 12 mandal + 12 SSR + sensör girişleri · RS485/Ethernet);1;~270 × 200;VARSAYIM · özel kart ya da kilit dolabı kontrolcüsü;SATIN ALMA
+kilit_karti_elemanlari;QR_KILIT_KARTI;kilit karti elemanlari;0;;aynı kalemin eşi ya da alt parça · zarf 240 × 170 × 18;ALT
+kart_ayakcigi_0;QR_KILIT_KARTI;Mesafe burcu M3 × 10;4;;katalog;SATIN ALMA
+kart_ayakcigi_1;QR_KILIT_KARTI;kart ayakcigi 1;0;;aynı kalemin eşi ya da alt parça · zarf 6 × 6 × 10;ALT
+kart_ayakcigi_2;QR_KILIT_KARTI;kart ayakcigi 2;0;;aynı kalemin eşi ya da alt parça · zarf 6 × 6 × 10;ALT
+kart_ayakcigi_3;QR_KILIT_KARTI;kart ayakcigi 3;0;;aynı kalemin eşi ya da alt parça · zarf 6 × 6 × 10;ALT
+din_rayi;QR_KILIT_KARTI;DIN ray 35 × 7,5;1;boy 100;EN 60715;SATIN ALMA
+guc_kaynagi_24V_HDR-60-24;QR_KILIT_KARTI;Güç kaynağı Mean Well HDR-60-24 (DIN);1;24 V 2,5 A · kart + 12 kapak motoru + 12 mandal (aynı anda 1 göz);meanwell.com HDR-60 · 52,5 × 90 × 54,5 [ölçü teyit];SATIN ALMA
+modem_4G;QR_KILIT_KARTI;4G / Ethernet modem-router;1;zarf 160 × 130 × 35;VARSAYIM;SATIN ALMA
+ekran_7in;QR_MUSTERI_PANELI;"7"" dokunmatik ekran modülü (sipariş no / göz no gösterir)";1;zarf 175 × 110 × 25;VARSAYIM;SATIN ALMA
+qr_okuyucu;QR_MUSTERI_PANELI;Gömme 2D QR okuyucu modülü (telefon ekranından okur);1;zarf 80 × 60 × 45;VARSAYIM;SATIN ALMA
+pin_tus_takimi;QR_MUSTERI_PANELI;Paslanmaz PIN tuş takımı 4 × 4 (vandal dayanımlı);1;86 × 86 × 30;VARSAYIM;SATIN ALMA
+filtreli_fan_alt;QR_HAVALANDIRMA;Filtreli fan 120 mm 24 V (çıkış) + filtre matı;2;zarf 150 × 150 × 40 · serbest debi 90 m³/h;VARSAYIM · pano fanı sınıfı;SATIN ALMA
+filtreli_fan_ust;QR_HAVALANDIRMA;filtreli fan ust;0;;aynı kalemin eşi ya da alt parça · zarf 150 × 150 × 40;ALT

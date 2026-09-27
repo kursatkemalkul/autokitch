@@ -1,6 +1,9 @@
 <!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>STORE · çekmece tahrik sistemi</title><link rel="stylesheet" href="hat.css"></head><body>
 <div class="top"><div class="in"><div class="crumb"><a href="../">Store</a><span>&rsaquo;</span><a href="index.html">HAT</a><span>&rsaquo;</span><a href="makine.html">Makine</a><span>&rsaquo;</span><a href="store.html">1 &middot; STORE</a><span>&rsaquo;</span><b>Çekmece tahriki</b></div><div><a href="store.html">&larr; STORE</a></div></div></div>
-<div class="wrap"><h1>Çekmece tahrik sistemi<span class="tag" style="background:#d94a3a">17 çekmece · motorlu</span></h1>
+<div class="wrap"><div class="card" style="border-left:4px solid #178a56;background:#eefaf3;margin:14px 0"><b style="color:#0f6e42">27 EYLÜL 2026 · GÜNCEL: 24 MOTORLU ÇEKMECE (store_cad_v6 · alçak hat, montaj v57)</b><br>
+Tahrik ilkesi aynı (ana PC → PLC → seçici röle → motor → kayış), parçalar değişti: <b>Transmotec PD3665-24-51-BFEC</b> motor + GT3 kayış yan duvarda, tek sürücü <b>Electromen EM-324C</b> (aynı anda tek çekmece), 24 seçici röle, her çekmecede AÇIK + KAPALI reed (48), ray <b>Accuride DZ3832-0070</b> üç parçalı teleskop, <b>strok 628</b> (3,3 sn), PLC S7-1200 + 3 × SM1221 + SM1222 (çıkışlar 26/26 dolu). Çekmeceler: K1 · K2 6'şar lahmacun, K3 5 pide, K5 3 pide + tatlı, K6 3 içecek; pano K4'te Secop'un arkasında. Dolap tek sıcaklık, +3 °C (−18 °C bölme yok). Ayrıntı ve 3B model: <a href="store.html">1 · STORE</a> · parça listesi <a href="../../arastirma/1_STORE_v9/BOM_OZET.csv">1_STORE_v9</a>.<br>
+Aşağıdaki metin 8 Eylül'ün SolidWorks v3 anlatımıdır (önceki: 17 çekmece, 700 mm açılım, arkada 57 mm motor yeri).</div>
+<h1>Çekmece tahrik sistemi<span class="tag" style="background:#d94a3a">24 çekmece · motorlu</span></h1>
 <p class="lead">Her çekmece ana PC komutuyla kendi motoruyla açılır ve kapanır. Robot çekmeceyi çekmez; geldiğinde çekmece zaten açıktır. Kasada mekanizma yığını yok: motor, rayın devamına — çekmecenin arkasında kalan 57 mm boşluğa — oturur.</p>
 
 <figure><img src="img/cekmece_tahrik_animasyon.gif" alt="Çekmece açılıp kapanma animasyonu — SolidWorks modeli" loading="lazy"><figcaption>Tek çekmece tahrik detayı — motor, kayış, kablo ve sensör görünür (üst raf gizlendi)</figcaption></figure>
@@ -47,7 +50,7 @@
 
 <h2>5 · Soru işaretleri</h2><div class="card"><table>
 <tr><th style="width:44px">#</th><th>Problem</th><th style="width:110px">Durum</th><th>Çözüm / not</th></tr>
-<tr><td><b>T1</b></td><td>&minus;18 °C bölmedeki 4 çekmecede motor/kayış</td><td><span class="st on">AÇIK</span></td><td>düşük sıcaklık gresi + IP67 motor; tedarikçiye &minus;25 °C sürüm sorulacak</td></tr>
+<tr><td><b>T1</b></td><td>&minus;18 °C bölmedeki 4 çekmecede motor/kayış</td><td><span class="st ok">KALKTI</span></td><td>dolap v6'da tek sıcaklık +3 °C, donmuş bölme yok (önceki: düşük sıcaklık gresi + IP67 motor)</td></tr>
 <tr><td><b>T2</b></td><td>Kayış gerginliği zamanla düşerse</td><td><span class="st on">ÖNERİ VAR</span></td><td>gergi makarası braketi (modelde var), 6 ayda bir bakım kalemi</td></tr>
 <tr><td><b>T3</b></td><td>Sıkışma / parmak emniyeti</td><td><span class="st ok">ÇÖZÜLDÜ</span></td><td>akım eşiği + yumuşak kalkış; dükkân tarafında çekmece yok, hepsi servis alanında</td></tr>
 <tr><td><b>T4</b></td><td>Temizlik: kayış ve motor gıda alanında</td><td><span class="st on">ÖNERİ VAR</span></td><td>kayış hattı yan duvarda, ürünün altında değil; motor kutusu kapalı</td></tr>
@@ -55,6 +58,7 @@
 </table></div>
 
 <h2>6 · Sürüm geçmişi</h2><ul class="ver">
+<li><b>store_cad_v6 (27 Eyl) · GEÇERLİ:</b> tek parça çekmeceli dolap 0–4000 × 788, 24 motorlu çekmece, strok 628, Transmotec + EM-324C + seçici röle (<a href="store.html">STORE</a>)</li>
 <li>v3 (8 Eyl): motor kasada sabit, kayışla tahrik, çekmece 700 derin — arkadaki 57 mm motora ayrıldı; detay montaj + animasyon</li>
 <li>v2 (8 Eyl): hazır motorlu teleskopik ray kararı (kremayer-pinyon tasarımı iptal — fazla karmaşık)</li>
 <li>v1 (8 Eyl): motorsuz seçenek (robot çeker) değerlendirildi — reddedildi, otomatik olacak</li>

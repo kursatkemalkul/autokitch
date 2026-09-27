@@ -54,11 +54,11 @@ async function kur(kutu) {
   const g1 = new THREE.DirectionalLight(0xffffff, 1.0); g1.position.set(1.4, 2.2, 1.6); sahne.add(g1);
   const g2 = new THREE.DirectionalLight(0xffffff, 0.35); g2.position.set(-1.2, 1.0, -1.4); sahne.add(g2);
 
-  const M = await (await fetch('../hat3d/sim_makine_v7.json?v=1')).json();
+  const M = await (await fetch('../hat3d/sim_makine_v7.json?v=57')).json();   // v57: ofset y 892 (alçak hat: disk 1000)
   K.kur(M, izle);
   const OFS = M.ofset, mak = p => [p[0] + OFS[0], p[1] + OFS[1], p[2] + OFS[2]];
 
-  const glb = await new GLTFLoader().loadAsync('../hat3d/modul_C.glb?v=47');
+  const glb = await new GLTFLoader().loadAsync('../hat3d/modul_C.glb?v=57');
   const kok = glb.scene;
   const G = {};
   const agalar = []; kok.traverse(o => { if (o.isMesh) agalar.push(o); });
