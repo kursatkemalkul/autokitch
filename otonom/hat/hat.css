@@ -34,7 +34,7 @@ figure{margin:12px 0}figure img{width:100%;display:block;border:1px solid var(--
    viewport genisligine oturur (wrap ortalandigi icin 50% - 50vw ile tasirilir). */
 .m3{position:relative;margin:16px 0 0;border:0;border-radius:0;overflow:hidden;background:#15181d;
     width:100vw;margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw)}
-.m3 model-viewer{display:block;width:100%;height:calc(100vh - 208px);min-height:460px;background:#15181d;--poster-color:transparent}   /* koyu zemin: beyaz POM · paslanmaz · seffaf PC ancak boyle okunuyor */
+.m3 model-viewer{display:block;width:100%;height:calc(100vh - 70px);min-height:640px;background:#15181d;--poster-color:transparent}   /* koyu zemin: beyaz POM · paslanmaz · seffaf PC ancak boyle okunuyor */
 .m3 .ip{position:absolute;left:22px;bottom:12px;color:#6d7682;font-size:12px;pointer-events:none}
 .m3ar .ip{position:static;flex:1 1 100%;margin:0;color:#6d7682;font-size:11.5px;line-height:1.35}
 .m3 .et{position:absolute;left:22px;top:14px;display:none;max-width:62%;padding:10px 13px;border-radius:11px;
@@ -79,13 +79,13 @@ figure{margin:12px 0}figure img{width:100%;display:block;border:1px solid var(--
   .m3ar input[type=range]{flex:1 1 120px;width:auto;min-width:110px}
   .m3ar .deg,.m3ar .snc{min-width:0;font-size:11.5px}
   .m3ar .ip{font-size:11px}
-  .m3 model-viewer{height:calc(100vh - 260px);min-height:380px}
+  .m3 model-viewer{height:calc(100vh - 150px);min-height:480px}
 }
 
 /* ---- sayfa içi canlı simülasyon (sim3d.js) ---- */
 .m3.sim-on model-viewer,.m3.sim-on .et,.m3.sim-on .ar{display:none}
 .m3.sim-on .m3ar{display:none}
-.m3 .simv{display:none;position:relative;width:100%;height:calc(100vh - 208px);min-height:460px;background:#15181d}
+.m3 .simv{display:none;position:relative;width:100%;height:calc(100vh - 70px);min-height:640px;background:#15181d}
 .m3 .simv canvas{display:block}
 .m3 .simp{display:none;position:absolute;right:0;top:0;bottom:0;width:430px;max-width:92vw;z-index:6;
           background:rgba(20,24,30,.97);border-left:1px solid #2a3039;backdrop-filter:blur(6px)}
