@@ -147,29 +147,31 @@
       gO.appendChild(sonucYazi);
       cubuk.appendChild(gO);
 
-      // v18 · ÖN KAPAKLAR: şeffaf (varsayılan) · gizli (içerisi rahat görünür) · kapalı (opak, temiz cephe) — montajın 'on_seffaf' malzemeleri
+      // v19 · ÖN KAPAKLAR KAYDIRICISI (Kemal): tam sağ = düz metal sac kapak (304 fırçalı, opak, cam tonu yok) · sola çektikçe saydamlaşır · tam sol = görünmez
       const kapMat = mv.model ? mv.model.materials.filter(m => /__on_seffaf$/.test(m.name)) : [];
       if (kapMat.length) {
-        const kapOrj = kapMat.map(m => ({ m, c: m.pbrMetallicRoughness.baseColorFactor.slice() }));
         const gC = el('div', 'grp');
         gC.appendChild(el('b', null, 'Ön kapaklar'));
-        const kapakMod = mod => {
-          kapOrj.forEach(o => {
-            const c = mod === 'kapali' ? [0.80, 0.82, 0.85, 1] : o.c.slice();
-            if (mod === 'gizli') c[3] = 0;
-            o.m.pbrMetallicRoughness.setBaseColorFactor(c);
-            o.m.setAlphaMode(mod === 'kapali' ? 'OPAQUE' : 'BLEND');
+        const kb = el('input'); kb.type = 'range'; kb.min = 0; kb.max = 100; kb.step = 1;
+        kb.title = 'sağ: metal kapak · sol: görünmez (içerisi)';
+        const ky = el('span', 'deg', '');
+        const kapak = v => {
+          v = +v; const a = v / 100;
+          kapMat.forEach(m => {
+            m.pbrMetallicRoughness.setBaseColorFactor([0.80, 0.82, 0.85, a]);       // SAC tonu (montaj MALZEME 'sac'): metal, cam tonu yok
+            m.pbrMetallicRoughness.setMetallicFactor(0.85);
+            m.pbrMetallicRoughness.setRoughnessFactor(0.32);
+            m.setAlphaMode(v >= 100 ? 'OPAQUE' : 'BLEND');
           });
-          gC.querySelectorAll('button').forEach(b => b.classList.toggle('on', b.dataset.km === mod));
-          try { localStorage.setItem('ak_on_kapak', mod); } catch (e) {}
+          ky.textContent = v >= 100 ? 'metal' : (v <= 0 ? 'gizli' : '%' + v);
+          try { localStorage.setItem('ak_kapak_saydam', String(v)); } catch (e) {}
         };
-        [['seffaf', 'şeffaf', 'kapaklar yarı saydam'], ['gizli', 'gizle', 'kapaklar görünmez — içerisi rahat görünür'], ['kapali', 'kapalı', 'kapaklar opak — temiz ön cephe']].forEach(([k, ad, t]) => {
-          const d = el('button', null, ad); d.dataset.km = k; d.title = t; d.onclick = () => kapakMod(k); gC.appendChild(d);
-        });
+        kb.oninput = () => kapak(kb.value);
+        gC.appendChild(kb); gC.appendChild(ky);
         cubuk.appendChild(gC);
-        let _km = 'seffaf';
-        try { _km = localStorage.getItem('ak_on_kapak') || 'seffaf'; } catch (e) {}
-        kapakMod(_km);
+        let _v = 100;
+        try { const _s = localStorage.getItem('ak_kapak_saydam'); if (_s !== null) _v = +_s; } catch (e) {}
+        kb.value = _v; kapak(_v);
       }
 
       const ip = kap.querySelector('.ip');                    // "sürükle: döndür ..." yazısı çubuğun içine girer;
