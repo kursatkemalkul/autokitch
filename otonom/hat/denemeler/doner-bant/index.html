@@ -1,0 +1,14 @@
+<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="only light"><meta name="robots" content="noindex,nofollow,noarchive"><title>2 · Döner bantlı tabla — AUTOKITCH</title><link rel="stylesheet" href="../tabla-denemeleri.css?v=1"></head>
+<body data-method="belt"><header><a href="../">← Mekanizma denemeleri</a> · <a href="../katlanan-tabla/">1 · Katlanan tabla</a></header><main>
+<h1>2 · Dönen, rayda ilerleyen bantlı tabla</h1>
+<p class="meta">Pres altında bant ve dönüş kilitli · topping altında tabla döner · fırında yalnız bant çalışır</p>
+<div class="controls"><button id="play" class="primary" disabled>3D yükleniyor…</button><button id="iso">Çapraz / takip</button><button id="side">Yandan / takip</button><button id="top">Üstten / takip</button><button id="all">Genel görünüş</button><label>İzleme hızı <select id="speed"><option value="1">1× gerçek süre</option><option value="4">4×</option><option value="8" selected>8×</option></select></label></div>
+<div id="view" class="view" role="img" aria-label="Bant kaseti pres altında sabit kalır, rayda topping istasyonuna ilerler ve döner; fırın önünde dönüşü durur ve kendi bandı hamuru fırın bandına aktarır."></div>
+<div id="state" class="state" aria-live="polite"></div><input type="range" id="time" min="0" max="65" step="0.02" value="0" aria-label="Animasyon konumu">
+<div class="numbers"><span id="elapsed"></span><span id="detail"></span><span id="transfer"></span></div>
+<div class="controls"><label class="sweep-label"><input id="envelope" type="checkbox" checked>Ø340 eski sınır / Ø495 yeni dönüş alanı</label></div>
+<p class="warning">360 × 340 mm kasetin dönüş çapı en az 495 mm; dış motor bunun dışında kalır. Mevcut Ø340 diskin yerine doğrudan sığmaz. Pres yükünü bant değil, altındaki destek plakası ve mekanik kilit taşımalıdır.</p>
+<p class="note">Yavaş fırınla eş hız: 300 mm ürünün geçişi ≈ 47,9 sn; bu taslaktaki 32 mm ön mesafe dahil ≈ 53,0 sn. Saatte 70 ürün için toplam çevrim bütçesi 51,4 sn: yalnız bu aktarım bile bütçeyi aşıyor. Diğer adım süreleri temsili; pişme süresi henüz doğrulanmış değil.</p>
+<p class="note">Fırın hızı: 1316 mm ÷ 210 sn = 6,27 mm/sn varsayımı. Aktarımda iki bant aynı hızda; besleyiciyi tek başına hızlandırmak hamuru yığabilir. Hızlı aktarım için fırın hız rejimi veya ayrı biriktirme / yükleme düzeni ayrıca çözülmeli. Hamur deformasyonu simüle edilmedi; ana CAD değiştirilmedi.</p>
+<p class="compare"><a href="../katlanan-tabla/">← İlk fikri gör: eğilen, ucu içeri katlanan tabla</a></p><div id="error" class="error" role="alert" hidden></div>
+</main><script type="module" src="../tabla-denemeleri.js?v=1"></script></body></html>
