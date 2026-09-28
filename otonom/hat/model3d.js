@@ -147,6 +147,31 @@
       gO.appendChild(sonucYazi);
       cubuk.appendChild(gO);
 
+      // v18 · ÖN KAPAKLAR: şeffaf (varsayılan) · gizli (içerisi rahat görünür) · kapalı (opak, temiz cephe) — montajın 'on_seffaf' malzemeleri
+      const kapMat = mv.model ? mv.model.materials.filter(m => /__on_seffaf$/.test(m.name)) : [];
+      if (kapMat.length) {
+        const kapOrj = kapMat.map(m => ({ m, c: m.pbrMetallicRoughness.baseColorFactor.slice() }));
+        const gC = el('div', 'grp');
+        gC.appendChild(el('b', null, 'Ön kapaklar'));
+        const kapakMod = mod => {
+          kapOrj.forEach(o => {
+            const c = mod === 'kapali' ? [0.80, 0.82, 0.85, 1] : o.c.slice();
+            if (mod === 'gizli') c[3] = 0;
+            o.m.pbrMetallicRoughness.setBaseColorFactor(c);
+            o.m.setAlphaMode(mod === 'kapali' ? 'OPAQUE' : 'BLEND');
+          });
+          gC.querySelectorAll('button').forEach(b => b.classList.toggle('on', b.dataset.km === mod));
+          try { localStorage.setItem('ak_on_kapak', mod); } catch (e) {}
+        };
+        [['seffaf', 'şeffaf', 'kapaklar yarı saydam'], ['gizli', 'gizle', 'kapaklar görünmez — içerisi rahat görünür'], ['kapali', 'kapalı', 'kapaklar opak — temiz ön cephe']].forEach(([k, ad, t]) => {
+          const d = el('button', null, ad); d.dataset.km = k; d.title = t; d.onclick = () => kapakMod(k); gC.appendChild(d);
+        });
+        cubuk.appendChild(gC);
+        let _km = 'seffaf';
+        try { _km = localStorage.getItem('ak_on_kapak') || 'seffaf'; } catch (e) {}
+        kapakMod(_km);
+      }
+
       const ip = kap.querySelector('.ip');                    // "sürükle: döndür ..." yazısı çubuğun içine girer;
       if (ip) cubuk.appendChild(ip);                          // mutlak konumdayken mobilde düğmelerin üstüne biniyordu
       kap.appendChild(cubuk);
