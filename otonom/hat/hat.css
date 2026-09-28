@@ -116,3 +116,8 @@ figure{margin:12px 0}figure img{width:100%;display:block;border:1px solid var(--
 .simbtn{display:inline-block;padding:11px 18px;border:0;border-radius:10px;background:#2f7d4f;color:#fff;font:700 14px/1 inherit;cursor:pointer}
 .simbtn:disabled{background:#4a5260;cursor:default}
 @media (max-width:760px){.m3 .simp{width:100%;max-width:100%}.m3 .simv{height:calc(100vh - 260px)}}
+/* v17 · fare etiketi (parça adı) — model3d.js */
+.pet{position:fixed;z-index:60;display:none;max-width:290px;padding:6px 9px;border-radius:8px;background:rgba(22,26,33,.93);color:#fff;
+  font:12.5px/1.35 system-ui,-apple-system,"Segoe UI",sans-serif;pointer-events:none;box-shadow:0 4px 14px rgba(0,0,0,.25)}
+.pet b{display:block;font-weight:600}
+.pet span{display:block;margin-top:2px;color:#b9c2cf;font-size:11.5px}

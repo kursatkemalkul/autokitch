@@ -23,6 +23,8 @@
     const kap = mv.closest('.m3') || mv.parentNode;
     let BIRIM = {}, ASIL = {}, GRUP = {}, secili = null, kilit = null, gercekVar = false;
 
+    const MN = (x, y) => mv.materialFromPoint(x, y);                 // PENCERE koordinatı (1. tuzak; getNDC her seferinde taze rect okur)
+    const PN = (x, y) => mv.positionAndNormalFromPoint(x, y);
     const anahtar = ad => ad.split('__')[0];                        // M<modül>_<kod>__<ton> → birim anahtarı
     const gercek = b => b && b.durum && b.durum.indexOf('GERCEK') === 0;
     function grupAnahtari(b) { return opt.grup === 'modul' ? b.modul : b.kod; }
@@ -53,7 +55,7 @@
     }
 
     function noktada(ev) {
-      const m = mv.materialFromPoint(ev.clientX, ev.clientY);        // PENCERE koordinatı (1. tuzak)
+      const m = MN(ev.clientX, ev.clientY);                         // PENCERE koordinatı (1. tuzak)
       if (!m) return null;
       const b = BIRIM[anahtar(m.name)];
       if (!b) return null;
@@ -253,7 +255,7 @@
 
     // ------------------------------------------------------------------ ÖLÇÜ
     function olcNokta(ev) {
-      const p = mv.positionAndNormalFromPoint(ev.clientX, ev.clientY);   // PENCERE koordinatı (1. tuzak)
+      const p = PN(ev.clientX, ev.clientY);   // PENCERE koordinatı (1. tuzak)
       if (!p) { sonucYazi.textContent = 'boşluğa tıkladın — parçanın üstüne tıkla'; return; }
       if (nokta.length >= 2) nokta = [];
       nokta.push([p.position.x, p.position.y, p.position.z]);
@@ -306,6 +308,59 @@
       let k = 0;
       (function bekle() { cizgiTazele(); if (++k < 12) requestAnimationFrame(bekle); })();   // hotspot'lar yerleşene kadar
     }
+
+    // ================================================================== v17 · FARE ETİKETİ: fare ~0,45 sn durunca yanında PARÇA ADI
+    // GLB parçaları birim + malzemeye göre birleşik → parça adı parca_kutulari.json'daki sınır kutularından bulunur (hat_montaj_v62).
+    // Şeffaf ön kapağa değerse ışın boyunca arkasındaki ilk parçaya geçilir (büyük kabuk kutuları atlanır).
+    let PK = null, PB = {}, M2K = {}, tip = null, tipZam = null;
+    if (opt.parca) fetch(opt.parca).then(r => r.json()).then(D => {
+      PK = D.parca; PB = D.birim; Object.keys(PB).forEach(k => { M2K[PB[k].mal] = k; });
+    }).catch(() => {});
+    const icinde = (k, p, pay) => p[0] >= k[2] - pay && p[0] <= k[3] + pay && p[1] >= k[4] - pay && p[1] <= k[5] + pay && p[2] >= k[6] - pay && p[2] <= k[7] + pay;
+    const hacim = k => (k[3] - k[2]) * (k[5] - k[4]) * (k[7] - k[6]);
+    function enKucuk(liste, p, pay, secici) {
+      let en = null;
+      liste.forEach(([kod, k]) => { if (secici(k) && icinde(k, p, pay) && (!en || hacim(k) < hacim(en[1]))) en = [kod, k]; });
+      return en;
+    }
+    function parcaBul(ev) {
+      if (!PK) return null;
+      const m = MN(ev.clientX, ev.clientY), h = PN(ev.clientX, ev.clientY);
+      if (!m || !h) return null;
+      const P = [h.position.x * 1000, h.position.y * 1000, h.position.z * 1000];
+      if (m.name.indexOf('insan') === 0) return ['INSAN_180cm', PK.INSAN_180cm[0]];
+      const kod = M2K[m.name.split('__')[0]];
+      const hepsi = []; Object.keys(PK).forEach(kd => PK[kd].forEach(k => hepsi.push([kd, k])));
+      if (!m.name.endsWith('__on_seffaf')) {
+        const kendi = kod && PK[kod] ? PK[kod].map(k => [kod, k]) : hepsi;
+        return enKucuk(kendi, P, 3, () => true) || enKucuk(hepsi, P, 3, () => true);
+      }
+      // şeffaf kapak: kameradan geçen ışın boyunca ilerle, ilk dolu (şeffaf olmayan, dev kabuk olmayan) parçayı bul
+      const o = mv.getCameraOrbit(), t = mv.getCameraTarget();
+      const C = [t.x + o.radius * Math.sin(o.phi) * Math.sin(o.theta), t.y + o.radius * Math.cos(o.phi), t.z + o.radius * Math.sin(o.phi) * Math.cos(o.theta)].map(v => v * 1000);
+      let d = [P[0] - C[0], P[1] - C[1], P[2] - C[2]]; const n = Math.hypot(...d); d = d.map(v => v / n);
+      for (let s = 2; s < 2000; s += 5) {
+        const Q = [P[0] + d[0] * s, P[1] + d[1] * s, P[2] + d[2] * s];
+        const bul = enKucuk(hepsi, Q, 0, k => !k[1] && hacim(k) < 3e7);   // 0,03 m³ üstü kabuk / PU atlanır (çekmece kutusu 1,7e7)
+        if (bul) return bul;
+      }
+      return enKucuk(hepsi, P, 3, () => true);
+    }
+    function tipGizle() { clearTimeout(tipZam); if (tip) tip.style.display = 'none'; }
+    mv.addEventListener('pointermove', e => {
+      tipGizle();
+      if (!opt.parca || bas || olcModu) return;
+      const cx = e.clientX, cy = e.clientY;
+      tipZam = setTimeout(() => {
+        const b = parcaBul({ clientX: cx, clientY: cy }); if (!b) return;
+        if (!tip) { tip = document.createElement('div'); tip.className = 'pet'; document.body.appendChild(tip); }
+        const [kod, k] = b, ba = PB[kod] ? PB[kod].ad : '';
+        tip.innerHTML = '<b>' + k[0].replace(/_/g, ' ') + '</b>' + (ba ? '<span>' + (ba.length > 90 ? ba.slice(0, 90) + '…' : ba) + '</span>' : '');
+        tip.style.left = Math.min(cx + 14, innerWidth - 300) + 'px'; tip.style.top = (cy + 16) + 'px'; tip.style.display = 'block';
+      }, 450);
+    });
+    mv.addEventListener('pointerleave', tipGizle);
+    mv.addEventListener('pointerdown', tipGizle);
 
     return {
       veri(birimler) { birimler.forEach(b => { BIRIM[b.mal] = b; }); kur(); },

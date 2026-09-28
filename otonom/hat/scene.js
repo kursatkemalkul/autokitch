@@ -21,6 +21,30 @@ function buildScene(el, items, opts){
       if(it.href){meshes.push(m)} byItem[it.id].meshes.push(m);
     });
   });
+  // GERÇEK MODEL (opts.glb): makinenin üretim GLB'si (m, x · y yukarı · z sokağa doğru) sahneye ölçekli oturur; parçanın adı
+  // parca_kutulari.json'dan (hat_montaj_v62) bulunur; şeffaf ön kapaklar ışında atlanır. Kutu öğeleriyle aynı etiket / tık düzeni.
+  let glbRoot=null, PK=null, M2K={}, PB={}, glbSecili=false;
+  if(opts.glb&&THREE.GLTFLoader){
+    new THREE.GLTFLoader().load(opts.glb.url, g=>{
+      glbRoot=g.scene; glbRoot.scale.setScalar(opts.glb.scale); glbRoot.position.set(opts.glb.pos[0],opts.glb.pos[1],opts.glb.pos[2]);
+      glbRoot.traverse(o=>{ if((opts.glb.gizle||[]).some(n=>o.name.indexOf(n)===0)) o.visible=false;
+        // bu sahnede ortam haritası yok → metal (paslanmaz, sac) PBR'da siyah görünür: metalikliği kıs, rengi koru
+        if(o.material) [].concat(o.material).forEach(m=>{ if(m.metalness!==undefined){ m.metalness=Math.min(m.metalness,0.15); m.roughness=Math.max(m.roughness,0.55); } }); });
+      scene.add(glbRoot); if(opts.glb.yuklendi) opts.glb.yuklendi();
+    }, undefined, ()=>{ if(opts.glb.hata) opts.glb.hata(); });
+    if(opts.glb.parca) fetch(opts.glb.parca).then(r=>r.json()).then(D=>{PK=D.parca; PB=D.birim; Object.keys(PB).forEach(k=>{M2K[PB[k].mal]=k;});}).catch(()=>{});
+  }
+  const gorunur=o=>{ for(;o;o=o.parent){ if(!o.visible) return false; } return true; };
+  function glbParca(h){
+    if(!PK) return null;
+    const p=glbRoot.worldToLocal(h.point.clone()).multiplyScalar(1000), P=[p.x,p.y,p.z];
+    const mn=(h.object.material&&h.object.material.name)||''; if(mn.indexOf('insan')===0) return null;
+    const kod=M2K[mn.split('__')[0]], hac=k=>(k[3]-k[2])*(k[5]-k[4])*(k[7]-k[6]);
+    const ic=k=>P[0]>=k[2]-3&&P[0]<=k[3]+3&&P[1]>=k[4]-3&&P[1]<=k[5]+3&&P[2]>=k[6]-3&&P[2]<=k[7]+3;
+    let en=null; const bak=(kd)=>(PK[kd]||[]).forEach(k=>{ if(ic(k)&&(!en||hac(k)<hac(en[1]))) en=[kd,k]; });
+    if(kod) bak(kod); if(!en) Object.keys(PK).forEach(bak);
+    return en?{ad:en[1][0].replace(/_/g,' '),birim:(PB[en[0]]||{}).ad||''}:null;
+  }
   const tip=document.createElement('div'); tip.className='tip'; el.appendChild(tip);
   const ray=new THREE.Raycaster(); const mouse=new THREE.Vector2(); let hover=null;
   function setHover(it){
@@ -33,12 +57,19 @@ function buildScene(el, items, opts){
   el.addEventListener('pointermove',e=>{
     const r=el.getBoundingClientRect(); mouse.x=((e.clientX-r.left)/r.width)*2-1; mouse.y=-((e.clientY-r.top)/r.height)*2+1;
     ray.setFromCamera(mouse,cam); const hit=ray.intersectObjects(meshes,false)[0];
-    if(hit){ setHover(hit.object.userData.item); tip.style.display='block'; tip.style.left=(e.clientX-r.left)+'px'; tip.style.top=(e.clientY-r.top)+'px'; tip.textContent=hover.name+(hover.href?'  →':''); }
+    const gh=glbRoot?ray.intersectObject(glbRoot,true).find(h=>gorunur(h.object)&&!((h.object.material&&h.object.material.name)||'').endsWith('__on_seffaf')):null;
+    glbSecili=false;
+    if(gh&&(!hit||gh.distance<hit.distance)){
+      setHover(null); glbSecili=!!opts.glb.href; el.style.cursor=glbSecili?'pointer':'default';
+      const pr=glbParca(gh); tip.style.display='block'; tip.style.left=(e.clientX-r.left)+'px'; tip.style.top=(e.clientY-r.top)+'px';
+      tip.textContent=(pr?pr.ad+'  ·  '+pr.birim.slice(0,70):opts.glb.name)+(glbSecili?'  →':'');
+    }
+    else if(hit){ setHover(hit.object.userData.item); tip.style.display='block'; tip.style.left=(e.clientX-r.left)+'px'; tip.style.top=(e.clientY-r.top)+'px'; tip.textContent=hover.name+(hover.href?'  →':''); }
     else { setHover(null); tip.style.display='none'; }
   });
   el.addEventListener('pointerleave',()=>{setHover(null); tip.style.display='none'});
   let down=null; el.addEventListener('pointerdown',e=>{down=[e.clientX,e.clientY]});
-  el.addEventListener('pointerup',e=>{ if(down&&Math.hypot(e.clientX-down[0],e.clientY-down[1])<6&&hover&&hover.href){ location.href=hover.href; } down=null; });
+  el.addEventListener('pointerup',e=>{ if(down&&Math.hypot(e.clientX-down[0],e.clientY-down[1])<6){ if(hover&&hover.href) location.href=hover.href; else if(glbSecili) location.href=opts.glb.href; } down=null; });
   window.addEventListener('resize',()=>{const W=el.clientWidth,H=el.clientHeight; cam.aspect=W/H; cam.updateProjectionMatrix(); ren.setSize(W,H)});
   (function loop(){ requestAnimationFrame(loop); ctr.update(); ren.render(scene,cam); })();
 }

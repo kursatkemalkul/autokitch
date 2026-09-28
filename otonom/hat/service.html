@@ -3,7 +3,7 @@
 <div class="wrap"><h1>S · SERVİS / TESLİM — QR dolabı + personel tezgâhı<span class="tag" style="background:#c47c18">QR 860 × 520 × 2050 · tezgâh 600 × 450 × 900</span></h1>
 <p class="lead">Makinenin karşısındaki iki gövde. <b>QR teslim dolabı</b> koridorun karşısında durur: robot kutuyu arkadan göze koyar, müşteri önden kodla alır; robotun kontrol kutusu, ana pano, UPS ve kilit kartı da bu dolabın içinde. <b>Personel tezgâhı</b> ön zonda duvara yaslı: temizlik, sarf, çöp ve kişisel çekmece. Modelin altındaki çubuktan <b>kesit</b> alabilir (X/Y/Z) ve iki noktaya tıklayıp <b>ölçü</b> çıkarabilirsin.</p>
 <div class="m3">
-  <model-viewer id="mv" loading="eager" src="../hat3d/modul_S.glb?v=57" ios-src="../hat3d/modul_S.usdz?v=57" alt="S · SERVİS / TESLİM — QR teslim dolabı + personel tezgâhı"
+  <model-viewer id="mv" loading="eager" src="../hat3d/modul_S.glb?v=63" ios-src="../hat3d/modul_S.usdz?v=63" alt="S · SERVİS / TESLİM — QR teslim dolabı + personel tezgâhı"
       camera-controls touch-action="pan-y" shadow-intensity="0.6" exposure="1.0" environment-image="neutral"
       camera-orbit="200deg 76deg auto" camera-target="4.68m 1.02m 1.27m" field-of-view="30deg" min-field-of-view="5deg"
       ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
@@ -72,7 +72,7 @@ const ROZET = {GERCEK:['rz-g','gerçek model'], GERCEK_MODUL:['rz-g','gerçek mo
   KUTU:['rz-k','kutu'], KATALOG:['rz-c','katalog']};
 const rzOf = d => ROZET[d] || ((d || '').indexOf('GERCEK') === 0 ? ['rz-g', 'gerçek model'] : ['rz-k', (d || '?').toLowerCase()]);
 const YER = {'hat/dolap.html': '#qr', 'hat/service.html': '#tezgah'};   // S birimleri bu sayfada anlatılıyor (dolap.html 7 Eyl'in eski teslim dolabı)
-const git = b => b.sayfa ? (YER[b.sayfa] || '../' + b.sayfa) : '';
+const git = b => (b.kod || '').indexOf('QR_') === 0 ? '#qr' : (b.kod || '').indexOf('TEZGAH_') === 0 ? '#tezgah' : b.sayfa ? (YER[b.sayfa] || '../' + b.sayfa) : '';   // v58: kod önekine göre (QR_* → #qr, TEZGAH_* → #tezgah)
 const M = model3d({
   mv:'mv', etiket:'et', grup:'kod',
   hedef: g => git(g.birimler[0]),
