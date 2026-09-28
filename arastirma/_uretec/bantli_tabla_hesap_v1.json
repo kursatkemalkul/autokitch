@@ -1,0 +1,306 @@
+{
+ "surum": "bantli_tabla_hesap_v1",
+ "kaynaklar": {
+  "tabla_yigini": "TOPPING v26: ayar bileziği 972,77–978 · göbek 978–989 · Ø340 tabla 989–992 · disk 992–1000 (baglam_ozet)",
+  "bant": "Forbo Siegling ürün föyü TR-906726 (E 3/1 U0/U2 ailesi): kalınlık 1,15 · k1% gevşemiş 3 N/mm · 1,1 kg/m² · bıçak kenar r ≥ 3 mm · −30…+100 °C · FDA+AB · alt yüz üretan emdirilmiş kumaş; sürtünme çelik 0,18 (Forbo arama özeti)",
+  "yay": "centuryspring.com/shop/62266scs (ürün sayfası): 316 paslanmaz basma yayı, uçlar kapalı-taşlanmış, 5,41 sarım",
+  "acici": "konili döner açıcı baskısı 482 N (pnömatik; TOPPING v21 açıcı hesabı)",
+  "gt2": "GT2 2 mm hatve · burun 20 diş (Ø12,73) · rotor 28 diş (Ø17,83) · kapalı halka Gates 140-2GT-6 (70 diş, 6 mm)",
+  "miknatis": "supermagnete S-10-05-N (Ø10×5, N42, ~2,6 kg) ürün sayfası; 316 kaba lazer kaynaklı kapakla GÖMÜLÜ (gıda teması yok)",
+  "motor": "katalog/step/stp-mtr-23079.step (projede mevcut GERÇEK CAD); tutma ~1,0 N·m [V: föy]",
+  "firin_agzi": "fırın v8 (ana klasör, izlenmiyor): kabuk 2500–2501,5 · ağız y 984–1042 · z −341…−10"
+ },
+ "varsayimlar": [
+  "MT (mat) + HACCP varyantının kendi föyü okunamadı; aile değerleri (906726) kullanıldı — bayiden teyit",
+  "yatak sehiminde koni hattı z boyunca düzgün yayılı yük + 120 mm etkin şerit (güvenli yan); plaka etkisi tam genişlikte 0.19 mm",
+  "bükme + rulman direnci 1 N (bilyalı paslanmaz rulmanlar, düşük gerginlik)",
+  "kavrama torku: eksenel dipol modeli, kesme = 0,45 × çekme, 6 çift × r 12.5 — gerçek değer ±%50; masa denemesi (2 disk + tork anahtarı)"
+ ],
+ "denetim": [
+  {
+   "ad": "yay çalışma sıkışması en çok sınırının altında",
+   "deger": 3.3,
+   "sart": "< 3,33 mm",
+   "gecti": true
+  },
+  {
+   "ad": "dönüş kolu tabana değmez (sarkma dahil)",
+   "deger": 0.683,
+   "sart": "> 0,5 mm",
+   "gecti": true
+  },
+  {
+   "ad": "rulo sehimi 2T altında",
+   "deger": 0.125,
+   "sart": "< 0,25 mm",
+   "gecti": true
+  },
+  {
+   "ad": "yatak sehimi (en kötü şerit)",
+   "deger": 0.447,
+   "sart": "< 0,5 mm (hamur kalınlığı 5–8)",
+   "gecti": true
+  },
+  {
+   "ad": "burun rulosunda bant kaymaz",
+   "deger": 9.911,
+   "sart": "> 3 kat",
+   "gecti": true
+  },
+  {
+   "ad": "mıknatıslı kavrama torku / tasarım torku",
+   "deger": 5.248,
+   "sart": "> 1,5",
+   "gecti": true
+  },
+  {
+   "ad": "aktarma süresi",
+   "deger": 1.255,
+   "sart": "< 1,6 s",
+   "gecti": true
+  }
+ ],
+ "pide_payi": 8.0,
+ "kaset": {
+  "D_R": 12.0,
+  "Y_R": 992.85,
+  "X_N": 146.35,
+  "X_K": -146.35,
+  "X_UC": 153.5,
+  "W_BANT": 296.0,
+  "Z_KILAVUZ": [
+   148.5,
+   151.0
+  ],
+  "Z_YAN": [
+   151.0,
+   155.0
+  ],
+  "Y_YATAK": [
+   992.85,
+   998.85
+  ],
+  "X_YATAK": [
+   -139.35,
+   139.35
+  ],
+  "Y_TABAN": [
+   978.0,
+   984.0
+  ],
+  "DONUS_IC": 986.85,
+  "DONUS_DIS": 985.7
+ },
+ "bant_boyu": {
+  "merkezler": 292.7,
+  "L": 626.7119433947057,
+  "not_": "sonsuz sıcak ek (Forbo Z-ek); kuyruk kızağı ±3 mm"
+ },
+ "gerginlik": {
+  "eps_yuzde": 0.03786599099099099,
+  "T_kol_N": 33.625,
+  "mil_yuku_N": 67.25,
+  "sarkma_mm": 1.0172942001020076,
+  "yay": {
+   "ad": "Century Spring 62266SCS · 316 · dış Ø9,14 · tel 1,27 · serbest 12,7 · 13,45 N/mm · en çok 44,75 N (3,33 mm)",
+   "D": 9.14,
+   "tel": 1.27,
+   "L0": 12.7,
+   "k": 13.45,
+   "s_max": 3.33,
+   "on_sikma": 2.5
+  },
+  "F_yay": 33.625,
+  "calisma_boyu": 10.2,
+  "F_aralik": [
+   22.865,
+   44.385
+  ],
+  "not_": "kuyruk rulosu 2 kızakta; her kızağı 1 yay dışa iter (sabit kuvvet, bant uzasa da gerginlik ~aynı)"
+ },
+ "rulo": {
+  "I": 1017.8760197630929,
+  "L": 302.0,
+  "q_N_mm": 0.22719594594594594,
+  "sehim_mm": 0.12526072974933158
+ },
+ "yatak": {
+  "en_kotu_serit_120": {
+   "b": 120.0,
+   "I": 2160.0,
+   "sehim_mm": 0.4472439748027582
+  },
+  "tam_genislik": {
+   "b": 278.7,
+   "I": 5016.599999999999,
+   "sehim_mm": 0.1925700645006494
+  }
+ },
+ "tahrik_kaset": {
+  "GT2": {
+   "dis": 20,
+   "dis_rotor": 28,
+   "hatve": 2.0
+  },
+  "D_kasnak": 12.732395447351628,
+  "D_kasnak_rotor": 17.82535362629228,
+  "oran": 1.4,
+  "L_GT2": 140.0,
+  "C_GT2": 45.92940736529065,
+  "X_ROTOR": 100.42059263470935,
+  "Y_ROTOR": 988.0,
+  "Z_KASNAK": [
+   -163.0,
+   -156.0
+  ],
+  "Z_ROTOR_YATAK": [
+   -176.0,
+   -164.0
+  ],
+  "D_MIKNATIS": 36.0,
+  "Z_MIKNATIS": [
+   -184.0,
+   -176.5
+  ],
+  "bosluk": 4.6,
+  "mil": "sabit mil Ø6 × 34 (316) arka yan saca kaynaklı · dış ucu DIN 6799 RS5 segman (kabın ortasındaki Ø14 cepte)"
+ },
+ "tork": {
+  "m_pide": 0.45,
+  "m_bant": 0.20405740876931616,
+  "v": 300.0,
+  "a": 1200.0,
+  "F_yatak": 0.79461,
+  "F_ivme": 0.7848688905231794,
+  "F_bukme": 1.0,
+  "F_u": 2.5794788905231796,
+  "T_rulo_Nm": 0.016960073705189906,
+  "T_rotor_Nm": 0.02499379282870091,
+  "T_tasarim_Nm": 0.07498137848610273,
+  "F_kayma_siniri": 25.565231247822584
+ },
+ "kavrama": {
+  "miknatis": {
+   "ad": "supermagnete S-10-05-N · Ø10 × 5 N42 nikel · ~2,6 kg tutma",
+   "adet": 6,
+   "d": 10.0,
+   "h": 5.0,
+   "Br": 1.3,
+   "r_hatve": 12.5
+  },
+  "F_cekme_cift_N": 11.658778897038218,
+  "F_kesme_cift_N": 5.246450503667198,
+  "T_Nm": 0.39348378777503984,
+  "eksenel_cekme_N": 69.9526733822293,
+  "pay": 5.247753451851639
+ },
+ "motor": {
+  "ad": "NEMA23 kapalı çevrim step · STP-MTR-23079 (katalog STEP)",
+  "tutma_Nm": 1.0,
+  "n_dev_dk": 311.2209642209795,
+  "pay": 13.336644646848457
+ },
+ "donus": {
+  "noktalar": {
+   "yan_sac_kosesi": 218.74,
+   "burun_kasnagi": 223.91,
+   "rotor_miknatis": 218.81,
+   "rotor_kasnagi": 197.25,
+   "kuyruk_kizagi": 219.45,
+   "yay_kutusu": 219.21
+  },
+  "R": 223.9111943685146,
+  "cap": 447.8223887370292
+ },
+ "aktarma": {
+  "LB_sol": 2521.9111943685148,
+  "AKT": 2365.4111943685148,
+  "fark_eski": 28.41119436851477,
+  "bosluk_bant": 3.0
+ },
+ "sabit_tahrik": {
+  "X": 2465.8317870032242,
+  "Y": 988.0,
+  "Z_yuz": -356.0,
+  "kutu_dar": {
+   "x": [
+    2444.8317870032242,
+    2486.8317870032242
+   ],
+   "y": [
+    960.0,
+    1016.0
+   ],
+   "z": [
+    -420.0,
+    -356.0
+   ]
+  },
+  "kutu_motor": {
+   "x": [
+    2434.8317870032242,
+    2496.8317870032242
+   ],
+   "y": [
+    957.0,
+    1019.0
+   ],
+   "z": [
+    -508.0,
+    -420.0
+   ]
+  }
+ },
+ "acikliklar": {
+  "on_kapak (z 59)": 5.09,
+  "orta_dikme (z 39) — BOŞLUK AÇILMAZSA": -14.91,
+  "yukleme_bandi (sucukta dönüş)": 5.0,
+  "sabit_tahrik (sucukta dönüş)": 16.19,
+  "sabit_tahrik ↔ yarık contası (x 2491)": 4.17,
+  "yarık alt (987) ↔ dönüş kolu": -1.3,
+  "fırın ağzı alt (984) ↔ dönüş kolu": 1.7,
+  "sucukta dönen rotor kabı alt (970) ↔ BUGÜNKÜ yarık alt (987)": -17.0,
+  "sucukta dönen rotor kabı alt (970) ↔ YENİ yarık / ağız alt (965)": 5.0,
+  "yarık ön (−13) ↔ kaset ön yan sac": 2.0,
+  "fırın ağzı ön (−10) ↔ kaset ön yan sac": 5.0,
+  "fırın ağzı arka (−341) ↔ burun kasnağı": 8.0
+ },
+ "ayarlar": [
+  {
+   "kod": "a",
+   "ne": "orta dikme: tabla hizasında (y 965–1012) 47 mm boşluk (kapaklar yine dikmenin kalanına dayanır)",
+   "neden": "dönen köşe 14.9 mm giriyor"
+  },
+  {
+   "kod": "b",
+   "ne": "fırın: yükleme bandı burnu x 2521.9'den başlar (eski giriş bandı 2520,5) · ön kabuk ağzının alt kenarı 984 → 965",
+   "neden": "sucukta dönüşe 5 mm pay · rotor kabı sucukta dönerken ağzın altından 970'e iner"
+  },
+  {
+   "kod": "c",
+   "ne": "TOPPING çıkış yarığı: alt kenar 987 → 965, ön kenar −13 → −8",
+   "neden": "sucukta dönen rotor kabı 970'e iner (5 mm pay) · ön yan sac 2.0 mm pay"
+  },
+  {
+   "kod": "d",
+   "ne": "aktarma x 2337 → 2365.4 (+28.4): ray sağ ucu 2485 → 2498, limit+ ve tampon +28, araba plakası sağ kenarı −20",
+   "neden": "burun ucu yükleme bandına 3 mm"
+  },
+  {
+   "kod": "e",
+   "ne": "göbek + Ø340 tabla + çalışma diski + disk pimleri KALKAR; ayar bileziğine 2 × Ø8 konum pimi; tahrik lokması pimleri 958–966 → 958–983",
+   "neden": "kaset doğrudan ayar bileziğine oturur"
+  },
+  {
+   "kod": "f",
+   "ne": "sabit tahrik kutusu TOPPING sağ-arka (x 2435–2497, z -508…-356), braketi kayış kirişine",
+   "neden": "dönüş dairesinin dışı"
+  }
+ ],
+ "zaman": {
+  "yol_mm": 301.5,
+  "t_aktarma_s": 1.255,
+  "t_ivme_s": 0.25,
+  "yaklasma_mm": 72.41119436851477
+ }
+}
