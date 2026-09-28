@@ -1,0 +1,57 @@
+﻿parça (model adı);birim;kalem;adet;tanım / ürün;not / kaynak;tür
+a_govde_sol_yan;A_GOVDE;Sol yan sac AISI 304 1,5 (dış yüz fırçalı);1;889 × 1072.5 · lazer;"ÜRETİM · dolap üstüne (788) oturur, dikmelere + kuşağa M6 kaynak saplama + somun (içeriden; sol yan sabit, duvar tarafı) · ön kenarı alt panelin dönüşüne değer, servis kapağıyla arasında 3 mm menteşe derzi";ÜRETİM
+a_govde_sol_yan_omega;A_GOVDE;Omega takviye 1,0 · 40 × 15;3;AISI 304 1,0 abkant · yan (z boyunca) + üst (z boyunca) + arka (x boyunca) · ön panellerdekiler ayrı kalem;ÜRETİM · sacın iç yüzüne punta;ÜRETİM
+a_govde_ust;A_GOVDE;Üst sac AISI 304 1,5;1;700 × 889 · lazer;ÜRETİM · kuşaklara + üst kayda oturur, sol yan sacı örter · C dis_tavan'ına x 700'de uç uca (derz silikonu, BOM ek);ÜRETİM
+a_govde_ust_omega;A_GOVDE;a govde ust omega;0;;aynı kalemin eşi ya da alt parça · zarf 40 × 15 × 808;ALT
+a_govde_arka;A_GOVDE;Arka sac AISI 304 1,5 · SÖKÜLÜR (dışarıdan);1;698.5 × 1072.5 · delik YOK (kablolar içeriden C'ye) · 14 havşa baskılı delik;ÜRETİM · denetçi 10: 14 × DIN 7991 M6 A2 havşa başlı vida DIŞARIDAN, dikme + kuşaklardaki M6 perçin somuna · baş arka yüzle aynı düzlem (−830 geçilmez) · makine duvardan çekilince sökülür (Z kızağı + pnömatiğe arkadan erişim);ÜRETİM
+a_govde_arka_omega;A_GOVDE;a govde arka omega;0;;aynı kalemin eşi ya da alt parça · zarf 638 × 40 × 15;ALT
+a_kose_dikmesi_arka_sol;A_GOVDE;Arka köşe dikmesi 30 × 30 × 2 AISI 304 kutu profil + 3 mm alt kapak;2;boy 967 · kaide taban sacına 2 × M8 (kaide üst plakasında perçin somun);ÜRETİM · taban sacına tam oturur (x 1,5–700 · z −828,5…+39);ÜRETİM
+a_kose_dikmesi_arka_sag;A_GOVDE;a kose dikmesi arka sag;0;;aynı kalemin eşi ya da alt parça · zarf 30 × 967 × 30;ALT
+onyuz_cerceve_sol_dikme;A_GOVDE;Ön dikme 30 × 50 × 2 AISI 304 dikdörtgen profil + 3 mm alt kapak;2;boy 967 · z +9…+59 · alt: taban sacı (z +9…+39) + alt çerçeve dikmesi (z +39…+59) · 2 × M8;ÜRETİM · denetçi 7: köşe dikmesi 30 × 30 + çerçeve 30 × 20 sırt sırta çift profil yerine TEK profil · sağ dikme C sol yan sacına 3 × M6 (C v25 +39);ÜRETİM
+onyuz_cerceve_sag_dikme;A_GOVDE;onyuz cerceve sag dikme;0;;aynı kalemin eşi ya da alt parça · zarf 30 × 967 × 50;ALT
+onyuz_cerceve_ust_kayit;A_GOVDE;Üst kayıt 30 × 50 × 2 AISI 304 dikdörtgen profil;1;boy 638 · z +9…+59 (ön üst kuşak + çerçeve üst kaydı tek profil);ÜRETİM · dikmelere kaynak;ÜRETİM
+a_ust_kusak_arka;A_GOVDE;Üst kuşak 30 × 30 × 2 AISI 304 kutu profil;3;arka 638 · sol/sağ 808 · dikmelere kaynak (kaynaklı üst çerçeve);ÜRETİM;ÜRETİM
+a_ust_kusak_sol;A_GOVDE;a ust kusak sol;0;;aynı kalemin eşi ya da alt parça · zarf 30 × 30 × 808;ALT
+a_ust_kusak_sag;A_GOVDE;a ust kusak sag;0;;aynı kalemin eşi ya da alt parça · zarf 30 × 30 × 808;ALT
+onyuz_cerceve_sol_alt_dikme;A_GOVDE;Ön çerçeve 30 × 20 × 2 AISI 304 dikdörtgen profil · kaynaklı;6;6 parça · toplam boy 1.88 m · z +39…+59 (panel arkası) · orta kayıt ışın alanının dışında biter (x 228 / 472);ÜRETİM · menteşe, mandal, emniyet sensörü, ışık perdesi ve panel tutucuları bu çerçeveye;ÜRETİM
+onyuz_cerceve_sag_alt_dikme;A_GOVDE;onyuz cerceve sag alt dikme;0;;aynı kalemin eşi ya da alt parça · zarf 30 × 102 × 20;ALT
+onyuz_cerceve_alt_kayit;A_GOVDE;onyuz cerceve alt kayit;0;;aynı kalemin eşi ya da alt parça · zarf 638 × 30 × 20;ALT
+onyuz_cerceve_orta_kayit_sol;A_GOVDE;onyuz cerceve orta kayit sol;0;;aynı kalemin eşi ya da alt parça · zarf 196 × 30 × 20;ALT
+onyuz_cerceve_orta_kayit_sag;A_GOVDE;onyuz cerceve orta kayit sag;0;;aynı kalemin eşi ya da alt parça · zarf 198 × 30 × 20;ALT
+onyuz_cerceve_perde_kayit;A_GOVDE;onyuz cerceve perde kayit;0;;aynı kalemin eşi ya da alt parça · zarf 638 × 30 × 20;ALT
+onyuz_cerceve_ara_lama_sol;A_GOVDE;Ara lama AISI 304 4 mm (ön çerçeve ↔ kaide ön profili);3;20 × 80 / 18 × 80 / 30 × 26 · z +35…+39 · 2 × M6 A2 → kaide profilinde perçin somun;ÜRETİM · denetçi 6: ön çerçevenin alt kısmı (y 791–893,5) + alt kayıt artık kaideye cıvatalı (önce yalnız dikmeye kaynaktan asılı);ÜRETİM
+onyuz_cerceve_ara_lama_sag;A_GOVDE;onyuz cerceve ara lama sag;0;;aynı kalemin eşi ya da alt parça · zarf 18 × 80 × 4;ALT
+onyuz_cerceve_ara_lama_orta;A_GOVDE;onyuz cerceve ara lama orta;0;;aynı kalemin eşi ya da alt parça · zarf 30 × 26 × 4;ALT
+onyuz_emniyet_sensoru;A_GOVDE;Emniyet sensörü (RFID, kodlu) · Schmersal RSS 36-SD-ST;2;27 × 108,2 × 35 · IP65/67/69 · Sao 10 / Sar 20 mm (products.schmersal.com);servis kapağı ya da alt panel açılınca robot + açıcı + tabla durur · sağ ön dikmenin iç yüzüne 2 × M4 · emniyet kontrolörüne (BOM ek);SATIN ALMA
+onyuz_emniyet_sensoru_alt;A_GOVDE;onyuz emniyet sensoru alt;0;;aynı kalemin eşi ya da alt parça · zarf 35 × 108 × 27;ALT
+onyuz_isik_perdesi_alt;A_GOVDE;Güvenlik ışık perdesi · SICK miniTwin4 · 14 mm · koruma alanı 240 mm (çift = 2 twin stick);2;C4MT-02414ABB03… (sipariş kodu soneki VARSAYIM) · kesit 15 × 23,8 (fişle 32) · boy = koruma alanı · Type 4 / SIL 3 / PL e · tepki ≤ 14 ms · IP65 · 2 × O-fix tutucu dahil (datasheet C4MT-03014ABB03DB0);ağzın altında (y 834–857,8) + üstünde (1163,2–1187) · dikey ışınlar z ≈ 49,5 · robot girişinde MUTING (robot güvenli konum sinyali + açıcı/tabla STO) · ISO 13855: S = 2000 × T ≤ ~220 → toplam durma ≤ 110 ms;SATIN ALMA
+onyuz_isik_perdesi_ust;A_GOVDE;onyuz isik perdesi ust;0;;aynı kalemin eşi ya da alt parça · zarf 240 × 24 × 15;ALT
+onyuz_isik_perdesi_tutucu_alt_0;A_GOVDE;onyuz isik perdesi tutucu alt 0;0;;aynı kalemin eşi ya da alt parça · zarf 30 × 13 × 15;ALT
+onyuz_isik_perdesi_tutucu_ust_0;A_GOVDE;onyuz isik perdesi tutucu ust 0;0;;aynı kalemin eşi ya da alt parça · zarf 30 × 13 × 15;ALT
+onyuz_isik_perdesi_tutucu_alt_1;A_GOVDE;onyuz isik perdesi tutucu alt 1;0;;aynı kalemin eşi ya da alt parça · zarf 30 × 13 × 15;ALT
+onyuz_isik_perdesi_tutucu_ust_1;A_GOVDE;onyuz isik perdesi tutucu ust 1;0;;aynı kalemin eşi ya da alt parça · zarf 30 × 13 × 15;ALT
+onyuz_alt_panel;A_ONYUZ;Alt panel · tava 20 · AISI 304 fırçalı 1,5 · SÖKÜLÜR;1;698.5 × 319.5 · üstü açık robot ağzı çentiği 200 × 147.5, kenarları 20 arkaya bükülü;ÜRETİM (lazer + abkant, köşeler kaynak + taşlama) · 788'den başlar (dolap önü 785 + derz 3, denetçi 3) · kaide bandını da örter · aletsiz çıkar (4 yaylı tutucu, emniyet sensörlü) → disk günlük buradan çıkar;ÜRETİM
+onyuz_alt_panel_omega;A_ONYUZ;Panel omegası 1,0 · 40 × 15;3;AISI 304 1,0 · panel > 600 (SPEC) · alt panel 1 + servis kapağı 2;ÜRETİM · yüz sacının arkasına punta (dışta iz yok);ÜRETİM
+onyuz_alt_panel_tutucu_0;A_ONYUZ;Yaylı bilyeli panel tutucu (ball stud + yuva);4;ör. Southco ball-stud serisi — parça no + ölçü VARSAYIM (20 × 20 × 18,5);"alt panel aletsiz çekilip çıkar; dışarıdan görünmez";SATIN ALMA
+onyuz_alt_panel_tutucu_1;A_ONYUZ;onyuz alt panel tutucu 1;0;;aynı kalemin eşi ya da alt parça · zarf 20 × 20 × 18;ALT
+onyuz_alt_panel_tutucu_2;A_ONYUZ;onyuz alt panel tutucu 2;0;;aynı kalemin eşi ya da alt parça · zarf 20 × 20 × 18;ALT
+onyuz_alt_panel_tutucu_3;A_ONYUZ;onyuz alt panel tutucu 3;0;;aynı kalemin eşi ya da alt parça · zarf 20 × 20 × 18;ALT
+onyuz_servis_kapagi;A_ONYUZ;Üst servis kapağı · tava 20 · AISI 304 fırçalı 1,5;1;698.5 × 748.5 · altı açık robot ağzı çentiği 200 × 49.5, kenarları 20 arkaya bükülü · menteşe tarafında dönüşler 17 (z +62);ÜRETİM · gizli pim menteşe SOLDA (eksen x 7 · z 72), bas-aç sağda · menteşe tarafında sol yan sac + ön dikmeyle 3 mm derz (yalnız soldan, duvar tarafından görünür);ÜRETİM
+onyuz_servis_kapagi_omega_0;A_ONYUZ;onyuz servis kapagi omega 0;0;;aynı kalemin eşi ya da alt parça · zarf 595 × 40 × 15;ALT
+onyuz_servis_kapagi_omega_1;A_ONYUZ;onyuz servis kapagi omega 1;0;;aynı kalemin eşi ya da alt parça · zarf 595 × 40 × 15;ALT
+onyuz_servis_kapagi_mentese_0_sabit;A_ONYUZ;Gizli menteşe 90° · EMKA 1006-U1-PC (kaynaklı, AISI 304, aletsiz sökülür, dışarıdan sökülemez);2;katalog föyü 4B-120 · MODEL: eksen x 7 · z 72 (dış yan yüzden 7, ön yüzden 7) · pim Ø6 · göz Ø10 · boy 60 · sabit yarım dikme önüne, kapak yarımı yüz sacına kaynak — geometri VARSAYIM;kapak ~7.4 kg · eksen föyde farklıysa MENTESE['pivot'] değişir, tarama tekrarlanır (gerekli menteşe derzi tablosu rapor_A §0) · emka.com;SATIN ALMA
+onyuz_servis_kapagi_mentese_0_kanat;A_ONYUZ;onyuz servis kapagi mentese 0 kanat;0;;aynı kalemin eşi ya da alt parça · zarf 32 × 30 × 10;ALT
+onyuz_servis_kapagi_mentese_0_pim;A_ONYUZ;onyuz servis kapagi mentese 0 pim;0;;aynı kalemin eşi ya da alt parça · zarf 6 × 60 × 6;ALT
+onyuz_servis_kapagi_mentese_1_sabit;A_ONYUZ;onyuz servis kapagi mentese 1 sabit;0;;aynı kalemin eşi ya da alt parça · zarf 30 × 60 × 18;ALT
+onyuz_servis_kapagi_mentese_1_kanat;A_ONYUZ;onyuz servis kapagi mentese 1 kanat;0;;aynı kalemin eşi ya da alt parça · zarf 32 × 30 × 10;ALT
+onyuz_servis_kapagi_mentese_1_pim;A_ONYUZ;onyuz servis kapagi mentese 1 pim;0;;aynı kalemin eşi ya da alt parça · zarf 6 × 60 × 6;ALT
+onyuz_servis_kapagi_basac_mandal;A_ONYUZ;Bas-aç mandal (push-to-open, gizli) · Southco E4 touch latch;1;gizli montaj · parça no + ölçü VARSAYIM (24 × 40 × 18,5);kapak dışarıdan kulpsuz: basınca açılır;SATIN ALMA
+onyuz_emniyet_hedefi;A_ONYUZ;Emniyet sensörü hedefi · Schmersal RST 36-1;2;91 × 22 × 25 · kodlu RFID hedef (tutma mıknatısı ~18 N);kapağın / alt panelin arka yüzüne 2 × M4 kaynak saplama;SATIN ALMA
+onyuz_emniyet_hedefi_alt;A_ONYUZ;onyuz emniyet hedefi alt;0;;aynı kalemin eşi ya da alt parça · zarf 25 × 91 × 22;ALT
+(gövdesiz);A_GOVDE;Kaynak saplama M6 × 16 A2 + somun DIN 934 A2;14;sol yan sac ↔ dikmeler + sol kuşak (içeriden);ÜRETİM sırasında sacın iç yüzüne saplama kaynağı;SATIN ALMA
+(gövdesiz);A_GOVDE;Havşa başlı vida DIN 7991 M6 × 12 A2 + perçin somun M6 A2;14;arka sac ↔ arka dikmeler + arka kuşak · DIŞARIDAN (denetçi 10);havşa baskılı delik: baş arka yüzle aynı düzlem (−830 geçilmez);SATIN ALMA
+(gövdesiz);A_GOVDE;Cıvata DIN 912 M8 × 16 A2 + perçin somun M8 A2 (sıkma 3–6);8;4 dikme × 2 · dikme alt kapağı ↔ taban sacı 1,5 + kaide üst plakası 4;perçin somun kaide üst plakasına;SATIN ALMA
+(gövdesiz);A_GOVDE;Cıvata DIN 912 M6 × 20 A2 + perçin somun M6 A2;6;3 ara lama × 2 · ön çerçeve ↔ kaide ön profili;perçin somun kaide ön profiline;SATIN ALMA
+(gövdesiz);A_GOVDE;Cıvata DIN 912 M6 × 16 A2 + somun;6;sağ ön dikme (3) + arka sağ dikme (3) ↔ C sol yan sacı · LEGO bağlantı;C dis_yan_sol +39'a uzayınca (topping_cad_v25) delikler C'de;SATIN ALMA
+(gövdesiz);A_GOVDE;Emniyet kontrolörü · SICK Flexi Soft FX3-CPU000000 + FX3-XTIO84002 (VARSAYIM kodlar, doğrulanacak);1;2 × RSS 36 (seri, 2 kanal) + miniTwin4 OSSD + robot güvenli konum sinyaliyle MUTING + açıcı/tabla STO;PANODA (S/QR modülü) — A kabininde değil;SATIN ALMA
+(gövdesiz);A_GOVDE;Gıdaya uygun silikon derz dolgusu (ör. DOWSIL 732, FDA — VARSAYIM ürün);1;A üst sacı ↔ C dis_tavan derzi x 700 · 0,89 m · + sol yan sac ↔ duvar derzi montajda;üst yüzde su / kırıntı girmesin;SATIN ALMA
