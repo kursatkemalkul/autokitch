@@ -1,5 +1,5 @@
 {
- "surum": "topping_uno_cad_v14 · 28.09.2026 01:07",
+ "surum": "topping_uno_cad_v14 · 28.09.2026 09:39",
  "grup": {
   "SABIT": [
    0.0,
@@ -142,7 +142,7 @@
   {
    "ad": "raf_on_bukumu",
    "kaynak": "H",
-   "not_": "40 mm aşağı büküm (rafın kirişi) · v6: kaset yarıklarında 60 çentik",
+   "not_": "40 mm aşağı büküm (rafın kirişi) · v6: kaset yarıklarında 60 çentik · v14b: çentik yalnız 1311–1317 (tüp + yarık dili geçer), altındaki 34 mm kiriş sürekli",
    "mal": "paslanmaz"
   },
   {
@@ -1426,7 +1426,7 @@
   {
    "ad": "motor_kablosu_kasar_cad_v14_helezon",
    "kaynak": "B",
-   "not_": "",
+   "not_": "motor kablosu (katalog STEP ucu) · v14b: kablo rakoru Ø10 × 12 (PG7 sınıfı, VARSAYIM) motor gövdesinin yüzüne oturur — STEP'te kablo gövdeden 0,707 mm açıktı",
    "mal": "koyu"
   },
   {
@@ -1462,7 +1462,7 @@
   {
    "ad": "motor_kablosu_kasar_cad_v14_rotor",
    "kaynak": "B",
-   "not_": "",
+   "not_": "motor kablosu (katalog STEP ucu) · v14b: kablo rakoru Ø10 × 12 (PG7 sınıfı, VARSAYIM) motor gövdesinin yüzüne oturur — STEP'te kablo gövdeden 0,707 mm açıktı",
    "mal": "koyu"
   },
   {
@@ -1822,7 +1822,7 @@
   {
    "ad": "motor_kablosu_sucuk_cad_v7_helezon",
    "kaynak": "B",
-   "not_": "",
+   "not_": "motor kablosu (katalog STEP ucu) · v14b: kablo rakoru Ø10 × 12 (PG7 sınıfı, VARSAYIM) motor gövdesinin yüzüne oturur — STEP'te kablo gövdeden 0,707 mm açıktı",
    "mal": "koyu"
   },
   {
@@ -1858,7 +1858,7 @@
   {
    "ad": "motor_kablosu_sucuk_cad_v7_rotor",
    "kaynak": "B",
-   "not_": "",
+   "not_": "motor kablosu (katalog STEP ucu) · v14b: kablo rakoru Ø10 × 12 (PG7 sınıfı, VARSAYIM) motor gövdesinin yüzüne oturur — STEP'te kablo gövdeden 0,707 mm açıktı",
    "mal": "koyu"
   },
   {
@@ -2408,6 +2408,72 @@
    "mal": "siyah"
   },
   {
+   "ad": "kasar_cad_v14_yarik_dili",
+   "kaynak": "V",
+   "not_": "v14b · KASET YARIK DİLİ POM-C (gıda) · 60 × 173 × 8 + Ø60 yaka + 62 × 9 ön flanş · kasetin tüpüne yarıklı yaka ile 2 × M4 A2 (kelebek) → kasetle BİRLİKTE çıkar · raf U-yarığını + ön büküm / alt PU üst yarığını + 430 çerçeve çentiğini kapatır (denetim_C bulgu 1: v14'te ≈9 800 mm² doğrudan hava yolu)",
+   "mal": "pom"
+  },
+  {
+   "ad": "raf_kaset_contasi_kasar",
+   "kaynak": "K",
+   "not_": "v14b · gıda tipi silikon dudak conta (yarım halka: raf deliğinin arka yarısı Ø60 ↔ tüp Ø50) · raf deliğine yapışık, SABİT · kaset çekilince tüp öne kayar, conta yerinde kalır",
+   "mal": "conta"
+  },
+  {
+   "ad": "sucuk_cad_v7_yarik_dili",
+   "kaynak": "V",
+   "not_": "v14b · KASET YARIK DİLİ POM-C (gıda) · 60 × 173 × 8 + Ø60 yaka + 62 × 9 ön flanş · kasetin tüpüne yarıklı yaka ile 2 × M4 A2 (kelebek) → kasetle BİRLİKTE çıkar · raf U-yarığını + ön büküm / alt PU üst yarığını + 430 çerçeve çentiğini kapatır (denetim_C bulgu 1: v14'te ≈9 800 mm² doğrudan hava yolu)",
+   "mal": "pom"
+  },
+  {
+   "ad": "raf_kaset_contasi_sucuk",
+   "kaynak": "K",
+   "not_": "v14b · gıda tipi silikon dudak conta (yarım halka: raf deliğinin arka yarısı Ø60 ↔ tüp Ø48) · raf deliğine yapışık, SABİT · kaset çekilince tüp öne kayar, conta yerinde kalır",
+   "mal": "conta"
+  },
+  {
+   "ad": "raf_gecis_contasi_sos",
+   "kaynak": "K",
+   "not_": "v14b · gıda tipi silikon geçiş contası (grommet) · raf deliği Ø42 ↔ UNO ağzı Ø36 · 3 mm halka kapanır (v14: açık, 360 mm²)",
+   "mal": "conta"
+  },
+  {
+   "ad": "raf_gecis_contasi_sos_hortum",
+   "kaynak": "K",
+   "not_": "v14b · hortum geçiş lastiği Ø10 → Ø6 hortum (v14: 50 mm² açık)",
+   "mal": "conta"
+  },
+  {
+   "ad": "raf_gecis_contasi_harc",
+   "kaynak": "K",
+   "not_": "v14b · gıda tipi silikon geçiş contası (grommet) · raf deliği Ø42 ↔ UNO ağzı Ø36 · 3 mm halka kapanır (v14: açık, 360 mm²)",
+   "mal": "conta"
+  },
+  {
+   "ad": "raf_gecis_contasi_harc_hortum",
+   "kaynak": "K",
+   "not_": "v14b · hortum geçiş lastiği Ø10 → Ø6 hortum (v14: 50 mm² açık)",
+   "mal": "conta"
+  },
+  {
+   "ad": "raf_gecis_contasi_kiyma",
+   "kaynak": "K",
+   "not_": "v14b · gıda tipi silikon geçiş contası (grommet) · raf deliği Ø42 ↔ UNO ağzı Ø36 · 3 mm halka kapanır (v14: açık, 360 mm²)",
+   "mal": "conta"
+  },
+  {
+   "ad": "raf_gecis_contasi_kusbasi",
+   "kaynak": "K",
+   "not_": "v14b · gıda tipi silikon geçiş contası (grommet) · raf deliği Ø42 ↔ UNO ağzı Ø36 · 3 mm halka kapanır (v14: açık, 360 mm²)",
+   "mal": "conta"
+  },
+  {
+   "ad": "soguk_duvar_sag_alt_profili",
+   "kaynak": "H",
+   "not_": "v14b · lama 28,5 × 13 × 65 AISI 304 · soğuk duvarın dış sacı ↔ TC sağ yan sacı arası (Z profilin altına kaynak + TC yan sacına 2 × M6) · itici montaj kirişi (dünya x 2044,5–2489,5) sağ ucu buna 2 × M6 · yük: kiriş → profil → TC yan sacı",
+   "mal": "paslanmaz"
+  },
+  {
    "ad": "alt_yalitim_saci",
    "kaynak": "V",
    "not_": "v12 · AISI 304 1,0 · soğuk oda yalıtımının alt kabuğu (aşağı bakar, pişirme bölgesinin üstü) · rafın bükümlerine perçin",
@@ -2416,7 +2482,7 @@
   {
    "ad": "alt_yalitim_PU",
    "kaynak": "V",
-   "not_": "v12 · PU 39 (40 kg/m³) · rafın altı, bükümlerin arası · kaset / UNO / hava geçişlerinde 3 mm boşluklu delik (kaset yarıkları öne açık)",
+   "not_": "v12 · PU 39 (40 kg/m³) · rafın altı, bükümlerin arası · kaset / UNO / hava geçişlerinde 3 mm boşluklu delik · v14b: kaset yalnız ÜST 6 mm yarık (öne açık, yarık diliyle dolu), iniş borusu + huni altı / önü dolu",
    "mal": "pu"
   },
   {
@@ -2512,43 +2578,73 @@
   {
    "ad": "onyuz_K1_mentese_0",
    "kaynak": "K",
-   "not_": "v14 · gizli menteşe 3B ayarlı (Sugatsune HES3D sınıfı — parça no + ölçü VARSAYIM) · kapak ≈13 / 9 kg · ön dönüşe 2 × M5, kapağın iç sacına perçin somun",
+   "not_": "v14b · çok kollu gizli menteşe KOLU (kapak tarafı · 3B ayarlı, Sugatsune HES3D sınıfı — parça no + ölçü + sanal pivot VARSAYIM, föy doğrulanacak) · kapağın iç sacına perçin somun · kapak ≈14,4 kg",
+   "mal": "paslanmaz"
+  },
+  {
+   "ad": "onyuz_mentese_tabani_K1_mentese_0",
+   "kaynak": "K",
+   "not_": "v14b · menteşe TABANI AISI 304 blok 30 × 13,5 × 70 · TC yan sacının iç yüzüne 2 × M6 + ön dönüşün (+37,5…+39) arkasına dayalı · kol buna 2 × M5 (denetim_C bulgu 3)",
    "mal": "paslanmaz"
   },
   {
    "ad": "onyuz_K1_mentese_1",
    "kaynak": "K",
-   "not_": "v14 · gizli menteşe 3B ayarlı (Sugatsune HES3D sınıfı — parça no + ölçü VARSAYIM) · kapak ≈13 / 9 kg · ön dönüşe 2 × M5, kapağın iç sacına perçin somun",
+   "not_": "v14b · çok kollu gizli menteşe KOLU (kapak tarafı · 3B ayarlı, Sugatsune HES3D sınıfı — parça no + ölçü + sanal pivot VARSAYIM, föy doğrulanacak) · kapağın iç sacına perçin somun · kapak ≈14,4 kg",
+   "mal": "paslanmaz"
+  },
+  {
+   "ad": "onyuz_mentese_tabani_K1_mentese_1",
+   "kaynak": "K",
+   "not_": "v14b · menteşe TABANI AISI 304 blok 30 × 13,5 × 70 · TC yan sacının iç yüzüne 2 × M6 + ön dönüşün (+37,5…+39) arkasına dayalı · kol buna 2 × M5 (denetim_C bulgu 3)",
    "mal": "paslanmaz"
   },
   {
    "ad": "onyuz_K2_mentese_0",
    "kaynak": "K",
-   "not_": "v14 · gizli menteşe 3B ayarlı (Sugatsune HES3D sınıfı — parça no + ölçü VARSAYIM) · kapak ≈13 / 9 kg · ön dönüşe 2 × M5, kapağın iç sacına perçin somun",
+   "not_": "v14b · çok kollu gizli menteşe KOLU (kapak tarafı · 3B ayarlı, Sugatsune HES3D sınıfı — parça no + ölçü + sanal pivot VARSAYIM, föy doğrulanacak) · kapağın iç sacına perçin somun · kapak ≈10,4 kg",
+   "mal": "paslanmaz"
+  },
+  {
+   "ad": "onyuz_mentese_tabani_K2_mentese_0",
+   "kaynak": "K",
+   "not_": "v14b · menteşe TABANI AISI 304 blok 30 × 13,5 × 70 · TC yan sacının iç yüzüne 2 × M6 + ön dönüşün (+37,5…+39) arkasına dayalı · kol buna 2 × M5 (denetim_C bulgu 3)",
    "mal": "paslanmaz"
   },
   {
    "ad": "onyuz_K2_mentese_1",
    "kaynak": "K",
-   "not_": "v14 · gizli menteşe 3B ayarlı (Sugatsune HES3D sınıfı — parça no + ölçü VARSAYIM) · kapak ≈13 / 9 kg · ön dönüşe 2 × M5, kapağın iç sacına perçin somun",
+   "not_": "v14b · çok kollu gizli menteşe KOLU (kapak tarafı · 3B ayarlı, Sugatsune HES3D sınıfı — parça no + ölçü + sanal pivot VARSAYIM, föy doğrulanacak) · kapağın iç sacına perçin somun · kapak ≈10,4 kg",
    "mal": "paslanmaz"
   },
   {
-   "ad": "onyuz_K1_basac",
+   "ad": "onyuz_mentese_tabani_K2_mentese_1",
    "kaynak": "K",
-   "not_": "v14 · bas-aç mandal (push-to-open, gizli) · Southco E4 sınıfı — parça no + ölçü VARSAYIM · kapak kulpsuz",
+   "not_": "v14b · menteşe TABANI AISI 304 blok 30 × 13,5 × 70 · TC yan sacının iç yüzüne 2 × M6 + ön dönüşün (+37,5…+39) arkasına dayalı · kol buna 2 × M5 (denetim_C bulgu 3)",
+   "mal": "paslanmaz"
+  },
+  {
+   "ad": "onyuz_basac_K1",
+   "kaynak": "K",
+   "not_": "v14 · bas-aç mandal (push-to-open, gizli) · Southco E4 sınıfı — parça no + ölçü VARSAYIM · kapak kulpsuz · v14b: gövde tarafı (çerçevede), ad onyuz_basac_K*",
    "mal": "plastik"
   },
   {
-   "ad": "onyuz_K2_basac",
+   "ad": "onyuz_basac_K2",
    "kaynak": "K",
-   "not_": "v14 · bas-aç mandal (push-to-open, gizli) · Southco E4 sınıfı — parça no + ölçü VARSAYIM · kapak kulpsuz",
+   "not_": "v14 · bas-aç mandal (push-to-open, gizli) · Southco E4 sınıfı — parça no + ölçü VARSAYIM · kapak kulpsuz · v14b: gövde tarafı (çerçevede), ad onyuz_basac_K*",
    "mal": "plastik"
+  },
+  {
+   "ad": "onyuz_kilavuz_flipper",
+   "kaynak": "V",
+   "not_": "v14b · flipper KILAVUZ BLOĞU POM-C 107 × 15 × 64 · rafa 2 × M5 havşa · üstünde kam OLUĞU (pim Ø8 yolu, 10 derin, 153 nokta, α 0–4.23°) · ön yüzü +24 → K1 / K2 fitilleri 1152–1167 bandında buna basar · oluk ön yüzden K1 fitil halkasının İÇİNDE (dünya x ≈ 1469) çıkar",
+   "mal": "pom"
   },
   {
    "ad": "onyuz_flipper_govde",
    "kaynak": "V",
-   "not_": "v14 · katlanır orta dikme (flipper) 54 × 369 × 38,5 · ABS gövde + PU + ısıtıcı kablo (ter önleme, VARSAYIM 10 W/m) · K1 ile birlikte açılır (kıyma haznesinin çekme yolu açık kalır)",
+   "not_": "v14b · katlanır orta dikme (flipper) 54 × 354 × 38,5 · ABS gövde + PU + ısıtıcı kablo (ter önleme, VARSAYIM 10 W/m) · katlanma ekseni dünya x 1493 · z +20 · K1 3° açılınca tam katlanır (−90°) · kıyma haznesinin çekme yolu açık kalır",
    "mal": "plastik"
   },
   {
@@ -2558,15 +2654,21 @@
    "mal": "sac"
   },
   {
-   "ad": "onyuz_flipper_mentese_0",
+   "ad": "onyuz_flipper_pimi",
    "kaynak": "K",
-   "not_": "v14 · flipper menteşesi (yay yüklü, 90°) · K1 iç sacına · parça no VARSAYIM",
+   "not_": "v14b · kam pimi Ø8 × 10 AISI 316 (flipper altına vidalı) · kılavuz oluğunda kayar",
+   "mal": "celik"
+  },
+  {
+   "ad": "onyuz_K1_flipper_mentese_0",
+   "kaynak": "K",
+   "not_": "v14b · flipper menteşesi (K1 ile döner): K1 iç sacına braket 12 × 20 × 18 + pim Ø6 (katlanma ekseni) + BURULMA YAYI (katlar, −90° dayamalı — parça no VARSAYIM) · braket K1 fitilinin solunda (dünya x ≤ 1493)",
    "mal": "paslanmaz"
   },
   {
-   "ad": "onyuz_flipper_mentese_1",
+   "ad": "onyuz_K1_flipper_mentese_1",
    "kaynak": "K",
-   "not_": "v14 · flipper menteşesi (yay yüklü, 90°) · K1 iç sacına · parça no VARSAYIM",
+   "not_": "v14b · flipper menteşesi (K1 ile döner): K1 iç sacına braket 12 × 20 × 18 + pim Ø6 (katlanma ekseni) + BURULMA YAYI (katlar, −90° dayamalı — parça no VARSAYIM) · braket K1 fitilinin solunda (dünya x ≤ 1493)",
    "mal": "paslanmaz"
   }
  ],
@@ -3077,12 +3179,12 @@
    "deger": "0"
   },
   {
-   "ad": "v12 · soğuk oda ALTI yalıtımlı: alt sac y 1277–1278 + PU y 1278–1317 (39) · x 93–1707 · z -562…20 · 26 geçiş deliği",
+   "ad": "v12 · soğuk oda ALTI yalıtımlı: alt sac y 1277–1278 + PU y 1278–1317 (39) · x 93–1707 · z -562…20 · 24 geçiş deliği",
    "sonuc": "GEÇTİ",
    "deger": ""
   },
   {
-   "ad": "v12 · alt yalıtımın delik payı (üst üste binenler dahil kaba) %17 ≤ %25",
+   "ad": "v12 · alt yalıtımın delik payı (üst üste binenler dahil kaba) %4 ≤ %25",
    "sonuc": "GEÇTİ",
    "deger": ""
   },
@@ -3137,7 +3239,7 @@
    "deger": ""
   },
   {
-   "ad": "v14 · flipper ön yüzü +24.0 = çerçeve ön yüzü · açıklıkta (y 1320.5–1689.5 ⊂ 1320–1690) · K1 | K2 derzinin arkasında (dünya x 1493–1547)",
+   "ad": "v14 · flipper ön yüzü +24.0 = çerçeve ön yüzü · açıklıkta (y 1335.5–1689.5 ⊂ 1320–1690) · K1 | K2 derzinin arkasında (dünya x 1493–1547)",
    "sonuc": "GEÇTİ",
    "deger": ""
   },
@@ -3172,12 +3274,97 @@
    "deger": ""
   },
   {
-   "ad": "v14 · temas onyuz_flipper_mentese_0 ↔ onyuz_K1_ic_sac: 0.000 mm (≤ 0,05)",
+   "ad": "v14 · temas onyuz_K1_flipper_mentese_0 ↔ onyuz_K1_ic_sac: 0.000 mm (≤ 0,05)",
    "sonuc": "GEÇTİ",
    "deger": ""
   },
   {
-   "ad": "v14 · temas onyuz_flipper_mentese_0 ↔ onyuz_flipper_on_sac: 0.000 mm (≤ 0,05)",
+   "ad": "v14 · temas onyuz_K1_flipper_mentese_0 ↔ onyuz_flipper_govde: 0.000 mm (≤ 0,05)",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "v14 · temas onyuz_flipper_pimi ↔ onyuz_flipper_govde: 0.000 mm (≤ 0,05)",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "v14 · temas onyuz_flipper_pimi ↔ onyuz_kilavuz_flipper: 0.000 mm (≤ 0,05)",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "v14 · temas onyuz_kilavuz_flipper ↔ tasiyici_raf_3mm: 0.000 mm (≤ 0,05)",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "v14 · temas onyuz_K1_mentese_0 ↔ onyuz_K1_ic_sac: 0.000 mm (≤ 0,05)",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "v14 · temas onyuz_K1_mentese_0 ↔ onyuz_mentese_tabani_K1_mentese_0: 0.000 mm (≤ 0,05)",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "v14 · temas onyuz_K2_mentese_1 ↔ onyuz_K2_ic_sac: 0.000 mm (≤ 0,05)",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "v14 · temas onyuz_K2_mentese_1 ↔ onyuz_mentese_tabani_K2_mentese_1: 0.000 mm (≤ 0,05)",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "v14 · temas kasar_cad_v14_yarik_dili ↔ kasar_cad_v14__cikis_tupu: 0.000 mm (≤ 0,05)",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "v14 · temas sucuk_cad_v7_yarik_dili ↔ sucuk_cad_v7__cikis_tupu: 0.000 mm (≤ 0,05)",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "v14 · temas raf_kaset_contasi_kasar ↔ tasiyici_raf_3mm: 0.000 mm (≤ 0,05)",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "v14 · temas raf_kaset_contasi_sucuk ↔ sucuk_cad_v7__cikis_tupu: 0.000 mm (≤ 0,05)",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "v14 · temas raf_gecis_contasi_kiyma ↔ kiyma__agiz_90_derece: 0.000 mm (≤ 0,05)",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "v14 · temas raf_gecis_contasi_sos ↔ tasiyici_raf_3mm: 0.000 mm (≤ 0,05)",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "v14 · temas raf_gecis_contasi_harc_hortum ↔ harc_spreader_hava_hortumu: 0.000 mm (≤ 0,05)",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "v14 · temas motor_kablosu_sucuk_cad_v7_rotor ↔ motor_sucuk_cad_v7_rotor: 0.000 mm (≤ 0,05)",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "v14 · temas soguk_duvar_sag_alt_profili ↔ soguk_duvar_sag_dis_sac: 0.000 mm (≤ 0,05)",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "v14 · temas soguk_duvar_sag_alt_profili ↔ soguk_duvar_sag_z_profili_0: 0.000 mm (≤ 0,05)",
    "sonuc": "GEÇTİ",
    "deger": ""
   },
@@ -3318,6 +3505,41 @@
   },
   {
    "ad": "v14 · kompresör vanası motorun arka yüzünde (z -380…-360) · montajdaki ucu dünya (3790, 1809, -380) = ana hat başı (3790, 1809, −380)",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "v14b · SOĞUK ODA TABANI (raf dilimi y 1317,5–1319,5): 6 ürün kanalı dışında AÇIK alan 0.00 mm² ≤ 1 (v14: ≈ 21 350 — kaset U-yarıkları 2 × ≈9 900 + UNO ağız halkaları 4 × 360 + hortum delikleri 2 × 50)",
+   "sonuc": "GEÇTİ",
+   "deger": "[]"
+  },
+  {
+   "ad": "v14b · 430 çerçeve düzlemi soğuk oda altı bandında (y 1277–1320) kesintisiz: kaset çentikleri yarık dili flanşıyla kapalı · açık alan 0.00 mm² ≤ 1",
+   "sonuc": "GEÇTİ",
+   "deger": "[]"
+  },
+  {
+   "ad": "v14b · kasar yarık dili: x 1330–1392 · y 1311–1320 (raf üstü = raf üstü 1320) · z -180…24 (ön flanş çerçeve düzleminde)",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "v14b · sucuk yarık dili: x 1579–1641 · y 1311–1320 (raf üstü = raf üstü 1320) · z -180…24 (ön flanş çerçeve düzleminde)",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "v14b · K1 AÇILMA TARAMASI (TU parçaları · 0–110°, 19 açı · sanal pivot ön dış köşe · flipper katlanır min(90, 30·α), K2 KAPALI): çakışma 0",
+   "sonuc": "GEÇTİ",
+   "deger": "[]"
+  },
+  {
+   "ad": "v14b · K2 AÇILMA TARAMASI (TU parçaları · 0–110°, 19 açı · sanal pivot ön dış köşe · K1 + flipper KAPALI): çakışma 0",
+   "sonuc": "GEÇTİ",
+   "deger": "[]"
+  },
+  {
+   "ad": "v14b · flipper kam oluğu: pim yolu 153 nokta · α 0–4.23° · tam katlanma (α 3.0°) oluğun İÇİNDE → kapanırken pim oluğa −90°'de aynı yerden girer · çıkış dünya x 1468.8 + r 4 < 1493 (K1 fitil halkasının içi)",
    "sonuc": "GEÇTİ",
    "deger": ""
   },

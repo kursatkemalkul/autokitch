@@ -6,7 +6,7 @@
 <p class="lead">Hattın tamamı tek modelde. <b>Üstüne gel</b> &mdash; adı çıkar. <b>Çift tıkla</b> &mdash; o istasyonun kendi modeli açılır. Modelin altındaki çubuktan <b>kesit</b> alabilir (X/Y/Z) ve iki noktaya tıklayıp <b>ölçü</b> çıkarabilirsin.</p>
 
 <div class="m3">
-  <model-viewer id="mv" loading="eager" src="../hat3d/hat_v63.glb?v=63" ios-src="../hat3d/hat_v63.usdz?v=63" alt="AUTOKITCH hat üretim modeli" autoplay
+  <model-viewer id="mv" loading="eager" src="../hat3d/hat_v64.glb?v=64" ios-src="../hat3d/hat_v64.usdz?v=64" alt="AUTOKITCH hat üretim modeli" autoplay
       camera-controls touch-action="pan-y" shadow-intensity="0.6" exposure="1.0" environment-image="neutral"
       camera-orbit="-28deg 72deg 10.5m" camera-target="2.85m 0.93m 0.1m" field-of-view="30deg" min-field-of-view="6deg"
       ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
@@ -85,7 +85,7 @@ const SAYFA = {A:'press.html', B:'store.html', C:'topping_v2.html', D:'oven.html
 const AD = {A:'MODÜL A · AÇICI', B:'MODÜL B · ÇEKMECELİ DOLAP', C:'MODÜL C · TOPPING', D:'MODÜL F · FIRIN', K:'MODÜL K · KESME + SPREY', E:'MODÜL E · KUTU', S:'MODÜL S · SERVİS / TESLİM — QR dolabı + tezgâh', '-':'ROBOT + RAY'};
 
 const M = model3d({
-  mv:'mv', etiket:'et', grup:'modul', parca:'../hat3d/parca_kutulari.json?v=63',
+  mv:'mv', etiket:'et', grup:'modul', parca:'../hat3d/parca_kutulari.json?v=64',
   hedef: g => SAYFA[g.birimler[0].modul],
   yazi: g => {
     const m = g.birimler[0].modul, ger = g.birimler.filter(b => b.durum.indexOf('GERCEK') === 0).length;
@@ -93,7 +93,7 @@ const M = model3d({
   }
 });
 
-fetch('../hat3d/durum.json?v=63').then(r => r.json()).then(D => {
+fetch('../hat3d/durum.json?v=64').then(r => r.json()).then(D => {
   const _fd = (D.hat && D.hat.firin_denetim) || D.firin_denetim; if (_fd) document.getElementById('fdenetim').textContent = _fd;
   const _id = D.hat && D.hat.itici_denetim; if (_id) document.getElementById('idenetim').textContent = _id;
   M.veri(D.birim);
