@@ -13,6 +13,7 @@
   <div class="et" id="et"></div>
   <button class="ar" onclick="document.getElementById('mv').activateAR()">AR'de gör</button>
   <div class="ip">sürükle: döndür &middot; tekerlek: yakınlaştır &middot; üstüne gel: istasyon &middot; çift tıkla: aç &middot; alttan kesit + ölçü</div>
+  <div class="zc"><button id="dis-kabuk" type="button" aria-pressed="false" disabled>Sadece dış kabuk</button><span id="dis-kabuk-durum" style="color:#cfd6df;font-size:13px" role="status">Model yükleniyor…</span></div>
   <div class="sip" id="sip"></div>
   <div class="zc"><button id="oy">duraklat</button><input id="tz" type="range" min="0" max="84" step="0.05" value="0"><span class="sn" id="sn">0,0 / 84 sn</span></div>
   <div class="adim" id="adim"></div>
@@ -114,4 +115,4 @@ function animasyon(A, SIP) {
   setInterval(() => { if (!mv.paused && mv.loaded) { tz.value = mv.currentTime; goster(mv.currentTime); } }, 150);
   kur(L[0], false);
 }
-</script></body></html>
+</script><script src="dis-kabuk.js?v=1"></script></body></html>
