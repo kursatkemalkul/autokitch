@@ -1,0 +1,41 @@
+﻿grup;kalem;adet;malzeme / katalog;not;parça
+KASET;Kaset taban sacı 274 × 302 × 6;1;AISI 304 · lazer + CNC · alttan 4 mm hafifletme cepleri;bugünkü tabla göbeğinin YERİNE ayar bileziğine (978) oturur · 2 tahrik pimi burcu (r 10) · Ø8 H7 + oval konum deliği (r 75) · açıcı kilit pimi ve home bayrağı cepleri · kenarlarında 6 × M5 diş;taban_saci
+KASET;Yatak sacı 279 × 302 × 6;1;AISI 316L · iki yüz taşlanmış (Ra ≤ 0,8) · kenar yuvarlatma R1;"bandın üst kolu üstünde kayar; açıcının 482 N baskısını iki yan saca taşır · sehim en kötü şerit 0.45 mm (hesap)";yatak_saci
+KASET;Kaset yan sacı ön / arka;2;AISI 304 4 mm · lazer + 10 mm kaldırma dudağı abkant;tabana 3 × M5, yatağa 3 × M5 havşa (DIN 7991) · burun rulmanı Ø11 H7 · kuyruk kızak penceresi 30 × 16 · arka sacta rotor mili kulağı;yan_sac_on
+KASET;Bant kenar kılavuzu 2,5 × 1,0 × 275;2;UHMW-PE gıda (beyaz) · 4 × M3 havşa;"bant kenarına 0,5 mm; yana kaçmayı sınırlar";kenar_kilavuzu_0
+KASET;Rulo Ø12 × 301 · muylu Ø5;2;AISI 316 · taşlanmış · bombe 0,05 · DIN 6799 RS4 segman yuvaları;burun (tahrikli: arka muylusu uzun, GT2 kasnağı) + kuyruk (gergili) AYNI parça (burunda uzun muylu);burun_rulosu
+KASET;Paslanmaz mini rulman SMR115-2RS (5 × 11 × 4);4;AISI 440C · 2 lastik keçe · gıda gresi (NSF H1);burunda yan sacta, kuyrukta kızakta;rulman_burun_on
+KASET;Segman DIN 6799 RS4 (Ø5 mil);4;paslanmaz 1.4122;rulonun eksenel tutması (burun arkası kasnak göbeğiyle);segman_burun_on
+KASET;Kuyruk gergi kızağı (blok 16 × 16 × 4 + dış flanş 22 × 20 × 1 + yay tırnağı);2;AISI 304 · Ø11 H7 rulman yuvası · pencerede ±4 gezer;"dış flanşı yan saca dayanır; iki kızak rulo + segmanlarla birbirine bağlı → yanal kaçmaz · tırnağı yay dışa (−x) iter → 34 N/kol sabit gerginlik";gergi_kizagi_0
+KASET;Basma yayı Century Spring 62266SCS;2;316 · Ø9,14 × tel 1,27 × 12,7 · 13,45 N/mm · uçlar kapalı-taşlanmış;"çalışma boyu 10.2 → 33.6 N; kızak tırnağı ile yay kutusunun uç duvarı arasında";gergi_yayi_0
+KASET;Yay kutusu (U kapak) 1 mm;2;AISI 304 · yan saca 2 punta (kenarlarından);"yayı ve kızak tırnağını örter; uç duvarı yaya dayanak";yay_kutusu_0
+KASET;Havşa vida DIN 7991 M5 × 12;12;A2-70 paslanmaz;"yan sac → taban (6) + yatak (6); kenar dişlerine";vida_taban_0
+KASET;GT2 kasnak 20 diş, 6 mm, delik 5;1;paslanmaz (303) · M3 set vidası muylu düzlüğüne;burun rulosunun arka muylusunda;burun_kasnagi
+ROTOR;Tahrik rotoru (GT2 28 diş + ara gövde + mıknatıs kabı) TEK gövde;1;AISI 316 · CNC (GT2 dişi azdırma) · 2 rulman yuvası Ø13 H7 · 6 mıknatıs cebi Ø10,1 × 5,1;sabit mil Ø6'da 2 rulmanla (biri kasnakta, biri kapta) döner · dışta 0,5 mm kapak lazer kaynaklı (mıknatıslar gıdaya değmez);tahrik_rotoru
+ROTOR;Neodimyum disk mıknatıs supermagnete S-10-05-N;12;Ø10 × 5 · N42 · nikel · ~2,6 kg;6 kasette + 6 sabit tahrikte · kutuplar sırayla N-S;rotor_miknatisi_0
+ROTOR;Mıknatıs kapağı Ø36 × 0,5;2;AISI 316 · lazer kaynak (sızdırmaz);kaset rotoru + sabit tahrik diski;rotor_kapagi
+ROTOR;Paslanmaz rulman 686-2RS (6 × 13 × 5);4;AISI 440C · 2RS · NSF H1 gres;kasette rotorda 2, sabit tahrikte 2;rotor_rulmani_0
+KASET;Pul Ø9 × Ø6 × 1;1;A2;rulman A iç bileziği ile yan sac arası;rotor_pulu
+KASET;Rotor mili Ø6 × 33;1;AISI 316 · arka yan saca TIG kaynaklı (içte düz);dış ucunda DIN 6799 RS5 segman (kabın ortasındaki Ø14 cepte);rotor_mili
+KASET;Segman DIN 6799 RS5 (Ø6 mil);1;paslanmaz 1.4122;"rotoru milde tutar; kabın ortasındaki Ø14 cepte";segman_rotor
+KASET;Bant kilidi: ferritik pim Ø4 + ayak;1;1.4016 (manyetik paslanmaz) · arka yan saca kaynaklı;"rotorun mıknatısları pime yapışır → bant kendiliğinden dönmez; sabit tahrik gelince yener";kilit_pimi
+DONER;Konum pimi ISO 8734 Ø8 × 10 m6;2;1.4305 · ayar bileziğine presli (5 mm dışarıda);"kaset tabanını yerine oturtur; biri yuvarlak biri oval delikte → kaset tek yönde takılır";ayar_konum_pimi_0
+DONER;Tahrik lokması pimi Ø8 × 36 (eski Ø8 × 8 yerine);2;1.4305 · lokmaya presli;pim ucu kaset tabanının burçlarına girer (958 → 982,5);lokma_pim_uzatmasi_0
+ARABA;Araba plakası 280 × 290 × 10 (sağ kenar −20);1;AISI 304;aktarma 28 mm ileri gittiğinde fırın kabuğuna değmesin;araba_plakasi_v27
+TAHRIK;Sabit tahrik kutusu (pencereli);1;AISI 304 1,5 · pencere 316 1,0 mm · TIG kaynak, IP69K sınıfı yıkama;"mıknatıs diski pencerenin 0,5 mm arkasında döner; kasetin rotoru önüne gelince 4,5 mm'den kavranır (dokunmadan)";tahrik_kutusu
+TAHRIK;Motor kutusu 62 × 62 × 88;1;AISI 304 1,5 · arka kapak O-ring + 4 × M4 · kablo rakoru M16 IP68 (Lapp SKINTOP INOX);tahrik kutusuna TIG kaynaklı;motor_kutusu
+TAHRIK_DISK;Sabit tahrik mıknatıs diski Ø36;1;AISI 316 · 6 mıknatıs (S-10-05-N) · kapak 0,5 lazer kaynak;motor miline kaplinle;tahrik_diski
+TAHRIK_DISK;Tahrik mili Ø6 × 53;1;AISI 316;2 × 686-2RS yatak burcunda;tahrik_mili
+TAHRIK;Yatak burcu Ø22;1;AISI 304 · kutuya kaynaklı · 2 × 686-2RS;;tahrik_yatak_burcu
+TAHRIK;Kaplin Ø19 × 18,5 (6,35 ↔ 6) · körüklü/elastomer;1;ZARF — katalog kaplin seçilmedi [V];"motor mili 1/4"" → tahrik mili 6";kaplin
+TAHRIK;Step motor NEMA23 AutomationDirect SureStep STP-MTR-23079;1;GERÇEK CAD (katalog/step) · 24–48 V · STP-DRV-4830 sürücü (kuru bölmede);311 dev/dk'da aktarma · gereken 0.075 N·m;tahrik_motoru
+TAHRIK;Tahrik braketi L;1;AISI 304 4 mm abkant · kayış kirişine 2 × M6 (yeni diş) · kutuya 2 × M5;kutu 912,5 kotundaki kayış kirişinin üstünden taşınır;tahrik_braketi
+YB;Yükleme bandı yan sacı 5 mm;2;AISI 304 lazer;fırının ön odasına köprü braketleriyle (fırın v9'da kesinleşir);yb_cerceve_0
+YB;YB burun rulosu Ø12 (kasetinkiyle aynı);1;AISI 316 · 2 × SMR115-2RS;kaset burnuna 3 mm;yb_burun_rulosu
+YB;YB tahrik rulosu Ø30;1;AISI 316 · lastik kaplama · 2 × 6000-2RS;NEMA23 + GT2 (fırın üst bölmesinden);yb_tahrik_rulosu
+YB;YB yatak sacı 3 mm;1;AISI 304;;yb_yatak_saci
+YB;YB köprü ayağı;2;AISI 304 3 mm;fırın gövdesinin iç tabanına (ön oda);yb_ayak_0
+DEGISIK;HGR15 ray uzatması (TOPPING v27);2;ray sağ ucu 2485 → 2498;aktarma +28.4;deg_ray_uzatmasi_on
+KASET/YB;Konveyör bandı Forbo Siegling Transilon E 3/1 U0/U2 MT HACCP white FDA;1;1,15 mm · 296 × 627 sonsuz (sıcak Z-ek);hesap boyu 626.7 · bıçak/rulo r ≥ 3 · FDA + AB;-
+KASET/YB;GT2 kapalı kayış Gates PowerGrip 140-2GT-6;1;2 mm hatve · 70 diş · 6 mm;rotor 28 ↔ burun 20 (1,4) · C 45.9;-
+KASET/YB;Yükleme bandı PTFE-cam kumaş sonsuz bant;1;0,35 mm · 296 × 671;260 °C'ye kadar · ZARF — üretici seçilmedi [V];-

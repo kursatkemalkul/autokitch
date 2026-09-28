@@ -1,0 +1,637 @@
+{
+ "surum": "bantli_tabla_cad_v1",
+ "tarih": "2026-09-28 23:50",
+ "sure_s": 393.5,
+ "AKT": 2365.4111943685148,
+ "LB_SOL": 2521.9111943685148,
+ "R_hesap": 223.9111943685146,
+ "R_cad": 223.73100394014838,
+ "kaset_kg": 8.44647540294816,
+ "parca_sayisi": 87,
+ "gruplar": {
+  "ARABA": 1,
+  "DEGISIK": 6,
+  "DONER": 4,
+  "FIRIN": 5,
+  "KASET": 38,
+  "ROTOR": 10,
+  "TAHRIK": 8,
+  "TAHRIK_DISK": 8,
+  "YB": 7
+ },
+ "denetim": [
+  {
+   "kod": "D1",
+   "ad": "yeni katılar geçerli (87 parça)",
+   "deger": "hepsi",
+   "sart": "hepsi geçerli",
+   "gecti": true,
+   "ayrinti": ""
+  },
+  {
+   "kod": "D2",
+   "ad": "kaset kendi içinde çakışma (1128 parça çifti taranır)",
+   "deger": "0 çakışma",
+   "sart": "0",
+   "gecti": true,
+   "ayrinti": ""
+  },
+  {
+   "kod": "D3",
+   "ad": "dönüş yarıçapı CAD'den (hesap 223.9)",
+   "deger": 223.73,
+   "sart": "≤ hesap + 0,5",
+   "gecti": true,
+   "ayrinti": ""
+  },
+  {
+   "kod": "D4a",
+   "ad": "istasyonlarda dönerken çarpma — BUGÜNKÜ TOPPING (ayarsız)",
+   "deger": "3 çakışma",
+   "sart": "bilgi",
+   "gecti": true,
+   "ayrinti": "kiyma: onyuz_cerceve_mek_orta_dikme 3591 mm³; kusbasi: onyuz_cerceve_mek_orta_dikme 7 mm³; sucuk: cikis_yarigi_contasi 11251 mm³"
+  },
+  {
+   "kod": "D4b",
+   "ad": "istasyonlarda dönerken çarpma — AYARLAR (a–f) UYGULANMIŞ",
+   "deger": "0 çakışma",
+   "sart": "0",
+   "gecti": true,
+   "ayrinti": ""
+  },
+  {
+   "kod": "D5",
+   "ad": "dönüşte en yakın engele pay (ayarlı, 0,5 süpürme payı geri eklendi)",
+   "deger": {
+    "sos": 22.23,
+    "harc": 9.5,
+    "kiyma": 4.5,
+    "kusbasi": 8.5,
+    "kasar": 22.23,
+    "sucuk": 5.5
+   },
+   "sart": "≥ 3 mm",
+   "gecti": true,
+   "ayrinti": "sos → onyuz_mekanizma_kanadi_sol_omega 22.2; harc → fire_silecegi_lastigi 9.5; kiyma → onyuz_cerceve_mek_orta_dikme (yeni) 4.5; kusbasi → onyuz_cerceve_mek_orta_dikme (yeni) 8.5; kasar → onyuz_mekanizma_kanadi_sag_omega 22.2; sucuk → cikis_yarigi_contasi (yeni) 5.5"
+  },
+  {
+   "kod": "D6",
+   "ad": "0°'de park → aktarma yolculuğu (405 konum × 14 engel)",
+   "deger": "0 çakışma",
+   "sart": "0",
+   "gecti": true,
+   "ayrinti": ""
+  },
+  {
+   "kod": "D7",
+   "ad": "aktarma konumunda paylar (x 2365.4, 0°)",
+   "deger": {
+    "yükleme bandı": 2.39,
+    "yarık contası (yeni)": 7.0,
+    "fırın ön kabuğu": 5.0,
+    "sabit tahrik kutusu": 2.0,
+    "rotor kapağı ↔ tahrik diski (hava + pencere + hava)": 3.5
+   },
+   "sart": "> 0 · mıknatıs ≈ 3.6",
+   "gecti": true,
+   "ayrinti": ""
+  },
+  {
+   "kod": "D8",
+   "ad": "sabit tahrik + yükleme bandı ↔ TOPPING/A bağlamı",
+   "deger": "0 çakışma",
+   "sart": "0",
+   "gecti": true,
+   "ayrinti": ""
+  },
+  {
+   "kod": "D9",
+   "ad": "açıcı (TOPPING'deki basma konumu) ↔ kaset parkta",
+   "deger": "0 çakışma · en yakın 8.8 mm",
+   "sart": "0 çakışma",
+   "gecti": true,
+   "ayrinti": ""
+  },
+  {
+   "kod": "D10",
+   "ad": "kaset kütlesi (bant dahil)",
+   "deger": "8.45 kg",
+   "sart": "≤ 12 kg (elle sökülür)",
+   "gecti": true,
+   "ayrinti": ""
+  }
+ ],
+ "birlesim": [
+  {
+   "cift": "kaset tabanı ↔ ayar bileziği",
+   "tutma": "2 × Ø8 konum pimi (ayar bileziğine presli, 5 mm dışarıda) + kasetin ağırlığı (8.4 kg)",
+   "sabitleme": "dönme: 2 tahrik pimi (lokma, r 10) taban burçlarına girer · kalkmaz: yük hep aşağı (açıcı 482 N, ağırlık), yatay yükler pimlerde",
+   "sokum": "ALETSİZ kaldırılır (kaldırma dudakları)",
+   "islak": "ıslak · conta yok, kaset komple yıkanır"
+  },
+  {
+   "cift": "yan saclar ↔ taban / yatak",
+   "tutma": "12 × DIN 7991 M5×12 A2 havşa, kenar dişlerine",
+   "sabitleme": "havşa yüzü yan sacla aynı düzlem",
+   "sokum": "sökülür (4 mm Allen)",
+   "islak": "ıslak · kaynak yok, dişler açık → fırçayla yıkanır"
+  },
+  {
+   "cift": "burun / kuyruk rulosu ↔ yan saclar",
+   "tutma": "4 × SMR115-2RS (5×11×4) · burunda yan sac deliğinde H7, kuyrukta gergi kızağında",
+   "sabitleme": "eksenel: rulo omzu + DIN 6799 RS4 segman (burun arkası kasnak göbeği)",
+   "sokum": "segmanlar çıkınca rulo yana çekilir",
+   "islak": "keçeli rulman, NSF H1 gres"
+  },
+  {
+   "cift": "kuyruk kızakları ↔ yan sac",
+   "tutma": "16×16×4 kızak 30×16 pencerede kayar (±3) + Century Spring 62266SCS dışa iter",
+   "sabitleme": "yanal: 1 mm kapak laması (2 × M3)",
+   "sokum": "lama sökülünce kızak çıkar",
+   "islak": "ıslak"
+  },
+  {
+   "cift": "GT2 kasnak ↔ burun muylusu",
+   "tutma": "M3 set vidası muylu düzlüğüne",
+   "sabitleme": "eksenel: kasnak göbeği rulmana dayanır",
+   "sokum": "sökülür",
+   "islak": "—"
+  },
+  {
+   "cift": "tahrik rotoru ↔ rotor mili",
+   "tutma": "2 × 686-2RS rotor gövdesinde · mil arka yan saca TIG kaynaklı (içte düz)",
+   "sabitleme": "eksenel: iç rulman mil omzuna, dış uç DIN 6799 RS5 segman (kabın ortasındaki cepte)",
+   "sokum": "segman çıkınca rotor çekilir",
+   "islak": "mıknatıslar 316 kapta lazer kaynaklı kapak altında (sızdırmaz)"
+  },
+  {
+   "cift": "bant ↔ rulolar",
+   "tutma": "sonsuz bant 2 rulo üstünde, alt yüz kumaş; yatak sacında kayar",
+   "sabitleme": "yanal: 2 UHMW kenar kılavuzu (0,5 mm pay)",
+   "sokum": "kuyruk kızakları içe itilir → bant gevşer → yana çıkar (yan sac sökülmeden değil: ön yan sac 6 vidayla sökülür)",
+   "islak": "ıslak"
+  },
+  {
+   "cift": "bant kilidi",
+   "tutma": "rotor mıknatısları 1.4016 ferritik pime yapışır (8 konum/tur)",
+   "sabitleme": "tabla dönerken, açıcı bastırırken bant kaymaz",
+   "sokum": "—",
+   "islak": "—"
+  },
+  {
+   "cift": "kaset ↔ sabit tahrik",
+   "tutma": "TEMAS YOK · mıknatıs yüzleri 4.6 mm (kap 0,5 + hava + pencere 1 + kap 0,5)",
+   "sabitleme": "kaset 0°'de aktarma konumuna gelince diskler karşılıklı hizalanır",
+   "sokum": "—",
+   "islak": "kutu kapalı, pencere 316"
+  },
+  {
+   "cift": "sabit tahrik ↔ TOPPING",
+   "tutma": "L braket → kayış kirişine 2 × M6 (yeni diş), kutuya 2 × M5",
+   "sabitleme": "—",
+   "sokum": "sökülür",
+   "islak": "motor kutusu O-ring + M16 IP68 rakor"
+  },
+  {
+   "cift": "yükleme bandı ↔ fırın",
+   "tutma": "2 köprü ayağı fırın ön odasının tabanına",
+   "sabitleme": "—",
+   "sokum": "—",
+   "islak": "fırın v9'da kesinleşir (ÇÖZÜLMEDİ)"
+  }
+ ],
+ "bom": [
+  {
+   "grup": "KASET",
+   "ad": "Kaset taban sacı 274 × 302 × 6",
+   "adet": 1,
+   "malzeme": "AISI 304 · lazer + CNC · alttan 4 mm hafifletme cepleri",
+   "not_": "bugünkü tabla göbeğinin YERİNE ayar bileziğine (978) oturur · 2 tahrik pimi burcu (r 10) · Ø8 H7 + oval konum deliği (r 75) · açıcı kilit pimi ve home bayrağı cepleri · kenarlarında 6 × M5 diş",
+   "parca": "taban_saci"
+  },
+  {
+   "grup": "KASET",
+   "ad": "Yatak sacı 279 × 302 × 6",
+   "adet": 1,
+   "malzeme": "AISI 316L · iki yüz taşlanmış (Ra ≤ 0,8) · kenar yuvarlatma R1",
+   "not_": "bandın üst kolu üstünde kayar; açıcının 482 N baskısını iki yan saca taşır · sehim en kötü şerit 0.45 mm (hesap)",
+   "parca": "yatak_saci"
+  },
+  {
+   "grup": "KASET",
+   "ad": "Kaset yan sacı ön / arka",
+   "adet": 2,
+   "malzeme": "AISI 304 4 mm · lazer + 10 mm kaldırma dudağı abkant",
+   "not_": "tabana 3 × M5, yatağa 3 × M5 havşa (DIN 7991) · burun rulmanı Ø11 H7 · kuyruk kızak penceresi 30 × 16 · arka sacta rotor mili kulağı",
+   "parca": "yan_sac_on"
+  },
+  {
+   "grup": "KASET",
+   "ad": "Bant kenar kılavuzu 2,5 × 1,0 × 275",
+   "adet": 2,
+   "malzeme": "UHMW-PE gıda (beyaz) · 4 × M3 havşa",
+   "not_": "bant kenarına 0,5 mm; yana kaçmayı sınırlar",
+   "parca": "kenar_kilavuzu_0"
+  },
+  {
+   "grup": "KASET",
+   "ad": "Rulo Ø12 × 301 · muylu Ø5",
+   "adet": 2,
+   "malzeme": "AISI 316 · taşlanmış · bombe 0,05 · DIN 6799 RS4 segman yuvaları",
+   "not_": "burun (tahrikli: arka muylusu uzun, GT2 kasnağı) + kuyruk (gergili) AYNI parça (burunda uzun muylu)",
+   "parca": "burun_rulosu"
+  },
+  {
+   "grup": "KASET",
+   "ad": "Paslanmaz mini rulman SMR115-2RS (5 × 11 × 4)",
+   "adet": 4,
+   "malzeme": "AISI 440C · 2 lastik keçe · gıda gresi (NSF H1)",
+   "not_": "burunda yan sacta, kuyrukta kızakta",
+   "parca": "rulman_burun_on"
+  },
+  {
+   "grup": "KASET",
+   "ad": "Segman DIN 6799 RS4 (Ø5 mil)",
+   "adet": 4,
+   "malzeme": "paslanmaz 1.4122",
+   "not_": "rulonun eksenel tutması (burun arkası kasnak göbeğiyle)",
+   "parca": "segman_burun_on"
+  },
+  {
+   "grup": "KASET",
+   "ad": "Kuyruk gergi kızağı (blok 16 × 16 × 4 + dış flanş 22 × 20 × 1 + yay tırnağı)",
+   "adet": 2,
+   "malzeme": "AISI 304 · Ø11 H7 rulman yuvası · pencerede ±4 gezer",
+   "not_": "dış flanşı yan saca dayanır; iki kızak rulo + segmanlarla birbirine bağlı → yanal kaçmaz · tırnağı yay dışa (−x) iter → 34 N/kol sabit gerginlik",
+   "parca": "gergi_kizagi_0"
+  },
+  {
+   "grup": "KASET",
+   "ad": "Basma yayı Century Spring 62266SCS",
+   "adet": 2,
+   "malzeme": "316 · Ø9,14 × tel 1,27 × 12,7 · 13,45 N/mm · uçlar kapalı-taşlanmış",
+   "not_": "çalışma boyu 10.2 → 33.6 N; kızak tırnağı ile yay kutusunun uç duvarı arasında",
+   "parca": "gergi_yayi_0"
+  },
+  {
+   "grup": "KASET",
+   "ad": "Yay kutusu (U kapak) 1 mm",
+   "adet": 2,
+   "malzeme": "AISI 304 · yan saca 2 punta (kenarlarından)",
+   "not_": "yayı ve kızak tırnağını örter; uç duvarı yaya dayanak",
+   "parca": "yay_kutusu_0"
+  },
+  {
+   "grup": "KASET",
+   "ad": "Havşa vida DIN 7991 M5 × 12",
+   "adet": 12,
+   "malzeme": "A2-70 paslanmaz",
+   "not_": "yan sac → taban (6) + yatak (6); kenar dişlerine",
+   "parca": "vida_taban_0"
+  },
+  {
+   "grup": "KASET",
+   "ad": "GT2 kasnak 20 diş, 6 mm, delik 5",
+   "adet": 1,
+   "malzeme": "paslanmaz (303) · M3 set vidası muylu düzlüğüne",
+   "not_": "burun rulosunun arka muylusunda",
+   "parca": "burun_kasnagi"
+  },
+  {
+   "grup": "ROTOR",
+   "ad": "Tahrik rotoru (GT2 28 diş + ara gövde + mıknatıs kabı) TEK gövde",
+   "adet": 1,
+   "malzeme": "AISI 316 · CNC (GT2 dişi azdırma) · 2 rulman yuvası Ø13 H7 · 6 mıknatıs cebi Ø10,1 × 5,1",
+   "not_": "sabit mil Ø6'da 2 rulmanla (biri kasnakta, biri kapta) döner · dışta 0,5 mm kapak lazer kaynaklı (mıknatıslar gıdaya değmez)",
+   "parca": "tahrik_rotoru"
+  },
+  {
+   "grup": "ROTOR",
+   "ad": "Neodimyum disk mıknatıs supermagnete S-10-05-N",
+   "adet": 12,
+   "malzeme": "Ø10 × 5 · N42 · nikel · ~2,6 kg",
+   "not_": "6 kasette + 6 sabit tahrikte · kutuplar sırayla N-S",
+   "parca": "rotor_miknatisi_0"
+  },
+  {
+   "grup": "ROTOR",
+   "ad": "Mıknatıs kapağı Ø36 × 0,5",
+   "adet": 2,
+   "malzeme": "AISI 316 · lazer kaynak (sızdırmaz)",
+   "not_": "kaset rotoru + sabit tahrik diski",
+   "parca": "rotor_kapagi"
+  },
+  {
+   "grup": "ROTOR",
+   "ad": "Paslanmaz rulman 686-2RS (6 × 13 × 5)",
+   "adet": 4,
+   "malzeme": "AISI 440C · 2RS · NSF H1 gres",
+   "not_": "kasette rotorda 2, sabit tahrikte 2",
+   "parca": "rotor_rulmani_0"
+  },
+  {
+   "grup": "KASET",
+   "ad": "Pul Ø9 × Ø6 × 1",
+   "adet": 1,
+   "malzeme": "A2",
+   "not_": "rulman A iç bileziği ile yan sac arası",
+   "parca": "rotor_pulu"
+  },
+  {
+   "grup": "KASET",
+   "ad": "Rotor mili Ø6 × 33",
+   "adet": 1,
+   "malzeme": "AISI 316 · arka yan saca TIG kaynaklı (içte düz)",
+   "not_": "dış ucunda DIN 6799 RS5 segman (kabın ortasındaki Ø14 cepte)",
+   "parca": "rotor_mili"
+  },
+  {
+   "grup": "KASET",
+   "ad": "Segman DIN 6799 RS5 (Ø6 mil)",
+   "adet": 1,
+   "malzeme": "paslanmaz 1.4122",
+   "not_": "rotoru milde tutar; kabın ortasındaki Ø14 cepte",
+   "parca": "segman_rotor"
+  },
+  {
+   "grup": "KASET",
+   "ad": "Bant kilidi: ferritik pim Ø4 + ayak",
+   "adet": 1,
+   "malzeme": "1.4016 (manyetik paslanmaz) · arka yan saca kaynaklı",
+   "not_": "rotorun mıknatısları pime yapışır → bant kendiliğinden dönmez; sabit tahrik gelince yener",
+   "parca": "kilit_pimi"
+  },
+  {
+   "grup": "DONER",
+   "ad": "Konum pimi ISO 8734 Ø8 × 10 m6",
+   "adet": 2,
+   "malzeme": "1.4305 · ayar bileziğine presli (5 mm dışarıda)",
+   "not_": "kaset tabanını yerine oturtur; biri yuvarlak biri oval delikte → kaset tek yönde takılır",
+   "parca": "ayar_konum_pimi_0"
+  },
+  {
+   "grup": "DONER",
+   "ad": "Tahrik lokması pimi Ø8 × 36 (eski Ø8 × 8 yerine)",
+   "adet": 2,
+   "malzeme": "1.4305 · lokmaya presli",
+   "not_": "pim ucu kaset tabanının burçlarına girer (958 → 982,5)",
+   "parca": "lokma_pim_uzatmasi_0"
+  },
+  {
+   "grup": "ARABA",
+   "ad": "Araba plakası 280 × 290 × 10 (sağ kenar −20)",
+   "adet": 1,
+   "malzeme": "AISI 304",
+   "not_": "aktarma 28 mm ileri gittiğinde fırın kabuğuna değmesin",
+   "parca": "araba_plakasi_v27"
+  },
+  {
+   "grup": "TAHRIK",
+   "ad": "Sabit tahrik kutusu (pencereli)",
+   "adet": 1,
+   "malzeme": "AISI 304 1,5 · pencere 316 1,0 mm · TIG kaynak, IP69K sınıfı yıkama",
+   "not_": "mıknatıs diski pencerenin 0,5 mm arkasında döner; kasetin rotoru önüne gelince 4,5 mm'den kavranır (dokunmadan)",
+   "parca": "tahrik_kutusu"
+  },
+  {
+   "grup": "TAHRIK",
+   "ad": "Motor kutusu 62 × 62 × 88",
+   "adet": 1,
+   "malzeme": "AISI 304 1,5 · arka kapak O-ring + 4 × M4 · kablo rakoru M16 IP68 (Lapp SKINTOP INOX)",
+   "not_": "tahrik kutusuna TIG kaynaklı",
+   "parca": "motor_kutusu"
+  },
+  {
+   "grup": "TAHRIK_DISK",
+   "ad": "Sabit tahrik mıknatıs diski Ø36",
+   "adet": 1,
+   "malzeme": "AISI 316 · 6 mıknatıs (S-10-05-N) · kapak 0,5 lazer kaynak",
+   "not_": "motor miline kaplinle",
+   "parca": "tahrik_diski"
+  },
+  {
+   "grup": "TAHRIK_DISK",
+   "ad": "Tahrik mili Ø6 × 53",
+   "adet": 1,
+   "malzeme": "AISI 316",
+   "not_": "2 × 686-2RS yatak burcunda",
+   "parca": "tahrik_mili"
+  },
+  {
+   "grup": "TAHRIK",
+   "ad": "Yatak burcu Ø22",
+   "adet": 1,
+   "malzeme": "AISI 304 · kutuya kaynaklı · 2 × 686-2RS",
+   "not_": "",
+   "parca": "tahrik_yatak_burcu"
+  },
+  {
+   "grup": "TAHRIK",
+   "ad": "Kaplin Ø19 × 18,5 (6,35 ↔ 6) · körüklü/elastomer",
+   "adet": 1,
+   "malzeme": "ZARF — katalog kaplin seçilmedi [V]",
+   "not_": "motor mili 1/4\" → tahrik mili 6",
+   "parca": "kaplin"
+  },
+  {
+   "grup": "TAHRIK",
+   "ad": "Step motor NEMA23 AutomationDirect SureStep STP-MTR-23079",
+   "adet": 1,
+   "malzeme": "GERÇEK CAD (katalog/step) · 24–48 V · STP-DRV-4830 sürücü (kuru bölmede)",
+   "not_": "311 dev/dk'da aktarma · gereken 0.075 N·m",
+   "parca": "tahrik_motoru"
+  },
+  {
+   "grup": "TAHRIK",
+   "ad": "Tahrik braketi L",
+   "adet": 1,
+   "malzeme": "AISI 304 4 mm abkant · kayış kirişine 2 × M6 (yeni diş) · kutuya 2 × M5",
+   "not_": "kutu 912,5 kotundaki kayış kirişinin üstünden taşınır",
+   "parca": "tahrik_braketi"
+  },
+  {
+   "grup": "YB",
+   "ad": "Yükleme bandı yan sacı 5 mm",
+   "adet": 2,
+   "malzeme": "AISI 304 lazer",
+   "not_": "fırının ön odasına köprü braketleriyle (fırın v9'da kesinleşir)",
+   "parca": "yb_cerceve_0"
+  },
+  {
+   "grup": "YB",
+   "ad": "YB burun rulosu Ø12 (kasetinkiyle aynı)",
+   "adet": 1,
+   "malzeme": "AISI 316 · 2 × SMR115-2RS",
+   "not_": "kaset burnuna 3 mm",
+   "parca": "yb_burun_rulosu"
+  },
+  {
+   "grup": "YB",
+   "ad": "YB tahrik rulosu Ø30",
+   "adet": 1,
+   "malzeme": "AISI 316 · lastik kaplama · 2 × 6000-2RS",
+   "not_": "NEMA23 + GT2 (fırın üst bölmesinden)",
+   "parca": "yb_tahrik_rulosu"
+  },
+  {
+   "grup": "YB",
+   "ad": "YB yatak sacı 3 mm",
+   "adet": 1,
+   "malzeme": "AISI 304",
+   "not_": "",
+   "parca": "yb_yatak_saci"
+  },
+  {
+   "grup": "YB",
+   "ad": "YB köprü ayağı",
+   "adet": 2,
+   "malzeme": "AISI 304 3 mm",
+   "not_": "fırın gövdesinin iç tabanına (ön oda)",
+   "parca": "yb_ayak_0"
+  },
+  {
+   "grup": "DEGISIK",
+   "ad": "HGR15 ray uzatması (TOPPING v27)",
+   "adet": 2,
+   "malzeme": "ray sağ ucu 2485 → 2498",
+   "not_": "aktarma +28.4",
+   "parca": "deg_ray_uzatmasi_on"
+  },
+  {
+   "grup": "KASET/YB",
+   "ad": "Konveyör bandı Forbo Siegling Transilon E 3/1 U0/U2 MT HACCP white FDA",
+   "adet": 1,
+   "malzeme": "1,15 mm · 296 × 627 sonsuz (sıcak Z-ek)",
+   "not_": "hesap boyu 626.7 · bıçak/rulo r ≥ 3 · FDA + AB",
+   "parca": "-"
+  },
+  {
+   "grup": "KASET/YB",
+   "ad": "GT2 kapalı kayış Gates PowerGrip 140-2GT-6",
+   "adet": 1,
+   "malzeme": "2 mm hatve · 70 diş · 6 mm",
+   "not_": "rotor 28 ↔ burun 20 (1,4) · C 45.9",
+   "parca": "-"
+  },
+  {
+   "grup": "KASET/YB",
+   "ad": "Yükleme bandı PTFE-cam kumaş sonsuz bant",
+   "adet": 1,
+   "malzeme": "0,35 mm · 296 × 671",
+   "not_": "260 °C'ye kadar · ZARF — üretici seçilmedi [V]",
+   "parca": "-"
+  }
+ ],
+ "ayarlar": [
+  {
+   "kod": "a",
+   "ne": "orta dikme: tabla hizasında (y 965–1012) 47 mm boşluk (kapaklar yine dikmenin kalanına dayanır)",
+   "neden": "dönen köşe 14.9 mm giriyor"
+  },
+  {
+   "kod": "b",
+   "ne": "fırın: yükleme bandı burnu x 2521.9'den başlar (eski giriş bandı 2520,5) · ön kabuk ağzının alt kenarı 984 → 965",
+   "neden": "sucukta dönüşe 5 mm pay · rotor kabı sucukta dönerken ağzın altından 970'e iner"
+  },
+  {
+   "kod": "c",
+   "ne": "TOPPING çıkış yarığı: alt kenar 987 → 965, ön kenar −13 → −8",
+   "neden": "sucukta dönen rotor kabı 970'e iner (5 mm pay) · ön yan sac 2.0 mm pay"
+  },
+  {
+   "kod": "d",
+   "ne": "aktarma x 2337 → 2365.4 (+28.4): ray sağ ucu 2485 → 2498, limit+ ve tampon +28, araba plakası sağ kenarı −20",
+   "neden": "burun ucu yükleme bandına 3 mm"
+  },
+  {
+   "kod": "e",
+   "ne": "göbek + Ø340 tabla + çalışma diski + disk pimleri KALKAR; ayar bileziğine 2 × Ø8 konum pimi; tahrik lokması pimleri 958–966 → 958–983",
+   "neden": "kaset doğrudan ayar bileziğine oturur"
+  },
+  {
+   "kod": "f",
+   "ne": "sabit tahrik kutusu TOPPING sağ-arka (x 2435–2497, z -508…-356), braketi kayış kirişine",
+   "neden": "dönüş dairesinin dışı"
+  }
+ ],
+ "hesap_acikliklar": {
+  "on_kapak (z 59)": 5.09,
+  "orta_dikme (z 39) — BOŞLUK AÇILMAZSA": -14.91,
+  "yukleme_bandi (sucukta dönüş)": 5.0,
+  "sabit_tahrik (sucukta dönüş)": 16.19,
+  "sabit_tahrik ↔ yarık contası (x 2491)": 4.17,
+  "yarık alt (987) ↔ dönüş kolu": -1.3,
+  "fırın ağzı alt (984) ↔ dönüş kolu": 1.7,
+  "sucukta dönen rotor kabı alt (970) ↔ BUGÜNKÜ yarık alt (987)": -17.0,
+  "sucukta dönen rotor kabı alt (970) ↔ YENİ yarık / ağız alt (965)": 5.0,
+  "yarık ön (−13) ↔ kaset ön yan sac": 2.0,
+  "fırın ağzı ön (−10) ↔ kaset ön yan sac": 5.0,
+  "fırın ağzı arka (−341) ↔ burun kasnağı": 8.0
+ },
+ "paylar_istasyon": {
+  "sos": [
+   22.23,
+   "onyuz_mekanizma_kanadi_sol_omega"
+  ],
+  "harc": [
+   9.5,
+   "fire_silecegi_lastigi"
+  ],
+  "kiyma": [
+   4.5,
+   "onyuz_cerceve_mek_orta_dikme (yeni)"
+  ],
+  "kusbasi": [
+   8.5,
+   "onyuz_cerceve_mek_orta_dikme (yeni)"
+  ],
+  "kasar": [
+   22.23,
+   "onyuz_mekanizma_kanadi_sag_omega"
+  ],
+  "sucuk": [
+   5.5,
+   "cikis_yarigi_contasi (yeni)"
+  ]
+ },
+ "aktarma_paylar": {
+  "yükleme bandı": 2.39,
+  "yarık contası (yeni)": 7.0,
+  "fırın ön kabuğu": 5.0,
+  "sabit tahrik kutusu": 2.0,
+  "rotor kapağı ↔ tahrik diski (hava + pencere + hava)": 3.5
+ },
+ "pivotlar": {
+  "tabla_z": -170.0,
+  "park_x": 350.0,
+  "rotor": [
+   100.42059263470935,
+   988.0
+  ],
+  "tahrik": [
+   2465.8317870032242,
+   988.0
+  ],
+  "yb_burun": [
+   2528.2611943685147,
+   993.65
+  ],
+  "yb_tahrik": [
+   2830.0,
+   984.65,
+   15.0
+  ],
+  "bant_L": 626.7119433947057,
+  "gt2_L": 142.89645613214506,
+  "yb_L": 671.0867081367925,
+  "isi0": 2912.0,
+  "zaman": {
+   "yol_mm": 301.5,
+   "t_aktarma_s": 1.255,
+   "t_ivme_s": 0.25,
+   "yaklasma_mm": 72.41119436851477
+  },
+  "acici_strok": 90.0
+ }
+}
