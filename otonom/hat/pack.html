@@ -1,4 +1,4 @@
-<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>5 · PACK — kutu katlama</title><link rel="stylesheet" href="hat.css?v=10"><script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script><script src="model3d.js?v=19"></script>
+<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>5 · PACK — kutu katlama</title><link rel="stylesheet" href="hat.css?v=10"><script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script><script src="model3d.js?v=20"></script>
 <style>
 .zc{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;padding:10px 16px;background:#1b1f26;border-top:1px solid #2a3039}
 .zc button{border:1px solid #39424f;background:#232932;color:#cfd6df;border-radius:8px;padding:6px 11px;font:600 12.5px system-ui,sans-serif;cursor:pointer}
@@ -17,7 +17,7 @@ table.t td,table.t th{vertical-align:top}
 <div class="wrap"><h1>5 · PACK — kutu katlama modülü v7<span class="tag" style="background:#d9b43a">830 × 909 × 1862 · kapaklı · içecek yedeği altta</span></h1><div class="card" style="border-left:4px solid #d94a3a;background:#fdf3f2;margin:12px 0"><b style="color:#a3281c">ÖN DÜZLEM +79 · HER İSTASYON KAPAKLI, TEMİZ BİR KUTU.</b> Bütün istasyonların ön yüzü fırının ön yüzüyle aynı düzlemde (z +79); arka yüz −830 yerinde, derinlik <b>909</b>. Her istasyon kendi başına kapalı bir kutu: kapaklar ön düzlemde, aralarında 3 mm derz. Soğuk kapaklar 40 mm (304 1,5 + PU 37,5 + 304 1,0), kuru istasyon kapakları 20 mm tava panel (304 fırçalı 1,5). Modelin altındaki <b>Ön kapaklar</b> çubuğu: tam sağ = metal kapaklar, sola çektikçe saydamlaşır, tam sol = görünmez (içerisi). E'ye kapaklar geldi (alt içecek yedeği 2 kanat · orta: sabit panel + robot ağzı + servis kapağı · üst 2 kanat); robot ağzı ve koli çekme yolu serbest.</div>
 <p class="lead">Standart pizza kutusunu (32 × 32 × 4,2 cm, E-dalga) düz açılımdan katlar, pizzayı alır, kapağını kapatıp bastırır. Robot kutuyu tepsinin aralıklarından çatalla alır. 7 step motorlu. Her parça ya katalog ürünü ya da çizimle üretilecek sac ya da alüminyum. Hareketi <a href="makine.html">MAKİNE</a> sayfasında sipariş seçerek izle.</p>
 <div class="m3">
-  <model-viewer id="mv" loading="eager" src="../hat3d/modul_E.glb?v=68" ios-src="../hat3d/modul_E.usdz?v=68" alt="E · kutu katlama modülü (kutu_cad_v7)"
+  <model-viewer id="mv" loading="eager" src="../hat3d/modul_E.glb?v=69" ios-src="../hat3d/modul_E.usdz?v=69" alt="E · kutu katlama modülü (kutu_cad_v8)"
       camera-controls touch-action="pan-y" shadow-intensity="0.6" exposure="1.0" environment-image="neutral"
       camera-orbit="25deg 70deg 3.6m" camera-target="5.0m 1.25m -0.4m" field-of-view="30deg" min-field-of-view="5deg"
       ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
@@ -27,7 +27,7 @@ table.t td,table.t th{vertical-align:top}
 </div>
 <div class="secim" id="secim"></div>
 <p class="note" id="ozet"></p>
-<div class="card" style="border-left:4px solid #178a56;background:#eefaf3;margin:12px 0"><b style="color:#0f6e42">GÜNCEL · MONTAJ v68 (28 Eyl 2026).</b> Model montajdaki güncel istasyon (modul_E): ön kapaklar modelde, alttaki <b>Ön kapaklar</b> çubuğuyla saydamlaşır; kapak dışındaki her şey (yalıtım, sac, silindirler) gerçek renginde, opak. Bu sayfada animasyon yok; çalışmayı <a href="makine.html">MAKİNE</a> sayfasında sipariş seçerek izle.</div>
+<div class="card" style="border-left:4px solid #178a56;background:#eefaf3;margin:12px 0"><b style="color:#0f6e42">GÜNCEL · MONTAJ v69 (28 Eyl 2026).</b> Model montajdaki güncel istasyon (modul_E · kutu_cad_v8): ön kapaklar modelde, alttaki <b>Ön kapaklar</b> çubuğuyla saydamlaşır; kapak dışındaki her şey (yalıtım, sac, silindirler) gerçek renginde, opak. Bu sayfada animasyon yok; çalışmayı <a href="makine.html">MAKİNE</a> sayfasında sipariş seçerek izle. <b>v69:</b> kapak masası 2 ayrı levha (kapak kolu aradaki 26 mm yarıktan geçer; kolun 0–144° dönüşü boyunca levhalara en az 1 mm açıklık, ölçüldü).</div>
 <h2>Çalışma sırası</h2><div class="card"><ol class="steps" id="adim"></ol></div>
 
 
@@ -52,12 +52,12 @@ table.t td,table.t th{vertical-align:top}
 <b>Köprü</b><span>Pizza yolu. Katlama sırasında 30 mm aşağıda durur; ön paneller serbest kalıp dik kalkabilsin diye. Pizza gelirken kalıp kotuna (981,5) çıkar. SFU1605, NEMA 23 ve 2 × LM12UU ile çalışır.</span>
 <b>Piston</b><span>296 × 296 kafa, SFU1610 vida (üstten BK12, sabit–serbest), 2 HGR15 ray ve NEMA 23. Üç iş yapar: tabanı 45,6 mm kalıba basar, 2. vuruşta kilit dillerini yarıklara iter, son vuruşta kapağı kapatıp bastırır.</span>
 <b>Devirme parmağı</b><span>NEMA 23 + SureGear 10:1. Dik duran iç ön paneli 140°'lik dönüşle kutunun içine devirir.</span>
-<b>Kapak</b><span>Kapak masası, U flap katlayıcı (SFU1605 + NEMA 23; 37,6 mm kalkar, 3 flapı birden katlar) ve kapak kolu (NEMA 23 + SureGear 10:1, R 166, POM makaralı). Kol kapağı pizza gelene kadar 85°'de dik tutar, sonra 100°'ye yatırır.</span>
+<b>Kapak</b><span>Kapak masası (iki ayrı 3 mm levha; aradaki 26 mm yarıktan kapak kolu geçer), U flap katlayıcı (SFU1605 + NEMA 23; 37,6 mm kalkar, 3 flapı birden katlar) ve kapak kolu (NEMA 23 + SureGear 10:1, R 166, POM makaralı). Kol kapağı pizza gelene kadar 85°'de dik tutar, sonra 100°'ye yatırır.</span>
 <b>Alt raf + altı</b><span>Kalıbın 4 ayağı ve kapak alt plakasının 2 ayağı 618–622'deki 4 mm alt rafta biter (mekanizmanın en alt parçası U flap motoru 629,5). Rafın altında içecek yedeği 6 koli = 144 kutu (soğutmasız); önünde 2 kanatlı alt kapak (≥ 110° açılır), koliler düz çekilir; üstünde 89 mm boş.</span>
-<b>Ön (kutu_cad_v7)</b><span>tam boy çerçeve + 6 tava panel (304 fırçalı 1,5 · 20 büküm · +59…+79 · derz 3): ALT 2 kanat (içecek yedeği) · ORTA sol sabit panel + ROBOT AĞZI (x 85–440 · y 886–1062) + sağ servis kapağı · ÜST 2 kanat; gizli menteşe + bas-aç, kulp yok.</span>
+<b>Ön (kutu_cad_v8)</b><span>tam boy çerçeve + 6 tava panel (304 fırçalı 1,5 · 20 büküm · +59…+79 · derz 3): ALT 2 kanat (içecek yedeği) · ORTA sol sabit panel + ROBOT AĞZI (x 85–440 · y 886–1062) + sağ servis kapağı · ÜST 2 kanat; gizli menteşe + bas-aç, kulp yok.</span>
 <b>Pano (üst arka)</b><span>Siemens S7-1200 1214C + SM1221 DI16 + SM1222 DQ16, 7 × AutomationDirect SureStep STP-DRV-4830, Mean Well NDR-240-24 + 2 × NDR-240-48.</span>
 <b>Sensörler</b><span>3 × Omron E3Z-D62 (yığın üstü, blank var, kutu dolu) ve 7 × Omron E2E-X2D1-N (eksen sıfırları).</span>
-<b>Malzeme listesi</b><span><a href="../../arastirma/5_PACK_kutu_v7/BOM_OZET.csv">BOM_OZET.csv</a> (kalem toplamları, satın alma / üretim) · <a href="../../arastirma/5_PACK_kutu_v7/BOM.csv">BOM.csv</a> (modeldeki her parça). Üretici STEP'leri (HIWIN ray/araba, SureStep motor/sürücü, SureGear redüktör, Mean Well) modelde birebir kullanıldı. Vida, yatak, sensör ve PLC katalog ölçüsüyle modellendi.</span>
+<b>Malzeme listesi</b><span><a href="../../arastirma/5_PACK_kutu_v8/BOM_OZET.csv">BOM_OZET.csv</a> (kalem toplamları, satın alma / üretim) · <a href="../../arastirma/5_PACK_kutu_v8/BOM.csv">BOM.csv</a> (modeldeki her parça). Üretici STEP'leri (HIWIN ray/araba, SureStep motor/sürücü, SureGear redüktör, Mean Well) modelde birebir kullanıldı. Vida, yatak, sensör ve PLC katalog ölçüsüyle modellendi.</span>
 <b>Kaynaklar</b><span><a href="https://www.automationdirect.com/adc/shopping/catalog/motion_control/stepper_systems/single_shaft_stepper_motors/stp-mtr-23079" target="_blank">STP-MTR-23079</a> (1,95 N·m) · <a href="https://www.automationdirect.com/adc/shopping/catalog/motion_control/stepper_systems/stepper_drives/stp-drv-4830" target="_blank">STP-DRV-4830</a> (3 A, 12–48 V) · <a href="http://www.adcpn.com/pn/PGCN23-1025" target="_blank">SureGear PGCN23-1025</a> · HIWIN HGR15/HGH15CA (TraceParts) · <a href="https://fluxelectronix.com/shop/sfu1610-ball-screw-nut/" target="_blank">SFU1610 somun</a> (Ø48 × 57) · <a href="https://us.misumi-ec.com/vona2/detail/221000095199/?HissuCode=BK12" target="_blank">BK12</a> · <a href="https://www.sirosilo.com/products/pizza-box-folding-machine/" target="_blank">endüstriyel pizza kutusu makinesi</a> (çalışma ilkesi karşılaştırması: 2051 × 1400 × 2120, 580 kg, 15–20 kutu/dk, basınçlı hava).</span>
 </div></div>
 
@@ -91,7 +91,7 @@ table.t td,table.t th{vertical-align:top}
 </table></div>
 
 </div>
-<div class="foot">AUTOKITCH · HAT · Yol C canlı tasarım defteri · model: arastirma/_uretec/kutu_cad_v7.py (ön düzlem +79 · 6 tava panel + robot ağzı) · montaj v68 · 28 Eyl 2026</div>
+<div class="foot">AUTOKITCH · HAT · Yol C canlı tasarım defteri · model: arastirma/_uretec/kutu_cad_v8.py (ön düzlem +79 · 6 tava panel + robot ağzı) · montaj v69 · 28 Eyl 2026</div>
 <script>
 const ADIM = [
   [0.5, 'BESLEME', 'İtici en üstteki blankı şarjörden kalıbın üstüne sürer (411 mm, 1,2 sn). 2. blank kapı eşiğinde kalır.'],
@@ -107,9 +107,9 @@ const ADIM = [
   [13.9, 'ROBOT', 'FR5 çatalı tepsinin aralıklarından girer, kutuyu 55 mm kaldırır, ağızdan çeker (QR dolabına).'],
 ];
 document.getElementById('adim').innerHTML = ADIM.map(a => '<li><b>' + a[1] + '</b> — ' + a[2] + '</li>').join('');   // v65: animasyon yok, sıra metin
-const M = model3d({mv: 'mv', etiket: 'et', grup: 'kod', parca: '../hat3d/parca_kutulari.json?v=68', hedef: g => g.birimler[0].sayfa ? '../' + g.birimler[0].sayfa : '',
+const M = model3d({mv: 'mv', etiket: 'et', grup: 'kod', parca: '../hat3d/parca_kutulari.json?v=69', hedef: g => g.birimler[0].sayfa ? '../' + g.birimler[0].sayfa : '',
   yazi: g => { const b = g.birimler[0]; return '<b>' + b.ad + '</b><span>' + b.olcu.join(' \u00d7 ') + ' mm' + (b.kaynak ? '<br>' + b.kaynak : '') + '</span>'; }});
-fetch('../hat3d/durum.json?v=68').then(r => r.json()).then(D => {
+fetch('../hat3d/durum.json?v=69').then(r => r.json()).then(D => {
   const L = D.birim.filter(b => b.modul === 'E' && b.kod.indexOf('_KABIN') < 0); M.veri(L);
   document.getElementById('secim').innerHTML = L.map(b => '<a href="#" data-k="' + b.kod + '">' + b.ad + '<span>' + b.olcu.join(' \u00d7 ') + ' mm</span></a>').join('');
   document.querySelectorAll('.secim a').forEach(a => { a.onmouseenter = () => M.sec(a.dataset.k); a.onmouseleave = () => M.birak(); a.onclick = e => e.preventDefault(); });

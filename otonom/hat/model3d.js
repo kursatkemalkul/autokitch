@@ -1,4 +1,4 @@
-// AUTOKITCH · hat/model3d.js v2 — gerçek üretim modelini gösterir + KESİT + ÖLÇÜ araçları.
+// AUTOKITCH · hat/model3d.js v20 (kesit yüzü dolu) · v2 — gerçek üretim modelini gösterir + KESİT + ÖLÇÜ araçları.
 // model-viewer'ın materialFromPoint'i malzeme adını verir; her birim kendi malzemesini taşır (hat_montaj_v7.py),
 // eşleşme durum.json'daki "mal" alanından kurulur. Ayrı bir tıklama katmanı yok — model neyse o.
 //
@@ -164,6 +164,7 @@
             m.setAlphaMode(v >= 100 ? 'OPAQUE' : 'BLEND');
           });
           ky.textContent = v >= 100 ? 'metal' : (v <= 0 ? 'gizli' : '%' + v);
+          kesitUygula();                                                    // v20: kapak saydamlaşınca kesit yüzü boyası kalkar / opaklaşınca gelir
           try { localStorage.setItem('ak_kapak_saydam', String(v)); } catch (e) {}
         };
         kb.oninput = () => kapak(kb.value);
@@ -248,6 +249,28 @@
       uyariZaman = setTimeout(() => { if (!R && eksen) degerYazi.textContent = 'kesit açılamadı'; }, 8000);
     }
 
+    // KESİT YÜZÜ DOLU (v20 · Kemal: "parçalar solid mi, içi boş sac mı?"): tarayıcı yalnız parçaların DIŞ YÜZEYİNİ çizer; kesit düzlemi parçayı
+    // kesince içi boş görünüyordu. Kesit açıkken opak malzemeler iki yüzlü çizilir ve ARKA yüzler (kesilen katının içi) düz koyu tonda boyanır →
+    // kesilen her katı dolu görünür. Şeffaf malzemelere (ön kapak saydamken, PC kaset) dokunulmaz. Kesit kapanınca eski hale döner.
+    const KAPAK = '__kesitKapak';
+    function kapakAyarla(m, acik) {
+      const saydam = m.transparent && m.opacity < 0.999;              // ön kapak saydamken / PC kaset: kesit yüzü boyanmaz
+      if (acik && !saydam) {
+        if (m.userData[KAPAK]) return;
+        m.userData[KAPAK] = { side: m.side, obc: m.onBeforeCompile };
+        m.side = 2;                                                     // THREE.DoubleSide
+        m.onBeforeCompile = function (sh, r) {
+          if (m.userData[KAPAK] && m.userData[KAPAK].obc) m.userData[KAPAK].obc.call(this, sh, r);
+          sh.fragmentShader = sh.fragmentShader.replace('#include <dithering_fragment>',
+            '#include <dithering_fragment>\n  if (!gl_FrontFacing) { gl_FragColor = vec4(diffuseColor.rgb * 0.45, 1.0); }  // kesitKapak');
+        };
+        m.needsUpdate = true;
+      } else if (m.userData[KAPAK]) {
+        const u = m.userData[KAPAK];
+        m.side = u.side; m.onBeforeCompile = u.obc; delete m.userData[KAPAK]; m.needsUpdate = true;
+      }
+    }
+
     function kesitUygula() {
       const sc = SAHNE(mv);
       if (!sc || !R) return;
@@ -257,6 +280,7 @@
         if (!o.isMesh || !o.material) return;
         (Array.isArray(o.material) ? o.material : [o.material]).forEach(m => {
           if (m.clippingPlanes !== P) { m.clippingPlanes = P; m.needsUpdate = true; }
+          kapakAyarla(m, !!eksen);
         });
       });
       if (sc.queueRender) sc.queueRender();
