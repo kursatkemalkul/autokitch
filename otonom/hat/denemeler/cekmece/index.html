@@ -154,6 +154,8 @@
   color-scheme: light;
 }
 
+:root { --model-metal:#b6c1cd; --model-table:#dce4eb; --model-dark:#687b8c; --model-light:#ffffff; --model-ground:#b9c7d5; --model-dough:#e5c77f; }
+
 :root[data-theme=&quot;dark&quot;] {
   color-scheme: dark;
 }
@@ -1567,12 +1569,12 @@ html&gt;body{padding:0}&lt;/style&gt;
  const yo=[182.5,290.5,398.5,506.5,614.5],fronts=[[126,272.5],[275.5,380.5],[383.5,488.5],[491.5,596.5],[599.5,785]];
  const cols=token=&gt;{const e=document.createElement(&#x27;span&#x27;);e.style.color=`var(${token})`;root.appendChild(e);const c=new T.Color(getComputedStyle(e).color);e.remove();return c;};
  const mat=(token,p={})=&gt;new T.MeshStandardMaterial({color:cols(token),roughness:.66,metalness:.20,...p});
- const steel=mat(&#x27;--muted-foreground&#x27;),trayMat=mat(&#x27;--muted&#x27;),active=mat(&#x27;--viz-series-1&#x27;),mech=mat(&#x27;--viz-series-2&#x27;),dark=mat(&#x27;--foreground&#x27;),dough=mat(&#x27;--muted-foreground&#x27;,{metalness:0}),glass=mat(&#x27;--muted-foreground&#x27;,{transparent:true,opacity:.08,depthWrite:false}),red=mat(&#x27;--red&#x27;,{transparent:true,opacity:.35,depthWrite:false}),floor=mat(&#x27;--muted&#x27;,{transparent:true,opacity:.22});
+ const steel=mat(&#x27;--model-metal&#x27;),trayMat=mat(&#x27;--model-table&#x27;),active=mat(&#x27;--viz-series-1&#x27;),mech=mat(&#x27;--viz-series-2&#x27;),dark=mat(&#x27;--model-dark&#x27;),dough=mat(&#x27;--model-dough&#x27;,{metalness:0}),glass=mat(&#x27;--model-metal&#x27;,{transparent:true,opacity:.08,depthWrite:false}),red=mat(&#x27;--red&#x27;,{transparent:true,opacity:.35,depthWrite:false}),floor=mat(&#x27;--model-table&#x27;,{transparent:true,opacity:.22});
  const geom=new T.BoxGeometry(1,1,1),ball=new T.SphereGeometry(47.5,12,8),models=[];
  function box(p,x,y,z,w,h,d,m){const a=new T.Mesh(geom,m);a.position.set(x,y,z);a.scale.set(w,h,d);p.add(a);return a;}
  function line(p,pts,color){const g=new T.BufferGeometry().setFromPoints(pts.map(v=&gt;new T.Vector3(...v)));const l=new T.LineSegments(g,new T.LineBasicMaterial({color}));p.add(l);return l;}
  function create(container,lift){
-  const scene=new T.Scene();scene.add(new T.HemisphereLight(cols(&#x27;--background&#x27;),cols(&#x27;--muted-foreground&#x27;),2.7));const light=new T.DirectionalLight(cols(&#x27;--background&#x27;),3);light.position.set(900,1800,1400);scene.add(light);
+  const scene=new T.Scene();scene.add(new T.HemisphereLight(cols(&#x27;--model-light&#x27;),cols(&#x27;--model-ground&#x27;),2));const light=new T.DirectionalLight(cols(&#x27;--model-light&#x27;),2);light.position.set(900,1800,1400);scene.add(light);
   const renderer=new T.WebGLRenderer({antialias:true,alpha:true});renderer.setPixelRatio(Math.min(devicePixelRatio,2));renderer.setClearColor(0,0);container.appendChild(renderer.domElement);
   const camera=new T.PerspectiveCamera(36,1,1,10000),controls=new OrbitControls(camera,renderer.domElement);controls.enablePan=false;controls.minDistance=900;controls.maxDistance=4000;controls.maxPolarAngle=Math.PI*.49;controls.target.set(0,360,-130);controls.addEventListener(&#x27;change&#x27;,()=&gt;renderer.render(scene,camera));
   function view(back){camera.position.set(back?-1400:1400,1100,back?-2000:1700);controls.target.set(0,360,-130);controls.update();}

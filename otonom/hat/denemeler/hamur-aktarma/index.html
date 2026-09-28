@@ -154,6 +154,8 @@
   color-scheme: light;
 }
 
+:root { --model-metal:#b6c1cd; --model-table:#dce4eb; --model-dark:#687b8c; --model-light:#ffffff; --model-ground:#b9c7d5; }
+
 :root[data-theme=&quot;dark&quot;] {
   color-scheme: dark;
 }
@@ -1566,10 +1568,10 @@ html&gt;body{padding:0}&lt;/style&gt;
  const col=token=&gt;{const e=document.createElement(&#x27;span&#x27;);e.style.color=`var(${token})`;root.appendChild(e);const c=new T.Color(getComputedStyle(e).color);e.remove();return c;};
  const materials=[];
  function mat(token,props={}){const m=new T.MeshStandardMaterial({color:col(token),roughness:.6,metalness:.15,...props});materials.push([m,token]);return m;}
- const steel=mat(&#x27;--muted-foreground&#x27;,{metalness:.4}),diskmat=mat(&#x27;--border&#x27;,{metalness:0}),beltmat=mat(&#x27;--viz-series-1&#x27;),railmat=mat(&#x27;--viz-series-2&#x27;),dark=mat(&#x27;--foreground&#x27;),foodmat=mat(&#x27;--yellow&#x27;,{metalness:0,side:T.DoubleSide}),meat=mat(&#x27;--orange&#x27;,{metalness:0}),herb=mat(&#x27;--green&#x27;,{metalness:0}),glass=mat(&#x27;--muted-foreground&#x27;,{transparent:true,opacity:.08,depthWrite:false});
+ const steel=mat(&#x27;--model-metal&#x27;,{metalness:.15}),diskmat=mat(&#x27;--model-table&#x27;,{metalness:0}),beltmat=mat(&#x27;--viz-series-1&#x27;),railmat=mat(&#x27;--viz-series-2&#x27;),dark=mat(&#x27;--model-dark&#x27;),foodmat=mat(&#x27;--yellow&#x27;,{metalness:0,side:T.DoubleSide}),meat=mat(&#x27;--orange&#x27;,{metalness:0}),herb=mat(&#x27;--green&#x27;,{metalness:0}),glass=mat(&#x27;--model-metal&#x27;,{transparent:true,opacity:.08,depthWrite:false});
  const scene=new T.Scene();
- const hemi=new T.HemisphereLight(col(&#x27;--background&#x27;),col(&#x27;--muted-foreground&#x27;),1.8);scene.add(hemi);
- const light=new T.DirectionalLight(col(&#x27;--background&#x27;),2);light.position.set(200,900,750);scene.add(light);
+ const hemi=new T.HemisphereLight(col(&#x27;--model-light&#x27;),col(&#x27;--model-ground&#x27;),2);scene.add(hemi);
+ const light=new T.DirectionalLight(col(&#x27;--model-light&#x27;),2);light.position.set(200,900,750);scene.add(light);
  const renderer=new T.WebGLRenderer({antialias:true,alpha:true});renderer.setPixelRatio(Math.min(devicePixelRatio,2));renderer.setClearColor(0,0);q(&#x27;dp-view&#x27;).appendChild(renderer.domElement);
  const camera=new T.PerspectiveCamera(37,1,1,8000),orbit=new OrbitControls(camera,renderer.domElement);orbit.target.set(60,0,0);orbit.enablePan=true;orbit.minDistance=450;orbit.maxDistance=2600;
  const cube=new T.BoxGeometry(1,1,1);
@@ -1658,7 +1660,7 @@ html&gt;body{padding:0}&lt;/style&gt;
  q(&#x27;dp-product&#x27;).onchange=e=&gt;{thickness=+e.target.value;draw();save();};q(&#x27;dp-envelope&#x27;).onchange=e=&gt;{envelope.visible=e.target.checked;render();};
  q(&#x27;dp-play&#x27;).onclick=()=&gt;{if(playing){stop();save();return;}if(time&gt;=7)time=0;playing=true;last=performance.now();q(&#x27;dp-play&#x27;).textContent=&#x27;Duraklat&#x27;;requestAnimationFrame(frame);};
  function frame(now){if(!playing)return;time=Math.min(7,time+Math.min(.06,(now-last)/1000)/3);last=now;draw();if(time&gt;=7){stop();save();return;}requestAnimationFrame(frame);}
- new MutationObserver(()=&gt;{for(const[m,token]of materials)m.color.copy(col(token));hemi.color.copy(col(&#x27;--background&#x27;));hemi.groundColor.copy(col(&#x27;--muted-foreground&#x27;));light.color.copy(col(&#x27;--background&#x27;));render();}).observe(document.documentElement,{attributes:true,attributeFilter:[&#x27;class&#x27;,&#x27;style&#x27;,&#x27;data-theme&#x27;]});
+ new MutationObserver(()=&gt;{for(const[m,token]of materials)m.color.copy(col(token));render();}).observe(document.documentElement,{attributes:true,attributeFilter:[&#x27;class&#x27;,&#x27;style&#x27;,&#x27;data-theme&#x27;]});
  window.addEventListener(&#x27;openai:set_globals&#x27;,e=&gt;restore(e.detail?.globals?.widgetState));
  view(&#x27;iso&#x27;);q(&#x27;dp-play&#x27;).disabled=false;stop();restore(window.openai?.widgetState);draw();
  }catch(e){q(&#x27;dp-error&#x27;).hidden=false;q(&#x27;dp-error&#x27;).textContent=&#x27;3D açılamadı: &#x27;+e.message;q(&#x27;dp-play&#x27;).textContent=&#x27;3D yüklenemedi&#x27;;}
