@@ -32,8 +32,11 @@
  <div id="sahne"><div id="yukle">model yükleniyor…</div><div id="uyari"></div>
   <div id="ipucu">sürükle: döndür · tekerlek: yakınlaştır · sağ tık: kaydır · model: bantli_tabla_cad_v1 (CadQuery) + TOPPING v26 bağlamı</div></div>
  <div id="panel">
-  <div class="hiz">yerel · siteye konmadı · koordinatör işi claude-bantli-tabla-v1</div>
+  <div class="hiz">ayrı sayfa (ana sayfalardan bağlantı yok) · 29 Eyl 2026 · bantli_tabla_cad_v1 + hesap_v1</div>
   <h1>Bantlı tabla v1 · üretim modeli + simülasyon</h1>
+  <div class="kutu"><b>Özet</b><div id="ozet" style="font-size:13px"></div>
+   <div class="hiz" style="margin-top:6px">Renkler: <span class="tur">turuncu</span> = TOPPING / fırında değişecek parçalar (a–f) ·
+   beyaz = kaset bandı · kahve = yükleme bandı · saydam = mevcut TOPPING kapakları ve yan sacları.</div></div>
   <div class="kutu"><b>Şu an</b><div id="adim">—</div>
    <div><span id="saat">0,0 s</span> <span class="hiz">gerçek süre (yaklaşık)</span></div><div class="hiz" id="hiz"></div>
    <button id="oyna">↻ baştan</button><button id="dur">⏸ duraklat</button><button id="kam" class="on">🎥 yakından</button>
@@ -179,7 +182,11 @@ const daire = (() => { const pts = []; for (let i = 0; i <= 128; i++) { const a 
 
 // ---------- paneller ----------
 $('denetim').innerHTML = '<tr><th></th><th>Denetim</th><th>Sonuç</th></tr>' + J.denetim.map(d => '<tr><td class="' + (d.gecti ? 'ok' : 'xx') + '">' + (d.gecti ? '✓' : '✗') + ' ' + d.kod + '</td><td>' + d.ad + (d.ayrinti ? '<div class="hiz">' + d.ayrinti + '</div>' : '') + '</td><td>' + (typeof d.deger === 'object' ? Object.entries(d.deger).map(([k, v]) => k + ': ' + tr(v)).join('<br>') : tr(d.deger)) + '</td></tr>').join('');
-$('ayar').innerHTML = J.ayarlar.map(a => '<tr><td class="tur">' + a.kod + '</td><td>' + a.ne + '<div class="hiz">' + a.neden + '</div></td></tr>').join('');
+{ const gecen = J.denetim.filter(d => d.gecti).length;
+  $('ozet').innerHTML = 'Kaset <b>310 × 310</b> · bant 296 · <b>' + tr(J.kaset_kg, 2) + ' kg</b> (elle çıkar) · dönerken <b>Ø' + tr(2 * J.R_cad) + '</b> daire çizer<br>' +
+    'Aktarma konumu 2337 → <b>' + tr(AKT) + '</b> (+' + tr(AKT - 2337) + ') · pide <b>' + tr(P.zaman.t_aktarma_s, 2) + ' s</b>\'de yükleme bandında<br>' +
+    'Denetim: <b class="' + (gecen === J.denetim.length ? 'ok' : 'xx') + '">' + gecen + ' / ' + J.denetim.length + ' geçti</b> (gerçek katılarla) · ' + J.parca_sayisi + ' yeni parça'; }
+$('ayar').innerHTML =J.ayarlar.map(a => '<tr><td class="tur">' + a.kod + '</td><td>' + a.ne + '<div class="hiz">' + a.neden + '</div></td></tr>').join('');
 $('birlesim').innerHTML = '<tr><th>Çift</th><th>Tutma / sabitleme</th></tr>' + J.birlesim.map(b => '<tr><td><b>' + b.cift + '</b></td><td>' + b.tutma + '<div class="hiz">' + b.sabitleme + ' · sökme: ' + b.sokum + ' · ' + b.islak + '</div></td></tr>').join('');
 $('bom').innerHTML = '<tr><th>Kalem</th><th>Adet</th><th>Malzeme / katalog</th></tr>' + J.bom.filter(b => b.adet).map(b => '<tr><td>' + b.ad + '<div class="hiz">' + b.grup + ' · ' + b.not_ + '</div></td><td>' + b.adet + '</td><td>' + b.malzeme + '</td></tr>').join('');
 $('acik').innerHTML = [
