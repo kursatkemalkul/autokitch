@@ -5,7 +5,7 @@
 <div class="wrap"><h1>3 &middot; TOPPING &mdash; 3B üretim modeli<span class="tag" style="background:#8e5bd6">1800 &times; 830 &times; 970</span></h1>
 <p class="lead">Dozaj modülünün tamamı &mdash; kabin, yalıtım, 6 kaset yuvası, 12 tahrik, soğutma ve pano. Şimdilik <b>2 kaset takılı</b>: kaşar kabı ve küp sucuk. Modelde <b>ön kapak açık</b> gösteriliyor, yoksa kasetler görünmezdi. <b>Üstüne gel</b> &mdash; adı ve ölçüsü çıkar. <b>Kasete çift tıkla</b> &mdash; o kasetin kendi modeli, AR'si ve montaj animasyonu açılır. Modelin altındaki çubuktan <b>kesit</b> alabilir (X/Y/Z) ve iki noktaya tıklayıp <b>ölçü</b> çıkarabilirsin.</p>
 
-<p class="lead" style="margin:-6px 0 14px"><button class="simbtn" id="simac">▶ CANLI SİMÜLASYON</button> <span style="color:#8a9199;font-size:13.5px">&nbsp; sayfadan çıkmadan açılır: ürünü seç, makine çalışsın; sağdaki panelde hangi kod satırının çalıştığı, hangi motorun yandığı ve eksen değerleri görünür. Kasetin helezonu, karıştırıcısı ve pompası gerçekten döner; dozlanan ürün pidenin üstünde birikir.</span></p>
+
 <div class="m3">
   <model-viewer id="mv" loading="eager" src="../hat3d/modul_C_v41.glb?v=41" ios-src="../hat3d/modul_C_v41.usdz?v=41" alt="TOPPING modülü üretim modeli"
       camera-controls touch-action="pan-y" shadow-intensity="0.6" exposure="1.0" environment-image="neutral"
@@ -161,9 +161,5 @@ fetch('../hat3d/durum_v41.json?v=41').then(r => r.json()).then(D => {
 
 
 // ── canlı simülasyon: aynı kutunun içinde açılır, sağdan panel kayar (sim3d.js)
-document.getElementById('simac').onclick = async function () {
-  const m = await import('./sim3d.js?v=11');
-  await m.ac(document.querySelector('.m3'), this);
-  this.textContent = document.querySelector('.m3').classList.contains('sim-on') ? '■ SİMÜLASYONU KAPAT' : '▶ CANLI SİMÜLASYON';
-};
+
 </script></body></html>

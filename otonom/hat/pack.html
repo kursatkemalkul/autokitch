@@ -1,4 +1,4 @@
-<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>5 · PACK — kutu katlama</title><link rel="stylesheet" href="hat.css?v=10"><script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script>
+<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>5 · PACK — kutu katlama</title><link rel="stylesheet" href="hat.css?v=10"><script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script><script src="model3d.js?v=19"></script>
 <style>
 .zc{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;padding:10px 16px;background:#1b1f26;border-top:1px solid #2a3039}
 .zc button{border:1px solid #39424f;background:#232932;color:#cfd6df;border-radius:8px;padding:6px 11px;font:600 12.5px system-ui,sans-serif;cursor:pointer}
@@ -14,16 +14,21 @@
 table.t td,table.t th{vertical-align:top}
 </style></head><body>
 <div class="top"><div class="in"><div class="crumb"><a href="../">Store</a><span>›</span><a href="index.html">HAT</a><span>›</span><a href="makine.html">Makine</a><span>›</span><b>5 · PACK</b></div><div><a href="../">← Store</a></div></div></div>
-<div class="wrap"><h1>5 · PACK — kutu katlama modülü v5<span class="tag" style="background:#d9b43a">830 × 909 × 1862</span></h1><div class="card" style="border-left:4px solid #d94a3a;background:#fdf3f2;margin:12px 0"><b style="color:#a3281c">28 EYL · MONTAJ v63: ÖN DÜZLEM +79 · TEMİZ KUTU İSTASYONLAR.</b> Bütün istasyonların ön yüzü fırının ön yüzüyle aynı düzlemde (z +79); arka yüz −830 yerinde, derinlik <b>909</b>. Her istasyon kendi başına kapalı bir kutu: kapaklar ön düzlemde, aralarında 3 mm derz. Soğuk kapaklar 40 mm (304 1,5 + PU 37,5 + 304 1,0), kuru istasyon kapakları 20 mm tava panel (304 fırçalı 1,5). Modelin altındaki <b>Ön kapaklar</b> çubuğu: tam sağ = metal kapaklar, sola çektikçe saydamlaşır, tam sol = görünmez (içerisi). E'ye kapaklar geldi (alt içecek yedeği 2 kanat · orta: sabit panel + robot ağzı + servis kapağı · üst 2 kanat); robot ağzı ve koli çekme yolu serbest.</div>
+<div class="wrap"><h1>5 · PACK — kutu katlama modülü v7<span class="tag" style="background:#d9b43a">830 × 909 × 1862 · kapaklı · içecek yedeği altta</span></h1><div class="card" style="border-left:4px solid #d94a3a;background:#fdf3f2;margin:12px 0"><b style="color:#a3281c">28 EYL · MONTAJ v63: ÖN DÜZLEM +79 · TEMİZ KUTU İSTASYONLAR.</b> Bütün istasyonların ön yüzü fırının ön yüzüyle aynı düzlemde (z +79); arka yüz −830 yerinde, derinlik <b>909</b>. Her istasyon kendi başına kapalı bir kutu: kapaklar ön düzlemde, aralarında 3 mm derz. Soğuk kapaklar 40 mm (304 1,5 + PU 37,5 + 304 1,0), kuru istasyon kapakları 20 mm tava panel (304 fırçalı 1,5). Modelin altındaki <b>Ön kapaklar</b> çubuğu: tam sağ = metal kapaklar, sola çektikçe saydamlaşır, tam sol = görünmez (içerisi). E'ye kapaklar geldi (alt içecek yedeği 2 kanat · orta: sabit panel + robot ağzı + servis kapağı · üst 2 kanat); robot ağzı ve koli çekme yolu serbest.</div>
 <p class="lead">Standart pizza kutusunu (32 × 32 × 4,2 cm, E-dalga) düz açılımdan katlar, pizzayı alır, kapağını kapatıp bastırır. Robot kutuyu tepsinin aralıklarından çatalla alır. 7 step motorlu. Her parça ya katalog ürünü ya da çizimle üretilecek sac ya da alüminyum. Modelde her hareket gerçek zamanında oynar; aşağıdaki adımlardan birine basınca model o ana gider.</p>
 <div class="m3">
-  <model-viewer id="mv" loading="eager" src="../hat3d/kutu_modulu_v5.glb?v=5" alt="E · kutu katlama modülü — çalışma döngüsü" autoplay
-      camera-controls touch-action="pan-y" shadow-intensity="0.5" exposure="1.0" environment-image="neutral"
-      camera-orbit="32deg 66deg 2.6m" camera-target="0.42m 1.03m -0.3m" field-of-view="30deg" min-field-of-view="5deg" min-camera-orbit="auto auto 0.3m"></model-viewer>
-  <div class="zc"><button id="oy">duraklat</button><input id="tz" type="range" min="0" max="20" step="0.05" value="0"><span class="sn" id="sn">0,0 / 20 sn</span></div>
-  <div class="adim" id="adim"></div>
-  <div class="anlat" id="anlat"></div>
+  <model-viewer id="mv" loading="eager" src="../hat3d/modul_E.glb?v=65" ios-src="../hat3d/modul_E.usdz?v=65" alt="E · kutu katlama modülü (kutu_cad_v7)"
+      camera-controls touch-action="pan-y" shadow-intensity="0.6" exposure="1.0" environment-image="neutral"
+      camera-orbit="25deg 70deg 3.6m" camera-target="5.0m 1.25m -0.4m" field-of-view="30deg" min-field-of-view="5deg"
+      ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
+  <div class="et" id="et"></div>
+  <button class="ar" onclick="document.getElementById('mv').activateAR()">AR'de gör</button>
+  <div class="ip">sürükle: döndür · üstüne gel: parça · alttan kesit + ölçü + ön kapaklar çubuğu</div>
 </div>
+<div class="secim" id="secim"></div>
+<p class="note" id="ozet"></p>
+<div class="card" style="border-left:4px solid #178a56;background:#eefaf3;margin:12px 0"><b style="color:#0f6e42">28 EYL · MONTAJ v65.</b> Model montajdaki güncel istasyon (modul_E): ön kapaklar modelde, alttaki <b>Ön kapaklar</b> çubuğuyla saydamlaşır. Bu sayfada animasyon yok; çalışmayı <a href="makine.html">MAKİNE</a> sayfasında sipariş seçerek izle.</div>
+<h2>Çalışma sırası</h2><div class="card"><ol class="steps" id="adim"></ol></div>
 
 <div class="card" style="border-left:4px solid #178a56;background:#eefaf3;margin:14px 0"><b style="color:#0f6e42">27 EYL · E v5: ALÇAK HAT — 168 AŞAĞI, ALTINDA İÇECEK YEDEĞİ.</b> Kemal: <i>"bu teknik resme göre 3D modelle, sitede her şeyi güncelle, kontrol et"</i>. kutu_cad_v5 = v4'ün y 400–568 dilimi çıkarılmış hali: 225 parça v4 ile birebir, hareketler v4 − 168 (fark 0,0000 mm). Kutu tepsisi <b>936</b> (önce 1104), kalıp 981,5, K bandı 996; alt raf <b>618–622</b> (önce 786–790), üst <b>1862</b>. Şarjör yığını 240–980 = 740 mm → <b>462 kutu</b> (önce 567); fırın üstündeki 320 ile 782 = 2,8 gün. Alt rafın altında <b>içecek yedeği 6 koli</b> (400 × 267 × 123, 24 kutu · 2 sütun × 3 kat = 144): x 4603–5405 · y 130–499 · z −350…−83; dolaptaki 144 ile 288 = 4 gün (gerek 277). 4. kat sığmaz (622 > 588). <b>Açık:</b> asansör son 30 kutuyu besleyemiyor (kullanılabilir ≈ 432, toplam ≈ 752 = 2,7 gün) · kolilerin önündeki alt sacın kapısı yok. Denetim: çakışma 0 (makine 201 an · kutu 46 an · pizza 25 an).</div>
 <div class="card" style="border-left:4px solid #2456c8;background:#f4f7fd;margin:14px 0"><b style="color:#2456c8">25 EYLÜL 2026 · E KUTU KATLAMA MODÜLÜ v3 (kutu_cad_v3)</b><br>
@@ -110,20 +115,14 @@ const ADIM = [
   [11.2, 'KAPAT', 'Piston kapağı kapatıp bastırır: yan flaplar yan duvarların, ön flap iç panelin içine girer (2,0 sn).'],
   [13.9, 'ROBOT', 'FR5 çatalı tepsinin aralıklarından girer, kutuyu 55 mm kaldırır, ağızdan çeker (QR dolabına).'],
 ];
-const mv = document.getElementById('mv'), oy = document.getElementById('oy'), tz = document.getElementById('tz'), sn = document.getElementById('sn'),
-      adim = document.getElementById('adim'), anlat = document.getElementById('anlat');
-adim.innerHTML = ADIM.map((a, i) => '<button data-i="' + i + '">' + (i + 1) + ' · ' + a[1] + '</button>').join('');
-const btn = [...adim.querySelectorAll('button')];
-function goster(t) {
-  let k = 0; ADIM.forEach((a, i) => { if (t >= a[0] - 0.01) k = i; });
-  btn.forEach((b, i) => b.classList.toggle('ak', i === k));
-  anlat.innerHTML = '<b>' + (k + 1) + ' · ' + ADIM[k][1] + '</b> — ' + ADIM[k][2];
-  sn.textContent = t.toFixed(1).replace('.', ',') + ' / 20 sn';
-}
-btn.forEach(b => b.onclick = () => { const t = ADIM[+b.dataset.i][0]; mv.currentTime = t; tz.value = t; goster(t); mv.play(); oy.textContent = 'duraklat'; });
-tz.oninput = () => { mv.pause(); oy.textContent = 'oynat'; mv.currentTime = parseFloat(tz.value); goster(parseFloat(tz.value)); };
-oy.onclick = () => { if (mv.paused) { mv.play(); oy.textContent = 'duraklat'; } else { mv.pause(); oy.textContent = 'oynat'; } };
-setInterval(() => { if (!mv.paused && mv.loaded) { tz.value = mv.currentTime; goster(mv.currentTime); } }, 150);
-goster(0);
+document.getElementById('adim').innerHTML = ADIM.map(a => '<li><b>' + a[1] + '</b> — ' + a[2] + '</li>').join('');   // v65: animasyon yok, sıra metin
+const M = model3d({mv: 'mv', etiket: 'et', grup: 'kod', parca: '../hat3d/parca_kutulari.json?v=65', hedef: g => g.birimler[0].sayfa ? '../' + g.birimler[0].sayfa : '',
+  yazi: g => { const b = g.birimler[0]; return '<b>' + b.ad + '</b><span>' + b.olcu.join(' \u00d7 ') + ' mm' + (b.kaynak ? '<br>' + b.kaynak : '') + '</span>'; }});
+fetch('../hat3d/durum.json?v=65').then(r => r.json()).then(D => {
+  const L = D.birim.filter(b => b.modul === 'E' && b.kod.indexOf('_KABIN') < 0); M.veri(L);
+  document.getElementById('secim').innerHTML = L.map(b => '<a href="#" data-k="' + b.kod + '">' + b.ad + '<span>' + b.olcu.join(' \u00d7 ') + ' mm</span></a>').join('');
+  document.querySelectorAll('.secim a').forEach(a => { a.onmouseenter = () => M.sec(a.dataset.k); a.onmouseleave = () => M.birak(); a.onclick = e => e.preventDefault(); });
+  document.getElementById('ozet').innerHTML = '<b>' + L.length + ' birim.</b> Ölçü kaynağı: ' + String(D.hat.pafta).split(' · v64:')[0] + '.';
+});
 </script>
 </body></html>
