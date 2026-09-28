@@ -1,0 +1,2360 @@
+{
+ "surum": "kesme_cad_v6 · 28.09.2026 00:57",
+ "parcalar": [
+  {
+   "ad": "ayak_0",
+   "grup": "SABIT",
+   "mal": "celik",
+   "bom": [
+    "Ayarlı ayak Elesa+Ganter LV.A-SST · M12",
+    4,
+    "paslanmaz · taban Ø40",
+    "elesa-ganter.com LV.A-SST"
+   ]
+  },
+  {
+   "ad": "ayak_1",
+   "grup": "SABIT",
+   "mal": "celik",
+   "bom": null
+  },
+  {
+   "ad": "ayak_2",
+   "grup": "SABIT",
+   "mal": "celik",
+   "bom": null
+  },
+  {
+   "ad": "ayak_3",
+   "grup": "SABIT",
+   "mal": "celik",
+   "bom": null
+  },
+  {
+   "ad": "taban_sac_3",
+   "grup": "SABIT",
+   "mal": "sac",
+   "bom": null
+  },
+  {
+   "ad": "istasyon_tabani_3",
+   "grup": "SABIT",
+   "mal": "sac",
+   "bom": null
+  },
+  {
+   "ad": "arka_sac",
+   "grup": "SABIT",
+   "mal": "kabuk",
+   "bom": null
+  },
+  {
+   "ad": "ust_sac",
+   "grup": "SABIT",
+   "mal": "kabuk",
+   "bom": null
+  },
+  {
+   "ad": "sol_sac_urun_girisi",
+   "grup": "SABIT",
+   "mal": "kabuk",
+   "bom": null
+  },
+  {
+   "ad": "sag_sac_E_penceresi",
+   "grup": "SABIT",
+   "mal": "kabuk",
+   "bom": null
+  },
+  {
+   "ad": "kose_dikmesi_2",
+   "grup": "SABIT",
+   "mal": "sac",
+   "bom": [
+    "Kare profil 30 × 30 × 2 AISI 304 (arka köşe dikmesi)",
+    2,
+    "boy 1734.5",
+    "lazer + kaynak"
+   ]
+  },
+  {
+   "ad": "kose_dikmesi_3",
+   "grup": "SABIT",
+   "mal": "sac",
+   "bom": null
+  },
+  {
+   "ad": "onyuz_cerceve_dikme_sol",
+   "grup": "SABIT",
+   "mal": "sac",
+   "bom": [
+    "Ön çerçeve dikmesi · kare profil 30 × 30 × 2 AISI 304",
+    1,
+    "boy 1734.5 · kesintisiz · sol gizli menteşeler + köprü uç plakası buna",
+    "üretim · taban sacı + üst sac + yan saca kaynak"
+   ]
+  },
+  {
+   "ad": "onyuz_cerceve_dikme_sag",
+   "grup": "SABIT",
+   "mal": "sac",
+   "bom": [
+    "Ön çerçeve dikmesi · bükme kutu 28,5 × 30 × 2 AISI 304",
+    1,
+    "boy 1734.5 · kesintisiz · bas-aç mandallar + AZM40 + köprü uç plakası buna",
+    "KARAR (varsayım): SPEC x 570–598,5 → standart 30 × 30 sığmaz; 2 mm sac bükülüp dikiş kaynaklı (bulaşık kapak zarfına 1,5 pay)"
+   ]
+  },
+  {
+   "ad": "onyuz_cerceve_kayit_alt",
+   "grup": "SABIT",
+   "mal": "sac",
+   "bom": [
+    "Ön çerçeve kaydı · kare profil 30 × 30 × 2 AISI 304",
+    4,
+    "boy 538.5 · derz çizgilerinin arkasında (126 · 883/886 · 1305/1308 · 1860)",
+    "üretim · dikmelere kaynak"
+   ]
+  },
+  {
+   "ad": "onyuz_cerceve_kayit_883",
+   "grup": "SABIT",
+   "mal": "sac",
+   "bom": null
+  },
+  {
+   "ad": "onyuz_cerceve_kayit_1306",
+   "grup": "SABIT",
+   "mal": "sac",
+   "bom": null
+  },
+  {
+   "ad": "onyuz_cerceve_kayit_ust",
+   "grup": "SABIT",
+   "mal": "sac",
+   "bom": null
+  },
+  {
+   "ad": "onyuz_plint",
+   "grup": "SABIT",
+   "mal": "sac",
+   "bom": [
+    "Plint 304 fırçalı 1,5 · tam derinlik yan dönüşlü + üst flanşlı",
+    1,
+    "600 × 123 · ön yüz z +19 (ön düzlemin 60 gerisi) · yan dönüşler x 0 / 598,5 → z −828,5 · üst flanş 15",
+    "v6 · flanş taban sacına M5 perçin somunla (sökülebilir) · E v7 plintiyle x 600'de birleşir"
+   ]
+  },
+  {
+   "ad": "onyuz_kapak_alt",
+   "grup": "KAPAK_ALT",
+   "mal": "sac",
+   "bom": [
+    "Ön kapak ALT · tava panel 304 fırçalı 1,5 · kenarlar 20 büküm",
+    1,
+    "595.5 × 757.0 · 6.0 kg · 2 gizli menteşe + bas-aç",
+    "lazer + abkant · köşeler kaynaklı taşlanmış · derz 3 · önden yalnız düz yüzey"
+   ]
+  },
+  {
+   "ad": "onyuz_mentese_govde_alt_0",
+   "grup": "SABIT",
+   "mal": "celik",
+   "bom": [
+    "Gizli menteşe EMKA 1046-U5 (AISI 304 · 90° · kaynaklı · katalog 4B-130)",
+    6,
+    "boy ≈ 79 · pim Ø16 (GlobalSpec) · çerçeve kanadı sol dikmeye, kapak kanadı kapak içine kaynak",
+    "emka.com/products/1046-u5 · sanal pivot (kapak ön-sol köşesi) + kanat ölçüleri VARSAYIM — üreticiden teyit"
+   ]
+  },
+  {
+   "ad": "onyuz_mentese_kanat_alt_0",
+   "grup": "KAPAK_ALT",
+   "mal": "celik",
+   "bom": null
+  },
+  {
+   "ad": "onyuz_mentese_govde_alt_1",
+   "grup": "SABIT",
+   "mal": "celik",
+   "bom": null
+  },
+  {
+   "ad": "onyuz_mentese_kanat_alt_1",
+   "grup": "KAPAK_ALT",
+   "mal": "celik",
+   "bom": null
+  },
+  {
+   "ad": "onyuz_basac_mandal_alt",
+   "grup": "SABIT",
+   "mal": "plastik",
+   "bom": [
+    "Dokun-aç mandal Southco E4 (touch latch, gizli)",
+    3,
+    "sağ çerçeve dikmesinin ön yüzüne · strok 2 (kapak arkası 59 ↔ çerçeve 57)",
+    "southco.com E4 touch latches (ör. E4-10-201-10) · gövde ölçüsü VARSAYIM 14 × 44 × 14"
+   ]
+  },
+  {
+   "ad": "onyuz_basac_karsilik_alt",
+   "grup": "KAPAK_ALT",
+   "mal": "celik",
+   "bom": null
+  },
+  {
+   "ad": "onyuz_dayama_lastigi_alt",
+   "grup": "KAPAK_ALT",
+   "mal": "conta",
+   "bom": [
+    "Dayama lastiği EPDM 3 × 30 (yapışkanlı şerit)",
+    1,
+    "460 × 30 × 3 · ALT kapağın iç yüzüne · bulaşık kapağının üst kenarı kilitte buna dayanır",
+    "VARSAYIM ölçü · genel katalog EPDM şerit (parça no yok)"
+   ]
+  },
+  {
+   "ad": "onyuz_kapak_orta",
+   "grup": "KAPAK_ORTA",
+   "mal": "sac",
+   "bom": [
+    "Ön kapak ORTA · tava panel 304 fırçalı 1,5 · kenarlar 20 büküm",
+    1,
+    "595.5 × 419.0 · 3.4 kg · 2 gizli menteşe + bas-aç + AZM40 kilit",
+    "lazer + abkant · köşeler kaynaklı taşlanmış · derz 3 · önden yalnız düz yüzey"
+   ]
+  },
+  {
+   "ad": "onyuz_mentese_govde_orta_0",
+   "grup": "SABIT",
+   "mal": "celik",
+   "bom": null
+  },
+  {
+   "ad": "onyuz_mentese_kanat_orta_0",
+   "grup": "KAPAK_ORTA",
+   "mal": "celik",
+   "bom": null
+  },
+  {
+   "ad": "onyuz_mentese_govde_orta_1",
+   "grup": "SABIT",
+   "mal": "celik",
+   "bom": null
+  },
+  {
+   "ad": "onyuz_mentese_kanat_orta_1",
+   "grup": "KAPAK_ORTA",
+   "mal": "celik",
+   "bom": null
+  },
+  {
+   "ad": "onyuz_basac_mandal_orta",
+   "grup": "SABIT",
+   "mal": "plastik",
+   "bom": null
+  },
+  {
+   "ad": "onyuz_basac_karsilik_orta",
+   "grup": "KAPAK_ORTA",
+   "mal": "celik",
+   "bom": null
+  },
+  {
+   "ad": "onyuz_kilit_AZM40_orta",
+   "grup": "SABIT",
+   "mal": "sari",
+   "bom": [
+    "Emniyet kilidi Schmersal AZM40 (solenoid, RFID kodlu, IP69) — SPEC'te YOK, Kemal onayı gerekir",
+    2,
+    "119,5 × 40 × 20 · 2000 N kilitleme · PLe · sağ dikmenin iç yüzüne · dil ağıza 8 mm girer",
+    "schmersal.com/en/azm40 · ORTA (bıçak + itici) + ÜST (kılavuz mili uçları, tank, pano) · PNOZ s3'e · ağız yeri Schmersal çizimiyle teyit"
+   ]
+  },
+  {
+   "ad": "onyuz_kilit_dili_orta",
+   "grup": "KAPAK_ORTA",
+   "mal": "celik",
+   "bom": null
+  },
+  {
+   "ad": "onyuz_kapak_ust",
+   "grup": "KAPAK_UST",
+   "mal": "sac",
+   "bom": [
+    "Ön kapak UST · tava panel 304 fırçalı 1,5 · kenarlar 20 büküm",
+    1,
+    "595.5 × 551.0 · 4.4 kg · 2 gizli menteşe + bas-aç + AZM40 kilit",
+    "lazer + abkant · köşeler kaynaklı taşlanmış · derz 3 · önden yalnız düz yüzey"
+   ]
+  },
+  {
+   "ad": "onyuz_mentese_govde_ust_0",
+   "grup": "SABIT",
+   "mal": "celik",
+   "bom": null
+  },
+  {
+   "ad": "onyuz_mentese_kanat_ust_0",
+   "grup": "KAPAK_UST",
+   "mal": "celik",
+   "bom": null
+  },
+  {
+   "ad": "onyuz_mentese_govde_ust_1",
+   "grup": "SABIT",
+   "mal": "celik",
+   "bom": null
+  },
+  {
+   "ad": "onyuz_mentese_kanat_ust_1",
+   "grup": "KAPAK_UST",
+   "mal": "celik",
+   "bom": null
+  },
+  {
+   "ad": "onyuz_basac_mandal_ust",
+   "grup": "SABIT",
+   "mal": "plastik",
+   "bom": null
+  },
+  {
+   "ad": "onyuz_basac_karsilik_ust",
+   "grup": "KAPAK_UST",
+   "mal": "celik",
+   "bom": null
+  },
+  {
+   "ad": "onyuz_kilit_AZM40_ust",
+   "grup": "SABIT",
+   "mal": "sari",
+   "bom": null
+  },
+  {
+   "ad": "onyuz_kilit_dili_ust",
+   "grup": "KAPAK_UST",
+   "mal": "celik",
+   "bom": null
+  },
+  {
+   "ad": "bant_yan_levhasi_0",
+   "grup": "SABIT",
+   "mal": "sac",
+   "bom": [
+    "Bant yan levhası 3 mm AISI 304 (lazer + büküm)",
+    2,
+    "580 × 62",
+    "üretim"
+   ]
+  },
+  {
+   "ad": "bant_yan_levhasi_1",
+   "grup": "SABIT",
+   "mal": "sac",
+   "bom": null
+  },
+  {
+   "ad": "kayma_tablasi_6",
+   "grup": "SABIT",
+   "mal": "sac",
+   "bom": [
+    "Kayma tablası 6 mm AISI 304 (kesim yükünü taşır)",
+    1,
+    "483 × 396",
+    "üretim"
+   ]
+  },
+  {
+   "ad": "tabla_kirisi_0",
+   "grup": "SABIT",
+   "mal": "sac",
+   "bom": [
+    "Kutu profil 40 × 20 × 2 AISI 304",
+    2,
+    "boy 404",
+    "üretim"
+   ]
+  },
+  {
+   "ad": "tabla_kirisi_1",
+   "grup": "SABIT",
+   "mal": "sac",
+   "bom": null
+  },
+  {
+   "ad": "bant_ayagi_0",
+   "grup": "SABIT",
+   "mal": "sac",
+   "bom": [
+    "Bant ayağı 30 × 24 lama",
+    4,
+    "",
+    "üretim"
+   ]
+  },
+  {
+   "ad": "bant_ayagi_1",
+   "grup": "SABIT",
+   "mal": "sac",
+   "bom": null
+  },
+  {
+   "ad": "bant_ayagi_2",
+   "grup": "SABIT",
+   "mal": "sac",
+   "bom": null
+  },
+  {
+   "ad": "bant_ayagi_3",
+   "grup": "SABIT",
+   "mal": "sac",
+   "bom": null
+  },
+  {
+   "ad": "tahrik_rulosu_RollerDrive_EC5000",
+   "grup": "SABIT",
+   "mal": "aluminyum",
+   "bom": [
+    "Interroll RollerDrive EC5000 AI 24 V Ø50 (motor rulonun içinde, IP66)",
+    1,
+    "boy 404 · kaplamalı",
+    "interroll.com EC5000 [V: kaplama + IP teyidi]"
+   ]
+  },
+  {
+   "ad": "tahrik_rulosu_mili",
+   "grup": "SABIT",
+   "mal": "celik",
+   "bom": null
+  },
+  {
+   "ad": "kuyruk_rulosu",
+   "grup": "SABIT",
+   "mal": "aluminyum",
+   "bom": [
+    "Avara rulo Ø30 paslanmaz (gergi cıvatalı)",
+    1,
+    "boy 404",
+    "[V] katalog"
+   ]
+  },
+  {
+   "ad": "kuyruk_rulosu_mili",
+   "grup": "SABIT",
+   "mal": "celik",
+   "bom": null
+  },
+  {
+   "ad": "bant_gergi_civatasi_0",
+   "grup": "SABIT",
+   "mal": "celik",
+   "bom": null
+  },
+  {
+   "ad": "bant_gergi_civatasi_1",
+   "grup": "SABIT",
+   "mal": "celik",
+   "bom": null
+  },
+  {
+   "ad": "bant_PU_2mm",
+   "grup": "SABIT",
+   "mal": "pu_bant",
+   "bom": [
+    "Gıda PU bant 2 mm homojen, beyaz (FDA / EU 10-2011), sonsuz birleştirilmiş",
+    1,
+    "400 × ≈1150",
+    "[V] Ammeraal / Habasit sınıfı · kesim yüzeyi"
+   ]
+  },
+  {
+   "ad": "olu_plaka",
+   "grup": "SABIT",
+   "mal": "sac",
+   "bom": [
+    "Ölü plaka 10 mm AISI 304 (bant sonu → E köprüsü)",
+    1,
+    "10 × 6 × 404",
+    "v6: iki yan levhaya M5 × 2"
+   ]
+  },
+  {
+   "ad": "cit_20_derece",
+   "grup": "SABIT",
+   "mal": "uhmw",
+   "bom": [
+    "Kılavuz çit: 304 lama 3 mm + UHMW yüz (gıda)",
+    1,
+    "20° + düz · 20 yüksek",
+    "üretim"
+   ]
+  },
+  {
+   "ad": "cit_braketi_0",
+   "grup": "SABIT",
+   "mal": "sac",
+   "bom": null
+  },
+  {
+   "ad": "cit_braketi_1",
+   "grup": "SABIT",
+   "mal": "sac",
+   "bom": null
+  },
+  {
+   "ad": "kopru_kirisi_0",
+   "grup": "SABIT",
+   "mal": "sac",
+   "bom": [
+    "Kare profil 40 × 40 × 2 AISI 304 (köprü)",
+    2,
+    "boy 581 · v6: uçları 8 mm uç plakalarına kaynaklı",
+    "üretim"
+   ]
+  },
+  {
+   "ad": "kopru_kirisi_1",
+   "grup": "SABIT",
+   "mal": "sac",
+   "bom": null
+  },
+  {
+   "ad": "kopru_kirisi_uc_plakasi_0",
+   "grup": "SABIT",
+   "mal": "sac",
+   "bom": [
+    "Köprü uç plakası 8 mm AISI 304",
+    2,
+    "80 × 317 · yan saca 6 × M6 perçin somun + ön çerçeve dikmesine kaynak",
+    "v6 · 1870 N kesme tepkisi → yan sac + ön dikme"
+   ]
+  },
+  {
+   "ad": "kopru_kirisi_uc_plakasi_1",
+   "grup": "SABIT",
+   "mal": "sac",
+   "bom": null
+  },
+  {
+   "ad": "silindir_baglanti_plakasi",
+   "grup": "SABIT",
+   "mal": "sac",
+   "bom": null
+  },
+  {
+   "ad": "DGRF-C-63-125_govde",
+   "grup": "SABIT",
+   "mal": "aluminyum",
+   "bom": [
+    "Kılavuzlu silindir Festo DGRF-C-63-125 (Clean Design, paslanmaz kılavuz milleri)",
+    1,
+    "Ø63 · strok 125 · 6 bar'da 1870 N itme",
+    "festo DGRF-C veri sayfası (almotion.nl) · gövde ölçüsü [V]"
+   ]
+  },
+  {
+   "ad": "DGRF_hava_rakoru_0",
+   "grup": "SABIT",
+   "mal": "siyah",
+   "bom": null
+  },
+  {
+   "ad": "DGRF_hava_rakoru_1",
+   "grup": "SABIT",
+   "mal": "siyah",
+   "bom": null
+  },
+  {
+   "ad": "DGRF_piston_mili",
+   "grup": "KESICI",
+   "mal": "celik",
+   "bom": null
+  },
+  {
+   "ad": "DGRF_kilavuz_mili_0",
+   "grup": "KESICI",
+   "mal": "celik",
+   "bom": null
+  },
+  {
+   "ad": "DGRF_kilavuz_mili_1",
+   "grup": "KESICI",
+   "mal": "celik",
+   "bom": null
+  },
+  {
+   "ad": "DGRF_on_plaka",
+   "grup": "KESICI",
+   "mal": "aluminyum",
+   "bom": null
+  },
+  {
+   "ad": "ara_dikme_0",
+   "grup": "KESICI",
+   "mal": "celik",
+   "bom": [
+    "Ara dikme Ø16 × 50 paslanmaz (M8)",
+    3,
+    "",
+    "üretim"
+   ]
+  },
+  {
+   "ad": "ara_dikme_1",
+   "grup": "KESICI",
+   "mal": "celik",
+   "bom": null
+  },
+  {
+   "ad": "ara_dikme_2",
+   "grup": "KESICI",
+   "mal": "celik",
+   "bom": null
+  },
+  {
+   "ad": "kafa_plakasi_8",
+   "grup": "KESICI",
+   "mal": "sac",
+   "bom": [
+    "Kafa plakası Ø230 × 8 AISI 304",
+    1,
+    "",
+    "lazer + CNC"
+   ]
+  },
+  {
+   "ad": "bicak_gobek_halkasi",
+   "grup": "KESICI",
+   "mal": "celik",
+   "bom": null
+  },
+  {
+   "ad": "bicak_0",
+   "grup": "KESICI",
+   "mal": "celik",
+   "bom": [
+    "Yıldız bıçak seti 6 dilim Ø296 (sertleştirilmiş paslanmaz, bulaşık makinesinde yıkanır)",
+    1,
+    "6 × 133 × 45 × 1,5 · göbek Ø40",
+    "Q-T-S PC1018 / PC5000 bıçak seti sınıfı (q-t-s.com) [V: ölçü bize göre]"
+   ]
+  },
+  {
+   "ad": "bicak_1",
+   "grup": "KESICI",
+   "mal": "celik",
+   "bom": null
+  },
+  {
+   "ad": "bicak_2",
+   "grup": "KESICI",
+   "mal": "celik",
+   "bom": null
+  },
+  {
+   "ad": "bicak_3",
+   "grup": "KESICI",
+   "mal": "celik",
+   "bom": null
+  },
+  {
+   "ad": "bicak_4",
+   "grup": "KESICI",
+   "mal": "celik",
+   "bom": null
+  },
+  {
+   "ad": "bicak_5",
+   "grup": "KESICI",
+   "mal": "celik",
+   "bom": null
+  },
+  {
+   "ad": "koruma_braketi_0",
+   "grup": "KESICI",
+   "mal": "sac",
+   "bom": null
+  },
+  {
+   "ad": "koruma_braketi_1",
+   "grup": "KESICI",
+   "mal": "sac",
+   "bom": null
+  },
+  {
+   "ad": "koruma_braketi_2",
+   "grup": "KESICI",
+   "mal": "sac",
+   "bom": null
+  },
+  {
+   "ad": "koruma_braketi_3",
+   "grup": "KESICI",
+   "mal": "sac",
+   "bom": null
+  },
+  {
+   "ad": "koruma_braketi_4",
+   "grup": "KESICI",
+   "mal": "sac",
+   "bom": null
+  },
+  {
+   "ad": "koruma_braketi_5",
+   "grup": "KESICI",
+   "mal": "sac",
+   "bom": null
+  },
+  {
+   "ad": "bicak_koruma_halkasi",
+   "grup": "KESICI",
+   "mal": "sac",
+   "bom": [
+    "Bıçak koruma + sprey perdesi halkası Ø316 × 37 (1,5 mm 304)",
+    1,
+    "",
+    "üretim"
+   ]
+  },
+  {
+   "ad": "kelebek_somun_0",
+   "grup": "KESICI",
+   "mal": "celik",
+   "bom": [
+    "Kelebek somun M8 paslanmaz (bıçak seti aletsiz sökülür)",
+    3,
+    "DIN 315",
+    "katalog"
+   ]
+  },
+  {
+   "ad": "kelebek_somun_1",
+   "grup": "KESICI",
+   "mal": "celik",
+   "bom": null
+  },
+  {
+   "ad": "kelebek_somun_2",
+   "grup": "KESICI",
+   "mal": "celik",
+   "bom": null
+  },
+  {
+   "ad": "PulsaJet_AA10000AUH_104210",
+   "grup": "KESICI",
+   "mal": "celik",
+   "bom": [
+    "Elektrikli sprey nozülü Spraying Systems PulsaJet AA10000AUH-104210 (gıda: FDA + EC 1935/2004)",
+    1,
+    "24 VDC 0,36 A · PWM · sıvı ≤ 93 °C · 7 bar",
+    "spray.com katalog 76A · vaka E4058 (tereyağı) · gövde ölçüsü [V]"
+   ]
+  },
+  {
+   "ad": "PulsaJet_isitici_ceket",
+   "grup": "KESICI",
+   "mal": "hortum_isi",
+   "bom": [
+    "Silikon ısıtıcı ceket 24 V 20 W + termostat (nozülde tereyağı donmasın)",
+    1,
+    "45 °C",
+    "[V]"
+   ]
+  },
+  {
+   "ad": "sprey_dirsegi",
+   "grup": "KESICI",
+   "mal": "celik",
+   "bom": null
+  },
+  {
+   "ad": "UniJet_nozul_govdesi_TG",
+   "grup": "KESICI",
+   "mal": "celik",
+   "bom": [
+    "Nozül gövdesi UniJet + TG tam koni uç 90° (çek valfli: damlatmaz)",
+    1,
+    "yıldızın göbeğinde, pideden 150 mm",
+    "portal.spray.com TG · uç uyumu Spraying Systems'e teyit [V]"
+   ]
+  },
+  {
+   "ad": "sprey_ucu_TG",
+   "grup": "KESICI",
+   "mal": "pom",
+   "bom": null
+  },
+  {
+   "ad": "isitmali_hortum_kafa",
+   "grup": "KESICI",
+   "mal": "hortum_isi",
+   "bom": null
+  },
+  {
+   "ad": "PulsaJet_semeri",
+   "grup": "KESICI",
+   "mal": "sac",
+   "bom": [
+    "Sprey nozülü semeri 304 (kafa plakasına 2 × M5)",
+    1,
+    "18 × 25 × 28 · R19 oturma",
+    "v6: PulsaJet + nozül grubu havada kalmasın"
+   ]
+  },
+  {
+   "ad": "DGRF_burcu_0",
+   "grup": "SABIT",
+   "mal": "celik",
+   "bom": null
+  },
+  {
+   "ad": "DGRF_burcu_1",
+   "grup": "SABIT",
+   "mal": "celik",
+   "bom": null
+  },
+  {
+   "ad": "DGRF_burcu_2",
+   "grup": "SABIT",
+   "mal": "celik",
+   "bom": null
+  },
+  {
+   "ad": "sprey_konisi",
+   "grup": "SPREY",
+   "mal": "sprey",
+   "bom": null
+  },
+  {
+   "ad": "yag_tanki_3L",
+   "grup": "SABIT",
+   "mal": "sac",
+   "bom": [
+    "Isıtmalı basınçlı tereyağı tankı 3 L AISI 316 (ceketli, kapaklı, seviye sensörlü)",
+    1,
+    "Ø160 × 280 · 1,5 bar hava · 45 °C",
+    "[V] Spraying Systems basınçlı tank sınıfı · 2 gün = 1,41 L (hesap)"
+   ]
+  },
+  {
+   "ad": "yag_tanki_isitici_ceketi",
+   "grup": "SABIT",
+   "mal": "hortum_isi",
+   "bom": [
+    "Tank ısıtıcı ceketi 100 W + PT100",
+    1,
+    "45 °C (32–35 °C'de tamamen sıvı; aşırı ısıda yağ ayrışır)",
+    "[V] · vaka E4058 uyarısı"
+   ]
+  },
+  {
+   "ad": "yag_tanki_kapagi",
+   "grup": "SABIT",
+   "mal": "sac",
+   "bom": null
+  },
+  {
+   "ad": "yag_tanki_kelepcesi",
+   "grup": "SABIT",
+   "mal": "celik",
+   "bom": null
+  },
+  {
+   "ad": "yag_regulatoru_manometre",
+   "grup": "SABIT",
+   "mal": "aluminyum",
+   "bom": [
+    "Hava regülatörü + manometre 0–4 bar (tank basıncı)",
+    1,
+    "",
+    "[V] Festo MS2-LR sınıfı"
+   ]
+  },
+  {
+   "ad": "yag_seviye_sensoru",
+   "grup": "SABIT",
+   "mal": "sensor",
+   "bom": [
+    "Seviye sensörü (kapasitif, gıda)",
+    1,
+    "2 gün kala uyarır",
+    "[V]"
+   ]
+  },
+  {
+   "ad": "yag_tanki_rafi",
+   "grup": "SABIT",
+   "mal": "sac",
+   "bom": [
+    "Tank rafı 304 · 5 mm",
+    1,
+    "285,5 × 380",
+    "v6: köşebendin üst kanadına oturur (v5: 34'ten başlıyordu)"
+   ]
+  },
+  {
+   "ad": "yag_tanki_rafi_koseben",
+   "grup": "SABIT",
+   "mal": "sac",
+   "bom": [
+    "Köşebent 30 × 30 × 3 AISI 304 (tank rafı)",
+    1,
+    "boy 380",
+    "sol duvara M6 × 3 · v6: duvara değer (v5: 0,5 boşluk)"
+   ]
+  },
+  {
+   "ad": "isitmali_hortum_Ø6",
+   "grup": "SABIT",
+   "mal": "hortum_isi",
+   "bom": [
+    "Isıtmalı gıda hortumu Ø6 iç · 24 V · 45 °C",
+    1,
+    "≈ 2,6 m · kafaya yaylı sarımla",
+    "[V]"
+   ]
+  },
+  {
+   "ad": "hava_hortumu_tank",
+   "grup": "SABIT",
+   "mal": "hava",
+   "bom": null
+  },
+  {
+   "ad": "ZLW-1040_eksen_profili",
+   "grup": "SABIT",
+   "mal": "aluminyum",
+   "bom": [
+    "Dişli kayışlı lineer eksen igus drylin ZLW-1040 (yağsız, gıdaya yakın)",
+    1,
+    "strok 365 · profil 575",
+    "igus.com ZLW-1040 [V: ölçüler katalogdan teyit]"
+   ]
+  },
+  {
+   "ad": "ZLW_uc_blogu_0",
+   "grup": "SABIT",
+   "mal": "aluminyum",
+   "bom": null
+  },
+  {
+   "ad": "ZLW_uc_blogu_1",
+   "grup": "SABIT",
+   "mal": "aluminyum",
+   "bom": null
+  },
+  {
+   "ad": "itici_motoru",
+   "grup": "SABIT",
+   "mal": "motor",
+   "bom": [
+    "Step motor AutomationDirect SureStep STP-MTR-23079",
+    1,
+    "NEMA 23 · 1,95 N·m (276 oz-in) · 2,8 A",
+    "automationdirect.com STP-MTR-23079 · TraceParts STEP"
+   ]
+  },
+  {
+   "ad": "eksen_ayagi_0",
+   "grup": "SABIT",
+   "mal": "sac",
+   "bom": null
+  },
+  {
+   "ad": "eksen_ayagi_1",
+   "grup": "SABIT",
+   "mal": "sac",
+   "bom": null
+  },
+  {
+   "ad": "itici_home_sensoru",
+   "grup": "SABIT",
+   "mal": "sensor",
+   "bom": [
+    "Endüktif sensör Omron E2E-X2D1-N",
+    1,
+    "M8 · 2 mm · DC 2 telli",
+    "omron.com E2E · katalog ölçüsü"
+   ]
+  },
+  {
+   "ad": "itici_home_braketi",
+   "grup": "SABIT",
+   "mal": "sac",
+   "bom": [
+    "Sensör L braketi 304 · 4 mm (home sensörü eksen profiline)",
+    1,
+    "26 × 40 × 28",
+    "v6"
+   ]
+  },
+  {
+   "ad": "ZLW_araba",
+   "grup": "ITICI_ARABA",
+   "mal": "aluminyum",
+   "bom": null
+  },
+  {
+   "ad": "kaldirma_braketi",
+   "grup": "ITICI_ARABA",
+   "mal": "sac",
+   "bom": null
+  },
+  {
+   "ad": "MGPM20-60_govde",
+   "grup": "ITICI_ARABA",
+   "mal": "aluminyum",
+   "bom": [
+    "Kılavuzlu kompakt silindir SMC MGPM20-60Z",
+    1,
+    "Ø20 · strok 60 · itici kaldırma",
+    "smcworld MGP [V: gövde ölçüsü]"
+   ]
+  },
+  {
+   "ad": "kaldirma_kizagi",
+   "grup": "ITICI_KOL",
+   "mal": "aluminyum",
+   "bom": null
+  },
+  {
+   "ad": "itici_kolu_x",
+   "grup": "ITICI_KOL",
+   "mal": "sac",
+   "bom": null
+  },
+  {
+   "ad": "itici_kolu_z",
+   "grup": "ITICI_KOL",
+   "mal": "sac",
+   "bom": null
+  },
+  {
+   "ad": "itme_cubugu",
+   "grup": "ITICI_KOL",
+   "mal": "sac",
+   "bom": null
+  },
+  {
+   "ad": "itici_celik_plaka",
+   "grup": "ITICI_KOL",
+   "mal": "sac",
+   "bom": null
+  },
+  {
+   "ad": "itici_POM_yuz",
+   "grup": "ITICI_KOL",
+   "mal": "pom",
+   "bom": [
+    "İtici yüzü POM-C 10 mm (gıda, ≤ 90 °C sürekli)",
+    1,
+    "260 × 45",
+    "Ensinger TECAFORM AH veri sayfası"
+   ]
+  },
+  {
+   "ad": "pano_plakasi",
+   "grup": "SABIT",
+   "mal": "sac",
+   "bom": null
+  },
+  {
+   "ad": "pano_ara_burcu_0",
+   "grup": "SABIT",
+   "mal": "celik",
+   "bom": [
+    "Ara burç M5 × 2,5 paslanmaz (pano plakası)",
+    4,
+    "",
+    "katalog"
+   ]
+  },
+  {
+   "ad": "pano_ara_burcu_1",
+   "grup": "SABIT",
+   "mal": "celik",
+   "bom": null
+  },
+  {
+   "ad": "pano_ara_burcu_2",
+   "grup": "SABIT",
+   "mal": "celik",
+   "bom": null
+  },
+  {
+   "ad": "pano_ara_burcu_3",
+   "grup": "SABIT",
+   "mal": "celik",
+   "bom": null
+  },
+  {
+   "ad": "din_rayi_0",
+   "grup": "SABIT",
+   "mal": "celik",
+   "bom": [
+    "DIN ray 35 × 7,5",
+    2,
+    "boy 255",
+    "EN 60715"
+   ]
+  },
+  {
+   "ad": "din_rayi_1",
+   "grup": "SABIT",
+   "mal": "celik",
+   "bom": null
+  },
+  {
+   "ad": "plc_S7-1200_1214C",
+   "grup": "SABIT",
+   "mal": "siemens",
+   "bom": [
+    "PLC Siemens S7-1200 CPU 1214C DC/DC/DC",
+    1,
+    "6ES7214-1AG40-0XB0 · bant, kesici, itici, sprey",
+    "110 × 100 × 75"
+   ]
+  },
+  {
+   "ad": "plc_SM1222_DQ16",
+   "grup": "SABIT",
+   "mal": "siemens",
+   "bom": [
+    "Siemens SM1222 DQ16",
+    1,
+    "6ES7222-1BH32-0XB0",
+    "45 × 100 × 75"
+   ]
+  },
+  {
+   "ad": "emniyet_rolesi_PNOZ",
+   "grup": "SABIT",
+   "mal": "sari",
+   "bom": [
+    "Emniyet rölesi Pilz PNOZ s3",
+    1,
+    "v6: 2 × AZM40 kapak kilidi (ORTA + ÜST) + hat acil stop zinciri [AÇIK: acil stop yeri]",
+    "[V] pilz.com"
+   ]
+  },
+  {
+   "ad": "PWMD_sprey_suruculu",
+   "grup": "SABIT",
+   "mal": "siyah",
+   "bom": [
+    "PulsaJet PWM sürücüsü (tek nozül)",
+    1,
+    "PLC'den tetik · doz = süre × debi",
+    "[V] Spraying Systems PWMD"
+   ]
+  },
+  {
+   "ad": "sicaklik_kontrol_2",
+   "grup": "SABIT",
+   "mal": "siyah",
+   "bom": [
+    "Sıcaklık kontrolcüsü DIN (tank + hortum + nozül)",
+    2,
+    "PT100 · 45 °C",
+    "[V]"
+   ]
+  },
+  {
+   "ad": "guc_24V_NDR-240-24",
+   "grup": "SABIT",
+   "mal": "aluminyum",
+   "bom": [
+    "Güç kaynağı Mean Well NDR-240-24",
+    1,
+    "24 V 10 A · PLC, RollerDrive, sensör, ısıtıcılar",
+    "TraceParts STEP"
+   ]
+  },
+  {
+   "ad": "surucu_STP-DRV-4830",
+   "grup": "SABIT",
+   "mal": "kart",
+   "bom": [
+    "Step sürücü AutomationDirect SureStep STP-DRV-4830",
+    1,
+    "itici ekseni",
+    "automationdirect.com · TraceParts STEP"
+   ]
+  },
+  {
+   "ad": "guc_48V_NDR-240-48",
+   "grup": "SABIT",
+   "mal": "aluminyum",
+   "bom": [
+    "Güç kaynağı Mean Well NDR-240-48",
+    1,
+    "48 V · step sürücü",
+    "NDR-240 gövdesi"
+   ]
+  },
+  {
+   "ad": "klemens_sirasi",
+   "grup": "SABIT",
+   "mal": "plastik",
+   "bom": [
+    "Klemens sırası Phoenix UT 2,5",
+    24,
+    "",
+    "phoenixcontact.com"
+   ]
+  },
+  {
+   "ad": "kablo_kanali_0",
+   "grup": "SABIT",
+   "mal": "plastik",
+   "bom": [
+    "Kablo kanalı 40 × 25",
+    3,
+    "",
+    "katalog"
+   ]
+  },
+  {
+   "ad": "kablo_kanali_dikey",
+   "grup": "SABIT",
+   "mal": "plastik",
+   "bom": null
+  },
+  {
+   "ad": "sartlandirici_MS4",
+   "grup": "SABIT",
+   "mal": "aluminyum",
+   "bom": [
+    "Şartlandırıcı Festo MS4-LFR (filtre + regülatör + manometre)",
+    1,
+    "6 bar",
+    "[V] festo.com MS4"
+   ]
+  },
+  {
+   "ad": "valf_adasi_VUVG_4",
+   "grup": "SABIT",
+   "mal": "aluminyum",
+   "bom": [
+    "Valf adası Festo VUVG-L10 · 4 × 5/2 (kesici · itici kaldırma · tank basıncı · yedek)",
+    1,
+    "24 V",
+    "[V] festo.com VUVG"
+   ]
+  },
+  {
+   "ad": "sartlandirici_montaj_saci",
+   "grup": "SABIT",
+   "mal": "sac",
+   "bom": [
+    "Montaj sacı 2,5 · 304 (MS4 + valf adası)",
+    1,
+    "200 × 170",
+    "v6: arka saca 4 × M5 · MS4 ve VUVG buna vidalı"
+   ]
+  },
+  {
+   "ad": "hava_hortumu_kesici",
+   "grup": "SABIT",
+   "mal": "hava",
+   "bom": null
+  },
+  {
+   "ad": "hava_hortumu_kaldirma",
+   "grup": "SABIT",
+   "mal": "hava",
+   "bom": null
+  },
+  {
+   "ad": "sensor_urun_merkezde",
+   "grup": "SABIT",
+   "mal": "sensor",
+   "bom": [
+    "Fotosel Omron E3Z-D62 (dağınık yansımalı)",
+    2,
+    "ürün merkezde · bant sonu",
+    "omron.com E3Z"
+   ]
+  },
+  {
+   "ad": "sensor_braketi_urun_merkezde",
+   "grup": "SABIT",
+   "mal": "sac",
+   "bom": [
+    "Sensör braketi 304 (bant yan levhasına)",
+    2,
+    "20 × 4,5 × 16",
+    "v6"
+   ]
+  },
+  {
+   "ad": "sensor_bant_sonu",
+   "grup": "SABIT",
+   "mal": "sensor",
+   "bom": null
+  },
+  {
+   "ad": "sensor_braketi_bant_sonu",
+   "grup": "SABIT",
+   "mal": "sac",
+   "bom": null
+  },
+  {
+   "ad": "kesici_reed_0",
+   "grup": "SABIT",
+   "mal": "sensor",
+   "bom": [
+    "Silindir sensörü Festo SMT-8M (üst / alt)",
+    2,
+    "",
+    "[V] festo.com"
+   ]
+  },
+  {
+   "ad": "kesici_reed_1",
+   "grup": "SABIT",
+   "mal": "sensor",
+   "bom": null
+  },
+  {
+   "ad": "REF_bulasik_govde_cift_cidar",
+   "grup": "REF",
+   "mal": "referans",
+   "bom": null
+  },
+  {
+   "ad": "REF_bulasik_alt_on_panel",
+   "grup": "REF",
+   "mal": "referans",
+   "bom": null
+  },
+  {
+   "ad": "REF_bulasik_kapak",
+   "grup": "REF",
+   "mal": "referans",
+   "bom": null
+  },
+  {
+   "ad": "REF_bulasik_dokunmatik_ekran",
+   "grup": "REF",
+   "mal": "referans",
+   "bom": null
+  },
+  {
+   "ad": "REF_bulasik_isikli_kulp",
+   "grup": "REF",
+   "mal": "referans",
+   "bom": null
+  },
+  {
+   "ad": "REF_bulasik_miclean_filtre",
+   "grup": "REF",
+   "mal": "referans",
+   "bom": null
+  },
+  {
+   "ad": "REF_bulasik_yikama_kolu_alt",
+   "grup": "REF",
+   "mal": "referans",
+   "bom": null
+  },
+  {
+   "ad": "REF_bulasik_yikama_kolu_ust",
+   "grup": "REF",
+   "mal": "referans",
+   "bom": null
+  },
+  {
+   "ad": "REF_bulasik_yikama_kolu_gobek_borusu_alt",
+   "grup": "REF",
+   "mal": "referans",
+   "bom": null
+  },
+  {
+   "ad": "REF_bulasik_yikama_kolu_gobek_borusu_ust",
+   "grup": "REF",
+   "mal": "referans",
+   "bom": null
+  },
+  {
+   "ad": "REF_bulasik_sepet_400",
+   "grup": "REF",
+   "mal": "referans",
+   "bom": null
+  },
+  {
+   "ad": "REF_bulasik_sepet_rayi_sol",
+   "grup": "REF",
+   "mal": "referans",
+   "bom": null
+  },
+  {
+   "ad": "REF_bulasik_sepet_rayi_sag",
+   "grup": "REF",
+   "mal": "referans",
+   "bom": null
+  },
+  {
+   "ad": "REF_bulasik_baglanti_elektrik",
+   "grup": "REF",
+   "mal": "referans",
+   "bom": null
+  },
+  {
+   "ad": "REF_bulasik_baglanti_tahliye",
+   "grup": "REF",
+   "mal": "referans",
+   "bom": null
+  },
+  {
+   "ad": "REF_bulasik_baglanti_su",
+   "grup": "REF",
+   "mal": "referans",
+   "bom": null
+  },
+  {
+   "ad": "bulasik_tabla_kirisi_0",
+   "grup": "SABIT",
+   "mal": "sac",
+   "bom": [
+    "Tabla kirişi · kutu profil 40 × 20 × 2 AISI 304",
+    2,
+    "boy 597 · yan saclara kaynaklı · K taban sacına oturur",
+    "v6 · makine köşeleri (eski ayak hattı z −50 / −590) kirişin üstünde"
+   ]
+  },
+  {
+   "ad": "bulasik_tabla_kirisi_1",
+   "grup": "SABIT",
+   "mal": "sac",
+   "bom": null
+  },
+  {
+   "ad": "bulasik_tavasi",
+   "grup": "SABIT",
+   "mal": "sac",
+   "bom": [
+    "Bulaşık tabla tavası 3 mm AISI 304",
+    1,
+    "468 × 608 · ön + arka kenar 15 aşağı bükülü",
+    "v6 · MEIKO ayaksız buna oturur (+13) · kirişlere kaynak"
+   ]
+  },
+  {
+   "ad": "bulasik_gecis_rakoru_elektrik",
+   "grup": "SABIT",
+   "mal": "siyah",
+   "bom": [
+    "Kablo rakoru Lapp SKINTOP MS-M 20×1,5 (paslanmaz / pirinç, IP68)",
+    1,
+    "bulaşık besleme kablosu (sıkma 7–13) · taban sacı delik Ø20,5 · kilit somunu altta",
+    "lappgroup.com SKINTOP MS-M · parça no teyit (ör. 53112020) · ölçü VARSAYIM"
+   ]
+  },
+  {
+   "ad": "bulasik_gecis_lastigi_tahliye",
+   "grup": "SABIT",
+   "mal": "conta",
+   "bom": [
+    "Geçiş lastiği EPDM (grommet) · tahliye hortumu",
+    1,
+    "delik Ø50 · iç Ø40 · flanş Ø60",
+    "VARSAYIM ölçü · genel katalog (parça no yok)"
+   ]
+  },
+  {
+   "ad": "bulasik_gecis_lastigi_su",
+   "grup": "SABIT",
+   "mal": "conta",
+   "bom": [
+    "Geçiş lastiği EPDM (grommet) · su hortumu",
+    1,
+    "delik Ø35 · iç Ø26 · flanş Ø45",
+    "VARSAYIM ölçü · genel katalog (parça no yok)"
+   ]
+  },
+  {
+   "ad": "urun_hamur",
+   "grup": "URUN",
+   "mal": "hamur",
+   "bom": null
+  },
+  {
+   "ad": "urun_ustu",
+   "grup": "URUN",
+   "mal": "kasar_ust",
+   "bom": null
+  },
+  {
+   "ad": "urun_kesik_0",
+   "grup": "URUN_IZ",
+   "mal": "kesik",
+   "bom": null
+  },
+  {
+   "ad": "urun_kesik_1",
+   "grup": "URUN_IZ",
+   "mal": "kesik",
+   "bom": null
+  },
+  {
+   "ad": "urun_kesik_2",
+   "grup": "URUN_IZ",
+   "mal": "kesik",
+   "bom": null
+  },
+  {
+   "ad": "urun_kesik_3",
+   "grup": "URUN_IZ",
+   "mal": "kesik",
+   "bom": null
+  },
+  {
+   "ad": "urun_kesik_4",
+   "grup": "URUN_IZ",
+   "mal": "kesik",
+   "bom": null
+  },
+  {
+   "ad": "urun_kesik_5",
+   "grup": "URUN_IZ",
+   "mal": "kesik",
+   "bom": null
+  },
+  {
+   "ad": "REF_firin_bandi_ucu",
+   "grup": "REF",
+   "mal": "referans",
+   "bom": null
+  },
+  {
+   "ad": "REF_E_sol_duvar",
+   "grup": "REF",
+   "mal": "referans",
+   "bom": null
+  },
+  {
+   "ad": "REF_E_koprusu",
+   "grup": "REF",
+   "mal": "referans",
+   "bom": null
+  }
+ ],
+ "denetim": [
+  {
+   "ad": "zarf 600 × 1862 × (830 + 79) içinde: z −830…+79,5 (v6: ön düzlem +79 · kapaklar kapalı)",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "alt taban çizgisi 123: altında yalnız ayak + süpürgelik",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "istasyon tabanı 892",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "K bandı üstü 996.0 = fırın bandı 998 − 2 (ürün hep aşağı iner)",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "bıçak ağzı alt dayamada bandın 0.5 mm üstünde (bandı kesmez)",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "kafa yukarıda: bıçak ağzı ürünün 76 mm üstünde (ürün ≤ 50)",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "itici yukarıda: altı ürünün (15) 48 mm üstünde",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "itici yukarıda: üstü (1104) kafa yukarıdayken bıçak ağzının (1121.5) altında",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "itici aşağıda banttan 3 mm yukarıda",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "çit koruma halkasından 2.0 mm uzakta",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "çit kaydırması x 429'de biter (E'nin varsayımı 440 · E penceresine giriş 450)",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "itici E penceresinden geçer (y 999–1044, z -320…-60)",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "itici E'ye 110 mm girer (E'nin varsayımı 110)",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "itici kolu E'ye girmez (kol x ≤ 586 < 598)",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "araba stroku 365 (araba merkezi 121 → 486) eksen profilinde (71…536)",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "ürün E'ye girerken (merkez 450) z -206.0 = kutu ekseni -206",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "itme zamanı kutu modülüyle aynı (8.5–10.1 sn) · son merkez 860 (E yereli 260)",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "kesim itmeden önce biter (kafa 6.5 sn'de yukarıda)",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "kesme kuvveti 0.8–2.4 kN [V: 1–3 N/mm × 798 mm] · DGRF-C-63 1870 N → yeter (≤ 2,3 N/mm)",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "hava: kesim başına 5.1 NL · saatte 60 ürünle 5.1 NL/dk (kompresör 43 L/dk; TOPPING ~1,7)",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "tereyağı: pide başına 8 g · günde 640 g · 2 gün 1.41 L < tank 3 L",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "sprey 1.14 sn (pencere 1.2 sn) · koni yarıçapı ürün üstünde 143 mm (ürün 140–150)",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "ALÇAK HAT kotları (v5 ile aynı): üst 1862.0 · istasyon tabanı sacı 892–895 · K bandı 996.0 · fırın bandı 998 · ürün girişi 932–1072",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "E arayüzü kutu_cad_v6: E plakası 996.0 = K bandı 996.0 · E penceresi 978–1062 = K'deki · E kalıbı 981.5 · tepsi 936",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "ön düzlem sözleşmesi: Z_ON 79.0 = firin_tp10_cad_v8.ZS 79.0 (fırın gövdesinin ön yüzü, değişmez referans) · arka -830 → derinlik 909",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "E ileri uyum (kutu_cad_v7 = montaj v63'ün E'si): PLAKA_K · PENCERE · KALIP · TEPSI · T · ZB · Z_PIZZA kutu_cad_v6 ile AYNI → K'nin ürün yolu / itici arayüzü değişmez (ürün × E v7 + itici × E v7 taraması: __main__ e7_ileri)",
+   "sonuc": "GEÇTİ",
+   "deger": "[]"
+  },
+  {
+   "ad": "v5 ↔ v6 (dilim_v1.karsilastir: sınır kutusu ±0,01 + hacim): v5 149 → v6 198 parça · birebir 97 · değişen 44 (K 32 + bulaşık REF 12, hepsi +13 y) · yeni 57 · çıkan 8 — listeler beklenenle birebir",
+   "sonuc": "GEÇTİ",
+   "deger": "değişen fazla [] eksik [] · çıkan ['REF_bulasik_ayar_ayagi_0', 'REF_bulasik_ayar_ayagi_1', 'REF_bulasik_ayar_ayagi_2', 'REF_bulasik_ayar_ayagi_3', 'hava_besleme_K', 'kose_dikmesi_0', 'kose_dikmesi_1', 'plint_on'] · yeni tanımsız [] · bulaşık kayma []"
+  },
+  {
+   "ad": "2. tur · yalnız DELİK / YUVA / KESİM açılan 9 parça (rulo mil yuvaları, yan levha delikleri + gergi yarığı, bant şeridi, göbek yuvaları, DIN klipsi, kelepçe, eksen ayağı): sınır kutusu v5 ile AYNI (±0,05; göbek yuva ağzı 0,014) · hacim yalnız AZALDI (Σ -81846 mm³) → zarf ve işlev değişmedi",
+   "sonuc": "GEÇTİ",
+   "deger": "{'tahrik_rulosu_RollerDrive_EC5000': -45691.3, 'kuyruk_rulosu': -19905.1, 'bant_yan_levhasi_0': -1178.8, 'bant_yan_levhasi_1': -1178.8, 'bant_PU_2mm': -9.3, 'bicak_gobek_halkasi': -539.5, 'surucu_STP-DRV-4830': -11.9, 'yag_tanki_kelepcesi': -11831.2, 'eksen_ayagi_1': -1500.0}"
+  },
+  {
+   "ad": "2. tur · taşınan / kısalan: kablo_kanali_dikey z -798.5…-773.5 (arka köşe dikmesinin önü −798,5; v5 −822…−797 dikmenin içindeydi) · sprey_dirsegi x ≤ 306.0 (PulsaJet ucu 305) · koruma braketleri r ≥ 115 (kafa plakası kenarı)",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "kinematik v5 ile AYNI: urun_merkez(t) 401 an · en büyük fark 0.0000 mm · grup_trs(t) 201 an × 5 grup 0.0000 (kapaklar yalnız servis — çevrimde KAPALI)",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "ÖN DÜZLEM: 3 kapağın dış yüzü z 79.00/79.00/79.00 = Z_ON 79.0 · tava 20 → arka kenar z 59.00/59.00/59.00 · K'nin en ön noktası 79.00 ≤ 79.5",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "+59'un önünde YALNIZ kapak grupları (tava + menteşe kanadı + mandal karşılığı + kilit dili) + kapak boşluğuna giren 3 bas-aç mandalı (z ≤ 71): 18 parça",
+   "sonuc": "GEÇTİ",
+   "deger": "[]"
+  },
+  {
+   "ad": "kabuk ön kenarı +59 (kapak arkası): ust_sac 59.00 · sol_sac_urun_girisi 59.00 · sag_sac_E_penceresi 59.00 · taban_sac_3 59.00 · istasyon_tabani_3 59.00 · arka sac z -830.0 (SABİT) → gövde derinliği 909",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "plint onyuz_plint (2. tur): ön yüz z 17.5…19.0 (ön düzlemin 60 gerisi) · y 0–123 (SPEC 0–123) · x 0–600 (E v7 plinti x 600'den devam: tek çizgi) · yan dönüşler TAM DERİNLİK → z -828.5 · üst flanş 15 · hacim 436306 = beklenen 436306 · eski plint_on YOK",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "K'nin altı KAPALI (ışın testi, 5 ışın): önden x 15 / 585 / y 5 ve yandan x 0 / 600 → hepsi plinte çarpar (aralık 0) · ön x 15 0.00 · ön x 585 0.00 · ön y 5 0.00 · yan sol z −400 0.00 · yan sağ z −400 0.00",
+   "sonuc": "GEÇTİ",
+   "deger": "[('ön x 15', 0.0), ('ön x 585', 0.0), ('ön y 5', 0.0), ('yan sol z −400', 0.0), ('yan sağ z −400', 0.0)]"
+  },
+  {
+   "ad": "derzler 3 mm: yatay 3.0/3.0 (883/886 · 1305/1308) · alt kenar 126 · üst kenar 1859 (1862 − 3) · fırın/dolap ↔ K 3.0 (x 4000 → 4003) · K ↔ E 3.0 (4598.5 → 4601.5)",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "tava panel katıdan: sac 1.5 + büküm 20 (hacim = dış kutu − iç boşluk − yarıklar) · alt 5.96 kg 0 yarık · orta 3.41 kg 0 yarık · ust 4.41 kg 0 yarık",
+   "sonuc": "GEÇTİ",
+   "deger": "[('alt', -0.0), ('orta', -0.0), ('ust', -0.0)]"
+  },
+  {
+   "ad": "ÖNDEN YALNIZ DÜZ YÜZEY + DERZ (SPEC §1): YARIK_ACIK = False → 3 kapağın ön sacında kesik YOK (v6-1: ALT + ÜST'te 416 yarık varsayılandı)",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "SEÇENEK yarık deseni (katıdan, modele girmez): 52 yarık/sıra · ORTALI sol pay 41.25 = sağ pay 41.25 (v6-1 37 / 45,5) · dikey paylar alt 71/71 · ust 22/22 · alt 208 yarık · ust 208 yarık · ALT üst bandı ≤ dayama lastiği 814",
+   "sonuc": "GEÇTİ",
+   "deger": "{'alt': (208, 37439.99999999977, 37440.0, True), 'ust': (208, 37439.999999999534, 37440.0, True)}"
+  },
+  {
+   "ad": "yük yolu temasları (83 çift, gerçek katı aralığı ≤ 0,05): ön çerçeve ↔ kabuk · kayıt ↔ dikme · köprü kirişi ↔ uç plakası ↔ yan sac + ön dikme · tabla kirişi ↔ yan sac + taban · tava ↔ kiriş · makine ↔ tava · plint ↔ taban · menteşe / mandal / AZM ↔ çerçeve · menteşe kanadı ↔ kapak",
+   "sonuc": "GEÇTİ",
+   "deger": "[]"
+  },
+  {
+   "ad": "kapak kinematiği: SOL menteşe sanal pivotu (x 3.0, z 79.0) · 90°'de ORTA kapak x 3.0–23.0 · z 79.0…674.5 (öne-sola açılır, fırın/dolap önüne yaslanır)",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "kapaklar 0–90° (19 açı × 3 kapak, her 5°) ↔ bütün sabit parçalar + bulaşık + öbür kapaklar (kapalı): 0 çakışma · süpürülen x 3.0–598.5 · z 59.0…674.5 (K bandında kalır: fırın/dolap ve E yüzlerine girmez, +59'un arkasına YALNIZ kilit dili geçer: AZM ağzına z 49.0) · 0 sn",
+   "sonuc": "GEÇTİ",
+   "deger": "[]"
+  },
+  {
+   "ad": "TAM TARAMA İSTİSNASIZ (2. tur): 186 parça (sabit + 3 kapak kapalı + bulaşık + 41 hareketli) · hareketliler 201 an (her 0,1 sn) · 2385 aday çift · eşik 0,01 mm³ → 0 çakışma · ISTISNA listesi 0 kalem · 3 sn",
+   "sonuc": "GEÇTİ",
+   "deger": "[]"
+  },
+  {
+   "ad": "bulaşık (bulasik_cad_v2, kök (4108.5, 139.0, -20.0) · AYAKSIZ): dünya x 4108.5–4568.5 · gövde altı y 149.0 = tava üstü 149.0 (v5: gövde 136 → +13) · üst 839 · TAMAMI z -645…-12 = zarf · kulp + ekran önü z -12.0 (kapak arkasına 71.0)",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "bulaşık arka bağlantıları üstü y 319.0 ≤ 323 (v6: +13 · föy tahliye 165 + Y0 139 + r 15)",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "bulaşık zarfına (108.5–568.5 × 149–839 × -645…-12) hiçbir K parçası girmez (kapaklar kapalı · tava üstü = zarf altı)",
+   "sonuc": "GEÇTİ",
+   "deger": "[]"
+  },
+  {
+   "ad": "bulaşık gerçek katıları (16 parça) ↔ K parçaları (kapaklar kapalı) çakışma 0",
+   "sonuc": "GEÇTİ",
+   "deger": "[]"
+  },
+  {
+   "ad": "bulaşık kapak açık zarfı (x 108.5–568.5 · y 362–839 · z -20…435) ↔ K sabitleri + ORTA/ÜST (kapalı) + ALT kapak 90° AÇIK: 0 parça · ALT kapakla pay 85.5 mm",
+   "sonuc": "GEÇTİ",
+   "deger": "[]"
+  },
+  {
+   "ad": "KİLİT (mekanik): ALT kapak kapalıyken zarfta (363630 mm³) → bulaşık kapağı ≈ 12.0° açılıp ALT kapağın EPDM dayama lastiğine (x 108.5–568.5 · y 814–844) y 829.1'de dayanır — 1,5 sac yüklenmez (kapak x 110.5–566.5 lastiğin içinde) · ALT kapak ≥ 75° açıkken bulaşık kapağı serbest (menteşe en çok 90°)",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "MEIKO arka payı z -670…-645 BOŞ: hiçbir K parçası girmez (makinenin kendi bağlantıları y ≤ 323)",
+   "sonuc": "GEÇTİ",
+   "deger": "[]"
+  },
+  {
+   "ad": "bulaşığın arkası BOŞ: x 108.5–568.5 · y 149–839 · z -828.5…-670 (158.5 mm derin) → K parçası yok",
+   "sonuc": "GEÇTİ",
+   "deger": "[]"
+  },
+  {
+   "ad": "bulaşığın üstü 839 → ilk K parçası istasyon_tabani_3 892: boşluk 53 mm (v5: 66 → makine +13)",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "HAVADA PARÇA (denetim_temas_v1, tol 0,05): 186 parça · kök (ayak) 5 · zemine bağlı 186 · HAVADA 0 bileşen · v5: 17 bileşen / 74 parça · beyaz liste BOŞ",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "2. tur · kapaklar 90° AÇIK: havada kalan YALNIZ 3 kapak grubu (15 parça: tava + menteşe kanadı + karşılık + dil + dayama) — menteşe mekanizması sanal pivot, modelde YOK (EMKA pivot yeri üreticiden teyit) · kapağa dayanan başka parça YOK",
+   "sonuc": "GEÇTİ",
+   "deger": "[]"
+  },
+  {
+   "ad": "köprü (v6): 2 × 40×40×2 · açıklık 581 · tepki 1870 N (DGRF-C-63, 6 bar) → kiriş başına 935 N: sehim 0.27 mm (basit mesnet, en kötü; uçlar kaynaklı) · gerilme 37 MPa (304 akma 205, emniyet 5.5) · uç plakası → yan sac 6 × M6 yatak basıncı 17.3 MPa",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "bulaşık tablası: 2 × 40×20×2 kiriş (I 14379 mm⁴, açıklık 597, yan saclara kaynaklı) · makine 90 kg [VARSAYIM] köşe başına 221 N (köşeler kirişin üstünde) → sehim 0.33 mm (basit mesnet, taban sacı desteği yok sayıldı)",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  },
+  {
+   "ad": "ürün açıklıkları yan saclarda AYNI ve BOŞ: fırın → K girişi y 932–1072 z -420…-8 · K → E penceresi y 978–1062 z -372…-24 · K ön yüzünde açıklık YOK (ürün ön yüzden geçmez, K'de robot noktası yok)",
+   "sonuc": "GEÇTİ",
+   "deger": "[0.0, 0.0]"
+  },
+  {
+   "ad": "hava_besleme_K YOK (MS4 zaten üstten ANA_K48 ile beslenir) · istasyon tabanında delik YOK (hacim 1578496 = düz sac − 2 ön + 2 arka dikme çentiği 1578496 mm³)",
+   "sonuc": "GEÇTİ",
+   "deger": ""
+  }
+ ],
+ "hesap": {
+  "bicak_kenar_mm": 798.0,
+  "kuvvet_kN": [
+   0.798,
+   2.394
+  ],
+  "silindir_N": 1870.3471863146833,
+  "hava_NL_kesim": 5.123307477474547,
+  "hava_NL_dk_60h": 5.123307477474547,
+  "yag_g_gun": 640.0,
+  "yag_L_2gun": 1.4065934065934067,
+  "sprey_sn": 1.1428571428571428,
+  "koni_r_mm": 142.99999999999997,
+  "kesim_hiz": 37.499999999999964,
+  "itme_vmax": 337.50000000000006,
+  "taban_ust": 895.0,
+  "bant": 996.0,
+  "ust": 1862.0,
+  "E_v7_arayuz": {
+   "PLAKA_K": [
+    996.0,
+    996.0
+   ],
+   "PENCERE": [
+    [
+     978.0,
+     1062.0,
+     -372.0,
+     -24.0
+    ],
+    [
+     978.0,
+     1062.0,
+     -372.0,
+     -24.0
+    ]
+   ],
+   "KALIP": [
+    981.5,
+    981.5
+   ],
+   "TEPSI": [
+    936.0,
+    936.0
+   ],
+   "T": [
+    1.6,
+    1.6
+   ],
+   "ZB": [
+    -206.0,
+    -206.0
+   ],
+   "Z_PIZZA": [
+    [
+     8.5,
+     10.1,
+     10.35
+    ],
+    [
+     8.5,
+     10.1,
+     10.35
+    ]
+   ]
+  },
+  "v5_v6": {
+   "v5": 149,
+   "v6": 198,
+   "ayni": 97,
+   "degisen": [
+    "PulsaJet_isitici_ceket",
+    "REF_bulasik_alt_on_panel",
+    "REF_bulasik_baglanti_elektrik",
+    "REF_bulasik_baglanti_su",
+    "REF_bulasik_baglanti_tahliye",
+    "REF_bulasik_dokunmatik_ekran",
+    "REF_bulasik_govde_cift_cidar",
+    "REF_bulasik_isikli_kulp",
+    "REF_bulasik_kapak",
+    "REF_bulasik_miclean_filtre",
+    "REF_bulasik_sepet_400",
+    "REF_bulasik_yikama_kolu_alt",
+    "REF_bulasik_yikama_kolu_ust",
+    "bant_yan_levhasi_0",
+    "bant_yan_levhasi_1",
+    "bicak_gobek_halkasi",
+    "eksen_ayagi_1",
+    "hava_hortumu_kaldirma",
+    "hava_hortumu_tank",
+    "istasyon_tabani_3",
+    "kablo_kanali_dikey",
+    "kesici_reed_0",
+    "kesici_reed_1",
+    "kopru_kirisi_0",
+    "kopru_kirisi_1",
+    "koruma_braketi_0",
+    "koruma_braketi_1",
+    "koruma_braketi_2",
+    "koruma_braketi_3",
+    "koruma_braketi_4",
+    "koruma_braketi_5",
+    "kuyruk_rulosu",
+    "olu_plaka",
+    "sag_sac_E_penceresi",
+    "sol_sac_urun_girisi",
+    "sprey_dirsegi",
+    "surucu_STP-DRV-4830",
+    "taban_sac_3",
+    "tahrik_rulosu_RollerDrive_EC5000",
+    "ust_sac",
+    "yag_tanki_isitici_ceketi",
+    "yag_tanki_kelepcesi",
+    "yag_tanki_rafi",
+    "yag_tanki_rafi_koseben"
+   ],
+   "yeni": [
+    "DGRF_burcu_0",
+    "DGRF_burcu_1",
+    "DGRF_burcu_2",
+    "PulsaJet_semeri",
+    "REF_bulasik_sepet_rayi_sag",
+    "REF_bulasik_sepet_rayi_sol",
+    "REF_bulasik_yikama_kolu_gobek_borusu_alt",
+    "REF_bulasik_yikama_kolu_gobek_borusu_ust",
+    "bulasik_gecis_lastigi_su",
+    "bulasik_gecis_lastigi_tahliye",
+    "bulasik_gecis_rakoru_elektrik",
+    "bulasik_tabla_kirisi_0",
+    "bulasik_tabla_kirisi_1",
+    "bulasik_tavasi",
+    "itici_home_braketi",
+    "kopru_kirisi_uc_plakasi_0",
+    "kopru_kirisi_uc_plakasi_1",
+    "onyuz_basac_karsilik_alt",
+    "onyuz_basac_karsilik_orta",
+    "onyuz_basac_karsilik_ust",
+    "onyuz_basac_mandal_alt",
+    "onyuz_basac_mandal_orta",
+    "onyuz_basac_mandal_ust",
+    "onyuz_cerceve_dikme_sag",
+    "onyuz_cerceve_dikme_sol",
+    "onyuz_cerceve_kayit_1306",
+    "onyuz_cerceve_kayit_883",
+    "onyuz_cerceve_kayit_alt",
+    "onyuz_cerceve_kayit_ust",
+    "onyuz_dayama_lastigi_alt",
+    "onyuz_kapak_alt",
+    "onyuz_kapak_orta",
+    "onyuz_kapak_ust",
+    "onyuz_kilit_AZM40_orta",
+    "onyuz_kilit_AZM40_ust",
+    "onyuz_kilit_dili_orta",
+    "onyuz_kilit_dili_ust",
+    "onyuz_mentese_govde_alt_0",
+    "onyuz_mentese_govde_alt_1",
+    "onyuz_mentese_govde_orta_0",
+    "onyuz_mentese_govde_orta_1",
+    "onyuz_mentese_govde_ust_0",
+    "onyuz_mentese_govde_ust_1",
+    "onyuz_mentese_kanat_alt_0",
+    "onyuz_mentese_kanat_alt_1",
+    "onyuz_mentese_kanat_orta_0",
+    "onyuz_mentese_kanat_orta_1",
+    "onyuz_mentese_kanat_ust_0",
+    "onyuz_mentese_kanat_ust_1",
+    "onyuz_plint",
+    "pano_ara_burcu_0",
+    "pano_ara_burcu_1",
+    "pano_ara_burcu_2",
+    "pano_ara_burcu_3",
+    "sartlandirici_montaj_saci",
+    "sensor_braketi_bant_sonu",
+    "sensor_braketi_urun_merkezde"
+   ],
+   "cikan": [
+    "REF_bulasik_ayar_ayagi_0",
+    "REF_bulasik_ayar_ayagi_1",
+    "REF_bulasik_ayar_ayagi_2",
+    "REF_bulasik_ayar_ayagi_3",
+    "hava_besleme_K",
+    "kose_dikmesi_0",
+    "kose_dikmesi_1",
+    "plint_on"
+   ],
+   "bulasik_dy": 13.0
+  },
+  "v6_delik": {
+   "tahrik_rulosu_RollerDrive_EC5000": -45691.3,
+   "kuyruk_rulosu": -19905.1,
+   "bant_yan_levhasi_0": -1178.8,
+   "bant_yan_levhasi_1": -1178.8,
+   "bant_PU_2mm": -9.3,
+   "bicak_gobek_halkasi": -539.5,
+   "surucu_STP-DRV-4830": -11.9,
+   "yag_tanki_kelepcesi": -11831.2,
+   "eksen_ayagi_1": -1500.0
+  },
+  "on59": [
+   "onyuz_basac_karsilik_alt",
+   "onyuz_basac_karsilik_orta",
+   "onyuz_basac_karsilik_ust",
+   "onyuz_basac_mandal_alt",
+   "onyuz_basac_mandal_orta",
+   "onyuz_basac_mandal_ust",
+   "onyuz_dayama_lastigi_alt",
+   "onyuz_kapak_alt",
+   "onyuz_kapak_orta",
+   "onyuz_kapak_ust",
+   "onyuz_kilit_dili_orta",
+   "onyuz_kilit_dili_ust",
+   "onyuz_mentese_kanat_alt_0",
+   "onyuz_mentese_kanat_alt_1",
+   "onyuz_mentese_kanat_orta_0",
+   "onyuz_mentese_kanat_orta_1",
+   "onyuz_mentese_kanat_ust_0",
+   "onyuz_mentese_kanat_ust_1"
+  ],
+  "plint_isin": [
+   [
+    "ön x 15",
+    0.0
+   ],
+   [
+    "ön x 585",
+    0.0
+   ],
+   [
+    "ön y 5",
+    0.0
+   ],
+   [
+    "yan sol z −400",
+    0.0
+   ],
+   [
+    "yan sağ z −400",
+    0.0
+   ]
+  ],
+  "derz": {
+   "yatay": [
+    3.0,
+    3.0
+   ],
+   "firin": 3.0,
+   "E": 3.0,
+   "kapak_y": [
+    [
+     126.0,
+     883.0
+    ],
+    [
+     886.0,
+     1305.0
+    ],
+    [
+     1308.0,
+     1859.0
+    ]
+   ],
+   "kapak_x_dunya": [
+    4003.0,
+    4598.5
+   ]
+  },
+  "kapak": {
+   "alt": {
+    "yarik": 0,
+    "kg": 5.96
+   },
+   "orta": {
+    "yarik": 0,
+    "kg": 3.41
+   },
+   "ust": {
+    "yarik": 0,
+    "kg": 4.41
+   }
+  },
+  "yarik_secenek": {
+   "acik": false,
+   "sira": 52,
+   "sol_pay": 41.25,
+   "sag_pay": 41.25,
+   "dikey_pay": {
+    "alt": [
+     71.0,
+     71.0
+    ],
+    "ust": [
+     22.0,
+     22.0
+    ]
+   },
+   "yarik": {
+    "alt": 208,
+    "ust": 208
+   }
+  },
+  "kapak_tarama": {
+   "an": 19,
+   "bulgu": 0,
+   "x": [
+    2.9999999999999947,
+    598.5
+   ],
+   "z": [
+    59.0,
+    674.5
+   ],
+   "kilit_dili_zmin": 49.0
+  },
+  "tam_tarama": {
+   "parca": 186,
+   "an": 201,
+   "aday_cift": 2385,
+   "cakisma": 0,
+   "bulgu": [],
+   "istisna": 0
+  },
+  "bulasik": {
+   "x": [
+    108.5,
+    568.5
+   ],
+   "y": [
+    149.0,
+    839.0
+   ],
+   "z": [
+    -645.0,
+    -20.0
+   ],
+   "dunya_x": [
+    4108.5,
+    4568.5
+   ],
+   "kulp_onu_z": -12.0,
+   "tam_z": [
+    -645.0,
+    -12.0
+   ],
+   "yer": [
+    4108.5,
+    139.0,
+    -20.0
+   ],
+   "tava_ustu": 149.0
+  },
+  "bulasik_kapak_zarfi": {
+   "x": [
+    108.5,
+    568.5
+   ],
+   "y": [
+    362.0,
+    839.0
+   ],
+   "z": [
+    -20.0,
+    435.0
+   ],
+   "alt_kapak_min_aci": 75,
+   "alt_kapali_hacim": 363630.0,
+   "pay_90": 85.5,
+   "bulasik_kapak_kilitte_aci": 12.0,
+   "dayama_temas_y": 829.1,
+   "dayama": {
+    "x": [
+     108.5,
+     568.5
+    ],
+    "y": [
+     814.0,
+     844.0
+    ],
+    "t": 3.0
+   }
+  },
+  "bulasik_arka_bos": {
+   "x": [
+    108.5,
+    568.5
+   ],
+   "y": [
+    149.0,
+    839.0
+   ],
+   "z": [
+    -828.5,
+    -670.0
+   ],
+   "derinlik": 158.5
+  },
+  "bulasik_ust_bosluk": 53.0,
+  "bulasik_sol": {
+   "on": 77.0,
+   "arka": 107.0
+  },
+  "havada": {
+   "once": {
+    "bilesen": 17,
+    "parca": 74,
+    "not_": "kesme v5 + bulaşık v1 (K'deki yerinde, ayaklı) · aynı denetim"
+   },
+   "sonra": {
+    "parca": 186,
+    "bagli": 186,
+    "bilesen": 0,
+    "uye": []
+   },
+   "beyaz_liste": []
+  },
+  "havada_kapak_acik": {
+   "bilesen": 3,
+   "parca": 15,
+   "uye": [
+    [
+     "onyuz_kapak_alt",
+     "onyuz_basac_karsilik_alt",
+     "onyuz_dayama_lastigi_alt",
+     "onyuz_mentese_kanat_alt_1",
+     "onyuz_mentese_kanat_alt_0"
+    ],
+    [
+     "onyuz_kapak_orta",
+     "onyuz_basac_karsilik_orta",
+     "onyuz_kilit_dili_orta",
+     "onyuz_mentese_kanat_orta_1",
+     "onyuz_mentese_kanat_orta_0"
+    ],
+    [
+     "onyuz_kapak_ust",
+     "onyuz_basac_karsilik_ust",
+     "onyuz_kilit_dili_ust",
+     "onyuz_mentese_kanat_ust_1",
+     "onyuz_mentese_kanat_ust_0"
+    ]
+   ]
+  },
+  "kopru": {
+   "aciklik": 581.0,
+   "P_kiris": 935.1735931573417,
+   "sehim": 0.26985544825663943,
+   "gerilme": 37.0294683427515,
+   "uc_plaka_yatak": 17.318029502913735
+  },
+  "tabla": {
+   "kiris": [
+    40.0,
+    20.0,
+    2.0
+   ],
+   "I": 14378.666666666666,
+   "P_kose": 220.72500000000002,
+   "sehim": 0.3311943156312164,
+   "kg": 90.0
+  },
+  "mentese": {
+   "dikey_N": {
+    "alt": 29.2,
+    "orta": 16.7,
+    "ust": 21.6
+   },
+   "yatay_N": {
+    "alt": 31.3,
+    "orta": 45.5,
+    "ust": 36.7
+   }
+  },
+  "isi": {
+   "varsayilan": "YARIKSIZ (SPEC §1)",
+   "yarik_acik": false,
+   "kapali": {
+    "U": 5.0,
+    "A_alt": 0.4507935,
+    "A_ust": 0.3281205,
+    "dT_alt": 133.09863607172687,
+    "dT_ust": 60.95321688221248
+   },
+   "secenek_yarik": {
+    "yarik_alan_bant_cm2": 124.8,
+    "alt": {
+     "Q": 300.0,
+     "h": 0.525,
+     "dT": 39.97005310019068
+    },
+    "ust": {
+     "Q": 100.0,
+     "h": 0.417,
+     "dT": 20.748894933514176
+    },
+    "alt_15K_cm2": 542.8499280394776
+   }
+  },
+  "kaldirma_hortumu_MGPM": {
+   "t0": 188.049731745428,
+   "min": 17.0,
+   "max": 301.6571843892738
+  },
+  "pano_erisim": {
+   "derinlik": 901.0,
+   "y": [
+    1472.0,
+    1857.0
+   ],
+   "v5_derinlik": 822.0
+  },
+  "uyari": [
+   "kapaklar AÇIK konumda bağlılık: menteşe kanadı ↔ gövde arası sanal pivot (EMKA 1046-U5 iç mekanizması modelde yok) → açıkken 3 kapak grubu havada görünür; kapalı konumda bağlı (havada 0)",
+   "menteşe yükü: kapak başına 2 × EMKA 1046-U5 · dikey 29/17/22 N/menteşe · 90° açıkken yatay kuvvet çifti 31/45/37 N (kapak ağırlık merkezi 298 mm dışarıda) — EMKA yük değeri föyde yok, üreticiden teyit",
+   "ISI — KARAR GEREKLİ, montaja almadan önce (VARSAYIM, ölç): varsayılan model SPEC'e uygun YARIKSIZ → kapalı bölme ısıyı yalnız ön kapaktan atar: ALT (bulaşık Q 300 W) ΔT ≈ 133 K · ÜST (Q 100 W) ΔT ≈ 61 K (U 5 W/m²K iyimser, A 0.45 / 0.33 m²) → KABUL EDİLEMEZ. Seçenekler: (a) YARIK_ACIK = True: bant başına 125 cm² → ALT ΔT ≈ 40 K (baca 0.53 m) · ÜST ≈ 21 K; (b) ALT için bant başına ≈ 543 cm² (ΔT ≤ 15 K); (c) 24 V fan (B dolabındaki ebm-papst 4414 FL) + gizli emiş/atış; (d) MEIKO'ya kapalı niş havalandırma şartı sorulmalı · fırın ağzından K'ye sızan sıcak hava BİLİNMİYOR",
+   "kaldırma hortumu (AÇIK): valf ucu bağlı, MGPM ucu BOŞTA — t = 0'da 188 mm, çevrim boyunca 17–302 mm (itici arabası 365 strok) → spiral hortum (ör. SMC TCU0425 sarmal PU) ya da mini enerji zinciri (igus E2 micro) modellenmeli; 'havada 0' yalnız valf ucunun bağlı olmasından",
+   "pano erişimi (AÇIK): pano plakasının ön yüzü ön düzlemden 901 mm derinde (v5: 822; +79 ile uzadı), y 1472–1857 (1,47–1,86 m) → önden kablolama / servis zor: menteşeli / öne çekilir pano plakası ya da servisin arkadan yapılması karar ister (tank dolumu 619 mm derinde, aynı konu)",
+   "montaj (hat_montaj_v62 → yeni sürüm): K_BIRIM'e 'onyuz_' + 'bulasik_tabla' + 'bulasik_tavasi' + 'bulasik_gecis' öneki · ÖN YÜZ denetimi z ≤ 79,5 · SOZLESME bulaşık y 126 → 139 + KS.Z_ON = FT.ZS · _IZIN K girdileri sil · _KIC y alt sınırı 1 mm pay gereksiz (ayak yok) · bulaşık kapak zarfı ↔ K yazdırması ALT kapak AÇIK (KS.kapak_ac) ile"
+  ]
+ },
+ "cakisma": {
+  "makine": 0,
+  "urun": 0,
+  "itici_E": 0,
+  "urun_E7": 0,
+  "itici_E7": 0
+ }
+}
