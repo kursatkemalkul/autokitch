@@ -262,7 +262,7 @@
         m.onBeforeCompile = function (sh, r) {
           if (m.userData[KAPAK] && m.userData[KAPAK].obc) m.userData[KAPAK].obc.call(this, sh, r);
           sh.fragmentShader = sh.fragmentShader.replace('#include <dithering_fragment>',
-            '#include <dithering_fragment>\n  if (!gl_FrontFacing) { gl_FragColor = vec4(diffuseColor.rgb * 0.45, 1.0); }  // kesitKapak');
+            '#include <dithering_fragment>\n  if (!gl_FrontFacing) { gl_FragColor = vec4(0.86, 0.10, 0.08, 1.0); }  // kesitKapak · Kemal 29 Eyl: kesit KIRMIZI');
         };
         m.needsUpdate = true;
       } else if (m.userData[KAPAK]) {
