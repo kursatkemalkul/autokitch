@@ -23,7 +23,9 @@ def setup():
             if '.' in fullname or (U / (fullname + '.py')).exists():
                 return None
             p = PRIVATE / 'dependencies' / (fullname + '.py')
-            src = PRIMARY / 'arastirma' / '_uretec' / p.name
+            src = U / 'moduler_istasyon_v1' / 'legacy_dependencies' / p.name
+            if not src.exists():
+                src = PRIMARY / 'arastirma' / '_uretec' / p.name
             if not p.exists() and not src.exists():
                 return None
             p.parent.mkdir(parents=True, exist_ok=True)
@@ -39,7 +41,7 @@ def setup():
     sys.meta_path.insert(0, Missing())
     import cadquery as cq
     src = (U / 'onbellek.py').read_text(encoding='utf-8')
-    seed = Path(os.environ['LOCALAPPDATA']) / 'AUTOKITCH_onbellek'
+    seed = Path(os.environ.get('AUTOKITCH_SEED_CACHE', str(Path(os.environ['LOCALAPPDATA']) / 'AUTOKITCH_onbellek')))
     cache = PRIVATE / 'cache'
     src = re.sub(r'^KOK = .*$', lambda _: 'KOK = ' + repr(str(cache)), src, count=1, flags=re.M)
     helper = '''\ndef _seed(path):
