@@ -1,0 +1,28 @@
+TEZGÂH v2 · 97 parça · katı denetimi: hepsi geçerli · 1 sn
+   TEZGAH_GOVDE     21 parça · x 3834.0–4505.0 · y 0.0–1000.0 · z 1039.0–1874.0
+   TEZGAH_BULASIK   23 parça · x 3849.0–4510.0 · y 0.0–700.0 · z 1050.2–1510.2
+   TEZGAH_CEKMECE   14 parça · x 3834.0–4503.8 · y 713.0–866.0 · z 1045.2–1515.2
+   TEZGAH_EVYE      18 parça · x 3889.0–4510.0 · y 437.0–1007.0 · z 1516.4–1845.6
+   TEZGAH_TEMIZLIK   5 parça · x 3885.0–4090.0 · y 101.2–405.0 · z 1522.0–1800.0
+   TEZGAH_SARF       6 parça · x 4340.0–4490.0 · y 101.2–301.2 · z 1600.0–1858.0
+   TEZGAH_COP        3 parça · x 4110.0–4330.0 · y 101.2–366.0 · z 1540.0–1740.0
+   TEZGAH_HIJYEN     3 parça · x 3955.0–4452.0 · y 1038.0–1594.0 · z 1774.0–1879.0
+   TEZGAH_ASKI       4 parça · x 3950.0–4450.0 · y 1600.0–1660.0 · z 1039.0–1109.0
+DENETİM (tezgah_cad_v2)
+  katılar geçerli                                                                                                        GEÇTİ 
+  cebe sığar: x 3842.0–4505.0 (tabla 3842 · arka 4505 < niş duvarı 4510) · z 1039.0–1874.0 (ince duvar 1039 … sokak 1879, derz 5) GEÇTİ 
+  duvar parçaları duvar yüzlerinin içinde: x ≤ 4510 · z 1039–1879                                                        GEÇTİ 
+  QR dolabından ayrı: tezgâh x ≤ 4510 < QR x 4570                                                                        GEÇTİ 
+  bulaşık bölmesi: sol boşluk 5.0 · sağ boşluk 5.0 (≥ 5) · makine üstü 700 + ayar 12 = 712 ≤ raf altı 716 · arka payı 46.8 (≥ föy 25) GEÇTİ 
+  bulaşık ön yüzü önlerle aynı düzlemde: x 3857.0 = 3857.0                                                               GEÇTİ 
+  bulaşık kapağı açık zarfı x 3402–3857 · y 223–700 · z 1050–1510 (önde 455, bekleme alanına) ↔ tezgâh parçaları: BOŞ    GEÇTİ 
+  batarya çıkışı (x 4151 · z 1695) hazne ağzı içinde (x 3890–4190 · z 1545–1845) · çıkış tabladan 86 yukarıda (GROHE 86) GEÇTİ 
+  hazne iç 300 × 300 × 150 · ağız kotu 900 (EN 1116 tezgâh 850–950)                                                      GEÇTİ 
+  sabunluk pompası tabla önünden 170 içeride, hazne üstünde (z 1814 ∈ 1545–1845) · tabladan 150 yukarıda                 GEÇTİ 
+  ısıtıcı (EIL 3) sifonun 208 mm yanında, gider hattının üstünde değil                                                   GEÇTİ 
+  çekmece kutusu altı 725 > raf üstü 717 · tam açıkta önü x 3357 (bekleme alanı)                                         GEÇTİ 
+KENDİ ARASINDA (> 1 mm³): TEMİZ
+  kendi arasında çakışma = 0 (97 parça, bulaşık dahil)                                                                   GEÇTİ 0
+HAVADA PARCA (tezgah v2 · kok = zemin + duvara bagli parcalar): 97 parca · 137 aday cift · kok (zemin) 21 · zemine bagli 97 · HAVADA 0 bilesen (0 parca) · 0 sn
+  havada parça = 0 (kök: zemine oturanlar + duvara bağlı sabunluk / havluluk / askı / köşebent / hat uçları)             GEÇTİ 0
+DENETIM: 14 madde · 0 KALDI · toplam 1 sn
