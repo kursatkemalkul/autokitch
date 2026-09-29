@@ -59,7 +59,7 @@ Denetim dışında: mevcut mekanizmaların tüm dinamik taraması; robot erişim
 ## Dosyalar ve yeniden üretim
 
 - `otonom/hat/moduler-v1/moduler_v1.glb`: tüm makinenin yeni modüler 3D görünümü.
-- `MODULER_EK_PARCA_v1.step`: **yalnız eklenen parçalar**; tüm eski mekanizmaların STEP'i değildir.
+- `MODULER_EK_PARCA_v1.step`: 29 Eylül 2026'da siteden kaldırıldı (kural 6.7: STEP çıktısı yok). Dosya git geçmişinde ve Codex iş klasöründe duruyor.
 - `BOM_EK.csv`: ek parça geometrisi/malzeme listesi; kesim ve kaynak atölye resimlerinin yerine geçmez.
 - Üreteç: `arastirma/_uretec/moduler_istasyon_v1/model.py`; `--check-only` yalnız denetim yapar.
 - `source_dependencies.json`, `legacy_dependencies/`, `legacy_assets/`: eksik eski bağımlılıkların görev içinde sabitlenmiş kopyaları. Ana Claude çalışma klasörü değiştirilmedi. `.cache` yeniden oluşturulabilir, sürüme alınmaz.
