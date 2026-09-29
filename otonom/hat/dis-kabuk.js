@@ -9,8 +9,8 @@
   let data, scene, entries = [], active = false, saved, controls = [], door;
   function exterior(unit, name, front) {
     if (front) return true;
-    if (unit === 'TOPPING_MODUL') return /^(dis_(taban|tavan|yan_sol|yan_sag|arka)$|onyuz_|soguk_duvar_|kabin_(sol|sag)_duvar_PU|yalitim_blogu$|alt_yalitim_)/.test(name);
-    if (unit === 'B_KASA') return /^(onyuz_|ayak_|kasa_yan_|tavan_|taban_|arka_|yan_(ic|pu)_|isi_kalkani_(ayirma_saci|sol_sac|sag_sac|isinim_saci))/.test(name);
+    if (unit === 'TOPPING_MODUL') return /^(dis_(taban|tavan|yan_sol|yan_sag|arka)$|onyuz_|soguk_duvar_|kabin_(sol|sag)_duvar_PU|yalitim_blogu$|alt_yalitim_|raf_kosebendi_|tasiyici_raf|raf_(on|arka)_bukumu|gecis_blogu_yalitim|.*_yarik_dili$)/.test(name);
+    if (unit === 'B_KASA') return /^(onyuz_|ayak_|kasa_yan_|tavan_|taban_|arka_|yan_(ic|pu)_|bolme_|isi_kalkani_(ayirma_saci|sol_sac|sag_sac|isinim_saci))/.test(name);
     if (unit === 'A_GOVDE') return /^(a_govde_|a_kose_|a_ust_kusak_|onyuz_cerceve_)/.test(name);
     if (unit === 'A_ONYUZ') return !/sensor|isik_perdesi/.test(name);
     if (unit === 'K_GOVDE' || unit === 'E_GOVDE') return /^(ayak_|taban_sac|arka_sac|ust_sac|sol_sac|sag_sac|onyuz_|sarjor_yan_kapisi|kose_dikmesi|agiz_ust_kirisi)/.test(name);
@@ -37,6 +37,7 @@
     const mats = Array.isArray(mesh.material) ? mesh.material : [mesh.material];
     if (mats.length !== 1 || !mats[0]) return null;
     const name = mats[0].name;
+    if (/^(MC_TOPPING_MODUL__yalitim_gorunur|MB_B_KASA__pu)$/.test(name)) return mesh.geometry;
     if (/__on_seffaf$/.test(name) || name === 'MS_QR_GOZLER__kapak_pc') return mesh.geometry;
     const match = /^M[A-Z]_([^]*?)__/.exec(name);
     if (!match || /__(motor|kart|siemens|hamur|harc|sos|kasar|kiyma|kusbasi|sucuk|kablo|kayis|sensor)$/.test(name)) return null;
@@ -47,14 +48,32 @@
     if (!pos || !idx) return null;
     // Non-front articulated meshes are mechanisms; boxes are in CAD world coords.
     if (/__(ARABA|ACICI|VALF|HELEZON|KARISTIRICI|PISTON|CEKMECE|RULO|KOL|PARMAK)/.test(mesh.name)) return null;
-    const kept = [], v = [0,0,0,0,0,0];
+    // Keep entire connected surface components. Per-triangle bbox subtraction
+    // used to punch holes in solid foam wherever a smaller part box overlapped.
+    const parent = Array.from({length:idx.count/3},(_,i)=>i), vertices=new Map();
+    function root(i){while(parent[i]!==i){parent[i]=parent[parent[i]];i=parent[i];}return i;}
+    for(let i=0;i<idx.count;i++){
+      const j=idx.getX(i),key=[pos.getX(j),pos.getY(j),pos.getZ(j)].map(v=>Math.round(v*1e6)).join(',');
+      const t=Math.floor(i/3),previous=vertices.get(key);
+      if(previous!==undefined)parent[root(t)]=root(previous);else vertices.set(key,t);
+    }
+    const groups=new Map(), kept=[];
     for (let i=0;i<idx.count;i+=3) {
-      const a=idx.getX(i),b=idx.getX(i+1),c=idx.getX(i+2);
-      v[0]=Math.min(pos.getX(a),pos.getX(b),pos.getX(c));v[1]=Math.max(pos.getX(a),pos.getX(b),pos.getX(c));
-      v[2]=Math.min(pos.getY(a),pos.getY(b),pos.getY(c));v[3]=Math.max(pos.getY(a),pos.getY(b),pos.getY(c));
-      v[4]=Math.min(pos.getZ(a),pos.getZ(b),pos.getZ(c));v[5]=Math.max(pos.getZ(a),pos.getZ(b),pos.getZ(c));
-      const p=shell.find(p=>fits(p.b,v));
-      if (p && !parts.some(other=>!other.keep && other.volume<p.volume && fits(other.b,v))) kept.push(a,b,c);
+      const r=root(i/3);if(!groups.has(r))groups.set(r,{indices:[],b:[Infinity,-Infinity,Infinity,-Infinity,Infinity,-Infinity]});
+      const c=groups.get(r);for(let k=0;k<3;k++){const j=idx.getX(i+k);c.indices.push(j);const xyz=[pos.getX(j),pos.getY(j),pos.getZ(j)];for(let a=0;a<3;a++){c.b[2*a]=Math.min(c.b[2*a],xyz[a]);c.b[2*a+1]=Math.max(c.b[2*a+1],xyz[a]);}}
+    }
+    for(const c of groups.values()){
+      const candidates=parts.filter(p=>fits(p.b,c.b));
+      // Exact component envelope beats unrelated objects enclosed by a large box.
+      const best=candidates[0];
+      // Joined sheet corners can connect multiple exterior parts. If there is
+      // no single containing CAD box, require every face to belong to the shell.
+      const joinedShell=!best && c.indices.every((_,i)=>{
+        if(i%3)return true;const t=c.indices.slice(i,i+3),b=[];
+        for(const get of ['getX','getY','getZ']){const v=t.map(j=>pos[get](j));b.push(Math.min(...v),Math.max(...v));}
+        return shell.some(p=>fits(p.b,b));
+      });
+      if(best?.keep || joinedShell)for(const i of c.indices)kept.push(i);
     }
     if (!kept.length) return null;
     if (kept.length === idx.count) return g;
@@ -64,7 +83,7 @@
     if (!data || !mv.loaded || entries.length) return;
     scene=mv[Object.getOwnPropertySymbols(mv).find(s=>s.description==='scene')];
     if (!scene) { status.textContent='Dış kabuk görünümü bu görüntüleyicide açılamadı.';return; }
-    scene.traverse(mesh=>{if(mesh.isMesh && mesh.geometry && mesh.material) entries.push({mesh,original:mesh.geometry,outer:filtered(mesh),visible:mesh.visible});});
+    scene.traverse(mesh=>{if(mesh.isMesh && !mesh.userData.yalitimKesit && mesh.geometry && mesh.material) entries.push({mesh,original:mesh.geometry,outer:filtered(mesh),visible:mesh.visible});});
     button.disabled=false;status.textContent='Motor, kaset ve iç mekanizmaları gizler.';
   }
   function restore() {
