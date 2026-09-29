@@ -1,4 +1,4 @@
-<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>5 · PACK — kutu katlama</title><link rel="stylesheet" href="hat.css?v=12"><script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script><script src="model3d.js?v=20"></script>
+<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>5 · PACK — kutu katlama</title><link rel="stylesheet" href="hat.css?v=12"><script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script><script src="model3d.js?v=21"></script>
 <style>
 .zc{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;padding:10px 16px;background:#1b1f26;border-top:1px solid #2a3039}
 .zc button{border:1px solid #39424f;background:#232932;color:#cfd6df;border-radius:8px;padding:6px 11px;font:600 12.5px system-ui,sans-serif;cursor:pointer}
@@ -116,4 +116,4 @@ fetch('../hat3d/durum.json?v=69').then(r => r.json()).then(D => {
   document.getElementById('ozet').innerHTML = '<b>' + L.length + ' birim.</b> Ölçü kaynağı: ' + ('montaj v' + ((String(D.hat.pafta).match(/^HAT v(\d+)/) || [0, '?'])[1]) + ' · teknik resim HAT ATOSA TABLALI v18') + '.';
 });
 </script>
-</body></html>
+<script src="kenar-cizgi.js?v=2"></script></body></html>
