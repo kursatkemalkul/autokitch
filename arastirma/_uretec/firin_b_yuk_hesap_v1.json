@@ -1,0 +1,210 @@
+{
+ "surum": "firin_b_yuk_hesap_v1",
+ "tarih": "2026-09-29",
+ "cad_degisti": false,
+ "kaynaklar": {
+  "tasiyici_cerceve": "arastirma/_uretec/store_cad_v9.py satır 201–213 (TD_X, TD_Z, TK_X, TK_Y, M_FIRIN, M_RAF, EMN) + store_cad_v6 BOM satır 433–437",
+  "raf_yuku": "firin_tp10_cad_v6 RAF YÜKÜ 99 kg (raf 19 + 320 kutu 51,2 + kompresör 25 + kalkan 3,8)",
+  "ust_kabin": "otonom/hat/moduler-v1/checks.json mass_parts (Codex, CAD hacim × yoğunluk)",
+  "B_bilinmeyen_hacim": "otonom/hat/moduler-v1/moduler_v1.glb grup ağları (kapalı ağ hacmi)",
+  "secop": "https://www.secop.com/fileadmin/user_upload/SEPS/datasheets/en/nle88cn_105h6880_r290_220v_50hz_05-2026_ds.pdf (10,9 kg)"
+ },
+ "F_kutle": {
+  "firin_VARSAYIM": 200.0,
+  "raf_yuku": 99.0,
+  "raf_kalemleri": {
+   "raf": 19.0,
+   "isi_kalkani": 3.8,
+   "pizza_kutusu_320": 51.2,
+   "kompresor_JUNAIR_OF302_15B": 25.0
+  },
+  "ust_kabin_cad": 100.81,
+  "ust_kabin_kucuk_VARSAYIM": 10.0,
+  "ust_kabin_toplam": 110.8,
+  "ust_kabin_zg": -477.0,
+  "F_kullanimda_toplam": 409.8,
+  "eski_hesap_store_cad_v9": 299.0,
+  "eski_hesapta_olmayan": 110.8
+ },
+ "dikme": {
+  "profil": "30×30×2 AISI 304",
+  "boy_mm": 622.0,
+  "en_yuklu_N": 1394.0,
+  "eksenel_MPa": 6.2,
+  "Euler_Pcr_N": 144844.0,
+  "burkulma_guvenligi": 103.9,
+  "gecti": true
+ },
+ "B_agirlik": {
+  "codex_bilinen_kg": 843.2,
+  "bilinmeyen_kalemler": {
+   "motor": {
+    "hacim_L": 7.99,
+    "parca": 54,
+    "kg_alt": 20.0,
+    "kg_ust": 40.0
+   },
+   "kart": {
+    "hacim_L": 1.45,
+    "parca": 25,
+    "kg_alt": 0.9,
+    "kg_ust": 2.2
+   },
+   "siemens": {
+    "hacim_L": 2.17,
+    "parca": 5,
+    "kg_alt": 1.1,
+    "kg_ust": 2.0
+   },
+   "koyu": {
+    "hacim_L": 4.11,
+    "parca": 65,
+    "kg_alt": 4.5,
+    "kg_ust": 6.6
+   },
+   "plastik": {
+    "hacim_L": 4.4,
+    "parca": 152,
+    "kg_alt": 4.2,
+    "kg_ust": 6.4
+   },
+   "bakir": {
+    "hacim_L": 6.65,
+    "parca": 5,
+    "kg_alt": 2.7,
+    "kg_ust": 8.0
+   },
+   "kanal": {
+    "hacim_L": 4.83,
+    "parca": 8,
+    "kg_alt": 1.9,
+    "kg_ust": 6.8
+   },
+   "silikon": {
+    "hacim_L": 32.55,
+    "parca": 22,
+    "kg_alt": 35.8,
+    "kg_ust": 42.3
+   },
+   "conta": {
+    "hacim_L": 0.18,
+    "parca": 4,
+    "kg_alt": 0.2,
+    "kg_ust": 0.2
+   }
+  },
+  "secop_NLE8_8CN_katalog_kg": 10.9,
+  "evaporator_cad_kg": 51.3,
+  "evaporator_gercek_tahmin_kg": [
+   7.7,
+   17.9
+  ],
+  "B_tasima_bos_kg": [
+   892.0,
+   968.0
+  ],
+  "gida_kullanimda_kg": {
+   "hamur": 136.8,
+   "kutu_icecek": 56.3,
+   "poset": 0.1
+  },
+  "codex_zarfi_kg": 1000.0
+ },
+ "B_tasima_kirisi": {
+  "sigma_1000mm_ust_uc_MPa": 129.0,
+  "1000mm_icin_en_fazla_kg": 1051.0,
+  "ust_uc_icin_destek_araligi_mm": 1000,
+  "sigma_800mm_1200kg_MPa": 127.9
+ },
+ "ayaklar_firin_alti": {
+  "2517.5_on": {
+   "firindan_kg": 57.9,
+   "B_payi_kg": 75.8,
+   "toplam_kg": 133.7,
+   "toplam_N": 1311.0
+  },
+  "2517.5_arka": {
+   "firindan_kg": 60.9,
+   "B_payi_kg": 75.8,
+   "toplam_kg": 136.6,
+   "toplam_N": 1340.0
+  },
+  "3172.5_on": {
+   "firindan_kg": 94.7,
+   "B_payi_kg": 79.7,
+   "toplam_kg": 174.4,
+   "toplam_N": 1711.0
+  },
+  "3172.5_arka": {
+   "firindan_kg": 24.9,
+   "B_payi_kg": 79.7,
+   "toplam_kg": 104.6,
+   "toplam_N": 1026.0
+  },
+  "3792.5_on": {
+   "firindan_kg": 86.6,
+   "B_payi_kg": 48.0,
+   "toplam_kg": 134.6,
+   "toplam_N": 1320.0
+  },
+  "3792.5_arka": {
+   "firindan_kg": 84.8,
+   "B_payi_kg": 48.0,
+   "toplam_kg": 132.8,
+   "toplam_N": 1302.0
+  }
+ },
+ "ayak_kapasitesi": "Elesa LV.A-SST M12: statik yük KATALOGDAN TEYİT (elesa-ganter.com sayfasında tablo çıkmadı)",
+ "kirisler": {
+  "on": {
+   "yuk_toplam_N": 3520.0,
+   "M_max_Nmm": 98479.0,
+   "M_max_x": 3790.4,
+   "gerilme_MPa": 26.8,
+   "izin_MPa": 137.0,
+   "sehim_aciklik_mm": 0.22,
+   "sinir_L500_mm": 1.31,
+   "sehim_konsol_ucu_mm": 0.234,
+   "sinir_konsol_a250_mm": 0.82,
+   "dikme_tepkileri_N": {
+    "2517.5": 852.0,
+    "3172.5": 1394.0,
+    "3792.5": 1274.0
+   },
+   "gecti": true
+  },
+  "arka": {
+   "yuk_toplam_N": 2510.0,
+   "M_max_Nmm": 138751.0,
+   "M_max_x": 3790.4,
+   "gerilme_MPa": 37.8,
+   "izin_MPa": 137.0,
+   "sehim_aciklik_mm": 0.148,
+   "sinir_L500_mm": 1.31,
+   "sehim_konsol_ucu_mm": 0.441,
+   "sinir_konsol_a250_mm": 0.82,
+   "dikme_tepkileri_N": {
+    "2517.5": 896.0,
+    "3172.5": 367.0,
+    "3792.5": 1248.0
+   },
+   "gecti": true
+  }
+ },
+ "kesit": {
+  "kiris_40x40x2": {
+   "I_mm4": 73365.0,
+   "W_mm3": 3668.0
+  },
+  "dikme_30x30x2": {
+   "I_mm4": 29419.0,
+   "A_mm2": 224.0
+  }
+ },
+ "denetim": {
+  "D1 fırın taşıyıcı ön kiriş": true,
+  "D2 fırın taşıyıcı arka kiriş": true,
+  "D3 dikme burkulma ≥ 3": true,
+  "D4 B taşıma ağırlığı üst ucu ≤ 1000 kg zarfı": true
+ }
+}
