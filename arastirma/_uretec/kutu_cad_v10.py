@@ -2190,7 +2190,7 @@ V10_SIDE = _ray_uzeri(V10_U_PAUSE, KALIP, 2.1)
 V10_FOLD = (3.0, 3.7)
 V10_LIFT = (4.0, 4.5)
 V10_RETURN = (4.7, 5.3)
-V10_TOOL_STROKE = 60.0
+V10_TOOL_STROKE = 38.0
 _v9_u = u_zimba
 _v9_blank = blank_acilar
 _v9_parmak = parmak
@@ -2228,7 +2228,12 @@ def corner_angle(t):
     return -15+15*ss(V10_PAUSE,3.0,t)+90*ss(*V10_FOLD,t)-105*ss(*V10_RETURN,t)
 
 def corner_lift(t):
-    return V10_TOOL_STROKE*(ss(*V10_LIFT,t)-ss(20.4,20.8,t))
+    # 38 mm clears the upright carton while forming. At the top of the press
+    # stroke, use 60 mm for the tucker's 180-degree reset quadrant. Lower back
+    # to 38 mm at tucker=0 before it parks at -90; then return home.
+    return (V10_TOOL_STROKE*ss(*V10_LIFT,t)
+            +22*(ss(8.75,9.05,t)-ss(9.5,9.75,t))
+            -V10_TOOL_STROKE*ss(10.25,10.55,t))
 
 def _v10_add(a,b): return tuple(a[i]+b[i] for i in range(3))
 def _v10_mul(v,s): return tuple(x*s for x in v)
@@ -2242,8 +2247,8 @@ def _v10_faceplace(wp,ex,ey,out,P):
 def govde():
     _v9_govde()
     p=next(p for p in PARCALAR if p['ad']=='agiz_ust_kirisi')
-    p['wp']=p['wp'].translate((0,0,60))  # inside the existing +79 front, clear of tooling
-    p['wp']=p['wp'].intersect(kut(SAC+20,W-SAC-20,1161,1178,19,41))  # butt joints to front posts, no overlapping solids
+    p['wp']=p['wp'].translate((0,0,69))  # z29..49, ahead of tool bearings ending at z28
+    p['wp']=p['wp'].intersect(kut(SAC+20,W-SAC-20,1161,1178,28,50))  # butt joints to front posts, no overlapping solids
 
 def besleyici():
     _v9_besleyici()
@@ -2275,12 +2280,14 @@ def _axis_rotation(axis,angle):
 
 def corner_tools():
     y=H_UST
-    # Motorised common lift: keep fingers at 90, withdraw 60 mm, THEN reset.
+    # Motorised common lift: keep fingers at 90, withdraw 38 mm, THEN reset.
+    # At the bottom stroke the hub starts at 46+38=84 mm above the head:
+    # clears the still-upright double front wall (42+40=82) by nominal 2 mm.
     bridge=kut(16,444,y+180,y+186,-222,-190)
     for x in (196,316):bridge=bridge.union(kut(x,x+8,y+76,y+180,-222,-190))
     ekle('kose_takim_sabit_kopru',bridge,'aluminyum','PISTON')
     frame=kut(16,444,y+84,y+90,-371,-15).cut(kut(76,413,y+83,y+91,-344,-68))
-    frame=frame.cut(kut(138,376,y+83,y+91,-398,-348))
+    frame=frame.cut(kut(132,387,y+83,y+91,-398,-348))
     # Front spindle and return strap pass through this relieved tooling window.
     # The corner bearing seat remains on x90..118, z-68..-35.
     frame=frame.cut(kut(75,135,y+83,y+91,-35,-14))
@@ -2338,7 +2345,7 @@ def corner_tools():
 PARMAK_P=(BX0+T/2,TEPSI+T+H_ON)
 PARMAK_R=38.0
 def parmak_psi(t):
-    return -90*(1-ss(6.55,6.85,t)+ss(9.5,10.0,t))-180*(ss(7.2,8.0,t)-ss(9.15,9.5,t))
+    return -90*(1-ss(6.55,6.85,t)+ss(9.8,10.2,t))-180*(ss(7.2,8.0,t)-ss(9.15,9.5,t))
 
 def front_dy(t): return 100*(1-ss(6.4,6.8,t)+ss(9.5,9.8,t))
 Z_KOPRU=(9.9,10.3,Z_KOPRU[2],Z_KOPRU[3])
@@ -2347,7 +2354,11 @@ Z_KOPRU=(9.9,10.3,Z_KOPRU[2],Z_KOPRU[3])
 def piston():
     _v9_piston()
     p=next(p for p in PARCALAR if p['ad']=='piston_kafasi')
-    p['wp']=p['wp'].cut(kut(111,147,H_UST-1,H_UST+21,-306,-106))
+    # Relieve the FULL width of the inner front flap, not only the central
+    # tucker paddle. Its two end regions also sweep over the press head.
+    p['wp']=p['wp'].cut(kut(111,147,H_UST-1,H_UST+21,PK_Z[0]-1,PK_Z[1]+1))
+    p['bom']=("Piston kafası 6082 · ön kenar x147; 261 × 296 × 20",1,
+              "ön iç duvar tam genişlik süpürmesine açık; fiziksel karton testi bekleniyor","üretim prototipi")
     corner_tools()
 
 def kapak_mekanizmasi():

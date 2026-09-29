@@ -5,7 +5,7 @@ import cadquery as cq
 import kutu_cad_v10 as K
 OUT=Path(__file__).resolve().parents[2]/'_local'/'kutu-v10'
 OUT.mkdir(parents=True,exist_ok=True)
-RESULT=OUT/('candidate.json' if 'candidate' in sys.argv else 'checks.json')
+RESULT=OUT/('interfaces.json' if 'interfaces' in sys.argv else 'beam.json' if 'beam' in sys.argv else 'candidate.json' if 'candidate' in sys.argv else 'checks.json')
 K.modul()
 P={p['ad']:p for p in K.PARCALAR}
 def solid(p):
@@ -16,8 +16,15 @@ R={'parts':len(P),'invalid':[], 'collisions':[], 'contact':[], 'lid_contacts':[]
 for n,s in S.items():
     if not s.isValid():R['invalid'].append(n)
 new=[n for n in P if n.startswith(('kose_','parmak_','devirme_','flap_kilavuz','flap_lineer','flap_burc','flap_vida_alt')) or n=='flap_katlayici_U']
-new += [n for n in P if n in ('agiz_ust_kirisi','din_rayi_ek_klemens','klemens_sirasi')
+new += [n for n in P if n in ('agiz_ust_kirisi','din_rayi_ek_klemens','klemens_sirasi','piston_kafasi','besleyici_plakasi')
         or (n.startswith('surucu_STP-DRV-4830_') and int(n.rsplit('_',1)[1])>=7)]
+R['coverage']='all changed tools'
+if 'beam' in sys.argv:
+    new=['agiz_ust_kirisi']
+    R['coverage']='mouth cross-member only, after +9mm Z revision'
+if 'interfaces' in sys.argv:
+    new=['piston_kafasi','besleyici_plakasi']
+    R['coverage']='changed press-head relief and feeder-plate windows, complete cycle'
 
 if 'probe' in sys.argv:
     from OCP.BRepAlgoAPI import BRepAlgoAPI_Common
@@ -56,7 +63,9 @@ if 'static' in sys.argv:
     os._exit(0)
 times=[0,1.6,1.8,2.6,2.85,3,3.35,3.7,4.25,4.6,5,5.5,6,6.3,6.4,6.55,6.7,6.85,7.1,7.2,7.6,8,8.5,9.4,9.7,10.2,11,14.8,15.8,16.4,17.2,20.6,23]
 if 'quick' in sys.argv:times=[0,3.35,3.7,4.6,6.3,7.4,7.8,9.7]
-if 'dense' in sys.argv:times=sorted(set(times+[round(i*.2,4) for i in range(116)]+[K.V10_PAUSE]))
+if 'dense' in sys.argv:
+    critical=[9.3,9.4,9.5,9.6,9.75,9.9,10,10.1,10.2,10.35,10.45,10.55,8.8,8.9,9,9.1,16.4,6.3,6.6,6.65,6.7,3.35,3.7,4.3,4.6,4.8,5,5.2,5.3,5.5,6.55,6.75,6.8,6.85,7.4,8.4,14.8]
+    times=critical+sorted(set(times+[round(i*.2,4) for i in range(116)]+[K.V10_PAUSE])-set(critical))
 for t in times:
     W=K.blank_dunya(t)
     world={n:K.uygula(s,W[P[n]['grup']] if P[n]['grup'].startswith('B_') else K.grup_matrisi(P[n]['grup'],t)) for n,s in S.items() if P[n]['grup'] not in ('PIZZA','CATAL','K_ITICI','SABIT_REF')}
