@@ -56,7 +56,7 @@ PARCALAR = []
 PROFIL_BOM = {}                           # birim → (profil parça sayısı, toplam boy mm) · BOM ile model karşılaştırılır
 BIRIMLER = [
     ("KAIDE_A", "A mekanizma kaidesi 104 · x 1,5–700 (v3: istasyon yüzüyle aynı hiza · taban sacı 1,5–700) · y 788–892 · z −826…+35 (taban sacı −828,5…+39) · AISI 304 kutu profil 40 × 100 × 2 + üst plaka 4 · açıcı kolonu dikmesi altında enine + boyuna profil · 1,5 mm taban sacı 892–893,5 (tekne + kabin dikmeleri) · v2 ön düzlem +79"),
-    ("KAIDE_C", "C mekanizma kaidesi 104 · x 700–2500 (v3: TOPPING yan sacları ve fırınla aynı hiza) · y 788–892 · z −830…+35 · AISI 304 kutu profil 40 × 100 × 2 (çevre + 3 enine + boyuna) + üst plaka 4 · TOPPING dis_taban üstüne oturur · v2 ön düzlem +79 · v4: SOĞUTMA GRUBU CEBİ (3. göz 1620–2100) + 4 gözde ön / boyuna profil hava pencereleri 76 yüksek + plakada emiş / atış açıklıkları (TOPPING v30)"),
+    ("KAIDE_C", "C mekanizma kaidesi 104 · x 700–2500 (v3: TOPPING yan sacları ve fırınla aynı hiza) · y 788–892 · z −830…+35 · AISI 304 kutu profil 40 × 100 × 2 (çevre + 3 enine + boyuna) + üst plaka 4 · TOPPING dis_taban üstüne oturur · v2 ön düzlem +79 · v4: SOĞUTMA GRUBU CEBİ (3. göz 1620–2100) + 4 gözde ön / boyuna profil hava pencereleri 66 yüksek (y 800–866) + plakada emiş / atış açıklıkları (TOPPING v30)"),
 ]
 BIRIM_MODUL = {"KAIDE_A": "A", "KAIDE_C": "C"}
 ON_BIRIMLER = ()                          # v2: ön düzlemin (+79) önüne taşan parça YOK (kaide z ≤ +35, önünde ön çerçeve + panel) · v1: z ≤ −4
