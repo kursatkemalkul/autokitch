@@ -48,7 +48,7 @@
       if(!e.cap){const clipping=mesh.material.clippingPlanes;let material;
         try{mesh.material.clippingPlanes=null;material=mesh.material.clone();}finally{mesh.material.clippingPlanes=clipping;}
         material.onBeforeCompile=()=>{};material.clippingPlanes=null;material.side=2;material.transparent=false;material.opacity=1;material.metalness=0;material.roughness=1;
-        material.polygonOffset=true;material.polygonOffsetFactor=-1;material.polygonOffsetUnits=-1;
+        material.polygonOffset=true;material.polygonOffsetFactor=-1;material.polygonOffsetUnits=-1;material.color.setRGB(0.86,0.10,0.08);if(material.emissive)material.emissive.setRGB(0.55,0.05,0.04);material.envMapIntensity=0;/* Kemal 29 Eyl: kesit KIRMIZI */
         e.cap=new mesh.constructor(new mesh.geometry.constructor(),material);e.cap.name='YALITIM_KESIT_'+mesh.material.name;e.cap.userData.yalitimKesit=true;e.cap.raycast=()=>{};mesh.add(e.cap);
       }
       const geometry=new mesh.geometry.constructor(),Attribute=mesh.geometry.attributes.position.constructor;
