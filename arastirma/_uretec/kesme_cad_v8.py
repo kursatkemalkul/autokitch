@@ -421,6 +421,7 @@ def tank_v8():
 
 # ---------------------------------------------------------------- PANO + PNÖMATİK ----------------------------------------------------------------
 Z_PL = -818.0                                        # pano plakasının ön yüzü
+Y_HAVA_GIRIS, Z_HAVA_GIRIS = 1809.0, -770.0          # v87: hattın ana hava dalı K sol duvarına burada girer (hat_montaj: fırın üstü 1977 + DY −168)
 PANO_SIL = ("pano_elektrik_zarfi", "sartlandirici_MS4")
 
 
@@ -468,11 +469,14 @@ def pano_v8():
           bom=("SMC B240A şartlandırıcı braketi (2,3 mm)", 1, "", "SMC AW-A katalog s. 474 [V]", "SATIN ALMA"))
     # hava girişi (arka sac) → AW20 IN (+x) · AW20 OUT (−x) → manifold P (sağ uç, x 141,5)
     yp = ya1 - 67.4
-    arka = bul("arka_sac")
-    arka["wp"] = arka["wp"].cut(silz(345.0, yp, 7.0, -831.0, -827.0))
-    ekle8("hava_giris_rakoru", silz(345.0, yp, 7.0, -830.0, -822.0), "celik", "SABIT", bom=("Paslanmaz geçiş rakoru 1/4 → Ø8 (arka sac · ana hava hattı)", 1, "", "[V]", "SATIN ALMA"))
-    ekle8("hava_hortumu_giris", boru([(345.0, yp, -822.0), (345.0, yp, za), (xa + 20.0, yp, za)], 4.0), "hava", "SABIT",
-          bom=("PU hortum Ø8 / Ø6 / Ø4 (Festo PUN-H)", 1, "≈ 3 m toplam", "festo.com PUN-H [V]", "SATIN ALMA"))
+    # v87 (montaj): hattın ana hava dalı fırın üstü kabinden K'nın SOL duvarına (y 1809, z −780) gelir (hat_montaj ANA_K48) → duvar rakoru → pano önünden AW20 girişine
+    sol = bul("sol_sac_urun_girisi")
+    sol["wp"] = sol["wp"].cut(silx(Y_HAVA_GIRIS, Z_HAVA_GIRIS, 7.0, -1.0, 3.0))
+    ekle8("hava_giris_rakoru", silx(Y_HAVA_GIRIS, Z_HAVA_GIRIS, 7.0, -6.0, 8.0), "celik", "SABIT",
+          bom=("Paslanmaz duvar geçiş rakoru 1/4 → Ø8 (sol sac · hattın ana hava dalı)", 1, "", "[V]", "SATIN ALMA"))
+    ekle8("hava_hortumu_giris", boru([(8.0, Y_HAVA_GIRIS, Z_HAVA_GIRIS), (40.0, Y_HAVA_GIRIS, Z_HAVA_GIRIS), (40.0, Y_HAVA_GIRIS, -680.0), (345.0, Y_HAVA_GIRIS, -680.0),
+                                      (345.0, yp, -680.0), (345.0, yp, za), (xa + 20.0, yp, za)], 4.0), "hava", "SABIT",
+          bom=("PU hortum Ø8 / Ø6 / Ø4 (Festo PUN-H)", 1, "≈ 3,5 m toplam", "festo.com PUN-H [V]", "SATIN ALMA"))
     ekle8("hava_hortumu_manifold", boru([(xa - 20.0, yp, za), (160.0, yp, za), (160.0, ym0 + 12.0, za), (160.0, ym0 + 12.0, Z_PL + 10.0), (xm0 + 69.5, ym0 + 12.0, Z_PL + 10.0)], 3.0), "hava", "SABIT")
 
 
@@ -501,7 +505,6 @@ def pnomatik_v8():
 # ---------------------------------------------------------------- BOM (v7 parçaları) ----------------------------------------------------------------
 BOM_V7 = {
     "kose_dikmesi": ("Köşe dikmesi 304 kare profil 30 × 30 × 2 (EN 10296-2)", 4, "1736", "üretim", "ÜRETİM"),
-    "ayak_": ("Hijyenik ayar ayağı M16 paslanmaz (Elesa LV.A-sınıfı)", 4, "yerden 123 taban", "Elesa LV.A [V]", "SATIN ALMA"),
     "onyuz_kayit": ("Ön / arka kayıt 304 kare profil 30 × 30 × 2", 6, "330", "üretim", "ÜRETİM"),
     "taban_sac_tasiyici": ("Taban sacı taşıyıcı 30 × 30 × 2", 2, "812", "üretim", "ÜRETİM"),
     "taban_sac_3": ("Taban sacı AISI 304 3 mm", 1, "397 × 888", "üretim (lazer)", "ÜRETİM"),
@@ -582,6 +585,12 @@ def duzelt_v7():
     bul("itici_yuzer_kilavuz")["wp"] = kut(251.0, 261.0, 1020.3, 1040.0, -572.0, -540.0)
     bul("itici_alt_dudak")["wp"] = kut(258.0, 260.0, 996.0, 996.3, -706.0, -406.0)          # yüzün ön alt kenarının ALTINDA (v7: yüzün içindeydi)
     bul("olu_plaka")["wp"] = kut(382.0, 398.5, 990.0, 996.0, -418.0, -6.0)
+    # v87 (montaj): ayaklar MODÜLER STANDARDA (moduler_montaj_v3 M12 yuvası · K v6 ile aynı düzen): M12 mil + Ø40 taban, süpürgeliğin (z 17,5–19) gerisinde
+    # (v7: Ø16, köşe dikmelerinin altında z 42 — ön ayaklar süpürgeliğin önünde kalıyordu, modüler şasi süpürgeliği kesiyordu)
+    cikar(*["ayak_%d_%d" % (x, z) for x in (20, 380) for z in (-800, 42)])
+    for i, (x, z) in enumerate(((50.0, -110.0), (350.0, -110.0), (50.0, -770.0), (350.0, -770.0))):
+        ekle8("ayak_%d_%d" % (x, z), sily(x, z, 20.0, 0.0, 8.0).union(sily(x, z, 6.0, 8.0, Y_PLINT)), "celik", "SABIT",
+              bom=("Hijyenik ayar ayağı M12 paslanmaz, Ø40 taban (Elesa LV.A sınıfı · modüler M12 yuvasına)", 4, "yerden 123 taban", "Elesa LV.A [V]", "SATIN ALMA") if i == 0 else None)
 
 
 # ---------------------------------------------------------------- MODÜL ----------------------------------------------------------------
@@ -660,12 +669,14 @@ def _z_cit(x):
 _ZC_TABLO = {i: _z_cit(float(i)) for i in range(-60, 421, 2)}
 
 
-def urun_z(x, t):
-    if x > 420.0:
-        return -206.0
-    ze = -170.0 - 36.0 * ss(Z_GELIS[0], 2.1, t)
+def urun_z(x, t=None):
+    """v87: ürün z'si YALNIZ çitten (ürün çite değene kadar −170, değince çit onu iter · Codex v7'nin zamanla kayması fiziksel değildi, fırın çıkışında
+    ürünü yana kaydırıyordu) · itmede (x 420 → 548,5, ürün E kalıp rayına inerken) E'nin kutu eksenine −206 doğrusal"""
     xi = max(-60, min(420, int(round(x / 2.0)) * 2))
-    return min(ze, _ZC_TABLO[xi])
+    if x <= 420.0:
+        return _ZC_TABLO[xi]
+    u = min(1.0, (x - 420.0) / (548.5 - 420.0))
+    return _ZC_TABLO[420] + (-206.0 - _ZC_TABLO[420]) * u
 
 
 def state(t):

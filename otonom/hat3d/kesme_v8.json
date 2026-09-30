@@ -1,0 +1,131 @@
+{
+ "surum": "K v8 (30 Eyl 2026 · Claude · Codex K400 v7 üstüne üretim modeli)",
+ "adim": [
+  {
+   "t": 0.3,
+   "ad": "GELİŞ",
+   "not_": "Ürün fırın bandından K bandına geçer. Interroll EC5000 (49:1, ≤ 0,37 m/s) ürünü \u0001,\u0002 s'de kesme merkezine getirir (tepe 195 mm/s); Omron E3Z-T61 ışını ürünün ön kenarını x 350'de görünce durur. Çitler ürünü 36 mm içeri (kutu ekseni −206) kaydırır."
+  },
+  {
+   "t": 2.6,
+   "ad": "SPREY",
+   "not_": "Yalnız pide: kafanın göbeğindeki PulsaJet AAB10000AUH-03 + UniJet TG-W \u0001,\u0002W (120° tam koni) \u0001,\u0002 s PWM püskürtür ≈ 8 g tereyağı (45 °C · tank Walther Pilot MDG 3, alt dolapta)."
+  },
+  {
+   "t": 4.0,
+   "ad": "KESİM",
+   "not_": "Festo DGRF-C-63-125 kafayı \u0001,\u0002 s'de 125 mm indirir (6 bar 1870 N); 6 bıçak birlikte keser, bıçak bandın 0,5 mm üstünde strok sonunda durur. \u0001,\u0002 s bekler."
+  },
+  {
+   "t": 5.7,
+   "ad": "KALKIŞ",
+   "not_": "Kafa \u0001,\u0002 s'de kalkar (strok sonu çarpma enerjisi \u0001,\u00024 J ≤ 1,3 J · Festo 562221)."
+  },
+  {
+   "t": 6.6,
+   "ad": "TAŞI",
+   "not_": "Bant ürünü 220 mm ileri taşır (\u0001,\u0002 s); ön kenarı E'ye girer — E kutusu hazır bekler (kapak 85°, köprü yukarıda)."
+  },
+  {
+   "t": 7.8,
+   "ad": "İTİCİ GİRER",
+   "not_": "SMC MY1B10G-350 (Z) iticiyi ürünün arkasına \u0001,\u00022 s'de getirir: 350 mm, ort. 120 mm/s — lastik tampon sınırı (katalog s. 8-11-19, \u0001,\u00022 kg)."
+  },
+  {
+   "t": 10.82,
+   "ad": "İTME",
+   "not_": "SMC MY1B10G-250 (X) ürünü \u0001,\u00027 s'de 240 mm kutuya sürer (ort. 150 mm/s · iki uçta RB0805 şok emici · X arabası \u0001,\u00028 kg). Ürün E'nin kalıp rayına iner, sonra kutu tabanına oturur."
+  },
+  {
+   "t": 12.64,
+   "ad": "DÖNÜŞ",
+   "not_": "X geri döner (\u0001,\u00027 s), sonra Z arkaya çekilir (\u0001,\u00022 s). K 1\u0001,\u0002 s'de bir sonraki ürüne hazır; K + E birlikte bir ürün 3\u0001,\u0002 s."
+  }
+ ],
+ "hesap": {
+  "kesme": "Festo DGRF-C-GF-63-125-PPV-A-R · 6 bar 1870 N itme · strok 125 · bıçak yıldızı Ø296 × 6 · kesici hareketli kütle 1\u0001,\u0002 kg",
+  "hava": "kesim başına \u0001,\u0002 NL (Ø63 × 125 çift etkili, 6 bar) · saatte 60 ürünle 5 NL/dk + iki MY1B10 (ihmal edilir) · SMC AW20-F02-A 5 µm · SS5Y3-20-04 valf adası",
+  "yag": "pide başına 8 g [V] · günde 640 g (80 pide) · 2 gün 1,41 L → Walther Pilot MDG 3 (3,2 L dolum / 2,5 L kullanılır, paslanmaz, 3 bar) alt dolapta · ısıtıcı ceket 150 W + E5DC · ısıtmalı hortum 24 V",
+  "itici": "Z MY1B10G-350: \u0001,\u00022 s · X MY1B10G-250 + 2 × RB0805: \u0001,\u00027 s · MGN15 raylar · MY-J10 yüzer bağlantı · X arabası \u0001,\u00028 kg (6082 cepli; Codex zarfı 9,6 kg idi, silindir sınırı 5 kg)",
+  "bant": "Interroll RollerDrive EC5000 AI ø50 IP66 24 V 35 W 49:1 · Habasit CD.F20-A-UW 2 mm beyaz TPU (EU 10/2011 + FDA) 380 geniş · UHMW kayma tablası",
+  "pano": "Siemens S7-1200 CPU 1214C DC/DC/DC (14 DI / 10 DO / 2 AI · Q\u0001,\u0002 PWM → PulsaJet) · Mean Well NDR-240-24 · 2 × Omron E5DC + 2 × G3PE · C10 sigorta",
+  "kot": "istasyon tabanı 892 · K bandı üstü 996 · üst 1862 · ön düzlem +79 · arka −830 · genişlik 400 (K400)"
+ },
+ "denetim": [
+  {
+   "ad": "Katılar geçerli",
+   "deger": "231 parça",
+   "sonuc": "GEÇTİ"
+  },
+  {
+   "ad": "Durağan kesişim (bütün parçalar, istisnasız)",
+   "deger": "0",
+   "sonuc": "GEÇTİ"
+  },
+  {
+   "ad": "Hareket taraması (kesici + itici gruplar ↔ her şey, 0,1 s + olay anları)",
+   "deger": "0",
+   "sonuc": "GEÇTİ"
+  },
+  {
+   "ad": "Ürün yolu Ø300 × 15 (0,05 s; bıçak teması ve E'ye geçiş beklenen)",
+   "deger": "0",
+   "sonuc": "GEÇTİ"
+  },
+  {
+   "ad": "Havada parça (0,25 mm temas ağı)",
+   "deger": "1 bileşen",
+   "sonuc": "GEÇTİ"
+  },
+  {
+   "ad": "Z itici MY1B10G-350 (lastik tampon)",
+   "deger": "\u0001,\u00022 s · ort. 120 · çarpma 168 mm/s · çarpma ≤ 0,9 × tampon sınırı(\u0001,\u00022 kg) · ort. 100–500",
+   "sonuc": "GEÇTİ"
+  },
+  {
+   "ad": "X itici MY1B10G-250 + 2 × RB0805",
+   "deger": "\u0001,\u00027 s · ort. 150 · çarpma 210 mm/s · E = \u0001,\u000203 J ≤ 1,0 J (RB0805) · X kütlesi \u0001,\u00028 kg ≤ 5 kg (m1max) · ort. 100–1000",
+   "sonuc": "GEÇTİ"
+  },
+  {
+   "ad": "Kesici DGRF-C-63-125 dönüş",
+   "deger": "\u0001,\u00020 s · ort. 156 · çarpma 219 mm/s · çarpma enerjisi \u0001,\u000241 J ≤ 1,3 J (Festo 562221) · kesici kütlesi 1\u0001,\u00029 kg",
+   "sonuc": "GEÇTİ"
+  },
+  {
+   "ad": "Kesici DGRF-C-63-125 iniş",
+   "deger": "\u0001,\u00020 s · ort. 89 · çarpma 125 mm/s · bıçak strok sonunda (bant + 0,5) · 1870 N @ 6 bar",
+   "sonuc": "GEÇTİ"
+  },
+  {
+   "ad": "Bant EC5000 49:1 (ürün)",
+   "deger": "\u0001,\u00020 s · ort. 130 · çarpma 182 mm/s · tepe 195 mm/s ≤ 370",
+   "sonuc": "GEÇTİ"
+  }
+ ],
+ "kutle": {
+  "KESICI": 10.087,
+  "ITICI_ARABA": 3.26,
+  "ITICI_CAPRAZ": 0.389,
+  "ITICI_KOL": 0.903,
+  "ITICI_YUZ": 0.131,
+  "Z_hareketli": 1.423,
+  "X_hareketli": 4.683
+ },
+ "dongu": 37.0,
+ "dongu_KE": 35.65,
+ "E_basla_K": -10.63,
+ "catal_K": [
+  18.24,
+  19.44,
+  19.94,
+  21.64
+ ],
+ "acik": [
+  "PulsaJet -03 gövdesinin gıda uygunluğu (EC 1935/2004) Spraying Systems'e sorulacak (104210 gıda sürümü tam koni uç almıyor)",
+  "TG-W 2.8W ucun tereyağıyla debi / açı denemesi (katalog açıları su içindir)",
+  "Walther Pilot MDG 3: gıda uygunluğu + ısıtma seçeneği teyidi",
+  "E3Z-T61 ışın ekseni yüksekliği (veri sayfası D62 çizimi kullanıldı) · SMT-8M ölçüsü",
+  "Isıtmalı gıda hortumu tedarikçisi · EC5000 AI hız önayarları (Interroll ayar aracı)"
+ ]
+}
