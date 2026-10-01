@@ -1,0 +1,100 @@
+<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>MAKİNE v3 — sos ve harç dik iner</title><link rel="stylesheet" href="hat.css?v=12">
+<script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script><script src="model3d_v21.js?v=22"></script>
+<script>
+// v3 · dis-kabuk.js parça listesini sabit yoldan (../hat3d/parca_kutulari.json) okuyor → v3 klasörüne yönlendir (v1 / v2 dosyalarına dokunulmaz)
+(function () { const f0 = window.fetch; window.fetch = function (u, o) { if (typeof u === 'string' && u.indexOf('../hat3d/parca_kutulari.json') === 0) u = '../hat3d/v3/parca_kutulari.json?v=3'; return f0.call(this, u, o); }; })();
+</script>
+<style>.sip{display:flex;flex-wrap:wrap;gap:6px;align-items:center;padding:10px 16px;background:#14181e;border-top:1px solid #2a3039}.sip span{color:#9aa3ad;font:700 12px system-ui,sans-serif;letter-spacing:.04em;margin-right:6px}.sip button{border:1px solid #39424f;background:#232932;color:#e6ebf0;border-radius:18px;padding:7px 14px;font:600 13px system-ui,sans-serif;cursor:pointer}.sip button.ak{background:#d94a3a;border-color:#d94a3a;color:#fff}.zc{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;padding:10px 16px;background:#1b1f26;border-top:1px solid #2a3039}.zc button{border:1px solid #39424f;background:#232932;color:#cfd6df;border-radius:8px;padding:6px 11px;font:600 12.5px system-ui,sans-serif;cursor:pointer}.zc input[type=range]{flex:1 1 220px;accent-color:#4f86ff}.zc .sn{color:#8d97a4;font:600 12px system-ui,sans-serif;font-variant-numeric:tabular-nums;min-width:70px}.adim{display:flex;flex-wrap:wrap;gap:6px;padding:0 16px 12px;background:#1b1f26}.adim button{border:1px solid #2f3742;background:#1f252d;color:#aab4c0;border-radius:999px;padding:4px 10px;font:600 11.5px system-ui,sans-serif;cursor:pointer}.adim button.ak{border-color:#e0a31c;background:#3a2f14;color:#ffd978}.anlat{padding:8px 16px 14px;background:#1b1f26;color:#dce3ea;font:14px/1.45 system-ui,sans-serif;min-height:42px}.anlat b{color:#ffd978}.zc.hz button.ak{background:#4f86ff;border-color:#4f86ff;color:#fff}.v2 ul{margin:6px 0 0 18px;padding:0}.v2 li{margin:3px 0}</style></head><body>
+<div class="top"><div class="in"><div class="crumb"><a href="../">Store</a><span>&rsaquo;</span><a href="index.html">HAT</a><span>&rsaquo;</span><b>Makine v3</b></div><div><a href="makine_v2.html">v2 modeli &rarr;</a> &middot; <a href="makine.html">v1 &rarr;</a></div></div></div>
+<div class="wrap"><h1>MAKİNE v3 &mdash; sos ve harç dik iner<span class="tag" style="background:#1f6feb" id="etiket">4494 &times; 909 &times; 2200 · HAT v3.1</span></h1>
+<div class="card v2" style="border-left:4px solid #1f6feb;background:#f2f6fd;margin:12px 0"><b style="color:#1747a6">VERSİYON 3 (30 Eyl 2026 · yerel).</b> v1 ve v2 aynen duruyor; bu ayrı model.
+<ul>
+<li><b>SOS + HARÇ DİK İNER:</b> üst katta yalnız iki UNO · hortum sola gitmez, dik iner · yayıcılar alt kat dozajlayıcılarının arasında (sos kıyma ile kuşbaşının arası · harç kaşar kasetinin önü).</li>
+<li><b>A 700 AYNI</b> (736–1436) · TOPPING sol duvarı kıymanın dibinde · hat 4494.</li>
+<li><b>DOLAP K'NIN ALTINA UZAR:</b> 21 çekmece (2 gün) + K altında teknik sütun: Secop + pano + kaşar / sucuk deposu.</li>
+<li><b>ROBOT ÇÖPÜ E'NİN ALTINDA</b> · <b>YAĞ TENEKESİ FIRIN ÜSTÜNDE</b> (kompresör sola) · pompa grubu K'nın üstünde.</li>
+</ul><span id="v2denetim" style="display:block;margin-top:6px;color:#44505c"></span></div>
+<p class="lead">Hattın tamamı tek modelde. <b>Üstüne gel</b> &mdash; adı çıkar. Modelin altındaki çubuktan <b>kesit</b> alabilir (X/Y/Z) ve iki noktaya tıklayıp <b>ölçü</b> çıkarabilirsin.</p>
+
+<div class="m3">
+  <model-viewer id="mv" loading="eager" src="../hat3d/v3/hat3_v3.glb?v=3" ios-src="../hat3d/v3/hat3_v3.usdz?v=3" alt="AUTOKITCH hat versiyon 3 üretim modeli" autoplay animation-name="siparis_kasarli"
+      camera-controls touch-action="pan-y" shadow-intensity="0.6" exposure="1.0" environment-image="neutral"
+      camera-orbit="-28deg 72deg 10.2m" camera-target="2.98m 1.05m 0.1m" field-of-view="30deg" min-field-of-view="6deg"
+      ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
+  <div class="et" id="et"></div>
+  <button class="ar" onclick="document.getElementById('mv').activateAR()">AR'de gör</button>
+  <div class="ip">sürükle: döndür &middot; tekerlek: yakınlaştır &middot; üstüne gel: istasyon &middot; alttan kesit + ölçü</div>
+  <div class="zc"><button id="kenar" type="button" aria-pressed="true">Kenar çizgileri</button><span id="kenar-durum" style="color:#cfd6df;font-size:13px"></span><button id="dis-kabuk" type="button" aria-pressed="false" disabled>Sadece dış kabuk</button><span id="dis-kabuk-durum" style="color:#cfd6df;font-size:13px" role="status">Model yükleniyor…</span></div>
+  <div class="zc" id="kat-cubuk"><span style="color:#8d97a4;font:700 12px system-ui,sans-serif;letter-spacing:.04em">KATEGORİ</span><span id="kat-dugmeler" style="display:flex;flex-wrap:wrap;gap:6px"></span><span id="kat-durum" style="color:#cfd6df;font-size:13px" role="status">Model yükleniyor…</span></div>
+  <div class="sip" id="sip"></div>
+  <div class="zc"><button id="oy">duraklat</button><input id="tz" type="range" min="0" max="84" step="0.05" value="0"><span class="sn" id="sn">0,0 / 84 sn</span></div>
+  <div class="zc hz" id="hz"><span style="color:#8d97a4;font:700 12px system-ui,sans-serif">HIZ</span><button data-h="1" class="ak">1×</button><button data-h="2">2×</button><button data-h="5">5×</button><button data-h="10">10×</button><button data-h="20">20×</button><span class="sn" id="hzn">gerçek süre</span></div>
+  <div class="adim" id="adim"></div>
+  <div class="anlat" id="anlat"></div>
+</div>
+<div class="secim" id="secim"></div>
+<p class="note" id="ozet"></p>
+</div>
+<div class="foot">AUTOKITCH &middot; HAT v3 &middot; model: arastirma/_uretec/h3/hat3_montaj_v1.py (h3_* üreteçleri) &middot; 30 Eyl 2026</div>
+
+<script>
+const SAYFA = {A:'press.html', B:'store.html', C:'topping_v2.html', D:'oven.html', K:'kesme.html', E:'pack.html', S:'service.html', U:'makine_v3.html', '-':'robot.html'};
+const AD = {A:'MODÜL A · AÇICI', B:'MODÜL B · ÇEKMECELİ DOLAP (21 çekmece + teknik sütun)', C:'MODÜL C · TOPPING İKİ KATLI', D:'MODÜL F · FIRIN', K:'MODÜL K · KESME + SPREY', E:'MODÜL E · KUTU (+ robot çöpü altında)', S:'MODÜL S · SERVİS / TESLİM — QR dolabı + tezgâh', U:'MODÜL U · ÜST DEPO', '-':'ROBOT + RAY'};
+
+const M = model3d({
+  mv:'mv', etiket:'et', grup:'modul', parca:'../hat3d/v3/parca_kutulari.json?v=3',
+  hedef: g => null,
+  yazi: g => {
+    const m = g.birimler[0].modul, ger = g.birimler.filter(b => b.durum.indexOf('GERCEK') === 0).length;
+    return '<b>' + AD[m] + '</b><span>' + g.birimler.length + ' birim · ' + ger + ' tanesi gerçek model</span>';
+  }
+});
+
+fetch('../hat3d/v3/durum.json?v=3').then(r => r.json()).then(D => {
+  M.veri(D.birim);
+  animasyon(D.animasyon, D.siparis);
+  const mod = {}; D.birim.forEach(b => (mod[b.modul] = mod[b.modul] || []).push(b));
+  document.getElementById('secim').innerHTML = ['B','A','C','D','K','E','U','S','-'].filter(k => mod[k]).map(k => {
+    const ger = mod[k].filter(b => b.durum.indexOf('GERCEK') === 0).length;
+    return '<a data-k="' + k + '">' + AD[k] + '<span>' + mod[k].length + ' birim · ' + ger + ' gerçek</span></a>';
+  }).join('');
+  document.querySelectorAll('.secim a').forEach(a => { a.onmouseenter = () => M.sec(a.dataset.k); a.onmouseleave = () => M.birak(); });
+  const g = D.birim.filter(b => b.durum.indexOf('GERCEK') === 0).length, H = D.hat || {};
+  const x0 = H.x0 || 0, boy = (H.w - x0);
+  document.getElementById('etiket').textContent = boy.toFixed(1).replace('.', ',').replace(',0', '') + ' × ' + H.d + ' × ' + H.h + ' · HAT ' + (H.surum || 'v3');
+  if (H.v2_denetim) document.getElementById('v2denetim').textContent = H.v2_denetim;
+  document.getElementById('ozet').innerHTML = '<b>' + g + ' / ' + D.birim.length + ' birim gerçek üretim modeli</b> (%' + Math.round(100*g/D.birim.length) + ').';
+});
+function animasyon(A, SIP) {
+  if (!A) return;
+  const mv = document.getElementById('mv'), oy = document.getElementById('oy'), tz = document.getElementById('tz'), sn = document.getElementById('sn'),
+        adim = document.getElementById('adim'), anlat = document.getElementById('anlat'), sip = document.getElementById('sip');
+  const L = (SIP && SIP.length) ? SIP : [{kod: '', ad: '', sure: A.sure, adim: A.adim}];
+  let S = L[0], btn = [];
+  const f = v => v.toFixed(1).replace('.', ',');
+  function goster(t) { let k = 0; S.adim.forEach((a, i) => { if (t >= a.t - 0.01) k = i; }); btn.forEach((b, i) => b.classList.toggle('ak', i === k));
+    anlat.innerHTML = '<b>' + (S.ad ? S.ad + ' · ' : '') + (k + 1) + ' · ' + S.adim[k].ad + '</b> — ' + S.adim[k].not_; sn.textContent = f(t) + ' / ' + S.sure.toFixed(0) + ' sn'; }
+  function kur(yeni, oynat) {
+    S = yeni; tz.max = S.sure; tz.value = 0;
+    adim.innerHTML = S.adim.map((a, i) => '<button data-i="' + i + '">' + (i + 1) + ' · ' + a.ad + '</button>').join('');
+    btn = [...adim.querySelectorAll('button')];
+    btn.forEach(b => b.onclick = () => { const t = S.adim[+b.dataset.i].t; mv.currentTime = t; tz.value = t; goster(t); mv.play(); oy.textContent = 'duraklat'; });
+    if (sip) sip.querySelectorAll('button').forEach(b => b.classList.toggle('ak', b.dataset.k === S.kod));
+    if (S.kod) mv.animationName = 'siparis_' + S.kod;
+    mv.currentTime = 0;
+    if (oynat) { mv.play(); oy.textContent = 'duraklat'; }
+    goster(0);
+  }
+  if (sip && SIP && SIP.length) {
+    sip.innerHTML = '<span>SİPARİŞ VER</span>' + SIP.map(s_ => '<button data-k="' + s_.kod + '">' + s_.ad + '</button>').join('');
+    sip.querySelectorAll('button').forEach(b => b.onclick = () => kur(SIP.find(s_ => s_.kod === b.dataset.k), true));
+  }
+  tz.oninput = () => { mv.pause(); oy.textContent = 'oynat'; mv.currentTime = parseFloat(tz.value); goster(parseFloat(tz.value)); };
+  oy.onclick = () => { if (mv.paused) { mv.play(); oy.textContent = 'duraklat'; } else { mv.pause(); oy.textContent = 'oynat'; } };
+  setInterval(() => { if (!mv.paused && mv.loaded) { tz.value = mv.currentTime; goster(mv.currentTime); } }, 150);
+  const hz = document.getElementById('hz'), hzn = document.getElementById('hzn');
+  if (hz) hz.querySelectorAll('button').forEach(b => b.onclick = () => { const h = +b.dataset.h; mv.timeScale = h;
+    hz.querySelectorAll('button').forEach(x => x.classList.toggle('ak', x === b)); hzn.textContent = h === 1 ? 'gerçek süre' : h + ' kat hızlı'; });
+  kur(L[0], false);
+}
+</script><script src="dis-kabuk.js?v=2"></script><script src="yalitim-kesit.js?v=2"></script><script src="kenar-cizgi.js?v=2"></script><script src="kategori.js?v=2"></script><script src="yan-panel.js?v=2"></script></body></html>
