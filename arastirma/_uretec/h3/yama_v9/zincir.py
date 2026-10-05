@@ -203,8 +203,10 @@ ADIMLAR = [
      [(".", 'python "{YAMA}/60_hava_emniyet.py" hat3_v10a.glb hat3_v10b.glb')]),
     ("61", "davlumbaz yağ filtresi sola kayar, pizza kutusu tarafındaki servis ağzından alınır (Kemal): çerçeve sol kenarı açık · ray uzantısı · bölme sacında 530 × 420 ağız + tapa + 2 çeyrek tur kilit", ["hat3_v10b.glb"], "hat3_v10c.glb",
      [(".", 'python "{YAMA}/61_filtre_servis.py" hat3_v10b.glb hat3_v10c.glb')]),
+    ("62", "TOPPING bağlantısız 9 saca gerçek kaynak (TOPPING montaj v6, bağlı mı denetimi): 4 raf köşebendi → astar · 2 kaide cep taşıyıcısı → lama / enine boru · enine lama → arka boru / ön perde · 2 teknik perde → dış taban (aralıklı)", ["hat3_v10c.glb"], "hat3_v10d.glb",
+     [(".", 'python "{YAMA}/62_topping_kaynak.py" hat3_v10c.glb hat3_v10d.glb')]),
 ]
-SON = "hat3_v10c.glb"
+SON = "hat3_v10d.glb"
 
 
 def kur(is_dizin, h3, uretec):
