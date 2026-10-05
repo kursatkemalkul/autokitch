@@ -1,0 +1,25 @@
+{
+  "branch": "codex/k-montaj",
+  "sources_commit": "55df7aec",
+  "source_chain": "main step66 + registered K70–73",
+  "full_model_read_seconds": 6.902,
+  "plan_run_seconds": 205.26,
+  "plan_problems": 79,
+  "production_release": false,
+  "published": false,
+  "checks_completed": [
+    "K triangle coverage preserved",
+    "K old/latest cache surface equivalence",
+    "70–73 independent duplicate GLB/ENT byte equality",
+    "20 isolated nut paths:18 pass",
+    "sequence iteration9 complete"
+  ],
+  "next_work": [
+    "Correct rear-panel fastener access blocked by corner profiles; use a genuine numbered model correction",
+    "Separate DGRF two bolt/nut compound meshes into distinct assembly parts",
+    "Repair remaining paths individually from iteration9 diagnostics",
+    "Only after PLAN_SORUN=0: bending, connection, complete output audits and browser review"
+  ],
+  "shared_player_modified": false,
+  "topping_or_f_modified": false
+}
