@@ -1,0 +1,88 @@
+{
+  "published_source_sha256": "3d040099b681fb532ea41b56d2a314d299c6276776c122af38ff4442bb75566b",
+  "removed_user_requested_bench": true,
+  "version": 18,
+  "source_sha256": "01753af66aec1aa8e96b421990b0079d3372a87674063c7100987c9b774f1ee5",
+  "preserved_source_nodes": 1377,
+  "preserved_geometry_buffer_bytes": 288365944,
+  "stock_triangle_union_checked": true,
+  "orders": [
+    {
+      "recipe": "kasarli",
+      "channels": 416,
+      "frames": 11858,
+      "rail_centre_min_m": 1.376069188117981,
+      "rail_centre_max_m": 4.860000133514404,
+      "gate": null
+    },
+    {
+      "recipe": "kiymali",
+      "channels": 416,
+      "frames": 11858,
+      "rail_centre_min_m": 1.376069188117981,
+      "rail_centre_max_m": 4.860000133514404,
+      "gate": null
+    },
+    {
+      "recipe": "kusbasili",
+      "channels": 416,
+      "frames": 11858,
+      "rail_centre_min_m": 1.376069188117981,
+      "rail_centre_max_m": 4.860000133514404,
+      "gate": null
+    },
+    {
+      "recipe": "sucuklu",
+      "channels": 416,
+      "frames": 11858,
+      "rail_centre_min_m": 1.376069188117981,
+      "rail_centre_max_m": 4.860000133514404,
+      "gate": null
+    },
+    {
+      "recipe": "lahmacun",
+      "channels": 416,
+      "frames": 11858,
+      "rail_centre_min_m": 1.376069188117981,
+      "rail_centre_max_m": 4.860000133514404,
+      "gate": null
+    },
+    {
+      "recipe": "pizza",
+      "channels": 416,
+      "frames": 11858,
+      "rail_centre_min_m": 1.376069188117981,
+      "rail_centre_max_m": 4.860000133514404,
+      "gate": null
+    },
+    {
+      "recipe": "patatesli",
+      "channels": 196,
+      "frames": 11857,
+      "rail_centre_min_m": 1.376069188117981,
+      "rail_centre_max_m": 4.860000133514404,
+      "gate": {
+        "index": 9484,
+        "time_s": 140.00695514476675,
+        "event": "machine.box_ready"
+      }
+    },
+    {
+      "recipe": "tavuklu",
+      "channels": 196,
+      "frames": 11857,
+      "rail_centre_min_m": 1.376069188117981,
+      "rail_centre_max_m": 4.860000133514404,
+      "gate": {
+        "index": 9484,
+        "time_s": 140.00695514476675,
+        "event": "machine.box_ready"
+      }
+    }
+  ],
+  "errors": [],
+  "passed": true,
+  "scope": "geometry preservation and playable robot/rail/product channels only",
+  "full_collision_certified": false,
+  "production_ready": false
+}

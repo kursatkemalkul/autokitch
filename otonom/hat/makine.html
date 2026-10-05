@@ -4,7 +4,7 @@
 // v3 · dis-kabuk.js parça listesini sabit yoldan (../hat3d/parca_kutulari.json) okuyor → v3 klasörüne yönlendir (v1 / v2 dosyalarına dokunulmaz)
 (function () { const f0 = window.fetch; window.fetch = function (u, o) { if (typeof u === 'string' && u.indexOf('../hat3d/parca_kutulari.json') === 0) u = '../hat3d/v3/parca_kutulari.json?v=9w'; return f0.call(this, u, o); }; })();
 </script>
-<style>.sip{display:flex;flex-wrap:wrap;gap:6px;align-items:center;padding:10px 16px;background:#14181e;border-top:1px solid #2a3039}.sip span{color:#9aa3ad;font:700 12px system-ui,sans-serif;letter-spacing:.04em;margin-right:6px}.sip button{border:1px solid #39424f;background:#232932;color:#e6ebf0;border-radius:18px;padding:7px 14px;font:600 13px system-ui,sans-serif;cursor:pointer}.sip button.ak{background:#d94a3a;border-color:#d94a3a;color:#fff}.zc{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;padding:10px 16px;background:#1b1f26;border-top:1px solid #2a3039}.zc button{border:1px solid #39424f;background:#232932;color:#cfd6df;border-radius:8px;padding:6px 11px;font:600 12.5px system-ui,sans-serif;cursor:pointer}.zc input[type=range]{flex:1 1 220px;accent-color:#4f86ff}.zc .sn{color:#8d97a4;font:600 12px system-ui,sans-serif;font-variant-numeric:tabular-nums;min-width:70px}.adim{display:flex;flex-wrap:wrap;gap:6px;padding:0 16px 12px;background:#1b1f26}.adim button{border:1px solid #2f3742;background:#1f252d;color:#aab4c0;border-radius:999px;padding:4px 10px;font:600 11.5px system-ui,sans-serif;cursor:pointer}.adim button.ak{border-color:#e0a31c;background:#3a2f14;color:#ffd978}.anlat{padding:8px 16px 14px;background:#1b1f26;color:#dce3ea;font:14px/1.45 system-ui,sans-serif;min-height:42px}.anlat b{color:#ffd978}.zc.hz button.ak{background:#4f86ff;border-color:#4f86ff;color:#fff}.v2 ul{margin:6px 0 0 18px;padding:0}.v2 li{margin:3px 0}</style></head><body>
+<style>.sip{display:flex;flex-wrap:wrap;gap:6px;align-items:center;padding:10px 16px;background:#14181e;border-top:1px solid #2a3039}.sip span{color:#9aa3ad;font:700 12px system-ui,sans-serif;letter-spacing:.04em;margin-right:6px}.sip button{border:1px solid #39424f;background:#232932;color:#e6ebf0;border-radius:18px;padding:7px 14px;font:600 13px system-ui,sans-serif;cursor:pointer}.sip button.ak{background:#d94a3a;border-color:#d94a3a;color:#fff}.zc{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;padding:10px 16px;background:#1b1f26;border-top:1px solid #2a3039}.zc button{border:1px solid #39424f;background:#232932;color:#cfd6df;border-radius:8px;padding:6px 11px;font:600 12.5px system-ui,sans-serif;cursor:pointer}.zc input[type=range]{flex:1 1 220px;accent-color:#4f86ff}.zc .sn{color:#8d97a4;font:600 12px system-ui,sans-serif;font-variant-numeric:tabular-nums;min-width:70px}.adim{display:flex;flex-wrap:wrap;gap:6px;padding:0 16px 12px;background:#1b1f26}.adim button{border:1px solid #2f3742;background:#1f252d;color:#aab4c0;border-radius:999px;padding:4px 10px;font:600 11.5px system-ui,sans-serif;cursor:pointer}.adim button.ak{border-color:#e0a31c;background:#3a2f14;color:#ffd978}.anlat{padding:8px 16px 14px;background:#1b1f26;color:#dce3ea;font:14px/1.45 system-ui,sans-serif;min-height:42px}.anlat b{color:#ffd978}.zc.hz button.ak{background:#4f86ff;border-color:#4f86ff;color:#fff}.v2 ul{margin:6px 0 0 18px;padding:0}.v2 li{margin:3px 0}</style><style>.robot-panel{padding:8px 16px;color:#dce3ea;font:13px/1.45 system-ui}.robot-panel label{display:block;margin:9px 0}.robot-panel select,.robot-panel input{display:block;width:100%;padding:7px;background:#232932;color:#e6ebf0;border:1px solid #526174;border-radius:6px}.robot-panel button{padding:7px 9px;margin:4px 3px 4px 0;background:#263648;color:#fff;border:1px solid #526174;border-radius:6px}.robot-panel button:disabled{opacity:.45}.robot-panel p{margin:8px 0}#robot-load{color:#7dd3fc}.sip button{border-radius:6px}</style></head><body>
 <div class="top"><div class="in"><div class="crumb"><a href="../">Store</a><span>&rsaquo;</span><a href="index.html">HAT</a><span>&rsaquo;</span><b>Makine v3</b></div><div></div></div></div>
 <div class="wrap"><h1>MAKİNE v3 &mdash; sos ve harç dik iner<span class="tag" style="background:#1f6feb" id="etiket">4494 &times; 909 &times; 2200 · HAT v3.8</span></h1>
 <div class="card v2" style="border-left:4px solid #1f6feb;background:#f2f6fd;margin:12px 0"><b style="color:#1747a6">VERSİYON 3 (30 Eyl 2026 · yerel).</b> v1 ve v2 aynen duruyor; bu ayrı model.
@@ -17,7 +17,7 @@
 <p class="lead">Hattın tamamı tek modelde. <b>Üstüne gel</b> &mdash; adı çıkar. Modelin altındaki çubuktan <b>kesit</b> alabilir (X/Y/Z) ve iki noktaya tıklayıp <b>ölçü</b> çıkarabilirsin.</p>
 
 <div class="m3">
-  <model-viewer id="mv" loading="eager"   alt="AUTOKITCH hat versiyon 3 üretim modeli" autoplay animation-name="siparis_kasarli"
+  <model-viewer id="mv" loading="eager"   alt="AUTOKITCH hat versiyon 3 üretim modeli" autoplay animation-name="siparis_birlesik_kasarli"
       camera-controls touch-action="pan-y" shadow-intensity="0.6" exposure="1.0" environment-image="neutral"
       camera-orbit="-28deg 72deg 10.2m" camera-target="2.98m 1.05m 0.1m" field-of-view="30deg" min-field-of-view="6deg"
       ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
@@ -51,7 +51,7 @@ const M = model3d({
 
 fetch('../hat3d/v3/durum.json?v=7').then(r => r.json()).then(D => {
   M.veri(D.birim);
-  animasyon(D.animasyon, D.siparis);
+  // Robot v18 module owns the single playback clock and recipe selector.
   // eski İSTASYONLAR kartları kaldırıldı (3 Eki): sol menüde yalnız montaj ağacı (3 kademe + göz)
   const g = D.birim.filter(b => b.durum.indexOf('GERCEK') === 0).length, H = D.hat || {};
   const x0 = H.x0 || 0, boy = (H.w - x0);
@@ -59,52 +59,5 @@ fetch('../hat3d/v3/durum.json?v=7').then(r => r.json()).then(D => {
   if (H.v2_denetim) document.getElementById('v2denetim').textContent = H.v2_denetim;
   document.getElementById('ozet').innerHTML = '<b>' + g + ' / ' + D.birim.length + ' birim gerçek üretim modeli</b> (%' + Math.round(100*g/D.birim.length) + ').';
 });
-function animasyon(A, SIP) {
-  if (!A) return;
-  const mv = document.getElementById('mv'), oy = document.getElementById('oy'), tz = document.getElementById('tz'), sn = document.getElementById('sn'),
-        adim = document.getElementById('adim'), anlat = document.getElementById('anlat'), sip = document.getElementById('sip');
-  const L = (SIP && SIP.length) ? SIP : [{kod: '', ad: '', sure: A.sure, adim: A.adim}];
-  let S = L[0], btn = [];
-  const f = v => v.toFixed(1).replace('.', ',');
-  function goster(t) { let k = 0; S.adim.forEach((a, i) => { if (t >= a.t - 0.01) k = i; }); btn.forEach((b, i) => b.classList.toggle('ak', i === k));
-    anlat.innerHTML = '<b>' + (S.ad ? S.ad + ' · ' : '') + (k + 1) + ' · ' + S.adim[k].ad + '</b> — ' + S.adim[k].not_; sn.textContent = f(t) + ' / ' + S.sure.toFixed(0) + ' sn'; }
-  function kur(yeni, oynat) {
-    S = yeni; tz.max = S.sure; tz.value = 0;
-    adim.innerHTML = S.adim.map((a, i) => '<button data-i="' + i + '">' + (i + 1) + ' · ' + a.ad + '</button>').join('');
-    btn = [...adim.querySelectorAll('button')];
-    btn.forEach(b => b.onclick = () => { const t = S.adim[+b.dataset.i].t; mv.currentTime = t; tz.value = t; goster(t); mv.play(); oy.textContent = 'duraklat'; });
-    if (sip) sip.querySelectorAll('button').forEach(b => b.classList.toggle('ak', b.dataset.k === S.kod));
-    if (S.kod) mv.animationName = 'siparis_' + S.kod;
-    mv.currentTime = 0;
-    if (oynat) { mv.play(); oy.textContent = 'duraklat'; }
-    goster(0);
-  }
-  if (sip && SIP && SIP.length) {
-    sip.innerHTML = '<span>SİPARİŞ VER</span>' + SIP.map(s_ => '<button data-k="' + s_.kod + '">' + s_.ad + '</button>').join('');
-    sip.querySelectorAll('button').forEach(b => b.onclick = () => kur(SIP.find(s_ => s_.kod === b.dataset.k), true));
-  }
-  tz.oninput = () => { mv.pause(); oy.textContent = 'oynat'; mv.currentTime = parseFloat(tz.value); goster(parseFloat(tz.value)); };
-  oy.onclick = () => { if (mv.paused) { mv.play(); oy.textContent = 'duraklat'; } else { mv.pause(); oy.textContent = 'oynat'; } };
-  setInterval(() => { if (!mv.paused && mv.loaded) { tz.value = mv.currentTime; goster(mv.currentTime); } }, 150);
-  const hz = document.getElementById('hz'), hzn = document.getElementById('hzn');
-  if (hz) hz.querySelectorAll('button').forEach(b => b.onclick = () => { const h = +b.dataset.h; mv.timeScale = h;
-    hz.querySelectorAll('button').forEach(x => x.classList.toggle('ak', x === b)); hzn.textContent = h === 1 ? 'gerçek süre' : h + ' kat hızlı'; });
-  kur(L[0], false);
-}
-</script><script src="dis-kabuk.js?v=2"></script><script src="yalitim-kesit.js?v=2"></script><script src="kenar-cizgi.js?v=2"></script><script src="yan-panel.js?v=2"></script><script>window.MEK3_JSON = '../hat3d/v3/mekanizma_v3_8.json?v=9w'; window.MEK3_DISIPLIN = true;</script><script src="mekanizma-v3.js?v=20"></script><script src="kapak-gorunum.js?v=1"></script><script>
-(async()=>{
- const mv=document.getElementById('mv');
- try{
-  const response=await fetch('../hat3d/v3/claude_latest/hat3_v10h.glb.gz?v=1');
-  if(!response.ok)throw new Error('Model download '+response.status);
-  const packed=await response.arrayBuffer();
-  const stream=new Blob([packed]).stream().pipeThrough(new DecompressionStream('gzip'));
-  const raw=await new Response(stream).arrayBuffer();
-  if(raw.byteLength!==109392248)throw new Error('Model byte length mismatch');
-  const digest=Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',raw)),b=>b.toString(16).padStart(2,'0')).join('');
-  if(digest!=='3d040099b681fb532ea41b56d2a314d299c6276776c122af38ff4442bb75566b')throw new Error('Model integrity mismatch');
-  await customElements.whenDefined('model-viewer');
-  mv.src=URL.createObjectURL(new Blob([raw],{type:'model/gltf-binary'}));
- }catch(error){console.error('Latest model load failed',error);const notice=document.createElement('p');notice.textContent='Son model yüklenemedi: '+error.message;mv.after(notice);}
-})();
-</script></body></html>
+
+</script><script src="dis-kabuk.js?v=2"></script><script src="yalitim-kesit.js?v=2"></script><script src="kenar-cizgi.js?v=2"></script><script src="yan-panel.js?v=2"></script><script>window.MEK3_JSON = '../hat3d/v3/mekanizma_v3_8.json?v=9w'; window.MEK3_DISIPLIN = true;</script><script src="mekanizma-v3.js?v=20"></script><script src="kapak-gorunum.js?v=1"></script><script type="module" src="robot-integrated-v18/panel.js?v=18"></script></body></html>
