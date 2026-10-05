@@ -10,9 +10,9 @@ Kemal'in kararı (5 Eki 2026): iki ajan aynı anda, farklı istasyonlarda çalı
 |---|---|---|---|
 | Robot + ray + QR dolabı + sipariş animasyonları | Codex | `coord/codex-main-integrated-robot-v17` | çalışıyor |
 | TOPPING montaj animasyonu v5 | Claude | `claude/topping-montaj-v5` | yayında (açık 3 küçük madde) |
-| Standart önlemleri · makine (STANDART_DURUM.md madde 1, 3–8, 12–14): acil stop B ön kapağı, kapı kilit anahtarları, A ışık perdesi kablosu, hava boşaltma, R290 bölmesi, F filtresi, hijyen noktaları — zincir 58+ | Claude | `claude/standart-makine` | sırada |
+| Standart önlemleri · makine: acil stop (58) · 10 kapı emniyet anahtarı (59) · hava emniyet valfi (60) · davlumbaz filtresi servis ağzı (61) · hijyen / R290 / A perdesi kayıt | Claude | `claude/standart-makine` | BİTTİ (cb7d1ec) — Kemal incelemesinde |
 | TOPPING bağsız 63 parça + geçici dayalı 2 parça (KURALLAR §2.3 kural 10) | Claude | `claude/topping-montaj-v5` | sırada |
-| Standart önlemleri · robot + QR (madde 10–11): hücre kapısı emniyet anahtarı, robot gözdeyken QR müşteri kapısı kilitli + geri bildirim | Codex | `coord/codex-robot-qr-safety-v1` | çalışıyor: işlev taslağı 64/64 test geçti; fiziksel anahtar/kilit montajı ve devre doğrulaması açık; makine/zincir değişmez |
+| Standart önlemleri · robot + QR (madde 10–11): hücre kapısı emniyet anahtarı, robot gözdeyken QR müşteri kapısı kilitli + geri bildirim | Codex | `coord/codex-robot-qr-safety-v2` | adım61 incelendi; 64/64 işlev testi; QR düzeni ve hücre kapısı konumu Kemal yanıtını bekliyor; zincir kilidi boş |
 | Güvenlik devresi şeması (acil stop + kapı anahtarları + robot, tek röle / güvenlik PLC) | Claude + Codex | — | makine anahtarları bitince |
 
 Bir işe başlamadan önce tabloda başka bir ajanın aynı istasyonu ya da aynı dosyaları almadığını kontrol et.
@@ -28,7 +28,7 @@ Bir işe başlamadan önce tabloda başka bir ajanın aynı istasyonu ya da ayn�
 
 - Zincire yeni adım (58, 59 …) yalnız bir ajan yazar. Yazmaya başlamadan bu dosyanın en altındaki **ZİNCİR KİLİDİ** satırını kendi adınla doldur, commit + push et; adım bitince (iki koşu bayt aynı, SIRA.md kaydı) boşalt.
 - Kilit doluyken öteki ajan model değiştirmez; gerekiyorsa kilit sahibine / Kemal'e yazar.
-- Son model: `_local/claude_son_yerel/hat3_v9y.glb.gz` (adım 57). Yeni adım çıkınca bu satır güncellenir.
+- Son model: `_local/claude_son_yerel/hat3_v10c.glb.gz` (adım 61) — branch `claude/standart-makine` (zincir betikleri 56–61 de orada; main'e birlikte birleştirilecek). Yeni adım çıkınca bu satır güncellenir.
 
 ## 4. Branch, birleştirme, yayın
 
@@ -43,4 +43,4 @@ Bir işe başlamadan önce tabloda başka bir ajanın aynı istasyonu ya da ayn�
 - Depo herkese açık. Oturum kayıtları `_local/claude_oturum/` altında durur (Kemal: kalsın); `_local/` siteye kopyalanmaz. Parola, anahtar, kişisel bilgi depoya konmaz.
 - Büyük ara dosyalar (`.pkl`, 100 MB üstü GLB) depoya konmaz; GLB gerekirse kayıpsız `.gz` olarak.
 
-ZİNCİR KİLİDİ: Claude · adım 58 (acil stop, F sağ üst kapak) · 5 Eki 2026
+ZİNCİR KİLİDİ: (boş)
