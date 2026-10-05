@@ -14,6 +14,14 @@ OUT = sys.argv[sys.argv.index('--out') + 1] if '--out' in sys.argv else str(Path
 HIZLI = '--hizli' in sys.argv
 D = pickle.load(open('plan_k.pkl', 'rb')); D['KAM'].sort(key=lambda k: k[0])
 if D['PLAN_SORUN']: raise SystemExit('K output blocked: assembly sequence has unresolved PLAN SORUNU')
+# Clean paths alone do not authorize a production animation. Preserve every mandatory release gate.
+for name in ('manufacturing_release_audit.json','connection_release_audit.json'):
+    gate=Path(HERE)/name
+    if not gate.exists(): raise SystemExit('K output blocked: missing verified '+name)
+    result=json.loads(gate.read_text(encoding='utf-8'))
+    if not result.get('passed') or result.get('open_items'):
+        raise SystemExit('K output blocked: unresolved manufacturing/connection release gate '+name)
+
 P, HAR, GOR, MF, FR, VU, IST, ROT = D['P'], D['HAR'], D['GOR'], D['MF'], D['FRAMES'], D['VU'], D['ISTISNA'], D['ROT']
 CEV = set(D['CEVRE'])
 # 5 Eki: üst raf geçiş contaları tezgâhta, büküm BİTTİKTEN sonra deliklere takılır → görünme anı = üst rafın son büküm karesi
