@@ -12,7 +12,7 @@ Kemal'in kararı (5 Eki 2026): iki ajan aynı anda, farklı istasyonlarda çalı
 | TOPPING montaj animasyonu v5 | Claude | `claude/topping-montaj-v5` | yayında (açık 3 küçük madde) |
 | Standart önlemleri · makine (STANDART_DURUM.md madde 1, 3–8, 12–14): acil stop B ön kapağı, kapı kilit anahtarları, A ışık perdesi kablosu, hava boşaltma, R290 bölmesi, F filtresi, hijyen noktaları — zincir 58+ | Claude | `claude/standart-makine` | sırada |
 | TOPPING bağsız 63 parça + geçici dayalı 2 parça (KURALLAR §2.3 kural 10) | Claude | `claude/topping-montaj-v5` | sırada |
-| Standart önlemleri · robot + QR (madde 10–11): hücre kapısı emniyet anahtarı, robot gözdeyken QR müşteri kapısı kilitli + geri bildirim | Codex | `coord/codex-robot-qr-safety-v1` | çalışıyor: emniyet mantığı + güvenli I/O arayüzü; makine/zincir değişmez |
+| Standart önlemleri · robot + QR (madde 10–11): hücre kapısı emniyet anahtarı, robot gözdeyken QR müşteri kapısı kilitli + geri bildirim | Codex | `coord/codex-robot-qr-safety-v1` | çalışıyor: işlev taslağı 64/64 test geçti; fiziksel anahtar/kilit montajı ve devre doğrulaması açık; makine/zincir değişmez |
 | Güvenlik devresi şeması (acil stop + kapı anahtarları + robot, tek röle / güvenlik PLC) | Claude + Codex | — | makine anahtarları bitince |
 
 Bir işe başlamadan önce tabloda başka bir ajanın aynı istasyonu ya da aynı dosyaları almadığını kontrol et.

@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "base": "a5133e21e2529c16f2a493273a1c3b0a8457d6c2",
+  "tests": 64,
+  "pass": 64,
+  "fail": 0,
+  "process_exit": 0,
+  "function_reference_passed": true,
+  "machine_changed": false,
+  "chain_changed": false,
+  "geometry_changed": false,
+  "schematic_created": false,
+  "physical_safety_certified": false,
+  "installed_in_live_viewer": false,
+  "production_ready": false,
+  "physical_mounting_audit": "not performed: no geometry added",
+  "open": [
+    "physical lock/switch selection and mounting",
+    "safety circuit and PL calculation",
+    "robot and rail safe standstill / safe clearance",
+    "human presence and escape provision",
+    "final robot identity FR5 versus UR10e",
+    "live scene integration"
+  ]
+}
