@@ -153,6 +153,9 @@ Ayrıntı ve eksik listesi: `STANDART_DURUM.md`. Tasarımda uyulacak temel kural
 
 ## 6. Kemal kararları (değişmez; değişirse burada güncellenir)
 - **Acil stop:** 5 Eki 2026 kararı: B'nin ön kapağında, küçük. Eski "acil stop yok" kararı kaldırıldı.
+- Acil stop TEK buton (5 Eki: "tek buton dediğim yere"); ek buton yok.
+- Servis: makine durur, duvardan öne çekilir, arkadan servis yapılır, yeniden duvara yaslanır (5 Eki). Bağlantılar (elektrik, hava, gider, ağ) bu çekme payına göre esnek olur.
+- STANDART_DURUM.md §3'teki diğer önlemler onaylandı (5 Eki): kapı kilit anahtarları, A ışık perdesi kablosu, pnömatik boşaltma, R290 bölmesi, F filtresi, hijyen noktaları, robot kapısı + QR kilidi (Codex).
 - A'nın içi boş. Dış zarf sabit.
 - Renkler: güç kırmızı, bilgi mavi, hava yeşil.
 - QR ve tezgâh montaj animasyonu yapılmaz.
