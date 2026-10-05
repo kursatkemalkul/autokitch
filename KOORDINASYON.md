@@ -12,7 +12,7 @@ Kemal'in kararı (5 Eki 2026): iki ajan aynı anda, farklı istasyonlarda çalı
 | TOPPING montaj animasyonu v5 | Claude | `claude/topping-montaj-v5` | yayında (açık 3 küçük madde) |
 | Standart önlemleri · makine: acil stop (58) · 10 kapı emniyet anahtarı (59) · hava emniyet valfi (60) · davlumbaz filtresi servis ağzı (61) · hijyen / R290 / A perdesi kayıt | Claude | `claude/standart-makine` | BİTTİ (cb7d1ec) — Kemal incelemesinde |
 | **TOPPING montaj v6**: bağsız 63 parça + geçici dayalı 2 parça bağlanır (KURALLAR §2.3 kural 10), animasyon yeniden üretilir, §5 denetimi | Claude | `claude/topping-montaj-v6` | ÇALIŞIYOR (5 Eki) · zincir adımları **62–69** |
-| **K montaj animasyonu** (KURALLAR §2, yeni yöntem: açınım → abkant → PEM → gerçek bağlantı; bağlı mı denetimi) | Codex | `codex/k-montaj` | ÇALIŞIYOR · hazırlık commit 70645e86 (yerel); 33 sac/33 büküm hazırlığı iki koşu aynı, 32 saplama için yerel70 denetimi geçti; PEM/kurulum ve §5 tamamlanmadı, zincire eklenmedi; eski Claude K sayfa kilidi bekleniyor, push onayı yok |
+| **K montaj animasyonu** (KURALLAR §2, yeni yöntem: açınım → abkant → PEM → gerçek bağlantı; bağlı mı denetimi) | Codex | `codex/k-montaj` | ÇALIŞIYOR · hazırlık commit e002c297 (yerel; tamamlanmış montaj değildir); 33 sac/33 büküm hazırlığı iki koşu aynı, 32 saplama için yerel70 denetimi geçti; PEM/kurulum ve §5 tamamlanmadı, zincire eklenmedi; eski Claude K sayfa kilidi bekleniyor, push onayı yok |
 | Standart önlemleri · robot + QR (madde 10–11): hücre kapısı emniyet anahtarı, robot gözdeyken QR müşteri kapısı kilitli + geri bildirim | Codex | (Codex seçer) | Codex'e bildirildi |
 | Güvenlik devresi şeması (acil stop + kapı anahtarları + robot, tek röle / güvenlik PLC) | Claude + Codex | — | makine anahtarları bitince |
 
