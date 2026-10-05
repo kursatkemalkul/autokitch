@@ -207,8 +207,10 @@ ADIMLAR = [
      [(".", 'python "{YAMA}/62_topping_kaynak.py" hat3_v10c.glb hat3_v10d.glb')]),
     ("63", "TOPPING UNO'lar rafa vidalı (her UNO 2 rafa kaynaklı L pabuç + yandan M5 tabana) · kaşar / sucuk kaseti kapak K2 iç yüzündeki POM takozla kilitli (Kemal)", ["hat3_v10d.glb"], "hat3_v10e.glb",
      [(".", 'python "{YAMA}/63_uno_kaset.py" hat3_v10d.glb hat3_v10e.glb')]),
+    ("64", "TOPPING hazır ürünler bizim braketle bağlı: kaset motorları + valf adası duvara kaynaklı braket · X ekseni + orta kayıt kaynaklı L pabuç · menteşe + X sensör braketi PEM saplama", ["hat3_v10e.glb"], "hat3_v10f.glb",
+     [(".", 'python "{YAMA}/64_hazir_baglanti.py" hat3_v10e.glb hat3_v10f.glb')]),
 ]
-SON = "hat3_v10e.glb"
+SON = "hat3_v10f.glb"
 
 
 def kur(is_dizin, h3, uretec):
