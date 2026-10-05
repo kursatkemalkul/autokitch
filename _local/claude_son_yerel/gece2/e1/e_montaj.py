@@ -128,18 +128,18 @@ adim('Robot çöpü, şarjör ve asansör', 'Robot çöpü (kova + poşet + oluk
 kamera_genel(['sarjor_asansor'], yon=(0.4, 0.6, 0.7), olcek=0.9)
 t = koy('robot_copu', AD(UST6, ON9, lift=(5, 20), son=SON), 'Robot çöpü → yukarıdan sol öne')
 t = koy(['sarjor_asansor'], AD(UST6, ARKA9, lift=(), son=SON), 'Şarjör + asansör → yukarıdan, tabanın M6 saplamalarına')
-# ---- 4 ÜST
-adim('Üst sac', 'Üst sac (1,5 · yan dönüşler, Harting ağzı, U ↔ E için 3 × PEM M8, mekanizma askı saplamaları) yukarıdan ön kasanın tepesine iner (arkası montaj dayamasında); yanlar gelince yan saplamalar dönüşlerinden geçer.',
-     'üst sac')
-kamera_genel(['ust_sac'], yon=(0.5, 0.7, 0.5), olcek=0.8)
-t = koy('ust_sac', AD(UST6, lift=(), yan=()), 'Üst sac → yukarıdan ön kasaya (arka uç dayamada)', pem=sorted(PEM_SAC.get('ust_sac', [])))
-t = somunla(r'govde_kulak_ust_[a-z]+_bag', t, 20.0); t += 0.2
-# ---- 5 ÜST MODÜL (sol + sağ açıkken)
-adim('Üst modül', 'Tezgâhta: besleyici şasisi + motor + itici + vakum kolu, köşe kaldırıcılar + tutucular + piston, ön parmaklar, arka itici. Soldan girer, üst sacın askı saplamalarına alttan oturur.',
+# ---- 4 ÜST MODÜL (üst + yanlar açıkken)
+adim('Üst modül', 'Tezgâhta: besleyici şasisi + motor + itici + vakum kolu, köşe kaldırıcılar + tutucular + piston, ön parmaklar, arka itici. Yukarıdan şarjörün üstüne iner (montaj dayamasında); üst sac gelince askı saplamaları kulaklarından geçer.',
      'üst modül (besleyici · köşe × 4 · parmak · itici)')
 kamera_genel(['besleyici_sasi'], yon=(-0.7, 0.45, 0.5), olcek=0.9)
 USTM = var('besleyici_sasi', 'besleyici_motor', 'besleyici_itici', 'besleyici_vakum', 'kose_tutucu', 'kose_kaldirici', 'kose_piston', 'parmak', 'parmak_y', 'piston', 'piston_itici')
-t = koy(USTM, AD(SOL7, ARKA9, lift=(), yan=(), son=[(0, -15, 0), (0, -30, 0), (0, -60, 0)] + SON), 'Üst modül (besleyici + köşe + parmak + itici, tezgâhta) → soldan, üst askı saplamalarına alttan')
+t = koy(USTM, AD(UST6, SOL7, lift=(), yan=(), son=SON), 'Üst modül (besleyici + köşe + parmak + itici, tezgâhta) → yukarıdan, dayamaya')
+# ---- 5 ÜST
+adim('Üst sac', 'Üst sac (1,5 · yan dönüşler, Harting ağzı, U ↔ E için 3 × PEM M8, mekanizma askı saplamaları) yukarıdan ön kasanın tepesine iner (arkası montaj dayamasında): askı saplamaları üst modülün kulaklarına geçer; yanlar gelince yan saplamalar dönüşlerinden geçer.',
+     'üst sac')
+kamera_genel(['ust_sac'], yon=(0.5, 0.7, 0.5), olcek=0.8)
+t = koy('ust_sac', AD(UST6, lift=(), yan=()), 'Üst sac → yukarıdan ön kasaya, askı saplamaları üst modüle', pem=sorted(PEM_SAC.get('ust_sac', [])))
+t = somunla(r'govde_kulak_ust_[a-z]+_bag', t, 20.0); t += 0.2
 # ---- 6 YAN SOL
 adim('Yan sol', 'Yan sol (1,5 · pizza penceresi, preslenmiş FHP saplamalar) tezgâhta fiş paneli J3 ile birlikte soldan: saplamaları kulaklardan, üst sacın sol dönüşünden ve şarjör kulaklarından geçer; içten pul + fiberli somun.',
      'yan sol + fiş paneli J3 · pul + somun M5')
