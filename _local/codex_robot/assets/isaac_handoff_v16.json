@@ -1,0 +1,539 @@
+{
+  "schema": "autokitch.isaac.handoff/1",
+  "motion_file": "order_v16.json",
+  "geometry_sha256": "c8da9953ef81bfcf9e0881a5fb1852b4839eed32453cfe5e73c89c64f69e90a0",
+  "workflow_file": "workflow_v16.json",
+  "joint_order": [
+    "shoulder_pan_joint",
+    "shoulder_lift_joint",
+    "elbow_joint",
+    "wrist_1_joint",
+    "wrist_2_joint",
+    "wrist_3_joint"
+  ],
+  "units": {
+    "joint": "rad",
+    "rail": "m",
+    "time": "s",
+    "jaw": "deg"
+  },
+  "coordinates": "Isaac Z-up SI; q native USD axes",
+  "trajectory_actor_coordinates": "Product/placed positions are web Y-up metres: convert [x,y,z] to [x,-z,y] for Isaac",
+  "controller_interpolation": "Dense desired joint samples, finite-difference velocity/acceleration audit; actual actuator interpolation and torque not certified",
+  "mount": {
+    "rail_forward_m": 0.5,
+    "mount_forward_m": 0.1
+  },
+  "targets_isaac_m": {
+    "table": [
+      1.0861165201199048,
+      0.16993614608605556,
+      1.0238560228202322
+    ],
+    "qr": {
+      "Dough": [
+        1.0861165201199048,
+        0.16993614608605556,
+        1.0238560228202322
+      ],
+      "Cola": [
+        5.122498536131686,
+        -1.8819949175632056,
+        0.908481839174732
+      ],
+      "Dessert": [
+        5.122210954746434,
+        -1.7974958739887261,
+        0.8808579686685056
+      ],
+      "Box": [
+        4.913012691688799,
+        -1.9120000071693786,
+        0.8734991379345529
+      ]
+    }
+  },
+  "phases": [
+    {
+      "name": "Hamur çekmecesini otomatik aç",
+      "start_s": 0,
+      "end_s": 4.32165441867158,
+      "frame_start": 0,
+      "frame_end": 100,
+      "tcp_cap_m_s": 1
+    },
+    {
+      "name": "En sol hamur · Hamur · yaklaş",
+      "start_s": 4.32165441867158,
+      "end_s": 7.045546833693759,
+      "frame_start": 100,
+      "frame_end": 520,
+      "tcp_cap_m_s": 1
+    },
+    {
+      "name": "En sol hamur · Hamur · kavra",
+      "start_s": 7.045546833693759,
+      "end_s": 7.587872978240483,
+      "frame_start": 520,
+      "frame_end": 568,
+      "tcp_cap_m_s": 0.12
+    },
+    {
+      "name": "En sol hamur · Hamur · kaldır",
+      "start_s": 7.587872978240483,
+      "end_s": 10.30465858743126,
+      "frame_start": 568,
+      "frame_end": 724,
+      "tcp_cap_m_s": 0.12
+    },
+    {
+      "name": "En sol hamur · Hamur · çekmeceden uzaklaş",
+      "start_s": 10.30465858743126,
+      "end_s": 13.449153148391574,
+      "frame_start": 724,
+      "frame_end": 868,
+      "tcp_cap_m_s": 1
+    },
+    {
+      "name": "Hamur çekmecesini kapat",
+      "start_s": 13.449153148391574,
+      "end_s": 17.770807567063194,
+      "frame_start": 868,
+      "frame_end": 968,
+      "tcp_cap_m_s": 1
+    },
+    {
+      "name": "Hamuru soldaki tablaya taşı",
+      "start_s": 17.770807567063194,
+      "end_s": 22.752649301590942,
+      "frame_start": 968,
+      "frame_end": 1416,
+      "tcp_cap_m_s": 1
+    },
+    {
+      "name": "Tabla yaklaşımında ideal tutuş hizası",
+      "start_s": 22.752649301590942,
+      "end_s": 22.915347144954843,
+      "frame_start": 1416,
+      "frame_end": 1496,
+      "tcp_cap_m_s": 1
+    },
+    {
+      "name": "Hamur · hedefe yaklaş",
+      "start_s": 22.915347144954843,
+      "end_s": 33.06559697460741,
+      "frame_start": 1496,
+      "frame_end": 2236,
+      "tcp_cap_m_s": 1
+    },
+    {
+      "name": "Hamur · bırak",
+      "start_s": 33.06559697460741,
+      "end_s": 34.498610718369655,
+      "frame_start": 2236,
+      "frame_end": 2296,
+      "tcp_cap_m_s": 1
+    },
+    {
+      "name": "Hamur · elini geri çek",
+      "start_s": 34.498610718369655,
+      "end_s": 44.7011592081572,
+      "frame_start": 2296,
+      "frame_end": 3256,
+      "tcp_cap_m_s": 1
+    },
+    {
+      "name": "İçecek çekmecesine geç",
+      "start_s": 44.7011592081572,
+      "end_s": 49.74186752850712,
+      "frame_start": 3256,
+      "frame_end": 3752,
+      "tcp_cap_m_s": 1
+    },
+    {
+      "name": "Cola · başlangıç",
+      "start_s": 49.74186752850712,
+      "end_s": 49.904565371871264,
+      "frame_start": 3752,
+      "frame_end": 3756,
+      "tcp_cap_m_s": 1
+    },
+    {
+      "name": "Cola · çekmeceyi aç",
+      "start_s": 49.904565371871264,
+      "end_s": 54.226219790542565,
+      "frame_start": 3756,
+      "frame_end": 3856,
+      "tcp_cap_m_s": 1
+    },
+    {
+      "name": "İçecek · yaklaş",
+      "start_s": 54.226219790542565,
+      "end_s": 60.090068981128056,
+      "frame_start": 3856,
+      "frame_end": 4276,
+      "tcp_cap_m_s": 1
+    },
+    {
+      "name": "İçecek · kavra",
+      "start_s": 60.090068981128056,
+      "end_s": 60.63239512567484,
+      "frame_start": 4276,
+      "frame_end": 4324,
+      "tcp_cap_m_s": 0.12
+    },
+    {
+      "name": "İçecek · kaldır",
+      "start_s": 60.63239512567484,
+      "end_s": 64.36894678102087,
+      "frame_start": 4324,
+      "frame_end": 4480,
+      "tcp_cap_m_s": 0.12
+    },
+    {
+      "name": "İçecek · çekmeceden uzaklaş",
+      "start_s": 64.36894678102087,
+      "end_s": 67.50591888822899,
+      "frame_start": 4480,
+      "frame_end": 4624,
+      "tcp_cap_m_s": 1
+    },
+    {
+      "name": "Cola · çekmeceyi kapat",
+      "start_s": 67.50591888822899,
+      "end_s": 71.82757330690058,
+      "frame_start": 4624,
+      "frame_end": 4724,
+      "tcp_cap_m_s": 1
+    },
+    {
+      "name": "Cola · QR girişine taşı",
+      "start_s": 71.82757330690058,
+      "end_s": 86.151739703953,
+      "frame_start": 4724,
+      "frame_end": 6364,
+      "tcp_cap_m_s": 1
+    },
+    {
+      "name": "Cola · ideal tutuş hizası",
+      "start_s": 86.151739703953,
+      "end_s": 86.31443754731654,
+      "frame_start": 6364,
+      "frame_end": 6424,
+      "tcp_cap_m_s": 1
+    },
+    {
+      "name": "Cola · QR gözüne yerleştir",
+      "start_s": 86.31443754731654,
+      "end_s": 89.64085949949809,
+      "frame_start": 6424,
+      "frame_end": 6588,
+      "tcp_cap_m_s": 0.12
+    },
+    {
+      "name": "Cola · parmakları aç",
+      "start_s": 89.64085949949809,
+      "end_s": 90.50507565007292,
+      "frame_start": 6588,
+      "frame_end": 6684,
+      "tcp_cap_m_s": 0.12
+    },
+    {
+      "name": "Cola · QR’den geri çekil",
+      "start_s": 90.50507565007292,
+      "end_s": 94.07072988895531,
+      "frame_start": 6684,
+      "frame_end": 6848,
+      "tcp_cap_m_s": 1
+    },
+    {
+      "name": "Dessert · kaynağa yaklaş",
+      "start_s": 94.07072988895531,
+      "end_s": 103.7260475271435,
+      "frame_start": 6848,
+      "frame_end": 7328,
+      "tcp_cap_m_s": 1
+    },
+    {
+      "name": "Dessert · çekmeceyi aç",
+      "start_s": 103.7260475271435,
+      "end_s": 108.04770194581528,
+      "frame_start": 7328,
+      "frame_end": 7428,
+      "tcp_cap_m_s": 1
+    },
+    {
+      "name": "Tatlı · yaklaş",
+      "start_s": 108.04770194581528,
+      "end_s": 111.8853680754809,
+      "frame_start": 7428,
+      "frame_end": 7848,
+      "tcp_cap_m_s": 1
+    },
+    {
+      "name": "Tatlı · kavra",
+      "start_s": 111.8853680754809,
+      "end_s": 112.86113131283452,
+      "frame_start": 7848,
+      "frame_end": 7896,
+      "tcp_cap_m_s": 0.12
+    },
+    {
+      "name": "Tatlı · kaldır",
+      "start_s": 112.86113131283452,
+      "end_s": 115.58202939217837,
+      "frame_start": 7896,
+      "frame_end": 8052,
+      "tcp_cap_m_s": 0.12
+    },
+    {
+      "name": "Tatlı · çekmeceden uzaklaş",
+      "start_s": 115.58202939217837,
+      "end_s": 119.21312491712571,
+      "frame_start": 8052,
+      "frame_end": 8232,
+      "tcp_cap_m_s": 1
+    },
+    {
+      "name": "Dessert · çekmeceyi kapat",
+      "start_s": 119.21312491712571,
+      "end_s": 123.53477933579771,
+      "frame_start": 8232,
+      "frame_end": 8332,
+      "tcp_cap_m_s": 1
+    },
+    {
+      "name": "Dessert · QR girişine taşı · denetlenen geçiş",
+      "start_s": 123.53477933579771,
+      "end_s": 130.78093411131374,
+      "frame_start": 8332,
+      "frame_end": 9000,
+      "tcp_cap_m_s": 1
+    },
+    {
+      "name": "Dessert · ideal tutuş hizası",
+      "start_s": 130.78093411131374,
+      "end_s": 130.9436319546773,
+      "frame_start": 9000,
+      "frame_end": 9060,
+      "tcp_cap_m_s": 1
+    },
+    {
+      "name": "Dessert · QR gözüne yerleştir",
+      "start_s": 130.9436319546773,
+      "end_s": 134.94926795125826,
+      "frame_start": 9060,
+      "frame_end": 9224,
+      "tcp_cap_m_s": 0.12
+    },
+    {
+      "name": "Dessert · parmakları aç",
+      "start_s": 134.94926795125826,
+      "end_s": 135.81349312840166,
+      "frame_start": 9224,
+      "frame_end": 9320,
+      "tcp_cap_m_s": 0.12
+    },
+    {
+      "name": "Dessert · QR’den geri çekil",
+      "start_s": 135.81349312840166,
+      "end_s": 140.00695514476675,
+      "frame_start": 9320,
+      "frame_end": 9484,
+      "tcp_cap_m_s": 1
+    },
+    {
+      "name": "Kutu · ön kenara yaklaş",
+      "start_s": 140.00695514476675,
+      "end_s": 148.87445432934098,
+      "frame_start": 9484,
+      "frame_end": 9948,
+      "tcp_cap_m_s": 1
+    },
+    {
+      "name": "Kutu · ön kenara gir",
+      "start_s": 148.87445432934098,
+      "end_s": 152.1562356980272,
+      "frame_start": 9948,
+      "frame_end": 10128,
+      "tcp_cap_m_s": 0.12
+    },
+    {
+      "name": "Kutu · üst ve alt pedleri kapat",
+      "start_s": 152.1562356980272,
+      "end_s": 153.47193984357028,
+      "frame_start": 10128,
+      "frame_end": 10212,
+      "tcp_cap_m_s": 0.12
+    },
+    {
+      "name": "Kutu · yataktan 6 mm kaldır",
+      "start_s": 153.47193984357028,
+      "end_s": 154.45827831823615,
+      "frame_start": 10212,
+      "frame_end": 10260,
+      "tcp_cap_m_s": 0.12
+    },
+    {
+      "name": "Kutu · tamamen yataktan geri çık",
+      "start_s": 154.45827831823615,
+      "end_s": 159.9336499661976,
+      "frame_start": 10260,
+      "frame_end": 10620,
+      "tcp_cap_m_s": 0.12
+    },
+    {
+      "name": "Kutu · koridorda yatay kaldır",
+      "start_s": 159.9336499661976,
+      "end_s": 161.9230044325471,
+      "frame_start": 10620,
+      "frame_end": 10800,
+      "tcp_cap_m_s": 0.12
+    },
+    {
+      "name": "Box · QR girişine taşı",
+      "start_s": 161.9230044325471,
+      "end_s": 166.3119164916256,
+      "frame_start": 10800,
+      "frame_end": 11292,
+      "tcp_cap_m_s": 1
+    },
+    {
+      "name": "Box · ideal tutuş hizası",
+      "start_s": 166.3119164916256,
+      "end_s": 166.4746143349895,
+      "frame_start": 11292,
+      "frame_end": 11352,
+      "tcp_cap_m_s": 1
+    },
+    {
+      "name": "Box · QR gözüne yerleştir",
+      "start_s": 166.4746143349895,
+      "end_s": 170.94576223070288,
+      "frame_start": 11352,
+      "frame_end": 11516,
+      "tcp_cap_m_s": 0.12
+    },
+    {
+      "name": "Box · parmakları aç",
+      "start_s": 170.94576223070288,
+      "end_s": 171.8099767623374,
+      "frame_start": 11516,
+      "frame_end": 11612,
+      "tcp_cap_m_s": 0.12
+    },
+    {
+      "name": "Box · QR’den geri çekil",
+      "start_s": 171.8099767623374,
+      "end_s": 176.00189629664018,
+      "frame_start": 11612,
+      "frame_end": 11776,
+      "tcp_cap_m_s": 1
+    },
+    {
+      "name": "Kutu · ideal olarak rafa oturt",
+      "start_s": 176.00189629664018,
+      "end_s": 176.1645941400052,
+      "frame_start": 11776,
+      "frame_end": 11856,
+      "tcp_cap_m_s": 1
+    }
+  ],
+  "events": [
+    "drawer.opened",
+    "grasp.confirmed",
+    "table.robot_clear",
+    "machine.box_ready",
+    "qr.robot_clear",
+    "order.complete"
+  ],
+  "ideal_contact": true,
+  "physics_tasks_remaining": [
+    "rebuild grip friction/compliance",
+    "validate actual object attachment via contact, not world transforms",
+    "verify grasp and release sensor acknowledgements",
+    "verify controller velocity/acceleration and collision during interpolation"
+  ],
+  "integration": "Transform named fixtures to completed Claude machine coordinate frame; rerun collision audit if any fixture moves; do not infer new grasps from this visual demonstration.",
+  "limits": {
+    "joint_velocity_rad_s": [
+      2.0943951023931953,
+      2.0943951023931953,
+      3.141592653589793,
+      3.141592653589793,
+      3.141592653589793,
+      3.141592653589793
+    ],
+    "tcp_hardware_max_m_s": 4,
+    "tcp_operating_cap_m_s": 1,
+    "tcp_near_product_m_s": 0.12,
+    "joint_acceleration_rad_s2": 2,
+    "tcp_acceleration_m_s2": 1,
+    "rail_velocity_m_s": 0.5,
+    "rail_acceleration_m_s2": 0.6,
+    "jaw_velocity_deg_s": 45,
+    "drawer_velocity_m_s": 0.19,
+    "drawer_acceleration_m_s2": 0.633,
+    "sources": {
+      "joint_speed": "https://www.universal-robots.com/media/1807466/ur10e_e-series_datasheets_web.pdf",
+      "tcp_speed": "https://www.universal-robots.com/media/1807466/ur10e_e-series_datasheets_web.pdf"
+    },
+    "assumptions": [
+      "1 m/s working TCP cap; 4 m/s datasheet ceiling is not attainable at every pose.",
+      "Joint/TCP accelerations, rail and gripper limits are configured trial values, not manufacturer certification.",
+      "Speed limits depend on hardware revision, payload, safety settings and controller; Isaac must revalidate dynamics."
+    ]
+  },
+  "load_profiles": [
+    {
+      "scenario": "tek",
+      "orders": 1,
+      "completed": 1,
+      "units": 3,
+      "max_wait_s": 486.5906873005081,
+      "robot_utilization": 0.5256745206423916,
+      "clearance_geometry_certified": false,
+      "method": "FIFO discrete-event load estimate using current motion timings and legacy arrival generator; does not validate multi-box bay capacity or all pickup/QR trajectories."
+    },
+    {
+      "scenario": "uc",
+      "orders": 3,
+      "completed": 3,
+      "units": 6,
+      "max_wait_s": 824.9006447120611,
+      "robot_utilization": 0.6448054027883059,
+      "clearance_geometry_certified": false,
+      "method": "FIFO discrete-event load estimate using current motion timings and legacy arrival generator; does not validate multi-box bay capacity or all pickup/QR trajectories."
+    },
+    {
+      "scenario": "aksam",
+      "orders": 53,
+      "completed": 53,
+      "units": 98,
+      "max_wait_s": 2932.989937647624,
+      "robot_utilization": 0.7265761709821534,
+      "clearance_geometry_certified": false,
+      "method": "FIFO discrete-event load estimate using current motion timings and legacy arrival generator; does not validate multi-box bay capacity or all pickup/QR trajectories."
+    },
+    {
+      "scenario": "cmt",
+      "orders": 74,
+      "completed": 74,
+      "units": 138,
+      "max_wait_s": 6454.916824408188,
+      "robot_utilization": 0.7769330698227921,
+      "clearance_geometry_certified": false,
+      "method": "FIFO discrete-event load estimate using current motion timings and legacy arrival generator; does not validate multi-box bay capacity or all pickup/QR trajectories."
+    },
+    {
+      "scenario": "surekli",
+      "orders": 32,
+      "completed": 32,
+      "units": 64,
+      "max_wait_s": 4812.997095239157,
+      "robot_utilization": 0.763185363440142,
+      "clearance_geometry_certified": false,
+      "method": "FIFO discrete-event load estimate using current motion timings and legacy arrival generator; does not validate multi-box bay capacity or all pickup/QR trajectories."
+    }
+  ]
+}

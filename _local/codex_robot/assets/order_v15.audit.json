@@ -1,0 +1,45 @@
+{
+  "version": 15,
+  "passed": true,
+  "completed": [
+    "Dough",
+    "Cola",
+    "Dessert",
+    "Box"
+  ],
+  "frames": 2965,
+  "checks": 5661,
+  "ideal_grasp": true,
+  "continuous_collision_certified": false,
+  "rigid_dough": true,
+  "dough_stock_count": 42,
+  "table_fixed": true,
+  "qr_floor_mm": 850,
+  "qr_column": 2,
+  "max_joint_step_deg": 1.9993225462583373,
+  "max_rail_step_mm": 11.842543553866047,
+  "max_carried_product_step_mm": 17.993247271814553,
+  "final_positions_m": {
+    "Dough": [
+      1.0861165201199048,
+      1.0238560228202322,
+      -0.16993614608605556
+    ],
+    "Cola": [
+      5.122498536131686,
+      0.908481839174732,
+      1.8819949175632056
+    ],
+    "Dessert": [
+      5.122210954746434,
+      0.8808579686685056,
+      1.7974958739887261
+    ],
+    "Box": [
+      4.913012691688799,
+      0.8734991379345529,
+      1.9120000071693786
+    ]
+  },
+  "method": "One order: rigid dough to unchanged table centre, Cola rear-right, Dessert front-right, Box left of same fixed QR bay. Sampled native mesh motion/self/environment checks, ideal grip and explicit corridor grip alignment; no grip-force or falling simulation."
+}

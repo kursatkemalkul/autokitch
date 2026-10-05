@@ -1,0 +1,87 @@
+{
+  "passed": true,
+  "geometry_hash": "c8da9953ef81bfcf9e0881a5fb1852b4839eed32453cfe5e73c89c64f69e90a0",
+  "speed": {
+    "speed": 0.9219544457293917,
+    "acc": 0.8500000000007175,
+    "max_joint_speed_rad_s": [
+      0.7640559258850682,
+      0.44151159253076677,
+      0.5689569223022564,
+      0.40663586781053096,
+      0.7565875292103545,
+      0.7986960286291123
+    ],
+    "max_joint_accel_rad_s2": [
+      1.4213246878610004,
+      0.8314569101281183,
+      1.5514662476166787,
+      0.9690490126009353,
+      1.4202777841733025,
+      0.6750774457432267
+    ],
+    "max_tcp_speed_m_s": 0.6563524152685337,
+    "max_rail_speed_m_s": 0.42198954134336997
+  },
+  "profiles": [
+    {
+      "scenario": "tek",
+      "orders": 1,
+      "completed": 1,
+      "units": 3,
+      "max_wait_s": 486.5906873005081,
+      "robot_utilization": 0.5256745206423916,
+      "clearance_geometry_certified": false,
+      "method": "FIFO discrete-event load estimate using current motion timings and legacy arrival generator; does not validate multi-box bay capacity or all pickup/QR trajectories."
+    },
+    {
+      "scenario": "uc",
+      "orders": 3,
+      "completed": 3,
+      "units": 6,
+      "max_wait_s": 824.9006447120611,
+      "robot_utilization": 0.6448054027883059,
+      "clearance_geometry_certified": false,
+      "method": "FIFO discrete-event load estimate using current motion timings and legacy arrival generator; does not validate multi-box bay capacity or all pickup/QR trajectories."
+    },
+    {
+      "scenario": "aksam",
+      "orders": 53,
+      "completed": 53,
+      "units": 98,
+      "max_wait_s": 2932.989937647624,
+      "robot_utilization": 0.7265761709821534,
+      "clearance_geometry_certified": false,
+      "method": "FIFO discrete-event load estimate using current motion timings and legacy arrival generator; does not validate multi-box bay capacity or all pickup/QR trajectories."
+    },
+    {
+      "scenario": "cmt",
+      "orders": 74,
+      "completed": 74,
+      "units": 138,
+      "max_wait_s": 6454.916824408188,
+      "robot_utilization": 0.7769330698227921,
+      "clearance_geometry_certified": false,
+      "method": "FIFO discrete-event load estimate using current motion timings and legacy arrival generator; does not validate multi-box bay capacity or all pickup/QR trajectories."
+    },
+    {
+      "scenario": "surekli",
+      "orders": 32,
+      "completed": 32,
+      "units": 64,
+      "max_wait_s": 4812.997095239157,
+      "robot_utilization": 0.763185363440142,
+      "clearance_geometry_certified": false,
+      "method": "FIFO discrete-event load estimate using current motion timings and legacy arrival generator; does not validate multi-box bay capacity or all pickup/QR trajectories."
+    }
+  ],
+  "checks": [
+    "deterministic arrivals",
+    "53/74 archived profiles",
+    "single robot no overlap",
+    "QR occupancy release",
+    "machine readiness gate",
+    "SI joint contract",
+    "monotonic time and binary seeking"
+  ]
+}

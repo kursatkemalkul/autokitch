@@ -1,0 +1,11 @@
+import fs from 'node:fs';const path='otonom/hat/robot-main-v1/light-app.js';let s=fs.readFileSync(path,'utf8');
+s=s.replace('let railRecord,playing=false','let clipStart=0,clipEnd=null,railRecord,playing=false');
+s=s.replace('Math.min(railRecord.trajectory.length-1,playTime*15)','Math.min(clipEnd??railRecord.trajectory.length-1,playTime*15)');
+s=s.replace('if(index===railRecord.trajectory.length-1)','if(index===(clipEnd??railRecord.trajectory.length-1))');
+s=s.replace('if(playTime*15>=railRecord.trajectory.length-1)playTime=0;','if(playTime*15>=(clipEnd??railRecord.trajectory.length-1))playTime=clipStart/15;');
+s=s.replace('playTime=0;railFrame(0);','playTime=clipStart/15;railFrame(clipStart);');
+s=s.replace('i=Math.max(0,i);playTime=i/15;railFrame(i);',`i=Math.max(0,i);clipStart=i;clipEnd=null;if(k!=='all'){const re={Cola:/^(Cola|İçecek)/,Dessert:/^(Dessert|Tatlı)/,Box:/^(Box|Kutu)/,Dough:/^(Dough|Hamur|En sol hamur)/},next=railRecord.trajectory.findIndex((f,j)=>j>i&&Object.entries(re).some(([other,r])=>other!==k&&r.test(f.stage)));if(next>i)clipEnd=next-1;}playTime=i/15;railFrame(i);`);
+s=s.replace('railFrame(0);}',"railFrame(0);$('height').value='850';$('all').click();}");
+s=s.replace('async function loadRailAnimation(){railRecord=',"async function loadRailAnimation(){const fresh=await fetch(A+'qr_delivery_v15.json').then(r=>r.json());reach.results=reach.results.map(r=>r.column===2&&r.floor_mm===850?{...r,...fresh.result}:r);railRecord=");
+s=s.replace("$('pick').onclick=()=>{playing=false;lastTime=0;const k=$('product').value,p=poses[k+'_pick'];","$('pick').onclick=()=>{playing=false;lastTime=0;const k=$('product').value;if(k==='Box'||k==='Cola'){showGrip(k);return;}const p=poses[k+'_pick'];");
+fs.writeFileSync(path,s);

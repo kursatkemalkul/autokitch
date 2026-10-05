@@ -1,0 +1,21 @@
+{
+  "verified_at": "2026-10-04",
+  "page": "otonom/hat/makine_robot.html",
+  "method": "Real in-app browser controls and mouse drags; native-USD FK reference checked independently in Node and browser",
+  "robot_bodies": 18,
+  "machine_meshes": 811,
+  "fk_references_passed": 8,
+  "tcp_mouse_translate": "Hamur TCP height changed from 255 mm to 284 mm; linked shoulder/elbow/wrist updated; Undo restored 255 mm",
+  "tcp_mouse_rotate": "Rotation ring changed wrist 3 from 87.1 to 67.7 degrees; Undo restored 87.1 degrees",
+  "joint_control": "Shoulder slider keyboard increment changed shoulder -83.7 to -83.6 degrees and TCP height",
+  "jaw_control": "18.5 to 18.6 degrees through control",
+  "rail_control": "1715 to 1716 mm through control; TCP X moved by 1 mm",
+  "drawer_control": "Dough pick automatically opened CEK_K1_lahm_1 by 700 mm; place closed it; existing layout preserved",
+  "pose_buttons": "All eight pick/place callbacks exercised",
+  "save_reload": "Box_place saved and restored after page reload at rail 4158 mm; test saved unchanged source pose",
+  "console_errors": [],
+  "collision_warning_detected": ["Old FR5 energy chain/cable route against UR10e upper arm", "Gripper contact against merged product stock"],
+  "trajectory_verified": false,
+  "physical_grasp_verified": false,
+  "full_isaac_features_ported": false
+}

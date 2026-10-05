@@ -1,0 +1,1 @@
+import fs from 'node:fs';const p='otonom/hat/robot-main-v1/light-app.js';let s=fs.readFileSync(p,'utf8');s=s.replace("clipStart=0;clipEnd=null;playTime=i/15;railFrame(i);const p=place?","$('order-task').value=k;$('order-task').onchange();playTime=i/15;railFrame(i);const p=place?");fs.writeFileSync(p,s);

@@ -16,8 +16,9 @@
 </ul><span id="v2denetim" style="display:block;margin-top:6px;color:#44505c"></span></div>
 <p class="lead">Hattın tamamı tek modelde. <b>Üstüne gel</b> &mdash; adı çıkar. Modelin altındaki çubuktan <b>kesit</b> alabilir (X/Y/Z) ve iki noktaya tıklayıp <b>ölçü</b> çıkarabilirsin.</p>
 
+<p role="status" style="background:#fff2c6;color:#6b3500;padding:12px;border:1px solid #d38b20"><b>Birleşik entegrasyon taslağı:</b> Son makine (step55 v9w) + UR10e + 12 gözlü QR tek modelde. Tabla kapağı, E kutu alma ağzı ve kablo güzergâhında çakışmalar bulundu; çözülmeden internete yayınlanmayacak. İdeal tutuş; fiziksel kavrama testi değildir.</p>
 <div class="m3">
-  <model-viewer id="mv" loading="eager"   alt="AUTOKITCH hat versiyon 3 üretim modeli" autoplay animation-name="siparis_kasarli"
+  <model-viewer id="mv" loading="eager"   alt="AUTOKITCH hat versiyon 3 üretim modeli" animation-name="siparis_birlesik_kasarli"
       camera-controls touch-action="pan-y" shadow-intensity="0.6" exposure="1.0" environment-image="neutral"
       camera-orbit="-28deg 72deg 10.2m" camera-target="2.98m 1.05m 0.1m" field-of-view="30deg" min-field-of-view="6deg"
       ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
@@ -51,7 +52,7 @@ const M = model3d({
 
 fetch('../hat3d/v3/durum.json?v=7').then(r => r.json()).then(D => {
   M.veri(D.birim);
-  animasyon(D.animasyon, D.siparis);
+  fetch('../hat3d/robot-integrated-v17/manifest.json').then(r=>r.json()).then(R=>animasyon({sure:R.orders[0].sure,adim:R.orders[0].adim},R.orders));
   // eski İSTASYONLAR kartları kaldırıldı (3 Eki): sol menüde yalnız montaj ağacı (3 kademe + göz)
   const g = D.birim.filter(b => b.durum.indexOf('GERCEK') === 0).length, H = D.hat || {};
   const x0 = H.x0 || 0, boy = (H.w - x0);
@@ -90,20 +91,23 @@ function animasyon(A, SIP) {
   if (hz) hz.querySelectorAll('button').forEach(b => b.onclick = () => { const h = +b.dataset.h; mv.timeScale = h;
     hz.querySelectorAll('button').forEach(x => x.classList.toggle('ak', x === b)); hzn.textContent = h === 1 ? 'gerçek süre' : h + ' kat hızlı'; });
   kur(L[0], false);
+  mv.pause(); oy.textContent = 'oynat';
 }
 </script><script src="dis-kabuk.js?v=2"></script><script src="yalitim-kesit.js?v=2"></script><script src="kenar-cizgi.js?v=2"></script><script src="yan-panel.js?v=2"></script><script>window.MEK3_JSON = '../hat3d/v3/mekanizma_v3_8.json?v=9w'; window.MEK3_DISIPLIN = true;</script><script src="mekanizma-v3.js?v=20"></script><script src="kapak-gorunum.js?v=1"></script><script>
 (async()=>{
  const mv=document.getElementById('mv');
  try{
-  const response=await fetch('../hat3d/v3/claude_latest_v8/hat3_v8.glb.gz?v=1');
+  const R=await fetch('../hat3d/robot-integrated-v17/manifest.json').then(r=>r.json());
+  const response=await fetch('../hat3d/robot-integrated-v17/hat3_robot_v17.glb.gz?v=17');
   if(!response.ok)throw new Error('Model download '+response.status);
   const packed=await response.arrayBuffer();
   const stream=new Blob([packed]).stream().pipeThrough(new DecompressionStream('gzip'));
   const raw=await new Response(stream).arrayBuffer();
-  if(raw.byteLength!==106592740)throw new Error('Model byte length mismatch');
+  if(raw.byteLength!==R.raw_web_bytes)throw new Error('Model byte length mismatch');
   const digest=Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',raw)),b=>b.toString(16).padStart(2,'0')).join('');
-  if(digest!=='ade2f5f9ccffeffa9194d6d78adbd04943f49a07dedefa097518f9f78c2d4f25')throw new Error('Model integrity mismatch');
+  if(digest!==R.raw_web_sha256)throw new Error('Model integrity mismatch');
   await customElements.whenDefined('model-viewer');
+  mv.addEventListener('load',()=>{mv.pause();document.getElementById('oy').textContent='oynat';},{once:true});
   mv.src=URL.createObjectURL(new Blob([raw],{type:'model/gltf-binary'}));
  }catch(error){console.error('Latest model load failed',error);const notice=document.createElement('p');notice.textContent='Son model yüklenemedi: '+error.message;mv.after(notice);}
 })();

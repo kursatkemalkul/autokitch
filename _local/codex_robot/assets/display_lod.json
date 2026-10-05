@@ -1,0 +1,49 @@
+{
+  "display_only": true,
+  "collision_geometry_unchanged": true,
+  "voxel_m": 0.001,
+  "bodies": [
+    {
+      "body": "/World/RailSystem/Arm/base_link",
+      "original_triangles": 109394,
+      "render_triangles": 14218,
+      "max_vertex_displacement_m": 0.0011062894822890601
+    },
+    {
+      "body": "/World/RailSystem/Arm/shoulder_link",
+      "original_triangles": 325464,
+      "render_triangles": 26282,
+      "max_vertex_displacement_m": 0.0011800896618489182
+    },
+    {
+      "body": "/World/RailSystem/Arm/upper_arm_link",
+      "original_triangles": 488692,
+      "render_triangles": 45010,
+      "max_vertex_displacement_m": 0.0012006842772440025
+    },
+    {
+      "body": "/World/RailSystem/Arm/forearm_link",
+      "original_triangles": 226508,
+      "render_triangles": 28928,
+      "max_vertex_displacement_m": 0.0011812606722536394
+    },
+    {
+      "body": "/World/RailSystem/Arm/wrist_1_link",
+      "original_triangles": 206506,
+      "render_triangles": 19994,
+      "max_vertex_displacement_m": 0.0011533959795688598
+    },
+    {
+      "body": "/World/RailSystem/Arm/wrist_2_link",
+      "original_triangles": 213610,
+      "render_triangles": 19764,
+      "max_vertex_displacement_m": 0.0011993003677004547
+    },
+    {
+      "body": "/World/RailSystem/Arm/wrist_3_link",
+      "original_triangles": 28226,
+      "render_triangles": 5314,
+      "max_vertex_displacement_m": 0.0010337888515869582
+    }
+  ]
+}

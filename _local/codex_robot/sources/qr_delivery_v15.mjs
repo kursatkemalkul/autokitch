@@ -1,0 +1,27 @@
+import fs from 'node:fs';
+import {read,root,rig}from './geometry.mjs';import{grid,env}from './layout_v11.mjs';
+rig.setRailForward(.5);
+let source=fs.readFileSync('arastirma/_uretec/robot_main_v1/compact_qr_v5.mjs','utf8');
+source=source.replace("['Dessert','Cola','Box']","['Cola','Dessert','Box']");
+source=source.replace("const rawRotation=poses[key+'_place'].rotation","const rawRotation=key==='Box'?[[-1,0,0],[0,0,-1],[0,-1,0]]:poses[key+'_place'].rotation");
+source=source.replace("jaw=poses[key+'_pick'].jaw+(key==='Dessert'?3:0)","jaw=key==='Box'?22.59845602350424:poses[key+'_pick'].jaw+(key==='Dessert'?3:0)");
+source=source.replace('[bx,f+.0235,bz]','[bx,f+.0485,bz]');
+source=source.replace('[cx,f+.0585,cz]','[cx,f+.0585,cz+.0955+gap]');
+source=source.replace('[cx,f+.031,cz+.0805+gap]','[cx,f+.031,cz+.013]');
+source=source.replaceAll("(key==='Box'?.1516:0)","(key==='Box'?.145:0)");
+source=source.replaceAll("(key==='Box'?.012:.014)","(key==='Box'?0:key==='Cola'?.04532033243:.01350193903)");
+source=source.replace("cz=L.front+(L.canInset||.08)","cz=L.front+(L.canInset||.08)");
+fs.writeFileSync('arastirma/_uretec/robot_main_v1/compact_qr_v15.mjs',source);
+const{solve}=await import('./compact_qr_v15.mjs');
+const old=read('qr_grid_v13.json'),column=2,mm=850;
+const seeds=[...old.results.flatMap(r=>r.tasks.map(t=>t.state.q)),...Array.from({length:60},(_,i)=>Array.from({length:6},(_,j)=>Math.sin(i*12.9898+j*78.233)*Math.PI))];
+const result=solve({...old.config,x:old.columns_x[column],cabinet_parts:env(old,column,mm),ignore_workbench:true,lift_m:.02,box_lift_m:.02,search_yaws:true,extra_seeds:seeds,samples:40},mm);result.column=column;
+// Match dessert pickup's elbow branch rather than forcing a flip in the aisle.
+const negativeSource=source.replace('if(!a.valid)continue;',"if(!a.valid||(key==='Dessert'&&a.q[2]>0))continue;");
+fs.writeFileSync('arastirma/_uretec/robot_main_v1/compact_negative_v15.mjs',negativeSource);
+const{solve:negativeSolve}=await import('./compact_negative_v15.mjs');
+const negativeSeeds=[read('source_dense_v12.json').results.find(r=>r.key==='Dessert_pick').path.at(-1).state.q,...Object.values(read('poses_v12.json')).map(p=>p.q)];
+const alternative=negativeSolve({...old.config,x:old.columns_x[column],cabinet_parts:env(old,column,mm),ignore_workbench:true,lift_m:.02,box_lift_m:.02,search_yaws:true,extra_seeds:negativeSeeds,samples:40},mm);
+if(alternative.passed)result.tasks=result.tasks.map(t=>t.key==='Dessert'?alternative.tasks.find(k=>k.key==='Dessert'):t);
+fs.writeFileSync(root+'qr_delivery_v15.json',JSON.stringify({version:15,passed:result.passed,result,box_release_settle_m:.025,method:'Corrected box upper/lower grip; held25mm above final resting position while fingers withdraw, then ideal kinematic settling. Cola and dessert existing nominal pad contact. One order bay only.'},null,2));
+console.log(JSON.stringify({passed:result.passed,tasks:result.tasks.map(t=>[t.key,t.passed,t.last])}));if(!result.passed)process.exitCode=1;

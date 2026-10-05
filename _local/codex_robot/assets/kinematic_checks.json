@@ -1,0 +1,66 @@
+{
+  "passed": true,
+  "reference": "Native USD / Python FK",
+  "poses": [
+    {
+      "key": "Dough_pick",
+      "fk_error_m": 4.965068306494546e-16,
+      "ik_error_m": 0.0004470236787087017,
+      "ik_angle_deg": 0.011637101177891697,
+      "nearby_ik_error_m": 0.000018002322649152412
+    },
+    {
+      "key": "Dough_place",
+      "fk_error_m": 6.866350197783356e-16,
+      "ik_error_m": 0.0003123102436674787,
+      "ik_angle_deg": 0.019992804830813754,
+      "nearby_ik_error_m": 0.000049995733737138625
+    },
+    {
+      "key": "Cola_pick",
+      "fk_error_m": 5.661048867003676e-16,
+      "ik_error_m": 0.0006404197687275018,
+      "ik_angle_deg": 0.010863992762775002,
+      "nearby_ik_error_m": 0.00044603904007741823
+    },
+    {
+      "key": "Cola_place",
+      "fk_error_m": 5.551115123125783e-16,
+      "ik_error_m": 0.0007258527685224338,
+      "ik_angle_deg": 0.016836931084070802,
+      "nearby_ik_error_m": 0.000025547043309918082
+    },
+    {
+      "key": "Dessert_pick",
+      "fk_error_m": 4.47545209131181e-16,
+      "ik_error_m": 0.0006253714362204416,
+      "ik_angle_deg": 0.011349181490304687,
+      "nearby_ik_error_m": 0.0000398628865742275
+    },
+    {
+      "key": "Dessert_place",
+      "fk_error_m": 4.965068306494546e-16,
+      "ik_error_m": 0.0005082904454801367,
+      "ik_angle_deg": 0.020447464825701638,
+      "nearby_ik_error_m": 0.000036917753759531224
+    },
+    {
+      "key": "Box_pick",
+      "fk_error_m": 9.489809492268385e-16,
+      "ik_error_m": 0.0005166144472367783,
+      "ik_angle_deg": 0.01965516587962785,
+      "nearby_ik_error_m": 0.00013216349474053877
+    },
+    {
+      "key": "Box_place",
+      "fk_error_m": 9.742167503148516e-16,
+      "ik_error_m": 0.00044664602768503106,
+      "ik_angle_deg": 0.013807141105240242,
+      "nearby_ik_error_m": 0.000027396603903078217
+    }
+  ],
+  "unreachable_rejected": true,
+  "rail_delta_verified": true,
+  "jaw_tcp_compensated": true,
+  "physics_verified": false
+}

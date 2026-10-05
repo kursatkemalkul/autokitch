@@ -1,0 +1,484 @@
+{
+  "version": 17,
+  "status": "integration draft; NOT production-ready",
+  "machine": "step55 v9w",
+  "source_sha256": "346fd56761bf5e7d4b7810316d31e56d7d5c8f01ac8b5e0d5e4826cf0f781a13",
+  "source_meshes": 823,
+  "machine_binary_preserved": true,
+  "stock_split": [
+    {
+      "product": "Dough",
+      "source": "CEK_K1_lahm_1__hamur__CEKMECE",
+      "moved_triangles": 90,
+      "remaining_triangles": 3690
+    },
+    {
+      "product": "Cola",
+      "source": "CEK_K5_ic1_1__kutu_icecek__CEKMECE",
+      "moved_triangles": 48,
+      "remaining_triangles": 2256
+    },
+    {
+      "product": "Dessert",
+      "source": "CEK_K6_tatli_1__hamur__CEKMECE",
+      "moved_triangles": 48,
+      "remaining_triangles": 528
+    }
+  ],
+  "combined_nodes": 907,
+  "combined_animations": [
+    "siparis_kasarli",
+    "siparis_kiymali",
+    "siparis_kusbasili",
+    "siparis_sucuklu",
+    "siparis_lahmacun",
+    "siparis_pizza",
+    "siparis_birlesik_kasarli",
+    "siparis_birlesik_kiymali",
+    "siparis_birlesik_kusbasili",
+    "siparis_birlesik_sucuklu",
+    "siparis_birlesik_lahmacun",
+    "siparis_birlesik_pizza"
+  ],
+  "raw_web_bytes": 124459396,
+  "raw_web_sha256": "75691a68f8f78437218dc6a57e3339f1b8c898af6d1881a4f87253208e622b18",
+  "gzip_bytes": 59416721,
+  "orders": [
+    {
+      "kod": "birlesik_kasarli",
+      "ad": "Kaşarlı pide + robot",
+      "sure": 328.5287982033956,
+      "adim": [
+        {
+          "t": 0,
+          "ad": "order.accepted / qr.reserved",
+          "not_": "Birleşik entegrasyon taslağı · ideal tutuş · makine arayüzü çakışmaları henüz açık."
+        },
+        {
+          "t": 44.70115920815719,
+          "ad": "AÇICI",
+          "not_": "Birleşik entegrasyon taslağı · ideal tutuş · makine arayüzü çakışmaları henüz açık."
+        },
+        {
+          "t": 44.7011592081572,
+          "ad": "table.robot_clear",
+          "not_": "Birleşik entegrasyon taslağı · ideal tutuş · makine arayüzü çakışmaları henüz açık."
+        },
+        {
+          "t": 52.781159208157206,
+          "ad": "KASAR",
+          "not_": "Birleşik entegrasyon taslağı · ideal tutuş · makine arayüzü çakışmaları henüz açık."
+        },
+        {
+          "t": 69.3311592081572,
+          "ad": "AKTARMA",
+          "not_": "Birleşik entegrasyon taslağı · ideal tutuş · makine arayüzü çakışmaları henüz açık."
+        },
+        {
+          "t": 71.28115920815719,
+          "ad": "FIRIN",
+          "not_": "Birleşik entegrasyon taslağı · ideal tutuş · makine arayüzü çakışmaları henüz açık."
+        },
+        {
+          "t": 274.4411592081572,
+          "ad": "KESME",
+          "not_": "Birleşik entegrasyon taslağı · ideal tutuş · makine arayüzü çakışmaları henüz açık."
+        },
+        {
+          "t": 280.7411592081572,
+          "ad": "K BANDI + İTİCİ",
+          "not_": "Birleşik entegrasyon taslağı · ideal tutuş · makine arayüzü çakışmaları henüz açık."
+        },
+        {
+          "t": 284.9611592081572,
+          "ad": "KUTU",
+          "not_": "Birleşik entegrasyon taslağı · ideal tutuş · makine arayüzü çakışmaları henüz açık."
+        },
+        {
+          "t": 292.37115920815717,
+          "ad": "machine.box_ready",
+          "not_": "Birleşik entegrasyon taslağı · ideal tutuş · makine arayüzü çakışmaları henüz açık."
+        },
+        {
+          "t": 328.5287982033956,
+          "ad": "order.complete",
+          "not_": "Birleşik entegrasyon taslağı · ideal tutuş · makine arayüzü çakışmaları henüz açık."
+        }
+      ],
+      "robot_frames": 11858
+    },
+    {
+      "kod": "birlesik_kiymali",
+      "ad": "Kıymalı pide + robot",
+      "sure": 327.7787982033956,
+      "adim": [
+        {
+          "t": 0,
+          "ad": "order.accepted / qr.reserved",
+          "not_": "Birleşik entegrasyon taslağı · ideal tutuş · makine arayüzü çakışmaları henüz açık."
+        },
+        {
+          "t": 44.7011592081572,
+          "ad": "AÇICI",
+          "not_": "Birleşik entegrasyon taslağı · ideal tutuş · makine arayüzü çakışmaları henüz açık."
+        },
+        {
+          "t": 44.7011592081572,
+          "ad": "table.robot_clear",
+          "not_": "Birleşik entegrasyon taslağı · ideal tutuş · makine arayüzü çakışmaları henüz açık."
+        },
+        {
+          "t": 51.5311592081572,
+          "ad": "KIYMA",
+          "not_": "Birleşik entegrasyon taslağı · ideal tutuş · makine arayüzü çakışmaları henüz açık."
+        },
+        {
+          "t": 68.57115920815721,
+          "ad": "AKTARMA",
+          "not_": "Birleşik entegrasyon taslağı · ideal tutuş · makine arayüzü çakışmaları henüz açık."
+        },
+        {
+          "t": 70.5311592081572,
+          "ad": "FIRIN",
+          "not_": "Birleşik entegrasyon taslağı · ideal tutuş · makine arayüzü çakışmaları henüz açık."
+        },
+        {
+          "t": 273.68115920815717,
+          "ad": "KESME",
+          "not_": "Birleşik entegrasyon taslağı · ideal tutuş · makine arayüzü çakışmaları henüz açık."
+        },
+        {
+          "t": 279.9811592081572,
+          "ad": "K BANDI + İTİCİ",
+          "not_": "Birleşik entegrasyon taslağı · ideal tutuş · makine arayüzü çakışmaları henüz açık."
+        },
+        {
+          "t": 284.20115920815715,
+          "ad": "KUTU",
+          "not_": "Birleşik entegrasyon taslağı · ideal tutuş · makine arayüzü çakışmaları henüz açık."
+        },
+        {
+          "t": 291.62115920815717,
+          "ad": "machine.box_ready",
+          "not_": "Birleşik entegrasyon taslağı · ideal tutuş · makine arayüzü çakışmaları henüz açık."
+        },
+        {
+          "t": 327.7787982033956,
+          "ad": "order.complete",
+          "not_": "Birleşik entegrasyon taslağı · ideal tutuş · makine arayüzü çakışmaları henüz açık."
+        }
+      ],
+      "robot_frames": 11858
+    },
+    {
+      "kod": "birlesik_kusbasili",
+      "ad": "Kuşbaşılı pide + robot",
+      "sure": 326.8587982033956,
+      "adim": [
+        {
+          "t": 0,
+          "ad": "order.accepted / qr.reserved",
+          "not_": "Birleşik entegrasyon taslağı · ideal tutuş · makine arayüzü çakışmaları henüz açık."
+        },
+        {
+          "t": 44.7011592081572,
+          "ad": "AÇICI",
+          "not_": "Birleşik entegrasyon taslağı · ideal tutuş · makine arayüzü çakışmaları henüz açık."
+        },
+        {
+          "t": 44.7011592081572,
+          "ad": "table.robot_clear",
+          "not_": "Birleşik entegrasyon taslağı · ideal tutuş · makine arayüzü çakışmaları henüz açık."
+        },
+        {
+          "t": 51.4611592081572,
+          "ad": "KUSBASI",
+          "not_": "Birleşik entegrasyon taslağı · ideal tutuş · makine arayüzü çakışmaları henüz açık."
+        },
+        {
+          "t": 67.6511592081572,
+          "ad": "AKTARMA",
+          "not_": "Birleşik entegrasyon taslağı · ideal tutuş · makine arayüzü çakışmaları henüz açık."
+        },
+        {
+          "t": 69.6111592081572,
+          "ad": "FIRIN",
+          "not_": "Birleşik entegrasyon taslağı · ideal tutuş · makine arayüzü çakışmaları henüz açık."
+        },
+        {
+          "t": 272.76115920815715,
+          "ad": "KESME",
+          "not_": "Birleşik entegrasyon taslağı · ideal tutuş · makine arayüzü çakışmaları henüz açık."
+        },
+        {
+          "t": 279.06115920815716,
+          "ad": "K BANDI + İTİCİ",
+          "not_": "Birleşik entegrasyon taslağı · ideal tutuş · makine arayüzü çakışmaları henüz açık."
+        },
+        {
+          "t": 283.2811592081572,
+          "ad": "KUTU",
+          "not_": "Birleşik entegrasyon taslağı · ideal tutuş · makine arayüzü çakışmaları henüz açık."
+        },
+        {
+          "t": 290.7011592081572,
+          "ad": "machine.box_ready",
+          "not_": "Birleşik entegrasyon taslağı · ideal tutuş · makine arayüzü çakışmaları henüz açık."
+        },
+        {
+          "t": 326.8587982033956,
+          "ad": "order.complete",
+          "not_": "Birleşik entegrasyon taslağı · ideal tutuş · makine arayüzü çakışmaları henüz açık."
+        }
+      ],
+      "robot_frames": 11858
+    },
+    {
+      "kod": "birlesik_sucuklu",
+      "ad": "Sucuklu pide + robot",
+      "sure": 337.2487982033956,
+      "adim": [
+        {
+          "t": 0,
+          "ad": "order.accepted / qr.reserved",
+          "not_": "Birleşik entegrasyon taslağı · ideal tutuş · makine arayüzü çakışmaları henüz açık."
+        },
+        {
+          "t": 44.7011592081572,
+          "ad": "AÇICI",
+          "not_": "Birleşik entegrasyon taslağı · ideal tutuş · makine arayüzü çakışmaları henüz açık."
+        },
+        {
+          "t": 44.7011592081572,
+          "ad": "table.robot_clear",
+          "not_": "Birleşik entegrasyon taslağı · ideal tutuş · makine arayüzü çakışmaları henüz açık."
+        },
+        {
+          "t": 52.7711592081572,
+          "ad": "KASAR",
+          "not_": "Birleşik entegrasyon taslağı · ideal tutuş · makine arayüzü çakışmaları henüz açık."
+        },
+        {
+          "t": 63.691159208157195,
+          "ad": "SUCUK",
+          "not_": "Birleşik entegrasyon taslağı · ideal tutuş · makine arayüzü çakışmaları henüz açık."
+        },
+        {
+          "t": 78.0511592081572,
+          "ad": "AKTARMA",
+          "not_": "Birleşik entegrasyon taslağı · ideal tutuş · makine arayüzü çakışmaları henüz açık."
+        },
+        {
+          "t": 80.0011592081572,
+          "ad": "FIRIN",
+          "not_": "Birleşik entegrasyon taslağı · ideal tutuş · makine arayüzü çakışmaları henüz açık."
+        },
+        {
+          "t": 283.1611592081572,
+          "ad": "KESME",
+          "not_": "Birleşik entegrasyon taslağı · ideal tutuş · makine arayüzü çakışmaları henüz açık."
+        },
+        {
+          "t": 289.4611592081572,
+          "ad": "K BANDI + İTİCİ",
+          "not_": "Birleşik entegrasyon taslağı · ideal tutuş · makine arayüzü çakışmaları henüz açık."
+        },
+        {
+          "t": 293.68115920815717,
+          "ad": "KUTU",
+          "not_": "Birleşik entegrasyon taslağı · ideal tutuş · makine arayüzü çakışmaları henüz açık."
+        },
+        {
+          "t": 301.0911592081572,
+          "ad": "machine.box_ready",
+          "not_": "Birleşik entegrasyon taslağı · ideal tutuş · makine arayüzü çakışmaları henüz açık."
+        },
+        {
+          "t": 337.2487982033956,
+          "ad": "order.complete",
+          "not_": "Birleşik entegrasyon taslağı · ideal tutuş · makine arayüzü çakışmaları henüz açık."
+        }
+      ],
+      "robot_frames": 11858
+    },
+    {
+      "kod": "birlesik_lahmacun",
+      "ad": "Lahmacun (2 adet) + robot",
+      "sure": 347.81879820339566,
+      "adim": [
+        {
+          "t": 0,
+          "ad": "order.accepted / qr.reserved",
+          "not_": "Birleşik entegrasyon taslağı · ideal tutuş · makine arayüzü çakışmaları henüz açık."
+        },
+        {
+          "t": 44.7011592081572,
+          "ad": "AÇICI (1)",
+          "not_": "Birleşik entegrasyon taslağı · ideal tutuş · makine arayüzü çakışmaları henüz açık."
+        },
+        {
+          "t": 44.7011592081572,
+          "ad": "table.robot_clear",
+          "not_": "Birleşik entegrasyon taslağı · ideal tutuş · makine arayüzü çakışmaları henüz açık."
+        },
+        {
+          "t": 53.4411592081572,
+          "ad": "HARC (1)",
+          "not_": "Birleşik entegrasyon taslağı · ideal tutuş · makine arayüzü çakışmaları henüz açık."
+        },
+        {
+          "t": 60.1211592081572,
+          "ad": "AKTARMA (1)",
+          "not_": "Birleşik entegrasyon taslağı · ideal tutuş · makine arayüzü çakışmaları henüz açık."
+        },
+        {
+          "t": 62.081159208157196,
+          "ad": "FIRIN (1)",
+          "not_": "Birleşik entegrasyon taslağı · ideal tutuş · makine arayüzü çakışmaları henüz açık."
+        },
+        {
+          "t": 73.2011592081572,
+          "ad": "AÇICI (2)",
+          "not_": "Birleşik entegrasyon taslağı · ideal tutuş · makine arayüzü çakışmaları henüz açık."
+        },
+        {
+          "t": 81.9411592081572,
+          "ad": "HARC (2)",
+          "not_": "Birleşik entegrasyon taslağı · ideal tutuş · makine arayüzü çakışmaları henüz açık."
+        },
+        {
+          "t": 88.6211592081572,
+          "ad": "AKTARMA (2)",
+          "not_": "Birleşik entegrasyon taslağı · ideal tutuş · makine arayüzü çakışmaları henüz açık."
+        },
+        {
+          "t": 90.58115920815719,
+          "ad": "FIRIN (2)",
+          "not_": "Birleşik entegrasyon taslağı · ideal tutuş · makine arayüzü çakışmaları henüz açık."
+        },
+        {
+          "t": 265.2311592081572,
+          "ad": "KESME (1)",
+          "not_": "Birleşik entegrasyon taslağı · ideal tutuş · makine arayüzü çakışmaları henüz açık."
+        },
+        {
+          "t": 271.5311592081572,
+          "ad": "K BANDI + İTİCİ (1)",
+          "not_": "Birleşik entegrasyon taslağı · ideal tutuş · makine arayüzü çakışmaları henüz açık."
+        },
+        {
+          "t": 275.7511592081572,
+          "ad": "KUTU (1)",
+          "not_": "Birleşik entegrasyon taslağı · ideal tutuş · makine arayüzü çakışmaları henüz açık."
+        },
+        {
+          "t": 293.73115920815724,
+          "ad": "KESME (2)",
+          "not_": "Birleşik entegrasyon taslağı · ideal tutuş · makine arayüzü çakışmaları henüz açık."
+        },
+        {
+          "t": 300.0311592081572,
+          "ad": "K BANDI + İTİCİ (2)",
+          "not_": "Birleşik entegrasyon taslağı · ideal tutuş · makine arayüzü çakışmaları henüz açık."
+        },
+        {
+          "t": 304.2511592081572,
+          "ad": "KUTU (2)",
+          "not_": "Birleşik entegrasyon taslağı · ideal tutuş · makine arayüzü çakışmaları henüz açık."
+        },
+        {
+          "t": 311.66115920815724,
+          "ad": "machine.box_ready",
+          "not_": "Birleşik entegrasyon taslağı · ideal tutuş · makine arayüzü çakışmaları henüz açık."
+        },
+        {
+          "t": 347.81879820339566,
+          "ad": "order.complete",
+          "not_": "Birleşik entegrasyon taslağı · ideal tutuş · makine arayüzü çakışmaları henüz açık."
+        }
+      ],
+      "robot_frames": 11858
+    },
+    {
+      "kod": "birlesik_pizza",
+      "ad": "Pizza + robot",
+      "sure": 341.7987982033957,
+      "adim": [
+        {
+          "t": 0,
+          "ad": "order.accepted / qr.reserved",
+          "not_": "Birleşik entegrasyon taslağı · ideal tutuş · makine arayüzü çakışmaları henüz açık."
+        },
+        {
+          "t": 44.7011592081572,
+          "ad": "AÇICI",
+          "not_": "Birleşik entegrasyon taslağı · ideal tutuş · makine arayüzü çakışmaları henüz açık."
+        },
+        {
+          "t": 44.7011592081572,
+          "ad": "table.robot_clear",
+          "not_": "Birleşik entegrasyon taslağı · ideal tutuş · makine arayüzü çakışmaları henüz açık."
+        },
+        {
+          "t": 50.7111592081572,
+          "ad": "SOS",
+          "not_": "Birleşik entegrasyon taslağı · ideal tutuş · makine arayüzü çakışmaları henüz açık."
+        },
+        {
+          "t": 55.821159208157205,
+          "ad": "KASAR",
+          "not_": "Birleşik entegrasyon taslağı · ideal tutuş · makine arayüzü çakışmaları henüz açık."
+        },
+        {
+          "t": 67.7411592081572,
+          "ad": "SUCUK",
+          "not_": "Birleşik entegrasyon taslağı · ideal tutuş · makine arayüzü çakışmaları henüz açık."
+        },
+        {
+          "t": 82.60115920815721,
+          "ad": "AKTARMA",
+          "not_": "Birleşik entegrasyon taslağı · ideal tutuş · makine arayüzü çakışmaları henüz açık."
+        },
+        {
+          "t": 84.5511592081572,
+          "ad": "FIRIN",
+          "not_": "Birleşik entegrasyon taslağı · ideal tutuş · makine arayüzü çakışmaları henüz açık."
+        },
+        {
+          "t": 287.7111592081572,
+          "ad": "KESME",
+          "not_": "Birleşik entegrasyon taslağı · ideal tutuş · makine arayüzü çakışmaları henüz açık."
+        },
+        {
+          "t": 294.0111592081572,
+          "ad": "K BANDI + İTİCİ",
+          "not_": "Birleşik entegrasyon taslağı · ideal tutuş · makine arayüzü çakışmaları henüz açık."
+        },
+        {
+          "t": 298.2311592081572,
+          "ad": "KUTU",
+          "not_": "Birleşik entegrasyon taslağı · ideal tutuş · makine arayüzü çakışmaları henüz açık."
+        },
+        {
+          "t": 305.6411592081572,
+          "ad": "machine.box_ready",
+          "not_": "Birleşik entegrasyon taslağı · ideal tutuş · makine arayüzü çakışmaları henüz açık."
+        },
+        {
+          "t": 341.7987982033957,
+          "ad": "order.complete",
+          "not_": "Birleşik entegrasyon taslağı · ideal tutuş · makine arayüzü çakışmaları henüz açık."
+        }
+      ],
+      "robot_frames": 11858
+    }
+  ],
+  "known_open": [
+    "A transparent cover vs table entry",
+    "E front cover and nest vs box pickup",
+    "ELK_IC duct vs robot corridor",
+    "ELK_ZEMIN data cable vs moving robot base"
+  ],
+  "collision_certified": false,
+  "physics": false
+}

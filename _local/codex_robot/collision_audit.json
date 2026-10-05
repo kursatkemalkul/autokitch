@@ -1,0 +1,518 @@
+{
+  "machine": "step55 v9w",
+  "stride": 60,
+  "sampled_frames": 198,
+  "counts": {
+    "left_outer_finger > A_ONYUZ__on_seffaf": 2,
+    "left_inner_finger > A_ONYUZ__on_seffaf": 9,
+    "left_inner_knuckle > A_ONYUZ__on_seffaf": 2,
+    "right_outer_finger > A_ONYUZ__on_seffaf": 2,
+    "right_inner_finger > A_ONYUZ__on_seffaf": 9,
+    "right_inner_knuckle > A_ONYUZ__on_seffaf": 2,
+    "wrist_3_link > A_ONYUZ__on_seffaf": 2,
+    "robotiq_base_link > A_ONYUZ__on_seffaf": 2,
+    "wrist_2_link > A_ONYUZ__on_seffaf": 1,
+    "left_outer_knuckle > A_ONYUZ__on_seffaf": 1,
+    "right_outer_knuckle > A_ONYUZ__on_seffaf": 1,
+    "left_inner_finger > CEK_K5_ic1_1__kutu_icecek__CEKMECE": 3,
+    "right_inner_finger > CEK_K5_ic1_1__kutu_icecek__CEKMECE": 3,
+    "wrist_2_link > ELK_IC__kanal": 3,
+    "wrist_1_link > ELK_IC__kanal": 2,
+    "base_link > ELK_ZEMIN__kablo_veri": 45,
+    "upper_arm_link > ELK_IC__kanal": 34,
+    "forearm_link > ELK_IC__kanal": 22,
+    "right_outer_knuckle > ELK_IC__kanal": 1,
+    "right_outer_finger > ELK_IC__kanal": 1,
+    "robotiq_base_link > ELK_IC__kanal": 1,
+    "right_inner_finger > E_GOVDE__on_seffaf": 7,
+    "right_outer_finger > E_GOVDE__on_seffaf": 5,
+    "right_inner_knuckle > E_GOVDE__on_seffaf": 2,
+    "left_inner_finger > E_KALIP__sac": 7,
+    "left_inner_finger > E_KALIP__sac__NEST": 12,
+    "right_outer_knuckle > E_GOVDE__on_seffaf": 3
+  },
+  "finds": [
+    {
+      "index": 2160,
+      "time_s": 30.156376542888307,
+      "stage": "Hamur · hedefe yaklaş",
+      "hit": "left_outer_finger > A_ONYUZ__on_seffaf"
+    },
+    {
+      "index": 2160,
+      "time_s": 30.156376542888307,
+      "stage": "Hamur · hedefe yaklaş",
+      "hit": "left_inner_finger > A_ONYUZ__on_seffaf"
+    },
+    {
+      "index": 2160,
+      "time_s": 30.156376542888307,
+      "stage": "Hamur · hedefe yaklaş",
+      "hit": "left_inner_finger > A_ONYUZ__on_seffaf"
+    },
+    {
+      "index": 2160,
+      "time_s": 30.156376542888307,
+      "stage": "Hamur · hedefe yaklaş",
+      "hit": "left_inner_finger > A_ONYUZ__on_seffaf"
+    },
+    {
+      "index": 2160,
+      "time_s": 30.156376542888307,
+      "stage": "Hamur · hedefe yaklaş",
+      "hit": "left_inner_knuckle > A_ONYUZ__on_seffaf"
+    },
+    {
+      "index": 2160,
+      "time_s": 30.156376542888307,
+      "stage": "Hamur · hedefe yaklaş",
+      "hit": "right_outer_finger > A_ONYUZ__on_seffaf"
+    },
+    {
+      "index": 2160,
+      "time_s": 30.156376542888307,
+      "stage": "Hamur · hedefe yaklaş",
+      "hit": "right_inner_finger > A_ONYUZ__on_seffaf"
+    },
+    {
+      "index": 2160,
+      "time_s": 30.156376542888307,
+      "stage": "Hamur · hedefe yaklaş",
+      "hit": "right_inner_finger > A_ONYUZ__on_seffaf"
+    },
+    {
+      "index": 2160,
+      "time_s": 30.156376542888307,
+      "stage": "Hamur · hedefe yaklaş",
+      "hit": "right_inner_finger > A_ONYUZ__on_seffaf"
+    },
+    {
+      "index": 2160,
+      "time_s": 30.156376542888307,
+      "stage": "Hamur · hedefe yaklaş",
+      "hit": "right_inner_knuckle > A_ONYUZ__on_seffaf"
+    },
+    {
+      "index": 2220,
+      "time_s": 32.16087832637795,
+      "stage": "Hamur · hedefe yaklaş",
+      "hit": "wrist_3_link > A_ONYUZ__on_seffaf"
+    },
+    {
+      "index": 2220,
+      "time_s": 32.16087832637795,
+      "stage": "Hamur · hedefe yaklaş",
+      "hit": "robotiq_base_link > A_ONYUZ__on_seffaf"
+    },
+    {
+      "index": 2280,
+      "time_s": 34.06665207645268,
+      "stage": "Hamur · bırak",
+      "hit": "wrist_2_link > A_ONYUZ__on_seffaf"
+    },
+    {
+      "index": 2280,
+      "time_s": 34.06665207645268,
+      "stage": "Hamur · bırak",
+      "hit": "wrist_3_link > A_ONYUZ__on_seffaf"
+    },
+    {
+      "index": 2340,
+      "time_s": 36.01896496164774,
+      "stage": "Hamur · elini geri çek",
+      "hit": "left_outer_knuckle > A_ONYUZ__on_seffaf"
+    },
+    {
+      "index": 2340,
+      "time_s": 36.01896496164774,
+      "stage": "Hamur · elini geri çek",
+      "hit": "left_outer_finger > A_ONYUZ__on_seffaf"
+    },
+    {
+      "index": 2340,
+      "time_s": 36.01896496164774,
+      "stage": "Hamur · elini geri çek",
+      "hit": "left_inner_knuckle > A_ONYUZ__on_seffaf"
+    },
+    {
+      "index": 2340,
+      "time_s": 36.01896496164774,
+      "stage": "Hamur · elini geri çek",
+      "hit": "right_outer_knuckle > A_ONYUZ__on_seffaf"
+    },
+    {
+      "index": 2340,
+      "time_s": 36.01896496164774,
+      "stage": "Hamur · elini geri çek",
+      "hit": "right_outer_finger > A_ONYUZ__on_seffaf"
+    },
+    {
+      "index": 2340,
+      "time_s": 36.01896496164774,
+      "stage": "Hamur · elini geri çek",
+      "hit": "right_inner_knuckle > A_ONYUZ__on_seffaf"
+    },
+    {
+      "index": 2340,
+      "time_s": 36.01896496164774,
+      "stage": "Hamur · elini geri çek",
+      "hit": "robotiq_base_link > A_ONYUZ__on_seffaf"
+    },
+    {
+      "index": 2400,
+      "time_s": 37.78349556045013,
+      "stage": "Hamur · elini geri çek",
+      "hit": "left_inner_finger > A_ONYUZ__on_seffaf"
+    },
+    {
+      "index": 2400,
+      "time_s": 37.78349556045013,
+      "stage": "Hamur · elini geri çek",
+      "hit": "left_inner_finger > A_ONYUZ__on_seffaf"
+    },
+    {
+      "index": 2400,
+      "time_s": 37.78349556045013,
+      "stage": "Hamur · elini geri çek",
+      "hit": "left_inner_finger > A_ONYUZ__on_seffaf"
+    },
+    {
+      "index": 2400,
+      "time_s": 37.78349556045013,
+      "stage": "Hamur · elini geri çek",
+      "hit": "left_inner_finger > A_ONYUZ__on_seffaf"
+    },
+    {
+      "index": 2400,
+      "time_s": 37.78349556045013,
+      "stage": "Hamur · elini geri çek",
+      "hit": "left_inner_finger > A_ONYUZ__on_seffaf"
+    },
+    {
+      "index": 2400,
+      "time_s": 37.78349556045013,
+      "stage": "Hamur · elini geri çek",
+      "hit": "left_inner_finger > A_ONYUZ__on_seffaf"
+    },
+    {
+      "index": 2400,
+      "time_s": 37.78349556045013,
+      "stage": "Hamur · elini geri çek",
+      "hit": "right_inner_finger > A_ONYUZ__on_seffaf"
+    },
+    {
+      "index": 2400,
+      "time_s": 37.78349556045013,
+      "stage": "Hamur · elini geri çek",
+      "hit": "right_inner_finger > A_ONYUZ__on_seffaf"
+    },
+    {
+      "index": 2400,
+      "time_s": 37.78349556045013,
+      "stage": "Hamur · elini geri çek",
+      "hit": "right_inner_finger > A_ONYUZ__on_seffaf"
+    },
+    {
+      "index": 2400,
+      "time_s": 37.78349556045013,
+      "stage": "Hamur · elini geri çek",
+      "hit": "right_inner_finger > A_ONYUZ__on_seffaf"
+    },
+    {
+      "index": 2400,
+      "time_s": 37.78349556045013,
+      "stage": "Hamur · elini geri çek",
+      "hit": "right_inner_finger > A_ONYUZ__on_seffaf"
+    },
+    {
+      "index": 2400,
+      "time_s": 37.78349556045013,
+      "stage": "Hamur · elini geri çek",
+      "hit": "right_inner_finger > A_ONYUZ__on_seffaf"
+    },
+    {
+      "index": 4320,
+      "time_s": 60.52169168869052,
+      "stage": "İçecek · kavra",
+      "hit": "left_inner_finger > CEK_K5_ic1_1__kutu_icecek__CEKMECE"
+    },
+    {
+      "index": 4320,
+      "time_s": 60.52169168869052,
+      "stage": "İçecek · kavra",
+      "hit": "left_inner_finger > CEK_K5_ic1_1__kutu_icecek__CEKMECE"
+    },
+    {
+      "index": 4320,
+      "time_s": 60.52169168869052,
+      "stage": "İçecek · kavra",
+      "hit": "left_inner_finger > CEK_K5_ic1_1__kutu_icecek__CEKMECE"
+    },
+    {
+      "index": 4320,
+      "time_s": 60.52169168869052,
+      "stage": "İçecek · kavra",
+      "hit": "right_inner_finger > CEK_K5_ic1_1__kutu_icecek__CEKMECE"
+    },
+    {
+      "index": 4320,
+      "time_s": 60.52169168869052,
+      "stage": "İçecek · kavra",
+      "hit": "right_inner_finger > CEK_K5_ic1_1__kutu_icecek__CEKMECE"
+    },
+    {
+      "index": 4320,
+      "time_s": 60.52169168869052,
+      "stage": "İçecek · kavra",
+      "hit": "right_inner_finger > CEK_K5_ic1_1__kutu_icecek__CEKMECE"
+    },
+    {
+      "index": 5700,
+      "time_s": 79.7863775241815,
+      "stage": "Cola · QR girişine taşı",
+      "hit": "wrist_2_link > ELK_IC__kanal"
+    },
+    {
+      "index": 5760,
+      "time_s": 80.15349656632225,
+      "stage": "Cola · QR girişine taşı",
+      "hit": "wrist_1_link > ELK_IC__kanal"
+    },
+    {
+      "index": 5760,
+      "time_s": 80.15349656632225,
+      "stage": "Cola · QR girişine taşı",
+      "hit": "wrist_2_link > ELK_IC__kanal"
+    },
+    {
+      "index": 5880,
+      "time_s": 81.21859854750187,
+      "stage": "Cola · QR girişine taşı",
+      "hit": "base_link > ELK_ZEMIN__kablo_veri"
+    },
+    {
+      "index": 5940,
+      "time_s": 82.8744107267518,
+      "stage": "Cola · QR girişine taşı",
+      "hit": "base_link > ELK_ZEMIN__kablo_veri"
+    },
+    {
+      "index": 5940,
+      "time_s": 82.8744107267518,
+      "stage": "Cola · QR girişine taşı",
+      "hit": "upper_arm_link > ELK_IC__kanal"
+    },
+    {
+      "index": 6000,
+      "time_s": 83.48276819596359,
+      "stage": "Cola · QR girişine taşı",
+      "hit": "base_link > ELK_ZEMIN__kablo_veri"
+    },
+    {
+      "index": 6000,
+      "time_s": 83.48276819596359,
+      "stage": "Cola · QR girişine taşı",
+      "hit": "upper_arm_link > ELK_IC__kanal"
+    },
+    {
+      "index": 6060,
+      "time_s": 83.88774792495434,
+      "stage": "Cola · QR girişine taşı",
+      "hit": "base_link > ELK_ZEMIN__kablo_veri"
+    },
+    {
+      "index": 6060,
+      "time_s": 83.88774792495434,
+      "stage": "Cola · QR girişine taşı",
+      "hit": "upper_arm_link > ELK_IC__kanal"
+    },
+    {
+      "index": 6120,
+      "time_s": 84.43951452346587,
+      "stage": "Cola · QR girişine taşı",
+      "hit": "base_link > ELK_ZEMIN__kablo_veri"
+    },
+    {
+      "index": 6120,
+      "time_s": 84.43951452346587,
+      "stage": "Cola · QR girişine taşı",
+      "hit": "upper_arm_link > ELK_IC__kanal"
+    },
+    {
+      "index": 6120,
+      "time_s": 84.43951452346587,
+      "stage": "Cola · QR girişine taşı",
+      "hit": "forearm_link > ELK_IC__kanal"
+    },
+    {
+      "index": 6180,
+      "time_s": 84.89583956995493,
+      "stage": "Cola · QR girişine taşı",
+      "hit": "base_link > ELK_ZEMIN__kablo_veri"
+    },
+    {
+      "index": 6180,
+      "time_s": 84.89583956995493,
+      "stage": "Cola · QR girişine taşı",
+      "hit": "forearm_link > ELK_IC__kanal"
+    },
+    {
+      "index": 6240,
+      "time_s": 85.40056112977173,
+      "stage": "Cola · QR girişine taşı",
+      "hit": "base_link > ELK_ZEMIN__kablo_veri"
+    },
+    {
+      "index": 6300,
+      "time_s": 86.08232195745067,
+      "stage": "Cola · QR girişine taşı",
+      "hit": "base_link > ELK_ZEMIN__kablo_veri"
+    },
+    {
+      "index": 6360,
+      "time_s": 86.14740109479659,
+      "stage": "Cola · QR girişine taşı",
+      "hit": "base_link > ELK_ZEMIN__kablo_veri"
+    },
+    {
+      "index": 6420,
+      "time_s": 86.30359102442561,
+      "stage": "Cola · ideal tutuş hizası",
+      "hit": "base_link > ELK_ZEMIN__kablo_veri"
+    },
+    {
+      "index": 6480,
+      "time_s": 87.45059570285125,
+      "stage": "Cola · QR gözüne yerleştir",
+      "hit": "base_link > ELK_ZEMIN__kablo_veri"
+    },
+    {
+      "index": 6540,
+      "time_s": 88.26076821706148,
+      "stage": "Cola · QR gözüne yerleştir",
+      "hit": "base_link > ELK_ZEMIN__kablo_veri"
+    },
+    {
+      "index": 6600,
+      "time_s": 89.76753955137367,
+      "stage": "Cola · parmakları aç",
+      "hit": "base_link > ELK_ZEMIN__kablo_veri"
+    },
+    {
+      "index": 6660,
+      "time_s": 90.26351094558078,
+      "stage": "Cola · parmakları aç",
+      "hit": "base_link > ELK_ZEMIN__kablo_veri"
+    },
+    {
+      "index": 6720,
+      "time_s": 91.45979864782633,
+      "stage": "Cola · QR’den geri çekil",
+      "hit": "base_link > ELK_ZEMIN__kablo_veri"
+    },
+    {
+      "index": 6780,
+      "time_s": 92.51410746678674,
+      "stage": "Cola · QR’den geri çekil",
+      "hit": "base_link > ELK_ZEMIN__kablo_veri"
+    },
+    {
+      "index": 6840,
+      "time_s": 93.81136326219855,
+      "stage": "Cola · QR’den geri çekil",
+      "hit": "base_link > ELK_ZEMIN__kablo_veri"
+    },
+    {
+      "index": 6900,
+      "time_s": 95.36618900684826,
+      "stage": "Dessert · kaynağa yaklaş",
+      "hit": "base_link > ELK_ZEMIN__kablo_veri"
+    },
+    {
+      "index": 6960,
+      "time_s": 96.04546388198945,
+      "stage": "Dessert · kaynağa yaklaş",
+      "hit": "base_link > ELK_ZEMIN__kablo_veri"
+    },
+    {
+      "index": 7020,
+      "time_s": 96.8371705933048,
+      "stage": "Dessert · kaynağa yaklaş",
+      "hit": "base_link > ELK_ZEMIN__kablo_veri"
+    },
+    {
+      "index": 7020,
+      "time_s": 96.8371705933048,
+      "stage": "Dessert · kaynağa yaklaş",
+      "hit": "upper_arm_link > ELK_IC__kanal"
+    },
+    {
+      "index": 7080,
+      "time_s": 97.78738729960523,
+      "stage": "Dessert · kaynağa yaklaş",
+      "hit": "base_link > ELK_ZEMIN__kablo_veri"
+    },
+    {
+      "index": 7080,
+      "time_s": 97.78738729960523,
+      "stage": "Dessert · kaynağa yaklaş",
+      "hit": "upper_arm_link > ELK_IC__kanal"
+    },
+    {
+      "index": 7080,
+      "time_s": 97.78738729960523,
+      "stage": "Dessert · kaynağa yaklaş",
+      "hit": "wrist_2_link > ELK_IC__kanal"
+    },
+    {
+      "index": 7080,
+      "time_s": 97.78738729960523,
+      "stage": "Dessert · kaynağa yaklaş",
+      "hit": "right_outer_knuckle > ELK_IC__kanal"
+    },
+    {
+      "index": 7080,
+      "time_s": 97.78738729960523,
+      "stage": "Dessert · kaynağa yaklaş",
+      "hit": "right_outer_finger > ELK_IC__kanal"
+    },
+    {
+      "index": 7080,
+      "time_s": 97.78738729960523,
+      "stage": "Dessert · kaynağa yaklaş",
+      "hit": "robotiq_base_link > ELK_IC__kanal"
+    },
+    {
+      "index": 7140,
+      "time_s": 98.69302677700932,
+      "stage": "Dessert · kaynağa yaklaş",
+      "hit": "base_link > ELK_ZEMIN__kablo_veri"
+    },
+    {
+      "index": 7140,
+      "time_s": 98.69302677700932,
+      "stage": "Dessert · kaynağa yaklaş",
+      "hit": "upper_arm_link > ELK_IC__kanal"
+    },
+    {
+      "index": 7140,
+      "time_s": 98.69302677700932,
+      "stage": "Dessert · kaynağa yaklaş",
+      "hit": "forearm_link > ELK_IC__kanal"
+    },
+    {
+      "index": 7200,
+      "time_s": 99.49483540088391,
+      "stage": "Dessert · kaynağa yaklaş",
+      "hit": "upper_arm_link > ELK_IC__kanal"
+    },
+    {
+      "index": 7200,
+      "time_s": 99.49483540088391,
+      "stage": "Dessert · kaynağa yaklaş",
+      "hit": "forearm_link > ELK_IC__kanal"
+    }
+  ],
+  "passed": false,
+  "scope": "Sampled triangle intersection; stock contact exceptions; static machine rest pose plus drawer stroke. Not continuous collision or physics certification."
+}

@@ -1,0 +1,120 @@
+{
+  "version": "v14",
+  "machine_base": "7866c9213cdcb535d225b1a079194d9938eaab94",
+  "machine_model": "../v3/hat3_v7.glb",
+  "robot_model": "ur10e_short.glb",
+  "robot": "UR10e",
+  "end_effector": "Native Robotiq mechanism + common short thin turquoise tips",
+  "coordinate_conversion": "Isaac metres Z-up -> machine metres Y-up: (x,z,-y)",
+  "rail_envelope_mm": [
+    936,
+    5100
+  ],
+  "carriage_absolute_x_mm": [
+    1176,
+    4860
+  ],
+  "robot_base_height_mm": 130,
+  "mount_extension_mm": 0,
+  "kinematic_control": true,
+  "physics_simulation": false,
+  "collision_method": "Native collision geometry against current full assembly triangles; BVH surface intersections. Containment and continuous swept collisions not certified.",
+  "open": [
+    "Ideal grasp kinematic preview; no force or real robot safety certification.",
+    "Robot base shifted 100mm forward on carriage adapter; base height and short tool unchanged.",
+    "Opener is retracted to its existing 90mm home stroke (+30mm from imported idle).",
+    "Previously requested table access lid and four E front stops removed; table centre and drawer stocking unchanged.",
+    "Rail cable route replaced by a low covered-channel envelope; routing/support engineering remains to be specified.",
+    "No thermal/electrical production design for the simplified QR proposal.",
+    "Manual poses from the previous mounting remain stored under the old local storage key.",
+    "E front cover: 350x165mm physical box-pickup aperture; original supporting nest retained. Box preview rests 1mm above its support.",
+    "Stored product contact with its own silicone support is accepted only during grasp; robot/support and neighbouring stock collisions remain checked.",
+    "v11: fixed right-aligned QR, 3 columns x3 rows, 9 cells, 1473mm wide. Machine envelope drawing fixed to actual station X boundaries; no new station or machine resizing. Full transit/order path not replanned.",
+    "v12 endpoint measuring animation only. Existing 42-ball stocking preserved. Ideal grasp alignment is adjusted in free corridor; no physical gripping/force validation. Geometric rail length uses existing CAD 240mm carriage-centre end allowance each side; additional 50mm stop margin each side is a design assumption, not selected rail supplier specification. Not a global shortest rail proof or an all-stock-points audit.",
+    "v13: added lower3cells, floor588mm; unchanged1473mm width and1636mm top. All12cells x3products xentry/exit passed41sample poses each path, static0. 588mm floor below prior850mm human comfort assumption; human ergonomics unverified. Original v12 animation is retained and is not a full12cell order animation. Ideal grasp, no real forces or continuous sweep certification. Right upper cola/dessert needs carriage4.86m,97mm beyond v12endpoint measurement; combined recommended rail4064mm with assumed stop margins.",
+    "v14: corrected box source roll90deg, front edge upper/lower grip; both pads contactBox.80x105x33mm access notch in E nest under edge, preview only. Cola vertical source upper body contact both pads.21 sample opening/closing poses each source passed native environment/self; nonpad product collision0. Ideal pads/grasp; forces untested. Old QR12 and rail measurement paths remain historical and do not validate corrected box-grasp QR placement."
+  ],
+  "scenario": "rail-measurement: leftmost dough column to opening table; right box pickup to right upper QR bay",
+  "table_delivery": true,
+  "stock_count": 42,
+  "scenario_record": "rail_animation_v12.json",
+  "mount_forward_m": 0.1,
+  "lightweight_scene": "light_scene_v14.json",
+  "fixed_qr_reach": "qr_grid_v13.json",
+  "preview": "makine_robot.html",
+  "scenario_playback_active": true,
+  "shelf_limit": "shelf_dense_v7.json",
+  "rail_shift_mm": 500,
+  "local_source_checks": "source_dense_v12.json",
+  "pose_file": "poses_v12.json",
+  "qr_capacity": 12,
+  "machine_envelope_mm": {
+    "x": [
+      736,
+      5230
+    ],
+    "depth": 909,
+    "height": 2200,
+    "opener_width": 700
+  },
+  "fixed_qr_checks": {
+    "cells": 12,
+    "paths": 72,
+    "poses": 2952
+  },
+  "rail_measurement": {
+    "version": 12,
+    "passed": true,
+    "ideal_grasp": true,
+    "continuous_collision_certified": false,
+    "frames": 1397,
+    "checks": 4848,
+    "carriage_min_mm": 1376,
+    "carriage_max_mm": 4763,
+    "required_stroke_mm": 3387,
+    "end_allowance_each_mm": 240,
+    "geometric_rail_length_mm": 3867,
+    "recommended_extra_stop_margin_each_mm": 50,
+    "recommended_rail_length_mm": 3967,
+    "rail_start_m": 1.1360691692136846,
+    "rail_end_m": 5.003,
+    "table_m": [
+      1.0861165201199048,
+      1.0238560228202322,
+      -0.16993614608605556
+    ],
+    "box_qr_m": [
+      4.913017560012397,
+      1.3974981912290814,
+      1.911999849306855
+    ],
+    "method": "Collision sampled native robot/full fixed machine+QR; ideal grasp with explicit small grip alignment adjustment in free corridor. Feasible animated path envelope, not global minimum or hardware end-stop design.",
+    "rear_rows_not_audited": true,
+    "dough_left_column_m": [
+      0.8889701068401337,
+      0.2333323061466217,
+      -0.1979999989271164
+    ]
+  },
+  "qr_layout": {
+    "rows": 4,
+    "cells": 12,
+    "floors_mm": [
+      588,
+      850,
+      1112,
+      1374
+    ]
+  },
+  "qr_rail_requirement": {
+    "carriage_min_m": 1.3760691692136846,
+    "carriage_max_m": 4.86,
+    "rail_start_m": 1.1360691692136846,
+    "rail_end_m": 5.1000000000000005,
+    "required_stroke_mm": 3484,
+    "geometric_rail_length_mm": 3964,
+    "recommended_with_50mm_each_end_mm": 4064,
+    "assumptions": "Existing CAD end allowance240mm each; extra50mm each remains design assumption; combined separate source and QR routes, not a continuous new full order."
+  },
+  "grip_geometry": "grasp_v14.json"
+}
