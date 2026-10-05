@@ -1,0 +1,32 @@
+20:eksik = EH.istasyon_kur(E.ekle, E.DELIKLER, E.DUSUR, ER, R, E.PARCALAR)
+25:yeni = list(E.PARCALAR)
+QR + hat: 322 parça · 7 sn
+   kablo geçiş deliği: ana_besleme_kanali                 ← DOLAP_guc, DOLAP_veri
+   kablo geçiş deliği: ana_pano_toplama_kanali            ← DOLAP_guc, DOLAP_veri, E_guc, E_veri, K_guc, K_veri, QR_guc, QR_veri, ROBOT_guc, ROBOT_veri, TOPPING_guc, TOPPING_veri, bina, modem
+   kablo geçiş deliği: ust_hat_TOPPING                    ← TOPPING_guc, TOPPING_veri
+   kablo geçiş deliği: ust_hat_TOPPING_A                  ← A_guc, A_veri
+   kablo geçiş deliği: ust_hat_U_F                        ← A_guc, A_veri, F_guc, F_veri
+   kablo geçiş deliği: ust_hat_U_KE_arka                  ← E_guc, E_veri, K_guc, K_veri
+   kablo geçiş deliği: ust_hat_gecis_F_T                  ← bina
+   kablo geçiş deliği: zemin_ustu_kanal                   ← QR_guc, QR_veri, ROBOT_guc, ROBOT_veri, modem
+istasyon: yol 19 · BULUNAMADI 3 · askıda 0 · eksik soket []
+   BULUNAMADI: K_harting_ic_kablo YENI|harting_K_soket
+   BULUNAMADI: E_harting_ic_kablo YENI|harting_E_soket
+   BULUNAMADI: DOLAP_harting_ic_kablo YENI|DOLAP_kutu_rakoru_M20
+   ÇAKIŞMA   1393.9  ana_besleme_kanali                            ↔ TOPPING_MODUL|sartlandirici_filtre_regulator
+   ÇAKIŞMA    143.8  ana_besleme_kanali                            ↔ TOPPING_MODUL|kabin_sag_duvar_PU
+   ÇAKIŞMA   1811.2  ana_besleme_kanali                            ↔ TOPPING_MODUL|yalitim_blogu
+   ÇAKIŞMA     75.4  ana_besleme_kanali                            ↔ TOPPING_MODUL|soguk_arka_dis_sac
+   ÇAKIŞMA     31.5  ana_besleme_kanali                            ↔ TOPPING_MODUL|soguk_ic_kaplama
+   ÇAKIŞMA   1355.2  ana_besleme_kanali                            ↔ TOPPING_MODUL|alt_yalitim_saci
+   ÇAKIŞMA    136.0  ana_besleme_kanali                            ↔ TOPPING_MODUL|alt_yalitim_PU
+   ÇAKIŞMA     57.0  ana_besleme_kanali                            ↔ TOPPING_MODUL|raf_arka_bukumu
+   ÇAKIŞMA     25.5  ana_besleme_kanali                            ↔ TOPPING_MODUL|raf_kosebendi_sag
+   ÇAKIŞMA    588.0  ana_besleme_taban_cercevesi                   ↔ B_SOGUTMA|buharlastirma_tavasi
+   ÇAKIŞMA    234.0  ust_hat_U_F                                   ↔ U_F_GOVDE|ust_f_tavan_kirisi_0
+   ÇAKIŞMA    234.0  ust_hat_U_F                                   ↔ U_F_GOVDE|ust_f_tavan_kirisi_1
+   ÇAKIŞMA    420.0  ust_hat_U_F_kapak                             ↔ U_F_GOVDE|ust_f_tavan_kirisi_0
+   ÇAKIŞMA    420.0  ust_hat_U_F_kapak                             ↔ U_F_GOVDE|ust_f_tavan_kirisi_1
+ÇAKIŞMA: 14 (denetlenen 409 parça) · 648 sn
+
+[exited with code 0]

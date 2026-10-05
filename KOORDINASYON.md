@@ -34,7 +34,7 @@ Bir işe başlamadan önce tabloda başka bir ajanın aynı istasyonu ya da ayn�
 
 ## 5. Güvenlik
 
-- Depo herkese açık. Oturum kayıtları (`.jsonl`, `tasks/*.output`), parola, anahtar, kişisel bilgi depoya konmaz.
+- Depo herkese açık. Oturum kayıtları `_local/claude_oturum/` altında durur (Kemal: kalsın); `_local/` siteye kopyalanmaz. Parola, anahtar, kişisel bilgi depoya konmaz.
 - Büyük ara dosyalar (`.pkl`, 100 MB üstü GLB) depoya konmaz; GLB gerekirse kayıpsız `.gz` olarak.
 
 ZİNCİR KİLİDİ: (boş)

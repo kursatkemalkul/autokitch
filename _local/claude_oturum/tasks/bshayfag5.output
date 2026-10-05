@@ -1,0 +1,26 @@
+19:E.dunya_ekle()
+38:    sh = EO2.boru(b, 6.25); x = sh.intersect(PP[a]); bb = x.BoundingBox(); print("DEBUG", a, round(x.Volume(), 1), [round(v, 1) for v in (bb.xmin, bb.xmax, bb.ymin, bb.ymax, bb.zmin, bb.zmax)])
+QR + hat: 331 parça · 7 sn
+motor STEP bbox -28.0 28.0 -332.8 28.0 -64.5 31.6
+v3.7b · dökümde olmayan U / F üstü parçası eklendi: 25
+   kablo geçiş deliği: ana_besleme_kanali                 ← DOLAP_guc, DOLAP_veri
+   kablo geçiş deliği: ana_pano_toplama_kanali            ← DOLAP_guc, DOLAP_veri, E_guc, E_veri, K_guc, K_veri, QR_guc, QR_veri, ROBOT_guc, ROBOT_veri, TOPPING_guc, TOPPING_veri, bina, fan24, modem
+   kablo geçiş deliği: ust_hat_TOPPING                    ← TOPPING_guc, TOPPING_veri
+   kablo geçiş deliği: ust_hat_TOPPING_A                  ← A_guc, A_veri
+   kablo geçiş deliği: ust_hat_U_F                        ← A_guc, A_veri, F_guc, F_veri, fan24
+   kablo geçiş deliği: ust_hat_U_KE_arka                  ← E_guc, E_veri, K_guc, K_veri
+   kablo geçiş deliği: ust_hat_gecis_F_T                  ← bina
+   kablo geçiş deliği: zemin_ustu_kanal                   ← QR_guc, QR_veri, ROBOT_guc, ROBOT_veri, modem
+istasyon: yol 26 · BULUNAMADI 3 · askıda 0 · eksik soket []
+   BULUNAMADI: K_harting_ic_kablo YENI|harting_K_soket
+   BULUNAMADI: E_harting_ic_kablo YENI|harting_E_soket
+   BULUNAMADI: DOLAP_harting_ic_kablo YENI|DOLAP_kutu_rakoru_M20
+   ÇAKIŞMA     60.9  ust_hat_kesit_gecis_UF3_UF4                   ↔ U_F_HAVALANDIRMA|ust_f_fan_filtre_kasasi_atis_0
+   ÇAKIŞMA     15.6  ust_hat_U_F_konsol_0                          ↔ U_F_HAVALANDIRMA|ust_f_fan_filtre_kasasi_atis_0
+ÇAKIŞMA: 2 (denetlenen 437 parça) · 764 sn
+DEBUG harting_K_soket 360.7 [4283.8, 4296.2, 1830.1, 1832.8, -761.2, -744.0]
+   soket bb [4258.5, 4341.5, 1830.1, 1885.9, -788.5, -731.5]
+DEBUG harting_E_soket 329.8 [5083.8, 5096.2, 1830.1, 1832.8, -776.0, -763.8]
+   soket bb [5058.5, 5141.5, 1830.1, 1885.9, -788.5, -731.5]
+
+[exited with code 0]

@@ -1,0 +1,24 @@
+== yap_montaj
+ok
+== b4_montaj
+sac 63
+öğe 1364 0 s
+GDOKUN b_kanal_782_0 ['g_bolme_2_kovan_1', 'g_bolme_2_sac_a', 'ic_kanal_32']
+GDOKUN b_kanal_783_0 ['g_ic_arka_1', 'g_bolme_2_sac_a', 'ic_kanal_32']
+GDOKUN b_kanal_804_0 ['g_ic_tavan_2', 'ic_kanal_57']
+GDOKUN b_kanal_804_1 ['g_ic_tavan_2', 'ic_kanal_57']
+GDOKUN b_kanal_815_0 ['ic_kanal_57']
+GDOKUN b_kanal_815_1 ['ic_kanal_57']
+süre 215.6 s · adım 23 · öğe 1417 · zamanlanmamış 0 []
+PLAN SORUNU 0
+219 s
+== b4_cikti
+parça 1417 · süre 215.6 · adım 23
+YOL: çift 6012 · çakışma 0 · 328 s
+ÜRETİM KARELERİ: 0 sorun
+BELİRME [] 0 · HAVADA ['tasiyici_plaka_-484', 'tasiyici_plaka_-574']
+SON KONUM kesişimleri:
+SAC ↔ MODEL en büyük kutu farkı: [('g_ic_taban_1', 15.0), ('g_ic_taban_2', 15.0), ('g_ic_sol_duvar', 14.99), ('g_bolme_1_sac_a', 11.9901), ('g_bolme_5_sac_a', 11.9901)]
+GLB 35.64 MB · JSON yazıldı · zarf [[0.736, 0.0, -1.069], [4.615, 1.622, 1.112]]
+
+[exited with code 0]

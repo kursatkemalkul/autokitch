@@ -1,0 +1,35 @@
+[   7.2s] h3_b_sac_v1 · kuruldu: 63 sac · 41 PU · 138 eleman · 30 kaynak etiketi · 146 arayüz · 7.2 sn
+[  20.1s] SAC: 63 parça · açınım doğrulaması kalan 0 · DFM 0 HATA · 0 UYARI
+[  20.1s] PROFİL: 0 boru · 0.0 m · DFM 0 HATA
+[  20.1s] ZARF: hedef [736.0, 4400.0, 123.0, 788.0, -830.0, 39.0] · bulunan [np.float64(736.0), np.float64(4400.0), np.float64(123.0), np.float64(788.0), np.float64(-830.0), np.float64(39.0)] · fark [np.float64(0.0), np.float64(0.0), np.float64(0.0), np.float64(0.0), np.float64(0.0), np.float64(0.0)] · taşan 0 → GEÇTİ
+[  26.4s] GÖVDE ↔ GÖVDE: kesişim 0 · izinli (işaretli) 0
+[ 215.6s] GÖVDE ↔ v8zq (6646 bileşen · hariç ^B_KASA__(sac|pu|on_cerceve|koyu)$): ÇAKIŞMA 26 · İNCELE 0 · TEMAS 477 (izinli 0)
+[ 215.6s]    ÇAKIŞMA isi_kalkani_u[0]                                   ↔ B_MODULER__gfrp[7]                           1.499 mm · hacim 107.996 · [2500.0, 785.0, -104.5]
+[ 215.6s]    ÇAKIŞMA isi_kalkani_u[0]                                   ↔ B_MODULER__paslanmaz[7]                      1.156 mm · hacim 268.789 · [2500.0, 754.7, -96.2]
+[ 215.6s]    ÇAKIŞMA ic_taban_2[0]                                      ↔ B_TASIYICI__celik[9]                         1.153 mm · hacim 268.799 · [3387.2, 163.3, -606.2]
+[ 215.6s]    ÇAKIŞMA ic_tavan_2[0]                                      ↔ B_TASIYICI__celik[9]                         1.153 mm · hacim 268.803 · [3387.2, 668.0, -606.2]
+[ 215.6s]    ÇAKIŞMA ic_taban_2[0]                                      ↔ B_TASIYICI__celik[10]                        1.145 mm · hacim 268.799 · [3997.2, 163.3, -123.8]
+[ 215.6s]    ÇAKIŞMA ic_tavan_2[0]                                      ↔ B_TASIYICI__celik[10]                        1.145 mm · hacim 268.803 · [3997.2, 668.0, -123.8]
+[ 215.6s]    ÇAKIŞMA ic_taban_1[0]                                      ↔ B_MODULER__paslanmaz[1]                      1.143 mm · hacim 268.799 · [1449.8, 163.3, -719.8]
+[ 215.6s]    ÇAKIŞMA ic_tavan_1[0]                                      ↔ B_MODULER__paslanmaz[1]                      1.143 mm · hacim 268.803 · [1449.8, 728.0, -719.8]
+[ 215.6s]    ÇAKIŞMA ic_taban_2[0]                                      ↔ B_TASIYICI__celik[7]                         1.143 mm · hacim 268.799 · [2732.2, 163.3, -633.8]
+[ 215.6s]    ÇAKIŞMA ic_tavan_2[0]                                      ↔ B_TASIYICI__celik[7]                         1.143 mm · hacim 268.803 · [2732.2, 668.0, -633.8]
+[ 215.6s]    ÇAKIŞMA ic_taban_2[0]                                      ↔ B_TASIYICI__celik[8]                         1.130 mm · hacim 268.799 · [3414.8, 163.3, -96.2]
+[ 215.6s]    ÇAKIŞMA ic_tavan_2[0]                                      ↔ B_TASIYICI__celik[8]                         1.130 mm · hacim 268.803 · [3414.8, 668.0, -96.2]
+[ 215.6s]    ÇAKIŞMA ic_taban_1[0]                                      ↔ B_MODULER__paslanmaz[2]                      1.128 mm · hacim 268.799 · [2104.9, 163.3, -692.3]
+[ 215.6s]    ÇAKIŞMA ic_taban_1[0]                                      ↔ B_MODULER__paslanmaz[6]                      1.128 mm · hacim 268.799 · [2104.9, 163.3, -96.2]
+[ 215.6s]    ÇAKIŞMA ic_tavan_1[0]                                      ↔ B_MODULER__paslanmaz[2]                      1.128 mm · hacim 268.803 · [2104.9, 728.0, -692.3]
+[ 215.6s]    ÇAKIŞMA ic_tavan_1[0]                                      ↔ B_MODULER__paslanmaz[6]                      1.128 mm · hacim 268.803 · [2104.9, 728.0, -96.2]
+[ 215.6s]    ÇAKIŞMA ic_taban_2[0]                                      ↔ B_TASIYICI__celik[11]                        1.127 mm · hacim 268.799 · [4024.7, 164.5, -606.1]
+[ 215.6s]    ÇAKIŞMA ic_tavan_2[0]                                      ↔ B_TASIYICI__celik[11]                        1.127 mm · hacim 268.803 · [4024.7, 669.2, -606.1]
+[ 215.6s]    ÇAKIŞMA ic_taban_2[0]                                      ↔ B_TASIYICI__celik[6]                         1.126 mm · hacim 268.799 · [2759.8, 163.3, -123.8]
+[ 215.6s]    ÇAKIŞMA ic_tavan_2[0]                                      ↔ B_TASIYICI__celik[6]                         1.126 mm · hacim 268.803 · [2759.8, 668.0, -123.8]
+[ 215.6s]    ÇAKIŞMA ic_taban_1[0]                                      ↔ B_MODULER__paslanmaz[5]                      1.122 mm · hacim 268.799 · [1449.8, 163.3, -123.8]
+[ 215.6s]    ÇAKIŞMA ic_tavan_1[0]                                      ↔ B_MODULER__paslanmaz[5]                      1.122 mm · hacim 268.803 · [1449.8, 728.0, -123.8]
+[ 215.6s]    ÇAKIŞMA bolme_1_kovan_2[0]                                 ↔ B_KABLO__kanal[5]                            0.599 mm · hacim 24.491 · [1428.8, 703.0, -765.2]
+[ 215.6s]    ÇAKIŞMA bolme_3_kovan_0[0]                                 ↔ B_KABLO__kanal[7]                            0.599 mm · hacim None · [2730.5, 643.2, -765.0]
+[ 215.6s]    ÇAKIŞMA bolme_4_kovan_2[0]                                 ↔ B_KABLO__kanal[7]                            0.599 mm · hacim None · [3389.2, 643.0, -765.2]
+[ 215.6s]    ÇAKIŞMA bolme_5_kovan_2[0]                                 ↔ B_KABLO__kanal[7]                            0.599 mm · hacim None · [4001.2, 643.2, -765.0]
+[ 287.8s] ARAYÜZ: 146 eleman · kestiği v8zq parçası 89 → ['B_MODULER__paslanmaz[8]', 'B_MODULER__paslanmaz[9]', 'B_TASIYICI__celik[11]', 'B_TASIYICI__celik[7]', 'B_TASIYICI__celik[9]', 'CEK_K1_lahm_1__celik[0]', 'CEK_K1_lahm_1__celik[1]', 'CEK_K1_lahm_1__celik__CEKMECE_ARA[0]', 'CEK_K1_lahm_1__celik__CEKMECE_ARA[1]', 'CEK_K1_lahm_2__celik[0]', 'CEK_K1_lahm_2__celik[1]', 'CEK_K1_lahm_2__celik__CEKMECE_ARA[0]']
+
+[killed]

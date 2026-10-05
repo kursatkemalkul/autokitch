@@ -1,0 +1,12 @@
+[ 189.1s] astar_sol                          t1.0 · 4 büküm · açınım 1050×645 · ΔV 0.0 sim 0.0 · kalınlık True · kesit True · DFM 1 HATA 0 UYARI
+[ 189.1s]         HATA abkant             düz bıçak + V kalıpla HİÇBİR sırada temiz değil (tam arama 28 sıra denemesi) · en iyi sıra [1, 2, 3, 4] · çarpışma [(4, 'baslangic', 'kalip', 'P3'), (4, 'baslangic', 'kalip', 'B2')] → kaz boynu bıçak 
+[ 190.5s] astar_sag                          t1.0 · 4 büküm · açınım 1050×645 · ΔV 0.0 sim 0.0 · kalınlık True · kesit True · DFM 1 HATA 0 UYARI
+[ 190.5s]         HATA abkant             düz bıçak + V kalıpla HİÇBİR sırada temiz değil (tam arama 28 sıra denemesi) · en iyi sıra [1, 3, 4, 2] · çarpışma [(2, 'baslangic', 'kalip', 'P1'), (2, 'baslangic', 'kalip', 'B0')] → kaz boynu bıçak 
+[ 246.7s] SAC: 48 parça · açınım doğrulaması kalan 0 · DFM 2 HATA · 0 UYARI
+[ 246.8s] ZARF: hedef [1436.0, 2500.0, 788.0, 2200.0, -830.0, 39.0] · bulunan [np.float64(1436.0), np.float64(2500.0), np.float64(788.0), np.float64(2200.0), np.float64(-830.0), np.float64(39.0)] · fark [np.float64(0.0), np.float64(0.0), np.float64(0.0), np.float64(0.0), np.float64(0.0), np.float64(0.0)] · taşan 0 → GEÇTİ
+[ 267.6s] GÖVDE ↔ GÖVDE: kesişim 0 · izinli (işaretli) 0
+[ 447.5s] GÖVDE ↔ v8zq (6579 bileşen · hariç ^$^): ÇAKIŞMA 0 · İNCELE 0 · TEMAS 296 (izinli 0)
+[1013.9s] HAVADA: 330 parça · zemine bağlı kök 9 · bağlı 330 · HAVADA 0
+[1039.7s] PU GÖRÜNMEZ: 5 PU parçası · açıkta yüz noktası 81 → [('pu_raf_esik', [2440.4, 1122.7, 36.2]), ('pu_raf_esik', [2440.4, 1140.9, 36.2]), ('pu_raf_esik', [2440.4, 1114.6, 34.8]), ('pu_raf_esik', [1495.6, 1122.7, 36.2]), ('pu_raf_esik', [1495.6, 1140.9, 36.2])]
+
+[exited with code 0]

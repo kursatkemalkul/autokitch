@@ -1,0 +1,9 @@
+/usr/bin/bash: line 1: 38891 Segmentation fault         python -u h3/h3_hiz_ornek.py h3/hat3_montaj_v5.py h3/_ornek_montaj_v5 > h3/_log_ornek_montaj_v5.txt 2>&1
+EXIT 139
+            ^^^^^^^^^^^^^^^
+  File "C:\Users\Kemal\AppData\Local\Temp\claude\C--Users-Kemal-Desktop-Kemal-WEBS-TE\f3ef876a-f062-4b29-bb81-775cc8a1a6d8\scratchpad\b3_hiz\arastirma\_uretec\h3\h3_tu_v1.py", line 49, in den_assert
+    assert os.path.getmtime(yol) >= t_uret, "v2 TOPPING denetim raporu üreteçten ESKİ: %s" % ad
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: v2 TOPPING denetim raporu üreteçten ESKİ: _denetim_topping_v1.json
+
+[exited with code 0]

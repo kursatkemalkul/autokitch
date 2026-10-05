@@ -1,0 +1,4 @@
+153:    on_max = max(nd["ray"]["on"], sw["ray"]["on"], rp["ray"]["on"], isw["ray"]["on"], 120.0)
+153:    on_max = max(nd["ray"]["on"], sw["ray"]["on"], rp["ray"]["on"], isw["ray"]["on"], KS.bilgi("PR100197")["ray"]["on"], 125.0)   # v3.7: DIO fişleri 124,4 · QUINT4-CAP 125
+
+[exited with code 0]
