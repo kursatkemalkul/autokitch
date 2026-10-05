@@ -1,6 +1,8 @@
 """Reserved chain step70: shorten ONLY the 32 K panel FHP studs.
 GLB -> GLB. No TOPPING modifications. Run twice before chain integration.
 """
+import sys
+sys.dont_write_bytecode=True
 from pathlib import Path
 import sys,json,os,subprocess,hashlib
 import numpy as np
