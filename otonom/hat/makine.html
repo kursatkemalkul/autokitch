@@ -5,7 +5,7 @@
 (function () { const f0 = window.fetch; window.fetch = function (u, o) { if (typeof u === 'string' && u.indexOf('../hat3d/parca_kutulari.json') === 0) u = '../hat3d/v3/parca_kutulari.json?v=9w'; return f0.call(this, u, o); }; })();
 </script>
 <style>.sip{display:flex;flex-wrap:wrap;gap:6px;align-items:center;padding:10px 16px;background:#14181e;border-top:1px solid #2a3039}.sip span{color:#9aa3ad;font:700 12px system-ui,sans-serif;letter-spacing:.04em;margin-right:6px}.sip button{border:1px solid #39424f;background:#232932;color:#e6ebf0;border-radius:18px;padding:7px 14px;font:600 13px system-ui,sans-serif;cursor:pointer}.sip button.ak{background:#d94a3a;border-color:#d94a3a;color:#fff}.zc{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;padding:10px 16px;background:#1b1f26;border-top:1px solid #2a3039}.zc button{border:1px solid #39424f;background:#232932;color:#cfd6df;border-radius:8px;padding:6px 11px;font:600 12.5px system-ui,sans-serif;cursor:pointer}.zc input[type=range]{flex:1 1 220px;accent-color:#4f86ff}.zc .sn{color:#8d97a4;font:600 12px system-ui,sans-serif;font-variant-numeric:tabular-nums;min-width:70px}.adim{display:flex;flex-wrap:wrap;gap:6px;padding:0 16px 12px;background:#1b1f26}.adim button{border:1px solid #2f3742;background:#1f252d;color:#aab4c0;border-radius:999px;padding:4px 10px;font:600 11.5px system-ui,sans-serif;cursor:pointer}.adim button.ak{border-color:#e0a31c;background:#3a2f14;color:#ffd978}.anlat{padding:8px 16px 14px;background:#1b1f26;color:#dce3ea;font:14px/1.45 system-ui,sans-serif;min-height:42px}.anlat b{color:#ffd978}.zc.hz button.ak{background:#4f86ff;border-color:#4f86ff;color:#fff}.v2 ul{margin:6px 0 0 18px;padding:0}.v2 li{margin:3px 0}</style></head><body>
-<div class="top"><div class="in"><div class="crumb"><a href="../">Store</a><span>&rsaquo;</span><a href="index.html">HAT</a><span>&rsaquo;</span><b>Makine v3</b></div><div><a href="makine_v2.html">v2 modeli &rarr;</a> &middot; <a href="makine.html">v1 &rarr;</a></div></div></div>
+<div class="top"><div class="in"><div class="crumb"><a href="../">Store</a><span>&rsaquo;</span><a href="index.html">HAT</a><span>&rsaquo;</span><b>Makine v3</b></div><div></div></div></div>
 <div class="wrap"><h1>MAKİNE v3 &mdash; sos ve harç dik iner<span class="tag" style="background:#1f6feb" id="etiket">4494 &times; 909 &times; 2200 · HAT v3.8</span></h1>
 <div class="card v2" style="border-left:4px solid #1f6feb;background:#f2f6fd;margin:12px 0"><b style="color:#1747a6">VERSİYON 3 (30 Eyl 2026 · yerel).</b> v1 ve v2 aynen duruyor; bu ayrı model.
 <ul>
@@ -37,7 +37,7 @@
 <div class="foot">AUTOKITCH &middot; HAT v3 &middot; model: arastirma/_uretec/h3/hat3_montaj_v1.py (h3_* üreteçleri) &middot; 30 Eyl 2026</div>
 
 <script>
-const SAYFA = {A:'press.html', B:'store.html', C:'topping_v2.html', D:'oven.html', K:'kesme.html', E:'pack.html', S:'service.html', U:'makine_v3.html', '-':'robot.html'};
+const SAYFA = {A:'press.html', B:'store.html', C:'topping_v2.html', D:'oven.html', K:'kesme.html', E:'pack.html', S:'service.html', U:'u-montaj.html', '-':'robot.html'};
 const AD = {A:'MODÜL A · AÇICI', B:'MODÜL B · ÇEKMECELİ DOLAP (21 çekmece + teknik sütun)', C:'MODÜL C · TOPPING İKİ KATLI', D:'MODÜL F · FIRIN', K:'MODÜL K · KESME + SPREY', E:'MODÜL E · KUTU (+ robot çöpü altında)', S:'MODÜL S · SERVİS / TESLİM — QR dolabı + tezgâh', U:'MODÜL U · ÜST DEPO', '-':'ROBOT + RAY'};
 
 const M = model3d({
@@ -95,14 +95,14 @@ function animasyon(A, SIP) {
 (async()=>{
  const mv=document.getElementById('mv');
  try{
-  const response=await fetch('../hat3d/v3/claude_latest_v8/hat3_v8.glb.gz?v=1');
+  const response=await fetch('../hat3d/v3/claude_latest/hat3_v10h.glb.gz?v=1');
   if(!response.ok)throw new Error('Model download '+response.status);
   const packed=await response.arrayBuffer();
   const stream=new Blob([packed]).stream().pipeThrough(new DecompressionStream('gzip'));
   const raw=await new Response(stream).arrayBuffer();
-  if(raw.byteLength!==106592740)throw new Error('Model byte length mismatch');
+  if(raw.byteLength!==109392248)throw new Error('Model byte length mismatch');
   const digest=Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',raw)),b=>b.toString(16).padStart(2,'0')).join('');
-  if(digest!=='ade2f5f9ccffeffa9194d6d78adbd04943f49a07dedefa097518f9f78c2d4f25')throw new Error('Model integrity mismatch');
+  if(digest!=='3d040099b681fb532ea41b56d2a314d299c6276776c122af38ff4442bb75566b')throw new Error('Model integrity mismatch');
   await customElements.whenDefined('model-viewer');
   mv.src=URL.createObjectURL(new Blob([raw],{type:'model/gltf-binary'}));
  }catch(error){console.error('Latest model load failed',error);const notice=document.createElement('p');notice.textContent='Son model yüklenemedi: '+error.message;mv.after(notice);}
