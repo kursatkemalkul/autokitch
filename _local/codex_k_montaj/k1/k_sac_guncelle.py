@@ -32,6 +32,21 @@ for part in lower_parts+roof_parts+mount_parts:
  flat.taban([(0,0),(w,0),(w,h),(0,h)],O=O,ex=ex,ey=ey)
  sheets[name]=flat;old['sheets'].append({'name':name})
  flat_rows.append({'name':name,'thickness_mm':t,'normal_axis':'XYZ'[axis],'native_stock_bounds_mm':[lo.tolist(),hi.tolist()],'source':'lower_support.build / roof_mounts.build_roof / mechanism_mounts.build_mounts','holes_from_current_mesh_preserved':True,'machining_verified':False})
+# Authoritative current side plates are6mm, although older v8 cut extents
+# reference8mm. Use CURRENT cached triangles, never recreate from old solids.
+# These three parts are flat laser plates; actual bores/cut-outs stay in the mesh.
+for name in ('bant_yan_-421','bant_yan_-3','olu_plaka'):
+ v=P[name]['V'];lo=v.min(0);hi=v.max(0);span=hi-lo;axis=int(np.argmin(span));t=float(span[axis])
+ assert abs(t-6.)<.001,(name,t)
+ distance=np.minimum(abs(v[:,axis]-lo[axis]),abs(v[:,axis]-hi[axis]))
+ assert float(distance.max())<.001,(name,'not a flat current plate',float(distance.max()))
+ flat=S.Sac(name,'braket',t=6.,R=9.,birim='K_GOVDE')
+ if axis==1:O=(lo[0],lo[1],hi[2]);ex=(1,0,0);ey=(0,0,-1);w,h=span[0],span[2]
+ elif axis==2:O=lo;ex=(1,0,0);ey=(0,1,0);w,h=span[0],span[1]
+ else:raise ValueError('Unexpected conveyor plate stock axis')
+ flat.taban([(0,0),(w,0),(w,h),(0,h)],O=O,ex=ex,ey=ey)
+ sheets[name]=flat;old['sheets'].append({'name':name})
+ flat_rows.append({'name':name,'thickness_mm':t,'normal_axis':'XYZ'[axis],'native_stock_bounds_mm':[lo.tolist(),hi.tolist()],'source':'current K cached mesh + kesme_cad_v8 factory BOM; prior mesh remains authoritative','flat_face_deviation_mm':float(distance.max()),'holes_from_current_mesh_preserved':True,'machining_verified':False})
 (HERE/'custom_flat_stock_audit.json').write_text(json.dumps(clean({'parts':flat_rows,'production_release':False}),indent=2),encoding='utf-8')
 records=[];audit=[]
 for oldrec in old['sheets']:

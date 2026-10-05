@@ -499,6 +499,38 @@
       "seconds": 3.9099999999999993
     },
     {
+      "head": "bant_yan_-421",
+      "members": [
+        "bant_yan_-421",
+        "bant_yan_-3",
+        "bant_traversi_0",
+        "bant_traversi_1",
+        "olu_plaka",
+        "kayma_tablasi",
+        "avara_rulosu_46",
+        "avara_mili_0",
+        "avara_mili_1",
+        "tahrik_rulosu_EC5000_354",
+        "tahrik_rulosu_EC5000_hex_mil",
+        "tahrik_rulosu_EC5000_M8_civata"
+      ],
+      "source_sheet_members": [
+        "bant_yan_-421",
+        "bant_yan_-3",
+        "olu_plaka"
+      ],
+      "laser_timeline_parts": [
+        "bant_yan_-421",
+        "bant_yan_-3",
+        "olu_plaka"
+      ],
+      "bend_frame_parts": [],
+      "plan_problems": [],
+      "welds_to_verify": [],
+      "connection_release": false,
+      "seconds": 10.229999999999997
+    },
+    {
       "head": "sol_sac_urun_girisi",
       "members": [
         "sol_sac_urun_girisi",
@@ -553,12 +585,6 @@
       "seconds": 11.349999999999998
     }
   ],
-  "execution_seconds": 15.897646188735962,
-  "production_release": false,
-  "not_yet_covered_custom_group_heads": [
-    "bant_yan_-421"
-  ],
-  "covered_group_count": 16,
-  "all_declared_custom_groups_manufactured": false,
-  "remaining_manufacturing_issue": "Conveyor frame is custom; source inventory has no current native flat sheet mapping for its side plates/traverses. Supplier drum/shafts do not authorize treating the frame as a purchased assembly."
+  "execution_seconds": 15.851094484329224,
+  "production_release": false
 }

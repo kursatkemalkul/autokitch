@@ -33,6 +33,10 @@ for head,members in initial['GROUPS'].items():
   upright=next(a for a in members if a.startswith('k_itici_sac_'))
   assert upper in SAC and fragment in SAC and SAC[upper].record['name']==SAC[fragment].record['name']
   operations=[([head],presses),([upper,fragment],[]),([upright],[])]
+ if head=='bant_yan_-421':
+  # Supplier rollers with their shafts seat in the rear plate while the
+  # front plate is open; then the front plate enters along shaft axes.
+  operations=[([head],[]),(['bant_traversi_0'],[]),(['bant_traversi_1'],[]),(['tahrik_rulosu_EC5000_354','tahrik_rulosu_EC5000_hex_mil'],[]),(['avara_rulosu_46','avara_mili_0','avara_mili_1'],[]),(['bant_yan_-3'],[]),(['tahrik_rulosu_EC5000_M8_civata'],[]),(['olu_plaka'],[]),(['kayma_tablasi'],[])]
  if head=='sag_sac_E_penceresi':
   ears=[a for a in members if a.startswith('govde_kulak_sag_')]
   ducts=[a for a in members if a.startswith('elk_ic_kanal_')]
@@ -56,6 +60,9 @@ for head,members in initial['GROUPS'].items():
   tt=ns['yerlestir'](names,directions,tt,P[a]['ac'],pem=presses,sure_bekle=.02)
   # Separate GLB fragments of one physical source sheet bend together.
   for child in names[1:]:
+   if a not in SAC:
+    assert head=='bant_yan_-421' and a in ('tahrik_rulosu_EC5000_354','avara_rulosu_46'),(head,a,child)
+    continue
    assert child in SAC and SAC[child].record['name']==SAC[a].record['name']
    if SAC[a].bukum:
     ns['FRAMES'][child]=SAC[child].frames();ns['MF'][child]=dict(seg=[list(x) for x in ns['MF'][a]['seg']])

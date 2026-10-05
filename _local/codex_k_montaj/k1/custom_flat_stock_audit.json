@@ -559,6 +559,69 @@
       "source": "lower_support.build / roof_mounts.build_roof / mechanism_mounts.build_mounts",
       "holes_from_current_mesh_preserved": true,
       "machining_verified": false
+    },
+    {
+      "name": "bant_yan_-421",
+      "thickness_mm": 6.0,
+      "normal_axis": "Z",
+      "native_stock_bounds_mm": [
+        [
+          4005.0001,
+          932.5,
+          -424.0
+        ],
+        [
+          4395.0,
+          987.5,
+          -418.0
+        ]
+      ],
+      "source": "current K cached mesh + kesme_cad_v8 factory BOM; prior mesh remains authoritative",
+      "flat_face_deviation_mm": 0.0,
+      "holes_from_current_mesh_preserved": true,
+      "machining_verified": false
+    },
+    {
+      "name": "bant_yan_-3",
+      "thickness_mm": 6.0,
+      "normal_axis": "Z",
+      "native_stock_bounds_mm": [
+        [
+          4005.0001,
+          932.5,
+          -6.0
+        ],
+        [
+          4395.0,
+          987.5,
+          0.0
+        ]
+      ],
+      "source": "current K cached mesh + kesme_cad_v8 factory BOM; prior mesh remains authoritative",
+      "flat_face_deviation_mm": 0.0,
+      "holes_from_current_mesh_preserved": true,
+      "machining_verified": false
+    },
+    {
+      "name": "olu_plaka",
+      "thickness_mm": 6.0,
+      "normal_axis": "Y",
+      "native_stock_bounds_mm": [
+        [
+          4382.0,
+          990.0,
+          -418.0
+        ],
+        [
+          4398.5,
+          996.0,
+          -6.0
+        ]
+      ],
+      "source": "current K cached mesh + kesme_cad_v8 factory BOM; prior mesh remains authoritative",
+      "flat_face_deviation_mm": 0.0,
+      "holes_from_current_mesh_preserved": true,
+      "machining_verified": false
     }
   ],
   "production_release": false
