@@ -10,3 +10,7 @@ Completed: queue 0 seven-product TOPPING placement (step53), step54 straight-sid
 Pending: queue2 TOPPING assembly animation, then F/K/E/U, A+drawer check, B weld visibility, full electrical+data view, final audit. QR+counter assembly animation was cancelled by Kemal. Existing animations are not evidence of assembly feasibility. Retain the documented mechanical open items.
 
 No engineering change or new site deployment is made by this backup.
+
+## 5 Eki güncelleme (bulut oturumu)
+Working input is now hat3_v9x.glb.gz (step 56, SHA256 83d54bbbf595564ed50dc24a30dd92093443dc07b189ab05a05b40e582aec94d), not v9w. Step 56 = 56_evap_ayak.py (registered in zincir.py, SIRA.md).
+Queue item 2 (TOPPING assembly v5) done with open items listed in KUYRUK3.md; pipeline: gece2/t5 (t5_cikar → merkez_v9w → t5_parca → t5_montaj → t5_cikti). Large .pkl intermediates are not committed; rerun the pipeline.

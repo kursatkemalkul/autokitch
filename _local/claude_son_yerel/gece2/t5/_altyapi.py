@@ -24,7 +24,7 @@ def buyu(a, t0, sure=0.6):
 # ------------------------------------------------------------------ 4. plan anı yol denetimi (b3_montaj.serbest ile aynı)
 VEK = {}
 def tri(a):
-    if a not in VEK: VEK[a] = Y._vekil(P[a]['V'] / 1000.0, np.asarray(P[a]['F']))
+    if a not in VEK: VEK[a] = Y._vekil(P[a].get('Vm', P[a]['V']) / 1000.0, np.asarray(P[a].get('Fm', P[a]['F'])))   # 5 Eki: model ağı
     return VEK[a]
 LO = {a: P[a]['V'].min(0) for a in P}; HI = {a: P[a]['V'].max(0) for a in P}
 HARIC_PLAN = set(); HARIC_NEDEN = {}
@@ -49,7 +49,7 @@ def serbest(adlar, ofs, yerinde, ofs2=None):
             m = lam < 1.5
             if not m.any(): continue
             pts = lam[m][:, None] * v[None, :]
-            der = np.minimum(np.linalg.norm(pts - v[None, :], axis=1), np.linalg.norm(pts, axis=1))
+            der = np.linalg.norm(pts - v[None, :], axis=1)   # 5 Eki: temas yalnız bacağın SONUNA ≤ 1 mm kala ise oturma (başta başlayan temas da sorun: derinleşir)
             if der.max() > Y.OTURMA: sorun.append((a, b))
     return sorun
 PLAN_SORUN = []

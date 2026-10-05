@@ -34,18 +34,22 @@ def key(C): return [tuple(x) for x in np.round(C, 2)]
 
 
 # ---------------------------------------------------------------- gövde: v9e üçgen merkezleri → ent adı
-g9e = G(os.path.join(IS_A, 'hat3_v9e.glb'))
 GOVDE_DUG = sorted(set(v['dugum'] for v in ENT.values()))
-MERKEZ = {}
-for d in GOVDE_DUG:
-    ni = g9e.byname[d]; X, T, mek, mat, ex = g9e.tris(ni)[0]
-    C = X[T].mean(1)
-    for a, v in ENT.items():
-        if v['dugum'] != d: continue
-        s, n = v['indis']
-        for kk in key(C[s // 3:(s + n) // 3]): MERKEZ[(d, kk)] = a
-print('v9e merkez', len(MERKEZ))
-del g9e
+# 5 Eki (bulut): hat3_v9e.glb push edilmedi → merkez_v9w.py aynı eşlemeyi v9w + v4 parça GLB'sinden kurar
+if os.path.exists('merkez_v9w.pkl'):
+    MERKEZ = pickle.load(open('merkez_v9w.pkl', 'rb'))
+else:
+    g9e = G(os.path.join(IS_A, 'hat3_v9e.glb'))
+    MERKEZ = {}
+    for d in GOVDE_DUG:
+        ni = g9e.byname[d]; X, T, mek, mat, ex = g9e.tris(ni)[0]
+        C = X[T].mean(1)
+        for a, v in ENT.items():
+            if v['dugum'] != d: continue
+            s, n = v['indis']
+            for kk in key(C[s // 3:(s + n) // 3]): MERKEZ[(d, kk)] = a
+    del g9e
+print('merkez', len(MERKEZ))
 GOV = [o for o in L if o['dug'] in GOVDE_DUG and not (o['dug'] == 'B_MODULER__baglanti' and not (1430 < o['lo'][0] < 2500 and o['lo'][1] > 740))]
 def sinif(a, v):
     t = v['tur']; bom = (v.get('bom') or [''])[0]
@@ -62,7 +66,24 @@ def sinif(a, v):
 TOPLA = collections.defaultdict(list)          # ent adı → [(V, F)]
 YENI = []
 DEGISEN = ('raf', 'ust_raf', 'soguk_alt_sac', 'astar_arka', 'pu_raf_esik')
+# 5 Eki: kesin atama — tek başına bileşen olan cıvatalar (yüzey teması yüzünden PEM / pul etiketi alıyordu) ve adım 53 kıyma düşme kovanı
+CIV = {a: v for a, v in ENT.items() if v['tur'] == 'arayuz' and 'cıvata' in (v.get('bom') or [''])[0]}
+KESIN = {}
 for o in GOV:
+    c = (o['lo'] + o['hi']) / 2; e = o['hi'] - o['lo']
+    if o['dug'] == 'TOPPING_GOVDE__sac' and 1880 < o['lo'][0] < 1900 and 1105 < o['lo'][1] < 1115 and o['hi'][1] < 1152:
+        KESIN[id(o)] = None; continue      # YENİ'ye → dusme_kovani_kiyma
+    for a, v in CIV.items():
+        if v['dugum'] != o['dug']: continue
+        k = np.array(v['kutu']).reshape(3, 2); kc = k.mean(1); ke = k[:, 1] - k[:, 0]
+        if np.all(np.abs(kc - c) < 6) and np.all(np.abs(ke - e) < 10) and np.sort(e)[1] > 10:
+            KESIN[id(o)] = a; break
+print('kesin atama', {a for a in KESIN.values()})
+for o in GOV:
+    if id(o) in KESIN:
+        if KESIN[id(o)] is None: YENI.append(o)
+        else: TOPLA[KESIN[id(o)]].append((o['V'], np.asarray(o['F'])))
+        continue
     C = o['V'][o['F']].mean(1); lab = [MERKEZ.get((o['dug'], kk)) for kk in key(C)]
     say = collections.Counter(lab); yok = say.pop(None, 0)
     if not say:
@@ -70,15 +91,28 @@ for o in GOV:
     lab = np.array([x or '' for x in lab], dtype=object)
     if yok:
         # kısmi eşleşen parça: ent'teki üçgen sayısına göre eksik olan (adım 53'te yeniden ağlanan)
-        kismi = [a for a in say if a in DEGISEN] or sorted(say, key=lambda a: say[a] / max(1, ENT[a]['indis'][1] // 3))[:1]
-        assert len(kismi) == 1, (o['dug'], kismi, dict(say), yok)
-        lab[lab == ''] = kismi[0]
-        print('  kısmi: %s ← %d eşleşmeyen üçgen (%s)' % (kismi[0], yok, o['dug']))
+        # 5 Eki: eşleşmeyen üçgen (adım 53 delik duvarı, yeniden ağlanan yüzey) → bileşendeki en yakın etiketli üçgenin parçası
+        from scipy.spatial import cKDTree as _K
+        ad_m = lab != ''; bos = ~ad_m
+        _, jj = _K(C[ad_m]).query(C[bos]); lab[np.where(bos)[0]] = lab[np.where(ad_m)[0][jj]]
+        print('  kısmi (en yakın): %d eşleşmeyen üçgen (%s) → %s' % (yok, o['dug'], dict(collections.Counter(lab[np.where(bos)[0]]))))
     for a in set(lab):
         m = lab == a; Tc = o['F'][m]; u, inv = np.unique(Tc.reshape(-1), return_inverse=True)
         TOPLA[a].append((o['V'][u], inv.reshape(-1, 3)))
+# 5 Eki: pul etiketine düşen cıvata parçaları (cıvata başı pul yüzüne oturur → yüzey oyu) — boyu > 5 mm olan parça cıvatadır
+for a in [a for a in list(TOPLA) if a.startswith('arayuz_kb_') and a.endswith('_pul') and a[:-4] in ENT]:
+    kal = []
+    for V_, F_ in TOPLA[a]:
+        (TOPLA[a[:-4]] if np.ptp(V_[:, 1]) > 5 else kal).append((V_, F_))
+    TOPLA[a] = kal
+# 5 Eki: B perçin somunları (adım 47'de boy 17 → 21 mm) — eşleşmeyen B_MODULER__baglanti bileşenleri konumla ent'e
+for o in list(YENI):
+    if o['dug'] != 'B_MODULER__baglanti': continue
+    c = (o['lo'] + o['hi']) / 2
+    ad = [a for a in ENT if a.startswith('percin_somun_tb') and abs((ENT[a]['kutu'][0] + ENT[a]['kutu'][1]) / 2 - c[0]) < 2 and abs((ENT[a]['kutu'][4] + ENT[a]['kutu'][5]) / 2 - c[2]) < 2]
+    if len(ad) == 1: TOPLA[ad[0]].append((o['V'], o['F'])); YENI.remove(o)
 for a, v in ENT.items():
-    if a not in TOPLA: print('  ENT EŞLEŞMEDİ', a, v['dugum']); continue
+    if a not in TOPLA or not TOPLA[a]: print('  ENT EŞLEŞMEDİ', a, v['dugum']); continue
     VV, FF, n = [], [], 0
     for V, F in TOPLA[a]: VV.append(V); FF.append(F + n); n += len(V)
     m, t, bom = sinif(a, v)
@@ -177,6 +211,7 @@ for kd, ad, ek, tr_ in UNO:
     if ad == 'kiyma':
         grup('burc_kilifi_kiyma', [o for o in U if id(o) not in ATANAN and o['lo'][2] < -629.9 and o['hi'][2] > -572 and o['dug'] == 'TOPPING_MODUL__paslanmaz' and o['hi'][1] < 1660], 'mekanizma', 'mek', 'Burç kılıfı (paslanmaz boru + ayak · evaporatör cebi ağzında)')
     arka = [o for o in U if id(o) not in ATANAN and (o['hi'][2] < -650 or (o['lo'][2] < -560 and o['hi'][2] < -440 and ex(o)[0] < 60 and o['lo'][1] > 1100)) and 'PISTON' not in o['dug']]
+    arka += [o for o in U if id(o) not in ATANAN and 'PISTON' in o['dug'] and 'pom' not in o['dug']]   # 5 Eki: piston mili (duvar + burç + gövde içi) silindirle arkadan gelir, POM pistona vidalanır; POM piston ön grupta
     grup('uno_%s_arka' % ad, arka, 'alu', 'mek', 'UNO %s · arka grup (pnömatik silindir + piston + duvar flanşı · üründen ayrılmış)' % tr_)
     if ad in ('harc', 'patates', 'kiyma'):
         grup('uno_%s_conta' % ad, [o for o in U if id(o) not in ATANAN and o['dug'] == 'TOPPING_MODUL__conta' and o['hi'][1] < 1153], 'yapistirici', 'mek', 'UNO %s kovanı taban contası' % tr_)

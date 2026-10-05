@@ -223,3 +223,11 @@ Uyum denetimi (scratchpad gece2/k3_uyum/RAPOR.md: 7 üreteç kurulup döküldü 
 | 55 | `55_uyum.py` (+ `sac_standart/sac_uyum_v1.json` 'pul') | v9v → v9w | **M5:** DIN 9021 Ø15 × 1,2 → ISO 7089 Ø10 × 1,0 (A 35 · K 32 · E 28 = 95; FHP / vida + ISO 10511 somun — somun 0,2 mm sac tarafına) · **M8:** DIN 9021 Ø24 × 2 → ISO 7092 Ø15 × 1,6 (A→TOPPING 4 · TOPPING→F 4 · B şase 10; cıvata 0,4 mm sac tarafına) + DIN 125 Ø16 → ISO 7092 (A açıcı flanşı 4 · U_F 6; kalınlık aynı). Pul köşeleri radyal + eksenel ölçeklenir (oturma yüzü sabit, iç Ø aynı); somun = pula değen, boyu ≤ 1,15 × ISO 10511 (perçin somun / PEM somun sayılmaz), yoksa pulu geçen cıvatanın kısa yanı baş. Beklenen sayılar tutmazsa durur | iki koşu bayt aynı (gece2/k3_uyum/z55A, z55B; girdi z54A/hat3_v9v.glb) · tam model çakışma (c8a, v9v taban ↔ v9w): YENİ 0, KALKAN 0 (1063 = gerçek 74 · kasıtlı 804 · şüpheli 185 aynı) |
 
 Sayfa: `meshopt_kucult.mjs hat3_v9w.glb <W>/otonom/hat3d/v3/hat3_v8.glb --idx seq` (5655 bv bayt aynı, HATA 0; dogrula.mjs extras aynı) · makine_v3_8.html `?v=9x` · json'lar değişmedi (kutu / parça değişikliği 0,4 mm altında, pul parça kutusu kaydı yok).
+
+## ADIM 56 · SOL EVAPORATÖR 2. AYAĞI 3 mm DAR (5 Eki 2026 · Claude · bulut oturumu · KUYRUK 3 iş 2 TOPPING montaj animasyonu)
+
+| # | betik | GLB | ne | denetim |
+|---|---|---|---|---|
+| 56 | `56_evap_ayak.py` | v9w → v9x | TOPPING montaj v5 yol denetimi: tavuk UNO silindiri (arka grup) arkadan, mili burçtan pistona en az 179 mm eksenel girer; duvar flanşı (x 1570–1622) bu sırada sol evaporatörün 2. ayağının dik kolundan (x 1620–1650, z −828,5…−826) geçer → 2,0 mm çakışma. Sıra ile çözülmez (evaporatör yalnız yukarıdan, tavan kapanmadan; silindir UNO gövdesinden sonra). Ayak (2,5 L, kasete kaynaklı) sol kenarı x 1620 → 1623: genişlik 30 → 27, vida deliği (x 1641) ve somun yerinde, kenar mesafesi 13 mm, flanş ↔ ayak 1,0 mm. Yalnız uç yüzün 228 köşesi taşındı; 50_sikilastir | iki koşu bayt aynı (bulut: /home/user/is/z56A, z56B; girdi hat3_v9w.glb SHA256 346fd567…) · çıktı SHA256 83d54bbb… · yalnız malzeme çıkarıldı (yeni çakışma olamaz) |
+
+Sayfa: meshopt kopyası Codex yayınında (hat3_v8.glb 100 MB üstü, GitHub'a girmez) · TOPPING montaj v5 bu modelle üretildi.

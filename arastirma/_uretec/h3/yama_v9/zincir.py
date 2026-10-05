@@ -191,8 +191,10 @@ ADIMLAR = [
      [(".", 'python "{YAMA}/54_kusbasi_dik.py" hat3_v9u.glb hat3_v9v.glb')]),
     ("55", "standart uyum · pul tek standart: M5 DIN 9021 → ISO 7089 (A, K, E) · M8 DIN 9021 / DIN 125 → ISO 7092 (A, TOPPING, B şase, U_F, K) · baş / somun Δ kalınlık kadar sac tarafına (sac_standart/sac_uyum_v1.json)", ["hat3_v9v.glb"], "hat3_v9w.glb",
      [(".", 'python "{YAMA}/55_uyum.py" hat3_v9v.glb hat3_v9w.glb')]),
+    ("56", "sol evaporatör 2. ayağı 3 mm dar (x 1620 → 1623, 30 → 27 mm): tavuk UNO silindirinin duvar flanşı arkadan geçerken ayağın dik kolunu 2 mm sıyırıyordu (TOPPING montaj v5 yol denetimi)", ["hat3_v9w.glb"], "hat3_v9x.glb",
+     [(".", 'python "{YAMA}/56_evap_ayak.py" hat3_v9w.glb hat3_v9x.glb')]),
 ]
-SON = "hat3_v9w.glb"
+SON = "hat3_v9x.glb"
 
 
 def kur(is_dizin, h3, uretec):
