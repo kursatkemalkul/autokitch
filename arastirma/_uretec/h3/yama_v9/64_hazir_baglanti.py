@@ -4,8 +4,8 @@ python 64_hazir_baglanti.py girdi.glb cikti.glb      (zincir: hat3_v10e.glb → 
 
 Kemal (5 Eki): hazır ürünlere dokunma, bağlantı BİZİM taraftan basit parçayla; küçük kararları sorma (KURALLAR §3).
   · Kaset motorları (kaşar, sucuk; flanşı gövdeden yalnız 3 mm büyük → flanşa vida yeri yok): gövdenin iki yanında soğuk oda arka dış sacına
-      (arka yüz z −630) KAYNAKLI 3 mm L braket + dolgu pulu (flanşın arkasında motor gövdesine dayanır) · 1 × ISO 4762 M5 × 16 + pul yandan motor gövdesine
-      (motor siparişinde: gövde iki yanında M5 dişli delik). Braket flanş ve POM burcun dışından dolaşır.
+      (arka yüz z −630) KAYNAKLI 3 mm L braket (bacak burcun 1 mm dışında) + AYRI ara dolgu (motor arkadan oturduktan sonra bacak ile gövde arasına;
+      braketle birleşik olsa flanş arkadan gelirken çarpar) · 1 × ISO 4762 M5 × 16 + pul bacak + dolgudan motor gövdesine (siparişte M5 dişli delik).
   · Valf adası (havada duruyordu: önü z −660, duvarın arkası z −630, arası BOŞ): iki 3 mm Z braket — ayağı duvara kaynaklı, öbür ayağı valf adasının
       ön yüzüne 1 × M5 × 12 (valf adası siparişinde: ön yüzde 2 × M5 dişli delik). Servis sacı sökülünce valf yerinde kalır.
   · X ekseni (hazır ünite): ray tabanının arka (z −415) ve ön (z −5) duvarına 2 + 2 tabana kaynaklı L pabuç, 1 × M5 × 10 → ray tabanındaki M5 perçin
@@ -76,8 +76,11 @@ def vida(ad, o, d, M, t_bas, t_uc, bom, somun_t=None):
 
 # ---------------------------------------------------------------- kaset motorları
 # (ad, motor gövdesi yan yüzü x, yön s (−1 sol / +1 sağ), burç / flanş dış kenarı x, y bandı)
-MOTOR = [("kasar_sol", 2063.5, -1, 2059.3, (1180.0, 1210.0)), ("kasar_sag", 2113.5, +1, 2118.6, (1180.0, 1210.0)),
-         ("sucuk_sol", 2335.5, -1, 2331.3, (1195.0, 1225.0)), ("sucuk_sag", 2385.5, +1, 2390.6, (1310.0, 1340.0))]
+# (bacak burcun 1 mm dışında: motor + burç arkadan z boyunca gelirken bacağa sürtmez · dolgu AYRI ara parça, motor oturduktan sonra takılır —
+#  dolgu braketle birleşik olsaydı flanş (gövdeden geniş) arkadan gelirken dolguya çarpardı: montaj sırası denetimi)
+MOTOR = [("kasar_sol", 2063.5, -1, 2058.3, (1180.0, 1210.0)), ("kasar_sag", 2113.5, +1, 2119.6, (1180.0, 1210.0)),
+         ("sucuk_sol", 2335.5, -1, 2330.3, (1195.0, 1225.0)), ("sucuk_sag", 2385.5, +1, 2391.6, (1310.0, 1340.0))]
+DOLGU = []
 ZD, ZA, ZF = -630.0, -716.0, -672.0                                          # duvar arka yüzü · braket arka ucu · dolgunun önü (flanş arkası −670)
 for ad, xm, s, xb, (y0, y1) in MOTOR:
     xl0 = xb; xl1 = xb + s * T3                                              # bacak (burç / flanş dışında)
@@ -85,11 +88,13 @@ for ad, xm, s, xb, (y0, y1) in MOTOR:
     bacak = kutu((min(xl0, xl1), y0, ZA), (max(xl0, xl1), y1, ZD))
     dolgu = kutu((min(xm, xb), y0, ZA), (max(xm, xb), y1, ZF))
     yv, zv = (y0 + y1) / 2, -694.0
-    br = cq.Workplane("XY").add(ayak).union(cq.Workplane("XY").add(bacak)).union(cq.Workplane("XY").add(dolgu)).cut(
-        cq.Workplane("XY").add(sil((xl1, yv, zv), (-s, 0, 0), 0, abs(xl1 - xm), 2.75)))
-    BRK.append(dict(ad="motor_%s_braket" % ad, sh=br.val(), bom=["Motor braketi AISI 304 3 mm L + dolgu (lazer + büküm, duvara TIG)"],
-                    kutular=[((min(xl1, xl1 + s * 22), y0, ZD - T3), (max(xl1, xl1 + s * 22), y1, ZD)), ((min(xl0, xl1), y0, ZA), (max(xl0, xl1), y1, ZD)),
-                             ((min(xm, xb), y0, ZA), (max(xm, xb), y1, ZF))]))
+    br = cq.Workplane("XY").add(ayak).union(cq.Workplane("XY").add(bacak)).cut(
+        cq.Workplane("XY").add(sil((xl1, yv, zv), (-s, 0, 0), 0, T3, 2.75)))
+    BRK.append(dict(ad="motor_%s_braket" % ad, sh=br.val(), bom=["Motor braketi AISI 304 3 mm L (lazer + 1 büküm, duvara TIG)"],
+                    kutular=[((min(xl1, xl1 + s * 22), y0, ZD - T3), (max(xl1, xl1 + s * 22), y1, ZD)), ((min(xl0, xl1), y0, ZA), (max(xl0, xl1), y1, ZD))]))
+    dl = cq.Workplane("XY").add(dolgu).cut(cq.Workplane("XY").add(sil((xl0, yv, zv), (-s, 0, 0), 0, abs(xm - xl0), 2.75)))
+    DOLGU.append(dict(ad="motor_%s_dolgu" % ad, sh=dl.val(), bom=["Ara dolgu AISI 304 %.1f mm (lazer, motor oturduktan sonra bacak ile gövde arasına)" % abs(xm - xb)],
+                      kutular=[((min(xm, xb), y0, ZA), (max(xm, xb), y1, ZF))]))
     vida("motor_%s_vida" % ad, (xl1, yv, zv), (-s, 0, 0), "M5", 0, 16.0, "ISO 4762 cıvata M5 × 16 A2-70 (motor gövdesindeki M5 dişli deliğe)")
     xo = xl1 + s * 22
     KAY.append(dict(ad="motor_%s_kaynak" % ad, sh=prizma([(xo, y0, ZD), (xo + s * 3, y0, ZD), (xo, y0, ZD - 3)], (0, y1 - y0, 0)),
@@ -183,7 +188,7 @@ def bos(lo, hi, pay=0.3):
     return sorted(set(AD[m]))
 
 
-for L in (BRK, PUL, SOM, KAY):
+for L in (BRK, DOLGU, PUL, SOM, KAY):
     for p in L:
         for kk in (p.get("kutular") or [p["kutu"]]):
             dd = bos(*kk)
@@ -199,7 +204,7 @@ assert not eks, "ADIM 64 DUR: hiçbir şeyi delmeyen vida %s" % eks
 LOG("  %d vida · %d delik kaydı" % (len(VIDA), len(kayit)))
 tmp = go + ".e1.glb"; g.kaydet(tmp); del g, K
 H = SE.Ham(tmp)
-PAR = [("TOPPING_BRAKET__paslanmaz", "TOPPING_GOVDE__sac", BRK), ("TOPPING_BRAKET__kaynak", "TOPPING_GOVDE__sac", KAY),
+PAR = [("TOPPING_BRAKET__paslanmaz", "TOPPING_GOVDE__sac", BRK), ("TOPPING_BRAKET__dolgu", "TOPPING_GOVDE__sac", DOLGU), ("TOPPING_BRAKET__kaynak", "TOPPING_GOVDE__sac", KAY),
        ("TOPPING_BRAKET__vida", "U_F_GOVDE__paslanmaz", VIDA + SAPLAMA + PUL + SOM)]
 TUM = {}
 for d, sb, L in PAR:
