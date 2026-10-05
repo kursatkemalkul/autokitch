@@ -217,8 +217,10 @@ ADIMLAR = [
      [(".", 'python "{YAMA}/67_f_arka_civata.py" hat3_v10h.glb hat3_v10i.glb')]),
     ("68", "E gövdesi: arka sacın alt / üst dönüşündeki 10 saplama deliği öne açık yarık (arka sac arkadan sürülür, taban / üst sacın dik saplamalarına geçer · E montaj v2 sıra denetimi)", ["hat3_v10i.glb"], "hat3_v10j.glb",
      [(".", 'python "{YAMA}/68_e_arka_yarik.py" hat3_v10i.glb hat3_v10j.glb')]),
+    ("69", "E gövdesi: arka ↔ yan sol 4 bağlantı (şarjör kılavuzu arkası) saplama + somun yerine yan dönüşte PEM S-M5 + dıştan ISO 7380 M5 × 6 (somun şarjörden sonra takılamıyordu · E montaj v2 yol denetimi)", ["hat3_v10j.glb"], "hat3_v10k.glb",
+     [(".", 'python "{YAMA}/69_e_arka_pem.py" hat3_v10j.glb hat3_v10k.glb')]),
 ]
-SON = "hat3_v10j.glb"
+SON = "hat3_v10k.glb"
 
 
 def kur(is_dizin, h3, uretec):

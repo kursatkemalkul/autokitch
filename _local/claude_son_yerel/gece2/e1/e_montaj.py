@@ -53,6 +53,8 @@ for p, h in HOST.items():
     if s not in P: continue
     pem_bagla(p, s, yan, 'PEM FHP-M6' if 'taban_3' in p or p.startswith('arayuz_mek_taban') else 'PEM FHP-M5')
 for p in [a for a in P if a.startswith('govde_pem_m8_ust')]: pem_bagla(p, 'ust_sac', (0, -1.0, 0), 'PEM SP-M8')
+for p in [a for a in P if a.startswith('e_arka_pem_')]: pem_bagla(p, 'sol_sac_pizza_penceresi', (0, 0, 1.0), 'PEM S-M5 (zincir 69)')
+for p in [a for a in P if a.startswith('e_arka_civata_')]: P[p]['eks'] = np.array([0, 0, 1.0])
 print('PEM / saplama', {k: len(v) for k, v in PEM_SAC.items()})
 # pul / somun giriş ekseni: saplamanın ucundan başa doğru (baş = yan)
 for a in list(P):
@@ -169,7 +171,8 @@ kamera_genel(['arka_sac'], yon=(0.4, 0.45, -0.85), olcek=0.8)
 ARK = ['arka_sac', 'istasyon_kutusu'] + var('sarjor_yan_kapisi_mentese_lamasi', 'sarjor_yan_kapisi_mentese_0', 'sarjor_yan_kapisi_mentese_1')
 t = koy(ARK, AD(ARKA9, lift=(0.5, 1, 2), yan=()), 'Arka sac + E panosu + menteşe laması (tezgâhta) → arkadan', pem=sorted(PEM_SAC.get('arka_sac', [])))
 t = somunla(r'govde_bag_(arka_sag|taban_arka|ust_arka|kosebent_arka|kapi_lamasi)', t, 10.0)
-t = somunla(r'govde_bag_arka_sol', t, 6.0)                               # şarjör kılavuzu somunun 7 mm önünde (ince anahtar); olay(t - 0.6, 'Arka ↔ yanlar / taban / üst: pul + fiberli somunlar'); t += 0.2
+t = somunla(r'govde_bag_arka_sol', t, 12.0)
+t = sira_tak(sorted(a for a in P if a.startswith('e_arka_civata_')), t, 25.0, 0.45, 0.1); olay(t - 0.5, 'Şarjör arkası 4 nokta: dıştan M5 × 6 bombe başlı cıvata → yan sol dönüşündeki preslenmiş somuna (zincir 69)'); t += 0.2; olay(t - 0.6, 'Arka ↔ yanlar / taban / üst: pul + fiberli somunlar'); t += 0.2
 # ---- 9 ELEKTRİK
 adim('Kablolar ve vakum hattı', 'Güç (kırmızı) ve bilgi (mavi) kabloları, vakum hattı kanallar boyunca: pano ↔ fiş paneli ↔ motorlar / sensörler.', 'kablolar · vakum hattı')
 kamera_genel(['istasyon_kutusu', 'fis_paneli'], yon=(0.6, 0.5, -0.6), olcek=1.0)

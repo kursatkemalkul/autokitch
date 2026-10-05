@@ -12,7 +12,8 @@ BIL = pickle.load(open('e_bil.pkl', 'rb'))
 MEK = BIL['MEK']; L = BIL['L']
 P = {}
 ENTF = [('/home/user/main_wt/_local/claude_son_yerel/gece2/adim5e/is/hat3_v9c_ent.json', None),
-        ('/home/user/is/z59A/hat3_v10a_ent.json', lambda a, v: '_E_' in a)]
+        ('/home/user/is/z59A/hat3_v10a_ent.json', lambda a, v: '_E_' in a),
+        ('/home/user/is/z69A/hat3_v10k_ent.json', None)]
 ENT = {}
 for f_, s_ in ENTF:
     for a, v in json.load(open(f_, encoding='utf-8'))['parca'].items():
