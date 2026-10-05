@@ -135,6 +135,7 @@ adim('Üst modül', 'Tezgâhta: besleyici şasisi + motor + itici + vakum kolu, 
      'üst modül (besleyici · köşe × 4 · parmak · itici)')
 kamera_genel(['besleyici_sasi'], yon=(-0.7, 0.45, 0.5), olcek=0.9)
 USTM = var('besleyici_sasi', 'besleyici_motor', 'besleyici_itici', 'besleyici_vakum', 'kose_tutucu', 'kose_kaldirici', 'kose_piston', 'parmak', 'parmak_y', 'piston', 'piston_itici')
+for a_ in USTM: P[a_]['tezgah'] = True                                   # üst sac gelene kadar montaj dayamasında
 t = koy(USTM, AD(UST6, SOL7, lift=(), yan=(), son=SON), 'Üst modül (besleyici + köşe + parmak + itici, tezgâhta) → yukarıdan, dayamaya')
 # ---- 5 ÜST
 adim('Üst sac', 'Üst sac (1,5 · yan dönüşler, Harting ağzı, U ↔ E için 3 × PEM M8, mekanizma askı saplamaları) yukarıdan ön kasanın tepesine iner (arkası montaj dayamasında): askı saplamaları üst modülün kulaklarına geçer; yanlar gelince yan saplamalar dönüşlerinden geçer.',
@@ -167,7 +168,8 @@ adim('Arka sac ve E panosu', 'Tezgâhta arka sacın iç yüzüne: E panosu (Beck
 kamera_genel(['arka_sac'], yon=(0.4, 0.45, -0.85), olcek=0.8)
 ARK = ['arka_sac', 'istasyon_kutusu'] + var('sarjor_yan_kapisi_mentese_lamasi', 'sarjor_yan_kapisi_mentese_0', 'sarjor_yan_kapisi_mentese_1')
 t = koy(ARK, AD(ARKA9, lift=(0.5, 1, 2), yan=()), 'Arka sac + E panosu + menteşe laması (tezgâhta) → arkadan', pem=sorted(PEM_SAC.get('arka_sac', [])))
-t = somunla(r'govde_bag_(arka_(sol|sag)|taban_arka|ust_arka|kosebent_arka|kapi_lamasi)', t, 10.0); olay(t - 0.6, 'Arka ↔ yanlar / taban / üst: pul + fiberli somunlar'); t += 0.2
+t = somunla(r'govde_bag_(arka_sag|taban_arka|ust_arka|kosebent_arka|kapi_lamasi)', t, 10.0)
+t = somunla(r'govde_bag_arka_sol', t, 6.0)                               # şarjör kılavuzu somunun 7 mm önünde (ince anahtar); olay(t - 0.6, 'Arka ↔ yanlar / taban / üst: pul + fiberli somunlar'); t += 0.2
 # ---- 9 ELEKTRİK
 adim('Kablolar ve vakum hattı', 'Güç (kırmızı) ve bilgi (mavi) kabloları, vakum hattı kanallar boyunca: pano ↔ fiş paneli ↔ motorlar / sensörler.', 'kablolar · vakum hattı')
 kamera_genel(['istasyon_kutusu', 'fis_paneli'], yon=(0.6, 0.5, -0.6), olcek=1.0)

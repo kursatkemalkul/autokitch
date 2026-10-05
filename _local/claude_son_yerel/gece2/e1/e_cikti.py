@@ -35,7 +35,9 @@ for a in P:
     if P[a]['tur'] == 'kablo':
         for b in P:
             if b != a: HARIC[tuple(sorted((a, b)))] = 'kablo / hortum: kanal boyunca yerinde uzar (kural 9 istisnası)'
-for a in [x for x in P if x.endswith('_raf_conta')]: har(a, 'ust_raf', 'kauçuk geçiş contası üst raf deliğine sıkı oturur (conta esner)')
+for a_, b_ in (('besleyici_motor', 'besleyici_sasi'), ('kose_kaldirici', 'kose_tutucu'), ('parmak', 'parmak_y')):
+    har(a_, b_, 'ÖNCEDEN VAR (kaynak model hat3_v10j): aynı hazır alt montajın parçaları, tezgâhta birlikte gelir (montajdan doğmaz)')
+har('cevre_B', 'cevre_K', 'silik çevre: B ↔ K kaynak modelde (E montajı dışı)')
 # ------------------------------------------------------------------ 0. son konumda kesişim
 SON = Y.son_kesisim(Pm, GOS, 3e-4)
 son_rap = {}
