@@ -30,10 +30,11 @@ for item in r['results']:
  # does not affect any shoulder/ring or create collapsed side faces.
  Pw=np.concatenate([p['X'][p['T'][tri]] for p,tri in b['parca']]);ax=(Pw[:,:,k]-origin)*sgn;ring=np.unique(np.round(ax,3));assert not any(L+.01<x<old-.01 for x in ring),(item,ring)
  new=trim(Pw);assert np.all(np.linalg.norm(np.cross(new[:,1]-new[:,0],new[:,2]-new[:,0]),axis=1)>1e-9)
- g.donustur(b,trim);changes.append({'component':item['stud'],'old_length_mm':round(old,3),'catalog':'PEM FHP-M5-'+str(L),'new_length_mm':L,'protrusion_mm':round(L-stack,4),'threads':round((L-stack)/PITCH,4),'nut_and_washer_unchanged':True})
+ g.donustur(b,trim);blo=b['lo'].copy();bhi=b['hi'].copy();bhi[k]=tip if sgn>0 else bhi[k];blo[k]=tip if sgn<0 else blo[k];changes.append({'component':item['stud'],'dugum':name if False else item['stud'].split('[')[0],'kutu':[float(blo[0]),float(bhi[0]),float(blo[1]),float(bhi[1]),float(blo[2]),float(bhi[2])],'old_length_mm':round(old,3),'catalog':'PEM FHP-M5-'+str(L),'new_length_mm':L,'protrusion_mm':round(L-stack,4),'threads':round((L-stack)/PITCH,4),'nut_and_washer_unchanged':True})
 # Save and compact without rerunning any other station generator.
 tmp=dest.with_suffix('.raw.glb');g.kaydet(str(tmp));del g
 env=dict(os.environ,YAMA_IS_KOK=str(Y/'kaynak'));r=subprocess.run([sys.executable,str(Y/'50_sikilastir.py'),str(tmp),str(dest)],env=env);assert r.returncode==0;tmp.unlink()
 report={'step':70,'source_sha256':hashlib.sha256(source.read_bytes()).hexdigest(),'output_sha256':hashlib.sha256(dest.read_bytes()).hexdigest(),'changes':changes,'toppping_modified':False,'source_final_position_audit_pending':True,'publication_allowed':False}
 dest.with_suffix('.json').write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf8');print(json.dumps({'step':70,'changed':len(changes),'sha256':report['output_sha256']}),flush=True)
+dest.with_name(dest.stem+'_ent.json').write_text(json.dumps({'adim':70,'parca':{c['component']:{'dugum':c['dugum'],'kutu':c['kutu'],'tur':'arayuz','bom':[c['catalog']]} for c in changes}},ensure_ascii=False,indent=2),encoding='utf-8')
 sys.stdout.flush();os._exit(0)

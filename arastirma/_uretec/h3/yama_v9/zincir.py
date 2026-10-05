@@ -213,8 +213,16 @@ ADIMLAR = [
      [(".", 'python "{YAMA}/65_kanal_daralt.py" hat3_v10f.glb hat3_v10g.glb')]),
     ("66", "TOPPING K1 / K2 kapak emniyet sensörleri vidalı: tabana kaynaklı 2 mm L braket + 2 × PEM S-M4 · sensör önden 2 × M4 × 20 (bağlantı denetimi)", ["hat3_v10g.glb"], "hat3_v10h.glb",
      [(".", 'python "{YAMA}/66_emniyet_braket.py" hat3_v10g.glb hat3_v10h.glb')]),
+    ("70", "K panel 32 saplama katalog boyu", ["hat3_v10h.glb"], "hat3_v10k.glb",
+     [(".", 'python "{YAMA}/70_k_saplama_boyu.py" hat3_v10h.glb hat3_v10k.glb')]),
+    ("71", "K alt raf ve altı kaynaklı destek: gerçek PEM / M5 bağlantılar", ["hat3_v10k.glb"], "hat3_v10l.glb",
+     [(".", 'python "{YAMA}/71_k_baglanti.py" hat3_v10k.glb hat3_v10l.glb')]),
+    ("72", "K bant ve itici montaj bağlantıları", ["hat3_v10l.glb"], "hat3_v10m.glb",
+     [(".", 'python "{YAMA}/72_k_mekanizma_baglantilari.py" hat3_v10l.glb hat3_v10m.glb')]),
+    ("73", "K tavan dişli takviye bağlantıları", ["hat3_v10m.glb"], "hat3_v10n.glb",
+     [(".", 'python "{YAMA}/73_k_tavan_baglantilari.py" hat3_v10m.glb hat3_v10n.glb')]),
 ]
-SON = "hat3_v10h.glb"
+SON = "hat3_v10n.glb"
 
 
 def kur(is_dizin, h3, uretec):

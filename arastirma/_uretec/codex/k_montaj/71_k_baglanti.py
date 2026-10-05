@@ -44,6 +44,8 @@ def apply(source,dest):
     subprocess.run([sys.executable,str(Y/'50_sikilastir.py'),str(temp),str(dest)],env=env,check=True);temp.unlink()
     report={'step':71,'input_sha256':hashlib.sha256(source.read_bytes()).hexdigest(),'output_sha256':hashlib.sha256(dest.read_bytes()).hexdigest(),'removed_primitive_components':removed,'new_parts':[p['ad'] for p in parts],'manufacturing':manufacturing,'whole_assembly_checked':False,'publish_allowed':False}
     dest.with_suffix('.json').write_text(json.dumps(clean(report),ensure_ascii=False,indent=2),encoding='utf8')
+    from chain_entry import write_ent
+    write_ent(dest,parts,71)
     print('STEP71',len(parts),'new parts',report['output_sha256'],flush=True)
 
 if __name__=='__main__':

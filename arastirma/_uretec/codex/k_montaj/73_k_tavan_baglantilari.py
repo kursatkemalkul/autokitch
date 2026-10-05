@@ -40,6 +40,8 @@ def apply(source,dest):
     env=dict(os.environ,YAMA_IS_KOK=str(Y/'kaynak'))
     subprocess.run([sys.executable,str(Y/'50_sikilastir.py'),str(temp),str(dest)],env=env,check=True);temp.unlink()
     r.update(input_sha256=hashlib.sha256(source.read_bytes()).hexdigest(),output_sha256=hashlib.sha256(dest.read_bytes()).hexdigest(),new_parts=[p['ad'] for p in parts],full_assembly_release=False)
+    from chain_entry import write_ent
+    write_ent(dest,parts,73)
     dest.with_suffix('.json').write_text(json.dumps(clean(r),ensure_ascii=False,indent=2),encoding='utf8');print('STEP73',r['output_sha256'],flush=True)
 
 if __name__=='__main__':
