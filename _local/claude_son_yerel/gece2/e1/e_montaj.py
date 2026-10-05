@@ -59,7 +59,7 @@ for a in list(P):
     m = _re.match(r'(.+)_(pul|somun)$', a)
     if m and m.group(1) + '_saplama' in P and 'yan' in P[m.group(1) + '_saplama']:
         P[a]['eks'] = P[m.group(1) + '_saplama']['yan'].copy()
-for a in [a for a in P if a.startswith('kaide_e_vida')]: P[a]['eks'] = np.array([0, -1.0, 0])
+for a in [a for a in P if a.startswith(('kaide_e_vida', 'arayuz_uke_m8'))]: P[a]['eks'] = np.array([0, -1.0, 0])
 for a in [a for a in P if _re.match(r'ayak_\d+(_kontra)?$', a)]: P[a]['eks'] = np.array([0, 1.0, 0])
 for a in [a for a in P if _re.match(r'onyuz_kapak_E_mentese_(sol|sag)_\d_sabit_vida', a)]: P[a]['eks'] = np.array([-1.0 if '_sol_' in a else 1.0, 0, 0])
 
@@ -141,7 +141,7 @@ adim('Üst sac', 'Üst sac (1,5 · yan dönüşler, Harting ağzı, U ↔ E içi
      'üst sac · pul + somun')
 kamera_genel(['ust_sac'], yon=(0.5, 0.7, 0.5), olcek=0.8)
 t = koy('ust_sac', AD(SAG7, UST6, lift=(0.5, 1, 2, 5), yan=()), 'Üst sac → sağdan, sol dönüşü yan saplamalarına', pem=sorted(PEM_SAC.get('ust_sac', [])))
-t = somunla(r'govde_bag_ust_sol', t, 20.0); olay(t - 0.6, 'Üst ↔ yan sol: pul + fiberli somun'); t += 0.2
+t = somunla(r'govde_(bag_ust_sol|kulak_ust_[a-z]+_bag)', t, 20.0); olay(t - 0.6, 'Üst ↔ yan sol: pul + fiberli somun'); t += 0.2
 # ---- 7 YAN SAĞ
 adim('Yan sağ', 'Yan sağ (şarjör kapısı açıklığı, preslenmiş saplamalar) sağdan: saplamaları kulaklardan, üst sacın dönüşünden ve mekanizma kulaklarından geçer; köşebent; içten pul + somunlar.',
      'yan sağ · köşebent · pul + somun')

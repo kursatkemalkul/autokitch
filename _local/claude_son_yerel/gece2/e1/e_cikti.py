@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
-"""F montaj v2 · denetim (kural 17–18) + çıktı (GLB morph + JSON). Girdi: plan_f.pkl (t5_montaj.py) · yöntem a3_cikti.py ile aynı
+"""E montaj v2 · denetim (kural 17–18) + çıktı (GLB morph + JSON). Girdi: plan_e.pkl (e_montaj.py) · yöntem a3_cikti.py ile aynı
 (5 Eki 2026 · bulut oturumu). Yol / son konum / havada denetimi MODEL ağıyla (Vm/Fm: hat3_v9x · zincir 00–56); gösterim ağı = açınımdan bükülen sac.
-Kullanım: python t5_cikti.py [--hizli] [--out <klasör>]"""
+Kullanım: python e_cikti.py [--hizli] [--out <klasör>]"""
 import sys, os, json, pickle, time, collections
 import numpy as np
 HERE = os.path.dirname(os.path.abspath(__file__)); os.chdir(HERE)
@@ -9,9 +9,9 @@ sys.path.insert(0, os.path.join(HERE, '..', 'cekmece')); sys.path.insert(0, HERE
 import yol_denetim_v2 as Y
 import v2geo as G
 Y.ADIM = 0.002
-OUT = sys.argv[sys.argv.index('--out') + 1] if '--out' in sys.argv else os.path.normpath(os.path.join(HERE, '..', '..', '..', '..', 'otonom', 'hat3d', 'v3', 'f_montaj'))
+OUT = sys.argv[sys.argv.index('--out') + 1] if '--out' in sys.argv else os.path.normpath(os.path.join(HERE, '..', '..', '..', '..', 'otonom', 'hat3d', 'v3', 'e_montaj'))
 HIZLI = '--hizli' in sys.argv
-D = pickle.load(open('plan_f.pkl', 'rb')); D['KAM'].sort(key=lambda k: k[0])
+D = pickle.load(open('plan_e.pkl', 'rb')); D['KAM'].sort(key=lambda k: k[0])
 P, HAR, GOR, MF, FR, VU, IST, ROT = D['P'], D['HAR'], D['GOR'], D['MF'], D['FRAMES'], D['VU'], D['ISTISNA'], D['ROT']
 CEV = set(D['CEVRE'])
 # 5 Eki: üst raf geçiş contaları tezgâhta, büküm BİTTİKTEN sonra deliklere takılır → görünme anı = üst rafın son büküm karesi
@@ -147,18 +147,10 @@ def vida(ad, std, d_nom, karsi, karsi_ad, delikler, eks=None):
     kes = [b for b in delikler if b in P and (('%s ↔ %s' % (ad, b)) in BEYANSIZ_SON or ('%s ↔ %s' % (b, ad)) in BEYANSIZ_SON)]
     VD.append(dict(eleman=ad, std=std, karsi=karsi_ad, kavrama_mm=round(kav, 2), dis_boyu_mm=None if k0 is None else round(k1 - k0, 2),
                    uc_tasma_mm=None if tas is None else round(tas, 2), delik_gecis=('TEMİZ' if not kes else 'KESİŞİM: ' + ', '.join(kes)), gecilen=list(delikler)))
-for a in sorted(x for x in P if x.startswith('arayuz_kb_') and not x.endswith('_pul')):
-    vida(a, 'ISO 4762 M8 × 25 (+ ISO 7092 pul)', 8, 'percin_somun_tb_' + a[len('arayuz_kb_'):], 'B kirişi M8 kapalı perçin somun', ['kaide_ust_plaka_4', 'kaide_arka_boru', 'kaide_sol_boru', 'kaide_sag_boru', 'kaide_enine_boru'])
-for a in sorted(x for x in P if x.startswith('arayuz_kaide_M6')):
-    vida(a, 'ISO 4762 M6 × 12', 6, 'kaide_plaka_pem_M6_' + a[-1], 'PEM SP-M6-2 (kaide plakası)', ['teknik_on_perde', 'dis_taban', 'kaide_ust_plaka_4'])
-for a in sorted(x for x in P if x.startswith('arayuz_m8_F') and not x.endswith('_pul')):
-    vida(a, 'ISO 4762 M8 × 16 (+ ISO 7092 pul)', 8, 'pem_M8_F_' + a[len('arayuz_m8_F_'):], 'PEM SP-M8-1 (sağ dış yan)', ['dis_yan_sag'])
-for a in sorted(x for x in P if x.startswith('servis_arka') and x.endswith('_vida')):
-    vida(a, 'DIN 7991 M5 × 12 (çökertme)', 5, a[:-len('_vida')] + '_burc', 'kaynak burcu M5 (dönüşün iç yüzü)', ['dis_arka_servis'])
-for a in sorted(x for x in P if x.startswith('evaporator_ayak_') and x.endswith('_vida')):
-    vida(a, 'ISO 7380 M5 × 6', 5, a[:-len('_vida')] + '_pem', 'PEM SP-M5-1 (kuru bölme tabanı)', ['evaporator_ayagi_' + a.split('_')[2]])
-for a in sorted(x for x in P if x.startswith('kanal_kapagi_') and x.endswith('_vida')):
-    vida(a, 'ISO 7380 M5', 5, a[:-len('_vida')] + '_pem', 'PEM SP-M5-1 (kuru bölme tabanı)', ['kanal_gecis_kapagi'])
+for a in sorted(x for x in P if x.startswith('kaide_e_vida')):
+    vida(a, 'ISO 7380 M8 (bombe başlı)', 8, 'kaide_e_somun_' + a[len('kaide_e_vida_'):], 'DIN 929 M8 kaynak somunu (kaide rayı)', ['taban_sac_3'])
+for a in sorted(x for x in P if x.startswith('arayuz_uke_m8')):
+    vida(a, 'ISO 7380 M8 × 16 (U tabanından)', 8, 'govde_pem_m8_ust_' + a.split('_')[-1], 'PEM SP-M8 (üst sac)', [])
 ozet = collections.OrderedDict()
 for r in VD:
     k = (r['std'], r['karsi'])
@@ -186,20 +178,20 @@ for a in P:
     if a in ROT: PARCA[a]['r'] = [r for r in ROT[a] if abs(r[2]) > 1e-9]
     if a in IST: PARCA[a]['k'] = 1
     o0 = ofs_t(a, -1.0) / 1000.0; LOt = np.minimum(LOt, V.min(0) + np.minimum(o0, 0)); HIt = np.maximum(HIt, V.max(0) + np.maximum(o0, 0))
-n = G.glb_yaz(os.path.join(OUT, 'f_montaj.glb'), dug, MATS)
+n = G.glb_yaz(os.path.join(OUT, 'e_montaj.glb'), dug, MATS)
 MA = {('%s ↔ %s' % k): v for k, v in HARIC.items() if v.startswith('MODEL AÇIĞI')}
 DEN = dict(model_acigi=len(MA), yuzey_temasi=TEMAS, adim=len(D['ADIM']), parca=len(GOS), cevre=len(CEV), cift=DN.ciftsay, cakisma=len(CAK), cakismalar=CAK, adim_mm=2.0,
            uretim_kare_sorun=[list(x) for x in KARE_SORUN], belirme=len(BELIRME), belirme_liste=BELIRME, havada=HAVADA, son_konum=son_rap, son_beyansiz=len(BEYANSIZ_SON),
            haric={'%s ↔ %s' % k: v for k, v in HARIC.items() if not v.startswith(('kaynak dikişi /', 'kablo / hortum'))}, vida=VD, sac_model=SK[:10], plan_sorun=D['PLAN_SORUN'],
            istisna=sorted(IST), uretilen=sorted(FR), siyirma_mm=Y.SINIR * 1000, oturma_mm=Y.OTURMA * 1000)
-OUTJ = dict(surum='f_montaj_v2', ist='F', tarih='5 Eki 2026',
-            kaynak='hat3_v10h.glb (zincir 00–66) · F üst kabin h3_u_sac_v1 + kapak / atış kanalı h3_f_sac_v1 (açınım) + ana model · üretim: f_parca.py + f_montaj.py + f_cikti.py',
+OUTJ = dict(surum='e_montaj_v2', ist='E', tarih='5 Eki 2026',
+            kaynak='hat3_v10h.glb (zincir 00–66) · E gövde h3_e_sac_v1 (açınım) + ana model · üretim: e_parca.py + e_montaj.py + e_cikti.py',
             sehpa=False, birim='m', toplam=D['TOPLAM'], zarf=[np.round(np.maximum(LOt, [-1, 0, -3]), 3).tolist(), np.round(np.minimum(HIt, [5, 4, 3]), 3).tolist()], ghost=[], ghost_t=0.0,
             adimlar=D['ADIM'], olaylar=sorted(D['OLAY'], key=lambda o: o[0]), kamera=D['KAM'], parcalar=PARCA, acinim=D['ACN'],
             sayim=dict(gosterilen=len(GOS), cevre=len(CEV), ucgen=int(sum(len(P[a]['F']) for a in P)), uretilen=len(FR),
                        sac=len(D['SAC_AD']), baglanti=sum(1 for a in GOS if P[a]['tur'] == 'baglanti'), kaynak=sum(1 for a in GOS if P[a]['tur'] == 'kaynak')), denetim=DEN,
-            aciklama=None, istisna_metin='Kaynak dikişleri ve punta işaretleri birleşme anında belirir ve kalır; kablolar ve hava hortumları kanal boyunca uzar. Baca ve pizza kutusu stoğu U montajında / işletmede.')
+            aciklama=None, istisna_metin='Kaynak dikişleri ve punta işaretleri birleşme anında belirir ve kalır; kablolar ve hava hortumları kanal boyunca uzar. Kutu kartonu yığını işletmede şarjör yan kapısından doldurulur.')
 OUTJ.pop('aciklama')
-json.dump(OUTJ, open(os.path.join(OUT, 'f_montaj.json'), 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'), default=float)
-json.dump(DEN, open('sonuc_f.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1, default=str)
+json.dump(OUTJ, open(os.path.join(OUT, 'e_montaj.json'), 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'), default=float)
+json.dump(DEN, open('sonuc_e.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1, default=str)
 print('GLB %.2f MB · JSON yazıldı · zarf %s · %s' % (n / 1e6, OUTJ['zarf'], OUT))
