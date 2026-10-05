@@ -1,0 +1,48 @@
+{
+  "step": 77,
+  "two_runs_byte_identical": true,
+  "glb_sha256": "5c08c6c90a0724360cdc3764a16a6955ea7023989915eb1f51b7c0bce5ad89f4",
+  "proof": {
+    "step": 77,
+    "precision_grid_mm": 0.001,
+    "max_vertex_adjustment_mm": 0.0006905536223815254,
+    "input_sha256": "f46148bf3f4c497f2b390e9401f5edd0161969162a4042efefb5d636449cd12f",
+    "output_sha256": "5c08c6c90a0724360cdc3764a16a6955ea7023989915eb1f51b7c0bce5ad89f4",
+    "slots": [
+      {
+        "center_mm": [
+          4040.0,
+          1853,
+          -828.5
+        ],
+        "width_mm": 5.5,
+        "bottom_open_y_mm": 1840,
+        "upper_radius_mm": 2.75,
+        "depth_mm": 1.51,
+        "existing_M5_stud_retained": true,
+        "reason": "Roof lowers over horizontal rear studs; ISO7089 washer and ISO10511 nut are fitted afterwards"
+      },
+      {
+        "center_mm": [
+          4360.0,
+          1853,
+          -828.5
+        ],
+        "width_mm": 5.5,
+        "bottom_open_y_mm": 1840,
+        "upper_radius_mm": 2.75,
+        "depth_mm": 1.51,
+        "existing_M5_stud_retained": true,
+        "reason": "Roof lowers over horizontal rear studs; ISO7089 washer and ISO10511 nut are fitted afterwards"
+      }
+    ],
+    "removed_volume_mm3": 173.3046008887468,
+    "delta_outside_slots_mm3": 0.0,
+    "rear_panel_modified": false,
+    "studs_modified": false,
+    "animation_exceptions_added": false,
+    "production_release": false
+  },
+  "registered_chain_step": false,
+  "full_station_release": false
+}

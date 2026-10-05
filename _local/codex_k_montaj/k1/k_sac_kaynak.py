@@ -13,7 +13,7 @@ _decode=ns['decode']
 class SourceSac:
  def __init__(self,record,current_vertices,indices,flat):
   self.record=record;self.current=np.asarray(current_vertices);self.indices=indices;self.t=record['t']
-  by={b['number']:b for b in record['bends']};self.bukum=[{'no':i+1,'source_no':n,'aci':abs(float(np.degrees(by[n]['angle']))),'ad':'Kaynak büküm '+str(n)} for i,n in enumerate(record['order'])]
+  by={b['number']:b for b in record['bends']};self.bukum=[{'no':i+1,'source_no':n,'aci':abs(float(np.degrees(by[n]['angle']))),'R':float(by[n]['BA']/abs(by[n]['angle'])-by[n]['K']*record['t']),'ad':'Kaynak büküm '+str(n)} for i,n in enumerate(record['order'])]
   self.levha={'boy':flat['levha']['boy'],'en':flat['levha']['en']} if 'levha' in flat else self._flat_size()
  def _flat_size(self):
   v=_decode(self.record,0.);span=np.ptp(v,axis=0);axes=np.argsort(span)[-2:];return {'boy':float(span[axes[1]]),'en':float(span[axes[0]])}
@@ -33,11 +33,13 @@ class SourceSac:
   return result
 
 def load(P):
- data=json.loads((ROOT/'_local/codex_k_montaj/source_bending_updated.json').read_text(encoding='utf-8'));inventory=json.loads((ROOT/'_local/codex_k_montaj/source_cad_inventory.json').read_text(encoding='utf-8'))
+ data=json.loads((HERE/'current_sheet_bending.json').read_text(encoding='utf-8'));
+ if not data['passed']:raise ValueError('Current sheet endpoint encoding is incomplete')
+ inventory=json.loads((ROOT/'_local/codex_k_montaj/source_cad_inventory.json').read_text(encoding='utf-8'))
  flats={s['name']:s['flat'] for s in inventory['sheets']};SAC={};audit=[]
  aliases={'onyuz_kapak_K':['k_govde_on_seffaf_0','k_govde_on_seffaf_2','k_govde_on_seffaf_3'],'onyuz_kapak_K_ic_tava':['k_govde_on_seffaf_1']}
  for rec in data['sheets']:
-  for a in aliases.get(rec['name'],[rec['name']]):
+  for a in rec.get('target_parts',aliases.get(rec['name'],[rec['name']])):
    if a not in P:continue
    v=np.asarray(P[a]['V']);distance,idx=cKDTree(np.asarray(rec['vertices'])).query(v)
    row={'part':a,'source_sheet':rec['name'],'maximum_mapping_distance_mm':float(distance.max()),'passed':float(distance.max())<=.01}

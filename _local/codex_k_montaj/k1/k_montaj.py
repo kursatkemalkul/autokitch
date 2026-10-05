@@ -9,7 +9,10 @@ sys.path.insert(0,str(ROOT/'_local/claude_son_yerel/gece2/cekmece'));sys.path.in
 import yol_denetim_v2 as Y
 import v2geo as G
 T0=time.time(); D0=pickle.load(open('k_parca.pkl','rb'));P=D0['P'];ENT=D0['ENT']
-SAC={};PEM_SAC={};CEVRE=[a for a in P if P[a]['tur']=='cevre'];KAPGRUP=[]
+from k_sac_kaynak import load as load_current_sheets
+SAC,SHEET_AUDIT=load_current_sheets(P)
+assert all(r['passed'] for r in SHEET_AUDIT),'Current manufacturing mesh mapping failed'
+PEM_SAC={};CEVRE=[a for a in P if P[a]['tur']=='cevre'];KAPGRUP=[]
 def bk(x):return x.replace('_',' ')
 def tr(a):return P[a]['ac']
 exec((HERE/'_altyapi.py').read_text(encoding='utf-8'))
@@ -290,7 +293,7 @@ for a in P:
 # The open frame is closed after belt end plates have entered axially; no path is exempted.
 for rail in ('bant_yan_-3','bant_yan_-421'):
  for post in ('kose_dikmesi_20_42','kose_dikmesi_380_42','kose_dikmesi_20_-800','kose_dikmesi_380_-800','emniyet_sari_0','emniyet_siyah_0'):
-  before(rail,post)
+  before(post,rail)
 for a in P:
  if a.startswith(('itici_X_','itici_Z_')):before('bant_yan_-421',a)
  if a.startswith(('yag_pompasi_','yag_emis_filtresi','yag_basinc_sensoru_','yag_geri_basinc_','yag_T_parcasi')):
@@ -349,7 +352,29 @@ for a in ('elk_zincir_hava_1','elk_zincir_kanal_1'):before('elk_zincir_kanal_0',
 before('elk_zincir_kanal_2','elk_zincir_hava_2')
 before('k76_tarti_rakor_M16_kilit_somunu','elk_ic_kanal_1')
 
-remaining=set(items);ordered=[];cycle_breaks=[]
+remaining=set(items);# Correctly separated side returns must be installed before the rear studs,
+# belt endplates and inner fixtures obstruct their lateral entry. Neighbouring
+# modules remain visible context only after K factory assembly, as in v6.
+for wall in ('sol_sac_urun_girisi','sag_sac_E_penceresi'):
+ before(wall,'arka_sac');before(wall,'ust_sac')
+ for a in P:
+  if a.startswith(('bant_yan_','cit_','elk_ic_kanal_','elk_zincir_kanal_','itici_','DGRF','PulsaJet','yag_tarti_','yag_pompa_')) or a=='yag_tenekesi_18L':before(wall,a)
+before('arka_sac','ust_sac')
+# Keep the top access open while fittings that enter through it are installed.
+for a in ('elk_ic_kanal_8','hava_ic_kanal_0','hava_ic_kanal_1','elk_ic_kanal_5','yag_pompa_rafi','yag_pompa_plakasi','hava_ic_aski_2','hava_ic_aski_3','yag_emis_filtresi','yag_geri_basinc_regulatoru_KBP','yag_pompasi_GJ-N21_EagleDrive','elk_zincir_kanal_1','elk_ic_kanal_2','elk_ic_kanal_3'):
+ before(a,'ust_sac')
+for a in P:
+ if a.startswith(('elk_zincir_paslanmaz_','elk_zincir_harting_','elk_k_tarti_celik_','elk_k_celik_')):before(a,'ust_sac')
+before('sol_sac_urun_girisi','yag_damlama_tavasi_F')
+# The source feet must be seated before their new step72 screws and washers.
+for a in P:
+ if a.startswith(('itici_taban_','bant_ayagi_')):
+  for file in ('k72_mounts.json',):
+   for j in json.loads((ROOT/'_local/codex_k_montaj'/file).read_text(encoding='utf-8'))['connections']:
+    x,_,z=j['center_mm']
+    if LO[a][0]-.1<=x<=HI[a][0]+.1 and LO[a][2]-.1<=z<=HI[a][2]+.1:
+     for b in j['parts']:before(a,b)
+ordered=[];cycle_breaks=[]
 while remaining:
  ready=[a for a in remaining if not any(b==a and x in remaining for x,b in edges)]
  if not ready:
@@ -385,9 +410,10 @@ for a in ordered:
   elif a=='elk_zincir_kanal_0':alternatives=[YOL((0,35,0))]+AD
   elif a=='elk_zincir_kanal_2':alternatives=[YOL((-35,0,0))]+AD
   elif a=='arka_sac':alternatives=[YOL((0,0,-950))]+AD
-  elif a=='sol_sac_urun_girisi':alternatives=[YOL((0,0,950),(-14,0,0)),YOL((0,0,-950),(-14,0,0)),YOL((-650,0,0),(0,0,12))]+AD
-  elif a=='bant_yan_-3':alternatives=[YOL((0,0,950))]+AD
-  elif a=='bant_yan_-421':alternatives=[YOL((0,0,-950))]+AD
+  elif a=='sag_sac_E_penceresi':alternatives=[YOL((650,0,0)),YOL((0,0,950),(24,0,0))]+AD
+  elif a=='sol_sac_urun_girisi':alternatives=[YOL((-650,0,0)),YOL((0,0,950),(-24,0,0)),YOL((0,0,-950),(-24,0,0))]+AD
+  elif a=='bant_yan_-3':alternatives=[YOL((0,700,0),(0,0,12)),YOL((0,0,950))]+AD
+  elif a=='bant_yan_-421':alternatives=[YOL((0,700,0),(0,0,-12)),YOL((0,0,-950))]+AD
   else:alternatives=AD
   t=yerlestir(GROUPS.get(a,[a]),alternatives,t,tr(a),pem=PRESS_BY_SHEET.get(a,()),tezgah_kaynak=WELDS.get(a,()),sure_bekle=0.02)
  (HERE/'plan_progress.json').write_text(json.dumps({'last_part':a,'installed':len(YER),'problems':PLAN_SORUN,'elapsed_seconds':round(time.time()-T0,2)},ensure_ascii=False,indent=2),encoding='utf-8')

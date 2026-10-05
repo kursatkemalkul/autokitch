@@ -1,9 +1,14 @@
 """Invert actual source vertices into flat/folded native sheet coordinates."""
 from lower_support import *
 
-def encode_sheet(sheet,triangles,offset):
+def encode_sheet(sheet,triangles,offset,stock_outline=False):
     V,F=np.unique(triangles.reshape(-1,3),axis=0,return_inverse=True);F=F.reshape(-1,3)
     pk,_=sheet._yerel_katilar();encoded=[];missing=[];worst=0.
+    if stock_outline:
+        # Current mesh already contains authoritative through holes and machining.
+        # Inverse-map its exact vertices against panel stock, not obsolete source
+        # hole seats. This never fills holes or changes triangles or bend geometry.
+        pk={p.no:cq.Solid.extrudeLinear(S.yuz_poligon(p.poly).outerWire(),[],cq.Vector(0,0,sheet.t)) for p in sheet.paneller}
     for index,world in enumerate(V):
         point=world-np.array(offset);record=None;reconstructed=None
         for panel in sheet.paneller:

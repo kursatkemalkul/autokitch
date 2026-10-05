@@ -167,6 +167,8 @@ cev('cevre_F', lambda o: kod(o).startswith('F/') or o['dug'].startswith('F_'), '
 cev('cevre_diger', lambda o: True, 'Hat (silik çevre)')
 kalan = [o for o in L if id(o) not in ATANAN]
 print('ATANMAYAN', len(kalan))
+from k_yuz_etiket import apply as apply_verified_surface_names
+P=apply_verified_surface_names(P)
 pickle.dump(dict(P=P, ENT=ENT), open('k_parca.pkl', 'wb'))
 c = collections.Counter(v['tur'] for v in P.values()); print('tür', dict(c))
 for a in sorted(P):

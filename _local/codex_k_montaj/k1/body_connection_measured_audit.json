@@ -1,0 +1,1737 @@
+{
+  "scope": "existing source-defined K body joins only; not whole K connection release",
+  "checks": [
+    {
+      "id": "govde_kulak_sol_on_841_bag",
+      "hardware": [
+        "govde_kulak_sol_on_841_bag_saplama",
+        "govde_kulak_sol_on_841_bag_pul",
+        "govde_kulak_sol_on_841_bag_somun"
+      ],
+      "hosts": [
+        "sol_sac_urun_girisi",
+        "govde_kulak_sol_on_841"
+      ],
+      "source_axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "measured_axis_deviation_mm": {
+        "govde_kulak_sol_on_841_bag_saplama": 2.837939641649598e-05,
+        "govde_kulak_sol_on_841_bag_pul": 1.1075450922758713e-05,
+        "govde_kulak_sol_on_841_bag_somun": 1.2560334171203479e-05
+      },
+      "measured_intervals_mm": {
+        "govde_kulak_sol_on_841_bag_saplama": [
+          0.0,
+          12.000100000000202
+        ],
+        "govde_kulak_sol_on_841_bag_pul": [
+          4.499899999999798,
+          5.500300000000152
+        ],
+        "govde_kulak_sol_on_841_bag_somun": [
+          5.500300000000152,
+          10.5003999999999
+        ]
+      },
+      "engagement_mm": 5.0000999999997475,
+      "protrusion_mm": 1.4997000000003027,
+      "protrusion_threads": 1.8746250000003783,
+      "holes": [
+        {
+          "host": "govde_kulak_sol_on_841",
+          "nominal_diameter_mm": 5.5,
+          "nearest_circular_surface_radius_error_mm": 0.0,
+          "passed": true
+        },
+        {
+          "host": "sol_sac_urun_girisi",
+          "nominal_diameter_mm": 5.0,
+          "nearest_circular_surface_radius_error_mm": 0.0,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "govde_kulak_sol_on_1150_bag",
+      "hardware": [
+        "govde_kulak_sol_on_1150_bag_saplama",
+        "govde_kulak_sol_on_1150_bag_pul",
+        "govde_kulak_sol_on_1150_bag_somun"
+      ],
+      "hosts": [
+        "sol_sac_urun_girisi",
+        "govde_kulak_sol_on_1150"
+      ],
+      "source_axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "measured_axis_deviation_mm": {
+        "govde_kulak_sol_on_1150_bag_saplama": 4.050417891811865e-06,
+        "govde_kulak_sol_on_1150_bag_pul": 9.625852260536929e-06,
+        "govde_kulak_sol_on_1150_bag_somun": 1.6346166695521494e-06
+      },
+      "measured_intervals_mm": {
+        "govde_kulak_sol_on_1150_bag_saplama": [
+          0.0,
+          12.000100000000202
+        ],
+        "govde_kulak_sol_on_1150_bag_pul": [
+          4.499899999999798,
+          5.500300000000152
+        ],
+        "govde_kulak_sol_on_1150_bag_somun": [
+          5.500300000000152,
+          10.5003999999999
+        ]
+      },
+      "engagement_mm": 5.0000999999997475,
+      "protrusion_mm": 1.4997000000003027,
+      "protrusion_threads": 1.8746250000003783,
+      "holes": [
+        {
+          "host": "govde_kulak_sol_on_1150",
+          "nominal_diameter_mm": 5.5,
+          "nearest_circular_surface_radius_error_mm": 0.0,
+          "passed": true
+        },
+        {
+          "host": "sol_sac_urun_girisi",
+          "nominal_diameter_mm": 5.0,
+          "nearest_circular_surface_radius_error_mm": 0.0,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "govde_kulak_sol_on_1600_bag",
+      "hardware": [
+        "govde_kulak_sol_on_1600_bag_saplama",
+        "govde_kulak_sol_on_1600_bag_pul",
+        "govde_kulak_sol_on_1600_bag_somun"
+      ],
+      "hosts": [
+        "sol_sac_urun_girisi",
+        "govde_kulak_sol_on_1600"
+      ],
+      "source_axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "measured_axis_deviation_mm": {
+        "govde_kulak_sol_on_1600_bag_saplama": 3.8656150640537186e-07,
+        "govde_kulak_sol_on_1600_bag_pul": 1.1075450951811845e-05,
+        "govde_kulak_sol_on_1600_bag_somun": 1.689400289645867e-05
+      },
+      "measured_intervals_mm": {
+        "govde_kulak_sol_on_1600_bag_saplama": [
+          0.0,
+          12.000100000000202
+        ],
+        "govde_kulak_sol_on_1600_bag_pul": [
+          4.499899999999798,
+          5.500300000000152
+        ],
+        "govde_kulak_sol_on_1600_bag_somun": [
+          5.500300000000152,
+          10.5003999999999
+        ]
+      },
+      "engagement_mm": 5.0000999999997475,
+      "protrusion_mm": 1.4997000000003027,
+      "protrusion_threads": 1.8746250000003783,
+      "holes": [
+        {
+          "host": "govde_kulak_sol_on_1600",
+          "nominal_diameter_mm": 5.5,
+          "nearest_circular_surface_radius_error_mm": 1.6363631010207769e-06,
+          "passed": true
+        },
+        {
+          "host": "sol_sac_urun_girisi",
+          "nominal_diameter_mm": 5.0,
+          "nearest_circular_surface_radius_error_mm": 0.0,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "govde_kulak_sol_on_1810_bag",
+      "hardware": [
+        "govde_kulak_sol_on_1810_bag_saplama",
+        "govde_kulak_sol_on_1810_bag_pul",
+        "govde_kulak_sol_on_1810_bag_somun"
+      ],
+      "hosts": [
+        "sol_sac_urun_girisi",
+        "govde_kulak_sol_on_1810"
+      ],
+      "source_axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "measured_axis_deviation_mm": {
+        "govde_kulak_sol_on_1810_bag_saplama": 1.7200006715428314e-05,
+        "govde_kulak_sol_on_1810_bag_pul": 1.4119101255418817e-05,
+        "govde_kulak_sol_on_1810_bag_somun": 1.1563433683969403e-05
+      },
+      "measured_intervals_mm": {
+        "govde_kulak_sol_on_1810_bag_saplama": [
+          0.0,
+          12.000100000000202
+        ],
+        "govde_kulak_sol_on_1810_bag_pul": [
+          4.499899999999798,
+          5.500300000000152
+        ],
+        "govde_kulak_sol_on_1810_bag_somun": [
+          5.500300000000152,
+          10.5003999999999
+        ]
+      },
+      "engagement_mm": 5.0000999999997475,
+      "protrusion_mm": 1.4997000000003027,
+      "protrusion_threads": 1.8746250000003783,
+      "holes": [
+        {
+          "host": "govde_kulak_sol_on_1810",
+          "nominal_diameter_mm": 5.5,
+          "nearest_circular_surface_radius_error_mm": 0.0,
+          "passed": true
+        },
+        {
+          "host": "sol_sac_urun_girisi",
+          "nominal_diameter_mm": 5.0,
+          "nearest_circular_surface_radius_error_mm": 0.0,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "govde_kulak_sol_arka_841_bag",
+      "hardware": [
+        "govde_kulak_sol_arka_841_bag_saplama",
+        "govde_kulak_sol_arka_841_bag_pul",
+        "govde_kulak_sol_arka_841_bag_somun"
+      ],
+      "hosts": [
+        "sol_sac_urun_girisi",
+        "govde_kulak_sol_arka_841"
+      ],
+      "source_axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "measured_axis_deviation_mm": {
+        "govde_kulak_sol_arka_841_bag_saplama": 2.229762330957927e-05,
+        "govde_kulak_sol_arka_841_bag_pul": 1.1075450925585154e-05,
+        "govde_kulak_sol_arka_841_bag_somun": 1.2560334163199847e-05
+      },
+      "measured_intervals_mm": {
+        "govde_kulak_sol_arka_841_bag_saplama": [
+          0.0,
+          12.000100000000202
+        ],
+        "govde_kulak_sol_arka_841_bag_pul": [
+          4.499899999999798,
+          5.500300000000152
+        ],
+        "govde_kulak_sol_arka_841_bag_somun": [
+          5.500300000000152,
+          10.5003999999999
+        ]
+      },
+      "engagement_mm": 5.0000999999997475,
+      "protrusion_mm": 1.4997000000003027,
+      "protrusion_threads": 1.8746250000003783,
+      "holes": [
+        {
+          "host": "govde_kulak_sol_arka_841",
+          "nominal_diameter_mm": 5.5,
+          "nearest_circular_surface_radius_error_mm": 0.0,
+          "passed": true
+        },
+        {
+          "host": "sol_sac_urun_girisi",
+          "nominal_diameter_mm": 5.0,
+          "nearest_circular_surface_radius_error_mm": 0.0,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "govde_kulak_sol_arka_1150_bag",
+      "hardware": [
+        "govde_kulak_sol_arka_1150_bag_saplama",
+        "govde_kulak_sol_arka_1150_bag_pul",
+        "govde_kulak_sol_arka_1150_bag_somun"
+      ],
+      "hosts": [
+        "sol_sac_urun_girisi",
+        "govde_kulak_sol_arka_1150"
+      ],
+      "source_axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "measured_axis_deviation_mm": {
+        "govde_kulak_sol_arka_1150_bag_saplama": 1.0899665430772467e-05,
+        "govde_kulak_sol_arka_1150_bag_pul": 9.625852257638726e-06,
+        "govde_kulak_sol_arka_1150_bag_somun": 1.6346166775645483e-06
+      },
+      "measured_intervals_mm": {
+        "govde_kulak_sol_arka_1150_bag_saplama": [
+          0.0,
+          12.000100000000202
+        ],
+        "govde_kulak_sol_arka_1150_bag_pul": [
+          4.499899999999798,
+          5.500300000000152
+        ],
+        "govde_kulak_sol_arka_1150_bag_somun": [
+          5.500300000000152,
+          10.5003999999999
+        ]
+      },
+      "engagement_mm": 5.0000999999997475,
+      "protrusion_mm": 1.4997000000003027,
+      "protrusion_threads": 1.8746250000003783,
+      "holes": [
+        {
+          "host": "govde_kulak_sol_arka_1150",
+          "nominal_diameter_mm": 5.5,
+          "nearest_circular_surface_radius_error_mm": 1.6363631103466503e-06,
+          "passed": true
+        },
+        {
+          "host": "sol_sac_urun_girisi",
+          "nominal_diameter_mm": 5.0,
+          "nearest_circular_surface_radius_error_mm": 0.0,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "govde_kulak_sol_arka_1600_bag",
+      "hardware": [
+        "govde_kulak_sol_arka_1600_bag_saplama",
+        "govde_kulak_sol_arka_1600_bag_pul",
+        "govde_kulak_sol_arka_1600_bag_somun"
+      ],
+      "hosts": [
+        "sol_sac_urun_girisi",
+        "govde_kulak_sol_arka_1600"
+      ],
+      "source_axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "measured_axis_deviation_mm": {
+        "govde_kulak_sol_arka_1600_bag_saplama": 6.809389357624018e-06,
+        "govde_kulak_sol_arka_1600_bag_pul": 1.1075450954835482e-05,
+        "govde_kulak_sol_arka_1600_bag_somun": 1.6894002904332016e-05
+      },
+      "measured_intervals_mm": {
+        "govde_kulak_sol_arka_1600_bag_saplama": [
+          0.0,
+          12.000100000000202
+        ],
+        "govde_kulak_sol_arka_1600_bag_pul": [
+          4.499899999999798,
+          5.500300000000152
+        ],
+        "govde_kulak_sol_arka_1600_bag_somun": [
+          5.500300000000152,
+          10.5003999999999
+        ]
+      },
+      "engagement_mm": 5.0000999999997475,
+      "protrusion_mm": 1.4997000000003027,
+      "protrusion_threads": 1.8746250000003783,
+      "holes": [
+        {
+          "host": "govde_kulak_sol_arka_1600",
+          "nominal_diameter_mm": 5.5,
+          "nearest_circular_surface_radius_error_mm": 0.0,
+          "passed": true
+        },
+        {
+          "host": "sol_sac_urun_girisi",
+          "nominal_diameter_mm": 5.0,
+          "nearest_circular_surface_radius_error_mm": 0.0,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "govde_kulak_sol_arka_1720_bag",
+      "hardware": [
+        "govde_kulak_sol_arka_1720_bag_saplama",
+        "govde_kulak_sol_arka_1720_bag_pul",
+        "govde_kulak_sol_arka_1720_bag_somun"
+      ],
+      "hosts": [
+        "sol_sac_urun_girisi",
+        "govde_kulak_sol_arka_1720"
+      ],
+      "source_axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "measured_axis_deviation_mm": {
+        "govde_kulak_sol_arka_1720_bag_saplama": 6.809389357624018e-06,
+        "govde_kulak_sol_arka_1720_bag_pul": 4.3102465385201255e-06,
+        "govde_kulak_sol_arka_1720_bag_somun": 1.6894002904332016e-05
+      },
+      "measured_intervals_mm": {
+        "govde_kulak_sol_arka_1720_bag_saplama": [
+          0.0,
+          12.000100000000202
+        ],
+        "govde_kulak_sol_arka_1720_bag_pul": [
+          4.499899999999798,
+          5.500300000000152
+        ],
+        "govde_kulak_sol_arka_1720_bag_somun": [
+          5.500300000000152,
+          10.5003999999999
+        ]
+      },
+      "engagement_mm": 5.0000999999997475,
+      "protrusion_mm": 1.4997000000003027,
+      "protrusion_threads": 1.8746250000003783,
+      "holes": [
+        {
+          "host": "govde_kulak_sol_arka_1720",
+          "nominal_diameter_mm": 5.5,
+          "nearest_circular_surface_radius_error_mm": 0.0,
+          "passed": true
+        },
+        {
+          "host": "sol_sac_urun_girisi",
+          "nominal_diameter_mm": 5.0,
+          "nearest_circular_surface_radius_error_mm": 0.0,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "govde_kulak_sag_on_841_bag",
+      "hardware": [
+        "govde_kulak_sag_on_841_bag_saplama",
+        "govde_kulak_sag_on_841_bag_pul",
+        "govde_kulak_sag_on_841_bag_somun"
+      ],
+      "hosts": [
+        "sag_sac_E_penceresi",
+        "govde_kulak_sag_on_841"
+      ],
+      "source_axis": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "measured_axis_deviation_mm": {
+        "govde_kulak_sag_on_841_bag_saplama": 2.837939641649598e-05,
+        "govde_kulak_sag_on_841_bag_pul": 1.1075450922758713e-05,
+        "govde_kulak_sag_on_841_bag_somun": 1.2560334171203479e-05
+      },
+      "measured_intervals_mm": {
+        "govde_kulak_sag_on_841_bag_saplama": [
+          -0.00010000000020227162,
+          12.0
+        ],
+        "govde_kulak_sag_on_841_bag_pul": [
+          4.4997999999995955,
+          5.5002000000004045
+        ],
+        "govde_kulak_sag_on_841_bag_somun": [
+          5.5002000000004045,
+          10.500299999999697
+        ]
+      },
+      "engagement_mm": 5.000099999999293,
+      "protrusion_mm": 1.4997000000003027,
+      "protrusion_threads": 1.8746250000003783,
+      "holes": [
+        {
+          "host": "govde_kulak_sag_on_841",
+          "nominal_diameter_mm": 5.5,
+          "nearest_circular_surface_radius_error_mm": 0.0,
+          "passed": true
+        },
+        {
+          "host": "sag_sac_E_penceresi",
+          "nominal_diameter_mm": 5.0,
+          "nearest_circular_surface_radius_error_mm": 0.0,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "govde_kulak_sag_on_1150_bag",
+      "hardware": [
+        "govde_kulak_sag_on_1150_bag_saplama",
+        "govde_kulak_sag_on_1150_bag_pul",
+        "govde_kulak_sag_on_1150_bag_somun"
+      ],
+      "hosts": [
+        "sag_sac_E_penceresi",
+        "govde_kulak_sag_on_1150"
+      ],
+      "source_axis": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "measured_axis_deviation_mm": {
+        "govde_kulak_sag_on_1150_bag_saplama": 4.050417891811865e-06,
+        "govde_kulak_sag_on_1150_bag_pul": 9.625852260536929e-06,
+        "govde_kulak_sag_on_1150_bag_somun": 1.6346166695521494e-06
+      },
+      "measured_intervals_mm": {
+        "govde_kulak_sag_on_1150_bag_saplama": [
+          -0.00010000000020227162,
+          12.0
+        ],
+        "govde_kulak_sag_on_1150_bag_pul": [
+          4.4997999999995955,
+          5.5002000000004045
+        ],
+        "govde_kulak_sag_on_1150_bag_somun": [
+          5.5002000000004045,
+          10.500299999999697
+        ]
+      },
+      "engagement_mm": 5.000099999999293,
+      "protrusion_mm": 1.4997000000003027,
+      "protrusion_threads": 1.8746250000003783,
+      "holes": [
+        {
+          "host": "govde_kulak_sag_on_1150",
+          "nominal_diameter_mm": 5.5,
+          "nearest_circular_surface_radius_error_mm": 1.6363631010207769e-06,
+          "passed": true
+        },
+        {
+          "host": "sag_sac_E_penceresi",
+          "nominal_diameter_mm": 5.0,
+          "nearest_circular_surface_radius_error_mm": 0.0,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "govde_kulak_sag_on_1600_bag",
+      "hardware": [
+        "govde_kulak_sag_on_1600_bag_saplama",
+        "govde_kulak_sag_on_1600_bag_pul",
+        "govde_kulak_sag_on_1600_bag_somun"
+      ],
+      "hosts": [
+        "sag_sac_E_penceresi",
+        "govde_kulak_sag_on_1600"
+      ],
+      "source_axis": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "measured_axis_deviation_mm": {
+        "govde_kulak_sag_on_1600_bag_saplama": 3.8656150640537186e-07,
+        "govde_kulak_sag_on_1600_bag_pul": 1.1075450951811845e-05,
+        "govde_kulak_sag_on_1600_bag_somun": 1.689400289645867e-05
+      },
+      "measured_intervals_mm": {
+        "govde_kulak_sag_on_1600_bag_saplama": [
+          -0.00010000000020227162,
+          12.0
+        ],
+        "govde_kulak_sag_on_1600_bag_pul": [
+          4.4997999999995955,
+          5.5002000000004045
+        ],
+        "govde_kulak_sag_on_1600_bag_somun": [
+          5.5002000000004045,
+          10.500299999999697
+        ]
+      },
+      "engagement_mm": 5.000099999999293,
+      "protrusion_mm": 1.4997000000003027,
+      "protrusion_threads": 1.8746250000003783,
+      "holes": [
+        {
+          "host": "govde_kulak_sag_on_1600",
+          "nominal_diameter_mm": 5.5,
+          "nearest_circular_surface_radius_error_mm": 0.0,
+          "passed": true
+        },
+        {
+          "host": "sag_sac_E_penceresi",
+          "nominal_diameter_mm": 5.0,
+          "nearest_circular_surface_radius_error_mm": 0.0,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "govde_kulak_sag_on_1810_bag",
+      "hardware": [
+        "govde_kulak_sag_on_1810_bag_saplama",
+        "govde_kulak_sag_on_1810_bag_pul",
+        "govde_kulak_sag_on_1810_bag_somun"
+      ],
+      "hosts": [
+        "sag_sac_E_penceresi",
+        "govde_kulak_sag_on_1810"
+      ],
+      "source_axis": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "measured_axis_deviation_mm": {
+        "govde_kulak_sag_on_1810_bag_saplama": 1.7200006715428314e-05,
+        "govde_kulak_sag_on_1810_bag_pul": 1.4119101255418817e-05,
+        "govde_kulak_sag_on_1810_bag_somun": 1.1563433683969403e-05
+      },
+      "measured_intervals_mm": {
+        "govde_kulak_sag_on_1810_bag_saplama": [
+          -0.00010000000020227162,
+          12.0
+        ],
+        "govde_kulak_sag_on_1810_bag_pul": [
+          4.4997999999995955,
+          5.5002000000004045
+        ],
+        "govde_kulak_sag_on_1810_bag_somun": [
+          5.5002000000004045,
+          10.500299999999697
+        ]
+      },
+      "engagement_mm": 5.000099999999293,
+      "protrusion_mm": 1.4997000000003027,
+      "protrusion_threads": 1.8746250000003783,
+      "holes": [
+        {
+          "host": "govde_kulak_sag_on_1810",
+          "nominal_diameter_mm": 5.5,
+          "nearest_circular_surface_radius_error_mm": 0.0,
+          "passed": true
+        },
+        {
+          "host": "sag_sac_E_penceresi",
+          "nominal_diameter_mm": 5.0,
+          "nearest_circular_surface_radius_error_mm": 0.0,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "govde_kulak_sag_arka_841_bag",
+      "hardware": [
+        "govde_kulak_sag_arka_841_bag_saplama",
+        "govde_kulak_sag_arka_841_bag_pul",
+        "govde_kulak_sag_arka_841_bag_somun"
+      ],
+      "hosts": [
+        "sag_sac_E_penceresi",
+        "govde_kulak_sag_arka_841"
+      ],
+      "source_axis": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "measured_axis_deviation_mm": {
+        "govde_kulak_sag_arka_841_bag_saplama": 2.229762330957927e-05,
+        "govde_kulak_sag_arka_841_bag_pul": 1.1075450925585154e-05,
+        "govde_kulak_sag_arka_841_bag_somun": 1.2560334163199847e-05
+      },
+      "measured_intervals_mm": {
+        "govde_kulak_sag_arka_841_bag_saplama": [
+          -0.00010000000020227162,
+          12.0
+        ],
+        "govde_kulak_sag_arka_841_bag_pul": [
+          4.4997999999995955,
+          5.5002000000004045
+        ],
+        "govde_kulak_sag_arka_841_bag_somun": [
+          5.5002000000004045,
+          10.500299999999697
+        ]
+      },
+      "engagement_mm": 5.000099999999293,
+      "protrusion_mm": 1.4997000000003027,
+      "protrusion_threads": 1.8746250000003783,
+      "holes": [
+        {
+          "host": "govde_kulak_sag_arka_841",
+          "nominal_diameter_mm": 5.5,
+          "nearest_circular_surface_radius_error_mm": 0.0,
+          "passed": true
+        },
+        {
+          "host": "sag_sac_E_penceresi",
+          "nominal_diameter_mm": 5.0,
+          "nearest_circular_surface_radius_error_mm": 0.0,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "govde_kulak_sag_arka_1150_bag",
+      "hardware": [
+        "govde_kulak_sag_arka_1150_bag_saplama",
+        "govde_kulak_sag_arka_1150_bag_pul",
+        "govde_kulak_sag_arka_1150_bag_somun"
+      ],
+      "hosts": [
+        "sag_sac_E_penceresi",
+        "govde_kulak_sag_arka_1150"
+      ],
+      "source_axis": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "measured_axis_deviation_mm": {
+        "govde_kulak_sag_arka_1150_bag_saplama": 1.0899665430772467e-05,
+        "govde_kulak_sag_arka_1150_bag_pul": 9.625852257638726e-06,
+        "govde_kulak_sag_arka_1150_bag_somun": 1.6346166775645483e-06
+      },
+      "measured_intervals_mm": {
+        "govde_kulak_sag_arka_1150_bag_saplama": [
+          -0.00010000000020227162,
+          12.0
+        ],
+        "govde_kulak_sag_arka_1150_bag_pul": [
+          4.4997999999995955,
+          5.5002000000004045
+        ],
+        "govde_kulak_sag_arka_1150_bag_somun": [
+          5.5002000000004045,
+          10.500299999999697
+        ]
+      },
+      "engagement_mm": 5.000099999999293,
+      "protrusion_mm": 1.4997000000003027,
+      "protrusion_threads": 1.8746250000003783,
+      "holes": [
+        {
+          "host": "govde_kulak_sag_arka_1150",
+          "nominal_diameter_mm": 5.5,
+          "nearest_circular_surface_radius_error_mm": 0.0,
+          "passed": true
+        },
+        {
+          "host": "sag_sac_E_penceresi",
+          "nominal_diameter_mm": 5.0,
+          "nearest_circular_surface_radius_error_mm": 0.0,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "govde_kulak_sag_arka_1600_bag",
+      "hardware": [
+        "govde_kulak_sag_arka_1600_bag_saplama",
+        "govde_kulak_sag_arka_1600_bag_pul",
+        "govde_kulak_sag_arka_1600_bag_somun"
+      ],
+      "hosts": [
+        "sag_sac_E_penceresi",
+        "govde_kulak_sag_arka_1600"
+      ],
+      "source_axis": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "measured_axis_deviation_mm": {
+        "govde_kulak_sag_arka_1600_bag_saplama": 6.809389357624018e-06,
+        "govde_kulak_sag_arka_1600_bag_pul": 1.1075450954835482e-05,
+        "govde_kulak_sag_arka_1600_bag_somun": 1.6894002904332016e-05
+      },
+      "measured_intervals_mm": {
+        "govde_kulak_sag_arka_1600_bag_saplama": [
+          -0.00010000000020227162,
+          12.0
+        ],
+        "govde_kulak_sag_arka_1600_bag_pul": [
+          4.4997999999995955,
+          5.5002000000004045
+        ],
+        "govde_kulak_sag_arka_1600_bag_somun": [
+          5.5002000000004045,
+          10.500299999999697
+        ]
+      },
+      "engagement_mm": 5.000099999999293,
+      "protrusion_mm": 1.4997000000003027,
+      "protrusion_threads": 1.8746250000003783,
+      "holes": [
+        {
+          "host": "govde_kulak_sag_arka_1600",
+          "nominal_diameter_mm": 5.5,
+          "nearest_circular_surface_radius_error_mm": 1.6363631103466503e-06,
+          "passed": true
+        },
+        {
+          "host": "sag_sac_E_penceresi",
+          "nominal_diameter_mm": 5.0,
+          "nearest_circular_surface_radius_error_mm": 0.0,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "govde_kulak_sag_arka_1810_bag",
+      "hardware": [
+        "govde_kulak_sag_arka_1810_bag_saplama",
+        "govde_kulak_sag_arka_1810_bag_pul",
+        "govde_kulak_sag_arka_1810_bag_somun"
+      ],
+      "hosts": [
+        "sag_sac_E_penceresi",
+        "govde_kulak_sag_arka_1810"
+      ],
+      "source_axis": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "measured_axis_deviation_mm": {
+        "govde_kulak_sag_arka_1810_bag_saplama": 1.136594942156818e-05,
+        "govde_kulak_sag_arka_1810_bag_pul": 1.4119101258310993e-05,
+        "govde_kulak_sag_arka_1810_bag_somun": 1.1563433692051514e-05
+      },
+      "measured_intervals_mm": {
+        "govde_kulak_sag_arka_1810_bag_saplama": [
+          -0.00010000000020227162,
+          12.0
+        ],
+        "govde_kulak_sag_arka_1810_bag_pul": [
+          4.4997999999995955,
+          5.5002000000004045
+        ],
+        "govde_kulak_sag_arka_1810_bag_somun": [
+          5.5002000000004045,
+          10.500299999999697
+        ]
+      },
+      "engagement_mm": 5.000099999999293,
+      "protrusion_mm": 1.4997000000003027,
+      "protrusion_threads": 1.8746250000003783,
+      "holes": [
+        {
+          "host": "govde_kulak_sag_arka_1810",
+          "nominal_diameter_mm": 5.5,
+          "nearest_circular_surface_radius_error_mm": 0.0,
+          "passed": true
+        },
+        {
+          "host": "sag_sac_E_penceresi",
+          "nominal_diameter_mm": 5.0,
+          "nearest_circular_surface_radius_error_mm": 0.0,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "govde_kulak_ust_on_80_bag",
+      "hardware": [
+        "govde_kulak_ust_on_80_bag_saplama",
+        "govde_kulak_ust_on_80_bag_pul",
+        "govde_kulak_ust_on_80_bag_somun"
+      ],
+      "hosts": [
+        "ust_sac",
+        "govde_kulak_ust_on_80"
+      ],
+      "source_axis": [
+        0.0,
+        -1.0,
+        -0.0
+      ],
+      "measured_axis_deviation_mm": {
+        "govde_kulak_ust_on_80_bag_saplama": 7.914152150711459e-05,
+        "govde_kulak_ust_on_80_bag_pul": 6.145469894341536e-05,
+        "govde_kulak_ust_on_80_bag_somun": 1.5338064493353388e-05
+      },
+      "measured_intervals_mm": {
+        "govde_kulak_ust_on_80_bag_saplama": [
+          0.0,
+          12.0
+        ],
+        "govde_kulak_ust_on_80_bag_pul": [
+          4.5,
+          5.5
+        ],
+        "govde_kulak_ust_on_80_bag_somun": [
+          5.5,
+          10.5
+        ]
+      },
+      "engagement_mm": 5.0,
+      "protrusion_mm": 1.5,
+      "protrusion_threads": 1.875,
+      "holes": [
+        {
+          "host": "govde_kulak_ust_on_80",
+          "nominal_diameter_mm": 5.5,
+          "nearest_circular_surface_radius_error_mm": 1.7950850452752576e-05,
+          "passed": true
+        },
+        {
+          "host": "ust_sac",
+          "nominal_diameter_mm": 5.0,
+          "nearest_circular_surface_radius_error_mm": 0.0,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "govde_kulak_ust_on_320_bag",
+      "hardware": [
+        "govde_kulak_ust_on_320_bag_saplama",
+        "govde_kulak_ust_on_320_bag_pul",
+        "govde_kulak_ust_on_320_bag_somun"
+      ],
+      "hosts": [
+        "ust_sac",
+        "govde_kulak_ust_on_320"
+      ],
+      "source_axis": [
+        0.0,
+        -1.0,
+        -0.0
+      ],
+      "measured_axis_deviation_mm": {
+        "govde_kulak_ust_on_320_bag_saplama": 6.250806765380203e-05,
+        "govde_kulak_ust_on_320_bag_pul": 0.00013058224749562452,
+        "govde_kulak_ust_on_320_bag_somun": 5.871763931652745e-06
+      },
+      "measured_intervals_mm": {
+        "govde_kulak_ust_on_320_bag_saplama": [
+          0.0,
+          12.0
+        ],
+        "govde_kulak_ust_on_320_bag_pul": [
+          4.5,
+          5.5
+        ],
+        "govde_kulak_ust_on_320_bag_somun": [
+          5.5,
+          10.5
+        ]
+      },
+      "engagement_mm": 5.0,
+      "protrusion_mm": 1.5,
+      "protrusion_threads": 1.875,
+      "holes": [
+        {
+          "host": "govde_kulak_ust_on_320",
+          "nominal_diameter_mm": 5.5,
+          "nearest_circular_surface_radius_error_mm": 5.385449539208054e-06,
+          "passed": true
+        },
+        {
+          "host": "ust_sac",
+          "nominal_diameter_mm": 5.0,
+          "nearest_circular_surface_radius_error_mm": 1.510000494864272e-06,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "govde_kulak_ust_arka_80_bag",
+      "hardware": [
+        "govde_kulak_ust_arka_80_bag_saplama",
+        "govde_kulak_ust_arka_80_bag_pul",
+        "govde_kulak_ust_arka_80_bag_somun"
+      ],
+      "hosts": [
+        "ust_sac",
+        "govde_kulak_ust_arka_80"
+      ],
+      "source_axis": [
+        0.0,
+        -1.0,
+        -0.0
+      ],
+      "measured_axis_deviation_mm": {
+        "govde_kulak_ust_arka_80_bag_saplama": 7.288670071317594e-05,
+        "govde_kulak_ust_arka_80_bag_pul": 6.145469894567748e-05,
+        "govde_kulak_ust_arka_80_bag_somun": 1.533806448534048e-05
+      },
+      "measured_intervals_mm": {
+        "govde_kulak_ust_arka_80_bag_saplama": [
+          0.0,
+          12.0
+        ],
+        "govde_kulak_ust_arka_80_bag_pul": [
+          4.5,
+          5.5
+        ],
+        "govde_kulak_ust_arka_80_bag_somun": [
+          5.5,
+          10.5
+        ]
+      },
+      "engagement_mm": 5.0,
+      "protrusion_mm": 1.5,
+      "protrusion_threads": 1.875,
+      "holes": [
+        {
+          "host": "govde_kulak_ust_arka_80",
+          "nominal_diameter_mm": 5.5,
+          "nearest_circular_surface_radius_error_mm": 0.0,
+          "passed": true
+        },
+        {
+          "host": "ust_sac",
+          "nominal_diameter_mm": 5.0,
+          "nearest_circular_surface_radius_error_mm": 0.0,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "govde_kulak_ust_arka_200_bag",
+      "hardware": [
+        "govde_kulak_ust_arka_200_bag_saplama",
+        "govde_kulak_ust_arka_200_bag_pul",
+        "govde_kulak_ust_arka_200_bag_somun"
+      ],
+      "hosts": [
+        "ust_sac",
+        "govde_kulak_ust_arka_200"
+      ],
+      "source_axis": [
+        0.0,
+        -1.0,
+        -0.0
+      ],
+      "measured_axis_deviation_mm": {
+        "govde_kulak_ust_arka_200_bag_saplama": 2.1896118989663553e-05,
+        "govde_kulak_ust_arka_200_bag_pul": 7.703243486455286e-05,
+        "govde_kulak_ust_arka_200_bag_somun": 5.492778351585468e-05
+      },
+      "measured_intervals_mm": {
+        "govde_kulak_ust_arka_200_bag_saplama": [
+          0.0,
+          12.0
+        ],
+        "govde_kulak_ust_arka_200_bag_pul": [
+          4.5,
+          5.5
+        ],
+        "govde_kulak_ust_arka_200_bag_somun": [
+          5.5,
+          10.5
+        ]
+      },
+      "engagement_mm": 5.0,
+      "protrusion_mm": 1.5,
+      "protrusion_threads": 1.875,
+      "holes": [
+        {
+          "host": "govde_kulak_ust_arka_200",
+          "nominal_diameter_mm": 5.5,
+          "nearest_circular_surface_radius_error_mm": 5.385449536987608e-06,
+          "passed": true
+        },
+        {
+          "host": "ust_sac",
+          "nominal_diameter_mm": 5.0,
+          "nearest_circular_surface_radius_error_mm": 6.838009437792891e-06,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "govde_bag_arka_sol_850",
+      "hardware": [
+        "govde_bag_arka_sol_850_saplama",
+        "govde_bag_arka_sol_850_pul",
+        "govde_bag_arka_sol_850_somun"
+      ],
+      "hosts": [
+        "arka_sac",
+        "sol_sac_urun_girisi"
+      ],
+      "source_axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "measured_axis_deviation_mm": {
+        "govde_bag_arka_sol_850_saplama": 2.189611918387772e-05,
+        "govde_bag_arka_sol_850_pul": 7.703243483707067e-05,
+        "govde_bag_arka_sol_850_somun": 5.1609928812493687e-05
+      },
+      "measured_intervals_mm": {
+        "govde_bag_arka_sol_850_saplama": [
+          0.0,
+          10.0
+        ],
+        "govde_bag_arka_sol_850_pul": [
+          3.0,
+          4.0
+        ],
+        "govde_bag_arka_sol_850_somun": [
+          4.0,
+          9.0
+        ]
+      },
+      "engagement_mm": 5.0,
+      "protrusion_mm": 1.0,
+      "protrusion_threads": 1.25,
+      "holes": [
+        {
+          "host": "sol_sac_urun_girisi",
+          "nominal_diameter_mm": 5.5,
+          "nearest_circular_surface_radius_error_mm": 1.6363631103466503e-06,
+          "passed": true
+        },
+        {
+          "host": "arka_sac",
+          "nominal_diameter_mm": 5.0,
+          "nearest_circular_surface_radius_error_mm": 6.838009437792891e-06,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "govde_bag_arka_sol_1100",
+      "hardware": [
+        "govde_bag_arka_sol_1100_saplama",
+        "govde_bag_arka_sol_1100_pul",
+        "govde_bag_arka_sol_1100_somun"
+      ],
+      "hosts": [
+        "arka_sac",
+        "sol_sac_urun_girisi"
+      ],
+      "source_axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "measured_axis_deviation_mm": {
+        "govde_bag_arka_sol_1100_saplama": 4.1842604964671e-05,
+        "govde_bag_arka_sol_1100_pul": 6.108166335871909e-05,
+        "govde_bag_arka_sol_1100_somun": 4.482976951684074e-05
+      },
+      "measured_intervals_mm": {
+        "govde_bag_arka_sol_1100_saplama": [
+          0.0,
+          10.0
+        ],
+        "govde_bag_arka_sol_1100_pul": [
+          3.0,
+          4.0
+        ],
+        "govde_bag_arka_sol_1100_somun": [
+          4.0,
+          9.0
+        ]
+      },
+      "engagement_mm": 5.0,
+      "protrusion_mm": 1.0,
+      "protrusion_threads": 1.25,
+      "holes": [
+        {
+          "host": "sol_sac_urun_girisi",
+          "nominal_diameter_mm": 5.5,
+          "nearest_circular_surface_radius_error_mm": 1.6363631103466503e-06,
+          "passed": true
+        },
+        {
+          "host": "arka_sac",
+          "nominal_diameter_mm": 5.0,
+          "nearest_circular_surface_radius_error_mm": 1.05359778053149e-05,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "govde_bag_arka_sol_1350",
+      "hardware": [
+        "govde_bag_arka_sol_1350_saplama",
+        "govde_bag_arka_sol_1350_pul",
+        "govde_bag_arka_sol_1350_somun"
+      ],
+      "hosts": [
+        "arka_sac",
+        "sol_sac_urun_girisi"
+      ],
+      "source_axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "measured_axis_deviation_mm": {
+        "govde_bag_arka_sol_1350_saplama": 4.1842604964671e-05,
+        "govde_bag_arka_sol_1350_pul": 6.108166335871909e-05,
+        "govde_bag_arka_sol_1350_somun": 4.482976951684074e-05
+      },
+      "measured_intervals_mm": {
+        "govde_bag_arka_sol_1350_saplama": [
+          0.0,
+          10.0
+        ],
+        "govde_bag_arka_sol_1350_pul": [
+          3.0,
+          4.0
+        ],
+        "govde_bag_arka_sol_1350_somun": [
+          4.0,
+          9.0
+        ]
+      },
+      "engagement_mm": 5.0,
+      "protrusion_mm": 1.0,
+      "protrusion_threads": 1.25,
+      "holes": [
+        {
+          "host": "sol_sac_urun_girisi",
+          "nominal_diameter_mm": 5.5,
+          "nearest_circular_surface_radius_error_mm": 1.6363631103466503e-06,
+          "passed": true
+        },
+        {
+          "host": "arka_sac",
+          "nominal_diameter_mm": 5.0,
+          "nearest_circular_surface_radius_error_mm": 1.05359778053149e-05,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "govde_bag_arka_sol_1600",
+      "hardware": [
+        "govde_bag_arka_sol_1600_saplama",
+        "govde_bag_arka_sol_1600_pul",
+        "govde_bag_arka_sol_1600_somun"
+      ],
+      "hosts": [
+        "arka_sac",
+        "sol_sac_urun_girisi"
+      ],
+      "source_axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "measured_axis_deviation_mm": {
+        "govde_bag_arka_sol_1600_saplama": 4.1842604964671e-05,
+        "govde_bag_arka_sol_1600_pul": 6.108166335871909e-05,
+        "govde_bag_arka_sol_1600_somun": 4.482976951684074e-05
+      },
+      "measured_intervals_mm": {
+        "govde_bag_arka_sol_1600_saplama": [
+          0.0,
+          10.0
+        ],
+        "govde_bag_arka_sol_1600_pul": [
+          3.0,
+          4.0
+        ],
+        "govde_bag_arka_sol_1600_somun": [
+          4.0,
+          9.0
+        ]
+      },
+      "engagement_mm": 5.0,
+      "protrusion_mm": 1.0,
+      "protrusion_threads": 1.25,
+      "holes": [
+        {
+          "host": "sol_sac_urun_girisi",
+          "nominal_diameter_mm": 5.5,
+          "nearest_circular_surface_radius_error_mm": 1.6363631103466503e-06,
+          "passed": true
+        },
+        {
+          "host": "arka_sac",
+          "nominal_diameter_mm": 5.0,
+          "nearest_circular_surface_radius_error_mm": 1.05359778053149e-05,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "govde_bag_arka_sol_1830",
+      "hardware": [
+        "govde_bag_arka_sol_1830_saplama",
+        "govde_bag_arka_sol_1830_pul",
+        "govde_bag_arka_sol_1830_somun"
+      ],
+      "hosts": [
+        "arka_sac",
+        "sol_sac_urun_girisi"
+      ],
+      "source_axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "measured_axis_deviation_mm": {
+        "govde_bag_arka_sol_1830_saplama": 3.070890275375033e-05,
+        "govde_bag_arka_sol_1830_pul": 7.173059182966011e-05,
+        "govde_bag_arka_sol_1830_somun": 6.426448427587582e-05
+      },
+      "measured_intervals_mm": {
+        "govde_bag_arka_sol_1830_saplama": [
+          0.0,
+          10.0
+        ],
+        "govde_bag_arka_sol_1830_pul": [
+          3.0,
+          4.0
+        ],
+        "govde_bag_arka_sol_1830_somun": [
+          4.0,
+          9.0
+        ]
+      },
+      "engagement_mm": 5.0,
+      "protrusion_mm": 1.0,
+      "protrusion_threads": 1.25,
+      "holes": [
+        {
+          "host": "sol_sac_urun_girisi",
+          "nominal_diameter_mm": 5.5,
+          "nearest_circular_surface_radius_error_mm": 1.6363631103466503e-06,
+          "passed": true
+        },
+        {
+          "host": "arka_sac",
+          "nominal_diameter_mm": 5.0,
+          "nearest_circular_surface_radius_error_mm": 6.83800933165557e-06,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "govde_bag_arka_sag_850",
+      "hardware": [
+        "govde_bag_arka_sag_850_saplama",
+        "govde_bag_arka_sag_850_pul",
+        "govde_bag_arka_sag_850_somun"
+      ],
+      "hosts": [
+        "arka_sac",
+        "sag_sac_E_penceresi"
+      ],
+      "source_axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "measured_axis_deviation_mm": {
+        "govde_bag_arka_sag_850_saplama": 2.1896118989663553e-05,
+        "govde_bag_arka_sag_850_pul": 7.703243486455286e-05,
+        "govde_bag_arka_sag_850_somun": 5.1609928747338333e-05
+      },
+      "measured_intervals_mm": {
+        "govde_bag_arka_sag_850_saplama": [
+          0.0,
+          10.0
+        ],
+        "govde_bag_arka_sag_850_pul": [
+          3.0,
+          4.0
+        ],
+        "govde_bag_arka_sag_850_somun": [
+          4.0,
+          9.0
+        ]
+      },
+      "engagement_mm": 5.0,
+      "protrusion_mm": 1.0,
+      "protrusion_threads": 1.25,
+      "holes": [
+        {
+          "host": "sag_sac_E_penceresi",
+          "nominal_diameter_mm": 5.5,
+          "nearest_circular_surface_radius_error_mm": 5.385449536987608e-06,
+          "passed": true
+        },
+        {
+          "host": "arka_sac",
+          "nominal_diameter_mm": 5.0,
+          "nearest_circular_surface_radius_error_mm": 6.838009437792891e-06,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "govde_bag_arka_sag_1100",
+      "hardware": [
+        "govde_bag_arka_sag_1100_saplama",
+        "govde_bag_arka_sag_1100_pul",
+        "govde_bag_arka_sag_1100_somun"
+      ],
+      "hosts": [
+        "arka_sac",
+        "sag_sac_E_penceresi"
+      ],
+      "source_axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "measured_axis_deviation_mm": {
+        "govde_bag_arka_sag_1100_saplama": 4.184260479300353e-05,
+        "govde_bag_arka_sag_1100_pul": 6.108166338145314e-05,
+        "govde_bag_arka_sag_1100_somun": 4.482976945135629e-05
+      },
+      "measured_intervals_mm": {
+        "govde_bag_arka_sag_1100_saplama": [
+          0.0,
+          10.0
+        ],
+        "govde_bag_arka_sag_1100_pul": [
+          3.0,
+          4.0
+        ],
+        "govde_bag_arka_sag_1100_somun": [
+          4.0,
+          9.0
+        ]
+      },
+      "engagement_mm": 5.0,
+      "protrusion_mm": 1.0,
+      "protrusion_threads": 1.25,
+      "holes": [
+        {
+          "host": "sag_sac_E_penceresi",
+          "nominal_diameter_mm": 5.5,
+          "nearest_circular_surface_radius_error_mm": 5.3854495640770494e-06,
+          "passed": true
+        },
+        {
+          "host": "arka_sac",
+          "nominal_diameter_mm": 5.0,
+          "nearest_circular_surface_radius_error_mm": 1.05359778053149e-05,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "govde_bag_arka_sag_1350",
+      "hardware": [
+        "govde_bag_arka_sag_1350_saplama",
+        "govde_bag_arka_sag_1350_pul",
+        "govde_bag_arka_sag_1350_somun"
+      ],
+      "hosts": [
+        "arka_sac",
+        "sag_sac_E_penceresi"
+      ],
+      "source_axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "measured_axis_deviation_mm": {
+        "govde_bag_arka_sag_1350_saplama": 4.184260479300353e-05,
+        "govde_bag_arka_sag_1350_pul": 6.108166338145314e-05,
+        "govde_bag_arka_sag_1350_somun": 4.482976945135629e-05
+      },
+      "measured_intervals_mm": {
+        "govde_bag_arka_sag_1350_saplama": [
+          0.0,
+          10.0
+        ],
+        "govde_bag_arka_sag_1350_pul": [
+          3.0,
+          4.0
+        ],
+        "govde_bag_arka_sag_1350_somun": [
+          4.0,
+          9.0
+        ]
+      },
+      "engagement_mm": 5.0,
+      "protrusion_mm": 1.0,
+      "protrusion_threads": 1.25,
+      "holes": [
+        {
+          "host": "sag_sac_E_penceresi",
+          "nominal_diameter_mm": 5.5,
+          "nearest_circular_surface_radius_error_mm": 5.3854495640770494e-06,
+          "passed": true
+        },
+        {
+          "host": "arka_sac",
+          "nominal_diameter_mm": 5.0,
+          "nearest_circular_surface_radius_error_mm": 1.05359778053149e-05,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "govde_bag_arka_sag_1600",
+      "hardware": [
+        "govde_bag_arka_sag_1600_saplama",
+        "govde_bag_arka_sag_1600_pul",
+        "govde_bag_arka_sag_1600_somun"
+      ],
+      "hosts": [
+        "arka_sac",
+        "sag_sac_E_penceresi"
+      ],
+      "source_axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "measured_axis_deviation_mm": {
+        "govde_bag_arka_sag_1600_saplama": 4.184260479300353e-05,
+        "govde_bag_arka_sag_1600_pul": 6.108166338145314e-05,
+        "govde_bag_arka_sag_1600_somun": 4.482976945135629e-05
+      },
+      "measured_intervals_mm": {
+        "govde_bag_arka_sag_1600_saplama": [
+          0.0,
+          10.0
+        ],
+        "govde_bag_arka_sag_1600_pul": [
+          3.0,
+          4.0
+        ],
+        "govde_bag_arka_sag_1600_somun": [
+          4.0,
+          9.0
+        ]
+      },
+      "engagement_mm": 5.0,
+      "protrusion_mm": 1.0,
+      "protrusion_threads": 1.25,
+      "holes": [
+        {
+          "host": "sag_sac_E_penceresi",
+          "nominal_diameter_mm": 5.5,
+          "nearest_circular_surface_radius_error_mm": 5.3854495640770494e-06,
+          "passed": true
+        },
+        {
+          "host": "arka_sac",
+          "nominal_diameter_mm": 5.0,
+          "nearest_circular_surface_radius_error_mm": 1.05359778053149e-05,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "govde_bag_arka_sag_1830",
+      "hardware": [
+        "govde_bag_arka_sag_1830_saplama",
+        "govde_bag_arka_sag_1830_pul",
+        "govde_bag_arka_sag_1830_somun"
+      ],
+      "hosts": [
+        "arka_sac",
+        "sag_sac_E_penceresi"
+      ],
+      "source_axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "measured_axis_deviation_mm": {
+        "govde_bag_arka_sag_1830_saplama": 3.070890255735154e-05,
+        "govde_bag_arka_sag_1830_pul": 7.17305918570184e-05,
+        "govde_bag_arka_sag_1830_somun": 6.426448420974877e-05
+      },
+      "measured_intervals_mm": {
+        "govde_bag_arka_sag_1830_saplama": [
+          0.0,
+          10.0
+        ],
+        "govde_bag_arka_sag_1830_pul": [
+          3.0,
+          4.0
+        ],
+        "govde_bag_arka_sag_1830_somun": [
+          4.0,
+          9.0
+        ]
+      },
+      "engagement_mm": 5.0,
+      "protrusion_mm": 1.0,
+      "protrusion_threads": 1.25,
+      "holes": [
+        {
+          "host": "sag_sac_E_penceresi",
+          "nominal_diameter_mm": 5.5,
+          "nearest_circular_surface_radius_error_mm": 5.3854495640770494e-06,
+          "passed": true
+        },
+        {
+          "host": "arka_sac",
+          "nominal_diameter_mm": 5.0,
+          "nearest_circular_surface_radius_error_mm": 6.83800933165557e-06,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "govde_bag_arka_ust_40",
+      "hardware": [
+        "govde_bag_arka_ust_40_saplama",
+        "govde_bag_arka_ust_40_pul",
+        "govde_bag_arka_ust_40_somun"
+      ],
+      "hosts": [
+        "arka_sac",
+        "ust_sac"
+      ],
+      "source_axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "measured_axis_deviation_mm": {
+        "govde_bag_arka_ust_40_saplama": 0.00010369887956793136,
+        "govde_bag_arka_ust_40_pul": 3.0182782802525753e-05,
+        "govde_bag_arka_ust_40_somun": 4.083488335472682e-05
+      },
+      "measured_intervals_mm": {
+        "govde_bag_arka_ust_40_saplama": [
+          0.0,
+          10.0
+        ],
+        "govde_bag_arka_ust_40_pul": [
+          3.0,
+          4.0
+        ],
+        "govde_bag_arka_ust_40_somun": [
+          4.0,
+          9.0
+        ]
+      },
+      "engagement_mm": 5.0,
+      "protrusion_mm": 1.0,
+      "protrusion_threads": 1.25,
+      "holes": [
+        {
+          "host": "ust_sac",
+          "nominal_diameter_mm": 5.5,
+          "nearest_circular_surface_radius_error_mm": 0.0,
+          "passed": true
+        },
+        {
+          "host": "arka_sac",
+          "nominal_diameter_mm": 5.0,
+          "nearest_circular_surface_radius_error_mm": 2.000000165480742e-09,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "govde_bag_arka_ust_360",
+      "hardware": [
+        "govde_bag_arka_ust_360_saplama",
+        "govde_bag_arka_ust_360_pul",
+        "govde_bag_arka_ust_360_somun"
+      ],
+      "hosts": [
+        "arka_sac",
+        "ust_sac"
+      ],
+      "source_axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "measured_axis_deviation_mm": {
+        "govde_bag_arka_ust_360_saplama": 0.00011328297187528701,
+        "govde_bag_arka_ust_360_pul": 6.877109991479079e-05,
+        "govde_bag_arka_ust_360_somun": 7.643047103928049e-06
+      },
+      "measured_intervals_mm": {
+        "govde_bag_arka_ust_360_saplama": [
+          0.0,
+          10.0
+        ],
+        "govde_bag_arka_ust_360_pul": [
+          3.0,
+          4.0
+        ],
+        "govde_bag_arka_ust_360_somun": [
+          4.0,
+          9.0
+        ]
+      },
+      "engagement_mm": 5.0,
+      "protrusion_mm": 1.0,
+      "protrusion_threads": 1.25,
+      "holes": [
+        {
+          "host": "ust_sac",
+          "nominal_diameter_mm": 5.5,
+          "nearest_circular_surface_radius_error_mm": 1.8181816052731392e-09,
+          "passed": true
+        },
+        {
+          "host": "arka_sac",
+          "nominal_diameter_mm": 5.0,
+          "nearest_circular_surface_radius_error_mm": 3.91603066294266e-05,
+          "passed": true
+        }
+      ],
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "count": 32,
+  "unresolved": [],
+  "full_station_release": false
+}

@@ -5,6 +5,7 @@ Kullanım: python k_cikti.py [--hizli] [--out <klasör>]"""
 from pathlib import Path
 import sys, os, json, pickle, time, collections
 import numpy as np
+import hashlib
 HERE = os.path.dirname(os.path.abspath(__file__)); os.chdir(HERE)
 sys.path.insert(0, str(Path(HERE).parents[2] / '_local/claude_son_yerel/gece2/cekmece')); sys.path.insert(0, HERE); sys.stdout.reconfigure(encoding='utf-8')
 import yol_denetim_v2 as Y
@@ -14,11 +15,13 @@ OUT = sys.argv[sys.argv.index('--out') + 1] if '--out' in sys.argv else str(Path
 HIZLI = '--hizli' in sys.argv
 D = pickle.load(open('plan_k.pkl', 'rb')); D['KAM'].sort(key=lambda k: k[0])
 if D['PLAN_SORUN']: raise SystemExit('K output blocked: assembly sequence has unresolved PLAN SORUNU')
+PLAN_SHA256=hashlib.sha256(Path('plan_k.pkl').read_bytes()).hexdigest()
 # Clean paths alone do not authorize a production animation. Preserve every mandatory release gate.
 for name in ('manufacturing_release_audit.json','connection_release_audit.json'):
     gate=Path(HERE)/name
     if not gate.exists(): raise SystemExit('K output blocked: missing verified '+name)
     result=json.loads(gate.read_text(encoding='utf-8'))
+    if result.get('source_plan_sha256')!=PLAN_SHA256:raise SystemExit('K output blocked: stale or unbound release gate '+name)
     if not result.get('passed') or result.get('open_items'):
         raise SystemExit('K output blocked: unresolved manufacturing/connection release gate '+name)
 
