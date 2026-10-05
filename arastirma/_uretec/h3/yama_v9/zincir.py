@@ -195,8 +195,10 @@ ADIMLAR = [
      [(".", 'python "{YAMA}/56_evap_ayak.py" hat3_v9w.glb hat3_v9x.glb')]),
     ("57", "servis sacı yatay kablo kanalı 4 evaporatör ayağı hizasından 2 mm boşlukla kesik (4 parça: servis sacı arkadan kapanırken / bakımda çıkarken kanal ayakların içinden geçiyordu) · boş rakor 1476 → 1608", ["hat3_v9x.glb"], "hat3_v9y.glb",
      [(".", 'python "{YAMA}/57_kanal_kesik.py" hat3_v9x.glb hat3_v9y.glb')]),
+    ("58", "TEK acil stop (Kemal 5 Eki): ana şalterin önündeki kapakta — F sağ üst kapağı (3625, 1600, z 79) · Schneider XB4BS8442 Ø40 + ZBY9330T Ø60 · kapakla döner", ["hat3_v9y.glb"], "hat3_v9z.glb",
+     [(".", 'python "{YAMA}/58_acil_stop.py" hat3_v9y.glb hat3_v9z.glb')]),
 ]
-SON = "hat3_v9y.glb"
+SON = "hat3_v9z.glb"
 
 
 def kur(is_dizin, h3, uretec):

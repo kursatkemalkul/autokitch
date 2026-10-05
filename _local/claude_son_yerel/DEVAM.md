@@ -14,3 +14,9 @@ No engineering change or new site deployment is made by this backup.
 ## 5 Eki güncelleme (bulut oturumu)
 Working input is now hat3_v9y.glb.gz (step 57, SHA256 49fc7520579156828c3ee31c05b36aba774f99e88d0e77be5557dc2ae34dda54), not v9w. Steps 56 (evaporator foot) and 57 (service cable channel cut) are registered in zincir.py. Step 56 = 56_evap_ayak.py (registered in zincir.py, SIRA.md).
 Queue item 2 (TOPPING assembly v5) done with open items listed in KUYRUK3.md; pipeline: gece2/t5 (t5_cikar → merkez_v9w → t5_parca → t5_montaj → t5_cikti). Large .pkl intermediates are not committed; rerun the pipeline.
+
+## 5 Eki öğleden sonra — adım 58 (tek acil stop)
+- Kemal: "tek bir acil butonu, o da şalterin önündeki kapakta" → F sağ üst kapağı (3625, 1600). Zincir 58: hat3_v9y → **hat3_v9z.glb.gz** (bu klasör), SHA256 (açık GLB) 94dccd07e404dd18567cb5629f78384a1ce889b6aa166734f2042e8fdca385a4, iki koşu bayt aynı.
+- Ana şalter yüksekliği + servis açıklığı: Kemal "boşver" → değişmez.
+- Sıradaki (branch claude/standart-makine): kapı kilit anahtarları (TOPPING, K, F, E) · A ışık perdesi kablosu · pnömatik boşaltma + yumuşak başlatma · R290 bölmesi · F davlumbaz filtresi önden · hijyen noktaları.
+- Site (meshopt / mekanizma json: yeni ACIL_STOP__*__KAPAK_F_SAG düğümleri kapakla döner) henüz güncellenmedi.
