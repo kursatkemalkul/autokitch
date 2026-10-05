@@ -6,7 +6,7 @@
 <p class="lead">Sos, harç, kıyma ve kuşbaşı birer <b>Beltop UNO çekirdeğiyle</b> dozlanıyor; kaşar ve küp sucuk bizim kasetlerde. UNO parçaları <a href="beldos.html">Beldos sayfasındaki UNO modelinin</a> aynısı. Parçaya dokununca adı ve kaynağı çıkar. Ön kapaklar modelde: alttaki <b>Ön kapaklar</b> çubuğuyla saydamlaşır.</p>
 
 <div class="m3">
-  <model-viewer id="mv" loading="eager" src="../hat3d/modul_C.glb?v=87" ios-src="../hat3d/modul_C.usdz?v=87" alt="TOPPING — montajdaki güncel istasyon (TU v15 + mekanizma v27 bantlı tabla + kapaklar)"
+  <model-viewer id="mv" loading="eager" src="../hat3d/modul_C.glb?v=88" ios-src="../hat3d/modul_C.usdz?v=88" alt="TOPPING — montajdaki güncel istasyon (TU v15 + mekanizma v27 bantlı tabla + kapaklar)"
       camera-controls touch-action="pan-y" shadow-intensity="0.5" exposure="1.05" environment-image="neutral"
       camera-orbit="-22deg 72deg 4.4m" camera-target="1.6m 1.35m -0.4m" field-of-view="30deg" min-field-of-view="5deg" min-camera-orbit="auto auto 0.2m"
       ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
@@ -72,9 +72,9 @@
 <p class="note">Model: montajdaki modul_C (topping_uno_cad_v15 + topping_cad_v27 · kaset: bantli_tabla_cad_v1) · hesap: topping_v2_hesap_v1.py + topping_hesap_v7.py + bantli_tabla_hesap_v1.py · çevrim tablosu: sim_makine_v7.json · ana montaj: hat_montaj_v71 · aktarma: kaset bandı → yükleme bandı (<a href="oven.html#aktarma">FIRIN</a>) · <span id="sur"></span></p>
 </div>
 <script>
-const M = model3d({mv: 'mv', etiket: 'et', grup: 'kod', parca: '../hat3d/parca_kutulari.json?v=87', hedef: () => '',
+const M = model3d({mv: 'mv', etiket: 'et', grup: 'kod', parca: '../hat3d/parca_kutulari.json?v=88', hedef: () => '',
   yazi: g => { const b = g.birimler[0]; return '<b>' + b.ad + '</b><span>' + b.olcu.join(' \u00d7 ') + ' mm</span>'; }});   // v65: montajdaki modul_C (kapaklı)
-fetch('../hat3d/durum.json?v=87').then(r => r.json()).then(D => M.veri(D.birim.filter(b => b.modul === 'C' && b.kod.indexOf('_KABIN') < 0)));
+fetch('../hat3d/durum.json?v=88').then(r => r.json()).then(D => M.veri(D.birim.filter(b => b.modul === 'C' && b.kod.indexOf('_KABIN') < 0)));
 fetch('../hat3d/topping_uno_v15.json?v=15').then(r => r.json()).then(D => {
   document.getElementById('den').innerHTML += D.denetim.map(d => '<tr><td>' + d.ad + '</td><td><span class="st ' + (d.sonuc === 'GEÇTİ' ? 'ok' : 'ac') + '">' + d.sonuc + '</span></td></tr>').join('');
   document.getElementById('sur').textContent = D.surum;

@@ -1,0 +1,14 @@
+    kur()
+  File "C:\Users\Kemal\AppData\Local\Temp\claude\C--Users-Kemal-Desktop-Kemal-WEBS-TE\f3ef876a-f062-4b29-bb81-775cc8a1a6d8\scratchpad\b3\arastirma\_uretec\h3\h3_elektrik_v1.py", line 104, in kur
+    ACIK_SOKET = EH.istasyon_kur(ekle, DELIKLER, DUSUR, ER, R)                     # v3.6 · A + F kutuları · DOLAP Harting · ana pano fişleri + toplama kanalı
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Kemal\AppData\Local\Temp\claude\C--Users-Kemal-Desktop-Kemal-WEBS-TE\f3ef876a-f062-4b29-bb81-775cc8a1a6d8\scratchpad\b3\arastirma\_uretec\h3\h3_elk_hat_v1.py", line 308, in istasyon_kur
+    ist, xm, ys, zs, yon = sk[:5]
+           ^^^^^^^^^^^
+AssertionError: -z
+EXIT 139
+KESİN (h3_ana_pano_v1 · 1 Eki 2026 · v3.6)
+[['TOPPING', 3490.0, 2122.0, -240.0, '-x'], ['DOLAP', 3490.0, 2122.0, -140.0, '-x'], ['K', 3490.0, 2021.0, -240.0, '-x'], ['E', 3490.0, 2021.0, -140.0, '-x'], ['ROBOT', 3490.0, 1920.0, -240.0, '-x'], ['QR', 3490.0, 1920.0, -140.0, '-x']]
+{'GIRIS_RAKORLARI_alanlar': "(ad, x sac dış yüzü, y, z, yön (kablo dışarıdan bu yönden gelir), rakor diş çapı M) · rakor gövdesi dış yüzden 12 mm −x · kablo ucu x 3506'da bitirilebilir", 'HARTING_alanlar': '(istasyon, x soket ağzı (fiş buraya oturur), y, z, yön) · fiş + başlık −x yönünde ≈ 75 mm · kablo fiş başlığından −x / aşağı çıkar · serbest bölge x 3335–3490'}
+
+[exited with code 0]

@@ -1,0 +1,28 @@
+[   0.4s] h3_f_sac_v1 · kuruldu: 16 sac · 4 yalıtım · 18 eleman · 12 arayüz · 0.4 sn
+[  17.3s] baca_alt_kapama_halkasi            t0.8 · 0 büküm · açınım 349×249 · ΔV 0.0 sim 0.0 · kalınlık False · kesit True · DFM 0 HATA 0 UYARI
+[  17.3s]         DOĞRULAMA: [{'yuz': 8, 'tip': 'PLANE', 'alan': 27140.36, 'isin': [], 'w': [24.7, 25.2817, 1073.5183]}, {'yuz': 9, 'tip': 'PLANE', 'alan': 27140.36, 'isin': [], 'w': [24.7, 25.2817, 1073.5183]}]
+[  17.5s] baca_ust_flansi                    t3.0 · 0 büküm · açınım 360×260 · ΔV 0.0 sim 0.0 · kalınlık False · kesit True · DFM 0 HATA 0 UYARI
+[  17.5s]         DOĞRULAMA: [{'yuz': 16, 'tip': 'PLANE', 'alan': 33091.062, 'isin': [], 'w': [26.8357, 27.4466, 1205.6507]}, {'yuz': 17, 'tip': 'PLANE', 'alan': 33091.062, 'isin': [], 'w': [26.8357, 27.4466, 1205.6507]}]
+[  17.5s] SAC: 16 parça · açınım doğrulaması kalan 2 · DFM 0 HATA · 0 UYARI
+[  17.5s] PROFİL: 0 boru · 0.0 m · DFM 0 HATA
+[  17.5s] ZARF: hedef [2500.0, 4000.0, 1308.0, 2198.5, -750.0, 79.0] · bulunan [np.float64(2500.0), np.float64(4000.0), np.float64(1308.0), np.float64(2198.5), np.float64(-750.0), np.float64(79.0)] · fark [np.float64(0.0), np.float64(0.0), np.float64(0.0), np.float64(0.0), np.float64(0.0), np.float64(0.0)] · taşan 0 → GEÇTİ
+[  19.3s] GÖVDE ↔ GÖVDE: kesişim 10 → [('onyuz_kapak_F_sol_dis_tava', 'onyuz_kapak_F_sol_alt_kayit', 765.972), ('onyuz_kapak_F_sol_dis_tava', 'onyuz_kapak_F_sol_ust_kayit', 6.519), ('onyuz_kapak_F_sol_dis_tava', 'onyuz_kapak_F_sol_basac_karsilik', 8.888), ('onyuz_kapak_F_sag_dis_tava', 'onyuz_kapak_F_sag_alt_kayit', 765.972), ('onyuz_kapak_F_sag_dis_tava', 'onyuz_kapak_F_sag_ust_kayit', 6.519), ('onyuz_kapak_F_sag_dis_tava', 'onyuz_kapak_F_sag_basac_karsilik', 8.888), ('baca_dis_kilif_L1', 'baca_alt_kapama_halkasi', 0.247), ('baca_dis_kilif_L1', 'yalitim_baca_on', 102.35), ('baca_dis_kilif_L2', 'baca_alt_kapama_halkasi', 0.247), ('baca_dis_kilif_L2', 'yalitim_baca_arka', 102.35)] · izinli (işaretli) 2
+[  39.0s]    yavaş çift onyuz_kapak_F_sol_dis_tava ↔ F_UST_KABIN__sac[0] 11 s → None
+[  51.3s]    yavaş çift onyuz_kapak_F_sol_dis_tava ↔ F_UST_KABIN__sac[2] 12 s → None
+[  62.5s]    yavaş çift onyuz_kapak_F_sol_dis_tava ↔ U_F_GOVDE__sac[0] 11 s → None
+[  74.6s]    yavaş çift onyuz_kapak_F_sag_dis_tava ↔ F_UST_KABIN__sac[1] 11 s → None
+[  86.3s]    yavaş çift onyuz_kapak_F_sag_dis_tava ↔ F_UST_KABIN__sac[2] 12 s → None
+[  97.2s]    yavaş çift onyuz_kapak_F_sag_dis_tava ↔ U_F_GOVDE__sac[0] 11 s → None
+[ 110.0s]    yavaş çift baca_dis_kilif_L1 ↔ U_F_GOVDE__sac[0] 7 s → None
+[ 116.1s]    yavaş çift baca_dis_kilif_L2 ↔ U_F_GOVDE__sac[0] 6 s → None
+[ 123.4s]    yavaş çift baca_alt_kapama_halkasi ↔ U_F_GOVDE__sac[0] 7 s → None
+[ 123.9s] GÖVDE ↔ v8zq (6705 bileşen · hariç ^$^): ÇAKIŞMA 0 · İNCELE 0 · TEMAS 19 (izinli 0)
+[ 127.6s] ARAYÜZ: 12 eleman · kestiği v8zq parçası 10 → ['F_UST_KABIN__paslanmaz[3]', 'F_UST_KAPAK__celik[0]', 'F_UST_KAPAK__celik[1]', 'F_UST_KAPAK__celik[2]', 'F_UST_KAPAK__celik[3]', 'F_UST_KAPAK__on_seffaf__KAPAK_F_SAG[6]', 'F_UST_KAPAK__on_seffaf__KAPAK_F_SAG[7]', 'F_UST_KAPAK__on_seffaf__KAPAK_F_SOL[6]', 'F_UST_KAPAK__on_seffaf__KAPAK_F_SOL[7]', 'U_F_GOVDE__sac[1]']
+[ 131.7s] HAVADA: 46 parça · zemine bağlı kök 15 · bağlı 46 · HAVADA 0
+[ 133.7s] PU GÖRÜNMEZ: 4 PU parçası · açıkta yüz noktası 22 → [('yalitim_baca_on', [3263.1, 2195.9, -501.9]), ('yalitim_baca_on', [3263.1, 2195.9, -504.4]), ('yalitim_baca_on', [3263.1, 2195.9, -506.8]), ('yalitim_baca_on', [3263.1, 2195.9, -509.3]), ('yalitim_baca_on', [2936.9, 2195.9, -501.1])]
+[ 135.9s] GLB F_sac_v1.glb · 58 düğüm · 1567 kB (dünya koordinatı, metre · arayüz elemanları kırmızı)
+[ 135.9s] CSV F_parca.csv · sac 16 · profil 0 · bağlantı satırı 2 (12 adet) · kaynak 14
+[ 140.0s] görünümler yazıldı
+[ 140.0s] ÖZET {"govde_parca": 46, "sac": 16, "profil": 0, "baglanti_elemani": 12, "kaynak_dikisi": 14, "arayuz": 12, "dogrulama_kalan": 2, "dfm_hata": 0, "dfm_uyari": 0, "profil_dfm_hata": 0, "zarf_gecti": true, "govde_govde": 10, "dis_cakisma": 0, "incele": 0, "havada": 0, "pu_acik": 22}
+
+[exited with code 0]

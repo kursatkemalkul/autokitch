@@ -2,7 +2,7 @@
 <div class="top"><div class="in"><div class="crumb"><a href="../">Store</a><span>›</span><a href="index.html">HAT</a><span>›</span><a href="makine.html">Makine</a><span>›</span><b>2 · AÇICI</b></div><div><a href="../">← Store</a></div></div></div>
 <div class="wrap"><h1>2 · AÇICI — konili açıcı + mekanizma kaidesi<span class="tag" style="background:#e08a2e">700 × 909 × 1074 · kaide 104 · gerçek kabin</span></h1><div class="card" style="border-left:4px solid #d94a3a;background:#fdf3f2;margin:12px 0"><b style="color:#a3281c">ÖN DÜZLEM +79 · HER İSTASYON KAPAKLI, TEMİZ BİR KUTU.</b> Bütün istasyonların ön yüzü fırının ön yüzüyle aynı düzlemde (z +79); arka yüz −830 yerinde, derinlik <b>909</b>. Her istasyon kendi başına kapalı bir kutu: kapaklar ön düzlemde, aralarında 3 mm derz. Soğuk kapaklar 40 mm (304 1,5 + PU 37,5 + 304 1,0), kuru istasyon kapakları 20 mm tava panel (304 fırçalı 1,5). Modelin altındaki <b>Ön kapaklar</b> çubuğu: tam sağ = metal kapaklar, sola çektikçe saydamlaşır, tam sol = görünmez (içerisi). A artık gerçek kabin (acici_kabin_cad_v1): 304 1,5 gövde, ön tava 20 panel + üst servis kapağı, robot ağzı x 250–450 · y 960–1160, ağzın altında/üstünde ışık perdesi. Açıcı kafası +79 düzlemine sığacak şekilde dik açılı redüktörle yenilendi.</div><p class="lead">Modül A (x 0–700): hamur topu tablada <b>konili dönen açıcıyla</b> açılır (düz presin yerine seçildi: açıcı 40–160 N ister, düz pres 3–12 kN). Açıcının kendisi TOPPING modelinin parçası (<a href="topping_v2.html">TOPPING v2</a>); bu modülde görünen gerçek parça <b>mekanizma kaidesi</b>. Modelin altındaki çubuktan <b>kesit</b> alabilir (X/Y/Z) ve iki noktaya tıklayıp <b>ölçü</b> çıkarabilirsin.</p>
 <div class="m3">
-  <model-viewer id="mv" loading="eager" src="../hat3d/modul_A.glb?v=87" ios-src="../hat3d/modul_A.usdz?v=87" alt="2 · AÇICI — kabin + mekanizma kaidesi"
+  <model-viewer id="mv" loading="eager" src="../hat3d/modul_A.glb?v=88" ios-src="../hat3d/modul_A.usdz?v=88" alt="2 · AÇICI — kabin + mekanizma kaidesi"
       camera-controls touch-action="pan-y" shadow-intensity="0.6" exposure="1.0" environment-image="neutral"
       camera-orbit="20deg 80deg 2.6m" camera-target="0.35m 1.33m -0.4m" field-of-view="30deg" min-field-of-view="5deg"
       ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
@@ -12,7 +12,7 @@
 </div>
 <div class="secim" id="secim"></div>
 <p class="note" id="ozet"></p>
-<div class="card" style="border-left:4px solid #178a56;background:#eefaf3;margin:12px 0"><b style="color:#0f6e42">GÜNCEL · MONTAJ v87 (30 Eyl 2026).</b> Model montajdaki güncel istasyon (acici_kabin_cad_v1 + kaide_cad_v2): ön kapaklar modelde, alttaki <b>Ön kapaklar</b> çubuğuyla saydamlaşır; kapak dışındaki her şey gerçek renginde, opak. Bu sayfada animasyon yok; çalışmayı <a href="makine.html">MAKİNE</a> sayfasında sipariş seçerek izle. <b>v69:</b> açıcı kolonu gerçek kutu profil 120 × 50 × 4 (et VARSAYIM · içte 10 mm alt uç plakası, kaide A'ya alttan 4 × M10); önce dolu blok çiziliydi.</div>
+<div class="card" style="border-left:4px solid #178a56;background:#eefaf3;margin:12px 0"><b style="color:#0f6e42">GÜNCEL · MONTAJ v88 (30 Eyl 2026).</b> Model montajdaki güncel istasyon (acici_kabin_cad_v1 + kaide_cad_v2): ön kapaklar modelde, alttaki <b>Ön kapaklar</b> çubuğuyla saydamlaşır; kapak dışındaki her şey gerçek renginde, opak. Bu sayfada animasyon yok; çalışmayı <a href="makine.html">MAKİNE</a> sayfasında sipariş seçerek izle. <b>v69:</b> açıcı kolonu gerçek kutu profil 120 × 50 × 4 (et VARSAYIM · içte 10 mm alt uç plakası, kaide A'ya alttan 4 × M10); önce dolu blok çiziliydi.</div>
 <div class="card" style="border-left:4px solid #178a56;background:#eefaf3;margin:0 0 14px"><b style="color:#0f6e42">MEKANİZMA KAİDESİ (kaide_cad_v2)</b><br>
 A kabini 788–1862: çekmeceli dolabın düz üstüne (788) oturur. Mekanizma dolabın üstünde değil, <b>104 mm kaidenin</b> üstünde: mekanizma tabanı 892, disk 1000. A'ya başka hiçbir şey konmaz (Kemal: "orası dolu").
 <div class="kv" style="margin:8px 0">
@@ -36,7 +36,7 @@ const M = model3d({
     return '<b>' + b.ad + '</b><span>' + b.olcu.join(' \u00d7 ') + ' mm \u00b7 <span class="rozet ' + rz[0] + '">' + rz[1] + '</span>' +
       (b.kaynak ? '<br>' + b.kaynak : '') + '</span>'; }
 });
-fetch('../hat3d/durum.json?v=87').then(r => r.json()).then(D => {
+fetch('../hat3d/durum.json?v=88').then(r => r.json()).then(D => {
   const L = D.birim.filter(b => b.modul === MODUL && b.kod.indexOf('_KABIN') < 0); M.veri(L);   // kabin zarfi modele girmiyor, listede de olmasin
   const tek = {}; L.forEach(b => { const k = b.ad + '|' + b.durum; (tek[k] = tek[k] || []).push(b); });
   document.getElementById('secim').innerHTML = Object.values(tek).map(gr => {

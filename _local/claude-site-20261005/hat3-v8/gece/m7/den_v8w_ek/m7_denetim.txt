@@ -1,0 +1,57 @@
+== 1 · EVAPORATÖR ↔ ÜST UNO ARKA TAKIMI (evap kaseti dış sacı x 1676–2216 · y 1383–1765 · z −826…−640)
+   harc__pnomatik_silindir_D32        x  2171.0– 2208.4  y/z örtüşme VAR  →  x boşluğu -45.0 mm YETERSİZ
+   harc_silindir_konsolu              x  2164.0– 2216.0  y/z örtüşme VAR  →  x boşluğu -52.0 mm YETERSİZ
+   harc__pnomatik_on_ayak             x  2165.0– 2215.0  y/z örtüşme VAR  →  x boşluğu -51.0 mm YETERSİZ
+   harc__pnomatik_arka_mafsal         x  2178.0– 2202.0  y/z örtüşme VAR  →  x boşluğu -38.0 mm YETERSİZ
+   harc__pnomatik_on_bogaz            x  2178.0– 2201.7  y/z örtüşme VAR  →  x boşluğu -38.0 mm YETERSİZ
+   sos__pnomatik_silindir_D32         x  1626.0– 1663.5  y/z örtüşme VAR  →  x boşluğu +12.5 mm TAMAM
+   sos_silindir_konsolu               x  1619.0– 1671.0  y/z örtüşme VAR  →  x boşluğu +5.0 mm TAMAM
+   sos__pnomatik_on_ayak              x  1620.0– 1670.0  y/z örtüşme VAR  →  x boşluğu +6.0 mm TAMAM
+   sos__pnomatik_arka_mafsal          x  1633.0– 1657.0  y/z örtüşme VAR  →  x boşluğu +19.0 mm TAMAM
+   sos__pnomatik_on_bogaz             x  1633.0– 1656.7  y/z örtüşme VAR  →  x boşluğu +19.3 mm TAMAM
+
+== 2 · AÇIK PU (1 mm raster · kapaklar yok · PU = düğüm adı __pu)
+   önden (kapaklar yok)                       açık PU      0 mm² · 0 bölge 
+   oda içinden sola (x 2000 → −x)             açık PU      0 mm² · 0 bölge 
+   oda içinden sağa (x 1600 → +x)             açık PU      0 mm² · 0 bölge 
+   oda içinden arkaya (z 0 → −z)              açık PU      0 mm² · 0 bölge 
+   oda içinden aşağı (y 2100 → −y)            açık PU      0 mm² · 0 bölge 
+   oda içinden yukarı · ana oda (y 1160 → +y) açık PU      0 mm² · 0 bölge 
+   oda içinden yukarı · cep (y 1160 → +y)     açık PU  28594 mm² · 5 bölge · en büyükler: 8410 mm² x 1438–1495 z -512–-368; 8352 mm² x 1438–1495 z -351–-208; 5510 mm² x 1438–1495 z -192–-98; 3886 mm² x 1438–1495 z -82–-16; 2436 mm² x 1438–1495 z -569–-528
+   mekanizma bandından yukarı (y 1050 → +y)   açık PU      0 mm² · 0 bölge 
+   A'nın içinden sağa (x 1180 → +x)           açık PU      0 mm² · 0 bölge 
+
+== 3 · KASET ÖNDEN ÇEKME SÜPÜRMESİ (+z 300 mm · kilit dili bastırılmış)
+   kasar: YOLDA harc_spreader_valf_mili                      x 2187–2193 y 1191–1197 z -152–-144 ← kasar_cad_v14__conta_on, kasar_cad_v14__govde, kasar_cad_v14__plaka_on
+   kasar: YOLDA harc_urun_hortumu_D32                        x 2169–2211 y 1216–1539 z -191–-150 ← kasar_cad_v14__conta_on, kasar_cad_v14__govde, kasar_cad_v14__plaka_on
+   kasar: YOLDA harc_spreader_giris_kelepcesi                x 2165–2215 y 1204–1216 z -195–-146 ← kasar_cad_v14__conta_on, kasar_cad_v14__govde, kasar_cad_v14__plaka_on
+   kasar: YOLDA harc_spreader_dik_boru                       x 2172–2208 y 1182–1206 z -188–-153 ← kasar_cad_v14__conta_on, kasar_cad_v14__govde, kasar_cad_v14__plaka_on
+   kasar: YOLDA harc_spreader_valf_braketi                   x 2188–2192 y 1184–1204 z -152–-130 ← kasar_cad_v14__conta_on, kasar_cad_v14__govde, kasar_cad_v14__plaka_on
+   kasar: YOLDA harc_spreader_valf_kelepcesi                 x 2169–2211 y 1184–1204 z -191–-150 ← kasar_cad_v14__conta_on, kasar_cad_v14__govde, kasar_cad_v14__plaka_on
+   kasar: YOLDA harc_spreader_uzatma_borusu                  x 2175–2205 y 1108–1182 z -185–-155 ← kasar_cad_v14__conta_on, kasar_cad_v14__govde, kasar_cad_v14__plaka_on
+   kasar: YOLDA harc_spreader_kesme_valfi_govde              x 2176–2204 y 1162–1208 z -144–-116 ← kasar_cad_v14__conta_on, kasar_cad_v14__govde, kasar_cad_v14__plaka_on
+   kasar: YOLDA harc_spreader_kesme_valfi_kapak              x 2175–2205 y 1208–1216 z -145–-115 ← kasar_cad_v14__conta_on, kasar_cad_v14__govde, kasar_cad_v14__plaka_on
+   kasar: YOLDA yuva_kasar_mandal_dili                       x 1908–1926 y 1154–1196 z -200–-192 ← kasar_cad_v14__plaka_on
+   kasar: YOLDA kasar_boru_kulagi_sol                        x 2024–2037 y 1082–1149 z -160–-140 ← kasar_cad_v14__cikis_tupu
+   kasar: YOLDA kasar_boru_kulagi_sag                        x 2087–2100 y 1082–1149 z -160–-140 ← kasar_cad_v14__cikis_tupu
+   kasar: YOLDA TOPPING_MODUL__paslanmaz#0                   x 1438–2498 y 894–2198 z -571–39 ← kasar_cad_v14__cikis_tupu, kasar_cad_v14_yarik_dili
+   kasar: YOLDA TOPPING_MODUL__paslanmaz#1                   x 1438–2498 y 1109–2198 z -630–38 ← kasar_cad_v14__cikis_tupu, kasar_cad_v14_yarik_dili
+   kasar: YOLDA TOPPING_MODUL__pu#1                          x 1496–2440 y 1110–1151 z 23–37 ← kasar_cad_v14__cikis_tupu
+   kasar: YOLDA alt_yalitim_PU                               x 1499–2437 y 1110–1149 z -567–20 ← kasar_cad_v14__cikis_tupu, kasar_cad_v14_yarik_dili
+   sucuk: YOLDA yuva_sucuk_mandal_dili                       x 2227–2246 y 1154–1196 z -200–-192 ← sucuk_cad_v8__plaka_on
+   sucuk: YOLDA sucuk_boru_kulagi_sol                        x 2273–2287 y 1082–1149 z -160–-140 ← sucuk_cad_v8__cikis_tupu
+   sucuk: YOLDA sucuk_boru_kulagi_sag                        x 2335–2349 y 1082–1149 z -160–-140 ← sucuk_cad_v8__cikis_tupu
+   sucuk: YOLDA TOPPING_MODUL__paslanmaz#0                   x 1438–2498 y 894–2198 z -571–39 ← sucuk_cad_v8__cikis_tupu, sucuk_cad_v8_yarik_dili
+   sucuk: YOLDA TOPPING_MODUL__paslanmaz#1                   x 1438–2498 y 1109–2198 z -630–38 ← sucuk_cad_v8__cikis_tupu, sucuk_cad_v8_yarik_dili
+   sucuk: YOLDA TOPPING_MODUL__pu#1                          x 1496–2440 y 1110–1151 z 23–37 ← sucuk_cad_v8__cikis_tupu
+   sucuk: YOLDA alt_yalitim_PU                               x 1499–2437 y 1110–1149 z -567–20 ← sucuk_cad_v8__cikis_tupu, sucuk_cad_v8_yarik_dili
+
+== 4 · UNO HUNİSİ ÇIKARMA PAYI (TC kelepçe açılır → huni kalkar → öne çekilir · ön ağız x 1496–2440)
+   kiyma    hazne x 1501–1691 y 1284–1499 · üst boşluk 35 mm · sol 204 · sağ 20 · doğrudan öne çekilir
+   kusbasi  hazne x 1711–1901 y 1284–1499 · üst boşluk 35 mm · sol 20 · sağ 21 · doğrudan öne çekilir
+   harc     hazne x 2000–2380 y 1707–2099 · üst boşluk 41 mm · sol 245 · sağ 60 · doğrudan öne çekilir
+   sos      hazne x 1535–1755 y 1707–1992 · üst boşluk 148 mm · sol 238 · sağ 245 · doğrudan öne çekilir
+
+== 5 · ÜST UNO HORTUMLARI (D32, dış Ø42)
+   harç (sol) hortumun önünde/arkasında alt birim yok · yatay boşluk sol 999.0 · sağ -17.0 mm
+   sos (sağ)  hortumun önünde/arkasında alt birim yok · yatay boşluk sol 61.0 · sağ -18.0 mm

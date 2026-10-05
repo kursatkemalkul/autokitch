@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TOPPING UNO Denemesi</title>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script>
+<style>
+:root{--bg:#f4f5f7;--fg:#1c1d21;--mut:#666b75;--ok:#1f8a4c;--no:#c62828;--kart:#fff;--cizgi:#d9dce1}
+body{margin:0;background:var(--bg);color:var(--fg);font:14px/1.45 Arial,Helvetica,sans-serif}
+header{padding:12px 16px 4px}h1{font-size:17px;margin:0 0 4px;letter-spacing:.04em}
+.not{color:var(--mut);font-size:12.5px}
+.btn{display:flex;gap:8px;padding:8px 16px}.btn button{flex:1;padding:9px;border:1px solid var(--cizgi);background:var(--kart);font-weight:700;cursor:pointer;border-radius:6px}
+.btn button.on{background:#1c1d21;color:#fff}
+.ozet{display:none;margin:0 16px;padding:10px 12px;background:var(--kart);border:1px solid var(--cizgi);border-radius:6px;font-size:13px}
+.ozet.on{display:block}.ozet b.ok{color:var(--ok)}.ozet b.no{color:var(--no)}
+.ozet table{border-collapse:collapse;margin-top:6px;width:100%}.ozet td{padding:2px 6px;border-top:1px solid var(--cizgi);vertical-align:top}
+model-viewer{width:100%;height:68vh;background:#e9ebee}
+.leg{padding:6px 16px 14px;font-size:12px;color:var(--mut)}
+</style></head><body>
+<header><h1>TOPPING DOLABI · UNO YERLEŞİM DENEMESİ v1</h1>
+<div class="not">Basit kutu modeli, ana modele bağlı değil. Ölçüler hat3_v8 modelinden alındı. İç genişlik 1495–2441 = 946 mm · hortum Ø42 (D32) · boşluk = 42 + 2×10 = 62 mm · düşme ekseni z −170 (tabla merkezi).</div></header>
+<div class="btn"><button id="bA" class="on">DENEME A · 2 ÜST UNO</button><button id="bB">DENEME B · 3 ÜST UNO</button></div>
+<div class="ozet on" id="oA">
+<b class="ok">SIĞIYOR, ŞARTLI:</b> kaşar ve sucuk kasetinin sol yandaki kilit mandalı kasetin önüne/altına alınırsa (39 mm kazanç). Mandallar yerinde kalırsa <b class="no">35 mm eksik</b>.
+<table>
+<tr><td>Alt sıra (x mm)</td><td>kıyma 1497–1687 · <b>boşluk 1687–1749</b> · kuşbaşı 1749–1939 · kaşar 1939–2227 · <b>boşluk 2227–2289</b> · sucuk 2289–2439 · duvar payı 2 + 2</td></tr>
+<tr><td>Hortum x</td><td>büyük (harç) <b>1718</b> · küçük (sos) <b>2258</b> — dik, her iki yanda 10 mm</td></tr>
+<tr><td>Üst raf</td><td>büyük ve küçük yer değiştirir: büyük solda (1528–1908), küçük sağda (2148–2368)</td></tr>
+<tr><td>Düşme x</td><td>1592 · 1718 · 1844 · 2083 · 2258 · 2364, hepsi tabla yolunda (merkez 1056–2375)</td></tr>
+<tr><td>Sorun</td><td><b class="no">Büyük UNO'nun arka pnömatik silindiri (kırmızı) evaporatör kasetine giriyor</b> (kaset x 1676–2216). İki üst silindir arası 502 mm, kaset 540 mm, yani 38 mm eksik.</td></tr>
+</table></div>
+<div class="ozet" id="oB">
+<b class="no">SIĞMIYOR.</b> Mandallar içeri alınsa bile <b class="no">68 mm eksik</b> (mandallar yerinde kalırsa 98 mm). Kırmızı kutular sağ duvarı aşan kısım.
+<table>
+<tr><td>Alt sıra (x mm)</td><td>kıyma 1495–1685 · <b>boşluk</b> · kuşbaşı 1747–1937 · <b>boşluk</b> · kaşar 1999–2287 · <b>boşluk</b> · sucuk 2349–2499 (<b class="no">duvarı 58 mm aşar</b>)</td></tr>
+<tr><td>Hortum x</td><td>küçük 1716 · küçük (yeni) 1968 · büyük 2318</td></tr>
+<tr><td>Üst raf</td><td>Üç UNO'nun toplam genişliği 820 mm, rafa yan yana sığıyor. Ama hortum aralıklarına oturunca büyük UNO 2128–2508'e düşüyor, <b class="no">duvarı 67 mm aşıyor</b>.</td></tr>
+<tr><td>Ek sorunlar</td><td>Sucuk düşmesi 2424, tabla merkezi en fazla 2375'e gidiyor (49 mm kaçık). Ortadaki üst UNO'nun silindiri tam evaporatör kasetinin önünde.</td></tr>
+</table></div>
+<model-viewer id="mv" src="uno_deneme_A_v1.glb" camera-controls camera-orbit="0deg 86deg 3.2m" field-of-view="24deg" min-camera-orbit="auto auto 1m" max-camera-orbit="auto auto 8m" shadow-intensity="0" exposure="1.05" alt="UNO denemesi"></model-viewer>
+<div class="leg">Beyaz: hortum · turuncu: düşme deliği ve hamura düşme noktası · sarı bant: tabla yolu · kırmızı saydam: evaporatör kaseti (arka kuru bölme) · kırmızı silindir: evaporatörle çakışan pnömatik · mavi: içeri alınmış mandal</div>
+<script>
+const mv=document.getElementById('mv');
+function sec(k){mv.src='uno_deneme_'+k+'_v1.glb';for(const x of['A','B']){document.getElementById('b'+x).classList.toggle('on',x==k);document.getElementById('o'+x).classList.toggle('on',x==k);}}
+bA.onclick=()=>sec('A');bB.onclick=()=>sec('B');
+</script></body></html>

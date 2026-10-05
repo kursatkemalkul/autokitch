@@ -1,0 +1,26 @@
+TOPPING GÖVDE DENETİMİ · yeni 84 katı + değişen 10 · 5 s
+  geçersiz katı: ['ESKI:on_seffaf|?13#0']
+  örnek nokta: 37113206 (40 s)
+(a) ÇAKIŞMA gövde ↔ GLB diğer üçgenler: TEMİZ · 101 s
+    gövde ↔ gövde hacim kesişimi (> 1 mm³): TEMİZ
+(d) KABLO / HORTUM ↔ GÖVDE: TEMİZ (her kablo / hortum gövdeye girmiyor; sac geçişleri delikten)
+  örtücü katı: 311 · 141 s
+(b) BOŞLUK (0,2–15 mm, karşılıklı yüz, arası boş): TEMİZ · kasıtlı (kanat derzi) 6 · 143 s
+     kasıtlı: onyuz_K1_dis_tava                ↔ onyuz_K2_dis_tava                x 3.00 mm
+     kasıtlı: onyuz_K1_ic_tava                 ↔ onyuz_K2_ic_tava                 x 6.00 mm
+     kasıtlı: onyuz_K1_kopuk_perdesi           ↔ onyuz_K2_kopuk_perdesi           x 6.00 mm
+     kasıtlı: onyuz_K1_pu                      ↔ onyuz_K2_pu                      x 6.00 mm
+     kasıtlı: ESKI:paslanmaz|soguk_ic_kaplama#uzama2 ↔ ESKI:on_seffaf|?13#0             y 0.50 mm
+     kasıtlı: ESKI:on_seffaf|?13#0             ↔ ESKI:pom|onyuz_kilavuz_flipper#0 y 0.50 mm
+     tam  onyuz_K1_pu                303498 nokta · bütün yüzler sac / PU / gömülü elemana değiyor
+     tam  onyuz_K2_pu                269514 nokta · bütün yüzler sac / PU / gömülü elemana değiyor
+     tam  soguk_esik_PU               50777 nokta · bütün yüzler sac / PU / gömülü elemana değiyor
+     tam  soguk_oda_PU_duvar         863251 nokta · bütün yüzler sac / PU / gömülü elemana değiyor
+     tam  soguk_oda_PU_alt_0         188402 nokta · bütün yüzler sac / PU / gömülü elemana değiyor
+     tam  evap_penceresi_PU           45210 nokta · bütün yüzler sac / PU / gömülü elemana değiyor
+(c) PU SARIM (kesit): 6 PU · 1720652 nokta · açık 0 → TEMİZ · 151 s
+(e1) KAPAK AÇILMA 10–100° (K1 pivot 1438 · K2 pivot 2497 · z 79): TEMİZ · 157 s
+(e2) TABLA / X ARABASI SÜPÜRMESİ 353646 nokta · 1041.0 … 2375.4 · aday gövde katısı 2: TEMİZ · 158 s
+     dis_yan_sol                          x 1282.5 … 1627.5  temiz
+     dis_yan_sag                          x 2345.0 … 2375.4  temiz
+BİTTİ 158 s

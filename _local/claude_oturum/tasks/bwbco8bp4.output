@@ -1,0 +1,9 @@
+/usr/bin/bash: line 1:  8217 Segmentation fault         timeout 7000 python -u ob_calistir.py h3/hat3_montaj_v1.py > h3/_log_montaj.txt 2>&1
+CIKIS 139
+    z, eng0 = _hat_z(z0, xs)                                                               # v2: engel varsa hat öne kayar (kiriş + dikmeler birlikte)
+              ^^^^^^^^^^^^^^
+  File "C:\Users\Kemal\AppData\Local\Temp\claude\C--Users-Kemal-Desktop-Kemal-WEBS-TE\f3ef876a-f062-4b29-bb81-775cc8a1a6d8\scratchpad\b3\arastirma\_uretec\h3\h3_moduler_v1.py", line 231, in _hat_z
+    raise AssertionError("h3_moduler_v1: B/AC hattı z %.0f dikmeleri %s parçalarına çarpıyor, öne %d mm içinde engelsiz z yok" % (z0, ilk, B_AC_ARAMA))
+AssertionError: h3_moduler_v1: B/AC hattı z -747 dikmeleri ['gider_ana_hatti_borusu', 'gider_ana_hatti_kilifi_B2', 'gider_ana_hatti_kilifi_B3', 'isi_kalkani_ayirma_saci', 'isi_kalkani_isinim_saci'] parçalarına çarpıyor, öne 60 mm içinde engelsiz z yok
+
+[exited with code 0]

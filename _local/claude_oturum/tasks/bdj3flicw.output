@@ -1,0 +1,31 @@
+== cikar_b
+46 ('ELK_DOLAP__kablo_sinyal', 5)
+70 ('ELK_IC__kanal', 5)
+== mk_parca
+ok False
+== b4_parca
+gövde: 674 · ent eşleşmeyen: []
+çekmece 21
+kablo dağılımı {'CEK_K1_lahm_4': 2, 'CEK_K1_lahm_1': 2, 'CEK_K1_lahm_2': 2, 'CEK_K1_lahm_3': 2, 'CEK_K1_lahm_5': 2, 'CEK_K2_lahm_4': 2, 'CEK_K2_lahm_1': 2, 'CEK_K2_lahm_3': 2, 'CEK_K2_lahm_2': 2, 'CEK_K2_lahm_5': 2, 'evap': 4, 'CEK_K3_hamur_2': 2, 'CEK_K3_hamur_3': 2, 'CEK_K3_hamur_4': 2, 'CEK_K3_hamur_1': 2, 'CEK_K5_ic1_1': 2, 'CEK_K5_hamur_1': 2, 'CEK_K5_hamur_3': 2, 'CEK_K5_hamur_2': 2, 'CEK_K6_tatli_1': 2, 'CEK_K6_ic1_1': 2, 'CEK_K6_ic1_2': 2}
+TOPLAM 1704
+== yap_montaj
+ok
+== b4_montaj
+sac 63
+öğe 1362 0 s
+süre 215.6 s · adım 23 · öğe 1415 · zamanlanmamış 0 []
+PLAN SORUNU 0
+220 s
+== yap_cikti
+ok
+== b4_cikti
+parça 1415 · süre 215.6 · adım 23
+YOL: çift 6008 · çakışma 0 · 334 s
+ÜRETİM KARELERİ: 0 sorun
+BELİRME [] 0 · HAVADA []
+SON KONUM kesişimleri:
+SAC ↔ MODEL en büyük kutu farkı: [('g_ic_taban_1', 15.0), ('g_ic_taban_2', 15.0), ('g_ic_sol_duvar', 14.99), ('g_bolme_1_sac_a', 11.9901), ('g_bolme_5_sac_a', 11.9901)]
+GLB 35.63 MB · JSON yazıldı · zarf [[0.736, 0.0, -1.069], [4.615, 1.622, 1.112]]
+BITTI
+
+[exited with code 0]

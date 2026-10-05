@@ -1,0 +1,145 @@
+{
+ "imza": {
+  "surum": "v1",
+  "dosya": "ndr-120-24.stp",
+  "boyut": 2663705,
+  "sha1": "cc0438ac950e21d472b3a2c3470690de83b71872",
+  "eksen": [
+   "+y",
+   "+z",
+   "+x"
+  ],
+  "ray_on": 105.35,
+  "ray_h": 11.95,
+  "sade": "gorunur",
+  "gorunur": {
+   "adim": 0.5,
+   "esik": 4,
+   "ag": [
+    0.2,
+    0.3
+   ],
+   "kabuk_oran": 0.6
+  }
+ },
+ "kod": "NDR-120-24",
+ "ad": "NDR-120-24 DIN ray güç kaynağı 24 V 120 W",
+ "uretici": "MEAN WELL",
+ "kaynak": "https://www.meanwell.com/webapp/product/search.aspx?prod=NDR-120 (3D OUTLINE: NDR-120-3D.zip)",
+ "dosya": "ndr-120-24.stp",
+ "olcum": "sac klips yan kulakları arka kenarı x 105,35 (ray önü) · alt basamak z −6,0 – üst kanca cebi z 29,9 · kilit sürgüsü altta",
+ "olcu": [
+  40.0,
+  129.21,
+  124.26
+ ],
+ "kanonik_kutu": [
+  -0.0,
+  -66.562,
+  -119.247,
+  40.0,
+  62.65,
+  5.009
+ ],
+ "ray": {
+  "alt": 66.56,
+  "ust": 62.65,
+  "on": 119.25,
+  "arka": 5.01,
+  "bindirme_mm3": 148.8
+ },
+ "sayim": {
+  "kati": [
+   5,
+   5
+  ],
+  "yuz": [
+   1498,
+   1498
+  ],
+  "ucgen_hazir": 12494,
+  "ucgen": [
+   12494,
+   12494
+  ],
+  "step_mb": 2.54,
+  "brep_mb": 0.46
+ },
+ "sade": "gorunur",
+ "zorunlu": [],
+ "kalan": [
+  {
+   "i": 0,
+   "vurus": 45583,
+   "oran": 0.25,
+   "yuz": 282,
+   "kutu": [
+    1.7,
+    -60.9,
+    -117.2,
+    40.0,
+    61.1,
+    -5.5
+   ]
+  },
+  {
+   "i": 1,
+   "vurus": 616527,
+   "oran": 1.84,
+   "yuz": 922,
+   "kutu": [
+    -0.0,
+    -62.5,
+    -119.2,
+    40.0,
+    62.7,
+    -5.3
+   ]
+  },
+  {
+   "i": 2,
+   "vurus": 56,
+   "oran": 0.22,
+   "yuz": 6,
+   "kutu": [
+    14.6,
+    -37.3,
+    -5.1,
+    16.2,
+    -31.3,
+    -2.1
+   ]
+  },
+  {
+   "i": 3,
+   "vurus": 46505,
+   "oran": 1.62,
+   "yuz": 162,
+   "kutu": [
+    4.1,
+    -56.8,
+    -6.0,
+    35.9,
+    27.7,
+    4.0
+   ]
+  },
+  {
+   "i": 4,
+   "vurus": 15619,
+   "oran": 1.82,
+   "yuz": 126,
+   "kutu": [
+    11.7,
+    -66.6,
+    -3.8,
+    28.3,
+    -12.6,
+    5.0
+   ]
+  }
+ ],
+ "atilan": [],
+ "sure_sn": 10.9,
+ "tarih": "2026-10-01 16:44"
+}
