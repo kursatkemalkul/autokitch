@@ -2,6 +2,8 @@
 
 Kemal'in kararı (5 Eki 2026): iki ajan aynı anda, farklı istasyonlarda çalışır. Depo düzenlemesi proje bitince yapılacak; o zamana kadar dosya taşınmaz.
 
+**İşe başlamadan `KURALLAR.md`'yi oku** (üretilebilirlik, montaj animasyonu, makine emniyeti / hijyen, Kemal kararları). Bitirince oradaki §5 denetimini çalıştır; tutmazsa yayımlama.
+
 ## 1. Kim neyi yapıyor (çalışmaya başlamadan önce bu tabloyu güncelle, commit + push et)
 
 | İş | Kim | Branch | Durum |
