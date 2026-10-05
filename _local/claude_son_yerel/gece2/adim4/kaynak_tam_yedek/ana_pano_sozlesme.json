@@ -1,0 +1,182 @@
+{
+ "durum": "KESİN (h3_ana_pano_v1 · 1 Eki 2026 · v3.6)",
+ "kaynak": "arastirma/_uretec/h3/h3_ana_pano_v1.py",
+ "eksen": "x hat boyunca · y yukarı (zemin 0) · z koridora (+79 ön, −830 arka) · mm",
+ "PANO_KUTU": [
+  3518.0,
+  3978.0,
+  1866.5,
+  2176.0,
+  -320.0,
+  -87.0
+ ],
+ "birim": "ELK_ANA_PANO_UF",
+ "GIRIS_RAKORLARI": [
+  [
+   "bina_besleme_5G6_M32",
+   3518.0,
+   1925.0,
+   -190.0,
+   "-x",
+   32.0
+  ],
+  [
+   "modem_Cat6A_M20",
+   3518.0,
+   2021.0,
+   -190.0,
+   "-x",
+   20.0
+  ],
+  [
+   "fan_24V_M20",
+   3518.0,
+   2117.0,
+   -190.0,
+   "-x",
+   20.0
+  ]
+ ],
+ "GIRIS_RAKORLARI_alanlar": "(ad, x sac dış yüzü, y, z, yön (kablo dışarıdan bu yönden gelir), rakor diş çapı M) · rakor gövdesi dış yüzden 12 mm −x · kablo ucu x 3506'da bitirilebilir",
+ "HARTING_SOKETLERI": [
+  [
+   "TOPPING",
+   3489.1,
+   2122.0,
+   -240.0,
+   "-x"
+  ],
+  [
+   "DOLAP",
+   3489.1,
+   2122.0,
+   -140.0,
+   "-x"
+  ],
+  [
+   "K",
+   3489.1,
+   2021.0,
+   -240.0,
+   "-x"
+  ],
+  [
+   "E",
+   3489.1,
+   2021.0,
+   -140.0,
+   "-x"
+  ],
+  [
+   "ROBOT",
+   3489.1,
+   1920.0,
+   -240.0,
+   "-x"
+  ],
+  [
+   "QR",
+   3489.1,
+   1920.0,
+   -140.0,
+   "-x"
+  ],
+  [
+   "A",
+   3668.0,
+   2021.0,
+   -348.9,
+   "-z"
+  ],
+  [
+   "F",
+   3828.0,
+   2021.0,
+   -348.9,
+   "-z"
+  ]
+ ],
+ "HARTING_alanlar": "(istasyon, x, y, z soket ağzı (fiş buraya oturur), yön) · sol yan 6 soket yön −x (v3.7: ağız x 3489,1 · serbest bölge x 3335–3489) · arka yüz A + F yön −z (v3.7: ağız z −348,9; fiş + kablo arkaya → U_F üst hat kanalına) · fiş + başlık ≈ 75 mm · Han B 10 ölçüsü distribütörden (93 × 43,4 × 28,9)",
+ "kablo_bolgesi": {
+  "x": [
+   3335.0,
+   3490.0
+  ],
+  "y": [
+   1866.0,
+   2165.0
+  ],
+  "z": [
+   -290.0,
+   -90.0
+  ],
+  "not_": "soket fiş bölgesi (U_F içi, pizza raf kirişi 3329'un sağı) · U_F arka üst hat kanalı ust_hat_U_F y 2143–2166,5 z −826…−766"
+ },
+ "kapak": {
+  "eksen": [
+   3973.0,
+   1899.0,
+   -86.0
+  ],
+  "yon": [
+   0.0,
+   1.0,
+   0.0
+  ],
+  "aci": 90.0
+ },
+ "U_F_FANLAR": [
+  [
+   "uf_fan_emis_0",
+   3711.5,
+   1981.5,
+   -793.5
+  ],
+  [
+   "uf_fan_emis_1",
+   3911.5,
+   1981.5,
+   -793.5
+  ],
+  [
+   "uf_fan_atis_0",
+   2691.5,
+   2126.5,
+   -793.5
+  ],
+  [
+   "uf_fan_atis_1",
+   2871.5,
+   2126.5,
+   -793.5
+  ],
+  [
+   "uf_fan_termostati",
+   3360.0,
+   2000.0,
+   -778.0
+  ]
+ ],
+ "U_F_FANLAR_alanlar": "(ad, x, y, z bağlantı ucu) · 4 × 4414 FL 24 V DC (1,2 W) + STEGO KTS 011 · panoya fan_24V_M20 rakoru (sol yan, y 2117 · z −190) · termostat NO: + hattını keser",
+ "DAVLUMBAZ_FANI": {
+  "ad": "Systemair RS 30-15 sileo · 230 V 51 W",
+  "klemens": [
+   3460.0,
+   1490.0,
+   -742.0
+  ],
+  "rakor": "F_UST arka sac 'davlumbaz_fani' M20 (x 2600 · y 1825 · z −830)",
+  "besleme": "AÇIK: ana panoda raf yeri yok (ray A 3 mm pay) → fırın devresinden ya da ayrı C6 (karar)"
+ },
+ "sigortalar": [
+  "TOPPING C16",
+  "DOLAP C16",
+  "K C16",
+  "E C16",
+  "ROBOT C16",
+  "QR C16",
+  "A C16 (iDPN N)",
+  "PANO_24V C6 (iDPN N)",
+  "F: YOK — fırın kendi CEE 32 A devresinde (bina, arka rakor)"
+ ]
+}

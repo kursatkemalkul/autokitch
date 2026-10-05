@@ -1,0 +1,166 @@
+{
+  "baseline_A": {
+    "valid": true,
+    "closed_mesh": true,
+    "bad_edges": 0,
+    "cad_volume_mm3": 53760.92909886766,
+    "mesh_volume_mm3": 53728.09342314082,
+    "relative_volume_error": 0.0006107721030351901,
+    "vertices": 10714,
+    "triangles": 21428,
+    "bbox_local_mm": [
+      [
+        -33.999258,
+        26.0,
+        -151.0
+      ],
+      [
+        34.0,
+        93.999995,
+        -52.617457
+      ]
+    ],
+    "source": "C:\\Users\\Kemal\\Desktop\\Kemal\\WEBS\u0130TE\\AUTOKITCH\\arastirma\\3_TOPPING\\sucuk_kaseti_v7\\step\\helezon_A.step",
+    "source_sha256": "736d1e0ba5152f4f80847e7e46beeb77ef756a922036c23b3d7e3fd90ee209af"
+  },
+  "baseline_B": {
+    "valid": true,
+    "closed_mesh": true,
+    "bad_edges": 0,
+    "cad_volume_mm3": 43856.25869574637,
+    "mesh_volume_mm3": 43843.22548304617,
+    "relative_volume_error": 0.00029718022211201457,
+    "vertices": 11633,
+    "triangles": 23266,
+    "bbox_local_mm": [
+      [
+        -33.999872,
+        26.000414,
+        -56.217457
+      ],
+      [
+        33.999928,
+        93.999806,
+        48.512953
+      ]
+    ],
+    "source": "C:\\Users\\Kemal\\Desktop\\Kemal\\WEBS\u0130TE\\AUTOKITCH\\arastirma\\3_TOPPING\\sucuk_kaseti_v7\\step\\helezon_B.step",
+    "source_sha256": "d47e118de532c24c180b7919aa7c1931073c1a069bf4c6f6a866feab37330aeb"
+  },
+  "baseline_C": {
+    "valid": true,
+    "closed_mesh": true,
+    "bad_edges": 0,
+    "cad_volume_mm3": 44942.06223133321,
+    "mesh_volume_mm3": 44926.662351010986,
+    "relative_volume_error": 0.00034266074046532925,
+    "vertices": 11333,
+    "triangles": 22666,
+    "bbox_local_mm": [
+      [
+        -33.999938,
+        26.000352,
+        44.912953
+      ],
+      [
+        33.996605,
+        93.99997,
+        157.8
+      ]
+    ],
+    "source": "C:\\Users\\Kemal\\Desktop\\Kemal\\WEBS\u0130TE\\AUTOKITCH\\arastirma\\3_TOPPING\\sucuk_kaseti_v7\\step\\helezon_C.step",
+    "source_sha256": "02c4c7ccde44cf5a5488f254905a160b67eac608d19d8b5cd5f13f750268baf2"
+  },
+  "baseline_D": {
+    "valid": true,
+    "closed_mesh": true,
+    "bad_edges": 0,
+    "cad_volume_mm3": 16918.573885478618,
+    "mesh_volume_mm3": 16910.603778762463,
+    "relative_volume_error": 0.0004710862020702472,
+    "vertices": 2208,
+    "triangles": 4412,
+    "bbox_local_mm": [
+      [
+        -8.0,
+        26.0,
+        153.0
+      ],
+      [
+        33.993638,
+        67.999416,
+        253.0
+      ]
+    ],
+    "source": "C:\\Users\\Kemal\\Desktop\\Kemal\\WEBS\u0130TE\\AUTOKITCH\\arastirma\\3_TOPPING\\sucuk_kaseti_v7\\step\\helezon_D.step",
+    "source_sha256": "4e7b07161d4304f9e0d17ccf48fff8239fa33a89abbfa75a7fd39cc2fb5d25d4"
+  },
+  "candidate_D": {
+    "valid": true,
+    "closed_mesh": true,
+    "bad_edges": 0,
+    "cad_volume_mm3": 25346.84509921293,
+    "mesh_volume_mm3": 25335.876823862036,
+    "relative_volume_error": 0.0004327274383837941,
+    "vertices": 4282,
+    "triangles": 8560,
+    "bbox_local_mm": [
+      [
+        -33.994869,
+        26.0,
+        153.0
+      ],
+      [
+        33.993789,
+        93.999999,
+        253.0
+      ]
+    ],
+    "source": "candidate_CAD",
+    "source_sha256": null
+  },
+  "candidate_tube": {
+    "valid": true,
+    "closed_mesh": true,
+    "bad_edges": 0,
+    "cad_volume_mm3": 79662.00809375274,
+    "mesh_volume_mm3": 79652.94154489438,
+    "relative_volume_error": 0.00011381270790577525,
+    "vertices": 3138,
+    "triangles": 6280,
+    "bbox_local_mm": [
+      [
+        -55.0,
+        -8.0,
+        161.2
+      ],
+      [
+        55.0,
+        104.991138,
+        248.504026
+      ]
+    ],
+    "source": "candidate_CAD",
+    "source_sha256": null
+  },
+  "candidate_checks": {
+    "D_tube_interference_mm3": 0.0,
+    "old_journal_interference_mm3": 15.997671186250248,
+    "new_journal_clearance_bore_mm": 12.4,
+    "flight_end_old_mm": 170.0,
+    "flight_end_new_mm": 196.0,
+    "sill_old_mm": 6.0,
+    "sill_new_mm": 0.0,
+    "unchanged": [
+      "A",
+      "B",
+      "C",
+      "shaft core",
+      "bearings",
+      "coupling",
+      "140 mm external body",
+      "325 mm depth"
+    ],
+    "warning": "Removing sill can increase idle leakage; must test; NOT production-approved."
+  }
+}

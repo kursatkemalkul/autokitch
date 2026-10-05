@@ -1,0 +1,556 @@
+{
+"adim": 46,
+"ad": "B PU levhaları yeniden kesildi",
+"parca": {
+"pu_sol": {
+"dugum": "B_KASA__pu",
+"kaynak": "pu_sol",
+"kutu": [
+737.5,
+797.3,
+124.5,
+786.5,
+-827.0,
+23.0
+],
+"hacim": 31750257.63,
+"ucgen": 15674,
+"takilis": "ana levha (köşeler köşebent / flanş kadar boşaltılmış) · üstten",
+"bom": [
+"PU levha 40 kg/m³ (λ 0,022) kesilmiş · pu_sol"
+]
+},
+"pu_sol_arka_serit": {
+"dugum": "B_KASA__pu_dolgu",
+"kaynak": "pu_sol",
+"kutu": [
+761.0,
+797.3,
+124.5,
+786.5,
+-828.5,
+-805.0
+],
+"hacim": 562148.49,
+"ucgen": 166,
+"takilis": "arka şerit (dış arka 1 üst flanşının altı, z < −805) · tezgâhta arka sac grubuyla",
+"bom": [
+"PU levha 40 kg/m³ (λ 0,022) kesilmiş · pu_sol_arka_serit"
+],
+"indis": [
+0,
+498
+]
+},
+"pu_sol_kose_alt_1": {
+"dugum": "B_KASA__pu_dolgu",
+"kaynak": "pu_sol",
+"kutu": [
+737.5,
+741.25,
+124.5,
+128.25,
+-822.0,
+-722.5
+],
+"hacim": 302.4,
+"ucgen": 56,
+"takilis": "alt köşe dolgu şeridi (köşebent alt 1 büküm dış yayı ↔ yan sac / taban köşesi) · köşebentten önce köşeye",
+"bom": [
+"PU levha 40 kg/m³ (λ 0,022) kesilmiş · pu_sol_kose_alt_1"
+],
+"indis": [
+498,
+168
+]
+},
+"pu_sol_kose_alt_2": {
+"dugum": "B_KASA__pu_dolgu",
+"kaynak": "pu_sol",
+"kutu": [
+737.5,
+741.25,
+124.5,
+128.25,
+-689.5,
+-126.5
+],
+"hacim": 1711.06,
+"ucgen": 56,
+"takilis": "alt köşe dolgu şeridi (köşebent alt 2 büküm dış yayı ↔ yan sac / taban köşesi) · köşebentten önce köşeye",
+"bom": [
+"PU levha 40 kg/m³ (λ 0,022) kesilmiş · pu_sol_kose_alt_2"
+],
+"indis": [
+666,
+168
+]
+},
+"pu_sol_kose_alt_3": {
+"dugum": "B_KASA__pu_dolgu",
+"kaynak": "pu_sol",
+"kutu": [
+737.5,
+741.25,
+124.5,
+128.25,
+-93.5,
+21.0
+],
+"hacim": 347.99,
+"ucgen": 56,
+"takilis": "alt köşe dolgu şeridi (köşebent alt 3 büküm dış yayı ↔ yan sac / taban köşesi) · köşebentten önce köşeye",
+"bom": [
+"PU levha 40 kg/m³ (λ 0,022) kesilmiş · pu_sol_kose_alt_3"
+],
+"indis": [
+834,
+168
+]
+},
+"pu_sol_kose_ust_1": {
+"dugum": "B_KASA__pu_dolgu",
+"kaynak": "pu_sol",
+"kutu": [
+737.5,
+741.25,
+782.75,
+786.5,
+-822.0,
+-722.5
+],
+"hacim": 302.4,
+"ucgen": 56,
+"takilis": "üst köşe dolgu şeridi (köşebent üst 1 iniş yolu: büküm dış yayı ↔ yan sac / tavan köşesi) · köşebentten sonra üstten",
+"bom": [
+"PU levha 40 kg/m³ (λ 0,022) kesilmiş · pu_sol_kose_ust_1"
+],
+"indis": [
+1002,
+168
+]
+},
+"pu_sol_kose_ust_2": {
+"dugum": "B_KASA__pu_dolgu",
+"kaynak": "pu_sol",
+"kutu": [
+737.5,
+741.25,
+782.75,
+786.5,
+-689.5,
+-126.5
+],
+"hacim": 1711.06,
+"ucgen": 56,
+"takilis": "üst köşe dolgu şeridi (köşebent üst 2 iniş yolu: büküm dış yayı ↔ yan sac / tavan köşesi) · köşebentten sonra üstten",
+"bom": [
+"PU levha 40 kg/m³ (λ 0,022) kesilmiş · pu_sol_kose_ust_2"
+],
+"indis": [
+1170,
+168
+]
+},
+"pu_sol_kose_ust_3": {
+"dugum": "B_KASA__pu_dolgu",
+"kaynak": "pu_sol",
+"kutu": [
+737.5,
+741.25,
+782.75,
+786.5,
+-93.5,
+21.0
+],
+"hacim": 347.99,
+"ucgen": 56,
+"takilis": "üst köşe dolgu şeridi (köşebent üst 3 iniş yolu: büküm dış yayı ↔ yan sac / tavan köşesi) · köşebentten sonra üstten",
+"bom": [
+"PU levha 40 kg/m³ (λ 0,022) kesilmiş · pu_sol_kose_ust_3"
+],
+"indis": [
+1338,
+168
+]
+},
+"pu_arka_yuksek_arka": {
+"dugum": "B_KASA__pu",
+"kaynak": "pu_arka_yuksek",
+"kutu": [
+797.3,
+2500.0,
+126.0,
+785.0,
+-828.5,
+-805.0
+],
+"hacim": 26292172.11,
+"ucgen": 252,
+"takilis": "arka katman 23,5 mm (dış arka sacın üst / alt flanşları arası) · tezgâhta sac grubuna önden",
+"bom": [
+"PU levha 40 kg/m³ (λ 0,022) kesilmiş · pu_arka_yuksek_arka"
+]
+},
+"pu_arka_yuksek_on": {
+"dugum": "B_KASA__pu",
+"kaynak": "pu_arka_yuksek",
+"kutu": [
+797.3,
+2500.0,
+124.5,
+786.5,
+-805.0,
+-791.2
+],
+"hacim": 15544886.92,
+"ucgen": 3636,
+"takilis": "ön katman 13,8 mm · tezgâhta arka katmanın üstüne önden",
+"bom": [
+"PU levha 40 kg/m³ (λ 0,022) kesilmiş · pu_arka_yuksek_on"
+]
+},
+"pu_arka_alcak_arka": {
+"dugum": "B_KASA__pu",
+"kaynak": "pu_arka_alcak",
+"kutu": [
+2500.0,
+4027.3,
+126.0,
+728.0,
+-828.5,
+-805.0
+],
+"hacim": 21605036.23,
+"ucgen": 64,
+"takilis": "arka katman 23,5 mm (dış arka sacın üst / alt flanşları arası) · tezgâhta sac grubuna önden",
+"bom": [
+"PU levha 40 kg/m³ (λ 0,022) kesilmiş · pu_arka_alcak_arka"
+]
+},
+"pu_arka_alcak_on": {
+"dugum": "B_KASA__pu",
+"kaynak": "pu_arka_alcak",
+"kutu": [
+2500.0,
+4027.3,
+124.5,
+728.0,
+-805.0,
+-791.2
+],
+"hacim": 12716072.93,
+"ucgen": 1808,
+"takilis": "ön katman 13,8 mm · tezgâhta arka katmanın üstüne önden",
+"bom": [
+"PU levha 40 kg/m³ (λ 0,022) kesilmiş · pu_arka_alcak_on"
+]
+},
+"tk_depo_arka_pu": {
+"dugum": "B_KASA__pu",
+"kaynak": "tk_depo_arka_pu",
+"kutu": [
+4028.5,
+4398.5,
+463.5,
+786.5,
+-469.0,
+-441.0
+],
+"hacim": 3344323.08,
+"ucgen": 88,
+"takilis": "ana levha · üstten",
+"bom": [
+"PU levha 40 kg/m³ (λ 0,022) kesilmiş · tk_depo_arka_pu"
+]
+},
+"tk_depo_kose_dolgu": {
+"dugum": "B_KASA__pu_dolgu",
+"kaynak": "tk_depo_arka_pu + tk_depo_sag_pu",
+"kutu": [
+4394.75,
+4398.5,
+782.75,
+786.5,
+-467.5,
+21.0
+],
+"hacim": 1487.4,
+"ucgen": 86,
+"takilis": "köşe dolgu şeridi (sağ üst köşebent 2 iniş yolu, köşebent boyu: teknik depo arka + sağ PU) · köşebentten sonra üstten",
+"bom": [
+"PU levha 40 kg/m³ (λ 0,022) kesilmiş · tk_depo_kose_dolgu"
+],
+"indis": [
+1506,
+258
+]
+},
+"tk_depo_sag_pu": {
+"dugum": "B_KASA__pu",
+"kaynak": "tk_depo_sag_pu",
+"kutu": [
+4338.5,
+4398.5,
+463.5,
+786.5,
+-441.0,
+23.0
+],
+"hacim": 8958203.09,
+"ucgen": 88,
+"takilis": "ana levha · üstten",
+"bom": [
+"PU levha 40 kg/m³ (λ 0,022) kesilmiş · tk_depo_sag_pu"
+]
+},
+"pu_taban_0": {
+"dugum": "B_KASA__pu",
+"kaynak": "pu_taban_0",
+"kutu": [
+797.3,
+4027.3,
+124.5,
+163.3,
+-791.2,
+23.0
+],
+"hacim": 101404870.27,
+"ucgen": 2860,
+"takilis": "taban levhası (şase cıvatası yerlerinde Ø25 delikli) · üstten",
+"bom": [
+"PU levha 40 kg/m³ (λ 0,022) kesilmiş · pu_taban_0"
+]
+},
+"pu_taban_tapa_1100_110": {
+"dugum": "B_KASA__pu_dolgu",
+"kaynak": "pu_taban_0",
+"kutu": [
+1087.5,
+1112.5,
+124.5,
+163.3,
+-122.5,
+-97.5
+],
+"hacim": 17174.92,
+"ucgen": 948,
+"takilis": "PU tapa Ø25 (şase cıvatası başı + pulu üstüne, cıvatadan sonra üstten)",
+"bom": [
+"PU levha 40 kg/m³ (λ 0,022) kesilmiş · pu_taban_tapa_1100_110"
+],
+"indis": [
+1764,
+2844
+]
+},
+"pu_taban_tapa_1100_760": {
+"dugum": "B_KASA__pu_dolgu",
+"kaynak": "pu_taban_0",
+"kutu": [
+1087.5,
+1112.5,
+124.5,
+163.3,
+-772.5,
+-747.5
+],
+"hacim": 17174.92,
+"ucgen": 948,
+"takilis": "PU tapa Ø25 (şase cıvatası başı + pulu üstüne, cıvatadan sonra üstten)",
+"bom": [
+"PU levha 40 kg/m³ (λ 0,022) kesilmiş · pu_taban_tapa_1100_760"
+],
+"indis": [
+4608,
+2844
+]
+},
+"pu_taban_tapa_1750_110": {
+"dugum": "B_KASA__pu_dolgu",
+"kaynak": "pu_taban_0",
+"kutu": [
+1737.5,
+1762.5,
+124.5,
+163.3,
+-122.5,
+-97.5
+],
+"hacim": 17174.92,
+"ucgen": 948,
+"takilis": "PU tapa Ø25 (şase cıvatası başı + pulu üstüne, cıvatadan sonra üstten)",
+"bom": [
+"PU levha 40 kg/m³ (λ 0,022) kesilmiş · pu_taban_tapa_1750_110"
+],
+"indis": [
+7452,
+2844
+]
+},
+"pu_taban_tapa_1750_760": {
+"dugum": "B_KASA__pu_dolgu",
+"kaynak": "pu_taban_0",
+"kutu": [
+1737.5,
+1762.5,
+124.5,
+163.3,
+-772.5,
+-747.5
+],
+"hacim": 17174.92,
+"ucgen": 948,
+"takilis": "PU tapa Ø25 (şase cıvatası başı + pulu üstüne, cıvatadan sonra üstten)",
+"bom": [
+"PU levha 40 kg/m³ (λ 0,022) kesilmiş · pu_taban_tapa_1750_760"
+],
+"indis": [
+10296,
+2844
+]
+},
+"pu_taban_tapa_2400_110": {
+"dugum": "B_KASA__pu_dolgu",
+"kaynak": "pu_taban_0",
+"kutu": [
+2387.5,
+2412.5,
+124.5,
+163.3,
+-122.5,
+-97.5
+],
+"hacim": 17174.92,
+"ucgen": 948,
+"takilis": "PU tapa Ø25 (şase cıvatası başı + pulu üstüne, cıvatadan sonra üstten)",
+"bom": [
+"PU levha 40 kg/m³ (λ 0,022) kesilmiş · pu_taban_tapa_2400_110"
+],
+"indis": [
+13140,
+2844
+]
+},
+"pu_taban_tapa_2400_760": {
+"dugum": "B_KASA__pu_dolgu",
+"kaynak": "pu_taban_0",
+"kutu": [
+2387.5,
+2412.5,
+124.5,
+163.3,
+-772.5,
+-747.5
+],
+"hacim": 17174.92,
+"ucgen": 948,
+"takilis": "PU tapa Ø25 (şase cıvatası başı + pulu üstüne, cıvatadan sonra üstten)",
+"bom": [
+"PU levha 40 kg/m³ (λ 0,022) kesilmiş · pu_taban_tapa_2400_760"
+],
+"indis": [
+15984,
+2844
+]
+},
+"pu_taban_tapa_3050_110": {
+"dugum": "B_KASA__pu_dolgu",
+"kaynak": "pu_taban_0",
+"kutu": [
+3037.5,
+3062.5,
+124.5,
+163.3,
+-122.5,
+-97.5
+],
+"hacim": 17174.93,
+"ucgen": 948,
+"takilis": "PU tapa Ø25 (şase cıvatası başı + pulu üstüne, cıvatadan sonra üstten)",
+"bom": [
+"PU levha 40 kg/m³ (λ 0,022) kesilmiş · pu_taban_tapa_3050_110"
+],
+"indis": [
+18828,
+2844
+]
+},
+"pu_taban_tapa_3050_760": {
+"dugum": "B_KASA__pu_dolgu",
+"kaynak": "pu_taban_0",
+"kutu": [
+3037.5,
+3062.5,
+124.5,
+163.3,
+-772.5,
+-747.5
+],
+"hacim": 17174.92,
+"ucgen": 948,
+"takilis": "PU tapa Ø25 (şase cıvatası başı + pulu üstüne, cıvatadan sonra üstten)",
+"bom": [
+"PU levha 40 kg/m³ (λ 0,022) kesilmiş · pu_taban_tapa_3050_760"
+],
+"indis": [
+21672,
+2844
+]
+},
+"pu_taban_tapa_3700_110": {
+"dugum": "B_KASA__pu_dolgu",
+"kaynak": "pu_taban_0",
+"kutu": [
+3687.5,
+3712.5,
+124.5,
+163.3,
+-122.5,
+-97.5
+],
+"hacim": 17174.93,
+"ucgen": 948,
+"takilis": "PU tapa Ø25 (şase cıvatası başı + pulu üstüne, cıvatadan sonra üstten)",
+"bom": [
+"PU levha 40 kg/m³ (λ 0,022) kesilmiş · pu_taban_tapa_3700_110"
+],
+"indis": [
+24516,
+2844
+]
+},
+"pu_taban_tapa_3700_760": {
+"dugum": "B_KASA__pu_dolgu",
+"kaynak": "pu_taban_0",
+"kutu": [
+3687.5,
+3712.5,
+124.5,
+163.3,
+-772.5,
+-747.5
+],
+"hacim": 17174.92,
+"ucgen": 948,
+"takilis": "PU tapa Ø25 (şase cıvatası başı + pulu üstüne, cıvatadan sonra üstten)",
+"bom": [
+"PU levha 40 kg/m³ (λ 0,022) kesilmiş · pu_taban_tapa_3700_760"
+],
+"indis": [
+27360,
+2844
+]
+}
+},
+"log": [
+"  pu_sol             32317129 mm³ → 8 parça (Σ 32317129.0, fark 0.000 mm³): pu_sol 31750258, pu_sol_arka_serit 562148, pu_sol_kose_alt_1 302, pu_sol_kose_alt_2 1711, pu_sol_kose_alt_3 348, pu_sol_kose_ust_1 302, pu_sol_kose_ust_2 1711, pu_sol_kose_ust_3 348",
+"  pu_arka_yuksek     41837059 mm³ → 2 parça (Σ 41837059.0, fark 0.000 mm³): pu_arka_yuksek_arka 26292172, pu_arka_yuksek_on 15544887",
+"  pu_arka_alcak      34321109 mm³ → 2 parça (Σ 34321109.2, fark 0.000 mm³): pu_arka_alcak_arka 21605036, pu_arka_alcak_on 12716073",
+"  tk_depo_arka_pu     3344404 mm³ → 2 parça (Σ 3344403.8, fark 0.000 mm³): tk_depo_arka_pu 3344323, tk_depo_arka_pu_kose 81",
+"  tk_depo_sag_pu      8959610 mm³ → 2 parça (Σ 8959609.8, fark 0.000 mm³): tk_depo_sag_pu 8958203, tk_depo_sag_pu_kose 1407",
+"  pu_taban_0        101576619 mm³ → 11 parça (Σ 101576619.5, fark -0.000 mm³): pu_taban_0 101404870, pu_taban_tapa_1100_110 17175, pu_taban_tapa_1100_760 17175, pu_taban_tapa_1750_110 17175, pu_taban_tapa_1750_760 17175, pu_taban_tapa_2400_110 17175, pu_taban_tapa_2400_760 17175, pu_taban_tapa_3050_110 17175, pu_taban_tapa_3050_760 17175, pu_taban_tapa_3700_110 17175, pu_taban_tapa_3700_760 17175",
+"  yeni düğüm/ağ: B_KASA__pu_dolgu (malzeme MB_B_KASA__pu_dolgu ← MB_B_KASA__pu)",
+"  B_KASA__pu_dolgu: 18 parça · 10068 üçgen"
+]
+}

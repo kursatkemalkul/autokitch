@@ -1,0 +1,152 @@
+{
+ "parca": "dis_tavan_2",
+ "surum": "h3_sac_v1",
+ "malzeme": "AISI 304 2B, dış yüz 240 kum satine, hat boyunca yatay",
+ "t": 1.5,
+ "R": 2.25,
+ "K": 0.45,
+ "adet": 1,
+ "birim": "mm",
+ "ust_yuz": "Z = t yüzü = kök panelin +n yüzü (bütün panellerin yerel z = t yüzü)",
+ "dis_kontur": [
+  {
+   "t": "L",
+   "p": [
+    [
+     2091.25,
+     -39.0
+    ],
+    [
+     4400.0,
+     -39.0
+    ]
+   ]
+  },
+  {
+   "t": "L",
+   "p": [
+    [
+     4400.0,
+     -39.0
+    ],
+    [
+     4400.0,
+     830.0
+    ]
+   ]
+  },
+  {
+   "t": "L",
+   "p": [
+    [
+     4400.0,
+     830.0
+    ],
+    [
+     2091.25,
+     830.0
+    ]
+   ]
+  },
+  {
+   "t": "L",
+   "p": [
+    [
+     2091.25,
+     830.0
+    ],
+    [
+     2091.25,
+     -39.0
+    ]
+   ]
+  }
+ ],
+ "ek_dis_konturlar": [],
+ "ic_konturlar": [
+  [
+   {
+    "t": "C",
+    "c": [
+     4016.5,
+     480.0
+    ],
+    "r": 7.75
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     4016.5,
+     570.0
+    ],
+    "r": 7.75
+   }
+  ]
+ ],
+ "bukumler": [],
+ "formlar": [],
+ "kesikler": [
+  {
+   "panel": "levha",
+   "tip": "vida_deligi",
+   "sekil": "daire",
+   "merkez_duz": [
+    4016.5,
+    480.0
+   ],
+   "parca": "K → B M8 · altta B_TASIYICI perçin somun başı Ø15 → baş boşluğu Ø15,5 · h3_k_sac_v1 ARAYÜZ",
+   "cap": 15.5
+  },
+  {
+   "panel": "levha",
+   "tip": "vida_deligi",
+   "sekil": "daire",
+   "merkez_duz": [
+    4016.5,
+    570.0
+   ],
+   "parca": "K → B M8 · altta B_TASIYICI perçin somun başı Ø15 → baş boşluğu Ø15,5 · h3_k_sac_v1 ARAYÜZ",
+   "cap": 15.5
+  }
+ ],
+ "parca_sayisi": 1,
+ "levha": {
+  "boy": 2308.75,
+  "en": 869.0,
+  "aci": 0.0,
+  "alan_mm2": 2005926.37,
+  "kutle_kg": 23.8605
+ },
+ "sabit_yuz": [
+  3245.47997,
+  395.47564
+ ],
+ "donusum_3b": [
+  [
+   1.0,
+   0.0,
+   -0.0,
+   0.0
+  ],
+  [
+   0.0,
+   0.0,
+   1.0,
+   786.5
+  ],
+  [
+   0.0,
+   -1.0,
+   0.0,
+   0.0
+  ],
+  [
+   0.0,
+   0.0,
+   0.0,
+   1.0
+  ]
+ ]
+}

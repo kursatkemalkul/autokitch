@@ -1,0 +1,73 @@
+bağlayıcı 0/327
+bağlayıcı 50/327
+bağlayıcı 100/327
+bağlayıcı 150/327
+bağlayıcı 200/327
+bağlayıcı 250/327
+bağlayıcı 300/327
+Counter({'HEMEN': 115, 'BAGLANTISIZ': 63, 'GECICI': 2})
+GEÇİCİ  kaide_enine_lama_6                       geliş adım  2 (Kaide çerçevesi) → bağlanma adım  3 (Kaide: cep taşıyıcı, ön perde, plaka) · kaide_arka_emis_filtresi ↔ kaide_arka_boru · arada değen: ['kaide_on_perde_menfezli', 'kaide_cep_tasiyici_0', 'kaide_cep_tasiyici_1', 'kaide_boyuna_boru_1', 'kaide_boyuna_boru_2']
+GEÇİCİ  dis_yan_sag                              geliş adım  8 (Kuru bölme + soğutma grubu) → bağlanma adım  9 (Soğuk oda: taban + arka duvar) · yapistirici_arka ↔ soguk_alt_sac · arada değen: ['soguk_alt_sac', 'soguk_arka_dis_sac', 'sogutma_parca_2492_957']
+BAĞSIZ  kaide_cep_tasiyici_0                     sac    adım  3 (Kaide: cep taşıyıcı, ön perde, plaka) grup:False
+BAĞSIZ  kaide_cep_tasiyici_1                     sac    adım  3 (Kaide: cep taşıyıcı, ön perde, plaka) grup:False
+BAĞSIZ  x_ekseni                                 mek    adım  6 (X ekseni (tabla hattı)) grup:False
+BAĞSIZ  x_motor                                  mek    adım  7 (Dış yan sağ) grup:False
+BAĞSIZ  sogutma_parca_2492_957                   mek    adım  8 (Kuru bölme + soğutma grubu) grup:False
+BAĞSIZ  ayirma_perdesi_cep_sol                   sac    adım  8 (Kuru bölme + soğutma grubu) grup:False
+BAĞSIZ  teknik_sag_perde                         sac    adım  8 (Kuru bölme + soğutma grubu) grup:False
+BAĞSIZ  elk_rakor_1689_1099                      mek    adım  8 (Kuru bölme + soğutma grubu) grup:False
+BAĞSIZ  hava_kanal_1676_1312                     mek    adım 10 (Hava kanalı + valf adası) grup:False
+BAĞSIZ  hava_kanal_2014_1259                     mek    adım 10 (Hava kanalı + valf adası) grup:False
+BAĞSIZ  valf_adasi                               mek    adım 11 (Evaporatörler) grup:False
+BAĞSIZ  evaporator_L                             mek    adım 11 (Evaporatörler) grup:True
+BAĞSIZ  evaporator_R                             mek    adım 11 (Evaporatörler) grup:True
+BAĞSIZ  kaset_kasar_mandal                       mek    adım 14 (Raf, kovanlar, eşik) grup:True
+BAĞSIZ  kaset_sucuk_mandal                       mek    adım 14 (Raf, kovanlar, eşik) grup:True
+BAĞSIZ  raf_kosebendi_sol                        sac    adım 14 (Raf, kovanlar, eşik) grup:True
+BAĞSIZ  raf_kosebendi_sag                        sac    adım 14 (Raf, kovanlar, eşik) grup:True
+BAĞSIZ  kaset_kasar_conta                        mek    adım 14 (Raf, kovanlar, eşik) grup:True
+BAĞSIZ  kaset_sucuk_conta                        mek    adım 14 (Raf, kovanlar, eşik) grup:True
+BAĞSIZ  uno_tavuk_on                             mek    adım 15 (UNO'lar, kasetler, üst raf) grup:False
+BAĞSIZ  uno_kusbasi_on                           mek    adım 15 (UNO'lar, kasetler, üst raf) grup:False
+BAĞSIZ  ust_raf_kosebendi_sol                    sac    adım 15 (UNO'lar, kasetler, üst raf) grup:True
+BAĞSIZ  ust_raf_kosebendi_sag                    sac    adım 15 (UNO'lar, kasetler, üst raf) grup:True
+BAĞSIZ  ust_raf                                  sac    adım 15 (UNO'lar, kasetler, üst raf) grup:True
+BAĞSIZ  uno_patates_raf_conta                    mek    adım 15 (UNO'lar, kasetler, üst raf) grup:True
+BAĞSIZ  uno_harc_raf_conta                       mek    adım 15 (UNO'lar, kasetler, üst raf) grup:True
+BAĞSIZ  uno_kiyma_raf_conta                      mek    adım 15 (UNO'lar, kasetler, üst raf) grup:True
+BAĞSIZ  uno_harc_on                              mek    adım 15 (UNO'lar, kasetler, üst raf) grup:False
+BAĞSIZ  uno_harc_raf_flans                       mek    adım 15 (UNO'lar, kasetler, üst raf) grup:False
+BAĞSIZ  uno_harc_kelepce                         mek    adım 15 (UNO'lar, kasetler, üst raf) grup:False
+BAĞSIZ  uno_kiyma_dirsek                         mek    adım 15 (UNO'lar, kasetler, üst raf) grup:True
+BAĞSIZ  uno_kiyma_on                             mek    adım 15 (UNO'lar, kasetler, üst raf) grup:True
+BAĞSIZ  uno_kiyma_raf_flans                      mek    adım 15 (UNO'lar, kasetler, üst raf) grup:False
+BAĞSIZ  uno_kiyma_kelepce                        mek    adım 15 (UNO'lar, kasetler, üst raf) grup:False
+BAĞSIZ  uno_patates_on                           mek    adım 15 (UNO'lar, kasetler, üst raf) grup:False
+BAĞSIZ  uno_patates_raf_flans                    mek    adım 15 (UNO'lar, kasetler, üst raf) grup:False
+BAĞSIZ  uno_patates_kelepce                      mek    adım 15 (UNO'lar, kasetler, üst raf) grup:False
+BAĞSIZ  kaset_kasar_cikis                        mek    adım 15 (UNO'lar, kasetler, üst raf) grup:False
+BAĞSIZ  kaset_kasar                              mek    adım 15 (UNO'lar, kasetler, üst raf) grup:False
+BAĞSIZ  kaset_sucuk_cikis                        mek    adım 15 (UNO'lar, kasetler, üst raf) grup:False
+BAĞSIZ  kaset_sucuk                              mek    adım 16 (Arkadan: burçlar, motorlar, silindirler) grup:False
+BAĞSIZ  burc_kilifi_kiyma                        mek    adım 16 (Arkadan: burçlar, motorlar, silindirler) grup:True
+BAĞSIZ  burc_uno_kiyma                           mek    adım 16 (Arkadan: burçlar, motorlar, silindirler) grup:False
+BAĞSIZ  motor_kasar                              mek    adım 16 (Arkadan: burçlar, motorlar, silindirler) grup:True
+BAĞSIZ  elk_koyu_2083_1142                       mek    adım 16 (Arkadan: burçlar, motorlar, silindirler) grup:True
+BAĞSIZ  motor_sucuk                              mek    adım 16 (Arkadan: burçlar, motorlar, silindirler) grup:True
+BAĞSIZ  elk_koyu_2356_1162                       mek    adım 16 (Arkadan: burçlar, motorlar, silindirler) grup:True
+BAĞSIZ  elk_koyu_2356_1266                       mek    adım 16 (Arkadan: burçlar, motorlar, silindirler) grup:True
+BAĞSIZ  uno_kiyma_arka                           mek    adım 16 (Arkadan: burçlar, motorlar, silindirler) grup:False
+BAĞSIZ  elk_rakor_2447_911                       mek    adım 18 (İç kanallar, fiş paneli, hortumlar, kablolar) grup:True
+BAĞSIZ  elk_kanal_2450_910                       mek    adım 18 (İç kanallar, fiş paneli, hortumlar, kablolar) grup:True
+BAĞSIZ  elk_celik_2197_1303                      mek    adım 18 (İç kanallar, fiş paneli, hortumlar, kablolar) grup:False
+BAĞSIZ  elk_celik_1526_1745                      mek    adım 18 (İç kanallar, fiş paneli, hortumlar, kablolar) grup:False
+BAĞSIZ  elk_kanal_1523_1692                      mek    adım 18 (İç kanallar, fiş paneli, hortumlar, kablolar) grup:False
+BAĞSIZ  x_sensor_braket_0                        mek    adım 21 (Ön braketler + kapaklar) grup:True
+BAĞSIZ  x_sensor_braket_1                        mek    adım 21 (Ön braketler + kapaklar) grup:True
+BAĞSIZ  orta_kayit                               mek    adım 21 (Ön braketler + kapaklar) grup:False
+BAĞSIZ  mentese_sol_893                          mek    adım 21 (Ön braketler + kapaklar) grup:True
+BAĞSIZ  mentese_sag_893                          mek    adım 21 (Ön braketler + kapaklar) grup:True
+BAĞSIZ  basac_1927_900                           mek    adım 21 (Ön braketler + kapaklar) grup:True
+BAĞSIZ  basac_1927_2160                          mek    adım 21 (Ön braketler + kapaklar) grup:True
+BAĞSIZ  basac_1977_900                           mek    adım 21 (Ön braketler + kapaklar) grup:True
+BAĞSIZ  basac_1977_2160                          mek    adım 21 (Ön braketler + kapaklar) grup:True

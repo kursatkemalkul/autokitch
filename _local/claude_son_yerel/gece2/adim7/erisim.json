@@ -1,0 +1,2053 @@
+[
+{
+"ist": "A",
+"et": "Açıcı ön motoru",
+"ad": "acici_motoru_on",
+"k": [
+1088.0,
+1144.0,
+1106.0,
+1184.6,
+-65.0,
+8.4
+],
+"derinlik": 70.6,
+"engel": []
+},
+{
+"ist": "A",
+"et": "Açıcı arka motoru",
+"ad": "acici_motoru_arka",
+"k": [
+1058.0,
+1114.0,
+1067.0,
+1140.1,
+-506.6,
+-428.0
+],
+"derinlik": 507.0,
+"engel": [
+"acici_askisi_arka",
+"acici_konisi_arka",
+"acici_konisi_on",
+"acici_mili_arka",
+"acici_mili_on",
+"acici_motoru_on",
+"acici_reduktoru_on",
+"acici_yatagi_arka"
+]
+},
+{
+"ist": "A",
+"et": "Açıcı pnömatiği",
+"ad": "acici_pnomatigi",
+"k": [
+1063.5,
+1108.5,
+1280.0,
+1474.0,
+-562.5,
+-517.5
+],
+"derinlik": 596.5,
+"engel": []
+},
+{
+"ist": "A",
+"et": "A istasyon kutusu (U_A içinde)",
+"ad": "A_istasyon_kutusu_160x170x100",
+"k": [
+1240.0,
+1400.0,
+1880.0,
+2050.0,
+-828.5,
+-730.5
+],
+"derinlik": 809.5,
+"engel": []
+},
+{
+"ist": "TOPPING",
+"et": "Kuru bölme pano kutusu",
+"ad": "kuru_pano_kutusu",
+"k": [
+1443.0,
+1993.0,
+1880.0,
+2140.0,
+-828.5,
+-708.5
+],
+"derinlik": 787.5,
+"engel": [
+"arayuz_m8_T_2000_300",
+"arayuz_m8_T_2000_700",
+"sos_hazne_bizim"
+]
+},
+{
+"ist": "TOPPING",
+"et": "DIN plakası (UPS/güç)",
+"ad": "kuru_din_plakasi",
+"k": [
+1443.0,
+1653.0,
+1680.0,
+1840.0,
+-828.5,
+-826.5
+],
+"derinlik": 905.5,
+"engel": [
+"gecis_blogu_ust_sol",
+"kuru_din_rayi_guc",
+"kuru_din_rayi_ups",
+"kuru_guc_kaynagi",
+"kuru_ups",
+"sos_hazne_bizim",
+"sos_hazne_boynu"
+]
+},
+{
+"ist": "TOPPING",
+"et": "Sürücüler (4)",
+"ad": "kuru_surucu_0",
+"k": [
+1468.0,
+1496.0,
+1432.0,
+1477.0,
+-760.0,
+-699.7
+],
+"derinlik": 778.7,
+"engel": []
+},
+{
+"ist": "TOPPING",
+"et": "Sürücüler (4)",
+"ad": "kuru_surucu_1",
+"k": [
+1501.0,
+1529.0,
+1432.0,
+1477.0,
+-760.0,
+-699.7
+],
+"derinlik": 778.7,
+"engel": [
+"kiyma_hazne_bizim"
+]
+},
+{
+"ist": "TOPPING",
+"et": "Valf adası 12×5/2",
+"ad": "valf_adasi_12x5_2",
+"k": [
+1690.0,
+1998.0,
+1250.0,
+1310.0,
+-760.0,
+-660.0
+],
+"derinlik": 739.0,
+"engel": [
+"gecis_blogu_alt",
+"kasar_cad_v14__govde",
+"kasar_cad_v14__orumcek_arka",
+"kasar_cad_v14__orumcek_on",
+"kasar_cad_v14__orumcek_orta",
+"kasar_cad_v14__plaka_arka",
+"kasar_cad_v14__plaka_on",
+"kusbasi_hazne_bizim",
+"kusbasi_hazne_boynu"
+]
+},
+{
+"ist": "TOPPING",
+"et": "Hava şartlandırıcı (filtre-reg.)",
+"ad": "sartlandirici_filtre_regulator",
+"k": [
+2420.0,
+2470.0,
+1082.0,
+1252.0,
+-780.0,
+-700.0
+],
+"derinlik": 779.0,
+"engel": [
+"raf_arka_bukumu",
+"raf_askisi_burclari_sag",
+"raf_kosebendi_sag",
+"raf_on_bukumu",
+"sartlandirici_manometre",
+"sucuk_cad_v8__govde",
+"sucuk_cad_v8__plaka_arka",
+"sucuk_cad_v8__plaka_on",
+"tasiyici_raf_3mm",
+"yuva_sucuk_arka_dayama_sag",
+"yuva_sucuk_kilavuz_sag"
+]
+},
+{
+"ist": "TOPPING",
+"et": "Kaşar helezon motoru",
+"ad": "motor_kasar_cad_v14_helezon",
+"k": [
+2060.5,
+2116.5,
+1163.0,
+1220.0,
+-813.5,
+-749.0
+],
+"derinlik": 828.0,
+"engel": [
+"hava_hatti_sartlandirici_ada",
+"kasar_cad_v14__gobek_helezon",
+"kasar_cad_v14__govde",
+"kasar_cad_v14__helezon_A",
+"kasar_cad_v14__helezon_B",
+"kasar_cad_v14__helezon_C",
+"kasar_cad_v14__helezon_D",
+"kasar_cad_v14__helezon_cekirdek",
+"kasar_cad_v14__kavrama_helezon",
+"kasar_cad_v14__oring_gobek_helezon",
+"kasar_cad_v14__oring_tup",
+"kasar_cad_v14__plaka_arka",
+"kasar_cad_v14__plaka_on",
+"kasar_cad_v14__yatak_kapagi",
+"kasar_cad_v14__yayli_pim_helezon",
+"kovan_kasar_cad_v14_helezon",
+"mil_kasar_cad_v14_helezon",
+"reduktor_flans_burcu_kasar_cad_v14_helezon",
+"reduktor_kasar_cad_v14_helezon",
+"sogutma_emis_hatti",
+"sogutma_sivi_hatti",
+"yuva_kasar_helezon_hac_yuvasi",
+"yuva_kasar_helezon_kavrama_pimi",
+"yuva_kasar_helezon_segmani",
+"yuva_kasar_helezon_yay_0",
+"yuva_kasar_helezon_yay_1",
+"yuva_kasar_helezon_yay_2",
+"yuva_kasar_helezon_yay_3",
+"yuva_kasar_helezon_yay_tablasi"
+]
+},
+{
+"ist": "TOPPING",
+"et": "Kaşar rotor motoru",
+"ad": "motor_kasar_cad_v14_rotor",
+"k": [
+2060.5,
+2116.5,
+1318.0,
+1375.0,
+-813.5,
+-749.0
+],
+"derinlik": 828.0,
+"engel": [
+"kasar_cad_v14__gobek_karistirici",
+"kasar_cad_v14__govde",
+"kasar_cad_v14__kar_mil",
+"kasar_cad_v14__kavrama_karistirici",
+"kasar_cad_v14__kilit_pimi",
+"kasar_cad_v14__on_kovan",
+"kasar_cad_v14__oring_gobek_karistirici",
+"kasar_cad_v14__oring_on_kovan",
+"kasar_cad_v14__orumcek_arka",
+"kasar_cad_v14__orumcek_on",
+"kasar_cad_v14__orumcek_orta",
+"kasar_cad_v14__plaka_arka",
+"kasar_cad_v14__plaka_on",
+"kasar_cad_v14__setuskur",
+"kasar_cad_v14__topuz",
+"kasar_cad_v14__yayli_pim_karistirici",
+"kovan_kasar_cad_v14_rotor",
+"mil_kasar_cad_v14_rotor",
+"reduktor_flans_burcu_kasar_cad_v14_rotor",
+"reduktor_kasar_cad_v14_rotor",
+"sogutma_emis_hatti",
+"sogutma_sivi_hatti",
+"yuva_kasar_rotor_hac_yuvasi",
+"yuva_kasar_rotor_kavrama_pimi",
+"yuva_kasar_rotor_segmani",
+"yuva_kasar_rotor_yay_0",
+"yuva_kasar_rotor_yay_1",
+"yuva_kasar_rotor_yay_2",
+"yuva_kasar_rotor_yay_3",
+"yuva_kasar_rotor_yay_tablasi"
+]
+},
+{
+"ist": "TOPPING",
+"et": "Sucuk helezon motoru",
+"ad": "motor_sucuk_cad_v8_helezon",
+"k": [
+2332.5,
+2388.5,
+1183.0,
+1240.0,
+-813.5,
+-749.0
+],
+"derinlik": 828.0,
+"engel": [
+"hava_hatti_sartlandirici_ada",
+"kovan_sucuk_cad_v8_helezon",
+"mil_sucuk_cad_v8_helezon",
+"reduktor_flans_burcu_sucuk_cad_v8_helezon",
+"reduktor_sucuk_cad_v8_helezon",
+"sucuk_cad_v8__gobek_helezon",
+"sucuk_cad_v8__govde",
+"sucuk_cad_v8__helezon_A",
+"sucuk_cad_v8__helezon_B",
+"sucuk_cad_v8__helezon_C",
+"sucuk_cad_v8__helezon_D",
+"sucuk_cad_v8__helezon_cekirdek",
+"sucuk_cad_v8__kavrama_helezon",
+"sucuk_cad_v8__oring_gobek_helezon",
+"sucuk_cad_v8__oring_tup",
+"sucuk_cad_v8__plaka_arka",
+"sucuk_cad_v8__plaka_on",
+"sucuk_cad_v8__yatak_kapagi",
+"sucuk_cad_v8__yayli_pim_helezon",
+"yuva_sucuk_helezon_hac_yuvasi",
+"yuva_sucuk_helezon_kavrama_pimi",
+"yuva_sucuk_helezon_segmani",
+"yuva_sucuk_helezon_yay_0",
+"yuva_sucuk_helezon_yay_1",
+"yuva_sucuk_helezon_yay_2",
+"yuva_sucuk_helezon_yay_3",
+"yuva_sucuk_helezon_yay_tablasi"
+]
+},
+{
+"ist": "TOPPING",
+"et": "Sucuk rotor motoru",
+"ad": "motor_sucuk_cad_v8_rotor",
+"k": [
+2332.5,
+2388.5,
+1287.0,
+1344.0,
+-813.5,
+-749.0
+],
+"derinlik": 828.0,
+"engel": [
+"kovan_sucuk_cad_v8_rotor",
+"mil_sucuk_cad_v8_rotor",
+"reduktor_flans_burcu_sucuk_cad_v8_rotor",
+"reduktor_sucuk_cad_v8_rotor",
+"sucuk_cad_v8__gobek_karistirici",
+"sucuk_cad_v8__govde",
+"sucuk_cad_v8__kar_mil",
+"sucuk_cad_v8__kavrama_karistirici",
+"sucuk_cad_v8__kilit_pimi",
+"sucuk_cad_v8__on_kovan",
+"sucuk_cad_v8__oring_gobek_karistirici",
+"sucuk_cad_v8__oring_on_kovan",
+"sucuk_cad_v8__orumcek_arka",
+"sucuk_cad_v8__orumcek_on",
+"sucuk_cad_v8__orumcek_orta",
+"sucuk_cad_v8__plaka_arka",
+"sucuk_cad_v8__plaka_on",
+"sucuk_cad_v8__setuskur",
+"sucuk_cad_v8__topuz",
+"sucuk_cad_v8__yayli_pim_karistirici",
+"yuva_sucuk_rotor_hac_yuvasi",
+"yuva_sucuk_rotor_kavrama_pimi",
+"yuva_sucuk_rotor_segmani",
+"yuva_sucuk_rotor_yay_0",
+"yuva_sucuk_rotor_yay_1",
+"yuva_sucuk_rotor_yay_2",
+"yuva_sucuk_rotor_yay_3",
+"yuva_sucuk_rotor_yay_tablasi"
+]
+},
+{
+"ist": "TOPPING",
+"et": "Evaporatör fanları (kaset)",
+"ad": "evap_kaseti_fani_0",
+"k": [
+1766.0,
+1886.0,
+1592.0,
+1712.0,
+-726.5,
+-701.5
+],
+"derinlik": 780.5,
+"engel": [
+"arka_duvar_kaset_yuzu",
+"arka_hava_izgarasi_ust",
+"evap_kaseti_fan_plakasi",
+"kaset_penceresi_dolgusu"
+]
+},
+{
+"ist": "TOPPING",
+"et": "Evaporatör fanları (kaset)",
+"ad": "evap_kaseti_fani_1",
+"k": [
+1946.0,
+2066.0,
+1592.0,
+1712.0,
+-726.5,
+-701.5
+],
+"derinlik": 780.5,
+"engel": [
+"arka_duvar_kaset_yuzu",
+"arka_hava_izgarasi_ust",
+"evap_kaseti_fan_plakasi",
+"kaset_penceresi_dolgusu"
+]
+},
+{
+"ist": "TOPPING",
+"et": "Soğutma grubu KLF6.6 (kaide cebi)",
+"ad": "sogutma_grubu_KLF66",
+"k": [
+1633.0,
+2013.0,
+815.0,
+1087.0,
+-785.0,
+-478.0
+],
+"derinlik": 557.0,
+"engel": [
+"baglama_lamasi_5",
+"baglama_lamasi_6",
+"kirinti_cekmecesi",
+"kusbasi_agiz_uzatmasi",
+"lineer_ray_arka",
+"lineer_ray_arka_civatalari",
+"lineer_ray_on",
+"lineer_ray_on_civatalari",
+"mekanizma_teknesi",
+"ray_ortu_catisi_arka",
+"ray_ortu_catisi_on",
+"sos_spreader_dagitici_boru",
+"sos_spreader_ucgen_dagitici",
+"x_kayisi_0",
+"x_kayisi_1"
+]
+},
+{
+"ist": "TOPPING",
+"et": "Teknik bölme arka emiş filtresi",
+"ad": "teknik_bolme_arka_emis_filtresi",
+"k": [
+1442.0,
+1630.0,
+900.0,
+1105.0,
+-828.5,
+-814.5
+],
+"derinlik": 893.5,
+"engel": [
+"baglama_lamasi_2",
+"fire_silecegi_kilavuzu_0",
+"fire_silecegi_kilavuzu_1",
+"fire_silecegi_lastigi",
+"fire_silecegi_silindiri",
+"kirinti_cekmecesi",
+"kiyma__agiz_90_derece",
+"kiyma_agiz_uzatmasi",
+"lineer_ray_arka",
+"lineer_ray_arka_civatalari",
+"lineer_ray_on",
+"lineer_ray_on_civatalari",
+"mekanizma_teknesi",
+"ray_ortu_catisi_arka",
+"ray_ortu_catisi_on",
+"x_kayisi_0",
+"x_kayisi_1"
+]
+},
+{
+"ist": "TOPPING",
+"et": "Ön kanat filtresi",
+"ad": "onyuz_mekanizma_kanadi_sol_filtre",
+"k": [
+1465.0,
+1600.0,
+823.0,
+886.0,
+62.0,
+77.5
+],
+"derinlik": 1.5,
+"engel": []
+},
+{
+"ist": "TOPPING",
+"et": "Sabit tahrik motoru (bant kaseti)",
+"ad": "st_tahrik_motoru",
+"k": [
+2437.8,
+2493.9,
+957.0,
+1016.0,
+-504.6,
+-408.5
+],
+"derinlik": 487.5,
+"engel": [
+"st_tahrik_diski",
+"st_tahrik_miknatisi_0",
+"st_tahrik_miknatisi_1",
+"st_tahrik_miknatisi_2",
+"st_tahrik_miknatisi_3",
+"st_tahrik_miknatisi_4",
+"st_tahrik_miknatisi_5",
+"st_tahrik_mili",
+"st_tahrik_rulmani_0",
+"st_tahrik_rulmani_1",
+"st_tahrik_yatak_burcu",
+"st_yatak_flansi"
+]
+},
+{
+"ist": "TOPPING",
+"et": "X home / limit sensörleri",
+"ad": "x_limit_sag_sensoru",
+"k": [
+2369.0,
+2381.0,
+914.0,
+926.0,
+-25.0,
+-19.0
+],
+"derinlik": 98.0,
+"engel": []
+},
+{
+"ist": "TOPPING",
+"et": "Tabla boş sensörü",
+"ad": "tabla_bos_sensoru",
+"k": [
+2342.0,
+2360.0,
+1042.0,
+1082.0,
+-179.0,
+-161.0
+],
+"derinlik": 240.0,
+"engel": []
+},
+{
+"ist": "TOPPING",
+"et": "UNO valf blokları (kıyma/kuşbaşı)",
+"ad": "kiyma__valf_blogu",
+"k": [
+1555.0,
+1637.0,
+1152.4,
+1224.6,
+-428.0,
+-346.0
+],
+"derinlik": 425.0,
+"engel": [
+"kiyma__agiz_90_derece",
+"kiyma__cikis_borusu",
+"kiyma__cikis_tc_ferrule",
+"kiyma__cikis_tc_ferrule_valf",
+"kiyma__cikis_tc_kelebegi",
+"sos_spreader_dik_boru",
+"sos_spreader_kesme_valfi_govde",
+"sos_spreader_uzatma_borusu"
+]
+},
+{
+"ist": "TOPPING",
+"et": "UNO valf blokları (kıyma/kuşbaşı)",
+"ad": "kusbasi__valf_blogu",
+"k": [
+1765.0,
+1847.0,
+1152.4,
+1224.6,
+-428.0,
+-346.0
+],
+"derinlik": 425.0,
+"engel": [
+"kusbasi__agiz_90_derece",
+"kusbasi__cikis_borusu",
+"kusbasi__cikis_tc_ferrule",
+"kusbasi__cikis_tc_ferrule_valf",
+"kusbasi__cikis_tc_kelebegi"
+]
+},
+{
+"ist": "TOPPING",
+"et": "UNO valf blokları (sos/harç)",
+"ad": "sos__valf_blogu",
+"k": [
+1604.0,
+1686.0,
+1575.4,
+1647.6,
+-428.0,
+-346.0
+],
+"derinlik": 425.0,
+"engel": [
+"sos__cikis_borusu",
+"sos__cikis_tc_ferrule",
+"sos__cikis_tc_ferrule_valf",
+"sos__cikis_tc_kelebegi"
+]
+},
+{
+"ist": "TOPPING",
+"et": "UNO valf blokları (sos/harç)",
+"ad": "harc__valf_blogu",
+"k": [
+2149.0,
+2231.0,
+1575.4,
+1647.6,
+-428.0,
+-346.0
+],
+"derinlik": 425.0,
+"engel": [
+"harc__cikis_borusu",
+"harc__cikis_tc_ferrule",
+"harc__cikis_tc_ferrule_valf",
+"harc__cikis_tc_kelebegi",
+"harc_cikis_dirsegi_316L"
+]
+},
+{
+"ist": "TOPPING",
+"et": "Yayıcı kesme valfleri",
+"ad": "sos_spreader_kesme_valfi_govde",
+"k": [
+1631.0,
+1659.0,
+1162.0,
+1208.0,
+-144.0,
+-116.0
+],
+"derinlik": 195.0,
+"engel": []
+},
+{
+"ist": "TOPPING",
+"et": "Yayıcı kesme valfleri",
+"ad": "harc_spreader_kesme_valfi_govde",
+"k": [
+2176.0,
+2204.0,
+1162.0,
+1208.0,
+-144.0,
+-116.0
+],
+"derinlik": 195.0,
+"engel": []
+},
+{
+"ist": "TOPPING",
+"et": "Evap. kaseti tahliye hortumu",
+"ad": "evap_kaseti_tahliye_hortumu",
+"k": [
+2097.0,
+2207.0,
+940.0,
+1425.0,
+-819.0,
+-766.0
+],
+"derinlik": 845.0,
+"engel": [
+"arka_duvar_kaset_yuzu",
+"evap_kaseti_hat_gecis_blogu",
+"harc_spreader_dagitici_boru",
+"harc_spreader_dik_boru",
+"harc_spreader_kesme_valfi_govde",
+"harc_spreader_ucgen_dagitici",
+"harc_spreader_uzatma_borusu",
+"harc_spreader_valf_braketi",
+"harc_spreader_valf_mili",
+"hava_hatti_sartlandirici_ada",
+"kasar_boru_kulagi_sag",
+"kasar_cad_v14__gobek_helezon",
+"kasar_cad_v14__gobek_karistirici",
+"kasar_cad_v14__govde",
+"kasar_cad_v14__helezon_A",
+"kasar_cad_v14__helezon_B",
+"kasar_cad_v14__helezon_C",
+"kasar_cad_v14__helezon_D",
+"kasar_cad_v14__insert_a",
+"kasar_cad_v14__kavrama_helezon",
+"kasar_cad_v14__kavrama_karistirici",
+"kasar_cad_v14__kilit_pimi",
+"kasar_cad_v14__on_kovan",
+"kasar_cad_v14__oring_tup",
+"kasar_cad_v14__orumcek_arka",
+"kasar_cad_v14__orumcek_on",
+"kasar_cad_v14__orumcek_orta",
+"kasar_cad_v14__plaka_arka",
+"kasar_cad_v14__plaka_on",
+"kasar_cad_v14__saplama_1",
+"kasar_cad_v14__topuz",
+"kasar_cad_v14__yatak_kapagi",
+"kasar_cad_v14_yarik_dili",
+"kasar_inis_borusu",
+"kasar_inis_hunisi",
+"kaset_penceresi_dolgusu",
+"kovan_kasar_cad_v14_helezon",
+"kovan_kasar_cad_v14_rotor",
+"raf_arka_bukumu",
+"raf_on_bukumu",
+"reduktor_flans_burcu_kasar_cad_v14_helezon",
+"reduktor_flans_burcu_kasar_cad_v14_rotor",
+"reduktor_kasar_cad_v14_helezon",
+"reduktor_kasar_cad_v14_rotor",
+"sicak_gaz_dongusu",
+"sogutma_emis_hatti",
+"sogutma_emis_hatti_ic",
+"sogutma_sivi_hatti",
+"sogutma_sivi_hatti_ic",
+"tasiyici_raf_3mm",
+"yuva_kasar_helezon_hac_yuvasi",
+"yuva_kasar_helezon_yay_0",
+"yuva_kasar_helezon_yay_3",
+"yuva_kasar_helezon_yay_tablasi",
+"yuva_kasar_rotor_hac_yuvasi",
+"yuva_kasar_rotor_yay_0",
+"yuva_kasar_rotor_yay_3",
+"yuva_kasar_rotor_yay_tablasi"
+]
+},
+{
+"ist": "B",
+"et": "Soğutma grubu (Secop) kondenser",
+"ad": "sogutma_grubu_kondenser",
+"k": [
+4043.5,
+4383.5,
+146.5,
+428.5,
+-554.0,
+-494.0
+],
+"derinlik": 573.0,
+"engel": [
+"sogutma_grubu_fan",
+"sogutma_grubu_kompresor",
+"sogutma_grubu_montaj_rayi_on",
+"tk_panel_klipsi_2",
+"tk_panel_klipsi_3"
+]
+},
+{
+"ist": "B",
+"et": "Soğutma grubu kompresör",
+"ad": "sogutma_grubu_kompresor",
+"k": [
+4128.5,
+4298.5,
+146.5,
+308.5,
+-329.0,
+-159.0
+],
+"derinlik": 238.0,
+"engel": [
+"sogutma_grubu_montaj_rayi_on"
+]
+},
+{
+"ist": "B",
+"et": "Buharlaştırma tavası",
+"ad": "buharlastirma_tavasi",
+"k": [
+4033.5,
+4393.5,
+124.5,
+157.5,
+-785.0,
+-705.0
+],
+"derinlik": 784.0,
+"engel": [
+"kosebent_sag_alt_2",
+"kosebent_sag_alt_3",
+"kosebent_sag_alt_4",
+"kosebent_sag_alt_5",
+"sogutma_grubu_kompresor",
+"sogutma_grubu_kondenser",
+"sogutma_grubu_montaj_rayi_arka",
+"sogutma_grubu_montaj_rayi_on",
+"sogutma_grubu_taban",
+"sogutma_grubu_takozu_0",
+"sogutma_grubu_takozu_1",
+"sogutma_grubu_takozu_2",
+"sogutma_grubu_takozu_3"
+]
+},
+{
+"ist": "B",
+"et": "B panosu PLC",
+"ad": "plc_S7-1200_1214C",
+"k": [
+4040.0,
+4150.0,
+470.0,
+570.0,
+-819.0,
+-744.0
+],
+"derinlik": 823.0,
+"engel": [
+"tk_depo_kutu_U_1.5",
+"tk_depo_kutu_arka_1.5",
+"tk_depo_kutu_on_1.5",
+"tk_depo_on_baglanti_sol"
+]
+},
+{
+"ist": "B",
+"et": "B panosu PLC",
+"ad": "plc_S7-1200_1214C",
+"k": [
+4145.0,
+4255.0,
+1710.0,
+1810.0,
+-810.5,
+-735.5
+],
+"derinlik": 814.5,
+"engel": [
+"yag_basinc_sensoru_PM1704",
+"yag_pompasi_GJ-N21_EagleDrive"
+]
+},
+{
+"ist": "B",
+"et": "B panosu güç kaynağı",
+"ad": "guc_kaynagi_NDR-240-24",
+"k": [
+4250.2,
+4313.2,
+610.0,
+735.2,
+-819.0,
+-705.5
+],
+"derinlik": 784.5,
+"engel": [
+"tk_depo_ayirici_1.5",
+"tk_depo_kutu_U_1.5",
+"tk_depo_kutu_arka_1.5",
+"tk_depo_kutu_on_1.5"
+]
+},
+{
+"ist": "B",
+"et": "DOLAP istasyon kutusu",
+"ad": "DOLAP_istasyon_kutusu_160x120x90",
+"k": [
+4160.0,
+4320.0,
+605.0,
+725.0,
+-698.0,
+-612.0
+],
+"derinlik": 691.0,
+"engel": [
+"tk_depo_ayirici_1.5",
+"tk_depo_kutu_U_1.5",
+"tk_depo_kutu_arka_1.5",
+"tk_depo_kutu_on_1.5",
+"tk_depo_on_baglanti_sag"
+]
+},
+{
+"ist": "B",
+"et": "Evaporatör fanı sol",
+"ad": "fan_sol_1",
+"k": [
+1724.0,
+1843.0,
+390.5,
+509.5,
+-641.0,
+-616.0
+],
+"derinlik": 695.0,
+"engel": [
+"CEK_K2_lahm_3_kutu_2.0_1.0",
+"CEK_K2_lahm_3_kutu_arka_1.0",
+"CEK_K2_lahm_3_kutu_on_1.0",
+"CEK_K2_lahm_3_tepsi",
+"CEK_K2_lahm_3_top_2_0",
+"CEK_K2_lahm_3_top_2_1",
+"CEK_K2_lahm_3_top_2_2",
+"CEK_K2_lahm_3_top_2_3",
+"CEK_K2_lahm_3_top_2_4",
+"CEK_K2_lahm_3_top_2_5",
+"CEK_K2_lahm_3_top_2_6",
+"CEK_K2_lahm_3_top_3_0",
+"CEK_K2_lahm_3_top_3_1",
+"CEK_K2_lahm_3_top_3_2",
+"CEK_K2_lahm_3_top_3_3",
+"CEK_K2_lahm_3_top_3_4",
+"CEK_K2_lahm_3_top_3_5",
+"CEK_K2_lahm_3_top_3_6"
+]
+},
+{
+"ist": "B",
+"et": "Evaporatör fanı sol",
+"ad": "fan_sol_2",
+"k": [
+1904.0,
+2023.0,
+390.5,
+509.5,
+-641.0,
+-616.0
+],
+"derinlik": 695.0,
+"engel": [
+"CEK_K2_lahm_3_kutu_2.0_1.0",
+"CEK_K2_lahm_3_kutu_arka_1.0",
+"CEK_K2_lahm_3_kutu_on_1.0",
+"CEK_K2_lahm_3_tepsi",
+"CEK_K2_lahm_3_top_4_0",
+"CEK_K2_lahm_3_top_4_1",
+"CEK_K2_lahm_3_top_4_2",
+"CEK_K2_lahm_3_top_4_3",
+"CEK_K2_lahm_3_top_4_4",
+"CEK_K2_lahm_3_top_4_5",
+"CEK_K2_lahm_3_top_4_6",
+"CEK_K2_lahm_3_top_5_0",
+"CEK_K2_lahm_3_top_5_1",
+"CEK_K2_lahm_3_top_5_2",
+"CEK_K2_lahm_3_top_5_3",
+"CEK_K2_lahm_3_top_5_4",
+"CEK_K2_lahm_3_top_5_5",
+"CEK_K2_lahm_3_top_5_6"
+]
+},
+{
+"ist": "B",
+"et": "Evaporatör fanı sağ",
+"ad": "fan_sag_1",
+"k": [
+3034.0,
+3153.0,
+303.0,
+422.0,
+-641.0,
+-616.0
+],
+"derinlik": 695.0,
+"engel": [
+"CEK_K5_hamur_2_kutu_2.0_1.0",
+"CEK_K5_hamur_2_kutu_arka_1.0",
+"CEK_K5_hamur_2_kutu_on_1.0",
+"CEK_K5_hamur_2_tepsi",
+"CEK_K5_hamur_2_top_2_0",
+"CEK_K5_hamur_2_top_2_1",
+"CEK_K5_hamur_2_top_2_2",
+"CEK_K5_hamur_2_top_2_3",
+"CEK_K5_hamur_2_top_2_4",
+"CEK_K5_hamur_2_top_3_0",
+"CEK_K5_hamur_2_top_3_1",
+"CEK_K5_hamur_2_top_3_2",
+"CEK_K5_hamur_2_top_3_3",
+"CEK_K5_hamur_2_top_3_4"
+]
+},
+{
+"ist": "B",
+"et": "Evaporatör fanı sağ",
+"ad": "fan_sag_2",
+"k": [
+3214.0,
+3333.0,
+303.0,
+422.0,
+-641.0,
+-616.0
+],
+"derinlik": 695.0,
+"engel": [
+"CEK_K5_hamur_2_kutu_2.0_1.0",
+"CEK_K5_hamur_2_kutu_arka_1.0",
+"CEK_K5_hamur_2_kutu_on_1.0",
+"CEK_K5_hamur_2_tepsi",
+"CEK_K5_hamur_2_top_3_0",
+"CEK_K5_hamur_2_top_3_1",
+"CEK_K5_hamur_2_top_3_2",
+"CEK_K5_hamur_2_top_3_3",
+"CEK_K5_hamur_2_top_3_4",
+"CEK_K5_hamur_2_top_4_0",
+"CEK_K5_hamur_2_top_4_1",
+"CEK_K5_hamur_2_top_4_2",
+"CEK_K5_hamur_2_top_4_3",
+"CEK_K5_hamur_2_top_4_4"
+]
+},
+{
+"ist": "F",
+"et": "TP10 teknik bölme fanı",
+"ad": "fan_0",
+"k": [
+2573.5,
+2706.5,
+915.5,
+1048.5,
+-653.0,
+-651.0
+],
+"derinlik": 730.0,
+"engel": [
+"teknik_bolme_duvari",
+"yukleme_bandi"
+]
+},
+{
+"ist": "F",
+"et": "TP10 teknik bölme fanı",
+"ad": "fan_1",
+"k": [
+3793.5,
+3926.5,
+915.5,
+1048.5,
+-653.0,
+-651.0
+],
+"derinlik": 730.0,
+"engel": [
+"alt_isitici_2",
+"alt_isitici_braketi_2_arka",
+"alt_isitici_braketi_2_on",
+"arka_ray",
+"bant_alt_kol",
+"bant_kizagi_arka",
+"bant_kizagi_on",
+"bant_ust_36",
+"bant_ust_37",
+"bant_ust_38",
+"bant_ust_39",
+"bant_ust_40",
+"bant_ust_41",
+"on_ray",
+"tahrik_motoru",
+"teknik_bolme_duvari"
+]
+},
+{
+"ist": "F",
+"et": "TP10 ana şalter",
+"ad": "ana_salter",
+"k": [
+3232.0,
+3268.0,
+970.0,
+1006.0,
+-671.0,
+-651.0
+],
+"derinlik": 730.0,
+"engel": [
+"arka_ray",
+"bant_kizagi_arka",
+"bant_kizagi_on",
+"bant_ust_14",
+"bant_ust_15",
+"on_ray",
+"teknik_bolme_duvari"
+]
+},
+{
+"ist": "F",
+"et": "TP10 ekran",
+"ad": "ekran_cami",
+"k": [
+3155.5,
+3344.5,
+1028.0,
+1179.0,
+-660.0,
+-659.0
+],
+"derinlik": 738.0,
+"engel": [
+"ekran_cami",
+"teknik_bolme_duvari",
+"ust_isitici_1",
+"ust_isitici_2",
+"ust_isitici_askisi_1_0",
+"ust_isitici_askisi_1_1",
+"ust_isitici_askisi_2_0",
+"ust_isitici_askisi_2_1"
+]
+},
+{
+"ist": "F",
+"et": "TP10 servis plakası",
+"ad": "servis_plakasi",
+"k": [
+3602.0,
+3687.0,
+926.0,
+987.0,
+-653.0,
+-651.0
+],
+"derinlik": 730.0,
+"engel": [
+"alt_isitici_2",
+"alt_isitici_braketi_2_arka",
+"alt_isitici_braketi_2_on",
+"arka_ray",
+"bant_alt_kol",
+"on_ray",
+"teknik_bolme_duvari"
+]
+},
+{
+"ist": "F",
+"et": "TP10 CEE priz",
+"ad": "cee_priz",
+"k": [
+2502.0,
+2558.0,
+960.0,
+1016.0,
+-681.0,
+-651.0
+],
+"derinlik": 730.0,
+"engel": [
+"teknik_bolme_duvari",
+"yb_burun_rulosu",
+"yukleme_bandi"
+]
+},
+{
+"ist": "F",
+"et": "F istasyon kutusu",
+"ad": "F_istasyon_kutusu_160x120x100",
+"k": [
+2800.0,
+2960.0,
+830.0,
+950.0,
+-828.0,
+-730.0
+],
+"derinlik": 809.0,
+"engel": [
+"arka_ray",
+"on_ray",
+"teknik_bolme_duvari"
+]
+},
+{
+"ist": "F",
+"et": "Yükleme bandı motoru",
+"ad": "yb_motoru",
+"k": [
+2752.0,
+2808.0,
+1093.0,
+1150.0,
+-495.5,
+-431.0
+],
+"derinlik": 510.0,
+"engel": [
+"teknik_bolme_duvari",
+"yb_gt2_kayis",
+"yb_kasnak_motor",
+"yb_motor_plakasi"
+]
+},
+{
+"ist": "F",
+"et": "Davlumbaz fanı RS30-15",
+"ad": "f_davlumbaz_fani_Systemair_RS_30-15_sileo",
+"k": [
+3248.0,
+3650.0,
+1321.0,
+1661.0,
+-742.0,
+-525.0
+],
+"derinlik": 604.0,
+"engel": [
+"arayuz_mek_f_davlumbaz_bolme_duvari_30",
+"arayuz_mek_f_ust_taban_levhasi_20",
+"arayuz_mek_f_ust_taban_levhasi_24",
+"arayuz_mek_f_ust_taban_levhasi_25",
+"f_davlumbaz_bolme_duvari",
+"f_davlumbaz_karbon_filtre",
+"f_davlumbaz_yag_filtresi_EN16282",
+"f_ust_kilif_percin_arka_orta_3450",
+"f_ust_kilif_percin_on_on_3450",
+"f_ust_kilif_percin_on_orta_3450",
+"f_ust_pizza_kutusu_yigini",
+"f_ust_taban_levhasi_delik_kaynagi_2",
+"f_ust_taban_levhasi_delik_kaynagi_3",
+"f_ust_taban_levhasi_delik_kaynagi_7",
+"f_ust_taban_levhasi_delik_kaynagi_8",
+"kompresor_JUNAIR_OF302_15B_tank",
+"ust_raf",
+"ust_raf_takozu_ust_2",
+"ust_raf_takozu_ust_3",
+"ust_raf_takozu_ust_7",
+"ust_raf_takozu_ust_8"
+]
+},
+{
+"ist": "F",
+"et": "Davlumbaz yağ filtresi EN16282",
+"ad": "f_davlumbaz_yag_filtresi_EN16282",
+"k": [
+3420.0,
+3920.0,
+1350.0,
+1750.0,
+-466.5,
+-441.5
+],
+"derinlik": 520.5,
+"engel": [
+"arayuz_mek_f_ust_taban_levhasi_26",
+"arayuz_mek_f_ust_taban_levhasi_27",
+"arayuz_mek_f_ust_taban_levhasi_28",
+"arayuz_mek_f_ust_taban_levhasi_29",
+"f_davlumbaz_bolme_duvari",
+"kompresor_JUNAIR_OF302_15B_motor",
+"kompresor_JUNAIR_OF302_15B_tank",
+"yag_damlama_tavasi_F",
+"yag_tarti_alt_takozu",
+"yag_tarti_platformu",
+"yag_tarti_taban_plakasi",
+"yag_tarti_ust_takozu",
+"yag_tarti_yuk_hucresi_PW15AH",
+"yag_tenekesi_18L"
+]
+},
+{
+"ist": "F",
+"et": "Davlumbaz karbon filtresi",
+"ad": "f_davlumbaz_karbon_filtre",
+"k": [
+3420.0,
+3920.0,
+1350.0,
+1750.0,
+-496.5,
+-466.5
+],
+"derinlik": 545.5,
+"engel": [
+"arayuz_mek_f_davlumbaz_bolme_duvari_30",
+"arayuz_mek_f_davlumbaz_bolme_duvari_31",
+"arayuz_mek_f_ust_taban_levhasi_26",
+"arayuz_mek_f_ust_taban_levhasi_27",
+"arayuz_mek_f_ust_taban_levhasi_28",
+"arayuz_mek_f_ust_taban_levhasi_29",
+"f_davlumbaz_bolme_duvari",
+"f_davlumbaz_yag_filtresi_EN16282",
+"kompresor_JUNAIR_OF302_15B_motor",
+"kompresor_JUNAIR_OF302_15B_tank",
+"yag_damlama_tavasi_F",
+"yag_tarti_alt_takozu",
+"yag_tarti_platformu",
+"yag_tarti_taban_plakasi",
+"yag_tarti_ust_takozu",
+"yag_tarti_yuk_hucresi_PW15AH",
+"yag_tenekesi_18L"
+]
+},
+{
+"ist": "F",
+"et": "Kompresör JUN-AIR",
+"ad": "kompresor_JUNAIR_OF302_15B_tank",
+"k": [
+3359.0,
+3739.0,
+1368.0,
+1668.0,
+-380.0,
+-80.0
+],
+"derinlik": 159.0,
+"engel": []
+},
+{
+"ist": "F",
+"et": "Kompresör çıkış vanası",
+"ad": "kompresor_cikis_vanasi",
+"k": [
+3541.0,
+3557.0,
+1821.0,
+1837.0,
+-380.0,
+-360.0
+],
+"derinlik": 439.0,
+"engel": [
+"kompresor_JUNAIR_OF302_15B_motor"
+]
+},
+{
+"ist": "F",
+"et": "Yağ tenekesi 18 L",
+"ad": "yag_tenekesi_18L",
+"k": [
+3746.0,
+3981.0,
+1421.0,
+1791.0,
+-413.5,
+-178.5
+],
+"derinlik": 257.5,
+"engel": []
+},
+{
+"ist": "F",
+"et": "Yağ tartısı yük hücresi",
+"ad": "yag_tarti_yuk_hucresi_PW15AH",
+"k": [
+3788.5,
+3938.5,
+1367.0,
+1407.0,
+-308.5,
+-283.5
+],
+"derinlik": 362.5,
+"engel": []
+},
+{
+"ist": "U",
+"et": "ANA PANO kapağı",
+"ad": "ana_pano_kapagi",
+"k": [
+3521.0,
+3968.0,
+1899.0,
+2165.0,
+-89.0,
+-87.0
+],
+"derinlik": 166.0,
+"engel": []
+},
+{
+"ist": "U",
+"et": "Ana şalter kolu",
+"ad": "ana_salter_kolu_OHYS2AJ",
+"k": [
+3579.0,
+3645.0,
+2074.0,
+2140.0,
+-87.0,
+-53.0
+],
+"derinlik": 132.0,
+"engel": []
+},
+{
+"ist": "U",
+"et": "U_F emiş fanı + G3 keçe",
+"ad": "ust_f_fan_filtre_kecesi_emis_0",
+"k": [
+3603.5,
+3716.5,
+1873.5,
+1986.5,
+-827.5,
+-819.5
+],
+"derinlik": 898.5,
+"engel": [
+"ust_f_fan_4414FL_emis_0"
+]
+},
+{
+"ist": "U",
+"et": "U_F emiş fanı + G3 keçe",
+"ad": "ust_f_fan_filtre_kecesi_emis_1",
+"k": [
+3803.5,
+3916.5,
+1873.5,
+1986.5,
+-827.5,
+-819.5
+],
+"derinlik": 898.5,
+"engel": [
+"ust_f_fan_4414FL_emis_1"
+]
+},
+{
+"ist": "U",
+"et": "U_F atış fanı + G3 keçe",
+"ad": "ust_f_fan_filtre_kecesi_atis_0",
+"k": [
+2583.5,
+2696.5,
+2018.5,
+2131.5,
+-827.5,
+-819.5
+],
+"derinlik": 898.5,
+"engel": [
+"ust_f_fan_4414FL_atis_0",
+"ust_f_pizza_kutusu_yigini"
+]
+},
+{
+"ist": "U",
+"et": "U_F atış fanı + G3 keçe",
+"ad": "ust_f_fan_filtre_kecesi_atis_1",
+"k": [
+2763.5,
+2876.5,
+2018.5,
+2131.5,
+-827.5,
+-819.5
+],
+"derinlik": 898.5,
+"engel": [
+"ust_f_fan_4414FL_atis_1",
+"ust_f_pizza_kutusu_yigini"
+]
+},
+{
+"ist": "U",
+"et": "STEGO termostat",
+"ad": "ust_f_fan_termostati_STEGO_KTS011",
+"k": [
+3343.5,
+3376.5,
+2000.0,
+2060.0,
+-821.0,
+-778.0
+],
+"derinlik": 857.0,
+"engel": []
+},
+{
+"ist": "K",
+"et": "K panosu PLC",
+"ad": "plc_S7-1200_1214C",
+"k": [
+4040.0,
+4150.0,
+470.0,
+570.0,
+-819.0,
+-744.0
+],
+"derinlik": 823.0,
+"engel": [
+"tk_depo_kutu_U_1.5",
+"tk_depo_kutu_arka_1.5",
+"tk_depo_kutu_on_1.5",
+"tk_depo_on_baglanti_sol"
+]
+},
+{
+"ist": "K",
+"et": "K panosu PLC",
+"ad": "plc_S7-1200_1214C",
+"k": [
+4145.0,
+4255.0,
+1710.0,
+1810.0,
+-810.5,
+-735.5
+],
+"derinlik": 814.5,
+"engel": [
+"yag_basinc_sensoru_PM1704",
+"yag_pompasi_GJ-N21_EagleDrive"
+]
+},
+{
+"ist": "K",
+"et": "K valf adası SS5Y3",
+"ad": "valf_adasi_SS5Y3-20-04",
+"k": [
+4072.0,
+4141.5,
+1482.0,
+1531.0,
+-818.0,
+-798.0
+],
+"derinlik": 877.0,
+"engel": [
+"DGRF_kilavuz_mili_0",
+"valf_SY3120_0",
+"valf_SY3120_0_rakor_0",
+"valf_SY3120_0_rakor_1",
+"valf_SY3120_1",
+"valf_SY3120_1_rakor_0",
+"valf_SY3120_1_rakor_1",
+"valf_SY3120_2",
+"valf_SY3120_2_rakor_0",
+"valf_SY3120_2_rakor_1",
+"valf_kor_plaka"
+]
+},
+{
+"ist": "K",
+"et": "K şartlandırıcı AW20 (filtre)",
+"ad": "sartlandirici_AW20-F02-A",
+"k": [
+4290.0,
+4330.0,
+1482.0,
+1637.0,
+-815.7,
+-765.7
+],
+"derinlik": 844.7,
+"engel": []
+},
+{
+"ist": "K",
+"et": "Yağ emiş filtresi 10 µm",
+"ad": "yag_emis_filtresi",
+"k": [
+4067.0,
+4093.0,
+1644.5,
+1744.5,
+-533.0,
+-507.0
+],
+"derinlik": 586.0,
+"engel": []
+},
+{
+"ist": "K",
+"et": "Yağ pompası GJ-N21",
+"ad": "yag_pompasi_GJ-N21_EagleDrive",
+"k": [
+4100.0,
+4200.3,
+1644.5,
+1724.8,
+-554.0,
+-486.0
+],
+"derinlik": 565.0,
+"engel": []
+},
+{
+"ist": "K",
+"et": "Yağ basınç sensörü PM1704",
+"ad": "yag_basinc_sensoru_PM1704",
+"k": [
+4209.9,
+4240.1,
+1698.7,
+1809.7,
+-535.1,
+-504.9
+],
+"derinlik": 583.9,
+"engel": []
+},
+{
+"ist": "K",
+"et": "PulsaJet nozül",
+"ad": "PulsaJet_AAB10000AUH-104210-VIFC",
+"k": [
+4009.9,
+4040.1,
+1155.4,
+1194.3,
+-188.9,
+-151.1
+],
+"derinlik": 230.1,
+"engel": []
+},
+{
+"ist": "K",
+"et": "Kesici DGRF",
+"ad": "DGRF-C-63-125_govde",
+"k": [
+4119.0,
+4281.0,
+1286.0,
+1391.0,
+-249.5,
+-165.5
+],
+"derinlik": 244.5,
+"engel": [
+"DGRF_port_on_QSL"
+]
+},
+{
+"ist": "K",
+"et": "Bıçak (yıldız)",
+"ad": "bicak_koruma_halkasi",
+"k": [
+4042.0,
+4358.0,
+1129.5,
+1166.5,
+-364.0,
+-48.0
+],
+"derinlik": 127.0,
+"engel": []
+},
+{
+"ist": "K",
+"et": "EC5000 tahrik rulosu",
+"ad": "tahrik_rulosu_EC5000_354",
+"k": [
+4329.0,
+4379.0,
+944.0,
+994.0,
+-411.0,
+-13.0
+],
+"derinlik": 92.0,
+"engel": [
+"bant_yan_-3",
+"tahrik_rulosu_EC5000_M8_civata",
+"urun_sensoru_durus_braket_1"
+]
+},
+{
+"ist": "K",
+"et": "Ürün sensörü verici (arka)",
+"ad": "urun_sensoru_giris_verici",
+"k": [
+4099.6,
+4110.4,
+994.5,
+1025.5,
+-438.0,
+-418.0
+],
+"derinlik": 497.0,
+"engel": [
+"cit_arka_a",
+"cit_on",
+"urun_sensoru_giris_alici",
+"urun_sensoru_giris_braket_1"
+]
+},
+{
+"ist": "K",
+"et": "Ürün sensörü verici (arka)",
+"ad": "urun_sensoru_durus_verici",
+"k": [
+4344.6,
+4355.4,
+994.5,
+1025.5,
+-438.0,
+-418.0
+],
+"derinlik": 497.0,
+"engel": [
+"cit_arka_b",
+"cit_on",
+"urun_sensoru_durus_alici",
+"urun_sensoru_durus_braket_1"
+]
+},
+{
+"ist": "K",
+"et": "İtici X (MY1B 250)",
+"ad": "itici_X_MY1B10G-250_profil",
+"k": [
+4035.0,
+4365.0,
+964.0,
+983.5,
+-713.0,
+-687.0
+],
+"derinlik": 766.0,
+"engel": [
+"avara_mili_0",
+"avara_mili_1",
+"avara_rulosu_46",
+"bant_sarim_354",
+"bant_sarim_46",
+"bant_traversi_0",
+"bant_traversi_1",
+"bant_yan_-3",
+"bant_yan_-421",
+"itici_X_blok_-645",
+"itici_X_ray_-645",
+"tahrik_rulosu_EC5000_354",
+"tahrik_rulosu_EC5000_M8_civata",
+"tahrik_rulosu_EC5000_hex_mil"
+]
+},
+{
+"ist": "K",
+"et": "İtici Z (MY1B 350)",
+"ad": "itici_Z_MY1B10G-350_profil",
+"k": [
+4062.0,
+4088.0,
+1051.0,
+1070.5,
+-805.0,
+-375.0
+],
+"derinlik": 454.0,
+"engel": [
+"itici_Z_MY1B10G-350_uc_kapagi_1"
+]
+},
+{
+"ist": "K",
+"et": "İtici Z sensörü D-M9N arka",
+"ad": "itici_Z_MY1B10G-350_D-M9N_0",
+"k": [
+4085.2,
+4088.0,
+1057.5,
+1060.5,
+-796.0,
+-774.0
+],
+"derinlik": 853.0,
+"engel": []
+},
+{
+"ist": "E",
+"et": "E panosu PLC / Beckhoff",
+"ad": "plc_S7-1200_1214C",
+"k": [
+4480.0,
+4590.0,
+1444.5,
+1544.5,
+-815.0,
+-740.0
+],
+"derinlik": 819.0,
+"engel": [
+"besleyici_plaka_askisi_0",
+"besleyici_plaka_askisi_2",
+"kose_CNR_MF_motor",
+"kose_CNR_PF_motor",
+"kose_takim_sabit_kopru",
+"parmak_kayisi",
+"piston_baglanti_plakasi",
+"piston_eksen_plakasi"
+]
+},
+{
+"ist": "E",
+"et": "E panosu PLC / Beckhoff",
+"ad": "beckhoff_CX9240",
+"k": [
+4490.0,
+4574.0,
+1664.5,
+1764.5,
+-815.0,
+-724.0
+],
+"derinlik": 803.0,
+"engel": [
+"besleyici_plaka_askisi_0",
+"besleyici_plaka_askisi_2"
+]
+},
+{
+"ist": "E",
+"et": "E 24/48 V güç",
+"ad": "guc_24V_NDR-240-24",
+"k": [
+4700.0,
+4763.0,
+1432.0,
+1557.2,
+-815.0,
+-692.2
+],
+"derinlik": 771.2,
+"engel": [
+"kose_takim_sabit_kopru",
+"parmak_kasnak_alt",
+"parmak_kayisi",
+"parmak_motor_braketi",
+"parmak_motoru",
+"parmak_motoru_arka_mili",
+"parmak_sifir_kami",
+"parmak_sifir_sensoru",
+"piston_baglanti_plakasi",
+"piston_eksen_plakasi",
+"piston_rayi_1"
+]
+},
+{
+"ist": "E",
+"et": "E 24/48 V güç",
+"ad": "guc_48V_NDR-240-48_a",
+"k": [
+4767.0,
+4830.0,
+1432.0,
+1557.2,
+-815.0,
+-692.2
+],
+"derinlik": 771.2,
+"engel": [
+"kose_CNR_MB_motor",
+"kose_CNR_PB_motor",
+"kose_takim_sabit_kopru",
+"parmak_motor_braketi",
+"parmak_sifir_braketi",
+"parmak_sifir_sensoru"
+]
+},
+{
+"ist": "E",
+"et": "Asansör motoru",
+"ad": "asansor_motoru",
+"k": [
+5106.6,
+5162.7,
+126.4,
+222.5,
+-410.0,
+-353.0
+],
+"derinlik": 432.0,
+"engel": []
+},
+{
+"ist": "E",
+"et": "Besleyici motoru",
+"ad": "besleyici_motoru",
+"k": [
+5121.4,
+5217.5,
+1328.0,
+1385.0,
+-373.0,
+-317.0
+],
+"derinlik": 396.0,
+"engel": []
+},
+{
+"ist": "E",
+"et": "Besleyici arka sensörü",
+"ad": "besleyici_arka_sensor",
+"k": [
+4996.0,
+5004.0,
+1310.0,
+1318.0,
+-820.5,
+-790.5
+],
+"derinlik": 869.5,
+"engel": []
+},
+{
+"ist": "E",
+"et": "Vakum Z silindiri",
+"ad": "vakum_Z_silindir",
+"k": [
+4795.5,
+4829.5,
+1080.0,
+1130.5,
+-806.5,
+-777.5
+],
+"derinlik": 856.5,
+"engel": []
+},
+{
+"ist": "E",
+"et": "Köşe motorları (arka MF/MB)",
+"ad": "kose_CNR_MF_motor",
+"k": [
+4472.6,
+4529.6,
+1405.2,
+1502.6,
+-403.2,
+-343.7
+],
+"derinlik": 422.7,
+"engel": [
+"kose_CNR_PF_kaplin",
+"kose_CNR_PF_motor",
+"kose_CNR_PF_sifir_bayragi",
+"kose_CNR_PF_sifir_sensoru",
+"kose_takim_sabit_kopru",
+"parmak_kayisi"
+]
+},
+{
+"ist": "E",
+"et": "Köşe motorları (arka MF/MB)",
+"ad": "kose_CNR_MB_motor",
+"k": [
+4789.4,
+4846.4,
+1405.2,
+1502.6,
+-403.2,
+-343.7
+],
+"derinlik": 422.7,
+"engel": [
+"kose_CNR_PB_kaplin",
+"kose_CNR_PB_motor",
+"kose_CNR_PB_sifir_bayragi",
+"kose_CNR_PB_sifir_sensoru",
+"kose_takim_kilavuz_1",
+"kose_takim_sabit_kopru"
+]
+},
+{
+"ist": "E",
+"et": "Piston motoru (frenli)",
+"ad": "piston_motoru",
+"k": [
+4711.8,
+4768.2,
+1711.5,
+1842.0,
+-346.2,
+-289.8
+],
+"derinlik": 368.8,
+"engel": []
+},
+{
+"ist": "E",
+"et": "Kalıp destek motoru",
+"ad": "destek_motoru",
+"k": [
+4632.0,
+4688.0,
+623.5,
+719.6,
+-235.0,
+-178.0
+],
+"derinlik": 257.0,
+"engel": []
+},
+{
+"ist": "E",
+"et": "Köprü motoru",
+"ad": "kopru_motoru",
+"k": [
+4419.0,
+4475.0,
+700.5,
+796.6,
+-235.0,
+-178.0
+],
+"derinlik": 257.0,
+"engel": [
+"kopru_kilavuz_mili_1"
+]
+},
+{
+"ist": "E",
+"et": "Flap katlayıcı motoru",
+"ad": "flap_katlayici_motoru",
+"k": [
+5122.0,
+5178.0,
+610.0,
+706.1,
+-329.0,
+-272.0
+],
+"derinlik": 351.0,
+"engel": [
+"kalip_alt_rafi_koseben_on"
+]
+},
+{
+"ist": "E",
+"et": "Yığın üstü sensörü (arka)",
+"ad": "sensor_yigin_ustu",
+"k": [
+5170.0,
+5180.8,
+1022.0,
+1053.0,
+-800.0,
+-780.0
+],
+"derinlik": 859.0,
+"engel": []
+},
+{
+"ist": "E",
+"et": "Robot çöp kovası 15 L",
+"ad": "ecop_robot_cop_kovasi_15L",
+"k": [
+4424.5,
+4589.5,
+127.5,
+427.5,
+-371.0,
+29.0
+],
+"derinlik": 50.0,
+"engel": []
+}
+]

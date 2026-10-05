@@ -191,8 +191,30 @@ ADIMLAR = [
      [(".", 'python "{YAMA}/54_kusbasi_dik.py" hat3_v9u.glb hat3_v9v.glb')]),
     ("55", "standart uyum · pul tek standart: M5 DIN 9021 → ISO 7089 (A, K, E) · M8 DIN 9021 / DIN 125 → ISO 7092 (A, TOPPING, B şase, U_F, K) · baş / somun Δ kalınlık kadar sac tarafına (sac_standart/sac_uyum_v1.json)", ["hat3_v9v.glb"], "hat3_v9w.glb",
      [(".", 'python "{YAMA}/55_uyum.py" hat3_v9v.glb hat3_v9w.glb')]),
+    ("56", "sol evaporatör 2. ayağı 3 mm dar (x 1620 → 1623, 30 → 27 mm): tavuk UNO silindirinin duvar flanşı arkadan geçerken ayağın dik kolunu 2 mm sıyırıyordu (TOPPING montaj v5 yol denetimi)", ["hat3_v9w.glb"], "hat3_v9x.glb",
+     [(".", 'python "{YAMA}/56_evap_ayak.py" hat3_v9w.glb hat3_v9x.glb')]),
+    ("57", "servis sacı yatay kablo kanalı 4 evaporatör ayağı hizasından 2 mm boşlukla kesik (4 parça: servis sacı arkadan kapanırken / bakımda çıkarken kanal ayakların içinden geçiyordu) · boş rakor 1476 → 1608", ["hat3_v9x.glb"], "hat3_v9y.glb",
+     [(".", 'python "{YAMA}/57_kanal_kesik.py" hat3_v9x.glb hat3_v9y.glb')]),
+    ("58", "TEK acil stop (Kemal 5 Eki): ana şalterin önündeki kapakta — F sağ üst kapağı (3625, 1600, z 79) · Schneider XB4BS8442 Ø40 + ZBY9330T Ø60 · kapakla döner", ["hat3_v9y.glb"], "hat3_v9z.glb",
+     [(".", 'python "{YAMA}/58_acil_stop.py" hat3_v9y.glb hat3_v9z.glb')]),
+    ("59", "kapı emniyet anahtarları (STANDART_DURUM madde 3): 10 ön kapak — Schmersal RSS36 kodlu sensör + aktüatör (K: AZM40 kilitli), mandal tarafında kapak arkası, gerekirse 2 mm braket", ["hat3_v9z.glb"], "hat3_v10a.glb",
+     [(".", 'python "{YAMA}/59_kapi_emniyet.py" hat3_v9z.glb hat3_v10a.glb')]),
+    ("60", "hava hattı emniyet valfi (STANDART_DURUM madde 8): kompresör çıkış hortumuna Festo MS6-SV-E (yumuşak başlatma + hızlı boşaltma) + bobin + susturucu · hortum iki parçaya", ["hat3_v10a.glb"], "hat3_v10b.glb",
+     [(".", 'python "{YAMA}/60_hava_emniyet.py" hat3_v10a.glb hat3_v10b.glb')]),
+    ("61", "davlumbaz yağ filtresi sola kayar, pizza kutusu tarafındaki servis ağzından alınır (Kemal): çerçeve sol kenarı açık · ray uzantısı · bölme sacında 530 × 420 ağız + tapa + 2 çeyrek tur kilit", ["hat3_v10b.glb"], "hat3_v10c.glb",
+     [(".", 'python "{YAMA}/61_filtre_servis.py" hat3_v10b.glb hat3_v10c.glb')]),
+    ("62", "TOPPING bağlantısız 9 saca gerçek kaynak (TOPPING montaj v6, bağlı mı denetimi): 4 raf köşebendi → astar · 2 kaide cep taşıyıcısı → lama / enine boru · enine lama → arka boru / ön perde · 2 teknik perde → dış taban (aralıklı)", ["hat3_v10c.glb"], "hat3_v10d.glb",
+     [(".", 'python "{YAMA}/62_topping_kaynak.py" hat3_v10c.glb hat3_v10d.glb')]),
+    ("63", "TOPPING UNO'lar rafa vidalı (her UNO 2 rafa kaynaklı L pabuç + yandan M5 tabana) · kaşar / sucuk kaseti kapak K2 iç yüzündeki POM takozla kilitli (Kemal)", ["hat3_v10d.glb"], "hat3_v10e.glb",
+     [(".", 'python "{YAMA}/63_uno_kaset.py" hat3_v10d.glb hat3_v10e.glb')]),
+    ("64", "TOPPING hazır ürünler bizim braketle bağlı: kaset motorları + valf adası duvara kaynaklı braket · X ekseni + orta kayıt kaynaklı L pabuç · menteşe + X sensör braketi PEM saplama", ["hat3_v10e.glb"], "hat3_v10f.glb",
+     [(".", 'python "{YAMA}/64_hazir_baglanti.py" hat3_v10e.glb hat3_v10f.glb')]),
+    ("65", "TOPPING servis sacı: sucuk motoru sensörünün önündeki yatay kablo kanalı 30 → 25 mm (servis sacı alt montajı sensöre çarpmadan girer · montaj sırası denetimi)", ["hat3_v10f.glb"], "hat3_v10g.glb",
+     [(".", 'python "{YAMA}/65_kanal_daralt.py" hat3_v10f.glb hat3_v10g.glb')]),
+    ("66", "TOPPING K1 / K2 kapak emniyet sensörleri vidalı: tabana kaynaklı 2 mm L braket + 2 × PEM S-M4 · sensör önden 2 × M4 × 20 (bağlantı denetimi)", ["hat3_v10g.glb"], "hat3_v10h.glb",
+     [(".", 'python "{YAMA}/66_emniyet_braket.py" hat3_v10g.glb hat3_v10h.glb')]),
 ]
-SON = "hat3_v9w.glb"
+SON = "hat3_v10h.glb"
 
 
 def kur(is_dizin, h3, uretec):

@@ -1,0 +1,409 @@
+{
+ "kod": "E",
+ "ozet": {
+  "govde_parca": 477,
+  "sac": 64,
+  "profil": 10,
+  "eleman": 304,
+  "kaynak": 83,
+  "arayuz": 48,
+  "dfm_hata": 0,
+  "dfm_uyari": 1,
+  "profil_dfm_hata": 0,
+  "dogrulama_kalan": 0,
+  "cakisma_izinsiz": 0,
+  "supurme": 0,
+  "sure_sn": 16.6
+ },
+ "sac_ozet": {
+  "adet": 64,
+  "dfm_hata": 0,
+  "dfm_uyari": 1,
+  "dogrulama_kalan": []
+ },
+ "profil_ozet": {
+  "adet": 10,
+  "dfm_hata": 0,
+  "toplam_boy_m": 9.357,
+  "kg": 26.66
+ },
+ "govde_govde_occ": {
+  "govde_govde": [],
+  "govde_mekanizma": [],
+  "govde_komsu": [],
+  "izinli_bilinen": [],
+  "izinsiz_toplam": 0
+ },
+ "csv": {
+  "satir": 100,
+  "pem_delik": 118,
+  "arayuz_pem": 45
+ },
+ "dogru_cakisma": {
+  "gercek": [],
+  "izinli_pem": 70,
+  "incele": [],
+  "acik_ag": [],
+  "temas": 806,
+  "bilesen": 477
+ },
+ "havada": [],
+ "zarf": [
+  4399.99,
+  5230.01,
+  -0.15,
+  2197.01,
+  -830.01,
+  79.01
+ ],
+ "zarf_ref": [
+  4400.0,
+  5230.0,
+  0.0,
+  2197.0,
+  -830.0,
+  79.0
+ ],
+ "zarf_fark": [
+  -0.01,
+  0.01,
+  -0.15,
+  0.01,
+  -0.01,
+  0.01
+ ],
+ "zarf_gecti": true,
+ "zarf_tasan": [],
+ "acinim_kalan": [],
+ "mekanizma_saplama": 41,
+ "mekanizma_atla": [
+  [
+   "sol",
+   "ELK_ZINCIR__paslanmaz",
+   "yer güvenli değil [1.5, 1476.0, -669.0]"
+  ],
+  [
+   "sol",
+   "ELK_ZINCIR__paslanmaz",
+   "yer güvenli değil [1.5, 1543.0, -561.0]"
+  ],
+  [
+   "sol",
+   "ELK_ZINCIR__paslanmaz",
+   "yer güvenli değil [1.5, 1566.0, -561.0]"
+  ],
+  [
+   "sol",
+   "ELK_ZINCIR__paslanmaz",
+   "yer güvenli değil [1.5, 1594.0, -669.0]"
+  ],
+  [
+   "ust",
+   "E_PISTON__aluminyum",
+   "yama dar"
+  ],
+  [
+   "ust",
+   "E_PISTON__aluminyum",
+   "yama dar"
+  ],
+  [
+   "taban",
+   "E_SARJOR__sac",
+   "yama dar"
+  ]
+ ],
+ "arayuz": [
+  {
+   "ad": "arayuz_uke_m8_100",
+   "karsi": "U_KE_GOVDE ust_ke_taban_sac",
+   "gerek": "U_KE tabanında Ø9 (aynı eksen) · ISO 7380 M8 × 16 A2 U_KE içinden"
+  },
+  {
+   "ad": "arayuz_uke_m8_730",
+   "karsi": "U_KE_GOVDE ust_ke_taban_sac",
+   "gerek": "U_KE tabanında Ø9 (aynı eksen) · ISO 7380 M8 × 16 A2 U_KE içinden"
+  },
+  {
+   "ad": "arayuz_uke_m8_415",
+   "karsi": "U_KE_GOVDE ust_ke_taban_sac",
+   "gerek": "U_KE tabanında Ø9 (aynı eksen) · ISO 7380 M8 × 16 A2 U_KE içinden"
+  },
+  {
+   "ad": "arayuz_j3_burc_1476_669",
+   "karsi": "ELK_ZINCIR J3 E paneli burcu",
+   "gerek": "burç Ø10 × 20 + panel plakası Ø5,5 · FHP-M5 × 25 · önde pul + fiberli somun"
+  },
+  {
+   "ad": "arayuz_j3_burc_1543_561",
+   "karsi": "ELK_ZINCIR J3 E paneli burcu",
+   "gerek": "burç Ø10 × 20 + panel plakası Ø5,5 · FHP-M5 × 25 · önde pul + fiberli somun"
+  },
+  {
+   "ad": "arayuz_j3_burc_1594_669",
+   "karsi": "ELK_ZINCIR J3 E paneli burcu",
+   "gerek": "burç Ø10 × 20 + panel plakası Ø5,5 · FHP-M5 × 25 · önde pul + fiberli somun"
+  },
+  {
+   "ad": "arayuz_j3_burc_1566_561",
+   "karsi": "ELK_ZINCIR J3 E paneli burcu",
+   "gerek": "burç Ø10 × 20 + panel plakası Ø5,5 · FHP-M5 × 25 · önde pul + fiberli somun"
+  },
+  {
+   "ad": "arayuz_mek_sol_0",
+   "karsi": "E_SARJOR__sac bbox [4401.5, 4440.0, 880.0, 930.0, -411.5, -380.0]",
+   "gerek": "mekanizma tarafında Ø5.5 delik (FHP-M5 saplama · pul + fiberli somun)"
+  },
+  {
+   "ad": "arayuz_mek_sol_1",
+   "karsi": "E_SARJOR__sac bbox [4401.5, 4630.0, 940.0, 972.0, -404.0, -378.0]",
+   "gerek": "mekanizma tarafında Ø5.5 delik (FHP-M5 saplama · pul + fiberli somun)"
+  },
+  {
+   "ad": "arayuz_mek_sol_2",
+   "karsi": "E_SARJOR__uhmw bbox [4401.5, 4407.5, 244.0, 984.0, -819.0, -415.0]",
+   "gerek": "mekanizma tarafında Ø5.5 delik (FHP-M5 saplama · pul + fiberli somun)"
+  },
+  {
+   "ad": "arayuz_mek_sol_3",
+   "karsi": "E_SARJOR__uhmw bbox [4401.5, 4407.5, 244.0, 984.0, -819.0, -415.0]",
+   "gerek": "mekanizma tarafında Ø5.5 delik (FHP-M5 saplama · pul + fiberli somun)"
+  },
+  {
+   "ad": "arayuz_mek_sol_4",
+   "karsi": "E_KALIP__sac bbox [4401.5, 5228.5, 588.0, 622.0, -372.0, -24.0]",
+   "gerek": "mekanizma tarafında Ø5.5 delik (FHP-M5 saplama · pul + fiberli somun)"
+  },
+  {
+   "ad": "arayuz_mek_sol_5",
+   "karsi": "E_KALIP__sac bbox [4401.5, 5228.5, 588.0, 622.0, -372.0, -24.0]",
+   "gerek": "mekanizma tarafında Ø5.5 delik (FHP-M5 saplama · pul + fiberli somun)"
+  },
+  {
+   "ad": "arayuz_mek_sol_6",
+   "karsi": "E_KOPRU__aluminyum bbox [4401.5, 4477.0, 776.0, 832.0, -236.0, -176.0]",
+   "gerek": "mekanizma tarafında Ø5.5 delik (FHP-M5 saplama · pul + fiberli somun)"
+  },
+  {
+   "ad": "arayuz_mek_sol_7",
+   "karsi": "E_KOPRU__aluminyum bbox [4401.5, 4474.0, 832.0, 853.0, -346.0, -66.0]",
+   "gerek": "mekanizma tarafında Ø5.5 delik (FHP-M5 saplama · pul + fiberli somun)"
+  },
+  {
+   "ad": "arayuz_mek_sol_8",
+   "karsi": "E_KOPRU__aluminyum bbox [4401.5, 4474.0, 832.0, 853.0, -346.0, -66.0]",
+   "gerek": "mekanizma tarafında Ø5.5 delik (FHP-M5 saplama · pul + fiberli somun)"
+  },
+  {
+   "ad": "arayuz_mek_sol_9",
+   "karsi": "E_ELEKTRIK__aluminyum bbox [4401.5, 4413.3, 1099.0, 1130.0, -250.0, -230.0]",
+   "gerek": "mekanizma tarafında Ø5.5 delik (FHP-M5 saplama · pul + fiberli somun)"
+  },
+  {
+   "ad": "arayuz_mek_sol_10",
+   "karsi": "ELK_ZINCIR__kanal bbox [4401.5, 4431.5, 1618.0, 1648.0, -822.0, -603.0]",
+   "gerek": "mekanizma tarafında Ø5.5 delik (FHP-M5 saplama · pul + fiberli somun)"
+  },
+  {
+   "ad": "arayuz_mek_sol_11",
+   "karsi": "ELK_ZINCIR__kanal bbox [4401.5, 4431.5, 1618.0, 1648.0, -822.0, -603.0]",
+   "gerek": "mekanizma tarafında Ø5.5 delik (FHP-M5 saplama · pul + fiberli somun)"
+  },
+  {
+   "ad": "arayuz_mek_sag_12",
+   "karsi": "E_SARJOR__sac bbox [4970.0, 5228.5, 940.0, 972.0, -404.0, -378.0]",
+   "gerek": "mekanizma tarafında Ø5.5 delik (FHP-M5 saplama · pul + fiberli somun)"
+  },
+  {
+   "ad": "arayuz_mek_sag_13",
+   "karsi": "E_SARJOR__sac bbox [5180.0, 5228.5, 880.0, 930.0, -411.5, -380.0]",
+   "gerek": "mekanizma tarafında Ø5.5 delik (FHP-M5 saplama · pul + fiberli somun)"
+  },
+  {
+   "ad": "arayuz_mek_sag_14",
+   "karsi": "E_BESLEYICI__aluminyum bbox [5138.0, 5228.5, 1321.0, 1387.0, -376.0, -314.0]",
+   "gerek": "mekanizma tarafında Ø5.5 delik (FHP-M5 saplama · pul + fiberli somun)"
+  },
+  {
+   "ad": "arayuz_mek_sag_15",
+   "karsi": "E_KALIP__sac bbox [4401.5, 5228.5, 588.0, 622.0, -372.0, -24.0]",
+   "gerek": "mekanizma tarafında Ø5.5 delik (FHP-M5 saplama · pul + fiberli somun)"
+  },
+  {
+   "ad": "arayuz_mek_sag_16",
+   "karsi": "E_KALIP__sac bbox [4401.5, 5228.5, 588.0, 622.0, -372.0, -24.0]",
+   "gerek": "mekanizma tarafında Ø5.5 delik (FHP-M5 saplama · pul + fiberli somun)"
+  },
+  {
+   "ad": "arayuz_mek_sag_17",
+   "karsi": "E_ELEKTRIK__aluminyum bbox [5170.0, 5228.5, 1053.0, 1080.0, -800.0, -780.0]",
+   "gerek": "mekanizma tarafında Ø5.5 delik (FHP-M5 saplama · pul + fiberli somun)"
+  },
+  {
+   "ad": "arayuz_mek_sag_18",
+   "karsi": "E_ELEKTRIK__aluminyum bbox [5190.0, 5228.5, 1053.0, 1080.0, -216.0, -196.0]",
+   "gerek": "mekanizma tarafında Ø5.5 delik (FHP-M5 saplama · pul + fiberli somun)"
+  },
+  {
+   "ad": "arayuz_mek_arka_19",
+   "karsi": "E_SARJOR__uhmw bbox [4417.0, 5212.0, 244.0, 972.0, -828.5, -819.5]",
+   "gerek": "mekanizma tarafında Ø5.5 delik (FHP-M5 saplama · pul + fiberli somun)"
+  },
+  {
+   "ad": "arayuz_mek_arka_20",
+   "karsi": "E_SARJOR__uhmw bbox [4417.0, 5212.0, 244.0, 972.0, -828.5, -819.5]",
+   "gerek": "mekanizma tarafında Ø5.5 delik (FHP-M5 saplama · pul + fiberli somun)"
+  },
+  {
+   "ad": "arayuz_mek_arka_21",
+   "karsi": "E_ELEKTRIK__celik bbox [4474.2, 4486.0, 1411.0, 1423.0, -828.5, -826.0]",
+   "gerek": "mekanizma tarafında Ø5.5 delik (FHP-M5 saplama · pul + fiberli somun)"
+  },
+  {
+   "ad": "arayuz_mek_arka_22",
+   "karsi": "E_ELEKTRIK__celik bbox [4474.2, 4486.0, 1831.0, 1843.0, -828.5, -826.0]",
+   "gerek": "mekanizma tarafında Ø5.5 delik (FHP-M5 saplama · pul + fiberli somun)"
+  },
+  {
+   "ad": "arayuz_mek_arka_23",
+   "karsi": "E_ELEKTRIK__celik bbox [5154.2, 5166.0, 1411.0, 1423.0, -828.5, -826.0]",
+   "gerek": "mekanizma tarafında Ø5.5 delik (FHP-M5 saplama · pul + fiberli somun)"
+  },
+  {
+   "ad": "arayuz_mek_arka_24",
+   "karsi": "E_ELEKTRIK__celik bbox [5154.2, 5166.0, 1831.0, 1843.0, -828.5, -826.0]",
+   "gerek": "mekanizma tarafında Ø5.5 delik (FHP-M5 saplama · pul + fiberli somun)"
+  },
+  {
+   "ad": "arayuz_mek_ust_25",
+   "karsi": "E_BESLEYICI__aluminyum bbox [4540.0, 4560.0, 1337.0, 1860.5, -600.0, -580.0]",
+   "gerek": "mekanizma tarafında Ø5.5 delik (FHP-M5 saplama · pul + fiberli somun)"
+  },
+  {
+   "ad": "arayuz_mek_ust_26",
+   "karsi": "E_BESLEYICI__aluminyum bbox [4540.0, 4560.0, 1337.0, 1860.5, -420.0, -400.0]",
+   "gerek": "mekanizma tarafında Ø5.5 delik (FHP-M5 saplama · pul + fiberli somun)"
+  },
+  {
+   "ad": "arayuz_mek_ust_27",
+   "karsi": "E_BESLEYICI__aluminyum bbox [5040.0, 5060.0, 1337.0, 1860.5, -600.0, -580.0]",
+   "gerek": "mekanizma tarafında Ø5.5 delik (FHP-M5 saplama · pul + fiberli somun)"
+  },
+  {
+   "ad": "arayuz_mek_ust_28",
+   "karsi": "E_BESLEYICI__aluminyum bbox [5040.0, 5060.0, 1337.0, 1860.5, -420.0, -400.0]",
+   "gerek": "mekanizma tarafında Ø5.5 delik (FHP-M5 saplama · pul + fiberli somun)"
+  },
+  {
+   "ad": "arayuz_mek_ust_29",
+   "karsi": "E_PISTON__aluminyum bbox [4570.0, 4770.0, 1332.0, 1860.5, -394.0, -380.0]",
+   "gerek": "mekanizma tarafında Ø5.5 delik (FHP-M5 saplama · pul + fiberli somun)"
+  },
+  {
+   "ad": "arayuz_mek_ust_30",
+   "karsi": "E_PISTON__aluminyum bbox [4570.0, 4770.0, 1332.0, 1860.5, -394.0, -380.0]",
+   "gerek": "mekanizma tarafında Ø5.5 delik (FHP-M5 saplama · pul + fiberli somun)"
+  },
+  {
+   "ad": "arayuz_mek_ust_31",
+   "karsi": "E_PISTON__aluminyum bbox [4708.0, 4772.0, 1822.0, 1860.5, -350.0, -286.0]",
+   "gerek": "mekanizma tarafında Ø5.5 delik (FHP-M5 saplama · pul + fiberli somun)"
+  },
+  {
+   "ad": "arayuz_mek_taban_32",
+   "karsi": "E_SARJOR__sac bbox [4408.0, 5212.0, 126.0, 980.8, -414.5, -399.0]",
+   "gerek": "mekanizma tarafında Ø6.6 delik (FHP-M6 saplama · pul + fiberli somun)"
+  },
+  {
+   "ad": "arayuz_mek_taban_33",
+   "karsi": "E_SARJOR__sac bbox [4408.0, 5212.0, 126.0, 980.8, -414.5, -399.0]",
+   "gerek": "mekanizma tarafında Ø6.6 delik (FHP-M6 saplama · pul + fiberli somun)"
+  },
+  {
+   "ad": "arayuz_mek_taban_34",
+   "karsi": "E_SARJOR__sac bbox [4600.0, 5000.0, 126.0, 150.0, -374.0, -354.0]",
+   "gerek": "mekanizma tarafında Ø6.6 delik (FHP-M6 saplama · pul + fiberli somun)"
+  },
+  {
+   "ad": "arayuz_mek_taban_35",
+   "karsi": "E_SARJOR__sac bbox [4600.0, 5000.0, 126.0, 150.0, -374.0, -354.0]",
+   "gerek": "mekanizma tarafında Ø6.6 delik (FHP-M6 saplama · pul + fiberli somun)"
+  },
+  {
+   "ad": "arayuz_mek_taban_36",
+   "karsi": "E_SARJOR__sac bbox [4780.0, 5172.0, 126.0, 143.0, -417.0, -363.0]",
+   "gerek": "mekanizma tarafında Ø6.6 delik (FHP-M6 saplama · pul + fiberli somun)"
+  },
+  {
+   "ad": "arayuz_mek_taban_37",
+   "karsi": "E_SARJOR__sac bbox [4780.0, 5172.0, 126.0, 143.0, -417.0, -363.0]",
+   "gerek": "mekanizma tarafında Ø6.6 delik (FHP-M6 saplama · pul + fiberli somun)"
+  },
+  {
+   "ad": "arayuz_mek_taban_38",
+   "karsi": "E_SARJOR__sac bbox [5104.0, 5166.0, 126.0, 147.0, -410.0, -351.0]",
+   "gerek": "mekanizma tarafında Ø6.6 delik (FHP-M6 saplama · pul + fiberli somun)"
+  },
+  {
+   "ad": "arayuz_mek_taban_39",
+   "karsi": "E_COP__sac bbox [4416.0, 4598.0, 126.0, 142.5, -397.5, 29.0]",
+   "gerek": "mekanizma tarafında Ø6.6 delik (FHP-M6 saplama · pul + fiberli somun)"
+  },
+  {
+   "ad": "arayuz_mek_taban_40",
+   "karsi": "E_COP__sac bbox [4416.0, 4598.0, 126.0, 142.5, -397.5, 29.0]",
+   "gerek": "mekanizma tarafında Ø6.6 delik (FHP-M6 saplama · pul + fiberli somun)"
+  }
+ ],
+ "karsi_delik": [
+  {
+   "etiket": "UKE_E_100",
+   "karsi": "U_KE_GOVDE ust_ke_taban_sac",
+   "cap": 9.0,
+   "merkez_dunya": [
+    4500.0,
+    1863.5,
+    -700.0
+   ]
+  },
+  {
+   "etiket": "UKE_E_730",
+   "karsi": "U_KE_GOVDE ust_ke_taban_sac",
+   "cap": 9.0,
+   "merkez_dunya": [
+    5130.0,
+    1863.5,
+    -700.0
+   ]
+  },
+  {
+   "etiket": "UKE_E_415",
+   "karsi": "U_KE_GOVDE ust_ke_taban_sac",
+   "cap": 9.0,
+   "merkez_dunya": [
+    4815.0,
+    1863.5,
+    -700.0
+   ]
+  }
+ ],
+ "notlar": [
+  "taban + ön kasa KAYNAKLI ALT MONTAJ: dikmeler tabana (arka + iç yan köşe dikişi, a2), kayıtlar dikmelere (alt/üst köşe dikişi; ön/arka yüz alın, taşlanır) · dikme tepeleri 2 mm tapa (çevresi TIG alın, taşlanır)",
+  "onyuz_kapak_E_ust_sol robot_agzi: kasa çıtası dik ayağı ↔ dış tava iç yüzü 0.5 boşluk → gıda sınıfı silikon (punta YOK, satine yüz)",
+  "onyuz_kapak_E_mentese_sol_0: kanat plakası iç tavaya 4 punta (kapak kapanmadan önce, iç tava ön yüzü)",
+  "onyuz_kapak_E_mentese_sol_1: kanat plakası iç tavaya 4 punta (kapak kapanmadan önce, iç tava ön yüzü)",
+  "onyuz_kapak_E_mentese_sol_2: kanat plakası iç tavaya 4 punta (kapak kapanmadan önce, iç tava ön yüzü)",
+  "onyuz_kapak_E_mentese_sag_0: kanat plakası iç tavaya 4 punta (kapak kapanmadan önce, iç tava ön yüzü)",
+  "onyuz_kapak_E_mentese_sag_1: kanat plakası iç tavaya 4 punta (kapak kapanmadan önce, iç tava ön yüzü)",
+  "onyuz_kapak_E_mentese_sag_2: kanat plakası iç tavaya 4 punta (kapak kapanmadan önce, iç tava ön yüzü)",
+  "onyuz_kapak_E_mentese_sol_3: kanat plakası iç tavaya 4 punta (kapak kapanmadan önce, iç tava ön yüzü)",
+  "onyuz_kapak_E_mentese_sol_4: kanat plakası iç tavaya 4 punta (kapak kapanmadan önce, iç tava ön yüzü)",
+  "onyuz_kapak_E_mentese_sol_5: kanat plakası iç tavaya 4 punta (kapak kapanmadan önce, iç tava ön yüzü)",
+  "onyuz_kapak_E_mentese_sag_3: kanat plakası iç tavaya 4 punta (kapak kapanmadan önce, iç tava ön yüzü)",
+  "onyuz_kapak_E_mentese_sag_4: kanat plakası iç tavaya 4 punta (kapak kapanmadan önce, iç tava ön yüzü)",
+  "onyuz_kapak_E_mentese_sag_5: kanat plakası iç tavaya 4 punta (kapak kapanmadan önce, iç tava ön yüzü)",
+  "onyuz_kapak_E_basac_sol_1: karşılık plakası yok — robot ağzı kasa çıtası (iç tavaya punta) pimin bastığı yüzü taşır",
+  "şarjör kapısı: menteşe kanatları iç tava arka dönüşüne punta · kapı açıklığında çevre derz 3 mm · iç tavada sağ UHMW kılavuz (3 mm) havşa vidalı (mevcut)",
+  "kaide: 60 × 60 × 3 boy rayları + uç kayıtlar 90° alın, köşe dikişi a3 (iç bükey yüzler) · ray alt duvarında Ø13 + DIN 929 M12 kaynak somunu (ayak) · ray üst duvarında Ø9 + içte DIN 929 M8 (taban bağlantısı) · ray uçları açık profil → 3 mm tapa (kaide_e_*_tapa)"
+ ]
+}

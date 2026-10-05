@@ -1,0 +1,1003 @@
+# Montaj animasyonu · YOL ÇAKIŞMA DENETİMİ (4 Eki 2026)
+
+Yöntem: her hareketli parçanın bağıl yolu ≤ 5 mm adımlarla örneklenir, ardışık örnekler arası **sürekli** (CCD) üçgen denetimi: köşe→üçgen, üçgen←köşe, kenar×kenar taraması. O anda yerinde olan + aynı adımda daha önce oturmuş + aynı anda hareket eden bütün parçalar engel. Oturma teması (dinlenme konumuna ≤ 1,0 mm) ve yüzeye paralel kayma sayılmaz. Son konumda zaten geçme olan çiftler (vida → PEM, ürün → silikon mat vb.) yol denetiminden hariç tutulur (sayısı tabloda). Kapak dönüşleri ≤ 2°/poz üçgen-üçgen.
+Düzeltme: çakışan hareket grubu için sırayla özgün yön → yukarıdan → önden → arkadan → yanlardan → iki aşamalı yol (açık taraftan yaklaş + kısa son oturma) → kısa yaklaşma; vida / pul / somun / saplama YALNIZ kendi ekseninde. İlk çakışmasız aday seçilir; adım metnine yeni yön yazılır, kamera yeni yöne bakar.
+
+| İstasyon | Adım | Parça | Hareketli | Hariç (son konum geçme) | Çakışan çift ÖNCE | SONRA | Yönü değişen grup | Çözülemeyen | Havada sac |
+|---|---|---|---|---|---|---|---|---|---|
+| B | 15 | 847 | 468 | 493 | 820 | **116** | 190 | 202 | 2 |
+| TOPPING | 17 | 519 | 222 | 71 | 731 | **1** | 134 | 71 | 1 |
+
+## B
+### Önce bulunan içinden geçmeler (pencere başı → örnek çift)
+- t 36.4 s · 2 çift · ör. `dis_arka_1` ↔ `dis_arka_ek_lamasi` (3 mm)
+- t 40.3 s · 18 çift · ör. `ic_arka_1` ↔ `ic_sol_duvar` (814 mm)
+- t 47.6 s · 4 çift · ör. `bolme_1_sac_b` ↔ `bolme_1_kovan_0` (137 mm)
+- t 47.7 s · 2 çift · ör. `bolme_2_sac_b` ↔ `bolme_2_kovan_0` (137 mm)
+- t 47.8 s · 2 çift · ör. `bolme_2_sac_b` ↔ `bolme_2_kovan_1` (147 mm)
+- t 47.9 s · 4 çift · ör. `bolme_4_sac_a` ↔ `bolme_4_kovan_1` (150 mm)
+- t 48.0 s · 3 çift · ör. `bolme_5_kovan_0` ↔ `M__B_TASIYICI__celik__2_dikme` (149 mm)
+- t 48.1 s · 6 çift · ör. `bolme_5_kovan_0_ust_L` ↔ `M__B_TASIYICI__celik__2_dikme` (147 mm)
+- t 48.2 s · 4 çift · ör. `bolme_5_kovan_1_ust_L` ↔ `M__B_TASIYICI__celik__2_dikme` (138 mm)
+- t 51.5 s · 3 çift · ör. `ic_tavan_2` ↔ `M__B_MODULER__paslanmaz__2_dikme` (86 mm)
+- t 54.0 s · 1 çift · ör. `isi_kalkani_isinim_08` ↔ `M__B_TASIYICI__celik__2_dikme` (732 mm)
+- t 54.2 s · 2 çift · ör. `isi_kalkani_u` ↔ `M__B_MODULER__paslanmaz__2_dikme` (734 mm)
+- t 63.0 s · 2 çift · ör. `dis_tavan_1` ↔ `dis_tavan_ek_lamasi_1` (3 mm)
+- t 63.1 s · 2 çift · ör. `dis_tavan_1` ↔ `dis_tavan_ek_lamasi_2` (3 mm)
+- t 63.2 s · 2 çift · ör. `dis_tavan_1` ↔ `dis_tavan_ek_lamasi_3` (3 mm)
+- t 73.5 s · 64 çift · ör. `dis_tavan_1` ↔ `M__B_SOGUTMA__aluminyum__6` (803 mm)
+- t 75.1 s · 5 çift · ör. `M__B_SOGUTMA__koyu__6` ↔ `M__DUZ_B_SERPANTIN__plastik__6` (574 mm)
+- t 76.6 s · 12 çift · ör. `M__B_DEPO__sac__4` ↔ `M__B_DEPO__pu__CEKMECE__4_k` (556 mm)
+- t 78.5 s · 5 çift · ör. `dis_tavan_2` ↔ `M__B_ELEKTRIK__aluminyum__5` (697 mm)
+- t 78.6 s · 6 çift · ör. `M__B_DEPO__sac__4` ↔ `M__B_ELEKTRIK__celik__5` (647 mm)
+- t 78.8 s · 5 çift · ör. `M__B_DEPO__sac__4` ↔ `M__B_ELEKTRIK__kart__5` (706 mm)
+- t 79.1 s · 13 çift · ör. `M__B_DEPO__sac__4` ↔ `M__B_ELEKTRIK__sac__5` (700 mm)
+- t 78.9 s · 5 çift · ör. `M__B_DEPO__sac__4` ↔ `M__B_ELEKTRIK__plastik__5` (616 mm)
+- t 79.2 s · 3 çift · ör. `M__B_DEPO__sac__CEKMECE__4` ↔ `M__B_ELEKTRIK__siemens__5` (662 mm)
+- t 79.5 s · 6 çift · ör. `M__ELK_ISTASYON__cihaz__5` ↔ `tk_depo_tavan_pu` (705 mm)
+- t 79.8 s · 9 çift · ör. `M__ELK_ISTASYON__pano__5` ↔ `M__B_DEPO__pu__CEKMECE__4_k` (707 mm)
+- t 79.7 s · 5 çift · ör. `M__ELK_ISTASYON__cihaz__5` ↔ `M__ELK_ISTASYON__din__5` (61 mm)
+- t 80.0 s · 6 çift · ör. `M__B_DEPO__sac__4` ↔ `M__ELK_ISTASYON__paslanmaz__5` (704 mm)
+- t 80.1 s · 7 çift · ör. `dis_taban_2` ↔ `M__ELK_ZEMIN__conta__5` (691 mm)
+- t 81.7 s · 45 çift · ör. `bolme_2_sac_a` ↔ `M__B_KABLO__kanal__5` (494 mm)
+- t 81.9 s · 11 çift · ör. `M__B_DEPO__sac__CEKMECE__4` ↔ `M__ELK_IC__kanal__5` (493 mm)
+- t 82.0 s · 11 çift · ör. `M__B_SOGUTMA__celik__6` ↔ `M__ELK_ZINCIR__kanal__5` (500 mm)
+- t 83.8 s · 4 çift · ör. `M__B_DEPO__sac__CEKMECE__4` ↔ `M__ELK_ISTASYON__rakor__5` (240 mm)
+- t 85.1 s · 7 çift · ör. `M__ELK_DOLAP__kablo__5` ↔ `tk_depo_sag_pu` (393 mm)
+- t 86.8 s · 6 çift · ör. `bolme_2_sac_a` ↔ `M__ELK_DOLAP__kablo_sinyal__5` (450 mm)
+- t 88.8 s · 1 çift · ör. `M__CEK_K1_lahm_1__celik__3` ↔ `M__ELK_DOLAP__kablo_sinyal__5` (737 mm)
+- t 88.9 s · 3 çift · ör. `M__CEK_K1_lahm_2__celik__3` ↔ `M__ELK_DOLAP__kablo_sinyal__5` (737 mm)
+- t 89.0 s · 5 çift · ör. `M__CEK_K1_lahm_4__celik__3` ↔ `M__ELK_DOLAP__kablo_sinyal__5` (737 mm)
+- t 89.1 s · 3 çift · ör. `M__CEK_K2_lahm_2__celik__3` ↔ `M__ELK_DOLAP__kablo_sinyal__5` (737 mm)
+- t 89.2 s · 6 çift · ör. `M__CEK_K2_lahm_4__celik__3` ↔ `M__ELK_DOLAP__kablo_sinyal__5` (737 mm)
+- t 89.3 s · 5 çift · ör. `M__CEK_K3_hamur_2__celik__3` ↔ `M__ELK_DOLAP__kablo_sinyal__5` (737 mm)
+- t 89.4 s · 3 çift · ör. `M__CEK_K5_hamur_1__celik__3` ↔ `M__ELK_DOLAP__kablo_sinyal__5` (737 mm)
+- t 89.5 s · 5 çift · ör. `M__CEK_K5_hamur_3__celik__3` ↔ `M__ELK_DOLAP__kablo_sinyal__5` (737 mm)
+- t 89.6 s · 3 çift · ör. `M__CEK_K6_ic1_2__celik__3` ↔ `M__ELK_DOLAP__kablo_sinyal__5` (737 mm)
+- t 90.8 s · 12 çift · ör. `bolme_1_sac_a` ↔ `arayuz_ray_1418_204_580` (118 mm)
+- t 90.9 s · 33 çift · ör. `arayuz_ray_1418_312_580` ↔ `bolme_1_pu` (120 mm)
+- t 91.0 s · 42 çift · ör. `bolme_1_sac_b` ↔ `arayuz_ray_1453_204_330` (114 mm)
+- t 91.1 s · 33 çift · ör. `bolme_2_sac_a` ↔ `arayuz_ray_2073_204_330` (119 mm)
+- t 91.2 s · 41 çift · ör. `arayuz_ray_2073_528_580` ↔ `bolme_2_pu` (115 mm)
+- t 91.3 s · 35 çift · ör. `arayuz_ray_2108_528_330` ↔ `bolme_2_pu` (118 mm)
+- t 91.4 s · 32 çift · ör. `bolme_3_sac_a` ↔ `arayuz_ray_2728_528_330` (118 mm)
+- t 91.5 s · 41 çift · ör. `bolme_3_sac_b` ↔ `arayuz_ray_2763_420_580` (117 mm)
+- t 91.6 s · 31 çift · ör. `arayuz_ray_3383_528_580` ↔ `bolme_4_pu` (116 mm)
+- t 91.7 s · 39 çift · ör. `bolme_5_sac_a` ↔ `arayuz_ray_3993_204_330` (119 mm)
+- t 91.8 s · 33 çift · ör. `arayuz_ray_798_312_580` ↔ `pu_sol` (118 mm)
+- t 93.8 s · 1 çift · ör. `on_cerceve_2` ↔ `M__B_DEPO__pu__CEKMECE__4_k` (54 mm)
+- t 95.6 s · 3 çift · ör. `M__CEK_K1_lahm_1__aluminyum__3` ↔ `M__CEK_K1_lahm_1__celik__3` (809 mm)
+- t 96.6 s · 3 çift · ör. `M__CEK_K1_lahm_2__aluminyum__3` ↔ `M__CEK_K1_lahm_2__celik__3` (809 mm)
+- t 97.6 s · 3 çift · ör. `M__CEK_K1_lahm_3__aluminyum__3` ↔ `M__CEK_K1_lahm_3__celik__3` (809 mm)
+- t 98.6 s · 3 çift · ör. `M__CEK_K1_lahm_4__aluminyum__3` ↔ `M__CEK_K1_lahm_4__celik__3` (809 mm)
+- t 99.6 s · 3 çift · ör. `M__CEK_K1_lahm_5__aluminyum__3` ↔ `M__CEK_K1_lahm_5__celik__3` (809 mm)
+- t 100.6 s · 3 çift · ör. `M__CEK_K2_lahm_1__aluminyum__3` ↔ `M__CEK_K2_lahm_1__celik__3` (809 mm)
+- t 101.6 s · 3 çift · ör. `M__CEK_K2_lahm_2__aluminyum__3` ↔ `M__CEK_K2_lahm_2__celik__3` (809 mm)
+- t 102.6 s · 3 çift · ör. `M__CEK_K2_lahm_3__aluminyum__3` ↔ `M__CEK_K2_lahm_3__celik__3` (809 mm)
+- t 103.6 s · 3 çift · ör. `M__CEK_K2_lahm_4__aluminyum__3` ↔ `M__CEK_K2_lahm_4__celik__3` (809 mm)
+- t 104.6 s · 3 çift · ör. `M__CEK_K2_lahm_5__aluminyum__3` ↔ `M__CEK_K2_lahm_5__celik__3` (809 mm)
+- t 105.6 s · 3 çift · ör. `M__CEK_K3_hamur_1__aluminyum__3` ↔ `M__CEK_K3_hamur_1__celik__3` (809 mm)
+- t 106.6 s · 3 çift · ör. `M__CEK_K3_hamur_2__aluminyum__3` ↔ `M__CEK_K3_hamur_2__celik__3` (809 mm)
+- t 107.6 s · 3 çift · ör. `M__CEK_K3_hamur_3__aluminyum__3` ↔ `M__CEK_K3_hamur_3__celik__3` (809 mm)
+- t 108.6 s · 3 çift · ör. `M__CEK_K3_hamur_4__aluminyum__3` ↔ `M__CEK_K3_hamur_4__celik__3` (809 mm)
+- t 109.6 s · 3 çift · ör. `M__CEK_K5_hamur_1__aluminyum__3` ↔ `M__CEK_K5_hamur_1__celik__3` (809 mm)
+- t 110.6 s · 3 çift · ör. `M__CEK_K5_hamur_2__aluminyum__3` ↔ `M__CEK_K5_hamur_2__celik__3` (809 mm)
+- t 111.6 s · 3 çift · ör. `M__CEK_K5_hamur_3__aluminyum__3` ↔ `M__CEK_K5_hamur_3__celik__3` (809 mm)
+- t 112.6 s · 3 çift · ör. `M__CEK_K5_ic1_1__aluminyum__3` ↔ `M__CEK_K5_ic1_1__celik__3` (809 mm)
+- t 113.6 s · 3 çift · ör. `M__CEK_K6_tatli_1__aluminyum__3` ↔ `M__CEK_K6_tatli_1__celik__3` (809 mm)
+- t 114.6 s · 3 çift · ör. `M__CEK_K6_ic1_1__aluminyum__3` ↔ `M__CEK_K6_ic1_1__celik__3` (809 mm)
+- t 115.6 s · 3 çift · ör. `M__CEK_K6_ic1_2__aluminyum__3` ↔ `M__CEK_K6_ic1_2__celik__3` (809 mm)
+- t 119.6 s · 3 çift · ör. `M__B_DEPO__sac__CEKMECE__4` ↔ `M__ELK_ISTASYON__pano__5_k` (443 mm)
+- t 119.1 s · 1 çift · ör. `M__B_DEPO__conta__CEKMECE__4_k` ↔ `M__B_DEPO__pu__CEKMECE__4_k` (54 mm)
+- t 119.2 s · 1 çift · ör. `M__B_DEPO__sac__CEKMECE__4_k` ↔ `M__B_DEPO__pu__CEKMECE__4_k` (38 mm)
+- t 121.5 s · 1 çift · ör. `M__CEK_K1_lahm_5__plastik__3` ↔ `M__ELK_DOLAP__kablo_sinyal__5` (620 mm)
+- t 124.1 s · 1 çift · ör. `M__CEK_K1_lahm_4__plastik__3` ↔ `M__ELK_DOLAP__kablo_sinyal__5` (620 mm)
+- t 125.0 s · 1 çift · ör. `M__CEK_K1_lahm_4__hamur__CEKMECE__3` ↔ `M__CEK_K1_lahm_5__on_seffaf__CEKMECE__3_k` (250 mm)
+- t 126.7 s · 1 çift · ör. `M__CEK_K1_lahm_3__plastik__3` ↔ `M__ELK_DOLAP__kablo_sinyal__5` (620 mm)
+- t 127.6 s · 2 çift · ör. `M__CEK_K1_lahm_3__hamur__CEKMECE__3` ↔ `M__CEK_K1_lahm_5__on_seffaf__CEKMECE__3_k` (299 mm)
+- t 129.3 s · 1 çift · ör. `M__CEK_K1_lahm_2__plastik__3` ↔ `M__ELK_DOLAP__kablo_sinyal__5` (620 mm)
+- t 130.2 s · 3 çift · ör. `M__CEK_K1_lahm_2__hamur__CEKMECE__3` ↔ `M__CEK_K1_lahm_5__on_seffaf__CEKMECE__3_k` (300 mm)
+- t 131.9 s · 1 çift · ör. `M__CEK_K1_lahm_1__plastik__3` ↔ `M__ELK_DOLAP__kablo_sinyal__5` (620 mm)
+- t 132.8 s · 3 çift · ör. `M__CEK_K1_lahm_1__hamur__CEKMECE__3` ↔ `M__CEK_K1_lahm_4__on_seffaf__CEKMECE__3_k` (300 mm)
+- t 134.5 s · 1 çift · ör. `M__CEK_K2_lahm_5__plastik__3` ↔ `M__ELK_DOLAP__kablo_sinyal__5` (620 mm)
+- t 137.1 s · 1 çift · ör. `M__CEK_K2_lahm_4__plastik__3` ↔ `M__ELK_DOLAP__kablo_sinyal__5` (620 mm)
+- t 138.0 s · 1 çift · ör. `M__CEK_K2_lahm_4__hamur__CEKMECE__3` ↔ `M__CEK_K2_lahm_5__on_seffaf__CEKMECE__3_k` (250 mm)
+- t 139.7 s · 1 çift · ör. `M__CEK_K2_lahm_3__plastik__3` ↔ `M__ELK_DOLAP__kablo_sinyal__5` (620 mm)
+- t 140.6 s · 2 çift · ör. `M__CEK_K2_lahm_3__hamur__CEKMECE__3` ↔ `M__CEK_K2_lahm_5__on_seffaf__CEKMECE__3_k` (298 mm)
+- t 142.3 s · 1 çift · ör. `M__CEK_K2_lahm_2__plastik__3` ↔ `M__ELK_DOLAP__kablo_sinyal__5` (620 mm)
+- t 143.2 s · 3 çift · ör. `M__CEK_K2_lahm_2__hamur__CEKMECE__3` ↔ `M__CEK_K2_lahm_5__on_seffaf__CEKMECE__3_k` (300 mm)
+- t 144.9 s · 1 çift · ör. `M__CEK_K2_lahm_1__plastik__3` ↔ `M__ELK_DOLAP__kablo_sinyal__5` (620 mm)
+- t 145.8 s · 3 çift · ör. `M__CEK_K2_lahm_1__hamur__CEKMECE__3` ↔ `M__CEK_K2_lahm_4__on_seffaf__CEKMECE__3_k` (300 mm)
+- t 147.5 s · 1 çift · ör. `M__CEK_K3_hamur_4__plastik__3` ↔ `M__ELK_DOLAP__kablo_sinyal__5` (620 mm)
+- t 151.0 s · 1 çift · ör. `M__CEK_K3_hamur_3__hamur__CEKMECE__3` ↔ `M__CEK_K3_hamur_4__on_seffaf__CEKMECE__3_k` (297 mm)
+- t 153.6 s · 2 çift · ör. `M__CEK_K3_hamur_2__hamur__CEKMECE__3` ↔ `M__CEK_K3_hamur_4__on_seffaf__CEKMECE__3_k` (299 mm)
+- t 155.3 s · 1 çift · ör. `M__CEK_K3_hamur_1__plastik__3` ↔ `M__ELK_DOLAP__kablo_sinyal__5` (620 mm)
+- t 156.2 s · 3 çift · ör. `M__CEK_K3_hamur_1__hamur__CEKMECE__3` ↔ `M__CEK_K3_hamur_4__on_seffaf__CEKMECE__3_k` (300 mm)
+- t 159.5 s · 2 çift · ör. `M__CEK_K3_hamur_3__on_seffaf__CEKMECE__3_k` ↔ `M__URUN__top__3` (484 mm)
+- t 160.5 s · 1 çift · ör. `M__CEK_K5_hamur_3__plastik__3` ↔ `M__ELK_DOLAP__kablo_sinyal__5` (620 mm)
+- t 161.4 s · 1 çift · ör. `M__CEK_K5_hamur_3__hamur__CEKMECE__3` ↔ `M__CEK_K5_ic1_1__on_seffaf__CEKMECE__3_k` (297 mm)
+- t 163.1 s · 1 çift · ör. `M__CEK_K5_hamur_2__plastik__3` ↔ `M__ELK_DOLAP__kablo_sinyal__5` (620 mm)
+- t 164.0 s · 2 çift · ör. `M__CEK_K5_hamur_2__hamur__CEKMECE__3` ↔ `M__CEK_K5_ic1_1__on_seffaf__CEKMECE__3_k` (299 mm)
+- t 165.7 s · 1 çift · ör. `M__CEK_K5_hamur_1__plastik__3` ↔ `M__ELK_DOLAP__kablo_sinyal__5` (620 mm)
+- t 166.6 s · 3 çift · ör. `M__CEK_K5_hamur_1__hamur__CEKMECE__3` ↔ `M__CEK_K5_ic1_1__on_seffaf__CEKMECE__3_k` (300 mm)
+- t 168.3 s · 1 çift · ör. `M__CEK_K5_ic1_1__plastik__3` ↔ `M__ELK_DOLAP__kablo_sinyal__5` (620 mm)
+- t 169.2 s · 1 çift · ör. `dis_tavan_2` ↔ `M__CEK_K5_ic1_1__kutu_icecek__CEKMECE__3` (254 mm)
+- t 170.9 s · 1 çift · ör. `M__CEK_K6_ic1_2__plastik__3` ↔ `M__ELK_DOLAP__kablo_sinyal__5` (620 mm)
+- t 171.8 s · 1 çift · ör. `dis_tavan_2` ↔ `M__CEK_K6_ic1_2__kutu_icecek__CEKMECE__3` (284 mm)
+- t 174.4 s · 1 çift · ör. `M__CEK_K6_ic1_1__kutu_icecek__CEKMECE__3` ↔ `M__CEK_K6_ic1_2__on_seffaf__CEKMECE__3_k` (299 mm)
+- t 176.1 s · 1 çift · ör. `M__CEK_K6_tatli_1__plastik__3` ↔ `M__ELK_DOLAP__kablo_sinyal__5` (620 mm)
+### Yönü değişen gruplar
+- t 36.37 · 1 parça (`dis_arka_ek_lamasi`…) · eski [0.0, 0.0, -0.15] → **sol** · Dış arka 2 parça + ek laması — soldan
+- t 40.32 · 2 parça (`ic_arka_1`…) · eski [0.0, 0.0, 0.9] → **ust** · İç arka 2 parça · iç köşeler TIG + taşlama — yukarıdan indirilir
+- t 47.57 · 1 parça (`bolme_1_kovan_0`…) · eski [0.0, 0.15, 0.0] → **sol** · Kablo / gider kovanları (U, L) bölmelere · köpüğe açılan köşe ağızları TIG — soldan
+- t 47.62 · 1 parça (`bolme_1_kovan_1`…) · eski [0.0, 0.15, 0.0] → **sol** · Kablo / gider kovanları (U, L) bölmelere · köpüğe açılan köşe ağızları TIG — soldan
+- t 47.72 · 1 parça (`bolme_2_kovan_0`…) · eski [0.0, 0.15, 0.0] → **sol** · Kablo / gider kovanları (U, L) bölmelere · köpüğe açılan köşe ağızları TIG — soldan
+- t 47.77 · 1 parça (`bolme_2_kovan_1`…) · eski [0.0, 0.15, 0.0] → **sol** · Kablo / gider kovanları (U, L) bölmelere · köpüğe açılan köşe ağızları TIG — soldan
+- t 47.87 · 1 parça (`bolme_4_kovan_0`…) · eski [0.0, 0.15, 0.0] → **sol** · Kablo / gider kovanları (U, L) bölmelere · köpüğe açılan köşe ağızları TIG — soldan
+- t 47.92 · 1 parça (`bolme_4_kovan_1`…) · eski [0.0, 0.15, 0.0] → **sol** · Kablo / gider kovanları (U, L) bölmelere · köpüğe açılan köşe ağızları TIG — soldan
+- t 48.02 · 1 parça (`bolme_5_kovan_0`…) · eski [0.0, 0.15, 0.0] → **sol** · Kablo / gider kovanları (U, L) bölmelere · köpüğe açılan köşe ağızları TIG — soldan
+- t 48.07 · 1 parça (`bolme_5_kovan_0_ust_L`…) · eski [0.0, 0.15, 0.0] → **sol** · Kablo / gider kovanları (U, L) bölmelere · köpüğe açılan köşe ağızları TIG — soldan
+- t 48.12 · 1 parça (`bolme_5_kovan_1`…) · eski [0.0, 0.15, 0.0] → **sol** · Kablo / gider kovanları (U, L) bölmelere · köpüğe açılan köşe ağızları TIG — soldan
+- t 48.17 · 1 parça (`bolme_5_kovan_1_ust_L`…) · eski [0.0, 0.15, 0.0] → **sol** · Kablo / gider kovanları (U, L) bölmelere · köpüğe açılan köşe ağızları TIG — soldan
+- t 48.22 · 1 parça (`bolme_5_kovan_2`…) · eski [0.0, 0.15, 0.0] → **sol** · Kablo / gider kovanları (U, L) bölmelere · köpüğe açılan köşe ağızları TIG — soldan
+- t 51.52 · 2 parça (`ic_tavan_1`…) · eski [0.0, 0.5, 0.0] → **yerinde** · İç tavan 2 parça yukarıdan — dikmeler tavan geçişlerinden çıkar — yerinde gösterilir (kapalı gövdede giriş yol
+- t 53.96 · 1 parça (`isi_kalkani_isinim_08`…) · eski [0.0, 0.0, 0.9] → **yerinde** · Isı kalkanı (fırın altı): U sac + ışınım sacı + 12 PTFE / cam elyaf takoz — üst kirişlerden önce — yerinde gös
+- t 54.16 · 1 parça (`isi_kalkani_u`…) · eski [0.0, 0.0, 0.9] → **yerinde** · Isı kalkanı (fırın altı): U sac + ışınım sacı + 12 PTFE / cam elyaf takoz — üst kirişlerden önce — yerinde gös
+- t 63.00 · 1 parça (`dis_tavan_ek_lamasi_1`…) · eski [0.0, 0.15, 0.0] → **sol** · Dış tavan 2 parça (A ve K bağlantı delikleri Ø9 hazır) — soldan
+- t 63.08 · 1 parça (`dis_tavan_ek_lamasi_2`…) · eski [0.0, 0.15, 0.0] → **sol** · Dış tavan 2 parça (A ve K bağlantı delikleri Ø9 hazır) — soldan
+- t 63.16 · 1 parça (`dis_tavan_ek_lamasi_3`…) · eski [0.0, 0.15, 0.0] → **on** · Dış tavan 2 parça (A ve K bağlantı delikleri Ø9 hazır) — soldan
+- t 73.53 · 9 parça (`M__B_SOGUTMA__aluminyum__6`…) · eski [0.0, 0.15, 0.85] → **yerinde** · soğutma grubu (Secop) — ön açıklıktan içeri, PEM saplamalara pul + fiberli somunla — yerinde gösterilir (kapal
+- t 75.08 · 1 parça (`M__DUZ_B_SERPANTIN__plastik__6`…) · eski [0.0, 0.15, 0.85] → **yerinde** · evaporatör serpantini — ön açıklıktan içeri, PEM saplamalara pul + fiberli somunla — yerinde gösterilir (kapal
+- t 76.63 · 5 parça (`M__B_DEPO__celik__4`…) · eski [0.0, 0.15, 0.85] → **yerinde** · soğuk depo çekmecesi — ön açıklıktan içeri, PEM saplamalara pul + fiberli somunla — yerinde gösterilir (kapalı
+- t 78.48 · 1 parça (`M__B_ELEKTRIK__aluminyum__5`…) · eski [0.0, 0.1, 0.7] → **yerinde** · Elektrik kutusu / pano, DIN ray cihazları ve sensör braketleri yerine (PEM saplamalara) — yukarıdan indirilir
+- t 78.63 · 1 parça (`M__B_ELEKTRIK__celik__5`…) · eski [0.0, 0.1, 0.7] → **ust** · Elektrik kutusu / pano, DIN ray cihazları ve sensör braketleri yerine (PEM saplamalara) — yukarıdan indirilir
+- t 78.78 · 1 parça (`M__B_ELEKTRIK__kart__5`…) · eski [0.0, 0.1, 0.7] → **yerinde** · Elektrik kutusu / pano, DIN ray cihazları ve sensör braketleri yerine (PEM saplamalara) — yukarıdan indirilir
+- t 78.93 · 1 parça (`M__B_ELEKTRIK__plastik__5`…) · eski [0.0, 0.1, 0.7] → **yerinde** · Elektrik kutusu / pano, DIN ray cihazları ve sensör braketleri yerine (PEM saplamalara) — yukarıdan indirilir
+- t 79.08 · 1 parça (`M__B_ELEKTRIK__sac__5`…) · eski [0.0, 0.1, 0.7] → **alt** · Elektrik kutusu / pano, DIN ray cihazları ve sensör braketleri yerine (PEM saplamalara) — yukarıdan indirilir
+- t 79.23 · 1 parça (`M__B_ELEKTRIK__siemens__5`…) · eski [0.0, 0.1, 0.7] → **ust** · Elektrik kutusu / pano, DIN ray cihazları ve sensör braketleri yerine (PEM saplamalara) — yukarıdan indirilir
+- t 79.53 · 1 parça (`M__ELK_ISTASYON__cihaz__5`…) · eski [0.0, 0.1, 0.7] → **yerinde** · Elektrik kutusu / pano, DIN ray cihazları ve sensör braketleri yerine (PEM saplamalara) — yukarıdan indirilir
+- t 79.68 · 1 parça (`M__ELK_ISTASYON__din__5`…) · eski [0.0, 0.1, 0.7] → **ust** · Elektrik kutusu / pano, DIN ray cihazları ve sensör braketleri yerine (PEM saplamalara) — yukarıdan indirilir
+- t 79.83 · 1 parça (`M__ELK_ISTASYON__pano__5`…) · eski [0.0, 0.1, 0.7] → **ust** · Elektrik kutusu / pano, DIN ray cihazları ve sensör braketleri yerine (PEM saplamalara) — yukarıdan indirilir
+- t 79.98 · 1 parça (`M__ELK_ISTASYON__paslanmaz__5`…) · eski [0.0, 0.1, 0.7] → **ust** · Elektrik kutusu / pano, DIN ray cihazları ve sensör braketleri yerine (PEM saplamalara) — yukarıdan indirilir
+- t 80.13 · 1 parça (`M__ELK_ZEMIN__conta__5`…) · eski [0.0, 0.1, 0.7] → **ust** · Elektrik kutusu / pano, DIN ray cihazları ve sensör braketleri yerine (PEM saplamalara) — yukarıdan indirilir
+- t 81.73 · 1 parça (`M__B_KABLO__kanal__5`…) · eski [0.0, 0.0, 0.5] → **yerinde** · İç kablo kanalları duvar / tavan boyunca (PEM saplamalı kanal ayakları) — yerinde gösterilir (kapalı gövdede g
+- t 81.88 · 1 parça (`M__ELK_IC__kanal__5`…) · eski [0.0, 0.0, 0.5] → **yerinde** · İç kablo kanalları duvar / tavan boyunca (PEM saplamalı kanal ayakları) — yerinde gösterilir (kapalı gövdede g
+- t 82.03 · 1 parça (`M__ELK_ZINCIR__kanal__5`…) · eski [0.0, 0.0, 0.5] → **sag** · İç kablo kanalları duvar / tavan boyunca (PEM saplamalı kanal ayakları) — yerinde gösterilir (kapalı gövdede g
+- t 83.83 · 1 parça (`M__ELK_ISTASYON__rakor__5`…) · eski [0.0, 0.0, 0.35] → **yerinde** · Gömme fiş paneli: Harting / M12 soketler + kablo rakorları (dışarıdan, contalı) — yerinde gösterilir (kapalı g
+- t 85.13 · 1 parça (`M__ELK_DOLAP__kablo__5`…) · eski [0.0, 0.0, 0.45] → **cekme** · Güç kabloları (KIRMIZI) — fiş panelinden kutuya, kutudan motorlara, kanal içinden — kanal içinden çekilir
+- t 86.83 · 1 parça (`M__ELK_DOLAP__kablo_sinyal__5`…) · eski [0.0, 0.0, 0.45] → **cekme** · Bilgi kabloları (MAVİ) — sensör, enkoder, EtherCAT / G/Ç, ayrı kanal bölmesinden — kanal içinden çekilir
+- t 88.83 · 1 parça (`M__CEK_K1_lahm_1__celik__3`…) · eski [0.0, 0.0, 0.8] → **yerinde** · 42 sabit çekmece rayı önden duvar / bölme yüzlerine — yerinde gösterilir (kapalı gövdede giriş yolu yok — açık
+- t 88.87 · 1 parça (`M__CEK_K1_lahm_2__celik__3`…) · eski [0.0, 0.0, 0.8] → **yerinde** · 42 sabit çekmece rayı önden duvar / bölme yüzlerine — yerinde gösterilir (kapalı gövdede giriş yolu yok — açık
+- t 88.91 · 1 parça (`M__CEK_K1_lahm_3__celik__3`…) · eski [0.0, 0.0, 0.8] → **yerinde** · 42 sabit çekmece rayı önden duvar / bölme yüzlerine — yerinde gösterilir (kapalı gövdede giriş yolu yok — açık
+- t 88.95 · 1 parça (`M__CEK_K1_lahm_4__celik__3`…) · eski [0.0, 0.0, 0.8] → **yerinde** · 42 sabit çekmece rayı önden duvar / bölme yüzlerine — yerinde gösterilir (kapalı gövdede giriş yolu yok — açık
+- t 88.99 · 1 parça (`M__CEK_K1_lahm_5__celik__3`…) · eski [0.0, 0.0, 0.8] → **yerinde** · 42 sabit çekmece rayı önden duvar / bölme yüzlerine — yerinde gösterilir (kapalı gövdede giriş yolu yok — açık
+- t 89.03 · 1 parça (`M__CEK_K2_lahm_1__celik__3`…) · eski [0.0, 0.0, 0.8] → **yerinde** · 42 sabit çekmece rayı önden duvar / bölme yüzlerine — yerinde gösterilir (kapalı gövdede giriş yolu yok — açık
+- t 89.07 · 1 parça (`M__CEK_K2_lahm_2__celik__3`…) · eski [0.0, 0.0, 0.8] → **yerinde** · 42 sabit çekmece rayı önden duvar / bölme yüzlerine — yerinde gösterilir (kapalı gövdede giriş yolu yok — açık
+- t 89.11 · 1 parça (`M__CEK_K2_lahm_3__celik__3`…) · eski [0.0, 0.0, 0.8] → **yerinde** · 42 sabit çekmece rayı önden duvar / bölme yüzlerine — yerinde gösterilir (kapalı gövdede giriş yolu yok — açık
+- t 89.15 · 1 parça (`M__CEK_K2_lahm_4__celik__3`…) · eski [0.0, 0.0, 0.8] → **yerinde** · 42 sabit çekmece rayı önden duvar / bölme yüzlerine — yerinde gösterilir (kapalı gövdede giriş yolu yok — açık
+- t 89.19 · 1 parça (`M__CEK_K2_lahm_5__celik__3`…) · eski [0.0, 0.0, 0.8] → **yerinde** · 42 sabit çekmece rayı önden duvar / bölme yüzlerine — yerinde gösterilir (kapalı gövdede giriş yolu yok — açık
+- t 89.23 · 1 parça (`M__CEK_K3_hamur_1__celik__3`…) · eski [0.0, 0.0, 0.8] → **yerinde** · 42 sabit çekmece rayı önden duvar / bölme yüzlerine — yerinde gösterilir (kapalı gövdede giriş yolu yok — açık
+- t 89.27 · 1 parça (`M__CEK_K3_hamur_2__celik__3`…) · eski [0.0, 0.0, 0.8] → **yerinde** · 42 sabit çekmece rayı önden duvar / bölme yüzlerine — yerinde gösterilir (kapalı gövdede giriş yolu yok — açık
+- t 89.31 · 1 parça (`M__CEK_K3_hamur_3__celik__3`…) · eski [0.0, 0.0, 0.8] → **yerinde** · 42 sabit çekmece rayı önden duvar / bölme yüzlerine — yerinde gösterilir (kapalı gövdede giriş yolu yok — açık
+- t 89.35 · 1 parça (`M__CEK_K3_hamur_4__celik__3`…) · eski [0.0, 0.0, 0.8] → **yerinde** · 42 sabit çekmece rayı önden duvar / bölme yüzlerine — yerinde gösterilir (kapalı gövdede giriş yolu yok — açık
+- t 89.39 · 1 parça (`M__CEK_K5_hamur_1__celik__3`…) · eski [0.0, 0.0, 0.8] → **yerinde** · 42 sabit çekmece rayı önden duvar / bölme yüzlerine — yerinde gösterilir (kapalı gövdede giriş yolu yok — açık
+- t 89.43 · 1 parça (`M__CEK_K5_hamur_2__celik__3`…) · eski [0.0, 0.0, 0.8] → **yerinde** · 42 sabit çekmece rayı önden duvar / bölme yüzlerine — yerinde gösterilir (kapalı gövdede giriş yolu yok — açık
+- t 89.47 · 1 parça (`M__CEK_K5_hamur_3__celik__3`…) · eski [0.0, 0.0, 0.8] → **yerinde** · 42 sabit çekmece rayı önden duvar / bölme yüzlerine — yerinde gösterilir (kapalı gövdede giriş yolu yok — açık
+- t 89.51 · 1 parça (`M__CEK_K5_ic1_1__celik__3`…) · eski [0.0, 0.0, 0.8] → **yerinde** · 42 sabit çekmece rayı önden duvar / bölme yüzlerine — yerinde gösterilir (kapalı gövdede giriş yolu yok — açık
+- t 89.55 · 1 parça (`M__CEK_K6_ic1_1__celik__3`…) · eski [0.0, 0.0, 0.8] → **yerinde** · 42 sabit çekmece rayı önden duvar / bölme yüzlerine — yerinde gösterilir (kapalı gövdede giriş yolu yok — açık
+- t 89.59 · 1 parça (`M__CEK_K6_ic1_2__celik__3`…) · eski [0.0, 0.0, 0.8] → **yerinde** · 42 sabit çekmece rayı önden duvar / bölme yüzlerine — yerinde gösterilir (kapalı gövdede giriş yolu yok — açık
+- t 89.63 · 1 parça (`M__CEK_K6_tatli_1__celik__3`…) · eski [0.0, 0.0, 0.8] → **yerinde** · 42 sabit çekmece rayı önden duvar / bölme yüzlerine — yerinde gösterilir (kapalı gövdede giriş yolu yok — açık
+- t 90.83 · 1 parça (`arayuz_ray_1418_204_330`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 90.84 · 1 parça (`arayuz_ray_1418_204_45`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 90.85 · 1 parça (`arayuz_ray_1418_204_580`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 90.85 · 1 parça (`arayuz_ray_1418_312_330`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 90.86 · 1 parça (`arayuz_ray_1418_312_45`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 90.87 · 1 parça (`arayuz_ray_1418_312_580`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 90.88 · 1 parça (`arayuz_ray_1418_420_330`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 90.89 · 1 parça (`arayuz_ray_1418_420_45`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 90.89 · 1 parça (`arayuz_ray_1418_420_580`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 90.90 · 1 parça (`arayuz_ray_1418_528_330`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 90.91 · 1 parça (`arayuz_ray_1418_528_45`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 90.92 · 1 parça (`arayuz_ray_1418_528_580`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 90.93 · 1 parça (`arayuz_ray_1418_636_330`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 90.93 · 1 parça (`arayuz_ray_1418_636_45`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 90.94 · 1 parça (`arayuz_ray_1418_636_580`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 90.95 · 1 parça (`arayuz_ray_1453_204_330`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 90.96 · 1 parça (`arayuz_ray_1453_204_45`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 90.97 · 1 parça (`arayuz_ray_1453_204_580`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 90.97 · 1 parça (`arayuz_ray_1453_312_330`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 90.98 · 1 parça (`arayuz_ray_1453_312_45`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 90.99 · 1 parça (`arayuz_ray_1453_312_580`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.00 · 1 parça (`arayuz_ray_1453_420_330`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.01 · 1 parça (`arayuz_ray_1453_420_45`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.01 · 1 parça (`arayuz_ray_1453_420_580`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.02 · 1 parça (`arayuz_ray_1453_528_330`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.03 · 1 parça (`arayuz_ray_1453_528_45`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.04 · 1 parça (`arayuz_ray_1453_528_580`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.05 · 1 parça (`arayuz_ray_1453_636_330`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.05 · 1 parça (`arayuz_ray_1453_636_45`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.06 · 1 parça (`arayuz_ray_1453_636_580`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.07 · 1 parça (`arayuz_ray_2073_204_330`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.08 · 1 parça (`arayuz_ray_2073_204_45`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.09 · 1 parça (`arayuz_ray_2073_204_580`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.09 · 1 parça (`arayuz_ray_2073_312_330`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.10 · 1 parça (`arayuz_ray_2073_312_45`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.11 · 1 parça (`arayuz_ray_2073_312_580`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.12 · 1 parça (`arayuz_ray_2073_420_330`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.13 · 1 parça (`arayuz_ray_2073_420_45`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.13 · 1 parça (`arayuz_ray_2073_420_580`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.14 · 1 parça (`arayuz_ray_2073_528_330`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.15 · 1 parça (`arayuz_ray_2073_528_45`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.16 · 1 parça (`arayuz_ray_2073_528_580`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.17 · 1 parça (`arayuz_ray_2073_636_330`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.17 · 1 parça (`arayuz_ray_2073_636_45`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.18 · 1 parça (`arayuz_ray_2073_636_580`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.19 · 1 parça (`arayuz_ray_2108_204_330`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.20 · 1 parça (`arayuz_ray_2108_204_45`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.21 · 1 parça (`arayuz_ray_2108_204_580`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.21 · 1 parça (`arayuz_ray_2108_312_330`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.22 · 1 parça (`arayuz_ray_2108_312_45`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.23 · 1 parça (`arayuz_ray_2108_312_580`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.24 · 1 parça (`arayuz_ray_2108_420_330`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.25 · 1 parça (`arayuz_ray_2108_420_45`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.25 · 1 parça (`arayuz_ray_2108_420_580`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.26 · 1 parça (`arayuz_ray_2108_528_330`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.27 · 1 parça (`arayuz_ray_2108_528_45`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.28 · 1 parça (`arayuz_ray_2108_528_580`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.29 · 1 parça (`arayuz_ray_2728_204_330`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.29 · 1 parça (`arayuz_ray_2728_204_45`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.30 · 1 parça (`arayuz_ray_2728_204_580`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.31 · 1 parça (`arayuz_ray_2728_312_330`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.32 · 1 parça (`arayuz_ray_2728_312_45`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.33 · 1 parça (`arayuz_ray_2728_312_580`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.33 · 1 parça (`arayuz_ray_2728_420_330`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.34 · 1 parça (`arayuz_ray_2728_420_45`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.35 · 1 parça (`arayuz_ray_2728_420_580`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.36 · 1 parça (`arayuz_ray_2728_528_330`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.37 · 1 parça (`arayuz_ray_2728_528_45`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.37 · 1 parça (`arayuz_ray_2728_528_580`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.38 · 1 parça (`arayuz_ray_2763_204_330`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.39 · 1 parça (`arayuz_ray_2763_204_45`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.40 · 1 parça (`arayuz_ray_2763_204_580`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.41 · 1 parça (`arayuz_ray_2763_312_330`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.41 · 1 parça (`arayuz_ray_2763_312_45`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.42 · 1 parça (`arayuz_ray_2763_312_580`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.43 · 1 parça (`arayuz_ray_2763_420_330`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.44 · 1 parça (`arayuz_ray_2763_420_45`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.45 · 1 parça (`arayuz_ray_2763_420_580`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.45 · 1 parça (`arayuz_ray_2763_528_330`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.46 · 1 parça (`arayuz_ray_2763_528_45`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.47 · 1 parça (`arayuz_ray_2763_528_580`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.48 · 1 parça (`arayuz_ray_3383_204_330`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.49 · 1 parça (`arayuz_ray_3383_204_45`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.49 · 1 parça (`arayuz_ray_3383_204_580`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.50 · 1 parça (`arayuz_ray_3383_312_330`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.51 · 1 parça (`arayuz_ray_3383_312_45`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.52 · 1 parça (`arayuz_ray_3383_312_580`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.53 · 1 parça (`arayuz_ray_3383_420_330`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.53 · 1 parça (`arayuz_ray_3383_420_45`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.54 · 1 parça (`arayuz_ray_3383_420_580`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.55 · 1 parça (`arayuz_ray_3383_528_330`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.56 · 1 parça (`arayuz_ray_3383_528_45`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.57 · 1 parça (`arayuz_ray_3383_528_580`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.57 · 1 parça (`arayuz_ray_3418_204_330`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.58 · 1 parça (`arayuz_ray_3418_204_45`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.59 · 1 parça (`arayuz_ray_3418_204_580`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.60 · 1 parça (`arayuz_ray_3418_312_330`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.61 · 1 parça (`arayuz_ray_3418_312_45`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.61 · 1 parça (`arayuz_ray_3418_312_580`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.62 · 1 parça (`arayuz_ray_3418_475_330`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.63 · 1 parça (`arayuz_ray_3418_475_45`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.64 · 1 parça (`arayuz_ray_3418_475_580`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.65 · 1 parça (`arayuz_ray_3993_204_330`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.65 · 1 parça (`arayuz_ray_3993_204_45`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.66 · 1 parça (`arayuz_ray_3993_204_580`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.67 · 1 parça (`arayuz_ray_3993_312_330`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.68 · 1 parça (`arayuz_ray_3993_312_45`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.69 · 1 parça (`arayuz_ray_3993_312_580`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.69 · 1 parça (`arayuz_ray_3993_475_330`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.70 · 1 parça (`arayuz_ray_3993_475_45`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.71 · 1 parça (`arayuz_ray_3993_475_580`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.72 · 1 parça (`arayuz_ray_798_204_330`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.73 · 1 parça (`arayuz_ray_798_204_45`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.73 · 1 parça (`arayuz_ray_798_204_580`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.74 · 1 parça (`arayuz_ray_798_312_330`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.75 · 1 parça (`arayuz_ray_798_312_45`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.76 · 1 parça (`arayuz_ray_798_312_580`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.77 · 1 parça (`arayuz_ray_798_420_330`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.77 · 1 parça (`arayuz_ray_798_420_45`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.78 · 1 parça (`arayuz_ray_798_420_580`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.79 · 1 parça (`arayuz_ray_798_528_330`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.80 · 1 parça (`arayuz_ray_798_528_45`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.81 · 1 parça (`arayuz_ray_798_528_580`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.81 · 1 parça (`arayuz_ray_798_636_330`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.82 · 1 parça (`arayuz_ray_798_636_45`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 91.83 · 1 parça (`arayuz_ray_798_636_580`…) · eski [0.0, 0.0, 0.12] → **yerinde** · Her ray 3 × DIN 7991 M5 × 10 havşa başlı — duvardaki PEM SP-M5'lere — yerinde gösterilir (kapalı gövdede giriş
+- t 93.83 · 1 parça (`on_cerceve_2`…) · eski [0.0, 0.0, 0.7] → **yerinde** · Ön çerçeve 2 parça (430) önden — ek x 2091 · 35 mm ek laması arkasında — yerinde gösterilir (kapalı gövdede gi
+- t 119.13 · 1 parça (`M__B_DEPO__conta__CEKMECE__4_k`…) · eski [0.0, 0.0, 0.5] → **yerinde** · Kapak elemanları önden takılır (menteşe, bas-aç, fitil) — yerinde gösterilir (kapalı gövdede giriş yolu yok — 
+- t 119.25 · 1 parça (`M__B_DEPO__sac__CEKMECE__4_k`…) · eski [0.0, 0.0, 0.5] → **yerinde** · Kapak elemanları önden takılır (menteşe, bas-aç, fitil) — yerinde gösterilir (kapalı gövdede giriş yolu yok — 
+- t 119.61 · 1 parça (`M__ELK_ISTASYON__pano__5_k`…) · eski [0.0, 0.0, 0.5] → **ust** · Kapak elemanları önden takılır (menteşe, bas-aç, fitil) — yerinde gösterilir (kapalı gövdede giriş yolu yok — 
+### Çözülemeyen
+- ic_tavan_1 (2 parça) — yerinde
+- isi_kalkani_isinim_08 (1 parça) — yerinde
+- isi_kalkani_u (1 parça) — yerinde
+- M__B_SOGUTMA__aluminyum__6 (9 parça) — yerinde
+- M__DUZ_B_SERPANTIN__plastik__6 (1 parça) — yerinde
+- M__B_DEPO__celik__4 (5 parça) — yerinde
+- M__B_ELEKTRIK__aluminyum__5 (1 parça) — yerinde
+- M__B_ELEKTRIK__kart__5 (1 parça) — yerinde
+- M__B_ELEKTRIK__plastik__5 (1 parça) — yerinde
+- M__ELK_ISTASYON__cihaz__5 (1 parça) — yerinde
+- M__B_KABLO__kanal__5 (1 parça) — yerinde
+- M__ELK_IC__kanal__5 (1 parça) — yerinde
+- M__ELK_ISTASYON__rakor__5 (1 parça) — yerinde
+- M__CEK_K1_lahm_1__celik__3 (1 parça) — yerinde
+- M__CEK_K1_lahm_2__celik__3 (1 parça) — yerinde
+- M__CEK_K1_lahm_3__celik__3 (1 parça) — yerinde
+- M__CEK_K1_lahm_4__celik__3 (1 parça) — yerinde
+- M__CEK_K1_lahm_5__celik__3 (1 parça) — yerinde
+- M__CEK_K2_lahm_1__celik__3 (1 parça) — yerinde
+- M__CEK_K2_lahm_2__celik__3 (1 parça) — yerinde
+- M__CEK_K2_lahm_3__celik__3 (1 parça) — yerinde
+- M__CEK_K2_lahm_4__celik__3 (1 parça) — yerinde
+- M__CEK_K2_lahm_5__celik__3 (1 parça) — yerinde
+- M__CEK_K3_hamur_1__celik__3 (1 parça) — yerinde
+- M__CEK_K3_hamur_2__celik__3 (1 parça) — yerinde
+- M__CEK_K3_hamur_3__celik__3 (1 parça) — yerinde
+- M__CEK_K3_hamur_4__celik__3 (1 parça) — yerinde
+- M__CEK_K5_hamur_1__celik__3 (1 parça) — yerinde
+- M__CEK_K5_hamur_2__celik__3 (1 parça) — yerinde
+- M__CEK_K5_hamur_3__celik__3 (1 parça) — yerinde
+- M__CEK_K5_ic1_1__celik__3 (1 parça) — yerinde
+- M__CEK_K6_ic1_1__celik__3 (1 parça) — yerinde
+- M__CEK_K6_ic1_2__celik__3 (1 parça) — yerinde
+- M__CEK_K6_tatli_1__celik__3 (1 parça) — yerinde
+- arayuz_ray_1418_204_330 (1 parça) — yerinde
+- arayuz_ray_1418_204_45 (1 parça) — yerinde
+- arayuz_ray_1418_204_580 (1 parça) — yerinde
+- arayuz_ray_1418_312_330 (1 parça) — yerinde
+- arayuz_ray_1418_312_45 (1 parça) — yerinde
+- arayuz_ray_1418_312_580 (1 parça) — yerinde
+- arayuz_ray_1418_420_330 (1 parça) — yerinde
+- arayuz_ray_1418_420_45 (1 parça) — yerinde
+- arayuz_ray_1418_420_580 (1 parça) — yerinde
+- arayuz_ray_1418_528_330 (1 parça) — yerinde
+- arayuz_ray_1418_528_45 (1 parça) — yerinde
+- arayuz_ray_1418_528_580 (1 parça) — yerinde
+- arayuz_ray_1418_636_330 (1 parça) — yerinde
+- arayuz_ray_1418_636_45 (1 parça) — yerinde
+- arayuz_ray_1418_636_580 (1 parça) — yerinde
+- arayuz_ray_1453_204_330 (1 parça) — yerinde
+- arayuz_ray_1453_204_45 (1 parça) — yerinde
+- arayuz_ray_1453_204_580 (1 parça) — yerinde
+- arayuz_ray_1453_312_330 (1 parça) — yerinde
+- arayuz_ray_1453_312_45 (1 parça) — yerinde
+- arayuz_ray_1453_312_580 (1 parça) — yerinde
+- arayuz_ray_1453_420_330 (1 parça) — yerinde
+- arayuz_ray_1453_420_45 (1 parça) — yerinde
+- arayuz_ray_1453_420_580 (1 parça) — yerinde
+- arayuz_ray_1453_528_330 (1 parça) — yerinde
+- arayuz_ray_1453_528_45 (1 parça) — yerinde
+- arayuz_ray_1453_528_580 (1 parça) — yerinde
+- arayuz_ray_1453_636_330 (1 parça) — yerinde
+- arayuz_ray_1453_636_45 (1 parça) — yerinde
+- arayuz_ray_1453_636_580 (1 parça) — yerinde
+- arayuz_ray_2073_204_330 (1 parça) — yerinde
+- arayuz_ray_2073_204_45 (1 parça) — yerinde
+- arayuz_ray_2073_204_580 (1 parça) — yerinde
+- arayuz_ray_2073_312_330 (1 parça) — yerinde
+- arayuz_ray_2073_312_45 (1 parça) — yerinde
+- arayuz_ray_2073_312_580 (1 parça) — yerinde
+- arayuz_ray_2073_420_330 (1 parça) — yerinde
+- arayuz_ray_2073_420_45 (1 parça) — yerinde
+- arayuz_ray_2073_420_580 (1 parça) — yerinde
+- arayuz_ray_2073_528_330 (1 parça) — yerinde
+- arayuz_ray_2073_528_45 (1 parça) — yerinde
+- arayuz_ray_2073_528_580 (1 parça) — yerinde
+- arayuz_ray_2073_636_330 (1 parça) — yerinde
+- arayuz_ray_2073_636_45 (1 parça) — yerinde
+- arayuz_ray_2073_636_580 (1 parça) — yerinde
+- arayuz_ray_2108_204_330 (1 parça) — yerinde
+- arayuz_ray_2108_204_45 (1 parça) — yerinde
+- arayuz_ray_2108_204_580 (1 parça) — yerinde
+- arayuz_ray_2108_312_330 (1 parça) — yerinde
+- arayuz_ray_2108_312_45 (1 parça) — yerinde
+- arayuz_ray_2108_312_580 (1 parça) — yerinde
+- arayuz_ray_2108_420_330 (1 parça) — yerinde
+- arayuz_ray_2108_420_45 (1 parça) — yerinde
+- arayuz_ray_2108_420_580 (1 parça) — yerinde
+- arayuz_ray_2108_528_330 (1 parça) — yerinde
+- arayuz_ray_2108_528_45 (1 parça) — yerinde
+- arayuz_ray_2108_528_580 (1 parça) — yerinde
+- arayuz_ray_2728_204_330 (1 parça) — yerinde
+- arayuz_ray_2728_204_45 (1 parça) — yerinde
+- arayuz_ray_2728_204_580 (1 parça) — yerinde
+- arayuz_ray_2728_312_330 (1 parça) — yerinde
+- arayuz_ray_2728_312_45 (1 parça) — yerinde
+- arayuz_ray_2728_312_580 (1 parça) — yerinde
+- arayuz_ray_2728_420_330 (1 parça) — yerinde
+- arayuz_ray_2728_420_45 (1 parça) — yerinde
+- arayuz_ray_2728_420_580 (1 parça) — yerinde
+- arayuz_ray_2728_528_330 (1 parça) — yerinde
+- arayuz_ray_2728_528_45 (1 parça) — yerinde
+- arayuz_ray_2728_528_580 (1 parça) — yerinde
+- arayuz_ray_2763_204_330 (1 parça) — yerinde
+- arayuz_ray_2763_204_45 (1 parça) — yerinde
+- arayuz_ray_2763_204_580 (1 parça) — yerinde
+- arayuz_ray_2763_312_330 (1 parça) — yerinde
+- arayuz_ray_2763_312_45 (1 parça) — yerinde
+- arayuz_ray_2763_312_580 (1 parça) — yerinde
+- arayuz_ray_2763_420_330 (1 parça) — yerinde
+- arayuz_ray_2763_420_45 (1 parça) — yerinde
+- arayuz_ray_2763_420_580 (1 parça) — yerinde
+- arayuz_ray_2763_528_330 (1 parça) — yerinde
+- arayuz_ray_2763_528_45 (1 parça) — yerinde
+- arayuz_ray_2763_528_580 (1 parça) — yerinde
+- arayuz_ray_3383_204_330 (1 parça) — yerinde
+- arayuz_ray_3383_204_45 (1 parça) — yerinde
+- arayuz_ray_3383_204_580 (1 parça) — yerinde
+- arayuz_ray_3383_312_330 (1 parça) — yerinde
+- arayuz_ray_3383_312_45 (1 parça) — yerinde
+- arayuz_ray_3383_312_580 (1 parça) — yerinde
+- arayuz_ray_3383_420_330 (1 parça) — yerinde
+- arayuz_ray_3383_420_45 (1 parça) — yerinde
+- arayuz_ray_3383_420_580 (1 parça) — yerinde
+- arayuz_ray_3383_528_330 (1 parça) — yerinde
+- arayuz_ray_3383_528_45 (1 parça) — yerinde
+- arayuz_ray_3383_528_580 (1 parça) — yerinde
+- arayuz_ray_3418_204_330 (1 parça) — yerinde
+- arayuz_ray_3418_204_45 (1 parça) — yerinde
+- arayuz_ray_3418_204_580 (1 parça) — yerinde
+- arayuz_ray_3418_312_330 (1 parça) — yerinde
+- arayuz_ray_3418_312_45 (1 parça) — yerinde
+- arayuz_ray_3418_312_580 (1 parça) — yerinde
+- arayuz_ray_3418_475_330 (1 parça) — yerinde
+- arayuz_ray_3418_475_45 (1 parça) — yerinde
+- arayuz_ray_3418_475_580 (1 parça) — yerinde
+- arayuz_ray_3993_204_330 (1 parça) — yerinde
+- arayuz_ray_3993_204_45 (1 parça) — yerinde
+- arayuz_ray_3993_204_580 (1 parça) — yerinde
+- arayuz_ray_3993_312_330 (1 parça) — yerinde
+- arayuz_ray_3993_312_45 (1 parça) — yerinde
+- arayuz_ray_3993_312_580 (1 parça) — yerinde
+- arayuz_ray_3993_475_330 (1 parça) — yerinde
+- arayuz_ray_3993_475_45 (1 parça) — yerinde
+- arayuz_ray_3993_475_580 (1 parça) — yerinde
+- arayuz_ray_798_204_330 (1 parça) — yerinde
+- arayuz_ray_798_204_45 (1 parça) — yerinde
+- arayuz_ray_798_204_580 (1 parça) — yerinde
+- arayuz_ray_798_312_330 (1 parça) — yerinde
+- arayuz_ray_798_312_45 (1 parça) — yerinde
+- arayuz_ray_798_312_580 (1 parça) — yerinde
+- arayuz_ray_798_420_330 (1 parça) — yerinde
+- arayuz_ray_798_420_45 (1 parça) — yerinde
+- arayuz_ray_798_420_580 (1 parça) — yerinde
+- arayuz_ray_798_528_330 (1 parça) — yerinde
+- arayuz_ray_798_528_45 (1 parça) — yerinde
+- arayuz_ray_798_528_580 (1 parça) — yerinde
+- arayuz_ray_798_636_330 (1 parça) — yerinde
+- arayuz_ray_798_636_45 (1 parça) — yerinde
+- arayuz_ray_798_636_580 (1 parça) — yerinde
+- on_cerceve_2 (1 parça) — yerinde
+- M__CEK_K1_lahm_1__aluminyum__3 (9 parça) — kilitli/dönen
+- M__CEK_K1_lahm_2__aluminyum__3 (9 parça) — kilitli/dönen
+- M__CEK_K1_lahm_3__aluminyum__3 (9 parça) — kilitli/dönen
+- M__CEK_K1_lahm_4__aluminyum__3 (9 parça) — kilitli/dönen
+- M__CEK_K1_lahm_5__aluminyum__3 (9 parça) — kilitli/dönen
+- M__CEK_K2_lahm_1__aluminyum__3 (9 parça) — kilitli/dönen
+- M__CEK_K2_lahm_2__aluminyum__3 (9 parça) — kilitli/dönen
+- M__CEK_K2_lahm_3__aluminyum__3 (9 parça) — kilitli/dönen
+- M__CEK_K2_lahm_4__aluminyum__3 (9 parça) — kilitli/dönen
+- M__CEK_K2_lahm_5__aluminyum__3 (9 parça) — kilitli/dönen
+- M__CEK_K3_hamur_1__aluminyum__3 (9 parça) — kilitli/dönen
+- M__CEK_K3_hamur_2__aluminyum__3 (9 parça) — kilitli/dönen
+- M__CEK_K3_hamur_3__aluminyum__3 (9 parça) — kilitli/dönen
+- M__CEK_K3_hamur_4__aluminyum__3 (9 parça) — kilitli/dönen
+- M__CEK_K5_hamur_1__aluminyum__3 (9 parça) — kilitli/dönen
+- M__CEK_K5_hamur_2__aluminyum__3 (9 parça) — kilitli/dönen
+- M__CEK_K5_hamur_3__aluminyum__3 (9 parça) — kilitli/dönen
+- M__CEK_K5_ic1_1__aluminyum__3 (9 parça) — kilitli/dönen
+- M__CEK_K6_tatli_1__aluminyum__3 (9 parça) — kilitli/dönen
+- M__CEK_K6_ic1_1__aluminyum__3 (9 parça) — kilitli/dönen
+- M__CEK_K6_ic1_2__aluminyum__3 (9 parça) — kilitli/dönen
+- M__B_DEPO__conta__CEKMECE__4_k (1 parça) — yerinde
+- M__B_DEPO__sac__CEKMECE__4_k (1 parça) — yerinde
+- M__CEK_K1_lahm_4__hamur__CEKMECE__3 (1 parça) — kilitli/dönen
+- M__CEK_K1_lahm_3__hamur__CEKMECE__3 (1 parça) — kilitli/dönen
+- M__CEK_K1_lahm_2__hamur__CEKMECE__3 (1 parça) — kilitli/dönen
+- M__CEK_K1_lahm_1__hamur__CEKMECE__3 (1 parça) — kilitli/dönen
+- M__CEK_K2_lahm_4__hamur__CEKMECE__3 (1 parça) — kilitli/dönen
+- M__CEK_K2_lahm_3__hamur__CEKMECE__3 (1 parça) — kilitli/dönen
+- M__CEK_K2_lahm_2__hamur__CEKMECE__3 (1 parça) — kilitli/dönen
+- M__CEK_K2_lahm_1__hamur__CEKMECE__3 (1 parça) — kilitli/dönen
+- M__CEK_K3_hamur_3__hamur__CEKMECE__3 (1 parça) — kilitli/dönen
+- M__CEK_K3_hamur_2__hamur__CEKMECE__3 (1 parça) — kilitli/dönen
+- M__CEK_K3_hamur_1__hamur__CEKMECE__3 (1 parça) — kilitli/dönen
+- M__URUN__top__3 (1 parça) — kilitli/dönen
+- M__CEK_K5_hamur_3__hamur__CEKMECE__3 (1 parça) — kilitli/dönen
+- M__CEK_K5_hamur_2__hamur__CEKMECE__3 (1 parça) — kilitli/dönen
+- M__CEK_K5_hamur_1__hamur__CEKMECE__3 (1 parça) — kilitli/dönen
+- M__CEK_K5_ic1_1__kutu_icecek__CEKMECE__3 (1 parça) — kilitli/dönen
+- M__CEK_K6_ic1_2__kutu_icecek__CEKMECE__3 (1 parça) — kilitli/dönen
+- M__CEK_K6_ic1_1__kutu_icecek__CEKMECE__3 (1 parça) — kilitli/dönen
+### SONRA kalan
+- t 169.25 `dis_tavan_2` ↔ `M__CEK_K5_ic1_1__kutu_icecek__CEKMECE__3` 254 mm
+- t 171.79 `dis_tavan_2` ↔ `M__CEK_K6_ic1_2__kutu_icecek__CEKMECE__3` 284 mm
+- t 95.72 `M__CEK_K1_lahm_1__aluminyum__3` ↔ `M__CEK_K1_lahm_1__celik__3` 809 mm
+- t 132.98 `M__CEK_K1_lahm_1__hamur__CEKMECE__3` ↔ `M__CEK_K1_lahm_2__on_seffaf__CEKMECE__3_k` 188 mm
+- t 132.77 `M__CEK_K1_lahm_1__hamur__CEKMECE__3` ↔ `M__CEK_K1_lahm_3__on_seffaf__CEKMECE__3_k` 296 mm
+- t 132.76 `M__CEK_K1_lahm_1__hamur__CEKMECE__3` ↔ `M__CEK_K1_lahm_4__on_seffaf__CEKMECE__3_k` 300 mm
+- t 95.74 `M__CEK_K1_lahm_1__koyu__3` ↔ `M__CEK_K1_lahm_1__celik__3` 786 mm
+- t 95.76 `M__CEK_K1_lahm_1__plastik__3` ↔ `M__CEK_K1_lahm_1__celik__3` 774 mm
+- t 131.91 `M__CEK_K1_lahm_1__plastik__3` ↔ `M__ELK_DOLAP__kablo_sinyal__5` 620 mm
+- t 96.72 `M__CEK_K1_lahm_2__aluminyum__3` ↔ `M__CEK_K1_lahm_2__celik__3` 809 mm
+- t 130.38 `M__CEK_K1_lahm_2__hamur__CEKMECE__3` ↔ `M__CEK_K1_lahm_3__on_seffaf__CEKMECE__3_k` 188 mm
+- t 130.17 `M__CEK_K1_lahm_2__hamur__CEKMECE__3` ↔ `M__CEK_K1_lahm_4__on_seffaf__CEKMECE__3_k` 296 mm
+- t 130.16 `M__CEK_K1_lahm_2__hamur__CEKMECE__3` ↔ `M__CEK_K1_lahm_5__on_seffaf__CEKMECE__3_k` 300 mm
+- t 96.74 `M__CEK_K1_lahm_2__koyu__3` ↔ `M__CEK_K1_lahm_2__celik__3` 786 mm
+- t 96.76 `M__CEK_K1_lahm_2__plastik__3` ↔ `M__CEK_K1_lahm_2__celik__3` 774 mm
+- t 129.31 `M__CEK_K1_lahm_2__plastik__3` ↔ `M__ELK_DOLAP__kablo_sinyal__5` 620 mm
+- t 97.72 `M__CEK_K1_lahm_3__aluminyum__3` ↔ `M__CEK_K1_lahm_3__celik__3` 809 mm
+- t 127.78 `M__CEK_K1_lahm_3__hamur__CEKMECE__3` ↔ `M__CEK_K1_lahm_4__on_seffaf__CEKMECE__3_k` 188 mm
+- t 127.56 `M__CEK_K1_lahm_3__hamur__CEKMECE__3` ↔ `M__CEK_K1_lahm_5__on_seffaf__CEKMECE__3_k` 299 mm
+- t 97.74 `M__CEK_K1_lahm_3__koyu__3` ↔ `M__CEK_K1_lahm_3__celik__3` 786 mm
+- t 97.76 `M__CEK_K1_lahm_3__plastik__3` ↔ `M__CEK_K1_lahm_3__celik__3` 774 mm
+- t 126.71 `M__CEK_K1_lahm_3__plastik__3` ↔ `M__ELK_DOLAP__kablo_sinyal__5` 620 mm
+- t 98.72 `M__CEK_K1_lahm_4__aluminyum__3` ↔ `M__CEK_K1_lahm_4__celik__3` 809 mm
+- t 125.06 `M__CEK_K1_lahm_4__hamur__CEKMECE__3` ↔ `M__CEK_K1_lahm_5__on_seffaf__CEKMECE__3_k` 250 mm
+- t 98.74 `M__CEK_K1_lahm_4__koyu__3` ↔ `M__CEK_K1_lahm_4__celik__3` 786 mm
+- t 98.76 `M__CEK_K1_lahm_4__plastik__3` ↔ `M__CEK_K1_lahm_4__celik__3` 774 mm
+- t 124.11 `M__CEK_K1_lahm_4__plastik__3` ↔ `M__ELK_DOLAP__kablo_sinyal__5` 620 mm
+- t 99.72 `M__CEK_K1_lahm_5__aluminyum__3` ↔ `M__CEK_K1_lahm_5__celik__3` 809 mm
+- t 99.74 `M__CEK_K1_lahm_5__koyu__3` ↔ `M__CEK_K1_lahm_5__celik__3` 786 mm
+- t 99.76 `M__CEK_K1_lahm_5__plastik__3` ↔ `M__CEK_K1_lahm_5__celik__3` 774 mm
+- t 121.51 `M__CEK_K1_lahm_5__plastik__3` ↔ `M__ELK_DOLAP__kablo_sinyal__5` 620 mm
+- t 100.72 `M__CEK_K2_lahm_1__aluminyum__3` ↔ `M__CEK_K2_lahm_1__celik__3` 809 mm
+- t 145.98 `M__CEK_K2_lahm_1__hamur__CEKMECE__3` ↔ `M__CEK_K2_lahm_2__on_seffaf__CEKMECE__3_k` 188 mm
+- t 145.77 `M__CEK_K2_lahm_1__hamur__CEKMECE__3` ↔ `M__CEK_K2_lahm_3__on_seffaf__CEKMECE__3_k` 296 mm
+- t 145.76 `M__CEK_K2_lahm_1__hamur__CEKMECE__3` ↔ `M__CEK_K2_lahm_4__on_seffaf__CEKMECE__3_k` 300 mm
+- t 100.74 `M__CEK_K2_lahm_1__koyu__3` ↔ `M__CEK_K2_lahm_1__celik__3` 786 mm
+- t 100.76 `M__CEK_K2_lahm_1__plastik__3` ↔ `M__CEK_K2_lahm_1__celik__3` 774 mm
+- t 144.91 `M__CEK_K2_lahm_1__plastik__3` ↔ `M__ELK_DOLAP__kablo_sinyal__5` 620 mm
+- t 101.72 `M__CEK_K2_lahm_2__aluminyum__3` ↔ `M__CEK_K2_lahm_2__celik__3` 809 mm
+- t 143.38 `M__CEK_K2_lahm_2__hamur__CEKMECE__3` ↔ `M__CEK_K2_lahm_3__on_seffaf__CEKMECE__3_k` 188 mm
+- t 143.17 `M__CEK_K2_lahm_2__hamur__CEKMECE__3` ↔ `M__CEK_K2_lahm_4__on_seffaf__CEKMECE__3_k` 296 mm
+- t 143.16 `M__CEK_K2_lahm_2__hamur__CEKMECE__3` ↔ `M__CEK_K2_lahm_5__on_seffaf__CEKMECE__3_k` 300 mm
+- t 101.74 `M__CEK_K2_lahm_2__koyu__3` ↔ `M__CEK_K2_lahm_2__celik__3` 786 mm
+- t 101.76 `M__CEK_K2_lahm_2__plastik__3` ↔ `M__CEK_K2_lahm_2__celik__3` 774 mm
+- t 142.31 `M__CEK_K2_lahm_2__plastik__3` ↔ `M__ELK_DOLAP__kablo_sinyal__5` 620 mm
+- t 102.72 `M__CEK_K2_lahm_3__aluminyum__3` ↔ `M__CEK_K2_lahm_3__celik__3` 809 mm
+- t 140.78 `M__CEK_K2_lahm_3__hamur__CEKMECE__3` ↔ `M__CEK_K2_lahm_4__on_seffaf__CEKMECE__3_k` 188 mm
+- t 140.56 `M__CEK_K2_lahm_3__hamur__CEKMECE__3` ↔ `M__CEK_K2_lahm_5__on_seffaf__CEKMECE__3_k` 298 mm
+- t 102.74 `M__CEK_K2_lahm_3__koyu__3` ↔ `M__CEK_K2_lahm_3__celik__3` 786 mm
+- t 102.76 `M__CEK_K2_lahm_3__plastik__3` ↔ `M__CEK_K2_lahm_3__celik__3` 774 mm
+- t 139.71 `M__CEK_K2_lahm_3__plastik__3` ↔ `M__ELK_DOLAP__kablo_sinyal__5` 620 mm
+- t 103.72 `M__CEK_K2_lahm_4__aluminyum__3` ↔ `M__CEK_K2_lahm_4__celik__3` 809 mm
+- t 138.06 `M__CEK_K2_lahm_4__hamur__CEKMECE__3` ↔ `M__CEK_K2_lahm_5__on_seffaf__CEKMECE__3_k` 250 mm
+- t 103.74 `M__CEK_K2_lahm_4__koyu__3` ↔ `M__CEK_K2_lahm_4__celik__3` 786 mm
+- t 103.76 `M__CEK_K2_lahm_4__plastik__3` ↔ `M__CEK_K2_lahm_4__celik__3` 774 mm
+- t 137.11 `M__CEK_K2_lahm_4__plastik__3` ↔ `M__ELK_DOLAP__kablo_sinyal__5` 620 mm
+- t 104.72 `M__CEK_K2_lahm_5__aluminyum__3` ↔ `M__CEK_K2_lahm_5__celik__3` 809 mm
+- t 104.74 `M__CEK_K2_lahm_5__koyu__3` ↔ `M__CEK_K2_lahm_5__celik__3` 786 mm
+- t 104.76 `M__CEK_K2_lahm_5__plastik__3` ↔ `M__CEK_K2_lahm_5__celik__3` 774 mm
+- t 134.51 `M__CEK_K2_lahm_5__plastik__3` ↔ `M__ELK_DOLAP__kablo_sinyal__5` 620 mm
+- t 105.72 `M__CEK_K3_hamur_1__aluminyum__3` ↔ `M__CEK_K3_hamur_1__celik__3` 809 mm
+- t 156.38 `M__CEK_K3_hamur_1__hamur__CEKMECE__3` ↔ `M__CEK_K3_hamur_2__on_seffaf__CEKMECE__3_k` 188 mm
+- t 156.17 `M__CEK_K3_hamur_1__hamur__CEKMECE__3` ↔ `M__CEK_K3_hamur_3__on_seffaf__CEKMECE__3_k` 296 mm
+- t 156.16 `M__CEK_K3_hamur_1__hamur__CEKMECE__3` ↔ `M__CEK_K3_hamur_4__on_seffaf__CEKMECE__3_k` 300 mm
+- t 105.74 `M__CEK_K3_hamur_1__koyu__3` ↔ `M__CEK_K3_hamur_1__celik__3` 786 mm
+- t 105.76 `M__CEK_K3_hamur_1__plastik__3` ↔ `M__CEK_K3_hamur_1__celik__3` 774 mm
+- t 155.31 `M__CEK_K3_hamur_1__plastik__3` ↔ `M__ELK_DOLAP__kablo_sinyal__5` 620 mm
+- t 106.72 `M__CEK_K3_hamur_2__aluminyum__3` ↔ `M__CEK_K3_hamur_2__celik__3` 809 mm
+- t 153.78 `M__CEK_K3_hamur_2__hamur__CEKMECE__3` ↔ `M__CEK_K3_hamur_3__on_seffaf__CEKMECE__3_k` 188 mm
+- t 153.56 `M__CEK_K3_hamur_2__hamur__CEKMECE__3` ↔ `M__CEK_K3_hamur_4__on_seffaf__CEKMECE__3_k` 299 mm
+- t 106.74 `M__CEK_K3_hamur_2__koyu__3` ↔ `M__CEK_K3_hamur_2__celik__3` 786 mm
+- t 106.76 `M__CEK_K3_hamur_2__plastik__3` ↔ `M__CEK_K3_hamur_2__celik__3` 774 mm
+- t 107.72 `M__CEK_K3_hamur_3__aluminyum__3` ↔ `M__CEK_K3_hamur_3__celik__3` 809 mm
+- t 150.97 `M__CEK_K3_hamur_3__hamur__CEKMECE__3` ↔ `M__CEK_K3_hamur_4__on_seffaf__CEKMECE__3_k` 297 mm
+- t 107.74 `M__CEK_K3_hamur_3__koyu__3` ↔ `M__CEK_K3_hamur_3__celik__3` 786 mm
+- t 159.69 `M__CEK_K3_hamur_3__on_seffaf__CEKMECE__3_k` ↔ `M__URUN__top__3` 484 mm
+- t 107.76 `M__CEK_K3_hamur_3__plastik__3` ↔ `M__CEK_K3_hamur_3__celik__3` 774 mm
+- t 108.72 `M__CEK_K3_hamur_4__aluminyum__3` ↔ `M__CEK_K3_hamur_4__celik__3` 809 mm
+- t 108.74 `M__CEK_K3_hamur_4__koyu__3` ↔ `M__CEK_K3_hamur_4__celik__3` 786 mm
+- t 108.76 `M__CEK_K3_hamur_4__plastik__3` ↔ `M__CEK_K3_hamur_4__celik__3` 774 mm
+- t 147.51 `M__CEK_K3_hamur_4__plastik__3` ↔ `M__ELK_DOLAP__kablo_sinyal__5` 620 mm
+- t 109.72 `M__CEK_K5_hamur_1__aluminyum__3` ↔ `M__CEK_K5_hamur_1__celik__3` 809 mm
+- t 166.78 `M__CEK_K5_hamur_1__hamur__CEKMECE__3` ↔ `M__CEK_K5_hamur_2__on_seffaf__CEKMECE__3_k` 188 mm
+- t 166.57 `M__CEK_K5_hamur_1__hamur__CEKMECE__3` ↔ `M__CEK_K5_hamur_3__on_seffaf__CEKMECE__3_k` 296 mm
+- t 166.56 `M__CEK_K5_hamur_1__hamur__CEKMECE__3` ↔ `M__CEK_K5_ic1_1__on_seffaf__CEKMECE__3_k` 300 mm
+- t 109.74 `M__CEK_K5_hamur_1__koyu__3` ↔ `M__CEK_K5_hamur_1__celik__3` 786 mm
+- t 109.76 `M__CEK_K5_hamur_1__plastik__3` ↔ `M__CEK_K5_hamur_1__celik__3` 774 mm
+- t 165.71 `M__CEK_K5_hamur_1__plastik__3` ↔ `M__ELK_DOLAP__kablo_sinyal__5` 620 mm
+- t 110.72 `M__CEK_K5_hamur_2__aluminyum__3` ↔ `M__CEK_K5_hamur_2__celik__3` 809 mm
+- t 164.18 `M__CEK_K5_hamur_2__hamur__CEKMECE__3` ↔ `M__CEK_K5_hamur_3__on_seffaf__CEKMECE__3_k` 188 mm
+- t 163.96 `M__CEK_K5_hamur_2__hamur__CEKMECE__3` ↔ `M__CEK_K5_ic1_1__on_seffaf__CEKMECE__3_k` 299 mm
+- t 110.74 `M__CEK_K5_hamur_2__koyu__3` ↔ `M__CEK_K5_hamur_2__celik__3` 786 mm
+- t 110.76 `M__CEK_K5_hamur_2__plastik__3` ↔ `M__CEK_K5_hamur_2__celik__3` 774 mm
+- t 163.11 `M__CEK_K5_hamur_2__plastik__3` ↔ `M__ELK_DOLAP__kablo_sinyal__5` 620 mm
+- t 111.72 `M__CEK_K5_hamur_3__aluminyum__3` ↔ `M__CEK_K5_hamur_3__celik__3` 809 mm
+- t 161.37 `M__CEK_K5_hamur_3__hamur__CEKMECE__3` ↔ `M__CEK_K5_ic1_1__on_seffaf__CEKMECE__3_k` 297 mm
+- t 111.74 `M__CEK_K5_hamur_3__koyu__3` ↔ `M__CEK_K5_hamur_3__celik__3` 786 mm
+- t 111.76 `M__CEK_K5_hamur_3__plastik__3` ↔ `M__CEK_K5_hamur_3__celik__3` 774 mm
+- t 160.51 `M__CEK_K5_hamur_3__plastik__3` ↔ `M__ELK_DOLAP__kablo_sinyal__5` 620 mm
+- t 112.72 `M__CEK_K5_ic1_1__aluminyum__3` ↔ `M__CEK_K5_ic1_1__celik__3` 809 mm
+- t 112.74 `M__CEK_K5_ic1_1__koyu__3` ↔ `M__CEK_K5_ic1_1__celik__3` 786 mm
+- t 112.76 `M__CEK_K5_ic1_1__plastik__3` ↔ `M__CEK_K5_ic1_1__celik__3` 774 mm
+- t 168.31 `M__CEK_K5_ic1_1__plastik__3` ↔ `M__ELK_DOLAP__kablo_sinyal__5` 620 mm
+- t 113.72 `M__CEK_K6_tatli_1__aluminyum__3` ↔ `M__CEK_K6_tatli_1__celik__3` 809 mm
+- t 113.74 `M__CEK_K6_tatli_1__koyu__3` ↔ `M__CEK_K6_tatli_1__celik__3` 786 mm
+- t 113.76 `M__CEK_K6_tatli_1__plastik__3` ↔ `M__CEK_K6_tatli_1__celik__3` 774 mm
+- t 176.11 `M__CEK_K6_tatli_1__plastik__3` ↔ `M__ELK_DOLAP__kablo_sinyal__5` 620 mm
+- t 114.72 `M__CEK_K6_ic1_1__aluminyum__3` ↔ `M__CEK_K6_ic1_1__celik__3` 809 mm
+- t 114.74 `M__CEK_K6_ic1_1__koyu__3` ↔ `M__CEK_K6_ic1_1__celik__3` 786 mm
+- t 174.36 `M__CEK_K6_ic1_1__kutu_icecek__CEKMECE__3` ↔ `M__CEK_K6_ic1_2__on_seffaf__CEKMECE__3_k` 299 mm
+- t 114.76 `M__CEK_K6_ic1_1__plastik__3` ↔ `M__CEK_K6_ic1_1__celik__3` 774 mm
+- t 115.72 `M__CEK_K6_ic1_2__aluminyum__3` ↔ `M__CEK_K6_ic1_2__celik__3` 809 mm
+- t 115.74 `M__CEK_K6_ic1_2__koyu__3` ↔ `M__CEK_K6_ic1_2__celik__3` 786 mm
+- t 115.76 `M__CEK_K6_ic1_2__plastik__3` ↔ `M__CEK_K6_ic1_2__celik__3` 774 mm
+- t 170.91 `M__CEK_K6_ic1_2__plastik__3` ↔ `M__ELK_DOLAP__kablo_sinyal__5` 620 mm
+- t 159.80 `M__URUN__top__3` ↔ `on_cerceve_2` 395 mm
+### Havada (oturduğu anda hiçbir yerinde parçaya değmeyen) sac / profil
+- `ic_taban_1`
+- `ic_taban_2`
+### Adım listesi
+1. **Lazer kesim** — 63 sac · 0 profil — dış kabuk 2 parçalı + ek lamaları · iç kabuk · 9 bölme sacı · 14 kovan · ısı kalkanı · ön çerçeve 2 parça · 126 ray PEM SP-M5
+2. **PEM saplama / somun basma** — turuncu noktalar = PEM yerleri (açınım üstünde)
+3. **Abkant büküm** — kırmızı kesik = büküm çizgisi · gri = büküm bölgesi
+4. **Ayaklar · alt şase** — 14 ayak · alt şase boyunaları
+5. **Dış taban · iç taban · dikmeler · yanlar · arka** — dış taban 2 + ek laması · 10 × M8 şase cıvatası · GFRP ped · iç taban 2 · dikmeler · 8 alt köşebent · 2 yan · dış arka 2 + ek laması · silikon
+6. **İç kabuk · bölmeler · kovanlar · iç tavan · üst kirişler · ısı kalkanı** — iç sol duvar · teknik duvar · iç arka 2 · 9 bölme sacı · 14 kovan · iç tavan 2 · üst kirişler + GFRP · ısı kalkanı + 12 takoz
+7. **Tavan · köpük hazırlığı · PU köpükleme** — 7 üst köşebent · dış tavan 2 + 3 ek laması · 126 köpük kapağı · silikonlar · 19 PU bloğu
+8. **Mekanizmalar** — soğutma grubu (Secop) · evaporatör serpantini · soğuk depo çekmecesi
+9. **Elektrik kutusu + iç kanallar** — elektrik kutusu · DIN ray cihazları · sensör braketleri · iç kanallar
+10. **Kablolar + fiş paneli** — fiş paneli · güç kabloları (kırmızı) · bilgi kabloları (mavi)
+11. **Çekmece rayları** — 42 sabit ray · 126 × M5 × 10 havşa başlı
+12. **Ön çerçeve** — ön çerçeve 2 parça + ek laması
+13. **Çekmeceler + ön kapaklar** — 21 çekmece · ön kapaklar · fitiller
+14. **Kapak elemanları** — menteşe · bas-aç · fitil
+15. **Ürün yükleme** — 22 çekmeceye ürün (görsel)
+
+## TOPPING
+### Önce bulunan içinden geçmeler (pencere başı → örnek çift)
+- t 31.1 s · 1 çift · ör. `dis_yan_sol` ↔ `pem_M8_A_1300_300` (6 mm)
+- t 31.2 s · 2 çift · ör. `dis_yan_sol` ↔ `pem_M8_A_1300_700` (6 mm)
+- t 31.3 s · 1 çift · ör. `dis_yan_sol` ↔ `pem_M8_A_2000_700` (6 mm)
+- t 33.4 s · 1 çift · ör. `dis_yan_sag` ↔ `pem_M8_F_1000_760` (6 mm)
+- t 33.5 s · 3 çift · ör. `dis_yan_sag` ↔ `pem_M8_F_1250_700` (6 mm)
+- t 35.6 s · 19 çift · ör. `sogutma_cebi` ↔ `kaide_on_perde_menfezli` (700 mm)
+- t 36.9 s · 4 çift · ör. `dis_taban` ↔ `ayirma_perdesi_cep_sol` (700 mm)
+- t 37.2 s · 1 çift · ör. `teknik_on_perde` ↔ `teknik_sag_perde` (58 mm)
+- t 38.2 s · 3 çift · ör. `kuru_bolme_tabani` ↔ `teknik_on_perde` (372 mm)
+- t 40.8 s · 3 çift · ör. `soguk_alt_sac` ↔ `soguk_arka_dis_sac` (668 mm)
+- t 55.9 s · 2 çift · ör. `raf_kosebendi_sol` ↔ `pu_levha_taban` (581 mm)
+- t 57.0 s · 3 çift · ör. `raf` ↔ `pu_levha_taban` (607 mm)
+- t 58.5 s · 4 çift · ör. `dusme_kovani_kiyma_L1` ↔ `kaide_enine_lama_6` (242 mm)
+- t 58.6 s · 4 çift · ör. `dusme_kovani_kiyma_L2` ↔ `kaide_enine_lama_6` (250 mm)
+- t 58.7 s · 6 çift · ör. `dis_taban` ↔ `dusme_kovani_kusbasi_L1` (248 mm)
+- t 58.8 s · 4 çift · ör. `dis_taban` ↔ `dusme_kovani_harc` (249 mm)
+- t 58.9 s · 4 çift · ör. `dis_taban` ↔ `dusme_kovani_kasar` (250 mm)
+- t 59.1 s · 3 çift · ör. `dis_taban` ↔ `dusme_kovani_sucuk` (250 mm)
+- t 59.0 s · 4 çift · ör. `kaide_ust_plaka_4` ↔ `dusme_kovani_sos` (222 mm)
+- t 64.3 s · 2 çift · ör. `ust_raf` ↔ `ust_raf_kosebendi_sol` (511 mm)
+- t 70.4 s · 1 çift · ör. `dis_arka_servis` ↔ `M__TOPPING_MODUL__celik__15__c00` (62 mm)
+- t 70.7 s · 1 çift · ör. `dis_arka_servis` ↔ `M__TOPPING_MODUL__sac__15__c00` (134 mm)
+- t 70.6 s · 1 çift · ör. `dis_arka_servis` ↔ `M__TOPPING_MODUL__celik__15__c01` (62 mm)
+- t 70.9 s · 1 çift · ör. `dis_arka_servis` ↔ `M__TOPPING_MODUL__sac__15__c01` (122 mm)
+- t 71.0 s · 3 çift · ör. `M__TOPPING_MODUL__celik__15__c01` ↔ `M__TOPPING_MODUL__sac__15__c02` (68 mm)
+- t 75.3 s · 20 çift · ör. `dis_yan_sag` ↔ `M__TOPPING_MODUL__silikon__17__c05` (798 mm)
+- t 76.9 s · 3 çift · ör. `dis_yan_sol` ↔ `M__TOPPING_MODUL__pom__17__c01` (198 mm)
+- t 78.4 s · 1 çift · ör. `kuru_bolme_tabani` ↔ `M__TOPPING_MODUL__koyu__17__c01` (144 mm)
+- t 79.9 s · 6 çift · ör. `kuru_bolme_tabani` ↔ `M__TOPPING_MODUL__bakir__17` (172 mm)
+- t 80.1 s · 5 çift · ör. `M__TOPPING_MODUL__sac__17__c00` ↔ `M__TOPPING_MODUL__silikon__17__c00` (112 mm)
+- t 85.1 s · 1 çift · ör. `M__TOPPING_MODUL__koyu__15__c00` ↔ `M__TOPPING_MODUL__sac__15__c01` (211 mm)
+- t 87.1 s · 2 çift · ör. `dis_yan_sag` ↔ `M__ELK_IC__kanal__15__c04` (450 mm)
+- t 87.8 s · 5 çift · ör. `M__ELK_TOPPING__celik__15__c04` ↔ `M__ELK_TOPPING__kanal__15__c00` (30 mm)
+- t 88.2 s · 1 çift · ör. `dis_yan_sag` ↔ `M__ELK_ZINCIR__kanal__15` (126 mm)
+- t 89.3 s · 2 çift · ör. `kuru_bolme_tabani` ↔ `M__ELK_TOPPING__kablo__15__c00` (28 mm)
+- t 89.5 s · 1 çift · ör. `M__ELK_TOPPING__kablo__15__c02` ↔ `M__ELK_IC__kanal__15__c03` (24 mm)
+- t 89.7 s · 1 çift · ör. `M__ELK_TOPPING__kablo__15__c03` ↔ `M__ELK_IC__kanal__15__c03` (24 mm)
+- t 89.8 s · 1 çift · ör. `M__ELK_TOPPING__kablo__15__c04` ↔ `M__ELK_IC__kanal__15__c03` (24 mm)
+- t 89.9 s · 1 çift · ör. `M__ELK_TOPPING__kablo__15__c05` ↔ `M__ELK_IC__kanal__15__c03` (24 mm)
+- t 90.3 s · 2 çift · ör. `dis_yan_sag` ↔ `M__ELK_ZINCIR__kablo_guc__15` (85 mm)
+- t 92.2 s · 6 çift · ör. `M__ELK_TOPPING__kablo_sinyal__15__c05` ↔ `M__ELK_IC__kanal__15__c04` (448 mm)
+- t 91.6 s · 4 çift · ör. `M__ELK_TOPPING__kablo_sinyal__15__c00` ↔ `M__ELK_IC__kanal__15__c00` (117 mm)
+- t 91.7 s · 2 çift · ör. `M__TOPPING_MODUL__pu__17__c01` ↔ `M__ELK_TOPPING__kablo_sinyal__15__c01` (114 mm)
+- t 92.1 s · 1 çift · ör. `M__ELK_TOPPING__kablo_sinyal__15__c04` ↔ `M__ELK_IC__kanal__15__c02` (147 mm)
+- t 91.8 s · 1 çift · ör. `M__ELK_TOPPING__kablo_sinyal__15__c02` ↔ `M__ELK_IC__kanal__15__c01` (18 mm)
+- t 92.4 s · 3 çift · ör. `dis_yan_sag` ↔ `M__ELK_ZINCIR__kablo_veri__15` (162 mm)
+- t 92.3 s · 1 çift · ör. `M__ELK_TOPPING__kablo_sinyal__15__c06` ↔ `M__ELK_IC__kanal__15__c05` (19 mm)
+- t 94.2 s · 4 çift · ör. `M__TOPPING_MODUL__celik__17__c01` ↔ `M__ELK_TOPPING__rakor__15__c04` (264 mm)
+- t 93.7 s · 1 çift · ör. `M__ELK_TOPPING__kanal__15__c00` ↔ `M__ELK_TOPPING__rakor__15__c00` (106 mm)
+- t 93.8 s · 1 çift · ör. `M__ELK_TOPPING__kanal__15__c00` ↔ `M__ELK_TOPPING__rakor__15__c01` (73 mm)
+- t 94.0 s · 1 çift · ör. `M__ELK_TOPPING__kanal__15__c00` ↔ `M__ELK_TOPPING__rakor__15__c02` (40 mm)
+- t 94.3 s · 2 çift · ör. `kuru_bolme_tabani` ↔ `M__ELK_TOPPING__rakor__15__c05` (116 mm)
+- t 94.1 s · 1 çift · ör. `M__ELK_TOPPING__kanal__15__c00` ↔ `M__ELK_TOPPING__rakor__15__c03` (7 mm)
+- t 94.4 s · 3 çift · ör. `M__TOPPING_MODUL__sac__17__c01` ↔ `M__ELK_TOPPING__rakor__15__c06` (60 mm)
+- t 94.5 s · 3 çift · ör. `dis_yan_sag` ↔ `M__ELK_TOPPING__rakor__15__c07` (54 mm)
+- t 94.8 s · 2 çift · ör. `dis_yan_sag` ↔ `M__ELK_ZINCIR__harting__15` (90 mm)
+- t 95.2 s · 3 çift · ör. `M__ELK_ZINCIR__paslanmaz__15` ↔ `M__ELK_ZINCIR__rakor__15` (37 mm)
+- t 94.7 s · 1 çift · ör. `dis_yan_sag` ↔ `M__ELK_ZINCIR__etiket__15` (24 mm)
+- t 94.9 s · 2 çift · ör. `dis_yan_sag` ↔ `M__ELK_ZINCIR__m12__15__c00` (70 mm)
+- t 95.0 s · 2 çift · ör. `dis_yan_sag` ↔ `M__ELK_ZINCIR__m12__15__c01` (26 mm)
+- t 95.1 s · 3 çift · ör. `dis_yan_sag` ↔ `M__ELK_ZINCIR__paslanmaz__15` (24 mm)
+- t 96.7 s · 4 çift · ör. `M__TOPPING_MODUL__aluminyum__16__c01` ↔ `M__TOPPING_MODUL__pom__16` (7 mm)
+- t 96.6 s · 3 çift · ör. `M__TOPPING_MODUL__aluminyum__16__c00` ↔ `M__ELK_TOPPING__celik__15__c02` (168 mm)
+- t 98.5 s · 2 çift · ör. `M__ELK_IC__kanal__15__c00` ↔ `M__HAVA_IC__aski__16__c00` (198 mm)
+- t 98.3 s · 1 çift · ör. `M__ELK_ZINCIR__kod_mavi__16` ↔ `M__ELK_ZINCIR__harting__15` (93 mm)
+- t 98.6 s · 3 çift · ör. `M__ELK_IC__kanal__15__c00` ↔ `M__HAVA_IC__aski__16__c01` (198 mm)
+- t 98.4 s · 1 çift · ör. `M__ELK_ZINCIR__rakor__16` ↔ `M__ELK_ZINCIR__harting__15` (95 mm)
+- t 98.8 s · 1 çift · ör. `M__ELK_TOPPING__kablo_sinyal__15__c03` ↔ `M__HAVA_IC__aski__16__c04` (179 mm)
+- t 99.0 s · 1 çift · ör. `M__TOPPING_MODUL__koyu__17__c01` ↔ `M__HAVA_IC__aski__16__c06` (82 mm)
+- t 99.5 s · 5 çift · ör. `M__ELK_IC__kanal__15__c00` ↔ `M__HAVA_IC__kanal__16__c00` (164 mm)
+- t 99.7 s · 7 çift · ör. `M__ELK_IC__kanal__15__c02` ↔ `M__HAVA_IC__kanal__16__c02` (164 mm)
+- t 99.6 s · 3 çift · ör. `M__ELK_TOPPING__kablo_sinyal__15__c02` ↔ `M__HAVA_IC__kanal__16__c01` (77 mm)
+- t 100.7 s · 4 çift · ör. `dis_yan_sag` ↔ `M__ELK_ZINCIR__hava__16__c01` (144 mm)
+- t 100.5 s · 1 çift · ör. `dis_yan_sag` ↔ `M__ELK_ZINCIR__hava__16__c00` (90 mm)
+- t 100.8 s · 4 çift · ör. `M__TOPPING_MODUL__hava_ana__16__c00` ↔ `M__ELK_IC__kanal__15__c00` (145 mm)
+- t 101.0 s · 6 çift · ör. `M__TOPPING_MODUL__hava_ana__16__c02` ↔ `M__ELK_IC__kanal__15__c00` (163 mm)
+- t 100.9 s · 3 çift · ör. `M__TOPPING_MODUL__hava_ana__16__c01` ↔ `M__ELK_TOPPING__kanal__15__c00` (53 mm)
+- t 101.2 s · 1 çift · ör. `M__TOPPING_MODUL__hava_ana__16__c03` ↔ `M__ELK_TOPPING__kanal__15__c00` (115 mm)
+- t 101.4 s · 9 çift · ör. `M__TOPPING_MODUL__hava_ana__16__c05` ↔ `M__ELK_TOPPING__kanal__15__c00` (127 mm)
+- t 101.3 s · 1 çift · ör. `M__TOPPING_MODUL__hava_ana__16__c04` ↔ `M__ELK_TOPPING__kanal__15__c00` (53 mm)
+- t 103.0 s · 62 çift · ör. `M__TOPPING_MODUL__paslanmaz__11__c00` ↔ `M__TOPPING_MODUL__pu__17__c00` (705 mm)
+- t 104.3 s · 7 çift · ör. `soguk_alt_sac` ↔ `M__TOPPING_MODUL__conta__11` (61 mm)
+- t 105.2 s · 53 çift · ör. `M__TOPPING_MODUL__paslanmaz__12__c00` ↔ `M__TOPPING_MODUL__pu__17__c01` (705 mm)
+- t 106.5 s · 7 çift · ör. `soguk_alt_sac` ↔ `M__TOPPING_MODUL__conta__12` (61 mm)
+- t 107.4 s · 70 çift · ör. `M__TOPPING_MODUL__paslanmaz__9__c00` ↔ `M__ELK_TOPPING__kanal__15__c02` (699 mm)
+- t 108.9 s · 10 çift · ör. `on_cerceve_430` ↔ `M__TOPPING_MODUL__hortum_gida__9` (283 mm)
+- t 108.8 s · 5 çift · ör. `soguk_alt_sac` ↔ `M__TOPPING_MODUL__conta__9__c01` (61 mm)
+- t 109.0 s · 3 çift · ör. `soguk_alt_sac` ↔ `M__TOPPING_MODUL__yayici_sabit_baglanti__9` (132 mm)
+- t 108.7 s · 1 çift · ör. `ust_raf` ↔ `M__TOPPING_MODUL__conta__9__c00` (4 mm)
+- t 109.9 s · 87 çift · ör. `M__TOPPING_MODUL__paslanmaz__10__c00` ↔ `M__ELK_TOPPING__kanal__15__c02` (699 mm)
+- t 111.4 s · 10 çift · ör. `on_cerceve_430` ↔ `M__TOPPING_MODUL__hortum_gida__10` (282 mm)
+- t 111.3 s · 5 çift · ör. `soguk_alt_sac` ↔ `M__TOPPING_MODUL__conta__10__c01` (61 mm)
+- t 111.5 s · 3 çift · ör. `soguk_alt_sac` ↔ `M__TOPPING_MODUL__yayici_sabit_baglanti__10` (132 mm)
+- t 111.2 s · 1 çift · ör. `ust_raf` ↔ `M__TOPPING_MODUL__conta__10__c00` (4 mm)
+- t 112.7 s · 13 çift · ör. `M__TOPPING_MODUL__kart__15__c00` ↔ `M__ELK_IC__kanal__15__c02` (126 mm)
+- t 114.9 s · 2 çift · ör. `servis_arka_taban_1700_903_vida` ↔ `servis_arka_taban_1700_903_pem` (2 mm)
+- t 115.1 s · 2 çift · ör. `servis_arka_tavan_1550_2188_vida` ↔ `servis_arka_tavan_1550_2188_pem` (2 mm)
+- t 115.2 s · 2 çift · ör. `servis_arka_tavan_2050_2188_vida` ↔ `servis_arka_tavan_2050_2188_pem` (2 mm)
+- t 115.3 s · 2 çift · ör. `servis_arka_tavan_2450_2188_vida` ↔ `servis_arka_tavan_2450_2188_pem` (2 mm)
+- t 115.4 s · 2 çift · ör. `servis_arka_yan_sag_2488_1440_vida` ↔ `servis_arka_yan_sag_2488_1440_pem` (2 mm)
+- t 115.5 s · 1 çift · ör. `servis_arka_yan_sag_2488_1960_vida` ↔ `servis_arka_yan_sag_2488_1960_pem` (2 mm)
+- t 115.6 s · 2 çift · ör. `servis_arka_yan_sag_2488_960_vida` ↔ `servis_arka_yan_sag_2488_960_pem` (2 mm)
+- t 116.6 s · 37 çift · ör. `on_cerceve_430` ↔ `M__TOPPING_MODUL__pom__13__c00` (253 mm)
+- t 118.7 s · 37 çift · ör. `on_cerceve_430` ↔ `M__TOPPING_MODUL__pom__14__c00` (253 mm)
+- t 121.0 s · 36 çift · ör. `on_cerceve_430` ↔ `M__TOPPING_MODUL__celik__8__c00` (547 mm)
+- t 123.4 s · 9 çift · ör. `M__TOPPING_MODUL__celik__ARABA__8__c00` ↔ `M__TOPPING_MODUL__sac__8` (22 mm)
+- t 128.7 s · 4 çift · ör. `arayuz_kb_1456_110_pul` ↔ `M__TOPPING_MODUL__sac__8` (106 mm)
+- t 128.8 s · 3 çift · ör. `dis_taban` ↔ `arayuz_kb_1456_706_pul` (104 mm)
+- t 128.9 s · 8 çift · ör. `arayuz_kb_2120_110_pul` ↔ `M__TOPPING_MODUL__sac__8` (106 mm)
+- t 129.4 s · 2 çift · ör. `arayuz_kb_1456_110` ↔ `M__TOPPING_MODUL__sac__8` (130 mm)
+- t 129.5 s · 1 çift · ör. `dis_taban` ↔ `arayuz_kb_1456_706` (126 mm)
+- t 129.6 s · 2 çift · ör. `arayuz_kb_2120_110` ↔ `M__TOPPING_MODUL__sac__8` (130 mm)
+- t 129.7 s · 2 çift · ör. `arayuz_kb_2480_110` ↔ `M__TOPPING_MODUL__sac__8` (130 mm)
+### Yönü değişen gruplar
+- t 31.15 · 1 parça (`pem_M8_A_1300_300`…) · eski [-0.15, 0.0, 0.0] → **yerinde** · Sol yan sac (A tarafı) — tabla ağzı alta açık · A bağlantısı 4 × PEM SP-M8 — yerinde gösterilir (kapalı gövded
+- t 31.20 · 1 parça (`pem_M8_A_1300_700`…) · eski [-0.15, 0.0, 0.0] → **yerinde** · Sol yan sac (A tarafı) — tabla ağzı alta açık · A bağlantısı 4 × PEM SP-M8 — yerinde gösterilir (kapalı gövded
+- t 31.25 · 1 parça (`pem_M8_A_2000_300`…) · eski [-0.15, 0.0, 0.0] → **yerinde** · Sol yan sac (A tarafı) — tabla ağzı alta açık · A bağlantısı 4 × PEM SP-M8 — yerinde gösterilir (kapalı gövded
+- t 31.30 · 1 parça (`pem_M8_A_2000_700`…) · eski [-0.15, 0.0, 0.0] → **yerinde** · Sol yan sac (A tarafı) — tabla ağzı alta açık · A bağlantısı 4 × PEM SP-M8 — yerinde gösterilir (kapalı gövded
+- t 33.40 · 1 parça (`pem_M8_F_1000_760`…) · eski [0.15, 0.0, 0.0] → **yerinde** · Sağ yan sac (F tarafı) — J1 ağzı 57 × 67 · F bağlantısı 4 × PEM SP-M8 — yerinde gösterilir (kapalı gövdede gir
+- t 33.45 · 1 parça (`pem_M8_F_1250_700`…) · eski [0.15, 0.0, 0.0] → **yerinde** · Sağ yan sac (F tarafı) — J1 ağzı 57 × 67 · F bağlantısı 4 × PEM SP-M8 — yerinde gösterilir (kapalı gövdede gir
+- t 33.50 · 1 parça (`pem_M8_F_1700_780`…) · eski [0.15, 0.0, 0.0] → **yerinde** · Sağ yan sac (F tarafı) — J1 ağzı 57 × 67 · F bağlantısı 4 × PEM SP-M8 — yerinde gösterilir (kapalı gövdede gir
+- t 33.55 · 1 parça (`pem_M8_F_1950_780`…) · eski [0.15, 0.0, 0.0] → **yerinde** · Sağ yan sac (F tarafı) — J1 ağzı 57 × 67 · F bağlantısı 4 × PEM SP-M8 — yerinde gösterilir (kapalı gövdede gir
+- t 35.65 · 5 parça (`cep_takoz_pem_M8_0`…) · eski [0.0, 0.0, 0.7] → **ust** · Kuru (teknik) bölme: soğutma cebi + ayırma perdesi, teknik ön / sağ perde, kuru bölme tabanı — yerinde gösteri
+- t 36.85 · 1 parça (`ayirma_perdesi_cep_sol`…) · eski [0.0, 0.0, 0.7] → **ust** · Kuru (teknik) bölme: soğutma cebi + ayırma perdesi, teknik ön / sağ perde, kuru bölme tabanı — yerinde gösteri
+- t 37.05 · 1 parça (`teknik_on_perde`…) · eski [0.0, 0.0, 0.7] → **yerinde** · Kuru (teknik) bölme: soğutma cebi + ayırma perdesi, teknik ön / sağ perde, kuru bölme tabanı — yerinde gösteri
+- t 38.25 · 1 parça (`kuru_bolme_tabani`…) · eski [0.0, 0.0, 0.7] → **yerinde** · Kuru (teknik) bölme: soğutma cebi + ayırma perdesi, teknik ön / sağ perde, kuru bölme tabanı — yerinde gösteri
+- t 40.75 · 1 parça (`soguk_arka_dis_sac`…) · eski [0.0, 0.0, 0.8] → **yerinde** · Soğuk oda alt sacı + arka dış sacı (evaporatör kanal ağızları açık) — yerinde gösterilir (kapalı gövdede giriş
+- t 55.90 · 1 parça (`pu_levha_taban`…) · eski [0.0, 0.0, 0.8] → **yerinde** · Yalıtım levhası TABAN — raf çift cidarının içine, alt sacın üstüne — yerinde gösterilir (kapalı gövdede giriş 
+- t 57.00 · 1 parça (`raf`…) · eski [0.0, 0.0, 0.8] → **ust** · Raf 3,0 levhanın üstüne — büküm kenarları köşebentlere oturur · arka köşe dolgu kaynağı — yerinde gösterilir (
+- t 58.50 · 1 parça (`dusme_kovani_kiyma_L1`…) · eski [0.0, -0.25, 0.0] → **yerinde** · Raf 3,0 levhanın üstüne — büküm kenarları köşebentlere oturur · arka köşe dolgu kaynağı — yerinde gösterilir (
+- t 58.58 · 1 parça (`dusme_kovani_kiyma_L2`…) · eski [0.0, -0.25, 0.0] → **yerinde** · Raf 3,0 levhanın üstüne — büküm kenarları köşebentlere oturur · arka köşe dolgu kaynağı — yerinde gösterilir (
+- t 58.66 · 1 parça (`dusme_kovani_kusbasi_L1`…) · eski [0.0, -0.25, 0.0] → **yerinde** · Raf 3,0 levhanın üstüne — büküm kenarları köşebentlere oturur · arka köşe dolgu kaynağı — yerinde gösterilir (
+- t 58.74 · 1 parça (`dusme_kovani_kusbasi_L2`…) · eski [0.0, -0.25, 0.0] → **yerinde** · Raf 3,0 levhanın üstüne — büküm kenarları köşebentlere oturur · arka köşe dolgu kaynağı — yerinde gösterilir (
+- t 58.82 · 1 parça (`dusme_kovani_harc`…) · eski [0.0, -0.25, 0.0] → **yerinde** · Raf 3,0 levhanın üstüne — büküm kenarları köşebentlere oturur · arka köşe dolgu kaynağı — yerinde gösterilir (
+- t 58.90 · 1 parça (`dusme_kovani_kasar`…) · eski [0.0, -0.25, 0.0] → **yerinde** · Raf 3,0 levhanın üstüne — büküm kenarları köşebentlere oturur · arka köşe dolgu kaynağı — yerinde gösterilir (
+- t 58.98 · 1 parça (`dusme_kovani_sos`…) · eski [0.0, -0.25, 0.0] → **yerinde** · Raf 3,0 levhanın üstüne — büküm kenarları köşebentlere oturur · arka köşe dolgu kaynağı — yerinde gösterilir (
+- t 59.06 · 1 parça (`dusme_kovani_sucuk`…) · eski [0.0, -0.25, 0.0] → **yerinde** · Raf 3,0 levhanın üstüne — büküm kenarları köşebentlere oturur · arka köşe dolgu kaynağı — yerinde gösterilir (
+- t 64.29 · 1 parça (`ust_raf`…) · eski [0.0, 0.0, 0.8] → **on+ust** · Üst raf 3,0 + köşebentler · raf askı burçları (POM + paslanmaz pim) — önden sokulur, yukarıdan oturur
+- t 70.44 · 1 parça (`M__TOPPING_MODUL__celik__15__c00`…) · eski [0.0, 0.0, -0.35] → **yerinde** · Arka servis sacı alt montajı (tezgâhta, arkada): sac + pano kutusu + DIN plakası / rayları + emiş filtresi — y
+- t 70.59 · 1 parça (`M__TOPPING_MODUL__celik__15__c01`…) · eski [0.0, 0.0, -0.35] → **yerinde** · Arka servis sacı alt montajı (tezgâhta, arkada): sac + pano kutusu + DIN plakası / rayları + emiş filtresi — y
+- t 70.74 · 1 parça (`M__TOPPING_MODUL__sac__15__c00`…) · eski [0.0, 0.0, -0.35] → **on** · Arka servis sacı alt montajı (tezgâhta, arkada): sac + pano kutusu + DIN plakası / rayları + emiş filtresi — y
+- t 70.89 · 1 parça (`M__TOPPING_MODUL__sac__15__c01`…) · eski [0.0, 0.0, -0.35] → **yerinde** · Arka servis sacı alt montajı (tezgâhta, arkada): sac + pano kutusu + DIN plakası / rayları + emiş filtresi — y
+- t 71.04 · 1 parça (`M__TOPPING_MODUL__sac__15__c02`…) · eski [0.0, 0.0, -0.35] → **ust** · Arka servis sacı alt montajı (tezgâhta, arkada): sac + pano kutusu + DIN plakası / rayları + emiş filtresi — y
+- t 72.04 · 1 parça (`kaide_arka_emis_filtresi`…) · eski [0.0, -0.2, 0.0] → **yerinde** · Arka servis sacı alt montajı (tezgâhta, arkada): sac + pano kutusu + DIN plakası / rayları + emiş filtresi — y
+- t 75.34 · 8 parça (`M__TOPPING_MODUL__celik__17__c02`…) · eski [0.0, 0.0, -0.8] → **yerinde** · Soğutma grubu (Secop) arkadan soğutma cebine — 4 silikon titreşim takozu cep tabanındaki PEM SP-M8'lere — yeri
+- t 76.94 · 7 parça (`M__TOPPING_MODUL__celik__17__c00`…) · eski [0.0, 0.0, -0.8] → **yerinde** · Evaporatör L ve R (kaset + fan) arkadan — kanal kovanlarının ağzına, ayakları servis sacının FHP-M5 saplamalar
+- t 78.39 · 7 parça (`M__TOPPING_MODUL__celik__17__c01`…) · eski [0.0, 0.0, -0.8] → **yerinde** · Evaporatör L ve R (kaset + fan) arkadan — kanal kovanlarının ağzına, ayakları servis sacının FHP-M5 saplamalar
+- t 79.89 · 1 parça (`M__TOPPING_MODUL__bakir__17`…) · eski [0.0, 0.0, -0.5] → **yerinde** · Bakır hatlar (emiş / sıvı) + yoğuşma hortumu — grup ↔ evaporatörler, kanal içinden — yerinde gösterilir (kapal
+- t 80.09 · 1 parça (`M__TOPPING_MODUL__silikon__17__c00`…) · eski [0.0, 0.0, -0.5] → **yerinde** · Bakır hatlar (emiş / sıvı) + yoğuşma hortumu — grup ↔ evaporatörler, kanal içinden — yerinde gösterilir (kapal
+- t 84.49 · 1 parça (`M__TOPPING_MODUL__kart__15__c00`…) · eski [0.0, 0.25, 0.0] → **yerinde** · Sürücü kartları DIN rayına + istasyon kutusu cihazları (servis sacı üstünde, tezgâhta) — yerinde gösterilir (k
+- t 84.64 · 1 parça (`M__TOPPING_MODUL__kart__15__c01`…) · eski [0.0, 0.25, 0.0] → **yerinde** · Sürücü kartları DIN rayına + istasyon kutusu cihazları (servis sacı üstünde, tezgâhta) — yerinde gösterilir (k
+- t 84.79 · 1 parça (`M__TOPPING_MODUL__kart__15__c02`…) · eski [0.0, 0.25, 0.0] → **yerinde** · Sürücü kartları DIN rayına + istasyon kutusu cihazları (servis sacı üstünde, tezgâhta) — yerinde gösterilir (k
+- t 84.94 · 1 parça (`M__TOPPING_MODUL__kart__15__c03`…) · eski [0.0, 0.25, 0.0] → **yerinde** · Sürücü kartları DIN rayına + istasyon kutusu cihazları (servis sacı üstünde, tezgâhta) — yerinde gösterilir (k
+- t 85.09 · 1 parça (`M__TOPPING_MODUL__koyu__15__c00`…) · eski [0.0, 0.25, 0.0] → **on** · Sürücü kartları DIN rayına + istasyon kutusu cihazları (servis sacı üstünde, tezgâhta) — yerinde gösterilir (k
+- t 85.24 · 1 parça (`M__TOPPING_MODUL__koyu__15__c01`…) · eski [0.0, 0.25, 0.0] → **yerinde** · Sürücü kartları DIN rayına + istasyon kutusu cihazları (servis sacı üstünde, tezgâhta) — yerinde gösterilir (k
+- t 85.39 · 1 parça (`M__TOPPING_MODUL__koyu__15__c02`…) · eski [0.0, 0.25, 0.0] → **yerinde** · Sürücü kartları DIN rayına + istasyon kutusu cihazları (servis sacı üstünde, tezgâhta) — yerinde gösterilir (k
+- t 85.54 · 1 parça (`M__TOPPING_MODUL__koyu__15__c03`…) · eski [0.0, 0.25, 0.0] → **yerinde** · Sürücü kartları DIN rayına + istasyon kutusu cihazları (servis sacı üstünde, tezgâhta) — yerinde gösterilir (k
+- t 85.69 · 1 parça (`M__TOPPING_MODUL__koyu__15__c04`…) · eski [0.0, 0.25, 0.0] → **yerinde** · Sürücü kartları DIN rayına + istasyon kutusu cihazları (servis sacı üstünde, tezgâhta) — yerinde gösterilir (k
+- t 87.07 · 1 parça (`M__ELK_IC__kanal__15__c04`…) · eski [0.0, 0.0, -0.45] → **yerinde** · İç kablo kanalları + braketler (PEM saplamalı kanal ayakları) — yerinde gösterilir (kapalı gövdede giriş yolu 
+- t 87.73 · 1 parça (`M__ELK_TOPPING__celik__15__c04`…) · eski [0.0, 0.0, -0.45] → **yerinde** · İç kablo kanalları + braketler (PEM saplamalı kanal ayakları) — yerinde gösterilir (kapalı gövdede giriş yolu 
+- t 87.82 · 1 parça (`M__ELK_TOPPING__kanal__15__c00`…) · eski [0.0, 0.0, -0.45] → **yerinde** · İç kablo kanalları + braketler (PEM saplamalı kanal ayakları) — yerinde gösterilir (kapalı gövdede giriş yolu 
+- t 88.20 · 1 parça (`M__ELK_ZINCIR__kanal__15`…) · eski [0.0, 0.0, -0.45] → **ust+on** · İç kablo kanalları + braketler (PEM saplamalı kanal ayakları) — yerinde gösterilir (kapalı gövdede giriş yolu 
+- t 89.30 · 1 parça (`M__ELK_TOPPING__kablo__15__c00`…) · eski [0.0, 0.0, -0.45] → **cekme** · Güç kabloları (KIRMIZI) — motorlara, kanal içinden — kanal içinden çekilir
+- t 89.54 · 1 parça (`M__ELK_TOPPING__kablo__15__c02`…) · eski [0.0, 0.0, -0.45] → **cekme** · Güç kabloları (KIRMIZI) — motorlara, kanal içinden — kanal içinden çekilir
+- t 89.66 · 1 parça (`M__ELK_TOPPING__kablo__15__c03`…) · eski [0.0, 0.0, -0.45] → **cekme** · Güç kabloları (KIRMIZI) — motorlara, kanal içinden — kanal içinden çekilir
+- t 89.78 · 1 parça (`M__ELK_TOPPING__kablo__15__c04`…) · eski [0.0, 0.0, -0.45] → **cekme** · Güç kabloları (KIRMIZI) — motorlara, kanal içinden — kanal içinden çekilir
+- t 89.90 · 1 parça (`M__ELK_TOPPING__kablo__15__c05`…) · eski [0.0, 0.0, -0.45] → **cekme** · Güç kabloları (KIRMIZI) — motorlara, kanal içinden — kanal içinden çekilir
+- t 90.26 · 1 parça (`M__ELK_ZINCIR__kablo_guc__15`…) · eski [0.0, 0.0, -0.45] → **cekme** · Güç kabloları (KIRMIZI) — motorlara, kanal içinden — kanal içinden çekilir
+- t 91.58 · 1 parça (`M__ELK_TOPPING__kablo_sinyal__15__c00`…) · eski [0.0, 0.0, -0.45] → **cekme** · Bilgi kabloları (MAVİ) — sensör, enkoder, EtherCAT · ayrı kanal bölmesinden — kanal içinden çekilir
+- t 91.70 · 1 parça (`M__ELK_TOPPING__kablo_sinyal__15__c01`…) · eski [0.0, 0.0, -0.45] → **cekme** · Bilgi kabloları (MAVİ) — sensör, enkoder, EtherCAT · ayrı kanal bölmesinden — kanal içinden çekilir
+- t 91.82 · 1 parça (`M__ELK_TOPPING__kablo_sinyal__15__c02`…) · eski [0.0, 0.0, -0.45] → **cekme** · Bilgi kabloları (MAVİ) — sensör, enkoder, EtherCAT · ayrı kanal bölmesinden — kanal içinden çekilir
+- t 92.06 · 1 parça (`M__ELK_TOPPING__kablo_sinyal__15__c04`…) · eski [0.0, 0.0, -0.45] → **cekme** · Bilgi kabloları (MAVİ) — sensör, enkoder, EtherCAT · ayrı kanal bölmesinden — kanal içinden çekilir
+- t 92.18 · 1 parça (`M__ELK_TOPPING__kablo_sinyal__15__c05`…) · eski [0.0, 0.0, -0.45] → **cekme** · Bilgi kabloları (MAVİ) — sensör, enkoder, EtherCAT · ayrı kanal bölmesinden — kanal içinden çekilir
+- t 92.30 · 1 parça (`M__ELK_TOPPING__kablo_sinyal__15__c06`…) · eski [0.0, 0.0, -0.45] → **cekme** · Bilgi kabloları (MAVİ) — sensör, enkoder, EtherCAT · ayrı kanal bölmesinden — kanal içinden çekilir
+- t 92.42 · 1 parça (`M__ELK_ZINCIR__kablo_veri__15`…) · eski [0.0, 0.0, -0.45] → **cekme** · Bilgi kabloları (MAVİ) — sensör, enkoder, EtherCAT · ayrı kanal bölmesinden — kanal içinden çekilir
+- t 93.74 · 1 parça (`M__ELK_TOPPING__rakor__15__c00`…) · eski [0.3, 0.0, 0.0] → **yerinde** · Gömme fiş paneli (J1, sağ yanda): Harting güç + M12 bilgi + kablo rakorları — yerinde gösterilir (kapalı gövde
+- t 93.85 · 1 parça (`M__ELK_TOPPING__rakor__15__c01`…) · eski [0.3, 0.0, 0.0] → **yerinde** · Gömme fiş paneli (J1, sağ yanda): Harting güç + M12 bilgi + kablo rakorları — yerinde gösterilir (kapalı gövde
+- t 93.97 · 1 parça (`M__ELK_TOPPING__rakor__15__c02`…) · eski [0.3, 0.0, 0.0] → **yerinde** · Gömme fiş paneli (J1, sağ yanda): Harting güç + M12 bilgi + kablo rakorları — yerinde gösterilir (kapalı gövde
+- t 94.08 · 1 parça (`M__ELK_TOPPING__rakor__15__c03`…) · eski [0.3, 0.0, 0.0] → **yerinde** · Gömme fiş paneli (J1, sağ yanda): Harting güç + M12 bilgi + kablo rakorları — yerinde gösterilir (kapalı gövde
+- t 94.20 · 1 parça (`M__ELK_TOPPING__rakor__15__c04`…) · eski [0.3, 0.0, 0.0] → **yerinde** · Gömme fiş paneli (J1, sağ yanda): Harting güç + M12 bilgi + kablo rakorları — yerinde gösterilir (kapalı gövde
+- t 94.31 · 1 parça (`M__ELK_TOPPING__rakor__15__c05`…) · eski [0.3, 0.0, 0.0] → **yerinde** · Gömme fiş paneli (J1, sağ yanda): Harting güç + M12 bilgi + kablo rakorları — yerinde gösterilir (kapalı gövde
+- t 94.43 · 1 parça (`M__ELK_TOPPING__rakor__15__c06`…) · eski [0.3, 0.0, 0.0] → **ust** · Gömme fiş paneli (J1, sağ yanda): Harting güç + M12 bilgi + kablo rakorları — yerinde gösterilir (kapalı gövde
+- t 94.54 · 1 parça (`M__ELK_TOPPING__rakor__15__c07`…) · eski [0.3, 0.0, 0.0] → **on** · Gömme fiş paneli (J1, sağ yanda): Harting güç + M12 bilgi + kablo rakorları — yerinde gösterilir (kapalı gövde
+- t 94.65 · 1 parça (`M__ELK_ZINCIR__etiket__15`…) · eski [0.3, 0.0, 0.0] → **arka** · Gömme fiş paneli (J1, sağ yanda): Harting güç + M12 bilgi + kablo rakorları — yerinde gösterilir (kapalı gövde
+- t 94.77 · 1 parça (`M__ELK_ZINCIR__harting__15`…) · eski [0.3, 0.0, 0.0] → **alt** · Gömme fiş paneli (J1, sağ yanda): Harting güç + M12 bilgi + kablo rakorları — yerinde gösterilir (kapalı gövde
+- t 94.88 · 1 parça (`M__ELK_ZINCIR__m12__15__c00`…) · eski [0.3, 0.0, 0.0] → **eksen** · Gömme fiş paneli (J1, sağ yanda): Harting güç + M12 bilgi + kablo rakorları — yerinde gösterilir (kapalı gövde
+- t 95.00 · 1 parça (`M__ELK_ZINCIR__m12__15__c01`…) · eski [0.3, 0.0, 0.0] → **eksen** · Gömme fiş paneli (J1, sağ yanda): Harting güç + M12 bilgi + kablo rakorları — yerinde gösterilir (kapalı gövde
+- t 95.11 · 1 parça (`M__ELK_ZINCIR__paslanmaz__15`…) · eski [0.3, 0.0, 0.0] → **yerinde** · Gömme fiş paneli (J1, sağ yanda): Harting güç + M12 bilgi + kablo rakorları — yerinde gösterilir (kapalı gövde
+- t 95.23 · 1 parça (`M__ELK_ZINCIR__rakor__15`…) · eski [0.3, 0.0, 0.0] → **arka+sol** · Gömme fiş paneli (J1, sağ yanda): Harting güç + M12 bilgi + kablo rakorları — yerinde gösterilir (kapalı gövde
+- t 96.63 · 1 parça (`M__TOPPING_MODUL__aluminyum__16__c00`…) · eski [0.0, 0.0, -0.4] → **cekme** · Gömme fiş paneli (J1, sağ yanda): Harting güç + M12 bilgi + kablo rakorları — yerinde gösterilir (kapalı gövde
+- t 96.68 · 1 parça (`M__TOPPING_MODUL__aluminyum__16__c01`…) · eski [0.0, 0.0, -0.4] → **cekme** · Valf adası (12 valf) arka bölmeye · hava kanalı + askılar — kanal içinden çekilir
+- t 96.73 · 1 parça (`M__TOPPING_MODUL__pom__16`…) · eski [0.0, 0.0, -0.4] → **cekme** · Valf adası (12 valf) arka bölmeye · hava kanalı + askılar — kanal içinden çekilir
+- t 98.33 · 1 parça (`M__ELK_ZINCIR__kod_mavi__16`…) · eski [0.0, 0.0, -0.35] → **cekme** · Valf adası (12 valf) arka bölmeye · hava kanalı + askılar — kanal içinden çekilir
+- t 98.40 · 1 parça (`M__ELK_ZINCIR__rakor__16`…) · eski [0.0, 0.0, -0.35] → **cekme** · Valf adası (12 valf) arka bölmeye · hava kanalı + askılar — kanal içinden çekilir
+- t 98.48 · 1 parça (`M__HAVA_IC__aski__16__c00`…) · eski [0.0, 0.0, -0.35] → **cekme** · Valf adası (12 valf) arka bölmeye · hava kanalı + askılar — kanal içinden çekilir
+- t 98.56 · 1 parça (`M__HAVA_IC__aski__16__c01`…) · eski [0.0, 0.0, -0.35] → **cekme** · Valf adası (12 valf) arka bölmeye · hava kanalı + askılar — kanal içinden çekilir
+- t 98.79 · 1 parça (`M__HAVA_IC__aski__16__c04`…) · eski [0.0, 0.0, -0.35] → **cekme** · Valf adası (12 valf) arka bölmeye · hava kanalı + askılar — kanal içinden çekilir
+- t 98.95 · 1 parça (`M__HAVA_IC__aski__16__c06`…) · eski [0.0, 0.0, -0.35] → **cekme** · Valf adası (12 valf) arka bölmeye · hava kanalı + askılar — kanal içinden çekilir
+- t 99.49 · 1 parça (`M__HAVA_IC__kanal__16__c00`…) · eski [0.0, 0.0, -0.35] → **cekme** · Valf adası (12 valf) arka bölmeye · hava kanalı + askılar — kanal içinden çekilir
+- t 99.57 · 1 parça (`M__HAVA_IC__kanal__16__c01`…) · eski [0.0, 0.0, -0.35] → **cekme** · Valf adası (12 valf) arka bölmeye · hava kanalı + askılar — kanal içinden çekilir
+- t 99.65 · 1 parça (`M__HAVA_IC__kanal__16__c02`…) · eski [0.0, 0.0, -0.35] → **cekme** · Valf adası (12 valf) arka bölmeye · hava kanalı + askılar — kanal içinden çekilir
+- t 100.55 · 1 parça (`M__ELK_ZINCIR__hava__16__c00`…) · eski [0.0, 0.0, -0.45] → **cekme** · Valf adası (12 valf) arka bölmeye · hava kanalı + askılar — kanal içinden çekilir
+- t 100.67 · 1 parça (`M__ELK_ZINCIR__hava__16__c01`…) · eski [0.0, 0.0, -0.45] → **cekme** · Hava hortumları (YEŞİL) — valf adasından UNO pistonlarına, J1 hava rakorundan girişe — kanal içinden çekilir
+- t 100.79 · 1 parça (`M__TOPPING_MODUL__hava_ana__16__c00`…) · eski [0.0, 0.0, -0.45] → **cekme** · Hava hortumları (YEŞİL) — valf adasından UNO pistonlarına, J1 hava rakorundan girişe — kanal içinden çekilir
+- t 100.91 · 1 parça (`M__TOPPING_MODUL__hava_ana__16__c01`…) · eski [0.0, 0.0, -0.45] → **cekme** · Hava hortumları (YEŞİL) — valf adasından UNO pistonlarına, J1 hava rakorundan girişe — kanal içinden çekilir
+- t 101.03 · 1 parça (`M__TOPPING_MODUL__hava_ana__16__c02`…) · eski [0.0, 0.0, -0.45] → **cekme** · Hava hortumları (YEŞİL) — valf adasından UNO pistonlarına, J1 hava rakorundan girişe — kanal içinden çekilir
+- t 101.15 · 1 parça (`M__TOPPING_MODUL__hava_ana__16__c03`…) · eski [0.0, 0.0, -0.45] → **cekme** · Hava hortumları (YEŞİL) — valf adasından UNO pistonlarına, J1 hava rakorundan girişe — kanal içinden çekilir
+- t 101.27 · 1 parça (`M__TOPPING_MODUL__hava_ana__16__c04`…) · eski [0.0, 0.0, -0.45] → **cekme** · Hava hortumları (YEŞİL) — valf adasından UNO pistonlarına, J1 hava rakorundan girişe — kanal içinden çekilir
+- t 101.39 · 1 parça (`M__TOPPING_MODUL__hava_ana__16__c05`…) · eski [0.0, 0.0, -0.45] → **cekme** · Hava hortumları (YEŞİL) — valf adasından UNO pistonlarına, J1 hava rakorundan girişe — kanal içinden çekilir
+- t 102.99 · 11 parça (`M__TOPPING_DONER__VALF_KIYMA__11`…) · eski [0.0, 0.0, -0.8] → **yerinde** · Hava hortumları (YEŞİL) — valf adasından UNO pistonlarına, J1 hava rakorundan girişe — kanal içinden çekilir
+- t 104.29 · 1 parça (`M__TOPPING_MODUL__conta__11`…) · eski [0.0, -0.2, 0.2] → **yerinde** · UNO · kıyma: servis ağzı açıkken hazne + piston + valf arkadan, raf burcuna · gıda hortumu + yayıcı — yerinde 
+- t 105.19 · 11 parça (`M__TOPPING_DONER__VALF_KUSBASI__12`…) · eski [0.0, 0.0, -0.8] → **yerinde** · UNO · kıyma: servis ağzı açıkken hazne + piston + valf arkadan, raf burcuna · gıda hortumu + yayıcı — yerinde 
+- t 106.49 · 1 parça (`M__TOPPING_MODUL__conta__12`…) · eski [0.0, -0.2, 0.2] → **yerinde** · UNO · kuşbaşı: servis ağzı açıkken hazne + piston + valf arkadan, raf burcuna · gıda hortumu + yayıcı — yerind
+- t 107.39 · 15 parça (`M__TOPPING_DONER__VALF_SOS__9`…) · eski [0.0, 0.0, -0.8] → **yerinde** · UNO · kuşbaşı: servis ağzı açıkken hazne + piston + valf arkadan, raf burcuna · gıda hortumu + yayıcı — yerind
+- t 108.69 · 1 parça (`M__TOPPING_MODUL__conta__9__c00`…) · eski [0.0, -0.2, 0.2] → **ust** · UNO · sos: servis ağzı açıkken hazne + piston + valf arkadan, raf burcuna · gıda hortumu + yayıcı — yerinde gö
+- t 108.79 · 1 parça (`M__TOPPING_MODUL__conta__9__c01`…) · eski [0.0, -0.2, 0.2] → **yerinde** · UNO · sos: servis ağzı açıkken hazne + piston + valf arkadan, raf burcuna · gıda hortumu + yayıcı — yerinde gö
+- t 108.89 · 1 parça (`M__TOPPING_MODUL__hortum_gida__9`…) · eski [0.0, -0.2, 0.2] → **arka** · UNO · sos: servis ağzı açıkken hazne + piston + valf arkadan, raf burcuna · gıda hortumu + yayıcı — yerinde gö
+- t 108.99 · 1 parça (`M__TOPPING_MODUL__yayici_sabit_baglanti__9`…) · eski [0.0, -0.2, 0.2] → **ust** · UNO · sos: servis ağzı açıkken hazne + piston + valf arkadan, raf burcuna · gıda hortumu + yayıcı — yerinde gö
+- t 109.89 · 15 parça (`M__TOPPING_DONER__VALF_HARC__10`…) · eski [0.0, 0.0, -0.8] → **yerinde** · UNO · sos: servis ağzı açıkken hazne + piston + valf arkadan, raf burcuna · gıda hortumu + yayıcı — yerinde gö
+- t 111.19 · 1 parça (`M__TOPPING_MODUL__conta__10__c00`…) · eski [0.0, -0.2, 0.2] → **ust** · UNO · harç: servis ağzı açıkken hazne + piston + valf, raf burcuna · gıda hortumu + yayıcı — yukarıdan indiril
+- t 111.29 · 1 parça (`M__TOPPING_MODUL__conta__10__c01`…) · eski [0.0, -0.2, 0.2] → **yerinde** · UNO · harç: servis ağzı açıkken hazne + piston + valf, raf burcuna · gıda hortumu + yayıcı — yukarıdan indiril
+- t 111.39 · 1 parça (`M__TOPPING_MODUL__hortum_gida__10`…) · eski [0.0, -0.2, 0.2] → **arka** · UNO · harç: servis ağzı açıkken hazne + piston + valf, raf burcuna · gıda hortumu + yayıcı — yukarıdan indiril
+- t 111.49 · 1 parça (`M__TOPPING_MODUL__yayici_sabit_baglanti__10`…) · eski [0.0, -0.2, 0.2] → **ust** · UNO · harç: servis ağzı açıkken hazne + piston + valf, raf burcuna · gıda hortumu + yayıcı — yukarıdan indiril
+- t 114.89 · 1 parça (`servis_arka_taban_1700_903_vida`…) · eski [0.0, 0.0, -0.07] → **yerinde** · Servis sacı (pano + kartlar + filtre üstünde) arkadan gelir — 17 × ISO 7380 M5 yan / tavan / taban dönüşündeki
+- t 114.94 · 1 parça (`servis_arka_taban_1950_903_vida`…) · eski [0.0, 0.0, -0.07] → **yerinde** · Servis sacı (pano + kartlar + filtre üstünde) arkadan gelir — 17 × ISO 7380 M5 yan / tavan / taban dönüşündeki
+- t 115.09 · 1 parça (`servis_arka_tavan_1550_2188_vida`…) · eski [0.0, 0.0, -0.07] → **yerinde** · Servis sacı (pano + kartlar + filtre üstünde) arkadan gelir — 17 × ISO 7380 M5 yan / tavan / taban dönüşündeki
+- t 115.14 · 1 parça (`servis_arka_tavan_1800_2188_vida`…) · eski [0.0, 0.0, -0.07] → **yerinde** · Servis sacı (pano + kartlar + filtre üstünde) arkadan gelir — 17 × ISO 7380 M5 yan / tavan / taban dönüşündeki
+- t 115.19 · 1 parça (`servis_arka_tavan_2050_2188_vida`…) · eski [0.0, 0.0, -0.07] → **yerinde** · Servis sacı (pano + kartlar + filtre üstünde) arkadan gelir — 17 × ISO 7380 M5 yan / tavan / taban dönüşündeki
+- t 115.24 · 1 parça (`servis_arka_tavan_2300_2188_vida`…) · eski [0.0, 0.0, -0.07] → **yerinde** · Servis sacı (pano + kartlar + filtre üstünde) arkadan gelir — 17 × ISO 7380 M5 yan / tavan / taban dönüşündeki
+- t 115.29 · 1 parça (`servis_arka_tavan_2450_2188_vida`…) · eski [0.0, 0.0, -0.07] → **yerinde** · Servis sacı (pano + kartlar + filtre üstünde) arkadan gelir — 17 × ISO 7380 M5 yan / tavan / taban dönüşündeki
+- t 115.34 · 1 parça (`servis_arka_yan_sag_2488_1200_vida`…) · eski [0.0, 0.0, -0.07] → **yerinde** · Servis sacı (pano + kartlar + filtre üstünde) arkadan gelir — 17 × ISO 7380 M5 yan / tavan / taban dönüşündeki
+- t 115.39 · 1 parça (`servis_arka_yan_sag_2488_1440_vida`…) · eski [0.0, 0.0, -0.07] → **yerinde** · Servis sacı (pano + kartlar + filtre üstünde) arkadan gelir — 17 × ISO 7380 M5 yan / tavan / taban dönüşündeki
+- t 115.44 · 1 parça (`servis_arka_yan_sag_2488_1700_vida`…) · eski [0.0, 0.0, -0.07] → **yerinde** · Servis sacı (pano + kartlar + filtre üstünde) arkadan gelir — 17 × ISO 7380 M5 yan / tavan / taban dönüşündeki
+- t 115.49 · 1 parça (`servis_arka_yan_sag_2488_1960_vida`…) · eski [0.0, 0.0, -0.07] → **yerinde** · Servis sacı (pano + kartlar + filtre üstünde) arkadan gelir — 17 × ISO 7380 M5 yan / tavan / taban dönüşündeki
+- t 115.59 · 1 parça (`servis_arka_yan_sag_2488_960_vida`…) · eski [0.0, 0.0, -0.07] → **yerinde** · Servis sacı (pano + kartlar + filtre üstünde) arkadan gelir — 17 × ISO 7380 M5 yan / tavan / taban dönüşündeki
+- t 115.64 · 1 parça (`servis_arka_yan_sol_1447_1150_vida`…) · eski [0.0, 0.0, -0.07] → **yerinde** · Servis sacı (pano + kartlar + filtre üstünde) arkadan gelir — 17 × ISO 7380 M5 yan / tavan / taban dönüşündeki
+- t 116.64 · 24 parça (`M__TOPPING_DONER__HELEZON_KASAR__13`…) · eski [0.0, 0.0, 0.75] → **yerinde** · Servis sacı (pano + kartlar + filtre üstünde) arkadan gelir — 17 × ISO 7380 M5 yan / tavan / taban dönüşündeki
+- t 118.74 · 24 parça (`M__TOPPING_DONER__HELEZON_SUCUK__14`…) · eski [0.0, 0.0, 0.75] → **yerinde** · Kaşar kaseti dil kanalından raya sürülür — kaplin motora geçer, mandal kilitler — yerinde gösterilir (kapalı g
+- t 121.04 · 20 parça (`M__TOPPING_MODUL__celik__8__c00`…) · eski [0.0, 0.0, 0.7] → **yerinde** · Sucuk kaseti dil kanalından raya sürülür — kaplin motora geçer, mandal kilitler — yerinde gösterilir (kapalı g
+- t 123.44 · 15 parça (`M__TOPPING_DONER__TABLA__8`…) · eski [0.0, 0.35, 0.0] → **sag** · X ekseni: ray tabanı + lineer ray + tahrik motoru — tabanı 4 × M6 kaide plakasındaki PEM'lere (A geçiş ağzında
+- t 128.70 · 1 parça (`arayuz_kb_1456_110_pul`…) · eski [0.0, 0.12, 0.0] → **eksen** · Kanatlar K1 / K2 (çift cidar + PU + fitil) önden, menteşelere — vidalar / pullar kendi eksenlerinde
+- t 128.78 · 1 parça (`arayuz_kb_1456_706_pul`…) · eski [0.0, 0.12, 0.0] → **eksen** · Sahada: kaide B tavanına 4 × M8 + DIN 9021 (kaide borusunun içinden) — A, B, F silik — vidalar / pullar kendi 
+- t 128.86 · 1 parça (`arayuz_kb_2120_110_pul`…) · eski [0.0, 0.12, 0.0] → **eksen** · Sahada: kaide B tavanına 4 × M8 + DIN 9021 (kaide borusunun içinden) — A, B, F silik — vidalar / pullar kendi 
+- t 128.94 · 1 parça (`arayuz_kb_2480_110_pul`…) · eski [0.0, 0.12, 0.0] → **eksen** · Sahada: kaide B tavanına 4 × M8 + DIN 9021 (kaide borusunun içinden) — A, B, F silik — vidalar / pullar kendi 
+- t 129.44 · 1 parça (`arayuz_kb_1456_110`…) · eski [0.0, 0.18, 0.0] → **eksen** · Sahada: kaide B tavanına 4 × M8 + DIN 9021 (kaide borusunun içinden) — A, B, F silik — vidalar / pullar kendi 
+- t 129.52 · 1 parça (`arayuz_kb_1456_706`…) · eski [0.0, 0.18, 0.0] → **eksen** · Sahada: kaide B tavanına 4 × M8 + DIN 9021 (kaide borusunun içinden) — A, B, F silik — vidalar / pullar kendi 
+- t 129.60 · 1 parça (`arayuz_kb_2120_110`…) · eski [0.0, 0.18, 0.0] → **eksen** · Sahada: kaide B tavanına 4 × M8 + DIN 9021 (kaide borusunun içinden) — A, B, F silik — vidalar / pullar kendi 
+- t 129.68 · 1 parça (`arayuz_kb_2480_110`…) · eski [0.0, 0.18, 0.0] → **eksen** · Sahada: kaide B tavanına 4 × M8 + DIN 9021 (kaide borusunun içinden) — A, B, F silik — vidalar / pullar kendi 
+### Çözülemeyen
+- pem_M8_A_1300_300 (1 parça) — yerinde
+- pem_M8_A_1300_700 (1 parça) — yerinde
+- pem_M8_A_2000_300 (1 parça) — yerinde
+- pem_M8_A_2000_700 (1 parça) — yerinde
+- pem_M8_F_1000_760 (1 parça) — yerinde
+- pem_M8_F_1250_700 (1 parça) — yerinde
+- pem_M8_F_1700_780 (1 parça) — yerinde
+- pem_M8_F_1950_780 (1 parça) — yerinde
+- teknik_on_perde (1 parça) — yerinde
+- kuru_bolme_tabani (1 parça) — yerinde
+- soguk_arka_dis_sac (1 parça) — yerinde
+- pu_levha_taban (1 parça) — yerinde
+- dusme_kovani_kiyma_L1 (1 parça) — yerinde
+- dusme_kovani_kiyma_L2 (1 parça) — yerinde
+- dusme_kovani_kusbasi_L1 (1 parça) — yerinde
+- dusme_kovani_kusbasi_L2 (1 parça) — yerinde
+- dusme_kovani_harc (1 parça) — yerinde
+- dusme_kovani_kasar (1 parça) — yerinde
+- dusme_kovani_sos (1 parça) — yerinde
+- dusme_kovani_sucuk (1 parça) — yerinde
+- M__TOPPING_MODUL__celik__15__c00 (1 parça) — yerinde
+- M__TOPPING_MODUL__celik__15__c01 (1 parça) — yerinde
+- M__TOPPING_MODUL__sac__15__c01 (1 parça) — yerinde
+- kaide_arka_emis_filtresi (1 parça) — yerinde
+- M__TOPPING_MODUL__celik__17__c02 (8 parça) — yerinde
+- M__TOPPING_MODUL__celik__17__c00 (7 parça) — yerinde
+- M__TOPPING_MODUL__celik__17__c01 (7 parça) — yerinde
+- M__TOPPING_MODUL__bakir__17 (1 parça) — yerinde
+- M__TOPPING_MODUL__silikon__17__c00 (1 parça) — yerinde
+- M__TOPPING_MODUL__kart__15__c00 (1 parça) — yerinde
+- M__TOPPING_MODUL__kart__15__c01 (1 parça) — yerinde
+- M__TOPPING_MODUL__kart__15__c02 (1 parça) — yerinde
+- M__TOPPING_MODUL__kart__15__c03 (1 parça) — yerinde
+- M__TOPPING_MODUL__koyu__15__c01 (1 parça) — yerinde
+- M__TOPPING_MODUL__koyu__15__c02 (1 parça) — yerinde
+- M__TOPPING_MODUL__koyu__15__c03 (1 parça) — yerinde
+- M__TOPPING_MODUL__koyu__15__c04 (1 parça) — yerinde
+- M__ELK_IC__kanal__15__c04 (1 parça) — yerinde
+- M__ELK_TOPPING__celik__15__c04 (1 parça) — yerinde
+- M__ELK_TOPPING__kanal__15__c00 (1 parça) — yerinde
+- M__ELK_TOPPING__rakor__15__c00 (1 parça) — yerinde
+- M__ELK_TOPPING__rakor__15__c01 (1 parça) — yerinde
+- M__ELK_TOPPING__rakor__15__c02 (1 parça) — yerinde
+- M__ELK_TOPPING__rakor__15__c03 (1 parça) — yerinde
+- M__ELK_TOPPING__rakor__15__c04 (1 parça) — yerinde
+- M__ELK_TOPPING__rakor__15__c05 (1 parça) — yerinde
+- M__ELK_ZINCIR__paslanmaz__15 (1 parça) — yerinde
+- M__TOPPING_DONER__VALF_KIYMA__11 (11 parça) — yerinde
+- M__TOPPING_MODUL__conta__11 (1 parça) — yerinde
+- M__TOPPING_DONER__VALF_KUSBASI__12 (11 parça) — yerinde
+- M__TOPPING_MODUL__conta__12 (1 parça) — yerinde
+- M__TOPPING_DONER__VALF_SOS__9 (15 parça) — yerinde
+- M__TOPPING_MODUL__conta__9__c01 (1 parça) — yerinde
+- M__TOPPING_DONER__VALF_HARC__10 (15 parça) — yerinde
+- M__TOPPING_MODUL__conta__10__c01 (1 parça) — yerinde
+- servis_arka_taban_1700_903_vida (1 parça) — yerinde
+- servis_arka_taban_1950_903_vida (1 parça) — yerinde
+- servis_arka_tavan_1550_2188_vida (1 parça) — yerinde
+- servis_arka_tavan_1800_2188_vida (1 parça) — yerinde
+- servis_arka_tavan_2050_2188_vida (1 parça) — yerinde
+- servis_arka_tavan_2300_2188_vida (1 parça) — yerinde
+- servis_arka_tavan_2450_2188_vida (1 parça) — yerinde
+- servis_arka_yan_sag_2488_1200_vida (1 parça) — yerinde
+- servis_arka_yan_sag_2488_1440_vida (1 parça) — yerinde
+- servis_arka_yan_sag_2488_1700_vida (1 parça) — yerinde
+- servis_arka_yan_sag_2488_1960_vida (1 parça) — yerinde
+- servis_arka_yan_sag_2488_960_vida (1 parça) — yerinde
+- servis_arka_yan_sol_1447_1150_vida (1 parça) — yerinde
+- M__TOPPING_DONER__HELEZON_KASAR__13 (24 parça) — yerinde
+- M__TOPPING_DONER__HELEZON_SUCUK__14 (24 parça) — yerinde
+- M__TOPPING_MODUL__celik__8__c00 (20 parça) — yerinde
+### SONRA kalan
+- t 38.05 `teknik_sag_perde` ↔ `teknik_on_perde` 72 mm
+### Havada (oturduğu anda hiçbir yerinde parçaya değmeyen) sac / profil
+- `kaide_arka_boru`
+### Adım listesi
+1. **Lazer kesim** — 43 sac · 7 profil — kaide 7 boru + menfezli ön perde C · dış kabuk 4 sac · sökülür arka servis sacı · soğuk oda 13 sac · 6 düşme kovanı · 4 evaporatör kanal kovanı
+2. **PEM saplama / somun basma** — turuncu noktalar = PEM yerleri (açınım üstünde)
+3. **Abkant büküm** — kırmızı kesik = büküm çizgisi · gri = büküm bölgesi
+4. **Kaide · menfezli ön perde** — 7 boru + enine lama · menfezli ön perde C · 2 cep taşıyıcı L · üst plaka 4 mm + 6 PEM SP-M6 · 17 delik kaynağı
+5. **Dış kabuk · kuru bölme** — dış taban · 2 × M6 gövde → kaide · sol yan + 4 PEM M8 (A) · sağ yan + 4 PEM M8 (F) · tavan · soğutma cebi · ayırma + teknik perdeler · kuru bölme tabanı
+6. **Soğuk oda · yalıtım levhaları + astar, raflar, eşik, kovanlar, ön çerçeve** — alt sac · arka dış sac · 4 kanal kovanı · 5 PU levha (arka, sol, sağ, tavan, taban) · astar 4 sac · raf + 2 köşebent · 6 düşme kovanı · 2 dil kanalı · eşik · üst raf + 2 köşebent · raf burçları · ön çerçeve
+7. **Arka servis sacı · alt montaj** — servis sacı 1,5 · pano kutusu · DIN plakası + rayları · emiş filtresi
+8. **Soğutma grubu + evaporatör L / R + bakır hatlar** — soğutma grubu + 4 takoz · evaporatör L · evaporatör R · bakır hatlar · yoğuşma hortumu
+9. **Kaset tahrik motorları** — 2 kaset tahrik motoru
+10. **Elektrik · kartlar, kutu, kanallar, kablolar, fiş paneli** — 4 sürücü kartı + kutu cihazları · iç kanallar · güç (kırmızı) · bilgi (mavi) · J1 fiş paneli
+11. **Valf adası + hava hortumları** — valf adası (12 valf) · hava kanalı + askılar · hava hortumları (yeşil)
+12. **UNO'lar (4) + hortumlar + yayıcılar** — UNO kıyma · UNO kuşbaşı · UNO sos · UNO harç · gıda hortumları · yayıcılar
+13. **Arka servis sacı kapanır** — servis sacı + pano + kartlar + filtre · 17 × ISO 7380 M5
+14. **Kaşar + sucuk kasetleri** — kaşar kaseti · sucuk kaseti · mandal
+15. **Tabla + X ekseni** — ray tabanı + lineer ray · X motoru · 4 × M6 · araba · tabla
+16. **Kapaklar (kanatlar)** — menteşe gövdeleri · bas-aç · kanat K1 · kanat K2
+17. **Saha · B, A ve F bağlantısı** — 4 × M8 + DIN 9021 (B) · 4 × M8 × 16 (F)

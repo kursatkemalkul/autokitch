@@ -1,0 +1,7236 @@
+{
+"ist": "T",
+"mod": "h3_topping_sac_v2",
+"gruplar": {
+"T": {
+"sac": [
+{
+"ad": "dis_yan_sol",
+"rol": "dis",
+"t": 1.5,
+"R": 2.25,
+"K": 0.45,
+"bolge": "gida_disi",
+"birim": "TOPPING_GOVDE",
+"bukum": [
+{
+"R": 2.25,
+"aci": 90.0,
+"K": 0.45
+}
+],
+"kose": []
+},
+{
+"ad": "dis_yan_sag",
+"rol": "dis",
+"t": 1.5,
+"R": 2.25,
+"K": 0.45,
+"bolge": "gida_disi",
+"birim": "TOPPING_GOVDE",
+"bukum": [
+{
+"R": 2.25,
+"aci": 90.0,
+"K": 0.45
+}
+],
+"kose": []
+},
+{
+"ad": "dis_tavan",
+"rol": "dis",
+"t": 1.5,
+"R": 2.25,
+"K": 0.45,
+"bolge": "gida_disi",
+"birim": "TOPPING_GOVDE",
+"bukum": [
+{
+"R": 2.25,
+"aci": 90.0,
+"K": 0.45
+},
+{
+"R": 2.25,
+"aci": 90.0,
+"K": 0.45
+},
+{
+"R": 2.25,
+"aci": 90.0,
+"K": 0.45
+}
+],
+"kose": []
+},
+{
+"ad": "dis_taban",
+"rol": "dis",
+"t": 1.5,
+"R": 2.25,
+"K": 0.45,
+"bolge": "gida_disi",
+"birim": "TOPPING_GOVDE",
+"bukum": [
+{
+"R": 2.25,
+"aci": 90.0,
+"K": 0.45
+},
+{
+"R": 2.25,
+"aci": 90.0,
+"K": 0.45
+},
+{
+"R": 2.25,
+"aci": 90.0,
+"K": 0.45
+}
+],
+"kose": []
+},
+{
+"ad": "dis_arka_servis",
+"rol": "dis",
+"t": 1.5,
+"R": 2.25,
+"K": 0.45,
+"bolge": "gida_disi",
+"birim": "TOPPING_GOVDE",
+"bukum": [],
+"kose": []
+},
+{
+"ad": "on_cerceve_430",
+"rol": "ic",
+"t": 1.0,
+"R": 1.5,
+"K": 0.45,
+"bolge": "gida_disi",
+"birim": "TOPPING_GOVDE",
+"bukum": [],
+"kose": []
+},
+{
+"ad": "soguk_alt_sac",
+"rol": "dis",
+"t": 1.5,
+"R": 2.25,
+"K": 0.45,
+"bolge": "gida_disi",
+"birim": "TOPPING_GOVDE",
+"bukum": [],
+"kose": []
+},
+{
+"ad": "soguk_arka_dis_sac",
+"rol": "dis",
+"t": 1.5,
+"R": 2.25,
+"K": 0.45,
+"bolge": "gida_disi",
+"birim": "TOPPING_GOVDE",
+"bukum": [],
+"kose": []
+},
+{
+"ad": "astar_sol",
+"rol": "ic",
+"t": 1.0,
+"R": 3.0,
+"K": 0.45,
+"bolge": "gida",
+"birim": "TOPPING_GOVDE",
+"bukum": [
+{
+"R": 3.0,
+"aci": 90.0,
+"K": 0.45
+},
+{
+"R": 3.0,
+"aci": 90.0,
+"K": 0.45
+},
+{
+"R": 3.0,
+"aci": 90.0,
+"K": 0.45
+},
+{
+"R": 3.0,
+"aci": 90.0,
+"K": 0.45
+}
+],
+"kose": []
+},
+{
+"ad": "astar_sag",
+"rol": "ic",
+"t": 1.0,
+"R": 3.0,
+"K": 0.45,
+"bolge": "gida",
+"birim": "TOPPING_GOVDE",
+"bukum": [
+{
+"R": 3.0,
+"aci": 90.0,
+"K": 0.45
+},
+{
+"R": 3.0,
+"aci": 90.0,
+"K": 0.45
+},
+{
+"R": 3.0,
+"aci": 90.0,
+"K": 0.45
+},
+{
+"R": 3.0,
+"aci": 90.0,
+"K": 0.45
+}
+],
+"kose": []
+},
+{
+"ad": "astar_tavan",
+"rol": "ic",
+"t": 1.0,
+"R": 3.0,
+"K": 0.45,
+"bolge": "gida",
+"birim": "TOPPING_GOVDE",
+"bukum": [
+{
+"R": 3.0,
+"aci": 90.0,
+"K": 0.45
+},
+{
+"R": 3.0,
+"aci": 90.0,
+"K": 0.45
+}
+],
+"kose": []
+},
+{
+"ad": "astar_arka",
+"rol": "ic",
+"t": 1.0,
+"R": 3.0,
+"K": 0.45,
+"bolge": "gida",
+"birim": "TOPPING_GOVDE",
+"bukum": [],
+"kose": []
+},
+{
+"ad": "evap_kanal_kovani_0_L1",
+"rol": "ic",
+"t": 1.0,
+"R": 1.5,
+"K": 0.45,
+"bolge": "gida_disi",
+"birim": "TOPPING_GOVDE",
+"bukum": [
+{
+"R": 1.5,
+"aci": 90.0,
+"K": 0.45
+}
+],
+"kose": []
+},
+{
+"ad": "evap_kanal_kovani_0_L2",
+"rol": "ic",
+"t": 1.0,
+"R": 1.5,
+"K": 0.45,
+"bolge": "gida_disi",
+"birim": "TOPPING_GOVDE",
+"bukum": [
+{
+"R": 1.5,
+"aci": 90.0,
+"K": 0.45
+}
+],
+"kose": []
+},
+{
+"ad": "evap_kanal_kovani_1_L1",
+"rol": "ic",
+"t": 1.0,
+"R": 1.5,
+"K": 0.45,
+"bolge": "gida_disi",
+"birim": "TOPPING_GOVDE",
+"bukum": [
+{
+"R": 1.5,
+"aci": 90.0,
+"K": 0.45
+}
+],
+"kose": []
+},
+{
+"ad": "evap_kanal_kovani_1_L2",
+"rol": "ic",
+"t": 1.0,
+"R": 1.5,
+"K": 0.45,
+"bolge": "gida_disi",
+"birim": "TOPPING_GOVDE",
+"bukum": [
+{
+"R": 1.5,
+"aci": 90.0,
+"K": 0.45
+}
+],
+"kose": []
+},
+{
+"ad": "evap_kanal_kovani_2_L1",
+"rol": "ic",
+"t": 1.0,
+"R": 1.5,
+"K": 0.45,
+"bolge": "gida_disi",
+"birim": "TOPPING_GOVDE",
+"bukum": [
+{
+"R": 1.5,
+"aci": 90.0,
+"K": 0.45
+}
+],
+"kose": []
+},
+{
+"ad": "evap_kanal_kovani_2_L2",
+"rol": "ic",
+"t": 1.0,
+"R": 1.5,
+"K": 0.45,
+"bolge": "gida_disi",
+"birim": "TOPPING_GOVDE",
+"bukum": [
+{
+"R": 1.5,
+"aci": 90.0,
+"K": 0.45
+}
+],
+"kose": []
+},
+{
+"ad": "evap_kanal_kovani_3_L1",
+"rol": "ic",
+"t": 1.0,
+"R": 1.5,
+"K": 0.45,
+"bolge": "gida_disi",
+"birim": "TOPPING_GOVDE",
+"bukum": [
+{
+"R": 1.5,
+"aci": 90.0,
+"K": 0.45
+}
+],
+"kose": []
+},
+{
+"ad": "evap_kanal_kovani_3_L2",
+"rol": "ic",
+"t": 1.0,
+"R": 1.5,
+"K": 0.45,
+"bolge": "gida_disi",
+"birim": "TOPPING_GOVDE",
+"bukum": [
+{
+"R": 1.5,
+"aci": 90.0,
+"K": 0.45
+}
+],
+"kose": []
+},
+{
+"ad": "dusme_kovani_kiyma_L1",
+"rol": "ic",
+"t": 3.0,
+"R": 4.5,
+"K": 0.41,
+"bolge": "gida_disi",
+"birim": "TOPPING_GOVDE",
+"bukum": [
+{
+"R": 4.5,
+"aci": 90.0,
+"K": 0.41
+}
+],
+"kose": []
+},
+{
+"ad": "dusme_kovani_kiyma_L2",
+"rol": "ic",
+"t": 3.0,
+"R": 4.5,
+"K": 0.41,
+"bolge": "gida_disi",
+"birim": "TOPPING_GOVDE",
+"bukum": [
+{
+"R": 4.5,
+"aci": 90.0,
+"K": 0.41
+}
+],
+"kose": []
+},
+{
+"ad": "dusme_kovani_kusbasi_L1",
+"rol": "ic",
+"t": 3.0,
+"R": 4.5,
+"K": 0.41,
+"bolge": "gida_disi",
+"birim": "TOPPING_GOVDE",
+"bukum": [
+{
+"R": 4.5,
+"aci": 90.0,
+"K": 0.41
+}
+],
+"kose": []
+},
+{
+"ad": "dusme_kovani_kusbasi_L2",
+"rol": "ic",
+"t": 3.0,
+"R": 4.5,
+"K": 0.41,
+"bolge": "gida_disi",
+"birim": "TOPPING_GOVDE",
+"bukum": [
+{
+"R": 4.5,
+"aci": 90.0,
+"K": 0.41
+}
+],
+"kose": []
+},
+{
+"ad": "raf",
+"rol": "ic",
+"t": 3.0,
+"R": 4.5,
+"K": 0.41,
+"bolge": "gida",
+"birim": "TOPPING_GOVDE",
+"bukum": [
+{
+"R": 4.5,
+"aci": 90.0,
+"K": 0.41
+},
+{
+"R": 4.5,
+"aci": 90.0,
+"K": 0.41
+},
+{
+"R": 4.5,
+"aci": 90.0,
+"K": 0.41
+},
+{
+"R": 4.5,
+"aci": 90.0,
+"K": 0.41
+}
+],
+"kose": []
+},
+{
+"ad": "raf_kosebendi_sol",
+"rol": "ic",
+"t": 3.0,
+"R": 4.5,
+"K": 0.41,
+"bolge": "gida",
+"birim": "TOPPING_GOVDE",
+"bukum": [
+{
+"R": 4.5,
+"aci": 90.0,
+"K": 0.41
+}
+],
+"kose": []
+},
+{
+"ad": "raf_kosebendi_sag",
+"rol": "ic",
+"t": 3.0,
+"R": 4.5,
+"K": 0.41,
+"bolge": "gida",
+"birim": "TOPPING_GOVDE",
+"bukum": [
+{
+"R": 4.5,
+"aci": 90.0,
+"K": 0.41
+}
+],
+"kose": []
+},
+{
+"ad": "ust_raf",
+"rol": "ic",
+"t": 3.0,
+"R": 4.5,
+"K": 0.41,
+"bolge": "gida",
+"birim": "TOPPING_GOVDE",
+"bukum": [
+{
+"R": 4.5,
+"aci": 90.0,
+"K": 0.41
+},
+{
+"R": 4.5,
+"aci": 90.0,
+"K": 0.41
+}
+],
+"kose": []
+},
+{
+"ad": "ust_raf_kosebendi_sol",
+"rol": "ic",
+"t": 3.0,
+"R": 4.5,
+"K": 0.41,
+"bolge": "gida",
+"birim": "TOPPING_GOVDE",
+"bukum": [
+{
+"R": 4.5,
+"aci": 90.0,
+"K": 0.41
+}
+],
+"kose": []
+},
+{
+"ad": "ust_raf_kosebendi_sag",
+"rol": "ic",
+"t": 3.0,
+"R": 4.5,
+"K": 0.41,
+"bolge": "gida",
+"birim": "TOPPING_GOVDE",
+"bukum": [
+{
+"R": 4.5,
+"aci": 90.0,
+"K": 0.41
+}
+],
+"kose": []
+},
+{
+"ad": "soguk_esik",
+"rol": "ic",
+"t": 1.2,
+"R": 3.0,
+"K": 0.45,
+"bolge": "gida",
+"birim": "TOPPING_GOVDE",
+"bukum": [
+{
+"R": 3.0,
+"aci": 90.0,
+"K": 0.45
+},
+{
+"R": 3.0,
+"aci": 90.0,
+"K": 0.45
+},
+{
+"R": 3.0,
+"aci": 90.0,
+"K": 0.45
+}
+],
+"kose": []
+},
+{
+"ad": "dil_kanali_kasar",
+"rol": "ic",
+"t": 1.0,
+"R": 3.0,
+"K": 0.45,
+"bolge": "gida",
+"birim": "TOPPING_GOVDE",
+"bukum": [
+{
+"R": 3.0,
+"aci": 90.0,
+"K": 0.45
+},
+{
+"R": 3.0,
+"aci": 90.0,
+"K": 0.45
+}
+],
+"kose": []
+},
+{
+"ad": "dil_kanali_sucuk",
+"rol": "ic",
+"t": 1.0,
+"R": 3.0,
+"K": 0.45,
+"bolge": "gida",
+"birim": "TOPPING_GOVDE",
+"bukum": [
+{
+"R": 3.0,
+"aci": 90.0,
+"K": 0.45
+},
+{
+"R": 3.0,
+"aci": 90.0,
+"K": 0.45
+}
+],
+"kose": []
+},
+{
+"ad": "kuru_bolme_tabani",
+"rol": "dis",
+"t": 1.5,
+"R": 2.25,
+"K": 0.45,
+"bolge": "gida_disi",
+"birim": "TOPPING_GOVDE",
+"bukum": [
+{
+"R": 2.25,
+"aci": 90.0,
+"K": 0.45
+},
+{
+"R": 2.25,
+"aci": 90.0,
+"K": 0.45
+}
+],
+"kose": []
+},
+{
+"ad": "kanal_gecis_kapagi",
+"rol": "dis",
+"t": 1.5,
+"R": 2.25,
+"K": 0.45,
+"bolge": "gida_disi",
+"birim": "TOPPING_GOVDE",
+"bukum": [],
+"kose": []
+},
+{
+"ad": "evaporator_ayagi_0",
+"rol": "braket",
+"t": 2.5,
+"R": 3.75,
+"K": 0.45,
+"bolge": "gida_disi",
+"birim": "TOPPING_GOVDE",
+"bukum": [
+{
+"R": 3.75,
+"aci": 90.0,
+"K": 0.45
+}
+],
+"kose": []
+},
+{
+"ad": "evaporator_ayagi_1",
+"rol": "braket",
+"t": 2.5,
+"R": 3.75,
+"K": 0.45,
+"bolge": "gida_disi",
+"birim": "TOPPING_GOVDE",
+"bukum": [
+{
+"R": 3.75,
+"aci": 90.0,
+"K": 0.45
+}
+],
+"kose": []
+},
+{
+"ad": "evaporator_ayagi_2",
+"rol": "braket",
+"t": 2.5,
+"R": 3.75,
+"K": 0.45,
+"bolge": "gida_disi",
+"birim": "TOPPING_GOVDE",
+"bukum": [
+{
+"R": 3.75,
+"aci": 90.0,
+"K": 0.45
+}
+],
+"kose": []
+},
+{
+"ad": "evaporator_ayagi_3",
+"rol": "braket",
+"t": 2.5,
+"R": 3.75,
+"K": 0.45,
+"bolge": "gida_disi",
+"birim": "TOPPING_GOVDE",
+"bukum": [
+{
+"R": 3.75,
+"aci": 90.0,
+"K": 0.45
+}
+],
+"kose": []
+},
+{
+"ad": "teknik_on_perde",
+"rol": "dis",
+"t": 1.5,
+"R": 2.25,
+"K": 0.45,
+"bolge": "gida_disi",
+"birim": "TOPPING_GOVDE",
+"bukum": [
+{
+"R": 2.25,
+"aci": 90.0,
+"K": 0.45
+},
+{
+"R": 2.25,
+"aci": 90.0,
+"K": 0.45
+}
+],
+"kose": []
+},
+{
+"ad": "teknik_sag_perde",
+"rol": "dis",
+"t": 1.5,
+"R": 2.25,
+"K": 0.45,
+"bolge": "gida_disi",
+"birim": "TOPPING_GOVDE",
+"bukum": [],
+"kose": []
+},
+{
+"ad": "ayirma_perdesi_cep_sol",
+"rol": "dis",
+"t": 1.5,
+"R": 2.25,
+"K": 0.45,
+"bolge": "gida_disi",
+"birim": "TOPPING_GOVDE",
+"bukum": [],
+"kose": []
+},
+{
+"ad": "sogutma_cebi",
+"rol": "dis",
+"t": 1.5,
+"R": 2.25,
+"K": 0.45,
+"bolge": "gida_disi",
+"birim": "TOPPING_GOVDE",
+"bukum": [
+{
+"R": 2.25,
+"aci": 90.0,
+"K": 0.45
+},
+{
+"R": 2.25,
+"aci": 90.0,
+"K": 0.45
+},
+{
+"R": 2.25,
+"aci": 90.0,
+"K": 0.45
+}
+],
+"kose": null
+},
+{
+"ad": "kaide_enine_lama_6",
+"rol": "braket",
+"t": 6.0,
+"R": 9.0,
+"K": 0.45,
+"bolge": "gida_disi",
+"birim": "TOPPING_GOVDE",
+"bukum": [],
+"kose": []
+},
+{
+"ad": "kaide_on_perde_menfezli",
+"rol": "dis",
+"t": 2.0,
+"R": 3.0,
+"K": 0.41,
+"bolge": "gida_disi",
+"birim": "TOPPING_GOVDE",
+"bukum": [
+{
+"R": 3.0,
+"aci": 90.0,
+"K": 0.41
+},
+{
+"R": 3.0,
+"aci": 90.0,
+"K": 0.41
+}
+],
+"kose": []
+},
+{
+"ad": "kaide_ust_plaka_4",
+"rol": "braket",
+"t": 4.0,
+"R": 6.0,
+"K": 0.45,
+"bolge": "gida_disi",
+"birim": "TOPPING_GOVDE",
+"bukum": [],
+"kose": []
+},
+{
+"ad": "kaide_cep_tasiyici_0",
+"rol": "braket",
+"t": 3.0,
+"R": 4.5,
+"K": 0.41,
+"bolge": "gida_disi",
+"birim": "TOPPING_GOVDE",
+"bukum": [
+{
+"R": 4.5,
+"aci": 90.0,
+"K": 0.41
+}
+],
+"kose": []
+},
+{
+"ad": "kaide_cep_tasiyici_1",
+"rol": "braket",
+"t": 3.0,
+"R": 4.5,
+"K": 0.41,
+"bolge": "gida_disi",
+"birim": "TOPPING_GOVDE",
+"bukum": [
+{
+"R": 4.5,
+"aci": 90.0,
+"K": 0.41
+}
+],
+"kose": []
+}
+],
+"profil": [
+{
+"ad": "kaide_arka_boru",
+"b1": 100.0,
+"b2": 40.0,
+"t": 2.0,
+"Ro": 4.0,
+"std": "Dikdörtgen boru",
+"L": 1064.0
+},
+{
+"ad": "kaide_sol_boru",
+"b1": 40.0,
+"b2": 100.0,
+"t": 2.0,
+"Ro": 4.0,
+"std": "Dikdörtgen boru",
+"L": 785.0
+},
+{
+"ad": "kaide_sag_boru",
+"b1": 40.0,
+"b2": 100.0,
+"t": 2.0,
+"Ro": 4.0,
+"std": "Dikdörtgen boru",
+"L": 785.0
+},
+{
+"ad": "kaide_enine_boru",
+"b1": 40.0,
+"b2": 100.0,
+"t": 2.0,
+"Ro": 4.0,
+"std": "Dikdörtgen boru",
+"L": 785.0
+},
+{
+"ad": "kaide_boyuna_boru_1",
+"b1": 100.0,
+"b2": 40.0,
+"t": 2.0,
+"Ro": 4.0,
+"std": "Dikdörtgen boru",
+"L": 138.0
+},
+{
+"ad": "kaide_boyuna_boru_2",
+"b1": 100.0,
+"b2": 40.0,
+"t": 2.0,
+"Ro": 4.0,
+"std": "Dikdörtgen boru",
+"L": 480.0
+},
+{
+"ad": "kaide_boyuna_boru_3",
+"b1": 100.0,
+"b2": 40.0,
+"t": 2.0,
+"Ro": 4.0,
+"std": "Dikdörtgen boru",
+"L": 320.0
+}
+],
+"eleman": [
+{
+"ad": "pem_M8_A_1300_300",
+"bom": [
+"PEM kendinden kenetli somun SP-M8-1 (A286 / sertleştirilmiş paslanmaz · sac ≤ HRB 90 (304 için))",
+1,
+"delik Ø10.50 · gövde Ø12.70 × 5.47",
+"PEM SP-M8-1 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M8",
+"pem_tip": "SP",
+"parca": "SP-M8-1",
+"delik": 10.5,
+"kenar_min": 9.7,
+"min_sac": 1.4,
+"sap": 1.38,
+"T": 5.47,
+"tur": "baglanti",
+"std": "PEM SP-M8-1",
+"malzeme": "A286 pasive"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "pem_M8_A_1300_300_kopuk_kapagi",
+"bom": [
+"Köpük kapağı PEM SP-M8 · köpüklemeden önce takılır",
+1,
+"Ø14.3 × 4.9",
+"PE geçme kapak (PEM / Kalei köpük kapağı) · PE-LD",
+"SATIN ALMA"
+],
+"meta": {
+"tur": "baglanti",
+"std": "PE geçme kapak (PEM / Kalei köpük kapağı)",
+"malzeme": "PE-LD"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "pem_M8_A_1300_700",
+"bom": [
+"PEM kendinden kenetli somun SP-M8-1 (A286 / sertleştirilmiş paslanmaz · sac ≤ HRB 90 (304 için))",
+1,
+"delik Ø10.50 · gövde Ø12.70 × 5.47",
+"PEM SP-M8-1 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M8",
+"pem_tip": "SP",
+"parca": "SP-M8-1",
+"delik": 10.5,
+"kenar_min": 9.7,
+"min_sac": 1.4,
+"sap": 1.38,
+"T": 5.47,
+"tur": "baglanti",
+"std": "PEM SP-M8-1",
+"malzeme": "A286 pasive"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "pem_M8_A_2000_300",
+"bom": [
+"PEM kendinden kenetli somun SP-M8-1 (A286 / sertleştirilmiş paslanmaz · sac ≤ HRB 90 (304 için))",
+1,
+"delik Ø10.50 · gövde Ø12.70 × 5.47",
+"PEM SP-M8-1 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M8",
+"pem_tip": "SP",
+"parca": "SP-M8-1",
+"delik": 10.5,
+"kenar_min": 9.7,
+"min_sac": 1.4,
+"sap": 1.38,
+"T": 5.47,
+"tur": "baglanti",
+"std": "PEM SP-M8-1",
+"malzeme": "A286 pasive"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "pem_M8_A_2000_300_kopuk_kapagi",
+"bom": [
+"Köpük kapağı PEM SP-M8 · köpüklemeden önce takılır",
+1,
+"Ø14.3 × 4.9",
+"PE geçme kapak (PEM / Kalei köpük kapağı) · PE-LD",
+"SATIN ALMA"
+],
+"meta": {
+"tur": "baglanti",
+"std": "PE geçme kapak (PEM / Kalei köpük kapağı)",
+"malzeme": "PE-LD"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "pem_M8_A_2000_700",
+"bom": [
+"PEM kendinden kenetli somun SP-M8-1 (A286 / sertleştirilmiş paslanmaz · sac ≤ HRB 90 (304 için))",
+1,
+"delik Ø10.50 · gövde Ø12.70 × 5.47",
+"PEM SP-M8-1 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M8",
+"pem_tip": "SP",
+"parca": "SP-M8-1",
+"delik": 10.5,
+"kenar_min": 9.7,
+"min_sac": 1.4,
+"sap": 1.38,
+"T": 5.47,
+"tur": "baglanti",
+"std": "PEM SP-M8-1",
+"malzeme": "A286 pasive"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "pem_M8_F_1000_760",
+"bom": [
+"PEM kendinden kenetli somun SP-M8-1 (A286 / sertleştirilmiş paslanmaz · sac ≤ HRB 90 (304 için))",
+1,
+"delik Ø10.50 · gövde Ø12.70 × 5.47",
+"PEM SP-M8-1 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M8",
+"pem_tip": "SP",
+"parca": "SP-M8-1",
+"delik": 10.5,
+"kenar_min": 9.7,
+"min_sac": 1.4,
+"sap": 1.38,
+"T": 5.47,
+"tur": "baglanti",
+"std": "PEM SP-M8-1",
+"malzeme": "A286 pasive"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "pem_M8_F_1250_700",
+"bom": [
+"PEM kendinden kenetli somun SP-M8-1 (A286 / sertleştirilmiş paslanmaz · sac ≤ HRB 90 (304 için))",
+1,
+"delik Ø10.50 · gövde Ø12.70 × 5.47",
+"PEM SP-M8-1 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M8",
+"pem_tip": "SP",
+"parca": "SP-M8-1",
+"delik": 10.5,
+"kenar_min": 9.7,
+"min_sac": 1.4,
+"sap": 1.38,
+"T": 5.47,
+"tur": "baglanti",
+"std": "PEM SP-M8-1",
+"malzeme": "A286 pasive"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "pem_M8_F_1700_780",
+"bom": [
+"PEM kendinden kenetli somun SP-M8-1 (A286 / sertleştirilmiş paslanmaz · sac ≤ HRB 90 (304 için))",
+1,
+"delik Ø10.50 · gövde Ø12.70 × 5.47",
+"PEM SP-M8-1 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M8",
+"pem_tip": "SP",
+"parca": "SP-M8-1",
+"delik": 10.5,
+"kenar_min": 9.7,
+"min_sac": 1.4,
+"sap": 1.38,
+"T": 5.47,
+"tur": "baglanti",
+"std": "PEM SP-M8-1",
+"malzeme": "A286 pasive"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "pem_M8_F_1950_780",
+"bom": [
+"PEM kendinden kenetli somun SP-M8-1 (A286 / sertleştirilmiş paslanmaz · sac ≤ HRB 90 (304 için))",
+1,
+"delik Ø10.50 · gövde Ø12.70 × 5.47",
+"PEM SP-M8-1 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M8",
+"pem_tip": "SP",
+"parca": "SP-M8-1",
+"delik": 10.5,
+"kenar_min": 9.7,
+"min_sac": 1.4,
+"sap": 1.38,
+"T": 5.47,
+"tur": "baglanti",
+"std": "PEM SP-M8-1",
+"malzeme": "A286 pasive"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "servis_arka_yan_sol_1447_1150_burc",
+"bom": [
+"Kaynak burcu M5 Ø14 × 9 · alt yüzü 90° havşalı (dimple'a oturur) · dönüşe 2 punta TIG",
+1,
+"Ø14 × 9 · M5 diş 9",
+"özel imalat (torna) · AISI 304 · AISI 304",
+"ÜRETİM"
+],
+"meta": {
+"dis": "M5",
+"tip": "kaynak_burcu",
+"tur": "baglanti",
+"std": "özel imalat (torna) · AISI 304",
+"malzeme": "AISI 304"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "servis_arka_yan_sol_1447_1150_burc_punta_0",
+"bom": [
+"Kaynak burcu ↔ dönüş punta",
+1,
+"Ø3 × 1,2",
+"TIG 141 · ER308LSi · AISI 304",
+"ÜRETİM"
+],
+"meta": {
+"tur": "baglanti",
+"tip": "punta",
+"yontem": "TIG 141",
+"std": "TIG 141 · ER308LSi",
+"malzeme": "AISI 304"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "servis_arka_yan_sol_1447_1150_burc_punta_1",
+"bom": [
+"Kaynak burcu ↔ dönüş punta",
+1,
+"Ø3 × 1,2",
+"TIG 141 · ER308LSi · AISI 304",
+"ÜRETİM"
+],
+"meta": {
+"tur": "baglanti",
+"tip": "punta",
+"yontem": "TIG 141",
+"std": "TIG 141 · ER308LSi",
+"malzeme": "AISI 304"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "servis_arka_yan_sol_1447_1150_vida",
+"bom": [
+"Havşa başlı imbus vida M5×12",
+1,
+"M5×12",
+"DIN 7991 / ISO 10642 · A2-70",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"boy": 12,
+"tur": "baglanti",
+"std": "DIN 7991 / ISO 10642",
+"malzeme": "A2-70"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "servis_arka_yan_sol_1447_1255_burc",
+"bom": [
+"Kaynak burcu M5 Ø14 × 9 · alt yüzü 90° havşalı (dimple'a oturur) · dönüşe 2 punta TIG",
+1,
+"Ø14 × 9 · M5 diş 9",
+"özel imalat (torna) · AISI 304 · AISI 304",
+"ÜRETİM"
+],
+"meta": {
+"dis": "M5",
+"tip": "kaynak_burcu",
+"tur": "baglanti",
+"std": "özel imalat (torna) · AISI 304",
+"malzeme": "AISI 304"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "servis_arka_yan_sol_1447_1255_burc_punta_0",
+"bom": [
+"Kaynak burcu ↔ dönüş punta",
+1,
+"Ø3 × 1,2",
+"TIG 141 · ER308LSi · AISI 304",
+"ÜRETİM"
+],
+"meta": {
+"tur": "baglanti",
+"tip": "punta",
+"yontem": "TIG 141",
+"std": "TIG 141 · ER308LSi",
+"malzeme": "AISI 304"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "servis_arka_yan_sol_1447_1255_burc_punta_1",
+"bom": [
+"Kaynak burcu ↔ dönüş punta",
+1,
+"Ø3 × 1,2",
+"TIG 141 · ER308LSi · AISI 304",
+"ÜRETİM"
+],
+"meta": {
+"tur": "baglanti",
+"tip": "punta",
+"yontem": "TIG 141",
+"std": "TIG 141 · ER308LSi",
+"malzeme": "AISI 304"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "servis_arka_yan_sol_1447_1255_vida",
+"bom": [
+"Havşa başlı imbus vida M5×12",
+1,
+"M5×12",
+"DIN 7991 / ISO 10642 · A2-70",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"boy": 12,
+"tur": "baglanti",
+"std": "DIN 7991 / ISO 10642",
+"malzeme": "A2-70"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "servis_arka_yan_sag_2488_960_burc",
+"bom": [
+"Kaynak burcu M5 Ø14 × 9 · alt yüzü 90° havşalı (dimple'a oturur) · dönüşe 2 punta TIG",
+1,
+"Ø14 × 9 · M5 diş 9",
+"özel imalat (torna) · AISI 304 · AISI 304",
+"ÜRETİM"
+],
+"meta": {
+"dis": "M5",
+"tip": "kaynak_burcu",
+"tur": "baglanti",
+"std": "özel imalat (torna) · AISI 304",
+"malzeme": "AISI 304"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "servis_arka_yan_sag_2488_960_burc_punta_0",
+"bom": [
+"Kaynak burcu ↔ dönüş punta",
+1,
+"Ø3 × 1,2",
+"TIG 141 · ER308LSi · AISI 304",
+"ÜRETİM"
+],
+"meta": {
+"tur": "baglanti",
+"tip": "punta",
+"yontem": "TIG 141",
+"std": "TIG 141 · ER308LSi",
+"malzeme": "AISI 304"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "servis_arka_yan_sag_2488_960_burc_punta_1",
+"bom": [
+"Kaynak burcu ↔ dönüş punta",
+1,
+"Ø3 × 1,2",
+"TIG 141 · ER308LSi · AISI 304",
+"ÜRETİM"
+],
+"meta": {
+"tur": "baglanti",
+"tip": "punta",
+"yontem": "TIG 141",
+"std": "TIG 141 · ER308LSi",
+"malzeme": "AISI 304"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "servis_arka_yan_sag_2488_960_vida",
+"bom": [
+"Havşa başlı imbus vida M5×12",
+1,
+"M5×12",
+"DIN 7991 / ISO 10642 · A2-70",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"boy": 12,
+"tur": "baglanti",
+"std": "DIN 7991 / ISO 10642",
+"malzeme": "A2-70"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "servis_arka_yan_sag_2488_1200_burc",
+"bom": [
+"Kaynak burcu M5 Ø14 × 9 · alt yüzü 90° havşalı (dimple'a oturur) · dönüşe 2 punta TIG",
+1,
+"Ø14 × 9 · M5 diş 9",
+"özel imalat (torna) · AISI 304 · AISI 304",
+"ÜRETİM"
+],
+"meta": {
+"dis": "M5",
+"tip": "kaynak_burcu",
+"tur": "baglanti",
+"std": "özel imalat (torna) · AISI 304",
+"malzeme": "AISI 304"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "servis_arka_yan_sag_2488_1200_burc_punta_0",
+"bom": [
+"Kaynak burcu ↔ dönüş punta",
+1,
+"Ø3 × 1,2",
+"TIG 141 · ER308LSi · AISI 304",
+"ÜRETİM"
+],
+"meta": {
+"tur": "baglanti",
+"tip": "punta",
+"yontem": "TIG 141",
+"std": "TIG 141 · ER308LSi",
+"malzeme": "AISI 304"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "servis_arka_yan_sag_2488_1200_burc_punta_1",
+"bom": [
+"Kaynak burcu ↔ dönüş punta",
+1,
+"Ø3 × 1,2",
+"TIG 141 · ER308LSi · AISI 304",
+"ÜRETİM"
+],
+"meta": {
+"tur": "baglanti",
+"tip": "punta",
+"yontem": "TIG 141",
+"std": "TIG 141 · ER308LSi",
+"malzeme": "AISI 304"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "servis_arka_yan_sag_2488_1200_vida",
+"bom": [
+"Havşa başlı imbus vida M5×12",
+1,
+"M5×12",
+"DIN 7991 / ISO 10642 · A2-70",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"boy": 12,
+"tur": "baglanti",
+"std": "DIN 7991 / ISO 10642",
+"malzeme": "A2-70"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "servis_arka_yan_sag_2488_1440_burc",
+"bom": [
+"Kaynak burcu M5 Ø14 × 9 · alt yüzü 90° havşalı (dimple'a oturur) · dönüşe 2 punta TIG",
+1,
+"Ø14 × 9 · M5 diş 9",
+"özel imalat (torna) · AISI 304 · AISI 304",
+"ÜRETİM"
+],
+"meta": {
+"dis": "M5",
+"tip": "kaynak_burcu",
+"tur": "baglanti",
+"std": "özel imalat (torna) · AISI 304",
+"malzeme": "AISI 304"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "servis_arka_yan_sag_2488_1440_burc_punta_0",
+"bom": [
+"Kaynak burcu ↔ dönüş punta",
+1,
+"Ø3 × 1,2",
+"TIG 141 · ER308LSi · AISI 304",
+"ÜRETİM"
+],
+"meta": {
+"tur": "baglanti",
+"tip": "punta",
+"yontem": "TIG 141",
+"std": "TIG 141 · ER308LSi",
+"malzeme": "AISI 304"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "servis_arka_yan_sag_2488_1440_burc_punta_1",
+"bom": [
+"Kaynak burcu ↔ dönüş punta",
+1,
+"Ø3 × 1,2",
+"TIG 141 · ER308LSi · AISI 304",
+"ÜRETİM"
+],
+"meta": {
+"tur": "baglanti",
+"tip": "punta",
+"yontem": "TIG 141",
+"std": "TIG 141 · ER308LSi",
+"malzeme": "AISI 304"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "servis_arka_yan_sag_2488_1440_vida",
+"bom": [
+"Havşa başlı imbus vida M5×12",
+1,
+"M5×12",
+"DIN 7991 / ISO 10642 · A2-70",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"boy": 12,
+"tur": "baglanti",
+"std": "DIN 7991 / ISO 10642",
+"malzeme": "A2-70"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "servis_arka_yan_sag_2488_1700_burc",
+"bom": [
+"Kaynak burcu M5 Ø14 × 9 · alt yüzü 90° havşalı (dimple'a oturur) · dönüşe 2 punta TIG",
+1,
+"Ø14 × 9 · M5 diş 9",
+"özel imalat (torna) · AISI 304 · AISI 304",
+"ÜRETİM"
+],
+"meta": {
+"dis": "M5",
+"tip": "kaynak_burcu",
+"tur": "baglanti",
+"std": "özel imalat (torna) · AISI 304",
+"malzeme": "AISI 304"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "servis_arka_yan_sag_2488_1700_burc_punta_0",
+"bom": [
+"Kaynak burcu ↔ dönüş punta",
+1,
+"Ø3 × 1,2",
+"TIG 141 · ER308LSi · AISI 304",
+"ÜRETİM"
+],
+"meta": {
+"tur": "baglanti",
+"tip": "punta",
+"yontem": "TIG 141",
+"std": "TIG 141 · ER308LSi",
+"malzeme": "AISI 304"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "servis_arka_yan_sag_2488_1700_burc_punta_1",
+"bom": [
+"Kaynak burcu ↔ dönüş punta",
+1,
+"Ø3 × 1,2",
+"TIG 141 · ER308LSi · AISI 304",
+"ÜRETİM"
+],
+"meta": {
+"tur": "baglanti",
+"tip": "punta",
+"yontem": "TIG 141",
+"std": "TIG 141 · ER308LSi",
+"malzeme": "AISI 304"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "servis_arka_yan_sag_2488_1700_vida",
+"bom": [
+"Havşa başlı imbus vida M5×12",
+1,
+"M5×12",
+"DIN 7991 / ISO 10642 · A2-70",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"boy": 12,
+"tur": "baglanti",
+"std": "DIN 7991 / ISO 10642",
+"malzeme": "A2-70"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "servis_arka_yan_sag_2488_1960_burc",
+"bom": [
+"Kaynak burcu M5 Ø14 × 9 · alt yüzü 90° havşalı (dimple'a oturur) · dönüşe 2 punta TIG",
+1,
+"Ø14 × 9 · M5 diş 9",
+"özel imalat (torna) · AISI 304 · AISI 304",
+"ÜRETİM"
+],
+"meta": {
+"dis": "M5",
+"tip": "kaynak_burcu",
+"tur": "baglanti",
+"std": "özel imalat (torna) · AISI 304",
+"malzeme": "AISI 304"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "servis_arka_yan_sag_2488_1960_burc_punta_0",
+"bom": [
+"Kaynak burcu ↔ dönüş punta",
+1,
+"Ø3 × 1,2",
+"TIG 141 · ER308LSi · AISI 304",
+"ÜRETİM"
+],
+"meta": {
+"tur": "baglanti",
+"tip": "punta",
+"yontem": "TIG 141",
+"std": "TIG 141 · ER308LSi",
+"malzeme": "AISI 304"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "servis_arka_yan_sag_2488_1960_burc_punta_1",
+"bom": [
+"Kaynak burcu ↔ dönüş punta",
+1,
+"Ø3 × 1,2",
+"TIG 141 · ER308LSi · AISI 304",
+"ÜRETİM"
+],
+"meta": {
+"tur": "baglanti",
+"tip": "punta",
+"yontem": "TIG 141",
+"std": "TIG 141 · ER308LSi",
+"malzeme": "AISI 304"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "servis_arka_yan_sag_2488_1960_vida",
+"bom": [
+"Havşa başlı imbus vida M5×12",
+1,
+"M5×12",
+"DIN 7991 / ISO 10642 · A2-70",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"boy": 12,
+"tur": "baglanti",
+"std": "DIN 7991 / ISO 10642",
+"malzeme": "A2-70"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "servis_arka_yan_sag_2488_2070_burc",
+"bom": [
+"Kaynak burcu M5 Ø14 × 9 · alt yüzü 90° havşalı (dimple'a oturur) · dönüşe 2 punta TIG",
+1,
+"Ø14 × 9 · M5 diş 9",
+"özel imalat (torna) · AISI 304 · AISI 304",
+"ÜRETİM"
+],
+"meta": {
+"dis": "M5",
+"tip": "kaynak_burcu",
+"tur": "baglanti",
+"std": "özel imalat (torna) · AISI 304",
+"malzeme": "AISI 304"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "servis_arka_yan_sag_2488_2070_burc_punta_0",
+"bom": [
+"Kaynak burcu ↔ dönüş punta",
+1,
+"Ø3 × 1,2",
+"TIG 141 · ER308LSi · AISI 304",
+"ÜRETİM"
+],
+"meta": {
+"tur": "baglanti",
+"tip": "punta",
+"yontem": "TIG 141",
+"std": "TIG 141 · ER308LSi",
+"malzeme": "AISI 304"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "servis_arka_yan_sag_2488_2070_burc_punta_1",
+"bom": [
+"Kaynak burcu ↔ dönüş punta",
+1,
+"Ø3 × 1,2",
+"TIG 141 · ER308LSi · AISI 304",
+"ÜRETİM"
+],
+"meta": {
+"tur": "baglanti",
+"tip": "punta",
+"yontem": "TIG 141",
+"std": "TIG 141 · ER308LSi",
+"malzeme": "AISI 304"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "servis_arka_yan_sag_2488_2070_vida",
+"bom": [
+"Havşa başlı imbus vida M5×12",
+1,
+"M5×12",
+"DIN 7991 / ISO 10642 · A2-70",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"boy": 12,
+"tur": "baglanti",
+"std": "DIN 7991 / ISO 10642",
+"malzeme": "A2-70"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "servis_arka_tavan_1550_2188_burc",
+"bom": [
+"Kaynak burcu M5 Ø14 × 9 · alt yüzü 90° havşalı (dimple'a oturur) · dönüşe 2 punta TIG",
+1,
+"Ø14 × 9 · M5 diş 9",
+"özel imalat (torna) · AISI 304 · AISI 304",
+"ÜRETİM"
+],
+"meta": {
+"dis": "M5",
+"tip": "kaynak_burcu",
+"tur": "baglanti",
+"std": "özel imalat (torna) · AISI 304",
+"malzeme": "AISI 304"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "servis_arka_tavan_1550_2188_burc_punta_0",
+"bom": [
+"Kaynak burcu ↔ dönüş punta",
+1,
+"Ø3 × 1,2",
+"TIG 141 · ER308LSi · AISI 304",
+"ÜRETİM"
+],
+"meta": {
+"tur": "baglanti",
+"tip": "punta",
+"yontem": "TIG 141",
+"std": "TIG 141 · ER308LSi",
+"malzeme": "AISI 304"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "servis_arka_tavan_1550_2188_burc_punta_1",
+"bom": [
+"Kaynak burcu ↔ dönüş punta",
+1,
+"Ø3 × 1,2",
+"TIG 141 · ER308LSi · AISI 304",
+"ÜRETİM"
+],
+"meta": {
+"tur": "baglanti",
+"tip": "punta",
+"yontem": "TIG 141",
+"std": "TIG 141 · ER308LSi",
+"malzeme": "AISI 304"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "servis_arka_tavan_1550_2188_vida",
+"bom": [
+"Havşa başlı imbus vida M5×12",
+1,
+"M5×12",
+"DIN 7991 / ISO 10642 · A2-70",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"boy": 12,
+"tur": "baglanti",
+"std": "DIN 7991 / ISO 10642",
+"malzeme": "A2-70"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "servis_arka_tavan_1800_2188_burc",
+"bom": [
+"Kaynak burcu M5 Ø14 × 9 · alt yüzü 90° havşalı (dimple'a oturur) · dönüşe 2 punta TIG",
+1,
+"Ø14 × 9 · M5 diş 9",
+"özel imalat (torna) · AISI 304 · AISI 304",
+"ÜRETİM"
+],
+"meta": {
+"dis": "M5",
+"tip": "kaynak_burcu",
+"tur": "baglanti",
+"std": "özel imalat (torna) · AISI 304",
+"malzeme": "AISI 304"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "servis_arka_tavan_1800_2188_burc_punta_0",
+"bom": [
+"Kaynak burcu ↔ dönüş punta",
+1,
+"Ø3 × 1,2",
+"TIG 141 · ER308LSi · AISI 304",
+"ÜRETİM"
+],
+"meta": {
+"tur": "baglanti",
+"tip": "punta",
+"yontem": "TIG 141",
+"std": "TIG 141 · ER308LSi",
+"malzeme": "AISI 304"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "servis_arka_tavan_1800_2188_burc_punta_1",
+"bom": [
+"Kaynak burcu ↔ dönüş punta",
+1,
+"Ø3 × 1,2",
+"TIG 141 · ER308LSi · AISI 304",
+"ÜRETİM"
+],
+"meta": {
+"tur": "baglanti",
+"tip": "punta",
+"yontem": "TIG 141",
+"std": "TIG 141 · ER308LSi",
+"malzeme": "AISI 304"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "servis_arka_tavan_1800_2188_vida",
+"bom": [
+"Havşa başlı imbus vida M5×12",
+1,
+"M5×12",
+"DIN 7991 / ISO 10642 · A2-70",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"boy": 12,
+"tur": "baglanti",
+"std": "DIN 7991 / ISO 10642",
+"malzeme": "A2-70"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "servis_arka_tavan_2050_2188_burc",
+"bom": [
+"Kaynak burcu M5 Ø14 × 9 · alt yüzü 90° havşalı (dimple'a oturur) · dönüşe 2 punta TIG",
+1,
+"Ø14 × 9 · M5 diş 9",
+"özel imalat (torna) · AISI 304 · AISI 304",
+"ÜRETİM"
+],
+"meta": {
+"dis": "M5",
+"tip": "kaynak_burcu",
+"tur": "baglanti",
+"std": "özel imalat (torna) · AISI 304",
+"malzeme": "AISI 304"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "servis_arka_tavan_2050_2188_burc_punta_0",
+"bom": [
+"Kaynak burcu ↔ dönüş punta",
+1,
+"Ø3 × 1,2",
+"TIG 141 · ER308LSi · AISI 304",
+"ÜRETİM"
+],
+"meta": {
+"tur": "baglanti",
+"tip": "punta",
+"yontem": "TIG 141",
+"std": "TIG 141 · ER308LSi",
+"malzeme": "AISI 304"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "servis_arka_tavan_2050_2188_burc_punta_1",
+"bom": [
+"Kaynak burcu ↔ dönüş punta",
+1,
+"Ø3 × 1,2",
+"TIG 141 · ER308LSi · AISI 304",
+"ÜRETİM"
+],
+"meta": {
+"tur": "baglanti",
+"tip": "punta",
+"yontem": "TIG 141",
+"std": "TIG 141 · ER308LSi",
+"malzeme": "AISI 304"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "servis_arka_tavan_2050_2188_vida",
+"bom": [
+"Havşa başlı imbus vida M5×12",
+1,
+"M5×12",
+"DIN 7991 / ISO 10642 · A2-70",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"boy": 12,
+"tur": "baglanti",
+"std": "DIN 7991 / ISO 10642",
+"malzeme": "A2-70"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "servis_arka_tavan_2300_2188_burc",
+"bom": [
+"Kaynak burcu M5 Ø14 × 9 · alt yüzü 90° havşalı (dimple'a oturur) · dönüşe 2 punta TIG",
+1,
+"Ø14 × 9 · M5 diş 9",
+"özel imalat (torna) · AISI 304 · AISI 304",
+"ÜRETİM"
+],
+"meta": {
+"dis": "M5",
+"tip": "kaynak_burcu",
+"tur": "baglanti",
+"std": "özel imalat (torna) · AISI 304",
+"malzeme": "AISI 304"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "servis_arka_tavan_2300_2188_burc_punta_0",
+"bom": [
+"Kaynak burcu ↔ dönüş punta",
+1,
+"Ø3 × 1,2",
+"TIG 141 · ER308LSi · AISI 304",
+"ÜRETİM"
+],
+"meta": {
+"tur": "baglanti",
+"tip": "punta",
+"yontem": "TIG 141",
+"std": "TIG 141 · ER308LSi",
+"malzeme": "AISI 304"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "servis_arka_tavan_2300_2188_burc_punta_1",
+"bom": [
+"Kaynak burcu ↔ dönüş punta",
+1,
+"Ø3 × 1,2",
+"TIG 141 · ER308LSi · AISI 304",
+"ÜRETİM"
+],
+"meta": {
+"tur": "baglanti",
+"tip": "punta",
+"yontem": "TIG 141",
+"std": "TIG 141 · ER308LSi",
+"malzeme": "AISI 304"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "servis_arka_tavan_2300_2188_vida",
+"bom": [
+"Havşa başlı imbus vida M5×12",
+1,
+"M5×12",
+"DIN 7991 / ISO 10642 · A2-70",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"boy": 12,
+"tur": "baglanti",
+"std": "DIN 7991 / ISO 10642",
+"malzeme": "A2-70"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "servis_arka_tavan_2450_2188_burc",
+"bom": [
+"Kaynak burcu M5 Ø14 × 9 · alt yüzü 90° havşalı (dimple'a oturur) · dönüşe 2 punta TIG",
+1,
+"Ø14 × 9 · M5 diş 9",
+"özel imalat (torna) · AISI 304 · AISI 304",
+"ÜRETİM"
+],
+"meta": {
+"dis": "M5",
+"tip": "kaynak_burcu",
+"tur": "baglanti",
+"std": "özel imalat (torna) · AISI 304",
+"malzeme": "AISI 304"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "servis_arka_tavan_2450_2188_burc_punta_0",
+"bom": [
+"Kaynak burcu ↔ dönüş punta",
+1,
+"Ø3 × 1,2",
+"TIG 141 · ER308LSi · AISI 304",
+"ÜRETİM"
+],
+"meta": {
+"tur": "baglanti",
+"tip": "punta",
+"yontem": "TIG 141",
+"std": "TIG 141 · ER308LSi",
+"malzeme": "AISI 304"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "servis_arka_tavan_2450_2188_burc_punta_1",
+"bom": [
+"Kaynak burcu ↔ dönüş punta",
+1,
+"Ø3 × 1,2",
+"TIG 141 · ER308LSi · AISI 304",
+"ÜRETİM"
+],
+"meta": {
+"tur": "baglanti",
+"tip": "punta",
+"yontem": "TIG 141",
+"std": "TIG 141 · ER308LSi",
+"malzeme": "AISI 304"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "servis_arka_tavan_2450_2188_vida",
+"bom": [
+"Havşa başlı imbus vida M5×12",
+1,
+"M5×12",
+"DIN 7991 / ISO 10642 · A2-70",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"boy": 12,
+"tur": "baglanti",
+"std": "DIN 7991 / ISO 10642",
+"malzeme": "A2-70"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "servis_arka_taban_1700_903_burc",
+"bom": [
+"Kaynak burcu M5 Ø14 × 9 · alt yüzü 90° havşalı (dimple'a oturur) · dönüşe 2 punta TIG",
+1,
+"Ø14 × 9 · M5 diş 9",
+"özel imalat (torna) · AISI 304 · AISI 304",
+"ÜRETİM"
+],
+"meta": {
+"dis": "M5",
+"tip": "kaynak_burcu",
+"tur": "baglanti",
+"std": "özel imalat (torna) · AISI 304",
+"malzeme": "AISI 304"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "servis_arka_taban_1700_903_burc_punta_0",
+"bom": [
+"Kaynak burcu ↔ dönüş punta",
+1,
+"Ø3 × 1,2",
+"TIG 141 · ER308LSi · AISI 304",
+"ÜRETİM"
+],
+"meta": {
+"tur": "baglanti",
+"tip": "punta",
+"yontem": "TIG 141",
+"std": "TIG 141 · ER308LSi",
+"malzeme": "AISI 304"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "servis_arka_taban_1700_903_burc_punta_1",
+"bom": [
+"Kaynak burcu ↔ dönüş punta",
+1,
+"Ø3 × 1,2",
+"TIG 141 · ER308LSi · AISI 304",
+"ÜRETİM"
+],
+"meta": {
+"tur": "baglanti",
+"tip": "punta",
+"yontem": "TIG 141",
+"std": "TIG 141 · ER308LSi",
+"malzeme": "AISI 304"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "servis_arka_taban_1700_903_vida",
+"bom": [
+"Havşa başlı imbus vida M5×12",
+1,
+"M5×12",
+"DIN 7991 / ISO 10642 · A2-70",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"boy": 12,
+"tur": "baglanti",
+"std": "DIN 7991 / ISO 10642",
+"malzeme": "A2-70"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "servis_arka_taban_1950_903_burc",
+"bom": [
+"Kaynak burcu M5 Ø14 × 9 · alt yüzü 90° havşalı (dimple'a oturur) · dönüşe 2 punta TIG",
+1,
+"Ø14 × 9 · M5 diş 9",
+"özel imalat (torna) · AISI 304 · AISI 304",
+"ÜRETİM"
+],
+"meta": {
+"dis": "M5",
+"tip": "kaynak_burcu",
+"tur": "baglanti",
+"std": "özel imalat (torna) · AISI 304",
+"malzeme": "AISI 304"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "servis_arka_taban_1950_903_burc_punta_0",
+"bom": [
+"Kaynak burcu ↔ dönüş punta",
+1,
+"Ø3 × 1,2",
+"TIG 141 · ER308LSi · AISI 304",
+"ÜRETİM"
+],
+"meta": {
+"tur": "baglanti",
+"tip": "punta",
+"yontem": "TIG 141",
+"std": "TIG 141 · ER308LSi",
+"malzeme": "AISI 304"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "servis_arka_taban_1950_903_burc_punta_1",
+"bom": [
+"Kaynak burcu ↔ dönüş punta",
+1,
+"Ø3 × 1,2",
+"TIG 141 · ER308LSi · AISI 304",
+"ÜRETİM"
+],
+"meta": {
+"tur": "baglanti",
+"tip": "punta",
+"yontem": "TIG 141",
+"std": "TIG 141 · ER308LSi",
+"malzeme": "AISI 304"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "servis_arka_taban_1950_903_vida",
+"bom": [
+"Havşa başlı imbus vida M5×12",
+1,
+"M5×12",
+"DIN 7991 / ISO 10642 · A2-70",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"boy": 12,
+"tur": "baglanti",
+"std": "DIN 7991 / ISO 10642",
+"malzeme": "A2-70"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "servis_arka_taban_2200_903_burc",
+"bom": [
+"Kaynak burcu M5 Ø14 × 9 · alt yüzü 90° havşalı (dimple'a oturur) · dönüşe 2 punta TIG",
+1,
+"Ø14 × 9 · M5 diş 9",
+"özel imalat (torna) · AISI 304 · AISI 304",
+"ÜRETİM"
+],
+"meta": {
+"dis": "M5",
+"tip": "kaynak_burcu",
+"tur": "baglanti",
+"std": "özel imalat (torna) · AISI 304",
+"malzeme": "AISI 304"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "servis_arka_taban_2200_903_burc_punta_0",
+"bom": [
+"Kaynak burcu ↔ dönüş punta",
+1,
+"Ø3 × 1,2",
+"TIG 141 · ER308LSi · AISI 304",
+"ÜRETİM"
+],
+"meta": {
+"tur": "baglanti",
+"tip": "punta",
+"yontem": "TIG 141",
+"std": "TIG 141 · ER308LSi",
+"malzeme": "AISI 304"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "servis_arka_taban_2200_903_burc_punta_1",
+"bom": [
+"Kaynak burcu ↔ dönüş punta",
+1,
+"Ø3 × 1,2",
+"TIG 141 · ER308LSi · AISI 304",
+"ÜRETİM"
+],
+"meta": {
+"tur": "baglanti",
+"tip": "punta",
+"yontem": "TIG 141",
+"std": "TIG 141 · ER308LSi",
+"malzeme": "AISI 304"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "servis_arka_taban_2200_903_vida",
+"bom": [
+"Havşa başlı imbus vida M5×12",
+1,
+"M5×12",
+"DIN 7991 / ISO 10642 · A2-70",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"boy": 12,
+"tur": "baglanti",
+"std": "DIN 7991 / ISO 10642",
+"malzeme": "A2-70"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "servis_arka_taban_2380_903_burc",
+"bom": [
+"Kaynak burcu M5 Ø14 × 9 · alt yüzü 90° havşalı (dimple'a oturur) · dönüşe 2 punta TIG",
+1,
+"Ø14 × 9 · M5 diş 9",
+"özel imalat (torna) · AISI 304 · AISI 304",
+"ÜRETİM"
+],
+"meta": {
+"dis": "M5",
+"tip": "kaynak_burcu",
+"tur": "baglanti",
+"std": "özel imalat (torna) · AISI 304",
+"malzeme": "AISI 304"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "servis_arka_taban_2380_903_burc_punta_0",
+"bom": [
+"Kaynak burcu ↔ dönüş punta",
+1,
+"Ø3 × 1,2",
+"TIG 141 · ER308LSi · AISI 304",
+"ÜRETİM"
+],
+"meta": {
+"tur": "baglanti",
+"tip": "punta",
+"yontem": "TIG 141",
+"std": "TIG 141 · ER308LSi",
+"malzeme": "AISI 304"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "servis_arka_taban_2380_903_burc_punta_1",
+"bom": [
+"Kaynak burcu ↔ dönüş punta",
+1,
+"Ø3 × 1,2",
+"TIG 141 · ER308LSi · AISI 304",
+"ÜRETİM"
+],
+"meta": {
+"tur": "baglanti",
+"tip": "punta",
+"yontem": "TIG 141",
+"std": "TIG 141 · ER308LSi",
+"malzeme": "AISI 304"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "servis_arka_taban_2380_903_vida",
+"bom": [
+"Havşa başlı imbus vida M5×12",
+1,
+"M5×12",
+"DIN 7991 / ISO 10642 · A2-70",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"boy": 12,
+"tur": "baglanti",
+"std": "DIN 7991 / ISO 10642",
+"malzeme": "A2-70"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_arka_sol_0",
+"bom": [
+"Kör perçin Ø3,2 × 8 bombe baş A2/A2 · kapalı uçlu (gıda tarafı sızdırmaz)",
+1,
+"delik Ø3.3",
+"ISO 15983 · A2/A2",
+"SATIN ALMA"
+],
+"meta": {
+"cap": 3.2,
+"boy": 8,
+"delik": 3.3,
+"tur": "baglanti",
+"std": "ISO 15983",
+"malzeme": "A2/A2"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_arka_sol_0_pul",
+"bom": [
+"Isı kesici ara pul Ø9 × 1 POM-C (iç sac ↔ dış parça arası soğuk köprü kesici)",
+1,
+"Ø9 / Ø3,4 × 1",
+"POM-C (FDA) · zımba · POM-C",
+"SATIN ALMA"
+],
+"meta": {
+"tur": "baglanti",
+"std": "POM-C (FDA) · zımba",
+"malzeme": "POM-C"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_arka_sol_1",
+"bom": [
+"Kör perçin Ø3,2 × 8 bombe baş A2/A2 · kapalı uçlu (gıda tarafı sızdırmaz)",
+1,
+"delik Ø3.3",
+"ISO 15983 · A2/A2",
+"SATIN ALMA"
+],
+"meta": {
+"cap": 3.2,
+"boy": 8,
+"delik": 3.3,
+"tur": "baglanti",
+"std": "ISO 15983",
+"malzeme": "A2/A2"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_arka_sol_1_pul",
+"bom": [
+"Isı kesici ara pul Ø9 × 1 POM-C (iç sac ↔ dış parça arası soğuk köprü kesici)",
+1,
+"Ø9 / Ø3,4 × 1",
+"POM-C (FDA) · zımba · POM-C",
+"SATIN ALMA"
+],
+"meta": {
+"tur": "baglanti",
+"std": "POM-C (FDA) · zımba",
+"malzeme": "POM-C"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_arka_sol_2",
+"bom": [
+"Kör perçin Ø3,2 × 8 bombe baş A2/A2 · kapalı uçlu (gıda tarafı sızdırmaz)",
+1,
+"delik Ø3.3",
+"ISO 15983 · A2/A2",
+"SATIN ALMA"
+],
+"meta": {
+"cap": 3.2,
+"boy": 8,
+"delik": 3.3,
+"tur": "baglanti",
+"std": "ISO 15983",
+"malzeme": "A2/A2"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_arka_sol_2_pul",
+"bom": [
+"Isı kesici ara pul Ø9 × 1 POM-C (iç sac ↔ dış parça arası soğuk köprü kesici)",
+1,
+"Ø9 / Ø3,4 × 1",
+"POM-C (FDA) · zımba · POM-C",
+"SATIN ALMA"
+],
+"meta": {
+"tur": "baglanti",
+"std": "POM-C (FDA) · zımba",
+"malzeme": "POM-C"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_arka_sol_3",
+"bom": [
+"Kör perçin Ø3,2 × 8 bombe baş A2/A2 · kapalı uçlu (gıda tarafı sızdırmaz)",
+1,
+"delik Ø3.3",
+"ISO 15983 · A2/A2",
+"SATIN ALMA"
+],
+"meta": {
+"cap": 3.2,
+"boy": 8,
+"delik": 3.3,
+"tur": "baglanti",
+"std": "ISO 15983",
+"malzeme": "A2/A2"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_arka_sol_3_pul",
+"bom": [
+"Isı kesici ara pul Ø9 × 1 POM-C (iç sac ↔ dış parça arası soğuk köprü kesici)",
+1,
+"Ø9 / Ø3,4 × 1",
+"POM-C (FDA) · zımba · POM-C",
+"SATIN ALMA"
+],
+"meta": {
+"tur": "baglanti",
+"std": "POM-C (FDA) · zımba",
+"malzeme": "POM-C"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_arka_sol_4",
+"bom": [
+"Kör perçin Ø3,2 × 8 bombe baş A2/A2 · kapalı uçlu (gıda tarafı sızdırmaz)",
+1,
+"delik Ø3.3",
+"ISO 15983 · A2/A2",
+"SATIN ALMA"
+],
+"meta": {
+"cap": 3.2,
+"boy": 8,
+"delik": 3.3,
+"tur": "baglanti",
+"std": "ISO 15983",
+"malzeme": "A2/A2"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_arka_sol_4_pul",
+"bom": [
+"Isı kesici ara pul Ø9 × 1 POM-C (iç sac ↔ dış parça arası soğuk köprü kesici)",
+1,
+"Ø9 / Ø3,4 × 1",
+"POM-C (FDA) · zımba · POM-C",
+"SATIN ALMA"
+],
+"meta": {
+"tur": "baglanti",
+"std": "POM-C (FDA) · zımba",
+"malzeme": "POM-C"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_arka_sol_5",
+"bom": [
+"Kör perçin Ø3,2 × 8 bombe baş A2/A2 · kapalı uçlu (gıda tarafı sızdırmaz)",
+1,
+"delik Ø3.3",
+"ISO 15983 · A2/A2",
+"SATIN ALMA"
+],
+"meta": {
+"cap": 3.2,
+"boy": 8,
+"delik": 3.3,
+"tur": "baglanti",
+"std": "ISO 15983",
+"malzeme": "A2/A2"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_arka_sol_5_pul",
+"bom": [
+"Isı kesici ara pul Ø9 × 1 POM-C (iç sac ↔ dış parça arası soğuk köprü kesici)",
+1,
+"Ø9 / Ø3,4 × 1",
+"POM-C (FDA) · zımba · POM-C",
+"SATIN ALMA"
+],
+"meta": {
+"tur": "baglanti",
+"std": "POM-C (FDA) · zımba",
+"malzeme": "POM-C"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_tavan_sol_6",
+"bom": [
+"Kör perçin Ø3,2 × 8 bombe baş A2/A2 · kapalı uçlu (gıda tarafı sızdırmaz)",
+1,
+"delik Ø3.3",
+"ISO 15983 · A2/A2",
+"SATIN ALMA"
+],
+"meta": {
+"cap": 3.2,
+"boy": 8,
+"delik": 3.3,
+"tur": "baglanti",
+"std": "ISO 15983",
+"malzeme": "A2/A2"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_tavan_sol_6_pul",
+"bom": [
+"Isı kesici ara pul Ø9 × 1 POM-C (iç sac ↔ dış parça arası soğuk köprü kesici)",
+1,
+"Ø9 / Ø3,4 × 1",
+"POM-C (FDA) · zımba · POM-C",
+"SATIN ALMA"
+],
+"meta": {
+"tur": "baglanti",
+"std": "POM-C (FDA) · zımba",
+"malzeme": "POM-C"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_tavan_sol_7",
+"bom": [
+"Kör perçin Ø3,2 × 8 bombe baş A2/A2 · kapalı uçlu (gıda tarafı sızdırmaz)",
+1,
+"delik Ø3.3",
+"ISO 15983 · A2/A2",
+"SATIN ALMA"
+],
+"meta": {
+"cap": 3.2,
+"boy": 8,
+"delik": 3.3,
+"tur": "baglanti",
+"std": "ISO 15983",
+"malzeme": "A2/A2"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_tavan_sol_7_pul",
+"bom": [
+"Isı kesici ara pul Ø9 × 1 POM-C (iç sac ↔ dış parça arası soğuk köprü kesici)",
+1,
+"Ø9 / Ø3,4 × 1",
+"POM-C (FDA) · zımba · POM-C",
+"SATIN ALMA"
+],
+"meta": {
+"tur": "baglanti",
+"std": "POM-C (FDA) · zımba",
+"malzeme": "POM-C"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_tavan_sol_8",
+"bom": [
+"Kör perçin Ø3,2 × 8 bombe baş A2/A2 · kapalı uçlu (gıda tarafı sızdırmaz)",
+1,
+"delik Ø3.3",
+"ISO 15983 · A2/A2",
+"SATIN ALMA"
+],
+"meta": {
+"cap": 3.2,
+"boy": 8,
+"delik": 3.3,
+"tur": "baglanti",
+"std": "ISO 15983",
+"malzeme": "A2/A2"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_tavan_sol_8_pul",
+"bom": [
+"Isı kesici ara pul Ø9 × 1 POM-C (iç sac ↔ dış parça arası soğuk köprü kesici)",
+1,
+"Ø9 / Ø3,4 × 1",
+"POM-C (FDA) · zımba · POM-C",
+"SATIN ALMA"
+],
+"meta": {
+"tur": "baglanti",
+"std": "POM-C (FDA) · zımba",
+"malzeme": "POM-C"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_tavan_sol_9",
+"bom": [
+"Kör perçin Ø3,2 × 8 bombe baş A2/A2 · kapalı uçlu (gıda tarafı sızdırmaz)",
+1,
+"delik Ø3.3",
+"ISO 15983 · A2/A2",
+"SATIN ALMA"
+],
+"meta": {
+"cap": 3.2,
+"boy": 8,
+"delik": 3.3,
+"tur": "baglanti",
+"std": "ISO 15983",
+"malzeme": "A2/A2"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_tavan_sol_9_pul",
+"bom": [
+"Isı kesici ara pul Ø9 × 1 POM-C (iç sac ↔ dış parça arası soğuk köprü kesici)",
+1,
+"Ø9 / Ø3,4 × 1",
+"POM-C (FDA) · zımba · POM-C",
+"SATIN ALMA"
+],
+"meta": {
+"tur": "baglanti",
+"std": "POM-C (FDA) · zımba",
+"malzeme": "POM-C"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_tavan_sol_10",
+"bom": [
+"Kör perçin Ø3,2 × 8 bombe baş A2/A2 · kapalı uçlu (gıda tarafı sızdırmaz)",
+1,
+"delik Ø3.3",
+"ISO 15983 · A2/A2",
+"SATIN ALMA"
+],
+"meta": {
+"cap": 3.2,
+"boy": 8,
+"delik": 3.3,
+"tur": "baglanti",
+"std": "ISO 15983",
+"malzeme": "A2/A2"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_tavan_sol_10_pul",
+"bom": [
+"Isı kesici ara pul Ø9 × 1 POM-C (iç sac ↔ dış parça arası soğuk köprü kesici)",
+1,
+"Ø9 / Ø3,4 × 1",
+"POM-C (FDA) · zımba · POM-C",
+"SATIN ALMA"
+],
+"meta": {
+"tur": "baglanti",
+"std": "POM-C (FDA) · zımba",
+"malzeme": "POM-C"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_arka_sag_11",
+"bom": [
+"Kör perçin Ø3,2 × 8 bombe baş A2/A2 · kapalı uçlu (gıda tarafı sızdırmaz)",
+1,
+"delik Ø3.3",
+"ISO 15983 · A2/A2",
+"SATIN ALMA"
+],
+"meta": {
+"cap": 3.2,
+"boy": 8,
+"delik": 3.3,
+"tur": "baglanti",
+"std": "ISO 15983",
+"malzeme": "A2/A2"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_arka_sag_11_pul",
+"bom": [
+"Isı kesici ara pul Ø9 × 1 POM-C (iç sac ↔ dış parça arası soğuk köprü kesici)",
+1,
+"Ø9 / Ø3,4 × 1",
+"POM-C (FDA) · zımba · POM-C",
+"SATIN ALMA"
+],
+"meta": {
+"tur": "baglanti",
+"std": "POM-C (FDA) · zımba",
+"malzeme": "POM-C"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_arka_sag_12",
+"bom": [
+"Kör perçin Ø3,2 × 8 bombe baş A2/A2 · kapalı uçlu (gıda tarafı sızdırmaz)",
+1,
+"delik Ø3.3",
+"ISO 15983 · A2/A2",
+"SATIN ALMA"
+],
+"meta": {
+"cap": 3.2,
+"boy": 8,
+"delik": 3.3,
+"tur": "baglanti",
+"std": "ISO 15983",
+"malzeme": "A2/A2"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_arka_sag_12_pul",
+"bom": [
+"Isı kesici ara pul Ø9 × 1 POM-C (iç sac ↔ dış parça arası soğuk köprü kesici)",
+1,
+"Ø9 / Ø3,4 × 1",
+"POM-C (FDA) · zımba · POM-C",
+"SATIN ALMA"
+],
+"meta": {
+"tur": "baglanti",
+"std": "POM-C (FDA) · zımba",
+"malzeme": "POM-C"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_arka_sag_13",
+"bom": [
+"Kör perçin Ø3,2 × 8 bombe baş A2/A2 · kapalı uçlu (gıda tarafı sızdırmaz)",
+1,
+"delik Ø3.3",
+"ISO 15983 · A2/A2",
+"SATIN ALMA"
+],
+"meta": {
+"cap": 3.2,
+"boy": 8,
+"delik": 3.3,
+"tur": "baglanti",
+"std": "ISO 15983",
+"malzeme": "A2/A2"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_arka_sag_13_pul",
+"bom": [
+"Isı kesici ara pul Ø9 × 1 POM-C (iç sac ↔ dış parça arası soğuk köprü kesici)",
+1,
+"Ø9 / Ø3,4 × 1",
+"POM-C (FDA) · zımba · POM-C",
+"SATIN ALMA"
+],
+"meta": {
+"tur": "baglanti",
+"std": "POM-C (FDA) · zımba",
+"malzeme": "POM-C"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_arka_sag_14",
+"bom": [
+"Kör perçin Ø3,2 × 8 bombe baş A2/A2 · kapalı uçlu (gıda tarafı sızdırmaz)",
+1,
+"delik Ø3.3",
+"ISO 15983 · A2/A2",
+"SATIN ALMA"
+],
+"meta": {
+"cap": 3.2,
+"boy": 8,
+"delik": 3.3,
+"tur": "baglanti",
+"std": "ISO 15983",
+"malzeme": "A2/A2"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_arka_sag_14_pul",
+"bom": [
+"Isı kesici ara pul Ø9 × 1 POM-C (iç sac ↔ dış parça arası soğuk köprü kesici)",
+1,
+"Ø9 / Ø3,4 × 1",
+"POM-C (FDA) · zımba · POM-C",
+"SATIN ALMA"
+],
+"meta": {
+"tur": "baglanti",
+"std": "POM-C (FDA) · zımba",
+"malzeme": "POM-C"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_arka_sag_15",
+"bom": [
+"Kör perçin Ø3,2 × 8 bombe baş A2/A2 · kapalı uçlu (gıda tarafı sızdırmaz)",
+1,
+"delik Ø3.3",
+"ISO 15983 · A2/A2",
+"SATIN ALMA"
+],
+"meta": {
+"cap": 3.2,
+"boy": 8,
+"delik": 3.3,
+"tur": "baglanti",
+"std": "ISO 15983",
+"malzeme": "A2/A2"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_arka_sag_15_pul",
+"bom": [
+"Isı kesici ara pul Ø9 × 1 POM-C (iç sac ↔ dış parça arası soğuk köprü kesici)",
+1,
+"Ø9 / Ø3,4 × 1",
+"POM-C (FDA) · zımba · POM-C",
+"SATIN ALMA"
+],
+"meta": {
+"tur": "baglanti",
+"std": "POM-C (FDA) · zımba",
+"malzeme": "POM-C"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_arka_sag_16",
+"bom": [
+"Kör perçin Ø3,2 × 8 bombe baş A2/A2 · kapalı uçlu (gıda tarafı sızdırmaz)",
+1,
+"delik Ø3.3",
+"ISO 15983 · A2/A2",
+"SATIN ALMA"
+],
+"meta": {
+"cap": 3.2,
+"boy": 8,
+"delik": 3.3,
+"tur": "baglanti",
+"std": "ISO 15983",
+"malzeme": "A2/A2"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_arka_sag_16_pul",
+"bom": [
+"Isı kesici ara pul Ø9 × 1 POM-C (iç sac ↔ dış parça arası soğuk köprü kesici)",
+1,
+"Ø9 / Ø3,4 × 1",
+"POM-C (FDA) · zımba · POM-C",
+"SATIN ALMA"
+],
+"meta": {
+"tur": "baglanti",
+"std": "POM-C (FDA) · zımba",
+"malzeme": "POM-C"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_tavan_sag_17",
+"bom": [
+"Kör perçin Ø3,2 × 8 bombe baş A2/A2 · kapalı uçlu (gıda tarafı sızdırmaz)",
+1,
+"delik Ø3.3",
+"ISO 15983 · A2/A2",
+"SATIN ALMA"
+],
+"meta": {
+"cap": 3.2,
+"boy": 8,
+"delik": 3.3,
+"tur": "baglanti",
+"std": "ISO 15983",
+"malzeme": "A2/A2"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_tavan_sag_17_pul",
+"bom": [
+"Isı kesici ara pul Ø9 × 1 POM-C (iç sac ↔ dış parça arası soğuk köprü kesici)",
+1,
+"Ø9 / Ø3,4 × 1",
+"POM-C (FDA) · zımba · POM-C",
+"SATIN ALMA"
+],
+"meta": {
+"tur": "baglanti",
+"std": "POM-C (FDA) · zımba",
+"malzeme": "POM-C"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_tavan_sag_18",
+"bom": [
+"Kör perçin Ø3,2 × 8 bombe baş A2/A2 · kapalı uçlu (gıda tarafı sızdırmaz)",
+1,
+"delik Ø3.3",
+"ISO 15983 · A2/A2",
+"SATIN ALMA"
+],
+"meta": {
+"cap": 3.2,
+"boy": 8,
+"delik": 3.3,
+"tur": "baglanti",
+"std": "ISO 15983",
+"malzeme": "A2/A2"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_tavan_sag_18_pul",
+"bom": [
+"Isı kesici ara pul Ø9 × 1 POM-C (iç sac ↔ dış parça arası soğuk köprü kesici)",
+1,
+"Ø9 / Ø3,4 × 1",
+"POM-C (FDA) · zımba · POM-C",
+"SATIN ALMA"
+],
+"meta": {
+"tur": "baglanti",
+"std": "POM-C (FDA) · zımba",
+"malzeme": "POM-C"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_tavan_sag_19",
+"bom": [
+"Kör perçin Ø3,2 × 8 bombe baş A2/A2 · kapalı uçlu (gıda tarafı sızdırmaz)",
+1,
+"delik Ø3.3",
+"ISO 15983 · A2/A2",
+"SATIN ALMA"
+],
+"meta": {
+"cap": 3.2,
+"boy": 8,
+"delik": 3.3,
+"tur": "baglanti",
+"std": "ISO 15983",
+"malzeme": "A2/A2"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_tavan_sag_19_pul",
+"bom": [
+"Isı kesici ara pul Ø9 × 1 POM-C (iç sac ↔ dış parça arası soğuk köprü kesici)",
+1,
+"Ø9 / Ø3,4 × 1",
+"POM-C (FDA) · zımba · POM-C",
+"SATIN ALMA"
+],
+"meta": {
+"tur": "baglanti",
+"std": "POM-C (FDA) · zımba",
+"malzeme": "POM-C"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_tavan_sag_20",
+"bom": [
+"Kör perçin Ø3,2 × 8 bombe baş A2/A2 · kapalı uçlu (gıda tarafı sızdırmaz)",
+1,
+"delik Ø3.3",
+"ISO 15983 · A2/A2",
+"SATIN ALMA"
+],
+"meta": {
+"cap": 3.2,
+"boy": 8,
+"delik": 3.3,
+"tur": "baglanti",
+"std": "ISO 15983",
+"malzeme": "A2/A2"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_tavan_sag_20_pul",
+"bom": [
+"Isı kesici ara pul Ø9 × 1 POM-C (iç sac ↔ dış parça arası soğuk köprü kesici)",
+1,
+"Ø9 / Ø3,4 × 1",
+"POM-C (FDA) · zımba · POM-C",
+"SATIN ALMA"
+],
+"meta": {
+"tur": "baglanti",
+"std": "POM-C (FDA) · zımba",
+"malzeme": "POM-C"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_tavan_sag_21",
+"bom": [
+"Kör perçin Ø3,2 × 8 bombe baş A2/A2 · kapalı uçlu (gıda tarafı sızdırmaz)",
+1,
+"delik Ø3.3",
+"ISO 15983 · A2/A2",
+"SATIN ALMA"
+],
+"meta": {
+"cap": 3.2,
+"boy": 8,
+"delik": 3.3,
+"tur": "baglanti",
+"std": "ISO 15983",
+"malzeme": "A2/A2"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_tavan_sag_21_pul",
+"bom": [
+"Isı kesici ara pul Ø9 × 1 POM-C (iç sac ↔ dış parça arası soğuk köprü kesici)",
+1,
+"Ø9 / Ø3,4 × 1",
+"POM-C (FDA) · zımba · POM-C",
+"SATIN ALMA"
+],
+"meta": {
+"tur": "baglanti",
+"std": "POM-C (FDA) · zımba",
+"malzeme": "POM-C"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_arka_tavan_22",
+"bom": [
+"Kör perçin Ø3,2 × 8 bombe baş A2/A2 · kapalı uçlu (gıda tarafı sızdırmaz)",
+1,
+"delik Ø3.3",
+"ISO 15983 · A2/A2",
+"SATIN ALMA"
+],
+"meta": {
+"cap": 3.2,
+"boy": 8,
+"delik": 3.3,
+"tur": "baglanti",
+"std": "ISO 15983",
+"malzeme": "A2/A2"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_arka_tavan_22_pul",
+"bom": [
+"Isı kesici ara pul Ø9 × 1 POM-C (iç sac ↔ dış parça arası soğuk köprü kesici)",
+1,
+"Ø9 / Ø3,4 × 1",
+"POM-C (FDA) · zımba · POM-C",
+"SATIN ALMA"
+],
+"meta": {
+"tur": "baglanti",
+"std": "POM-C (FDA) · zımba",
+"malzeme": "POM-C"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_arka_tavan_23",
+"bom": [
+"Kör perçin Ø3,2 × 8 bombe baş A2/A2 · kapalı uçlu (gıda tarafı sızdırmaz)",
+1,
+"delik Ø3.3",
+"ISO 15983 · A2/A2",
+"SATIN ALMA"
+],
+"meta": {
+"cap": 3.2,
+"boy": 8,
+"delik": 3.3,
+"tur": "baglanti",
+"std": "ISO 15983",
+"malzeme": "A2/A2"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_arka_tavan_23_pul",
+"bom": [
+"Isı kesici ara pul Ø9 × 1 POM-C (iç sac ↔ dış parça arası soğuk köprü kesici)",
+1,
+"Ø9 / Ø3,4 × 1",
+"POM-C (FDA) · zımba · POM-C",
+"SATIN ALMA"
+],
+"meta": {
+"tur": "baglanti",
+"std": "POM-C (FDA) · zımba",
+"malzeme": "POM-C"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_arka_tavan_24",
+"bom": [
+"Kör perçin Ø3,2 × 8 bombe baş A2/A2 · kapalı uçlu (gıda tarafı sızdırmaz)",
+1,
+"delik Ø3.3",
+"ISO 15983 · A2/A2",
+"SATIN ALMA"
+],
+"meta": {
+"cap": 3.2,
+"boy": 8,
+"delik": 3.3,
+"tur": "baglanti",
+"std": "ISO 15983",
+"malzeme": "A2/A2"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_arka_tavan_24_pul",
+"bom": [
+"Isı kesici ara pul Ø9 × 1 POM-C (iç sac ↔ dış parça arası soğuk köprü kesici)",
+1,
+"Ø9 / Ø3,4 × 1",
+"POM-C (FDA) · zımba · POM-C",
+"SATIN ALMA"
+],
+"meta": {
+"tur": "baglanti",
+"std": "POM-C (FDA) · zımba",
+"malzeme": "POM-C"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_arka_tavan_25",
+"bom": [
+"Kör perçin Ø3,2 × 8 bombe baş A2/A2 · kapalı uçlu (gıda tarafı sızdırmaz)",
+1,
+"delik Ø3.3",
+"ISO 15983 · A2/A2",
+"SATIN ALMA"
+],
+"meta": {
+"cap": 3.2,
+"boy": 8,
+"delik": 3.3,
+"tur": "baglanti",
+"std": "ISO 15983",
+"malzeme": "A2/A2"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_arka_tavan_25_pul",
+"bom": [
+"Isı kesici ara pul Ø9 × 1 POM-C (iç sac ↔ dış parça arası soğuk köprü kesici)",
+1,
+"Ø9 / Ø3,4 × 1",
+"POM-C (FDA) · zımba · POM-C",
+"SATIN ALMA"
+],
+"meta": {
+"tur": "baglanti",
+"std": "POM-C (FDA) · zımba",
+"malzeme": "POM-C"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_arka_tavan_26",
+"bom": [
+"Kör perçin Ø3,2 × 8 bombe baş A2/A2 · kapalı uçlu (gıda tarafı sızdırmaz)",
+1,
+"delik Ø3.3",
+"ISO 15983 · A2/A2",
+"SATIN ALMA"
+],
+"meta": {
+"cap": 3.2,
+"boy": 8,
+"delik": 3.3,
+"tur": "baglanti",
+"std": "ISO 15983",
+"malzeme": "A2/A2"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_arka_tavan_26_pul",
+"bom": [
+"Isı kesici ara pul Ø9 × 1 POM-C (iç sac ↔ dış parça arası soğuk köprü kesici)",
+1,
+"Ø9 / Ø3,4 × 1",
+"POM-C (FDA) · zımba · POM-C",
+"SATIN ALMA"
+],
+"meta": {
+"tur": "baglanti",
+"std": "POM-C (FDA) · zımba",
+"malzeme": "POM-C"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_arka_tavan_27",
+"bom": [
+"Kör perçin Ø3,2 × 8 bombe baş A2/A2 · kapalı uçlu (gıda tarafı sızdırmaz)",
+1,
+"delik Ø3.3",
+"ISO 15983 · A2/A2",
+"SATIN ALMA"
+],
+"meta": {
+"cap": 3.2,
+"boy": 8,
+"delik": 3.3,
+"tur": "baglanti",
+"std": "ISO 15983",
+"malzeme": "A2/A2"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_arka_tavan_27_pul",
+"bom": [
+"Isı kesici ara pul Ø9 × 1 POM-C (iç sac ↔ dış parça arası soğuk köprü kesici)",
+1,
+"Ø9 / Ø3,4 × 1",
+"POM-C (FDA) · zımba · POM-C",
+"SATIN ALMA"
+],
+"meta": {
+"tur": "baglanti",
+"std": "POM-C (FDA) · zımba",
+"malzeme": "POM-C"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_cerceve_sol_28",
+"bom": [
+"Havşa başlı kör perçin Ø3,2 × 6 A2/A2 (çerçeve dış yüzüyle aynı düzlem · kapak fitili oturur)",
+1,
+"delik Ø3,3 · havşa 90°",
+"ISO 15984 · A2/A2",
+"SATIN ALMA"
+],
+"meta": {
+"cap": 3.2,
+"boy": 6,
+"delik": 3.3,
+"kavrama": 3.0,
+"tur": "baglanti",
+"std": "ISO 15984",
+"malzeme": "A2/A2"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_cerceve_sol_28_pul",
+"bom": [
+"Isı kesici ara pul Ø9 × 1 POM-C (iç sac ↔ dış parça arası soğuk köprü kesici)",
+1,
+"Ø9 / Ø3,4 × 1",
+"POM-C (FDA) · zımba · POM-C",
+"SATIN ALMA"
+],
+"meta": {
+"tur": "baglanti",
+"std": "POM-C (FDA) · zımba",
+"malzeme": "POM-C"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_cerceve_sol_29",
+"bom": [
+"Havşa başlı kör perçin Ø3,2 × 6 A2/A2 (çerçeve dış yüzüyle aynı düzlem · kapak fitili oturur)",
+1,
+"delik Ø3,3 · havşa 90°",
+"ISO 15984 · A2/A2",
+"SATIN ALMA"
+],
+"meta": {
+"cap": 3.2,
+"boy": 6,
+"delik": 3.3,
+"kavrama": 3.0,
+"tur": "baglanti",
+"std": "ISO 15984",
+"malzeme": "A2/A2"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_cerceve_sol_29_pul",
+"bom": [
+"Isı kesici ara pul Ø9 × 1 POM-C (iç sac ↔ dış parça arası soğuk köprü kesici)",
+1,
+"Ø9 / Ø3,4 × 1",
+"POM-C (FDA) · zımba · POM-C",
+"SATIN ALMA"
+],
+"meta": {
+"tur": "baglanti",
+"std": "POM-C (FDA) · zımba",
+"malzeme": "POM-C"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_cerceve_sol_30",
+"bom": [
+"Havşa başlı kör perçin Ø3,2 × 6 A2/A2 (çerçeve dış yüzüyle aynı düzlem · kapak fitili oturur)",
+1,
+"delik Ø3,3 · havşa 90°",
+"ISO 15984 · A2/A2",
+"SATIN ALMA"
+],
+"meta": {
+"cap": 3.2,
+"boy": 6,
+"delik": 3.3,
+"kavrama": 3.0,
+"tur": "baglanti",
+"std": "ISO 15984",
+"malzeme": "A2/A2"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_cerceve_sol_30_pul",
+"bom": [
+"Isı kesici ara pul Ø9 × 1 POM-C (iç sac ↔ dış parça arası soğuk köprü kesici)",
+1,
+"Ø9 / Ø3,4 × 1",
+"POM-C (FDA) · zımba · POM-C",
+"SATIN ALMA"
+],
+"meta": {
+"tur": "baglanti",
+"std": "POM-C (FDA) · zımba",
+"malzeme": "POM-C"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_cerceve_sol_31",
+"bom": [
+"Havşa başlı kör perçin Ø3,2 × 6 A2/A2 (çerçeve dış yüzüyle aynı düzlem · kapak fitili oturur)",
+1,
+"delik Ø3,3 · havşa 90°",
+"ISO 15984 · A2/A2",
+"SATIN ALMA"
+],
+"meta": {
+"cap": 3.2,
+"boy": 6,
+"delik": 3.3,
+"kavrama": 3.0,
+"tur": "baglanti",
+"std": "ISO 15984",
+"malzeme": "A2/A2"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_cerceve_sol_31_pul",
+"bom": [
+"Isı kesici ara pul Ø9 × 1 POM-C (iç sac ↔ dış parça arası soğuk köprü kesici)",
+1,
+"Ø9 / Ø3,4 × 1",
+"POM-C (FDA) · zımba · POM-C",
+"SATIN ALMA"
+],
+"meta": {
+"tur": "baglanti",
+"std": "POM-C (FDA) · zımba",
+"malzeme": "POM-C"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_cerceve_sol_32",
+"bom": [
+"Havşa başlı kör perçin Ø3,2 × 6 A2/A2 (çerçeve dış yüzüyle aynı düzlem · kapak fitili oturur)",
+1,
+"delik Ø3,3 · havşa 90°",
+"ISO 15984 · A2/A2",
+"SATIN ALMA"
+],
+"meta": {
+"cap": 3.2,
+"boy": 6,
+"delik": 3.3,
+"kavrama": 3.0,
+"tur": "baglanti",
+"std": "ISO 15984",
+"malzeme": "A2/A2"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_cerceve_sol_32_pul",
+"bom": [
+"Isı kesici ara pul Ø9 × 1 POM-C (iç sac ↔ dış parça arası soğuk köprü kesici)",
+1,
+"Ø9 / Ø3,4 × 1",
+"POM-C (FDA) · zımba · POM-C",
+"SATIN ALMA"
+],
+"meta": {
+"tur": "baglanti",
+"std": "POM-C (FDA) · zımba",
+"malzeme": "POM-C"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_cerceve_sol_33",
+"bom": [
+"Havşa başlı kör perçin Ø3,2 × 6 A2/A2 (çerçeve dış yüzüyle aynı düzlem · kapak fitili oturur)",
+1,
+"delik Ø3,3 · havşa 90°",
+"ISO 15984 · A2/A2",
+"SATIN ALMA"
+],
+"meta": {
+"cap": 3.2,
+"boy": 6,
+"delik": 3.3,
+"kavrama": 3.0,
+"tur": "baglanti",
+"std": "ISO 15984",
+"malzeme": "A2/A2"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_cerceve_sol_33_pul",
+"bom": [
+"Isı kesici ara pul Ø9 × 1 POM-C (iç sac ↔ dış parça arası soğuk köprü kesici)",
+1,
+"Ø9 / Ø3,4 × 1",
+"POM-C (FDA) · zımba · POM-C",
+"SATIN ALMA"
+],
+"meta": {
+"tur": "baglanti",
+"std": "POM-C (FDA) · zımba",
+"malzeme": "POM-C"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_cerceve_sol_34",
+"bom": [
+"Havşa başlı kör perçin Ø3,2 × 6 A2/A2 (çerçeve dış yüzüyle aynı düzlem · kapak fitili oturur)",
+1,
+"delik Ø3,3 · havşa 90°",
+"ISO 15984 · A2/A2",
+"SATIN ALMA"
+],
+"meta": {
+"cap": 3.2,
+"boy": 6,
+"delik": 3.3,
+"kavrama": 3.0,
+"tur": "baglanti",
+"std": "ISO 15984",
+"malzeme": "A2/A2"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_cerceve_sol_34_pul",
+"bom": [
+"Isı kesici ara pul Ø9 × 1 POM-C (iç sac ↔ dış parça arası soğuk köprü kesici)",
+1,
+"Ø9 / Ø3,4 × 1",
+"POM-C (FDA) · zımba · POM-C",
+"SATIN ALMA"
+],
+"meta": {
+"tur": "baglanti",
+"std": "POM-C (FDA) · zımba",
+"malzeme": "POM-C"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_cerceve_sag_35",
+"bom": [
+"Havşa başlı kör perçin Ø3,2 × 6 A2/A2 (çerçeve dış yüzüyle aynı düzlem · kapak fitili oturur)",
+1,
+"delik Ø3,3 · havşa 90°",
+"ISO 15984 · A2/A2",
+"SATIN ALMA"
+],
+"meta": {
+"cap": 3.2,
+"boy": 6,
+"delik": 3.3,
+"kavrama": 3.0,
+"tur": "baglanti",
+"std": "ISO 15984",
+"malzeme": "A2/A2"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_cerceve_sag_35_pul",
+"bom": [
+"Isı kesici ara pul Ø9 × 1 POM-C (iç sac ↔ dış parça arası soğuk köprü kesici)",
+1,
+"Ø9 / Ø3,4 × 1",
+"POM-C (FDA) · zımba · POM-C",
+"SATIN ALMA"
+],
+"meta": {
+"tur": "baglanti",
+"std": "POM-C (FDA) · zımba",
+"malzeme": "POM-C"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_cerceve_sag_36",
+"bom": [
+"Havşa başlı kör perçin Ø3,2 × 6 A2/A2 (çerçeve dış yüzüyle aynı düzlem · kapak fitili oturur)",
+1,
+"delik Ø3,3 · havşa 90°",
+"ISO 15984 · A2/A2",
+"SATIN ALMA"
+],
+"meta": {
+"cap": 3.2,
+"boy": 6,
+"delik": 3.3,
+"kavrama": 3.0,
+"tur": "baglanti",
+"std": "ISO 15984",
+"malzeme": "A2/A2"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_cerceve_sag_36_pul",
+"bom": [
+"Isı kesici ara pul Ø9 × 1 POM-C (iç sac ↔ dış parça arası soğuk köprü kesici)",
+1,
+"Ø9 / Ø3,4 × 1",
+"POM-C (FDA) · zımba · POM-C",
+"SATIN ALMA"
+],
+"meta": {
+"tur": "baglanti",
+"std": "POM-C (FDA) · zımba",
+"malzeme": "POM-C"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_cerceve_sag_37",
+"bom": [
+"Havşa başlı kör perçin Ø3,2 × 6 A2/A2 (çerçeve dış yüzüyle aynı düzlem · kapak fitili oturur)",
+1,
+"delik Ø3,3 · havşa 90°",
+"ISO 15984 · A2/A2",
+"SATIN ALMA"
+],
+"meta": {
+"cap": 3.2,
+"boy": 6,
+"delik": 3.3,
+"kavrama": 3.0,
+"tur": "baglanti",
+"std": "ISO 15984",
+"malzeme": "A2/A2"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_cerceve_sag_37_pul",
+"bom": [
+"Isı kesici ara pul Ø9 × 1 POM-C (iç sac ↔ dış parça arası soğuk köprü kesici)",
+1,
+"Ø9 / Ø3,4 × 1",
+"POM-C (FDA) · zımba · POM-C",
+"SATIN ALMA"
+],
+"meta": {
+"tur": "baglanti",
+"std": "POM-C (FDA) · zımba",
+"malzeme": "POM-C"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_cerceve_sag_38",
+"bom": [
+"Havşa başlı kör perçin Ø3,2 × 6 A2/A2 (çerçeve dış yüzüyle aynı düzlem · kapak fitili oturur)",
+1,
+"delik Ø3,3 · havşa 90°",
+"ISO 15984 · A2/A2",
+"SATIN ALMA"
+],
+"meta": {
+"cap": 3.2,
+"boy": 6,
+"delik": 3.3,
+"kavrama": 3.0,
+"tur": "baglanti",
+"std": "ISO 15984",
+"malzeme": "A2/A2"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_cerceve_sag_38_pul",
+"bom": [
+"Isı kesici ara pul Ø9 × 1 POM-C (iç sac ↔ dış parça arası soğuk köprü kesici)",
+1,
+"Ø9 / Ø3,4 × 1",
+"POM-C (FDA) · zımba · POM-C",
+"SATIN ALMA"
+],
+"meta": {
+"tur": "baglanti",
+"std": "POM-C (FDA) · zımba",
+"malzeme": "POM-C"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_cerceve_sag_39",
+"bom": [
+"Havşa başlı kör perçin Ø3,2 × 6 A2/A2 (çerçeve dış yüzüyle aynı düzlem · kapak fitili oturur)",
+1,
+"delik Ø3,3 · havşa 90°",
+"ISO 15984 · A2/A2",
+"SATIN ALMA"
+],
+"meta": {
+"cap": 3.2,
+"boy": 6,
+"delik": 3.3,
+"kavrama": 3.0,
+"tur": "baglanti",
+"std": "ISO 15984",
+"malzeme": "A2/A2"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_cerceve_sag_39_pul",
+"bom": [
+"Isı kesici ara pul Ø9 × 1 POM-C (iç sac ↔ dış parça arası soğuk köprü kesici)",
+1,
+"Ø9 / Ø3,4 × 1",
+"POM-C (FDA) · zımba · POM-C",
+"SATIN ALMA"
+],
+"meta": {
+"tur": "baglanti",
+"std": "POM-C (FDA) · zımba",
+"malzeme": "POM-C"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_cerceve_sag_40",
+"bom": [
+"Havşa başlı kör perçin Ø3,2 × 6 A2/A2 (çerçeve dış yüzüyle aynı düzlem · kapak fitili oturur)",
+1,
+"delik Ø3,3 · havşa 90°",
+"ISO 15984 · A2/A2",
+"SATIN ALMA"
+],
+"meta": {
+"cap": 3.2,
+"boy": 6,
+"delik": 3.3,
+"kavrama": 3.0,
+"tur": "baglanti",
+"std": "ISO 15984",
+"malzeme": "A2/A2"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_cerceve_sag_40_pul",
+"bom": [
+"Isı kesici ara pul Ø9 × 1 POM-C (iç sac ↔ dış parça arası soğuk köprü kesici)",
+1,
+"Ø9 / Ø3,4 × 1",
+"POM-C (FDA) · zımba · POM-C",
+"SATIN ALMA"
+],
+"meta": {
+"tur": "baglanti",
+"std": "POM-C (FDA) · zımba",
+"malzeme": "POM-C"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_cerceve_sag_41",
+"bom": [
+"Havşa başlı kör perçin Ø3,2 × 6 A2/A2 (çerçeve dış yüzüyle aynı düzlem · kapak fitili oturur)",
+1,
+"delik Ø3,3 · havşa 90°",
+"ISO 15984 · A2/A2",
+"SATIN ALMA"
+],
+"meta": {
+"cap": 3.2,
+"boy": 6,
+"delik": 3.3,
+"kavrama": 3.0,
+"tur": "baglanti",
+"std": "ISO 15984",
+"malzeme": "A2/A2"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_cerceve_sag_41_pul",
+"bom": [
+"Isı kesici ara pul Ø9 × 1 POM-C (iç sac ↔ dış parça arası soğuk köprü kesici)",
+1,
+"Ø9 / Ø3,4 × 1",
+"POM-C (FDA) · zımba · POM-C",
+"SATIN ALMA"
+],
+"meta": {
+"tur": "baglanti",
+"std": "POM-C (FDA) · zımba",
+"malzeme": "POM-C"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_cerceve_tavan_42",
+"bom": [
+"Havşa başlı kör perçin Ø3,2 × 6 A2/A2 (çerçeve dış yüzüyle aynı düzlem · kapak fitili oturur)",
+1,
+"delik Ø3,3 · havşa 90°",
+"ISO 15984 · A2/A2",
+"SATIN ALMA"
+],
+"meta": {
+"cap": 3.2,
+"boy": 6,
+"delik": 3.3,
+"kavrama": 3.0,
+"tur": "baglanti",
+"std": "ISO 15984",
+"malzeme": "A2/A2"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_cerceve_tavan_42_pul",
+"bom": [
+"Isı kesici ara pul Ø9 × 1 POM-C (iç sac ↔ dış parça arası soğuk köprü kesici)",
+1,
+"Ø9 / Ø3,4 × 1",
+"POM-C (FDA) · zımba · POM-C",
+"SATIN ALMA"
+],
+"meta": {
+"tur": "baglanti",
+"std": "POM-C (FDA) · zımba",
+"malzeme": "POM-C"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_cerceve_tavan_43",
+"bom": [
+"Havşa başlı kör perçin Ø3,2 × 6 A2/A2 (çerçeve dış yüzüyle aynı düzlem · kapak fitili oturur)",
+1,
+"delik Ø3,3 · havşa 90°",
+"ISO 15984 · A2/A2",
+"SATIN ALMA"
+],
+"meta": {
+"cap": 3.2,
+"boy": 6,
+"delik": 3.3,
+"kavrama": 3.0,
+"tur": "baglanti",
+"std": "ISO 15984",
+"malzeme": "A2/A2"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_cerceve_tavan_43_pul",
+"bom": [
+"Isı kesici ara pul Ø9 × 1 POM-C (iç sac ↔ dış parça arası soğuk köprü kesici)",
+1,
+"Ø9 / Ø3,4 × 1",
+"POM-C (FDA) · zımba · POM-C",
+"SATIN ALMA"
+],
+"meta": {
+"tur": "baglanti",
+"std": "POM-C (FDA) · zımba",
+"malzeme": "POM-C"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_cerceve_tavan_44",
+"bom": [
+"Havşa başlı kör perçin Ø3,2 × 6 A2/A2 (çerçeve dış yüzüyle aynı düzlem · kapak fitili oturur)",
+1,
+"delik Ø3,3 · havşa 90°",
+"ISO 15984 · A2/A2",
+"SATIN ALMA"
+],
+"meta": {
+"cap": 3.2,
+"boy": 6,
+"delik": 3.3,
+"kavrama": 3.0,
+"tur": "baglanti",
+"std": "ISO 15984",
+"malzeme": "A2/A2"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_cerceve_tavan_44_pul",
+"bom": [
+"Isı kesici ara pul Ø9 × 1 POM-C (iç sac ↔ dış parça arası soğuk köprü kesici)",
+1,
+"Ø9 / Ø3,4 × 1",
+"POM-C (FDA) · zımba · POM-C",
+"SATIN ALMA"
+],
+"meta": {
+"tur": "baglanti",
+"std": "POM-C (FDA) · zımba",
+"malzeme": "POM-C"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_cerceve_tavan_45",
+"bom": [
+"Havşa başlı kör perçin Ø3,2 × 6 A2/A2 (çerçeve dış yüzüyle aynı düzlem · kapak fitili oturur)",
+1,
+"delik Ø3,3 · havşa 90°",
+"ISO 15984 · A2/A2",
+"SATIN ALMA"
+],
+"meta": {
+"cap": 3.2,
+"boy": 6,
+"delik": 3.3,
+"kavrama": 3.0,
+"tur": "baglanti",
+"std": "ISO 15984",
+"malzeme": "A2/A2"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_cerceve_tavan_45_pul",
+"bom": [
+"Isı kesici ara pul Ø9 × 1 POM-C (iç sac ↔ dış parça arası soğuk köprü kesici)",
+1,
+"Ø9 / Ø3,4 × 1",
+"POM-C (FDA) · zımba · POM-C",
+"SATIN ALMA"
+],
+"meta": {
+"tur": "baglanti",
+"std": "POM-C (FDA) · zımba",
+"malzeme": "POM-C"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_cerceve_tavan_46",
+"bom": [
+"Havşa başlı kör perçin Ø3,2 × 6 A2/A2 (çerçeve dış yüzüyle aynı düzlem · kapak fitili oturur)",
+1,
+"delik Ø3,3 · havşa 90°",
+"ISO 15984 · A2/A2",
+"SATIN ALMA"
+],
+"meta": {
+"cap": 3.2,
+"boy": 6,
+"delik": 3.3,
+"kavrama": 3.0,
+"tur": "baglanti",
+"std": "ISO 15984",
+"malzeme": "A2/A2"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_cerceve_tavan_46_pul",
+"bom": [
+"Isı kesici ara pul Ø9 × 1 POM-C (iç sac ↔ dış parça arası soğuk köprü kesici)",
+1,
+"Ø9 / Ø3,4 × 1",
+"POM-C (FDA) · zımba · POM-C",
+"SATIN ALMA"
+],
+"meta": {
+"tur": "baglanti",
+"std": "POM-C (FDA) · zımba",
+"malzeme": "POM-C"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_cerceve_tavan_47",
+"bom": [
+"Havşa başlı kör perçin Ø3,2 × 6 A2/A2 (çerçeve dış yüzüyle aynı düzlem · kapak fitili oturur)",
+1,
+"delik Ø3,3 · havşa 90°",
+"ISO 15984 · A2/A2",
+"SATIN ALMA"
+],
+"meta": {
+"cap": 3.2,
+"boy": 6,
+"delik": 3.3,
+"kavrama": 3.0,
+"tur": "baglanti",
+"std": "ISO 15984",
+"malzeme": "A2/A2"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "astar_percin_cerceve_tavan_47_pul",
+"bom": [
+"Isı kesici ara pul Ø9 × 1 POM-C (iç sac ↔ dış parça arası soğuk köprü kesici)",
+1,
+"Ø9 / Ø3,4 × 1",
+"POM-C (FDA) · zımba · POM-C",
+"SATIN ALMA"
+],
+"meta": {
+"tur": "baglanti",
+"std": "POM-C (FDA) · zımba",
+"malzeme": "POM-C"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "evap_kanal_kovani_0_boyuna_kaynak_0",
+"bom": [
+"Kovan boyuna köşe dikişi (köpük sızdırmaz)",
+1,
+"59 mm",
+"TIG 141 · ER308LSi · AISI 304",
+"ÜRETİM"
+],
+"meta": {
+"tur": "baglanti",
+"tip": "kose",
+"boy": 59.0,
+"yontem": "TIG 141",
+"std": "TIG 141 · ER308LSi",
+"malzeme": "AISI 304"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "evap_kanal_kovani_0_boyuna_kaynak_1",
+"bom": [
+"Kovan boyuna köşe dikişi (köpük sızdırmaz)",
+1,
+"59 mm",
+"TIG 141 · ER308LSi · AISI 304",
+"ÜRETİM"
+],
+"meta": {
+"tur": "baglanti",
+"tip": "kose",
+"boy": 59.0,
+"yontem": "TIG 141",
+"std": "TIG 141 · ER308LSi",
+"malzeme": "AISI 304"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "evap_kanal_kovani_1_boyuna_kaynak_0",
+"bom": [
+"Kovan boyuna köşe dikişi (köpük sızdırmaz)",
+1,
+"59 mm",
+"TIG 141 · ER308LSi · AISI 304",
+"ÜRETİM"
+],
+"meta": {
+"tur": "baglanti",
+"tip": "kose",
+"boy": 59.0,
+"yontem": "TIG 141",
+"std": "TIG 141 · ER308LSi",
+"malzeme": "AISI 304"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "evap_kanal_kovani_1_boyuna_kaynak_1",
+"bom": [
+"Kovan boyuna köşe dikişi (köpük sızdırmaz)",
+1,
+"59 mm",
+"TIG 141 · ER308LSi · AISI 304",
+"ÜRETİM"
+],
+"meta": {
+"tur": "baglanti",
+"tip": "kose",
+"boy": 59.0,
+"yontem": "TIG 141",
+"std": "TIG 141 · ER308LSi",
+"malzeme": "AISI 304"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "evap_kanal_kovani_2_boyuna_kaynak_0",
+"bom": [
+"Kovan boyuna köşe dikişi (köpük sızdırmaz)",
+1,
+"59 mm",
+"TIG 141 · ER308LSi · AISI 304",
+"ÜRETİM"
+],
+"meta": {
+"tur": "baglanti",
+"tip": "kose",
+"boy": 59.0,
+"yontem": "TIG 141",
+"std": "TIG 141 · ER308LSi",
+"malzeme": "AISI 304"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "evap_kanal_kovani_2_boyuna_kaynak_1",
+"bom": [
+"Kovan boyuna köşe dikişi (köpük sızdırmaz)",
+1,
+"59 mm",
+"TIG 141 · ER308LSi · AISI 304",
+"ÜRETİM"
+],
+"meta": {
+"tur": "baglanti",
+"tip": "kose",
+"boy": 59.0,
+"yontem": "TIG 141",
+"std": "TIG 141 · ER308LSi",
+"malzeme": "AISI 304"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "evap_kanal_kovani_3_boyuna_kaynak_0",
+"bom": [
+"Kovan boyuna köşe dikişi (köpük sızdırmaz)",
+1,
+"59 mm",
+"TIG 141 · ER308LSi · AISI 304",
+"ÜRETİM"
+],
+"meta": {
+"tur": "baglanti",
+"tip": "kose",
+"boy": 59.0,
+"yontem": "TIG 141",
+"std": "TIG 141 · ER308LSi",
+"malzeme": "AISI 304"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "evap_kanal_kovani_3_boyuna_kaynak_1",
+"bom": [
+"Kovan boyuna köşe dikişi (köpük sızdırmaz)",
+1,
+"59 mm",
+"TIG 141 · ER308LSi · AISI 304",
+"ÜRETİM"
+],
+"meta": {
+"tur": "baglanti",
+"tip": "kose",
+"boy": 59.0,
+"yontem": "TIG 141",
+"std": "TIG 141 · ER308LSi",
+"malzeme": "AISI 304"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "dusme_kovani_kiyma_boyuna_kaynak_0",
+"bom": [
+"Kovan boyuna köşe dikişi",
+1,
+"38 mm",
+"TIG 141 · ER308LSi · AISI 304",
+"ÜRETİM"
+],
+"meta": {
+"tur": "baglanti",
+"tip": "kose",
+"boy": 38.5,
+"yontem": "TIG 141",
+"std": "TIG 141 · ER308LSi",
+"malzeme": "AISI 304"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "dusme_kovani_kiyma_boyuna_kaynak_1",
+"bom": [
+"Kovan boyuna köşe dikişi",
+1,
+"38 mm",
+"TIG 141 · ER308LSi · AISI 304",
+"ÜRETİM"
+],
+"meta": {
+"tur": "baglanti",
+"tip": "kose",
+"boy": 38.5,
+"yontem": "TIG 141",
+"std": "TIG 141 · ER308LSi",
+"malzeme": "AISI 304"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "dusme_kovani_kusbasi_boyuna_kaynak_0",
+"bom": [
+"Kovan boyuna köşe dikişi",
+1,
+"38 mm",
+"TIG 141 · ER308LSi · AISI 304",
+"ÜRETİM"
+],
+"meta": {
+"tur": "baglanti",
+"tip": "kose",
+"boy": 38.5,
+"yontem": "TIG 141",
+"std": "TIG 141 · ER308LSi",
+"malzeme": "AISI 304"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "dusme_kovani_kusbasi_boyuna_kaynak_1",
+"bom": [
+"Kovan boyuna köşe dikişi",
+1,
+"38 mm",
+"TIG 141 · ER308LSi · AISI 304",
+"ÜRETİM"
+],
+"meta": {
+"tur": "baglanti",
+"tip": "kose",
+"boy": 38.5,
+"yontem": "TIG 141",
+"std": "TIG 141 · ER308LSi",
+"malzeme": "AISI 304"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "dusme_kovani_sos",
+"bom": [
+"Düşme kovanı boru Ø38 × 3,5 AISI 304 (iç Ø31) · alt sac + raf altına TIG",
+1,
+"Ø38 × 3,5 × 37,5",
+"EN 10217-7 / ISO 1127 kalın et boru · AISI 304",
+"ÜRETİM"
+],
+"meta": {
+"tur": "baglanti",
+"std": "EN 10217-7 / ISO 1127 kalın et boru",
+"malzeme": "AISI 304"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "dusme_kovani_harc",
+"bom": [
+"Düşme kovanı boru Ø38 × 3,5 AISI 304 (iç Ø31) · alt sac + raf altına TIG",
+1,
+"Ø38 × 3,5 × 37,5",
+"EN 10217-7 / ISO 1127 kalın et boru · AISI 304",
+"ÜRETİM"
+],
+"meta": {
+"tur": "baglanti",
+"std": "EN 10217-7 / ISO 1127 kalın et boru",
+"malzeme": "AISI 304"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "dusme_kovani_kasar",
+"bom": [
+"Kaşar / sucuk düşme kovanı · artı kesit, et 1,0 · üst yaka kaset dili yuvalı (1143–1149) · köpüklemeden önce yerleştirilir",
+1,
+"80 × 67,5 × 37,5",
+"POM-C (FDA 21 CFR 177.2470) CNC · POM-C gıda sınıfı",
+"ÜRETİM"
+],
+"meta": {
+"tur": "baglanti",
+"std": "POM-C (FDA 21 CFR 177.2470) CNC",
+"malzeme": "POM-C gıda sınıfı"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "dusme_kovani_sucuk",
+"bom": [
+"Kaşar / sucuk düşme kovanı · artı kesit, et 1,0 · üst yaka kaset dili yuvalı (1143–1149) · köpüklemeden önce yerleştirilir",
+1,
+"80 × 67,5 × 37,5",
+"POM-C (FDA 21 CFR 177.2470) CNC · POM-C gıda sınıfı",
+"ÜRETİM"
+],
+"meta": {
+"tur": "baglanti",
+"std": "POM-C (FDA 21 CFR 177.2470) CNC",
+"malzeme": "POM-C gıda sınıfı"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "kanal_kapagi_2150_vida",
+"bom": [
+"Bombe başlı imbus vida M5×6",
+1,
+"M5×6",
+"ISO 7380-1 · A2-70",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"boy": 6.0,
+"tur": "baglanti",
+"std": "ISO 7380-1",
+"malzeme": "A2-70"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "kanal_kapagi_2150_pem",
+"bom": [
+"PEM kendinden kenetli somun SP-M5-2 (A286 / sertleştirilmiş paslanmaz · sac ≤ HRB 90 (304 için))",
+1,
+"delik Ø6.35 · gövde Ø8.89 × 2.00",
+"PEM SP-M5-2 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "SP",
+"parca": "SP-M5-2",
+"delik": 6.35,
+"kenar_min": 7.1,
+"min_sac": 1.4,
+"sap": 1.38,
+"T": 2.0,
+"tur": "baglanti",
+"std": "PEM SP-M5-2",
+"malzeme": "A286 pasive"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "kanal_kapagi_2200_vida",
+"bom": [
+"Bombe başlı imbus vida M5×6",
+1,
+"M5×6",
+"ISO 7380-1 · A2-70",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"boy": 6.0,
+"tur": "baglanti",
+"std": "ISO 7380-1",
+"malzeme": "A2-70"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "kanal_kapagi_2200_pem",
+"bom": [
+"PEM kendinden kenetli somun SP-M5-2 (A286 / sertleştirilmiş paslanmaz · sac ≤ HRB 90 (304 için))",
+1,
+"delik Ø6.35 · gövde Ø8.89 × 2.00",
+"PEM SP-M5-2 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "SP",
+"parca": "SP-M5-2",
+"delik": 6.35,
+"kenar_min": 7.1,
+"min_sac": 1.4,
+"sap": 1.38,
+"T": 2.0,
+"tur": "baglanti",
+"std": "PEM SP-M5-2",
+"malzeme": "A286 pasive"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "evaporator_ayak_0_vida",
+"bom": [
+"Bombe başlı imbus vida M5×6",
+1,
+"M5×6",
+"ISO 7380-1 · A2-70",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"boy": 6.0,
+"tur": "baglanti",
+"std": "ISO 7380-1",
+"malzeme": "A2-70"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "evaporator_ayak_0_pem",
+"bom": [
+"PEM kendinden kenetli somun SP-M5-2 (A286 / sertleştirilmiş paslanmaz · sac ≤ HRB 90 (304 için))",
+1,
+"delik Ø6.35 · gövde Ø8.89 × 2.00",
+"PEM SP-M5-2 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "SP",
+"parca": "SP-M5-2",
+"delik": 6.35,
+"kenar_min": 7.1,
+"min_sac": 1.4,
+"sap": 1.38,
+"T": 2.0,
+"tur": "baglanti",
+"std": "PEM SP-M5-2",
+"malzeme": "A286 pasive"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "evaporator_ayak_1_vida",
+"bom": [
+"Bombe başlı imbus vida M5×6",
+1,
+"M5×6",
+"ISO 7380-1 · A2-70",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"boy": 6.0,
+"tur": "baglanti",
+"std": "ISO 7380-1",
+"malzeme": "A2-70"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "evaporator_ayak_1_pem",
+"bom": [
+"PEM kendinden kenetli somun SP-M5-2 (A286 / sertleştirilmiş paslanmaz · sac ≤ HRB 90 (304 için))",
+1,
+"delik Ø6.35 · gövde Ø8.89 × 2.00",
+"PEM SP-M5-2 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "SP",
+"parca": "SP-M5-2",
+"delik": 6.35,
+"kenar_min": 7.1,
+"min_sac": 1.4,
+"sap": 1.38,
+"T": 2.0,
+"tur": "baglanti",
+"std": "PEM SP-M5-2",
+"malzeme": "A286 pasive"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "evaporator_ayak_2_vida",
+"bom": [
+"Bombe başlı imbus vida M5×6",
+1,
+"M5×6",
+"ISO 7380-1 · A2-70",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"boy": 6.0,
+"tur": "baglanti",
+"std": "ISO 7380-1",
+"malzeme": "A2-70"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "evaporator_ayak_2_pem",
+"bom": [
+"PEM kendinden kenetli somun SP-M5-2 (A286 / sertleştirilmiş paslanmaz · sac ≤ HRB 90 (304 için))",
+1,
+"delik Ø6.35 · gövde Ø8.89 × 2.00",
+"PEM SP-M5-2 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "SP",
+"parca": "SP-M5-2",
+"delik": 6.35,
+"kenar_min": 7.1,
+"min_sac": 1.4,
+"sap": 1.38,
+"T": 2.0,
+"tur": "baglanti",
+"std": "PEM SP-M5-2",
+"malzeme": "A286 pasive"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "evaporator_ayak_3_vida",
+"bom": [
+"Bombe başlı imbus vida M5×6",
+1,
+"M5×6",
+"ISO 7380-1 · A2-70",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"boy": 6.0,
+"tur": "baglanti",
+"std": "ISO 7380-1",
+"malzeme": "A2-70"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "evaporator_ayak_3_pem",
+"bom": [
+"PEM kendinden kenetli somun SP-M5-2 (A286 / sertleştirilmiş paslanmaz · sac ≤ HRB 90 (304 için))",
+1,
+"delik Ø6.35 · gövde Ø8.89 × 2.00",
+"PEM SP-M5-2 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "SP",
+"parca": "SP-M5-2",
+"delik": 6.35,
+"kenar_min": 7.1,
+"min_sac": 1.4,
+"sap": 1.38,
+"T": 2.0,
+"tur": "baglanti",
+"std": "PEM SP-M5-2",
+"malzeme": "A286 pasive"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "cep_takoz_pem_M8_0",
+"bom": [
+"PEM kendinden kenetli somun SP-M8-1 (A286 / sertleştirilmiş paslanmaz · sac ≤ HRB 90 (304 için))",
+1,
+"delik Ø10.50 · gövde Ø12.70 × 5.47",
+"PEM SP-M8-1 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M8",
+"pem_tip": "SP",
+"parca": "SP-M8-1",
+"delik": 10.5,
+"kenar_min": 9.7,
+"min_sac": 1.4,
+"sap": 1.38,
+"T": 5.47,
+"tur": "baglanti",
+"std": "PEM SP-M8-1",
+"malzeme": "A286 pasive"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "cep_takoz_pem_M8_1",
+"bom": [
+"PEM kendinden kenetli somun SP-M8-1 (A286 / sertleştirilmiş paslanmaz · sac ≤ HRB 90 (304 için))",
+1,
+"delik Ø10.50 · gövde Ø12.70 × 5.47",
+"PEM SP-M8-1 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M8",
+"pem_tip": "SP",
+"parca": "SP-M8-1",
+"delik": 10.5,
+"kenar_min": 9.7,
+"min_sac": 1.4,
+"sap": 1.38,
+"T": 5.47,
+"tur": "baglanti",
+"std": "PEM SP-M8-1",
+"malzeme": "A286 pasive"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "cep_takoz_pem_M8_2",
+"bom": [
+"PEM kendinden kenetli somun SP-M8-1 (A286 / sertleştirilmiş paslanmaz · sac ≤ HRB 90 (304 için))",
+1,
+"delik Ø10.50 · gövde Ø12.70 × 5.47",
+"PEM SP-M8-1 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M8",
+"pem_tip": "SP",
+"parca": "SP-M8-1",
+"delik": 10.5,
+"kenar_min": 9.7,
+"min_sac": 1.4,
+"sap": 1.38,
+"T": 5.47,
+"tur": "baglanti",
+"std": "PEM SP-M8-1",
+"malzeme": "A286 pasive"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "cep_takoz_pem_M8_3",
+"bom": [
+"PEM kendinden kenetli somun SP-M8-1 (A286 / sertleştirilmiş paslanmaz · sac ≤ HRB 90 (304 için))",
+1,
+"delik Ø10.50 · gövde Ø12.70 × 5.47",
+"PEM SP-M8-1 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M8",
+"pem_tip": "SP",
+"parca": "SP-M8-1",
+"delik": 10.5,
+"kenar_min": 9.7,
+"min_sac": 1.4,
+"sap": 1.38,
+"T": 5.47,
+"tur": "baglanti",
+"std": "PEM SP-M8-1",
+"malzeme": "A286 pasive"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "kaide_plaka_pem_M6_0",
+"bom": [
+"PEM kendinden kenetli somun SP-M6-2 (A286 / sertleştirilmiş paslanmaz · sac ≤ HRB 90 (304 için))",
+1,
+"delik Ø8.75 · gövde Ø11.18 × 4.08",
+"PEM SP-M6-2 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M6",
+"pem_tip": "SP",
+"parca": "SP-M6-2",
+"delik": 8.75,
+"kenar_min": 8.6,
+"min_sac": 2.3,
+"sap": 2.21,
+"T": 4.08,
+"tur": "baglanti",
+"std": "PEM SP-M6-2",
+"malzeme": "A286 pasive"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "kaide_plaka_pem_M6_1",
+"bom": [
+"PEM kendinden kenetli somun SP-M6-2 (A286 / sertleştirilmiş paslanmaz · sac ≤ HRB 90 (304 için))",
+1,
+"delik Ø8.75 · gövde Ø11.18 × 4.08",
+"PEM SP-M6-2 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M6",
+"pem_tip": "SP",
+"parca": "SP-M6-2",
+"delik": 8.75,
+"kenar_min": 8.6,
+"min_sac": 2.3,
+"sap": 2.21,
+"T": 4.08,
+"tur": "baglanti",
+"std": "PEM SP-M6-2",
+"malzeme": "A286 pasive"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "kaide_arka_emis_filtresi",
+"bom": [
+"Kondenser emiş filtresi 128 × 66 × 14 · kaide gözünde, arka boruya klips",
+1,
+"128 × 66 × 14",
+"filtre kaseti (G3, paslanmaz çerçeve) · AISI 304 çerçeve + PES keçe",
+"SATIN ALMA"
+],
+"meta": {
+"tur": "baglanti",
+"std": "filtre kaseti (G3, paslanmaz çerçeve)",
+"malzeme": "AISI 304 çerçeve + PES keçe"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "dil_kesik_kose_silikonu_0_0_0",
+"bom": [
+"Eşik kesiği köşe cebi dolgusu (köpüklemeden önce)",
+1,
+"≈ 4 × 4 × 1,2",
+"gıda sınıfı silikon (FDA 21 CFR 177.2600) · VMQ silikon",
+"SATIN ALMA"
+],
+"meta": {
+"tur": "baglanti",
+"std": "gıda sınıfı silikon (FDA 21 CFR 177.2600)",
+"malzeme": "VMQ silikon"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "dil_kesik_kose_silikonu_0_0_1",
+"bom": [
+"Eşik kesiği köşe cebi dolgusu (köpüklemeden önce)",
+1,
+"≈ 4 × 4 × 1,2",
+"gıda sınıfı silikon (FDA 21 CFR 177.2600) · VMQ silikon",
+"SATIN ALMA"
+],
+"meta": {
+"tur": "baglanti",
+"std": "gıda sınıfı silikon (FDA 21 CFR 177.2600)",
+"malzeme": "VMQ silikon"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "dil_kesik_kose_silikonu_0_1_0",
+"bom": [
+"Eşik kesiği köşe cebi dolgusu (köpüklemeden önce)",
+1,
+"≈ 4 × 4 × 1,2",
+"gıda sınıfı silikon (FDA 21 CFR 177.2600) · VMQ silikon",
+"SATIN ALMA"
+],
+"meta": {
+"tur": "baglanti",
+"std": "gıda sınıfı silikon (FDA 21 CFR 177.2600)",
+"malzeme": "VMQ silikon"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "dil_kesik_kose_silikonu_0_1_1",
+"bom": [
+"Eşik kesiği köşe cebi dolgusu (köpüklemeden önce)",
+1,
+"≈ 4 × 4 × 1,2",
+"gıda sınıfı silikon (FDA 21 CFR 177.2600) · VMQ silikon",
+"SATIN ALMA"
+],
+"meta": {
+"tur": "baglanti",
+"std": "gıda sınıfı silikon (FDA 21 CFR 177.2600)",
+"malzeme": "VMQ silikon"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "dil_kesik_kose_silikonu_1_0_0",
+"bom": [
+"Eşik kesiği köşe cebi dolgusu (köpüklemeden önce)",
+1,
+"≈ 4 × 4 × 1,2",
+"gıda sınıfı silikon (FDA 21 CFR 177.2600) · VMQ silikon",
+"SATIN ALMA"
+],
+"meta": {
+"tur": "baglanti",
+"std": "gıda sınıfı silikon (FDA 21 CFR 177.2600)",
+"malzeme": "VMQ silikon"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "dil_kesik_kose_silikonu_1_0_1",
+"bom": [
+"Eşik kesiği köşe cebi dolgusu (köpüklemeden önce)",
+1,
+"≈ 4 × 4 × 1,2",
+"gıda sınıfı silikon (FDA 21 CFR 177.2600) · VMQ silikon",
+"SATIN ALMA"
+],
+"meta": {
+"tur": "baglanti",
+"std": "gıda sınıfı silikon (FDA 21 CFR 177.2600)",
+"malzeme": "VMQ silikon"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "dil_kesik_kose_silikonu_1_1_0",
+"bom": [
+"Eşik kesiği köşe cebi dolgusu (köpüklemeden önce)",
+1,
+"≈ 4 × 4 × 1,2",
+"gıda sınıfı silikon (FDA 21 CFR 177.2600) · VMQ silikon",
+"SATIN ALMA"
+],
+"meta": {
+"tur": "baglanti",
+"std": "gıda sınıfı silikon (FDA 21 CFR 177.2600)",
+"malzeme": "VMQ silikon"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "dil_kesik_kose_silikonu_1_1_1",
+"bom": [
+"Eşik kesiği köşe cebi dolgusu (köpüklemeden önce)",
+1,
+"≈ 4 × 4 × 1,2",
+"gıda sınıfı silikon (FDA 21 CFR 177.2600) · VMQ silikon",
+"SATIN ALMA"
+],
+"meta": {
+"tur": "baglanti",
+"std": "gıda sınıfı silikon (FDA 21 CFR 177.2600)",
+"malzeme": "VMQ silikon"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "raf_arka_kose_dolgusu_0",
+"bom": [
+"Büküm yayı yivi dolgusu (gıda yüzeyi düz)",
+1,
+"11.4 cm³",
+"TIG 141 dolgu + taşlama / gıda silikonu (FDA 21 CFR 177.2600) · ER308LSi",
+"ÜRETİM"
+],
+"meta": {
+"tur": "baglanti",
+"tip": "dolgu",
+"yontem": "TIG 141",
+"std": "TIG 141 dolgu + taşlama / gıda silikonu (FDA 21 CFR 177.2600)",
+"malzeme": "ER308LSi"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "raf_esik_yiv_dolgusu_1",
+"bom": [
+"Büküm yayı yivi dolgusu (gıda yüzeyi düz)",
+1,
+"6.7 cm³",
+"TIG 141 dolgu + taşlama / gıda silikonu (FDA 21 CFR 177.2600) · ER308LSi",
+"ÜRETİM"
+],
+"meta": {
+"tur": "baglanti",
+"tip": "dolgu",
+"yontem": "TIG 141",
+"std": "TIG 141 dolgu + taşlama / gıda silikonu (FDA 21 CFR 177.2600)",
+"malzeme": "ER308LSi"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "raf_esik_yiv_dolgusu_3",
+"bom": [
+"Büküm yayı yivi dolgusu (gıda yüzeyi düz)",
+1,
+"2.5 cm³",
+"TIG 141 dolgu + taşlama / gıda silikonu (FDA 21 CFR 177.2600) · ER308LSi",
+"ÜRETİM"
+],
+"meta": {
+"tur": "baglanti",
+"tip": "dolgu",
+"yontem": "TIG 141",
+"std": "TIG 141 dolgu + taşlama / gıda silikonu (FDA 21 CFR 177.2600)",
+"malzeme": "ER308LSi"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "raf_esik_yiv_dolgusu_5",
+"bom": [
+"Büküm yayı yivi dolgusu (gıda yüzeyi düz)",
+1,
+"0.5 cm³",
+"TIG 141 dolgu + taşlama / gıda silikonu (FDA 21 CFR 177.2600) · ER308LSi",
+"ÜRETİM"
+],
+"meta": {
+"tur": "baglanti",
+"tip": "dolgu",
+"yontem": "TIG 141",
+"std": "TIG 141 dolgu + taşlama / gıda silikonu (FDA 21 CFR 177.2600)",
+"malzeme": "ER308LSi"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "esik_on_yiv_dolgusu_0",
+"bom": [
+"Büküm yayı yivi dolgusu (gıda yüzeyi düz)",
+1,
+"7.0 cm³",
+"TIG 141 dolgu + taşlama / gıda silikonu (FDA 21 CFR 177.2600) · ER308LSi",
+"ÜRETİM"
+],
+"meta": {
+"tur": "baglanti",
+"tip": "dolgu",
+"yontem": "TIG 141",
+"std": "TIG 141 dolgu + taşlama / gıda silikonu (FDA 21 CFR 177.2600)",
+"malzeme": "ER308LSi"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "esik_on_yiv_dolgusu_1",
+"bom": [
+"Büküm yayı yivi dolgusu (gıda yüzeyi düz)",
+1,
+"2.1 cm³",
+"TIG 141 dolgu + taşlama / gıda silikonu (FDA 21 CFR 177.2600) · ER308LSi",
+"ÜRETİM"
+],
+"meta": {
+"tur": "baglanti",
+"tip": "dolgu",
+"yontem": "TIG 141",
+"std": "TIG 141 dolgu + taşlama / gıda silikonu (FDA 21 CFR 177.2600)",
+"malzeme": "ER308LSi"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "esik_on_yiv_dolgusu_2",
+"bom": [
+"Büküm yayı yivi dolgusu (gıda yüzeyi düz)",
+1,
+"2.5 cm³",
+"TIG 141 dolgu + taşlama / gıda silikonu (FDA 21 CFR 177.2600) · ER308LSi",
+"ÜRETİM"
+],
+"meta": {
+"tur": "baglanti",
+"tip": "dolgu",
+"yontem": "TIG 141",
+"std": "TIG 141 dolgu + taşlama / gıda silikonu (FDA 21 CFR 177.2600)",
+"malzeme": "ER308LSi"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "esik_on_yiv_dolgusu_3",
+"bom": [
+"Büküm yayı yivi dolgusu (gıda yüzeyi düz)",
+1,
+"0.8 cm³",
+"TIG 141 dolgu + taşlama / gıda silikonu (FDA 21 CFR 177.2600) · ER308LSi",
+"ÜRETİM"
+],
+"meta": {
+"tur": "baglanti",
+"tip": "dolgu",
+"yontem": "TIG 141",
+"std": "TIG 141 dolgu + taşlama / gıda silikonu (FDA 21 CFR 177.2600)",
+"malzeme": "ER308LSi"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "esik_on_yiv_dolgusu_4",
+"bom": [
+"Büküm yayı yivi dolgusu (gıda yüzeyi düz)",
+1,
+"0.6 cm³",
+"TIG 141 dolgu + taşlama / gıda silikonu (FDA 21 CFR 177.2600) · ER308LSi",
+"ÜRETİM"
+],
+"meta": {
+"tur": "baglanti",
+"tip": "dolgu",
+"yontem": "TIG 141",
+"std": "TIG 141 dolgu + taşlama / gıda silikonu (FDA 21 CFR 177.2600)",
+"malzeme": "ER308LSi"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "esik_on_yiv_dolgusu_5",
+"bom": [
+"Büküm yayı yivi dolgusu (gıda yüzeyi düz)",
+1,
+"0.2 cm³",
+"TIG 141 dolgu + taşlama / gıda silikonu (FDA 21 CFR 177.2600) · ER308LSi",
+"ÜRETİM"
+],
+"meta": {
+"tur": "baglanti",
+"tip": "dolgu",
+"yontem": "TIG 141",
+"std": "TIG 141 dolgu + taşlama / gıda silikonu (FDA 21 CFR 177.2600)",
+"malzeme": "ER308LSi"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "derz_arka_sol_alt",
+"bom": [
+"Derz silikonu 3 × 3 (gıda tarafı iç köşe)",
+1,
+"381 mm",
+"gıda sınıfı silikon (FDA 21 CFR 177.2600) · VMQ silikon",
+"SATIN ALMA"
+],
+"meta": {
+"tur": "baglanti",
+"std": "gıda sınıfı silikon (FDA 21 CFR 177.2600)",
+"malzeme": "VMQ silikon"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "derz_arka_sol_ust",
+"bom": [
+"Derz silikonu 3 × 3 (gıda tarafı iç köşe)",
+1,
+"560 mm",
+"gıda sınıfı silikon (FDA 21 CFR 177.2600) · VMQ silikon",
+"SATIN ALMA"
+],
+"meta": {
+"tur": "baglanti",
+"std": "gıda sınıfı silikon (FDA 21 CFR 177.2600)",
+"malzeme": "VMQ silikon"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "derz_tavan_sol",
+"bom": [
+"Derz silikonu 3 × 3 (gıda tarafı iç köşe)",
+1,
+"604 mm",
+"gıda sınıfı silikon (FDA 21 CFR 177.2600) · VMQ silikon",
+"SATIN ALMA"
+],
+"meta": {
+"tur": "baglanti",
+"std": "gıda sınıfı silikon (FDA 21 CFR 177.2600)",
+"malzeme": "VMQ silikon"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "derz_arka_sag_alt",
+"bom": [
+"Derz silikonu 3 × 3 (gıda tarafı iç köşe)",
+1,
+"381 mm",
+"gıda sınıfı silikon (FDA 21 CFR 177.2600) · VMQ silikon",
+"SATIN ALMA"
+],
+"meta": {
+"tur": "baglanti",
+"std": "gıda sınıfı silikon (FDA 21 CFR 177.2600)",
+"malzeme": "VMQ silikon"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "derz_arka_sag_ust",
+"bom": [
+"Derz silikonu 3 × 3 (gıda tarafı iç köşe)",
+1,
+"560 mm",
+"gıda sınıfı silikon (FDA 21 CFR 177.2600) · VMQ silikon",
+"SATIN ALMA"
+],
+"meta": {
+"tur": "baglanti",
+"std": "gıda sınıfı silikon (FDA 21 CFR 177.2600)",
+"malzeme": "VMQ silikon"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "derz_tavan_sag",
+"bom": [
+"Derz silikonu 3 × 3 (gıda tarafı iç köşe)",
+1,
+"604 mm",
+"gıda sınıfı silikon (FDA 21 CFR 177.2600) · VMQ silikon",
+"SATIN ALMA"
+],
+"meta": {
+"tur": "baglanti",
+"std": "gıda sınıfı silikon (FDA 21 CFR 177.2600)",
+"malzeme": "VMQ silikon"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "derz_arka_tavan",
+"bom": [
+"Derz silikonu 3 × 3 (gıda tarafı iç köşe)",
+1,
+"936 mm",
+"gıda sınıfı silikon (FDA 21 CFR 177.2600) · VMQ silikon",
+"SATIN ALMA"
+],
+"meta": {
+"tur": "baglanti",
+"std": "gıda sınıfı silikon (FDA 21 CFR 177.2600)",
+"malzeme": "VMQ silikon"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "derz_kose_sol_0_0",
+"bom": [
+"Köşe dolgu silikonu (yan iç sacın arka kenarı kesik bölgede)",
+1,
+"0.3 cm³",
+"gıda sınıfı silikon (FDA 21 CFR 177.2600) · VMQ silikon",
+"SATIN ALMA"
+],
+"meta": {
+"tur": "baglanti",
+"std": "gıda sınıfı silikon (FDA 21 CFR 177.2600)",
+"malzeme": "VMQ silikon"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "derz_kose_sol_1_0",
+"bom": [
+"Köşe dolgu silikonu (yan iç sacın arka kenarı kesik bölgede)",
+1,
+"0.3 cm³",
+"gıda sınıfı silikon (FDA 21 CFR 177.2600) · VMQ silikon",
+"SATIN ALMA"
+],
+"meta": {
+"tur": "baglanti",
+"std": "gıda sınıfı silikon (FDA 21 CFR 177.2600)",
+"malzeme": "VMQ silikon"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "derz_kose_sag_0_0",
+"bom": [
+"Köşe dolgu silikonu (yan iç sacın arka kenarı kesik bölgede)",
+1,
+"0.3 cm³",
+"gıda sınıfı silikon (FDA 21 CFR 177.2600) · VMQ silikon",
+"SATIN ALMA"
+],
+"meta": {
+"tur": "baglanti",
+"std": "gıda sınıfı silikon (FDA 21 CFR 177.2600)",
+"malzeme": "VMQ silikon"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "derz_kose_sag_1_0",
+"bom": [
+"Köşe dolgu silikonu (yan iç sacın arka kenarı kesik bölgede)",
+1,
+"0.3 cm³",
+"gıda sınıfı silikon (FDA 21 CFR 177.2600) · VMQ silikon",
+"SATIN ALMA"
+],
+"meta": {
+"tur": "baglanti",
+"std": "gıda sınıfı silikon (FDA 21 CFR 177.2600)",
+"malzeme": "VMQ silikon"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "derz_on_sol_0",
+"bom": [
+"Ön derz silikonu (iç sac ön bükümü ↔ ön çerçeve arkası)",
+1,
+"7.3 cm³",
+"gıda sınıfı silikon (FDA 21 CFR 177.2600) · VMQ silikon",
+"SATIN ALMA"
+],
+"meta": {
+"tur": "baglanti",
+"std": "gıda sınıfı silikon (FDA 21 CFR 177.2600)",
+"malzeme": "VMQ silikon"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "derz_on_sag_0",
+"bom": [
+"Ön derz silikonu (iç sac ön bükümü ↔ ön çerçeve arkası)",
+1,
+"7.3 cm³",
+"gıda sınıfı silikon (FDA 21 CFR 177.2600) · VMQ silikon",
+"SATIN ALMA"
+],
+"meta": {
+"tur": "baglanti",
+"std": "gıda sınıfı silikon (FDA 21 CFR 177.2600)",
+"malzeme": "VMQ silikon"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "derz_on_tavan_0",
+"bom": [
+"Ön derz silikonu (iç sac ön bükümü ↔ ön çerçeve arkası)",
+1,
+"6.7 cm³",
+"gıda sınıfı silikon (FDA 21 CFR 177.2600) · VMQ silikon",
+"SATIN ALMA"
+],
+"meta": {
+"tur": "baglanti",
+"std": "gıda sınıfı silikon (FDA 21 CFR 177.2600)",
+"malzeme": "VMQ silikon"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "yapistirici_arka",
+"bom": [
+"Yapıştırıcı katmanı arka · PU levha → dış sac 0,5 mm",
+1,
+"497.2 cm³",
+"PU levha yapıştırıcısı (tek bileşenli PU, gıda dışı bölge) · PU yapıştırıcı",
+"SATIN ALMA"
+],
+"meta": {
+"tur": "baglanti",
+"std": "PU levha yapıştırıcısı (tek bileşenli PU, gıda dışı bölge)",
+"malzeme": "PU yapıştırıcı"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "yapistirici_sol",
+"bom": [
+"Yapıştırıcı katmanı sol · PU levha → dış sac 0,5 mm",
+1,
+"329.5 cm³",
+"PU levha yapıştırıcısı (tek bileşenli PU, gıda dışı bölge) · PU yapıştırıcı",
+"SATIN ALMA"
+],
+"meta": {
+"tur": "baglanti",
+"std": "PU levha yapıştırıcısı (tek bileşenli PU, gıda dışı bölge)",
+"malzeme": "PU yapıştırıcı"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "yapistirici_sag",
+"bom": [
+"Yapıştırıcı katmanı sağ · PU levha → dış sac 0,5 mm",
+1,
+"329.7 cm³",
+"PU levha yapıştırıcısı (tek bileşenli PU, gıda dışı bölge) · PU yapıştırıcı",
+"SATIN ALMA"
+],
+"meta": {
+"tur": "baglanti",
+"std": "PU levha yapıştırıcısı (tek bileşenli PU, gıda dışı bölge)",
+"malzeme": "PU yapıştırıcı"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "yapistirici_tavan",
+"bom": [
+"Yapıştırıcı katmanı tavan · PU levha → dış sac 0,5 mm",
+1,
+"288.1 cm³",
+"PU levha yapıştırıcısı (tek bileşenli PU, gıda dışı bölge) · PU yapıştırıcı",
+"SATIN ALMA"
+],
+"meta": {
+"tur": "baglanti",
+"std": "PU levha yapıştırıcısı (tek bileşenli PU, gıda dışı bölge)",
+"malzeme": "PU yapıştırıcı"
+},
+"birim": "TOPPING_GOVDE"
+}
+],
+"arayuz": [
+{
+"ad": "arayuz_m8_F_1000_760_pul",
+"bom": [
+"Geniş pul M8",
+1,
+"8.4/24×2",
+"DIN 9021 / ISO 7093 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M8",
+"d1": 8.4,
+"d2": 24.0,
+"h": 2.0,
+"tur": "baglanti",
+"std": "DIN 9021 / ISO 7093",
+"malzeme": "A2"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "arayuz_m8_F_1000_760",
+"bom": [
+"Silindir başlı imbus cıvata M8×16",
+1,
+"M8×16",
+"ISO 4762 · A2-70",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M8",
+"boy": 16,
+"tur": "baglanti",
+"std": "ISO 4762",
+"malzeme": "A2-70"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "arayuz_m8_F_1250_700_pul",
+"bom": [
+"Geniş pul M8",
+1,
+"8.4/24×2",
+"DIN 9021 / ISO 7093 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M8",
+"d1": 8.4,
+"d2": 24.0,
+"h": 2.0,
+"tur": "baglanti",
+"std": "DIN 9021 / ISO 7093",
+"malzeme": "A2"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "arayuz_m8_F_1250_700",
+"bom": [
+"Silindir başlı imbus cıvata M8×16",
+1,
+"M8×16",
+"ISO 4762 · A2-70",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M8",
+"boy": 16,
+"tur": "baglanti",
+"std": "ISO 4762",
+"malzeme": "A2-70"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "arayuz_m8_F_1700_780_pul",
+"bom": [
+"Geniş pul M8",
+1,
+"8.4/24×2",
+"DIN 9021 / ISO 7093 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M8",
+"d1": 8.4,
+"d2": 24.0,
+"h": 2.0,
+"tur": "baglanti",
+"std": "DIN 9021 / ISO 7093",
+"malzeme": "A2"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "arayuz_m8_F_1700_780",
+"bom": [
+"Silindir başlı imbus cıvata M8×16",
+1,
+"M8×16",
+"ISO 4762 · A2-70",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M8",
+"boy": 16,
+"tur": "baglanti",
+"std": "ISO 4762",
+"malzeme": "A2-70"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "arayuz_m8_F_1950_780_pul",
+"bom": [
+"Geniş pul M8",
+1,
+"8.4/24×2",
+"DIN 9021 / ISO 7093 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M8",
+"d1": 8.4,
+"d2": 24.0,
+"h": 2.0,
+"tur": "baglanti",
+"std": "DIN 9021 / ISO 7093",
+"malzeme": "A2"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "arayuz_m8_F_1950_780",
+"bom": [
+"Silindir başlı imbus cıvata M8×16",
+1,
+"M8×16",
+"ISO 4762 · A2-70",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M8",
+"boy": 16,
+"tur": "baglanti",
+"std": "ISO 4762",
+"malzeme": "A2-70"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "arayuz_j1_burc_1543_661",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-25 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×25",
+"PEM FHP-M5-25 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-25",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 25,
+"tur": "baglanti",
+"std": "PEM FHP-M5-25",
+"malzeme": "A286 pasive"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "arayuz_j1_burc_1566_661",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-25 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×25",
+"PEM FHP-M5-25 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-25",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 25,
+"tur": "baglanti",
+"std": "PEM FHP-M5-25",
+"malzeme": "A286 pasive"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "arayuz_kaide_M6_0",
+"bom": [
+"Silindir başlı imbus cıvata M6×12",
+1,
+"M6×12",
+"ISO 4762 · A2-70",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M6",
+"boy": 12,
+"tur": "baglanti",
+"std": "ISO 4762",
+"malzeme": "A2-70"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "arayuz_kaide_M6_1",
+"bom": [
+"Silindir başlı imbus cıvata M6×12",
+1,
+"M6×12",
+"ISO 4762 · A2-70",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M6",
+"boy": 12,
+"tur": "baglanti",
+"std": "ISO 4762",
+"malzeme": "A2-70"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "arayuz_kb_1456_706_pul",
+"bom": [
+"Küçük seri pul M8 (Ø16 servis deliğinden geçer)",
+1,
+"8,4 / 15 × 1,6",
+"ISO 7092 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M8",
+"d1": 8.4,
+"d2": 15.0,
+"h": 1.6,
+"tur": "baglanti",
+"std": "ISO 7092",
+"malzeme": "A2"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "arayuz_kb_1456_706",
+"bom": [
+"Silindir başlı imbus cıvata M8×25",
+1,
+"M8×25",
+"ISO 4762 · A2-70",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M8",
+"boy": 25,
+"tur": "baglanti",
+"std": "ISO 4762",
+"malzeme": "A2-70"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "arayuz_kb_1456_110_pul",
+"bom": [
+"Küçük seri pul M8 (Ø16 servis deliğinden geçer)",
+1,
+"8,4 / 15 × 1,6",
+"ISO 7092 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M8",
+"d1": 8.4,
+"d2": 15.0,
+"h": 1.6,
+"tur": "baglanti",
+"std": "ISO 7092",
+"malzeme": "A2"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "arayuz_kb_1456_110",
+"bom": [
+"Silindir başlı imbus cıvata M8×25",
+1,
+"M8×25",
+"ISO 4762 · A2-70",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M8",
+"boy": 25,
+"tur": "baglanti",
+"std": "ISO 4762",
+"malzeme": "A2-70"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "arayuz_kb_2120_110_pul",
+"bom": [
+"Küçük seri pul M8 (Ø16 servis deliğinden geçer)",
+1,
+"8,4 / 15 × 1,6",
+"ISO 7092 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M8",
+"d1": 8.4,
+"d2": 15.0,
+"h": 1.6,
+"tur": "baglanti",
+"std": "ISO 7092",
+"malzeme": "A2"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "arayuz_kb_2120_110",
+"bom": [
+"Silindir başlı imbus cıvata M8×25",
+1,
+"M8×25",
+"ISO 4762 · A2-70",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M8",
+"boy": 25,
+"tur": "baglanti",
+"std": "ISO 4762",
+"malzeme": "A2-70"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "arayuz_kb_2480_110_pul",
+"bom": [
+"Küçük seri pul M8 (Ø16 servis deliğinden geçer)",
+1,
+"8,4 / 15 × 1,6",
+"ISO 7092 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M8",
+"d1": 8.4,
+"d2": 15.0,
+"h": 1.6,
+"tur": "baglanti",
+"std": "ISO 7092",
+"malzeme": "A2"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "arayuz_kb_2480_110",
+"bom": [
+"Silindir başlı imbus cıvata M8×25",
+1,
+"M8×25",
+"ISO 4762 · A2-70",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M8",
+"boy": 25,
+"tur": "baglanti",
+"std": "ISO 4762",
+"malzeme": "A2-70"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "arayuz_mek_yan_sag_2",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "arayuz_mek_yan_sag_3",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "arayuz_mek_yan_sag_4",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "arayuz_mek_yan_sag_5",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "arayuz_mek_taban_6",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "arayuz_mek_taban_7",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "arayuz_mek_taban_8",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "arayuz_mek_taban_9",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "arayuz_mek_arka_10",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "arayuz_mek_arka_11",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "arayuz_mek_arka_12",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "arayuz_mek_arka_13",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "arayuz_mek_arka_14",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "arayuz_mek_arka_15",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "arayuz_mek_arka_16",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "arayuz_mek_arka_17",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "arayuz_mek_arka_18",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "arayuz_mek_soguk_arka_23",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "arayuz_mek_soguk_arka_24",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "arayuz_mek_soguk_arka_25",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "arayuz_mek_soguk_arka_26",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "arayuz_mek_soguk_arka_27",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "arayuz_mek_soguk_arka_28",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "arayuz_mek_soguk_arka_29",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "arayuz_mek_soguk_arka_30",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "arayuz_mek_soguk_arka_31",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "arayuz_mek_soguk_arka_32",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "arayuz_mek_soguk_arka_33",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "arayuz_mek_soguk_arka_34",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "arayuz_mek_raf_35",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "arayuz_mek_raf_36",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "arayuz_mek_raf_37",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "arayuz_mek_raf_38",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "arayuz_mek_alt_sac_39",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "arayuz_mek_alt_sac_40",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "arayuz_mek_kuru_taban_41",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "arayuz_mek_kuru_taban_42",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "arayuz_mek_kuru_taban_43",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "arayuz_mek_kuru_taban_44",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "arayuz_mek_kuru_taban_45",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "TOPPING_GOVDE"
+}
+],
+"kaynak": [
+{
+"ad": "kaide_sol_boru_kaynak_arka_0",
+"bom": [
+"Köşe kaynak dikişi · TIG 141 · dolgu ER308LSi · a 2.0",
+1,
+"92 mm",
+"dis (köşe) boru ucu ↔ boru · TIG 141",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "kose",
+"yontem": "TIG 141",
+"dolgu": "ER308LSi",
+"a": 2.0,
+"boy": 92.0,
+"taraf": "dis (köşe)",
+"iso2553": "a2 ◺ 92"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "kaide_sag_boru_kaynak_arka_0",
+"bom": [
+"Köşe kaynak dikişi · TIG 141 · dolgu ER308LSi · a 2.0",
+1,
+"92 mm",
+"dis (köşe) boru ucu ↔ boru · TIG 141",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "kose",
+"yontem": "TIG 141",
+"dolgu": "ER308LSi",
+"a": 2.0,
+"boy": 92.0,
+"taraf": "dis (köşe)",
+"iso2553": "a2 ◺ 92"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "kaide_enine_boru_kaynak_arka_0",
+"bom": [
+"Köşe kaynak dikişi · TIG 141 · dolgu ER308LSi · a 2.0",
+1,
+"92 mm",
+"dis (köşe) boru ucu ↔ boru · TIG 141",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "kose",
+"yontem": "TIG 141",
+"dolgu": "ER308LSi",
+"a": 2.0,
+"boy": 92.0,
+"taraf": "dis (köşe)",
+"iso2553": "a2 ◺ 92"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "kaide_enine_boru_kaynak_arka_1",
+"bom": [
+"Köşe kaynak dikişi · TIG 141 · dolgu ER308LSi · a 2.0",
+1,
+"92 mm",
+"dis (köşe) boru ucu ↔ boru · TIG 141",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "kose",
+"yontem": "TIG 141",
+"dolgu": "ER308LSi",
+"a": 2.0,
+"boy": 92.0,
+"taraf": "dis (köşe)",
+"iso2553": "a2 ◺ 92"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "kaide_boyuna_boru_1_kaynak_1476_0",
+"bom": [
+"Köşe kaynak dikişi · TIG 141 · dolgu ER308LSi · a 2.0",
+1,
+"92 mm",
+"dis (köşe) boru ucu ↔ boru · TIG 141",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "kose",
+"yontem": "TIG 141",
+"dolgu": "ER308LSi",
+"a": 2.0,
+"boy": 92.0,
+"taraf": "dis (köşe)",
+"iso2553": "a2 ◺ 92"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "kaide_boyuna_boru_1_kaynak_1476_1",
+"bom": [
+"Köşe kaynak dikişi · TIG 141 · dolgu ER308LSi · a 2.0",
+1,
+"92 mm",
+"dis (köşe) boru ucu ↔ boru · TIG 141",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "kose",
+"yontem": "TIG 141",
+"dolgu": "ER308LSi",
+"a": 2.0,
+"boy": 92.0,
+"taraf": "dis (köşe)",
+"iso2553": "a2 ◺ 92"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "kaide_boyuna_boru_2_kaynak_2100_0",
+"bom": [
+"Köşe kaynak dikişi · TIG 141 · dolgu ER308LSi · a 2.0",
+1,
+"92 mm",
+"dis (köşe) boru ucu ↔ boru · TIG 141",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "kose",
+"yontem": "TIG 141",
+"dolgu": "ER308LSi",
+"a": 2.0,
+"boy": 92.0,
+"taraf": "dis (köşe)",
+"iso2553": "a2 ◺ 92"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "kaide_boyuna_boru_2_kaynak_2100_1",
+"bom": [
+"Köşe kaynak dikişi · TIG 141 · dolgu ER308LSi · a 2.0",
+1,
+"92 mm",
+"dis (köşe) boru ucu ↔ boru · TIG 141",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "kose",
+"yontem": "TIG 141",
+"dolgu": "ER308LSi",
+"a": 2.0,
+"boy": 92.0,
+"taraf": "dis (köşe)",
+"iso2553": "a2 ◺ 92"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "kaide_boyuna_boru_3_kaynak_2140_0",
+"bom": [
+"Köşe kaynak dikişi · TIG 141 · dolgu ER308LSi · a 2.0",
+1,
+"92 mm",
+"dis (köşe) boru ucu ↔ boru · TIG 141",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "kose",
+"yontem": "TIG 141",
+"dolgu": "ER308LSi",
+"a": 2.0,
+"boy": 92.0,
+"taraf": "dis (köşe)",
+"iso2553": "a2 ◺ 92"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "kaide_boyuna_boru_3_kaynak_2140_1",
+"bom": [
+"Köşe kaynak dikişi · TIG 141 · dolgu ER308LSi · a 2.0",
+1,
+"92 mm",
+"dis (köşe) boru ucu ↔ boru · TIG 141",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "kose",
+"yontem": "TIG 141",
+"dolgu": "ER308LSi",
+"a": 2.0,
+"boy": 92.0,
+"taraf": "dis (köşe)",
+"iso2553": "a2 ◺ 92"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "kaide_boyuna_boru_3_kaynak_2460_0",
+"bom": [
+"Köşe kaynak dikişi · TIG 141 · dolgu ER308LSi · a 2.0",
+1,
+"92 mm",
+"dis (köşe) boru ucu ↔ boru · TIG 141",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "kose",
+"yontem": "TIG 141",
+"dolgu": "ER308LSi",
+"a": 2.0,
+"boy": 92.0,
+"taraf": "dis (köşe)",
+"iso2553": "a2 ◺ 92"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "kaide_boyuna_boru_3_kaynak_2460_1",
+"bom": [
+"Köşe kaynak dikişi · TIG 141 · dolgu ER308LSi · a 2.0",
+1,
+"92 mm",
+"dis (köşe) boru ucu ↔ boru · TIG 141",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "kose",
+"yontem": "TIG 141",
+"dolgu": "ER308LSi",
+"a": 2.0,
+"boy": 92.0,
+"taraf": "dis (köşe)",
+"iso2553": "a2 ◺ 92"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "kaide_ust_plaka_delik_kaynagi_0",
+"bom": [
+"Delik kaynağı · TIG 141 · yüz taşlanır",
+1,
+"25 × 8 × 4",
+"kaide plakası ↔ boru",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "delik",
+"yontem": "TIG 141"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "kaide_ust_plaka_delik_kaynagi_1",
+"bom": [
+"Delik kaynağı · TIG 141 · yüz taşlanır",
+1,
+"25 × 8 × 4",
+"kaide plakası ↔ boru",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "delik",
+"yontem": "TIG 141"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "kaide_ust_plaka_delik_kaynagi_2",
+"bom": [
+"Delik kaynağı · TIG 141 · yüz taşlanır",
+1,
+"25 × 8 × 4",
+"kaide plakası ↔ boru",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "delik",
+"yontem": "TIG 141"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "kaide_ust_plaka_delik_kaynagi_3",
+"bom": [
+"Delik kaynağı · TIG 141 · yüz taşlanır",
+1,
+"25 × 8 × 4",
+"kaide plakası ↔ boru",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "delik",
+"yontem": "TIG 141"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "kaide_ust_plaka_delik_kaynagi_4",
+"bom": [
+"Delik kaynağı · TIG 141 · yüz taşlanır",
+1,
+"25 × 8 × 4",
+"kaide plakası ↔ boru",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "delik",
+"yontem": "TIG 141"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "kaide_ust_plaka_delik_kaynagi_5",
+"bom": [
+"Delik kaynağı · TIG 141 · yüz taşlanır",
+1,
+"25 × 8 × 4",
+"kaide plakası ↔ boru",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "delik",
+"yontem": "TIG 141"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "kaide_ust_plaka_delik_kaynagi_6",
+"bom": [
+"Delik kaynağı · TIG 141 · yüz taşlanır",
+1,
+"25 × 8 × 4",
+"kaide plakası ↔ boru",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "delik",
+"yontem": "TIG 141"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "kaide_ust_plaka_delik_kaynagi_7",
+"bom": [
+"Delik kaynağı · TIG 141 · yüz taşlanır",
+1,
+"25 × 8 × 4",
+"kaide plakası ↔ boru",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "delik",
+"yontem": "TIG 141"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "kaide_ust_plaka_delik_kaynagi_8",
+"bom": [
+"Delik kaynağı · TIG 141 · yüz taşlanır",
+1,
+"25 × 8 × 4",
+"kaide plakası ↔ boru",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "delik",
+"yontem": "TIG 141"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "kaide_ust_plaka_delik_kaynagi_9",
+"bom": [
+"Delik kaynağı · TIG 141 · yüz taşlanır",
+1,
+"25 × 8 × 4",
+"kaide plakası ↔ boru",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "delik",
+"yontem": "TIG 141"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "kaide_ust_plaka_delik_kaynagi_10",
+"bom": [
+"Delik kaynağı · TIG 141 · yüz taşlanır",
+1,
+"25 × 8 × 4",
+"kaide plakası ↔ boru",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "delik",
+"yontem": "TIG 141"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "kaide_ust_plaka_delik_kaynagi_11",
+"bom": [
+"Delik kaynağı · TIG 141 · yüz taşlanır",
+1,
+"25 × 8 × 4",
+"kaide plakası ↔ boru",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "delik",
+"yontem": "TIG 141"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "kaide_ust_plaka_delik_kaynagi_12",
+"bom": [
+"Delik kaynağı · TIG 141 · yüz taşlanır",
+1,
+"25 × 8 × 4",
+"kaide plakası ↔ boru",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "delik",
+"yontem": "TIG 141"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "kaide_ust_plaka_delik_kaynagi_13",
+"bom": [
+"Delik kaynağı · TIG 141 · yüz taşlanır",
+1,
+"25 × 8 × 4",
+"kaide plakası ↔ boru",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "delik",
+"yontem": "TIG 141"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "kaide_ust_plaka_delik_kaynagi_14",
+"bom": [
+"Delik kaynağı · TIG 141 · yüz taşlanır",
+1,
+"25 × 8 × 4",
+"kaide plakası ↔ boru",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "delik",
+"yontem": "TIG 141"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "kaide_ust_plaka_delik_kaynagi_15",
+"bom": [
+"Delik kaynağı · TIG 141 · yüz taşlanır",
+1,
+"25 × 8 × 4",
+"kaide plakası ↔ boru",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "delik",
+"yontem": "TIG 141"
+},
+"birim": "TOPPING_GOVDE"
+},
+{
+"ad": "kaide_ust_plaka_delik_kaynagi_16",
+"bom": [
+"Delik kaynağı · TIG 141 · yüz taşlanır",
+1,
+"25 × 8 × 4",
+"kaide plakası ↔ boru",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "delik",
+"yontem": "TIG 141"
+},
+"birim": "TOPPING_GOVDE"
+}
+]
+}
+},
+"sure": 38.2
+}

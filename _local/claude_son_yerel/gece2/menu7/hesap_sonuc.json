@@ -1,0 +1,153 @@
+{
+ "mevcut": {
+  "alt1_190 (kiyma yeri)": [
+   9.056241182722493,
+   6.130396014702066,
+   2.925845168020427
+  ],
+  "alt2_190 (kusbasi yeri)": [
+   9.056241182720914,
+   6.130396014702574,
+   2.9258451680183413
+  ],
+  "ust_sol_380 (harc)": [
+   47.03914602134551,
+   11.59364329273595,
+   35.44550272860956
+  ],
+  "ust_sag_220 (sos yeri)": [
+   17.171937581231237,
+   7.008324767529607,
+   10.16361281370163
+  ]
+ },
+ "oneri": {
+  "alt2_EKSANTRIK_dik_sag (sag kenar 1879)": [
+   6.14065303918387,
+   4.199007598529115,
+   1.9416454406547545
+  ],
+  "alt2_ON_SAG_CEP (sadece y>1410, z>-201 x>1879 kesik)": [
+   8.731990838970914,
+   null,
+   null
+  ],
+  "ust_orta_190 (x 1936-2126)": [
+   23.852658175268502,
+   6.130396014700263,
+   17.72226216056824
+  ],
+  "ust_orta_200 (x 1931-2131)": [
+   25.079740094991088,
+   6.424059044638276,
+   18.65568105035281
+  ],
+  "ust_orta_210 (x 1926-2136)": [
+   26.304778446445226,
+   6.716582390100002,
+   19.588196056345225
+  ],
+  "ust_orta_217 (10 mm pay)": [
+   27.222667689436822,
+   6.935356485482126,
+   20.287311203954697
+  ],
+  "ust_sag_220_YUKSELTILMIS (ust 2099)": [
+   27.529143019955754,
+   7.008324767529607,
+   20.520818252426146
+  ]
+ },
+ "sekil_190x440_h215": {
+  "A kare-yuvarlak gecis (mevcut, keskin kose)": 9.05624118271889,
+  "A' ayni, kose R25 (hijyen)": 9.002917843114629,
+  "B yuvarlak konik (O = dar kenar)": 3.4595250439830822,
+  "C oval (stadyum, uclar yarim daire)": 8.281967245518508,
+  "D eksantrik (bir kenar dik)": 6.1828882227019895
+ },
+ "sekil_200x440_h392": {
+  "A kare-yuvarlak gecis (mevcut, keskin kose)": 25.079740094970926,
+  "A' ayni, kose R25 (hijyen)": 24.930578718208615,
+  "B yuvarlak konik (O = dar kenar)": 9.341218696422379,
+  "C oval (stadyum, uclar yarim daire)": 22.698072201845086,
+  "D eksantrik (bir kenar dik)": 16.685860437329744
+ },
+ "sekil_380x440_h392": {
+  "A kare-yuvarlak gecis (mevcut, keskin kose)": 47.039146021344415,
+  "A' ayni, kose R25 (hijyen)": 46.89103759252062,
+  "B yuvarlak konik (O = dar kenar)": 32.18659050832596,
+  "C oval (stadyum, uclar yarim daire)": 38.458462897130666,
+  "D eksantrik (bir kenar dik)": 27.665563400516486
+ },
+ "acilar": {
+  "190": {
+   "yan": 19.3,
+   "on": 52.5,
+   "arka": 38.1,
+   "vadi_on": 53.5,
+   "vadi_arka": 40.7
+  },
+  "200": {
+   "yan": 20.7,
+   "on": 52.5,
+   "arka": 38.1,
+   "vadi_on": 53.7,
+   "vadi_arka": 41.1
+  },
+  "220": {
+   "yan": 23.4,
+   "on": 52.5,
+   "arka": 38.1,
+   "vadi_on": 54.0,
+   "vadi_arka": 41.9
+  },
+  "380": {
+   "yan": 41.3,
+   "on": 52.5,
+   "arka": 38.1,
+   "vadi_on": 57.6,
+   "vadi_arka": 49.7
+  },
+  "eksantrik_sol_190": {
+   "sol": 19.5,
+   "sag": 0.0
+  }
+ },
+ "ihtiyac": {
+  "harc": {
+   "gun_kg": 22.0,
+   "iki_gun_kg": 44.0,
+   "iki_gun_L": 42.0
+  },
+  "patates": {
+   "gun_kg": 3.0,
+   "iki_gun_kg": 6.0,
+   "iki_gun_L": 5.71
+  },
+  "kiyma": {
+   "gun_kg": 1.6,
+   "iki_gun_kg": 3.2,
+   "iki_gun_L": 3.04
+  },
+  "tavuk": {
+   "gun_kg": 2.9,
+   "iki_gun_kg": 5.8,
+   "iki_gun_L": 6.8
+  },
+  "kusbasi": {
+   "gun_kg": 1.45,
+   "iki_gun_kg": 2.9,
+   "iki_gun_L": 3.4
+  },
+  "kasar": {
+   "gun_kg": 2.2,
+   "iki_gun_kg": 4.4,
+   "iki_gun_L": null
+  },
+  "sucuk": {
+   "gun_kg": 0.7,
+   "iki_gun_kg": 1.4,
+   "iki_gun_L": null
+  }
+ }
+}

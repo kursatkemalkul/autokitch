@@ -1,0 +1,193 @@
+1521 bileşen 18.8 s
+2 ('A_GOVDE__conta', 0) A/Gövde [1403.  888. -714.] [1419.  893. -102.] 400
+52 ('A_GOVDE__paslanmaz', 0) A/Gövde [1378.  776. -830.] [1443. 2191.   13.] 23098
+3 ('A_GOVDE__plastik', 0) A/Gövde [1405.  993.   31.] [1419. 2107.   59.] 1824
+15 ('A_GOVDE__sac', 0) A/Gövde [ 736.  788. -830.] [1436. 2200.   59.] 11188
+7 ('A_ONYUZ__on_seffaf', 0) A/Gövde [736. 788.  59.] [1434. 2197.   79.] 764
+21 ('B_BAGLANTI__paslanmaz', 2) B/Gövde [1409.  725. -761.] [2071.  732.    7.] 6468
+8 ('B_BAGLANTI__paslanmaz', 5) B/Elektrik [1389.  700. -794.] [1946.  719. -162.] 2446
+2 ('B_KABLO__kanal', 5) B/Elektrik [ 988.  164. -790.] [2072.  728. -765.] 3484
+1 ('B_KASA__conta', 2) B/Gövde [2091.  124. -830.] [2091.  788.   39.] 30
+2 ('B_KASA__on_cerceve', 2) B/Gövde [738. 124.  22.] [4398.  786.   24.] 274
+3 ('B_KASA__pu', 2) B/Gövde [ 797.  126. -828.] [4027.  786.   23.] 20416
+13 ('B_KASA__sac', 2) B/Gövde [ 736.  128. -830.] [4400.  788.   39.] 21149
+6 ('B_MODULER__baglanti', 2) B/Gövde [1403.  764. -714.] [2487.  785. -102.] 11378
+2 ('B_MODULER__gfrp', 2) B/Gövde [ 738.  784. -721.] [2731.  786.  -95.] 3351
+5 ('B_MODULER__paslanmaz', 2) B/Gövde [ 738.  127. -721.] [2731.  784.  -95.] 2360
+1 ('B_TASIYICI__celik', 2) B/Gövde [2503.  747. -640.] [4026.  786. -125.] 56
+3 ('CEK_K1_lahm_5__on_seffaf__CEKMECE', 3) B/Çekmeceler [736. 618.  24.] [1434.  785.   79.] 176
+3 ('CEK_K2_lahm_5__celik', 3) B/Çekmeceler [1454.  655. -756.] [1479.  727.   23.] 245
+1 ('CEK_K2_lahm_5__celik__CEKMECE', 3) B/Çekmeceler [1483.  683. -751.] [1485.  702. -722.] 80
+3 ('CEK_K2_lahm_5__on_seffaf__CEKMECE', 3) B/Çekmeceler [1438.  618.   24.] [2089.  785.   79.] 254
+2 ('CEK_K2_lahm_5__plastik', 3) B/Çekmeceler [1466.  683. -751.] [1472.  702.  -22.] 136
+1 ('CEK_K2_lahm_5__plastik__CEKMECE', 3) B/Çekmeceler [1477.  683. -751.] [1483.  702. -722.] 68
+3 ('CEK_K3_hamur_4__on_seffaf__CEKMECE', 3) B/Çekmeceler [2092.  510.   39.] [2744.  785.   79.] 59
+1 ('D_PIZZA_YEDEK_UST__karton', 19) F/Gövde [2520. 1348. -424.] [3324. 1860.  -20.] 10
+1 ('ELK_DOLAP__kablo_sinyal', 5) B/Elektrik [1457.  691. -762.] [1461.  706.  -53.] 544
+4 ('ELK_IC__kanal', 5) B/Elektrik [1454.  685. -790.] [1643.  715.  -62.] 2669
+9 ('ELK_IC__kanal', 16) TOPPING/Elektrik [1671.  910. -828.] [2499. 1880.   25.] 1988
+1 ('ELK_ISTASYON__kablo_sinyal', 23) F/Elektrik [2557.  857. -803.] [2788.  863. -656.] 99
+5 ('ELK_TOPPING__celik', 16) TOPPING/Elektrik [1495. 1245. -828.] [2335. 1757. -712.] 1430
+9 ('ELK_TOPPING__kablo', 16) TOPPING/Elektrik [1680.  918. -814.] [2465. 1880. -460.] 8111
+14 ('ELK_TOPPING__kablo_sinyal', 16) TOPPING/Elektrik [1618.  918. -824.] [2496. 1880.    7.] 20682
+7 ('ELK_TOPPING__kanal', 16) TOPPING/Elektrik [1496.  905. -828.] [2449. 1880. -768.] 1990
+8 ('ELK_TOPPING__rakor', 16) TOPPING/Elektrik [1509.  911. -817.] [2471. 1847. -464.] 2388
+1 ('ELK_ZINCIR__conta', 51) Elektrik/Ana hat [2477. 1474. -723.] [2523. 1530. -657.] 48
+1 ('ELK_ZINCIR__etiket', 16) TOPPING/Elektrik [2476. 1470. -773.] [2477. 1478. -729.] 12
+1 ('ELK_ZINCIR__etiket', 23) F/Elektrik [2523. 1470. -773.] [2524. 1478. -729.] 12
+2 ('ELK_ZINCIR__harting', 16) TOPPING/Elektrik [2410. 1503. -773.] [2477. 1596. -730.] 24
+2 ('ELK_ZINCIR__harting', 23) F/Elektrik [2523. 1503. -773.] [2590. 1596. -730.] 22
+2 ('ELK_ZINCIR__hava', 17) TOPPING/Hava [2450. 1161. -809.] [2493. 1624. -685.] 864
+2 ('ELK_ZINCIR__hava', 24) F/Hava [2437. 1510. -729.] [2563. 1624. -685.] 1876
+1 ('ELK_ZINCIR__kablo_guc', 16) TOPPING/Elektrik [2478. 1541. -759.] [2496. 1624. -744.] 320
+1 ('ELK_ZINCIR__kablo_guc', 23) F/Elektrik [2504. 1541. -759.] [2522. 1624. -744.] 320
+1 ('ELK_ZINCIR__kablo_guc', 51) Elektrik/Ana hat [2421. 1477. -759.] [2571. 1492. -701.] 1072
+1 ('ELK_ZINCIR__kablo_veri', 16) TOPPING/Elektrik [2478. 1583. -715.] [2493. 1624. -667.] 624
+1 ('ELK_ZINCIR__kablo_veri', 23) F/Elektrik [2507. 1583. -715.] [2522. 1624. -667.] 624
+1 ('ELK_ZINCIR__kablo_veri', 51) Elektrik/Ana hat [2418. 1510. -675.] [2578. 1591. -667.] 1072
+1 ('ELK_ZINCIR__kanal', 16) TOPPING/Elektrik [2450. 1618. -818.] [2499. 1648. -703.] 572
+1 ('ELK_ZINCIR__kanal', 23) F/Elektrik [2501. 1618. -826.] [3929. 1648. -703.] 160
+1 ('ELK_ZINCIR__kod_kirmizi', 16) TOPPING/Elektrik [2409. 1528. -769.] [2410. 1572. -734.] 12
+1 ('ELK_ZINCIR__kod_mavi', 16) TOPPING/Elektrik [2470. 1576. -682.] [2474. 1598. -660.] 80
+1 ('ELK_ZINCIR__kod_mavi', 17) TOPPING/Hava [2448. 1539. -698.] [2454. 1557. -680.] 80
+1 ('ELK_ZINCIR__kod_mavi', 23) F/Elektrik [2526. 1576. -682.] [2530. 1598. -660.] 80
+1 ('ELK_ZINCIR__kod_mavi', 24) F/Hava [2546. 1539. -698.] [2552. 1557. -680.] 80
+2 ('ELK_ZINCIR__m12', 16) TOPPING/Elektrik [2431. 1574. -684.] [2477. 1600. -658.] 92
+2 ('ELK_ZINCIR__m12', 23) F/Elektrik [2523. 1574. -684.] [2569. 1600. -658.] 72
+3 ('ELK_ZINCIR__paslanmaz', 16) TOPPING/Elektrik [2477. 1468. -777.] [2499. 1602. -653.] 1016
+3 ('ELK_ZINCIR__paslanmaz', 23) F/Elektrik [2501. 1468. -777.] [2523. 1602. -653.] 1016
+1 ('ELK_ZINCIR__rakor', 16) TOPPING/Elektrik [2414. 1492. -766.] [2444. 1512. -736.] 80
+1 ('ELK_ZINCIR__rakor', 17) TOPPING/Hava [2454. 1538. -700.] [2477. 1558. -678.] 104
+1 ('ELK_ZINCIR__rakor', 23) F/Elektrik [2556. 1492. -763.] [2571. 1512. -739.] 24
+1 ('ELK_ZINCIR__rakor', 24) F/Hava [2523. 1538. -700.] [2546. 1558. -678.] 104
+1 ('F_DONER__RULO_GB_BURUN', 21) F/Yükleme bandı [2522.  988. -335.] [2534. 1000.   -5.] 152
+1 ('F_TP10_GOVDE__grafit', 20) F/Fırın [2500. 1246. -652.] [4000. 1305. -651.] 10
+2 ('F_TP10_GOVDE__koyu', 20) F/Fırın [2503.  842. -681.] [2613. 1016. -651.] 58
+1 ('F_TP10_GOVDE__paslanmaz', 20) F/Fırın [2501.  789. -412.] [3999. 1304. -410.] 32
+1 ('F_TP10_GOVDE__sac', 20) F/Fırın [2500.  788. -651.] [4000. 1305.   79.] 58
+1 ('F_UST_KABIN__on_seffaf', 19) F/Gövde [2501. 1597.   -8.] [2513. 1613.    8.] 460
+51 ('F_UST_KABIN__paslanmaz', 19) F/Gövde [2500.  845. -830.] [2555. 1862.    3.] 20780
+1 ('F_UST_KABIN__plastik', 23) F/Elektrik [2541.  840. -830.] [2576.  880. -812.] 92
+27 ('F_UST_KABIN__sac', 19) F/Gövde [2500.  788. -830.] [4000. 1862.   59.] 13176
+2 ('F_UST_KABIN__yalitim', 19) F/Gövde [2503. 1327. -795.] [3997. 1347.   26.] 136
+7 ('F_UST_KAPAK__on_seffaf__KAPAK_F_SOL', 19) F/Gövde [2500. 1308.   59.] [3248. 2197.   79.] 1554
+4 ('F_UST_KAPAK__on_seffaf__YAY_F_SOL', 19) F/Gövde [2503. 1338.   -6.] [2518. 1611.   76.] 408
+4 ('F_YUKLEME_BANDI__celik', 21) F/Yükleme bandı [2520.  789. -335.] [2850. 1001.   -5.] 198
+1 ('F_YUKLEME_BANDI__ptfe_bant', 21) F/Yükleme bandı [2522.  985. -318.] [2561. 1000.  -22.] 664
+13 ('HAVA_IC__aski', 17) TOPPING/Hava [1677. 1109. -747.] [2387. 1661. -630.] 3568
+4 ('HAVA_IC__kanal', 17) TOPPING/Hava [1676. 1118. -747.] [2398. 1666. -664.] 2468
+8 ('KAIDE_A__paslanmaz', 0) A/Gövde [ 741.  788. -815.] [1433.  896.   57.] 2792
+1 ('KAIDE_A__sac', 0) A/Gövde [ 741.  888. -815.] [1431.  893.   57.] 1720
+13 ('KAIDE_C__paslanmaz', 7) TOPPING/Gövde [1436.  788. -830.] [2500.  892.   35.] 32560
+14 ('TOPPING_DONER__HELEZON_KASAR', 14) TOPPING/Kaşar [2065. 1168. -670.] [2113. 1216. -109.] 5546
+14 ('TOPPING_DONER__HELEZON_SUCUK', 15) TOPPING/Sucuk [2327. 1178. -670.] [2395. 1246. -109.] 4356
+25 ('TOPPING_DONER__KARISTIRICI_KASAR', 14) TOPPING/Kaşar [1959. 1298. -670.] [2218. 1439. -144.] 5896
+23 ('TOPPING_DONER__KARISTIRICI_SUCUK', 15) TOPPING/Sucuk [2313. 1292. -670.] [2408. 1340. -144.] 4776
+47 ('TOPPING_DONER__TABLA', 8) TOPPING/Tabla [ 926.  940. -354.] [1240. 1006.   -4.] 17076
+3 ('TOPPING_DONER__VALF_HARC', 9) TOPPING/Lahmacun harcı [1679. 1590. -410.] [1790. 1637. -364.] 278
+3 ('TOPPING_DONER__VALF_KIYMA', 12) TOPPING/Tavuk [1553. 1167. -410.] [1664. 1214. -364.] 278
+3 ('TOPPING_DONER__VALF_KIYMA_ORTA', 10) TOPPING/Kıyma [1988. 1590. -410.] [2099. 1637. -364.] 278
+3 ('TOPPING_DONER__VALF_KUSBASI', 13) TOPPING/Kuşbaşı [1805. 1167. -410.] [1916. 1214. -364.] 278
+3 ('TOPPING_DONER__VALF_SOS', 11) TOPPING/Patates [2216. 1590. -410.] [2328. 1637. -364.] 278
+1 ('TOPPING_GOVDE__cerceve', 7) TOPPING/Gövde [1438.  964.   38.] [2499. 2198.   39.] 5384
+18 ('TOPPING_GOVDE__conta', 7) TOPPING/Gövde [1438. 1110. -628.] [2499. 2198.   38.] 5520
+1 ('TOPPING_GOVDE__kabuk', 7) TOPPING/Gövde [1436.  892. -830.] [2500. 2200.   39.] 98340
+166 ('TOPPING_GOVDE__paslanmaz', 7) TOPPING/Gövde [1436.  776. -830.] [2511. 2195.   39.] 126662
+50 ('TOPPING_GOVDE__pom', 7) TOPPING/Gövde [1480. 1110. -572.] [2455. 2154.   38.] 21848
+3 ('TOPPING_GOVDE__pu', 7) TOPPING/Gövde [1438. 1110. -628.] [2499. 2198.   38.] 35884
+57 ('TOPPING_GOVDE__sac', 7) TOPPING/Gövde [1438.  806. -828.] [2499. 2198.   38.] 72640
+3 ('TOPPING_MODUL__aluminyum', 9) TOPPING/Lahmacun harcı [1631. 1591. -827.] [1740. 1635. -359.] 512
+3 ('TOPPING_MODUL__aluminyum', 10) TOPPING/Kıyma [1940. 1591. -827.] [2049. 1635. -359.] 512
+3 ('TOPPING_MODUL__aluminyum', 11) TOPPING/Patates [2168. 1591. -827.] [2278. 1635. -359.] 512
+4 ('TOPPING_MODUL__aluminyum', 12) TOPPING/Tavuk [1505. 1168. -827.] [1614. 1212. -359.] 120
+3 ('TOPPING_MODUL__aluminyum', 13) TOPPING/Kuşbaşı [1757. 1168. -827.] [1866. 1212. -359.] 608
+2 ('TOPPING_MODUL__aluminyum', 17) TOPPING/Hava [1690. 1082. -780.] [2470. 1310. -660.] 24
+6 ('TOPPING_MODUL__bakir', 18) TOPPING/Soğutma [1609. 1067. -781.] [2239. 1560. -657.] 11449
+4 ('TOPPING_MODUL__cam', 14) TOPPING/Kaşar [1949. 1144. -525.] [2228. 1504. -116.] 17554
+4 ('TOPPING_MODUL__cam', 15) TOPPING/Sucuk [2290. 1144. -525.] [2431. 1504. -116.] 16814
+115 ('TOPPING_MODUL__celik', 8) TOPPING/Tabla [ 836.  896. -508.] [2497. 1109.  -17.] 21016
+1 ('TOPPING_MODUL__celik', 9) TOPPING/Lahmacun harcı [1719. 1191. -152.] [1725. 1197. -144.] 48
+1 ('TOPPING_MODUL__celik', 11) TOPPING/Patates [2257. 1191. -152.] [2262. 1197. -144.] 48
+23 ('TOPPING_MODUL__celik', 14) TOPPING/Kaşar [1956. 1126. -539.] [2194. 1502. -154.] 8120
+23 ('TOPPING_MODUL__celik', 15) TOPPING/Sucuk [2291. 1126. -539.] [2419. 1502. -154.] 8120
+2 ('TOPPING_MODUL__celik', 16) TOPPING/Elektrik [2270. 1707. -828.] [2401. 1737. -767.] 64
+6 ('TOPPING_MODUL__celik', 18) TOPPING/Soğutma [1487.  902. -731.] [2126. 1565. -557.] 1074
+22 ('TOPPING_MODUL__celik__ARABA', 8) TOPPING/Tabla [ 936.  914. -385.] [1216.  973.  -25.] 5804
+2 ('TOPPING_MODUL__conta', 9) TOPPING/Lahmacun harcı [1702. 1149. -192.] [1742. 1575. -152.] 302
+2 ('TOPPING_MODUL__conta', 10) TOPPING/Kıyma [1892. 1149. -190.] [1931. 1575. -150.] 302
+2 ('TOPPING_MODUL__conta', 11) TOPPING/Patates [2240. 1149. -192.] [2279. 1575. -152.] 302
+1 ('TOPPING_MODUL__conta', 12) TOPPING/Tavuk [1576. 1149. -191.] [1617. 1152. -149.] 172
+1 ('TOPPING_MODUL__conta', 13) TOPPING/Kuşbaşı [1828. 1149. -191.] [1869. 1152. -149.] 172
+1 ('TOPPING_MODUL__conta', 14) TOPPING/Kaşar [2059. 1149. -180.] [2118. 1152. -150.] 508
+1 ('TOPPING_MODUL__conta', 15) TOPPING/Sucuk [2330. 1149. -180.] [2391. 1152. -150.] 528
+1 ('TOPPING_MODUL__conta', 18) TOPPING/Soğutma [1973. 1568. -640.] [2089. 1835. -630.] 28
+1 ('TOPPING_MODUL__fircali', 9) TOPPING/Lahmacun harcı [1697. 1577. -680.] [1747. 1595. -674.] 12
+1 ('TOPPING_MODUL__fircali', 10) TOPPING/Kıyma [2006. 1590. -680.] [2056. 1595. -674.] 12
+1 ('TOPPING_MODUL__fircali', 11) TOPPING/Patates [2234. 1577. -680.] [2284. 1595. -674.] 12
+1 ('TOPPING_MODUL__fircali', 12) TOPPING/Tavuk [1571. 1154. -680.] [1621. 1172. -674.] 12
+1 ('TOPPING_MODUL__fircali', 13) TOPPING/Kuşbaşı [1823. 1154. -680.] [1873. 1172. -674.] 12
+21 ('TOPPING_MODUL__hava_ana', 17) TOPPING/Hava [1587. 1120. -799.] [2420. 1853. -663.] 8045
+1 ('TOPPING_MODUL__hortum_gida', 9) TOPPING/Lahmacun harcı [1701. 1216. -191.] [1743. 1539. -150.] 104
+1 ('TOPPING_MODUL__hortum_gida', 10) TOPPING/Kıyma [1891. 1216. -191.] [1932. 1539. -150.] 104
+1 ('TOPPING_MODUL__hortum_gida', 11) TOPPING/Patates [2239. 1216. -191.] [2280. 1539. -150.] 104
+52 ('TOPPING_MODUL__kart', 16) TOPPING/Elektrik [2272. 1700. -760.] [2399. 1745. -700.] 116096
+6 ('TOPPING_MODUL__koyu', 8) TOPPING/Tabla [ 865.  914. -418.] [2475. 1109.  -19.] 804
+22 ('TOPPING_MODUL__koyu', 16) TOPPING/Elektrik [1463. 1142. -819.] [2366. 1814. -688.] 38266
+3 ('TOPPING_MODUL__koyu', 18) TOPPING/Soğutma [1598. 1035. -752.] [2273. 1495. -645.] 445
+9 ('TOPPING_MODUL__koyu__ARABA', 8) TOPPING/Tabla [ 977.  917. -302.] [1195.  969.  -49.] 272
+6 ('TOPPING_MODUL__miknatis', 8) TOPPING/Tabla [2450.  971. -363.] [2482. 1005. -358.] 288
+14 ('TOPPING_MODUL__motor', 8) TOPPING/Tabla [2350.  896. -505.] [2494. 1016. -398.] 42156
+4 ('TOPPING_MODUL__motor', 14) TOPPING/Kaşar [2060. 1163. -814.] [2117. 1376. -670.] 44048
+4 ('TOPPING_MODUL__motor', 15) TOPPING/Sucuk [2332. 1183. -814.] [2389. 1345. -670.] 44048
+5 ('TOPPING_MODUL__motor', 18) TOPPING/Soğutma [1498.  815. -786.] [2013. 1742. -479.] 588
+1 ('TOPPING_MODUL__motor__ARABA', 8) TOPPING/Tabla [1058.  900. -199.] [1115.  941. -141.] 12
+8 ('TOPPING_MODUL__on_seffaf', 7) TOPPING/Gövde [ 1.438e+03  7.880e+02 -1.000e+00] [2497. 2197.   79.] 4052
+15 ('TOPPING_MODUL__paslanmaz', 7) TOPPING/Gövde [1438.  893.    6.] [2499. 2190.   39.] 2220
+22 ('TOPPING_MODUL__paslanmaz', 9) TOPPING/Lahmacun harcı [1532. 1048. -692.] [1912. 2129. -120.] 3550
+20 ('TOPPING_MODUL__paslanmaz', 10) TOPPING/Kıyma [1882. 1048. -692.] [2131. 2099. -120.] 6602
+22 ('TOPPING_MODUL__paslanmaz', 11) TOPPING/Patates [2149. 1048. -692.] [2369. 1992. -120.] 3552
+14 ('TOPPING_MODUL__paslanmaz', 12) TOPPING/Tavuk [1501. 1048. -692.] [1691. 1499. -120.] 2076
+14 ('TOPPING_MODUL__paslanmaz', 13) TOPPING/Kuşbaşı [1753. 1048. -692.] [1894. 1499. -120.] 2498
+9 ('TOPPING_MODUL__paslanmaz', 14) TOPPING/Kaşar [1944. 1048. -670.] [2233. 1375. -118.] 1230
+9 ('TOPPING_MODUL__paslanmaz', 15) TOPPING/Sucuk [2286. 1048. -670.] [2435. 1344. -118.] 1246
+2 ('TOPPING_MODUL__paslanmaz__PISTON_HARC', 9) TOPPING/Lahmacun harcı [1712. 1604. -682.] [1732. 1623. -456.] 196
+3 ('TOPPING_MODUL__paslanmaz__PISTON_KIYMA', 12) TOPPING/Tavuk [1586. 1181. -682.] [1606. 1200. -456.] 144
+2 ('TOPPING_MODUL__paslanmaz__PISTON_KIYMA_ORTA', 10) TOPPING/Kıyma [2021. 1604. -682.] [2041. 1623. -456.] 196
+2 ('TOPPING_MODUL__paslanmaz__PISTON_KUSBASI', 13) TOPPING/Kuşbaşı [1838. 1181. -682.] [1858. 1200. -456.] 196
+2 ('TOPPING_MODUL__paslanmaz__PISTON_SOS', 11) TOPPING/Patates [2249. 1604. -682.] [2269. 1623. -456.] 196
+20 ('TOPPING_MODUL__pom', 7) TOPPING/Gövde [1438. 1120. -630.] [2499. 1730.   39.] 5728
+3 ('TOPPING_MODUL__pom', 9) TOPPING/Lahmacun harcı [1703. 1048. -635.] [1741. 1628. -156.] 200
+1 ('TOPPING_MODUL__pom', 10) TOPPING/Kıyma [2016. 1599. -635.] [2046. 1628. -565.] 104
+3 ('TOPPING_MODUL__pom', 11) TOPPING/Patates [2241. 1048. -635.] [2278. 1628. -156.] 200
+1 ('TOPPING_MODUL__pom', 12) TOPPING/Tavuk [1581. 1176. -635.] [1611. 1205. -565.] 104
+1 ('TOPPING_MODUL__pom', 13) TOPPING/Kuşbaşı [1833. 1176. -635.] [1863. 1205. -565.] 104
+5 ('TOPPING_MODUL__pom', 14) TOPPING/Kaşar [1951. 1124. -648.] [2119. 1377.   24.] 3300
+5 ('TOPPING_MODUL__pom', 15) TOPPING/Sucuk [2286. 1124. -648.] [2404. 1346.   24.] 3304
+1 ('TOPPING_MODUL__pom', 17) TOPPING/Hava [2431. 1198. -700.] [2459. 1226. -690.] 48
+3 ('TOPPING_MODUL__pom', 18) TOPPING/Soğutma [1442.  900. -828.] [2223. 1835. -630.] 88
+1 ('TOPPING_MODUL__pom__PISTON_HARC', 9) TOPPING/Lahmacun harcı [1696. 1588. -456.] [1747. 1639. -436.] 48
+1 ('TOPPING_MODUL__pom__PISTON_KIYMA', 12) TOPPING/Tavuk [1562. 1156. -456.] [1631. 1225. -436.] 48
+1 ('TOPPING_MODUL__pom__PISTON_KIYMA_ORTA', 10) TOPPING/Kıyma [2005. 1588. -456.] [2056. 1639. -436.] 48
+1 ('TOPPING_MODUL__pom__PISTON_KUSBASI', 13) TOPPING/Kuşbaşı [1814. 1156. -456.] [1883. 1225. -436.] 48
+1 ('TOPPING_MODUL__pom__PISTON_SOS', 11) TOPPING/Patates [2234. 1588. -456.] [2284. 1639. -436.] 48
+3 ('TOPPING_MODUL__pu', 18) TOPPING/Soğutma [1447. 1283. -826.] [2222. 1835. -640.] 3034
+5 ('TOPPING_MODUL__sac', 8) TOPPING/Tabla [ 836.  893. -415.] [2495.  967.   -5.] 1116
+7 ('TOPPING_MODUL__sac', 16) TOPPING/Elektrik [1443. 1680. -828.] [2409. 2140. -696.] 3244
+11 ('TOPPING_MODUL__sac', 18) TOPPING/Soğutma [1446.  893. -826.] [2223. 1835. -490.] 7526
+2 ('TOPPING_MODUL__sac__ARABA', 8) TOPPING/Tabla [ 896.  932. -340.] [1216.  952.   -5.] 80
+1 ('TOPPING_MODUL__saydam_celik', 9) TOPPING/Lahmacun harcı [1693. 1585. -552.] [1750. 1642. -436.] 104
+1 ('TOPPING_MODUL__saydam_celik', 10) TOPPING/Kıyma [2002. 1585. -552.] [2059. 1642. -436.] 104
+1 ('TOPPING_MODUL__saydam_celik', 11) TOPPING/Patates [2230. 1585. -552.] [2288. 1642. -436.] 104
+1 ('TOPPING_MODUL__saydam_celik', 12) TOPPING/Tavuk [1559. 1153. -559.] [1634. 1228. -428.] 208
+1 ('TOPPING_MODUL__saydam_celik', 13) TOPPING/Kuşbaşı [1811. 1153. -559.] [1886. 1228. -428.] 520
+3 ('TOPPING_MODUL__silikon', 8) TOPPING/Tabla [ 843.  940. -377.] [1464. 1059.    0.] 72
+4 ('TOPPING_MODUL__silikon', 14) TOPPING/Kaşar [1952. 1167. -521.] [2226. 1504. -114.] 6904
+4 ('TOPPING_MODUL__silikon', 15) TOPPING/Sucuk [2290. 1173. -521.] [2431. 1504. -114.] 6328
+6 ('TOPPING_MODUL__silikon', 18) TOPPING/Soğutma [1620.  808. -780.] [ 2.499e+03  1.424e+03 -2.000e+00] 5994
+12 ('TOPPING_MODUL__siyah', 17) TOPPING/Hava [1704. 1310. -740.] [1986. 1340. -680.] 144
+1 ('TOPPING_MODUL__yayici_sabit_baglanti', 9) TOPPING/Lahmacun harcı [1714. 1186. -144.] [1730. 1202. -134.] 192
+1 ('TOPPING_MODUL__yayici_sabit_baglanti', 11) TOPPING/Patates [2251. 1186. -144.] [2267. 1202. -134.] 192
+1 ('U_F_GOVDE__on_seffaf', 40) U/Gövde [2501. 2130.   20.] [2517. 2150.   76.] 64
+30 ('U_F_GOVDE__paslanmaz', 40) U/Gövde [2500. 1885. -830.] [2555. 2194.   35.] 11420
+9 ('U_F_GOVDE__sac', 40) U/Gövde [2500. 1862. -830.] [4000. 2200.   59.] 6020
+1 ('U_KUTU_YEDEK__karton', 40) U/Gövde [2520. 1863. -424.] [3324. 2135.  -20.] 10

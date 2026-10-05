@@ -1,0 +1,913 @@
+{
+ "parca": "astar_tavan",
+ "surum": "h3_sac_v1",
+ "malzeme": "AISI 304 2B, dış yüz 240 kum satine, hat boyunca yatay",
+ "t": 1.0,
+ "R": 3.0,
+ "K": 0.45,
+ "adet": 1,
+ "birim": "mm",
+ "ust_yuz": "Z = t yüzü = kök panelin +n yüzü (bütün panellerin yerel z = t yüzü)",
+ "dis_kontur": [
+  {
+   "t": "L",
+   "p": [
+    [
+     2417.0,
+     -569.0
+    ],
+    [
+     2438.4,
+     -569.0
+    ]
+   ]
+  },
+  {
+   "t": "L",
+   "p": [
+    [
+     2438.4,
+     -569.0
+    ],
+    [
+     2438.4,
+     33.0
+    ]
+   ]
+  },
+  {
+   "t": "L",
+   "p": [
+    [
+     2438.4,
+     33.0
+    ],
+    [
+     2437.4,
+     33.0
+    ]
+   ]
+  },
+  {
+   "t": "L",
+   "p": [
+    [
+     2437.4,
+     33.0
+    ],
+    [
+     2437.4,
+     30.0
+    ]
+   ]
+  },
+  {
+   "t": "L",
+   "p": [
+    [
+     2437.4,
+     30.0
+    ],
+    [
+     2436.4,
+     30.0
+    ]
+   ]
+  },
+  {
+   "t": "L",
+   "p": [
+    [
+     2436.4,
+     30.0
+    ],
+    [
+     2436.4,
+     52.41925
+    ]
+   ]
+  },
+  {
+   "t": "L",
+   "p": [
+    [
+     2436.4,
+     52.41925
+    ],
+    [
+     1499.6,
+     52.41925
+    ]
+   ]
+  },
+  {
+   "t": "L",
+   "p": [
+    [
+     1499.6,
+     52.41925
+    ],
+    [
+     1499.6,
+     30.0
+    ]
+   ]
+  },
+  {
+   "t": "L",
+   "p": [
+    [
+     1499.6,
+     30.0
+    ],
+    [
+     1498.6,
+     30.0
+    ]
+   ]
+  },
+  {
+   "t": "L",
+   "p": [
+    [
+     1498.6,
+     30.0
+    ],
+    [
+     1498.6,
+     33.0
+    ]
+   ]
+  },
+  {
+   "t": "L",
+   "p": [
+    [
+     1498.6,
+     33.0
+    ],
+    [
+     1497.6,
+     33.0
+    ]
+   ]
+  },
+  {
+   "t": "L",
+   "p": [
+    [
+     1497.6,
+     33.0
+    ],
+    [
+     1497.6,
+     -569.0
+    ]
+   ]
+  },
+  {
+   "t": "L",
+   "p": [
+    [
+     1497.6,
+     -569.0
+    ],
+    [
+     1519.0,
+     -569.0
+    ]
+   ]
+  },
+  {
+   "t": "L",
+   "p": [
+    [
+     1519.0,
+     -569.0
+    ],
+    [
+     1519.0,
+     -566.0
+    ]
+   ]
+  },
+  {
+   "t": "L",
+   "p": [
+    [
+     1519.0,
+     -566.0
+    ],
+    [
+     1520.0,
+     -566.0
+    ]
+   ]
+  },
+  {
+   "t": "L",
+   "p": [
+    [
+     1520.0,
+     -566.0
+    ],
+    [
+     1520.0,
+     -590.41925
+    ]
+   ]
+  },
+  {
+   "t": "L",
+   "p": [
+    [
+     1520.0,
+     -590.41925
+    ],
+    [
+     2416.0,
+     -590.41925
+    ]
+   ]
+  },
+  {
+   "t": "L",
+   "p": [
+    [
+     2416.0,
+     -590.41925
+    ],
+    [
+     2416.0,
+     -566.0
+    ]
+   ]
+  },
+  {
+   "t": "L",
+   "p": [
+    [
+     2416.0,
+     -566.0
+    ],
+    [
+     2417.0,
+     -566.0
+    ]
+   ]
+  },
+  {
+   "t": "L",
+   "p": [
+    [
+     2417.0,
+     -566.0
+    ],
+    [
+     2417.0,
+     -569.0
+    ]
+   ]
+  }
+ ],
+ "ek_dis_konturlar": [],
+ "ic_konturlar": [
+  [
+   {
+    "t": "C",
+    "c": [
+     1507.0,
+     -520.0
+    ],
+    "r": 1.65
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     1507.0,
+     -380.0
+    ],
+    "r": 1.65
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     2429.0,
+     -520.0
+    ],
+    "r": 1.65
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     2429.0,
+     -380.0
+    ],
+    "r": 1.65
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     1507.0,
+     -240.0
+    ],
+    "r": 1.65
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     1507.0,
+     -100.0
+    ],
+    "r": 1.65
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     1507.0,
+     10.0
+    ],
+    "r": 1.65
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     2429.0,
+     -240.0
+    ],
+    "r": 1.65
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     2429.0,
+     -100.0
+    ],
+    "r": 1.65
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     2429.0,
+     10.0
+    ],
+    "r": 1.65
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     2380.0,
+     -581.41925
+    ],
+    "r": 1.65
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     1560.0,
+     -581.41925
+    ],
+    "r": 1.65
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     1720.0,
+     -581.41925
+    ],
+    "r": 1.65
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     1880.0,
+     -581.41925
+    ],
+    "r": 1.65
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     2050.0,
+     -581.41925
+    ],
+    "r": 1.65
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     2220.0,
+     -581.41925
+    ],
+    "r": 1.65
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     1560.0,
+     44.41925
+    ],
+    "r": 1.65
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     2380.0,
+     44.41925
+    ],
+    "r": 1.65
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     2220.0,
+     44.41925
+    ],
+    "r": 1.65
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     2050.0,
+     44.41925
+    ],
+    "r": 1.65
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     1880.0,
+     44.41925
+    ],
+    "r": 1.65
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     1720.0,
+     44.41925
+    ],
+    "r": 1.65
+   }
+  ]
+ ],
+ "bukumler": [
+  {
+   "no": 1,
+   "ad": "arka_flans",
+   "aci": 90.0,
+   "yon": "yukari",
+   "R": 3.0,
+   "K": 0.45,
+   "BA": 5.41925,
+   "tip": "flans",
+   "t": 1.0,
+   "V_kalip": 8.0,
+   "cizgi": [
+    [
+     1520.0,
+     -571.70962
+    ],
+    [
+     2416.0,
+     -571.70962
+    ]
+   ],
+   "baslangic": [
+    [
+     1520.0,
+     -569.0
+    ],
+    [
+     2416.0,
+     -569.0
+    ]
+   ],
+   "bitis": [
+    [
+     1520.0,
+     -574.41925
+    ],
+    [
+     2416.0,
+     -574.41925
+    ]
+   ],
+   "nominal_boy": 896.0,
+   "gercek_aralik": [
+    22.4,
+    918.4
+   ],
+   "gercek_boy": 896.0
+  },
+  {
+   "no": 2,
+   "ad": "on_flans",
+   "aci": 90.0,
+   "yon": "asagi",
+   "R": 3.0,
+   "K": 0.45,
+   "BA": 5.41925,
+   "tip": "flans",
+   "t": 1.0,
+   "V_kalip": 8.0,
+   "cizgi": [
+    [
+     2436.4,
+     35.70962
+    ],
+    [
+     1499.6,
+     35.70962
+    ]
+   ],
+   "baslangic": [
+    [
+     2436.4,
+     33.0
+    ],
+    [
+     1499.6,
+     33.0
+    ]
+   ],
+   "bitis": [
+    [
+     2436.4,
+     38.41925
+    ],
+    [
+     1499.6,
+     38.41925
+    ]
+   ],
+   "nominal_boy": 936.8,
+   "gercek_aralik": [
+    2.0,
+    938.8
+   ],
+   "gercek_boy": 936.8
+  }
+ ],
+ "formlar": [],
+ "kesikler": [
+  {
+   "panel": "tavan",
+   "tip": "rahatlatma",
+   "sekil": "dikdortgen",
+   "merkez_duz": null,
+   "uc": "bas",
+   "genislik": 1.0,
+   "derinlik": 3.0
+  },
+  {
+   "panel": "tavan",
+   "tip": "rahatlatma",
+   "sekil": "dikdortgen",
+   "merkez_duz": null,
+   "uc": "son",
+   "genislik": 1.0,
+   "derinlik": 3.0
+  },
+  {
+   "panel": "tavan",
+   "tip": "rahatlatma",
+   "sekil": "dikdortgen",
+   "merkez_duz": null,
+   "uc": "bas",
+   "genislik": 1.0,
+   "derinlik": 3.0
+  },
+  {
+   "panel": "tavan",
+   "tip": "rahatlatma",
+   "sekil": "dikdortgen",
+   "merkez_duz": null,
+   "uc": "son",
+   "genislik": 1.0,
+   "derinlik": 3.0
+  },
+  {
+   "panel": "tavan",
+   "tip": "kor_percin",
+   "sekil": "daire",
+   "merkez_duz": [
+    1507.0,
+    -520.0
+   ],
+   "parca": "ISO 15983 / 15984 Ø3,2 perçin deliği",
+   "cap": 3.3
+  },
+  {
+   "panel": "tavan",
+   "tip": "kor_percin",
+   "sekil": "daire",
+   "merkez_duz": [
+    1507.0,
+    -380.0
+   ],
+   "parca": "ISO 15983 / 15984 Ø3,2 perçin deliği",
+   "cap": 3.3
+  },
+  {
+   "panel": "tavan",
+   "tip": "kor_percin",
+   "sekil": "daire",
+   "merkez_duz": [
+    1507.0,
+    -240.0
+   ],
+   "parca": "ISO 15983 / 15984 Ø3,2 perçin deliği",
+   "cap": 3.3
+  },
+  {
+   "panel": "tavan",
+   "tip": "kor_percin",
+   "sekil": "daire",
+   "merkez_duz": [
+    1507.0,
+    -100.0
+   ],
+   "parca": "ISO 15983 / 15984 Ø3,2 perçin deliği",
+   "cap": 3.3
+  },
+  {
+   "panel": "tavan",
+   "tip": "kor_percin",
+   "sekil": "daire",
+   "merkez_duz": [
+    1507.0,
+    10.0
+   ],
+   "parca": "ISO 15983 / 15984 Ø3,2 perçin deliği",
+   "cap": 3.3
+  },
+  {
+   "panel": "tavan",
+   "tip": "kor_percin",
+   "sekil": "daire",
+   "merkez_duz": [
+    2429.0,
+    -520.0
+   ],
+   "parca": "ISO 15983 / 15984 Ø3,2 perçin deliği",
+   "cap": 3.3
+  },
+  {
+   "panel": "tavan",
+   "tip": "kor_percin",
+   "sekil": "daire",
+   "merkez_duz": [
+    2429.0,
+    -380.0
+   ],
+   "parca": "ISO 15983 / 15984 Ø3,2 perçin deliği",
+   "cap": 3.3
+  },
+  {
+   "panel": "tavan",
+   "tip": "kor_percin",
+   "sekil": "daire",
+   "merkez_duz": [
+    2429.0,
+    -240.0
+   ],
+   "parca": "ISO 15983 / 15984 Ø3,2 perçin deliği",
+   "cap": 3.3
+  },
+  {
+   "panel": "tavan",
+   "tip": "kor_percin",
+   "sekil": "daire",
+   "merkez_duz": [
+    2429.0,
+    -100.0
+   ],
+   "parca": "ISO 15983 / 15984 Ø3,2 perçin deliği",
+   "cap": 3.3
+  },
+  {
+   "panel": "tavan",
+   "tip": "kor_percin",
+   "sekil": "daire",
+   "merkez_duz": [
+    2429.0,
+    10.0
+   ],
+   "parca": "ISO 15983 / 15984 Ø3,2 perçin deliği",
+   "cap": 3.3
+  },
+  {
+   "panel": "arka_flans",
+   "tip": "kor_percin",
+   "sekil": "daire",
+   "merkez_duz": [
+    1560.0,
+    -581.4192
+   ],
+   "parca": "ISO 15983 / 15984 Ø3,2 perçin deliği",
+   "cap": 3.3
+  },
+  {
+   "panel": "arka_flans",
+   "tip": "kor_percin",
+   "sekil": "daire",
+   "merkez_duz": [
+    1720.0,
+    -581.4192
+   ],
+   "parca": "ISO 15983 / 15984 Ø3,2 perçin deliği",
+   "cap": 3.3
+  },
+  {
+   "panel": "arka_flans",
+   "tip": "kor_percin",
+   "sekil": "daire",
+   "merkez_duz": [
+    1880.0,
+    -581.4192
+   ],
+   "parca": "ISO 15983 / 15984 Ø3,2 perçin deliği",
+   "cap": 3.3
+  },
+  {
+   "panel": "arka_flans",
+   "tip": "kor_percin",
+   "sekil": "daire",
+   "merkez_duz": [
+    2050.0,
+    -581.4192
+   ],
+   "parca": "ISO 15983 / 15984 Ø3,2 perçin deliği",
+   "cap": 3.3
+  },
+  {
+   "panel": "arka_flans",
+   "tip": "kor_percin",
+   "sekil": "daire",
+   "merkez_duz": [
+    2220.0,
+    -581.4192
+   ],
+   "parca": "ISO 15983 / 15984 Ø3,2 perçin deliği",
+   "cap": 3.3
+  },
+  {
+   "panel": "arka_flans",
+   "tip": "kor_percin",
+   "sekil": "daire",
+   "merkez_duz": [
+    2380.0,
+    -581.4192
+   ],
+   "parca": "ISO 15983 / 15984 Ø3,2 perçin deliği",
+   "cap": 3.3
+  },
+  {
+   "panel": "on_flans",
+   "tip": "kor_percin",
+   "sekil": "daire",
+   "merkez_duz": [
+    1560.0,
+    44.4192
+   ],
+   "parca": "ISO 15983 / 15984 Ø3,2 perçin deliği",
+   "cap": 3.3
+  },
+  {
+   "panel": "on_flans",
+   "tip": "kor_percin",
+   "sekil": "daire",
+   "merkez_duz": [
+    1720.0,
+    44.4192
+   ],
+   "parca": "ISO 15983 / 15984 Ø3,2 perçin deliği",
+   "cap": 3.3
+  },
+  {
+   "panel": "on_flans",
+   "tip": "kor_percin",
+   "sekil": "daire",
+   "merkez_duz": [
+    1880.0,
+    44.4192
+   ],
+   "parca": "ISO 15983 / 15984 Ø3,2 perçin deliği",
+   "cap": 3.3
+  },
+  {
+   "panel": "on_flans",
+   "tip": "kor_percin",
+   "sekil": "daire",
+   "merkez_duz": [
+    2050.0,
+    44.4192
+   ],
+   "parca": "ISO 15983 / 15984 Ø3,2 perçin deliği",
+   "cap": 3.3
+  },
+  {
+   "panel": "on_flans",
+   "tip": "kor_percin",
+   "sekil": "daire",
+   "merkez_duz": [
+    2220.0,
+    44.4192
+   ],
+   "parca": "ISO 15983 / 15984 Ø3,2 perçin deliği",
+   "cap": 3.3
+  },
+  {
+   "panel": "on_flans",
+   "tip": "kor_percin",
+   "sekil": "daire",
+   "merkez_duz": [
+    2380.0,
+    44.4192
+   ],
+   "parca": "ISO 15983 / 15984 Ø3,2 perçin deliği",
+   "cap": 3.3
+  }
+ ],
+ "parca_sayisi": 1,
+ "levha": {
+  "boy": 940.8,
+  "en": 642.839,
+  "aci": 0.0,
+  "alan_mm2": 603545.03,
+  "kutle_kg": 4.7861
+ },
+ "sabit_yuz": [
+  1968.0,
+  -268.00332
+ ],
+ "donusum_3b": [
+  [
+   1.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  [
+   0.0,
+   0.0,
+   -1.0,
+   2141.0
+  ],
+  [
+   0.0,
+   1.0,
+   0.0,
+   0.0
+  ],
+  [
+   0.0,
+   0.0,
+   0.0,
+   1.0
+  ]
+ ]
+}

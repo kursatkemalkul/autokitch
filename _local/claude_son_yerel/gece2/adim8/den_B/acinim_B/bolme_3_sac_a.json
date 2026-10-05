@@ -1,0 +1,416 @@
+{
+ "parca": "bolme_3_sac_a",
+ "surum": "h3_sac_v1",
+ "malzeme": "AISI 304 2B, dış yüz 240 kum satine, hat boyunca yatay",
+ "t": 1.2,
+ "R": 3.0,
+ "K": 0.45,
+ "adet": 1,
+ "birim": "mm",
+ "ust_yuz": "Z = t yüzü = kök panelin +n yüzü (bütün panellerin yerel z = t yüzü)",
+ "dis_kontur": [
+  {
+   "t": "L",
+   "p": [
+    [
+     164.5,
+     23.0
+    ],
+    [
+     164.5,
+     -790.0
+    ]
+   ]
+  },
+  {
+   "t": "L",
+   "p": [
+    [
+     164.5,
+     -790.0
+    ],
+    [
+     640.8,
+     -790.0
+    ]
+   ]
+  },
+  {
+   "t": "L",
+   "p": [
+    [
+     640.8,
+     -790.0
+    ],
+    [
+     640.8,
+     -762.8
+    ]
+   ]
+  },
+  {
+   "t": "L",
+   "p": [
+    [
+     640.8,
+     -762.8
+    ],
+    [
+     668.0,
+     -762.8
+    ]
+   ]
+  },
+  {
+   "t": "L",
+   "p": [
+    [
+     668.0,
+     -762.8
+    ],
+    [
+     668.0,
+     23.0
+    ]
+   ]
+  },
+  {
+   "t": "L",
+   "p": [
+    [
+     668.0,
+     23.0
+    ],
+    [
+     164.5,
+     23.0
+    ]
+   ]
+  }
+ ],
+ "ek_dis_konturlar": [],
+ "ic_konturlar": [
+  [
+   {
+    "t": "C",
+    "c": [
+     192.7384,
+     -738.0
+    ],
+    "r": 12.2
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     227.35,
+     -580.0
+    ],
+    "r": 3.175
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     335.35,
+     -580.0
+    ],
+    "r": 3.175
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     443.35,
+     -580.0
+    ],
+    "r": 3.175
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     551.35,
+     -580.0
+    ],
+    "r": 3.175
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     227.35,
+     -330.0
+    ],
+    "r": 3.175
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     335.35,
+     -330.0
+    ],
+    "r": 3.175
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     227.35,
+     -45.0
+    ],
+    "r": 3.175
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     335.35,
+     -45.0
+    ],
+    "r": 3.175
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     443.35,
+     -330.0
+    ],
+    "r": 3.175
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     551.35,
+     -330.0
+    ],
+    "r": 3.175
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     443.35,
+     -45.0
+    ],
+    "r": 3.175
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     551.35,
+     -45.0
+    ],
+    "r": 3.175
+   }
+  ]
+ ],
+ "bukumler": [],
+ "formlar": [],
+ "kesikler": [
+  {
+   "panel": "sac",
+   "tip": "kovan_deligi",
+   "sekil": "poligon",
+   "merkez_duz": null,
+   "parca": "hava / kablo kanalı kovanı"
+  },
+  {
+   "panel": "sac",
+   "tip": "gider_deligi",
+   "sekil": "daire",
+   "merkez_duz": [
+    192.7384,
+    -738.0
+   ],
+   "parca": "gider kılıfı Ø24 (B_SOGUTMA)",
+   "cap": 24.4
+  },
+  {
+   "panel": "sac",
+   "tip": "pem_somun",
+   "sekil": "daire",
+   "merkez_duz": [
+    227.35,
+    -580.0
+   ],
+   "parca": "SP-M5-1",
+   "cap": 6.35
+  },
+  {
+   "panel": "sac",
+   "tip": "pem_somun",
+   "sekil": "daire",
+   "merkez_duz": [
+    227.35,
+    -330.0
+   ],
+   "parca": "SP-M5-1",
+   "cap": 6.35
+  },
+  {
+   "panel": "sac",
+   "tip": "pem_somun",
+   "sekil": "daire",
+   "merkez_duz": [
+    227.35,
+    -45.0
+   ],
+   "parca": "SP-M5-1",
+   "cap": 6.35
+  },
+  {
+   "panel": "sac",
+   "tip": "pem_somun",
+   "sekil": "daire",
+   "merkez_duz": [
+    335.35,
+    -580.0
+   ],
+   "parca": "SP-M5-1",
+   "cap": 6.35
+  },
+  {
+   "panel": "sac",
+   "tip": "pem_somun",
+   "sekil": "daire",
+   "merkez_duz": [
+    335.35,
+    -330.0
+   ],
+   "parca": "SP-M5-1",
+   "cap": 6.35
+  },
+  {
+   "panel": "sac",
+   "tip": "pem_somun",
+   "sekil": "daire",
+   "merkez_duz": [
+    335.35,
+    -45.0
+   ],
+   "parca": "SP-M5-1",
+   "cap": 6.35
+  },
+  {
+   "panel": "sac",
+   "tip": "pem_somun",
+   "sekil": "daire",
+   "merkez_duz": [
+    443.35,
+    -580.0
+   ],
+   "parca": "SP-M5-1",
+   "cap": 6.35
+  },
+  {
+   "panel": "sac",
+   "tip": "pem_somun",
+   "sekil": "daire",
+   "merkez_duz": [
+    443.35,
+    -330.0
+   ],
+   "parca": "SP-M5-1",
+   "cap": 6.35
+  },
+  {
+   "panel": "sac",
+   "tip": "pem_somun",
+   "sekil": "daire",
+   "merkez_duz": [
+    443.35,
+    -45.0
+   ],
+   "parca": "SP-M5-1",
+   "cap": 6.35
+  },
+  {
+   "panel": "sac",
+   "tip": "pem_somun",
+   "sekil": "daire",
+   "merkez_duz": [
+    551.35,
+    -580.0
+   ],
+   "parca": "SP-M5-1",
+   "cap": 6.35
+  },
+  {
+   "panel": "sac",
+   "tip": "pem_somun",
+   "sekil": "daire",
+   "merkez_duz": [
+    551.35,
+    -330.0
+   ],
+   "parca": "SP-M5-1",
+   "cap": 6.35
+  },
+  {
+   "panel": "sac",
+   "tip": "pem_somun",
+   "sekil": "daire",
+   "merkez_duz": [
+    551.35,
+    -45.0
+   ],
+   "parca": "SP-M5-1",
+   "cap": 6.35
+  }
+ ],
+ "parca_sayisi": 1,
+ "levha": {
+  "boy": 813.0,
+  "en": 503.5,
+  "aci": 0.0,
+  "alan_mm2": 407758.03,
+  "kutle_kg": 3.8802
+ },
+ "sabit_yuz": [
+  416.09928,
+  -382.44133
+ ],
+ "donusum_3b": [
+  [
+   0.0,
+   0.0,
+   1.0,
+   2728.5
+  ],
+  [
+   1.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  [
+   0.0,
+   1.0,
+   0.0,
+   0.0
+  ],
+  [
+   0.0,
+   0.0,
+   0.0,
+   1.0
+  ]
+ ]
+}

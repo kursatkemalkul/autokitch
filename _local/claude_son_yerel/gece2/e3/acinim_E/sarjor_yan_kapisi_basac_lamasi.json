@@ -1,0 +1,152 @@
+{
+ "parca": "sarjor_yan_kapisi_basac_lamasi",
+ "surum": "h3_sac_v1",
+ "malzeme": "AISI 304 2B, dış yüz 240 kum satine, hat boyunca yatay",
+ "t": 3.0,
+ "R": 4.5,
+ "K": 0.41,
+ "adet": 1,
+ "birim": "mm",
+ "ust_yuz": "Z = t yüzü = kök panelin +n yüzü (bütün panellerin yerel z = t yüzü)",
+ "dis_kontur": [
+  {
+   "t": "L",
+   "p": [
+    [
+     580.0,
+     380.0
+    ],
+    [
+     640.0,
+     380.0
+    ]
+   ]
+  },
+  {
+   "t": "L",
+   "p": [
+    [
+     640.0,
+     380.0
+    ],
+    [
+     640.0,
+     409.5
+    ]
+   ]
+  },
+  {
+   "t": "L",
+   "p": [
+    [
+     640.0,
+     409.5
+    ],
+    [
+     580.0,
+     409.5
+    ]
+   ]
+  },
+  {
+   "t": "L",
+   "p": [
+    [
+     580.0,
+     409.5
+    ],
+    [
+     580.0,
+     380.0
+    ]
+   ]
+  }
+ ],
+ "ek_dis_konturlar": [],
+ "ic_konturlar": [
+  [
+   {
+    "t": "C",
+    "c": [
+     592.0,
+     395.0
+    ],
+    "r": 2.75
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     628.0,
+     395.0
+    ],
+    "r": 2.75
+   }
+  ]
+ ],
+ "bukumler": [],
+ "formlar": [],
+ "kesikler": [
+  {
+   "panel": "lama",
+   "tip": "vida_deligi",
+   "sekil": "daire",
+   "merkez_duz": [
+    592.0,
+    395.0
+   ],
+   "parca": "ISO 273 orta",
+   "cap": 5.5
+  },
+  {
+   "panel": "lama",
+   "tip": "vida_deligi",
+   "sekil": "daire",
+   "merkez_duz": [
+    628.0,
+    395.0
+   ],
+   "parca": "ISO 273 orta",
+   "cap": 5.5
+  }
+ ],
+ "parca_sayisi": 1,
+ "levha": {
+  "boy": 60.0,
+  "en": 29.5,
+  "aci": 0.0,
+  "alan_mm2": 1722.48,
+  "kutle_kg": 0.041
+ },
+ "sabit_yuz": [
+  610.0,
+  394.7431
+ ],
+ "donusum_3b": [
+  [
+   0.0,
+   0.0,
+   -1.0,
+   828.5
+  ],
+  [
+   1.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  [
+   0.0,
+   -1.0,
+   0.0,
+   0.0
+  ],
+  [
+   0.0,
+   0.0,
+   0.0,
+   1.0
+  ]
+ ]
+}

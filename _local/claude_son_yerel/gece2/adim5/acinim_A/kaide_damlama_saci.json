@@ -1,0 +1,536 @@
+{
+ "parca": "kaide_damlama_saci",
+ "surum": "h3_sac_v1",
+ "malzeme": "AISI 304 2B, dış yüz 240 kum satine, hat boyunca yatay",
+ "t": 1.5,
+ "R": 2.25,
+ "K": 0.45,
+ "adet": 1,
+ "birim": "mm",
+ "ust_yuz": "Z = t yüzü = kök panelin +n yüzü (bütün panellerin yerel z = t yüzü)",
+ "dis_kontur": [
+  {
+   "t": "L",
+   "p": [
+    [
+     35.5,
+     -26.5
+    ],
+    [
+     35.5,
+     -57.0
+    ]
+   ]
+  },
+  {
+   "t": "L",
+   "p": [
+    [
+     35.5,
+     -57.0
+    ],
+    [
+     664.5,
+     -57.0
+    ]
+   ]
+  },
+  {
+   "t": "L",
+   "p": [
+    [
+     664.5,
+     -57.0
+    ],
+    [
+     664.5,
+     -26.5
+    ]
+   ]
+  },
+  {
+   "t": "L",
+   "p": [
+    [
+     664.5,
+     -26.5
+    ],
+    [
+     695.0,
+     -26.5
+    ]
+   ]
+  },
+  {
+   "t": "L",
+   "p": [
+    [
+     695.0,
+     -26.5
+    ],
+    [
+     695.0,
+     784.5
+    ]
+   ]
+  },
+  {
+   "t": "L",
+   "p": [
+    [
+     695.0,
+     784.5
+    ],
+    [
+     664.5,
+     784.5
+    ]
+   ]
+  },
+  {
+   "t": "L",
+   "p": [
+    [
+     664.5,
+     784.5
+    ],
+    [
+     664.5,
+     815.0
+    ]
+   ]
+  },
+  {
+   "t": "L",
+   "p": [
+    [
+     664.5,
+     815.0
+    ],
+    [
+     35.5,
+     815.0
+    ]
+   ]
+  },
+  {
+   "t": "L",
+   "p": [
+    [
+     35.5,
+     815.0
+    ],
+    [
+     35.5,
+     784.5
+    ]
+   ]
+  },
+  {
+   "t": "L",
+   "p": [
+    [
+     35.5,
+     784.5
+    ],
+    [
+     5.0,
+     784.5
+    ]
+   ]
+  },
+  {
+   "t": "L",
+   "p": [
+    [
+     5.0,
+     784.5
+    ],
+    [
+     5.0,
+     -26.5
+    ]
+   ]
+  },
+  {
+   "t": "L",
+   "p": [
+    [
+     5.0,
+     -26.5
+    ],
+    [
+     35.5,
+     -26.5
+    ]
+   ]
+  }
+ ],
+ "ek_dis_konturlar": [],
+ "ic_konturlar": [
+  [
+   {
+    "t": "C",
+    "c": [
+     144.0,
+     20.0
+    ],
+    "r": 3.3
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     25.0,
+     110.0
+    ],
+    "r": 8.0
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     144.0,
+     320.0
+    ],
+    "r": 3.3
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     350.0,
+     110.0
+    ],
+    "r": 8.0
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     564.0,
+     20.0
+    ],
+    "r": 3.3
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     675.0,
+     110.0
+    ],
+    "r": 8.0
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     564.0,
+     320.0
+    ],
+    "r": 3.3
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     305.0,
+     520.0
+    ],
+    "r": 4.5
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     25.0,
+     706.0
+    ],
+    "r": 8.0
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     305.0,
+     645.0
+    ],
+    "r": 4.5
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     395.0,
+     520.0
+    ],
+    "r": 4.5
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     395.0,
+     645.0
+    ],
+    "r": 4.5
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     350.0,
+     706.0
+    ],
+    "r": 8.0
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     675.0,
+     706.0
+    ],
+    "r": 8.0
+   }
+  ]
+ ],
+ "bukumler": [],
+ "formlar": [],
+ "kesikler": [
+  {
+   "panel": "damlama",
+   "tip": "dikme_centigi",
+   "sekil": "poligon",
+   "merkez_duz": null,
+   "parca": "dikme çevresi 0,5 boşluk · TIG köşe kaynağıyla kapatılır"
+  },
+  {
+   "panel": "damlama",
+   "tip": "dikme_centigi",
+   "sekil": "poligon",
+   "merkez_duz": null,
+   "parca": "dikme çevresi 0,5 boşluk · TIG köşe kaynağıyla kapatılır"
+  },
+  {
+   "panel": "damlama",
+   "tip": "dikme_centigi",
+   "sekil": "poligon",
+   "merkez_duz": null,
+   "parca": "dikme çevresi 0,5 boşluk · TIG köşe kaynağıyla kapatılır"
+  },
+  {
+   "panel": "damlama",
+   "tip": "dikme_centigi",
+   "sekil": "poligon",
+   "merkez_duz": null,
+   "parca": "dikme çevresi 0,5 boşluk · TIG köşe kaynağıyla kapatılır"
+  },
+  {
+   "panel": "damlama",
+   "tip": "vida_deligi",
+   "sekil": "daire",
+   "merkez_duz": [
+    305.0,
+    645.0
+   ],
+   "parca": "açıcı kolonu M8 (ISO 273 orta)",
+   "cap": 9.0
+  },
+  {
+   "panel": "damlama",
+   "tip": "vida_deligi",
+   "sekil": "daire",
+   "merkez_duz": [
+    395.0,
+    645.0
+   ],
+   "parca": "açıcı kolonu M8 (ISO 273 orta)",
+   "cap": 9.0
+  },
+  {
+   "panel": "damlama",
+   "tip": "vida_deligi",
+   "sekil": "daire",
+   "merkez_duz": [
+    305.0,
+    520.0
+   ],
+   "parca": "açıcı kolonu M8 (ISO 273 orta)",
+   "cap": 9.0
+  },
+  {
+   "panel": "damlama",
+   "tip": "vida_deligi",
+   "sekil": "daire",
+   "merkez_duz": [
+    395.0,
+    520.0
+   ],
+   "parca": "açıcı kolonu M8 (ISO 273 orta)",
+   "cap": 9.0
+  },
+  {
+   "panel": "damlama",
+   "tip": "vida_deligi",
+   "sekil": "daire",
+   "merkez_duz": [
+    144.0,
+    320.0
+   ],
+   "parca": "tabla rayı M6 (ISO 273 orta)",
+   "cap": 6.6
+  },
+  {
+   "panel": "damlama",
+   "tip": "vida_deligi",
+   "sekil": "daire",
+   "merkez_duz": [
+    144.0,
+    20.0
+   ],
+   "parca": "tabla rayı M6 (ISO 273 orta)",
+   "cap": 6.6
+  },
+  {
+   "panel": "damlama",
+   "tip": "vida_deligi",
+   "sekil": "daire",
+   "merkez_duz": [
+    564.0,
+    320.0
+   ],
+   "parca": "tabla rayı M6 (ISO 273 orta)",
+   "cap": 6.6
+  },
+  {
+   "panel": "damlama",
+   "tip": "vida_deligi",
+   "sekil": "daire",
+   "merkez_duz": [
+    564.0,
+    20.0
+   ],
+   "parca": "tabla rayı M6 (ISO 273 orta)",
+   "cap": 6.6
+  },
+  {
+   "panel": "damlama",
+   "tip": "servis_deligi",
+   "sekil": "daire",
+   "merkez_duz": [
+    25.0,
+    706.0
+   ],
+   "parca": "A→B M8 lokma geçişi · gıda sınıfı silikon tapa",
+   "cap": 16.0
+  },
+  {
+   "panel": "damlama",
+   "tip": "servis_deligi",
+   "sekil": "daire",
+   "merkez_duz": [
+    25.0,
+    110.0
+   ],
+   "parca": "A→B M8 lokma geçişi · gıda sınıfı silikon tapa",
+   "cap": 16.0
+  },
+  {
+   "panel": "damlama",
+   "tip": "servis_deligi",
+   "sekil": "daire",
+   "merkez_duz": [
+    350.0,
+    706.0
+   ],
+   "parca": "A→B M8 lokma geçişi · gıda sınıfı silikon tapa",
+   "cap": 16.0
+  },
+  {
+   "panel": "damlama",
+   "tip": "servis_deligi",
+   "sekil": "daire",
+   "merkez_duz": [
+    350.0,
+    110.0
+   ],
+   "parca": "A→B M8 lokma geçişi · gıda sınıfı silikon tapa",
+   "cap": 16.0
+  },
+  {
+   "panel": "damlama",
+   "tip": "servis_deligi",
+   "sekil": "daire",
+   "merkez_duz": [
+    675.0,
+    706.0
+   ],
+   "parca": "A→B M8 lokma geçişi · gıda sınıfı silikon tapa",
+   "cap": 16.0
+  },
+  {
+   "panel": "damlama",
+   "tip": "servis_deligi",
+   "sekil": "daire",
+   "merkez_duz": [
+    675.0,
+    110.0
+   ],
+   "parca": "A→B M8 lokma geçişi · gıda sınıfı silikon tapa",
+   "cap": 16.0
+  }
+ ],
+ "parca_sayisi": 1,
+ "levha": {
+  "boy": 872.0,
+  "en": 690.0,
+  "aci": 0.0,
+  "alan_mm2": 596361.31,
+  "kutle_kg": 7.0937
+ },
+ "sabit_yuz": [
+  349.99908,
+  378.90246
+ ],
+ "donusum_3b": [
+  [
+   1.0,
+   0.0,
+   -0.0,
+   0.0
+  ],
+  [
+   0.0,
+   0.0,
+   1.0,
+   892.0
+  ],
+  [
+   0.0,
+   -1.0,
+   0.0,
+   0.0
+  ],
+  [
+   0.0,
+   0.0,
+   0.0,
+   1.0
+  ]
+ ]
+}

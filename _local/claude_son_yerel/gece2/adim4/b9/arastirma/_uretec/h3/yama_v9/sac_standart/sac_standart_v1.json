@@ -1,0 +1,590 @@
+{
+  "meta": {
+    "ad": "AUTOKITCH gövde sac üretim standardı",
+    "surum": "v1",
+    "tarih": "2026-10-01",
+    "durum": "ONERI - modele uygulanmadi; Kemal onayi bekleyen maddeler 'kemal_onayi' altinda",
+    "birim": "mm, derece, kN",
+    "belge": "GOVDE_SAC_STANDARDI_v1.md",
+    "malzeme_varsayimi": "AISI 304 (1.4301), hava bukumu, CNC abkant"
+  },
+  "formul": {
+    "BA": "pi*aci/180*(R_ic + K*t)",
+    "OSSB_90": "R_ic + t",
+    "BD": "2*OSSB - BA (90 derece)",
+    "acinim": "dis olculer toplami - sum(BD)",
+    "R_ic_model": "1.5*t",
+    "V_kalip": "~8*t",
+    "kuvvet_kN_m": "1.33*Rm*t^2/V (Rm=650 MPa)",
+    "geri_yaylanma_derece": [
+      2,
+      5
+    ],
+    "kalibrasyon": "atolye 3 adet 50x50 numune; BD sapmasi > 0.1 ise K guncellenir (Bartin yontemi)"
+  },
+  "bukum": {
+    "0.8": {
+      "t": 0.8,
+      "V_kalip": 6,
+      "R_ic_dogal_0_2V": 1.2,
+      "R_ic_model": 1.2,
+      "K": 0.41,
+      "BA_90": 2.4,
+      "BD_90": 1.6,
+      "BD_90_bartin_olcum": 1.6,
+      "min_flans_mutlak": 4.5,
+      "min_flans_tasarim": 7,
+      "relief_genislik": 1.0,
+      "relief_derinlik": 2.5,
+      "delik_flans_ic_yuz": 3.5,
+      "uzun_yarik_flans_ic_yuz": 4.5,
+      "panjur_flans_ic_yuz": 5.0,
+      "pem_m5_eksen_flans_ic_yuz": 8.5,
+      "delik_sac_kenari": 3.0,
+      "delik_kopru": 3.0,
+      "min_delik_cap": 3.0,
+      "kuvvet_kN_m_Rm650": 92.0
+    },
+    "1.0": {
+      "t": 1.0,
+      "V_kalip": 8,
+      "R_ic_dogal_0_2V": 1.6,
+      "R_ic_model": 1.5,
+      "K": 0.45,
+      "BA_90": 3.063,
+      "BD_90": 1.94,
+      "BD_90_bartin_olcum": 1.93,
+      "min_flans_mutlak": 6,
+      "min_flans_tasarim": 9,
+      "relief_genislik": 1.0,
+      "relief_derinlik": 3.0,
+      "delik_flans_ic_yuz": 4.0,
+      "uzun_yarik_flans_ic_yuz": 5.5,
+      "panjur_flans_ic_yuz": 6.0,
+      "pem_m5_eksen_flans_ic_yuz": 9.0,
+      "delik_sac_kenari": 3.0,
+      "delik_kopru": 3.0,
+      "min_delik_cap": 3.0,
+      "kuvvet_kN_m_Rm650": 108.0
+    },
+    "1.2": {
+      "t": 1.2,
+      "V_kalip": 10,
+      "R_ic_dogal_0_2V": 2.0,
+      "R_ic_model": 1.8,
+      "K": 0.45,
+      "BA_90": 3.676,
+      "BD_90": 2.32,
+      "BD_90_bartin_olcum": null,
+      "min_flans_mutlak": 7,
+      "min_flans_tasarim": 10,
+      "relief_genislik": 1.5,
+      "relief_derinlik": 3.5,
+      "delik_flans_ic_yuz": 5.0,
+      "uzun_yarik_flans_ic_yuz": 7.0,
+      "panjur_flans_ic_yuz": 7.5,
+      "pem_m5_eksen_flans_ic_yuz": 9.0,
+      "delik_sac_kenari": 3.0,
+      "delik_kopru": 3.0,
+      "min_delik_cap": 3.0,
+      "kuvvet_kN_m_Rm650": 124.0
+    },
+    "1.5": {
+      "t": 1.5,
+      "V_kalip": 12,
+      "R_ic_dogal_0_2V": 2.4,
+      "R_ic_model": 2.25,
+      "K": 0.45,
+      "BA_90": 4.595,
+      "BD_90": 2.91,
+      "BD_90_bartin_olcum": 2.9,
+      "min_flans_mutlak": 8,
+      "min_flans_tasarim": 12,
+      "relief_genislik": 1.5,
+      "relief_derinlik": 4.5,
+      "delik_flans_ic_yuz": 6.0,
+      "uzun_yarik_flans_ic_yuz": 8.5,
+      "panjur_flans_ic_yuz": 9.0,
+      "pem_m5_eksen_flans_ic_yuz": 9.5,
+      "delik_sac_kenari": 3.0,
+      "delik_kopru": 3.0,
+      "min_delik_cap": 3.0,
+      "kuvvet_kN_m_Rm650": 162.0
+    },
+    "2.0": {
+      "t": 2.0,
+      "V_kalip": 16,
+      "R_ic_dogal_0_2V": 3.2,
+      "R_ic_model": 3.0,
+      "K": 0.41,
+      "BA_90": 6.0,
+      "BD_90": 4.0,
+      "BD_90_bartin_olcum": 3.99,
+      "min_flans_mutlak": 11,
+      "min_flans_tasarim": 16,
+      "relief_genislik": 2.0,
+      "relief_derinlik": 5.5,
+      "delik_flans_ic_yuz": 8.0,
+      "uzun_yarik_flans_ic_yuz": 11.0,
+      "panjur_flans_ic_yuz": 12.0,
+      "pem_m5_eksen_flans_ic_yuz": null,
+      "delik_sac_kenari": 4.0,
+      "delik_kopru": 4.0,
+      "min_delik_cap": 3.0,
+      "kuvvet_kN_m_Rm650": 216.0
+    },
+    "3.0": {
+      "t": 3.0,
+      "V_kalip": 24,
+      "R_ic_dogal_0_2V": 4.8,
+      "R_ic_model": 4.5,
+      "K": 0.41,
+      "BA_90": 9.001,
+      "BD_90": 6.0,
+      "BD_90_bartin_olcum": 5.99,
+      "min_flans_mutlak": 16,
+      "min_flans_tasarim": 24,
+      "relief_genislik": 3.0,
+      "relief_derinlik": 8.0,
+      "delik_flans_ic_yuz": 12.0,
+      "uzun_yarik_flans_ic_yuz": 16.5,
+      "panjur_flans_ic_yuz": 18.0,
+      "pem_m5_eksen_flans_ic_yuz": null,
+      "delik_sac_kenari": 6.0,
+      "delik_kopru": 6.0,
+      "min_delik_cap": 3.0,
+      "kuvvet_kN_m_Rm650": 324.0
+    }
+  },
+  "malzeme": {
+    "kalite": "AISI 304 (1.4301)",
+    "kaynakli_parca": "304L (1.4307) kabul",
+    "yasak": [
+      "AISI 430"
+    ],
+    "yuzey_ic": "2B",
+    "yuzey_dis": "No.4 satine, 180-240 kum, tek yon",
+    "satine_yonu": "X (hat boyunca yatay)",
+    "urun_temas_Ra_max_um": 0.8,
+    "folyo": {
+      "tip": "PE lazer folyosu",
+      "kalinlik_um": [
+        70,
+        100
+      ],
+      "kesim": "folyo yukari",
+      "kaynaktan_geri_soyma": 20
+    },
+    "levha_formatlari": [
+      [
+        1000,
+        2000
+      ],
+      [
+        1250,
+        2500
+      ],
+      [
+        1500,
+        3000
+      ]
+    ],
+    "max_acinim": [
+      1500,
+      3000
+    ],
+    "abkant_max_boy": 3100
+  },
+  "kalinlik": {
+    "ana_sac": 1.2,
+    "ana_sac_kapsam": [
+      "dis panel",
+      "ic panel",
+      "kapak dis tava",
+      "kapak ic tava",
+      "ic bolme",
+      "taban"
+    ],
+    "yuk_saci": 1.5,
+    "yuk_saci_kapsam": [
+      "raf",
+      "tasiyici tabla",
+      "sogutma grubu tepsisi"
+    ],
+    "braket": 3.0,
+    "braket_kapsam": [
+      "konsol",
+      "aski",
+      "lama"
+    ],
+    "ayak_tipasi": 5.0,
+    "iskelet_profil": {
+      "tip": "kare boru AISI 304",
+      "olcu": [
+        40,
+        40,
+        2.0
+      ],
+      "uclar": "kaynakla kapali"
+    },
+    "sektor_karsilastirma": {
+      "tr_ust_tabla": [
+        1.0,
+        1.2,
+        1.5
+      ],
+      "tr_cevre_kaplama": [
+        0.8,
+        1.0,
+        1.2
+      ],
+      "tr_bant_kapak": 1.0,
+      "tr_raf_cekmece": 1.0,
+      "tr_ayak_profil": [
+        40,
+        40,
+        1.2
+      ],
+      "eu_900xp_ust": 2.0
+    }
+  },
+  "rijitlik": {
+    "panel_tava_donusu": 20,
+    "ic_tava_donusu": 15,
+    "desteksiz_aciklik_max_1_2": 600,
+    "omega_takviye": [
+      20,
+      40,
+      20
+    ],
+    "gorunur_panelde_punta": false,
+    "gorunur_panel_takviye_baglama": [
+      "MS polimer yapistirici",
+      "CD saplama + somun"
+    ]
+  },
+  "kose": {
+    "gorunur": "TIG kapali kose + tasla + satine",
+    "flans_ucu_araligi_kaynakli": [
+      0.0,
+      0.3
+    ],
+    "gizli": "relief / kose deligi O=2t",
+    "kaynaksiz_flans_bosluk_min": 0.4,
+    "urun_bolgesi_ic_R_min": 3.0,
+    "urun_bolgesi_ic_R_tercih": 6.0,
+    "nsf_2_duzlem_R": 3.2,
+    "nsf_3_duzlem_R": 6.4
+  },
+  "kenar": {
+    "serbest_kenar": "90 derece donus flansi 10-20",
+    "kapali_hem": {
+      "ic_cap": "t",
+      "donus": "6t",
+      "bolge": "yalniz gida disi",
+      "max_t_304": 1.5
+    },
+    "acik_hem": {
+      "ic_cap": "t",
+      "donus": "4t",
+      "bolge": "yalniz gida disi"
+    },
+    "teardrop_hem": {
+      "ic_cap": "t",
+      "donus": "4t",
+      "aciklik_min": "t/4",
+      "bolge": "sicrama (uclari kaynakli)"
+    }
+  },
+  "tolerans": {
+    "genel": "ISO 2768-mK",
+    "iso2768m_lineer": {
+      "0.5-6": 0.1,
+      "6-30": 0.2,
+      "30-120": 0.3,
+      "120-400": 0.5,
+      "400-1000": 0.8,
+      "1000-2000": 1.2
+    },
+    "lazer": 0.1,
+    "bukum_acisi_derece": 0.5,
+    "datum_bukum": 0.25,
+    "toplam_form": 0.5,
+    "iki_bukum": 0.38,
+    "uc_arti_bukum": 0.76,
+    "panel_iskelet_bosluk": 1.0,
+    "panel_panel_dis_bosluk_max": 0.5
+  },
+  "baglanti": {
+    "sac_gizli_secenek_A_PEM": {
+      "somun": {
+        "parca": "PEM SP-M5-1",
+        "dis": "M5",
+        "delik": 6.35,
+        "delik_tol": 0.08,
+        "min_sac": 1.0,
+        "kenar_eksen_min": 7.1,
+        "malzeme": "A286",
+        "sac_sertlik_max": "HRB 90"
+      },
+      "saplama": {
+        "parca": "PEM FHP-M5-xx",
+        "dis": "M5",
+        "delik": 5.0,
+        "delik_tol": 0.08,
+        "sac_aralik": [
+          1.0,
+          2.4
+        ],
+        "kenar_eksen_min": 7.2,
+        "malzeme": "A286"
+      },
+      "yasak": [
+        "PEM CLS (HRB 70 siniri, 304 sacta tutmaz)",
+        "PEM FH4 (400 serisi)"
+      ],
+      "cakma_zamani": "bukumden once, duz sacta"
+    },
+    "sac_gizli_secenek_B_CD_saplama": {
+      "standart": "ISO 13918 PT",
+      "malzeme": "A2",
+      "dis": "M5",
+      "flans_cap": 6.7,
+      "min_sac": 0.5,
+      "flans_ic_yuz_eksen_min": 12
+    },
+    "pem_diger": {
+      "SP-M4-1": {
+        "delik": 5.41,
+        "min_sac": 1.0,
+        "kenar_eksen_min": 6.9
+      },
+      "SP-M6-1": {
+        "delik": 8.75,
+        "min_sac": 1.4
+      },
+      "FHP-M4": {
+        "delik": 4.0,
+        "sac_aralik": [
+          1.0,
+          2.4
+        ]
+      }
+    },
+    "percin_somun": {
+      "M4": {
+        "delik": 6.0
+      },
+      "M5": {
+        "delik": 7.0,
+        "kavrama": [
+          0.5,
+          3.0
+        ]
+      },
+      "M6": {
+        "delik": 9.0,
+        "kavrama": [
+          0.5,
+          3.5
+        ]
+      },
+      "malzeme": "A2",
+      "islak_bolge": "kapali uclu"
+    },
+    "iskelet_baglanti": "M6 percin somun",
+    "modul_modul": {
+      "civata": "ISO 4762 M8 A2-70",
+      "somun": "ISO 10511 M8 A2",
+      "delik": 9.0,
+      "dis_derz_max": 0.5,
+      "derz_dolgu": "gida sinifi silikon / EPDM serit"
+    },
+    "vida_tipleri": {
+      "ISO 7380-1": "bombe imbus - yalniz arka/teknik/servis",
+      "ISO 10642": "havsa imbus - yalniz >= 3 mm parca (M5 bas O10 x 2.8)",
+      "ISO 4762": "silindir imbus - iskelet, modul M8",
+      "ISO 10511": "fiberli somun",
+      "DIN 1587": "kor somun - sicrama bolgesinde acik dis",
+      "ISO 7093": "genis pul (ince sac)",
+      "DIN 929": "kaynak somunu M12 - ayak burcu"
+    },
+    "malzeme": "A2-70",
+    "gorunur_vida_on_ust": false,
+    "galling_onlem": "gida uyumlu kaydirici / anti-seize",
+    "delik_iso273_orta": {
+      "M4": 4.5,
+      "M5": 5.5,
+      "M6": 6.6,
+      "M8": 9.0
+    },
+    "delik_iso273_ince": {
+      "M4": 4.3,
+      "M5": 5.3,
+      "M6": 6.4,
+      "M8": 8.4
+    },
+    "vida_araligi_max": 200,
+    "vida_koseden_max": 80,
+    "vida_araligi_contali_max": 150,
+    "kenar_basina_min_vida": 2
+  },
+  "kapak": {
+    "kurgu": "cift cidarli",
+    "dis_tava_t": 1.2,
+    "dis_tava_donus": 20,
+    "ic_tava_t": 1.2,
+    "ic_tava_t_alternatif": 1.0,
+    "ic_tava_donus": 15,
+    "ic_dis_bosluk": 0.5,
+    "dolgu_notr": {
+      "tip": "PE kopuk / mineral yun / Al petek",
+      "kalinlik": 20
+    },
+    "dolgu_soguk": {
+      "tip": "yerinde kopuk PU",
+      "yogunluk_kg_m3": 42,
+      "kapak_kalinlik": 55,
+      "duvar_kalinlik": 50
+    },
+    "toplam_kalinlik_notr": [
+      22,
+      25
+    ],
+    "mentese": {
+      "tip": "gizli 180 derece paslanmaz pasive (Southco R6 sinifi)",
+      "alternatif": "kaldir-cikar pim mentese (GN 128.2 sinifi)",
+      "adet": {
+        "h<=900": 2,
+        "h<=1500": 3
+      }
+    },
+    "kulp": {
+      "tip": "gomme bukumlu J-profil (kapagin kendi sacindan)",
+      "cep_derinlik": [
+        25,
+        30
+      ],
+      "boy": "tam boy"
+    },
+    "conta_notr": "EPDM/silikon gecme fitil",
+    "conta_soguk": "cikarilabilir manyetik conta",
+    "tutucu": "miknatisli tutucu / bas-ac mandal",
+    "derz": 3.0,
+    "derz_tol": 0.5,
+    "govde_ortusme": [
+      10,
+      15
+    ]
+  },
+  "ayak": {
+    "tip": "hijyenik ayarli ayak AISI 304 (GN 20 sinifi)",
+    "dis": "M12",
+    "taban_cap": 60,
+    "statik_yuk_kN": 16,
+    "govde_alti_kot": 123,
+    "ayar": 20,
+    "burc": "40x40x2 alt kusak ucuna 5 mm 304 tipa kaynakli + DIN 929 M12 kaynak somunu",
+    "koseden_max": 50,
+    "ayak_araligi_max": 1000,
+    "supurgelik": "zemine contali (dudak conta) + sokulebilir klipsli",
+    "nsf_acik_alt_min": 150,
+    "nsf_acik_alt_min_erisim_150_icinde": 100
+  },
+  "havalandirma": {
+    "panjur_taret": {
+      "H_max": "3t",
+      "H_max_1_2": 3.6,
+      "aralik_min": 6,
+      "acik_taraf_kenar_min": 10,
+      "kapali_taraf_kenar_min": 10,
+      "agiz_yonu": "asagi"
+    },
+    "lazer_yarik": {
+      "genislik": 5,
+      "boy": 60,
+      "uc_R": 2.5,
+      "kopru_min": 5,
+      "sira_araligi_min": 10,
+      "kenar_min": 10,
+      "arka": "10-15 mm su kirici perde / paslanmaz tel filtre"
+    }
+  },
+  "kablo": {
+    "rakor_delik": {
+      "M16": 16.5,
+      "M20": 20.5,
+      "M25": 25.5,
+      "M32": 32.5
+    },
+    "dis_sicrama_rakor": "paslanmaz hijyenik (Hummel HSK-INOX-HD-Pro, 1.4404, IP69K)",
+    "hd_pro_D": {
+      "M20": 33,
+      "M25": 38
+    },
+    "eksen_araligi": "D + 5",
+    "flans_ic_yuz_min": "D/2 + R + 2",
+    "kenar_koruma": "EPDM kenar profili / membran grommet"
+  },
+  "servis_acikligi": {
+    "kose_R_min": 6,
+    "kenar": "10-15 mm ice donus ya da 1.5 mm cerceve",
+    "kapak_baglanti": "kanca + alt donuste gizli vida"
+  },
+  "su": {
+    "kapali_profil": "kaynakla tam kapali",
+    "urun_bolgesi_yatay_egim_derece_min": 3,
+    "acik_kanal_tahliye_cap": 8
+  },
+  "is_sirasi": [
+    "3B -> parca basina acinim DXF (R, K, V, yon notlu)",
+    "levha: 304 2B + dis yuz satine + lazer folyosu",
+    "fiber lazer (azot kesim, folyo yukari)",
+    "capak alma",
+    "PEM / CD saplama (duz sacta)",
+    "abkant (folyolu, icten disa)",
+    "puntalama + TIG (Ar, gerekirse arka gaz, atlamali kisa dikis)",
+    "taslama (ic kose R>=3) + ayni kum/yon satine",
+    "dekapaj (isi rengi) + pasivasyon ASTM A380/A967",
+    "kontrol: ISO 2768-m, isi rengi yok, bakir sulfat testi",
+    "montaj: iskelet -> ayak -> mekanizma -> panel -> kapak -> derz",
+    "teslim: folyo sokme"
+  ],
+  "hijyen_bolge": {
+    "gida": [
+      "B cekmece ici",
+      "disk/tabla",
+      "TOPPING kaset agzi + dokme bolgesi",
+      "firin bandi agzi",
+      "K kesme",
+      "E kutu tepsisi"
+    ],
+    "sicrama": [
+      "on yuzler",
+      "kapak dislari",
+      "robot tarafi ic duvarlar",
+      "tezgah",
+      "soguk dolap icleri"
+    ],
+    "gida_disi": [
+      "teknik bolmeler",
+      "pano",
+      "kompresor/sogutma grubu cebi",
+      "iskelet ici",
+      "arka yuz"
+    ],
+    "kurallar": {
+      "gida": "surekli kaynak, baglanti elemani yok, bindirme yok, ic R>=3",
+      "sicrama": "temizlenebilir bas, acik dis yok (kor somun), metal-metal yerine elastomer",
+      "gida_disi": "dikis kapali + capaksiz"
+    }
+  },
+  "kemal_onayi": [
+    "kabuk 1.5 -> 1.2 (mevcut kural: seffaf istasyon yuzeyleri 1.5)",
+    "satine yonu hat boyunca yatay",
+    "govde alti 123 + contali supurgelik (NSF acik alt 150 ister)",
+    "mentese: gizli 180 mi, kaldir-cikar pim mi",
+    "panjur: atolyede taret kalibi var mi",
+    "K kalibrasyonu atolyenin numune bukumuyle"
+  ]
+}

@@ -1,0 +1,108 @@
+{
+ "parca": "onyuz_kapak_A_karsilik_2",
+ "surum": "h3_sac_v1",
+ "malzeme": "AISI 304 2B, dış yüz 240 kum satine, hat boyunca yatay",
+ "t": 1.5,
+ "R": 2.25,
+ "K": 0.45,
+ "adet": 1,
+ "birim": "mm",
+ "ust_yuz": "Z = t yüzü = kök panelin +n yüzü (bütün panellerin yerel z = t yüzü)",
+ "dis_kontur": [
+  {
+   "t": "L",
+   "p": [
+    [
+     664.0,
+     2080.0
+    ],
+    [
+     688.0,
+     2080.0
+    ]
+   ]
+  },
+  {
+   "t": "L",
+   "p": [
+    [
+     688.0,
+     2080.0
+    ],
+    [
+     688.0,
+     2120.0
+    ]
+   ]
+  },
+  {
+   "t": "L",
+   "p": [
+    [
+     688.0,
+     2120.0
+    ],
+    [
+     664.0,
+     2120.0
+    ]
+   ]
+  },
+  {
+   "t": "L",
+   "p": [
+    [
+     664.0,
+     2120.0
+    ],
+    [
+     664.0,
+     2080.0
+    ]
+   ]
+  }
+ ],
+ "ek_dis_konturlar": [],
+ "ic_konturlar": [],
+ "bukumler": [],
+ "formlar": [],
+ "kesikler": [],
+ "parca_sayisi": 1,
+ "levha": {
+  "boy": 40.0,
+  "en": 24.0,
+  "aci": 0.0,
+  "alan_mm2": 960.0,
+  "kutle_kg": 0.0114
+ },
+ "sabit_yuz": [
+  676.0,
+  2100.0
+ ],
+ "donusum_3b": [
+  [
+   1.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  [
+   0.0,
+   1.0,
+   0.0,
+   0.0
+  ],
+  [
+   0.0,
+   0.0,
+   1.0,
+   60.0
+  ],
+  [
+   0.0,
+   0.0,
+   0.0,
+   1.0
+  ]
+ ]
+}

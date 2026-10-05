@@ -1,0 +1,1166 @@
+{
+ "adim": 13,
+ "parca": 384,
+ "cevre": 7,
+ "cift": 736,
+ "cakisma": 0,
+ "cakismalar": [],
+ "adim_mm": 2.0,
+ "uretim_kare_sorun": [],
+ "belirme": 0,
+ "belirme_liste": [],
+ "havada": [],
+ "son_konum": {},
+ "haric": {
+  "arka_sac ↔ govde_bag_arka_sag_1150_saplama": "PEM kendi deliğine preslenir (sıkı geçme, model teması)",
+  "arka_sac ↔ govde_bag_arka_sag_1450_saplama": "PEM kendi deliğine preslenir (sıkı geçme, model teması)",
+  "arka_sac ↔ govde_bag_arka_sag_1750_saplama": "PEM kendi deliğine preslenir (sıkı geçme, model teması)",
+  "arka_sac ↔ govde_bag_arka_sag_2050_saplama": "PEM kendi deliğine preslenir (sıkı geçme, model teması)",
+  "arka_sac ↔ govde_bag_arka_sag_850_saplama": "PEM kendi deliğine preslenir (sıkı geçme, model teması)",
+  "arka_sac ↔ govde_bag_arka_sol_1150_saplama": "PEM kendi deliğine preslenir (sıkı geçme, model teması)",
+  "arka_sac ↔ govde_bag_arka_sol_1450_saplama": "PEM kendi deliğine preslenir (sıkı geçme, model teması)",
+  "arka_sac ↔ govde_bag_arka_sol_1750_saplama": "PEM kendi deliğine preslenir (sıkı geçme, model teması)",
+  "arka_sac ↔ govde_bag_arka_sol_2050_saplama": "PEM kendi deliğine preslenir (sıkı geçme, model teması)",
+  "arka_sac ↔ govde_bag_arka_sol_850_saplama": "PEM kendi deliğine preslenir (sıkı geçme, model teması)",
+  "arka_sac ↔ govde_bag_arka_ust_350_saplama": "PEM kendi deliğine preslenir (sıkı geçme, model teması)",
+  "arka_sac ↔ govde_bag_arka_ust_60_saplama": "PEM kendi deliğine preslenir (sıkı geçme, model teması)",
+  "arka_sac ↔ govde_bag_arka_ust_640_saplama": "PEM kendi deliğine preslenir (sıkı geçme, model teması)",
+  "govde_kulak_sag_arka_1300_bag_saplama ↔ sag_yan_sac_tabla_gecisi": "PEM kendi deliğine preslenir (sıkı geçme, model teması)",
+  "govde_kulak_sag_arka_1700_bag_saplama ↔ sag_yan_sac_tabla_gecisi": "PEM kendi deliğine preslenir (sıkı geçme, model teması)",
+  "govde_kulak_sag_arka_2100_bag_saplama ↔ sag_yan_sac_tabla_gecisi": "PEM kendi deliğine preslenir (sıkı geçme, model teması)",
+  "govde_kulak_sag_arka_930_bag_saplama ↔ sag_yan_sac_tabla_gecisi": "PEM kendi deliğine preslenir (sıkı geçme, model teması)",
+  "govde_kulak_sag_on_1080_bag_saplama ↔ sag_yan_sac_tabla_gecisi": "PEM kendi deliğine preslenir (sıkı geçme, model teması)",
+  "govde_kulak_sag_on_1400_bag_saplama ↔ sag_yan_sac_tabla_gecisi": "PEM kendi deliğine preslenir (sıkı geçme, model teması)",
+  "govde_kulak_sag_on_1750_bag_saplama ↔ sag_yan_sac_tabla_gecisi": "PEM kendi deliğine preslenir (sıkı geçme, model teması)",
+  "govde_kulak_sag_on_2100_bag_saplama ↔ sag_yan_sac_tabla_gecisi": "PEM kendi deliğine preslenir (sıkı geçme, model teması)",
+  "govde_kulak_sol_arka_1300_bag_saplama ↔ sol_yan_sac": "PEM kendi deliğine preslenir (sıkı geçme, model teması)",
+  "govde_kulak_sol_arka_1700_bag_saplama ↔ sol_yan_sac": "PEM kendi deliğine preslenir (sıkı geçme, model teması)",
+  "govde_kulak_sol_arka_2100_bag_saplama ↔ sol_yan_sac": "PEM kendi deliğine preslenir (sıkı geçme, model teması)",
+  "govde_kulak_sol_arka_930_bag_saplama ↔ sol_yan_sac": "PEM kendi deliğine preslenir (sıkı geçme, model teması)",
+  "govde_kulak_sol_on_1080_bag_saplama ↔ sol_yan_sac": "PEM kendi deliğine preslenir (sıkı geçme, model teması)",
+  "govde_kulak_sol_on_1400_bag_saplama ↔ sol_yan_sac": "PEM kendi deliğine preslenir (sıkı geçme, model teması)",
+  "govde_kulak_sol_on_1750_bag_saplama ↔ sol_yan_sac": "PEM kendi deliğine preslenir (sıkı geçme, model teması)",
+  "govde_kulak_sol_on_2100_bag_saplama ↔ sol_yan_sac": "PEM kendi deliğine preslenir (sıkı geçme, model teması)",
+  "govde_kulak_ust_arka_120_bag_saplama ↔ ust_sac": "PEM kendi deliğine preslenir (sıkı geçme, model teması)",
+  "govde_kulak_ust_arka_350_bag_saplama ↔ ust_sac": "PEM kendi deliğine preslenir (sıkı geçme, model teması)",
+  "govde_kulak_ust_arka_580_bag_saplama ↔ ust_sac": "PEM kendi deliğine preslenir (sıkı geçme, model teması)",
+  "govde_kulak_ust_on_120_bag_saplama ↔ ust_sac": "PEM kendi deliğine preslenir (sıkı geçme, model teması)",
+  "govde_kulak_ust_on_350_bag_saplama ↔ ust_sac": "PEM kendi deliğine preslenir (sıkı geçme, model teması)",
+  "govde_kulak_ust_on_580_bag_saplama ↔ ust_sac": "PEM kendi deliğine preslenir (sıkı geçme, model teması)",
+  "kaide_ust_plaka_4 ↔ kaide_ust_plaka_pem_M6_ray_144_20": "PEM kendi deliğine preslenir (sıkı geçme, model teması)",
+  "kaide_ust_plaka_4 ↔ kaide_ust_plaka_pem_M6_ray_144_320": "PEM kendi deliğine preslenir (sıkı geçme, model teması)",
+  "kaide_ust_plaka_4 ↔ kaide_ust_plaka_pem_M6_ray_564_20": "PEM kendi deliğine preslenir (sıkı geçme, model teması)",
+  "kaide_ust_plaka_4 ↔ kaide_ust_plaka_pem_M6_ray_564_320": "PEM kendi deliğine preslenir (sıkı geçme, model teması)",
+  "kaide_ust_plaka_4 ↔ kaide_ust_plaka_pem_M8_acici_305_520": "PEM kendi deliğine preslenir (sıkı geçme, model teması)",
+  "kaide_ust_plaka_4 ↔ kaide_ust_plaka_pem_M8_acici_305_645": "PEM kendi deliğine preslenir (sıkı geçme, model teması)",
+  "kaide_ust_plaka_4 ↔ kaide_ust_plaka_pem_M8_acici_395_520": "PEM kendi deliğine preslenir (sıkı geçme, model teması)",
+  "kaide_ust_plaka_4 ↔ kaide_ust_plaka_pem_M8_acici_395_645": "PEM kendi deliğine preslenir (sıkı geçme, model teması)"
+ },
+ "vida": [
+  {
+   "eleman": "arayuz_ab_25_110",
+   "std": "ISO 4762 M8 × 25 (+ ISO 7092 pul)",
+   "karsi": "B kirişi M8 perçin somun",
+   "kavrama_mm": 17.0,
+   "dis_boyu_mm": 17.0,
+   "uc_tasma_mm": 1.4,
+   "delik_gecis": "TEMİZ",
+   "gecilen": [
+    "kaide_damlama_saci",
+    "kaide_ust_plaka_4",
+    "kaide_sol_boru",
+    "kaide_sag_boru",
+    "kaide_enine_boru",
+    "cevre_B_kabuk",
+    "cevre_B_gfrp",
+    "cevre_B_kiris"
+   ]
+  },
+  {
+   "eleman": "arayuz_ab_25_706",
+   "std": "ISO 4762 M8 × 25 (+ ISO 7092 pul)",
+   "karsi": "B kirişi M8 perçin somun",
+   "kavrama_mm": 17.0,
+   "dis_boyu_mm": 17.0,
+   "uc_tasma_mm": 1.4,
+   "delik_gecis": "TEMİZ",
+   "gecilen": [
+    "kaide_damlama_saci",
+    "kaide_ust_plaka_4",
+    "kaide_sol_boru",
+    "kaide_sag_boru",
+    "kaide_enine_boru",
+    "cevre_B_kabuk",
+    "cevre_B_gfrp",
+    "cevre_B_kiris"
+   ]
+  },
+  {
+   "eleman": "arayuz_ab_350_110",
+   "std": "ISO 4762 M8 × 25 (+ ISO 7092 pul)",
+   "karsi": "B kirişi M8 perçin somun",
+   "kavrama_mm": 17.0,
+   "dis_boyu_mm": 17.0,
+   "uc_tasma_mm": 1.4,
+   "delik_gecis": "TEMİZ",
+   "gecilen": [
+    "kaide_damlama_saci",
+    "kaide_ust_plaka_4",
+    "kaide_sol_boru",
+    "kaide_sag_boru",
+    "kaide_enine_boru",
+    "cevre_B_kabuk",
+    "cevre_B_gfrp",
+    "cevre_B_kiris"
+   ]
+  },
+  {
+   "eleman": "arayuz_ab_350_706",
+   "std": "ISO 4762 M8 × 25 (+ ISO 7092 pul)",
+   "karsi": "B kirişi M8 perçin somun",
+   "kavrama_mm": 17.0,
+   "dis_boyu_mm": 17.0,
+   "uc_tasma_mm": 1.4,
+   "delik_gecis": "TEMİZ",
+   "gecilen": [
+    "kaide_damlama_saci",
+    "kaide_ust_plaka_4",
+    "kaide_sol_boru",
+    "kaide_sag_boru",
+    "kaide_enine_boru",
+    "cevre_B_kabuk",
+    "cevre_B_gfrp",
+    "cevre_B_kiris"
+   ]
+  },
+  {
+   "eleman": "arayuz_ab_675_110",
+   "std": "ISO 4762 M8 × 25 (+ ISO 7092 pul)",
+   "karsi": "B kirişi M8 perçin somun",
+   "kavrama_mm": 17.0,
+   "dis_boyu_mm": 17.0,
+   "uc_tasma_mm": 1.4,
+   "delik_gecis": "TEMİZ",
+   "gecilen": [
+    "kaide_damlama_saci",
+    "kaide_ust_plaka_4",
+    "kaide_sol_boru",
+    "kaide_sag_boru",
+    "kaide_enine_boru",
+    "cevre_B_kabuk",
+    "cevre_B_gfrp",
+    "cevre_B_kiris"
+   ]
+  },
+  {
+   "eleman": "arayuz_ab_675_706",
+   "std": "ISO 4762 M8 × 25 (+ ISO 7092 pul)",
+   "karsi": "B kirişi M8 perçin somun",
+   "kavrama_mm": 17.0,
+   "dis_boyu_mm": 17.0,
+   "uc_tasma_mm": 1.4,
+   "delik_gecis": "TEMİZ",
+   "gecilen": [
+    "kaide_damlama_saci",
+    "kaide_ust_plaka_4",
+    "kaide_sol_boru",
+    "kaide_sag_boru",
+    "kaide_enine_boru",
+    "cevre_B_kabuk",
+    "cevre_B_gfrp",
+    "cevre_B_kiris"
+   ]
+  },
+  {
+   "eleman": "arayuz_acici_kolonu_M8_305_520",
+   "std": "ISO 4762 M8 × 20 (+ DIN 125 pul)",
+   "karsi": "PEM SP-M8-2 (kaide plakası)",
+   "kavrama_mm": 5.47,
+   "dis_boyu_mm": 5.47,
+   "uc_tasma_mm": 1.14,
+   "delik_gecis": "TEMİZ",
+   "gecilen": [
+    "acici_kolon",
+    "kaide_damlama_saci",
+    "kaide_ust_plaka_4"
+   ]
+  },
+  {
+   "eleman": "arayuz_acici_kolonu_M8_305_645",
+   "std": "ISO 4762 M8 × 20 (+ DIN 125 pul)",
+   "karsi": "PEM SP-M8-2 (kaide plakası)",
+   "kavrama_mm": 5.47,
+   "dis_boyu_mm": 5.47,
+   "uc_tasma_mm": 1.14,
+   "delik_gecis": "TEMİZ",
+   "gecilen": [
+    "acici_kolon",
+    "kaide_damlama_saci",
+    "kaide_ust_plaka_4"
+   ]
+  },
+  {
+   "eleman": "arayuz_acici_kolonu_M8_395_520",
+   "std": "ISO 4762 M8 × 20 (+ DIN 125 pul)",
+   "karsi": "PEM SP-M8-2 (kaide plakası)",
+   "kavrama_mm": 5.47,
+   "dis_boyu_mm": 5.47,
+   "uc_tasma_mm": 1.14,
+   "delik_gecis": "TEMİZ",
+   "gecilen": [
+    "acici_kolon",
+    "kaide_damlama_saci",
+    "kaide_ust_plaka_4"
+   ]
+  },
+  {
+   "eleman": "arayuz_acici_kolonu_M8_395_645",
+   "std": "ISO 4762 M8 × 20 (+ DIN 125 pul)",
+   "karsi": "PEM SP-M8-2 (kaide plakası)",
+   "kavrama_mm": 5.47,
+   "dis_boyu_mm": 5.47,
+   "uc_tasma_mm": 1.14,
+   "delik_gecis": "TEMİZ",
+   "gecilen": [
+    "acici_kolon",
+    "kaide_damlama_saci",
+    "kaide_ust_plaka_4"
+   ]
+  },
+  {
+   "eleman": "arayuz_tabla_rayi_M6_144_20",
+   "std": "ISO 4762 M6 × 16",
+   "karsi": "PEM SP-M6-2 (kaide plakası)",
+   "kavrama_mm": 4.08,
+   "dis_boyu_mm": 4.08,
+   "uc_tasma_mm": 5.63,
+   "delik_gecis": "TEMİZ",
+   "gecilen": [
+    "cevre_T_ray",
+    "kaide_damlama_saci",
+    "kaide_ust_plaka_4"
+   ]
+  },
+  {
+   "eleman": "arayuz_tabla_rayi_M6_144_320",
+   "std": "ISO 4762 M6 × 16",
+   "karsi": "PEM SP-M6-2 (kaide plakası)",
+   "kavrama_mm": 4.08,
+   "dis_boyu_mm": 4.08,
+   "uc_tasma_mm": 5.63,
+   "delik_gecis": "TEMİZ",
+   "gecilen": [
+    "cevre_T_ray",
+    "kaide_damlama_saci",
+    "kaide_ust_plaka_4"
+   ]
+  },
+  {
+   "eleman": "arayuz_tabla_rayi_M6_564_20",
+   "std": "ISO 4762 M6 × 16",
+   "karsi": "PEM SP-M6-2 (kaide plakası)",
+   "kavrama_mm": 4.08,
+   "dis_boyu_mm": 4.08,
+   "uc_tasma_mm": 5.63,
+   "delik_gecis": "TEMİZ",
+   "gecilen": [
+    "cevre_T_ray",
+    "kaide_damlama_saci",
+    "kaide_ust_plaka_4"
+   ]
+  },
+  {
+   "eleman": "arayuz_tabla_rayi_M6_564_320",
+   "std": "ISO 4762 M6 × 16",
+   "karsi": "PEM SP-M6-2 (kaide plakası)",
+   "kavrama_mm": 4.08,
+   "dis_boyu_mm": 4.08,
+   "uc_tasma_mm": 5.63,
+   "delik_gecis": "TEMİZ",
+   "gecilen": [
+    "cevre_T_ray",
+    "kaide_damlama_saci",
+    "kaide_ust_plaka_4"
+   ]
+  },
+  {
+   "eleman": "arayuz_m8_T_1300_300",
+   "std": "ISO 4762 M8 × 16 (+ DIN 9021 pul)",
+   "karsi": "TOPPING sol dış sacı PEM SP-M8",
+   "kavrama_mm": 6.27,
+   "dis_boyu_mm": 6.27,
+   "uc_tasma_mm": 6.11,
+   "delik_gecis": "TEMİZ",
+   "gecilen": [
+    "sag_yan_sac_tabla_gecisi",
+    "cevre_T_govde"
+   ]
+  },
+  {
+   "eleman": "arayuz_m8_T_1300_700",
+   "std": "ISO 4762 M8 × 16 (+ DIN 9021 pul)",
+   "karsi": "TOPPING sol dış sacı PEM SP-M8",
+   "kavrama_mm": 5.47,
+   "dis_boyu_mm": 5.47,
+   "uc_tasma_mm": 6.91,
+   "delik_gecis": "TEMİZ",
+   "gecilen": [
+    "sag_yan_sac_tabla_gecisi",
+    "cevre_T_govde"
+   ]
+  },
+  {
+   "eleman": "arayuz_m8_T_2000_300",
+   "std": "ISO 4762 M8 × 16 (+ DIN 9021 pul)",
+   "karsi": "TOPPING sol dış sacı PEM SP-M8",
+   "kavrama_mm": 6.27,
+   "dis_boyu_mm": 6.27,
+   "uc_tasma_mm": 6.11,
+   "delik_gecis": "TEMİZ",
+   "gecilen": [
+    "sag_yan_sac_tabla_gecisi",
+    "cevre_T_govde"
+   ]
+  },
+  {
+   "eleman": "arayuz_m8_T_2000_700",
+   "std": "ISO 4762 M8 × 16 (+ DIN 9021 pul)",
+   "karsi": "TOPPING sol dış sacı PEM SP-M8",
+   "kavrama_mm": 5.47,
+   "dis_boyu_mm": 5.47,
+   "uc_tasma_mm": 6.91,
+   "delik_gecis": "TEMİZ",
+   "gecilen": [
+    "sag_yan_sac_tabla_gecisi",
+    "cevre_T_govde"
+   ]
+  },
+  {
+   "eleman": "govde_bag_arka_sag_1150_saplama",
+   "std": "PEM FHP-M5-12 saplama (arka sac)",
+   "karsi": "ISO 10511 M5 fiberli somun",
+   "kavrama_mm": 5.0,
+   "dis_boyu_mm": 5.0,
+   "uc_tasma_mm": 2.8,
+   "delik_gecis": "TEMİZ",
+   "gecilen": [
+    "sag_yan_sac_tabla_gecisi",
+    "arka_sac"
+   ]
+  },
+  {
+   "eleman": "govde_bag_arka_sag_1450_saplama",
+   "std": "PEM FHP-M5-12 saplama (arka sac)",
+   "karsi": "ISO 10511 M5 fiberli somun",
+   "kavrama_mm": 5.0,
+   "dis_boyu_mm": 5.0,
+   "uc_tasma_mm": 2.8,
+   "delik_gecis": "TEMİZ",
+   "gecilen": [
+    "sag_yan_sac_tabla_gecisi",
+    "arka_sac"
+   ]
+  },
+  {
+   "eleman": "govde_bag_arka_sag_1750_saplama",
+   "std": "PEM FHP-M5-12 saplama (arka sac)",
+   "karsi": "ISO 10511 M5 fiberli somun",
+   "kavrama_mm": 5.0,
+   "dis_boyu_mm": 5.0,
+   "uc_tasma_mm": 2.8,
+   "delik_gecis": "TEMİZ",
+   "gecilen": [
+    "sag_yan_sac_tabla_gecisi",
+    "arka_sac"
+   ]
+  },
+  {
+   "eleman": "govde_bag_arka_sag_2050_saplama",
+   "std": "PEM FHP-M5-12 saplama (arka sac)",
+   "karsi": "ISO 10511 M5 fiberli somun",
+   "kavrama_mm": 5.0,
+   "dis_boyu_mm": 5.0,
+   "uc_tasma_mm": 2.8,
+   "delik_gecis": "TEMİZ",
+   "gecilen": [
+    "sag_yan_sac_tabla_gecisi",
+    "arka_sac"
+   ]
+  },
+  {
+   "eleman": "govde_bag_arka_sag_850_saplama",
+   "std": "PEM FHP-M5-12 saplama (arka sac)",
+   "karsi": "ISO 10511 M5 fiberli somun",
+   "kavrama_mm": 5.0,
+   "dis_boyu_mm": 5.0,
+   "uc_tasma_mm": 2.8,
+   "delik_gecis": "TEMİZ",
+   "gecilen": [
+    "sag_yan_sac_tabla_gecisi",
+    "arka_sac"
+   ]
+  },
+  {
+   "eleman": "govde_bag_arka_sol_1150_saplama",
+   "std": "PEM FHP-M5-12 saplama (arka sac)",
+   "karsi": "ISO 10511 M5 fiberli somun",
+   "kavrama_mm": 5.0,
+   "dis_boyu_mm": 5.0,
+   "uc_tasma_mm": 2.8,
+   "delik_gecis": "TEMİZ",
+   "gecilen": [
+    "sol_yan_sac",
+    "arka_sac"
+   ]
+  },
+  {
+   "eleman": "govde_bag_arka_sol_1450_saplama",
+   "std": "PEM FHP-M5-12 saplama (arka sac)",
+   "karsi": "ISO 10511 M5 fiberli somun",
+   "kavrama_mm": 5.0,
+   "dis_boyu_mm": 5.0,
+   "uc_tasma_mm": 2.8,
+   "delik_gecis": "TEMİZ",
+   "gecilen": [
+    "sol_yan_sac",
+    "arka_sac"
+   ]
+  },
+  {
+   "eleman": "govde_bag_arka_sol_1750_saplama",
+   "std": "PEM FHP-M5-12 saplama (arka sac)",
+   "karsi": "ISO 10511 M5 fiberli somun",
+   "kavrama_mm": 5.0,
+   "dis_boyu_mm": 5.0,
+   "uc_tasma_mm": 2.8,
+   "delik_gecis": "TEMİZ",
+   "gecilen": [
+    "sol_yan_sac",
+    "arka_sac"
+   ]
+  },
+  {
+   "eleman": "govde_bag_arka_sol_2050_saplama",
+   "std": "PEM FHP-M5-12 saplama (arka sac)",
+   "karsi": "ISO 10511 M5 fiberli somun",
+   "kavrama_mm": 5.0,
+   "dis_boyu_mm": 5.0,
+   "uc_tasma_mm": 2.8,
+   "delik_gecis": "TEMİZ",
+   "gecilen": [
+    "sol_yan_sac",
+    "arka_sac"
+   ]
+  },
+  {
+   "eleman": "govde_bag_arka_sol_850_saplama",
+   "std": "PEM FHP-M5-12 saplama (arka sac)",
+   "karsi": "ISO 10511 M5 fiberli somun",
+   "kavrama_mm": 5.0,
+   "dis_boyu_mm": 5.0,
+   "uc_tasma_mm": 2.8,
+   "delik_gecis": "TEMİZ",
+   "gecilen": [
+    "sol_yan_sac",
+    "arka_sac"
+   ]
+  },
+  {
+   "eleman": "govde_bag_arka_ust_350_saplama",
+   "std": "PEM FHP-M5-12 saplama (arka sac)",
+   "karsi": "ISO 10511 M5 fiberli somun",
+   "kavrama_mm": 5.0,
+   "dis_boyu_mm": 5.0,
+   "uc_tasma_mm": 2.8,
+   "delik_gecis": "TEMİZ",
+   "gecilen": [
+    "ust_sac",
+    "arka_sac"
+   ]
+  },
+  {
+   "eleman": "govde_bag_arka_ust_60_saplama",
+   "std": "PEM FHP-M5-12 saplama (arka sac)",
+   "karsi": "ISO 10511 M5 fiberli somun",
+   "kavrama_mm": 5.0,
+   "dis_boyu_mm": 5.0,
+   "uc_tasma_mm": 2.8,
+   "delik_gecis": "TEMİZ",
+   "gecilen": [
+    "ust_sac",
+    "arka_sac"
+   ]
+  },
+  {
+   "eleman": "govde_bag_arka_ust_640_saplama",
+   "std": "PEM FHP-M5-12 saplama (arka sac)",
+   "karsi": "ISO 10511 M5 fiberli somun",
+   "kavrama_mm": 5.0,
+   "dis_boyu_mm": 5.0,
+   "uc_tasma_mm": 2.8,
+   "delik_gecis": "TEMİZ",
+   "gecilen": [
+    "ust_sac",
+    "arka_sac"
+   ]
+  },
+  {
+   "eleman": "govde_kulak_sag_arka_1300_bag_saplama",
+   "std": "PEM FHP-M5-15 saplama (yan / üst sac)",
+   "karsi": "ISO 10511 M5 fiberli somun",
+   "kavrama_mm": 5.0,
+   "dis_boyu_mm": 5.0,
+   "uc_tasma_mm": 4.3,
+   "delik_gecis": "TEMİZ",
+   "gecilen": [
+    "govde_kulak_sag_arka_1300",
+    "sag_yan_sac_tabla_gecisi"
+   ]
+  },
+  {
+   "eleman": "govde_kulak_sag_arka_1700_bag_saplama",
+   "std": "PEM FHP-M5-15 saplama (yan / üst sac)",
+   "karsi": "ISO 10511 M5 fiberli somun",
+   "kavrama_mm": 5.0,
+   "dis_boyu_mm": 5.0,
+   "uc_tasma_mm": 4.3,
+   "delik_gecis": "TEMİZ",
+   "gecilen": [
+    "govde_kulak_sag_arka_1700",
+    "sag_yan_sac_tabla_gecisi"
+   ]
+  },
+  {
+   "eleman": "govde_kulak_sag_arka_2100_bag_saplama",
+   "std": "PEM FHP-M5-15 saplama (yan / üst sac)",
+   "karsi": "ISO 10511 M5 fiberli somun",
+   "kavrama_mm": 5.0,
+   "dis_boyu_mm": 5.0,
+   "uc_tasma_mm": 4.3,
+   "delik_gecis": "TEMİZ",
+   "gecilen": [
+    "govde_kulak_sag_arka_2100",
+    "sag_yan_sac_tabla_gecisi"
+   ]
+  },
+  {
+   "eleman": "govde_kulak_sag_arka_930_bag_saplama",
+   "std": "PEM FHP-M5-15 saplama (yan / üst sac)",
+   "karsi": "ISO 10511 M5 fiberli somun",
+   "kavrama_mm": 5.0,
+   "dis_boyu_mm": 5.0,
+   "uc_tasma_mm": 4.3,
+   "delik_gecis": "TEMİZ",
+   "gecilen": [
+    "govde_kulak_sag_arka_930",
+    "sag_yan_sac_tabla_gecisi"
+   ]
+  },
+  {
+   "eleman": "govde_kulak_sag_on_1080_bag_saplama",
+   "std": "PEM FHP-M5-15 saplama (yan / üst sac)",
+   "karsi": "ISO 10511 M5 fiberli somun",
+   "kavrama_mm": 5.0,
+   "dis_boyu_mm": 5.0,
+   "uc_tasma_mm": 4.3,
+   "delik_gecis": "TEMİZ",
+   "gecilen": [
+    "govde_kulak_sag_on_1080",
+    "sag_yan_sac_tabla_gecisi"
+   ]
+  },
+  {
+   "eleman": "govde_kulak_sag_on_1400_bag_saplama",
+   "std": "PEM FHP-M5-15 saplama (yan / üst sac)",
+   "karsi": "ISO 10511 M5 fiberli somun",
+   "kavrama_mm": 5.0,
+   "dis_boyu_mm": 5.0,
+   "uc_tasma_mm": 4.3,
+   "delik_gecis": "TEMİZ",
+   "gecilen": [
+    "govde_kulak_sag_on_1400",
+    "sag_yan_sac_tabla_gecisi"
+   ]
+  },
+  {
+   "eleman": "govde_kulak_sag_on_1750_bag_saplama",
+   "std": "PEM FHP-M5-15 saplama (yan / üst sac)",
+   "karsi": "ISO 10511 M5 fiberli somun",
+   "kavrama_mm": 5.0,
+   "dis_boyu_mm": 5.0,
+   "uc_tasma_mm": 4.3,
+   "delik_gecis": "TEMİZ",
+   "gecilen": [
+    "govde_kulak_sag_on_1750",
+    "sag_yan_sac_tabla_gecisi"
+   ]
+  },
+  {
+   "eleman": "govde_kulak_sag_on_2100_bag_saplama",
+   "std": "PEM FHP-M5-15 saplama (yan / üst sac)",
+   "karsi": "ISO 10511 M5 fiberli somun",
+   "kavrama_mm": 5.0,
+   "dis_boyu_mm": 5.0,
+   "uc_tasma_mm": 4.3,
+   "delik_gecis": "TEMİZ",
+   "gecilen": [
+    "govde_kulak_sag_on_2100",
+    "sag_yan_sac_tabla_gecisi"
+   ]
+  },
+  {
+   "eleman": "govde_kulak_sol_arka_1300_bag_saplama",
+   "std": "PEM FHP-M5-15 saplama (yan / üst sac)",
+   "karsi": "ISO 10511 M5 fiberli somun",
+   "kavrama_mm": 5.0,
+   "dis_boyu_mm": 5.0,
+   "uc_tasma_mm": 4.3,
+   "delik_gecis": "TEMİZ",
+   "gecilen": [
+    "govde_kulak_sol_arka_1300",
+    "sol_yan_sac"
+   ]
+  },
+  {
+   "eleman": "govde_kulak_sol_arka_1700_bag_saplama",
+   "std": "PEM FHP-M5-15 saplama (yan / üst sac)",
+   "karsi": "ISO 10511 M5 fiberli somun",
+   "kavrama_mm": 5.0,
+   "dis_boyu_mm": 5.0,
+   "uc_tasma_mm": 4.3,
+   "delik_gecis": "TEMİZ",
+   "gecilen": [
+    "govde_kulak_sol_arka_1700",
+    "sol_yan_sac"
+   ]
+  },
+  {
+   "eleman": "govde_kulak_sol_arka_2100_bag_saplama",
+   "std": "PEM FHP-M5-15 saplama (yan / üst sac)",
+   "karsi": "ISO 10511 M5 fiberli somun",
+   "kavrama_mm": 5.0,
+   "dis_boyu_mm": 5.0,
+   "uc_tasma_mm": 4.3,
+   "delik_gecis": "TEMİZ",
+   "gecilen": [
+    "govde_kulak_sol_arka_2100",
+    "sol_yan_sac"
+   ]
+  },
+  {
+   "eleman": "govde_kulak_sol_arka_930_bag_saplama",
+   "std": "PEM FHP-M5-15 saplama (yan / üst sac)",
+   "karsi": "ISO 10511 M5 fiberli somun",
+   "kavrama_mm": 5.0,
+   "dis_boyu_mm": 5.0,
+   "uc_tasma_mm": 4.3,
+   "delik_gecis": "TEMİZ",
+   "gecilen": [
+    "govde_kulak_sol_arka_930",
+    "sol_yan_sac"
+   ]
+  },
+  {
+   "eleman": "govde_kulak_sol_on_1080_bag_saplama",
+   "std": "PEM FHP-M5-15 saplama (yan / üst sac)",
+   "karsi": "ISO 10511 M5 fiberli somun",
+   "kavrama_mm": 5.0,
+   "dis_boyu_mm": 5.0,
+   "uc_tasma_mm": 4.3,
+   "delik_gecis": "TEMİZ",
+   "gecilen": [
+    "govde_kulak_sol_on_1080",
+    "sol_yan_sac"
+   ]
+  },
+  {
+   "eleman": "govde_kulak_sol_on_1400_bag_saplama",
+   "std": "PEM FHP-M5-15 saplama (yan / üst sac)",
+   "karsi": "ISO 10511 M5 fiberli somun",
+   "kavrama_mm": 5.0,
+   "dis_boyu_mm": 5.0,
+   "uc_tasma_mm": 4.3,
+   "delik_gecis": "TEMİZ",
+   "gecilen": [
+    "govde_kulak_sol_on_1400",
+    "sol_yan_sac"
+   ]
+  },
+  {
+   "eleman": "govde_kulak_sol_on_1750_bag_saplama",
+   "std": "PEM FHP-M5-15 saplama (yan / üst sac)",
+   "karsi": "ISO 10511 M5 fiberli somun",
+   "kavrama_mm": 5.0,
+   "dis_boyu_mm": 5.0,
+   "uc_tasma_mm": 4.3,
+   "delik_gecis": "TEMİZ",
+   "gecilen": [
+    "govde_kulak_sol_on_1750",
+    "sol_yan_sac"
+   ]
+  },
+  {
+   "eleman": "govde_kulak_sol_on_2100_bag_saplama",
+   "std": "PEM FHP-M5-15 saplama (yan / üst sac)",
+   "karsi": "ISO 10511 M5 fiberli somun",
+   "kavrama_mm": 5.0,
+   "dis_boyu_mm": 5.0,
+   "uc_tasma_mm": 4.3,
+   "delik_gecis": "TEMİZ",
+   "gecilen": [
+    "govde_kulak_sol_on_2100",
+    "sol_yan_sac"
+   ]
+  },
+  {
+   "eleman": "govde_kulak_ust_arka_120_bag_saplama",
+   "std": "PEM FHP-M5-15 saplama (yan / üst sac)",
+   "karsi": "ISO 10511 M5 fiberli somun",
+   "kavrama_mm": 5.0,
+   "dis_boyu_mm": 5.0,
+   "uc_tasma_mm": 4.3,
+   "delik_gecis": "TEMİZ",
+   "gecilen": [
+    "govde_kulak_ust_arka_120",
+    "ust_sac"
+   ]
+  },
+  {
+   "eleman": "govde_kulak_ust_arka_350_bag_saplama",
+   "std": "PEM FHP-M5-15 saplama (yan / üst sac)",
+   "karsi": "ISO 10511 M5 fiberli somun",
+   "kavrama_mm": 5.0,
+   "dis_boyu_mm": 5.0,
+   "uc_tasma_mm": 4.3,
+   "delik_gecis": "TEMİZ",
+   "gecilen": [
+    "govde_kulak_ust_arka_350",
+    "ust_sac"
+   ]
+  },
+  {
+   "eleman": "govde_kulak_ust_arka_580_bag_saplama",
+   "std": "PEM FHP-M5-15 saplama (yan / üst sac)",
+   "karsi": "ISO 10511 M5 fiberli somun",
+   "kavrama_mm": 5.0,
+   "dis_boyu_mm": 5.0,
+   "uc_tasma_mm": 4.3,
+   "delik_gecis": "TEMİZ",
+   "gecilen": [
+    "govde_kulak_ust_arka_580",
+    "ust_sac"
+   ]
+  },
+  {
+   "eleman": "govde_kulak_ust_on_120_bag_saplama",
+   "std": "PEM FHP-M5-15 saplama (yan / üst sac)",
+   "karsi": "ISO 10511 M5 fiberli somun",
+   "kavrama_mm": 5.0,
+   "dis_boyu_mm": 5.0,
+   "uc_tasma_mm": 4.3,
+   "delik_gecis": "TEMİZ",
+   "gecilen": [
+    "govde_kulak_ust_on_120",
+    "ust_sac"
+   ]
+  },
+  {
+   "eleman": "govde_kulak_ust_on_350_bag_saplama",
+   "std": "PEM FHP-M5-15 saplama (yan / üst sac)",
+   "karsi": "ISO 10511 M5 fiberli somun",
+   "kavrama_mm": 5.0,
+   "dis_boyu_mm": 5.0,
+   "uc_tasma_mm": 4.3,
+   "delik_gecis": "TEMİZ",
+   "gecilen": [
+    "govde_kulak_ust_on_350",
+    "ust_sac"
+   ]
+  },
+  {
+   "eleman": "govde_kulak_ust_on_580_bag_saplama",
+   "std": "PEM FHP-M5-15 saplama (yan / üst sac)",
+   "karsi": "ISO 10511 M5 fiberli somun",
+   "kavrama_mm": 5.0,
+   "dis_boyu_mm": 5.0,
+   "uc_tasma_mm": 4.3,
+   "delik_gecis": "TEMİZ",
+   "gecilen": [
+    "govde_kulak_ust_on_580",
+    "ust_sac"
+   ]
+  },
+  {
+   "eleman": "onyuz_kapak_A_mentese_0_sabit_vida_a",
+   "std": "ISO 7380 M5 × 12",
+   "karsi": "menteşe gövdesi M5 dişi",
+   "kavrama_mm": 7.0,
+   "dis_boyu_mm": 8.0,
+   "uc_tasma_mm": -1.0,
+   "delik_gecis": "TEMİZ",
+   "gecilen": [
+    "kose_dikmesi_20_42"
+   ]
+  },
+  {
+   "eleman": "onyuz_kapak_A_mentese_0_kanat_vida_a",
+   "std": "ISO 7380 M5 × 6",
+   "karsi": "PEM SP-M5-1 (iç tava)",
+   "kavrama_mm": 2.0,
+   "dis_boyu_mm": 2.0,
+   "uc_tasma_mm": 2.47,
+   "delik_gecis": "TEMİZ",
+   "gecilen": [
+    "onyuz_kapak_A_mentese_0_kanat",
+    "onyuz_kapak_A_ic_tava"
+   ]
+  },
+  {
+   "eleman": "onyuz_kapak_A_mentese_0_sabit_vida_b",
+   "std": "ISO 7380 M5 × 12",
+   "karsi": "menteşe gövdesi M5 dişi",
+   "kavrama_mm": 7.0,
+   "dis_boyu_mm": 8.0,
+   "uc_tasma_mm": -1.0,
+   "delik_gecis": "TEMİZ",
+   "gecilen": [
+    "kose_dikmesi_20_42"
+   ]
+  },
+  {
+   "eleman": "onyuz_kapak_A_mentese_0_kanat_vida_b",
+   "std": "ISO 7380 M5 × 6",
+   "karsi": "PEM SP-M5-1 (iç tava)",
+   "kavrama_mm": 2.0,
+   "dis_boyu_mm": 2.0,
+   "uc_tasma_mm": 2.47,
+   "delik_gecis": "TEMİZ",
+   "gecilen": [
+    "onyuz_kapak_A_mentese_0_kanat",
+    "onyuz_kapak_A_ic_tava"
+   ]
+  },
+  {
+   "eleman": "onyuz_kapak_A_mentese_1_sabit_vida_a",
+   "std": "ISO 7380 M5 × 12",
+   "karsi": "menteşe gövdesi M5 dişi",
+   "kavrama_mm": 7.0,
+   "dis_boyu_mm": 8.0,
+   "uc_tasma_mm": -1.0,
+   "delik_gecis": "TEMİZ",
+   "gecilen": [
+    "kose_dikmesi_20_42"
+   ]
+  },
+  {
+   "eleman": "onyuz_kapak_A_mentese_1_kanat_vida_a",
+   "std": "ISO 7380 M5 × 6",
+   "karsi": "PEM SP-M5-1 (iç tava)",
+   "kavrama_mm": 2.0,
+   "dis_boyu_mm": 2.0,
+   "uc_tasma_mm": 2.47,
+   "delik_gecis": "TEMİZ",
+   "gecilen": [
+    "onyuz_kapak_A_mentese_1_kanat",
+    "onyuz_kapak_A_ic_tava"
+   ]
+  },
+  {
+   "eleman": "onyuz_kapak_A_mentese_1_sabit_vida_b",
+   "std": "ISO 7380 M5 × 12",
+   "karsi": "menteşe gövdesi M5 dişi",
+   "kavrama_mm": 7.0,
+   "dis_boyu_mm": 8.0,
+   "uc_tasma_mm": -1.0,
+   "delik_gecis": "TEMİZ",
+   "gecilen": [
+    "kose_dikmesi_20_42"
+   ]
+  },
+  {
+   "eleman": "onyuz_kapak_A_mentese_1_kanat_vida_b",
+   "std": "ISO 7380 M5 × 6",
+   "karsi": "PEM SP-M5-1 (iç tava)",
+   "kavrama_mm": 2.0,
+   "dis_boyu_mm": 2.0,
+   "uc_tasma_mm": 2.47,
+   "delik_gecis": "TEMİZ",
+   "gecilen": [
+    "onyuz_kapak_A_mentese_1_kanat",
+    "onyuz_kapak_A_ic_tava"
+   ]
+  },
+  {
+   "eleman": "onyuz_kapak_A_mentese_2_sabit_vida_a",
+   "std": "ISO 7380 M5 × 12",
+   "karsi": "menteşe gövdesi M5 dişi",
+   "kavrama_mm": 7.0,
+   "dis_boyu_mm": 8.0,
+   "uc_tasma_mm": -1.0,
+   "delik_gecis": "TEMİZ",
+   "gecilen": [
+    "kose_dikmesi_20_42"
+   ]
+  },
+  {
+   "eleman": "onyuz_kapak_A_mentese_2_kanat_vida_a",
+   "std": "ISO 7380 M5 × 6",
+   "karsi": "PEM SP-M5-1 (iç tava)",
+   "kavrama_mm": 2.0,
+   "dis_boyu_mm": 2.0,
+   "uc_tasma_mm": 2.47,
+   "delik_gecis": "TEMİZ",
+   "gecilen": [
+    "onyuz_kapak_A_mentese_2_kanat",
+    "onyuz_kapak_A_ic_tava"
+   ]
+  },
+  {
+   "eleman": "onyuz_kapak_A_mentese_2_sabit_vida_b",
+   "std": "ISO 7380 M5 × 12",
+   "karsi": "menteşe gövdesi M5 dişi",
+   "kavrama_mm": 7.0,
+   "dis_boyu_mm": 8.0,
+   "uc_tasma_mm": -1.0,
+   "delik_gecis": "TEMİZ",
+   "gecilen": [
+    "kose_dikmesi_20_42"
+   ]
+  },
+  {
+   "eleman": "onyuz_kapak_A_mentese_2_kanat_vida_b",
+   "std": "ISO 7380 M5 × 6",
+   "karsi": "PEM SP-M5-1 (iç tava)",
+   "kavrama_mm": 2.0,
+   "dis_boyu_mm": 2.0,
+   "uc_tasma_mm": 2.47,
+   "delik_gecis": "TEMİZ",
+   "gecilen": [
+    "onyuz_kapak_A_mentese_2_kanat",
+    "onyuz_kapak_A_ic_tava"
+   ]
+  }
+ ],
+ "sac_model": [
+  [
+   "sol_yan_sac",
+   0.0001
+  ],
+  [
+   "sag_yan_sac_tabla_gecisi",
+   0.0001
+  ],
+  [
+   "ust_sac",
+   0.0001
+  ],
+  [
+   "govde_kulak_sol_on_2100",
+   0.0001
+  ],
+  [
+   "govde_kulak_sol_arka_2100",
+   0.0001
+  ],
+  [
+   "govde_kulak_sag_on_2100",
+   0.0001
+  ],
+  [
+   "govde_kulak_sag_arka_2100",
+   0.0001
+  ],
+  [
+   "govde_kulak_ust_on_120",
+   0.0001
+  ],
+  [
+   "govde_kulak_ust_on_350",
+   0.0001
+  ],
+  [
+   "govde_kulak_ust_on_580",
+   0.0001
+  ]
+ ],
+ "plan_sorun": [],
+ "istisna": [
+  "govde_kulak_sag_arka_1300_kaynak_a",
+  "govde_kulak_sag_arka_1300_kaynak_b",
+  "govde_kulak_sag_arka_1700_kaynak_a",
+  "govde_kulak_sag_arka_1700_kaynak_b",
+  "govde_kulak_sag_arka_2100_kaynak_a",
+  "govde_kulak_sag_arka_2100_kaynak_b",
+  "govde_kulak_sag_arka_930_kaynak_a",
+  "govde_kulak_sag_arka_930_kaynak_b",
+  "govde_kulak_sag_on_1080_kaynak_a",
+  "govde_kulak_sag_on_1080_kaynak_b",
+  "govde_kulak_sag_on_1400_kaynak_a",
+  "govde_kulak_sag_on_1400_kaynak_b",
+  "govde_kulak_sag_on_1750_kaynak_a",
+  "govde_kulak_sag_on_1750_kaynak_b",
+  "govde_kulak_sag_on_2100_kaynak_a",
+  "govde_kulak_sag_on_2100_kaynak_b",
+  "govde_kulak_sol_arka_1300_kaynak_a",
+  "govde_kulak_sol_arka_1300_kaynak_b",
+  "govde_kulak_sol_arka_1700_kaynak_a",
+  "govde_kulak_sol_arka_1700_kaynak_b",
+  "govde_kulak_sol_arka_2100_kaynak_a",
+  "govde_kulak_sol_arka_2100_kaynak_b",
+  "govde_kulak_sol_arka_930_kaynak_a",
+  "govde_kulak_sol_arka_930_kaynak_b",
+  "govde_kulak_sol_on_1080_kaynak_a",
+  "govde_kulak_sol_on_1080_kaynak_b",
+  "govde_kulak_sol_on_1400_kaynak_a",
+  "govde_kulak_sol_on_1400_kaynak_b",
+  "govde_kulak_sol_on_1750_kaynak_a",
+  "govde_kulak_sol_on_1750_kaynak_b",
+  "govde_kulak_sol_on_2100_kaynak_a",
+  "govde_kulak_sol_on_2100_kaynak_b",
+  "govde_kulak_ust_arka_120_kaynak_a",
+  "govde_kulak_ust_arka_120_kaynak_b",
+  "govde_kulak_ust_arka_350_kaynak_a",
+  "govde_kulak_ust_arka_350_kaynak_b",
+  "govde_kulak_ust_arka_580_kaynak_a",
+  "govde_kulak_ust_arka_580_kaynak_b",
+  "govde_kulak_ust_on_120_kaynak_a",
+  "govde_kulak_ust_on_120_kaynak_b",
+  "govde_kulak_ust_on_350_kaynak_a",
+  "govde_kulak_ust_on_350_kaynak_b",
+  "govde_kulak_ust_on_580_kaynak_a",
+  "govde_kulak_ust_on_580_kaynak_b",
+  "kaide_boyuna_boru_sag_kaynak_370_0",
+  "kaide_boyuna_boru_sag_kaynak_370_1",
+  "kaide_boyuna_boru_sag_kaynak_655_0",
+  "kaide_boyuna_boru_sag_kaynak_655_1",
+  "kaide_boyuna_boru_sol_kaynak_330_0",
+  "kaide_boyuna_boru_sol_kaynak_330_1",
+  "kaide_boyuna_boru_sol_kaynak_45_0",
+  "kaide_boyuna_boru_sol_kaynak_45_1",
+  "kaide_damlama_dikme_kaynagi_20_-800_a",
+  "kaide_damlama_dikme_kaynagi_20_-800_b",
+  "kaide_damlama_dikme_kaynagi_20_42_a",
+  "kaide_damlama_dikme_kaynagi_20_42_b",
+  "kaide_damlama_dikme_kaynagi_680_-800_a",
+  "kaide_damlama_dikme_kaynagi_680_-800_b",
+  "kaide_damlama_dikme_kaynagi_680_42_a",
+  "kaide_damlama_dikme_kaynagi_680_42_b",
+  "kaide_enine_boru_kaynak_-17_0",
+  "kaide_enine_boru_kaynak_-17_1",
+  "kaide_enine_boru_kaynak_775_0",
+  "kaide_enine_boru_kaynak_775_1",
+  "kaide_sag_boru_kaynak_-17_0",
+  "kaide_sag_boru_kaynak_-17_1",
+  "kaide_sag_boru_kaynak_775_0",
+  "kaide_sag_boru_kaynak_775_1",
+  "kaide_sol_boru_kaynak_-17_0",
+  "kaide_sol_boru_kaynak_-17_1",
+  "kaide_sol_boru_kaynak_775_0",
+  "kaide_sol_boru_kaynak_775_1",
+  "kaide_ust_plaka_delik_kaynagi_0",
+  "kaide_ust_plaka_delik_kaynagi_1",
+  "kaide_ust_plaka_delik_kaynagi_10",
+  "kaide_ust_plaka_delik_kaynagi_11",
+  "kaide_ust_plaka_delik_kaynagi_12",
+  "kaide_ust_plaka_delik_kaynagi_13",
+  "kaide_ust_plaka_delik_kaynagi_14",
+  "kaide_ust_plaka_delik_kaynagi_15",
+  "kaide_ust_plaka_delik_kaynagi_2",
+  "kaide_ust_plaka_delik_kaynagi_3",
+  "kaide_ust_plaka_delik_kaynagi_4",
+  "kaide_ust_plaka_delik_kaynagi_5",
+  "kaide_ust_plaka_delik_kaynagi_6",
+  "kaide_ust_plaka_delik_kaynagi_7",
+  "kaide_ust_plaka_delik_kaynagi_8",
+  "kaide_ust_plaka_delik_kaynagi_9",
+  "onyuz_kapak_A_kose_kaynagi_1",
+  "onyuz_kapak_A_kose_kaynagi_2",
+  "onyuz_kapak_A_kose_kaynagi_3",
+  "onyuz_kapak_A_kose_kaynagi_4",
+  "punta_damlama_350_-20",
+  "punta_damlama_350_400",
+  "punta_damlama_350_780",
+  "punta_damlama_40_-20",
+  "punta_damlama_40_400",
+  "punta_damlama_40_780",
+  "punta_damlama_660_-20",
+  "punta_damlama_660_400",
+  "punta_damlama_660_780",
+  "punta_kapak_alt_0",
+  "punta_kapak_alt_1",
+  "punta_kapak_alt_2",
+  "punta_kapak_alt_3",
+  "punta_kapak_alt_4",
+  "punta_kapak_alt_5",
+  "punta_kapak_sag_0",
+  "punta_kapak_sag_1",
+  "punta_kapak_sag_2",
+  "punta_kapak_sag_3",
+  "punta_kapak_sag_4",
+  "punta_kapak_sag_5",
+  "punta_kapak_sag_6",
+  "punta_kapak_sag_7",
+  "punta_kapak_sag_8",
+  "punta_kapak_sol_0",
+  "punta_kapak_sol_1",
+  "punta_kapak_sol_2",
+  "punta_kapak_sol_3",
+  "punta_kapak_sol_4",
+  "punta_kapak_sol_5",
+  "punta_kapak_sol_6",
+  "punta_kapak_sol_7",
+  "punta_kapak_sol_8",
+  "punta_kapak_ust_0",
+  "punta_kapak_ust_1",
+  "punta_kapak_ust_2",
+  "punta_kapak_ust_3",
+  "punta_kapak_ust_4",
+  "punta_kapak_ust_5",
+  "punta_karsilik_0_0",
+  "punta_karsilik_0_1",
+  "punta_karsilik_1_0",
+  "punta_karsilik_1_1",
+  "punta_karsilik_2_0",
+  "punta_karsilik_2_1",
+  "ust_halka_kaynak_-42_35_0",
+  "ust_halka_kaynak_-42_665_0",
+  "ust_halka_kaynak_800_35_0",
+  "ust_halka_kaynak_800_665_0",
+  "ust_halka_yan_kaynak_20_-27_0",
+  "ust_halka_yan_kaynak_20_785_0",
+  "ust_halka_yan_kaynak_680_-27_0",
+  "ust_halka_yan_kaynak_680_785_0"
+ ],
+ "uretilen": [
+  "arka_sac",
+  "govde_kulak_sag_arka_1300",
+  "govde_kulak_sag_arka_1700",
+  "govde_kulak_sag_arka_2100",
+  "govde_kulak_sag_arka_930",
+  "govde_kulak_sag_on_1080",
+  "govde_kulak_sag_on_1400",
+  "govde_kulak_sag_on_1750",
+  "govde_kulak_sag_on_2100",
+  "govde_kulak_sol_arka_1300",
+  "govde_kulak_sol_arka_1700",
+  "govde_kulak_sol_arka_2100",
+  "govde_kulak_sol_arka_930",
+  "govde_kulak_sol_on_1080",
+  "govde_kulak_sol_on_1400",
+  "govde_kulak_sol_on_1750",
+  "govde_kulak_sol_on_2100",
+  "govde_kulak_ust_arka_120",
+  "govde_kulak_ust_arka_350",
+  "govde_kulak_ust_arka_580",
+  "govde_kulak_ust_on_120",
+  "govde_kulak_ust_on_350",
+  "govde_kulak_ust_on_580",
+  "onyuz_kapak_A",
+  "onyuz_kapak_A_ic_tava",
+  "sag_yan_sac_tabla_gecisi",
+  "sol_yan_sac",
+  "ust_sac"
+ ],
+ "siyirma_mm": 0.75,
+ "oturma_mm": 1.0
+}
