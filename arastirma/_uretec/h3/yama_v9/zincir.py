@@ -215,8 +215,10 @@ ADIMLAR = [
      [(".", 'python "{YAMA}/66_emniyet_braket.py" hat3_v10g.glb hat3_v10h.glb')]),
     ("67", "F üst kabin: arka sac ↔ yanlar + köşebent 11 preslenmiş saplama yerine dıştan ISO 7380 M5 × 10 cıvata (üç eksenli saplama düğümü kurulamıyordu · F montaj v2 sıra denetimi)", ["hat3_v10h.glb"], "hat3_v10i.glb",
      [(".", 'python "{YAMA}/67_f_arka_civata.py" hat3_v10h.glb hat3_v10i.glb')]),
+    ("68", "E gövdesi: arka sacın alt / üst dönüşündeki 10 saplama deliği öne açık yarık (arka sac arkadan sürülür, taban / üst sacın dik saplamalarına geçer · E montaj v2 sıra denetimi)", ["hat3_v10i.glb"], "hat3_v10j.glb",
+     [(".", 'python "{YAMA}/68_e_arka_yarik.py" hat3_v10i.glb hat3_v10j.glb')]),
 ]
-SON = "hat3_v10i.glb"
+SON = "hat3_v10j.glb"
 
 
 def kur(is_dizin, h3, uretec):
