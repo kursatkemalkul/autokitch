@@ -1,0 +1,257 @@
+{
+ "parca": "sarjor_yan_kapisi_mentese_lamasi",
+ "surum": "h3_sac_v1",
+ "malzeme": "AISI 304 2B, dış yüz 240 kum satine, hat boyunca yatay",
+ "t": 2.0,
+ "R": 3.0,
+ "K": 0.41,
+ "adet": 1,
+ "birim": "mm",
+ "ust_yuz": "Z = t yüzü = kök panelin +n yüzü (bütün panellerin yerel z = t yüzü)",
+ "dis_kontur": [
+  {
+   "t": "L",
+   "p": [
+    [
+     812.5,
+     245.0
+    ],
+    [
+     828.4,
+     245.0
+    ]
+   ]
+  },
+  {
+   "t": "L",
+   "p": [
+    [
+     828.4,
+     245.0
+    ],
+    [
+     828.4,
+     975.0
+    ]
+   ]
+  },
+  {
+   "t": "L",
+   "p": [
+    [
+     828.4,
+     975.0
+    ],
+    [
+     812.5,
+     975.0
+    ]
+   ]
+  },
+  {
+   "t": "L",
+   "p": [
+    [
+     812.5,
+     975.0
+    ],
+    [
+     812.5,
+     245.0
+    ]
+   ]
+  }
+ ],
+ "ek_dis_konturlar": [],
+ "ic_konturlar": [
+  [
+   {
+    "t": "C",
+    "c": [
+     820.5,
+     285.0
+    ],
+    "r": 2.1
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     820.5,
+     315.0
+    ],
+    "r": 2.1
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     820.5,
+     420.0
+    ],
+    "r": 2.75
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     820.5,
+     600.0
+    ],
+    "r": 2.75
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     820.5,
+     780.0
+    ],
+    "r": 2.75
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     820.5,
+     885.0
+    ],
+    "r": 2.1
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     820.5,
+     915.0
+    ],
+    "r": 2.1
+   }
+  ]
+ ],
+ "bukumler": [],
+ "formlar": [],
+ "kesikler": [
+  {
+   "panel": "lama",
+   "tip": "vida_deligi",
+   "sekil": "daire",
+   "merkez_duz": [
+    820.5,
+    420.0
+   ],
+   "parca": "ISO 273 orta",
+   "cap": 5.5
+  },
+  {
+   "panel": "lama",
+   "tip": "vida_deligi",
+   "sekil": "daire",
+   "merkez_duz": [
+    820.5,
+    600.0
+   ],
+   "parca": "ISO 273 orta",
+   "cap": 5.5
+  },
+  {
+   "panel": "lama",
+   "tip": "vida_deligi",
+   "sekil": "daire",
+   "merkez_duz": [
+    820.5,
+    780.0
+   ],
+   "parca": "ISO 273 orta",
+   "cap": 5.5
+  },
+  {
+   "panel": "lama",
+   "tip": "dis_delik",
+   "sekil": "daire",
+   "merkez_duz": [
+    820.5,
+    285.0
+   ],
+   "parca": "M5 diş (3 mm lama · kılavuz)",
+   "cap": 4.2
+  },
+  {
+   "panel": "lama",
+   "tip": "dis_delik",
+   "sekil": "daire",
+   "merkez_duz": [
+    820.5,
+    315.0
+   ],
+   "parca": "M5 diş (3 mm lama · kılavuz)",
+   "cap": 4.2
+  },
+  {
+   "panel": "lama",
+   "tip": "dis_delik",
+   "sekil": "daire",
+   "merkez_duz": [
+    820.5,
+    885.0
+   ],
+   "parca": "M5 diş (3 mm lama · kılavuz)",
+   "cap": 4.2
+  },
+  {
+   "panel": "lama",
+   "tip": "dis_delik",
+   "sekil": "daire",
+   "merkez_duz": [
+    820.5,
+    915.0
+   ],
+   "parca": "M5 diş (3 mm lama · kılavuz)",
+   "cap": 4.2
+  }
+ ],
+ "parca_sayisi": 1,
+ "levha": {
+  "boy": 730.0,
+  "en": 15.9,
+  "aci": 0.0,
+  "alan_mm2": 11480.31,
+  "kutle_kg": 0.1821
+ },
+ "sabit_yuz": [
+  820.44945,
+  610.11036
+ ],
+ "donusum_3b": [
+  [
+   1.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  [
+   0.0,
+   1.0,
+   0.0,
+   0.0
+  ],
+  [
+   0.0,
+   0.0,
+   1.0,
+   -828.5
+  ],
+  [
+   0.0,
+   0.0,
+   0.0,
+   1.0
+  ]
+ ]
+}

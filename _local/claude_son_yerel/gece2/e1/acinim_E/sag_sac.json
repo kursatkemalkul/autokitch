@@ -1,0 +1,1062 @@
+{
+ "parca": "sag_sac",
+ "surum": "h3_sac_v1",
+ "malzeme": "AISI 304 2B, dış yüz 240 kum satine, hat boyunca yatay",
+ "t": 1.5,
+ "R": 2.25,
+ "K": 0.45,
+ "adet": 1,
+ "birim": "mm",
+ "ust_yuz": "Z = t yüzü = kök panelin +n yüzü (bütün panellerin yerel z = t yüzü)",
+ "dis_kontur": [
+  {
+   "t": "L",
+   "p": [
+    [
+     998.5,
+     824.75
+    ],
+    [
+     123.0,
+     824.75
+    ]
+   ]
+  },
+  {
+   "t": "L",
+   "p": [
+    [
+     123.0,
+     824.75
+    ],
+    [
+     123.0,
+     -59.0
+    ]
+   ]
+  },
+  {
+   "t": "L",
+   "p": [
+    [
+     123.0,
+     -59.0
+    ],
+    [
+     1862.0,
+     -59.0
+    ]
+   ]
+  },
+  {
+   "t": "L",
+   "p": [
+    [
+     1862.0,
+     -59.0
+    ],
+    [
+     1862.0,
+     824.75
+    ]
+   ]
+  },
+  {
+   "t": "L",
+   "p": [
+    [
+     1862.0,
+     824.75
+    ],
+    [
+     1856.5,
+     824.75
+    ]
+   ]
+  },
+  {
+   "t": "L",
+   "p": [
+    [
+     1856.5,
+     824.75
+    ],
+    [
+     1856.5,
+     820.25
+    ]
+   ]
+  },
+  {
+   "t": "L",
+   "p": [
+    [
+     1856.5,
+     820.25
+    ],
+    [
+     1855.0,
+     820.25
+    ]
+   ]
+  },
+  {
+   "t": "L",
+   "p": [
+    [
+     1855.0,
+     820.25
+    ],
+    [
+     1855.0,
+     842.09458
+    ]
+   ]
+  },
+  {
+   "t": "L",
+   "p": [
+    [
+     1855.0,
+     842.09458
+    ],
+    [
+     1000.0,
+     842.09458
+    ]
+   ]
+  },
+  {
+   "t": "L",
+   "p": [
+    [
+     1000.0,
+     842.09458
+    ],
+    [
+     1000.0,
+     820.25
+    ]
+   ]
+  },
+  {
+   "t": "L",
+   "p": [
+    [
+     1000.0,
+     820.25
+    ],
+    [
+     998.5,
+     820.25
+    ]
+   ]
+  },
+  {
+   "t": "L",
+   "p": [
+    [
+     998.5,
+     820.25
+    ],
+    [
+     998.5,
+     824.75
+    ]
+   ]
+  }
+ ],
+ "ek_dis_konturlar": [],
+ "ic_konturlar": [
+  [
+   {
+    "t": "C",
+    "c": [
+     145.0,
+     30.0
+    ],
+    "r": 2.5
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     250.0,
+     -10.0
+    ],
+    "r": 2.5
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     450.0,
+     -10.0
+    ],
+    "r": 2.5
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     145.0,
+     150.0
+    ],
+    "r": 2.5
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     620.0,
+     -10.0
+    ],
+    "r": 2.5
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     850.0,
+     -10.0
+    ],
+    "r": 2.5
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     604.99999,
+     111.0
+    ],
+    "r": 2.5
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     145.0,
+     300.0
+    ],
+    "r": 2.5
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     604.99999,
+     285.00001
+    ],
+    "r": 2.5
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     592.0,
+     395.0
+    ],
+    "r": 2.5
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     628.0,
+     395.0
+    ],
+    "r": 2.5
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     905.0,
+     395.75
+    ],
+    "r": 2.5
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     956.0,
+     391.0
+    ],
+    "r": 2.5
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     1100.0,
+     -10.0
+    ],
+    "r": 2.5
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     1300.0,
+     -10.0
+    ],
+    "r": 2.5
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     1500.0,
+     -10.0
+    ],
+    "r": 2.5
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     1700.0,
+     -10.0
+    ],
+    "r": 2.5
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     1820.0,
+     -10.0
+    ],
+    "r": 2.5
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     1849.0,
+     10.0
+    ],
+    "r": 2.5
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     1066.50001,
+     206.0
+    ],
+    "r": 2.5
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     1353.99997,
+     345.0
+    ],
+    "r": 2.5
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     1849.0,
+     202.5
+    ],
+    "r": 2.5
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     1849.0,
+     395.0
+    ],
+    "r": 2.5
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     145.0,
+     470.0
+    ],
+    "r": 2.5
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     145.0,
+     620.0
+    ],
+    "r": 2.5
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     145.0,
+     760.0
+    ],
+    "r": 2.5
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     180.0,
+     806.5
+    ],
+    "r": 2.5
+   }
+  ],
+  [
+   {
+    "t": "L",
+    "p": [
+     [
+      989.0,
+      411.0
+     ],
+     [
+      231.0,
+      411.0
+     ]
+    ]
+   },
+   {
+    "t": "L",
+    "p": [
+     [
+      231.0,
+      411.0
+     ],
+     [
+      231.0,
+      823.0
+     ]
+    ]
+   },
+   {
+    "t": "L",
+    "p": [
+     [
+      231.0,
+      823.0
+     ],
+     [
+      989.0,
+      823.0
+     ]
+    ]
+   },
+   {
+    "t": "L",
+    "p": [
+     [
+      989.0,
+      823.0
+     ],
+     [
+      989.0,
+      411.0
+     ]
+    ]
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     1849.0,
+     587.5
+    ],
+    "r": 2.5
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     1066.50001,
+     789.99999
+    ],
+    "r": 2.5
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     1849.0,
+     780.0
+    ],
+    "r": 2.5
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     1035.0,
+     836.09458
+    ],
+    "r": 2.75
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     1820.0,
+     836.09458
+    ],
+    "r": 2.75
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     1427.5,
+     836.09458
+    ],
+    "r": 2.75
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     1231.25,
+     836.09458
+    ],
+    "r": 2.75
+   }
+  ]
+ ],
+ "bukumler": [
+  {
+   "no": 1,
+   "ad": "arka_donus",
+   "aci": 90.0,
+   "yon": "yukari",
+   "R": 2.25,
+   "K": 0.45,
+   "BA": 4.59458,
+   "tip": "flans",
+   "t": 1.5,
+   "V_kalip": 12.0,
+   "cizgi": [
+    [
+     1855.0,
+     827.04729
+    ],
+    [
+     1000.0,
+     827.04729
+    ]
+   ],
+   "baslangic": [
+    [
+     1855.0,
+     824.75
+    ],
+    [
+     1000.0,
+     824.75
+    ]
+   ],
+   "bitis": [
+    [
+     1855.0,
+     829.34458
+    ],
+    [
+     1000.0,
+     829.34458
+    ]
+   ],
+   "nominal_boy": 855.0,
+   "gercek_aralik": [
+    7.0,
+    862.0
+   ],
+   "gercek_boy": 855.0
+  }
+ ],
+ "formlar": [],
+ "kesikler": [
+  {
+   "panel": "yan",
+   "tip": "rahatlatma",
+   "sekil": "dikdortgen",
+   "merkez_duz": null,
+   "uc": "bas",
+   "genislik": 1.5,
+   "derinlik": 4.5
+  },
+  {
+   "panel": "yan",
+   "tip": "rahatlatma",
+   "sekil": "dikdortgen",
+   "merkez_duz": null,
+   "uc": "son",
+   "genislik": 1.5,
+   "derinlik": 4.5
+  },
+  {
+   "panel": "yan",
+   "tip": "sarjor_kapi_acikligi",
+   "sekil": "dikdortgen",
+   "merkez_duz": [
+    610.0,
+    617.0
+   ],
+   "parca": "şarjör yan kapısı açıklığı (lazer · çıkan parça kapının dış sacı olur, 3 mm derz)",
+   "boy": 758.0,
+   "en": 412.0,
+   "aci": 0.0
+  },
+  {
+   "panel": "yan",
+   "tip": "pem_saplama",
+   "sekil": "daire",
+   "merkez_duz": [
+    145.0,
+    760.0
+   ],
+   "parca": "FHP-M5-15",
+   "cap": 5.0
+  },
+  {
+   "panel": "yan",
+   "tip": "pem_saplama",
+   "sekil": "daire",
+   "merkez_duz": [
+    145.0,
+    620.0
+   ],
+   "parca": "FHP-M5-15",
+   "cap": 5.0
+  },
+  {
+   "panel": "yan",
+   "tip": "pem_saplama",
+   "sekil": "daire",
+   "merkez_duz": [
+    145.0,
+    470.0
+   ],
+   "parca": "FHP-M5-15",
+   "cap": 5.0
+  },
+  {
+   "panel": "yan",
+   "tip": "pem_saplama",
+   "sekil": "daire",
+   "merkez_duz": [
+    145.0,
+    300.0
+   ],
+   "parca": "FHP-M5-15",
+   "cap": 5.0
+  },
+  {
+   "panel": "yan",
+   "tip": "pem_saplama",
+   "sekil": "daire",
+   "merkez_duz": [
+    145.0,
+    150.0
+   ],
+   "parca": "FHP-M5-15",
+   "cap": 5.0
+  },
+  {
+   "panel": "yan",
+   "tip": "pem_saplama",
+   "sekil": "daire",
+   "merkez_duz": [
+    145.0,
+    30.0
+   ],
+   "parca": "FHP-M5-15",
+   "cap": 5.0
+  },
+  {
+   "panel": "yan",
+   "tip": "pem_saplama",
+   "sekil": "daire",
+   "merkez_duz": [
+    250.0,
+    -10.0
+   ],
+   "parca": "FHP-M5-12",
+   "cap": 5.0
+  },
+  {
+   "panel": "yan",
+   "tip": "pem_saplama",
+   "sekil": "daire",
+   "merkez_duz": [
+    450.0,
+    -10.0
+   ],
+   "parca": "FHP-M5-12",
+   "cap": 5.0
+  },
+  {
+   "panel": "yan",
+   "tip": "pem_saplama",
+   "sekil": "daire",
+   "merkez_duz": [
+    620.0,
+    -10.0
+   ],
+   "parca": "FHP-M5-12",
+   "cap": 5.0
+  },
+  {
+   "panel": "yan",
+   "tip": "pem_saplama",
+   "sekil": "daire",
+   "merkez_duz": [
+    850.0,
+    -10.0
+   ],
+   "parca": "FHP-M5-12",
+   "cap": 5.0
+  },
+  {
+   "panel": "yan",
+   "tip": "pem_saplama",
+   "sekil": "daire",
+   "merkez_duz": [
+    1100.0,
+    -10.0
+   ],
+   "parca": "FHP-M5-12",
+   "cap": 5.0
+  },
+  {
+   "panel": "yan",
+   "tip": "pem_saplama",
+   "sekil": "daire",
+   "merkez_duz": [
+    1300.0,
+    -10.0
+   ],
+   "parca": "FHP-M5-12",
+   "cap": 5.0
+  },
+  {
+   "panel": "yan",
+   "tip": "pem_saplama",
+   "sekil": "daire",
+   "merkez_duz": [
+    1500.0,
+    -10.0
+   ],
+   "parca": "FHP-M5-12",
+   "cap": 5.0
+  },
+  {
+   "panel": "yan",
+   "tip": "pem_saplama",
+   "sekil": "daire",
+   "merkez_duz": [
+    1700.0,
+    -10.0
+   ],
+   "parca": "FHP-M5-12",
+   "cap": 5.0
+  },
+  {
+   "panel": "yan",
+   "tip": "pem_saplama",
+   "sekil": "daire",
+   "merkez_duz": [
+    1820.0,
+    -10.0
+   ],
+   "parca": "FHP-M5-12",
+   "cap": 5.0
+  },
+  {
+   "panel": "yan",
+   "tip": "pem_saplama",
+   "sekil": "daire",
+   "merkez_duz": [
+    1849.0,
+    780.0
+   ],
+   "parca": "FHP-M5-12",
+   "cap": 5.0
+  },
+  {
+   "panel": "yan",
+   "tip": "pem_saplama",
+   "sekil": "daire",
+   "merkez_duz": [
+    1849.0,
+    587.5
+   ],
+   "parca": "FHP-M5-12",
+   "cap": 5.0
+  },
+  {
+   "panel": "yan",
+   "tip": "pem_saplama",
+   "sekil": "daire",
+   "merkez_duz": [
+    1849.0,
+    395.0
+   ],
+   "parca": "FHP-M5-12",
+   "cap": 5.0
+  },
+  {
+   "panel": "yan",
+   "tip": "pem_saplama",
+   "sekil": "daire",
+   "merkez_duz": [
+    1849.0,
+    202.5
+   ],
+   "parca": "FHP-M5-12",
+   "cap": 5.0
+  },
+  {
+   "panel": "yan",
+   "tip": "pem_saplama",
+   "sekil": "daire",
+   "merkez_duz": [
+    1849.0,
+    10.0
+   ],
+   "parca": "FHP-M5-12",
+   "cap": 5.0
+  },
+  {
+   "panel": "yan",
+   "tip": "pem_saplama",
+   "sekil": "daire",
+   "merkez_duz": [
+    180.0,
+    806.5
+   ],
+   "parca": "FHP-M5-12",
+   "cap": 5.0
+  },
+  {
+   "panel": "yan",
+   "tip": "pem_saplama",
+   "sekil": "daire",
+   "merkez_duz": [
+    592.0,
+    395.0
+   ],
+   "parca": "FHP-M5-12",
+   "cap": 5.0
+  },
+  {
+   "panel": "yan",
+   "tip": "pem_saplama",
+   "sekil": "daire",
+   "merkez_duz": [
+    628.0,
+    395.0
+   ],
+   "parca": "FHP-M5-12",
+   "cap": 5.0
+  },
+  {
+   "panel": "yan",
+   "tip": "pem_saplama",
+   "sekil": "daire",
+   "merkez_duz": [
+    956.0,
+    391.0
+   ],
+   "parca": "FHP-M5-12",
+   "cap": 5.0
+  },
+  {
+   "panel": "yan",
+   "tip": "pem_saplama",
+   "sekil": "daire",
+   "merkez_duz": [
+    905.0,
+    395.75
+   ],
+   "parca": "FHP-M5-12",
+   "cap": 5.0
+  },
+  {
+   "panel": "yan",
+   "tip": "pem_saplama",
+   "sekil": "daire",
+   "merkez_duz": [
+    1354.0,
+    345.0
+   ],
+   "parca": "FHP-M5-12",
+   "cap": 5.0
+  },
+  {
+   "panel": "yan",
+   "tip": "pem_saplama",
+   "sekil": "daire",
+   "merkez_duz": [
+    605.0,
+    285.0
+   ],
+   "parca": "FHP-M5-12",
+   "cap": 5.0
+  },
+  {
+   "panel": "yan",
+   "tip": "pem_saplama",
+   "sekil": "daire",
+   "merkez_duz": [
+    605.0,
+    111.0
+   ],
+   "parca": "FHP-M5-12",
+   "cap": 5.0
+  },
+  {
+   "panel": "yan",
+   "tip": "pem_saplama",
+   "sekil": "daire",
+   "merkez_duz": [
+    1066.5,
+    790.0
+   ],
+   "parca": "FHP-M5-12",
+   "cap": 5.0
+  },
+  {
+   "panel": "yan",
+   "tip": "pem_saplama",
+   "sekil": "daire",
+   "merkez_duz": [
+    1066.5,
+    206.0
+   ],
+   "parca": "FHP-M5-12",
+   "cap": 5.0
+  },
+  {
+   "panel": "arka_donus",
+   "tip": "vida_deligi",
+   "sekil": "daire",
+   "merkez_duz": [
+    1035.0,
+    836.0946
+   ],
+   "parca": "ISO 273 orta",
+   "cap": 5.5
+  },
+  {
+   "panel": "arka_donus",
+   "tip": "vida_deligi",
+   "sekil": "daire",
+   "merkez_duz": [
+    1231.25,
+    836.0946
+   ],
+   "parca": "ISO 273 orta",
+   "cap": 5.5
+  },
+  {
+   "panel": "arka_donus",
+   "tip": "vida_deligi",
+   "sekil": "daire",
+   "merkez_duz": [
+    1427.5,
+    836.0946
+   ],
+   "parca": "ISO 273 orta",
+   "cap": 5.5
+  },
+  {
+   "panel": "arka_donus",
+   "tip": "vida_deligi",
+   "sekil": "daire",
+   "merkez_duz": [
+    1820.0,
+    836.0946
+   ],
+   "parca": "ISO 273 orta",
+   "cap": 5.5
+  }
+ ],
+ "parca_sayisi": 1,
+ "levha": {
+  "boy": 1739.0,
+  "en": 901.095,
+  "aci": 0.0,
+  "alan_mm2": 1238677.28,
+  "kutle_kg": 14.7341
+ },
+ "sabit_yuz": [
+  1090.12615,
+  323.18236
+ ],
+ "donusum_3b": [
+  [
+   0.0,
+   0.0,
+   -1.0,
+   830.0
+  ],
+  [
+   1.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  [
+   0.0,
+   -1.0,
+   0.0,
+   0.0
+  ],
+  [
+   0.0,
+   0.0,
+   0.0,
+   1.0
+  ]
+ ]
+}
