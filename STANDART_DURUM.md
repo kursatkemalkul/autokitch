@@ -117,3 +117,7 @@ Değişiklik büyüklüğü: **0** = değişiklik yok (yalnız kâğıt) · **K*
 | 8 Pnömatik | Kompresör çıkış hortumuna Festo MS6-SV-E emniyetli yumuşak başlatma + hızlı boşaltma valfi; bakım kilitleme ana şalterle, tank kendi musluğuyla boşaltılır | adım 60 |
 | 12 Hijyen | B iç kabuğunun gıda tarafına dönen kör perçinleri kapalı uçlu ISO 15973 + silikon (KURALLAR §1.3); geometri aynı | — (parça listesi) |
 Açık: ölçüler katalogdan teyit (RSS36, AZM40, MS6-SV-E); kablolar ve güvenlik devresi şeması (Claude + Codex); sitede kapak animasyonu için mekanizma listesi.
+
+## Codex · adım62 yerleşim incelemesi
+
+Madde 10–11 için ısıtıcısız 3×4 QR, müşteri kapısı kilitleri ve hücre giriş kilidi yerleştirildi. Eski QR güç/kontrol cihazları aktarıldı; makine değişmedi. 12 gözün kayıtlı giriş/çekilme pozları temiz. İşlevsel yazılım referansı 64/64 test geçti; gerçek güvenlik devresi henüz kurulmadı. Son montaj bağlantıları ve hücre çevre koruması açıktır. Üretime hazır olarak yayınlanmadı.

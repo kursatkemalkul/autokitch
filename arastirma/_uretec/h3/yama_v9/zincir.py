@@ -204,7 +204,7 @@ ADIMLAR = [
     ("61", "davlumbaz yağ filtresi sola kayar, pizza kutusu tarafındaki servis ağzından alınır (Kemal): çerçeve sol kenarı açık · ray uzantısı · bölme sacında 530 × 420 ağız + tapa + 2 çeyrek tur kilit", ["hat3_v10b.glb"], "hat3_v10c.glb",
      [(".", 'python "{YAMA}/61_filtre_servis.py" hat3_v10b.glb hat3_v10c.glb')]),
 ]
-SON = "hat3_v10c.glb"
+SON = "hat3_v10c.glb"  # adım62 inceleme taslağı; üretim bağlantıları tamamlanınca ana çıkışa alınacak
 
 
 def kur(is_dizin, h3, uretec):

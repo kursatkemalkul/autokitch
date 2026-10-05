@@ -12,7 +12,7 @@ Kemal'in kararı (5 Eki 2026): iki ajan aynı anda, farklı istasyonlarda çalı
 | TOPPING montaj animasyonu v5 | Claude | `claude/topping-montaj-v5` | yayında (açık 3 küçük madde) |
 | Standart önlemleri · makine: acil stop (58) · 10 kapı emniyet anahtarı (59) · hava emniyet valfi (60) · davlumbaz filtresi servis ağzı (61) · hijyen / R290 / A perdesi kayıt | Claude | `claude/standart-makine` | BİTTİ (cb7d1ec) — Kemal incelemesinde |
 | TOPPING bağsız 63 parça + geçici dayalı 2 parça (KURALLAR §2.3 kural 10) | Claude | `claude/topping-montaj-v5` | sırada |
-| Standart önlemleri · robot + QR (madde 10–11): hücre kapısı emniyet anahtarı, robot gözdeyken QR müşteri kapısı kilitli + geri bildirim | Codex | `coord/codex-robot-qr-emniyet-62` | çalışıyor: onaylı 3x4 QR + eski QR sistemlerinin aktarımı + hücre kapısı; adım62 |
+| Standart önlemleri · robot + QR (madde 10–11): hücre kapısı emniyet anahtarı, robot gözdeyken QR müşteri kapısı kilitli + geri bildirim | Codex | `coord/codex-robot-qr-emniyet-62` | yerleşim incelemesi kaydedildi: ısıtıcısız 3x4 QR + eski cihazların aktarımı + hücre kapısı; adım62, güvenlik devresi/son bağlantılar açık |
 | Güvenlik devresi şeması (acil stop + kapı anahtarları + robot, tek röle / güvenlik PLC) | Claude + Codex | — | makine anahtarları bitince |
 
 Bir işe başlamadan önce tabloda başka bir ajanın aynı istasyonu ya da aynı dosyaları almadığını kontrol et.
@@ -43,4 +43,6 @@ Bir işe başlamadan önce tabloda başka bir ajanın aynı istasyonu ya da ayn�
 - Depo herkese açık. Oturum kayıtları `_local/claude_oturum/` altında durur (Kemal: kalsın); `_local/` siteye kopyalanmaz. Parola, anahtar, kişisel bilgi depoya konmaz.
 - Büyük ara dosyalar (`.pkl`, 100 MB üstü GLB) depoya konmaz; GLB gerekirse kayıpsız `.gz` olarak.
 
-ZİNCİR KİLİDİ: Codex · adım 62 (3x4 QR ve robot emniyeti) · 5 Eki 2026
+ZİNCİR KİLİDİ: boş
+
+Codex adım62 inceleme modeli: `otonom/hat3d/robot-safety-v3/hat3_v10d.glb.gz`, branch `coord/codex-robot-qr-emniyet-62`. Son onaylı zincir adım61 kalır; üretim bağlantıları ve ortak güvenlik devresi açık.

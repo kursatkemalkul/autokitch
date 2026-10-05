@@ -17,9 +17,9 @@
 <p class="lead">Hattın tamamı tek modelde. <b>Üstüne gel</b> &mdash; adı çıkar. Modelin altındaki çubuktan <b>kesit</b> alabilir (X/Y/Z) ve iki noktaya tıklayıp <b>ölçü</b> çıkarabilirsin.</p>
 
 <div class="m3">
-  <model-viewer id="mv" loading="eager"   alt="AUTOKITCH hat versiyon 3 üretim modeli" autoplay animation-name="siparis_kasarli"
+  <model-viewer id="mv" loading="eager"   alt="Adım 62 robot ve ısıtıcısız 3x4 QR yerleşim incelemesi" animation-name="siparis_kasarli"
       camera-controls touch-action="pan-y" shadow-intensity="0.6" exposure="1.0" environment-image="neutral"
-      camera-orbit="-28deg 72deg 10.2m" camera-target="2.98m 1.05m 0.1m" field-of-view="30deg" min-field-of-view="6deg"
+      camera-orbit="-28deg 72deg 10.2m" camera-target="3.2m 1.05m 0.6m" field-of-view="30deg" min-field-of-view="6deg"
       ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
   <div class="et" id="et"></div>
   <button class="ar" onclick="document.getElementById('mv').activateAR()">AR'de gör</button>
@@ -95,14 +95,14 @@ function animasyon(A, SIP) {
 (async()=>{
  const mv=document.getElementById('mv');
  try{
-  const response=await fetch('../hat3d/v3/claude_latest_v8/hat3_v8.glb.gz?v=1');
+  const response=await fetch('../hat3d/robot-safety-v3/hat3_v10d.glb.gz?v=62');
   if(!response.ok)throw new Error('Model download '+response.status);
   const packed=await response.arrayBuffer();
   const stream=new Blob([packed]).stream().pipeThrough(new DecompressionStream('gzip'));
   const raw=await new Response(stream).arrayBuffer();
-  if(raw.byteLength!==106592740)throw new Error('Model byte length mismatch');
+  if(raw.byteLength!==302988232)throw new Error('Model byte length mismatch');
   const digest=Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',raw)),b=>b.toString(16).padStart(2,'0')).join('');
-  if(digest!=='ade2f5f9ccffeffa9194d6d78adbd04943f49a07dedefa097518f9f78c2d4f25')throw new Error('Model integrity mismatch');
+  if(digest!=='0990fcc321aacc4f6d4018bfff2a079da36b078514f4f60876e79c7f7f375acc')throw new Error('Model integrity mismatch');
   await customElements.whenDefined('model-viewer');
   mv.src=URL.createObjectURL(new Blob([raw],{type:'model/gltf-binary'}));
  }catch(error){console.error('Latest model load failed',error);const notice=document.createElement('p');notice.textContent='Son model yüklenemedi: '+error.message;mv.after(notice);}
