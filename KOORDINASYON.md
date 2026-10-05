@@ -11,7 +11,7 @@ Kemal'in kararı (5 Eki 2026): iki ajan aynı anda, farklı istasyonlarda çalı
 | Robot + ray + QR dolabı + sipariş animasyonları | Codex | `coord/codex-main-integrated-robot-v17` | çalışıyor |
 | TOPPING montaj animasyonu v5 | Claude | `claude/topping-montaj-v5` | yayında (açık 3 küçük madde) |
 | Standart önlemleri · makine: acil stop (58) · 10 kapı emniyet anahtarı (59) · hava emniyet valfi (60) · davlumbaz filtresi servis ağzı (61) · hijyen / R290 / A perdesi kayıt | Claude | `claude/standart-makine` | BİTTİ (cb7d1ec) — Kemal incelemesinde |
-| **TOPPING montaj v6**: bağsız 63 parça + geçici dayalı 2 parça bağlanır (KURALLAR §2.3 kural 10), animasyon yeniden üretilir, §5 denetimi | Claude | `claude/topping-montaj-v6` | ÇALIŞIYOR (5 Eki) · zincir adımları **62–69** |
+| **TOPPING montaj v6**: bağsız 63 parça + geçici dayalı 2 parça bağlanır (KURALLAR §2.3 kural 10), animasyon yeniden üretilir, §5 denetimi | Claude | `claude/topping-montaj-v6` | HAZIR, Kemal'in bakışını bekliyor (5 Eki) · zincir 62–66 yazıldı (67–69 boş, Claude'da) · plan + çıktı çakışma 0 · açık: kıyma silindiri flanşı, 5 iç elektrik parçası, 2 kovan contası |
 | **K montaj animasyonu** (KURALLAR §2, yeni yöntem: açınım → abkant → PEM → gerçek bağlantı; bağlı mı denetimi) | Codex | `codex/k-montaj` | Codex başlayacak · zincir adımları **70–79** |
 | Standart önlemleri · robot + QR (madde 10–11): hücre kapısı emniyet anahtarı, robot gözdeyken QR müşteri kapısı kilitli + geri bildirim | Codex | (Codex seçer) | Codex'e bildirildi |
 | Güvenlik devresi şeması (acil stop + kapı anahtarları + robot, tek röle / güvenlik PLC) | Claude + Codex | — | makine anahtarları bitince |
@@ -42,7 +42,7 @@ Bir işe başlamadan önce tabloda başka bir ajanın aynı istasyonu ya da ayn�
 
 - Zincire yeni adım (58, 59 …) yalnız bir ajan yazar. Yazmaya başlamadan bu dosyanın en altındaki **ZİNCİR KİLİDİ** satırını kendi adınla doldur, commit + push et; adım bitince (iki koşu bayt aynı, SIRA.md kaydı) boşalt.
 - Kilit doluyken öteki ajan model değiştirmez; gerekiyorsa kilit sahibine / Kemal'e yazar.
-- Son model: `_local/claude_son_yerel/hat3_v10c.glb.gz` (adım 61) — branch `claude/standart-makine` (zincir betikleri 56–61 de orada; main'e birlikte birleştirilecek). Yeni adım çıkınca bu satır güncellenir.
+- Son model: `_local/claude_son_yerel/hat3_v10h.glb.gz` (adım 66) — branch `claude/topping-montaj-v6` (zincir betikleri 56–66 orada; 56–61 `claude/standart-makine`'de de; main'e birlikte birleştirilecek). Yeni adım çıkınca bu satır güncellenir.
 
 ## 4. Branch, birleştirme, yayın
 
