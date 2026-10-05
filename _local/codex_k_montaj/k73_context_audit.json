@@ -1,0 +1,40 @@
+{
+  "scope": "30 new reinforcement/weld parts versus all retained stations; local roof patch preserves source outside two seats",
+  "pairs_tested": 6,
+  "collisions": [],
+  "unresolved_open_meshes": [],
+  "allowed_thread_contacts": [
+    {
+      "part": "k73_tavan_baglanti_plakasi_4100_0",
+      "source": "U_KE_GOVDE__paslanmaz[96]",
+      "volume_mm3": 48.02176260948136,
+      "allowed": true,
+      "reason": "M8 external/minor thread envelope in 8mm tapped pack"
+    },
+    {
+      "part": "k73_tavan_baglanti_plakasi_4100_1",
+      "source": "U_KE_GOVDE__paslanmaz[96]",
+      "volume_mm3": 48.021762609481286,
+      "allowed": true,
+      "reason": "M8 external/minor thread envelope in 8mm tapped pack"
+    },
+    {
+      "part": "k73_tavan_baglanti_plakasi_4300_0",
+      "source": "U_KE_GOVDE__paslanmaz[97]",
+      "volume_mm3": 48.01734864711689,
+      "allowed": true,
+      "reason": "M8 external/minor thread envelope in 8mm tapped pack"
+    },
+    {
+      "part": "k73_tavan_baglanti_plakasi_4300_1",
+      "source": "U_KE_GOVDE__paslanmaz[97]",
+      "volume_mm3": 48.01734864711689,
+      "allowed": true,
+      "reason": "M8 external/minor thread envelope in 8mm tapped pack"
+    }
+  ],
+  "local_roof_patch_isolation_passed": true,
+  "legacy_source_contacts_not_certified": true,
+  "passed": true,
+  "full_assembly_release": false
+}

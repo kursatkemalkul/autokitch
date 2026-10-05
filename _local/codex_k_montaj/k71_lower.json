@@ -1,0 +1,1374 @@
+{
+  "step": 71,
+  "unit": "mm",
+  "bottom_holes": [
+    {
+      "center": [
+        4060.0,
+        788,
+        -732.0
+      ],
+      "diameter": 5.0,
+      "sheet": "taban_sac_3",
+      "stud": "k71_alt_saplama_4060_700_-32.0"
+    },
+    {
+      "center": [
+        4060.0,
+        788,
+        -668.0
+      ],
+      "diameter": 5.0,
+      "sheet": "taban_sac_3",
+      "stud": "k71_alt_saplama_4060_700_32.0"
+    },
+    {
+      "center": [
+        4060.0,
+        788,
+        -411.0
+      ],
+      "diameter": 5.0,
+      "sheet": "taban_sac_3",
+      "stud": "k71_alt_saplama_4060_379_-32.0"
+    },
+    {
+      "center": [
+        4060.0,
+        788,
+        -347.0
+      ],
+      "diameter": 5.0,
+      "sheet": "taban_sac_3",
+      "stud": "k71_alt_saplama_4060_379_32.0"
+    },
+    {
+      "center": [
+        4060.0,
+        788,
+        -90.0
+      ],
+      "diameter": 5.0,
+      "sheet": "taban_sac_3",
+      "stud": "k71_alt_saplama_4060_58_-32.0"
+    },
+    {
+      "center": [
+        4060.0,
+        788,
+        -26.0
+      ],
+      "diameter": 5.0,
+      "sheet": "taban_sac_3",
+      "stud": "k71_alt_saplama_4060_58_32.0"
+    },
+    {
+      "center": [
+        4340.0,
+        788,
+        -732.0
+      ],
+      "diameter": 5.0,
+      "sheet": "taban_sac_3",
+      "stud": "k71_alt_saplama_4340_700_-32.0"
+    },
+    {
+      "center": [
+        4340.0,
+        788,
+        -668.0
+      ],
+      "diameter": 5.0,
+      "sheet": "taban_sac_3",
+      "stud": "k71_alt_saplama_4340_700_32.0"
+    },
+    {
+      "center": [
+        4340.0,
+        788,
+        -411.0
+      ],
+      "diameter": 5.0,
+      "sheet": "taban_sac_3",
+      "stud": "k71_alt_saplama_4340_379_-32.0"
+    },
+    {
+      "center": [
+        4340.0,
+        788,
+        -347.0
+      ],
+      "diameter": 5.0,
+      "sheet": "taban_sac_3",
+      "stud": "k71_alt_saplama_4340_379_32.0"
+    },
+    {
+      "center": [
+        4340.0,
+        788,
+        -90.0
+      ],
+      "diameter": 5.0,
+      "sheet": "taban_sac_3",
+      "stud": "k71_alt_saplama_4340_58_-32.0"
+    },
+    {
+      "center": [
+        4340.0,
+        788,
+        -26.0
+      ],
+      "diameter": 5.0,
+      "sheet": "taban_sac_3",
+      "stud": "k71_alt_saplama_4340_58_32.0"
+    }
+  ],
+  "connections": [
+    {
+      "id": "base_4060_700_-32.0",
+      "method": "PEM FHP-M5-15 + ISO7089 + ISO10511",
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "hole_mm": 5.5,
+      "engagement_mm": 5.0,
+      "protrusion_mm": 2.0,
+      "parts": [
+        "k71_alt_saplama_4060_700_-32.0",
+        "k71_alt_flans_4060_700",
+        "k71_alt_pul_4060_700_-32.0",
+        "k71_alt_somun_4060_700_-32.0"
+      ]
+    },
+    {
+      "id": "base_4060_700_32.0",
+      "method": "PEM FHP-M5-15 + ISO7089 + ISO10511",
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "hole_mm": 5.5,
+      "engagement_mm": 5.0,
+      "protrusion_mm": 2.0,
+      "parts": [
+        "k71_alt_saplama_4060_700_32.0",
+        "k71_alt_flans_4060_700",
+        "k71_alt_pul_4060_700_32.0",
+        "k71_alt_somun_4060_700_32.0"
+      ]
+    },
+    {
+      "id": "top_4060_700_-10.0",
+      "method": "DIN7991 M5x10 in tapped 6 mm 304 cap",
+      "axis": [
+        0,
+        -1,
+        0
+      ],
+      "engagement_mm": 6.0,
+      "protrusion_mm": 1.0,
+      "parts": [
+        "k71_ust_havsa_4060_700_-10.0",
+        "k71_disli_ust_kapak_4060_700",
+        "k71_istasyon_rafi"
+      ]
+    },
+    {
+      "id": "top_4060_700_10.0",
+      "method": "DIN7991 M5x10 in tapped 6 mm 304 cap",
+      "axis": [
+        0,
+        -1,
+        0
+      ],
+      "engagement_mm": 6.0,
+      "protrusion_mm": 1.0,
+      "parts": [
+        "k71_ust_havsa_4060_700_10.0",
+        "k71_disli_ust_kapak_4060_700",
+        "k71_istasyon_rafi"
+      ]
+    },
+    {
+      "id": "base_4060_379_-32.0",
+      "method": "PEM FHP-M5-15 + ISO7089 + ISO10511",
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "hole_mm": 5.5,
+      "engagement_mm": 5.0,
+      "protrusion_mm": 2.0,
+      "parts": [
+        "k71_alt_saplama_4060_379_-32.0",
+        "k71_alt_flans_4060_379",
+        "k71_alt_pul_4060_379_-32.0",
+        "k71_alt_somun_4060_379_-32.0"
+      ]
+    },
+    {
+      "id": "base_4060_379_32.0",
+      "method": "PEM FHP-M5-15 + ISO7089 + ISO10511",
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "hole_mm": 5.5,
+      "engagement_mm": 5.0,
+      "protrusion_mm": 2.0,
+      "parts": [
+        "k71_alt_saplama_4060_379_32.0",
+        "k71_alt_flans_4060_379",
+        "k71_alt_pul_4060_379_32.0",
+        "k71_alt_somun_4060_379_32.0"
+      ]
+    },
+    {
+      "id": "top_4060_379_-10.0",
+      "method": "DIN7991 M5x10 in tapped 6 mm 304 cap",
+      "axis": [
+        0,
+        -1,
+        0
+      ],
+      "engagement_mm": 6.0,
+      "protrusion_mm": 1.0,
+      "parts": [
+        "k71_ust_havsa_4060_379_-10.0",
+        "k71_disli_ust_kapak_4060_379",
+        "k71_istasyon_rafi"
+      ]
+    },
+    {
+      "id": "top_4060_379_10.0",
+      "method": "DIN7991 M5x10 in tapped 6 mm 304 cap",
+      "axis": [
+        0,
+        -1,
+        0
+      ],
+      "engagement_mm": 6.0,
+      "protrusion_mm": 1.0,
+      "parts": [
+        "k71_ust_havsa_4060_379_10.0",
+        "k71_disli_ust_kapak_4060_379",
+        "k71_istasyon_rafi"
+      ]
+    },
+    {
+      "id": "base_4060_58_-32.0",
+      "method": "PEM FHP-M5-15 + ISO7089 + ISO10511",
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "hole_mm": 5.5,
+      "engagement_mm": 5.0,
+      "protrusion_mm": 2.0,
+      "parts": [
+        "k71_alt_saplama_4060_58_-32.0",
+        "k71_alt_flans_4060_58",
+        "k71_alt_pul_4060_58_-32.0",
+        "k71_alt_somun_4060_58_-32.0"
+      ]
+    },
+    {
+      "id": "base_4060_58_32.0",
+      "method": "PEM FHP-M5-15 + ISO7089 + ISO10511",
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "hole_mm": 5.5,
+      "engagement_mm": 5.0,
+      "protrusion_mm": 2.0,
+      "parts": [
+        "k71_alt_saplama_4060_58_32.0",
+        "k71_alt_flans_4060_58",
+        "k71_alt_pul_4060_58_32.0",
+        "k71_alt_somun_4060_58_32.0"
+      ]
+    },
+    {
+      "id": "top_4060_58_-10.0",
+      "method": "DIN7991 M5x10 in tapped 6 mm 304 cap",
+      "axis": [
+        0,
+        -1,
+        0
+      ],
+      "engagement_mm": 6.0,
+      "protrusion_mm": 1.0,
+      "parts": [
+        "k71_ust_havsa_4060_58_-10.0",
+        "k71_disli_ust_kapak_4060_58",
+        "k71_istasyon_rafi"
+      ]
+    },
+    {
+      "id": "top_4060_58_10.0",
+      "method": "DIN7991 M5x10 in tapped 6 mm 304 cap",
+      "axis": [
+        0,
+        -1,
+        0
+      ],
+      "engagement_mm": 6.0,
+      "protrusion_mm": 1.0,
+      "parts": [
+        "k71_ust_havsa_4060_58_10.0",
+        "k71_disli_ust_kapak_4060_58",
+        "k71_istasyon_rafi"
+      ]
+    },
+    {
+      "id": "base_4340_700_-32.0",
+      "method": "PEM FHP-M5-15 + ISO7089 + ISO10511",
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "hole_mm": 5.5,
+      "engagement_mm": 5.0,
+      "protrusion_mm": 2.0,
+      "parts": [
+        "k71_alt_saplama_4340_700_-32.0",
+        "k71_alt_flans_4340_700",
+        "k71_alt_pul_4340_700_-32.0",
+        "k71_alt_somun_4340_700_-32.0"
+      ]
+    },
+    {
+      "id": "base_4340_700_32.0",
+      "method": "PEM FHP-M5-15 + ISO7089 + ISO10511",
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "hole_mm": 5.5,
+      "engagement_mm": 5.0,
+      "protrusion_mm": 2.0,
+      "parts": [
+        "k71_alt_saplama_4340_700_32.0",
+        "k71_alt_flans_4340_700",
+        "k71_alt_pul_4340_700_32.0",
+        "k71_alt_somun_4340_700_32.0"
+      ]
+    },
+    {
+      "id": "top_4340_700_-10.0",
+      "method": "DIN7991 M5x10 in tapped 6 mm 304 cap",
+      "axis": [
+        0,
+        -1,
+        0
+      ],
+      "engagement_mm": 6.0,
+      "protrusion_mm": 1.0,
+      "parts": [
+        "k71_ust_havsa_4340_700_-10.0",
+        "k71_disli_ust_kapak_4340_700",
+        "k71_istasyon_rafi"
+      ]
+    },
+    {
+      "id": "top_4340_700_10.0",
+      "method": "DIN7991 M5x10 in tapped 6 mm 304 cap",
+      "axis": [
+        0,
+        -1,
+        0
+      ],
+      "engagement_mm": 6.0,
+      "protrusion_mm": 1.0,
+      "parts": [
+        "k71_ust_havsa_4340_700_10.0",
+        "k71_disli_ust_kapak_4340_700",
+        "k71_istasyon_rafi"
+      ]
+    },
+    {
+      "id": "base_4340_379_-32.0",
+      "method": "PEM FHP-M5-15 + ISO7089 + ISO10511",
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "hole_mm": 5.5,
+      "engagement_mm": 5.0,
+      "protrusion_mm": 2.0,
+      "parts": [
+        "k71_alt_saplama_4340_379_-32.0",
+        "k71_alt_flans_4340_379",
+        "k71_alt_pul_4340_379_-32.0",
+        "k71_alt_somun_4340_379_-32.0"
+      ]
+    },
+    {
+      "id": "base_4340_379_32.0",
+      "method": "PEM FHP-M5-15 + ISO7089 + ISO10511",
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "hole_mm": 5.5,
+      "engagement_mm": 5.0,
+      "protrusion_mm": 2.0,
+      "parts": [
+        "k71_alt_saplama_4340_379_32.0",
+        "k71_alt_flans_4340_379",
+        "k71_alt_pul_4340_379_32.0",
+        "k71_alt_somun_4340_379_32.0"
+      ]
+    },
+    {
+      "id": "top_4340_379_-10.0",
+      "method": "DIN7991 M5x10 in tapped 6 mm 304 cap",
+      "axis": [
+        0,
+        -1,
+        0
+      ],
+      "engagement_mm": 6.0,
+      "protrusion_mm": 1.0,
+      "parts": [
+        "k71_ust_havsa_4340_379_-10.0",
+        "k71_disli_ust_kapak_4340_379",
+        "k71_istasyon_rafi"
+      ]
+    },
+    {
+      "id": "top_4340_379_10.0",
+      "method": "DIN7991 M5x10 in tapped 6 mm 304 cap",
+      "axis": [
+        0,
+        -1,
+        0
+      ],
+      "engagement_mm": 6.0,
+      "protrusion_mm": 1.0,
+      "parts": [
+        "k71_ust_havsa_4340_379_10.0",
+        "k71_disli_ust_kapak_4340_379",
+        "k71_istasyon_rafi"
+      ]
+    },
+    {
+      "id": "base_4340_58_-32.0",
+      "method": "PEM FHP-M5-15 + ISO7089 + ISO10511",
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "hole_mm": 5.5,
+      "engagement_mm": 5.0,
+      "protrusion_mm": 2.0,
+      "parts": [
+        "k71_alt_saplama_4340_58_-32.0",
+        "k71_alt_flans_4340_58",
+        "k71_alt_pul_4340_58_-32.0",
+        "k71_alt_somun_4340_58_-32.0"
+      ]
+    },
+    {
+      "id": "base_4340_58_32.0",
+      "method": "PEM FHP-M5-15 + ISO7089 + ISO10511",
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "hole_mm": 5.5,
+      "engagement_mm": 5.0,
+      "protrusion_mm": 2.0,
+      "parts": [
+        "k71_alt_saplama_4340_58_32.0",
+        "k71_alt_flans_4340_58",
+        "k71_alt_pul_4340_58_32.0",
+        "k71_alt_somun_4340_58_32.0"
+      ]
+    },
+    {
+      "id": "top_4340_58_-10.0",
+      "method": "DIN7991 M5x10 in tapped 6 mm 304 cap",
+      "axis": [
+        0,
+        -1,
+        0
+      ],
+      "engagement_mm": 6.0,
+      "protrusion_mm": 1.0,
+      "parts": [
+        "k71_ust_havsa_4340_58_-10.0",
+        "k71_disli_ust_kapak_4340_58",
+        "k71_istasyon_rafi"
+      ]
+    },
+    {
+      "id": "top_4340_58_10.0",
+      "method": "DIN7991 M5x10 in tapped 6 mm 304 cap",
+      "axis": [
+        0,
+        -1,
+        0
+      ],
+      "engagement_mm": 6.0,
+      "protrusion_mm": 1.0,
+      "parts": [
+        "k71_ust_havsa_4340_58_10.0",
+        "k71_disli_ust_kapak_4340_58",
+        "k71_istasyon_rafi"
+      ]
+    }
+  ],
+  "welds": [
+    "k71_raf_yan_kaynagi_4005",
+    "k71_raf_yan_kaynagi_4395",
+    "k71_kaynak_4060_700_795_0",
+    "k71_kaynak_4060_700_795_1",
+    "k71_kaynak_4060_700_795_2",
+    "k71_kaynak_4060_700_795_3",
+    "k71_kaynak_4060_700_883_0",
+    "k71_kaynak_4060_700_883_1",
+    "k71_kaynak_4060_700_883_2",
+    "k71_kaynak_4060_700_883_3",
+    "k71_kaynak_4060_379_795_0",
+    "k71_kaynak_4060_379_795_1",
+    "k71_kaynak_4060_379_795_2",
+    "k71_kaynak_4060_379_795_3",
+    "k71_kaynak_4060_379_883_0",
+    "k71_kaynak_4060_379_883_1",
+    "k71_kaynak_4060_379_883_2",
+    "k71_kaynak_4060_379_883_3",
+    "k71_kaynak_4060_58_795_0",
+    "k71_kaynak_4060_58_795_1",
+    "k71_kaynak_4060_58_795_2",
+    "k71_kaynak_4060_58_795_3",
+    "k71_kaynak_4060_58_883_0",
+    "k71_kaynak_4060_58_883_1",
+    "k71_kaynak_4060_58_883_2",
+    "k71_kaynak_4060_58_883_3",
+    "k71_kaynak_4340_700_795_0",
+    "k71_kaynak_4340_700_795_1",
+    "k71_kaynak_4340_700_795_2",
+    "k71_kaynak_4340_700_795_3",
+    "k71_kaynak_4340_700_883_0",
+    "k71_kaynak_4340_700_883_1",
+    "k71_kaynak_4340_700_883_2",
+    "k71_kaynak_4340_700_883_3",
+    "k71_kaynak_4340_379_795_0",
+    "k71_kaynak_4340_379_795_1",
+    "k71_kaynak_4340_379_795_2",
+    "k71_kaynak_4340_379_795_3",
+    "k71_kaynak_4340_379_883_0",
+    "k71_kaynak_4340_379_883_1",
+    "k71_kaynak_4340_379_883_2",
+    "k71_kaynak_4340_379_883_3",
+    "k71_kaynak_4340_58_795_0",
+    "k71_kaynak_4340_58_795_1",
+    "k71_kaynak_4340_58_795_2",
+    "k71_kaynak_4340_58_795_3",
+    "k71_kaynak_4340_58_883_0",
+    "k71_kaynak_4340_58_883_1",
+    "k71_kaynak_4340_58_883_2",
+    "k71_kaynak_4340_58_883_3"
+  ],
+  "flat": {
+    "parca": "k71_istasyon_rafi",
+    "surum": "h3_sac_v1",
+    "malzeme": "AISI 304 2B, dış yüz 240 kum satine, hat boyunca yatay",
+    "t": 3.0,
+    "R": 4.5,
+    "K": 0.41,
+    "adet": 1,
+    "birim": "mm",
+    "ust_yuz": "Z = t yüzü = kök panelin +n yüzü (bütün panellerin yerel z = t yüzü)",
+    "dis_kontur": [
+      {
+        "t": "L",
+        "p": [
+          [
+            4002.0,
+            -51.00066
+          ],
+          [
+            4395.0,
+            -51.00066
+          ]
+        ]
+      },
+      {
+        "t": "L",
+        "p": [
+          [
+            4395.0,
+            -51.00066
+          ],
+          [
+            4395.0,
+            809.00066
+          ]
+        ]
+      },
+      {
+        "t": "L",
+        "p": [
+          [
+            4395.0,
+            809.00066
+          ],
+          [
+            4002.0,
+            809.00066
+          ]
+        ]
+      },
+      {
+        "t": "L",
+        "p": [
+          [
+            4002.0,
+            809.00066
+          ],
+          [
+            4002.0,
+            -51.00066
+          ]
+        ]
+      }
+    ],
+    "ek_dis_konturlar": [],
+    "ic_konturlar": [
+      [
+        {
+          "t": "C",
+          "c": [
+            4050.0,
+            58.0
+          ],
+          "r": 2.75
+        }
+      ],
+      [
+        {
+          "t": "C",
+          "c": [
+            4065.0,
+            3.0
+          ],
+          "r": 4.375
+        }
+      ],
+      [
+        {
+          "t": "C",
+          "c": [
+            4070.0,
+            58.0
+          ],
+          "r": 2.75
+        }
+      ],
+      [
+        {
+          "t": "C",
+          "c": [
+            4050.0,
+            379.0
+          ],
+          "r": 2.75
+        }
+      ],
+      [
+        {
+          "t": "C",
+          "c": [
+            4070.0,
+            379.0
+          ],
+          "r": 2.75
+        }
+      ],
+      [
+        {
+          "t": "C",
+          "c": [
+            4335.0,
+            3.0
+          ],
+          "r": 4.375
+        }
+      ],
+      [
+        {
+          "t": "C",
+          "c": [
+            4330.0,
+            58.0
+          ],
+          "r": 2.75
+        }
+      ],
+      [
+        {
+          "t": "C",
+          "c": [
+            4350.0,
+            58.0
+          ],
+          "r": 2.75
+        }
+      ],
+      [
+        {
+          "t": "C",
+          "c": [
+            4330.0,
+            379.0
+          ],
+          "r": 2.75
+        }
+      ],
+      [
+        {
+          "t": "C",
+          "c": [
+            4350.0,
+            379.0
+          ],
+          "r": 2.75
+        }
+      ],
+      [
+        {
+          "t": "C",
+          "c": [
+            4016.5,
+            479.86
+          ],
+          "r": 8.2
+        }
+      ],
+      [
+        {
+          "t": "C",
+          "c": [
+            4065.0,
+            421.0
+          ],
+          "r": 4.375
+        }
+      ],
+      [
+        {
+          "t": "C",
+          "c": [
+            4016.5,
+            569.86
+          ],
+          "r": 8.2
+        }
+      ],
+      [
+        {
+          "t": "C",
+          "c": [
+            4054.0,
+            631.0
+          ],
+          "r": 3.175
+        }
+      ],
+      [
+        {
+          "t": "C",
+          "c": [
+            4054.0,
+            659.0
+          ],
+          "r": 3.175
+        }
+      ],
+      [
+        {
+          "t": "C",
+          "c": [
+            4050.0,
+            700.0
+          ],
+          "r": 2.75
+        }
+      ],
+      [
+        {
+          "t": "C",
+          "c": [
+            4070.0,
+            700.0
+          ],
+          "r": 2.75
+        }
+      ],
+      [
+        {
+          "t": "C",
+          "c": [
+            4054.0,
+            741.0
+          ],
+          "r": 3.175
+        }
+      ],
+      [
+        {
+          "t": "C",
+          "c": [
+            4054.0,
+            769.0
+          ],
+          "r": 3.175
+        }
+      ],
+      [
+        {
+          "t": "C",
+          "c": [
+            4335.0,
+            421.0
+          ],
+          "r": 4.375
+        }
+      ],
+      [
+        {
+          "t": "C",
+          "c": [
+            4346.0,
+            631.0
+          ],
+          "r": 3.175
+        }
+      ],
+      [
+        {
+          "t": "C",
+          "c": [
+            4346.0,
+            659.0
+          ],
+          "r": 3.175
+        }
+      ],
+      [
+        {
+          "t": "C",
+          "c": [
+            4330.0,
+            700.0
+          ],
+          "r": 2.75
+        }
+      ],
+      [
+        {
+          "t": "C",
+          "c": [
+            4350.0,
+            700.0
+          ],
+          "r": 2.75
+        }
+      ],
+      [
+        {
+          "t": "C",
+          "c": [
+            4346.0,
+            741.0
+          ],
+          "r": 3.175
+        }
+      ],
+      [
+        {
+          "t": "C",
+          "c": [
+            4346.0,
+            769.0
+          ],
+          "r": 3.175
+        }
+      ]
+    ],
+    "bukumler": [
+      {
+        "no": 1,
+        "ad": "kenar_0",
+        "aci": 90.0,
+        "yon": "asagi",
+        "R": 4.5,
+        "K": 0.41,
+        "BA": 9.00066,
+        "tip": "flans",
+        "t": 3.0,
+        "V_kalip": 24.0,
+        "cizgi": [
+          [
+            4002.0,
+            -24.00033
+          ],
+          [
+            4395.0,
+            -24.00033
+          ]
+        ],
+        "baslangic": [
+          [
+            4002.0,
+            -19.5
+          ],
+          [
+            4395.0,
+            -19.5
+          ]
+        ],
+        "bitis": [
+          [
+            4002.0,
+            -28.50066
+          ],
+          [
+            4395.0,
+            -28.50066
+          ]
+        ],
+        "nominal_boy": 393.0,
+        "gercek_aralik": [
+          0.0,
+          393.0
+        ],
+        "gercek_boy": 393.0
+      },
+      {
+        "no": 2,
+        "ad": "kenar_2",
+        "aci": 90.0,
+        "yon": "asagi",
+        "R": 4.5,
+        "K": 0.41,
+        "BA": 9.00066,
+        "tip": "flans",
+        "t": 3.0,
+        "V_kalip": 24.0,
+        "cizgi": [
+          [
+            4395.0,
+            782.00033
+          ],
+          [
+            4002.0,
+            782.00033
+          ]
+        ],
+        "baslangic": [
+          [
+            4395.0,
+            777.5
+          ],
+          [
+            4002.0,
+            777.5
+          ]
+        ],
+        "bitis": [
+          [
+            4395.0,
+            786.50066
+          ],
+          [
+            4002.0,
+            786.50066
+          ]
+        ],
+        "nominal_boy": 393.0,
+        "gercek_aralik": [
+          0.0,
+          393.0
+        ],
+        "gercek_boy": 393.0
+      }
+    ],
+    "formlar": [],
+    "kesikler": [
+      {
+        "panel": "taban",
+        "tip": "servis_deligi",
+        "sekil": "daire",
+        "merkez_duz": [
+          4016.5,
+          569.86
+        ],
+        "cap": 16.4
+      },
+      {
+        "panel": "taban",
+        "tip": "servis_deligi",
+        "sekil": "daire",
+        "merkez_duz": [
+          4016.5,
+          479.86
+        ],
+        "cap": 16.4
+      },
+      {
+        "panel": "taban",
+        "tip": "pem_somun",
+        "sekil": "daire",
+        "merkez_duz": [
+          4065.0,
+          421.0
+        ],
+        "cap": 8.75
+      },
+      {
+        "panel": "taban",
+        "tip": "pem_somun",
+        "sekil": "daire",
+        "merkez_duz": [
+          4065.0,
+          3.0
+        ],
+        "cap": 8.75
+      },
+      {
+        "panel": "taban",
+        "tip": "pem_somun",
+        "sekil": "daire",
+        "merkez_duz": [
+          4335.0,
+          421.0
+        ],
+        "cap": 8.75
+      },
+      {
+        "panel": "taban",
+        "tip": "pem_somun",
+        "sekil": "daire",
+        "merkez_duz": [
+          4335.0,
+          3.0
+        ],
+        "cap": 8.75
+      },
+      {
+        "panel": "taban",
+        "tip": "pem_somun",
+        "sekil": "daire",
+        "merkez_duz": [
+          4054.0,
+          741.0
+        ],
+        "cap": 6.35
+      },
+      {
+        "panel": "taban",
+        "tip": "pem_somun",
+        "sekil": "daire",
+        "merkez_duz": [
+          4054.0,
+          769.0
+        ],
+        "cap": 6.35
+      },
+      {
+        "panel": "taban",
+        "tip": "pem_somun",
+        "sekil": "daire",
+        "merkez_duz": [
+          4054.0,
+          631.0
+        ],
+        "cap": 6.35
+      },
+      {
+        "panel": "taban",
+        "tip": "pem_somun",
+        "sekil": "daire",
+        "merkez_duz": [
+          4054.0,
+          659.0
+        ],
+        "cap": 6.35
+      },
+      {
+        "panel": "taban",
+        "tip": "pem_somun",
+        "sekil": "daire",
+        "merkez_duz": [
+          4346.0,
+          741.0
+        ],
+        "cap": 6.35
+      },
+      {
+        "panel": "taban",
+        "tip": "pem_somun",
+        "sekil": "daire",
+        "merkez_duz": [
+          4346.0,
+          769.0
+        ],
+        "cap": 6.35
+      },
+      {
+        "panel": "taban",
+        "tip": "pem_somun",
+        "sekil": "daire",
+        "merkez_duz": [
+          4346.0,
+          631.0
+        ],
+        "cap": 6.35
+      },
+      {
+        "panel": "taban",
+        "tip": "pem_somun",
+        "sekil": "daire",
+        "merkez_duz": [
+          4346.0,
+          659.0
+        ],
+        "cap": 6.35
+      },
+      {
+        "panel": "taban",
+        "tip": "vida_deligi",
+        "sekil": "daire",
+        "merkez_duz": [
+          4050.0,
+          700.0
+        ],
+        "cap": 5.5
+      },
+      {
+        "panel": "taban",
+        "tip": "vida_deligi",
+        "sekil": "daire",
+        "merkez_duz": [
+          4070.0,
+          700.0
+        ],
+        "cap": 5.5
+      },
+      {
+        "panel": "taban",
+        "tip": "vida_deligi",
+        "sekil": "daire",
+        "merkez_duz": [
+          4050.0,
+          379.0
+        ],
+        "cap": 5.5
+      },
+      {
+        "panel": "taban",
+        "tip": "vida_deligi",
+        "sekil": "daire",
+        "merkez_duz": [
+          4070.0,
+          379.0
+        ],
+        "cap": 5.5
+      },
+      {
+        "panel": "taban",
+        "tip": "vida_deligi",
+        "sekil": "daire",
+        "merkez_duz": [
+          4050.0,
+          58.0
+        ],
+        "cap": 5.5
+      },
+      {
+        "panel": "taban",
+        "tip": "vida_deligi",
+        "sekil": "daire",
+        "merkez_duz": [
+          4070.0,
+          58.0
+        ],
+        "cap": 5.5
+      },
+      {
+        "panel": "taban",
+        "tip": "vida_deligi",
+        "sekil": "daire",
+        "merkez_duz": [
+          4330.0,
+          700.0
+        ],
+        "cap": 5.5
+      },
+      {
+        "panel": "taban",
+        "tip": "vida_deligi",
+        "sekil": "daire",
+        "merkez_duz": [
+          4350.0,
+          700.0
+        ],
+        "cap": 5.5
+      },
+      {
+        "panel": "taban",
+        "tip": "vida_deligi",
+        "sekil": "daire",
+        "merkez_duz": [
+          4330.0,
+          379.0
+        ],
+        "cap": 5.5
+      },
+      {
+        "panel": "taban",
+        "tip": "vida_deligi",
+        "sekil": "daire",
+        "merkez_duz": [
+          4350.0,
+          379.0
+        ],
+        "cap": 5.5
+      },
+      {
+        "panel": "taban",
+        "tip": "vida_deligi",
+        "sekil": "daire",
+        "merkez_duz": [
+          4330.0,
+          58.0
+        ],
+        "cap": 5.5
+      },
+      {
+        "panel": "taban",
+        "tip": "vida_deligi",
+        "sekil": "daire",
+        "merkez_duz": [
+          4350.0,
+          58.0
+        ],
+        "cap": 5.5
+      }
+    ],
+    "parca_sayisi": 1,
+    "levha": {
+      "boy": 860.001,
+      "en": 393.0,
+      "aci": 0.0,
+      "alan_mm2": 336779.06,
+      "kutle_kg": 8.012
+    },
+    "sabit_yuz": [
+      4198.74269,
+      378.67059
+    ],
+    "donusum_3b": [
+      [
+        1.0,
+        0.0,
+        -0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        889.0
+      ],
+      [
+        0.0,
+        -1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ]
+  },
+  "dfm": [
+    {
+      "kural": "min_flans",
+      "durum": "GEÇTİ",
+      "detay": "kenar_0 dış 30.00 (düz 22.50) · mutlak 16.0 · tasarım 24.0",
+      "bukum": 1
+    },
+    {
+      "kural": "min_flans",
+      "durum": "GEÇTİ",
+      "detay": "kenar_2 dış 30.00 (düz 22.50) · mutlak 16.0 · tasarım 24.0",
+      "bukum": 2
+    },
+    {
+      "kural": "tek_R",
+      "durum": "GEÇTİ",
+      "detay": "büküm R [4.5]"
+    },
+    {
+      "kural": "delikler",
+      "durum": "GEÇTİ",
+      "detay": "26 delik/kesik: büküm iç yüzü (delik 12.0 · yarık 16.5 · PEM kenar+R) · kenar 6.0 · köprü 6.0 · Ø ≥ 3.0"
+    },
+    {
+      "kural": "levha",
+      "durum": "GEÇTİ",
+      "detay": "açınım 860.0 × 393.0 ≤ 3000 × 1500"
+    },
+    {
+      "kural": "abkant_boy",
+      "durum": "GEÇTİ",
+      "detay": "en uzun büküm 393.0 ≤ 3100"
+    },
+    {
+      "kural": "tek_parca_duz",
+      "durum": "GEÇTİ",
+      "detay": "açınım 1 parça"
+    },
+    {
+      "kural": "tek_parca_3b",
+      "durum": "GEÇTİ",
+      "detay": "3B 1 katı"
+    },
+    {
+      "kural": "kendi_cakisma",
+      "durum": "GEÇTİ",
+      "detay": "bölgeler toplamı − birleşik hacim = -0.0000 mm³"
+    },
+    {
+      "kural": "abkant",
+      "durum": "GEÇTİ",
+      "detay": "sıra [1, 2] · bıçak / kalıp / koç çarpması yok",
+      "sira": [
+        1,
+        2
+      ]
+    }
+  ],
+  "production_released": false
+}

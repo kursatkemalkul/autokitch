@@ -1,0 +1,36 @@
+{
+  "scope": "K roof pack; whole motion and assembly not certified",
+  "checks": [
+    {
+      "name": "Existing U shaft measured at 4100.0",
+      "passed": true
+    },
+    {
+      "name": "Existing U shaft measured at 4300.0",
+      "passed": true
+    },
+    {
+      "name": "All roof and reinforcement DFM",
+      "passed": true
+    },
+    {
+      "name": "All new roof solids valid",
+      "passed": true
+    },
+    {
+      "name": "M8 engagement >=8mm, protrusion 1..3 threads",
+      "passed": true
+    },
+    {
+      "name": "Unclassified solid overlap zero",
+      "passed": true
+    },
+    {
+      "name": "U geometry unchanged by definition",
+      "passed": true
+    }
+  ],
+  "unexpected_intersections": [],
+  "passed": true,
+  "full_assembly_release": false
+}

@@ -13,7 +13,7 @@
 
 Sonraki: güncel K geometri/üretim eşleştirmesi tamamlanacak; kesici/bant/itici/yağ/pano gerçek bağlantıları planlanacak; bütün saclar gerçek açınım ve sırayla abkantta bükülür, PEM deliklerine basılır. Her parçanın gelişinde gerçek bağlantı veya ekranda geçici dayalı uyarısı; bağlı olmadan yük yok. 2mm aralıklarla yol kontrolü, son konum 0,01mm, vida–delik/diş kontrolü ve bütün §5 geçmeden yayın yok.
 
-Engel: koordinatörde eski claude-k-montaj-v1 hâlâ otonom/hat/k-montaj.html ve otonom/hat3d/v3/k_montaj kapsamını tutuyor. Onun sahibinin kapsamı bırakması istenmiştir; dosyalarına/kilidine dokunulmadı. Yeni görev kaydının push'ı otomatik onay incelemesince yerel/push-yok kuralı nedeniyle reddedildi; yalnız yerelde kayıtlı.
+Güncel durum: eski K kapsamları dosyalar korunarak bırakıldı. Aktif görev `codex-k-montaj-v2`, dal `codex/k-montaj`. Kemal tamamlanınca yayınlanmasını istedi. Bu yetki §5 tamamlanmadan yayın anlamına gelmez. Ana model zinciri ve site henüz değiştirilmedi.
 
 Model adım70 ana zincire eklenmedi. Birleştirmeden önce güncel KOORDINASYON zincir kilidi alınacak; Claude'un TOPPING çıktısı üzerine tekrar iki koşu yapılacak ve son modelden animasyon yeniden üretilecek.
 
@@ -22,3 +22,18 @@ Model adım70 ana zincire eklenmedi. Birleştirmeden önce güncel KOORDINASYON 
 `bending_data.py` eşleşen 33 sac için 33 büküm üretir. Nötr çizgi boyu korunarak açı ve yarıçap sürekli değişir; başlangıç ve son panel dönüşümleri CAD tanımıyla 0,01mm altında eşleşir. İki JSON üretimi bayt aynı: c3da7718ef35e362faa3775ceff3a0fda1f18d025f9c32eb11846ea62fd20d6b. Bu büküm geometrisi denetimidir; abkant hareketi boyunca takım çarpışması ve sacın tüm yüzeyleri için kaynak eşitliği henüz doğrulanmadı.
 
 Yerel hazırlık önizlemesi: `/codex-k-montaj/arastirma/_uretec/codex/k_montaj/bending-preview.html` (8766 sunucusu). Seçilen gerçek delikli açınım sırayla bükülür, oynat/duraklat/başa dön ve zaman kaydırıcısı vardır. Tarayıcıda sol sac seçimi ve oynatma görsel kontrol edildi. Bu sayfa atölye GEOMETRİ hazırlığıdır; takım, destek, PEM ve bağlı kurulum henüz gösterilmez. K sayfası teslimi sayılmaz ve siteye yayımlanmaz. Ortak oynatıcı değiştirilmedi. §5 `publish_allowed=false` olarak kalır.
+
+## Doğrulanmış yerel bağlantı düzeltmeleri (70–73; zincire henüz eklenmedi)
+
+- 71: gerçek alt bağlantı delikleri, 6 boş 40×40×1,5 profil, 6 mm dişli üst kapaklar, 12 alt FHP-M5-15 bağlantısı ve 12 havşa üst bağlantısı. Raf iki büküm + iki kaynaklı yan sac; servis eksenleri korunur. 131 parça / 24 bağlantı. İç katı kesişim, DFM, diş ve taşma denetimleri geçti.
+- 72: bant ayaklarına gerçek 4 M6 bağlantı, itici ayaklarına 8 M5 bağlantı. İtici tabanları iki 4 mm plaka; eski 8 mm kot korunur. Kısa PEM'e ek tam dişli ISO10511 alt somunlar. 112 parça / 12 bağlantı. İç denetim ve kaynak model bağlamında katı kesişim denetimi geçti.
+- 73: U'nun mevcut M8×16 cıvataları değişmeden K tavanına iki 4 mm dişli plaka + 3 mm ara plaka. Diş tutuşu 8 mm, taşma 2 mm. 31 parça; 2 bağlantı. Yerel diş, DFM ve kesişim denetimi geçti.
+- Her adım iki koşuda bayt aynı; izin verilen K düğümleri dışında bütün geometri 0,01 mm denetiminde aynı. Bunlar tam animasyon yol/bağlantı zamanı denetimi değildir.
+- Son kayıpsız kayıt `_local/codex_k_montaj/k73.glb.gz` (55.311.616 bayt); açılmış SHA256 `9d454410dd5ad55d530357b74a6a028de2d16966e303a977df133cb05ff42b45`. `checkpoint.py` üretir/doğrular. 73 tavanın tamamını eski pilottan değiştirmez: kaynak tavanını korur, yalnız iki M8 yatağında delik geometrisini yeniler. Diğer çelik saplama ve elektrik arayüzleri korunur. 30 yeni takviye/kaynak parçası için bütün istasyonlarla temas denetimi geçti; kaynak modelin eski bütün temaslarına üretim onayı verilmedi.
+- `cutter_layers.py`: kaynak kesicinin 8 adet kalın plakasını 16 izinli kalınlıkta katmana ayıran üretim önerisi. Katman birleşimi kaynak katısına eşittir; kaynak erişimi/delik DFM henüz doğrulanmadığından modele veya zincire uygulanmadı.
+
+Kalan: tüm K parçalarının güncel kaynak geometri/bağlantı eşleştirmesi, gerçek imalat takımları, geçici dayalı parçalarda fiziksel destek ve sabitleme adımları, her yolun 2 mm örneklenmesi, bütün cihazların bağlantısı ve §5. Tam montaj sayfası henüz teslim edilmedi. Önceki raporlardaki yayımlanabilirlik false korunur.
+
+`source_bending.py`: son k73a modelinin 33 eşleşmiş sacındaki bütün kaynak köşelerini panel/büküm dilimine ters eşler; sınıflanmayan köşe 0, bitiş hatası 0,01 mm altında. Son konumda başka CAD ağına geçiş yok. Bileşen numaraları değiştiği için kaynak ölçülerinden tekil kimlik eşlemesi yapılır; bu kimlik seçimi tek başına yüzey eşitliği sayılmaz. `source-bending-preview.html/js` bu gerçek geometriyi oynatır; takım/kurulum henüz gösterilmez. Yalnız yerel çalışma önizlemesidir, yayımlanmaz.
+
+`support_motion.py`: 6 desteğin alt flans/profil/üst kapak girişleri 2 mm aralıkla toplam 918 konumda denetlendi; beklenmeyen katı kesişimi 0. Bu kontrol kaynak takımı, fikstür yükleri veya K'ye kurulum yollarını kapsamaz. Tam §5 yerine sayılmaz.

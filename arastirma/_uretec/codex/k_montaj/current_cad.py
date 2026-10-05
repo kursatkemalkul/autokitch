@@ -8,4 +8,13 @@ def factory_from_source(K, out):
     assert abs(K.KAPAK_X[0]-3)<.01 and abs(K.KAPAK_X[1]-399)<.01, K.KAPAK_X
     # GLB float32 coordinate quantization is not a new manufacturing dimension.
     K.KAPAK_X=(3.,399.)
-    return K.kur()
+    g=K.kur()
+    # Source step36 drilled the two U_KE mounting PEM holes in K's roof.
+    # Nominal pilot reconstruction only. Source step36 has a stepped pressed
+    # seat; the surface-screen report correctly excludes this roof. Step73
+    # has its own roof definition; do not use this pilot as source equivalence.
+    roof=next(s for s in g.SAC if s.ad=='ust_sac')
+    for x in (100.,300.):
+        _,c,_=K.S.pem_somun('SP','M8',(x,1860.5,-700.),(0,-1,0),1.5)
+        roof.paneller[0].delik(x,700.,c['delik'],tip='pem_somun',pem_tip='SP',kenar_min=c['kenar'],min_sac=1.5)
+    return g

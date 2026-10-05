@@ -1,0 +1,49 @@
+{
+  "step": 73,
+  "two_runs_byte_identical": true,
+  "changed_nodes_outside_K_lower_body": [],
+  "ownership_tolerance_mm": 0.01,
+  "permitted_nodes": [
+    "K_GOVDE__kabuk",
+    "K_GOVDE__sac",
+    "K_GOVDE__baglanti"
+  ],
+  "subassembly_audit": {
+    "scope": "K roof pack; whole motion and assembly not certified",
+    "checks": [
+      {
+        "name": "Existing U shaft measured at 4100.0",
+        "passed": true
+      },
+      {
+        "name": "Existing U shaft measured at 4300.0",
+        "passed": true
+      },
+      {
+        "name": "All roof and reinforcement DFM",
+        "passed": true
+      },
+      {
+        "name": "All new roof solids valid",
+        "passed": true
+      },
+      {
+        "name": "M8 engagement >=8mm, protrusion 1..3 threads",
+        "passed": true
+      },
+      {
+        "name": "Unclassified solid overlap zero",
+        "passed": true
+      },
+      {
+        "name": "U geometry unchanged by definition",
+        "passed": true
+      }
+    ],
+    "unexpected_intersections": [],
+    "passed": true,
+    "full_assembly_release": false
+  },
+  "full_assembly_release": false,
+  "passed": true
+}

@@ -1,0 +1,24 @@
+{
+  "scope": "new lower parts versus retained K/ELK_K only",
+  "pairs_tested": 63,
+  "collisions": [],
+  "unresolved_open_source": [],
+  "reconstructed_source_sides": [
+    {
+      "source": "K_GOVDE__kabuk[0]",
+      "method": "source native solid; every source vertex agrees",
+      "vertices_checked": 830,
+      "max_vertex_distance_mm": 0.00015078554924059082,
+      "continuous_surface_equivalence_claimed": false
+    },
+    {
+      "source": "K_GOVDE__kabuk[1]",
+      "method": "source native solid; every source vertex agrees",
+      "vertices_checked": 694,
+      "max_vertex_distance_mm": 0.000217437744140625,
+      "continuous_surface_equivalence_claimed": false
+    }
+  ],
+  "passed": true,
+  "whole_assembly_release": false
+}
