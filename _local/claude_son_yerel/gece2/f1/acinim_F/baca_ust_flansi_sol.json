@@ -1,0 +1,131 @@
+{
+ "parca": "baca_ust_flansi_sol",
+ "surum": "h3_sac_v1",
+ "malzeme": "AISI 304 2B, dış yüz 240 kum satine, hat boyunca yatay",
+ "t": 3.0,
+ "R": 4.5,
+ "K": 0.41,
+ "adet": 1,
+ "birim": "mm",
+ "ust_yuz": "Z = t yüzü = kök panelin +n yüzü (bütün panellerin yerel z = t yüzü)",
+ "dis_kontur": [
+  {
+   "t": "L",
+   "p": [
+    [
+     2920.0,
+     520.0
+    ],
+    [
+     2950.0,
+     520.0
+    ]
+   ]
+  },
+  {
+   "t": "L",
+   "p": [
+    [
+     2950.0,
+     520.0
+    ],
+    [
+     2950.0,
+     720.0
+    ]
+   ]
+  },
+  {
+   "t": "L",
+   "p": [
+    [
+     2950.0,
+     720.0
+    ],
+    [
+     2920.0,
+     720.0
+    ]
+   ]
+  },
+  {
+   "t": "L",
+   "p": [
+    [
+     2920.0,
+     720.0
+    ],
+    [
+     2920.0,
+     520.0
+    ]
+   ]
+  }
+ ],
+ "ek_dis_konturlar": [],
+ "ic_konturlar": [
+  [
+   {
+    "t": "C",
+    "c": [
+     2937.0,
+     620.0
+    ],
+    "r": 4.375
+   }
+  ]
+ ],
+ "bukumler": [],
+ "formlar": [],
+ "kesikler": [
+  {
+   "panel": "lama",
+   "tip": "pem_somun",
+   "sekil": "daire",
+   "merkez_duz": [
+    2937.0,
+    620.0
+   ],
+   "parca": "SP-M6-2",
+   "cap": 8.75
+  }
+ ],
+ "parca_sayisi": 1,
+ "levha": {
+  "boy": 200.0,
+  "en": 30.0,
+  "aci": 0.0,
+  "alan_mm2": 5939.87,
+  "kutle_kg": 0.1413
+ },
+ "sabit_yuz": [
+  2922.5,
+  536.66667
+ ],
+ "donusum_3b": [
+  [
+   1.0,
+   0.0,
+   -0.0,
+   0.0
+  ],
+  [
+   0.0,
+   0.0,
+   1.0,
+   2195.5
+  ],
+  [
+   0.0,
+   -1.0,
+   0.0,
+   0.0
+  ],
+  [
+   0.0,
+   0.0,
+   0.0,
+   1.0
+  ]
+ ]
+}
