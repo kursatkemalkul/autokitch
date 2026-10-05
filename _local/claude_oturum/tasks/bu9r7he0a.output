@@ -1,7 +1,0 @@
--rw-r--r-- 1 Kemal 197121 273454400 Oct  4 16:19 hat3_v9r.glb
-2:"""B istasyonu (mek: B/*) tüm bileşenleri hat3_v9l.glb'den çıkarır → b_bil.pkl (mm): her bileşen = (düğüm, prim, mek, V, F)"""
-4:sys.path.insert(0, r'..\cekmece'); sys.stdout.reconfigure(encoding='utf-8')
-7:g = G(r'..\..\hat3_v9l.glb')
-bitti
-
-[exited with code 0]

@@ -1,8 +1,0 @@
-/usr/bin/bash: line 1:  8302 Segmentation fault         timeout 7000 python -u ob_calistir.py h3/hat3_montaj_v1.py > h3/_log_montaj.txt 2>&1
-CIKIS 139
-  File "h3/hat3_montaj_v1.py", line 2349
-    else: _IST.append((_i2["kod"].lower(), X_BC + _TH2.tabla_x(_i2, _d2["r_dis"]), X_BC + _TH2.tabla_x(_i2, _d2["r_ic"])))
-    ^^^^
-SyntaxError: invalid syntax
-
-[exited with code 0]

@@ -1,5 +1,0 @@
-297:def eslesir(nd, desenler):
-305:        if onekler is not None and not eslesir(nd, onekler): continue
-323:        ozn = [i for i, b in enumerate(TUM) if eslesir(b.dugum, onek) and not (deg and (b.dugum, b.ozet) in eski)]
-
-[killed]

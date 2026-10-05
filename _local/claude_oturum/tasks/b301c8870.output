@@ -1,8 +1,0 @@
-/usr/bin/bash: line 1:  8250 Segmentation fault         timeout 7000 python -u ob_calistir.py h3/hat3_montaj_v1.py > h3/_log_montaj.txt 2>&1
-CIKIS 139
-  File "h3/hat3_montaj_v1.py", line 2398, in <module>
-    assert not _cak_it, "v70: bantli tabla cakismasi var"
-           ^^^^^^^^^^^
-AssertionError: v70: bantli tabla cakismasi var
-
-[exited with code 0]
