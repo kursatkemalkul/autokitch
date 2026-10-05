@@ -209,8 +209,12 @@ ADIMLAR = [
      [(".", 'python "{YAMA}/63_uno_kaset.py" hat3_v10d.glb hat3_v10e.glb')]),
     ("64", "TOPPING hazır ürünler bizim braketle bağlı: kaset motorları + valf adası duvara kaynaklı braket · X ekseni + orta kayıt kaynaklı L pabuç · menteşe + X sensör braketi PEM saplama", ["hat3_v10e.glb"], "hat3_v10f.glb",
      [(".", 'python "{YAMA}/64_hazir_baglanti.py" hat3_v10e.glb hat3_v10f.glb')]),
+    ("65", "TOPPING servis sacı: sucuk motoru sensörünün önündeki yatay kablo kanalı 30 → 25 mm (servis sacı alt montajı sensöre çarpmadan girer · montaj sırası denetimi)", ["hat3_v10f.glb"], "hat3_v10g.glb",
+     [(".", 'python "{YAMA}/65_kanal_daralt.py" hat3_v10f.glb hat3_v10g.glb')]),
+    ("66", "TOPPING K1 / K2 kapak emniyet sensörleri vidalı: tabana kaynaklı 2 mm L braket + 2 × PEM S-M4 · sensör önden 2 × M4 × 20 (bağlantı denetimi)", ["hat3_v10g.glb"], "hat3_v10h.glb",
+     [(".", 'python "{YAMA}/66_emniyet_braket.py" hat3_v10g.glb hat3_v10h.glb')]),
 ]
-SON = "hat3_v10f.glb"
+SON = "hat3_v10h.glb"
 
 
 def kur(is_dizin, h3, uretec):
