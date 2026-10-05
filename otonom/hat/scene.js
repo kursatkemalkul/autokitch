@@ -25,13 +25,19 @@ function buildScene(el, items, opts){
   // parca_kutulari.json'dan (hat_montaj_v62) bulunur; şeffaf ön kapaklar ışında atlanır. Kutu öğeleriyle aynı etiket / tık düzeni.
   let glbRoot=null, PK=null, M2K={}, PB={}, glbSecili=false;
   if(opts.glb&&THREE.GLTFLoader){
-    new THREE.GLTFLoader().load(opts.glb.url, g=>{
+    const yukle=g=>{
       glbRoot=g.scene; glbRoot.scale.setScalar(opts.glb.scale); glbRoot.position.set(opts.glb.pos[0],opts.glb.pos[1],opts.glb.pos[2]);
       glbRoot.traverse(o=>{ if((opts.glb.gizle||[]).some(n=>o.name.indexOf(n)===0)) o.visible=false;
         // bu sahnede ortam haritası yok → metal (paslanmaz, sac) PBR'da siyah görünür: metalikliği kıs, rengi koru
         if(o.material) [].concat(o.material).forEach(m=>{ if(m.metalness!==undefined){ m.metalness=Math.min(m.metalness,0.15); m.roughness=Math.max(m.roughness,0.55); } }); });
       scene.add(glbRoot); if(opts.glb.yuklendi) opts.glb.yuklendi();
-    }, undefined, ()=>{ if(opts.glb.hata) opts.glb.hata(); });
+    };
+    const hata=()=>{ if(opts.glb.hata) opts.glb.hata(); };
+    const L=new THREE.GLTFLoader(); if(self.MeshoptDecoder&&L.setMeshoptDecoder) L.setMeshoptDecoder(self.MeshoptDecoder);
+    if(/\.gz(\?|$)/.test(opts.glb.url)){   // gzip taşıma (makine sayfasıyla aynı dosya): indir → aç → ayrıştır
+      fetch(opts.glb.url).then(r=>{ if(!r.ok) throw Error(r.status); return new Response(r.body.pipeThrough(new DecompressionStream('gzip'))).arrayBuffer(); })
+        .then(buf=>L.parse(buf,'',yukle,hata)).catch(hata);
+    } else L.load(opts.glb.url, yukle, undefined, hata);
     if(opts.glb.parca) fetch(opts.glb.parca).then(r=>r.json()).then(D=>{PK=D.parca; PB=D.birim; Object.keys(PB).forEach(k=>{M2K[PB[k].mal]=k;});}).catch(()=>{});
   }
   const gorunur=o=>{ for(;o;o=o.parent){ if(!o.visible) return false; } return true; };

@@ -10,7 +10,7 @@ Kemal (5 Eki): "solda arka arkaya iki kapı: biri dükkâna giriş, sonraki robo
 2. Sağ uç (x 5600) SABİT koruma paneli: aynı dikme / ayak / çerçeve / tel panel (kapı donanımı yok).
 3. Eski ayaklı ana hat şalteri (ELK_ANA_HAT ayırıcı + kutu) ve ayaklığı / yükselen kablo-kanal parçaları (x 5330–5700 · z 560–1100) kaldırılır;
    zemin ÜSTÜ kablo rampası (ELK_ZEMIN_KANALI, y 0–123) ve onun içindeki zemin seviyesi ana hat kablo parçaları kaldırılır.
-4. Yeni: sağ duvarın iç yüzünde (x 6336) duvar tipi ana şalter kutusu (200 × 300 × 150, kol yerden 1500) + sarı plaka + kırmızı döner kol;
+4. Yeni: sağ duvarın iç yüzünde (x 6000) duvar tipi ana şalter kutusu (200 × 300 × 150, kol yerden 1500) + sarı plaka + kırmızı döner kol;
    besleme duvar içinden iner (görünmez), duvar dibinden mevcut gömülü zemin oluğunun (ELK_ZEMIN, x 4040–4845, y −120…0) ön ucuna
    GÖMÜLÜ yeni oluk x 4845–6336 · z 1000–1075 (üstü zeminle aynı düzlemde paslanmaz kapak), içinde güç (kırmızı) + bilgi (mavi) kablosu.
 Animasyon kanalları ve düğüm sırası korunur (yalnız sona düğüm eklenir; kaldırılan düğümlerin mesh'i boşaltılır)."""
@@ -115,7 +115,7 @@ for nm in ('ELK_ANA_HAT__paslanmaz', 'ELK_ANA_HAT__kablo', 'ELK_ANA_HAT__kablo_v
 n = ucgen_sil('ELK_IC__kanal', lambda C, lo, hi: (C[:, 0] > 5150) & (C[:, 0] < 5300) & (C[:, 2] > 600) & (C[:, 2] < 1100))
 LOG.append('  ELK_IC__kanal: %d üçgen (E önünden eski şaltere uzanan kanal)' % n)
 # ---------------------------------------------------------------- 4: duvar tipi şalter + gömülü oluk
-WX = 6336.0
+WX = 6000.0                                                       # sağ duvar iç yüzü (Kemal: makinenin sağına biraz pay)
 dugum('DUVAR_SALTER__kutu', kutu_mesh([((WX - 150, 1350, 1350), (WX, 1650, 1550))], mc), dict(bom='Ana hat yük ayırıcı 3P 63 A, kilitlenebilir (EN 60947-3) · duvar tipi muhafaza IP65, 4 dübel', scope='claude_dukkan_v1'))
 dugum('DUVAR_SALTER__plaka', kutu_mesh([((WX - 154, 1455, 1405), (WX - 150, 1545, 1495))], ms_), dict(bom='Sarı ön plaka (acil kesme)', scope='claude_dukkan_v1'))
 dugum('DUVAR_SALTER__kol', kutu_mesh([((WX - 172, 1490, 1420), (WX - 154, 1510, 1480)), ((WX - 166, 1480, 1440), (WX - 154, 1520, 1460))], mk), dict(bom='Kırmızı döner kol, asma kilitlenebilir (kol yerden 1500)', scope='claude_dukkan_v1'))
