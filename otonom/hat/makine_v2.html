@@ -2,12 +2,12 @@
 <script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script><script src="model3d_v21.js?v=22"></script>
 <script>
 // v2 · dis-kabuk.js parça listesini sabit yoldan (../hat3d/parca_kutulari.json) okuyor → v2 klasörüne yönlendir (v1 dosyalarına dokunulmaz)
-(function () { const f0 = window.fetch; window.fetch = function (u, o) { if (typeof u === 'string' && u.indexOf('../hat3d/parca_kutulari.json') === 0) u = '../hat3d/v2/parca_kutulari.json?v=2.4'; return f0.call(this, u, o); }; })();
+(function () { const f0 = window.fetch; window.fetch = function (u, o) { if (typeof u === 'string' && u.indexOf('../hat3d/parca_kutulari.json') === 0) u = '../hat3d/v2/parca_kutulari.json?v=1'; return f0.call(this, u, o); }; })();
 </script>
 <style>.sip{display:flex;flex-wrap:wrap;gap:6px;align-items:center;padding:10px 16px;background:#14181e;border-top:1px solid #2a3039}.sip span{color:#9aa3ad;font:700 12px system-ui,sans-serif;letter-spacing:.04em;margin-right:6px}.sip button{border:1px solid #39424f;background:#232932;color:#e6ebf0;border-radius:18px;padding:7px 14px;font:600 13px system-ui,sans-serif;cursor:pointer}.sip button.ak{background:#d94a3a;border-color:#d94a3a;color:#fff}.zc{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;padding:10px 16px;background:#1b1f26;border-top:1px solid #2a3039}.zc button{border:1px solid #39424f;background:#232932;color:#cfd6df;border-radius:8px;padding:6px 11px;font:600 12.5px system-ui,sans-serif;cursor:pointer}.zc input[type=range]{flex:1 1 220px;accent-color:#4f86ff}.zc .sn{color:#8d97a4;font:600 12px system-ui,sans-serif;font-variant-numeric:tabular-nums;min-width:70px}.adim{display:flex;flex-wrap:wrap;gap:6px;padding:0 16px 12px;background:#1b1f26}.adim button{border:1px solid #2f3742;background:#1f252d;color:#aab4c0;border-radius:999px;padding:4px 10px;font:600 11.5px system-ui,sans-serif;cursor:pointer}.adim button.ak{border-color:#e0a31c;background:#3a2f14;color:#ffd978}.anlat{padding:8px 16px 14px;background:#1b1f26;color:#dce3ea;font:14px/1.45 system-ui,sans-serif;min-height:42px}.anlat b{color:#ffd978}.zc.hz button.ak{background:#4f86ff;border-color:#4f86ff;color:#fff}.v2 ul{margin:6px 0 0 18px;padding:0}.v2 li{margin:3px 0}</style></head><body>
 <div class="top"><div class="in"><div class="crumb"><a href="../">Store</a><span>&rsaquo;</span><a href="index.html">HAT</a><span>&rsaquo;</span><b>Makine v2</b></div><div><a href="makine.html">v1 modeli &rarr;</a></div></div></div>
-<div class="wrap"><h1>MAKİNE v2 &mdash; iki katlı TOPPING, dar hat<span class="tag" style="background:#1f6feb" id="etiket">4722,5 &times; 909 &times; 2200 · HAT v2.3</span></h1>
-<div class="card v2" style="border-left:4px solid #1f6feb;background:#f2f6fd;margin:12px 0"><b style="color:#1747a6">Önceki v2.1 yerleşiminin açıklaması.</b> Aşağıdaki 3D, aynı modelin v2.3 revizyonudur; bu eski açıklamadaki ekipman yerleri artık geçerli değildir.
+<div class="wrap"><h1>MAKİNE v2 &mdash; iki katlı TOPPING, dar hat<span class="tag" style="background:#1f6feb" id="etiket">4722,5 &times; 909 &times; 2200 · HAT v2.1</span></h1>
+<div class="card v2" style="border-left:4px solid #1f6feb;background:#f2f6fd;margin:12px 0"><b style="color:#1747a6">VERSİYON 2 (30 Eyl 2026 · yerel).</b> v1 (makine.html) aynen duruyor; bu ayrı model.
 <ul>
 <li><b>DAR + YÜKSEK:</b> hat 4722,5 (v1 5230 · −507,5) · üst 2200 (v1 1862). Sağ taraf (fırın · K · E · QR · robot evi) v1 ile aynı yerde; A, TOPPING ve dolabın solu 507,5 sağa kaydı.</li>
 <li><b>TOPPING İKİ KATLI (1292,5 geniş · v1 1800):</b> alt kat kıyma + kuşbaşı UNO, kaşar + küp sucuk kaseti · üst kat sos + harç UNO ve kaşar / sucuk 2 günlük yedeği (GN 1/1 + GN 1/2). Sos ve harç Ø32 hortumla soğuk kutunun içinden, yine tablanın en solundaki yayıcılara iner (hortum ılık bölgeye çıkmaz).</li>
@@ -18,7 +18,7 @@
 <p class="lead">Hattın tamamı tek modelde. <b>Üstüne gel</b> &mdash; adı çıkar. Modelin altındaki çubuktan <b>kesit</b> alabilir (X/Y/Z) ve iki noktaya tıklayıp <b>ölçü</b> çıkarabilirsin.</p>
 
 <div class="m3">
-  <model-viewer id="mv" loading="eager" src="../hat3d/v2/hat2_v4.glb?v=2.4" ios-src="../hat3d/v2/hat2_v4.usdz?v=2.4" alt="AUTOKITCH hat versiyon 2 yerleşim revizyonu" autoplay animation-name="siparis_kasarli"
+  <model-viewer id="mv" loading="eager" src="../hat3d/v2/hat2_v1.glb?v=1" ios-src="../hat3d/v2/hat2_v1.usdz?v=1" alt="AUTOKITCH hat versiyon 2 üretim modeli" autoplay animation-name="siparis_kasarli"
       camera-controls touch-action="pan-y" shadow-intensity="0.6" exposure="1.0" environment-image="neutral"
       camera-orbit="-28deg 72deg 10.2m" camera-target="2.87m 1.05m 0.1m" field-of-view="30deg" min-field-of-view="6deg"
       ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
@@ -36,14 +36,14 @@
 <div class="secim" id="secim"></div>
 <p class="note" id="ozet"></p>
 </div>
-<div class="foot">AUTOKITCH &middot; HAT v2.3 &middot; model: arastirma/_uretec/h2/hat2_montaj_v3.py &middot; 1 Eki 2026</div>
+<div class="foot">AUTOKITCH &middot; HAT v2 &middot; model: arastirma/_uretec/hat2_montaj_v1.py (h2_* üreteçleri) &middot; 30 Eyl 2026</div>
 
 <script>
 const SAYFA = {A:'press.html', B:'store.html', C:'topping_v2.html', D:'oven.html', K:'kesme.html', E:'pack.html', S:'service.html', U:'makine_v2.html', '-':'robot.html'};
-const AD = {A:'MODÜL A · AÇICI', B:'MODÜL B · ÇEKMECELİ DOLAP (21 çekmece)', C:'MODÜL C · TOPPING İKİ KATLI', D:'MODÜL F · FIRIN', K:'MODÜL K · KESME + SPREY', E:'MODÜL E · KUTU (+ çöp altında)', S:'MODÜL S · SERVİS / TESLİM — QR dolabı + tezgâh', U:'MODÜL U · ÜST DEPO', '-':'ROBOT + RAY'};
+const AD = {A:'MODÜL A · AÇICI', B:'MODÜL B · ÇEKMECELİ DOLAP (21 çekmece)', C:'MODÜL C · TOPPING İKİ KATLI', D:'MODÜL F · FIRIN', K:'MODÜL K · KESME + SPREY', E:'MODÜL E · KUTU (+ B soğutması altında)', S:'MODÜL S · SERVİS / TESLİM — QR dolabı + tezgâh', U:'MODÜL U · ÜST DEPO', '-':'ROBOT + RAY'};
 
 const M = model3d({
-  mv:'mv', etiket:'et', grup:'modul', parca:'../hat3d/v2/parca_kutulari.json?v=2.4',
+  mv:'mv', etiket:'et', grup:'modul', parca:'../hat3d/v2/parca_kutulari.json?v=1',
   hedef: g => null,
   yazi: g => {
     const m = g.birimler[0].modul, ger = g.birimler.filter(b => b.durum.indexOf('GERCEK') === 0).length;
@@ -51,7 +51,7 @@ const M = model3d({
   }
 });
 
-fetch('../hat3d/v2/durum.json?v=2.4').then(r => r.json()).then(D => {
+fetch('../hat3d/v2/durum.json?v=1').then(r => r.json()).then(D => {
   M.veri(D.birim);
   animasyon(D.animasyon, D.siparis);
   const mod = {}; D.birim.forEach(b => (mod[b.modul] = mod[b.modul] || []).push(b));
@@ -62,10 +62,9 @@ fetch('../hat3d/v2/durum.json?v=2.4').then(r => r.json()).then(D => {
   document.querySelectorAll('.secim a').forEach(a => { a.onmouseenter = () => M.sec(a.dataset.k); a.onmouseleave = () => M.birak(); });
   const g = D.birim.filter(b => b.durum.indexOf('GERCEK') === 0).length, H = D.hat || {};
   const x0 = H.x0 || 0, boy = (H.w - x0);
-  document.querySelectorAll('#etiket').forEach(el => { el.textContent = boy.toFixed(1).replace('.', ',').replace(',0', '') + ' × ' + H.d + ' × ' + H.h + ' · HAT ' + (H.surum || 'v2'); });
+  document.getElementById('etiket').textContent = boy.toFixed(1).replace('.', ',').replace(',0', '') + ' × ' + H.d + ' × ' + H.h + ' · HAT ' + (H.surum || 'v2');
   if (H.v2_denetim) document.getElementById('v2denetim').textContent = H.v2_denetim;
-  document.getElementById('ozet').innerHTML = '<b>' + g + ' / ' + D.birim.length + ' birim gerçek parça geometrisi</b> (%' + Math.round(100*g/D.birim.length) + ').' +
-    (D.v23_engineering ? '<br><b>Yerleşim revizyonu; üretim onayı tamamlanmadı.</b> Motor uç kabloları, devre/emniyet doğrulaması ve iPad izleme yazılımı açık.' : '');
+  document.getElementById('ozet').innerHTML = '<b>' + g + ' / ' + D.birim.length + ' birim gerçek üretim modeli</b> (%' + Math.round(100*g/D.birim.length) + ').';
 });
 function animasyon(A, SIP) {
   if (!A) return;

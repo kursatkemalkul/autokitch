@@ -1,0 +1,10245 @@
+{
+ "model": "hat3_v8x.glb",
+ "tarih": "2026-10-03",
+ "yontem": {
+  "temas": "dugum ici bagli bilesen + (mek,kpk) etiketi = PARCA (4432); kose->ucgen kesin uzaklik <=0,5 mm; havada gorunen kumelerde kenar ornegi 0,7 mm ile ikinci tur; tam dunya donusumu (TRS + hiyerarsi; olcek 0,0001 urunler gizli sayildi)",
+  "topraklama": "kume y_alt <= 1 mm olmali; istasyon gorunumunde en buyuk kume = istasyon govdesi (A/F/K/TOPPING/U modulleri tasarim geregi 788/1862'de baska modulun ustunde)",
+  "pu": "ortografik z-tampon raster 1 mm (24 is) + 0,5 mm (hat grubu, 12 is); kapali = on_seffaf opak, acik = kpk gizli; cam saydam; ZEMIN/INSAN/ROBOT/URUN ortmez",
+  "derz": "GOVDE kat. sac malzemeleri (sac/paslanmaz/on_seffaf/kabuk/qr_govde/on_cerceve); hic degmeyen ciftlerin en yakin uzakligi 0,2-15 mm"
+ },
+ "k1_havada": [
+  {
+   "tur": "havada",
+   "istasyon": "TOPPING",
+   "dugum": "TOPPING_MODUL__motor",
+   "mek": [
+    "TOPPING/Tabla"
+   ],
+   "konum_mm": {
+    "x": [
+     2439.3,
+     2442.5
+    ],
+    "y": [
+     970.7,
+     973.9
+    ],
+    "z": [
+     -493.2,
+     -431.7
+    ]
+   },
+   "boyut_mm": [
+    3.2,
+    3.2,
+    61.5
+   ],
+   "parca_sayisi": 1,
+   "en_yakin_mm": 0.51,
+   "en_yakin_parca": "TOPPING_MODUL__motor · TOPPING/Tabla",
+   "tam_modelde_degdigi": [],
+   "oneri": "Tabla motoru baglanti civata/pimleri delikte bosta (0,5-1,35 mm), hicbir yere degmiyor: civata basi motor flansina oturacak sekilde uzat ya da delik capini civataya esitle."
+  },
+  {
+   "tur": "havada",
+   "istasyon": "TOPPING",
+   "dugum": "TOPPING_MODUL__motor",
+   "mek": [
+    "TOPPING/Tabla"
+   ],
+   "konum_mm": {
+    "x": [
+     2439.3,
+     2442.5
+    ],
+    "y": [
+     1002.1,
+     1005.3
+    ],
+    "z": [
+     -493.2,
+     -431.7
+    ]
+   },
+   "boyut_mm": [
+    3.2,
+    3.2,
+    61.5
+   ],
+   "parca_sayisi": 1,
+   "en_yakin_mm": 0.51,
+   "en_yakin_parca": "TOPPING_MODUL__motor · TOPPING/Tabla",
+   "tam_modelde_degdigi": [],
+   "oneri": "Tabla motoru baglanti civata/pimleri delikte bosta (0,5-1,35 mm), hicbir yere degmiyor: civata basi motor flansina oturacak sekilde uzat ya da delik capini civataya esitle."
+  },
+  {
+   "tur": "havada",
+   "istasyon": "TOPPING",
+   "dugum": "TOPPING_MODUL__motor",
+   "mek": [
+    "TOPPING/Tabla"
+   ],
+   "konum_mm": {
+    "x": [
+     2448.6,
+     2451.7
+    ],
+    "y": [
+     961.5,
+     964.7
+    ],
+    "z": [
+     -493.1,
+     -440.1
+    ]
+   },
+   "boyut_mm": [
+    3.1,
+    3.1,
+    53.0
+   ],
+   "parca_sayisi": 1,
+   "en_yakin_mm": 1.35,
+   "en_yakin_parca": "TOPPING_MODUL__motor · TOPPING/Tabla",
+   "tam_modelde_degdigi": [],
+   "oneri": "Tabla motoru baglanti civata/pimleri delikte bosta (0,5-1,35 mm), hicbir yere degmiyor: civata basi motor flansina oturacak sekilde uzat ya da delik capini civataya esitle."
+  },
+  {
+   "tur": "havada",
+   "istasyon": "TOPPING",
+   "dugum": "TOPPING_MODUL__motor",
+   "mek": [
+    "TOPPING/Tabla"
+   ],
+   "konum_mm": {
+    "x": [
+     2448.6,
+     2451.7
+    ],
+    "y": [
+     1011.3,
+     1014.5
+    ],
+    "z": [
+     -493.1,
+     -440.1
+    ]
+   },
+   "boyut_mm": [
+    3.1,
+    3.1,
+    53.0
+   ],
+   "parca_sayisi": 1,
+   "en_yakin_mm": 1.35,
+   "en_yakin_parca": "TOPPING_MODUL__motor · TOPPING/Tabla",
+   "tam_modelde_degdigi": [],
+   "oneri": "Tabla motoru baglanti civata/pimleri delikte bosta (0,5-1,35 mm), hicbir yere degmiyor: civata basi motor flansina oturacak sekilde uzat ya da delik capini civataya esitle."
+  },
+  {
+   "tur": "havada",
+   "istasyon": "TOPPING",
+   "dugum": "TOPPING_MODUL__motor",
+   "mek": [
+    "TOPPING/Tabla"
+   ],
+   "konum_mm": {
+    "x": [
+     2464.2,
+     2467.5
+    ],
+    "y": [
+     957.0,
+     962.5
+    ],
+    "z": [
+     -499.7,
+     -496.4
+    ]
+   },
+   "boyut_mm": [
+    3.3,
+    5.5,
+    3.3
+   ],
+   "parca_sayisi": 4,
+   "en_yakin_mm": 0.65,
+   "en_yakin_parca": "TOPPING_MODUL__motor · TOPPING/Tabla",
+   "tam_modelde_degdigi": [],
+   "oneri": "Tabla motoru baglanti civata/pimleri delikte bosta (0,5-1,35 mm), hicbir yere degmiyor: civata basi motor flansina oturacak sekilde uzat ya da delik capini civataya esitle."
+  },
+  {
+   "tur": "havada",
+   "istasyon": "TOPPING",
+   "dugum": "TOPPING_MODUL__motor",
+   "mek": [
+    "TOPPING/Tabla"
+   ],
+   "konum_mm": {
+    "x": [
+     2480.0,
+     2483.1
+    ],
+    "y": [
+     961.5,
+     964.7
+    ],
+    "z": [
+     -493.1,
+     -440.1
+    ]
+   },
+   "boyut_mm": [
+    3.1,
+    3.1,
+    53.0
+   ],
+   "parca_sayisi": 1,
+   "en_yakin_mm": 1.33,
+   "en_yakin_parca": "TOPPING_MODUL__motor · TOPPING/Tabla",
+   "tam_modelde_degdigi": [],
+   "oneri": "Tabla motoru baglanti civata/pimleri delikte bosta (0,5-1,35 mm), hicbir yere degmiyor: civata basi motor flansina oturacak sekilde uzat ya da delik capini civataya esitle."
+  },
+  {
+   "tur": "havada",
+   "istasyon": "TOPPING",
+   "dugum": "TOPPING_MODUL__motor",
+   "mek": [
+    "TOPPING/Tabla"
+   ],
+   "konum_mm": {
+    "x": [
+     2480.0,
+     2483.1
+    ],
+    "y": [
+     1011.3,
+     1014.5
+    ],
+    "z": [
+     -493.1,
+     -440.1
+    ]
+   },
+   "boyut_mm": [
+    3.1,
+    3.1,
+    53.0
+   ],
+   "parca_sayisi": 1,
+   "en_yakin_mm": 1.33,
+   "en_yakin_parca": "TOPPING_MODUL__motor · TOPPING/Tabla",
+   "tam_modelde_degdigi": [],
+   "oneri": "Tabla motoru baglanti civata/pimleri delikte bosta (0,5-1,35 mm), hicbir yere degmiyor: civata basi motor flansina oturacak sekilde uzat ya da delik capini civataya esitle."
+  },
+  {
+   "tur": "havada",
+   "istasyon": "TOPPING",
+   "dugum": "TOPPING_MODUL__motor",
+   "mek": [
+    "TOPPING/Tabla"
+   ],
+   "konum_mm": {
+    "x": [
+     2489.1,
+     2492.3
+    ],
+    "y": [
+     1002.1,
+     1005.3
+    ],
+    "z": [
+     -493.2,
+     -431.7
+    ]
+   },
+   "boyut_mm": [
+    3.2,
+    3.2,
+    61.5
+   ],
+   "parca_sayisi": 1,
+   "en_yakin_mm": 0.51,
+   "en_yakin_parca": "TOPPING_MODUL__motor · TOPPING/Tabla",
+   "tam_modelde_degdigi": [],
+   "oneri": "Tabla motoru baglanti civata/pimleri delikte bosta (0,5-1,35 mm), hicbir yere degmiyor: civata basi motor flansina oturacak sekilde uzat ya da delik capini civataya esitle."
+  },
+  {
+   "tur": "havada",
+   "istasyon": "TOPPING",
+   "dugum": "TOPPING_MODUL__motor",
+   "mek": [
+    "TOPPING/Tabla"
+   ],
+   "konum_mm": {
+    "x": [
+     2489.1,
+     2492.3
+    ],
+    "y": [
+     970.7,
+     973.9
+    ],
+    "z": [
+     -493.2,
+     -431.7
+    ]
+   },
+   "boyut_mm": [
+    3.2,
+    3.2,
+    61.5
+   ],
+   "parca_sayisi": 1,
+   "en_yakin_mm": 0.51,
+   "en_yakin_parca": "TOPPING_MODUL__motor · TOPPING/Tabla",
+   "tam_modelde_degdigi": [],
+   "oneri": "Tabla motoru baglanti civata/pimleri delikte bosta (0,5-1,35 mm), hicbir yere degmiyor: civata basi motor flansina oturacak sekilde uzat ya da delik capini civataya esitle."
+  },
+  {
+   "tur": "havada",
+   "istasyon": "TOPPING",
+   "dugum": "ELK_TOPPING__kanal",
+   "mek": [
+    "TOPPING/Pano"
+   ],
+   "konum_mm": {
+    "x": [
+     1891.5,
+     2447.5
+    ],
+    "y": [
+     1841.5,
+     1878.4
+    ],
+    "z": [
+     -826.8,
+     -790.0
+    ]
+   },
+   "boyut_mm": [
+    556.0,
+    36.9,
+    36.8
+   ],
+   "parca_sayisi": 1,
+   "en_yakin_mm": 1.5,
+   "en_yakin_parca": "ELK_TOPPING__kanal · TOPPING/Pano",
+   "tam_modelde_degdigi": [],
+   "oneri": "Yatay kablo kanali (556 mm) 1,5 mm havada: arka saca yasla ya da klips ekle."
+  },
+  {
+   "tur": "havada",
+   "istasyon": "K",
+   "dugum": "K_BANT__aluminyum",
+   "mek": [
+    "K/Bant"
+   ],
+   "konum_mm": {
+    "x": [
+     4023.2,
+     4069.5
+    ],
+    "y": [
+     945.7,
+     992.3
+    ],
+    "z": [
+     -403.0,
+     -21.0
+    ]
+   },
+   "boyut_mm": [
+    46.3,
+    46.7,
+    382.0
+   ],
+   "parca_sayisi": 1,
+   "en_yakin_mm": 1.1,
+   "en_yakin_parca": "K_BANT__pu_bant · K/Bant",
+   "tam_modelde_degdigi": [],
+   "oneri": "Bant yan profilleri PU banttan 0,9-1,1 mm ayrik, baska hicbir seye degmiyor: saseye/uc plakasina koseben ile bagla."
+  },
+  {
+   "tur": "havada",
+   "istasyon": "K",
+   "dugum": "K_BANT__aluminyum",
+   "mek": [
+    "K/Bant"
+   ],
+   "konum_mm": {
+    "x": [
+     4331.2,
+     4377.5
+    ],
+    "y": [
+     945.7,
+     992.3
+    ],
+    "z": [
+     -403.0,
+     -21.0
+    ]
+   },
+   "boyut_mm": [
+    46.3,
+    46.7,
+    382.0
+   ],
+   "parca_sayisi": 1,
+   "en_yakin_mm": 0.87,
+   "en_yakin_parca": "K_BANT__pu_bant · K/Bant",
+   "tam_modelde_degdigi": [],
+   "oneri": "Bant yan profilleri PU banttan 0,9-1,1 mm ayrik, baska hicbir seye degmiyor: saseye/uc plakasina koseben ile bagla."
+  },
+  {
+   "tur": "havada",
+   "istasyon": "K",
+   "dugum": "K_ITICI__aluminyum__ITICI_ARABA",
+   "mek": [
+    "K/İtici"
+   ],
+   "konum_mm": {
+    "x": [
+     4049.6,
+     4100.4
+    ],
+    "y": [
+     984.0,
+     1042.0
+    ],
+    "z": [
+     -767.0,
+     -743.0
+    ]
+   },
+   "boyut_mm": [
+    50.8,
+    58.0,
+    24.0
+   ],
+   "parca_sayisi": 1,
+   "en_yakin_mm": 4.0,
+   "en_yakin_parca": "K_ITICI__aluminyum__ITICI_ARABA · K/İtici",
+   "tam_modelde_degdigi": [],
+   "oneri": "BILINEN: K itici arabasindaki 2 aluminyum parca 4,0 mm bosta; araba plakasina 4 mm kaydir ya da ara burc ekle."
+  },
+  {
+   "tur": "havada",
+   "istasyon": "K",
+   "dugum": "K_ITICI__aluminyum__ITICI_ARABA",
+   "mek": [
+    "K/İtici"
+   ],
+   "konum_mm": {
+    "x": [
+     4049.6,
+     4100.4
+    ],
+    "y": [
+     984.0,
+     1042.0
+    ],
+    "z": [
+     -657.0,
+     -633.0
+    ]
+   },
+   "boyut_mm": [
+    50.8,
+    58.0,
+    24.0
+   ],
+   "parca_sayisi": 1,
+   "en_yakin_mm": 4.0,
+   "en_yakin_parca": "K_ITICI__aluminyum__ITICI_ARABA · K/İtici",
+   "tam_modelde_degdigi": [],
+   "oneri": "BILINEN: K itici arabasindaki 2 aluminyum parca 4,0 mm bosta; araba plakasina 4 mm kaydir ya da ara burc ekle."
+  },
+  {
+   "tur": "havada",
+   "istasyon": "E",
+   "dugum": "E_GOVDE__sac",
+   "mek": [
+    "E/Gövde"
+   ],
+   "konum_mm": {
+    "x": [
+     5217.0,
+     5228.5
+    ],
+    "y": [
+     237.5,
+     982.5
+    ],
+    "z": [
+     -810.5,
+     -421.5
+    ]
+   },
+   "boyut_mm": [
+    11.5,
+    745.0,
+    389.0
+   ],
+   "parca_sayisi": 1,
+   "en_yakin_mm": 1.5,
+   "en_yakin_parca": "E_GOVDE__sac · E/Gövde",
+   "tam_modelde_degdigi": [],
+   "oneri": "E govde sag yan sac parcasi (11,5x745x389) 1,5 mm havada: komsu sac kenarina kaydir / bukumle birlestir."
+  },
+  {
+   "tur": "havada",
+   "istasyon": "Tezgâh",
+   "dugum": "TEZGAH_EVYE__krom",
+   "mek": [
+    "Tezgâh/Evye"
+   ],
+   "konum_mm": {
+    "x": [
+     4140.0,
+     4220.0
+    ],
+    "y": [
+     986.0,
+     1006.0
+    ],
+    "z": [
+     1682.6,
+     1706.6
+    ]
+   },
+   "boyut_mm": [
+    80.0,
+    20.0,
+    24.0
+   ],
+   "parca_sayisi": 1,
+   "en_yakin_mm": 0.58,
+   "en_yakin_parca": "TEZGAH_EVYE__krom · Tezgâh/Evye",
+   "tam_modelde_degdigi": [],
+   "oneri": "Evye sensorlu batarya kafasi (krom + sensor cami) govdesinden 0,58 mm ayrik: kafayi 0,6 mm govdeye yaklastir."
+  },
+  {
+   "tur": "havada",
+   "istasyon": "Tezgâh",
+   "dugum": "TEZGAH_EVYE__sensor_cam",
+   "mek": [
+    "Tezgâh/Evye"
+   ],
+   "konum_mm": {
+    "x": [
+     4218.0,
+     4220.0
+    ],
+    "y": [
+     960.0,
+     978.0
+    ],
+    "z": [
+     1686.6,
+     1702.6
+    ]
+   },
+   "boyut_mm": [
+    2.0,
+    18.0,
+    16.0
+   ],
+   "parca_sayisi": 1,
+   "en_yakin_mm": 0.58,
+   "en_yakin_parca": "TEZGAH_EVYE__krom · Tezgâh/Evye",
+   "tam_modelde_degdigi": [],
+   "oneri": "Evye kafasi ile ayni: kafa duzelince cozulur."
+  },
+  {
+   "tur": "havada",
+   "istasyon": "Tezgâh",
+   "dugum": "TEZGAH_SARF__poset",
+   "mek": [
+    "Tezgâh/Gövde"
+   ],
+   "konum_mm": {
+    "x": [
+     4350.0,
+     4480.0
+    ],
+    "y": [
+     104.2,
+     173.2
+    ],
+    "z": [
+     1779.3,
+     1848.7
+    ]
+   },
+   "boyut_mm": [
+    130.0,
+    69.0,
+    69.5
+   ],
+   "parca_sayisi": 1,
+   "en_yakin_mm": 1.02,
+   "en_yakin_parca": "TEZGAH_SARF__pp_gri · Tezgâh/Gövde",
+   "tam_modelde_degdigi": [],
+   "oneri": "Poset rulosu askisindan 1,0 mm havada: ruloyu aski cubuguna oturt."
+  },
+  {
+   "tur": "havada",
+   "istasyon": "Elektrik",
+   "dugum": "ELK_ANA_PANO_UF__cihaz_koyu",
+   "mek": [
+    "Elektrik/Ana pano"
+   ],
+   "konum_mm": {
+    "x": [
+     3770.2,
+     3786.3
+    ],
+    "y": [
+     1927.8,
+     1977.5
+    ],
+    "z": [
+     -169.6,
+     -148.6
+    ]
+   },
+   "boyut_mm": [
+    16.1,
+    49.7,
+    21.0
+   ],
+   "parca_sayisi": 2,
+   "en_yakin_mm": null,
+   "en_yakin_parca": null,
+   "tam_modelde_degdigi": [],
+   "oneri": "Ana pano UF icinde 2x2 dar modul (7,8 mm) DIN rayina degmiyor, komsu cihaza 1,78 mm: modulleri raya oturt."
+  },
+  {
+   "tur": "havada",
+   "istasyon": "Elektrik",
+   "dugum": "ELK_ANA_PANO_UF__cihaz_koyu",
+   "mek": [
+    "Elektrik/Ana pano"
+   ],
+   "konum_mm": {
+    "x": [
+     3792.8,
+     3808.8
+    ],
+    "y": [
+     1927.8,
+     1977.5
+    ],
+    "z": [
+     -169.6,
+     -148.6
+    ]
+   },
+   "boyut_mm": [
+    16.1,
+    49.7,
+    21.0
+   ],
+   "parca_sayisi": 2,
+   "en_yakin_mm": null,
+   "en_yakin_parca": null,
+   "tam_modelde_degdigi": [],
+   "oneri": "Ana pano UF icinde 2x2 dar modul (7,8 mm) DIN rayina degmiyor, komsu cihaza 1,78 mm: modulleri raya oturt."
+  },
+  {
+   "tur": "havada - HARIC (insan figuru, gorsel)",
+   "istasyon": "Çevre",
+   "dugum": "INSAN_180cm__insan_180",
+   "mek": [
+    "Çevre/İnsan figürü"
+   ],
+   "konum_mm": {
+    "x": [
+     -831.2,
+     -742.5
+    ],
+    "y": [
+     820.0,
+     1420.0
+    ],
+    "z": [
+     -344.7,
+     -255.3
+    ]
+   },
+   "boyut_mm": [
+    88.7,
+    600.0,
+    89.3
+   ],
+   "parca_sayisi": 1,
+   "en_yakin_mm": 2.5,
+   "en_yakin_parca": "INSAN_180cm__insan_180 · Çevre/İnsan figürü",
+   "tam_modelde_degdigi": [],
+   "oneri": "Insan figuru uzuvlari ayrik; gorsel, duzeltme gerekmez."
+  },
+  {
+   "tur": "havada - HARIC (insan figuru, gorsel)",
+   "istasyon": "Çevre",
+   "dugum": "INSAN_180cm__insan_180",
+   "mek": [
+    "Çevre/İnsan figürü"
+   ],
+   "konum_mm": {
+    "x": [
+     -659.4,
+     -437.9
+    ],
+    "y": [
+     1577.3,
+     1792.7
+    ],
+    "z": [
+     -415.0,
+     -185.0
+    ]
+   },
+   "boyut_mm": [
+    221.5,
+    215.4,
+    230.0
+   ],
+   "parca_sayisi": 1,
+   "en_yakin_mm": 7.29,
+   "en_yakin_parca": "INSAN_180cm__insan_180 · Çevre/İnsan figürü",
+   "tam_modelde_degdigi": [],
+   "oneri": "Insan figuru uzuvlari ayrik; gorsel, duzeltme gerekmez."
+  },
+  {
+   "tur": "havada - HARIC (insan figuru, gorsel)",
+   "istasyon": "Çevre",
+   "dugum": "INSAN_180cm__insan_180",
+   "mek": [
+    "Çevre/İnsan figürü"
+   ],
+   "konum_mm": {
+    "x": [
+     -356.2,
+     -267.5
+    ],
+    "y": [
+     820.0,
+     1420.0
+    ],
+    "z": [
+     -344.7,
+     -255.3
+    ]
+   },
+   "boyut_mm": [
+    88.7,
+    600.0,
+    89.3
+   ],
+   "parca_sayisi": 1,
+   "en_yakin_mm": 3.81,
+   "en_yakin_parca": "INSAN_180cm__insan_180 · Çevre/İnsan figürü",
+   "tam_modelde_degdigi": [],
+   "oneri": "Insan figuru uzuvlari ayrik; gorsel, duzeltme gerekmez."
+  },
+  {
+   "tur": "havada",
+   "istasyon": "TOPPING",
+   "dugum": "TOPPING_DONER__TABLA",
+   "mek": [
+    "TOPPING/Tabla"
+   ],
+   "konum_mm": {
+    "x": [
+     1076.2,
+     1096.0
+    ],
+    "y": [
+     972.8,
+     981.0
+    ],
+    "z": [
+     -308.0,
+     -275.0
+    ]
+   },
+   "boyut_mm": [
+    19.8,
+    8.2,
+    33.0
+   ],
+   "parca_sayisi": 1,
+   "en_yakin_mm": 1.0,
+   "en_yakin_parca": "TOPPING_DONER__TABLA · TOPPING/Tabla",
+   "tam_modelde_degdigi": [],
+   "oneri": "Doner tabla dugumunde kucuk parca (19,8x8,2x33) 1,0 mm havada: tabla gobegine bagla (donerken de bagli kalsin)."
+  }
+ ],
+ "k2_kapak_gizli": {
+  "havada": [
+   {
+    "tur": "kapak gizli -> havada",
+    "istasyon": "B",
+    "dugum": "ELK_ISTASYON__cihaz, ELK_ISTASYON__din",
+    "mek": [
+     "B/Elektrik"
+    ],
+    "konum_mm": {
+     "x": [
+      4168.0,
+      4312.0
+     ],
+     "y": [
+      620.0,
+      710.0
+     ],
+     "z": [
+      -698.0,
+      -630.5
+     ]
+    },
+    "boyut_mm": [
+     144.0,
+     90.0,
+     67.5
+    ],
+    "parca_sayisi": 3,
+    "en_yakin_mm": 1.0,
+    "en_yakin_parca": "ELK_ISTASYON__rakor · B/Elektrik",
+    "tam_modelde_degdigi": [
+     "ELK_ISTASYON__pano · B/Elektrik (kpk)"
+    ],
+    "oneri": "B/Elektrik kutusunun ARKA montaj saci (z -700..-698, 160x120x2) kpk etiketli; kapak gizlenince ustundeki cihaz/DIN/rakor havada. Arka sactan kpk kaldir (yalniz on kapak z -612..-610 kpk kalsin)."
+   },
+   {
+    "tur": "kapak gizli -> havada",
+    "istasyon": "B",
+    "dugum": "ELK_ISTASYON__rakor",
+    "mek": [
+     "B/Elektrik"
+    ],
+    "konum_mm": {
+     "x": [
+      4198.0,
+      4282.0
+     ],
+     "y": [
+      636.5,
+      693.5
+     ],
+     "z": [
+      -642.0,
+      -525.0
+     ]
+    },
+    "boyut_mm": [
+     84.0,
+     57.0,
+     117.0
+    ],
+    "parca_sayisi": 2,
+    "en_yakin_mm": 1.0,
+    "en_yakin_parca": "ELK_ISTASYON__cihaz · B/Elektrik",
+    "tam_modelde_degdigi": [
+     "ELK_ISTASYON__pano · B/Elektrik (kpk)"
+    ],
+    "oneri": "Ayni kutu: rakorlar kpk'li saca bagli; arka sacin kpk'si kalkinca cozulur."
+   },
+   {
+    "tur": "kapak gizli -> havada",
+    "istasyon": "E",
+    "dugum": "DUZ_E_OLUK__paslanmaz, E_COP__sac",
+    "mek": [
+     "E/Robot çöpü"
+    ],
+    "konum_mm": {
+     "x": [
+      4449.0,
+      4609.0
+     ],
+     "y": [
+      545.5,
+      603.0
+     ],
+     "z": [
+      0.0,
+      59.0
+     ]
+    },
+    "boyut_mm": [
+     160.0,
+     57.5,
+     59.0
+    ],
+    "parca_sayisi": 2,
+    "en_yakin_mm": 26.88,
+    "en_yakin_parca": "E_KALIP__sac · E/Kutu katlama",
+    "tam_modelde_degdigi": [
+     "E_GOVDE__on_seffaf · E/Gövde (kpk)"
+    ],
+    "oneri": "E robot copu (E_COP sac + DUZ_E_OLUK) yalniz E on kapagina (E_GOVDE__on_seffaf, kpk) degiyor; kapak gizlenince 26,9 mm havada. Kapakla aciliyorsa kpk ekle, degilse govdeye/kaliba tasiyici braket."
+   },
+   {
+    "tur": "kapak gizli -> havada",
+    "istasyon": "QR",
+    "dugum": "QR_MUSTERI_PANELI__ekran_cam",
+    "mek": [
+     "QR/Müşteri paneli"
+    ],
+    "konum_mm": {
+     "x": [
+      4835.0,
+      5010.0
+     ],
+     "y": [
+      1663.0,
+      1773.0
+     ],
+     "z": [
+      1163.0,
+      1188.5
+     ]
+    },
+    "boyut_mm": [
+     175.0,
+     110.0,
+     25.5
+    ],
+    "parca_sayisi": 1,
+    "en_yakin_mm": 10.0,
+    "en_yakin_parca": "QR_GOVDE__qr_govde · QR/Gövde",
+    "tam_modelde_degdigi": [
+     "QR_GOVDE__on_seffaf · QR/Gövde (kpk)"
+    ],
+    "oneri": "BILINEN: QR musteri paneli (ekran cami + paslanmaz okuyucu + plastik) yalniz QR on paneline (QR_GOVDE__on_seffaf, kpk) bagli. Panel sabitse on panelden kpk kaldir; aciliyorsa musteri paneli 3 parcasina kpk ekle."
+   },
+   {
+    "tur": "kapak gizli -> havada",
+    "istasyon": "QR",
+    "dugum": "QR_MUSTERI_PANELI__paslanmaz",
+    "mek": [
+     "QR/Müşteri paneli"
+    ],
+    "konum_mm": {
+     "x": [
+      5150.0,
+      5236.0
+     ],
+     "y": [
+      1675.0,
+      1761.0
+     ],
+     "z": [
+      1158.5,
+      1188.5
+     ]
+    },
+    "boyut_mm": [
+     86.0,
+     86.0,
+     30.0
+    ],
+    "parca_sayisi": 1,
+    "en_yakin_mm": 22.0,
+    "en_yakin_parca": "QR_GOVDE__qr_govde · QR/Gövde",
+    "tam_modelde_degdigi": [
+     "QR_GOVDE__on_seffaf · QR/Gövde (kpk)"
+    ],
+    "oneri": "Musteri paneli ile ayni karar."
+   },
+   {
+    "tur": "kapak gizli -> havada",
+    "istasyon": "QR",
+    "dugum": "QR_MUSTERI_PANELI__plastik",
+    "mek": [
+     "QR/Müşteri paneli"
+    ],
+    "konum_mm": {
+     "x": [
+      5040.0,
+      5120.0
+     ],
+     "y": [
+      1683.0,
+      1743.0
+     ],
+     "z": [
+      1143.0,
+      1188.5
+     ]
+    },
+    "boyut_mm": [
+     80.0,
+     60.0,
+     45.5
+    ],
+    "parca_sayisi": 1,
+    "en_yakin_mm": 30.0,
+    "en_yakin_parca": "QR_MUSTERI_PANELI__ekran_cam · QR/Müşteri paneli",
+    "tam_modelde_degdigi": [
+     "QR_GOVDE__on_seffaf · QR/Gövde (kpk)"
+    ],
+    "oneri": "Musteri paneli ile ayni karar."
+   },
+   {
+    "tur": "kapak gizli -> havada",
+    "istasyon": "QR",
+    "dugum": "QR_HAVALANDIRMA__plastik",
+    "mek": [
+     "QR/Pano"
+    ],
+    "konum_mm": {
+     "x": [
+      5225.0,
+      5375.0
+     ],
+     "y": [
+      275.0,
+      425.0
+     ],
+     "z": [
+      671.5,
+      711.5
+     ]
+    },
+    "boyut_mm": [
+     150.0,
+     150.0,
+     40.0
+    ],
+    "parca_sayisi": 1,
+    "en_yakin_mm": 22.0,
+    "en_yakin_parca": "QR_GOVDE__qr_govde · QR/Gövde",
+    "tam_modelde_degdigi": [
+     "ELK_QR_MONTAJ__on_seffaf · QR/Gövde (kpk)"
+    ],
+    "oneri": "QR pano havalandirma izgarasi (150x150) yalniz kpk'li panele degiyor: izgaraya kpk ekle."
+   },
+   {
+    "tur": "kapak gizli -> havada",
+    "istasyon": "QR",
+    "dugum": "QR_HAVALANDIRMA__plastik",
+    "mek": [
+     "QR/Pano"
+    ],
+    "konum_mm": {
+     "x": [
+      5245.0,
+      5395.0
+     ],
+     "y": [
+      1885.0,
+      2035.0
+     ],
+     "z": [
+      671.5,
+      711.5
+     ]
+    },
+    "boyut_mm": [
+     150.0,
+     150.0,
+     40.0
+    ],
+    "parca_sayisi": 1,
+    "en_yakin_mm": 13.0,
+    "en_yakin_parca": "QR_GOVDE__qr_govde · QR/Gövde",
+    "tam_modelde_degdigi": [
+     "QR_GOVDE__on_seffaf · QR/Gövde (kpk)"
+    ],
+    "oneri": "QR pano havalandirma izgarasi (150x150) yalniz kpk'li panele degiyor: izgaraya kpk ekle."
+   },
+   {
+    "tur": "kapak gizli -> havada",
+    "istasyon": "Tezgâh",
+    "dugum": "TEZGAH_BULASIK__ekran_cam",
+    "mek": [
+     "Tezgâh/Bulaşık makinesi"
+    ],
+    "konum_mm": {
+     "x": [
+      3855.5,
+      3857.0
+     ],
+     "y": [
+      655.0,
+      685.0
+     ],
+     "z": [
+      1220.2,
+      1340.2
+     ]
+    },
+    "boyut_mm": [
+     1.5,
+     30.0,
+     120.0
+    ],
+    "parca_sayisi": 1,
+    "en_yakin_mm": 22.0,
+    "en_yakin_parca": "TEZGAH_BULASIK__paslanmaz · Tezgâh/Bulaşık makinesi",
+    "tam_modelde_degdigi": [
+     "TEZGAH_BULASIK__paslanmaz · Tezgâh/Bulaşık makinesi (kpk)"
+    ],
+    "oneri": "Bulasik kapagindaki ekran cami kpk'siz: kpk ekle."
+   },
+   {
+    "tur": "kapak gizli -> havada",
+    "istasyon": "Tezgâh",
+    "dugum": "TEZGAH_BULASIK__kulp_isik",
+    "mek": [
+     "Tezgâh/Bulaşık makinesi"
+    ],
+    "konum_mm": {
+     "x": [
+      3849.0,
+      3857.0
+     ],
+     "y": [
+      597.1,
+      626.9
+     ],
+     "z": [
+      1265.6,
+      1295.2
+     ]
+    },
+    "boyut_mm": [
+     8.0,
+     29.8,
+     29.6
+    ],
+    "parca_sayisi": 1,
+    "en_yakin_mm": 22.24,
+    "en_yakin_parca": "TEZGAH_BULASIK__paslanmaz · Tezgâh/Bulaşık makinesi",
+    "tam_modelde_degdigi": [
+     "TEZGAH_BULASIK__paslanmaz · Tezgâh/Bulaşık makinesi (kpk)"
+    ],
+    "oneri": "BILINEN: bulasik kulp isigi kapaga bagli ama kpk'siz: kpk ekle."
+   },
+   {
+    "tur": "kapak gizli -> havada",
+    "istasyon": "Tezgâh",
+    "dugum": "TEZGAH_CEKMECE__celik",
+    "mek": [
+     "Tezgâh/Gövde"
+    ],
+    "konum_mm": {
+     "x": [
+      3834.0,
+      3857.0
+     ],
+     "y": [
+      790.0,
+      805.0
+     ],
+     "z": [
+      1210.0,
+      1350.0
+     ]
+    },
+    "boyut_mm": [
+     23.0,
+     15.0,
+     140.0
+    ],
+    "parca_sayisi": 1,
+    "en_yakin_mm": 18.0,
+    "en_yakin_parca": "TEZGAH_CEKMECE__paslanmaz · Tezgâh/Gövde",
+    "tam_modelde_degdigi": [
+     "TEZGAH_CEKMECE__on_seffaf · Tezgâh/Gövde (kpk)"
+    ],
+    "oneri": "Tezgah cekmece celik parcalari (kulp/ray) yalniz cekmece onune degiyor: kulpsa kpk ekle, raysa govdeye bagla (4-18 mm)."
+   },
+   {
+    "tur": "kapak gizli -> havada",
+    "istasyon": "Tezgâh",
+    "dugum": "TEZGAH_CEKMECE__celik",
+    "mek": [
+     "Tezgâh/Gövde"
+    ],
+    "konum_mm": {
+     "x": [
+      3855.0,
+      3881.0
+     ],
+     "y": [
+      836.5,
+      866.0
+     ],
+     "z": [
+      1270.3,
+      1289.7
+     ]
+    },
+    "boyut_mm": [
+     26.0,
+     29.5,
+     19.4
+    ],
+    "parca_sayisi": 2,
+    "en_yakin_mm": 4.0,
+    "en_yakin_parca": "TEZGAH_GOVDE__paslanmaz · Tezgâh/Gövde",
+    "tam_modelde_degdigi": [
+     "TEZGAH_CEKMECE__on_seffaf · Tezgâh/Gövde (kpk)"
+    ],
+    "oneri": "Tezgah cekmece celik parcalari (kulp/ray) yalniz cekmece onune degiyor: kulpsa kpk ekle, raysa govdeye bagla (4-18 mm)."
+   }
+  ],
+  "kpk_ters": [
+   {
+    "tur": "kpk'li, kpk komsusu yok (bilgi)",
+    "istasyon": "QR",
+    "dugum": "ELK_QR_KUTU__on_seffaf",
+    "mek": "QR/Elektrik",
+    "konum_mm": {
+     "x": [
+      4640.0,
+      4940.0
+     ],
+     "y": [
+      1700.0,
+      1920.0
+     ],
+     "z": [
+      675.0,
+      677.0
+     ]
+    },
+    "boyut_mm": [
+     300.0,
+     220.0,
+     2.0
+    ],
+    "komsular": [
+     "ELK_QR_KUTU__pano · QR/Elektrik"
+    ],
+    "oneri": "Kapak paneli tek parca; mentese/kilit modellenmemis ya da kpk'siz. Dogruysa sorun yok."
+   },
+   {
+    "tur": "govdeye ait olup kpk'li (TERS)",
+    "istasyon": "F",
+    "dugum": "ELK_ISTASYON__pano",
+    "mek": "F/Elektrik",
+    "konum_mm": {
+     "x": [
+      2800.0,
+      2960.0
+     ],
+     "y": [
+      830.0,
+      950.0
+     ],
+     "z": [
+      -730.0,
+      -728.0
+     ]
+    },
+    "boyut_mm": [
+     160.0,
+     120.0,
+     2.0
+    ],
+    "komsular": [
+     "ELK_ISTASYON__pano · F/Elektrik"
+    ],
+    "oneri": "Kutunun arka montaj saci kpk'li: kpk kaldir (cihazlar bu saca bagli)."
+   },
+   {
+    "tur": "govdeye ait olup kpk'li (TERS)",
+    "istasyon": "B",
+    "dugum": "ELK_ISTASYON__pano",
+    "mek": "B/Elektrik",
+    "konum_mm": {
+     "x": [
+      4160.0,
+      4320.0
+     ],
+     "y": [
+      605.0,
+      725.0
+     ],
+     "z": [
+      -700.0,
+      -698.0
+     ]
+    },
+    "boyut_mm": [
+     160.0,
+     120.0,
+     2.0
+    ],
+    "komsular": [
+     "ELK_ISTASYON__din · B/Elektrik",
+     "ELK_ISTASYON__pano · B/Elektrik"
+    ],
+    "oneri": "Kutunun arka montaj saci kpk'li: kpk kaldir (cihazlar bu saca bagli)."
+   },
+   {
+    "tur": "kpk'li, kpk komsusu yok (bilgi)",
+    "istasyon": "B",
+    "dugum": "ELK_ISTASYON__pano",
+    "mek": "B/Elektrik",
+    "konum_mm": {
+     "x": [
+      4160.0,
+      4320.0
+     ],
+     "y": [
+      605.0,
+      725.0
+     ],
+     "z": [
+      -612.0,
+      -610.0
+     ]
+    },
+    "boyut_mm": [
+     160.0,
+     120.0,
+     2.0
+    ],
+    "komsular": [
+     "ELK_ISTASYON__pano · B/Elektrik",
+     "ELK_ISTASYON__rakor · B/Elektrik"
+    ],
+    "oneri": "Kapak paneli tek parca; mentese/kilit modellenmemis ya da kpk'siz. Dogruysa sorun yok."
+   },
+   {
+    "tur": "kpk'li, kpk komsusu yok (bilgi)",
+    "istasyon": "QR",
+    "dugum": "QR_GOVDE__on_seffaf",
+    "mek": "QR/Gövde",
+    "konum_mm": {
+     "x": [
+      4571.5,
+      5428.5
+     ],
+     "y": [
+      20.0,
+      447.0
+     ],
+     "z": [
+      1188.5,
+      1190.0
+     ]
+    },
+    "boyut_mm": [
+     857.0,
+     427.0,
+     1.5
+    ],
+    "komsular": [
+     "QR_GOVDE__qr_govde · QR/Gövde"
+    ],
+    "oneri": "Kapak paneli tek parca; mentese/kilit modellenmemis ya da kpk'siz. Dogruysa sorun yok."
+   },
+   {
+    "tur": "kpk'li, kpk komsusu yok (bilgi)",
+    "istasyon": "QR",
+    "dugum": "QR_GOVDE__on_seffaf",
+    "mek": "QR/Gövde",
+    "konum_mm": {
+     "x": [
+      4571.5,
+      5428.5
+     ],
+     "y": [
+      1653.0,
+      2048.0
+     ],
+     "z": [
+      1188.5,
+      1190.0
+     ]
+    },
+    "boyut_mm": [
+     857.0,
+     395.0,
+     1.5
+    ],
+    "komsular": [
+     "QR_GOVDE__qr_govde · QR/Gövde",
+     "QR_MUSTERI_PANELI__ekran_cam · QR/Müşteri paneli",
+     "QR_MUSTERI_PANELI__paslanmaz · QR/Müşteri paneli",
+     "QR_MUSTERI_PANELI__plastik · QR/Müşteri paneli"
+    ],
+    "oneri": "Kapak paneli tek parca; mentese/kilit modellenmemis ya da kpk'siz. Dogruysa sorun yok."
+   },
+   {
+    "tur": "kpk'li, kpk komsusu yok (bilgi)",
+    "istasyon": "Tezgâh",
+    "dugum": "TEZGAH_BULASIK__paslanmaz",
+    "mek": "Tezgâh/Bulaşık makinesi",
+    "konum_mm": {
+     "x": [
+      3857.0,
+      3879.0
+     ],
+     "y": [
+      246.0,
+      700.0
+     ],
+     "z": [
+      1052.2,
+      1508.2
+     ]
+    },
+    "boyut_mm": [
+     22.0,
+     454.0,
+     456.0
+    ],
+    "komsular": [
+     "TEZGAH_BULASIK__ekran_cam · Tezgâh/Bulaşık makinesi",
+     "TEZGAH_BULASIK__kulp_isik · Tezgâh/Bulaşık makinesi",
+     "TEZGAH_BULASIK__paslanmaz · Tezgâh/Bulaşık makinesi"
+    ],
+    "oneri": "Kapak paneli tek parca; mentese/kilit modellenmemis ya da kpk'siz. Dogruysa sorun yok."
+   },
+   {
+    "tur": "kpk'li, kpk komsusu yok (bilgi)",
+    "istasyon": "Tezgâh",
+    "dugum": "TEZGAH_CEKMECE__on_seffaf",
+    "mek": "Tezgâh/Gövde",
+    "konum_mm": {
+     "x": [
+      3857.0,
+      3875.0
+     ],
+     "y": [
+      720.0,
+      866.0
+     ],
+     "z": [
+      1047.0,
+      1514.8
+     ]
+    },
+    "boyut_mm": [
+     18.0,
+     146.0,
+     467.8
+    ],
+    "komsular": [
+     "TEZGAH_CEKMECE__celik · Tezgâh/Gövde",
+     "TEZGAH_CEKMECE__paslanmaz · Tezgâh/Gövde",
+     "TEZGAH_GOVDE__paslanmaz · Tezgâh/Gövde"
+    ],
+    "oneri": "Kapak paneli tek parca; mentese/kilit modellenmemis ya da kpk'siz. Dogruysa sorun yok."
+   }
+  ],
+  "kpksiz_yalniz_kapaga_bagli": [
+   {
+    "tur": "kpk'siz ama yalniz kapaga bagli",
+    "istasyon": "QR",
+    "dugum": "QR_MUSTERI_PANELI__ekran_cam",
+    "mek": "QR/Müşteri paneli",
+    "konum_mm": {
+     "x": [
+      4835.0,
+      5010.0
+     ],
+     "y": [
+      1663.0,
+      1773.0
+     ],
+     "z": [
+      1163.0,
+      1188.5
+     ]
+    },
+    "boyut_mm": [
+     175.0,
+     110.0,
+     25.5
+    ],
+    "komsular": [
+     "QR_GOVDE__on_seffaf · QR/Gövde"
+    ],
+    "oneri": "kpk ekle (kapakla birlikte gizlenmeli)"
+   },
+   {
+    "tur": "kpk'siz ama yalniz kapaga bagli",
+    "istasyon": "QR",
+    "dugum": "QR_MUSTERI_PANELI__paslanmaz",
+    "mek": "QR/Müşteri paneli",
+    "konum_mm": {
+     "x": [
+      5150.0,
+      5236.0
+     ],
+     "y": [
+      1675.0,
+      1761.0
+     ],
+     "z": [
+      1158.5,
+      1188.5
+     ]
+    },
+    "boyut_mm": [
+     86.0,
+     86.0,
+     30.0
+    ],
+    "komsular": [
+     "QR_GOVDE__on_seffaf · QR/Gövde"
+    ],
+    "oneri": "kpk ekle (kapakla birlikte gizlenmeli)"
+   },
+   {
+    "tur": "kpk'siz ama yalniz kapaga bagli",
+    "istasyon": "QR",
+    "dugum": "QR_MUSTERI_PANELI__plastik",
+    "mek": "QR/Müşteri paneli",
+    "konum_mm": {
+     "x": [
+      5040.0,
+      5120.0
+     ],
+     "y": [
+      1683.0,
+      1743.0
+     ],
+     "z": [
+      1143.0,
+      1188.5
+     ]
+    },
+    "boyut_mm": [
+     80.0,
+     60.0,
+     45.5
+    ],
+    "komsular": [
+     "QR_GOVDE__on_seffaf · QR/Gövde"
+    ],
+    "oneri": "kpk ekle (kapakla birlikte gizlenmeli)"
+   },
+   {
+    "tur": "kpk'siz ama yalniz kapaga bagli",
+    "istasyon": "QR",
+    "dugum": "QR_HAVALANDIRMA__plastik",
+    "mek": "QR/Pano",
+    "konum_mm": {
+     "x": [
+      5225.0,
+      5375.0
+     ],
+     "y": [
+      275.0,
+      425.0
+     ],
+     "z": [
+      671.5,
+      711.5
+     ]
+    },
+    "boyut_mm": [
+     150.0,
+     150.0,
+     40.0
+    ],
+    "komsular": [
+     "ELK_QR_MONTAJ__on_seffaf · QR/Gövde"
+    ],
+    "oneri": "kpk ekle (kapakla birlikte gizlenmeli)"
+   },
+   {
+    "tur": "kpk'siz ama yalniz kapaga bagli",
+    "istasyon": "QR",
+    "dugum": "QR_HAVALANDIRMA__plastik",
+    "mek": "QR/Pano",
+    "konum_mm": {
+     "x": [
+      5245.0,
+      5395.0
+     ],
+     "y": [
+      1885.0,
+      2035.0
+     ],
+     "z": [
+      671.5,
+      711.5
+     ]
+    },
+    "boyut_mm": [
+     150.0,
+     150.0,
+     40.0
+    ],
+    "komsular": [
+     "QR_GOVDE__on_seffaf · QR/Gövde"
+    ],
+    "oneri": "kpk ekle (kapakla birlikte gizlenmeli)"
+   },
+   {
+    "tur": "kpk'siz ama yalniz kapaga bagli",
+    "istasyon": "Tezgâh",
+    "dugum": "TEZGAH_BULASIK__ekran_cam",
+    "mek": "Tezgâh/Bulaşık makinesi",
+    "konum_mm": {
+     "x": [
+      3855.5,
+      3857.0
+     ],
+     "y": [
+      655.0,
+      685.0
+     ],
+     "z": [
+      1220.2,
+      1340.2
+     ]
+    },
+    "boyut_mm": [
+     1.5,
+     30.0,
+     120.0
+    ],
+    "komsular": [
+     "TEZGAH_BULASIK__paslanmaz · Tezgâh/Bulaşık makinesi"
+    ],
+    "oneri": "kpk ekle (kapakla birlikte gizlenmeli)"
+   },
+   {
+    "tur": "kpk'siz ama yalniz kapaga bagli",
+    "istasyon": "Tezgâh",
+    "dugum": "TEZGAH_BULASIK__kulp_isik",
+    "mek": "Tezgâh/Bulaşık makinesi",
+    "konum_mm": {
+     "x": [
+      3849.0,
+      3857.0
+     ],
+     "y": [
+      597.1,
+      626.9
+     ],
+     "z": [
+      1265.6,
+      1295.2
+     ]
+    },
+    "boyut_mm": [
+     8.0,
+     29.8,
+     29.6
+    ],
+    "komsular": [
+     "TEZGAH_BULASIK__paslanmaz · Tezgâh/Bulaşık makinesi"
+    ],
+    "oneri": "kpk ekle (kapakla birlikte gizlenmeli)"
+   },
+   {
+    "tur": "kpk'siz ama yalniz kapaga bagli",
+    "istasyon": "Tezgâh",
+    "dugum": "TEZGAH_CEKMECE__celik",
+    "mek": "Tezgâh/Gövde",
+    "konum_mm": {
+     "x": [
+      3834.0,
+      3857.0
+     ],
+     "y": [
+      790.0,
+      805.0
+     ],
+     "z": [
+      1210.0,
+      1350.0
+     ]
+    },
+    "boyut_mm": [
+     23.0,
+     15.0,
+     140.0
+    ],
+    "komsular": [
+     "TEZGAH_CEKMECE__on_seffaf · Tezgâh/Gövde"
+    ],
+    "oneri": "kpk ekle (kapakla birlikte gizlenmeli)"
+   }
+  ]
+ },
+ "k3_istasyon": {
+  "havada": {
+   "Elektrik": [
+    {
+     "tur": "istasyon gorunumunde havada",
+     "istasyon": "Elektrik",
+     "dugum": "ELK_QR_KABLO__rakor",
+     "mek": [
+      "Elektrik/Ana hat"
+     ],
+     "konum_mm": {
+      "x": [
+       5049.5,
+       5147.5
+      ],
+      "y": [
+       21.0,
+       79.0
+      ],
+      "z": [
+       653.0,
+       670.0
+      ]
+     },
+     "boyut_mm": [
+      98.0,
+      58.0,
+      17.0
+     ],
+     "parca_sayisi": 1,
+     "en_yakin_mm": null,
+     "en_yakin_parca": null,
+     "tam_modelde_degdigi": [
+      "ELK_QR_KABLO__rakor · Robot/Kablo + zincir",
+      "ELK_QR_MONTAJ__paslanmaz · QR/Gövde"
+     ],
+     "oneri": "Elektrik ana hat/ana pano kablo, kanal ve rakorlari baska istasyonun sacina bagli; Elektrik gorunumunde havada. Bilgi: ya ait oldugu istasyonun Elektrik mekanizmasina alin ya da kabul edin."
+    },
+    {
+     "tur": "istasyon gorunumunde havada",
+     "istasyon": "Elektrik",
+     "dugum": "ELK_ANA_HAT__kablo, ELK_ANA_HAT__kanal",
+     "mek": [
+      "Elektrik/Ana hat"
+     ],
+     "konum_mm": {
+      "x": [
+       4032.0,
+       4390.0
+      ],
+      "y": [
+       135.0,
+       625.0
+      ],
+      "z": [
+       -826.0,
+       -790.5
+      ]
+     },
+     "boyut_mm": [
+      358.0,
+      490.0,
+      35.5
+     ],
+     "parca_sayisi": 3,
+     "en_yakin_mm": null,
+     "en_yakin_parca": null,
+     "tam_modelde_degdigi": [
+      "B_ELEKTRIK__plastik · B/Pano",
+      "B_ELEKTRIK__siemens · B/Pano",
+      "ELK_DOLAP__kablo · B/Soğutma"
+     ],
+     "oneri": "Elektrik ana hat/ana pano kablo, kanal ve rakorlari baska istasyonun sacina bagli; Elektrik gorunumunde havada. Bilgi: ya ait oldugu istasyonun Elektrik mekanizmasina alin ya da kabul edin."
+    },
+    {
+     "tur": "istasyon gorunumunde havada",
+     "istasyon": "Elektrik",
+     "dugum": "ELK_ANA_HAT__rakor, ELK_ANA_HAT__kablo",
+     "mek": [
+      "Elektrik/Ana hat"
+     ],
+     "konum_mm": {
+      "x": [
+       5058.0,
+       5142.0
+      ],
+      "y": [
+       1810.8,
+       1948.9
+      ],
+      "z": [
+       -796.9,
+       -731.5
+      ]
+     },
+     "boyut_mm": [
+      84.0,
+      138.2,
+      65.4
+     ],
+     "parca_sayisi": 3,
+     "en_yakin_mm": 3.0,
+     "en_yakin_parca": "ELK_ANA_HAT__kanal · Elektrik/Ana hat",
+     "tam_modelde_degdigi": [
+      "E_ELEKTRIK__plastik · E/Pano",
+      "U_KE_GOVDE__sac · U/Gövde"
+     ],
+     "oneri": "Elektrik ana hat/ana pano kablo, kanal ve rakorlari baska istasyonun sacina bagli; Elektrik gorunumunde havada. Bilgi: ya ait oldugu istasyonun Elektrik mekanizmasina alin ya da kabul edin."
+    },
+    {
+     "tur": "istasyon gorunumunde havada",
+     "istasyon": "Elektrik",
+     "dugum": "ELK_ANA_HAT__rakor",
+     "mek": [
+      "Elektrik/Ana hat"
+     ],
+     "konum_mm": {
+      "x": [
+       1961.5,
+       2078.0
+      ],
+      "y": [
+       1998.0,
+       2082.0
+      ],
+      "z": [
+       -824.5,
+       -767.5
+      ]
+     },
+     "boyut_mm": [
+      116.5,
+      84.0,
+      57.0
+     ],
+     "parca_sayisi": 2,
+     "en_yakin_mm": 6.0,
+     "en_yakin_parca": "ELK_ANA_HAT__kablo_veri · Elektrik/Ana hat",
+     "tam_modelde_degdigi": [
+      "TOPPING_MODUL__sac · TOPPING/Pano"
+     ],
+     "oneri": "Elektrik ana hat/ana pano kablo, kanal ve rakorlari baska istasyonun sacina bagli; Elektrik gorunumunde havada. Bilgi: ya ait oldugu istasyonun Elektrik mekanizmasina alin ya da kabul edin."
+    },
+    {
+     "tur": "istasyon gorunumunde havada",
+     "istasyon": "Elektrik",
+     "dugum": "ELK_ANA_HAT__rakor",
+     "mek": [
+      "Elektrik/Ana hat"
+     ],
+     "konum_mm": {
+      "x": [
+       4258.0,
+       4342.0
+      ],
+      "y": [
+       1830.1,
+       1948.9
+      ],
+      "z": [
+       -788.5,
+       -731.5
+      ]
+     },
+     "boyut_mm": [
+      84.0,
+      118.8,
+      57.0
+     ],
+     "parca_sayisi": 2,
+     "en_yakin_mm": 3.0,
+     "en_yakin_parca": "ELK_ANA_HAT__kanal · Elektrik/Ana hat",
+     "tam_modelde_degdigi": [
+      "ELK_K__kablo · K/Pano",
+      "U_KE_GOVDE__sac · U/Gövde"
+     ],
+     "oneri": "Elektrik ana hat/ana pano kablo, kanal ve rakorlari baska istasyonun sacina bagli; Elektrik gorunumunde havada. Bilgi: ya ait oldugu istasyonun Elektrik mekanizmasina alin ya da kabul edin."
+    },
+    {
+     "tur": "istasyon gorunumunde havada",
+     "istasyon": "Elektrik",
+     "dugum": "ELK_K_TARTI__celik, ELK_K_TARTI__kablo, ELK_K_TARTI__rakor",
+     "mek": [
+      "Elektrik/Ana hat"
+     ],
+     "konum_mm": {
+      "x": [
+       3938.5,
+       4398.5
+      ],
+      "y": [
+       1375.5,
+       1709.8
+      ],
+      "z": [
+       -775.5,
+       -266.2
+      ]
+     },
+     "boyut_mm": [
+      460.0,
+      334.3,
+      509.3
+     ],
+     "parca_sayisi": 5,
+     "en_yakin_mm": null,
+     "en_yakin_parca": null,
+     "tam_modelde_degdigi": [
+      "F_UST_KABIN__sac · F/Gövde",
+      "K_ELEKTRIK__siyah · K/Sprey",
+      "K_GOVDE__kabuk · K/Gövde",
+      "K_KESICI__aluminyum · K/Bıçak",
+      "K_YAG__celik · K/Sprey",
+      "K_YAG__sac · K/Sprey"
+     ],
+     "oneri": "Elektrik ana hat/ana pano kablo, kanal ve rakorlari baska istasyonun sacina bagli; Elektrik gorunumunde havada. Bilgi: ya ait oldugu istasyonun Elektrik mekanizmasina alin ya da kabul edin."
+    },
+    {
+     "tur": "istasyon gorunumunde havada",
+     "istasyon": "Elektrik",
+     "dugum": "ELK_ISTASYON__celik, ELK_ISTASYON__kablo",
+     "mek": [
+      "Elektrik/Ana pano"
+     ],
+     "konum_mm": {
+      "x": [
+       2689.1,
+       3343.4
+      ],
+      "y": [
+       2032.0,
+       2128.9
+      ],
+      "z": [
+       -828.5,
+       -786.6
+      ]
+     },
+     "boyut_mm": [
+      654.3,
+      96.9,
+      41.9
+     ],
+     "parca_sayisi": 3,
+     "en_yakin_mm": 4.29,
+     "en_yakin_parca": "ELK_ISTASYON__celik · Elektrik/Ana pano",
+     "tam_modelde_degdigi": [
+      "U_F_GOVDE__sac · U/Gövde",
+      "U_F_HAVALANDIRMA__koyu · U/Gövde",
+      "U_F_HAVALANDIRMA__plastik · U/Gövde"
+     ],
+     "oneri": "Elektrik ana hat/ana pano kablo, kanal ve rakorlari baska istasyonun sacina bagli; Elektrik gorunumunde havada. Bilgi: ya ait oldugu istasyonun Elektrik mekanizmasina alin ya da kabul edin."
+    },
+    {
+     "tur": "istasyon gorunumunde havada",
+     "istasyon": "Elektrik",
+     "dugum": "ELK_ISTASYON__celik, ELK_ISTASYON__kablo",
+     "mek": [
+      "Elektrik/Ana pano"
+     ],
+     "konum_mm": {
+      "x": [
+       2869.1,
+       3343.4
+      ],
+      "y": [
+       2042.0,
+       2128.9
+      ],
+      "z": [
+       -828.5,
+       -786.6
+      ]
+     },
+     "boyut_mm": [
+      474.3,
+      86.9,
+      41.9
+     ],
+     "parca_sayisi": 2,
+     "en_yakin_mm": 4.29,
+     "en_yakin_parca": "ELK_ISTASYON__kablo · Elektrik/Ana pano",
+     "tam_modelde_degdigi": [
+      "U_F_GOVDE__sac · U/Gövde",
+      "U_F_HAVALANDIRMA__koyu · U/Gövde",
+      "U_F_HAVALANDIRMA__plastik · U/Gövde"
+     ],
+     "oneri": "Elektrik ana hat/ana pano kablo, kanal ve rakorlari baska istasyonun sacina bagli; Elektrik gorunumunde havada. Bilgi: ya ait oldugu istasyonun Elektrik mekanizmasina alin ya da kabul edin."
+    },
+    {
+     "tur": "istasyon gorunumunde havada",
+     "istasyon": "Elektrik",
+     "dugum": "ELK_ISTASYON__celik, ELK_ISTASYON__kablo",
+     "mek": [
+      "Elektrik/Ana pano"
+     ],
+     "konum_mm": {
+      "x": [
+       3376.6,
+       3913.9
+      ],
+      "y": [
+       1979.1,
+       2058.0
+      ],
+      "z": [
+       -828.5,
+       -782.0
+      ]
+     },
+     "boyut_mm": [
+      537.3,
+      78.9,
+      46.5
+     ],
+     "parca_sayisi": 5,
+     "en_yakin_mm": 16.21,
+     "en_yakin_parca": "ELK_ANA_HAT__kablo · Elektrik/Ana hat",
+     "tam_modelde_degdigi": [
+      "U_F_GOVDE__sac · U/Gövde",
+      "U_F_HAVALANDIRMA__koyu · U/Gövde",
+      "U_F_HAVALANDIRMA__plastik · U/Gövde"
+     ],
+     "oneri": "Elektrik ana hat/ana pano kablo, kanal ve rakorlari baska istasyonun sacina bagli; Elektrik gorunumunde havada. Bilgi: ya ait oldugu istasyonun Elektrik mekanizmasina alin ya da kabul edin."
+    }
+   ],
+   "F": [
+    {
+     "tur": "istasyon gorunumunde havada",
+     "istasyon": "F",
+     "dugum": "ELK_ISTASYON__rakor",
+     "mek": [
+      "F/Elektrik"
+     ],
+     "konum_mm": {
+      "x": [
+       2971.6,
+       3008.4
+      ],
+      "y": [
+       778.5,
+       800.0
+      ],
+      "z": [
+       -690.0,
+       -653.5
+      ]
+     },
+     "boyut_mm": [
+      36.7,
+      21.5,
+      36.5
+     ],
+     "parca_sayisi": 1,
+     "en_yakin_mm": 2.5,
+     "en_yakin_parca": "F_TP10_GOVDE__sac · F/Fırın",
+     "tam_modelde_degdigi": [
+      "B_KASA__sac · B/Gövde",
+      "ELK_ANA_HAT__paslanmaz · Elektrik/Ana hat"
+     ],
+     "oneri": "F/Elektrik rakoru B kasasi sacina + ana hatta bagli, firin sacina 2,5 mm: rakoru firin sacina oturt ya da etiketi Elektrik/Ana hat yap."
+    }
+   ],
+   "QR": [
+    {
+     "tur": "istasyon gorunumunde havada",
+     "istasyon": "QR",
+     "dugum": "ELK_QR_MONTAJ__paslanmaz",
+     "mek": [
+      "QR/Gövde"
+     ],
+     "konum_mm": {
+      "x": [
+       5040.0,
+       5157.0
+      ],
+      "y": [
+       20.6,
+       83.6
+      ],
+      "z": [
+       670.0,
+       691.5
+      ]
+     },
+     "boyut_mm": [
+      117.0,
+      63.0,
+      21.5
+     ],
+     "parca_sayisi": 1,
+     "en_yakin_mm": 0.6,
+     "en_yakin_parca": "QR_GOVDE__qr_govde · QR/Gövde",
+     "tam_modelde_degdigi": [
+      "ELK_QR_KABLO__rakor · Elektrik/Ana hat",
+      "ELK_QR_KABLO__rakor · Robot/Kablo + zincir",
+      "QR_ROBOT_KONTROL__robot_kutu · Robot/Kontrol kutusu",
+      "ROBOT_KABLO_KOPRUSU__paslanmaz · Robot/Kablo + zincir"
+     ],
+     "oneri": "ELK_QR_MONTAJ paslanmaz braketi QR govdesine 0,6 mm; yalniz robot kontrol kutusu / kablo koprusune degiyor: braketi 0,6 mm QR govdesine yaklastir ya da Robot/Kontrol kutusu etiketine al."
+    }
+   ],
+   "TOPPING": [
+    {
+     "tur": "istasyon gorunumunde havada",
+     "istasyon": "TOPPING",
+     "dugum": "ELK_TOPPING__celik",
+     "mek": [
+      "TOPPING/Tabla"
+     ],
+     "konum_mm": {
+      "x": [
+       880.0,
+       896.0
+      ],
+      "y": [
+       893.5,
+       920.6
+      ],
+      "z": [
+       -627.6,
+       -615.6
+      ]
+     },
+     "boyut_mm": [
+      16.0,
+      27.1,
+      12.0
+     ],
+     "parca_sayisi": 1,
+     "en_yakin_mm": 0.9,
+     "en_yakin_parca": "ELK_TOPPING__kablo · TOPPING/Tabla",
+     "tam_modelde_degdigi": [
+      "KAIDE_A__sac · A/Gövde"
+     ],
+     "oneri": "(1) ELK_TOPPING__celik klips yalniz KAIDE_A sacina degiyor: A/Govde etiketi ya da TOPPING sacina tasi. (2) ELK_TOPPING dikey kablo kanali (25x932) yalniz Elektrik ana hattina degiyor, TOPPING sacina 1,5 mm: kanali TOPPING arka sacina yasla."
+    },
+    {
+     "tur": "istasyon gorunumunde havada",
+     "istasyon": "TOPPING",
+     "dugum": "ELK_TOPPING__kanal",
+     "mek": [
+      "TOPPING/Pano"
+     ],
+     "konum_mm": {
+      "x": [
+       2422.5,
+       2447.5
+      ],
+      "y": [
+       906.5,
+       1838.5
+      ],
+      "z": [
+       -826.8,
+       -790.0
+      ]
+     },
+     "boyut_mm": [
+      25.0,
+      932.0,
+      36.8
+     ],
+     "parca_sayisi": 1,
+     "en_yakin_mm": 1.5,
+     "en_yakin_parca": "ELK_TOPPING__kanal · TOPPING/Pano",
+     "tam_modelde_degdigi": [
+      "ELK_ANA_HAT__kablo · Elektrik/Ana hat",
+      "ELK_ANA_HAT__paslanmaz · Elektrik/Ana hat"
+     ],
+     "oneri": "(1) ELK_TOPPING__celik klips yalniz KAIDE_A sacina degiyor: A/Govde etiketi ya da TOPPING sacina tasi. (2) ELK_TOPPING dikey kablo kanali (25x932) yalniz Elektrik ana hattina degiyor, TOPPING sacina 1,5 mm: kanali TOPPING arka sacina yasla."
+    }
+   ]
+  },
+  "ana_govde": {
+   "A": {
+    "parca": 50,
+    "ucgen": 43392,
+    "topraklı": false,
+    "y_alt": 788.0
+   },
+   "B": {
+    "parca": 1603,
+    "ucgen": 192452,
+    "topraklı": true,
+    "y_alt": 0.0
+   },
+   "E": {
+    "parca": 372,
+    "ucgen": 348680,
+    "topraklı": true,
+    "y_alt": 0.0
+   },
+   "Elektrik": {
+    "parca": 211,
+    "ucgen": 264053,
+    "topraklı": true,
+    "y_alt": 0.0
+   },
+   "F": {
+    "parca": 221,
+    "ucgen": 42696,
+    "topraklı": false,
+    "y_alt": 788.0
+   },
+   "K": {
+    "parca": 473,
+    "ucgen": 97083,
+    "topraklı": false,
+    "y_alt": 788.0
+   },
+   "QR": {
+    "parca": 432,
+    "ucgen": 49306,
+    "topraklı": true,
+    "y_alt": 0.0
+   },
+   "Robot": {
+    "parca": 120,
+    "ucgen": 10840,
+    "topraklı": true,
+    "y_alt": 0.0
+   },
+   "TOPPING": {
+    "parca": 777,
+    "ucgen": 460754,
+    "topraklı": false,
+    "y_alt": 788.0
+   },
+   "Tezgâh": {
+    "parca": 59,
+    "ucgen": 3536,
+    "topraklı": true,
+    "y_alt": 0.0
+   },
+   "U": {
+    "parca": 27,
+    "ucgen": 3228,
+    "topraklı": false,
+    "y_alt": 1862.0
+   }
+  }
+ },
+ "k4_pu": {
+  "cozunurluk_1mm": {
+   "is_sayisi": 24,
+   "bulgu_sayisi": 0,
+   "not_": "6 yon x kapali/acik x hat/karsi grup: 4 mm2 ustu acik PU YOK"
+  },
+  "cozunurluk_05mm": {
+   "is_sayisi": 12,
+   "bulgu": [
+    {
+     "tur": "acikta PU (ince yarik)",
+     "istasyon": "TOPPING",
+     "dugum": "TOPPING_MODUL__pu",
+     "durum": "kapaklar acik (kpk gizli)",
+     "yon": "on(+z)",
+     "konum_mm": {
+      "x": [
+       2030.5,
+       2093.5
+      ],
+      "y": [
+       1142.5,
+       1143.0
+      ],
+      "z": [
+       20.0,
+       20.0
+      ]
+     },
+     "alan_mm2": 32,
+     "oneri": "TOPPING on PU yuzu (z 20) 63 mm x <=0,5 mm yariktan gorunuyor (y 1142,5-1143): komsu sac kenarini 0,5 mm uzat ya da PU on yuzunu 1 mm geri cek."
+    },
+    {
+     "tur": "acikta PU (ince yarik)",
+     "istasyon": "TOPPING",
+     "dugum": "TOPPING_MODUL__pu",
+     "durum": "kapaklar acik (kpk gizli)",
+     "yon": "on(+z)",
+     "konum_mm": {
+      "x": [
+       2324.0,
+       2387.0
+      ],
+      "y": [
+       1142.5,
+       1143.0
+      ],
+      "z": [
+       20.0,
+       20.0
+      ]
+     },
+     "alan_mm2": 32,
+     "oneri": "TOPPING on PU yuzu (z 20) 63 mm x <=0,5 mm yariktan gorunuyor (y 1142,5-1143): komsu sac kenarini 0,5 mm uzat ya da PU on yuzunu 1 mm geri cek."
+    }
+   ]
+  }
+ },
+ "k5_derz": [
+  {
+   "tur": "aynı istasyon gövde sacı",
+   "aralik_mm": 0.5,
+   "a": "F_UST_KABIN__sac",
+   "b": "F_DAVLUMBAZ__sac",
+   "adet": 1,
+   "noktalar": [
+    [
+     2951.5,
+     1860.5,
+     -523.0
+    ]
+   ]
+  },
+  {
+   "tur": "aynı istasyon gövde sacı",
+   "aralik_mm": 0.51,
+   "a": "K_GOVDE__sac",
+   "b": "K_GOVDE__sac",
+   "adet": 12,
+   "noktalar": [
+    [
+     4102.9,
+     793.0,
+     -785.0
+    ],
+    [
+     4105.7,
+     793.0,
+     27.0
+    ],
+    [
+     4198.6,
+     793.0,
+     -785.0
+    ],
+    [
+     4181.4,
+     793.0,
+     27.0
+    ],
+    [
+     4297.1,
+     793.0,
+     -785.0
+    ],
+    [
+     4282.9,
+     793.0,
+     27.0
+    ]
+   ]
+  },
+  {
+   "tur": "aynı istasyon gövde sacı",
+   "aralik_mm": 1.0,
+   "a": "B_KASA__sac",
+   "b": "B_KASA__sac",
+   "adet": 1,
+   "noktalar": [
+    [
+     2501.2,
+     740.3,
+     -771.7
+    ]
+   ]
+  },
+  {
+   "tur": "aynı istasyon gövde sacı",
+   "aralik_mm": 1.2,
+   "a": "TOPPING_MODUL__paslanmaz",
+   "b": "TOPPING_MODUL__paslanmaz",
+   "adet": 1,
+   "noktalar": [
+    [
+     1726.0,
+     1534.8,
+     -571.2
+    ]
+   ]
+  },
+  {
+   "tur": "aynı istasyon gövde sacı",
+   "aralik_mm": 1.3,
+   "a": "B_KASA__sac",
+   "b": "B_MODULER__paslanmaz",
+   "adet": 2,
+   "noktalar": [
+    [
+     1419.7,
+     728.0,
+     -693.5
+    ],
+    [
+     1419.7,
+     728.0,
+     -95.2
+    ]
+   ]
+  },
+  {
+   "tur": "aynı istasyon gövde sacı",
+   "aralik_mm": 1.5,
+   "a": "TOPPING_MODUL__paslanmaz",
+   "b": "KAIDE_C__paslanmaz",
+   "adet": 4,
+   "noktalar": [
+    [
+     1465.0,
+     893.5,
+     32.5
+    ],
+    [
+     1932.1,
+     893.5,
+     12.0
+    ],
+    [
+     1935.3,
+     893.5,
+     12.0
+    ],
+    [
+     1999.3,
+     893.5,
+     12.0
+    ]
+   ]
+  },
+  {
+   "tur": "aynı istasyon gövde sacı",
+   "aralik_mm": 1.5,
+   "a": "U_F_BACA__sac",
+   "b": "F_UST_KABIN__sac",
+   "adet": 1,
+   "noktalar": [
+    [
+     2924.5,
+     1863.5,
+     -496.0
+    ]
+   ]
+  },
+  {
+   "tur": "aynı istasyon gövde sacı",
+   "aralik_mm": 1.5,
+   "a": "F_UST_KABIN__paslanmaz",
+   "b": "F_DAVLUMBAZ__paslanmaz",
+   "adet": 1,
+   "noktalar": [
+    [
+     3953.5,
+     1348.0,
+     -441.6
+    ]
+   ]
+  },
+  {
+   "tur": "aynı istasyon gövde sacı",
+   "aralik_mm": 1.5,
+   "a": "F_UST_KABIN__paslanmaz",
+   "b": "F_DAVLUMBAZ__sac",
+   "adet": 1,
+   "noktalar": [
+    [
+     3998.5,
+     1346.5,
+     -440.7
+    ]
+   ]
+  },
+  {
+   "tur": "aynı istasyon gövde sacı",
+   "aralik_mm": 1.5,
+   "a": "F_UST_KABIN__paslanmaz",
+   "b": "F_UST_KABIN__paslanmaz",
+   "adet": 1,
+   "noktalar": [
+    [
+     3355.0,
+     1348.0,
+     28.0
+    ]
+   ]
+  },
+  {
+   "tur": "aynı istasyon gövde sacı",
+   "aralik_mm": 1.5,
+   "a": "F_UST_KABIN__sac",
+   "b": "F_TP10_GOVDE__paslanmaz",
+   "adet": 1,
+   "noktalar": [
+    [
+     2501.5,
+     1305.0,
+     -411.0
+    ]
+   ]
+  },
+  {
+   "tur": "aynı istasyon gövde sacı",
+   "aralik_mm": 1.5,
+   "a": "K_GOVDE__kabuk",
+   "b": "K_GOVDE__sac",
+   "adet": 1,
+   "noktalar": [
+    [
+     4375.5,
+     791.0,
+     -816.5
+    ]
+   ]
+  },
+  {
+   "tur": "aynı istasyon gövde sacı",
+   "aralik_mm": 1.5,
+   "a": "K_GOVDE__sac",
+   "b": "K_GOVDE__sac",
+   "adet": 7,
+   "noktalar": [
+    [
+     4005.0,
+     1706.6,
+     40.0
+    ],
+    [
+     4005.0,
+     1006.6,
+     -802.0
+    ],
+    [
+     4005.0,
+     1831.5,
+     -802.4
+    ],
+    [
+     4395.0,
+     1105.1,
+     -795.9
+    ],
+    [
+     4395.0,
+     1756.6,
+     -797.9
+    ],
+    [
+     4005.0,
+     879.6,
+     -713.6
+    ]
+   ]
+  },
+  {
+   "tur": "aynı istasyon gövde sacı",
+   "aralik_mm": 1.5,
+   "a": "E_GOVDE__sac",
+   "b": "E_GOVDE__sac",
+   "adet": 1,
+   "noktalar": [
+    [
+     5228.5,
+     240.5,
+     -812.0
+    ]
+   ]
+  },
+  {
+   "tur": "aynı istasyon gövde sacı",
+   "aralik_mm": 1.58,
+   "a": "U_F_BACA__sac",
+   "b": "F_DAVLUMBAZ__sac",
+   "adet": 1,
+   "noktalar": [
+    [
+     2951.5,
+     1862.0,
+     -523.0
+    ]
+   ]
+  },
+  {
+   "tur": "aynı istasyon gövde sacı",
+   "aralik_mm": 2.0,
+   "a": "TOPPING_MODUL__paslanmaz",
+   "b": "TOPPING_MODUL__sac",
+   "adet": 2,
+   "noktalar": [
+    [
+     1937.5,
+     895.5,
+     16.6
+    ],
+    [
+     2001.5,
+     895.5,
+     16.6
+    ]
+   ]
+  },
+  {
+   "tur": "aynı istasyon gövde sacı",
+   "aralik_mm": 2.0,
+   "a": "B_KASA__on_cerceve",
+   "b": "B_KASA__sac",
+   "adet": 1,
+   "noktalar": [
+    [
+     2502.2,
+     740.4,
+     21.0
+    ]
+   ]
+  },
+  {
+   "tur": "aynı istasyon gövde sacı",
+   "aralik_mm": 2.0,
+   "a": "K_GOVDE__kabuk",
+   "b": "K_GOVDE__sac",
+   "adet": 2,
+   "noktalar": [
+    [
+     4034.1,
+     1860.5,
+     -798.7
+    ],
+    [
+     4370.9,
+     1860.5,
+     -813.2
+    ]
+   ]
+  },
+  {
+   "tur": "aynı istasyon gövde sacı",
+   "aralik_mm": 3.0,
+   "a": "K_GOVDE__sac",
+   "b": "K_GOVDE__sac",
+   "adet": 4,
+   "noktalar": [
+    [
+     4010.4,
+     860.0,
+     -785.0
+    ],
+    [
+     4024.1,
+     860.0,
+     27.0
+    ],
+    [
+     4375.9,
+     860.0,
+     -785.0
+    ],
+    [
+     4389.6,
+     860.0,
+     27.0
+    ]
+   ]
+  },
+  {
+   "tur": "aynı istasyon gövde sacı",
+   "aralik_mm": 3.0,
+   "a": "E_GOVDE__kabuk",
+   "b": "E_GOVDE__sac",
+   "adet": 1,
+   "noktalar": [
+    [
+     5228.5,
+     231.0,
+     -415.5
+    ]
+   ]
+  },
+  {
+   "tur": "aynı istasyon gövde sacı",
+   "aralik_mm": 3.5,
+   "a": "TOPPING_MODUL__paslanmaz",
+   "b": "KAIDE_C__paslanmaz",
+   "adet": 2,
+   "noktalar": [
+    [
+     1937.5,
+     895.5,
+     16.6
+    ],
+    [
+     2001.5,
+     895.5,
+     16.6
+    ]
+   ]
+  },
+  {
+   "tur": "aynı istasyon gövde sacı",
+   "aralik_mm": 3.5,
+   "a": "K_GOVDE__kabuk",
+   "b": "K_GOVDE__sac",
+   "adet": 2,
+   "noktalar": [
+    [
+     4001.5,
+     872.7,
+     -724.1
+    ],
+    [
+     4398.5,
+     873.1,
+     -95.7
+    ]
+   ]
+  },
+  {
+   "tur": "aynı istasyon gövde sacı",
+   "aralik_mm": 4.0,
+   "a": "TOPPING_MODUL__sac",
+   "b": "KAIDE_C__paslanmaz",
+   "adet": 5,
+   "noktalar": [
+    [
+     1491.2,
+     892.0,
+     -395.3
+    ],
+    [
+     1619.7,
+     892.0,
+     -787.0
+    ],
+    [
+     2038.2,
+     892.0,
+     -434.0
+    ],
+    [
+     2139.0,
+     892.0,
+     -731.0
+    ],
+    [
+     2303.9,
+     892.0,
+     -396.7
+    ]
+   ]
+  },
+  {
+   "tur": "aynı istasyon gövde sacı",
+   "aralik_mm": 4.5,
+   "a": "B_MODULER__paslanmaz",
+   "b": "B_MODULER__paslanmaz",
+   "adet": 6,
+   "noktalar": [
+    [
+     766.5,
+     127.5,
+     -720.0
+    ],
+    [
+     2105.0,
+     127.5,
+     -720.0
+    ],
+    [
+     1450.0,
+     127.5,
+     -720.0
+    ],
+    [
+     766.5,
+     127.5,
+     -124.0
+    ],
+    [
+     1450.0,
+     127.5,
+     -124.0
+    ],
+    [
+     2105.0,
+     127.5,
+     -124.0
+    ]
+   ]
+  },
+  {
+   "tur": "aynı istasyon gövde sacı",
+   "aralik_mm": 5.75,
+   "a": "K_GOVDE__sac",
+   "b": "K_GOVDE__sac",
+   "adet": 2,
+   "noktalar": [
+    [
+     4001.7,
+     852.6,
+     -1.8
+    ],
+    [
+     4397.7,
+     835.9,
+     -1.8
+    ]
+   ]
+  },
+  {
+   "tur": "aynı istasyon gövde sacı",
+   "aralik_mm": 6.0,
+   "a": "KAIDE_C__paslanmaz",
+   "b": "KAIDE_C__paslanmaz",
+   "adet": 1,
+   "noktalar": [
+    [
+     1614.0,
+     798.8,
+     -435.0
+    ]
+   ]
+  },
+  {
+   "tur": "aynı istasyon gövde sacı",
+   "aralik_mm": 6.5,
+   "a": "TOPPING_MODUL__paslanmaz",
+   "b": "TOPPING_MODUL__sac",
+   "adet": 2,
+   "noktalar": [
+    [
+     1957.0,
+     900.0,
+     37.7
+    ],
+    [
+     2007.0,
+     900.0,
+     37.7
+    ]
+   ]
+  },
+  {
+   "tur": "aynı istasyon gövde sacı",
+   "aralik_mm": 6.5,
+   "a": "E_GOVDE__kabuk",
+   "b": "E_GOVDE__sac",
+   "adet": 1,
+   "noktalar": [
+    [
+     5228.5,
+     231.0,
+     -424.4
+    ]
+   ]
+  },
+  {
+   "tur": "aynı istasyon gövde sacı",
+   "aralik_mm": 7.5,
+   "a": "K_GOVDE__kabuk",
+   "b": "K_GOVDE__sac",
+   "adet": 8,
+   "noktalar": [
+    [
+     4009.0,
+     1418.5,
+     -784.0
+    ],
+    [
+     4009.0,
+     1459.5,
+     -784.0
+    ],
+    [
+     4009.0,
+     1418.5,
+     27.0
+    ],
+    [
+     4009.0,
+     1460.5,
+     27.0
+    ],
+    [
+     4391.0,
+     1418.5,
+     26.0
+    ],
+    [
+     4391.0,
+     1459.5,
+     26.0
+    ]
+   ]
+  },
+  {
+   "tur": "aynı istasyon gövde sacı",
+   "aralik_mm": 8.0,
+   "a": "TOPPING_MODUL__paslanmaz",
+   "b": "KAIDE_C__paslanmaz",
+   "adet": 2,
+   "noktalar": [
+    [
+     1957.0,
+     900.0,
+     32.5
+    ],
+    [
+     2007.0,
+     900.0,
+     32.5
+    ]
+   ]
+  },
+  {
+   "tur": "aynı istasyon gövde sacı",
+   "aralik_mm": 8.2,
+   "a": "K_GOVDE__kabuk",
+   "b": "K_GOVDE__sac",
+   "adet": 2,
+   "noktalar": [
+    [
+     4009.7,
+     821.0,
+     -570.8
+    ],
+    [
+     4009.7,
+     821.0,
+     -480.8
+    ]
+   ]
+  },
+  {
+   "tur": "aynı istasyon gövde sacı",
+   "aralik_mm": 8.6,
+   "a": "TOPPING_MODUL__paslanmaz",
+   "b": "TOPPING_MODUL__paslanmaz",
+   "adet": 2,
+   "noktalar": [
+    [
+     1934.5,
+     900.0,
+     26.0
+    ],
+    [
+     1999.5,
+     900.0,
+     26.0
+    ]
+   ]
+  },
+  {
+   "tur": "aynı istasyon gövde sacı",
+   "aralik_mm": 9.86,
+   "a": "K_GOVDE__sac",
+   "b": "K_GOVDE__sac",
+   "adet": 3,
+   "noktalar": [
+    [
+     4035.0,
+     1828.5,
+     31.0
+    ],
+    [
+     4365.0,
+     1828.5,
+     -789.0
+    ],
+    [
+     4365.0,
+     1828.5,
+     31.0
+    ]
+   ]
+  },
+  {
+   "tur": "aynı istasyon gövde sacı",
+   "aralik_mm": 10.0,
+   "a": "TOPPING_MODUL__paslanmaz",
+   "b": "TOPPING_MODUL__paslanmaz",
+   "adet": 2,
+   "noktalar": [
+    [
+     1935.0,
+     902.7,
+     16.0
+    ],
+    [
+     1999.0,
+     902.7,
+     16.0
+    ]
+   ]
+  },
+  {
+   "tur": "aynı istasyon gövde sacı",
+   "aralik_mm": 10.06,
+   "a": "B_MODULER__paslanmaz",
+   "b": "B_MODULER__paslanmaz",
+   "adet": 2,
+   "noktalar": [
+    [
+     2103.3,
+     123.0,
+     -730.0
+    ],
+    [
+     1449.6,
+     123.0,
+     -730.0
+    ]
+   ]
+  },
+  {
+   "tur": "aynı istasyon gövde sacı",
+   "aralik_mm": 11.5,
+   "a": "F_UST_KABIN__paslanmaz",
+   "b": "F_TP10_GOVDE__sac",
+   "adet": 1,
+   "noktalar": [
+    [
+     3997.0,
+     1316.5,
+     -425.8
+    ]
+   ]
+  },
+  {
+   "tur": "aynı istasyon gövde sacı",
+   "aralik_mm": 12.7,
+   "a": "B_KASA__sac",
+   "b": "B_MODULER__paslanmaz",
+   "adet": 1,
+   "noktalar": [
+    [
+     2502.2,
+     740.8,
+     -97.3
+    ]
+   ]
+  },
+  {
+   "tur": "aynı istasyon gövde sacı",
+   "aralik_mm": 12.9,
+   "a": "K_GOVDE__sac",
+   "b": "K_GOVDE__sac",
+   "adet": 6,
+   "noktalar": [
+    [
+     4007.5,
+     820.7,
+     -690.6
+    ],
+    [
+     4007.5,
+     820.7,
+     -361.0
+    ],
+    [
+     4007.5,
+     820.7,
+     -31.4
+    ],
+    [
+     4392.5,
+     820.7,
+     -690.6
+    ],
+    [
+     4392.5,
+     820.7,
+     -361.0
+    ],
+    [
+     4392.5,
+     820.7,
+     -31.4
+    ]
+   ]
+  },
+  {
+   "tur": "aynı istasyon gövde sacı",
+   "aralik_mm": 13.5,
+   "a": "F_UST_KABIN__sac",
+   "b": "F_DAVLUMBAZ__sac",
+   "adet": 1,
+   "noktalar": [
+    [
+     2952.0,
+     1361.5,
+     -523.5
+    ]
+   ]
+  },
+  {
+   "tur": "aynı istasyon gövde sacı",
+   "aralik_mm": 13.5,
+   "a": "K_GOVDE__kabuk",
+   "b": "K_GOVDE__sac",
+   "adet": 3,
+   "noktalar": [
+    [
+     4014.8,
+     1857.3,
+     -828.5
+    ],
+    [
+     4036.9,
+     1847.1,
+     -828.5
+    ],
+    [
+     4387.9,
+     1858.0,
+     -828.5
+    ]
+   ]
+  },
+  {
+   "tur": "aynı istasyon gövde sacı",
+   "aralik_mm": 14.5,
+   "a": "E_GOVDE__kabuk",
+   "b": "E_COP__sac",
+   "adet": 1,
+   "noktalar": [
+    [
+     4416.0,
+     128.7,
+     -396.1
+    ]
+   ]
+  },
+  {
+   "tur": "aynı istasyon gövde sacı · ön yüz",
+   "aralik_mm": 10.0,
+   "a": "QR_GOVDE__qr_govde",
+   "b": "QR_GOZLER__paslanmaz",
+   "adet": 2,
+   "noktalar": [
+    [
+     4979.2,
+     1650.0,
+     932.4
+    ],
+    [
+     5363.4,
+     1650.0,
+     711.5
+    ]
+   ]
+  },
+  {
+   "tur": "aynı istasyon gövde sacı · ön yüz",
+   "aralik_mm": 10.0,
+   "a": "QR_GOZLER__paslanmaz",
+   "b": "QR_GOZLER__paslanmaz",
+   "adet": 10,
+   "noktalar": [
+    [
+     4600.0,
+     640.0,
+     1148.5
+    ],
+    [
+     4600.0,
+     840.0,
+     1148.5
+    ],
+    [
+     4600.0,
+     1040.0,
+     1148.5
+    ],
+    [
+     4600.0,
+     1240.0,
+     1148.5
+    ],
+    [
+     4600.0,
+     1440.0,
+     1148.5
+    ],
+    [
+     5010.0,
+     640.0,
+     1148.5
+    ]
+   ]
+  },
+  {
+   "tur": "aynı istasyon gövde sacı · ön yüz",
+   "aralik_mm": 10.0,
+   "a": "QR_GOZLER__qr_govde",
+   "b": "QR_GOZLER__qr_govde",
+   "adet": 2,
+   "noktalar": [
+    [
+     4990.0,
+     451.5,
+     712.0
+    ],
+    [
+     4990.0,
+     451.5,
+     1128.0
+    ]
+   ]
+  },
+  {
+   "tur": "aynı istasyon gövde sacı · ön yüz",
+   "aralik_mm": 11.5,
+   "a": "F_UST_KABIN__paslanmaz",
+   "b": "F_TP10_GOVDE__sac",
+   "adet": 1,
+   "noktalar": [
+    [
+     3997.0,
+     1316.5,
+     57.0
+    ]
+   ]
+  },
+  {
+   "tur": "aynı istasyon gövde sacı · ön yüz",
+   "aralik_mm": 13.0,
+   "a": "F_UST_KABIN__paslanmaz",
+   "b": "F_TP10_GOVDE__paslanmaz",
+   "adet": 1,
+   "noktalar": [
+    [
+     2564.0,
+     1303.5,
+     55.1
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 0.5,
+   "a": "TOPPING_MODUL__on_seffaf",
+   "b": "TOPPING_MODUL__paslanmaz",
+   "adet": 1,
+   "noktalar": [
+    [
+     1992.8,
+     2139.5,
+     37.5
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 1.0,
+   "a": "TOPPING_MODUL__on_seffaf",
+   "b": "TOPPING_MODUL__paslanmaz",
+   "adet": 2,
+   "noktalar": [
+    [
+     1437.8,
+     1109.9,
+     39.0
+    ],
+    [
+     1969.1,
+     1109.9,
+     39.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 1.0,
+   "a": "B_KASA__sac",
+   "b": "CEK_K1_lahm_1__on_seffaf__CEKMECE",
+   "adet": 2,
+   "noktalar": [
+    [
+     797.3,
+     187.0,
+     23.0
+    ],
+    [
+     1418.5,
+     187.0,
+     23.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 1.0,
+   "a": "B_KASA__sac",
+   "b": "CEK_K1_lahm_2__on_seffaf__CEKMECE",
+   "adet": 2,
+   "noktalar": [
+    [
+     797.3,
+     294.9,
+     23.0
+    ],
+    [
+     1418.5,
+     294.9,
+     23.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 1.0,
+   "a": "B_KASA__sac",
+   "b": "CEK_K1_lahm_3__on_seffaf__CEKMECE",
+   "adet": 2,
+   "noktalar": [
+    [
+     797.3,
+     402.8,
+     23.0
+    ],
+    [
+     1418.5,
+     402.8,
+     23.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 1.0,
+   "a": "B_KASA__sac",
+   "b": "CEK_K1_lahm_4__on_seffaf__CEKMECE",
+   "adet": 2,
+   "noktalar": [
+    [
+     797.3,
+     510.7,
+     23.0
+    ],
+    [
+     1418.5,
+     510.7,
+     23.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 1.0,
+   "a": "B_KASA__sac",
+   "b": "CEK_K1_lahm_5__on_seffaf__CEKMECE",
+   "adet": 2,
+   "noktalar": [
+    [
+     797.3,
+     618.6,
+     23.0
+    ],
+    [
+     1418.5,
+     618.6,
+     23.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 1.0,
+   "a": "B_KASA__sac",
+   "b": "CEK_K2_lahm_1__on_seffaf__CEKMECE",
+   "adet": 2,
+   "noktalar": [
+    [
+     2073.5,
+     187.0,
+     23.0
+    ],
+    [
+     1452.3,
+     187.0,
+     23.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 1.0,
+   "a": "B_KASA__sac",
+   "b": "CEK_K2_lahm_2__on_seffaf__CEKMECE",
+   "adet": 2,
+   "noktalar": [
+    [
+     2073.5,
+     294.9,
+     23.0
+    ],
+    [
+     1452.3,
+     294.9,
+     23.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 1.0,
+   "a": "B_KASA__sac",
+   "b": "CEK_K2_lahm_3__on_seffaf__CEKMECE",
+   "adet": 2,
+   "noktalar": [
+    [
+     2073.5,
+     402.8,
+     23.0
+    ],
+    [
+     1452.3,
+     402.8,
+     23.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 1.0,
+   "a": "B_KASA__sac",
+   "b": "CEK_K2_lahm_4__on_seffaf__CEKMECE",
+   "adet": 2,
+   "noktalar": [
+    [
+     2073.5,
+     510.7,
+     23.0
+    ],
+    [
+     1452.3,
+     510.7,
+     23.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 1.0,
+   "a": "B_KASA__sac",
+   "b": "CEK_K2_lahm_5__on_seffaf__CEKMECE",
+   "adet": 2,
+   "noktalar": [
+    [
+     2073.5,
+     618.6,
+     23.0
+    ],
+    [
+     1452.3,
+     618.6,
+     23.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 1.0,
+   "a": "B_KASA__sac",
+   "b": "CEK_K6_tatli_1__on_seffaf__CEKMECE",
+   "adet": 2,
+   "noktalar": [
+    [
+     3993.5,
+     187.0,
+     23.0
+    ],
+    [
+     3417.3,
+     187.0,
+     23.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 1.0,
+   "a": "B_KASA__sac",
+   "b": "CEK_K6_ic1_1__on_seffaf__CEKMECE",
+   "adet": 2,
+   "noktalar": [
+    [
+     3993.5,
+     294.9,
+     23.0
+    ],
+    [
+     3417.3,
+     294.9,
+     23.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 1.0,
+   "a": "B_KASA__sac",
+   "b": "CEK_K6_ic1_2__on_seffaf__CEKMECE",
+   "adet": 2,
+   "noktalar": [
+    [
+     3993.5,
+     459.7,
+     23.0
+    ],
+    [
+     3417.3,
+     459.7,
+     23.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 1.0,
+   "a": "B_KASA__sac",
+   "b": "CEK_K5_ic1_1__on_seffaf__CEKMECE",
+   "adet": 2,
+   "noktalar": [
+    [
+     2762.3,
+     510.7,
+     23.0
+    ],
+    [
+     3383.5,
+     510.7,
+     23.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 1.5,
+   "a": "TOPPING_MODUL__sac",
+   "b": "U_F_GOVDE__on_seffaf",
+   "adet": 1,
+   "noktalar": [
+    [
+     2500.0,
+     2149.1,
+     39.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 1.5,
+   "a": "TOPPING_MODUL__sac",
+   "b": "F_UST_KABIN__on_seffaf",
+   "adet": 1,
+   "noktalar": [
+    [
+     2501.5,
+     1612.8,
+     -0.9
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 1.5,
+   "a": "B_KASA__sac",
+   "b": "CEK_K2_lahm_1__on_seffaf__CEKMECE",
+   "adet": 1,
+   "noktalar": [
+    [
+     2088.3,
+     124.5,
+     39.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 1.5,
+   "a": "B_KASA__sac",
+   "b": "CEK_K2_lahm_5__on_seffaf__CEKMECE",
+   "adet": 1,
+   "noktalar": [
+    [
+     2088.3,
+     786.5,
+     39.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 1.5,
+   "a": "B_KASA__sac",
+   "b": "CEK_K5_ic1_1__on_seffaf__CEKMECE",
+   "adet": 1,
+   "noktalar": [
+    [
+     3398.5,
+     786.5,
+     39.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 1.5,
+   "a": "B_KASA__sac",
+   "b": "CEK_K6_tatli_1__on_seffaf__CEKMECE",
+   "adet": 1,
+   "noktalar": [
+    [
+     4007.2,
+     124.5,
+     39.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 1.5,
+   "a": "B_KASA__sac",
+   "b": "CEK_K6_ic1_2__on_seffaf__CEKMECE",
+   "adet": 1,
+   "noktalar": [
+    [
+     4007.2,
+     786.5,
+     39.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 1.5,
+   "a": "B_DEPO__sac__CEKMECE",
+   "b": "B_DEPO__sac",
+   "adet": 1,
+   "noktalar": [
+    [
+     4028.5,
+     728.5,
+     37.5
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 1.5,
+   "a": "F_UST_KABIN__on_seffaf",
+   "b": "K_GOVDE__kabuk",
+   "adet": 1,
+   "noktalar": [
+    [
+     3998.5,
+     1612.4,
+     -1.1
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 2.8,
+   "a": "TOPPING_MODUL__sac",
+   "b": "F_UST_KAPAK__on_seffaf__YAY_F_SOL",
+   "adet": 1,
+   "noktalar": [
+    [
+     2502.8,
+     1456.1,
+     38.7
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 3.0,
+   "a": "TOPPING_MODUL__on_seffaf",
+   "b": "KAIDE_A__sac",
+   "adet": 1,
+   "noktalar": [
+    [
+     1434.5,
+     892.7,
+     39.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 3.0,
+   "a": "TOPPING_MODUL__on_seffaf",
+   "b": "CEK_K2_lahm_5__on_seffaf__CEKMECE",
+   "adet": 1,
+   "noktalar": [
+    [
+     2086.6,
+     788.0,
+     39.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 3.0,
+   "a": "TOPPING_MODUL__paslanmaz",
+   "b": "U_F_GOVDE__on_seffaf",
+   "adet": 1,
+   "noktalar": [
+    [
+     2498.5,
+     2130.0,
+     37.7
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 3.0,
+   "a": "CEK_K6_ic1_2__on_seffaf__CEKMECE",
+   "b": "K_GOVDE__sac",
+   "adet": 1,
+   "noktalar": [
+    [
+     4008.0,
+     785.0,
+     39.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 3.0,
+   "a": "F_UST_KABIN__on_seffaf",
+   "b": "K_GOVDE__sac",
+   "adet": 1,
+   "noktalar": [
+    [
+     3998.5,
+     1612.4,
+     -1.1
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 3.16,
+   "a": "B_KASA__sac",
+   "b": "CEK_K5_ic1_1__on_seffaf__CEKMECE",
+   "adet": 1,
+   "noktalar": [
+    [
+     3396.5,
+     665.0,
+     24.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 4.0,
+   "a": "TOPPING_MODUL__on_seffaf",
+   "b": "KAIDE_C__paslanmaz",
+   "adet": 2,
+   "noktalar": [
+    [
+     1962.8,
+     789.5,
+     39.0
+    ],
+    [
+     2495.5,
+     788.0,
+     39.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 4.0,
+   "a": "CEK_K1_lahm_1__on_seffaf__CEKMECE",
+   "b": "CEK_K1_lahm_2__on_seffaf__CEKMECE",
+   "adet": 1,
+   "noktalar": [
+    [
+     1431.5,
+     290.0,
+     24.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 4.0,
+   "a": "CEK_K1_lahm_2__on_seffaf__CEKMECE",
+   "b": "CEK_K1_lahm_3__on_seffaf__CEKMECE",
+   "adet": 1,
+   "noktalar": [
+    [
+     1431.5,
+     398.0,
+     24.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 4.0,
+   "a": "CEK_K1_lahm_3__on_seffaf__CEKMECE",
+   "b": "CEK_K1_lahm_4__on_seffaf__CEKMECE",
+   "adet": 1,
+   "noktalar": [
+    [
+     1431.5,
+     506.0,
+     24.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 4.0,
+   "a": "CEK_K1_lahm_4__on_seffaf__CEKMECE",
+   "b": "CEK_K1_lahm_5__on_seffaf__CEKMECE",
+   "adet": 1,
+   "noktalar": [
+    [
+     1431.5,
+     614.0,
+     24.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 4.0,
+   "a": "CEK_K2_lahm_1__on_seffaf__CEKMECE",
+   "b": "CEK_K2_lahm_2__on_seffaf__CEKMECE",
+   "adet": 1,
+   "noktalar": [
+    [
+     2086.5,
+     290.0,
+     24.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 4.0,
+   "a": "CEK_K2_lahm_2__on_seffaf__CEKMECE",
+   "b": "CEK_K2_lahm_3__on_seffaf__CEKMECE",
+   "adet": 1,
+   "noktalar": [
+    [
+     2086.5,
+     398.0,
+     24.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 4.0,
+   "a": "CEK_K2_lahm_3__on_seffaf__CEKMECE",
+   "b": "CEK_K2_lahm_4__on_seffaf__CEKMECE",
+   "adet": 1,
+   "noktalar": [
+    [
+     2086.5,
+     506.0,
+     24.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 4.0,
+   "a": "CEK_K2_lahm_4__on_seffaf__CEKMECE",
+   "b": "CEK_K2_lahm_5__on_seffaf__CEKMECE",
+   "adet": 1,
+   "noktalar": [
+    [
+     2086.5,
+     614.0,
+     24.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 4.0,
+   "a": "CEK_K6_tatli_1__on_seffaf__CEKMECE",
+   "b": "CEK_K6_ic1_1__on_seffaf__CEKMECE",
+   "adet": 1,
+   "noktalar": [
+    [
+     4006.5,
+     290.0,
+     24.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 4.0,
+   "a": "CEK_K6_ic1_1__on_seffaf__CEKMECE",
+   "b": "CEK_K6_ic1_2__on_seffaf__CEKMECE",
+   "adet": 1,
+   "noktalar": [
+    [
+     4006.5,
+     453.0,
+     24.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 4.0,
+   "a": "F_UST_KABIN__on_seffaf",
+   "b": "F_UST_KAPAK__on_seffaf__YAY_F_SOL",
+   "adet": 1,
+   "noktalar": [
+    [
+     2503.7,
+     1597.2,
+     1.9
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 4.0,
+   "a": "F_UST_KABIN__on_seffaf",
+   "b": "F_UST_KAPAK__on_seffaf__YAY_F_SAG",
+   "adet": 1,
+   "noktalar": [
+    [
+     3995.5,
+     1597.2,
+     1.9
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 4.3,
+   "a": "TOPPING_MODUL__paslanmaz",
+   "b": "F_UST_KAPAK__on_seffaf__YAY_F_SOL",
+   "adet": 1,
+   "noktalar": [
+    [
+     2502.8,
+     1456.1,
+     38.7
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 4.3,
+   "a": "F_UST_KAPAK__on_seffaf__YAY_F_SAG",
+   "b": "K_GOVDE__sac",
+   "adet": 1,
+   "noktalar": [
+    [
+     3997.2,
+     1588.8,
+     3.4
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 4.5,
+   "a": "TOPPING_MODUL__on_seffaf",
+   "b": "F_UST_KABIN__paslanmaz",
+   "adet": 1,
+   "noktalar": [
+    [
+     2497.0,
+     1317.1,
+     39.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 4.5,
+   "a": "TOPPING_MODUL__on_seffaf",
+   "b": "F_UST_KABIN__sac",
+   "adet": 1,
+   "noktalar": [
+    [
+     2497.0,
+     1347.1,
+     39.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 4.78,
+   "a": "F_UST_KABIN__sac",
+   "b": "F_UST_KAPAK__on_seffaf__YAY_F_SAG",
+   "adet": 1,
+   "noktalar": [
+    [
+     3993.7,
+     1593.3,
+     2.6
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 4.78,
+   "a": "F_UST_KABIN__sac",
+   "b": "F_UST_KAPAK__on_seffaf__YAY_F_SOL",
+   "adet": 1,
+   "noktalar": [
+    [
+     2506.3,
+     1593.3,
+     2.6
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 5.0,
+   "a": "TOPPING_MODUL__on_seffaf",
+   "b": "KAIDE_A__paslanmaz",
+   "adet": 1,
+   "noktalar": [
+    [
+     1437.5,
+     885.4,
+     39.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 5.0,
+   "a": "TOPPING_MODUL__on_seffaf",
+   "b": "KAIDE_C__paslanmaz",
+   "adet": 1,
+   "noktalar": [
+    [
+     1608.0,
+     799.5,
+     40.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 5.0,
+   "a": "CEK_K1_lahm_5__on_seffaf__CEKMECE",
+   "b": "KAIDE_A__paslanmaz",
+   "adet": 1,
+   "noktalar": [
+    [
+     1433.0,
+     788.0,
+     35.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 5.0,
+   "a": "CEK_K2_lahm_5__on_seffaf__CEKMECE",
+   "b": "KAIDE_C__paslanmaz",
+   "adet": 1,
+   "noktalar": [
+    [
+     2087.9,
+     788.0,
+     35.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 5.22,
+   "a": "CEK_K1_lahm_5__on_seffaf__CEKMECE",
+   "b": "KAIDE_C__paslanmaz",
+   "adet": 1,
+   "noktalar": [
+    [
+     1434.5,
+     785.0,
+     39.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 5.39,
+   "a": "CEK_K1_lahm_1__on_seffaf__CEKMECE",
+   "b": "CEK_K1_lahm_2__on_seffaf__CEKMECE",
+   "adet": 2,
+   "noktalar": [
+    [
+     787.0,
+     295.5,
+     37.0
+    ],
+    [
+     1430.0,
+     288.5,
+     37.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 5.39,
+   "a": "CEK_K1_lahm_2__on_seffaf__CEKMECE",
+   "b": "CEK_K1_lahm_3__on_seffaf__CEKMECE",
+   "adet": 2,
+   "noktalar": [
+    [
+     787.0,
+     403.5,
+     37.0
+    ],
+    [
+     1430.0,
+     396.5,
+     37.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 5.39,
+   "a": "CEK_K1_lahm_3__on_seffaf__CEKMECE",
+   "b": "CEK_K1_lahm_4__on_seffaf__CEKMECE",
+   "adet": 2,
+   "noktalar": [
+    [
+     787.0,
+     511.5,
+     37.0
+    ],
+    [
+     1430.0,
+     504.5,
+     37.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 5.39,
+   "a": "CEK_K1_lahm_4__on_seffaf__CEKMECE",
+   "b": "CEK_K1_lahm_5__on_seffaf__CEKMECE",
+   "adet": 2,
+   "noktalar": [
+    [
+     787.0,
+     619.5,
+     37.0
+    ],
+    [
+     1430.0,
+     612.5,
+     37.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 5.39,
+   "a": "CEK_K2_lahm_1__on_seffaf__CEKMECE",
+   "b": "CEK_K2_lahm_2__on_seffaf__CEKMECE",
+   "adet": 2,
+   "noktalar": [
+    [
+     1442.0,
+     295.5,
+     37.0
+    ],
+    [
+     2085.0,
+     288.5,
+     37.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 5.39,
+   "a": "CEK_K2_lahm_2__on_seffaf__CEKMECE",
+   "b": "CEK_K2_lahm_3__on_seffaf__CEKMECE",
+   "adet": 2,
+   "noktalar": [
+    [
+     1442.0,
+     403.5,
+     37.0
+    ],
+    [
+     2085.0,
+     396.5,
+     37.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 5.39,
+   "a": "CEK_K2_lahm_3__on_seffaf__CEKMECE",
+   "b": "CEK_K2_lahm_4__on_seffaf__CEKMECE",
+   "adet": 2,
+   "noktalar": [
+    [
+     1442.0,
+     511.5,
+     37.0
+    ],
+    [
+     2085.0,
+     504.5,
+     37.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 5.39,
+   "a": "CEK_K2_lahm_4__on_seffaf__CEKMECE",
+   "b": "CEK_K2_lahm_5__on_seffaf__CEKMECE",
+   "adet": 2,
+   "noktalar": [
+    [
+     1442.0,
+     619.5,
+     37.0
+    ],
+    [
+     2085.0,
+     612.5,
+     37.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 5.39,
+   "a": "CEK_K6_tatli_1__on_seffaf__CEKMECE",
+   "b": "CEK_K6_ic1_1__on_seffaf__CEKMECE",
+   "adet": 2,
+   "noktalar": [
+    [
+     4005.0,
+     290.5,
+     39.0
+    ],
+    [
+     4005.0,
+     288.5,
+     37.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 5.39,
+   "a": "CEK_K6_ic1_1__on_seffaf__CEKMECE",
+   "b": "CEK_K6_ic1_2__on_seffaf__CEKMECE",
+   "adet": 2,
+   "noktalar": [
+    [
+     4005.0,
+     453.5,
+     39.0
+    ],
+    [
+     4005.0,
+     451.5,
+     37.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 5.5,
+   "a": "TOPPING_MODUL__on_seffaf",
+   "b": "TOPPING_MODUL__paslanmaz",
+   "adet": 1,
+   "noktalar": [
+    [
+     1992.0,
+     1157.5,
+     5.9
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 5.83,
+   "a": "CEK_K2_lahm_5__on_seffaf__CEKMECE",
+   "b": "KAIDE_A__paslanmaz",
+   "adet": 1,
+   "noktalar": [
+    [
+     1437.5,
+     785.0,
+     39.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 6.0,
+   "a": "CEK_K1_lahm_1__on_seffaf__CEKMECE",
+   "b": "CEK_K2_lahm_1__on_seffaf__CEKMECE",
+   "adet": 1,
+   "noktalar": [
+    [
+     1433.0,
+     187.5,
+     24.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 6.0,
+   "a": "CEK_K1_lahm_2__on_seffaf__CEKMECE",
+   "b": "CEK_K2_lahm_2__on_seffaf__CEKMECE",
+   "adet": 1,
+   "noktalar": [
+    [
+     1433.0,
+     295.5,
+     24.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 6.0,
+   "a": "CEK_K1_lahm_3__on_seffaf__CEKMECE",
+   "b": "CEK_K2_lahm_3__on_seffaf__CEKMECE",
+   "adet": 1,
+   "noktalar": [
+    [
+     1433.0,
+     403.5,
+     24.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 6.0,
+   "a": "CEK_K1_lahm_4__on_seffaf__CEKMECE",
+   "b": "CEK_K2_lahm_4__on_seffaf__CEKMECE",
+   "adet": 1,
+   "noktalar": [
+    [
+     1433.0,
+     511.5,
+     24.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 6.0,
+   "a": "CEK_K1_lahm_5__on_seffaf__CEKMECE",
+   "b": "CEK_K2_lahm_5__on_seffaf__CEKMECE",
+   "adet": 1,
+   "noktalar": [
+    [
+     1433.0,
+     619.5,
+     24.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 6.0,
+   "a": "CEK_K5_ic1_1__on_seffaf__CEKMECE",
+   "b": "CEK_K6_ic1_2__on_seffaf__CEKMECE",
+   "adet": 1,
+   "noktalar": [
+    [
+     3398.0,
+     511.5,
+     24.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 6.0,
+   "a": "CEK_K6_ic1_2__on_seffaf__CEKMECE",
+   "b": "K_GOVDE__sac",
+   "adet": 1,
+   "noktalar": [
+    [
+     4005.0,
+     785.0,
+     39.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 6.28,
+   "a": "TOPPING_MODUL__sac",
+   "b": "F_UST_KAPAK__on_seffaf__YAY_F_SOL",
+   "adet": 1,
+   "noktalar": [
+    [
+     2506.3,
+     1593.3,
+     2.6
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 6.28,
+   "a": "F_UST_KAPAK__on_seffaf__YAY_F_SAG",
+   "b": "K_GOVDE__kabuk",
+   "adet": 1,
+   "noktalar": [
+    [
+     3993.7,
+     1593.3,
+     2.6
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 6.32,
+   "a": "B_DEPO__sac__CEKMECE",
+   "b": "CEK_K6_ic1_2__on_seffaf__CEKMECE",
+   "adet": 1,
+   "noktalar": [
+    [
+     4006.5,
+     460.0,
+     37.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 6.32,
+   "a": "CEK_K1_lahm_1__on_seffaf__CEKMECE",
+   "b": "CEK_K2_lahm_1__on_seffaf__CEKMECE",
+   "adet": 2,
+   "noktalar": [
+    [
+     1440.5,
+     287.0,
+     37.0
+    ],
+    [
+     1431.5,
+     189.0,
+     37.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 6.32,
+   "a": "CEK_K1_lahm_2__on_seffaf__CEKMECE",
+   "b": "CEK_K2_lahm_2__on_seffaf__CEKMECE",
+   "adet": 2,
+   "noktalar": [
+    [
+     1434.5,
+     394.0,
+     39.0
+    ],
+    [
+     1431.5,
+     297.0,
+     37.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 6.32,
+   "a": "CEK_K1_lahm_3__on_seffaf__CEKMECE",
+   "b": "CEK_K2_lahm_3__on_seffaf__CEKMECE",
+   "adet": 2,
+   "noktalar": [
+    [
+     1434.5,
+     502.1,
+     39.0
+    ],
+    [
+     1431.5,
+     405.0,
+     37.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 6.32,
+   "a": "CEK_K1_lahm_4__on_seffaf__CEKMECE",
+   "b": "CEK_K2_lahm_4__on_seffaf__CEKMECE",
+   "adet": 2,
+   "noktalar": [
+    [
+     1434.5,
+     610.0,
+     39.0
+    ],
+    [
+     1431.5,
+     513.0,
+     37.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 6.32,
+   "a": "CEK_K1_lahm_5__on_seffaf__CEKMECE",
+   "b": "CEK_K2_lahm_5__on_seffaf__CEKMECE",
+   "adet": 2,
+   "noktalar": [
+    [
+     1434.5,
+     622.0,
+     39.0
+    ],
+    [
+     1431.5,
+     621.0,
+     37.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 6.32,
+   "a": "CEK_K5_ic1_1__on_seffaf__CEKMECE",
+   "b": "CEK_K6_ic1_2__on_seffaf__CEKMECE",
+   "adet": 2,
+   "noktalar": [
+    [
+     3405.5,
+     613.0,
+     37.0
+    ],
+    [
+     3396.5,
+     513.0,
+     37.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 6.4,
+   "a": "B_DEPO__sac__CEKMECE",
+   "b": "B_DEPO__sac__CEKMECE",
+   "adet": 1,
+   "noktalar": [
+    [
+     4348.2,
+     549.1,
+     40.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 7.21,
+   "a": "CEK_K1_lahm_1__on_seffaf__CEKMECE",
+   "b": "CEK_K2_lahm_2__on_seffaf__CEKMECE",
+   "adet": 1,
+   "noktalar": [
+    [
+     1433.0,
+     290.0,
+     25.2
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 7.21,
+   "a": "CEK_K1_lahm_2__on_seffaf__CEKMECE",
+   "b": "CEK_K2_lahm_1__on_seffaf__CEKMECE",
+   "adet": 1,
+   "noktalar": [
+    [
+     1433.0,
+     294.0,
+     25.2
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 7.21,
+   "a": "CEK_K1_lahm_2__on_seffaf__CEKMECE",
+   "b": "CEK_K2_lahm_3__on_seffaf__CEKMECE",
+   "adet": 1,
+   "noktalar": [
+    [
+     1433.0,
+     398.0,
+     25.2
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 7.21,
+   "a": "CEK_K1_lahm_3__on_seffaf__CEKMECE",
+   "b": "CEK_K2_lahm_2__on_seffaf__CEKMECE",
+   "adet": 1,
+   "noktalar": [
+    [
+     1433.0,
+     402.0,
+     25.2
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 7.21,
+   "a": "CEK_K1_lahm_3__on_seffaf__CEKMECE",
+   "b": "CEK_K2_lahm_4__on_seffaf__CEKMECE",
+   "adet": 1,
+   "noktalar": [
+    [
+     1433.0,
+     506.0,
+     25.2
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 7.21,
+   "a": "CEK_K1_lahm_4__on_seffaf__CEKMECE",
+   "b": "CEK_K2_lahm_3__on_seffaf__CEKMECE",
+   "adet": 1,
+   "noktalar": [
+    [
+     1433.0,
+     510.0,
+     25.2
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 7.21,
+   "a": "CEK_K1_lahm_4__on_seffaf__CEKMECE",
+   "b": "CEK_K2_lahm_5__on_seffaf__CEKMECE",
+   "adet": 1,
+   "noktalar": [
+    [
+     1433.0,
+     614.0,
+     25.2
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 7.21,
+   "a": "CEK_K1_lahm_5__on_seffaf__CEKMECE",
+   "b": "CEK_K2_lahm_4__on_seffaf__CEKMECE",
+   "adet": 1,
+   "noktalar": [
+    [
+     1433.0,
+     618.0,
+     25.2
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 7.78,
+   "a": "F_UST_KAPAK__on_seffaf__YAY_F_SAG",
+   "b": "K_GOVDE__sac",
+   "adet": 1,
+   "noktalar": [
+    [
+     3993.7,
+     1593.3,
+     2.6
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 8.06,
+   "a": "B_DEPO__sac__CEKMECE",
+   "b": "CEK_K6_ic1_1__on_seffaf__CEKMECE",
+   "adet": 1,
+   "noktalar": [
+    [
+     4012.5,
+     456.5,
+     39.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 8.06,
+   "a": "CEK_K1_lahm_1__on_seffaf__CEKMECE",
+   "b": "CEK_K2_lahm_2__on_seffaf__CEKMECE",
+   "adet": 2,
+   "noktalar": [
+    [
+     1434.5,
+     290.5,
+     39.0
+    ],
+    [
+     1431.5,
+     288.5,
+     37.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 8.06,
+   "a": "CEK_K1_lahm_2__on_seffaf__CEKMECE",
+   "b": "CEK_K2_lahm_1__on_seffaf__CEKMECE",
+   "adet": 2,
+   "noktalar": [
+    [
+     1434.5,
+     293.5,
+     39.0
+    ],
+    [
+     1431.5,
+     295.5,
+     37.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 8.06,
+   "a": "CEK_K1_lahm_2__on_seffaf__CEKMECE",
+   "b": "CEK_K2_lahm_3__on_seffaf__CEKMECE",
+   "adet": 2,
+   "noktalar": [
+    [
+     1434.5,
+     398.5,
+     39.0
+    ],
+    [
+     1431.5,
+     396.5,
+     37.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 8.06,
+   "a": "CEK_K1_lahm_3__on_seffaf__CEKMECE",
+   "b": "CEK_K2_lahm_2__on_seffaf__CEKMECE",
+   "adet": 2,
+   "noktalar": [
+    [
+     1434.5,
+     401.5,
+     39.0
+    ],
+    [
+     1431.5,
+     403.5,
+     37.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 8.06,
+   "a": "CEK_K1_lahm_3__on_seffaf__CEKMECE",
+   "b": "CEK_K2_lahm_4__on_seffaf__CEKMECE",
+   "adet": 2,
+   "noktalar": [
+    [
+     1434.5,
+     506.5,
+     39.0
+    ],
+    [
+     1431.5,
+     504.5,
+     37.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 8.06,
+   "a": "CEK_K1_lahm_4__on_seffaf__CEKMECE",
+   "b": "CEK_K2_lahm_3__on_seffaf__CEKMECE",
+   "adet": 2,
+   "noktalar": [
+    [
+     1434.5,
+     509.5,
+     39.0
+    ],
+    [
+     1431.5,
+     511.5,
+     37.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 8.06,
+   "a": "CEK_K1_lahm_4__on_seffaf__CEKMECE",
+   "b": "CEK_K2_lahm_5__on_seffaf__CEKMECE",
+   "adet": 2,
+   "noktalar": [
+    [
+     1434.5,
+     614.5,
+     39.0
+    ],
+    [
+     1431.5,
+     612.5,
+     37.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 8.06,
+   "a": "CEK_K1_lahm_5__on_seffaf__CEKMECE",
+   "b": "CEK_K2_lahm_4__on_seffaf__CEKMECE",
+   "adet": 2,
+   "noktalar": [
+    [
+     1434.5,
+     617.5,
+     39.0
+    ],
+    [
+     1431.5,
+     619.5,
+     37.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 10.05,
+   "a": "TOPPING_MODUL__on_seffaf",
+   "b": "B_KASA__sac",
+   "adet": 1,
+   "noktalar": [
+    [
+     1605.5,
+     788.0,
+     39.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 11.25,
+   "a": "TOPPING_MODUL__on_seffaf",
+   "b": "TOPPING_MODUL__paslanmaz",
+   "adet": 1,
+   "noktalar": [
+    [
+     1965.7,
+     927.4,
+     39.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 11.75,
+   "a": "TOPPING_MODUL__on_seffaf",
+   "b": "TOPPING_MODUL__paslanmaz",
+   "adet": 1,
+   "noktalar": [
+    [
+     1968.8,
+     927.4,
+     39.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 12.82,
+   "a": "TOPPING_MODUL__on_seffaf",
+   "b": "F_UST_KABIN__sac",
+   "adet": 1,
+   "noktalar": [
+    [
+     2497.0,
+     1326.1,
+     39.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 13.0,
+   "a": "TOPPING_MODUL__on_seffaf",
+   "b": "TOPPING_MODUL__paslanmaz",
+   "adet": 2,
+   "noktalar": [
+    [
+     1964.4,
+     937.7,
+     39.0
+    ],
+    [
+     1968.9,
+     939.2,
+     39.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 13.42,
+   "a": "B_DEPO__sac__CEKMECE",
+   "b": "K_GOVDE__sac",
+   "adet": 3,
+   "noktalar": [
+    [
+     4091.4,
+     791.0,
+     27.0
+    ],
+    [
+     4181.4,
+     791.0,
+     27.0
+    ],
+    [
+     4271.4,
+     791.0,
+     27.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 14.64,
+   "a": "F_UST_KAPAK__on_seffaf__YAY_F_SAG",
+   "b": "K_GOVDE__sac",
+   "adet": 1,
+   "noktalar": [
+    [
+     4009.0,
+     1461.5,
+     27.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı)",
+   "aralik_mm": 14.7,
+   "a": "B_DEPO__sac__CEKMECE",
+   "b": "CEK_K6_ic1_2__on_seffaf__CEKMECE",
+   "adet": 1,
+   "noktalar": [
+    [
+     4024.2,
+     468.7,
+     39.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 0.46,
+   "a": "K_GOVDE__on_seffaf",
+   "b": "K_GOVDE__sac",
+   "adet": 1,
+   "noktalar": [
+    [
+     4247.8,
+     791.0,
+     59.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 0.5,
+   "a": "K_GOVDE__kabuk",
+   "b": "K_GOVDE__on_seffaf",
+   "adet": 3,
+   "noktalar": [
+    [
+     4016.5,
+     921.3,
+     59.0
+    ],
+    [
+     4016.5,
+     1331.7,
+     59.0
+    ],
+    [
+     4016.5,
+     1721.2,
+     59.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 0.58,
+   "a": "A_ONYUZ__on_seffaf__SERVIS_KAPAGI",
+   "b": "A_ONYUZ__paslanmaz",
+   "adet": 3,
+   "noktalar": [
+    [
+     743.9,
+     966.2,
+     76.9
+    ],
+    [
+     743.9,
+     1286.5,
+     76.9
+    ],
+    [
+     743.9,
+     1746.5,
+     76.9
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 0.7,
+   "a": "K_GOVDE__on_seffaf",
+   "b": "K_GOVDE__on_seffaf",
+   "adet": 6,
+   "noktalar": [
+    [
+     4041.6,
+     926.9,
+     60.0
+    ],
+    [
+     4044.3,
+     968.0,
+     60.0
+    ],
+    [
+     4041.6,
+     1336.9,
+     60.0
+    ],
+    [
+     4044.3,
+     1378.0,
+     60.0
+    ],
+    [
+     4043.1,
+     1732.9,
+     59.5
+    ],
+    [
+     4043.1,
+     1767.1,
+     60.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 0.8,
+   "a": "F_UST_KAPAK__on_seffaf__KAPAK_F_SAG",
+   "b": "F_UST_KAPAK__on_seffaf__YAY_F_SAG",
+   "adet": 1,
+   "noktalar": [
+    [
+     3982.3,
+     1366.6,
+     62.6
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 0.8,
+   "a": "F_UST_KAPAK__on_seffaf__KAPAK_F_SOL",
+   "b": "F_UST_KAPAK__on_seffaf__YAY_F_SOL",
+   "adet": 1,
+   "noktalar": [
+    [
+     2517.7,
+     1366.6,
+     62.6
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 1.0,
+   "a": "U_F_GOVDE__on_seffaf",
+   "b": "F_UST_KAPAK__on_seffaf__KAPAK_F_SOL",
+   "adet": 1,
+   "noktalar": [
+    [
+     2511.0,
+     2136.9,
+     76.5
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 1.0,
+   "a": "U_F_GOVDE__on_seffaf",
+   "b": "F_UST_KAPAK__on_seffaf__KAPAK_F_SAG",
+   "adet": 1,
+   "noktalar": [
+    [
+     3991.0,
+     2136.9,
+     76.5
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 1.0,
+   "a": "QR_GOVDE__on_seffaf",
+   "b": "QR_GOVDE__qr_govde",
+   "adet": 2,
+   "noktalar": [
+    [
+     5426.0,
+     2047.0,
+     671.5
+    ],
+    [
+     5426.0,
+     1654.0,
+     671.5
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 1.0,
+   "a": "QR_GOVDE__qr_govde",
+   "b": "QR_GOZLER__on_seffaf__GOZ_00_KAPI",
+   "adet": 1,
+   "noktalar": [
+    [
+     4979.0,
+     637.5,
+     1190.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 1.0,
+   "a": "QR_GOVDE__qr_govde",
+   "b": "QR_GOZLER__on_seffaf__GOZ_01_KAPI",
+   "adet": 1,
+   "noktalar": [
+    [
+     5389.0,
+     637.5,
+     1190.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 1.0,
+   "a": "QR_GOVDE__qr_govde",
+   "b": "QR_GOZLER__on_seffaf__GOZ_10_KAPI",
+   "adet": 1,
+   "noktalar": [
+    [
+     4979.0,
+     837.5,
+     1190.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 1.0,
+   "a": "QR_GOVDE__qr_govde",
+   "b": "QR_GOZLER__on_seffaf__GOZ_11_KAPI",
+   "adet": 1,
+   "noktalar": [
+    [
+     5389.0,
+     837.5,
+     1190.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 1.0,
+   "a": "QR_GOVDE__qr_govde",
+   "b": "QR_GOZLER__on_seffaf__GOZ_20_KAPI",
+   "adet": 1,
+   "noktalar": [
+    [
+     4979.0,
+     1037.5,
+     1190.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 1.0,
+   "a": "QR_GOVDE__qr_govde",
+   "b": "QR_GOZLER__on_seffaf__GOZ_21_KAPI",
+   "adet": 1,
+   "noktalar": [
+    [
+     5011.0,
+     1037.5,
+     1188.5
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 1.0,
+   "a": "QR_GOVDE__qr_govde",
+   "b": "QR_GOZLER__on_seffaf__GOZ_30_KAPI",
+   "adet": 1,
+   "noktalar": [
+    [
+     4979.0,
+     1052.5,
+     1190.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 1.0,
+   "a": "QR_GOVDE__qr_govde",
+   "b": "QR_GOZLER__on_seffaf__GOZ_31_KAPI",
+   "adet": 1,
+   "noktalar": [
+    [
+     5011.0,
+     1237.5,
+     1188.5
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 1.0,
+   "a": "QR_GOVDE__qr_govde",
+   "b": "QR_GOZLER__on_seffaf__GOZ_40_KAPI",
+   "adet": 1,
+   "noktalar": [
+    [
+     4977.5,
+     1251.0,
+     1190.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 1.0,
+   "a": "QR_GOVDE__qr_govde",
+   "b": "QR_GOZLER__on_seffaf__GOZ_41_KAPI",
+   "adet": 1,
+   "noktalar": [
+    [
+     5387.5,
+     1251.0,
+     1190.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 1.0,
+   "a": "QR_GOVDE__qr_govde",
+   "b": "QR_GOZLER__on_seffaf__GOZ_50_KAPI",
+   "adet": 1,
+   "noktalar": [
+    [
+     4979.0,
+     1452.5,
+     1190.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 1.0,
+   "a": "QR_GOVDE__qr_govde",
+   "b": "QR_GOZLER__on_seffaf__GOZ_51_KAPI",
+   "adet": 1,
+   "noktalar": [
+    [
+     5011.0,
+     1637.5,
+     1188.5
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 1.3,
+   "a": "F_UST_KABIN__sac",
+   "b": "F_UST_KAPAK__on_seffaf__YAY_F_SAG",
+   "adet": 1,
+   "noktalar": [
+    [
+     3997.2,
+     1381.0,
+     58.7
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 1.3,
+   "a": "F_UST_KABIN__sac",
+   "b": "F_UST_KAPAK__on_seffaf__YAY_F_SOL",
+   "adet": 1,
+   "noktalar": [
+    [
+     2502.8,
+     1381.0,
+     58.7
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 1.5,
+   "a": "TOPPING_MODUL__on_seffaf",
+   "b": "A_GOVDE__sac",
+   "adet": 1,
+   "noktalar": [
+    [
+     1437.5,
+     1494.0,
+     59.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 1.5,
+   "a": "B_DEPO__sac__CEKMECE",
+   "b": "E_GOVDE__sac",
+   "adet": 1,
+   "noktalar": [
+    [
+     4400.0,
+     785.0,
+     57.6
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 1.5,
+   "a": "U_F_GOVDE__on_seffaf",
+   "b": "U_KE_GOVDE__sac",
+   "adet": 1,
+   "noktalar": [
+    [
+     3998.5,
+     2150.0,
+     56.1
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 1.5,
+   "a": "U_F_GOVDE__paslanmaz",
+   "b": "F_UST_KAPAK__on_seffaf__KAPAK_F_SAG",
+   "adet": 1,
+   "noktalar": [
+    [
+     3310.0,
+     2196.0,
+     57.5
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 1.5,
+   "a": "U_KE_GOVDE__paslanmaz",
+   "b": "E_GOVDE__on_seffaf",
+   "adet": 1,
+   "noktalar": [
+    [
+     4628.6,
+     2178.5,
+     57.5
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 1.5,
+   "a": "E_GOVDE__on_seffaf",
+   "b": "E_COP__sac",
+   "adet": 1,
+   "noktalar": [
+    [
+     4599.5,
+     603.0,
+     59.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 1.55,
+   "a": "F_UST_KAPAK__on_seffaf__KAPAK_F_SAG",
+   "b": "K_GOVDE__kabuk",
+   "adet": 1,
+   "noktalar": [
+    [
+     4000.0,
+     1857.5,
+     59.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 1.58,
+   "a": "F_UST_KAPAK__on_seffaf__KAPAK_F_SAG",
+   "b": "F_UST_KAPAK__on_seffaf__YAY_F_SAG",
+   "adet": 1,
+   "noktalar": [
+    [
+     3990.5,
+     1343.0,
+     75.9
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 1.58,
+   "a": "F_UST_KAPAK__on_seffaf__KAPAK_F_SOL",
+   "b": "F_UST_KAPAK__on_seffaf__YAY_F_SOL",
+   "adet": 1,
+   "noktalar": [
+    [
+     2511.0,
+     1343.0,
+     75.9
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 1.58,
+   "a": "K_GOVDE__on_seffaf",
+   "b": "K_GOVDE__on_seffaf",
+   "adet": 4,
+   "noktalar": [
+    [
+     4004.5,
+     791.0,
+     73.9
+    ],
+    [
+     4004.5,
+     2194.0,
+     73.9
+    ],
+    [
+     4396.5,
+     791.0,
+     73.9
+    ],
+    [
+     4396.5,
+     2194.0,
+     73.9
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 2.0,
+   "a": "B_DEPO__sac__CEKMECE",
+   "b": "E_GOVDE__on_seffaf",
+   "adet": 1,
+   "noktalar": [
+    [
+     4400.0,
+     785.0,
+     77.6
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 2.0,
+   "a": "F_UST_KABIN__paslanmaz",
+   "b": "F_UST_KAPAK__on_seffaf__KAPAK_F_SAG",
+   "adet": 4,
+   "noktalar": [
+    [
+     3253.0,
+     1343.9,
+     59.0
+    ],
+    [
+     3398.2,
+     1316.5,
+     57.0
+    ],
+    [
+     3886.2,
+     1316.5,
+     57.0
+    ],
+    [
+     3251.5,
+     1830.5,
+     57.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 2.0,
+   "a": "F_UST_KABIN__paslanmaz",
+   "b": "F_UST_KAPAK__on_seffaf__KAPAK_F_SOL",
+   "adet": 4,
+   "noktalar": [
+    [
+     2501.5,
+     1317.9,
+     57.0
+    ],
+    [
+     2646.7,
+     1316.5,
+     57.0
+    ],
+    [
+     3134.7,
+     1316.5,
+     57.0
+    ],
+    [
+     3248.5,
+     1830.5,
+     57.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 2.0,
+   "a": "F_UST_KABIN__sac",
+   "b": "F_UST_KAPAK__on_seffaf__KAPAK_F_SAG",
+   "adet": 1,
+   "noktalar": [
+    [
+     3253.0,
+     1346.9,
+     59.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 2.0,
+   "a": "F_UST_KABIN__sac",
+   "b": "F_UST_KAPAK__on_seffaf__KAPAK_F_SOL",
+   "adet": 1,
+   "noktalar": [
+    [
+     2501.5,
+     1347.3,
+     57.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 2.0,
+   "a": "K_GOVDE__on_seffaf",
+   "b": "E_GOVDE__kabuk",
+   "adet": 1,
+   "noktalar": [
+    [
+     4398.0,
+     1861.2,
+     59.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 2.0,
+   "a": "K_GOVDE__on_seffaf",
+   "b": "K_GOVDE__sac",
+   "adet": 4,
+   "noktalar": [
+    [
+     4017.6,
+     923.0,
+     59.0
+    ],
+    [
+     4026.3,
+     1857.8,
+     59.0
+    ],
+    [
+     4035.7,
+     1855.3,
+     59.0
+    ],
+    [
+     4391.1,
+     1856.6,
+     57.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 2.5,
+   "a": "K_GOVDE__on_seffaf",
+   "b": "K_GOVDE__sac",
+   "adet": 1,
+   "noktalar": [
+    [
+     4390.4,
+     789.5,
+     59.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 2.52,
+   "a": "A_ONYUZ__on_seffaf",
+   "b": "A_ONYUZ__on_seffaf__SERVIS_KAPAGI",
+   "adet": 3,
+   "noktalar": [
+    [
+     743.4,
+     921.4,
+     75.0
+    ],
+    [
+     743.4,
+     1241.5,
+     75.0
+    ],
+    [
+     743.4,
+     1701.5,
+     75.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 2.8,
+   "a": "F_UST_KAPAK__on_seffaf__YAY_F_SAG",
+   "b": "K_GOVDE__kabuk",
+   "adet": 1,
+   "noktalar": [
+    [
+     3997.2,
+     1395.4,
+     54.9
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 3.0,
+   "a": "TOPPING_MODUL__on_seffaf",
+   "b": "TOPPING_MODUL__on_seffaf",
+   "adet": 1,
+   "noktalar": [
+    [
+     1965.7,
+     789.5,
+     79.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 3.0,
+   "a": "TOPPING_MODUL__on_seffaf",
+   "b": "CEK_K2_lahm_5__on_seffaf__CEKMECE",
+   "adet": 1,
+   "noktalar": [
+    [
+     1965.7,
+     788.0,
+     77.6
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 3.0,
+   "a": "TOPPING_MODUL__on_seffaf",
+   "b": "A_GOVDE__paslanmaz",
+   "adet": 1,
+   "noktalar": [
+    [
+     1437.5,
+     1494.0,
+     59.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 3.0,
+   "a": "TOPPING_MODUL__on_seffaf",
+   "b": "A_ONYUZ__on_seffaf__SERVIS_KAPAGI",
+   "adet": 1,
+   "noktalar": [
+    [
+     1437.5,
+     789.5,
+     79.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 3.0,
+   "a": "TOPPING_MODUL__on_seffaf",
+   "b": "U_F_GOVDE__sac",
+   "adet": 1,
+   "noktalar": [
+    [
+     2497.0,
+     1862.7,
+     48.5
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 3.0,
+   "a": "TOPPING_MODUL__on_seffaf",
+   "b": "F_UST_KABIN__sac",
+   "adet": 1,
+   "noktalar": [
+    [
+     2497.0,
+     1494.0,
+     59.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 3.0,
+   "a": "TOPPING_MODUL__on_seffaf",
+   "b": "F_UST_KAPAK__on_seffaf__KAPAK_F_SOL",
+   "adet": 1,
+   "noktalar": [
+    [
+     2497.0,
+     1308.1,
+     64.2
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 3.0,
+   "a": "TOPPING_MODUL__on_seffaf",
+   "b": "F_TP10_GOVDE__sac",
+   "adet": 1,
+   "noktalar": [
+    [
+     2497.0,
+     788.0,
+     77.6
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 3.0,
+   "a": "B_DEPO__sac__CEKMECE",
+   "b": "CEK_K6_ic1_2__on_seffaf__CEKMECE",
+   "adet": 1,
+   "noktalar": [
+    [
+     4012.5,
+     458.0,
+     78.8
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 3.0,
+   "a": "B_DEPO__sac__CEKMECE",
+   "b": "K_GOVDE__on_seffaf",
+   "adet": 1,
+   "noktalar": [
+    [
+     4362.7,
+     785.0,
+     75.2
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 3.0,
+   "a": "B_DEPO__sac__CEKMECE",
+   "b": "K_GOVDE__sac",
+   "adet": 1,
+   "noktalar": [
+    [
+     4204.8,
+     785.0,
+     58.8
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 3.0,
+   "a": "CEK_K1_lahm_1__on_seffaf__CEKMECE",
+   "b": "CEK_K1_lahm_2__on_seffaf__CEKMECE",
+   "adet": 1,
+   "noktalar": [
+    [
+     1433.0,
+     290.5,
+     79.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 3.0,
+   "a": "CEK_K1_lahm_1__on_seffaf__CEKMECE",
+   "b": "CEK_K2_lahm_1__on_seffaf__CEKMECE",
+   "adet": 1,
+   "noktalar": [
+    [
+     1434.5,
+     290.5,
+     77.6
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 3.0,
+   "a": "CEK_K1_lahm_2__on_seffaf__CEKMECE",
+   "b": "CEK_K1_lahm_3__on_seffaf__CEKMECE",
+   "adet": 1,
+   "noktalar": [
+    [
+     1433.0,
+     398.5,
+     79.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 3.0,
+   "a": "CEK_K1_lahm_2__on_seffaf__CEKMECE",
+   "b": "CEK_K2_lahm_2__on_seffaf__CEKMECE",
+   "adet": 1,
+   "noktalar": [
+    [
+     1434.5,
+     398.5,
+     77.6
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 3.0,
+   "a": "CEK_K1_lahm_3__on_seffaf__CEKMECE",
+   "b": "CEK_K1_lahm_4__on_seffaf__CEKMECE",
+   "adet": 1,
+   "noktalar": [
+    [
+     1433.0,
+     506.5,
+     79.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 3.0,
+   "a": "CEK_K1_lahm_3__on_seffaf__CEKMECE",
+   "b": "CEK_K2_lahm_3__on_seffaf__CEKMECE",
+   "adet": 1,
+   "noktalar": [
+    [
+     1434.5,
+     506.5,
+     77.6
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 3.0,
+   "a": "CEK_K1_lahm_4__on_seffaf__CEKMECE",
+   "b": "CEK_K1_lahm_5__on_seffaf__CEKMECE",
+   "adet": 1,
+   "noktalar": [
+    [
+     1433.0,
+     614.5,
+     79.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 3.0,
+   "a": "CEK_K1_lahm_4__on_seffaf__CEKMECE",
+   "b": "CEK_K2_lahm_4__on_seffaf__CEKMECE",
+   "adet": 1,
+   "noktalar": [
+    [
+     1434.5,
+     614.5,
+     77.6
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 3.0,
+   "a": "CEK_K1_lahm_5__on_seffaf__CEKMECE",
+   "b": "CEK_K2_lahm_5__on_seffaf__CEKMECE",
+   "adet": 1,
+   "noktalar": [
+    [
+     1434.5,
+     785.0,
+     77.6
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 3.0,
+   "a": "CEK_K1_lahm_5__on_seffaf__CEKMECE",
+   "b": "A_GOVDE__paslanmaz",
+   "adet": 1,
+   "noktalar": [
+    [
+     1434.5,
+     785.0,
+     57.6
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 3.0,
+   "a": "CEK_K1_lahm_5__on_seffaf__CEKMECE",
+   "b": "A_GOVDE__sac",
+   "adet": 1,
+   "noktalar": [
+    [
+     1434.5,
+     785.0,
+     57.6
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 3.0,
+   "a": "CEK_K1_lahm_5__on_seffaf__CEKMECE",
+   "b": "A_ONYUZ__on_seffaf__SERVIS_KAPAGI",
+   "adet": 1,
+   "noktalar": [
+    [
+     1433.0,
+     785.0,
+     79.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 3.0,
+   "a": "CEK_K2_lahm_1__on_seffaf__CEKMECE",
+   "b": "CEK_K2_lahm_2__on_seffaf__CEKMECE",
+   "adet": 1,
+   "noktalar": [
+    [
+     2088.0,
+     290.5,
+     79.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 3.0,
+   "a": "CEK_K2_lahm_2__on_seffaf__CEKMECE",
+   "b": "CEK_K2_lahm_3__on_seffaf__CEKMECE",
+   "adet": 1,
+   "noktalar": [
+    [
+     2088.0,
+     398.5,
+     79.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 3.0,
+   "a": "CEK_K2_lahm_3__on_seffaf__CEKMECE",
+   "b": "CEK_K2_lahm_4__on_seffaf__CEKMECE",
+   "adet": 1,
+   "noktalar": [
+    [
+     2088.0,
+     506.5,
+     79.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 3.0,
+   "a": "CEK_K2_lahm_4__on_seffaf__CEKMECE",
+   "b": "CEK_K2_lahm_5__on_seffaf__CEKMECE",
+   "adet": 1,
+   "noktalar": [
+    [
+     2088.0,
+     614.5,
+     79.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 3.0,
+   "a": "CEK_K5_ic1_1__on_seffaf__CEKMECE",
+   "b": "CEK_K6_ic1_2__on_seffaf__CEKMECE",
+   "adet": 1,
+   "noktalar": [
+    [
+     3399.5,
+     785.0,
+     77.6
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 3.0,
+   "a": "CEK_K5_ic1_1__on_seffaf__CEKMECE",
+   "b": "F_TP10_GOVDE__sac",
+   "adet": 1,
+   "noktalar": [
+    [
+     3398.0,
+     785.0,
+     79.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 3.0,
+   "a": "CEK_K6_tatli_1__on_seffaf__CEKMECE",
+   "b": "CEK_K6_ic1_1__on_seffaf__CEKMECE",
+   "adet": 1,
+   "noktalar": [
+    [
+     4008.0,
+     290.5,
+     79.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 3.0,
+   "a": "CEK_K6_ic1_1__on_seffaf__CEKMECE",
+   "b": "CEK_K6_ic1_2__on_seffaf__CEKMECE",
+   "adet": 1,
+   "noktalar": [
+    [
+     4008.0,
+     453.5,
+     79.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 3.0,
+   "a": "CEK_K6_ic1_2__on_seffaf__CEKMECE",
+   "b": "F_TP10_GOVDE__sac",
+   "adet": 1,
+   "noktalar": [
+    [
+     3999.0,
+     785.0,
+     79.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 3.0,
+   "a": "CEK_K6_ic1_2__on_seffaf__CEKMECE",
+   "b": "K_GOVDE__on_seffaf",
+   "adet": 1,
+   "noktalar": [
+    [
+     4009.5,
+     785.0,
+     74.7
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 3.0,
+   "a": "A_GOVDE__paslanmaz",
+   "b": "A_ONYUZ__on_seffaf__SERVIS_KAPAGI",
+   "adet": 1,
+   "noktalar": [
+    [
+     1364.8,
+     882.9,
+     59.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 3.0,
+   "a": "U_F_GOVDE__sac",
+   "b": "K_GOVDE__on_seffaf",
+   "adet": 1,
+   "noktalar": [
+    [
+     4000.0,
+     1865.0,
+     59.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 3.0,
+   "a": "F_UST_KABIN__sac",
+   "b": "K_GOVDE__on_seffaf",
+   "adet": 1,
+   "noktalar": [
+    [
+     4000.0,
+     1306.5,
+     59.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 3.0,
+   "a": "F_UST_KAPAK__on_seffaf__KAPAK_F_SAG",
+   "b": "F_UST_KAPAK__on_seffaf__KAPAK_F_SOL",
+   "adet": 1,
+   "noktalar": [
+    [
+     3251.5,
+     1863.5,
+     77.4
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 3.0,
+   "a": "F_UST_KAPAK__on_seffaf__KAPAK_F_SAG",
+   "b": "F_TP10_GOVDE__sac",
+   "adet": 1,
+   "noktalar": [
+    [
+     3998.5,
+     1308.0,
+     79.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 3.0,
+   "a": "F_UST_KAPAK__on_seffaf__KAPAK_F_SAG",
+   "b": "K_GOVDE__on_seffaf",
+   "adet": 1,
+   "noktalar": [
+    [
+     4000.0,
+     1857.5,
+     59.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 3.0,
+   "a": "F_UST_KAPAK__on_seffaf__KAPAK_F_SOL",
+   "b": "F_TP10_GOVDE__sac",
+   "adet": 1,
+   "noktalar": [
+    [
+     3247.0,
+     1308.0,
+     79.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 3.0,
+   "a": "F_TP10_GOVDE__sac",
+   "b": "K_GOVDE__on_seffaf",
+   "adet": 1,
+   "noktalar": [
+    [
+     4000.0,
+     1305.0,
+     74.5
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 3.0,
+   "a": "E_GOVDE__on_seffaf",
+   "b": "E_GOVDE__on_seffaf",
+   "adet": 4,
+   "noktalar": [
+    [
+     4860.0,
+     785.0,
+     77.6
+    ],
+    [
+     4860.0,
+     783.5,
+     59.0
+    ],
+    [
+     4860.0,
+     789.5,
+     79.0
+    ],
+    [
+     5228.5,
+     785.0,
+     79.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 3.12,
+   "a": "K_GOVDE__on_seffaf",
+   "b": "K_GOVDE__sac",
+   "adet": 1,
+   "noktalar": [
+    [
+     4007.5,
+     791.0,
+     56.7
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 3.19,
+   "a": "K_GOVDE__kabuk",
+   "b": "E_GOVDE__on_seffaf",
+   "adet": 1,
+   "noktalar": [
+    [
+     4402.0,
+     1377.1,
+     59.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 3.35,
+   "a": "CEK_K2_lahm_5__on_seffaf__CEKMECE",
+   "b": "A_GOVDE__sac",
+   "adet": 1,
+   "noktalar": [
+    [
+     1436.0,
+     788.0,
+     57.5
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 3.5,
+   "a": "F_UST_KABIN__paslanmaz",
+   "b": "F_UST_KAPAK__on_seffaf__KAPAK_F_SAG",
+   "adet": 1,
+   "noktalar": [
+    [
+     3326.0,
+     1349.5,
+     57.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 3.5,
+   "a": "K_GOVDE__on_seffaf",
+   "b": "E_GOVDE__sac",
+   "adet": 1,
+   "noktalar": [
+    [
+     4398.0,
+     1858.2,
+     59.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 3.5,
+   "a": "K_GOVDE__on_seffaf",
+   "b": "E_GOVDE__kabuk",
+   "adet": 1,
+   "noktalar": [
+    [
+     4396.5,
+     790.3,
+     59.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 3.5,
+   "a": "K_GOVDE__sac",
+   "b": "E_GOVDE__on_seffaf",
+   "adet": 1,
+   "noktalar": [
+    [
+     4398.5,
+     788.7,
+     59.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 3.54,
+   "a": "K_GOVDE__on_seffaf",
+   "b": "K_GOVDE__sac",
+   "adet": 1,
+   "noktalar": [
+    [
+     4004.5,
+     1858.2,
+     59.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 3.61,
+   "a": "B_DEPO__sac__CEKMECE",
+   "b": "E_GOVDE__on_seffaf",
+   "adet": 1,
+   "noktalar": [
+    [
+     4400.0,
+     785.0,
+     77.6
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 3.61,
+   "a": "K_GOVDE__on_seffaf",
+   "b": "K_GOVDE__sac",
+   "adet": 1,
+   "noktalar": [
+    [
+     4395.0,
+     789.5,
+     59.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 3.66,
+   "a": "K_GOVDE__on_seffaf",
+   "b": "K_GOVDE__sac",
+   "adet": 6,
+   "noktalar": [
+    [
+     4037.4,
+     930.0,
+     57.1
+    ],
+    [
+     4037.4,
+     970.0,
+     57.1
+    ],
+    [
+     4037.4,
+     1340.0,
+     57.1
+    ],
+    [
+     4037.4,
+     1380.0,
+     57.1
+    ],
+    [
+     4037.4,
+     1728.9,
+     57.1
+    ],
+    [
+     4037.4,
+     1770.0,
+     57.1
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 4.0,
+   "a": "K_GOVDE__on_seffaf",
+   "b": "E_GOVDE__on_seffaf",
+   "adet": 1,
+   "noktalar": [
+    [
+     4398.0,
+     794.7,
+     75.2
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 4.15,
+   "a": "F_UST_KABIN__sac",
+   "b": "F_UST_KAPAK__on_seffaf__YAY_F_SAG",
+   "adet": 1,
+   "noktalar": [
+    [
+     3990.5,
+     1342.6,
+     63.2
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 4.15,
+   "a": "F_UST_KABIN__sac",
+   "b": "F_UST_KAPAK__on_seffaf__YAY_F_SOL",
+   "adet": 1,
+   "noktalar": [
+    [
+     2511.0,
+     1342.6,
+     63.2
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 4.24,
+   "a": "TOPPING_MODUL__on_seffaf",
+   "b": "CEK_K1_lahm_5__on_seffaf__CEKMECE",
+   "adet": 1,
+   "noktalar": [
+    [
+     1434.5,
+     785.0,
+     77.6
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 4.24,
+   "a": "B_DEPO__sac__CEKMECE",
+   "b": "CEK_K6_ic1_1__on_seffaf__CEKMECE",
+   "adet": 1,
+   "noktalar": [
+    [
+     4009.5,
+     453.5,
+     77.6
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 4.24,
+   "a": "CEK_K1_lahm_1__on_seffaf__CEKMECE",
+   "b": "CEK_K2_lahm_2__on_seffaf__CEKMECE",
+   "adet": 1,
+   "noktalar": [
+    [
+     1434.5,
+     290.5,
+     77.6
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 4.24,
+   "a": "CEK_K1_lahm_2__on_seffaf__CEKMECE",
+   "b": "CEK_K2_lahm_1__on_seffaf__CEKMECE",
+   "adet": 1,
+   "noktalar": [
+    [
+     1434.5,
+     293.5,
+     77.6
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 4.24,
+   "a": "CEK_K1_lahm_2__on_seffaf__CEKMECE",
+   "b": "CEK_K2_lahm_3__on_seffaf__CEKMECE",
+   "adet": 1,
+   "noktalar": [
+    [
+     1434.5,
+     398.5,
+     77.6
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 4.24,
+   "a": "CEK_K1_lahm_3__on_seffaf__CEKMECE",
+   "b": "CEK_K2_lahm_2__on_seffaf__CEKMECE",
+   "adet": 1,
+   "noktalar": [
+    [
+     1434.5,
+     401.5,
+     77.6
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 4.24,
+   "a": "CEK_K1_lahm_3__on_seffaf__CEKMECE",
+   "b": "CEK_K2_lahm_4__on_seffaf__CEKMECE",
+   "adet": 1,
+   "noktalar": [
+    [
+     1434.5,
+     506.5,
+     77.6
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 4.24,
+   "a": "CEK_K1_lahm_4__on_seffaf__CEKMECE",
+   "b": "CEK_K2_lahm_3__on_seffaf__CEKMECE",
+   "adet": 1,
+   "noktalar": [
+    [
+     1434.5,
+     509.5,
+     77.6
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 4.24,
+   "a": "CEK_K1_lahm_4__on_seffaf__CEKMECE",
+   "b": "CEK_K2_lahm_5__on_seffaf__CEKMECE",
+   "adet": 1,
+   "noktalar": [
+    [
+     1434.5,
+     614.5,
+     77.6
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 4.24,
+   "a": "CEK_K1_lahm_5__on_seffaf__CEKMECE",
+   "b": "CEK_K2_lahm_4__on_seffaf__CEKMECE",
+   "adet": 1,
+   "noktalar": [
+    [
+     1434.5,
+     617.5,
+     77.6
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 4.24,
+   "a": "CEK_K2_lahm_5__on_seffaf__CEKMECE",
+   "b": "A_GOVDE__paslanmaz",
+   "adet": 1,
+   "noktalar": [
+    [
+     1434.5,
+     788.0,
+     57.7
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 4.24,
+   "a": "CEK_K2_lahm_5__on_seffaf__CEKMECE",
+   "b": "A_ONYUZ__on_seffaf__SERVIS_KAPAGI",
+   "adet": 1,
+   "noktalar": [
+    [
+     1434.5,
+     788.0,
+     77.6
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 4.24,
+   "a": "K_GOVDE__on_seffaf",
+   "b": "K_GOVDE__sac",
+   "adet": 1,
+   "noktalar": [
+    [
+     4396.5,
+     1858.2,
+     59.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 4.24,
+   "a": "E_GOVDE__on_seffaf",
+   "b": "E_GOVDE__on_seffaf",
+   "adet": 2,
+   "noktalar": [
+    [
+     4860.0,
+     785.0,
+     77.6
+    ],
+    [
+     4860.0,
+     788.0,
+     77.6
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 4.47,
+   "a": "K_GOVDE__on_seffaf",
+   "b": "E_GOVDE__kabuk",
+   "adet": 1,
+   "noktalar": [
+    [
+     4400.0,
+     1861.2,
+     59.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 4.5,
+   "a": "TOPPING_MODUL__on_seffaf",
+   "b": "U_F_GOVDE__on_seffaf",
+   "adet": 1,
+   "noktalar": [
+    [
+     2497.0,
+     2132.5,
+     40.8
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 4.5,
+   "a": "TOPPING_MODUL__on_seffaf",
+   "b": "F_UST_KAPAK__on_seffaf__KAPAK_F_SOL",
+   "adet": 1,
+   "noktalar": [
+    [
+     2501.5,
+     1346.8,
+     70.2
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 4.5,
+   "a": "B_DEPO__sac__CEKMECE",
+   "b": "K_GOVDE__on_seffaf",
+   "adet": 1,
+   "noktalar": [
+    [
+     4395.1,
+     789.5,
+     73.9
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 4.5,
+   "a": "CEK_K6_ic1_2__on_seffaf__CEKMECE",
+   "b": "K_GOVDE__on_seffaf",
+   "adet": 1,
+   "noktalar": [
+    [
+     4006.0,
+     789.5,
+     73.9
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 4.5,
+   "a": "U_F_GOVDE__sac",
+   "b": "K_GOVDE__on_seffaf",
+   "adet": 1,
+   "noktalar": [
+    [
+     4000.0,
+     2194.0,
+     59.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 4.5,
+   "a": "F_UST_KAPAK__on_seffaf__KAPAK_F_SAG",
+   "b": "K_GOVDE__on_seffaf",
+   "adet": 2,
+   "noktalar": [
+    [
+     4004.5,
+     2194.0,
+     73.9
+    ],
+    [
+     3998.5,
+     1346.7,
+     69.5
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 4.5,
+   "a": "F_UST_KAPAK__on_seffaf__KAPAK_F_SOL",
+   "b": "F_TP10_GOVDE__paslanmaz",
+   "adet": 1,
+   "noktalar": [
+    [
+     2563.5,
+     1303.5,
+     77.5
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 4.5,
+   "a": "F_TP10_GOVDE__sac",
+   "b": "K_GOVDE__on_seffaf",
+   "adet": 1,
+   "noktalar": [
+    [
+     4000.0,
+     790.3,
+     71.9
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 4.61,
+   "a": "A_GOVDE__paslanmaz",
+   "b": "A_ONYUZ__on_seffaf__SERVIS_KAPAGI",
+   "adet": 3,
+   "noktalar": [
+    [
+     771.0,
+     1348.4,
+     62.0
+    ],
+    [
+     771.0,
+     1608.4,
+     62.0
+    ],
+    [
+     771.0,
+     1998.4,
+     62.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 4.61,
+   "a": "K_GOVDE__sac",
+   "b": "E_GOVDE__on_seffaf",
+   "adet": 1,
+   "noktalar": [
+    [
+     4398.5,
+     788.0,
+     59.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 4.74,
+   "a": "U_F_GOVDE__on_seffaf",
+   "b": "K_GOVDE__on_seffaf",
+   "adet": 1,
+   "noktalar": [
+    [
+     4003.0,
+     2130.9,
+     59.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 4.92,
+   "a": "F_UST_KABIN__paslanmaz",
+   "b": "K_GOVDE__on_seffaf",
+   "adet": 1,
+   "noktalar": [
+    [
+     4003.0,
+     1318.7,
+     59.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 4.92,
+   "a": "F_UST_KABIN__sac",
+   "b": "K_GOVDE__on_seffaf",
+   "adet": 1,
+   "noktalar": [
+    [
+     3998.5,
+     1347.3,
+     57.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 5.0,
+   "a": "TOPPING_MODUL__on_seffaf",
+   "b": "F_UST_KAPAK__on_seffaf__KAPAK_F_SOL",
+   "adet": 1,
+   "noktalar": [
+    [
+     2502.0,
+     2131.4,
+     77.4
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 5.0,
+   "a": "B_DEPO__sac__CEKMECE",
+   "b": "K_GOVDE__on_seffaf",
+   "adet": 1,
+   "noktalar": [
+    [
+     4350.8,
+     785.0,
+     73.9
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 5.0,
+   "a": "CEK_K6_ic1_2__on_seffaf__CEKMECE",
+   "b": "K_GOVDE__on_seffaf",
+   "adet": 1,
+   "noktalar": [
+    [
+     4009.5,
+     785.0,
+     71.9
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 5.0,
+   "a": "F_UST_KAPAK__on_seffaf__KAPAK_F_SAG",
+   "b": "K_GOVDE__on_seffaf",
+   "adet": 1,
+   "noktalar": [
+    [
+     4000.0,
+     1862.0,
+     73.5
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 5.0,
+   "a": "F_TP10_GOVDE__sac",
+   "b": "K_GOVDE__on_seffaf",
+   "adet": 1,
+   "noktalar": [
+    [
+     4000.0,
+     1305.0,
+     71.5
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 5.0,
+   "a": "K_GOVDE__on_seffaf",
+   "b": "E_GOVDE__sac",
+   "adet": 1,
+   "noktalar": [
+    [
+     4396.5,
+     790.3,
+     59.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 5.0,
+   "a": "QR_GOVDE__on_seffaf",
+   "b": "QR_GOZLER__on_seffaf__GOZ_00_KAPI",
+   "adet": 1,
+   "noktalar": [
+    [
+     4977.5,
+     447.0,
+     1189.2
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 5.0,
+   "a": "QR_GOVDE__on_seffaf",
+   "b": "QR_GOZLER__on_seffaf__GOZ_01_KAPI",
+   "adet": 1,
+   "noktalar": [
+    [
+     5385.1,
+     447.0,
+     1189.9
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 5.12,
+   "a": "K_GOVDE__on_seffaf",
+   "b": "E_GOVDE__on_seffaf",
+   "adet": 1,
+   "noktalar": [
+    [
+     4397.9,
+     788.0,
+     60.4
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 5.15,
+   "a": "F_UST_KAPAK__on_seffaf__KAPAK_F_SAG",
+   "b": "K_GOVDE__on_seffaf",
+   "adet": 1,
+   "noktalar": [
+    [
+     3998.0,
+     2140.0,
+     76.5
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 5.27,
+   "a": "F_UST_KAPAK__on_seffaf__KAPAK_F_SAG",
+   "b": "F_UST_KAPAK__on_seffaf__YAY_F_SAG",
+   "adet": 1,
+   "noktalar": [
+    [
+     3986.8,
+     1356.7,
+     65.7
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 5.27,
+   "a": "F_UST_KAPAK__on_seffaf__KAPAK_F_SOL",
+   "b": "F_UST_KAPAK__on_seffaf__YAY_F_SOL",
+   "adet": 1,
+   "noktalar": [
+    [
+     2513.2,
+     1356.7,
+     65.7
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 5.41,
+   "a": "U_F_GOVDE__sac",
+   "b": "K_GOVDE__on_seffaf",
+   "adet": 1,
+   "noktalar": [
+    [
+     4000.0,
+     1865.0,
+     59.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 5.41,
+   "a": "F_UST_KABIN__sac",
+   "b": "K_GOVDE__on_seffaf",
+   "adet": 1,
+   "noktalar": [
+    [
+     4000.0,
+     1306.5,
+     59.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 5.5,
+   "a": "F_UST_KAPAK__on_seffaf__KAPAK_F_SAG",
+   "b": "F_TP10_GOVDE__sac",
+   "adet": 2,
+   "noktalar": [
+    [
+     3400.5,
+     1310.5,
+     59.8
+    ],
+    [
+     3889.0,
+     1310.5,
+     59.8
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 5.5,
+   "a": "F_UST_KAPAK__on_seffaf__KAPAK_F_SOL",
+   "b": "F_TP10_GOVDE__sac",
+   "adet": 2,
+   "noktalar": [
+    [
+     2649.0,
+     1310.5,
+     59.8
+    ],
+    [
+     3137.5,
+     1310.5,
+     59.8
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 5.5,
+   "a": "K_GOVDE__on_seffaf",
+   "b": "E_GOVDE__on_seffaf",
+   "adet": 2,
+   "noktalar": [
+    [
+     4396.5,
+     791.0,
+     73.9
+    ],
+    [
+     4396.5,
+     2194.1,
+     73.9
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 5.68,
+   "a": "K_GOVDE__on_seffaf",
+   "b": "K_GOVDE__sac",
+   "adet": 6,
+   "noktalar": [
+    [
+     4033.8,
+     930.2,
+     55.8
+    ],
+    [
+     4033.8,
+     969.1,
+     55.8
+    ],
+    [
+     4033.8,
+     1340.2,
+     55.8
+    ],
+    [
+     4033.8,
+     1379.1,
+     55.8
+    ],
+    [
+     4033.8,
+     1729.3,
+     55.8
+    ],
+    [
+     4037.7,
+     1770.0,
+     60.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 5.8,
+   "a": "TOPPING_MODUL__on_seffaf",
+   "b": "F_UST_KAPAK__on_seffaf__YAY_F_SOL",
+   "adet": 1,
+   "noktalar": [
+    [
+     2502.8,
+     1366.6,
+     62.6
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 5.8,
+   "a": "F_UST_KAPAK__on_seffaf__YAY_F_SAG",
+   "b": "K_GOVDE__on_seffaf",
+   "adet": 1,
+   "noktalar": [
+    [
+     3997.2,
+     1366.6,
+     62.6
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 5.9,
+   "a": "K_GOVDE__on_seffaf",
+   "b": "E_GOVDE__sac",
+   "adet": 1,
+   "noktalar": [
+    [
+     4401.5,
+     795.5,
+     59.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 6.0,
+   "a": "TOPPING_MODUL__on_seffaf",
+   "b": "F_UST_KABIN__paslanmaz",
+   "adet": 1,
+   "noktalar": [
+    [
+     2497.0,
+     1859.7,
+     48.6
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 6.0,
+   "a": "B_DEPO__sac__CEKMECE",
+   "b": "K_GOVDE__kabuk",
+   "adet": 1,
+   "noktalar": [
+    [
+     4400.0,
+     785.0,
+     54.7
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 6.0,
+   "a": "B_DEPO__sac__CEKMECE",
+   "b": "K_GOVDE__sac",
+   "adet": 1,
+   "noktalar": [
+    [
+     4145.1,
+     785.0,
+     52.7
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 6.0,
+   "a": "CEK_K6_ic1_2__on_seffaf__CEKMECE",
+   "b": "K_GOVDE__kabuk",
+   "adet": 1,
+   "noktalar": [
+    [
+     4009.5,
+     785.0,
+     57.6
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 6.0,
+   "a": "K_GOVDE__on_seffaf",
+   "b": "E_GOVDE__on_seffaf",
+   "adet": 1,
+   "noktalar": [
+    [
+     4396.0,
+     792.5,
+     72.8
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 6.15,
+   "a": "F_UST_KABIN__paslanmaz",
+   "b": "F_UST_KAPAK__on_seffaf__YAY_F_SAG",
+   "adet": 1,
+   "noktalar": [
+    [
+     3990.5,
+     1342.6,
+     63.2
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 6.15,
+   "a": "F_UST_KABIN__paslanmaz",
+   "b": "F_UST_KAPAK__on_seffaf__YAY_F_SOL",
+   "adet": 1,
+   "noktalar": [
+    [
+     2511.0,
+     1342.6,
+     63.2
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 6.26,
+   "a": "F_UST_KABIN__sac",
+   "b": "F_UST_KAPAK__on_seffaf__YAY_F_SAG",
+   "adet": 1,
+   "noktalar": [
+    [
+     3991.0,
+     1346.5,
+     57.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 6.26,
+   "a": "F_UST_KABIN__sac",
+   "b": "F_UST_KAPAK__on_seffaf__YAY_F_SOL",
+   "adet": 1,
+   "noktalar": [
+    [
+     2509.0,
+     1346.5,
+     57.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 6.32,
+   "a": "F_UST_KABIN__paslanmaz",
+   "b": "K_GOVDE__on_seffaf",
+   "adet": 1,
+   "noktalar": [
+    [
+     4003.0,
+     1831.2,
+     59.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 6.4,
+   "a": "F_UST_KABIN__sac",
+   "b": "F_UST_KAPAK__on_seffaf__YAY_F_SAG",
+   "adet": 1,
+   "noktalar": [
+    [
+     3989.7,
+     1354.8,
+     63.5
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 6.4,
+   "a": "F_UST_KABIN__sac",
+   "b": "F_UST_KAPAK__on_seffaf__YAY_F_SOL",
+   "adet": 1,
+   "noktalar": [
+    [
+     2510.3,
+     1354.8,
+     63.5
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 6.5,
+   "a": "F_UST_KAPAK__on_seffaf__KAPAK_F_SAG",
+   "b": "K_GOVDE__on_seffaf",
+   "adet": 1,
+   "noktalar": [
+    [
+     3998.5,
+     1346.7,
+     69.5
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 6.73,
+   "a": "F_UST_KAPAK__on_seffaf__KAPAK_F_SAG",
+   "b": "K_GOVDE__sac",
+   "adet": 1,
+   "noktalar": [
+    [
+     4000.0,
+     1857.5,
+     59.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 6.79,
+   "a": "K_GOVDE__kabuk",
+   "b": "E_GOVDE__on_seffaf",
+   "adet": 1,
+   "noktalar": [
+    [
+     4402.0,
+     785.0,
+     59.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 6.89,
+   "a": "F_UST_KAPAK__on_seffaf__KAPAK_F_SAG",
+   "b": "K_GOVDE__sac",
+   "adet": 1,
+   "noktalar": [
+    [
+     4000.0,
+     1309.5,
+     59.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 7.11,
+   "a": "K_GOVDE__on_seffaf",
+   "b": "E_GOVDE__on_seffaf",
+   "adet": 1,
+   "noktalar": [
+    [
+     4396.5,
+     789.5,
+     73.9
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 7.35,
+   "a": "U_F_GOVDE__on_seffaf",
+   "b": "K_GOVDE__on_seffaf",
+   "adet": 1,
+   "noktalar": [
+    [
+     4005.2,
+     2148.0,
+     60.5
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 7.43,
+   "a": "F_UST_KAPAK__on_seffaf__KAPAK_F_SAG",
+   "b": "K_GOVDE__on_seffaf",
+   "adet": 1,
+   "noktalar": [
+    [
+     3998.0,
+     2148.6,
+     76.5
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 7.5,
+   "a": "K_GOVDE__on_seffaf",
+   "b": "K_GOVDE__on_seffaf",
+   "adet": 3,
+   "noktalar": [
+    [
+     4018.0,
+     926.5,
+     70.0
+    ],
+    [
+     4018.0,
+     1336.5,
+     70.0
+    ],
+    [
+     4018.0,
+     1726.5,
+     70.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 7.52,
+   "a": "F_UST_KABIN__sac",
+   "b": "F_UST_KAPAK__on_seffaf__KAPAK_F_SAG",
+   "adet": 1,
+   "noktalar": [
+    [
+     3985.7,
+     1344.4,
+     66.5
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 7.52,
+   "a": "F_UST_KABIN__sac",
+   "b": "F_UST_KAPAK__on_seffaf__KAPAK_F_SOL",
+   "adet": 1,
+   "noktalar": [
+    [
+     2502.9,
+     1344.4,
+     66.5
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 7.57,
+   "a": "F_UST_KABIN__paslanmaz",
+   "b": "K_GOVDE__on_seffaf",
+   "adet": 1,
+   "noktalar": [
+    [
+     4005.2,
+     1344.0,
+     60.5
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 7.57,
+   "a": "F_UST_KABIN__sac",
+   "b": "K_GOVDE__on_seffaf",
+   "adet": 1,
+   "noktalar": [
+    [
+     4005.2,
+     1347.0,
+     60.5
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 7.8,
+   "a": "F_UST_KAPAK__on_seffaf__YAY_F_SAG",
+   "b": "K_GOVDE__on_seffaf",
+   "adet": 1,
+   "noktalar": [
+    [
+     3997.2,
+     1366.6,
+     62.6
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 7.8,
+   "a": "F_UST_KAPAK__on_seffaf__YAY_F_SAG",
+   "b": "K_GOVDE__sac",
+   "adet": 1,
+   "noktalar": [
+    [
+     3997.2,
+     1404.1,
+     52.6
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 7.91,
+   "a": "B_DEPO__sac__CEKMECE",
+   "b": "K_GOVDE__on_seffaf",
+   "adet": 1,
+   "noktalar": [
+    [
+     4006.0,
+     789.5,
+     73.9
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 8.09,
+   "a": "A_GOVDE__paslanmaz",
+   "b": "A_ONYUZ__on_seffaf__SERVIS_KAPAGI",
+   "adet": 3,
+   "noktalar": [
+    [
+     743.9,
+     936.5,
+     67.1
+    ],
+    [
+     743.9,
+     1256.5,
+     67.1
+    ],
+    [
+     743.9,
+     1716.5,
+     67.1
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 8.32,
+   "a": "K_GOVDE__sac",
+   "b": "E_GOVDE__on_seffaf",
+   "adet": 1,
+   "noktalar": [
+    [
+     4395.0,
+     1857.5,
+     54.5
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 8.56,
+   "a": "K_GOVDE__sac",
+   "b": "E_GOVDE__on_seffaf",
+   "adet": 1,
+   "noktalar": [
+    [
+     4394.7,
+     792.5,
+     54.5
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 8.69,
+   "a": "F_UST_KAPAK__on_seffaf__KAPAK_F_SAG",
+   "b": "K_GOVDE__kabuk",
+   "adet": 1,
+   "noktalar": [
+    [
+     3998.5,
+     1344.4,
+     66.5
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 8.92,
+   "a": "F_UST_KABIN__paslanmaz",
+   "b": "K_GOVDE__on_seffaf",
+   "adet": 1,
+   "noktalar": [
+    [
+     4005.2,
+     1860.0,
+     60.5
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 9.07,
+   "a": "F_UST_KAPAK__on_seffaf__KAPAK_F_SAG",
+   "b": "F_UST_KAPAK__on_seffaf__YAY_F_SAG",
+   "adet": 1,
+   "noktalar": [
+    [
+     3988.6,
+     1346.7,
+     68.1
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 9.07,
+   "a": "F_UST_KAPAK__on_seffaf__KAPAK_F_SOL",
+   "b": "F_UST_KAPAK__on_seffaf__YAY_F_SOL",
+   "adet": 1,
+   "noktalar": [
+    [
+     2508.6,
+     1346.7,
+     68.1
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 9.13,
+   "a": "A_GOVDE__sac",
+   "b": "A_ONYUZ__paslanmaz",
+   "adet": 3,
+   "noktalar": [
+    [
+     741.3,
+     966.2,
+     67.3
+    ],
+    [
+     741.3,
+     1286.5,
+     67.3
+    ],
+    [
+     741.3,
+     1746.5,
+     67.3
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 9.17,
+   "a": "A_GOVDE__sac",
+   "b": "A_ONYUZ__on_seffaf__SERVIS_KAPAGI",
+   "adet": 3,
+   "noktalar": [
+    [
+     741.6,
+     936.5,
+     67.2
+    ],
+    [
+     741.6,
+     1256.5,
+     67.2
+    ],
+    [
+     741.6,
+     1716.5,
+     67.2
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 9.23,
+   "a": "K_GOVDE__on_seffaf",
+   "b": "K_GOVDE__sac",
+   "adet": 1,
+   "noktalar": [
+    [
+     4003.0,
+     1699.3,
+     59.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 9.28,
+   "a": "TOPPING_MODUL__on_seffaf",
+   "b": "F_UST_KAPAK__on_seffaf__YAY_F_SOL",
+   "adet": 1,
+   "noktalar": [
+    [
+     2506.3,
+     1355.7,
+     66.9
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 9.28,
+   "a": "F_UST_KAPAK__on_seffaf__YAY_F_SAG",
+   "b": "K_GOVDE__on_seffaf",
+   "adet": 1,
+   "noktalar": [
+    [
+     3993.7,
+     1355.7,
+     66.9
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 9.35,
+   "a": "F_UST_KAPAK__on_seffaf__KAPAK_F_SAG",
+   "b": "K_GOVDE__sac",
+   "adet": 1,
+   "noktalar": [
+    [
+     4000.0,
+     1701.8,
+     59.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 9.43,
+   "a": "F_UST_KABIN__sac",
+   "b": "F_UST_KAPAK__on_seffaf__YAY_F_SAG",
+   "adet": 1,
+   "noktalar": [
+    [
+     3989.7,
+     1354.8,
+     63.5
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 9.43,
+   "a": "F_UST_KABIN__sac",
+   "b": "F_UST_KAPAK__on_seffaf__YAY_F_SOL",
+   "adet": 1,
+   "noktalar": [
+    [
+     2510.3,
+     1354.8,
+     63.5
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 9.52,
+   "a": "F_UST_KABIN__paslanmaz",
+   "b": "F_UST_KAPAK__on_seffaf__KAPAK_F_SAG",
+   "adet": 1,
+   "noktalar": [
+    [
+     3982.9,
+     1344.4,
+     66.5
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 9.52,
+   "a": "F_UST_KABIN__paslanmaz",
+   "b": "F_UST_KAPAK__on_seffaf__KAPAK_F_SOL",
+   "adet": 1,
+   "noktalar": [
+    [
+     2502.9,
+     1344.4,
+     66.5
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 9.6,
+   "a": "K_GOVDE__on_seffaf",
+   "b": "E_GOVDE__on_seffaf",
+   "adet": 1,
+   "noktalar": [
+    [
+     4396.0,
+     792.5,
+     72.8
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 9.75,
+   "a": "F_UST_KAPAK__on_seffaf__YAY_F_SAG",
+   "b": "K_GOVDE__kabuk",
+   "adet": 1,
+   "noktalar": [
+    [
+     3992.2,
+     1364.9,
+     62.2
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 9.76,
+   "a": "F_UST_KABIN__sac",
+   "b": "F_UST_KAPAK__on_seffaf__KAPAK_F_SAG",
+   "adet": 1,
+   "noktalar": [
+    [
+     3997.0,
+     1346.5,
+     57.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 9.76,
+   "a": "F_UST_KABIN__sac",
+   "b": "F_UST_KAPAK__on_seffaf__KAPAK_F_SOL",
+   "adet": 1,
+   "noktalar": [
+    [
+     2518.0,
+     1346.5,
+     57.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 9.9,
+   "a": "K_GOVDE__on_seffaf",
+   "b": "K_GOVDE__sac",
+   "adet": 1,
+   "noktalar": [
+    [
+     4006.5,
+     1701.0,
+     59.2
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 10.02,
+   "a": "A_GOVDE__paslanmaz",
+   "b": "A_ONYUZ__on_seffaf",
+   "adet": 3,
+   "noktalar": [
+    [
+     743.4,
+     921.4,
+     69.0
+    ],
+    [
+     743.4,
+     1241.5,
+     69.0
+    ],
+    [
+     743.4,
+     1701.5,
+     69.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 10.09,
+   "a": "F_UST_KAPAK__on_seffaf__YAY_F_SAG",
+   "b": "F_UST_KAPAK__on_seffaf__YAY_F_SAG",
+   "adet": 1,
+   "noktalar": [
+    [
+     3993.0,
+     1356.2,
+     68.6
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 10.09,
+   "a": "F_UST_KAPAK__on_seffaf__YAY_F_SOL",
+   "b": "F_UST_KAPAK__on_seffaf__YAY_F_SOL",
+   "adet": 1,
+   "noktalar": [
+    [
+     2507.0,
+     1356.2,
+     68.6
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 10.2,
+   "a": "F_UST_KABIN__sac",
+   "b": "F_UST_KAPAK__on_seffaf__KAPAK_F_SAG",
+   "adet": 2,
+   "noktalar": [
+    [
+     3398.2,
+     1346.5,
+     57.0
+    ],
+    [
+     3886.2,
+     1346.5,
+     57.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 10.2,
+   "a": "F_UST_KABIN__sac",
+   "b": "F_UST_KAPAK__on_seffaf__KAPAK_F_SOL",
+   "adet": 2,
+   "noktalar": [
+    [
+     2646.7,
+     1346.5,
+     57.0
+    ],
+    [
+     3134.7,
+     1346.5,
+     57.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 10.27,
+   "a": "TOPPING_MODUL__on_seffaf",
+   "b": "F_UST_KAPAK__on_seffaf__YAY_F_SOL",
+   "adet": 1,
+   "noktalar": [
+    [
+     2507.3,
+     1356.7,
+     65.7
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 10.27,
+   "a": "F_UST_KAPAK__on_seffaf__YAY_F_SAG",
+   "b": "K_GOVDE__on_seffaf",
+   "adet": 1,
+   "noktalar": [
+    [
+     3992.7,
+     1356.7,
+     65.7
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 10.35,
+   "a": "F_UST_KAPAK__on_seffaf__YAY_F_SAG",
+   "b": "K_GOVDE__kabuk",
+   "adet": 1,
+   "noktalar": [
+    [
+     3992.9,
+     1355.0,
+     64.3
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 10.46,
+   "a": "K_GOVDE__sac",
+   "b": "E_GOVDE__on_seffaf",
+   "adet": 1,
+   "noktalar": [
+    [
+     4394.7,
+     791.0,
+     54.5
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 10.57,
+   "a": "F_UST_KABIN__paslanmaz",
+   "b": "F_UST_KAPAK__on_seffaf__YAY_F_SAG",
+   "adet": 1,
+   "noktalar": [
+    [
+     3989.7,
+     1354.8,
+     63.5
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 10.57,
+   "a": "F_UST_KABIN__paslanmaz",
+   "b": "F_UST_KAPAK__on_seffaf__YAY_F_SOL",
+   "adet": 1,
+   "noktalar": [
+    [
+     2510.3,
+     1354.8,
+     63.5
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 11.12,
+   "a": "A_GOVDE__sac",
+   "b": "A_ONYUZ__on_seffaf",
+   "adet": 3,
+   "noktalar": [
+    [
+     741.9,
+     921.4,
+     69.2
+    ],
+    [
+     741.9,
+     1241.5,
+     69.2
+    ],
+    [
+     741.9,
+     1701.5,
+     69.2
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 11.28,
+   "a": "F_UST_KAPAK__on_seffaf__YAY_F_SAG",
+   "b": "K_GOVDE__on_seffaf",
+   "adet": 1,
+   "noktalar": [
+    [
+     3993.7,
+     1355.7,
+     66.9
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 12.27,
+   "a": "F_UST_KAPAK__on_seffaf__YAY_F_SAG",
+   "b": "K_GOVDE__on_seffaf",
+   "adet": 1,
+   "noktalar": [
+    [
+     3992.7,
+     1356.7,
+     65.7
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 12.85,
+   "a": "B_DEPO__sac__CEKMECE",
+   "b": "F_TP10_GOVDE__sac",
+   "adet": 1,
+   "noktalar": [
+    [
+     4000.0,
+     788.0,
+     77.5
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 13.0,
+   "a": "TOPPING_MODUL__on_seffaf",
+   "b": "CEK_K2_lahm_5__on_seffaf__CEKMECE",
+   "adet": 1,
+   "noktalar": [
+    [
+     1608.0,
+     798.0,
+     46.7
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 13.16,
+   "a": "F_UST_KAPAK__on_seffaf__KAPAK_F_SAG",
+   "b": "K_GOVDE__sac",
+   "adet": 1,
+   "noktalar": [
+    [
+     3998.5,
+     1344.4,
+     66.5
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 13.36,
+   "a": "F_UST_KABIN__paslanmaz",
+   "b": "F_UST_KAPAK__on_seffaf__KAPAK_F_SAG",
+   "adet": 1,
+   "noktalar": [
+    [
+     3356.0,
+     1348.0,
+     57.0
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 14.0,
+   "a": "K_GOVDE__on_seffaf",
+   "b": "K_GOVDE__on_seffaf",
+   "adet": 6,
+   "noktalar": [
+    [
+     4044.3,
+     930.6,
+     63.5
+    ],
+    [
+     4044.3,
+     970.6,
+     63.5
+    ],
+    [
+     4044.3,
+     1340.6,
+     63.5
+    ],
+    [
+     4044.3,
+     1380.6,
+     63.5
+    ],
+    [
+     4044.3,
+     1730.6,
+     63.5
+    ],
+    [
+     4044.3,
+     1770.6,
+     63.5
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 14.0,
+   "a": "QR_GOZLER__on_seffaf__GOZ_00_KAPI",
+   "b": "QR_GOZLER__on_seffaf__GOZ_10_KAPI",
+   "adet": 1,
+   "noktalar": [
+    [
+     4978.0,
+     638.0,
+     1188.6
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 14.0,
+   "a": "QR_GOZLER__on_seffaf__GOZ_01_KAPI",
+   "b": "QR_GOZLER__on_seffaf__GOZ_11_KAPI",
+   "adet": 1,
+   "noktalar": [
+    [
+     5388.0,
+     638.0,
+     1188.6
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 14.0,
+   "a": "QR_GOZLER__on_seffaf__GOZ_10_KAPI",
+   "b": "QR_GOZLER__on_seffaf__GOZ_20_KAPI",
+   "adet": 1,
+   "noktalar": [
+    [
+     4978.0,
+     838.0,
+     1188.6
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 14.0,
+   "a": "QR_GOZLER__on_seffaf__GOZ_11_KAPI",
+   "b": "QR_GOZLER__on_seffaf__GOZ_21_KAPI",
+   "adet": 1,
+   "noktalar": [
+    [
+     5388.0,
+     838.0,
+     1188.6
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 14.0,
+   "a": "QR_GOZLER__on_seffaf__GOZ_20_KAPI",
+   "b": "QR_GOZLER__on_seffaf__GOZ_30_KAPI",
+   "adet": 1,
+   "noktalar": [
+    [
+     4978.0,
+     1038.0,
+     1188.6
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 14.0,
+   "a": "QR_GOZLER__on_seffaf__GOZ_21_KAPI",
+   "b": "QR_GOZLER__on_seffaf__GOZ_31_KAPI",
+   "adet": 1,
+   "noktalar": [
+    [
+     5388.0,
+     1038.0,
+     1188.6
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 14.0,
+   "a": "QR_GOZLER__on_seffaf__GOZ_30_KAPI",
+   "b": "QR_GOZLER__on_seffaf__GOZ_40_KAPI",
+   "adet": 1,
+   "noktalar": [
+    [
+     4978.0,
+     1238.0,
+     1188.6
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 14.0,
+   "a": "QR_GOZLER__on_seffaf__GOZ_31_KAPI",
+   "b": "QR_GOZLER__on_seffaf__GOZ_41_KAPI",
+   "adet": 1,
+   "noktalar": [
+    [
+     5388.0,
+     1238.0,
+     1188.6
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 14.0,
+   "a": "QR_GOZLER__on_seffaf__GOZ_40_KAPI",
+   "b": "QR_GOZLER__on_seffaf__GOZ_50_KAPI",
+   "adet": 1,
+   "noktalar": [
+    [
+     4978.0,
+     1438.0,
+     1188.6
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 14.0,
+   "a": "QR_GOZLER__on_seffaf__GOZ_41_KAPI",
+   "b": "QR_GOZLER__on_seffaf__GOZ_51_KAPI",
+   "adet": 1,
+   "noktalar": [
+    [
+     5388.0,
+     1438.0,
+     1188.6
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 15.0,
+   "a": "QR_GOVDE__on_seffaf",
+   "b": "QR_GOZLER__on_seffaf__GOZ_50_KAPI",
+   "adet": 1,
+   "noktalar": [
+    [
+     4977.5,
+     1653.0,
+     1189.2
+    ]
+   ]
+  },
+  {
+   "tur": "kapak-gövde derzi (kasıtlı) · ön yüz",
+   "aralik_mm": 15.0,
+   "a": "QR_GOVDE__on_seffaf",
+   "b": "QR_GOZLER__on_seffaf__GOZ_51_KAPI",
+   "adet": 1,
+   "noktalar": [
+    [
+     5385.1,
+     1653.0,
+     1189.9
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 1.0,
+   "a": "TOPPING_MODUL__paslanmaz",
+   "b": "A_GOVDE__paslanmaz",
+   "adet": 1,
+   "noktalar": [
+    [
+     1433.0,
+     2167.5,
+     -628.5
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 1.0,
+   "a": "TOPPING_MODUL__sac",
+   "b": "A_GOVDE__paslanmaz",
+   "adet": 1,
+   "noktalar": [
+    [
+     1434.4,
+     2167.5,
+     15.0
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 1.5,
+   "a": "TOPPING_MODUL__paslanmaz",
+   "b": "A_GOVDE__sac",
+   "adet": 1,
+   "noktalar": [
+    [
+     1437.5,
+     895.0,
+     26.3
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 1.5,
+   "a": "TOPPING_MODUL__paslanmaz",
+   "b": "U_F_GOVDE__sac",
+   "adet": 2,
+   "noktalar": [
+    [
+     2498.5,
+     2061.5,
+     26.0
+    ],
+    [
+     2498.5,
+     2198.5,
+     -629.2
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 1.5,
+   "a": "TOPPING_MODUL__paslanmaz",
+   "b": "F_UST_KABIN__sac",
+   "adet": 2,
+   "noktalar": [
+    [
+     2498.5,
+     1501.5,
+     26.0
+    ],
+    [
+     2498.5,
+     1861.8,
+     -630.0
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 1.5,
+   "a": "TOPPING_MODUL__paslanmaz",
+   "b": "F_TP10_GOVDE__sac",
+   "adet": 2,
+   "noktalar": [
+    [
+     2498.5,
+     895.0,
+     26.0
+    ],
+    [
+     2498.5,
+     1110.5,
+     36.5
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 1.5,
+   "a": "TOPPING_MODUL__sac",
+   "b": "F_UST_KABIN__paslanmaz",
+   "adet": 3,
+   "noktalar": [
+    [
+     2500.0,
+     1317.5,
+     -811.4
+    ],
+    [
+     2500.0,
+     1346.0,
+     39.0
+    ],
+    [
+     2501.5,
+     1345.5,
+     -426.7
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 1.5,
+   "a": "TOPPING_MODUL__sac",
+   "b": "F_UST_KABIN__sac",
+   "adet": 3,
+   "noktalar": [
+    [
+     2500.0,
+     1326.0,
+     -787.8
+    ],
+    [
+     2500.0,
+     1326.2,
+     -279.0
+    ],
+    [
+     2500.0,
+     1346.7,
+     -786.5
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 1.5,
+   "a": "TOPPING_MODUL__sac",
+   "b": "F_DAVLUMBAZ__sac",
+   "adet": 1,
+   "noktalar": [
+    [
+     2501.5,
+     1349.5,
+     -440.0
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 1.5,
+   "a": "TOPPING_MODUL__sac",
+   "b": "F_TP10_GOVDE__paslanmaz",
+   "adet": 1,
+   "noktalar": [
+    [
+     2500.0,
+     1055.1,
+     -410.2
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 1.5,
+   "a": "TOPPING_MODUL__sac",
+   "b": "KAIDE_A__sac",
+   "adet": 1,
+   "noktalar": [
+    [
+     1436.0,
+     893.5,
+     38.9
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 1.5,
+   "a": "B_KASA__on_cerceve",
+   "b": "KAIDE_A__paslanmaz",
+   "adet": 1,
+   "noktalar": [
+    [
+     1431.6,
+     786.5,
+     24.0
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 1.5,
+   "a": "B_KASA__on_cerceve",
+   "b": "KAIDE_C__paslanmaz",
+   "adet": 1,
+   "noktalar": [
+    [
+     2499.0,
+     786.5,
+     24.0
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 1.5,
+   "a": "B_KASA__on_cerceve",
+   "b": "A_GOVDE__sac",
+   "adet": 1,
+   "noktalar": [
+    [
+     1434.6,
+     786.5,
+     24.0
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 1.5,
+   "a": "B_KASA__on_cerceve",
+   "b": "F_TP10_GOVDE__sac",
+   "adet": 1,
+   "noktalar": [
+    [
+     3998.2,
+     786.5,
+     24.0
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 1.5,
+   "a": "B_KASA__on_cerceve",
+   "b": "K_GOVDE__sac",
+   "adet": 1,
+   "noktalar": [
+    [
+     4397.0,
+     786.5,
+     24.0
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 1.5,
+   "a": "B_KASA__on_cerceve",
+   "b": "E_GOVDE__kabuk",
+   "adet": 1,
+   "noktalar": [
+    [
+     4398.5,
+     786.5,
+     23.5
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 1.5,
+   "a": "B_KASA__sac",
+   "b": "F_TP10_GOVDE__paslanmaz",
+   "adet": 2,
+   "noktalar": [
+    [
+     2933.6,
+     788.0,
+     -410.4
+    ],
+    [
+     2563.9,
+     789.5,
+     37.2
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 1.5,
+   "a": "B_KASA__sac",
+   "b": "E_GOVDE__sac",
+   "adet": 1,
+   "noktalar": [
+    [
+     4400.0,
+     787.1,
+     37.8
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 1.5,
+   "a": "B_KASA__sac",
+   "b": "E_GOVDE__kabuk",
+   "adet": 1,
+   "noktalar": [
+    [
+     4398.5,
+     433.5,
+     -494.6
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 1.5,
+   "a": "B_DEPO__sac",
+   "b": "K_GOVDE__sac",
+   "adet": 1,
+   "noktalar": [
+    [
+     4398.5,
+     786.5,
+     -469.5
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 1.5,
+   "a": "B_DEPO__sac",
+   "b": "E_GOVDE__kabuk",
+   "adet": 1,
+   "noktalar": [
+    [
+     4398.5,
+     463.5,
+     -469.5
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 1.5,
+   "a": "KAIDE_A__paslanmaz",
+   "b": "KAIDE_C__paslanmaz",
+   "adet": 1,
+   "noktalar": [
+    [
+     1434.5,
+     886.5,
+     -5.0
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 1.5,
+   "a": "KAIDE_A__sac",
+   "b": "KAIDE_C__paslanmaz",
+   "adet": 1,
+   "noktalar": [
+    [
+     1434.5,
+     888.0,
+     33.5
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 1.5,
+   "a": "KAIDE_C__paslanmaz",
+   "b": "A_GOVDE__paslanmaz",
+   "adet": 1,
+   "noktalar": [
+    [
+     1436.0,
+     789.5,
+     35.0
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 1.5,
+   "a": "KAIDE_C__paslanmaz",
+   "b": "F_TP10_GOVDE__paslanmaz",
+   "adet": 1,
+   "noktalar": [
+    [
+     2500.0,
+     888.0,
+     -411.0
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 1.5,
+   "a": "U_F_GOVDE__sac",
+   "b": "F_UST_KABIN__paslanmaz",
+   "adet": 2,
+   "noktalar": [
+    [
+     2539.2,
+     1862.0,
+     28.8
+    ],
+    [
+     3353.8,
+     1862.0,
+     -562.7
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 1.5,
+   "a": "U_F_GOVDE__sac",
+   "b": "F_DAVLUMBAZ__sac",
+   "adet": 1,
+   "noktalar": [
+    [
+     3146.8,
+     1862.0,
+     -440.3
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 1.5,
+   "a": "U_KE_GOVDE__sac",
+   "b": "K_GOVDE__sac",
+   "adet": 6,
+   "noktalar": [
+    [
+     4120.7,
+     1862.0,
+     -789.4
+    ],
+    [
+     4036.5,
+     1860.5,
+     31.0
+    ],
+    [
+     4082.1,
+     1860.5,
+     -762.7
+    ],
+    [
+     4211.6,
+     1862.0,
+     -759.9
+    ],
+    [
+     4077.9,
+     1860.5,
+     4.7
+    ],
+    [
+     4317.9,
+     1860.5,
+     4.7
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 1.5,
+   "a": "U_KE_GOVDE__sac",
+   "b": "E_GOVDE__sac",
+   "adet": 2,
+   "noktalar": [
+    [
+     5227.9,
+     1862.0,
+     48.7
+    ],
+    [
+     4881.4,
+     1862.0,
+     59.0
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 1.5,
+   "a": "F_UST_KABIN__paslanmaz",
+   "b": "K_GOVDE__kabuk",
+   "adet": 3,
+   "noktalar": [
+    [
+     3998.5,
+     1346.5,
+     -799.9
+    ],
+    [
+     3998.5,
+     1345.1,
+     -455.7
+    ],
+    [
+     3998.5,
+     1345.1,
+     27.0
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 1.5,
+   "a": "F_UST_KABIN__sac",
+   "b": "K_GOVDE__sac",
+   "adet": 12,
+   "noktalar": [
+    [
+     4000.0,
+     789.4,
+     -828.0
+    ],
+    [
+     4001.5,
+     1597.9,
+     4.7
+    ],
+    [
+     4001.5,
+     1697.2,
+     34.7
+    ],
+    [
+     4000.0,
+     1723.6,
+     -756.8
+    ],
+    [
+     4000.0,
+     1825.8,
+     -793.7
+    ],
+    [
+     4001.5,
+     1602.1,
+     -762.7
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 1.5,
+   "a": "F_UST_KABIN__sac",
+   "b": "K_GOVDE__kabuk",
+   "adet": 3,
+   "noktalar": [
+    [
+     3998.5,
+     1348.0,
+     52.5
+    ],
+    [
+     3998.5,
+     1326.5,
+     -457.2
+    ],
+    [
+     3998.5,
+     1326.0,
+     25.5
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 1.5,
+   "a": "F_DAVLUMBAZ__sac",
+   "b": "K_GOVDE__kabuk",
+   "adet": 1,
+   "noktalar": [
+    [
+     3998.5,
+     1839.0,
+     -441.5
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 1.5,
+   "a": "F_TP10_GOVDE__paslanmaz",
+   "b": "K_GOVDE__kabuk",
+   "adet": 1,
+   "noktalar": [
+    [
+     3998.5,
+     794.0,
+     -410.0
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 1.5,
+   "a": "F_TP10_GOVDE__sac",
+   "b": "K_GOVDE__sac",
+   "adet": 5,
+   "noktalar": [
+    [
+     4000.0,
+     789.5,
+     -651.0
+    ],
+    [
+     4001.5,
+     839.4,
+     4.7
+    ],
+    [
+     4001.5,
+     839.7,
+     -17.9
+    ],
+    [
+     4001.5,
+     1147.9,
+     4.7
+    ],
+    [
+     4001.5,
+     839.7,
+     -347.9
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 1.5,
+   "a": "K_GOVDE__kabuk",
+   "b": "E_GOVDE__sac",
+   "adet": 1,
+   "noktalar": [
+    [
+     4400.0,
+     818.0,
+     30.8
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 1.5,
+   "a": "K_GOVDE__sac",
+   "b": "E_GOVDE__kabuk",
+   "adet": 15,
+   "noktalar": [
+    [
+     4398.5,
+     788.7,
+     59.0
+    ],
+    [
+     4398.5,
+     839.4,
+     -762.7
+    ],
+    [
+     4398.5,
+     843.6,
+     4.7
+    ],
+    [
+     4398.5,
+     839.7,
+     -682.1
+    ],
+    [
+     4398.5,
+     839.7,
+     -352.1
+    ],
+    [
+     4398.5,
+     839.7,
+     -22.1
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 1.5,
+   "a": "E_GOVDE__kabuk",
+   "b": "B_MODULER__paslanmaz",
+   "adet": 2,
+   "noktalar": [
+    [
+     4398.5,
+     123.0,
+     -731.4
+    ],
+    [
+     4398.5,
+     123.0,
+     -81.4
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 2.0,
+   "a": "B_KASA__sac",
+   "b": "KAIDE_C__paslanmaz",
+   "adet": 1,
+   "noktalar": [
+    [
+     2006.0,
+     790.0,
+     -436.5
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 2.12,
+   "a": "F_UST_KABIN__paslanmaz",
+   "b": "K_GOVDE__kabuk",
+   "adet": 1,
+   "noktalar": [
+    [
+     3998.5,
+     1345.1,
+     -827.0
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 2.12,
+   "a": "F_UST_KABIN__sac",
+   "b": "K_GOVDE__kabuk",
+   "adet": 1,
+   "noktalar": [
+    [
+     3998.5,
+     1347.3,
+     -827.0
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 2.5,
+   "a": "U_F_GOVDE__sac",
+   "b": "F_DAVLUMBAZ__sac",
+   "adet": 1,
+   "noktalar": [
+    [
+     2950.0,
+     1862.0,
+     -524.5
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 3.0,
+   "a": "TOPPING_MODUL__paslanmaz",
+   "b": "KAIDE_A__sac",
+   "adet": 1,
+   "noktalar": [
+    [
+     1434.5,
+     893.5,
+     37.5
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 3.0,
+   "a": "TOPPING_MODUL__paslanmaz",
+   "b": "A_GOVDE__paslanmaz",
+   "adet": 1,
+   "noktalar": [
+    [
+     1437.5,
+     912.5,
+     29.5
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 3.0,
+   "a": "TOPPING_MODUL__paslanmaz",
+   "b": "F_UST_KABIN__sac",
+   "adet": 2,
+   "noktalar": [
+    [
+     2498.5,
+     1326.0,
+     -630.0
+    ],
+    [
+     2498.5,
+     1347.0,
+     -630.0
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 3.0,
+   "a": "TOPPING_MODUL__paslanmaz",
+   "b": "F_UST_KABIN__paslanmaz",
+   "adet": 1,
+   "noktalar": [
+    [
+     2498.5,
+     1345.6,
+     38.0
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 3.0,
+   "a": "TOPPING_MODUL__sac",
+   "b": "F_UST_KABIN__paslanmaz",
+   "adet": 1,
+   "noktalar": [
+    [
+     2500.0,
+     1831.4,
+     39.0
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 3.0,
+   "a": "B_KASA__on_cerceve",
+   "b": "E_GOVDE__sac",
+   "adet": 1,
+   "noktalar": [
+    [
+     4398.5,
+     126.0,
+     23.0
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 3.0,
+   "a": "B_KASA__sac",
+   "b": "K_GOVDE__kabuk",
+   "adet": 2,
+   "noktalar": [
+    [
+     4398.5,
+     788.0,
+     37.5
+    ],
+    [
+     4361.2,
+     788.0,
+     -826.2
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 3.0,
+   "a": "B_KASA__sac",
+   "b": "K_GOVDE__sac",
+   "adet": 13,
+   "noktalar": [
+    [
+     4394.0,
+     788.0,
+     39.0
+    ],
+    [
+     4036.0,
+     791.0,
+     -180.0
+    ],
+    [
+     4090.0,
+     791.0,
+     -784.0
+    ],
+    [
+     4091.4,
+     791.0,
+     25.1
+    ],
+    [
+     4181.4,
+     791.0,
+     25.1
+    ],
+    [
+     4271.4,
+     791.0,
+     25.1
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 3.0,
+   "a": "F_UST_KABIN__paslanmaz",
+   "b": "K_GOVDE__kabuk",
+   "adet": 1,
+   "noktalar": [
+    [
+     3997.0,
+     1859.0,
+     27.0
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 3.0,
+   "a": "F_TP10_GOVDE__paslanmaz",
+   "b": "K_GOVDE__sac",
+   "adet": 1,
+   "noktalar": [
+    [
+     3998.5,
+     791.0,
+     -410.0
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 3.0,
+   "a": "K_GOVDE__sac",
+   "b": "E_GOVDE__sac",
+   "adet": 1,
+   "noktalar": [
+    [
+     4398.5,
+     788.7,
+     59.0
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 3.0,
+   "a": "E_GOVDE__sac",
+   "b": "B_MODULER__paslanmaz",
+   "adet": 2,
+   "noktalar": [
+    [
+     4398.5,
+     123.0,
+     -731.4
+    ],
+    [
+     4398.5,
+     123.0,
+     -81.4
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 3.01,
+   "a": "TOPPING_MODUL__paslanmaz",
+   "b": "F_TP10_GOVDE__paslanmaz",
+   "adet": 1,
+   "noktalar": [
+    [
+     2501.5,
+     1110.8,
+     -410.9
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 3.04,
+   "a": "TOPPING_MODUL__paslanmaz",
+   "b": "F_UST_KABIN__sac",
+   "adet": 1,
+   "noktalar": [
+    [
+     2501.5,
+     1346.5,
+     37.5
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 3.1,
+   "a": "B_KASA__on_cerceve",
+   "b": "F_TP10_GOVDE__paslanmaz",
+   "adet": 1,
+   "noktalar": [
+    [
+     2563.9,
+     789.5,
+     22.2
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 3.35,
+   "a": "U_KE_GOVDE__sac",
+   "b": "F_UST_KABIN__paslanmaz",
+   "adet": 1,
+   "noktalar": [
+    [
+     4000.0,
+     1862.0,
+     54.5
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 3.35,
+   "a": "U_KE_GOVDE__sac",
+   "b": "F_DAVLUMBAZ__sac",
+   "adet": 1,
+   "noktalar": [
+    [
+     4000.0,
+     1862.0,
+     -440.2
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 3.5,
+   "a": "U_KE_GOVDE__sac",
+   "b": "K_GOVDE__sac",
+   "adet": 4,
+   "noktalar": [
+    [
+     4031.1,
+     1858.5,
+     -785.1
+    ],
+    [
+     4005.2,
+     1862.0,
+     43.4
+    ],
+    [
+     4391.1,
+     1858.5,
+     -785.1
+    ],
+    [
+     4391.1,
+     1858.5,
+     56.9
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 4.27,
+   "a": "TOPPING_MODUL__sac",
+   "b": "KAIDE_A__paslanmaz",
+   "adet": 1,
+   "noktalar": [
+    [
+     1434.5,
+     888.0,
+     33.6
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 4.5,
+   "a": "TOPPING_MODUL__paslanmaz",
+   "b": "F_UST_KABIN__paslanmaz",
+   "adet": 1,
+   "noktalar": [
+    [
+     2498.5,
+     1831.4,
+     38.0
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 4.5,
+   "a": "B_KASA__on_cerceve",
+   "b": "K_GOVDE__kabuk",
+   "adet": 1,
+   "noktalar": [
+    [
+     4001.2,
+     786.5,
+     24.0
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 4.5,
+   "a": "B_KASA__on_cerceve",
+   "b": "K_GOVDE__sac",
+   "adet": 1,
+   "noktalar": [
+    [
+     4388.0,
+     786.5,
+     24.0
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 4.5,
+   "a": "B_DEPO__sac",
+   "b": "K_GOVDE__kabuk",
+   "adet": 1,
+   "noktalar": [
+    [
+     4398.5,
+     786.5,
+     -469.5
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 4.5,
+   "a": "B_DEPO__sac",
+   "b": "K_GOVDE__sac",
+   "adet": 1,
+   "noktalar": [
+    [
+     4388.1,
+     786.5,
+     -469.0
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 4.5,
+   "a": "KAIDE_A__paslanmaz",
+   "b": "B_MODULER__paslanmaz",
+   "adet": 4,
+   "noktalar": [
+    [
+     742.5,
+     788.0,
+     -691.3
+    ],
+    [
+     772.8,
+     788.0,
+     -96.2
+    ],
+    [
+     1071.0,
+     788.0,
+     -691.3
+    ],
+    [
+     1101.3,
+     788.0,
+     -96.2
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 4.5,
+   "a": "KAIDE_C__paslanmaz",
+   "b": "B_MODULER__paslanmaz",
+   "adet": 6,
+   "noktalar": [
+    [
+     1440.9,
+     788.0,
+     -693.0
+    ],
+    [
+     1471.4,
+     788.0,
+     -96.0
+    ],
+    [
+     1620.0,
+     788.0,
+     -692.6
+    ],
+    [
+     1620.0,
+     788.0,
+     -96.4
+    ],
+    [
+     2104.9,
+     788.0,
+     -693.0
+    ],
+    [
+     2135.4,
+     788.0,
+     -96.0
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 4.5,
+   "a": "A_GOVDE__sac",
+   "b": "B_MODULER__paslanmaz",
+   "adet": 2,
+   "noktalar": [
+    [
+     737.5,
+     788.0,
+     -693.8
+    ],
+    [
+     737.5,
+     788.0,
+     -95.2
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 4.5,
+   "a": "F_TP10_GOVDE__sac",
+   "b": "B_MODULER__paslanmaz",
+   "adet": 1,
+   "noktalar": [
+    [
+     2729.5,
+     783.5,
+     -95.0
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 4.61,
+   "a": "B_KASA__on_cerceve",
+   "b": "K_GOVDE__sac",
+   "adet": 3,
+   "noktalar": [
+    [
+     4127.1,
+     786.5,
+     24.0
+    ],
+    [
+     4217.1,
+     786.5,
+     24.0
+    ],
+    [
+     4307.0,
+     786.5,
+     24.0
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 5.0,
+   "a": "F_UST_KABIN__sac",
+   "b": "K_GOVDE__sac",
+   "adet": 4,
+   "noktalar": [
+    [
+     4000.0,
+     1821.5,
+     -789.5
+    ],
+    [
+     4000.0,
+     867.3,
+     -651.2
+    ],
+    [
+     4005.0,
+     1857.5,
+     -812.5
+    ],
+    [
+     4000.0,
+     1858.4,
+     33.8
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 5.0,
+   "a": "F_TP10_GOVDE__sac",
+   "b": "K_GOVDE__sac",
+   "adet": 2,
+   "noktalar": [
+    [
+     4000.0,
+     816.4,
+     -651.0
+    ],
+    [
+     4000.0,
+     885.1,
+     -651.0
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 5.0,
+   "a": "K_GOVDE__sac",
+   "b": "E_GOVDE__kabuk",
+   "adet": 4,
+   "noktalar": [
+    [
+     4395.0,
+     1857.5,
+     -787.5
+    ],
+    [
+     4395.0,
+     1857.5,
+     54.5
+    ],
+    [
+     4395.0,
+     791.0,
+     32.4
+    ],
+    [
+     4395.0,
+     866.0,
+     -783.5
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 5.5,
+   "a": "U_F_HAVALANDIRMA__paslanmaz",
+   "b": "F_UST_KABIN__sac",
+   "adet": 2,
+   "noktalar": [
+    [
+     3721.0,
+     1867.5,
+     -828.4
+    ],
+    [
+     3921.0,
+     1867.5,
+     -828.4
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 5.5,
+   "a": "U_KE_GOVDE__sac",
+   "b": "K_GOVDE__sac",
+   "adet": 1,
+   "noktalar": [
+    [
+     4005.2,
+     1862.0,
+     43.4
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 6.0,
+   "a": "F_TP10_GOVDE__paslanmaz",
+   "b": "B_MODULER__paslanmaz",
+   "adet": 1,
+   "noktalar": [
+    [
+     2563.6,
+     789.5,
+     -97.3
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 6.1,
+   "a": "U_F_GOVDE__sac",
+   "b": "K_GOVDE__sac",
+   "adet": 2,
+   "noktalar": [
+    [
+     4000.0,
+     1862.0,
+     -788.0
+    ],
+    [
+     4000.0,
+     1862.0,
+     51.5
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 6.26,
+   "a": "TOPPING_MODUL__paslanmaz",
+   "b": "KAIDE_A__paslanmaz",
+   "adet": 1,
+   "noktalar": [
+    [
+     1434.5,
+     888.0,
+     33.6
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 6.5,
+   "a": "F_UST_KABIN__paslanmaz",
+   "b": "K_GOVDE__sac",
+   "adet": 2,
+   "noktalar": [
+    [
+     3998.5,
+     1346.5,
+     -799.9
+    ],
+    [
+     3998.5,
+     1346.5,
+     52.5
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 6.5,
+   "a": "F_UST_KABIN__sac",
+   "b": "K_GOVDE__sac",
+   "adet": 2,
+   "noktalar": [
+    [
+     3998.5,
+     1348.0,
+     52.5
+    ],
+    [
+     3998.5,
+     1326.5,
+     -791.0
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 6.5,
+   "a": "F_TP10_GOVDE__paslanmaz",
+   "b": "K_GOVDE__sac",
+   "adet": 2,
+   "noktalar": [
+    [
+     3998.5,
+     797.0,
+     -410.0
+    ],
+    [
+     3998.5,
+     868.7,
+     -410.0
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 6.5,
+   "a": "K_GOVDE__sac",
+   "b": "E_GOVDE__sac",
+   "adet": 2,
+   "noktalar": [
+    [
+     4395.0,
+     1857.5,
+     54.5
+    ],
+    [
+     4395.0,
+     791.0,
+     32.4
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 6.68,
+   "a": "K_GOVDE__sac",
+   "b": "E_GOVDE__sac",
+   "adet": 4,
+   "noktalar": [
+    [
+     4396.3,
+     830.4,
+     24.8
+    ],
+    [
+     4396.3,
+     1138.9,
+     24.8
+    ],
+    [
+     4396.3,
+     1588.9,
+     24.8
+    ],
+    [
+     4396.3,
+     1798.9,
+     24.8
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 6.8,
+   "a": "K_GOVDE__sac",
+   "b": "E_GOVDE__sac",
+   "adet": 1,
+   "noktalar": [
+    [
+     4395.0,
+     886.6,
+     27.0
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 7.24,
+   "a": "F_UST_KABIN__sac",
+   "b": "K_GOVDE__sac",
+   "adet": 1,
+   "noktalar": [
+    [
+     3998.5,
+     1326.3,
+     27.0
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 7.43,
+   "a": "U_F_GOVDE__sac",
+   "b": "K_GOVDE__sac",
+   "adet": 1,
+   "noktalar": [
+    [
+     4000.0,
+     1862.0,
+     51.5
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 8.0,
+   "a": "F_UST_KABIN__paslanmaz",
+   "b": "K_GOVDE__sac",
+   "adet": 2,
+   "noktalar": [
+    [
+     3997.0,
+     1832.5,
+     50.7
+    ],
+    [
+     3997.0,
+     1858.5,
+     53.6
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 9.0,
+   "a": "F_UST_KABIN__sac",
+   "b": "K_GOVDE__sac",
+   "adet": 4,
+   "noktalar": [
+    [
+     4009.0,
+     1418.5,
+     -784.0
+    ],
+    [
+     4009.0,
+     1418.5,
+     27.0
+    ],
+    [
+     4009.0,
+     1459.5,
+     -784.0
+    ],
+    [
+     4009.0,
+     1460.5,
+     27.0
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 9.0,
+   "a": "K_GOVDE__sac",
+   "b": "E_GOVDE__kabuk",
+   "adet": 4,
+   "noktalar": [
+    [
+     4391.0,
+     1418.5,
+     -785.0
+    ],
+    [
+     4391.0,
+     1418.5,
+     26.0
+    ],
+    [
+     4391.0,
+     1460.5,
+     -785.0
+    ],
+    [
+     4391.0,
+     1459.5,
+     26.0
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 9.7,
+   "a": "F_TP10_GOVDE__sac",
+   "b": "K_GOVDE__sac",
+   "adet": 2,
+   "noktalar": [
+    [
+     4009.7,
+     821.0,
+     -570.8
+    ],
+    [
+     4009.7,
+     821.0,
+     -480.8
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 10.49,
+   "a": "F_UST_KABIN__paslanmaz",
+   "b": "K_GOVDE__sac",
+   "adet": 1,
+   "noktalar": [
+    [
+     3997.0,
+     1830.5,
+     27.0
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 10.69,
+   "a": "K_GOVDE__sac",
+   "b": "E_GOVDE__sac",
+   "adet": 2,
+   "noktalar": [
+    [
+     4401.5,
+     1418.6,
+     29.0
+    ],
+    [
+     4391.0,
+     1460.5,
+     27.0
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 11.1,
+   "a": "B_KASA__on_cerceve",
+   "b": "A_GOVDE__paslanmaz",
+   "adet": 1,
+   "noktalar": [
+    [
+     1431.6,
+     786.5,
+     24.0
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 11.4,
+   "a": "TOPPING_MODUL__paslanmaz",
+   "b": "F_UST_KABIN__sac",
+   "adet": 1,
+   "noktalar": [
+    [
+     2501.5,
+     1326.3,
+     27.0
+    ]
+   ]
+  },
+  {
+   "tur": "modüller arası",
+   "aralik_mm": 12.0,
+   "a": "B_KASA__sac",
+   "b": "KAIDE_C__paslanmaz",
+   "adet": 1,
+   "noktalar": [
+    [
+     1614.0,
+     800.0,
+     -777.4
+    ]
+   ]
+  }
+ ]
+}

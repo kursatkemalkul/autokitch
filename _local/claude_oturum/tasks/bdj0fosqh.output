@@ -1,0 +1,8 @@
+83:    DUSUR.extend([("EL", a) for a in ("pano_ipc_montaj_plakasi", "pano_ipc_mesafe_burcu_0", "pano_ipc_mesafe_burcu_1", "pano_ipc_mesafe_burcu_2",
+84:                                    "pano_ipc_mesafe_burcu_3", "ipc_C6015_montaj_adaptoru", "ipc_C6015_82x82x40", "din_ray_ipc_TS35", "ag_anahtar_Moxa_EDS205", "klemens_24v_ipc")])
+/usr/bin/bash: line 1: 12213 Segmentation fault         python -u h2/h2_elektrik_v1.py > h2/_log_elk.txt 2>&1
+Traceback (most recent call last):
+ModuleNotFoundError: No module named 'kesme_cad_v6'
+ELK EXIT 139
+
+[exited with code 0]

@@ -1,0 +1,65 @@
+<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Çekmece Montajı</title>
+<link rel="icon" href="data:,"><link rel="stylesheet" href="hat.css?v=12">
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>
+<style>
+.km{position:relative;background:#e9edf2;border:1px solid var(--line);border-radius:16px 16px 0 0;overflow:hidden;height:min(64vh,640px);min-height:340px;touch-action:none}
+.km canvas{display:block;width:100%;height:100%}
+.km .yuk{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#68758a;font:600 14px system-ui,sans-serif}
+.km .olay{position:absolute;left:12px;right:12px;bottom:12px;background:rgba(15,23,38,.86);color:#fff;font:600 13.5px/1.4 system-ui,sans-serif;padding:8px 12px;border-radius:10px;pointer-events:none}
+.km .no{position:absolute;left:12px;top:12px;background:rgba(15,23,38,.86);color:#ffd978;font:800 13px system-ui,sans-serif;letter-spacing:.04em;padding:6px 10px;border-radius:8px}
+.km .kamtus{position:absolute;right:12px;top:12px;display:flex;gap:6px}
+.km .kamtus button{border:1px solid #39424f;background:rgba(35,41,50,.9);color:#e6ebf0;border-radius:8px;padding:6px 10px;font:600 12px system-ui,sans-serif;cursor:pointer;min-height:32px}
+.km .kamtus button[aria-pressed=true]{background:#4f86ff;border-color:#4f86ff;color:#fff}
+.acn{position:absolute;inset:0;background:#f7f9fb;display:none;flex-direction:column}
+.acn svg{flex:1;width:100%;min-height:0}
+.acn .sec{display:flex;flex-wrap:nowrap;overflow-x:auto;gap:6px;padding:52px 12px 6px;scrollbar-width:thin}.acn .sec button{flex:0 0 auto}
+.acn .sec button{border:1px solid #c9d2de;background:#fff;color:#33404f;border-radius:999px;padding:4px 10px;font:600 12px system-ui,sans-serif;cursor:pointer}
+.acn .sec button.ak{background:#0f1726;color:#fff;border-color:#0f1726}
+.acn .bil{padding:0 12px 58px;color:#44505c;font:12.5px/1.4 system-ui,sans-serif}
+.zc{display:flex;flex-wrap:wrap;gap:8px 10px;align-items:center;padding:10px 14px;background:#1b1f26;border-top:1px solid #2a3039}
+.zc button{border:1px solid #39424f;background:#232932;color:#cfd6df;border-radius:8px;padding:8px 12px;font:600 13px system-ui,sans-serif;cursor:pointer;min-height:38px;min-width:40px}
+.zc button.ak,.zc button[aria-pressed=true]{background:#4f86ff;border-color:#4f86ff;color:#fff}
+.zc input[type=range]{flex:1 1 200px;accent-color:#4f86ff;min-height:30px}
+.zc .sn{color:#8d97a4;font:600 12px system-ui,sans-serif;font-variant-numeric:tabular-nums;min-width:86px}
+.zc .et{color:#8d97a4;font:700 12px system-ui,sans-serif;letter-spacing:.04em}
+.adim{display:flex;flex-wrap:wrap;gap:6px;padding:10px 14px 12px;background:#1b1f26}
+.adim button{border:1px solid #2f3742;background:#1f252d;color:#aab4c0;border-radius:999px;padding:6px 12px;font:600 12.5px system-ui,sans-serif;cursor:pointer;min-height:34px}
+.adim button.ak{border-color:#e0a31c;background:#3a2f14;color:#ffd978}
+.kart{background:#fff;border:1px solid var(--line);border-top:0;border-radius:0 0 16px 16px;padding:16px 18px 18px}
+.kart h2{margin:0 0 6px;padding:0;border:0;font-size:22px}
+.kart p{margin:6px 0;font-size:15px;line-height:1.5}
+.kart .ls{color:#44505c;font-size:13.5px;background:#f4f6f9;border-radius:8px;padding:8px 10px;margin-top:8px}
+.dog{margin:14px 0 0;font-size:13px;color:#44505c}.dog b{color:#178a56}.dog b.k{color:#c0392b}
+.zc .kes{display:flex;align-items:center;gap:6px}
+@media (max-width:640px){h1{font-size:24px}.wrap{padding:16px 12px 40px}.km{height:58vh}.kart h2{font-size:19px}.zc{padding:8px 10px}.zc button{padding:8px 10px}}
+.ist{font-size:13.5px;color:#44505c;margin:-4px 0 12px}.ist a{font-weight:700}.ist span{color:#8d97a4}
+.ren{display:flex;flex-wrap:wrap;gap:6px 14px;margin-top:10px;font-size:12.5px;color:#44505c}.ren i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:5px;vertical-align:-1px;border:1px solid rgba(0,0,0,.25)}
+.km .acnk{position:absolute;left:12px;top:52px;max-width:min(330px,62%);background:rgba(255,255,255,.94);border:1px solid #c9d2de;border-radius:10px;padding:8px 10px;font:12.5px/1.4 system-ui,sans-serif;color:#33404f;display:none}.km .acnk .t{font:800 11px system-ui,sans-serif;letter-spacing:.06em;color:#c0392b}.km .acnk .a{font-weight:700;margin:2px 0}.km .acnk ol{margin:4px 0 0;padding-left:18px}
+.foto .km{position:fixed;inset:0;height:100vh;max-height:none;border-radius:0;z-index:50;border:0}.foto .kamtus{display:none}
+</style></head><body data-ist="cekmece">
+<div class="top"><div class="in"><div class="crumb"><a href="../">Store</a><span>&rsaquo;</span><a href="index.html">HAT</a><span>&rsaquo;</span><a href="makine_v3_8.html">Makine v3</a><span>&rsaquo;</span><a href="b-montaj.html">B montajı</a><span>&rsaquo;</span><b>Tek çekmece</b></div><div><a href="makine_v3_8.html">&larr; Makineye dön</a></div></div></div>
+<div class="wrap"><h1>B · TEK ÇEKMECE — montaj sırası<span class="tag" style="background:#2e7d4f">v3 · K2 sütunu · orta sıra · denetim temiz</span></h1>
+<p class="lead">B dolabındaki 21 çekmeceden biri (K2 sütunu, 3. sıra) — <b>üretimden başlayarak</b>: her sac parça lazerden düz açınım olarak gelir, abkantta bükümleri tek tek ve gerçek sırayla yapılır, PEM'ler preslenir; lamalar kesim boyunda ve dişli gelir. Sonra dolapta ve montaj tezgâhında her vida, perçin, PEM, pul ve somun tek tek kendi ekseninde takılır, kaynak dikişleri ve punta noktaları birleşme anında gösterilir. Ray (Accuride DZ3832) katalog ünitesi olarak gelir; profiller iç içe sokulmaz.</p>
+<p class="ist">Diğer montajlar: <a href="b-montaj.html">B dolabı</a> · <a href="a-montaj.html">A</a> · <a href="topping-montaj.html">TOPPING</a> · <a href="f-montaj.html">F</a> · <a href="e-montaj.html">E</a> · <a href="u-montaj.html">U</a></p>
+<div class="km" id="km"><div class="yuk" id="yuk">Model yükleniyor…</div>
+  <div class="acn" id="acn"><div class="sec" id="acnsec"></div><svg id="acnsvg" xmlns="http://www.w3.org/2000/svg"></svg><div class="bil" id="acnbil"></div></div>
+  <div class="no" id="no"></div>
+  <div class="acnk" id="acnk"></div>
+  <div class="kamtus"><button id="kam" aria-pressed="true" title="Kamera adımı takip etsin">Kamera: otomatik</button></div>
+  <div class="olay" id="olay"></div></div>
+<div class="zc"><button id="geri" aria-label="Önceki adım">&#9664;&#9664;</button><button id="oy" aria-label="Oynat / duraklat">&#10074;&#10074;</button><button id="ileri" aria-label="Sonraki adım">&#9654;&#9654;</button>
+  <input id="tz" type="range" min="0" max="100" step="0.01" value="0" aria-label="Zaman"><span class="sn" id="sn">0,0 / 0 sn</span></div>
+<div class="zc" id="hz"><span class="et">HIZ</span><button data-h="0.5">0,5×</button><button data-h="1" class="ak">1×</button><button data-h="2">2×</button><button data-h="4">4×</button>
+  <span class="et" style="margin-left:8px">GÖRÜNÜM</span><button id="kenar" aria-pressed="true">Kenar çizgileri</button>
+  <span class="kes"><button id="kesit" aria-pressed="false">Kesit</button><select id="kesx" aria-label="Kesit ekseni" style="min-height:34px;border-radius:8px"><option value="x">X</option><option value="y">Y</option><option value="z" selected>Z</option></select><input id="kesd" type="range" min="0" max="1" step="0.002" value="0.5" style="width:120px" aria-label="Kesit konumu"></span></div>
+<div class="adim" id="adim"></div>
+<div class="kart"><h2 id="bas"></h2><p id="met"></p><div class="ls" id="lis"></div>
+<div class="ren"><span><i style="background:#cfd4da"></i>sac</span><span><i style="background:#2f7bff"></i>vida / cıvata / perçin / PEM (mavi)</span><span><i style="background:#9aa3ad"></i>mekanizma</span><span><i style="background:#1d3f7a"></i>bilgi kablosu</span><span><i style="background:#c96a4a"></i>silikon tepsi</span><span><i style="background:#e0a31c"></i>sensör / mıknatıs</span><span><i style="background:#e3151b"></i>kaynak dikişi / punta (kırmızı, kalıcı)</span><span><i style="background:#b3bac3"></i>lama / profil</span><span><i style="background:#9a7b52"></i>tezgâh</span><span><i style="background:#c4cbd6;opacity:.6"></i>silik gövde</span></div>
+<div class="dog" id="dog"></div></div>
+<h2>Atölye sırası</h2>
+<ol id="sira" style="font-size:13.5px;color:#44505c;padding-left:20px"></ol>
+<p class="note" id="dis" style="font-size:13px;color:#68758a"></p>
+</div>
+<div class="foot">AUTOKITCH &middot; tek çekmece montajı v3 (her birleşim yakın planda, alt montajlar havada) &middot; model: hat3_v9l (zincir adım 44) · CEK_K2_lahm_3 + B gövdesi (silik) &middot; 4 Eki 2026 · yerel</div>
+<script type="module" src="ist_montaj/montaj-oynatici.js?v=2"></script>
+</body></html>

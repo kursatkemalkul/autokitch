@@ -1,0 +1,17 @@
+[  36 sn] E v14 · 433 parça (v13 435) · geçersiz 0 · döngü eski 23.0 s → gerçek 31.96 s
+[  36 sn]    ZAMAN İHLALİ (gerçek saatte sınırı aşan eksen): YOK
+[  44 sn]    1 · v13 ↔ v14: çıkan ['agiz_ust_kirisi', 'kablo_kanali_dikey_alt', 'kablo_kanali_dikey_ust'] · eklenen ['kablo_kanali_dikey'] · değişen 0 → AYNI (beklenen)
+[  45 sn]    2 · kinematik: 461 an × 20 grup + blank_dunya · fark 0 · saat sabitleri fark YOK → BİREBİR
+[  45 sn]    3 · tek parça kanal zarfı (806.0, 826.0, 126.0, 1827.0, -50.0, -25.0) (boy 1701) · durağan çakışma 0
+[  50 sn]    4 · KAFA İNİŞİ ↔ BESLEME (eski 1,85–2,80 · 5 ms): en kısa 4.30 mm (1.85, 'piston_kafasi', 'besleyici_arabasi_0') · kesişim 0
+[  53 sn]       KARTON-İÇ B_TABAN ↔ B_ARKA_MENTESE 8.9 mm³ (t 2.75)
+[  54 sn]       KARTON-İÇ B_TIRNAK_ARKA_MENTESE ↔ B_ARKA_MENTESE 77.0 mm³ (t 3.25)
+[  54 sn]       KARTON-İÇ B_TIRNAK_ON_MENTESE ↔ B_ARKA_MENTESE 77.0 mm³ (t 3.25)
+[  57 sn]       KARTON-İÇ B_ARKA_MENTESE ↔ B_KAPAK 16.3 mm³ (t 6.00)
+[  73 sn]    4 · tam tarama 128 an · kesişim 0 · makine↔karton 0 · karton içi 373 (kat yeri kalınlık bindirmesi, v13 ile aynı sayılır) · 73 s
+[  95 sn]    5 · BAĞLANTI: bileşen boyları [401, 1] · tek kalanlar [['asansor_kayisi']]
+[  95 sn]    5 · GÖRSEL HAVADA (yalnız saydam ön yüze değen opak parça): 0 []
+[  95 sn]    5 · bilgi · yalnız saydam dış kabuğa (kabuk) değen opak parça: 0 []
+[  95 sn]    5 · kanal komşuları: ['kablo_kanali_ust_mesafe_0', 'kablo_kanali_ust_mesafe_1', 'kablo_kanali_ust_mesafe_2', 'taban_sac_3']
+[  95 sn] E v14 DENETİM: GEÇTİ · v13↔v14 True · kinematik True · kanal True · v13 denetimleri True (kesişim 0 · karton 0 · kafa↔besleme 4.30 mm) · bağlantı True · 94 s
+ONBELLEK (ACIK): sinir kutusu oku 21512 / hesapla 542 · islem oku 27552 / hesapla 2 · ag oku 0 / hesapla 0 · STEP oku 36 / hesapla 0 · parmak izi 4410 (8 sn) · islem 20 sn · ag 0 sn · toplam 95 sn · klasor C:\Users\Kemal\AppData\Local\AUTOKITCH_onbellek

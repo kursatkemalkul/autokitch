@@ -1,0 +1,10 @@
+hat3_montaj_v7.py yazıldı · 16 yama
+MONTAJ 02:29:24
+  v14b · K1 AÇILMA TARAMASI (TU parçaları · 0–110°, 19 açı · sanal pivot ön dış köşe · flipper katlanır min(90, 33·α), K2 KAPALI): çakışma 0 GEÇTİ []
+  v14b · K2 AÇILMA TARAMASI (TU parçaları · 0–110°, 19 açı · sanal pivot ön dış köşe · K1 + flipper KAPALI): çakışma 0 GEÇTİ []
+KAIDE (kaide_cad_v4 · 21 parca · y 788.0-893.5) ↔ TOPPING (TC 311 parca + tabla aktarmada, acici dahil + TU 412): YOK · ↔ CEKMECELI DOLAP: YOK · TC en alt 892.00 ≥ 892 · TU en alt 788.00  KALDI [FAIL]
+Traceback (most recent call last):
+AssertionError: v57: kaide ↔ TOPPING / dolap
+MONTAJ EXIT 1 02:42:35
+
+[exited with code 0]

@@ -1,0 +1,16 @@
+ok False
+gövde: 674 · ent eşleşmeyen: []
+B_BAGLANTI: 638 / 638 bileşen eşlendi · eşlenmeyen meta 0 []
+süre 217.0 s · adım 23 · öğe 1416 · zamanlanmamış 4 ['b_evap_3073_227_saplama', 'b_evap_3293_227_saplama', 'b_evap_3073_508_saplama', 'b_evap_3293_508_saplama']
+PLAN SORUNU 9
+   {'parca': ['g_ic_arka_1', 'pem_ic_arka_1', 'kapak_ic_arka_1', 'b_evap_1763_247_saplama', 'b_evap_1984_247_saplama', 'b_evap_1763_663_saplama', 'b_evap_1984_663_saplama'], 'yon': 'ust', 'sorun': [('pem_ic_arka_1', 'g_pu_arka_yuksek_on'), ('kapak_ic_arka_1', 'g_pu_arka_yuksek_on')]}
+   {'parca': ['g_ic_arka_2', 'pem_ic_arka_2', 'kapak_ic_arka_2'], 'yon': 'ust', 'sorun': [('pem_ic_arka_2', 'g_pu_arka_yuksek_on'), ('pem_ic_arka_2', 'g_pu_arka_alcak_on'), ('kapak_ic_arka_2', 'g_pu_arka_yuksek_on'), ('kapak_ic_arka_2', 'g_pu_arka_alcak_on')]}
+   {'parca': ['g_bolme_2_pu'], 'yon': "('on', (36.0, 0.0, 0.0))", 'sorun': [('g_bolme_2_pu', 'b_f1_taban2_0'), ('g_bolme_2_pu', 'b_f1_taban1_9'), ('g_bolme_2_pu', 'b_f1_taban2_0')]}
+   {'parca': ['g_bolme_2_sac_b', 'pem_bolme_2_sac_b', 'kapak_bolme_2_sac_b'], 'yon': "('on', (36.0, 0.0, 0.0))", 'sorun': [('g_bolme_2_sac_b', 'b_f1_taban2_0')]}
+   {'parca': ['g_bolme_5_pu'], 'yon': "('on', (36.0, 0.0, 0.0))", 'sorun': [('g_bolme_5_pu', 'b_f1_taban2_13')]}
+   {'parca': ['g_teknik_sol_duvar'], 'yon': 'on', 'sorun': [('g_teknik_sol_duvar', 'g_bolme_5_kovan_0'), ('g_teknik_sol_duvar', 'g_bolme_5_kovan_0_ust_L'), ('g_teknik_sol_duvar', 'g_bolme_5_kovan_1'), ('g_teknik_sol_duvar', 'g_bolme_5_kovan_1_ust_L')]}
+   {'parca': ['sogutma_grubu'], 'yon': 'on', 'sorun': [('sogutma_grubu', 'b_zincir_taban_-1_saplama'), ('sogutma_grubu', 'b_zincir_taban_1_saplama'), ('sogutma_grubu', 'zemin_conta'), ('sogutma_grubu', 'g_kosebent_sag_alt_2')]}
+   {'parca': ['b_kanal_2954'], 'yon': 'on', 'sorun': [('b_kanal_2954', 'b_bkanal_3_0_percin'), ('b_kanal_2954', 'b_bkanal_3_1_percin'), ('b_kanal_2954', 'b_bkanal_3_2_percin')]}
+   {'parca': ['b_kanal_3609'], 'yon': 'on', 'sorun': [('b_kanal_3609', 'b_bkanal_4_0_percin'), ('b_kanal_3609', 'b_bkanal_4_1_percin'), ('b_kanal_3609', 'b_bkanal_4_2_percin')]}
+
+[exited with code 0]

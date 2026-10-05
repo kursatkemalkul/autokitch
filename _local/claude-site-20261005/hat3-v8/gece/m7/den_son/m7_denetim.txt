@@ -1,0 +1,46 @@
+== 1 · EVAPORATÖR ↔ ÜST UNO ARKA TAKIMI (evap kaseti dış sacı x 1676–2216 · y 1383–1765 · z −826…−640)
+   harc__pnomatik_silindir_D32        x  1478.0– 1515.5  y/z örtüşme VAR  →  x boşluğu +160.5 mm TAMAM
+   harc_silindir_konsolu              x  1471.0– 1523.0  y/z örtüşme VAR  →  x boşluğu +153.0 mm TAMAM
+   harc__pnomatik_on_ayak             x  1472.0– 1522.0  y/z örtüşme VAR  →  x boşluğu +154.0 mm TAMAM
+   harc__pnomatik_arka_mafsal         x  1485.0– 1509.0  y/z örtüşme VAR  →  x boşluğu +167.0 mm TAMAM
+   harc__pnomatik_on_bogaz            x  1485.0– 1508.7  y/z örtüşme VAR  →  x boşluğu +167.3 mm TAMAM
+   sos__pnomatik_silindir_D32         x  2231.0– 2268.4  y/z örtüşme VAR  →  x boşluğu +15.0 mm TAMAM
+   sos_silindir_konsolu               x  2224.0– 2276.0  y/z örtüşme VAR  →  x boşluğu +8.0 mm TAMAM
+   sos__pnomatik_on_ayak              x  2225.0– 2275.0  y/z örtüşme VAR  →  x boşluğu +9.0 mm TAMAM
+   sos__pnomatik_arka_mafsal          x  2238.0– 2262.0  y/z örtüşme VAR  →  x boşluğu +22.0 mm TAMAM
+   sos__pnomatik_on_bogaz             x  2238.0– 2261.7  y/z örtüşme VAR  →  x boşluğu +22.0 mm TAMAM
+
+== 2 · AÇIK PU (1 mm raster · kapaklar yok · PU = düğüm adı __pu)
+   önden (kapaklar yok)                       açık PU      0 mm² · 0 bölge 
+   oda içinden sola (x 2000 → −x)             açık PU      0 mm² · 0 bölge 
+   oda içinden sağa (x 1600 → +x)             açık PU      0 mm² · 0 bölge 
+   oda içinden arkaya (z 0 → −z)              açık PU      0 mm² · 0 bölge 
+   oda içinden aşağı (y 2100 → −y)            açık PU      0 mm² · 0 bölge 
+   oda içinden yukarı · ana oda (y 1160 → +y) açık PU      0 mm² · 0 bölge 
+   oda içinden yukarı · cep (y 1160 → +y)     açık PU      0 mm² · 0 bölge 
+   mekanizma bandından yukarı (y 1050 → +y)   açık PU      0 mm² · 0 bölge 
+   A'nın içinden sağa (x 1180 → +x)           açık PU      0 mm² · 0 bölge 
+
+== 3 · KASET ÖNDEN ÇEKME SÜPÜRMESİ (+z 300 mm · kilit dili bastırılmış)
+   kasar: YOLDA kasar_boru_kulagi_sol                        x 2024–2037 y 1082–1149 z -160–-140 ← kasar_cad_v14__cikis_tupu
+   kasar: YOLDA kasar_boru_kulagi_sag                        x 2087–2100 y 1082–1149 z -160–-140 ← kasar_cad_v14__cikis_tupu
+   kasar: YOLDA TOPPING_MODUL__paslanmaz#1                   x 1296–2498 y 894–2198 z -571–39 ← kasar_cad_v14__cikis_tupu
+   kasar: YOLDA TOPPING_MODUL__paslanmaz#0                   x 1238–2498 y 1109–2198 z -630–38 ← kasar_cad_v14__cikis_tupu
+   kasar: YOLDA soguk_oda_PU_alt_cepli                       x 1300–2437 y 1110–1149 z -567–20 ← kasar_cad_v14__cikis_tupu
+   sucuk: YOLDA sucuk_boru_kulagi_sol                        x 2318–2332 y 1082–1149 z -160–-140 ← sucuk_cad_v8__cikis_tupu
+   sucuk: YOLDA sucuk_boru_kulagi_sag                        x 2380–2394 y 1082–1149 z -160–-140 ← sucuk_cad_v8__cikis_tupu
+   sucuk: YOLDA TOPPING_MODUL__paslanmaz#1                   x 1296–2498 y 894–2198 z -571–39 ← sucuk_cad_v8__cikis_tupu
+   sucuk: YOLDA TOPPING_MODUL__paslanmaz#0                   x 1238–2498 y 1109–2198 z -630–38 ← sucuk_cad_v8__cikis_tupu
+   sucuk: YOLDA soguk_oda_PU_alt_cepli                       x 1300–2437 y 1110–1149 z -567–20 ← sucuk_cad_v8__cikis_tupu
+
+== 4 · UNO HUNİSİ ÇIKARMA PAYI (TC kelepçe açılır → huni kalkar → öne çekilir · ön ağız x 1496–2440)
+   kiyma    hazne x 1530–1720 y 1284–1499 · üst boşluk 35 mm · sol 12 · sağ 4 · doğrudan öne çekilir
+   kusbasi  hazne x 1724–1914 y 1284–1499 · üst boşluk 35 mm · sol 4 · sağ 8 · doğrudan öne çekilir
+   harc     hazne x 1307–1687 y 1707–2099 · üst boşluk 41 mm · sol 10 · sağ 753 · önce 189 mm sağa kaydırılır (sağ boşluk 753 YETER) sonra öne
+   sos      hazne x 2140–2360 y 1707–1992 · üst boşluk 148 mm · sol 843 · sağ 80 · doğrudan öne çekilir
+
+== 5 · ÜST UNO HORTUMLARI (D32, dış Ø42)
+   harç (sol) hortum x 1476.2–1517.8 (eksen 1497.0) y 1216–1539 z -191.0–-149.6 · dik: x/z sapma 0.1/-0.2 mm
+   harç (sol) hortumun önünde/arkasında alt birim yok · yatay boşluk sol 999.0 · sağ 11.5 mm
+   sos (sağ)  hortum x 2229.2–2270.8 (eksen 2250.0) y 1216–1539 z -191.0–-149.6 · dik: x/z sapma 0.1/-0.2 mm
+   sos (sağ)  hortumun önünde/arkasında alt birim yok · yatay boşluk sol 61.0 · sağ 26.5 mm

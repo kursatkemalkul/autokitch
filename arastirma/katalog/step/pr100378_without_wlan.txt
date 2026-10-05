@@ -1,0 +1,9 @@
+MANUFACTURER: KUNBUS GmbH (Revolution Pi)
+ORDER NO: PR100378 (RevPi Connect 4)
+TITLE: RevPi Connect 4 STEP file (variant WITH WLAN antenna socket)
+FILE: pr100378.stp (original RevPi-Connect-4.step); also pr100378_without_wlan.stp (RevPi-Connect-4-without-WLAN.step) from the same zip.
+  Check which variant PR100378 is (WLAN or not) and keep the matching one.
+SOURCE: https://revolutionpi.com/en/support/downloads (STEP Files > RevPi Connect > RevPi Connect 4) -> https://revolutionpi.com/fileadmin/downloads/step_files/RevPi-Connect-4.zip
+DATE: 2026-10-01
+BBOX (STEP, mm): with WLAN X 45.0 x Y 114.6 x Z 96.8 ; without WLAN X 45.0 x Y 110.6 x Z 96.8  (width on rail 45)
+NOTE: files are large (25 MB each, detailed PCB); decimate/simplify before GLB.

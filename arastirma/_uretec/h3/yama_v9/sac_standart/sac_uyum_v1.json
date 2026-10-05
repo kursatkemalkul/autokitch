@@ -1,0 +1,194 @@
+{
+  "meta": {
+    "ad": "AUTOKITCH istasyon gövdeleri · STANDART UYUM TABLOSU (tek kaynak)",
+    "surum": "sac_uyum_v1",
+    "tarih": "2026-10-04",
+    "kaynak": "KUYRUK 3 iş 1 · uyum denetimi (scratchpad gece2/k3_uyum/RAPOR.md) · sac_standart_v1.json + sac_kararlar_v1.json üstüne; o iki dosya DEĞİŞMEDİ (montaj v7 / zincir 33–38 bayt aynılığı için)",
+    "kapsam": "A, B, TOPPING, F (üst kabin / kapak / baca), K, E, U_F, U_KE — QR / tezgâh hariç",
+    "oncelik": "Yeni üreteç sürümleri ve zincir adımları bu tabloyu okur (55_uyum.py 'pul' bölümünü kullanır). Çelişkide: Kemal kararı > bu tablo > sac_kararlar_v1 > sac_standart_v1."
+  },
+  "malzeme": "AISI 304 2B, dış yüz 240 kum satine (hat boyunca yatay) · bağlantı elemanı A2-70 / A2, PEM A286 pasive",
+  "kalinlik_aile_mm": [
+    0.8,
+    1.0,
+    1.2,
+    1.5,
+    2.0,
+    3.0
+  ],
+  "kalinlik_aile_disi_izinli": {
+    "4.0": "kaide üst plakası (A, TOPPING) — plaka / lama sınıfı",
+    "6.0": "TOPPING kaide enine laması — plaka / lama sınıfı"
+  },
+  "kalinlik_islev": {
+    "dis_kabuk": {
+      "t": 1.5,
+      "istasyon": "A B TOPPING K E U_F U_KE F_UST",
+      "not": "Kemal kuralı (şeffaf istasyon yüzeyleri 1,5)"
+    },
+    "kapak_dis_tava": {
+      "t": 1.5,
+      "istasyon": "A K E F TOPPING"
+    },
+    "kapak_ic_tava_notr": {
+      "t": 1.0,
+      "istasyon": "A K E"
+    },
+    "kapak_ic_tava_sicak_F": {
+      "t": 1.5,
+      "istasyon": "F (fırın üstü kabin kapakları)",
+      "durum": "FARK — üreteçte gerekçe yazılı değil; diğer kapaklar 1,0. F üreteci v2'de 1,0 önerisi (iç tava dış tavaya 0,5 boşlukla oturur, dış ölçü değişmez)"
+    },
+    "on_cerceve": {
+      "t": 1.0,
+      "istasyon": "B TOPPING"
+    },
+    "ic_sac_gida_soguk": {
+      "t": "B 1,2 · TOPPING 1,0",
+      "R_ic": 3.0,
+      "durum": "FARK KORUNDU — TOPPING 1,0 Kemal onaylı (4 Eki, topping_sac_v2 D2); yeni sürümde 1,2'ye çekilmesi önerilir"
+    },
+    "raf_yuk": {
+      "t": 3.0,
+      "istasyon": "TOPPING raf / üst raf, K istasyon rafı",
+      "not": "sac_kararlar raf_tabla_t 1,5 der; iki istasyonda da 3,0 (UNO / kaset yükü) → tablo 3,0"
+    },
+    "kulak_braket": {
+      "t": 3.0,
+      "istasyon": "A K TOPPING F_UST",
+      "korunan_fark": "E ön dikme kulakları 2,0 (18 adet) — E üreteci bilerek seçmiş: dar ön dikmeler (20 mm) için ince kulak + küçük pul (h3_e_sac_v1.kulak notu) — işlevli"
+    },
+    "dikme_tapasi": {
+      "t": 2.0,
+      "istasyon": "A K E F_UST"
+    },
+    "isinim_kalkani": {
+      "t": 0.8,
+      "istasyon": "B (fırın tarafı ışınım sacı)"
+    },
+    "baca_kilifi": {
+      "t": 0.8,
+      "istasyon": "F baca dış kılıfı + alt kapama lamaları"
+    },
+    "yalitim_kilifi_F_UST": {
+      "t": 0.5,
+      "durum": "AİLE DIŞI — üreteç v2'de 0,8 önerisi (taş yünü 0,3 mm incelir)"
+    },
+    "evaporator_ayagi": {
+      "t": 2.5,
+      "durum": "AİLE DIŞI — Kemal onaylı (topping_sac_v2 D3, üreticide kaynaklı L ayak); yeni sürümde 3,0 önerisi"
+    }
+  },
+  "bukum_R_ic": {
+    "kural": "R_iç = 1,5 t (gıda dışı, hava bükümü) · gıda tarafı iç sac R_iç = 3,0 (EHEDG en az 3) — bütün istasyonlarda aynı",
+    "0.8": 1.2,
+    "1.0": 1.5,
+    "1.2": 1.8,
+    "1.5": 2.25,
+    "2.0": 3.0,
+    "2.5": 3.75,
+    "3.0": 4.5,
+    "gida_ic_sac": 3.0,
+    "K": {
+      "0.8": 0.41,
+      "1.0": 0.45,
+      "1.2": 0.45,
+      "1.5": 0.45,
+      "2.0": 0.41,
+      "3.0": 0.41
+    }
+  },
+  "kose_R": {
+    "profil_dis_R": "2t (30×30×2 → R4 · 40×100×2 → R4 · 60×60×3 → R6)",
+    "gida_ic_kose_min": 3.0,
+    "gida_ic_kose_tercih": 6.0,
+    "servis_acikligi_kose": 6.0,
+    "hazne_dikey_kose": 25.0
+  },
+  "profil": {
+    "iskelet": "304 kare boru 30×30×2 (A K E F_UST — sac_kararlar'daki 40×40 yerine dar istasyon sapması, hepsinde aynı)",
+    "kaide": "40×100×2 dikdörtgen boru (A, TOPPING) · E kaidesi 60×60×3 + 40×60×3 (yere basan, M12 ayak kaynak somunu taşır — işlevli fark)"
+  },
+  "pul": {
+    "M5": {
+      "tip": "DIN125_M5",
+      "standart": "ISO 7089 (DIN 125-A) M5",
+      "olcu": [
+        5.3,
+        10.0,
+        1.0
+      ],
+      "kullanim": "FHP-M5 saplama / M5 vida + ISO 10511 somun, kulak / profil / braket tarafı"
+    },
+    "M8": {
+      "tip": "ISO7092_M8",
+      "standart": "ISO 7092 M8 (küçük seri, ISO 4762 için)",
+      "olcu": [
+        8.4,
+        15.0,
+        1.6
+      ],
+      "kullanim": "bütün istasyon ↔ istasyon ve kaide / şase M8 cıvataları; Ø16 servis deliğinden geçer"
+    },
+    "M4": {
+      "tip": "DIN125_M4",
+      "standart": "ISO 7089 M4",
+      "olcu": [
+        4.3,
+        9.0,
+        0.8
+      ]
+    },
+    "M6": {
+      "tip": "DIN125_M6",
+      "standart": "ISO 7089 M6",
+      "olcu": [
+        6.4,
+        12.0,
+        1.6
+      ]
+    },
+    "kaldirilan": [
+      "DIN 9021 M5 (A, K, E kısmen) → ISO 7089",
+      "DIN 9021 M8 (A→TOPPING, TOPPING→F, B şase) → ISO 7092",
+      "DIN 125 M8 (A açıcı flanşı, U_F, K) → ISO 7092"
+    ]
+  },
+  "baglanti": {
+    "panel_gizli": "PEM FHP-M5 (A286) + ISO 7089 M5 + ISO 10511 M5 · FHP boyu yığına göre 10 / 12 / 15 / 25",
+    "arka_teknik": "ISO 7380-1 M5 + PEM SP-M5 (kod sac kalınlığından: 1,0–1,3 → -1 · ≥ 1,4 → -2)",
+    "modul_modul": "ISO 4762 M8 A2-70 + ISO 7092 M8 → PEM SP-M8 / kapalı uçlu perçin somun M8 / kaynak somunu · delik Ø9",
+    "modul_modul_sapma": "U_KE → E / K: ISO 7380 M8 × 16 (bombe baş, 5 adet) — Kemal / sonraki U sürümünde ISO 4762'ye çekilmesi önerilir (baş yüksekliği 4,4 → 8)",
+    "havsa": "DIN 7991 M5 yalnız ≥ 3 mm parçada ya da çökertme (dimple) / kaynak burçlu (B ray, TOPPING servis sacı)",
+    "kor_percin": "B iç kabuk DIN 7337 Ø4 (213) · TOPPING / F_UST ISO 15983 Ø3,2 (64) — FARK: yeni sürümlerde tek çap Ø4 (ISO 15983 A2/A2) önerisi",
+    "percin_somun": "M8 A2 düz baş · ıslak / soğuk bölgede kapalı uçlu (B), kuru iskelette açık uçlu (K)",
+    "delik_iso273_orta": {
+      "M4": 4.5,
+      "M5": 5.5,
+      "M6": 6.6,
+      "M8": 9.0
+    }
+  },
+  "katalog_parca": {
+    "mentese": "gizli 180° kaldır-çıkar (Southco R6 / EMKA 1046 sınıfı) — A K E ön kapakları; E şarjör yan kapısı Southco E6 (küçük kapı, farklı ürün — işlevli)",
+    "bas_ac": "Southco 97 / EMKA 1080 sınıfı Ø12 — A K E F",
+    "ayak": "GN 20 hijyenik M12 (E) — üst istasyonlar B'ye oturur (ayaksız)",
+    "fitil_conta": "nötr kapakta fitil yok (A K E, dikme önüne 0,5 boşluk) · soğuk kapakta (B TOPPING) fitil — işlevli fark"
+  },
+  "arayuz": {
+    "on_duzlem_kapak_z": 79.0,
+    "govde_on_z": {
+      "notr": 59.0,
+      "soguk (B, TOPPING)": 39.0
+    },
+    "arka_z": -830.0,
+    "ust_y": 2200.0,
+    "B_ust_y": 788.0,
+    "U_alt_y": 1862.0,
+    "kapak_derz": 3.0,
+    "modul_derz": 0.0,
+    "kapak_ust_kot": 2197.0,
+    "alt_sira_ust_kot": 785.0,
+    "ust_sira_alt_kot": 788.0
+  }
+}

@@ -2,7 +2,7 @@
 <div class="top"><div class="in"><div class="crumb"><a href="../">Store</a><span>›</span><a href="index.html">HAT</a><span>›</span><a href="makine.html">Makine</a><span>›</span><b>ROBOT</b></div><div><a href="../">← Store</a></div></div></div>
 <div class="wrap"><h1>ROBOT — FR5 + yer rayı + ray ekleri<span class="tag" style="background:#2456c8">Fairino FR5 · ray 4900 · erişim 779</span></h1><p class="lead">Tek Fairino FR5 kobot, hattın önündeki 4,9 m yer rayında (x 200–5100, ray ekseni z 360). Hamur topunu çekmeceden alır, kutuyu E'den QR dolabının gözüne taşır; kaseti eleman önden takar. Ray boyunca zincir oluğu, enerji zinciri, zemin kanalı ve 15 m robot kablosu. Modelin altındaki çubuktan <b>kesit</b> alabilir (X/Y/Z) ve iki noktaya tıklayıp <b>ölçü</b> çıkarabilirsin.</p>
 <div class="m3">
-  <model-viewer id="mv" loading="eager" src="../hat3d/modul_R.glb?v=87" ios-src="../hat3d/modul_R.usdz?v=87" alt="ROBOT — FR5, yer rayı ve ray ekleri"
+  <model-viewer id="mv" loading="eager" src="../hat3d/modul_R.glb?v=88" ios-src="../hat3d/modul_R.usdz?v=88" alt="ROBOT — FR5, yer rayı ve ray ekleri"
       camera-controls touch-action="pan-y" shadow-intensity="0.6" exposure="1.0" environment-image="neutral"
       camera-orbit="20deg 76deg 5.8m" camera-target="2.8m 0.55m 0.6m" field-of-view="30deg" min-field-of-view="5deg"
       ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
@@ -12,7 +12,7 @@
 </div>
 <div class="secim" id="secim"></div>
 <p class="note" id="ozet"></p>
-<div class="card" style="border-left:4px solid #178a56;background:#eefaf3;margin:12px 0"><b style="color:#0f6e42">GÜNCEL · MONTAJ v87 (30 Eyl 2026).</b> Model montajdaki robot, yer rayı ve ray ekleri (ray_ek_cad_v1); robot ve kol zarfı katalog kutusu. Bu sayfada animasyon yok; çalışmayı <a href="makine.html">MAKİNE</a> sayfasında sipariş seçerek izle.</div>
+<div class="card" style="border-left:4px solid #178a56;background:#eefaf3;margin:12px 0"><b style="color:#0f6e42">GÜNCEL · MONTAJ v88 (30 Eyl 2026).</b> Model montajdaki robot, yer rayı ve ray ekleri (ray_ek_cad_v1); robot ve kol zarfı katalog kutusu. Bu sayfada animasyon yok; çalışmayı <a href="makine.html">MAKİNE</a> sayfasında sipariş seçerek izle.</div>
 <div class="card" style="border-left:4px solid #178a56;background:#eefaf3;margin:0 0 14px"><b style="color:#0f6e42">ROBOT + RAY EKLERİ (ray_ek_cad_v1)</b><br>
 Robot, ray ve kol zarfı hâlâ katalog kutusu (gerçek kol modeli yok). Rayın çevresindeki kablo yolu gerçek üretim modeli. Robot kontrol kutusu <b>QR dolabının alt bölmesinde</b> (475 × 423 × 268 rezerv).
 <div class="kv" style="margin:8px 0">
@@ -38,7 +38,7 @@ const M = model3d({
     return '<b>' + b.ad + '</b><span>' + b.olcu.join(' \u00d7 ') + ' mm \u00b7 <span class="rozet ' + rz[0] + '">' + rz[1] + '</span>' +
       (b.kaynak ? '<br>' + b.kaynak : '') + '</span>'; }
 });
-fetch('../hat3d/durum.json?v=87').then(r => r.json()).then(D => {
+fetch('../hat3d/durum.json?v=88').then(r => r.json()).then(D => {
   const L = D.birim.filter(b => b.modul === MODUL && b.kod.indexOf('_KABIN') < 0); M.veri(L);   // kabin zarfi modele girmiyor, listede de olmasin
   const tek = {}; L.forEach(b => { const k = b.ad + '|' + b.durum; (tek[k] = tek[k] || []).push(b); });
   document.getElementById('secim').innerHTML = Object.values(tek).map(gr => {

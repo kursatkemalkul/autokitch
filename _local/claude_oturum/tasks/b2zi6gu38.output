@@ -1,0 +1,11 @@
+[ 232.6s] SAC: 43 parça · açınım doğrulaması kalan 0 · DFM 0 HATA · 0 UYARI
+[ 232.6s] PROFİL: 7 boru · 4.4 m · DFM 0 HATA
+[ 232.7s] ZARF: hedef [1436.0, 2500.0, 788.0, 2200.0, -830.0, 39.0] · bulunan [np.float64(1436.0), np.float64(2500.0), np.float64(788.0), np.float64(2200.0), np.float64(-832.6), np.float64(39.0)] · fark [np.float64(0.0), np.float64(0.0), np.float64(0.0), np.float64(0.0), np.float64(-2.615), np.float64(0.0)] · taşan 17 → KALDI
+[ 243.3s] GÖVDE ↔ GÖVDE: kesişim 1 → [('kuru_bolme_tabani', 'teknik_sag_perde', 0.228)] · izinli (işaretli) 0
+[ 461.3s] GÖVDE ↔ v8zq (6583 bileşen · hariç ^$^): ÇAKIŞMA 0 · İNCELE 0 · TEMAS 245 (izinli 0)
+[ 480.7s] ARAYÜZ: 72 eleman · kestiği v8zq parçası 76 → ['B_KASA__sac[2]', 'B_MODULER__gfrp[3]', 'B_MODULER__gfrp[7]', 'B_MODULER__paslanmaz[3]', 'B_MODULER__paslanmaz[7]', 'ELK_IC__kanal[65]', 'ELK_IC__kanal[77]', 'ELK_IC__kanal[90]', 'ELK_TOPPING__celik[1]', 'ELK_TOPPING__celik[2]', 'ELK_TOPPING__celik[3]', 'ELK_TOPPING__kablo_sinyal[0]']
+[ 596.4s] HAVADA: 162 parça · zemine bağlı kök 9 · bağlı 162 · HAVADA 0
+[ 608.6s] PU GÖRÜNMEZ: 2 PU parçası · açıkta yüz noktası 160 → [('pu_raf_esik', [2055.3, 1142.3, 37.2]), ('pu_raf_esik', [2054.9, 1142.7, 37.2]), ('pu_raf_esik', [2054.8, 1142.9, 37.2]), ('pu_raf_esik', [2055.5, 1142.2, 37.2]), ('pu_raf_esik', [2055.7, 1142.1, 37.2])]
+[ 638.2s] ÖZET {"govde_parca": 162, "sac": 43, "profil": 7, "baglanti_elemani": 59, "kaynak_dikisi": 51, "arayuz": 72, "dogrulama_kalan": 0, "dfm_hata": 0, "dfm_uyari": 0, "profil_dfm_hata": 0, "zarf_gecti": false, "govde_govde": 1, "dis_cakisma": 0, "incele": 0, "havada": 0, "pu_acik": 160}
+
+[exited with code 0]

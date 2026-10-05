@@ -1,0 +1,15 @@
+8677.703125 10
+
+real	1m19.290s
+user	0m0.000s
+sys	0m0.062s
+    C = HO.hesapla("M", [(L[i][1]["h"], L[j][1]["h"]) for i, j in ciftler])
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Kemal\AppData\Local\Temp\claude\C--Users-Kemal-Desktop-Kemal-WEBS-TE\f3ef876a-f062-4b29-bb81-775cc8a1a6d8\scratchpad\b3_hiz_elk\arastirma\_uretec\h3\h3_hiz_ortak.py", line 232, in hesapla
+    for sonuc in pool.imap_unordered(_is, gorev):
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Kemal\AppData\Local\Programs\Python\Python312\Lib\multiprocessing\pool.py", line 873, in next
+    raise value
+ImportError: cannot import name 'IVtkOCC_Shape' from 'OCP.IVtkOCC' (C:\Users\Kemal\AppData\Local\Programs\Python\Python312\Lib\site-packages\OCP\IVtkOCC\__init__.py)
+
+[exited with code 0]

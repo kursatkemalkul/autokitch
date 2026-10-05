@@ -1,0 +1,300 @@
+[   2 sn] motor STEP bbox -28.0 28.0 -332.8 28.0 -64.5 31.6
+[  41 sn] TOPPING MODULU v32 · 412 parca (397 cizili + 15 yalniz listede) · 35 sn
+[  61 sn] KATI DENETIMI: hepsi gecerli
+[  62 sn] ISTASYON ZARFI: GECTI (x -605...2240, y 0...970, z -830...79)
+[  62 sn] ON DUZLEM (v25 · butun parcalar z <= +79,5 · acici istisnasi YOK): GECTI · en on [(79.0, 'onyuz_mekanizma_kanadi_sol'), (79.0, 'onyuz_mekanizma_kanadi_sag'), (77.5, 'onyuz_mekanizma_kanadi_sol_omega')]
+[  62 sn] ACICI (v25 · hicbir parca +39'u gecmez · kafa on ucu <= +10): en on acici parcasi (31.7, 'acici_reduktoru_on') · kafa plakasi +10.0 · GECTI
+[  62 sn] KABUK on kenari +39: {'dis_taban': 39.0, 'dis_tavan': 39.0, 'dis_yan_sol': 39.0, 'dis_yan_sag': 39.0} · GECTI
+[  62 sn] TAVA PANELLER z +59…+79: {'onyuz_mekanizma_kanadi_sol': (59.0, 79.0), 'onyuz_mekanizma_kanadi_sag': (59.0, 79.0)} · GECTI
+[  62 sn] URUN GECIS ZARFI (O280 x 28,5 mm urun · disk -> bant): TEMIZ
+[  63 sn] CAKISMA: TEMIZ (v25: eski/montaj-dışı ↔ görünen 29 aday çift ölçüm dışı · görünenler dünya denetiminde ayrıca)
+[  63 sn] KASET <-> MODUL CAKISMASI: TEMIZ
+[  63 sn] YUVA DENETIMI:
+[  63 sn]    HARÇ 1      yuva 282  kaset 280  bosluk 2.0 mm · mil kotlari (kaset tabanindan) 40 / 195
+[  63 sn]    HARÇ 2      yuva 282  kaset 280  bosluk 2.0 mm · mil kotlari (kaset tabanindan) 40 / 195
+[  63 sn]    KIYMA       yuva 142  kaset 140  bosluk 2.0 mm · mil kotlari (kaset tabanindan) 60 / 164
+[  63 sn]    KUŞBAŞI     yuva 142  kaset 140  bosluk 2.0 mm · mil kotlari (kaset tabanindan) 60 / 164
+[  63 sn]    KAŞAR KABI  yuva 282  kaset 280  bosluk 2.0 mm · mil kotlari (kaset tabanindan) 40 / 195
+[  63 sn]    KÜP SUCUK   yuva 142  kaset 140  bosluk 2.0 mm · mil kotlari (kaset tabanindan) 60 / 164
+[  63 sn]    tahrik mil eksenleri kasetin kendi eksenleriyle AYNI: EVET (12/12)
+[  63 sn]    derinlik: ON NIS 84 | kapak 20 | kulp 96 | kaset 325 | kavrama 40 | yalitim 65 | kuru 200 = 830 mm
+[  98 sn] DENETİM
+[  98 sn]   SOS haznesi tavanın altında (1737 < 1970)                    GEÇTİ 
+[  98 sn]   SOS haznesi soğuk hücrede z (-560…-120)                      GEÇTİ 
+[  98 sn]   SOS UNO hava silindiri kuru bölmede (z -811…-672)            GEÇTİ 
+[  98 sn]   SOS ürün silindiri soğukta (z -552)                          GEÇTİ 
+[  98 sn]   SOS UNO ağzı tabla ekseninde (z -170.0)                      GEÇTİ 
+[  98 sn]   HARC haznesi tavanın altında (1832 < 1970)                   GEÇTİ 
+[  98 sn]   HARC haznesi soğuk hücrede z (-560…-120)                     GEÇTİ 
+[  98 sn]   HARC UNO hava silindiri kuru bölmede (z -811…-672)           GEÇTİ 
+[  98 sn]   HARC ürün silindiri soğukta (z -552)                         GEÇTİ 
+[  98 sn]   HARC UNO ağzı tabla ekseninde (z -170.0)                     GEÇTİ 
+[  98 sn]   KIYMA haznesi tavanın altında (1667 < 1970)                  GEÇTİ 
+[  98 sn]   KIYMA haznesi soğuk hücrede z (-560…-120)                    GEÇTİ 
+[  98 sn]   KIYMA UNO hava silindiri kuru bölmede (z -811…-672)          GEÇTİ 
+[  98 sn]   KIYMA ürün silindiri soğukta (z -559)                        GEÇTİ 
+[  98 sn]   KIYMA UNO ağzı tabla ekseninde (z -170.0)                    GEÇTİ 
+[  98 sn]   KUSBASI haznesi tavanın altında (1667 < 1970)                GEÇTİ 
+[  98 sn]   KUSBASI haznesi soğuk hücrede z (-560…-120)                  GEÇTİ 
+[  98 sn]   KUSBASI UNO hava silindiri kuru bölmede (z -811…-672)        GEÇTİ 
+[  98 sn]   KUSBASI ürün silindiri soğukta (z -559)                      GEÇTİ 
+[  98 sn]   KUSBASI UNO ağzı tabla ekseninde (z -170.0)                  GEÇTİ 
+[  98 sn]   UNO'lar kasetlere değmiyor (kuşbaşı valf topuzu 1172 < kaşar yuvası 1220) GEÇTİ 
+[  98 sn]   sos valf eyleyicisi sol duvara değmiyor (119 > 60)           GEÇTİ 
+[  98 sn]   SOS spreader borusu yarıçap boyunca (x 202…335, boy 133)     GEÇTİ 
+[  98 sn]   SOS spreader borusu pideden 6 mm yukarıda                    GEÇTİ 
+[  98 sn]   sos_spreader_giris_kelepcesi rafa girmiyor                   GEÇTİ 
+[  98 sn]   sos_spreader_kelepce_kanadi rafa girmiyor                    GEÇTİ 
+[  98 sn]   sos_spreader_dik_boru rafa girmiyor                          GEÇTİ 
+[  98 sn]   sos_spreader_kesme_valfi_govde rafa girmiyor                 GEÇTİ 
+[  98 sn]   sos_spreader_kesme_valfi_kapak rafa girmiyor                 GEÇTİ 
+[  98 sn]   sos_spreader_valf_braketi rafa girmiyor                      GEÇTİ 
+[  98 sn]   sos_spreader_valf_kelepcesi rafa girmiyor                    GEÇTİ 
+[  98 sn]   sos_spreader_valf_mili rafa girmiyor                         GEÇTİ 
+[  98 sn]   sos_spreader_hava_rakoru rafa girmiyor                       GEÇTİ 
+[  98 sn]   sos_spreader_ucgen_dagitici rafa girmiyor                    GEÇTİ 
+[  98 sn]   sos_spreader_dagitici_boru rafa girmiyor                     GEÇTİ 
+[  98 sn]   sos_spreader_uc_tapasi rafa girmiyor                         GEÇTİ 
+[  98 sn]   sos_spreader_merkez_tapasi rafa girmiyor                     GEÇTİ 
+[  98 sn]   HARC spreader borusu yarıçap boyunca (x 552…685, boy 133)    GEÇTİ 
+[  98 sn]   HARC spreader borusu pideden 6 mm yukarıda                   GEÇTİ 
+[  98 sn]   harc_spreader_giris_kelepcesi rafa girmiyor                  GEÇTİ 
+[  98 sn]   harc_spreader_kelepce_kanadi rafa girmiyor                   GEÇTİ 
+[  98 sn]   harc_spreader_dik_boru rafa girmiyor                         GEÇTİ 
+[  98 sn]   harc_spreader_kesme_valfi_govde rafa girmiyor                GEÇTİ 
+[  98 sn]   harc_spreader_kesme_valfi_kapak rafa girmiyor                GEÇTİ 
+[  98 sn]   harc_spreader_valf_braketi rafa girmiyor                     GEÇTİ 
+[  98 sn]   harc_spreader_valf_kelepcesi rafa girmiyor                   GEÇTİ 
+[  98 sn]   harc_spreader_valf_mili rafa girmiyor                        GEÇTİ 
+[  98 sn]   harc_spreader_hava_rakoru rafa girmiyor                      GEÇTİ 
+[  98 sn]   harc_spreader_ucgen_dagitici rafa girmiyor                   GEÇTİ 
+[  98 sn]   harc_spreader_dagitici_boru rafa girmiyor                    GEÇTİ 
+[  98 sn]   harc_spreader_uc_tapasi rafa girmiyor                        GEÇTİ 
+[  98 sn]   harc_spreader_merkez_tapasi rafa girmiyor                    GEÇTİ 
+[  98 sn]   SOS kama yarık: merkez 2.0 → kenar 3.2 mm (hesap q ∝ r)      GEÇTİ 
+[  98 sn]   HARC kama yarık: merkez 6.0 → kenar 9.6 mm (hesap q ∝ r)     GEÇTİ 
+[  98 sn]   kaset döner grubu dolu: HELEZON_KASAR (18 parça)             GEÇTİ 
+[  98 sn]   kaset döner grubu dolu: KARISTIRICI_KASAR (26 parça)         GEÇTİ 
+[  98 sn]   kaset döner grubu dolu: HELEZON_SUCUK (18 parça)             GEÇTİ 
+[  98 sn]   kaset döner grubu dolu: KARISTIRICI_SUCUK (24 parça)         GEÇTİ 
+[  98 sn]   harç spreader'ı kıyma istasyonuna değmiyor (695 < 938)       GEÇTİ 
+[  99 sn]   rafa hiçbir parça girmiyor (delikler ağız ve boruları geçiriyor) GEÇTİ 0
+[  99 sn]   kasetler modül içinde (x 1221…1680)                          GEÇTİ 
+[  99 sn]   valf adası + şartlandırıcı kuru bölmede                      GEÇTİ 
+[  99 sn]   hortumlar kaset motorlarına değmiyor                         GEÇTİ 0 çakışma
+[  99 sn]   KASAR yuvası kasete girmiyor (24 parça)                      GEÇTİ 0
+[  99 sn]   KASAR kaseti plakalarıyla rafa oturuyor (plaka altı 1320 = raf 1320) GEÇTİ 
+[  99 sn]   KASAR kılavuz dudakları plakaya 0,5 mm (0.5 / 0.5)           GEÇTİ 
+[  99 sn]   KASAR mandal dili plakanın ÖNÜNDE (z -199.5 ≥ plaka önü -200), plakayı 4.5 mm örtüyor ≥ 4,0 GEÇTİ 
+[  99 sn]   KASAR mandal kolu sola 7.5 mm kayabilir ≥ 5,0 (dil plakadan çıkar) GEÇTİ 
+[  99 sn]   KASAR arka dayama plakanın arka yüzünde (z -525)             GEÇTİ 
+[  99 sn]   KASAR haç çubukları yuvada 7.0 mm (7,0 · v7 katalog yayına göre) GEÇTİ 
+[  99 sn]   KASAR haç yuvası geri çekilebilir: yay tablasına 10.4 mm ≥ 8,5 sert durak + 1,9 GEÇTİ 
+[  99 sn]   KASAR yay takılı boy 20.1: ön yük 1.24 ≥ 1,0 · 8,0 geri çekilmede sıkışma 9.24 ≤ 9,12 (66644SCS) GEÇTİ 
+[  99 sn]   KASAR mandal yayı takılı 17.3: ön yük 4.0 (1.3 N) · 5 mm açılınca sıkışma 9.0 ≤ 9,12 GEÇTİ 
+[  99 sn]   KASAR segman kanalı DIN 471: genişlik 1.3 = 1,3 · segman kanalda · kovan yüzüne 0.4 GEÇTİ 
+[  99 sn]   KASAR mil ucu (−545) haç kavramasının arkasında ≥ 1 mm       GEÇTİ 
+[  99 sn]   KASAR yuva parçaları birbirine / makineye girmiyor (24 parça) GEÇTİ []
+[  99 sn]   SUCUK yuvası kasete girmiyor (24 parça)                      GEÇTİ 0
+[  99 sn]   SUCUK kaseti plakalarıyla rafa oturuyor (plaka altı 1320 = raf 1320) GEÇTİ 
+[  99 sn]   SUCUK kılavuz dudakları plakaya 0,5 mm (0.5 / 0.5)           GEÇTİ 
+[  99 sn]   SUCUK mandal dili plakanın ÖNÜNDE (z -199.5 ≥ plaka önü -200), plakayı 4.5 mm örtüyor ≥ 4,0 GEÇTİ 
+[  99 sn]   SUCUK mandal kolu sola 7.5 mm kayabilir ≥ 5,0 (dil plakadan çıkar) GEÇTİ 
+[  99 sn]   SUCUK arka dayama plakanın arka yüzünde (z -525)             GEÇTİ 
+[  99 sn]   SUCUK haç çubukları yuvada 7.0 mm (7,0 · v7 katalog yayına göre) GEÇTİ 
+[  99 sn]   SUCUK haç yuvası geri çekilebilir: yay tablasına 10.4 mm ≥ 8,5 sert durak + 1,9 GEÇTİ 
+[  99 sn]   SUCUK yay takılı boy 20.1: ön yük 1.24 ≥ 1,0 · 8,0 geri çekilmede sıkışma 9.24 ≤ 9,12 (66644SCS) GEÇTİ 
+[  99 sn]   SUCUK mandal yayı takılı 17.3: ön yük 4.0 (1.3 N) · 5 mm açılınca sıkışma 9.0 ≤ 9,12 GEÇTİ 
+[  99 sn]   SUCUK segman kanalı DIN 471: genişlik 1.3 = 1,3 · segman kanalda · kovan yüzüne 0.4 GEÇTİ 
+[  99 sn]   SUCUK mil ucu (−545) haç kavramasının arkasında ≥ 1 mm       GEÇTİ 
+[  99 sn]   SUCUK yuva parçaları birbirine / makineye girmiyor (24 parça) GEÇTİ []
+[  99 sn]   kaşar sağ kılavuzu–sucuk mandalı boşluğu 10.5 ≥ 10 · kaşar plakası–sucuk plakası 39 ≥ 30 GEÇTİ 
+[  99 sn]   sucuk sağ kılavuzu–sağ duvar boşluğu 55.5 ≥ 20               GEÇTİ 
+[  99 sn]   kuşbaşı valf topuzu–kaşar mandalı boşluğu 25 ≥ 20            GEÇTİ 
+[  99 sn]   v14 · eski ön fitil (z −104) kalktı                          GEÇTİ 
+[  99 sn]   v16 · yan PU duvarları alt dış sacın üstünden (1278.5) başlıyor · TC yan saclarının iç yüzüne YAPIŞIK (x 1.5 / 1798.5 · boşluk 0, v15 28,5) GEÇTİ 
+[  99 sn]   v16 · BÜTÜN YÜZLER 60 (kaplama 1,0 + PU 57,5 + dış 1,5): sol duvar 60.0 · sağ duvar 60.0 · arka 60.0 · tavan 60.0 · PU yan 57.5 / 57.5 · taban 43 (UNO ağzı + yayıcı kelepçesi 1274'te) · kapaklar 40 GEÇTİ 
+[  99 sn]   KAŞAR KABI çıkış borusu altı (1312) iniş hunisinin üstünde (1311), iç içe DEĞİL GEÇTİ 
+[  99 sn]   KÜP SUCUK çıkış borusu altı (1312) iniş hunisinin üstünde (1311), iç içe DEĞİL GEÇTİ 
+[  99 sn]   v18 · PU tek köpük (arka + tavan, DİKDÖRTGEN: x 1.5…1798.5 · y 1278.5…2028.5 · z -628.5…23.0) · iç kaplama TEK PARÇA (x 59…1741 · y 1278.5…1971 · z -571…23) GEÇTİ 
+[  99 sn]   eski parçalı yalıtım kalktı                                  GEÇTİ 
+[ 100 sn]   v16 · soğuk kutuya (kaplama · 3 PU · dış saclar · taban) hiçbir parça girmiyor · kutu parçaları birbirine girmiyor (kovan / blok / hortum / burç deliklerinde): 0 GEÇTİ []
+[ 100 sn]   v16 · soğuk oda TABANI 43: alt dış sac 1,5 y 1277.0–1278.5 (x 1.5–1798.5 TEK PARÇA, yan + arka duvarların altı dahil) + PU 38,5 y 1278.5–1317.0 · x 63–1737 · z -567…20 + raf 3 · 14 geçiş deliği GEÇTİ 
+[ 100 sn]      alt yalıtım deliği: kasar_inis_borusu                  x 1333–1389 · z -178…-122 (56 × 56)
+[ 100 sn]      alt yalıtım deliği: kasar_inis_hunisi                  x 1326–1396 · z -185…-115 (70 × 70)
+[ 100 sn]      alt yalıtım deliği: sucuk_inis_borusu                  x 1583–1637 · z -177…-123 (54 × 54)
+[ 100 sn]      alt yalıtım deliği: sucuk_inis_hunisi                  x 1575–1645 · z -185…-115 (70 × 70)
+[ 100 sn]      alt yalıtım deliği: kasar_boru_kulagi_sol              x 1320–1329 · z -163…-137 (9 × 26)
+[ 100 sn]      alt yalıtım deliği: kasar_boru_kulagi_sag              x 1393–1402 · z -163…-137 (9 × 26)
+[ 100 sn]      alt yalıtım deliği: sucuk_boru_kulagi_sol              x 1569–1578 · z -163…-137 (9 × 26)
+[ 100 sn]      alt yalıtım deliği: sucuk_boru_kulagi_sag              x 1642–1651 · z -163…-137 (9 × 26)
+[ 100 sn]      alt yalıtım deliği: sos__agiz_90_derece                x 189–231 · z -191…-149 (42 × 42)
+[ 100 sn]      alt yalıtım deliği: sos_spreader_hava_hortumu          x 104–116 · z -142…-130 (12 × 12)
+[ 100 sn]      alt yalıtım deliği: harc__agiz_90_derece               x 539–581 · z -191…-149 (42 × 42)
+[ 100 sn]      alt yalıtım deliği: harc_spreader_hava_hortumu         x 454–466 · z -142…-130 (12 × 12)
+[ 100 sn]      alt yalıtım deliği: kiyma__agiz_90_derece              x 874–916 · z -191…-149 (42 × 42)
+[ 100 sn]      alt yalıtım deliği: kusbasi__agiz_90_derece            x 1084–1126 · z -191…-149 (42 × 42)
+[ 100 sn]      alt yalıtım ÜST YARIĞI (v14b, y 1311–1317, öne açık, yarık diliyle dolu): kasar_cad_v14    x 1331–1391 · z -183…21
+[ 100 sn]      alt yalıtım ÜST YARIĞI (v14b, y 1311–1317, öne açık, yarık diliyle dolu): sucuk_cad_v8     x 1580–1640 · z -183…21
+[ 100 sn]   v12 · alt yalıtımın delik payı (üst üste binenler dahil kaba) %3 ≤ %25 GEÇTİ 
+[ 100 sn]   v12 · alt yalıtıma hiçbir parça girmiyor                     GEÇTİ 0
+[ 100 sn]   v16 · soğuk kutunun ön yüzü TEK DÜZLEM +23 (7 parça: kaplama, 3 PU, alt sac, raf · v18 teknik saclar yok) · alt PU 20.0 (raf ön bükümünün arkası) GEÇTİ 
+[ 100 sn]   v14 · 430 çerçeve sacı z 23.0…24.0 (+23…+24) · dünya x 701.5–2498.5 · y 1109.0–1860.5 GEÇTİ 
+[ 100 sn]   v14 · K1 dünya x 701.5–1597.8 · y 1110.5–1859.0 · z 39.0…79.0 (ön yüz +79, 40 sandviç) GEÇTİ 
+[ 100 sn]   v14 · K1 fitili z 24.0…47.3 (bası yüzü +24 = çerçeve ön yüzü) · kapağın içinde (x 45.5–893.8 ⊂ 1.5–897.8) GEÇTİ 
+[ 100 sn]   v14 · K1 fitili kaset çentiklerinin ALTINDA (çentik bölgesinde fitil hacmi 0.0 = 0 → conta sürekli) GEÇTİ 
+[ 100 sn]   v14 · K2 dünya x 1600.8–2497.0 · y 1110.5–1859.0 · z 39.0…79.0 (ön yüz +79, 40 sandviç) GEÇTİ 
+[ 100 sn]   v14 · K2 fitili z 24.0…47.3 (bası yüzü +24 = çerçeve ön yüzü) · kapağın içinde (x 902.2–1754.5 ⊂ 900.8–1797.0) GEÇTİ 
+[ 101 sn]   v14 · K2 fitili kaset çentiklerinin ALTINDA (çentik bölgesinde fitil hacmi 0.0 = 0 → conta sürekli) GEÇTİ 
+[ 101 sn]   v14 · derz K1 | K2 = 3.0 (3)                                 GEÇTİ 
+[ 101 sn]   v14 · flipper ön yüzü +24.0 = çerçeve ön yüzü · açıklıkta (y 1335.5–1969.5 ⊂ 1320–1970) · K1 | K2 derzinin arkasında (dünya x 1572–1626) GEÇTİ 
+[ 101 sn]   v14 · temas onyuz_K1_fitil ↔ onyuz_flipper_on_sac: 0.000 mm (≤ 0,05) GEÇTİ 
+[ 101 sn]   v14 · temas onyuz_K2_fitil ↔ onyuz_flipper_on_sac: 0.000 mm (≤ 0,05) GEÇTİ 
+[ 101 sn]   v14 · temas onyuz_K1_fitil ↔ onyuz_soguk_cerceve_saci: 0.000 mm (≤ 0,05) GEÇTİ 
+[ 101 sn]   v14 · temas onyuz_K2_fitil ↔ onyuz_soguk_cerceve_saci: 0.000 mm (≤ 0,05) GEÇTİ 
+[ 101 sn]   v14 · temas onyuz_K1_fitil ↔ onyuz_K1_ic_sac: 0.000 mm (≤ 0,05) GEÇTİ 
+[ 101 sn]   v14 · temas onyuz_K2_fitil ↔ onyuz_K2_ic_sac: 0.000 mm (≤ 0,05) GEÇTİ 
+[ 101 sn]   v14 · temas onyuz_K1_flipper_mentese_0 ↔ onyuz_K1_ic_sac: 0.000 mm (≤ 0,05) GEÇTİ 
+[ 101 sn]   v14 · temas onyuz_K1_flipper_mentese_0 ↔ onyuz_flipper_govde: 0.000 mm (≤ 0,05) GEÇTİ 
+[ 101 sn]   v14 · temas onyuz_flipper_pimi ↔ onyuz_flipper_govde: 0.000 mm (≤ 0,05) GEÇTİ 
+[ 101 sn]   v14 · temas onyuz_flipper_pimi ↔ onyuz_kilavuz_flipper: 0.000 mm (≤ 0,05) GEÇTİ 
+[ 101 sn]   v14 · temas onyuz_kilavuz_flipper ↔ tasiyici_raf_3mm: 0.000 mm (≤ 0,05) GEÇTİ 
+[ 101 sn]   v14 · temas onyuz_K1_mentese_0 ↔ onyuz_K1_ic_sac: 0.000 mm (≤ 0,05) GEÇTİ 
+[ 101 sn]   v14 · temas onyuz_K1_mentese_0 ↔ onyuz_mentese_tabani_K1_mentese_0: 0.000 mm (≤ 0,05) GEÇTİ 
+[ 101 sn]   v14 · temas onyuz_K2_mentese_1 ↔ onyuz_K2_ic_sac: 0.000 mm (≤ 0,05) GEÇTİ 
+[ 101 sn]   v14 · temas onyuz_K2_mentese_1 ↔ onyuz_mentese_tabani_K2_mentese_1: 0.000 mm (≤ 0,05) GEÇTİ 
+[ 102 sn]   v14 · temas kasar_cad_v14_yarik_dili ↔ kasar_cad_v14__cikis_tupu: 0.000 mm (≤ 0,05) GEÇTİ 
+[ 103 sn]   v14 · temas sucuk_cad_v8_yarik_dili ↔ sucuk_cad_v8__cikis_tupu: 0.000 mm (≤ 0,05) GEÇTİ 
+[ 103 sn]   v14 · temas raf_kaset_contasi_kasar ↔ tasiyici_raf_3mm: 0.000 mm (≤ 0,05) GEÇTİ 
+[ 103 sn]   v14 · temas raf_kaset_contasi_sucuk ↔ sucuk_cad_v8__cikis_tupu: 0.000 mm (≤ 0,05) GEÇTİ 
+[ 104 sn]   v14 · temas raf_gecis_contasi_kiyma ↔ kiyma__agiz_90_derece: 0.000 mm (≤ 0,05) GEÇTİ 
+[ 104 sn]   v14 · temas raf_gecis_contasi_sos ↔ tasiyici_raf_3mm: 0.000 mm (≤ 0,05) GEÇTİ 
+[ 104 sn]   v14 · temas raf_gecis_contasi_harc_hortum ↔ harc_spreader_hava_hortumu: 0.000 mm (≤ 0,05) GEÇTİ 
+[ 104 sn]   v14 · temas motor_kablosu_sucuk_cad_v8_rotor ↔ motor_sucuk_cad_v8_rotor: 0.000 mm (≤ 0,05) GEÇTİ 
+[ 104 sn]   v14 · temas raf_kosebendi_sol ↔ tasiyici_raf_3mm: 0.000 mm (≤ 0,05) GEÇTİ 
+[ 104 sn]   v14 · temas raf_kosebendi_sag ↔ tasiyici_raf_3mm: 0.000 mm (≤ 0,05) GEÇTİ 
+[ 104 sn]   v14 · temas raf_kosebendi_sol ↔ soguk_ic_kaplama: 0.000 mm (≤ 0,05) GEÇTİ 
+[ 104 sn]   v14 · temas raf_kosebendi_sag ↔ soguk_ic_kaplama: 0.000 mm (≤ 0,05) GEÇTİ 
+[ 104 sn]   v14 · temas raf_askisi_burclari_sol ↔ soguk_ic_kaplama: 0.000 mm (≤ 0,05) GEÇTİ 
+[ 104 sn]   v14 · temas raf_askisi_burclari_sag ↔ soguk_ic_kaplama: 0.000 mm (≤ 0,05) GEÇTİ 
+[ 104 sn]   v14 · temas kabin_sol_duvar_PU ↔ soguk_ic_kaplama: 0.000 mm (≤ 0,05) GEÇTİ 
+[ 104 sn]   v14 · temas kabin_sag_duvar_PU ↔ soguk_ic_kaplama: 0.000 mm (≤ 0,05) GEÇTİ 
+[ 104 sn]   v14 · temas yalitim_blogu ↔ soguk_ic_kaplama: 0.000 mm (≤ 0,05) GEÇTİ 
+[ 104 sn]   v14 · temas yalitim_blogu ↔ soguk_arka_dis_sac: 0.000 mm (≤ 0,05) GEÇTİ 
+[ 104 sn]   v14 · temas alt_yalitim_saci ↔ soguk_arka_dis_sac: 0.000 mm (≤ 0,05) GEÇTİ 
+[ 104 sn]   v14 · temas alt_yalitim_saci ↔ kabin_sol_duvar_PU: 0.000 mm (≤ 0,05) GEÇTİ 
+[ 104 sn]   v14 · temas alt_yalitim_PU ↔ alt_yalitim_saci: 0.000 mm (≤ 0,05) GEÇTİ 
+[ 104 sn]   v14 · temas raf_on_bukumu ↔ alt_yalitim_saci: 0.000 mm (≤ 0,05) GEÇTİ 
+[ 104 sn]   v14 · temas raf_arka_bukumu ↔ soguk_ic_kaplama: 0.000 mm (≤ 0,05) GEÇTİ 
+[ 104 sn]   v14 · temas arka_hava_kanali_ust ↔ yalitim_blogu: 0.000 mm (≤ 0,05) GEÇTİ 
+[ 104 sn]   v14 · temas arka_hava_kanali_alt ↔ yalitim_blogu: 0.000 mm (≤ 0,05) GEÇTİ 
+[ 104 sn]   v14 · temas arka_hava_kanali_ust ↔ soguk_ic_kaplama: 0.000 mm (≤ 0,05) GEÇTİ 
+[ 104 sn]   v14 · temas arka_hava_kanali_alt ↔ soguk_ic_kaplama: 0.000 mm (≤ 0,05) GEÇTİ 
+[ 104 sn]   v14 · temas arka_hava_kanali_ust ↔ arka_duvar_kaset_yuzu: 0.000 mm (≤ 0,05) GEÇTİ 
+[ 104 sn]   v14 · temas arka_hava_kanali_alt ↔ arka_duvar_kaset_yuzu: 0.000 mm (≤ 0,05) GEÇTİ 
+[ 104 sn]   v14 · temas arka_duvar_kaset_yuzu ↔ yalitim_blogu: 0.000 mm (≤ 0,05) GEÇTİ 
+[ 104 sn]   v14 · temas arka_duvar_kaset_yuzu ↔ soguk_arka_dis_sac: 0.000 mm (≤ 0,05) GEÇTİ 
+[ 104 sn]   v14 · temas arka_hava_izgarasi_ust ↔ arka_hava_kanali_ust: 0.000 mm (≤ 0,05) GEÇTİ 
+[ 104 sn]   v14 · temas arka_hava_izgarasi_alt ↔ arka_hava_kanali_alt: 0.000 mm (≤ 0,05) GEÇTİ 
+[ 104 sn]   v14 · temas kasar_boru_kulagi_sag ↔ kasar_inis_borusu: 0.000 mm (≤ 0,05) GEÇTİ 
+[ 104 sn]   v14 · temas kasar_boru_kulagi_sag ↔ tasiyici_raf_3mm: 0.000 mm (≤ 0,05) GEÇTİ 
+[ 104 sn]   v14 · temas sucuk_boru_kulagi_sol ↔ sucuk_inis_borusu: 0.000 mm (≤ 0,05) GEÇTİ 
+[ 104 sn]   v14 · temas sucuk_boru_kulagi_sol ↔ tasiyici_raf_3mm: 0.000 mm (≤ 0,05) GEÇTİ 
+[ 104 sn]   v14 · temas reduktor_flans_burcu_kasar_cad_v14_helezon ↔ reduktor_kasar_cad_v14_helezon: 0.000 mm (≤ 0,05) GEÇTİ 
+[ 104 sn]   v14 · temas reduktor_flans_burcu_kasar_cad_v14_helezon ↔ kovan_kasar_cad_v14_helezon: 0.000 mm (≤ 0,05) GEÇTİ 
+[ 104 sn]   v14 · temas motor_kasar_cad_v14_helezon ↔ reduktor_kasar_cad_v14_helezon: 0.000 mm (≤ 0,05) GEÇTİ 
+[ 104 sn]   v14 · temas kovan_kasar_cad_v14_helezon ↔ yalitim_blogu: 0.000 mm (≤ 0,05) GEÇTİ 
+[ 104 sn]   v14 · temas kiyma_mil_gecis_kovani ↔ yalitim_blogu: 0.000 mm (≤ 0,05) GEÇTİ 
+[ 104 sn]   v14 · temas kiyma_tc_kelepce_hazne ↔ kiyma_hazne_boynu: 0.000 mm (≤ 0,05) GEÇTİ 
+[ 104 sn]   v14 · temas kiyma__urun_silindiri_D70 ↔ kiyma__urun_silindiri_kapagi: 0.000 mm (≤ 0,05) GEÇTİ 
+[ 104 sn]   v14 · temas kiyma__cikis_tc_ferrule_valf ↔ kiyma__cikis_tc_kelepcesi: 0.000 mm (≤ 0,05) GEÇTİ 
+[ 104 sn]   v14 · temas kiyma__cikis_tc_ferrule_valf ↔ kiyma__cikis_borusu: 0.000 mm (≤ 0,05) GEÇTİ 
+[ 104 sn]   v14 · temas kiyma__cikis_tc_ferrule_valf ↔ kiyma__cikis_tc_ferrule: 0.000 mm (≤ 0,05) GEÇTİ 
+[ 104 sn]   v14 · temas kiyma_agiz_uzatmasi ↔ kiyma__agiz_90_derece: 0.000 mm (≤ 0,05) GEÇTİ 
+[ 104 sn]   v14 · temas yuva_kasar_mandal_pimi ↔ yuva_kasar_mandal_govdesi: 0.000 mm (≤ 0,05) GEÇTİ 
+[ 104 sn]   v14 · temas gecis_blogu_yalitim ↔ yalitim_blogu: 0.000 mm (≤ 0,05) GEÇTİ 
+[ 104 sn]   v14 · temas kompresor_cikis_vanasi ↔ kompresor_JUNAIR_OF302_15B_motor: 0.000 mm (≤ 0,05) GEÇTİ 
+[ 104 sn]   v14 · hortumlar birbirine girmiyor (18 hortum · v13'te 60+ üst üste binme) GEÇTİ []
+[ 104 sn]   v14 · geçiş bloğunda hortum delikleri (10 hortum geçer, iç içe 0) GEÇTİ []
+[ 104 sn]   v14 · açıcı hattı 2 × Ø6: uçları dünya x 372.5 / 372.5 = Z silindiri yüzü 372,5 (TC v25) · A tarafında GEÇTİ 
+[ 104 sn]   v14 · kompresör vanası motorun arka yüzünde (z -380…-360) · montajdaki ucu dünya (3790, 1809, -380) = ana hat başı (3790, 1809, −380) GEÇTİ 
+[ 104 sn]   v19 · soğuk odada ve arka duvarda SOĞUTMA PARÇASI YOK (evaporatör, kapak, lamel, fan, damlama tavası, tahliye hortumu, hat + hat bloğu, elektrikli buharlaştırma kabı → topping_cad_v31 kaseti): 0 GEÇTİ []
+[ 104 sn]   v19 · arka duvarda 2 HAVA KANALI (POM 3 · dünya x 1520–1900 · üst y 1682–1792 · alt y 1540–1662): duvarı boydan geçer (z -630…-570) · ızgaralar iç kaplamayla aynı düzlemde (z -571…-570) · alt kanal altı 1540 > altındaki hazneler (kiyma, kusbasi) dolumda 15 kalkınca 1514 · üst kanal üstü 1792 ≤ tavan − 10 (1792) · aralarında 20 mm duvar · en üstteki mil / hortum geçişi 1377 (≥ 100 aşağıda) GEÇTİ 
+[ 104 sn]   v19 · KASET YUVASI: arka dış sac kasetin önünde KESİK (dünya x 1492–1988 · y 1495–1833 · kesikte sac hacmi 0.0 mm³ = 0) · PU'nun açık yüzü ABS 1,5 (z -630.0…-628.5, sacla aynı düzlem) → kasetle kutu arasında METAL KÖPRÜ YOK · ızgara açık alanı üst 24480 · alt 26520 mm² (hava hızı topping_cad_v31'de fan debisiyle) GEÇTİ 
+[ 104 sn]   v16 · sos yayıcısı tabanın ALTINDA: kesme valfi kapağı 1274 · giriş kelepçesi 1274 < taban altı 1277 (v15'te valf tabana 17 mm gömülüydü) GEÇTİ 
+[ 104 sn]   v16 · harc yayıcısı tabanın ALTINDA: kesme valfi kapağı 1274 · giriş kelepçesi 1274 < taban altı 1277 (v15'te valf tabana 17 mm gömülüydü) GEÇTİ 
+[ 109 sn]   v16 · soğuk kutu duvar + tavanlarında BOŞLUK YOK (y ≥ 1320 · dış kabukların içi = oda + kaplama + PU + saclar + kovan / blok / hortum geçişleri): kalan 0.00 mm³ ≤ 5 GEÇTİ []
+[ 109 sn]   v14b · SOĞUK ODA TABANI (raf dilimi y 1317,5–1319,5): 6 ürün kanalı dışında AÇIK alan 0.00 mm² ≤ 1 (v14: ≈ 21 350 — kaset U-yarıkları 2 × ≈9 900 + UNO ağız halkaları 4 × 360 + hortum delikleri 2 × 50) GEÇTİ []
+[ 109 sn]   v14b · 430 çerçeve düzlemi soğuk oda altı bandında (y 1277–1320) kesintisiz: kaset çentikleri yarık dili flanşıyla kapalı · açık alan 0.00 mm² ≤ 1 GEÇTİ []
+[ 109 sn]   v14b · kasar yarık dili: x 1330–1392 · y 1311–1320 (raf üstü = raf üstü 1320) · z -180…24 (ön flanş çerçeve düzleminde) GEÇTİ 
+[ 109 sn]   v14b · sucuk yarık dili: x 1579–1641 · y 1311–1320 (raf üstü = raf üstü 1320) · z -180…24 (ön flanş çerçeve düzleminde) GEÇTİ 
+[ 109 sn]   v14b · K1 AÇILMA TARAMASI (TU parçaları · 0–110°, 19 açı · sanal pivot ön dış köşe · flipper katlanır min(90, 33·α), K2 KAPALI): çakışma 0 GEÇTİ []
+[ 109 sn]   v14b · K2 AÇILMA TARAMASI (TU parçaları · 0–110°, 19 açı · sanal pivot ön dış köşe · K1 + flipper KAPALI): çakışma 0 GEÇTİ []
+[ 109 sn]   v14b · flipper kam oluğu: pim yolu 149 nokta · α 0–3.84° · tam katlanma (α 2.7°) oluğun İÇİNDE → kapanırken pim oluğa −90°'de aynı yerden girer · çıkış dünya x 1547.5 + r 4 < 1572,25 (K1 fitil halkasının içi · v18) GEÇTİ 
+[ 109 sn]   TU topping_uno_cad_v19.py: modül denetimi 196 / 196 GEÇTİ (den_assert — montaj da çağırabilir)                                                         GEÇTİ 
+[ 111 sn] DUNYA: TC 258 + TU 413 + itici (yok (v70'ten beri bantlı tabla — aktarma iticisi kalktı)) 0 = 671 parça · 47 sn
+[ 111 sn]   ön düzlem: C istasyonunun bütün parçaları z ≤ +79,5 (istisna yok) · en ön TU:onyuz_K2_dis_sac +79.00                                                   GEÇTİ 
+[ 111 sn]   ön yüz panelleri SPEC ölçüsünde, dış yüz tam +79,0: mekanizma_kanadi_sol ✓, mekanizma_kanadi_sag ✓, K1_dis_sac ✓, K2_dis_sac ✓                         GEÇTİ 
+[ 111 sn]   ön yüz kapsama: 4 panel (v30 · 2 kanat + K1 + K2, EŞİT) 1914390 mm² + derz (3 mm) 8590 mm² = C önü 1922980 mm² (x 701,5–2497 · y 788–1859, v25b: kanatlar 788 = A alt paneli) · panel üst üste 0 · A|C ve C|F derzleri 3 (698,5/701,5 · 2497/2500) GEÇTİ 
+[ 111 sn]   açıcı: hiçbir parça +39'u geçmez (en ön TC:acici_reduktoru_on +31.7) · kafa plakası ön ucu +10.0 ≤ +10                                                 GEÇTİ 
+[ 114 sn]   çakışma (gerçek katı > 1 mm³, bütün çiftler): 0 · beyaz liste (satın alınan / başka üretecin iç geçmeleri): {'TU:sos__': 7, 'TU:sos_spreader_': 7, 'TU:harc__': 7, 'TU:harc_spreader_': 7, 'TU:kiyma__': 7, 'TU:kusbasi__': 7, 'TU:kasar_cad_v14__': 1} GEÇTİ []
+[ 368 sn] HAVADA PARCA (dunya · kok: 892 tabanı): 671 parca · 2560 aday cift · kok (zemin) 22 · zemine bagli 641 · HAVADA 16 bilesen (30 parca) · 254 sn
+[ 368 sn]    HAVADA: TU:kasar_cad_v14__orumcek_on             (7 parca: TU:kasar_cad_v14__orumcek_arka, TU:kasar_cad_v14__cubuk_0, TU:kasar_cad_v14__orumcek_on, TU:kasar_cad_v14__orumcek_orta …) · x 1931-2191 y 1298-1439 z -230…-209
+[ 368 sn]    HAVADA: TU:kasar_cad_v14__helezon_A              (4 parca: TU:kasar_cad_v14__helezon_A, TU:kasar_cad_v14__helezon_B, TU:kasar_cad_v14__helezon_C, TU:kasar_cad_v14__helezon_D) · x 2041-2081 y 1172-1212 z -514…-398
+[ 368 sn]    HAVADA: TU:sucuk_cad_v8__helezon_C               (4 parca: TU:sucuk_cad_v8__helezon_A, TU:sucuk_cad_v8__helezon_B, TU:sucuk_cad_v8__helezon_C, TU:sucuk_cad_v8__helezon_D) · x 2276-2344 y 1178-1246 z -318…-205
+[ 368 sn]    HAVADA: TU:kasar_cad_v14__topuz                  (2 parca: TU:kasar_cad_v14__topuz, TU:kasar_cad_v14__setuskur) · x 2043-2079 y 1329-1365 z -199…-144
+[ 368 sn]    HAVADA: TU:sucuk_cad_v8__topuz                   (2 parca: TU:sucuk_cad_v8__topuz, TU:sucuk_cad_v8__setuskur) · x 2292-2328 y 1298-1334 z -199…-144
+[ 368 sn]    HAVADA: TU:kasar_cad_v14__helezon_cekirdek       (1 parca: TU:kasar_cad_v14__helezon_cekirdek) · x 2057-2065 y 1188-1196 z -526…-131
+[ 368 sn]    HAVADA: TU:kasar_cad_v14__kar_mil                (1 parca: TU:kasar_cad_v14__kar_mil) · x 2057-2065 y 1343-1351 z -526…-158
+[ 368 sn]    HAVADA: TU:kasar_cad_v14__kilit_pimi             (1 parca: TU:kasar_cad_v14__kilit_pimi) · x 2020-2081 y 1345-1364 z -195…-190
+[ 368 sn]    HAVADA: TU:sucuk_cad_v8__helezon_cekirdek        (1 parca: TU:sucuk_cad_v8__helezon_cekirdek) · x 2306-2314 y 1208-1216 z -526…-131
+[ 368 sn]    HAVADA: TU:sucuk_cad_v8__kar_mil                 (1 parca: TU:sucuk_cad_v8__kar_mil) · x 2306-2314 y 1312-1320 z -526…-158
+[ 368 sn]    HAVADA: TU:sucuk_cad_v8__orumcek_arka            (1 parca: TU:sucuk_cad_v8__orumcek_arka) · x 2262-2358 y 1302-1330 z -513…-494
+[ 368 sn]    HAVADA: TU:sucuk_cad_v8__orumcek_orta            (1 parca: TU:sucuk_cad_v8__orumcek_orta) · x 2262-2358 y 1302-1330 z -372…-352
+[ 368 sn]    HAVADA: TU:sucuk_cad_v8__orumcek_on              (1 parca: TU:sucuk_cad_v8__orumcek_on) · x 2262-2358 y 1302-1330 z -231…-209
+[ 368 sn]    HAVADA: TU:sucuk_cad_v8__cubuk_0                 (1 parca: TU:sucuk_cad_v8__cubuk_0) · x 2342-2358 y 1312-1320 z -508…-216
+[ 368 sn]    HAVADA: TU:sucuk_cad_v8__cubuk_1                 (1 parca: TU:sucuk_cad_v8__cubuk_1) · x 2262-2278 y 1312-1320 z -508…-216
+[ 368 sn]    HAVADA: TU:sucuk_cad_v8__kilit_pimi              (1 parca: TU:sucuk_cad_v8__kilit_pimi) · x 2269-2330 y 1314-1333 z -195…-190
+[ 591 sn]   havada parça: 671 parça · kök 22 · bağlı 641 · KALAN 0 · beyaz liste (yalnız kaset iç dönen parçaları: 16 bileşen / 30 parça) 0.26 mm açıklıkla köke bağlı 16 · bağlanamayan 0 GEÇTİ []
+[ 591 sn]   açıcı kafası +60 mm (20 hareketli parça) ↔ sabit parçalar çakışma 0                                                                                    GEÇTİ []
+[ 592 sn]   açıcı kafası +90 mm (20 hareketli parça) ↔ sabit parçalar çakışma 0                                                                                    GEÇTİ []
+[ 592 sn]   açıcı kafası +100 mm (20 hareketli parça) ↔ sabit parçalar çakışma 0                                                                                   GEÇTİ []
+[ 600 sn]   kaset çekme kasar_cad_v14 0–630 mm (adım 10 · kapak açık): TC + TU + itici sabitlerine değmiyor · yarık dili raf / ön büküm / alt PU / çerçeve çentiğinden birlikte çıkar GEÇTİ []
+[ 607 sn]   kaset çekme sucuk_cad_v8 0–630 mm (adım 10 · kapak açık): TC + TU + itici sabitlerine değmiyor · yarık dili raf / ön büküm / alt PU / çerçeve çentiğinden birlikte çıkar GEÇTİ []
+[ 607 sn]   v30 · montaj ana hattı (ANA_V44 · y 1809 · z −740, KURU BÖLMEYE) sağ yan sacın rakorundan geçer: sacla kesişim 0.0 mm³ · rakora 0.000 mm               GEÇTİ 
+[ 607 sn]   açıcı hattı 1: sol yan sac rakorundan geçer (sacla kesişim 0.0) · ucu Z silindirinin portunda (0.000 mm)                                               GEÇTİ 
+[ 607 sn]   açıcı hattı 2: sol yan sac rakorundan geçer (sacla kesişim 0.0) · ucu Z silindirinin portunda (0.000 mm)                                               GEÇTİ 
+[ 607 sn]   v30 · SAĞ ÜST BOŞ: teknik cep parçası 0 (Secop, pano, UPS, güç kaynağı, DIN, pedler, T kapağı + çerçevesi, ayırma sacları) · soğuk kutunun üstünde cihaz 0 · soğutma grubu (Secop CU KLF6.6CND yan çevrili) KAİDEDE x 1633–2013 · y 815–1087 (taban sacının 78.5 altına gömülü) · z -785…-478 · üstü soğuk kutunun altına 22.0 (≥ 15) · tepsi B tavanına 18.0 (≥ 15, ısı köprüsü yok) GEÇTİ []
+[ 607 sn]   v30 · HAVA YOLU (sanayi dolabı gibi önden): 240 m³/h (KLF6.6CND 32 °C'de atılan 806 W, hava 10 K ısınır) · EMİŞ sol kanat 70 yarık → pencere önünde etkin 0.0231 m² (2.9 m/s ≤ 3,5) · kaide penceresi 0.0502 · taban açıklığı 0.2379 · ATIŞ sağ kanat 70 yarık → etkin 0.0231 m² (2.9 m/s ≤ 3,5) · pencere 0.0502 · taban + cep yanı 0.1065 · emiş / atış yarıkları arası 318 mm (≥ 250, kısa devre yok) · orta dikme (1584–1614) iki yanı ayırır GEÇTİ 
+[ 607 sn]   v31 · KLF6.6CND (dikdörtgen kutu, dolum + ılık gün + KASET EK ISISI 8.1 / 8.9 / 9.7 / 10.2 W) pay: 32 °C +43.3% · 35 °C +27.3% · 38 °C +14.2% · 40 °C +6.1% · kondenser yüzünün %71'i taban üstünde açık (alt 78 mm cepte) → %5 kayıp sayılsa 40 °C'de +0.8% (≥ 0) GEÇTİ 
+[ 607 sn]   v31 · KASET YERİ: kuru bölmede x 1470–2010 (pano 1450 ↔ DIN plakası 2020 arası: 20 / 10 mm) · y 1473–1855 (hava hattı üstü 1467 ↔ servis kapağı 1860.5: 3.0 / 5.5 mm) · z -826…-640 · soğutma grubunun %99'inin TAM ÜSTÜNDE GEÇTİ 
+[ 607 sn]   v31 · KANALLAR ↔ KASET: alt kanal geçidi (x 1523–1897 · y 1543–1659) bobinin önünde (bobin x 1513–1910 · y 1533–1670) · üst kanal geçidi (y 1685–1789) ara sacın (1671.5) üstünde, fan plakasının önünde · ikisi de kaset boşluğunda (x 1512–1968 · y 1515–1813) · kesik x 1492–1988 · y 1495–1833 GEÇTİ 
+[ 607 sn]   v31 · KASET HAVASI: 2 × Sanyo Denki San Ace 120W işletme 110 m³/h @ 40 Pa (toplam 220 m³/h = 0.061 m³/s) · üst ızgara 2.5 m/s · alt ızgara 2.3 m/s (≤ 4) · bobin yüzü 1.12 m/s (0,8–2,5) · arka baca 2.9 m/s (≤ 4,5) · 40 °C'de 420 W → hava 5.7 K soğur · LMTD 9.9 K · gereken UA 43 W/K · bobin dış yüzeyi ≈ 1.85 m² → gereken U 23.0 W/m²K (tipik 25–35 [V]) GEÇTİ 
+[ 607 sn]   v31 · YOĞUŞMA SUYU: tava → Ø8 hortum · sifon 1440 → 1462 (22 mm su ≥ 10: fan emişi kasete sıcak hava çekemez) · sifondan sonra hep iner: evet · uç y 940 tavanın (üstü 933.5) üstünde hava boşluklu · tava 0.47 L · günde ≈ 576 g (sogutma_topping_v1) · ünitenin atış havasında sıcak gaz döngülü (elektrikli kap yok) GEÇTİ 
+[ 607 sn]   v30 · KURU BÖLMENİN ÜSTÜ: pano (x 900–1450 · y 1585–1845) + UPS + güç kaynağı arka sacta · kuru bölme tabanı y 1109.0 (ünite havası altta) · pano altı ünite üstünün 498 mm yukarısında (R290 aşağı çöker) · üstleri servis kapağının 15.5 mm altında GEÇTİ 
+[ 607 sn]   v25b · soğuk oda ↔ mekanizma bandı: raf dilimi (dünya y 1149,5–1151,5) 6 ürün kanalı DIŞINDA açık alan 0.00 mm² ≤ 1 (v25: ≈ 21 350)                    GEÇTİ []
+[ 607 sn]   v25b · 430 çerçeve düzlemi soğuk oda altı bandında (dünya y 1109–1152) kesintisiz (kaset çentikleri yarık dili flanşıyla kapalı): açık alan 0.00 mm² ≤ 1 GEÇTİ []
+[ 608 sn]   v25b · K1 AÇILMA TARAMASI 0–110° (19 açı · sanal pivot ön dış köşe · flipper katlanır min(90, 33·α) · K2 KAPALI · A kabini 49 parça + F zarfı engel): çakışma 0 GEÇTİ []
+[ 608 sn]   v25b · K2 AÇILMA TARAMASI 0–110° (19 açı · sanal pivot ön dış köşe · K1 + flipper KAPALI · A kabini 49 parça + F zarfı engel): çakışma 0               GEÇTİ []
+[ 610 sn]   v25b · mekanizma_kanadi_sol AÇILMA TARAMASI 0–110° (19 açı · sanal pivot ön dış köşe x 701.5 · diğer kapaklar kapalı · A + F engel): çakışma 0         GEÇTİ []
+[ 611 sn]   v25b · mekanizma_kanadi_sag AÇILMA TARAMASI 0–110° (19 açı · sanal pivot ön dış köşe x 2497.0 · diğer kapaklar kapalı · A + F engel): çakışma 0        GEÇTİ []
+[ 611 sn]   v29 · sos haznesi DOLUM ÇEKMESİ: TC kelepçe sökülür → hazne 15 mm kaldırılır → 0–640 mm öne (K1 + flipper + K2 açık): serbest (bulgu 0)                GEÇTİ []
+[ 612 sn]   v29 · harc haznesi DOLUM ÇEKMESİ: TC kelepçe sökülür → hazne 15 mm kaldırılır → 0–640 mm öne (K1 + flipper + K2 açık): serbest (bulgu 0)               GEÇTİ []
+[ 612 sn]   v29 · kiyma haznesi DOLUM ÇEKMESİ: TC kelepçe sökülür → hazne 15 mm kaldırılır → 0–640 mm öne (K1 + flipper + K2 açık): serbest (bulgu 0)              GEÇTİ []
+[ 612 sn]   v29 · kusbasi haznesi DOLUM ÇEKMESİ: TC kelepçe sökülür → hazne 15 mm kaldırılır → 0–640 mm öne (K1 + flipper + K2 açık): serbest (bulgu 0)            GEÇTİ []
+[ 614 sn]   v30 · bağlantılar (91 çift: K1/K2 menteşe tabanı ↔ TC yan sacı · SOĞUK KUTU ↔ TC yan / tavan sacları · raf burçları · alt sac ↔ sensör / silecek askısı · kılavuz ↔ raf · SOĞUTMA GRUBU ped ↔ tepsi ↔ askı ↔ taban · hatlar ↔ ünite · teknik bölme perdeleri · kuru bölme tabanı · pano / DIN / UPS ↔ arka sac · servis kapağı · filtre ↔ kanat · panel menteşesi · mandallar · yarık dili · kablo rakoru): hepsi ≤ 0,05 mm GEÇTİ []
+[ 652 sn]   v32 · kinematik v31 ile aynı (koniler, araba plakası, döner yatak, ayar bileziği, sabit tahrik diski / kutusu / motoru + bantlı tabla kasetinin 50 parçası = gıda yüzeyi · raylar MGN15 → 9b): en büyük fark kutu 0.0000 mm · hacim 0.000 mm³ GEÇTİ 
+[ 652 sn]   v32 · KIZAK KATALOG: HIWIN MGN15HZ0HM blok y 24.5–36.5 (H 16 · v31 HGH15CA 28) · W 32 · L1 43.4 · L 58.8 · ray HIWIN MGNR15R…HM 15 × 10 · parçalar 1190.0 / 1143.5 / 1310.0 / 1023.5 mm (≤ 1960) · uç delik payı 8.5–15.0 (6–34) · 118 × DIN 912 M3 × 10 GEÇTİ 
+[ 652 sn]   v32 · TABLA KOTU DEĞİŞMEDİ: araba plakası y 48.5–58.5 · bantlı tabla kaseti en üst y 114.0 (dünya 1006.0 · 50 parça v31 ile birebir → kinematik) · ayak yüksekliği 12.0 = plaka 48.5 − blok üstü 36.5 · dönüş motoru plakaya oturur (y 7.5–48.5), tekne tabanından 3.0 mm (v31: 0, sürtüyordu) GEÇTİ 
+[ 654 sn]   v32 · BAĞLANTILAR (32 çift ≤ 0,05 mm): ayak ↔ blok üstü · ayak flanşı ↔ plaka · blok ↔ ray · uç kapağı ↔ blok · ray ↔ kiriş · cıvata ↔ ray · çatı ayağı ↔ kiriş · uç kapağı ↔ çatı · motor ↔ plaka · lokma ↔ motor GEÇTİ []
+[ 664 sn]   v32 · ÜSTTEN KAPALI: rayın, bloğun ve ayak tabanının üstü (u −16…+29, 2 ray × 25 kesit × 91 = 4550 düşey ışın, x -540.0…1793.5) çatıya çarpar · açık ışın 0 (v31: 36 mm yarık boydan boya) GEÇTİ []
+[ 664 sn]   v32 · LABİRENT: iç etek altı y 29.0 · ayak alt kolu y 22.0–26.0 (etekten 3.0 · kirişten 1.5) · ayak ↔ çatı en az 1.15 mm · blok ↔ çatı 4.15 · plaka ↔ çatı 3.96 · çatı üstü en yüksek y 44.54 (plaka 48.5) · dış etek kirişin dış kenarında, iç etek iç kenarından 0,5 içeride (kiriş üstünde açık raf yok) · su dışa akar (3°) GEÇTİ 
+[ 665 sn]   v32 · X SÜPÜRME: 27 hareketli (ARABA + TABLA, y < 70) · 111 konum (sert duruş -395.0 … 1675.4, adım 20 + limit / park / ek / aktarma) · 55 sabit (14 uzun prizmatik anahtar konumlarda) · 593 çift ölçüldü · çakışma 0 · ray bandı (u ±7,5, y < 30,5) hareketliden boş: EVET GEÇTİ []
+[ 670 sn]   v32 · SERT DURUŞLARDA BLOK RAYDA: sol (tabla -395.0) blok ucu -504.4 ≥ ray başı -540.0 (35.6) · sağ (tabla 1675.4) 1784.8 ≤ ray sonu 1793.5 (8.7) · yeni parçalar (blok, uç kapağı, ayak, motor) ↔ sabitler en küçük açıklık 1.15 mm (kizak_blogu_0_ayagi ↔ ray_ortu_catisi_on, x -395.0) ≥ 1 GEÇTİ [(1.15, -395.0, 'kizak_blogu_0_ayagi', 'ray_ortu_catisi_on'), (1.15, -395.0, 'kizak_blogu_1_ayagi', 'ray_ortu_catisi_on'), (1.15, -395.0, 'kizak_blogu_2_ayagi', 'ray_ortu_catisi_arka'), (1.15, -395.0, 'kizak_blogu_3_ayagi', 'ray_ortu_catisi_arka')]
+[ 670 sn]   v32 · YÜK: hareketli 25.2 kg + açıcı itişi 482 N (Festo DSBC-32 × 6 bar, disk kenarında r 170) → en yüklü blok 438 N · statik emniyet C0/P = 20.8 (≥ 4) · ömür (hareket yükü) 5.5e+07 km GEÇTİ 
+[ 670 sn]   X EKSENİ DENETİMİ 18 sn
+[ 670 sn]   v30 · kaide_cad_v4 (22 parça · 3. göz 1620–2100 ünite cebi · 4 gözde hava penceresi) ↔ C istasyonu (TC + TU) çakışma 0 · pencere / cep ölçüleri TC ile aynı: evet GEÇTİ []
+[ 671 sn]   BİLGİ · A kabini (acici_kabin_cad_v1) ↔ C istasyonu (49 parça) çakışma: TEMİZ
+[ 671 sn] DUNYA DENETIMI SURESI 608 sn
+[ 671 sn] DUNYA DENETIMI: 45 denetim · HEPSI GECTI
+CIKIS 0
