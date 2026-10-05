@@ -12,5 +12,5 @@ Pending: queue2 TOPPING assembly animation, then F/K/E/U, A+drawer check, B weld
 No engineering change or new site deployment is made by this backup.
 
 ## 5 Eki güncelleme (bulut oturumu)
-Working input is now hat3_v9x.glb.gz (step 56, SHA256 83d54bbbf595564ed50dc24a30dd92093443dc07b189ab05a05b40e582aec94d), not v9w. Step 56 = 56_evap_ayak.py (registered in zincir.py, SIRA.md).
+Working input is now hat3_v9y.glb.gz (step 57, SHA256 49fc7520579156828c3ee31c05b36aba774f99e88d0e77be5557dc2ae34dda54), not v9w. Steps 56 (evaporator foot) and 57 (service cable channel cut) are registered in zincir.py. Step 56 = 56_evap_ayak.py (registered in zincir.py, SIRA.md).
 Queue item 2 (TOPPING assembly v5) done with open items listed in KUYRUK3.md; pipeline: gece2/t5 (t5_cikar → merkez_v9w → t5_parca → t5_montaj → t5_cikti). Large .pkl intermediates are not committed; rerun the pipeline.

@@ -1,20 +1,16 @@
-parça 542 · süre 186.5 · adım 22
+parça 542 · süre 186.2 · adım 22
 SON KONUM kesişimi 4 · beyansız 0
   ilerleme 0/438  0 s  çakışma 0
-  ilerleme 100/438  28 s  çakışma 23
-  ilerleme 200/438  41 s  çakışma 27
-  ilerleme 300/438  55 s  çakışma 29
-  ilerleme 400/438  72 s  çakışma 31
-YOL: çift 894 · aday çakışma 32 · 77 s
-YOL (doğrulanmış): gerçek çakışma 6 · sıfır boşluklu yüzey teması 26
-  ÇAKIŞMA {'a': 'evaporator_ayagi_0', 'b': 'servis_cihaz', 't': 168.9, 'w': [167.44, 169.04], 'derin': 60.5, 'yon': 'oteleme', 'hareket': 'servis_cihaz', 'kesisim': {'t': 168.756, 'ucgen': 26}}
-  ÇAKIŞMA {'a': 'evaporator_ayagi_1', 'b': 'servis_cihaz', 't': 168.9, 'w': [167.44, 169.04], 'derin': 60.5, 'yon': 'oteleme', 'hareket': 'servis_cihaz', 'kesisim': {'t': 168.756, 'ucgen': 27}}
-  ÇAKIŞMA {'a': 'evaporator_ayagi_2', 'b': 'servis_cihaz', 't': 168.9, 'w': [167.44, 169.04], 'derin': 60.5, 'yon': 'oteleme', 'hareket': 'servis_cihaz', 'kesisim': {'t': 168.756, 'ucgen': 28}}
-  ÇAKIŞMA {'a': 'evaporator_ayagi_3', 'b': 'servis_cihaz', 't': 168.9, 'w': [167.44, 169.04], 'derin': 60.5, 'yon': 'oteleme', 'hareket': 'servis_cihaz', 'kesisim': {'t': 168.756, 'ucgen': 28}}
-  ÇAKIŞMA {'a': 'kanat_K1', 'b': 'orta_kayit', 't': 178.39, 'w': [175.44, 178.44], 'derin': -1, 'yon': 'donme', 'kesisim': {'t': 178.38, 'ucgen': 38}}
-  ÇAKIŞMA {'a': 'servis_cihaz', 'b': 'elk_koyu_2356_1266', 't': 168.95, 'w': [167.44, 169.04], 'derin': 40.6, 'yon': 'oteleme', 'hareket': 'servis_cihaz', 'kesisim': {'t': 168.918, 'ucgen': 2}}
+  ilerleme 100/438  31 s  çakışma 19
+  ilerleme 200/438  43 s  çakışma 23
+  ilerleme 300/438  59 s  çakışma 25
+  ilerleme 400/438  76 s  çakışma 27
+YOL: çift 894 · aday çakışma 28 · 82 s
+YOL (doğrulanmış): gerçek çakışma 2 · sıfır boşluklu yüzey teması 26
+  ÇAKIŞMA {'a': 'kanat_K1', 'b': 'orta_kayit', 't': 178.09, 'w': [175.15, 178.15], 'derin': -1, 'yon': 'donme', 'kesisim': {'t': 178.08, 'ucgen': 32}}
+  ÇAKIŞMA {'a': 'servis_cihaz', 'b': 'elk_koyu_2356_1266', 't': 168.65, 'w': [167.14, 168.74], 'derin': 40.6, 'yon': 'oteleme', 'hareket': 'servis_cihaz', 'kesisim': {'t': 168.509, 'ucgen': 2}}
 ÜRETİM KARELERİ: 1 sorun
-   ('ust_raf', 124.99, 'kesişiyor: uno_kiyma_raf_conta (21 üçgen)')
+   ('ust_raf', 124.69, 'kesişiyor: uno_kiyma_raf_conta (21 üçgen)')
 BELİRME 0 [] · HAVADA ['elk_celik_1526_1745', 'elk_kanal_1523_1692', 'elk_kanal_2450_910', 'elk_rakor_2447_911', 'kaset_kasar_conta', 'kaset_sucuk_conta', 'valf_adasi']
 SAC (gösterim) ↔ MODEL en büyük kutu farkı: [('evap_kanal_kovani_2_L2', 0.0002), ('evap_kanal_kovani_3_L2', 0.0002), ('raf', 0.0002), ('ust_raf', 0.0002), ('dis_tavan', 0.0001)]
   VİDA ('ISO 4762 M8 × 25 (+ ISO 7092 pul)', 'B kirişi M8 kapalı perçin somun') 4 kavrama 9.4 9.4 diş [21.0] taşma -11.6 {'TEMİZ'}
@@ -23,5 +19,4 @@ SAC (gösterim) ↔ MODEL en büyük kutu farkı: [('evap_kanal_kovani_2_L2', 0.
   VİDA ('DIN 7991 M5 × 12 (çökertme)', 'kaynak burcu M5 (dönüşün iç yüzü)') 17 kavrama 8.09 8.09 diş [8.09] taşma 0.0 {'TEMİZ'}
   VİDA ('ISO 7380 M5 × 6', 'PEM SP-M5-1 (kuru bölme tabanı)') 4 kavrama 2.0 2.0 diş [2.0] taşma 1.38 {'TEMİZ'}
   VİDA ('ISO 7380 M5', 'PEM SP-M5-1 (kuru bölme tabanı)') 2 kavrama 2.0 2.0 diş [2.0] taşma 2.38 {'TEMİZ'}
-GLB 30.71 MB · JSON yazıldı · zarf [[0.736, 0.124, -1.727], [4.4, 2.8, 0.939]] · /home/user/autokitch/otonom/hat3d/v3/topping_montaj
-CIKTI_BITTI 0
+GLB 30.72 MB · JSON yazıldı · zarf [[0.736, 0.124, -1.727], [4.4, 2.8, 0.939]] · /home/user/autokitch/otonom/hat3d/v3/topping_montaj
