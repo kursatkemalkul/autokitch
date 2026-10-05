@@ -67,6 +67,9 @@ for a in [a for a in P if _re.match(r'onyuz_kapak_E_mentese_(sol|sag)_\d_sabit_v
 
 exec(open(os.path.join(HERE, '_altyapi.py'), encoding='utf-8').read())
 
+_kg = kamera_genel
+def kamera_genel(adlar, **k):                                                    # E dar ve uzun: adım kamerası 1,6 kat geride (bütün istasyon görünsün)
+    k['olcek'] = k.get('olcek', 1.25) * 1.6; return _kg(adlar, **k)
 # ------------------------------------------------------------------ çevre + beyanlı plan istisnaları
 for s_, L_ in PEM_SAC.items():
     for p in L_: HARIC_PLAN.add((p, s_))
