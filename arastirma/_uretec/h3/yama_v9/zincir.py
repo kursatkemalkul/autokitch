@@ -205,8 +205,10 @@ ADIMLAR = [
      [(".", 'python "{YAMA}/61_filtre_servis.py" hat3_v10b.glb hat3_v10c.glb')]),
     ("62", "TOPPING bağlantısız 9 saca gerçek kaynak (TOPPING montaj v6, bağlı mı denetimi): 4 raf köşebendi → astar · 2 kaide cep taşıyıcısı → lama / enine boru · enine lama → arka boru / ön perde · 2 teknik perde → dış taban (aralıklı)", ["hat3_v10c.glb"], "hat3_v10d.glb",
      [(".", 'python "{YAMA}/62_topping_kaynak.py" hat3_v10c.glb hat3_v10d.glb')]),
+    ("63", "TOPPING UNO'lar rafa vidalı (her UNO 2 rafa kaynaklı L pabuç + yandan M5 tabana) · kaşar / sucuk kaseti kapak K2 iç yüzündeki POM takozla kilitli (Kemal)", ["hat3_v10d.glb"], "hat3_v10e.glb",
+     [(".", 'python "{YAMA}/63_uno_kaset.py" hat3_v10d.glb hat3_v10e.glb')]),
 ]
-SON = "hat3_v10d.glb"
+SON = "hat3_v10e.glb"
 
 
 def kur(is_dizin, h3, uretec):
