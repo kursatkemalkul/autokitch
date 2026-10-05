@@ -10,15 +10,16 @@ const material=new T.MeshStandardMaterial({color:0xa6b2c1,side:T.DoubleSide,meta
 const vec=a=>new T.Vector3(...a),matrix=a=>new T.Matrix4().set(...a.flat());
 function child(b,f){
  if(f===0)return matrix(b.flat_child);
- const th=b.angle*f,R=b.BA/th-b.K*sheet.t,A=vec(b.p0).add(new T.Vector3(0,0,b.direction>0?sheet.t+R:-R)),q=new T.Quaternion().setFromAxisAngle(vec(b.axis),th);
- const o=vec(b.out).applyQuaternion(q),n=new T.Vector3(0,0,1).applyQuaternion(q),origin=vec(b.p0).sub(A).applyQuaternion(q).add(A);
+ const th=b.angle*f,R=b.BA/th-b.K*sheet.t,q=new T.Quaternion().setFromAxisAngle(vec(b.axis),th),Z=new T.Vector3(0,0,1),c=b.direction>0?sheet.t+R:-R;
+ const delta=new T.Vector3().crossVectors(vec(b.axis),Z).multiplyScalar(Math.sin(th)).addScaledVector(Z,-2*Math.sin(th/2)**2);
+ const o=vec(b.out).applyQuaternion(q),n=Z.clone().applyQuaternion(q),origin=vec(b.p0).addScaledVector(delta,-c);
  return new T.Matrix4().makeBasis(o,vec(b.edge),n).setPosition(origin);
 }
 function strip(b,p,f){
  const [s,w,z]=p;if(f===0)return vec(b.p0).addScaledVector(vec(b.out),s).addScaledVector(vec(b.edge),w).add(new T.Vector3(0,0,z));
- const th=b.angle*f,R=b.BA/th-b.K*sheet.t,A=vec(b.p0).add(new T.Vector3(0,0,b.direction>0?sheet.t+R:-R));
- const radial=new T.Vector3(0,0,b.direction>0?-(R+sheet.t-z):R+z).applyAxisAngle(vec(b.axis),th*s/b.BA);
- return A.add(radial).addScaledVector(vec(b.edge),w);
+ const th=b.angle*f,R=b.BA/th-b.K*sheet.t,a=th*s/b.BA,r=b.direction>0?R+sheet.t-z:R+z,e=new T.Vector3(0,0,b.direction>0?-1:1);
+ const delta=new T.Vector3().crossVectors(vec(b.axis),e).multiplyScalar(Math.sin(a)).addScaledVector(e,-2*Math.sin(a/2)**2);
+ return vec(b.p0).addScaledVector(vec(b.edge),w).add(new T.Vector3(0,0,z)).addScaledVector(delta,r);
 }
 function update(){
  const progress=clock*sheet.order.length,states=new Map(sheet.order.map((id,i)=>[id,Math.max(0,Math.min(1,progress-i))])),poses=new Map([[0,new T.Matrix4()]]),bends=new Map();
