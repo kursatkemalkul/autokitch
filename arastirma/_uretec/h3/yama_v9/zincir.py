@@ -201,8 +201,10 @@ ADIMLAR = [
      [(".", 'python "{YAMA}/59_kapi_emniyet.py" hat3_v9z.glb hat3_v10a.glb')]),
     ("60", "hava hattı emniyet valfi (STANDART_DURUM madde 8): kompresör çıkış hortumuna Festo MS6-SV-E (yumuşak başlatma + hızlı boşaltma) + bobin + susturucu · hortum iki parçaya", ["hat3_v10a.glb"], "hat3_v10b.glb",
      [(".", 'python "{YAMA}/60_hava_emniyet.py" hat3_v10a.glb hat3_v10b.glb')]),
+    ("61", "davlumbaz yağ filtresi sola kayar, pizza kutusu tarafındaki servis ağzından alınır (Kemal): çerçeve sol kenarı açık · ray uzantısı · bölme sacında 530 × 420 ağız + tapa + 2 çeyrek tur kilit", ["hat3_v10b.glb"], "hat3_v10c.glb",
+     [(".", 'python "{YAMA}/61_filtre_servis.py" hat3_v10b.glb hat3_v10c.glb')]),
 ]
-SON = "hat3_v10b.glb"
+SON = "hat3_v10c.glb"
 
 
 def kur(is_dizin, h3, uretec):
