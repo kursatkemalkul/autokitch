@@ -73,6 +73,38 @@ rear_members=['arka_sac']+[a for a in P if a.startswith(('pano_','din_rayi_','pl
 if 'arka_sac' in P and 'pano_plakasi' in rear_members:
  GROUPS['arka_sac']=rear_members;done.update(rear_members[1:])
 
+# Purchased HIWIN guides arrive with their recirculating-ball carriages on the rail.
+# Our frame fixings stay separate and must still pass the connection gate.
+for z in (-755,-645):
+ head=f'itici_X_ray_{z}';carriage=f'itici_X_blok_{z}'
+ if head in P and carriage in P:GROUPS[head]=[head,carriage];done.add(carriage)
+# The roof's threaded packs are welded on the bench, then enter with the roof.
+# Installing them independently beforehand blocked insertion of the air duct.
+if 'ust_sac' in P:
+ packs=[a for a in P if a.startswith('k73_tavan_baglanti_plakasi_')]
+ seams=[a for a in P if a.startswith('k73_tavan_kaynagi_')]
+ GROUPS['ust_sac']=['ust_sac']+packs;WELDS['ust_sac']=seams;done.update(packs);done.update(seams)
+
+# Step72 welded foot packs: two 4 mm plates and the original upright.
+# The old itici_taban label is a GLB fragment of the upper physical plate,
+# proved against its native boundary in pusher_plate_fragment_audit.json.
+fragment_audit=json.loads((HERE/'pusher_plate_fragment_audit.json').read_text(encoding='utf-8'))
+assert fragment_audit['passed']
+for x,i in ((40,0),(360,2)):
+ for z,j in ((-755,0),(-645,1)):
+  tag=f'{4000.0+x}_{float(z)}';head='k72_itici_taban_'+tag
+  members=[head,'k72_itici_ust_plaka_'+tag,f'itici_taban_{x}_{z}',f'k_itici_sac_{i+j}']
+  assert all(a in P for a in members)
+  seams=[a for a in P if a.startswith(('k72_itici_ara_kaynagi_'+tag+'_','k72_itici_ayak_kaynagi_'+tag+'_'))]
+  assert len(seams)==8
+  GROUPS[head]=members;WELDS[head]=seams;done.update(members[1:]);done.update(seams)
+# The conveyor's custom frame is assembled on the bench, not treated as
+# a purchased module. Individual fabrication and fixings remain audit gates.
+head='bant_yan_-421'
+members=[head,'bant_yan_-3','bant_traversi_0','bant_traversi_1','olu_plaka','kayma_tablasi','avara_rulosu_46','avara_mili_0','avara_mili_1','tahrik_rulosu_EC5000_354','tahrik_rulosu_EC5000_hex_mil']
+assert all(a in P for a in members)
+GROUPS[head]=members;done.update(members[1:])
+
 # Pressed bottom studs accompany the base sheet; their attachment must precede support installation.
 PEMS=[a for a in P if a.startswith('k71_alt_saplama_')]
 if 'taban_sac_3' in P:
@@ -310,7 +342,7 @@ for i in range(2):
 for a in P:
  if a.startswith('k_itici_sac_') or a=='itici_sabit_plaka':before('bant_yan_-421',a)
  if a.startswith('yag_boru_'):before('yag_pompa_plakasi',a)
- if a.startswith('emniyet_'):before('tahrik_rulosu_EC5000_M8_civata',a)
+ # Roller shaft screw is installed through its own axis after conveyor seating.
 before('itici_X_MY-J10_blok_0','itici_Z_MY1B10G-350_profil');before('itici_X_merkez_yukseltme','itici_Z_MY1B10G-350_profil')
 
 # Access-sensitive installation order; every changed order is checked by the same full path solver.
@@ -374,6 +406,75 @@ for a in P:
     x,_,z=j['center_mm']
     if LO[a][0]-.1<=x<=HI[a][0]+.1 and LO[a][2]-.1<=z<=HI[a][2]+.1:
      for b in j['parts']:before(a,b)
+# Measured access dependencies from iteration25; no collision suppression.
+for x in (40,360):
+ before(f'itici_taban_{x}_-755',f'itici_taban_{x}_-645')
+for a in [n for n in P if n.startswith('k_itici_sac_')]:
+ before(a,'itici_sabit_plaka')
+before('itici_X_ray_-755','itici_X_ray_-645')
+before('itici_X_blok_-755','itici_X_ray_-645')
+before('itici_X_blok_-755','itici_X_blok_-645')
+before('itici_X_ray_-755','itici_X_MY1B10G-250_profil')
+before('itici_X_blok_-755','itici_X_MY1B10G-250_profil')
+for a in ('hava_ic_aski_2','hava_ic_aski_3'):
+ edges.discard((alias.get('hava_ic_kanal_1','hava_ic_kanal_1'),alias.get(a,a)))
+ before(a,'hava_ic_kanal_1')
+for x in (40,360):
+ front=f'k72_itici_ust_plaka_{4000.0+x}_-645.0'
+ before(f'itici_taban_{x}_-755',front)
+ for a in ('k_itici_sac_0','k_itici_sac_2'):before(a,front)
+for a in ('itici_X_ray_-755','itici_X_ray_-645','itici_X_MY1B10G-250_profil'):
+ for b in ('itici_X_durdurucu_0','itici_X_durdurucu_1'):before(a,b)
+# Zero-volume profile butt faces slide only tangentially to their Z normal.
+# Bounding intervals prove no stock can penetrate for the admitted Y-only path.
+profile_slide_checks=[]
+for x in (20,380):
+ a=f'kopru_kirisi_yan_{x}'
+ for z in (42,-800):
+  b=f'kose_dikmesi_{x}_{z}'
+  gap=LO[b][2]-HI[a][2] if z==42 else LO[a][2]-HI[b][2]
+  assert abs(gap)<.001,(a,b,gap)
+  reason=f'Native 30x40 bridge end and 30x30 post meet on Z={27 if z==42 else -785} mm butt plane; measured gap {gap:.6f} mm. Only XY-tangential insertion is admitted, no Z movement across this interface; welding remains a separate attachment gate.'
+  haric(a,b,reason);profile_slide_checks.append({'part':a,'carrier':b,'normal_axis':'Z','gap_mm':float(gap),'admitted_motion_axes':['X','Y'],'connection_verified':False})
+(HERE/'profile_slide_contact_audit.json').write_text(json.dumps({'checks':profile_slide_checks,'manufacturing_release':False},indent=2),encoding='utf-8')
+# Keep the cable duct's lateral access open before the nozzle bracket enters.
+before('elk_ic_kanal_0','nozul_braketi')
+# The front guide is installed before its entry sensor closes access.
+before('cit_giris_1','urun_sensoru_giris_alici')
+# Air-duct access precedes the rear DIN assembly; contrary broad control-to-
+# duct edges are limited to electrical ducts, not this pneumatic trunk.
+# The assembled rear stays first; enter the air duct from the front instead.
+# Fabricate the open structural frame before the cutter and DIN panel close
+# access. Side covers and their high ears are installed after the bridge.
+for bridge in ('kopru_kirisi_yan_20','kopru_kirisi_yan_380'):
+ for a,b in list(edges):
+  if b==bridge and a.startswith(('PulsaJet_','nozul_','elk_ic_kanal_','hava_ic_kanal_')):edges.discard((a,b))
+ before(bridge,'arka_sac')
+ for a in P:
+  if a.startswith(('govde_kulak_ust_','DGRF','bicak_','koruma_braketi_','kopru_kirisi_-')):before(bridge,a)
+  if a.startswith('govde_kulak_') and P[a]['tur']=='sac' and any('_'+str(y) in a for y in (1600,1720,1810)):before(bridge,a)
+# The bench-built conveyor is lowered before internal posts and the cutter;
+# its plug lead and threaded shaft fixing are fitted after the frame seats.
+for a in P:
+ if a.startswith(('ara_dikme_','bicak_','koruma_braketi_')) or a in ('tahrik_rulosu_EC5000_M8_civata','tahrik_rulosu_EC5000_kablo'):
+  before('bant_yan_-421',a)
+ if a.startswith(('bicak_','koruma_braketi_')):before('elk_ic_kanal_0',a)
+before('nozul_braketi','yag_duvar_gecis_bilezigi_donus')
+before('hava_ic_kanal_1','hava_ic_kanal_3');before('hava_ic_kanal_1','elk_k_celik_6')
+for x in (4040.0,4360.0):
+ for z in (-755.0,-645.0):before(f'k72_itici_taban_{x}_{z}','k_elektrik_sac_0')
+# Seat low mechanisms before the bridge; upper frame ears/DIN controls follow.
+for bridge in ('kopru_kirisi_yan_20','kopru_kirisi_yan_380'):
+ for a in P:
+  if a.startswith(('itici_X_','itici_Z_','k_itici_sac_','k72_itici_taban_')) or a=='itici_sabit_plaka':before(a,bridge)
+ before('bant_yan_-421',bridge)
+# Lower frame foot packs and the conveyor require the open sides for entry.
+for wall in ('sol_sac_urun_girisi','sag_sac_E_penceresi'):
+ for a,b in list(edges):
+  if a==wall and (b=='bant_yan_-421' or b.startswith('k72_itici_taban_')):edges.discard((a,b))
+for a in P:
+ if a.startswith('k72_itici_taban_'):
+  edges.discard(('bant_yan_-421',a));before(a,'bant_yan_-421')
 ordered=[];cycle_breaks=[]
 while remaining:
  ready=[a for a in remaining if not any(b==a and x in remaining for x,b in edges)]
@@ -383,6 +484,7 @@ while remaining:
  else:a=min(ready,key=seqrank)
  ordered.append(a);remaining.remove(a)
 (HERE/'order_constraints.json').write_text(json.dumps({'edges':sorted(edges),'cycles_requiring_path_recheck':cycle_breaks,'order':ordered},ensure_ascii=False,indent=2),encoding='utf-8')
+assert not cycle_breaks,'Precedence cycles must be resolved before a placement run'
 ordered+=sorted([a for a in P if a not in CEVRE and a not in done and a not in items],key=seqrank)
 for a in ordered:
  phase=seqrank(a)[0]
@@ -407,13 +509,29 @@ for a in ordered:
    for q in (0,1):
     for sign in (-1,1):
      side=np.zeros(3);side[q]=sign*100;alternatives.append(YOL(side,axial))
+  elif a.startswith('govde_kulak_') and P[a]['tur']=='sac' and ('_on_' in a or '_arka_' in a) and not '_ust_' in a:
+   sign=1 if '_sol_' in a else -1
+   alternatives=[YOL((0,700,0),(sign*d,0,0)) for d in (30,50,100)]+[YOL((sign*50,0,0))]+AD
+  elif a.startswith('bicak_') or a.startswith('koruma_braketi_'):
+   alternatives=[YOL((0,0,950),(0,-d,0)) for d in (60,100)]+[YOL((0,-60,0))]+AD
+  elif a=='nozul_braketi':alternatives=[YOL((0,0,950),(50,0,0)),YOL((0,700,0),(50,0,0)),YOL((0,700,0),(100,0,0))]+AD
+  elif a=='hava_ic_kanal_1':alternatives=[YOL((0,700,0),(0,0,d)) for d in (150,250,350)]+[YOL((0,0,950))]+AD
+  elif a in ('elk_ic_kanal_8','hava_ic_kanal_0'):
+   alternatives=[YOL((0,0,950),(d,0,0),(0,y,0)) for y in (-120,100) for d in (-50,-100,50)]+AD
+  elif a=='elk_ic_kanal_0':alternatives=[YOL((0,0,950),(d,0,0),(0,50,0)) for d in (50,100,150)]+[YOL((0,700,0),(d,0,0)) for d in (50,100,150)]+AD
   elif a=='elk_zincir_kanal_0':alternatives=[YOL((0,35,0))]+AD
   elif a=='elk_zincir_kanal_2':alternatives=[YOL((-35,0,0))]+AD
   elif a=='arka_sac':alternatives=[YOL((0,0,-950))]+AD
   elif a=='sag_sac_E_penceresi':alternatives=[YOL((650,0,0)),YOL((0,0,950),(24,0,0))]+AD
   elif a=='sol_sac_urun_girisi':alternatives=[YOL((-650,0,0)),YOL((0,0,950),(-24,0,0)),YOL((0,0,-950),(-24,0,0))]+AD
-  elif a=='bant_yan_-3':alternatives=[YOL((0,700,0),(0,0,12)),YOL((0,0,950))]+AD
-  elif a=='bant_yan_-421':alternatives=[YOL((0,700,0),(0,0,-12)),YOL((0,0,-950))]+AD
+  elif a=='bant_yan_-3':alternatives=[YOL((0,700,0),(0,0,-100)),YOL((0,700,0),(0,0,12)),YOL((0,0,950))]+AD
+  elif a=='bant_yan_-421':alternatives=[YOL((0,700,0),(0,0,-d)) for d in (50,100,150)]+AD
+  elif a in ('kopru_kirisi_yan_20','kopru_kirisi_yan_380'):
+   sign=1 if a.endswith('_20') else -1
+   alternatives=[YOL((0,700,0),(sign*d,0,0)) for d in (50,100,150)]+[YOL((0,700,0))]
+   assert all(abs(p[2])<1e-9 for path in alternatives for p in path)
+  elif a in ('itici_taban_360_-755','itici_taban_40_-755','itici_sabit_plaka','itici_X_ray_-755','itici_X_blok_-755','cit_giris_1','kopru_kirisi_yan_20','kopru_kirisi_yan_380','elk_ic_kanal_0','hava_ic_kanal_0','hava_ic_aski_2','hava_ic_aski_3') or a.startswith(('k_itici_sac_','k72_itici_taban_')):
+   alternatives=[YOL((0,700,0),(0,0,d)) for d in (100,-100,200,-200)]+[YOL((0,700,0),(d,0,0)) for d in (50,-50)]+AD
   else:alternatives=AD
   t=yerlestir(GROUPS.get(a,[a]),alternatives,t,tr(a),pem=PRESS_BY_SHEET.get(a,()),tezgah_kaynak=WELDS.get(a,()),sure_bekle=0.02)
  (HERE/'plan_progress.json').write_text(json.dumps({'last_part':a,'installed':len(YER),'problems':PLAN_SORUN,'elapsed_seconds':round(time.time()-T0,2)},ensure_ascii=False,indent=2),encoding='utf-8')
@@ -421,4 +539,7 @@ for a in CEVRE:
  if a not in GOR:basla(a,np.zeros(3),t);YER[a]=t
 TOPLAM=bitti()+2
 exec((HERE/'_son.py').read_text(encoding='utf-8').replace("'plan_a3.pkl'","'plan_k.pkl'").replace('OLC = 1.75','OLC = 1.0'))
-json.dump({'source':'local steps74-76 prototypes on registered step73; each two runs byte-identical; no production release','production_release':False,'plan_problems':PLAN_SORUN,'unplanned':[a for a in P if a not in GOR],'parts':len(P),'seconds':round(time.time()-T0,2)},open('plan_audit.json','w',encoding='utf-8'),ensure_ascii=False,indent=2)
+json.dump({'source':'local steps74-77 prototypes on registered step73; each two runs byte-identical; no production release','production_release':False,'plan_problems':PLAN_SORUN,'unplanned':[a for a in P if a not in GOR],'parts':len(P),'seconds':round(time.time()-T0,2)},open('plan_audit.json','w',encoding='utf-8'),ensure_ascii=False,indent=2)
+
+from k_son_kaynak import bind as bind_full_source
+bind_full_source()

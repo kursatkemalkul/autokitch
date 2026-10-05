@@ -16,11 +16,15 @@ HIZLI = '--hizli' in sys.argv
 D = pickle.load(open('plan_k.pkl', 'rb')); D['KAM'].sort(key=lambda k: k[0])
 if D['PLAN_SORUN']: raise SystemExit('K output blocked: assembly sequence has unresolved PLAN SORUNU')
 PLAN_SHA256=hashlib.sha256(Path('plan_k.pkl').read_bytes()).hexdigest()
+if not D.get('full_source_triangle_multiset_verified') or not D.get('source_model_sha256'):raise SystemExit('K output blocked: plan is not bound to complete source geometry')
+order=json.loads((Path(HERE)/'order_constraints.json').read_text(encoding='utf-8'))
+if order.get('cycles_requiring_path_recheck'):raise SystemExit('K output blocked: unresolved assembly precedence cycles')
 # Clean paths alone do not authorize a production animation. Preserve every mandatory release gate.
 for name in ('manufacturing_release_audit.json','connection_release_audit.json'):
     gate=Path(HERE)/name
     if not gate.exists(): raise SystemExit('K output blocked: missing verified '+name)
     result=json.loads(gate.read_text(encoding='utf-8'))
+    if result.get('source_model_sha256')!=D['source_model_sha256']:raise SystemExit('K output blocked: release gate belongs to another model '+name)
     if result.get('source_plan_sha256')!=PLAN_SHA256:raise SystemExit('K output blocked: stale or unbound release gate '+name)
     if not result.get('passed') or result.get('open_items'):
         raise SystemExit('K output blocked: unresolved manufacturing/connection release gate '+name)
