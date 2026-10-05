@@ -19,13 +19,34 @@ for f_ in sorted((ROOT/'_local/claude_son_yerel/gece2').rglob('*_ent.json')):
     data=json.loads(f_.read_text(encoding='utf-8-sig'))
     for a,v in data.get('parca',{}).items():
         if isinstance(v,dict) and v.get('dugum','').startswith(('K_','KAPAK_K','ELK_K')) and 'kutu' in v: ENT[a]=v
-# Legacy CAD names are provisional and only used when an exact source component box matched.
+# Legacy names remain provisional; unique same-node bounds within the existing v6 0.6 mm naming tolerance account for polygonal cylinders. No surface equality is implied.
 cat={v['name']:v for v in json.loads((ROOT/'_local/codex_k_montaj/legacy_catalog.json').read_text(encoding='utf-8'))}
+SOURCE_COMPONENTS=json.loads((ROOT/'_local/codex_k_montaj/source_components.json').read_text(encoding='utf-8'))['components']
 for m in json.loads((ROOT/'_local/codex_k_montaj/source_matches.json').read_text(encoding='utf-8')):
     a=m['legacy_name']
-    if m.get('bbox_unique_match') and m.get('bbox_error_mm',99)<0.01 and a in cat and a not in ENT:
+    if m.get('bbox_error_mm',99)<=0.6 and a in cat and a not in ENT:
+        v=cat[a];matches=[o for o in SOURCE_COMPONENTS if o['node']==m['source_component'].split('[')[0] and np.max(np.abs(np.array(o['lo']+o['hi'])-np.array(v['lo']+v['hi'])))<=0.6]
+        if len(matches)!=1: continue
         v=cat[a];lo=v['lo'];hi=v['hi'];ENT[a]={'dugum':m['source_component'].split('[')[0],'kutu':[lo[0],hi[0],lo[1],hi[1],lo[2],hi[2]],'tur':v['type'],'bom':v.get('bom',[]),'provisional_legacy_name':True}
+# Current standard washers have smaller OD than the provisional legacy wide-washer catalog.
+# Match their actual isolated ring by axis, thickness and centre, never change the geometry.
+for a,v in cat.items():
+ if a in ENT or not a.endswith('_pul'):continue
+ meta=v.get('meta') or {}
+ if not meta.get('h'):continue
+ lo=np.array(v['lo']);hi=np.array(v['hi']);axis=int(np.argmin(hi-lo));perp=[i for i in range(3) if i!=axis];centre=(lo+hi)/2
+ candidates=[o for o in L if o['dug']=='K_GOVDE__celik' and abs((o['hi']-o['lo'])[axis]-meta['h'])<.4 and np.max(np.abs(((o['lo']+o['hi'])/2-centre)[perp]))<.2 and abs(((o['lo']+o['hi'])/2-centre)[axis])<.6]
+ if len(candidates)!=1:continue
+ o=candidates[0];l=o['lo'];h=o['hi'];ENT[a]={'dugum':o['dug'],'kutu':[l[0],h[0],l[1],h[1],l[2],h[2]],'tur':'baglanti','bom':['Current source washer; geometry from authoritative model'],'current_washer_geometry':True}
 ENT.update(json.loads((Path(HERE)/'k_local_ent.json').read_text(encoding='utf-8'))['parca'])
+# Native source provides purchased/mechanical names only; the latest mesh remains authoritative.
+for v in json.loads((Path(HERE)/'native_mechanism_names.json').read_text(encoding='utf-8')):
+ if v['name'] in ENT:continue
+ lo=np.array(v['lo']);hi=np.array(v['hi'])
+ candidates=[o for o in L if o['dug'].startswith('K_') and not o['dug'].startswith('K_GOVDE') and o['dug'].endswith('__'+v['material']) and np.all(o['lo']>=lo-.6) and np.all(o['hi']<=hi+.6)]
+ nodes=set(o['dug'] for o in candidates)
+ if len(nodes)!=1:continue
+ ENT[v['name']]={'dugum':nodes.pop(),'kutu':[lo[0],hi[0],lo[1],hi[1],lo[2],hi[2]],'bom':v.get('bom'),'source_group':v['group'],'native_metadata_only':True}
 print('ent kayıt', len(ENT), collections.Counter(v['dugum'] for v in ENT.values()).most_common())
 
 
@@ -60,6 +81,7 @@ def sec(f): return [o for o in L if id(o) not in ATANAN and f(o)]
 def sinif(a, v):
     t = v.get('tur', ''); bom = '; '.join(str(x) for x in (v.get('bom') or []) if isinstance(x, str))
     d = v['dugum']
+    if 'hortum' in a or a.startswith(('bant_PU_', 'bant_sarim_')): return 'kablo', 'kablo', bom or 'Flexible hose or belt installed along its route (KURALLAR 2.3/9)'
     if 'kaynak' in a or 'kaynagi' in a or 'punta' in a: return 'kaynak', 'kaynak', bom or 'TIG dikişi'
     if 'silikon' in a or d.endswith('__conta'): return 'yapistirici', 'silikon', bom
     if d.endswith('__yalitim') or a.startswith('yalitim'): return 'pu', 'pu', bom
@@ -83,7 +105,8 @@ for o in list(L):
         if ic(o, lo, hi):
             h = float(np.prod(np.subtract(hi, lo) + 1e-3))
             if hc is None or h < hc: en, hc = a, h
-    if en: TOPLA[en].append(o); continue
+    # Split touching sheets even when their whole component fits a larger parent sheet box.
+    # The smallest containing record is selected per triangle below.
     # birbirine bitişik (ortak kenarlı) adlı saclar tek bileşen: üçgen merkezi hangi kayıt kutusundaysa (en küçük) ona
     Q = o['V'][o['F']]; Tl = Q.min(1); Th = Q.max(1); C = Q.mean(1); lab = np.full(len(C), '', dtype=object); hcv = np.full(len(C), np.inf)
     for a, v in ENT.items():

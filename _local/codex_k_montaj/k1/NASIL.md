@@ -1,13 +1,14 @@
 # K montaj – TOPPING v6 uyarlaması
 
-Kaynak: yerel `k73.glb.gz` (adım61 + yerel70–73). Ortak zincire henüz geçirilmedi. Bu çalışma yayın/üretim onayı değildir.
+Kaynak: kayıtlı adım 73 çıktısı `../chain73/hat3_v10n.glb.gz` (main adım 66 + K 70–73). `repeat_audit.json` iki bağımsız koşunun GLB ve ent JSON byte eşitliğini kaydeder. F 67–69 birleşince K zinciri yeni girdide yeniden koşulmalıdır. Üretim/yayın onayı yoktur.
 
-Mevcut `t5`/F betikleri uyarlandı; `_altyapi.py`, üçgen yol denetimi ve ortak oynatıcı korunur. Model mm/dünya koordinatları; oynatıcı çıktısı m.
+Mevcut t5/F betikleri uyarlandı; `_altyapi.py` ve ortak oynatıcı değiştirilmedi. Model mm/dünya; oynatıcı m.
 
-1. Gzip girdiyi bu klasöre `k73.glb` olarak aç.
-2. `k_cikar.py k73.glb k_bil.pkl`: modeli yalnız değiştiğinde okur; kaynak boyutu/zamanı önbellek JSON'unda.
-3. `k_kayit.py`: yerel71–73 CAD kayıtları. `k_parca.py`: en küçük kayıt kutusu/üçgen eşleştirmesi. Eski CAD adları yalnız <0,01 mm ve tekil kutu eşleşmesinde geçici etiketlenir; yüzey eşitliği iddia edilmez.
-4. `k_montaj.py`: önce yalnız tam sıra. `plan_audit.json` PLAN SORUNU listesini verir. Sıfır olmadan çıktı yayınlanmaz.
-5. Sıra temizlenince açınım/PEM/bağlantı aşaması eklenir, `baglanti_denetim.py` ve tam `k_cikti.py` çalıştırılır; `--hizli` yayın doğrulaması sayılmaz.
+1. Kaynak gzip'i aç; `k_cikar.py <model.glb> k_bil.pkl` yalnız girdi değiştiğinde büyük modeli okur.
+2. `k_kayit.py` K 71–73 ad/kutu kayıtlarını çıkarır. `k_native_names.py` mevcut K adapterinden mekanizma adlarını okur; vendor güç kaynağı STEP'i yalnız bu metadata işleminde kullanılır, model geometrisinin yerine geçirilmez.
+3. `k_parca.py` her üçgeni en küçük kaynak kutusuna eşler. Geçici eski CAD adları tekil aynı-düğüm kutusu ≤0.6 mm toleransında eşlenir; yüzey eşitliği iddia edilmez. Güncel pullar merkez/eksen/kalınlıkla eşlenir, dış çapları değiştirilmez. `part_audit.json` tüm üçgenlerin korunmasını doğrular.
+4. `k_montaj.py` sıra ve kesintisiz yol denetimini yapar; `plan_audit.json` PLAN SORUNU listesini yazar. Saplama/somun eksenleri gerçek baş geometrisinden; diğer girişler kaynak CAD kayıtlarından gelir. Yalnız adları belirtilen gerçek diş/pres eşleri yazılı gerekçeyle hariçtir. Hortum/kayış kurala göre kendi yolu boyunca uzar.
+5. `k_nut_probe.py` somun yollarını diğer tüm son-konum parçalarına karşı kısa test eder; bütün montajın onayı değildir.
+6. PLAN SORUNU sıfır olmadan açınım/büküm üretim doğrulaması ve yayın yok. Sonra bağlantı denetimi, tam `k_cikti.py`, tarayıcı kare kontrolü ve Kemal onayı gerekir. `--hizli` yayın denetimi sayılmaz.
 
-Pkl/raw GLB/cache dosyaları geçicidir. Büyük model her sıra turunda tekrar okunmaz. Ortak `ist_montaj/montaj-oynatici.js` değiştirilmez.
+Pkl/raw GLB/numba cache ara dosyalardır; commit edilmez. Sitede kullanılan çıktılar `_local` altında olmayacaktır. Ortak `ist_montaj/montaj-oynatici.js` değiştirilmez.
