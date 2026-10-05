@@ -193,8 +193,10 @@ ADIMLAR = [
      [(".", 'python "{YAMA}/55_uyum.py" hat3_v9v.glb hat3_v9w.glb')]),
     ("56", "sol evaporatör 2. ayağı 3 mm dar (x 1620 → 1623, 30 → 27 mm): tavuk UNO silindirinin duvar flanşı arkadan geçerken ayağın dik kolunu 2 mm sıyırıyordu (TOPPING montaj v5 yol denetimi)", ["hat3_v9w.glb"], "hat3_v9x.glb",
      [(".", 'python "{YAMA}/56_evap_ayak.py" hat3_v9w.glb hat3_v9x.glb')]),
+    ("57", "servis sacı yatay kablo kanalı 4 evaporatör ayağı hizasından 2 mm boşlukla kesik (4 parça: servis sacı arkadan kapanırken / bakımda çıkarken kanal ayakların içinden geçiyordu) · boş rakor 1476 → 1608", ["hat3_v9x.glb"], "hat3_v9y.glb",
+     [(".", 'python "{YAMA}/57_kanal_kesik.py" hat3_v9x.glb hat3_v9y.glb')]),
 ]
-SON = "hat3_v9x.glb"
+SON = "hat3_v9y.glb"
 
 
 def kur(is_dizin, h3, uretec):

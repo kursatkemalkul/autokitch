@@ -193,7 +193,7 @@ DEN = dict(model_acigi=len(MA), yuzey_temasi=TEMAS, adim=len(D['ADIM']), parca=l
            haric={'%s ↔ %s' % k: v for k, v in HARIC.items() if not v.startswith(('kaynak dikişi /', 'kablo / hortum'))}, vida=VD, sac_model=SK[:10], plan_sorun=D['PLAN_SORUN'],
            istisna=sorted(IST), uretilen=sorted(FR), siyirma_mm=Y.SINIR * 1000, oturma_mm=Y.OTURMA * 1000)
 OUTJ = dict(surum='topping_montaj_v5', ist='TOPPING', tarih='5 Eki 2026',
-            kaynak='hat3_v9x.glb (zincir 00–56: adım 53 yeni 7 ürün, 54 kuşbaşı dik huni, 55 pul standardı, 56 sol evaporatör 2. ayağı 27 mm) · TOPPING gövdesi h3_topping_sac_v2 (açınım) + ana model · üretim: t5_parca.py + t5_montaj.py + t5_cikti.py',
+            kaynak='hat3_v9y.glb (zincir 00–57: adım 53 yeni 7 ürün, 54 kuşbaşı dik huni, 55 pul standardı, 56 sol evaporatör 2. ayağı 27 mm, 57 servis sacı kablo kanalı ayak hizalarından kesik) · TOPPING gövdesi h3_topping_sac_v2 (açınım) + ana model · üretim: t5_parca.py + t5_montaj.py + t5_cikti.py',
             sehpa=False, birim='m', toplam=D['TOPLAM'], zarf=[np.round(np.maximum(LOt, [-1, 0, -3]), 3).tolist(), np.round(np.minimum(HIt, [5, 4, 3]), 3).tolist()], ghost=[], ghost_t=0.0,
             adimlar=D['ADIM'], olaylar=sorted(D['OLAY'], key=lambda o: o[0]), kamera=D['KAM'], parcalar=PARCA, acinim=D['ACN'],
             sayim=dict(gosterilen=len(GOS), cevre=len(CEV), ucgen=int(sum(len(P[a]['F']) for a in P)), uretilen=len(FR),
