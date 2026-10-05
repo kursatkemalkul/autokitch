@@ -57,7 +57,12 @@ for head,members in initial['GROUPS'].items():
   # Separate GLB fragments of one physical source sheet bend together.
   for child in names[1:]:
    assert child in SAC and SAC[child].record['name']==SAC[a].record['name']
-   ns['FRAMES'][child]=SAC[child].frames();ns['MF'][child]=dict(seg=[list(x) for x in ns['MF'][a]['seg']])
+   if SAC[a].bukum:
+    ns['FRAMES'][child]=SAC[child].frames();ns['MF'][child]=dict(seg=[list(x) for x in ns['MF'][a]['seg']])
+   else:
+    # Flat4mm plate fragments have no abkant movement or morph timeline.
+    assert not SAC[child].bukum
+    assert max(np.linalg.norm(SAC[child].frames()[-1],axis=1))<=.01
  # The prototype deliberately leaves welding/connection release open.
  row={'head':head,'members':members,'source_sheet_members':[a for a in members if a in SAC],'laser_timeline_parts':[a['ad'] for a in ns['ACN']],'bend_frame_parts':list(ns['FRAMES']),'plan_problems':ns['PLAN_SORUN'],'welds_to_verify':seams,'connection_release':False,'seconds':tt}
  bench_plans[head]={k:ns[k] for k in ('HAR','GOR','MF','FRAMES','VU','ISTISNA','ROT','ADIM','OLAY','KAM','ACN','YER','PLAN_SORUN')};bench_plans[head]['members']=members;bench_plans[head]['seconds']=tt

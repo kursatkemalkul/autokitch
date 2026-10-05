@@ -206,7 +206,7 @@
         "k71_raf_yan_kaynagi_4395"
       ],
       "connection_release": false,
-      "seconds": 4.71
+      "seconds": 5.26
     },
     {
       "head": "k_govde_on_seffaf_0",
@@ -306,9 +306,259 @@
       "plan_problems": [],
       "welds_to_verify": [],
       "connection_release": false,
-      "seconds": 25.919999999999987
+      "seconds": 26.469999999999985
+    },
+    {
+      "head": "ust_sac",
+      "members": [
+        "ust_sac",
+        "k73_tavan_baglanti_plakasi_4100_0",
+        "k73_tavan_baglanti_plakasi_4100_1",
+        "k73_tavan_baglanti_plakasi_4100_2",
+        "k73_tavan_baglanti_plakasi_4300_0",
+        "k73_tavan_baglanti_plakasi_4300_1",
+        "k73_tavan_baglanti_plakasi_4300_2"
+      ],
+      "source_sheet_members": [
+        "ust_sac",
+        "k73_tavan_baglanti_plakasi_4100_0",
+        "k73_tavan_baglanti_plakasi_4100_1",
+        "k73_tavan_baglanti_plakasi_4100_2",
+        "k73_tavan_baglanti_plakasi_4300_0",
+        "k73_tavan_baglanti_plakasi_4300_1",
+        "k73_tavan_baglanti_plakasi_4300_2"
+      ],
+      "laser_timeline_parts": [
+        "ust_sac",
+        "k73_tavan_baglanti_plakasi_4100_0",
+        "k73_tavan_baglanti_plakasi_4100_1",
+        "k73_tavan_baglanti_plakasi_4100_2",
+        "k73_tavan_baglanti_plakasi_4300_0",
+        "k73_tavan_baglanti_plakasi_4300_1",
+        "k73_tavan_baglanti_plakasi_4300_2"
+      ],
+      "bend_frame_parts": [
+        "ust_sac"
+      ],
+      "plan_problems": [],
+      "welds_to_verify": [
+        "k73_tavan_kaynagi_4100_1853.5_0",
+        "k73_tavan_kaynagi_4100_1853.5_1",
+        "k73_tavan_kaynagi_4100_1853.5_2",
+        "k73_tavan_kaynagi_4100_1853.5_3",
+        "k73_tavan_kaynagi_4100_1857.5_0",
+        "k73_tavan_kaynagi_4100_1857.5_1",
+        "k73_tavan_kaynagi_4100_1857.5_2",
+        "k73_tavan_kaynagi_4100_1857.5_3",
+        "k73_tavan_kaynagi_4100_1860.5_0",
+        "k73_tavan_kaynagi_4100_1860.5_1",
+        "k73_tavan_kaynagi_4100_1860.5_2",
+        "k73_tavan_kaynagi_4100_1860.5_3",
+        "k73_tavan_kaynagi_4300_1853.5_0",
+        "k73_tavan_kaynagi_4300_1853.5_1",
+        "k73_tavan_kaynagi_4300_1853.5_2",
+        "k73_tavan_kaynagi_4300_1853.5_3",
+        "k73_tavan_kaynagi_4300_1857.5_0",
+        "k73_tavan_kaynagi_4300_1857.5_1",
+        "k73_tavan_kaynagi_4300_1857.5_2",
+        "k73_tavan_kaynagi_4300_1857.5_3",
+        "k73_tavan_kaynagi_4300_1860.5_0",
+        "k73_tavan_kaynagi_4300_1860.5_1",
+        "k73_tavan_kaynagi_4300_1860.5_2",
+        "k73_tavan_kaynagi_4300_1860.5_3"
+      ],
+      "connection_release": false,
+      "seconds": 9.94
+    },
+    {
+      "head": "k72_itici_taban_4040.0_-755.0",
+      "members": [
+        "k72_itici_taban_4040.0_-755.0",
+        "k72_itici_ust_plaka_4040.0_-755.0",
+        "itici_taban_40_-755",
+        "k_itici_sac_0"
+      ],
+      "source_sheet_members": [
+        "k72_itici_taban_4040.0_-755.0",
+        "k72_itici_ust_plaka_4040.0_-755.0",
+        "itici_taban_40_-755"
+      ],
+      "laser_timeline_parts": [
+        "k72_itici_taban_4040.0_-755.0",
+        "k72_itici_ust_plaka_4040.0_-755.0"
+      ],
+      "bend_frame_parts": [],
+      "plan_problems": [],
+      "welds_to_verify": [
+        "k72_itici_ara_kaynagi_4040.0_-755.0_0",
+        "k72_itici_ara_kaynagi_4040.0_-755.0_1",
+        "k72_itici_ara_kaynagi_4040.0_-755.0_2",
+        "k72_itici_ara_kaynagi_4040.0_-755.0_3",
+        "k72_itici_ayak_kaynagi_4040.0_-755.0_0",
+        "k72_itici_ayak_kaynagi_4040.0_-755.0_1",
+        "k72_itici_ayak_kaynagi_4040.0_-755.0_2",
+        "k72_itici_ayak_kaynagi_4040.0_-755.0_3"
+      ],
+      "connection_release": false,
+      "seconds": 3.9099999999999993
+    },
+    {
+      "head": "k72_itici_taban_4040.0_-645.0",
+      "members": [
+        "k72_itici_taban_4040.0_-645.0",
+        "k72_itici_ust_plaka_4040.0_-645.0",
+        "itici_taban_40_-645",
+        "k_itici_sac_1"
+      ],
+      "source_sheet_members": [
+        "k72_itici_taban_4040.0_-645.0",
+        "k72_itici_ust_plaka_4040.0_-645.0",
+        "itici_taban_40_-645"
+      ],
+      "laser_timeline_parts": [
+        "k72_itici_taban_4040.0_-645.0",
+        "k72_itici_ust_plaka_4040.0_-645.0"
+      ],
+      "bend_frame_parts": [],
+      "plan_problems": [],
+      "welds_to_verify": [
+        "k72_itici_ara_kaynagi_4040.0_-645.0_0",
+        "k72_itici_ara_kaynagi_4040.0_-645.0_1",
+        "k72_itici_ara_kaynagi_4040.0_-645.0_2",
+        "k72_itici_ara_kaynagi_4040.0_-645.0_3",
+        "k72_itici_ayak_kaynagi_4040.0_-645.0_0",
+        "k72_itici_ayak_kaynagi_4040.0_-645.0_1",
+        "k72_itici_ayak_kaynagi_4040.0_-645.0_2",
+        "k72_itici_ayak_kaynagi_4040.0_-645.0_3"
+      ],
+      "connection_release": false,
+      "seconds": 3.9099999999999993
+    },
+    {
+      "head": "k72_itici_taban_4360.0_-755.0",
+      "members": [
+        "k72_itici_taban_4360.0_-755.0",
+        "k72_itici_ust_plaka_4360.0_-755.0",
+        "itici_taban_360_-755",
+        "k_itici_sac_2"
+      ],
+      "source_sheet_members": [
+        "k72_itici_taban_4360.0_-755.0",
+        "k72_itici_ust_plaka_4360.0_-755.0",
+        "itici_taban_360_-755"
+      ],
+      "laser_timeline_parts": [
+        "k72_itici_taban_4360.0_-755.0",
+        "k72_itici_ust_plaka_4360.0_-755.0"
+      ],
+      "bend_frame_parts": [],
+      "plan_problems": [],
+      "welds_to_verify": [
+        "k72_itici_ara_kaynagi_4360.0_-755.0_0",
+        "k72_itici_ara_kaynagi_4360.0_-755.0_1",
+        "k72_itici_ara_kaynagi_4360.0_-755.0_2",
+        "k72_itici_ara_kaynagi_4360.0_-755.0_3",
+        "k72_itici_ayak_kaynagi_4360.0_-755.0_0",
+        "k72_itici_ayak_kaynagi_4360.0_-755.0_1",
+        "k72_itici_ayak_kaynagi_4360.0_-755.0_2",
+        "k72_itici_ayak_kaynagi_4360.0_-755.0_3"
+      ],
+      "connection_release": false,
+      "seconds": 3.9099999999999993
+    },
+    {
+      "head": "k72_itici_taban_4360.0_-645.0",
+      "members": [
+        "k72_itici_taban_4360.0_-645.0",
+        "k72_itici_ust_plaka_4360.0_-645.0",
+        "itici_taban_360_-645",
+        "k_itici_sac_3"
+      ],
+      "source_sheet_members": [
+        "k72_itici_taban_4360.0_-645.0",
+        "k72_itici_ust_plaka_4360.0_-645.0",
+        "itici_taban_360_-645"
+      ],
+      "laser_timeline_parts": [
+        "k72_itici_taban_4360.0_-645.0",
+        "k72_itici_ust_plaka_4360.0_-645.0"
+      ],
+      "bend_frame_parts": [],
+      "plan_problems": [],
+      "welds_to_verify": [
+        "k72_itici_ara_kaynagi_4360.0_-645.0_0",
+        "k72_itici_ara_kaynagi_4360.0_-645.0_1",
+        "k72_itici_ara_kaynagi_4360.0_-645.0_2",
+        "k72_itici_ara_kaynagi_4360.0_-645.0_3",
+        "k72_itici_ayak_kaynagi_4360.0_-645.0_0",
+        "k72_itici_ayak_kaynagi_4360.0_-645.0_1",
+        "k72_itici_ayak_kaynagi_4360.0_-645.0_2",
+        "k72_itici_ayak_kaynagi_4360.0_-645.0_3"
+      ],
+      "connection_release": false,
+      "seconds": 3.9099999999999993
+    },
+    {
+      "head": "sol_sac_urun_girisi",
+      "members": [
+        "sol_sac_urun_girisi",
+        "elk_ic_kanal_0"
+      ],
+      "source_sheet_members": [
+        "sol_sac_urun_girisi"
+      ],
+      "laser_timeline_parts": [
+        "sol_sac_urun_girisi"
+      ],
+      "bend_frame_parts": [
+        "sol_sac_urun_girisi"
+      ],
+      "plan_problems": [],
+      "welds_to_verify": [],
+      "connection_release": false,
+      "seconds": 3.6899999999999995
+    },
+    {
+      "head": "sag_sac_E_penceresi",
+      "members": [
+        "sag_sac_E_penceresi",
+        "govde_kulak_sag_on_1150",
+        "govde_kulak_sag_on_1150_bag_pul",
+        "govde_kulak_sag_on_1150_bag_somun",
+        "govde_kulak_sag_arka_1150",
+        "govde_kulak_sag_arka_1150_bag_pul",
+        "govde_kulak_sag_arka_1150_bag_somun",
+        "elk_ic_kanal_6",
+        "elk_ic_kanal_7",
+        "elk_ic_kanal_8"
+      ],
+      "source_sheet_members": [
+        "sag_sac_E_penceresi",
+        "govde_kulak_sag_on_1150",
+        "govde_kulak_sag_arka_1150"
+      ],
+      "laser_timeline_parts": [
+        "sag_sac_E_penceresi",
+        "govde_kulak_sag_on_1150",
+        "govde_kulak_sag_arka_1150"
+      ],
+      "bend_frame_parts": [
+        "sag_sac_E_penceresi",
+        "govde_kulak_sag_on_1150",
+        "govde_kulak_sag_arka_1150"
+      ],
+      "plan_problems": [],
+      "welds_to_verify": [],
+      "connection_release": false,
+      "seconds": 11.349999999999998
     }
   ],
-  "execution_seconds": 5.336256504058838,
-  "production_release": false
+  "execution_seconds": 15.897646188735962,
+  "production_release": false,
+  "not_yet_covered_custom_group_heads": [
+    "bant_yan_-421"
+  ],
+  "covered_group_count": 16,
+  "all_declared_custom_groups_manufactured": false,
+  "remaining_manufacturing_issue": "Conveyor frame is custom; source inventory has no current native flat sheet mapping for its side plates/traverses. Supplier drum/shafts do not authorize treating the frame as a purchased assembly."
 }
