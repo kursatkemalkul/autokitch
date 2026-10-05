@@ -1,0 +1,49 @@
+
+function cartesianConnect(b,label){
+ const start=clone(st),m0=worldTCP(start),m1=worldTCP(b),p0=new T.Vector3().setFromMatrixPosition(m0),p1=new T.Vector3().setFromMatrixPosition(m1),r0=new T.Quaternion().setFromRotationMatrix(m0),r1=new T.Quaternion().setFromRotationMatrix(m1);
+ for(const height of [Math.max(p0.y,p1.y,.98),1.12])for(const z of [1.05,1.15]){
+  const sourceRail=Math.max(1.176,Math.min(4.86,p0.x+.35));
+  const way=[{p:p0,r:r0,rail:start.rail},{p:p0,r:r0,rail:sourceRail},{p:new T.Vector3(p0.x,p0.y,z),r:r0,rail:sourceRail},{p:new T.Vector3(p0.x,height,z),r:r0,rail:sourceRail},{p:new T.Vector3(p1.x,height,z),r:r0,rail:b.rail},{p:new T.Vector3(p1.x,height,z),r:r1,rail:b.rail},{p:p1,r:r1,rail:b.rail}],out=[];let q=start.q,ok=true;
+  for(let j=1;j<way.length&&ok;j++){const a=way[j-1],c=way[j],n=Math.max(30,Math.ceil(a.p.distanceTo(c.p)/.009),Math.ceil(Math.abs(a.rail-c.rail)/.01));for(let i=1;i<=n;i++){const t=i/n,ps=a.p.clone().lerp(c.p,t),rs=a.r.clone().slerp(c.r,t),m=C.clone().invert().multiply(new T.Matrix4().compose(ps,rs,new T.Vector3(1,1,1))),row=Array.from({length:16},(_,k)=>m.elements[(k%4)*4+Math.floor(k/4)]),rail=a.rail+(c.rail-a.rail)*t,jaw=start.jaw+(b.jaw-start.jaw)*((j-1+t)/(way.length-1)),ik=rig.solve(row,rail,jaw,q),s={q:ik.q,rail,jaw},why=ik.valid?check(s):['IK'];if(why.length){console.log('BLOCK',j,i,why,ps.toArray());ok=false;break;}const prev=out.at(-1)||start,delta=Math.max(...q.map((v,k)=>Math.abs(angle(s.q[k]-v))));if(delta>.08){if(!edge(prev,s)){console.log('BRANCH_BLOCK',j,i,delta);ok=false;break;}const count=Math.ceil(delta/.035);for(let k=1;k<count;k++)out.push(mix(prev,s,k/count));}out.push(s);q=s.q;}}
+  console.log('CARTESIAN_TRY',label,height,z,out.length,ok);
+  if(ok&&edge(out.at(-1),b)){console.log('CARTESIAN',label,height,z,out.length);for(const s of out)frame(s,label);append(b,label);return true;}
+ }
+ return false;
+}
+function addPlaced(key,p){productAt(key,p,0);for(const a of products[key].parts)cab.push(solid('PLACED_'+key,a.g.clone(),a.m.clone()));}
+function save(){const summary={version:15,passed:true,completed:Object.keys(placed),frames:frames.length,checks,ideal_grasp:true,continuous_collision_certified:false,qr_column:2,qr_floor_mm:850,method:'Native robot/self/full machine and fixed QR, sampled Cartesian/edge collision checks; ideal attachment, rigid products, no physical grip validation.'};fs.writeFileSync(root+'order_v15.json',JSON.stringify({summary,trajectory:frames}));fs.writeFileSync(root+'order_v15.checkpoint.json',JSON.stringify({drawers,carrying,local,placed,frames,st}));console.log('SAVED',summary.completed,frames.length);}
+function sourcePick(key){
+ const path=src.results.find(r=>r.key===key+'_pick').path,d=products[key].drawer;
+ if(!st){drawers={};frame(path[0].state,key+' · başlangıç');}else connect(path[0].state,key+' · kaynağa yaklaş');
+ for(let i=1;i<=25;i++){drawers={[d]:.7*i/25};frame(st,key+' · çekmeceyi aç');}
+ for(const f of path){drawers=f.drawers;if(f.carrying&&!carrying){st=f.state;attach(key,tcpScene(st).map((v,i)=>v+f.offset[i]));}frame(f.state,f.stage);}
+ for(let i=1;i<=25;i++){drawers={[d]:.7*(1-i/25)};frame(st,key+' · çekmeceyi kapat');}drawers={};
+}
+function sourceBox(){
+ const g=read('grasp_v14.json').results.find(r=>r.key==='Box'),a=g.path[0],tcp=rig.tcp(a.q,a.rail,a.jaw),initial=tcp.slice();initial[7]-=.22;initial[11]+=.10;
+ const pre=solveTCP(initial,a.rail,a.jaw,a.q);connect(pre,'Kutu · ön kenara yaklaş');
+ let q=st.q;for(let i=1;i<=45;i++){const t=i/45,m=initial.map((v,k)=>v+(tcp[k]-v)*t),s=solveTCP(m,a.rail,a.jaw,q);frame(s,'Kutu · ön kenara gir');q=s.q;}
+ for(const s of g.path)frame(s,'Kutu · üst ve alt pedleri kapat');attach('Box',g.product);
+ const held=rig.tcp(st.q,st.rail,st.jaw);q=st.q;for(let i=1;i<=12;i++){const m=held.slice();m[11]+=.006*i/12;const s=solveTCP(m,st.rail,st.jaw,q);frame(s,'Kutu · yataktan 6 mm kaldır');q=s.q;}
+ const raised=rig.tcp(st.q,st.rail,st.jaw);for(let i=1;i<=90;i++){const m=raised.slice();m[7]-=.48*i/90;const s=solveTCP(m,st.rail,st.jaw,q);frame(s,'Kutu · tamamen yataktan geri çık');q=s.q;}
+ const outside=rig.tcp(st.q,st.rail,st.jaw);for(let i=1;i<=45;i++){const m=outside.slice();m[11]+=.10*i/45;const s=solveTCP(m,st.rail,st.jaw,q);frame(s,'Kutu · koridorda yatay kaldır');q=s.q;}
+}
+function deliver(key){
+ const task=delivery.result.tasks.find(t=>t.key===key),path=[...task.sequence].reverse();
+ connect(path[0].state,key+' · QR girişine taşı');
+ // The source and target are nominal grasp geometry. Align only in the free approach corridor, explicitly ideal.
+ const desired=new T.Vector3(...path[0].product).applyMatrix4(worldTCP(st).invert()).toArray(),prior=local;
+ if(Math.hypot(...desired.map((v,i)=>v-prior[i]))>.003)console.log('IDEAL_ALIGNMENT',key,desired.map((v,i)=>v-prior[i]));
+ for(let i=1;i<=15;i++){local=prior.map((v,k)=>v+(desired[k]-v)*i/15);frame(st,key+' · ideal tutuş hizası');}
+ for(const f of path)frame(f.state,key+' · QR gözüne yerleştir');
+ placed[key]=point(st);carrying=null;
+ // Check the explicit finger-opening transition as well as the retreat.
+ append(task.exit[0].state,key+' · parmakları aç');for(const f of task.exit)frame(f.state,key+' · QR’den geri çekil');
+ if(key==='Box'){const high=placed.Box.slice();for(let i=1;i<=20;i++){placed.Box=[high[0],high[1]-.025*i/20,high[2]];frame(st,'Kutu · ideal olarak rafa oturt');}}
+ addPlaced(key,placed[key]);save();
+}
+try{
+ if(fs.existsSync(root+'order_v15.checkpoint.json'))({drawers,carrying,local,placed,frames,st}=read('order_v15.checkpoint.json'));
+ for(const key of Object.keys(placed))addPlaced(key,placed[key]);
+ for(const key of ['Cola','Dessert','Box']){if(placed[key])continue;if(key==='Box')sourceBox();else sourcePick(key);deliver(key);}
+}catch(e){console.error(e.stack);fs.writeFileSync(root+'order_v15.error.json',JSON.stringify({error:e.message,frames:frames.length,checks,last:frames.at(-1)},null,2));process.exitCode=1;}

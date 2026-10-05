@@ -1,0 +1,10 @@
+import fs from 'node:fs';const p='arastirma/_uretec/robot_main_v1/',s=fs.readFileSync(p+'finish_order_v15.mjs','utf8'),setup=s.slice(0,s.indexOf('let checks='));
+const body=`
+const record=read('order_v16.json');let checks=0,placedChecks=0,drawers={},carrying=null,local=null;const worldTCP=s=>C.clone().multiply(matrix(rig.tcp(s.q,s.rail,s.jaw)));
+let failures=[];for(let i=0;i<record.trajectory.length;i++){const f=record.trajectory[i],s=f.state;drawers=f.drawers;environment(drawers,{});const obs=[...base,...cab],h=hits(s,obs);checks++;if(h.length){failures.push({frame:i,stage:f.stage,hit:h});break;}
+const active=f.carrying||(/^(Box|Kutu)/.test(f.stage)?'Box':/^(Dessert|Tatlı)/.test(f.stage)?'Dessert':/^(Cola|İçecek)/.test(f.stage)?'Cola':'Dough');
+if(f.carrying){const m=worldTCP(s);productAt(f.carrying,f.product,f.carrying==='Box'?Math.atan2(m.elements[8],m.elements[10]):0);for(const a of products[f.carrying].parts){for(const b of robot)if(!b.body.includes('/Gripper/')&&intersects(a,b))failures.push({frame:i,hit:'carried>'+b.body});for(const b of obs)if(intersects(a,b))failures.push({frame:i,hit:'carried>'+b.name});}}
+for(const[k,pos]of Object.entries(f.placed)){productAt(k,pos);for(const a of products[k].parts){for(const b of robot){if(k===active&&b.body.includes('/Gripper/'))continue;placedChecks++;if(intersects(a,b))failures.push({frame:i,hit:'placed '+k+'>'+b.body});}if(f.carrying&&k!==f.carrying)for(const b of products[f.carrying].parts){placedChecks++;if(intersects(a,b))failures.push({frame:i,hit:'placed '+k+'>carried'});}}}if(failures.length)break;
+if(i%2000===0)console.log('AUDIT',i,checks,placedChecks);}
+const result={passed:!failures.length,frames:record.trajectory.length,checks,placedChecks,failures,sampled:true,continuous:false};fs.writeFileSync(root+'audit_v16.json',JSON.stringify(result,null,2));console.log(result);if(failures.length)process.exitCode=1;else{record.summary.geometric_audit='PASS sampled native robot, self, full machine and deposited products';fs.writeFileSync(root+'order_v16.json',JSON.stringify(record));}
+`;fs.writeFileSync(p+'audit_v16.mjs',setup+body);

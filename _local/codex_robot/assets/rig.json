@@ -1,0 +1,1132 @@
+{
+  "edges": [
+    {
+      "name": "GroundMountJoint",
+      "type": "PhysicsFixedJoint",
+      "axis": null,
+      "parent": "",
+      "child": "/World/RailSystem/RailBase",
+      "a": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          1.1759999990463257
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -0.36000001430511475
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0949999988079071
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "b": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "shoulder_pan_joint",
+      "type": "PhysicsRevoluteJoint",
+      "axis": "Z",
+      "parent": "/World/RailSystem/Arm/base_link",
+      "child": "/World/RailSystem/Arm/shoulder_link",
+      "a": [
+        [
+          -0.9999999999999963,
+          8.74227765734757e-08,
+          0.0,
+          0.0
+        ],
+        [
+          -8.74227765734757e-08,
+          -0.9999999999999963,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0000000000000002,
+          0.18070000410079956
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "b": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "shoulder_lift_joint",
+      "type": "PhysicsRevoluteJoint",
+      "axis": "Z",
+      "parent": "/World/RailSystem/Arm/shoulder_link",
+      "child": "/World/RailSystem/Arm/upper_arm_link",
+      "a": [
+        [
+          0.9999999999999998,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -0.9999999999999998,
+          0.0
+        ],
+        [
+          0.0,
+          0.9999999999999998,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "b": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "elbow_joint",
+      "type": "PhysicsRevoluteJoint",
+      "axis": "Z",
+      "parent": "/World/RailSystem/Arm/upper_arm_link",
+      "child": "/World/RailSystem/Arm/forearm_link",
+      "a": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -0.6126999855041504
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "b": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "wrist_1_joint",
+      "type": "PhysicsRevoluteJoint",
+      "axis": "Z",
+      "parent": "/World/RailSystem/Arm/forearm_link",
+      "child": "/World/RailSystem/Arm/wrist_1_link",
+      "a": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -0.5715500116348267
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.1741500049829483
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "b": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "wrist_2_joint",
+      "type": "PhysicsRevoluteJoint",
+      "axis": "Z",
+      "parent": "/World/RailSystem/Arm/wrist_1_link",
+      "child": "/World/RailSystem/Arm/wrist_2_link",
+      "a": [
+        [
+          0.9999999999999998,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -0.9999999999999998,
+          -0.11985000222921371
+        ],
+        [
+          0.0,
+          0.9999999999999998,
+          0.0,
+          -2.4581645746701852e-11
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "b": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "wrist_3_joint",
+      "type": "PhysicsRevoluteJoint",
+      "axis": "Z",
+      "parent": "/World/RailSystem/Arm/wrist_2_link",
+      "child": "/World/RailSystem/Arm/wrist_3_link",
+      "a": [
+        [
+          0.9999999999999922,
+          8.74227797414646e-08,
+          -8.74227797414646e-08,
+          0.0
+        ],
+        [
+          8.74227797414646e-08,
+          3.83026943495679e-15,
+          0.999999999999996,
+          0.11654999852180481
+        ],
+        [
+          8.74227797414646e-08,
+          -0.999999999999996,
+          -3.774758283725532e-15,
+          -2.390480521863303e-11
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "b": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "RailJoint",
+      "type": "PhysicsPrismaticJoint",
+      "axis": "X",
+      "parent": "/World/RailSystem/RailBase",
+      "child": "/World/RailSystem/Carriage",
+      "a": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "b": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "RobotMountJoint",
+      "type": "PhysicsFixedJoint",
+      "axis": null,
+      "parent": "/World/RailSystem/Carriage",
+      "child": "/World/RailSystem/Arm/base_link",
+      "a": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.03500000014901161
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "b": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "finger_joint",
+      "type": "PhysicsRevoluteJoint",
+      "axis": "Z",
+      "parent": "/World/RailSystem/Gripper/robotiq_base_link",
+      "child": "/World/RailSystem/Gripper/left_outer_knuckle",
+      "a": [
+        [
+          0.0,
+          0.0,
+          -1.0,
+          -2.552384397732207e-17
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0,
+          -0.030601145699620247
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.054662518203258514
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "b": [
+        [
+          -1.0,
+          -1.2246468525851679e-16,
+          -1.2246468525851679e-16,
+          -0.030601145699620247
+        ],
+        [
+          -1.2246468525851679e-16,
+          1.0,
+          -1.2246468525851679e-16,
+          0.0549045167863369
+        ],
+        [
+          1.2246468525851679e-16,
+          -1.2246468525851679e-16,
+          -1.0,
+          -6.162975822039155e-32
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "right_outer_knuckle_joint",
+      "type": "PhysicsRevoluteJoint",
+      "axis": "Z",
+      "parent": "/World/RailSystem/Gripper/robotiq_base_link",
+      "child": "/World/RailSystem/Gripper/right_outer_knuckle",
+      "a": [
+        [
+          0.0,
+          0.0,
+          1.0,
+          -2.3265769945227863e-17
+        ],
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.030601145699620247
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.054662518203258514
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "b": [
+        [
+          -1.0,
+          -1.2246468525851679e-16,
+          -1.2246468525851679e-16,
+          -0.030601145699620247
+        ],
+        [
+          -1.2246468525851679e-16,
+          1.0,
+          -1.2246468525851679e-16,
+          0.0549045167863369
+        ],
+        [
+          1.2246468525851679e-16,
+          -1.2246468525851679e-16,
+          -1.0,
+          -2.567265252874944e-18
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "left_inner_knuckle_joint",
+      "type": "PhysicsRevoluteJoint",
+      "axis": "Z",
+      "parent": "/World/RailSystem/Gripper/robotiq_base_link",
+      "child": "/World/RailSystem/Gripper/left_inner_knuckle",
+      "a": [
+        [
+          0.0,
+          0.0,
+          -1.0,
+          -2.8144479543704395e-17
+        ],
+        [
+          1.0,
+          0.0,
+          0.0,
+          -0.01269999984651804
+        ],
+        [
+          0.0,
+          -1.0,
+          0.0,
+          0.06117800250649452
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "b": [
+        [
+          1.0,
+          2.5270674441912888e-11,
+          -9.739927039851184e-16,
+          -0.01269999984651804
+        ],
+        [
+          2.5270674441912888e-11,
+          -1.0,
+          -2.3647465821568623e-15,
+          0.061420001089572906
+        ],
+        [
+          -9.73992704044877e-16,
+          2.364746582132249e-15,
+          -1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "right_inner_knuckle_joint",
+      "type": "PhysicsRevoluteJoint",
+      "axis": "Z",
+      "parent": "/World/RailSystem/Gripper/robotiq_base_link",
+      "child": "/World/RailSystem/Gripper/right_inner_knuckle",
+      "a": [
+        [
+          0.0,
+          0.0,
+          -1.0,
+          -3.723369893311467e-17
+        ],
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.01269999984651804
+        ],
+        [
+          0.0,
+          -1.0,
+          0.0,
+          0.06117800250649452
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "b": [
+        [
+          -1.0,
+          -1.2246468525851679e-16,
+          0.0,
+          -0.01269999984651804
+        ],
+        [
+          1.2246468525851679e-16,
+          -1.0,
+          0.0,
+          0.061420001089572906
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "left_outer_finger_joint",
+      "type": "PhysicsRevoluteJoint",
+      "axis": "Z",
+      "parent": "/World/RailSystem/Gripper/left_outer_knuckle",
+      "child": "/World/RailSystem/Gripper/left_outer_finger",
+      "a": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -0.062025997787714005
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.05037228763103485
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          1.232595164407831e-32
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "b": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -0.062025997787714005
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.05037228763103485
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          8.184431891667997e-30
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "right_outer_finger_joint",
+      "type": "PhysicsRevoluteJoint",
+      "axis": "Z",
+      "parent": "/World/RailSystem/Gripper/right_outer_knuckle",
+      "child": "/World/RailSystem/Gripper/right_outer_finger",
+      "a": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -0.062025997787714005
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.05037228763103485
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -1.232595164407831e-32
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "b": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -0.062025997787714005
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.05037228763103485
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          2.556666380891149e-17
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "left_inner_finger_joint",
+      "type": "PhysicsRevoluteJoint",
+      "axis": "Z",
+      "parent": "/World/RailSystem/Gripper/left_outer_finger",
+      "child": "/World/RailSystem/Gripper/left_inner_finger",
+      "a": [
+        [
+          1.0,
+          8.59266138257895e-32,
+          -2.391543759832701e-17,
+          -0.09745623171329498
+        ],
+        [
+          9.36184050737502e-32,
+          -1.0,
+          3.2162452459154583e-16,
+          0.12927116453647614
+        ],
+        [
+          -2.391543759832701e-17,
+          -3.2162452459154583e-16,
+          -1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "b": [
+        [
+          -1.1735392255656015e-32,
+          -0.9999999999999998,
+          -1.6237113379939108e-17,
+          0.12902916967868805
+        ],
+        [
+          -0.9999999999999998,
+          -1.1735392255656015e-32,
+          1.4455022861582161e-15,
+          0.09745623171329498
+        ],
+        [
+          -1.4455022861582161e-15,
+          1.6237113379939108e-17,
+          -0.9999999999999998,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "right_inner_finger_joint",
+      "type": "PhysicsRevoluteJoint",
+      "axis": "Z",
+      "parent": "/World/RailSystem/Gripper/right_outer_finger",
+      "child": "/World/RailSystem/Gripper/right_inner_finger",
+      "a": [
+        [
+          1.0,
+          -6.462268410920577e-27,
+          -2.391543759832701e-17,
+          -0.09745623171329498
+        ],
+        [
+          -6.4622607191293296e-27,
+          -1.0,
+          3.2162452459154583e-16,
+          0.12927116453647614
+        ],
+        [
+          -2.391543759832701e-17,
+          -3.2162452459154583e-16,
+          -1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "b": [
+        [
+          0.0,
+          -0.9999999999999998,
+          1.4309701569042087e-15,
+          0.12902916967868805
+        ],
+        [
+          0.9999999999999998,
+          0.0,
+          -1.6800460027533067e-15,
+          -0.09745623171329498
+        ],
+        [
+          1.6800460027533067e-15,
+          1.4309701569042087e-15,
+          0.9999999999999998,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "ToolMountJoint",
+      "type": "PhysicsFixedJoint",
+      "axis": null,
+      "parent": "/World/RailSystem/Arm/wrist_3_link",
+      "child": "/World/RailSystem/Gripper/robotiq_base_link",
+      "a": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "b": [
+        [
+          -1.0,
+          3.2162452459154583e-16,
+          5.977050639105248e-31,
+          0.0
+        ],
+        [
+          -3.2162452459154583e-16,
+          -1.0,
+          -2.5363265059368376e-17,
+          -2.7755575615628914e-17
+        ],
+        [
+          5.89547615843716e-31,
+          -2.5363265059368376e-17,
+          1.0,
+          -1.3877787807814457e-17
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    }
+  ],
+  "bodies": [
+    "/World/RailSystem/RailBase",
+    "/World/RailSystem/Arm/shoulder_link",
+    "/World/RailSystem/Arm/upper_arm_link",
+    "/World/RailSystem/Arm/forearm_link",
+    "/World/RailSystem/Arm/wrist_1_link",
+    "/World/RailSystem/Arm/wrist_2_link",
+    "/World/RailSystem/Arm/wrist_3_link",
+    "/World/RailSystem/Carriage",
+    "/World/RailSystem/Arm/base_link",
+    "/World/RailSystem/Gripper/left_outer_knuckle",
+    "/World/RailSystem/Gripper/right_outer_knuckle",
+    "/World/RailSystem/Gripper/left_inner_knuckle",
+    "/World/RailSystem/Gripper/right_inner_knuckle",
+    "/World/RailSystem/Gripper/left_outer_finger",
+    "/World/RailSystem/Gripper/right_outer_finger",
+    "/World/RailSystem/Gripper/left_inner_finger",
+    "/World/RailSystem/Gripper/right_inner_finger",
+    "/World/RailSystem/Gripper/robotiq_base_link"
+  ],
+  "rail_min": 1.176,
+  "rail_max": 4.86,
+  "mount_z_m": 0.13,
+  "connection_adapter_m": 0.0,
+  "tip": {
+    "version": "common-v3-thin-original-rim-offset",
+    "lip_inward": 0.009,
+    "face_inward": 0.009,
+    "upper_inward": 0.009,
+    "cap_width": 0.06,
+    "face_friction": 0.8,
+    "backing_thickness_mm": 2.0,
+    "pad_thickness_mm": 2.0,
+    "thickness_is_simulation_prototype": true
+  },
+  "tip_sha256": "f30932b94a16c376ee098f7a263b408f54268b7ae7f3109217e1b719b003382e",
+  "body_nodes": {
+    "/World/RailSystem/Arm/base_link": "body_00",
+    "/World/RailSystem/Arm/forearm_link": "body_01",
+    "/World/RailSystem/Arm/shoulder_link": "body_02",
+    "/World/RailSystem/Arm/upper_arm_link": "body_03",
+    "/World/RailSystem/Arm/wrist_1_link": "body_04",
+    "/World/RailSystem/Arm/wrist_2_link": "body_05",
+    "/World/RailSystem/Arm/wrist_3_link": "body_06",
+    "/World/RailSystem/Carriage": "body_07",
+    "/World/RailSystem/Gripper/left_inner_finger": "body_08",
+    "/World/RailSystem/Gripper/left_inner_knuckle": "body_09",
+    "/World/RailSystem/Gripper/left_outer_finger": "body_10",
+    "/World/RailSystem/Gripper/left_outer_knuckle": "body_11",
+    "/World/RailSystem/Gripper/right_inner_finger": "body_12",
+    "/World/RailSystem/Gripper/right_inner_knuckle": "body_13",
+    "/World/RailSystem/Gripper/right_outer_finger": "body_14",
+    "/World/RailSystem/Gripper/right_outer_knuckle": "body_15",
+    "/World/RailSystem/Gripper/robotiq_base_link": "body_16",
+    "/World/RailSystem/RailBase": "body_17"
+  },
+  "arm_joints": [
+    "shoulder_pan_joint",
+    "shoulder_lift_joint",
+    "elbow_joint",
+    "wrist_1_joint",
+    "wrist_2_joint",
+    "wrist_3_joint"
+  ],
+  "machine_base_commit": "7866c9213cdcb535d225b1a079194d9938eaab94",
+  "physics": false
+}

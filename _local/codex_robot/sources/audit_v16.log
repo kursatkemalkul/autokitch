@@ -1,0 +1,15 @@
+AUDIT 0 1 0
+AUDIT 2000 2001 0
+AUDIT 4000 4001 32688
+AUDIT 6000 6001 100361
+AUDIT 8000 8001 207226
+AUDIT 10000 10001 360764
+{
+  passed: true,
+  frames: 11857,
+  checks: 11857,
+  placedChecks: 551116,
+  failures: [],
+  sampled: true,
+  continuous: false
+}

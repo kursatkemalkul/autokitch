@@ -1,0 +1,22 @@
+import {T,C,matrix,rig,poses,machine,robot,box,solid,update,intersects,hits} from './geometry.mjs';
+import {layout,qrParts} from '../../../otonom/hat/robot-main-v1/qr-layout.js';
+import {replaced,removeFrontStops,cableChannel,mountAdapter,boxSupportParts,boxPickupWindow,stationShift} from '../../../otonom/hat/robot-main-v1/scene-adjust.js';
+const adapter=box(mountAdapter.name,mountAdapter.min,mountAdapter.max);adapter.g.applyMatrix4(adapter.m);adapter.m.identity();adapter.g.computeBoundingBox();adapter.body='/World/RailSystem/Carriage';robot.push(adapter);
+export const products={},excluded=[];
+const drawerKey={Dough:'CEK_K1_lahm_1',Cola:'CEK_K5_ic1_1',Dessert:'CEK_K6_tatli_1'};
+const vec=p=>new T.Vector3(p[0][3],p[2][3],-p[1][3]);
+function extract(s,centre){const g=s.g,idx=Array.from(g.index.array),p=g.attributes.position,parents=Array.from({length:p.count},(_,i)=>i),weld=new Map(),v=new T.Vector3();const find=i=>{while(parents[i]!==i){parents[i]=parents[parents[i]];i=parents[i];}return i;},join=(a,b)=>{a=find(a);b=find(b);parents[b]=a;};for(let i=0;i<p.count;i++){v.fromBufferAttribute(p,i);const k=v.toArray().map(x=>Math.round(x*1e6)).join(',');if(weld.has(k))join(i,weld.get(k));else weld.set(k,i);}for(let i=0;i<idx.length;i+=3){join(idx[i],idx[i+1]);join(idx[i],idx[i+2]);}const boxes=new Map();for(const i of new Set(idx)){const k=find(i);v.fromBufferAttribute(p,i).applyMatrix4(s.m);if(!boxes.has(k))boxes.set(k,new T.Box3());boxes.get(k).expandByPoint(v);}const chosen=new Set([...boxes].filter(([k,b])=>{const c=b.getCenter(new T.Vector3()),sz=b.getSize(new T.Vector3());return Math.hypot(c.x-centre.x,c.z-centre.z)<.025&&Math.abs(c.y-centre.y)<.085&&sz.x<.15&&sz.z<.15;}).map(([k])=>k));if(!chosen.size)return null;
+ const take=[],keep=[];for(let i=0;i<idx.length;i+=3)(chosen.has(find(idx[i]))?take:keep).push(...idx.slice(i,i+3));const h=g.clone();h.setIndex(take);h.applyMatrix4(s.m);h.translate(-centre.x,-centre.y,-centre.z);g.setIndex(keep);g.computeBoundingBox();s.bvh=null;return solid('PRODUCT_'+s.name,h,new T.Matrix4().makeTranslation(...centre.toArray()));}
+export const obstacles=machine.filter(s=>{if(replaced(s.name)||s.name.startsWith('E_KUTU__')){excluded.push(s.name);return false;}removeFrontStops(T,s.g,s.m,s.name);boxPickupWindow(T,s.g,s.m,s.name);return true;}).concat([...qrParts(),cableChannel,{name:"ROBOT_V10_FIXED_RAIL",min:[.936,.04,.24],max:[5.1,.075,.48]},...boxSupportParts].map(p=>box(p.name,p.min,p.max)));
+for(const [key,d] of Object.entries(drawerKey)){const centre=vec(poses[key+'_pick'].product);centre.z-=.7;const parts=[];for(const s of obstacles.filter(s=>s.name.startsWith(d+'__')&&s.name.includes('CEKMECE')&&/(?:__hamur|__kutu_icecek|__plastik)/.test(s.name))){const p=extract(s,centre);if(p)parts.push(p);}if(!parts.length)throw Error('No extraction '+key);products[key]={parts,centre:centre.toArray(),drawer:d};}
+const bc=vec(poses.Box_pick.product);products.Box={parts:[box('PRODUCT_BOX',[-.16,-.0225,-.16],[.16,.0225,.16])],centre:bc.toArray(),drawer:null};
+for(const s of obstacles){const m=s.m.clone();m.elements[14]+=stationShift(s.name);update(s,m);s.initial=m.clone();}
+export function environment(drawers={},trays={}){for(const s of obstacles){const d=s.name.match(/^(CEK_K\d+_[^_]+_\d+)__/),t=s.name.match(/^QR_V4_tray_(\d\d)$/);const m=s.initial.clone();if(s.name==="ROBOT_V10_FIXED_RAIL"||s.name===cableChannel.name)m.elements[14]+=rig.railForward||0;if(s.name.endsWith('__ACICI'))m.elements[13]+=.03;if(d&&s.name.includes('CEKMECE'))m.elements[14]+=(drawers[d[1]]||0)*(s.name.includes('CEKMECE_ARA')?.5:1);if(t)m.elements[14]-=(trays[t[1]]||0);update(s,m);} }
+export function productAt(key,p,yaw=0){for(const a of products[key].parts)update(a,new T.Matrix4().makeRotationY(yaw).setPosition(...p));}
+export function collision(state,options={}){const h=options.robot_ready?[]:hits(state,obstacles,options.limit||1);if(h.length)return h;const {key,position,rest=false}=options;if(key){productAt(key,position,options.yaw||0);for(const a of products[key].parts){for(const rb of robot){if(rb.body.includes('/Gripper/')&&options.grasp!==false)continue;if(intersects(a,rb))return ['Product '+key+' > '+rb.body];}}for(const a of products[key].parts)for(const b of obstacles){if(rest&&b.name===options.support)continue;if(intersects(a,b))return ['Product '+key+' > '+b.name];}}return [];}
+export function tcpScene(s){const m=rig.tcp(s.q,s.rail,s.jaw);return [m[3],m[11],-m[7]];}
+
+
+
+
+

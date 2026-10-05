@@ -1,0 +1,43 @@
+{
+  "passed": true,
+  "frames": 1397,
+  "max_joint_step_deg": 3.4311241081168316,
+  "max_rail_step_mm": 17.997472854657914,
+  "max_product_step_mm": 47.17329259665159,
+  "strok_mm": 3387,
+  "geometric_rail_mm": 3867,
+  "endpoints": {
+    "version": 12,
+    "passed": true,
+    "ideal_grasp": true,
+    "continuous_collision_certified": false,
+    "frames": 1397,
+    "checks": 4848,
+    "carriage_min_mm": 1376,
+    "carriage_max_mm": 4763,
+    "required_stroke_mm": 3387,
+    "end_allowance_each_mm": 240,
+    "geometric_rail_length_mm": 3867,
+    "recommended_extra_stop_margin_each_mm": 50,
+    "recommended_rail_length_mm": 3967,
+    "rail_start_m": 1.1360691692136846,
+    "rail_end_m": 5.003,
+    "table_m": [
+      1.0861165201199048,
+      1.0238560228202322,
+      -0.16993614608605556
+    ],
+    "box_qr_m": [
+      4.913017560012397,
+      1.3974981912290814,
+      1.911999849306855
+    ],
+    "method": "Collision sampled native robot/full fixed machine+QR; ideal grasp with explicit small grip alignment adjustment in free corridor. Feasible animated path envelope, not global minimum or hardware end-stop design.",
+    "rear_rows_not_audited": true,
+    "dough_left_column_m": [
+      0.8889701068401337,
+      0.2333323061466217,
+      -0.1979999989271164
+    ]
+  }
+}
