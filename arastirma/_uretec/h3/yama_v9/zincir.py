@@ -199,8 +199,10 @@ ADIMLAR = [
      [(".", 'python "{YAMA}/58_acil_stop.py" hat3_v9y.glb hat3_v9z.glb')]),
     ("59", "kapı emniyet anahtarları (STANDART_DURUM madde 3): 10 ön kapak — Schmersal RSS36 kodlu sensör + aktüatör (K: AZM40 kilitli), mandal tarafında kapak arkası, gerekirse 2 mm braket", ["hat3_v9z.glb"], "hat3_v10a.glb",
      [(".", 'python "{YAMA}/59_kapi_emniyet.py" hat3_v9z.glb hat3_v10a.glb')]),
+    ("60", "hava hattı emniyet valfi (STANDART_DURUM madde 8): kompresör çıkış hortumuna Festo MS6-SV-E (yumuşak başlatma + hızlı boşaltma) + bobin + susturucu · hortum iki parçaya", ["hat3_v10a.glb"], "hat3_v10b.glb",
+     [(".", 'python "{YAMA}/60_hava_emniyet.py" hat3_v10a.glb hat3_v10b.glb')]),
 ]
-SON = "hat3_v10a.glb"
+SON = "hat3_v10b.glb"
 
 
 def kur(is_dizin, h3, uretec):
