@@ -51,6 +51,7 @@ Kurallar:
 - Kaynak (TIG, punta) yalnız torç veya elektrot ucunun ulaştığı yerde yapılır.
 - Gıdaya değen dikiş sürekli olur, taşlanır ve pasive edilir. Gıda tarafında aralıklı dikiş ve yarık bırakılmaz.
 - Gıda tarafındaki contalar, silikonlar ve plastikler gıdaya uygun malzemeden olur ve uygunluk beyanı alınabilir: silikon, POM, EPDM, PU.
+- Gıda tarafında kör perçin yalnız KAPALI UÇLU (ISO 15973 / 15974, A2) ve başı silikonla sızdırmaz; açık uçlu perçin (DIN 7337, ISO 15983) yalnız gıdaya değmeyen tarafta. Açık PEM dişi / saplama ucu gıda tarafında olmaz (5 Eki: B iç kabuğunun gıda tarafına dönen perçinleri bu kurala çekildi — geometri aynı, parça listesi).
 
 ### 1.4 Erişim ve bakım
 - Her vidaya anahtar ya da tornavida girer; etrafında en az anahtar ağzı + 5 mm boşluk kalır.

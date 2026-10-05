@@ -105,3 +105,15 @@ Değişiklik büyüklüğü: **0** = değişiklik yok (yalnız kâğıt) · **K*
 - Acil stop: tek buton, B'nin ön kapağında, küçük.
 - Ana şalter yüksekliği ve servis açıklığı: değişmez (risk değerlendirmesinde açık madde).
 - Diğer önlemler (madde 3–8, 10–14): yapılacak; Claude ↔ Codex bölüşümü KOORDINASYON.md tablosunda.
+
+## 7. Yapılanlar (5 Eki 2026 · Claude · branch `claude/standart-makine`, model zinciri 58–61)
+| Madde | Ne yapıldı | Model |
+|---|---|---|
+| 1 Acil stop | TEK buton (Schneider XB4BS8442 Ø40 + Ø60 sarı etiket), ana şalterin önündeki kapakta: F sağ üst kapağı, yerden 1,60 m | adım 58 |
+| 3 Kapılar | 10 ön kapağa emniyet anahtarı: Schmersal RSS36 kodlu sensör + aktüatör (A, TOPPING K1/K2, F sol/sağ, E × 4); K'da kilitli AZM40 (bıçak) | adım 59 |
+| 4 A ışık perdesi | GEREKMEZ: açıcı kendi emniyet devresiyle hazır alınır (Kemal, v3.6); robot tarafı hücre kapısıyla korunur (Codex). A ön kapağı adım 59'da kilitli | — |
+| 6 F davlumbaz filtresi | Filtre sola kayar, pizza kutusu stoğunun arkasındaki servis ağzından (tapa + 2 kam kilit) alınır; kompresör / yağ tankı yerinde. Ayrıca filtrenin içine giren 2 eski saplama düzeltildi | adım 61 |
+| 7 R290 | Model değişmez: şarj miktarı soğutmacıdan (Secop NLE8.8CN / KLF6.6CND devreleri), kompresör bölmesine R290 + şarj etiketi; Secop R290 kompresörlerinin elektrik kutusu R290 onaylı | — (kılavuz / etiket) |
+| 8 Pnömatik | Kompresör çıkış hortumuna Festo MS6-SV-E emniyetli yumuşak başlatma + hızlı boşaltma valfi; bakım kilitleme ana şalterle, tank kendi musluğuyla boşaltılır | adım 60 |
+| 12 Hijyen | B iç kabuğunun gıda tarafına dönen kör perçinleri kapalı uçlu ISO 15973 + silikon (KURALLAR §1.3); geometri aynı | — (parça listesi) |
+Açık: ölçüler katalogdan teyit (RSS36, AZM40, MS6-SV-E); kablolar ve güvenlik devresi şeması (Claude + Codex); sitede kapak animasyonu için mekanizma listesi.
