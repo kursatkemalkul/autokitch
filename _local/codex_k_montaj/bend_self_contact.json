@@ -1,0 +1,343 @@
+{
+  "scope": "native sheet panel/strip self-contact only; source match and press tools separate",
+  "checks": [
+    {
+      "part": "sol_sac_urun_girisi",
+      "poses": 45,
+      "solid_pair_tests": 42,
+      "collisions": [],
+      "measured_same_sheet_boundary_contacts": [
+        {
+          "a": "panel_1",
+          "b": "strip_1_0",
+          "phase": 0.28125,
+          "volume_mm3": 0.06831603256741113,
+          "reason": "same-sheet tangent decomposition boundary",
+          "maximum_boundary_depth_mm": 5.6282400464624516e-05
+        },
+        {
+          "a": "panel_1",
+          "b": "strip_1_0",
+          "phase": 0.34375,
+          "volume_mm3": 0.08515472258309888,
+          "reason": "same-sheet tangent decomposition boundary",
+          "maximum_boundary_depth_mm": 5.659739451857604e-05
+        },
+        {
+          "a": "panel_2",
+          "b": "strip_2_0",
+          "phase": 0.84375,
+          "volume_mm3": 0.05196233398699339,
+          "reason": "same-sheet tangent decomposition boundary",
+          "maximum_boundary_depth_mm": 5.078302362448994e-05
+        }
+      ],
+      "unresolved_solids": [],
+      "passed": true
+    },
+    {
+      "part": "sag_sac_E_penceresi",
+      "poses": 45,
+      "solid_pair_tests": 42,
+      "collisions": [],
+      "measured_same_sheet_boundary_contacts": [
+        {
+          "a": "panel_1",
+          "b": "strip_1_0",
+          "phase": 0.28125,
+          "volume_mm3": 0.06831602462739922,
+          "reason": "same-sheet tangent decomposition boundary",
+          "maximum_boundary_depth_mm": 5.6282400464624516e-05
+        },
+        {
+          "a": "panel_1",
+          "b": "strip_1_0",
+          "phase": 0.34375,
+          "volume_mm3": 0.0851547253933209,
+          "reason": "same-sheet tangent decomposition boundary",
+          "maximum_boundary_depth_mm": 5.659739451857604e-05
+        },
+        {
+          "a": "panel_2",
+          "b": "strip_2_0",
+          "phase": 0.84375,
+          "volume_mm3": 0.051962333990011995,
+          "reason": "same-sheet tangent decomposition boundary",
+          "maximum_boundary_depth_mm": 5.078302362448994e-05
+        }
+      ],
+      "unresolved_solids": [],
+      "passed": true
+    },
+    {
+      "part": "arka_sac",
+      "poses": 17,
+      "solid_pair_tests": 15,
+      "collisions": [],
+      "measured_same_sheet_boundary_contacts": [],
+      "unresolved_solids": [],
+      "passed": true
+    },
+    {
+      "part": "govde_kulak_sol_on_841",
+      "poses": 33,
+      "solid_pair_tests": 31,
+      "collisions": [],
+      "measured_same_sheet_boundary_contacts": [],
+      "unresolved_solids": [],
+      "passed": true
+    },
+    {
+      "part": "govde_kulak_sol_on_1150",
+      "poses": 33,
+      "solid_pair_tests": 31,
+      "collisions": [],
+      "measured_same_sheet_boundary_contacts": [],
+      "unresolved_solids": [],
+      "passed": true
+    },
+    {
+      "part": "govde_kulak_sol_on_1600",
+      "poses": 33,
+      "solid_pair_tests": 31,
+      "collisions": [],
+      "measured_same_sheet_boundary_contacts": [],
+      "unresolved_solids": [],
+      "passed": true
+    },
+    {
+      "part": "govde_kulak_sol_on_1810",
+      "poses": 33,
+      "solid_pair_tests": 31,
+      "collisions": [],
+      "measured_same_sheet_boundary_contacts": [],
+      "unresolved_solids": [],
+      "passed": true
+    },
+    {
+      "part": "govde_kulak_sol_arka_841",
+      "poses": 33,
+      "solid_pair_tests": 31,
+      "collisions": [],
+      "measured_same_sheet_boundary_contacts": [],
+      "unresolved_solids": [],
+      "passed": true
+    },
+    {
+      "part": "govde_kulak_sol_arka_1150",
+      "poses": 33,
+      "solid_pair_tests": 31,
+      "collisions": [],
+      "measured_same_sheet_boundary_contacts": [],
+      "unresolved_solids": [],
+      "passed": true
+    },
+    {
+      "part": "govde_kulak_sol_arka_1600",
+      "poses": 33,
+      "solid_pair_tests": 31,
+      "collisions": [],
+      "measured_same_sheet_boundary_contacts": [],
+      "unresolved_solids": [],
+      "passed": true
+    },
+    {
+      "part": "govde_kulak_sol_arka_1720",
+      "poses": 33,
+      "solid_pair_tests": 31,
+      "collisions": [],
+      "measured_same_sheet_boundary_contacts": [],
+      "unresolved_solids": [],
+      "passed": true
+    },
+    {
+      "part": "govde_kulak_sag_on_841",
+      "poses": 33,
+      "solid_pair_tests": 31,
+      "collisions": [],
+      "measured_same_sheet_boundary_contacts": [],
+      "unresolved_solids": [],
+      "passed": true
+    },
+    {
+      "part": "govde_kulak_sag_on_1150",
+      "poses": 33,
+      "solid_pair_tests": 31,
+      "collisions": [],
+      "measured_same_sheet_boundary_contacts": [],
+      "unresolved_solids": [],
+      "passed": true
+    },
+    {
+      "part": "govde_kulak_sag_on_1600",
+      "poses": 33,
+      "solid_pair_tests": 31,
+      "collisions": [],
+      "measured_same_sheet_boundary_contacts": [],
+      "unresolved_solids": [],
+      "passed": true
+    },
+    {
+      "part": "govde_kulak_sag_on_1810",
+      "poses": 33,
+      "solid_pair_tests": 31,
+      "collisions": [],
+      "measured_same_sheet_boundary_contacts": [],
+      "unresolved_solids": [],
+      "passed": true
+    },
+    {
+      "part": "govde_kulak_sag_arka_841",
+      "poses": 33,
+      "solid_pair_tests": 31,
+      "collisions": [],
+      "measured_same_sheet_boundary_contacts": [],
+      "unresolved_solids": [],
+      "passed": true
+    },
+    {
+      "part": "govde_kulak_sag_arka_1150",
+      "poses": 33,
+      "solid_pair_tests": 31,
+      "collisions": [],
+      "measured_same_sheet_boundary_contacts": [],
+      "unresolved_solids": [],
+      "passed": true
+    },
+    {
+      "part": "govde_kulak_sag_arka_1600",
+      "poses": 33,
+      "solid_pair_tests": 31,
+      "collisions": [],
+      "measured_same_sheet_boundary_contacts": [],
+      "unresolved_solids": [],
+      "passed": true
+    },
+    {
+      "part": "govde_kulak_sag_arka_1810",
+      "poses": 33,
+      "solid_pair_tests": 31,
+      "collisions": [],
+      "measured_same_sheet_boundary_contacts": [],
+      "unresolved_solids": [],
+      "passed": true
+    },
+    {
+      "part": "govde_kulak_ust_on_80",
+      "poses": 33,
+      "solid_pair_tests": 31,
+      "collisions": [],
+      "measured_same_sheet_boundary_contacts": [],
+      "unresolved_solids": [],
+      "passed": true
+    },
+    {
+      "part": "govde_kulak_ust_on_320",
+      "poses": 33,
+      "solid_pair_tests": 31,
+      "collisions": [],
+      "measured_same_sheet_boundary_contacts": [],
+      "unresolved_solids": [],
+      "passed": true
+    },
+    {
+      "part": "govde_kulak_ust_arka_80",
+      "poses": 33,
+      "solid_pair_tests": 31,
+      "collisions": [],
+      "measured_same_sheet_boundary_contacts": [],
+      "unresolved_solids": [],
+      "passed": true
+    },
+    {
+      "part": "govde_kulak_ust_arka_200",
+      "poses": 33,
+      "solid_pair_tests": 31,
+      "collisions": [],
+      "measured_same_sheet_boundary_contacts": [],
+      "unresolved_solids": [],
+      "passed": true
+    },
+    {
+      "part": "onyuz_kapak_K",
+      "poses": 65,
+      "solid_pair_tests": 60,
+      "collisions": [],
+      "measured_same_sheet_boundary_contacts": [
+        {
+          "a": "panel_2",
+          "b": "strip_2_0",
+          "phase": 0.390625,
+          "volume_mm3": 0.06888128025379825,
+          "reason": "same-sheet tangent decomposition boundary",
+          "maximum_boundary_depth_mm": 3.600075362442112e-05
+        },
+        {
+          "a": "panel_2",
+          "b": "strip_2_0",
+          "phase": 0.421875,
+          "volume_mm3": 0.09615208907991438,
+          "reason": "same-sheet tangent decomposition boundary",
+          "maximum_boundary_depth_mm": 5.650410210478185e-05
+        },
+        {
+          "a": "panel_4",
+          "b": "strip_4_0",
+          "phase": 0.921875,
+          "volume_mm3": 0.05317417615478489,
+          "reason": "same-sheet tangent decomposition boundary",
+          "maximum_boundary_depth_mm": 5.070691654301268e-05
+        }
+      ],
+      "unresolved_solids": [],
+      "passed": true
+    },
+    {
+      "part": "onyuz_kapak_K_ic_tava",
+      "poses": 65,
+      "solid_pair_tests": 60,
+      "collisions": [],
+      "measured_same_sheet_boundary_contacts": [],
+      "unresolved_solids": [],
+      "passed": true
+    },
+    {
+      "part": "k71_istasyon_rafi",
+      "poses": 65,
+      "solid_pair_tests": 62,
+      "collisions": [],
+      "measured_same_sheet_boundary_contacts": [
+        {
+          "a": "panel_2",
+          "b": "strip_2_0",
+          "phase": 0.53125,
+          "volume_mm3": 0.056743570319289754,
+          "reason": "same-sheet tangent decomposition boundary",
+          "maximum_boundary_depth_mm": 6.789981910060305e-05
+        },
+        {
+          "a": "panel_2",
+          "b": "strip_2_0",
+          "phase": 0.5625,
+          "volume_mm3": 0.05621238070729628,
+          "reason": "same-sheet tangent decomposition boundary",
+          "maximum_boundary_depth_mm": 8.119715346310841e-05
+        }
+      ],
+      "unresolved_solids": [],
+      "passed": true
+    },
+    {
+      "part": "ust_sac",
+      "poses": 33,
+      "solid_pair_tests": 30,
+      "collisions": [],
+      "measured_same_sheet_boundary_contacts": [],
+      "unresolved_solids": [],
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "press_tool_checked": false,
+  "full_assembly_release": false
+}

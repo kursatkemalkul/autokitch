@@ -1,0 +1,178 @@
+{
+  "step": 73,
+  "roof_dfm": [
+    {
+      "kural": "min_flans",
+      "durum": "GEÇTİ",
+      "detay": "on_donus dış 21.50 (düz 17.75) · mutlak 8.0 · tasarım 12.0",
+      "bukum": 1
+    },
+    {
+      "kural": "min_flans",
+      "durum": "GEÇTİ",
+      "detay": "arka_donus dış 21.50 (düz 17.75) · mutlak 8.0 · tasarım 12.0",
+      "bukum": 2
+    },
+    {
+      "kural": "tek_R",
+      "durum": "GEÇTİ",
+      "detay": "büküm R [2.25]"
+    },
+    {
+      "kural": "relief",
+      "durum": "GEÇTİ",
+      "detay": "on_donus bas ucu: kenar büküm ucunda devam ediyor · relief VAR",
+      "bukum": 1
+    },
+    {
+      "kural": "relief",
+      "durum": "GEÇTİ",
+      "detay": "on_donus son ucu: kenar büküm ucunda devam ediyor · relief VAR",
+      "bukum": 1
+    },
+    {
+      "kural": "relief",
+      "durum": "GEÇTİ",
+      "detay": "arka_donus bas ucu: kenar büküm ucunda devam ediyor · relief VAR",
+      "bukum": 2
+    },
+    {
+      "kural": "relief",
+      "durum": "GEÇTİ",
+      "detay": "arka_donus son ucu: kenar büküm ucunda devam ediyor · relief VAR",
+      "bukum": 2
+    },
+    {
+      "kural": "delikler",
+      "durum": "GEÇTİ",
+      "detay": "9 delik/kesik: büküm iç yüzü (delik 6.0 · yarık 8.5 · PEM kenar+R) · kenar 3.0 · köprü 3.0 · Ø ≥ 3.0"
+    },
+    {
+      "kural": "levha",
+      "durum": "GEÇTİ",
+      "detay": "açınım 924.7 × 400.0 ≤ 3000 × 1500"
+    },
+    {
+      "kural": "abkant_boy",
+      "durum": "GEÇTİ",
+      "detay": "en uzun büküm 366.0 ≤ 3100"
+    },
+    {
+      "kural": "tek_parca_duz",
+      "durum": "GEÇTİ",
+      "detay": "açınım 1 parça"
+    },
+    {
+      "kural": "tek_parca_3b",
+      "durum": "GEÇTİ",
+      "detay": "3B 1 katı"
+    },
+    {
+      "kural": "kendi_cakisma",
+      "durum": "GEÇTİ",
+      "detay": "bölgeler toplamı − birleşik hacim = 0.0000 mm³"
+    },
+    {
+      "kural": "abkant",
+      "durum": "GEÇTİ",
+      "detay": "sıra [1, 2] · bıçak / kalıp / koç çarpması yok",
+      "sira": [
+        1,
+        2
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "id": "UKE_K_4100",
+      "external_source_node": "U_KE_GOVDE__paslanmaz",
+      "external_screw_unchanged": true,
+      "axis": [
+        0,
+        -1,
+        0
+      ],
+      "screw_seat_mm": [
+        4100.0,
+        1863.5,
+        -700.0
+      ],
+      "screw_tip_mm": [
+        4100.0,
+        1847.5,
+        -700.0
+      ],
+      "length_mm": 16,
+      "thread": "M8 tapped after welding; two 4mm plates",
+      "engagement_mm": 8.0,
+      "protrusion_mm": 2.0,
+      "protrusion_threads": 1.6
+    },
+    {
+      "id": "UKE_K_4300",
+      "external_source_node": "U_KE_GOVDE__paslanmaz",
+      "external_screw_unchanged": true,
+      "axis": [
+        0,
+        -1,
+        0
+      ],
+      "screw_seat_mm": [
+        4300.0,
+        1863.5,
+        -700.0
+      ],
+      "screw_tip_mm": [
+        4300.0,
+        1847.5,
+        -700.0
+      ],
+      "length_mm": 16,
+      "thread": "M8 tapped after welding; two 4mm plates",
+      "engagement_mm": 8.0,
+      "protrusion_mm": 2.0,
+      "protrusion_threads": 1.6
+    }
+  ],
+  "operation": "laser profiles and pilot holes; weld pack; tap M8 through both 4mm plates after welding",
+  "external_U_geometry_modified": false,
+  "production_released": false,
+  "source_roof_preserved_except_two_M8_seats": true,
+  "roof_delta_outside_seats_mm3": 0.0,
+  "input_sha256": "d9a47bf02acd9af49c6f79c1b26a545317091b374f91dd81faa3b9a8fd08578b",
+  "output_sha256": "9d454410dd5ad55d530357b74a6a028de2d16966e303a977df133cb05ff42b45",
+  "new_parts": [
+    "ust_sac",
+    "k73_tavan_baglanti_plakasi_4100_0",
+    "k73_tavan_baglanti_plakasi_4100_1",
+    "k73_tavan_baglanti_plakasi_4100_2",
+    "k73_tavan_kaynagi_4100_1853.5_0",
+    "k73_tavan_kaynagi_4100_1853.5_1",
+    "k73_tavan_kaynagi_4100_1853.5_2",
+    "k73_tavan_kaynagi_4100_1853.5_3",
+    "k73_tavan_kaynagi_4100_1857.5_0",
+    "k73_tavan_kaynagi_4100_1857.5_1",
+    "k73_tavan_kaynagi_4100_1857.5_2",
+    "k73_tavan_kaynagi_4100_1857.5_3",
+    "k73_tavan_kaynagi_4100_1860.5_0",
+    "k73_tavan_kaynagi_4100_1860.5_1",
+    "k73_tavan_kaynagi_4100_1860.5_2",
+    "k73_tavan_kaynagi_4100_1860.5_3",
+    "k73_tavan_baglanti_plakasi_4300_0",
+    "k73_tavan_baglanti_plakasi_4300_1",
+    "k73_tavan_baglanti_plakasi_4300_2",
+    "k73_tavan_kaynagi_4300_1853.5_0",
+    "k73_tavan_kaynagi_4300_1853.5_1",
+    "k73_tavan_kaynagi_4300_1853.5_2",
+    "k73_tavan_kaynagi_4300_1853.5_3",
+    "k73_tavan_kaynagi_4300_1857.5_0",
+    "k73_tavan_kaynagi_4300_1857.5_1",
+    "k73_tavan_kaynagi_4300_1857.5_2",
+    "k73_tavan_kaynagi_4300_1857.5_3",
+    "k73_tavan_kaynagi_4300_1860.5_0",
+    "k73_tavan_kaynagi_4300_1860.5_1",
+    "k73_tavan_kaynagi_4300_1860.5_2",
+    "k73_tavan_kaynagi_4300_1860.5_3"
+  ],
+  "full_assembly_release": false
+}

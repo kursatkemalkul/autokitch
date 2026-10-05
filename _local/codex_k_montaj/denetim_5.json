@@ -1,0 +1,1029 @@
+{
+  "source_step": 61,
+  "step70_ready_for_later_integration": true,
+  "assembly_completed": false,
+  "checks": [
+    {
+      "rule": "İki adım70 koşusu bayt aynı",
+      "status": "PASS"
+    },
+    {
+      "rule": "32 saplama çıkıntısı",
+      "status": "PASS"
+    },
+    {
+      "rule": "Hedef saplamalar dışındaki geometri korunur",
+      "status": "PASS"
+    },
+    {
+      "rule": "Yerel 71: iki koşu, K kapsamı ve alt montaj denetimi",
+      "status": "PASS",
+      "scope": "Alt montaj; tam §5 değildir"
+    },
+    {
+      "rule": "Yerel 72: iki koşu, K kapsamı ve alt montaj denetimi",
+      "status": "PASS",
+      "scope": "Alt montaj; tam §5 değildir"
+    },
+    {
+      "rule": "Yerel 73: iki koşu, K kapsamı ve alt montaj denetimi",
+      "status": "PASS",
+      "scope": "Alt montaj; tam §5 değildir"
+    },
+    {
+      "rule": "Bütün K parçalarında açınım/son geometri eşleşmesi",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "rule": "Bütün kurulum yolları 2mm örneklem ve sıfır çakışma",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "rule": "Bütün montajın son animasyon konumu ±0,01mm",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "rule": "Her taşıyıcı hemen bağlı veya uyarılı geçici dayalı",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "rule": "Geçici dayalı parçaya yük binmemesi",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "rule": "Bütün cihazlarda vida/delik/karşı diş ve erişim",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "rule": "Bütün güncel saclarda imal edilebilirlik",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "rule": "Son birleşmiş modelden animasyon ve yayın",
+      "status": "NOT_VERIFIED"
+    }
+  ],
+  "partial_evidence": {
+    "step71": {
+      "step": 71,
+      "two_runs_byte_identical": true,
+      "changed_nodes_outside_K_lower_body": [],
+      "ownership_tolerance_mm": 0.01,
+      "subassembly_audit": {
+        "scope": "new lower subassembly only; not whole §5",
+        "checks": [
+          {
+            "name": "Shelf DFM including two-bend press sequence",
+            "passed": true
+          },
+          {
+            "name": "Each new manufactured part is a valid solid",
+            "passed": true
+          },
+          {
+            "name": "Six 40x40x1.5 hollow profiles",
+            "passed": true
+          },
+          {
+            "name": "24 explicit threaded joints; engagement >= diameter",
+            "passed": true
+          },
+          {
+            "name": "12 lower stud protrusions 1..3 M5 threads",
+            "passed": true
+          },
+          {
+            "name": "12 upper screw protrusions 1..3 M5 threads",
+            "passed": true
+          },
+          {
+            "name": "No geometry extends under B interface Y788",
+            "passed": true
+          },
+          {
+            "name": "Zero unclassified solid overlap within new subassembly",
+            "passed": true
+          }
+        ],
+        "intersections": [
+          {
+            "a": "k71_ust_havsa_4060_700_-10.0",
+            "b": "k71_disli_ust_kapak_4060_700",
+            "volume_mm3": 30.017918,
+            "allowed": true,
+            "reason": "M5 external/minor thread envelope in tapped cap"
+          },
+          {
+            "a": "k71_ust_havsa_4060_700_10.0",
+            "b": "k71_disli_ust_kapak_4060_700",
+            "volume_mm3": 30.017918,
+            "allowed": true,
+            "reason": "M5 external/minor thread envelope in tapped cap"
+          },
+          {
+            "a": "k71_ust_havsa_4060_379_-10.0",
+            "b": "k71_disli_ust_kapak_4060_379",
+            "volume_mm3": 30.017918,
+            "allowed": true,
+            "reason": "M5 external/minor thread envelope in tapped cap"
+          },
+          {
+            "a": "k71_ust_havsa_4060_379_10.0",
+            "b": "k71_disli_ust_kapak_4060_379",
+            "volume_mm3": 30.017918,
+            "allowed": true,
+            "reason": "M5 external/minor thread envelope in tapped cap"
+          },
+          {
+            "a": "k71_ust_havsa_4060_58_-10.0",
+            "b": "k71_disli_ust_kapak_4060_58",
+            "volume_mm3": 30.017918,
+            "allowed": true,
+            "reason": "M5 external/minor thread envelope in tapped cap"
+          },
+          {
+            "a": "k71_ust_havsa_4060_58_10.0",
+            "b": "k71_disli_ust_kapak_4060_58",
+            "volume_mm3": 30.017918,
+            "allowed": true,
+            "reason": "M5 external/minor thread envelope in tapped cap"
+          },
+          {
+            "a": "k71_ust_havsa_4340_700_-10.0",
+            "b": "k71_disli_ust_kapak_4340_700",
+            "volume_mm3": 30.017918,
+            "allowed": true,
+            "reason": "M5 external/minor thread envelope in tapped cap"
+          },
+          {
+            "a": "k71_ust_havsa_4340_700_10.0",
+            "b": "k71_disli_ust_kapak_4340_700",
+            "volume_mm3": 30.017918,
+            "allowed": true,
+            "reason": "M5 external/minor thread envelope in tapped cap"
+          },
+          {
+            "a": "k71_ust_havsa_4340_379_-10.0",
+            "b": "k71_disli_ust_kapak_4340_379",
+            "volume_mm3": 30.017918,
+            "allowed": true,
+            "reason": "M5 external/minor thread envelope in tapped cap"
+          },
+          {
+            "a": "k71_ust_havsa_4340_379_10.0",
+            "b": "k71_disli_ust_kapak_4340_379",
+            "volume_mm3": 30.017918,
+            "allowed": true,
+            "reason": "M5 external/minor thread envelope in tapped cap"
+          },
+          {
+            "a": "k71_ust_havsa_4340_58_-10.0",
+            "b": "k71_disli_ust_kapak_4340_58",
+            "volume_mm3": 30.017918,
+            "allowed": true,
+            "reason": "M5 external/minor thread envelope in tapped cap"
+          },
+          {
+            "a": "k71_ust_havsa_4340_58_10.0",
+            "b": "k71_disli_ust_kapak_4340_58",
+            "volume_mm3": 30.017918,
+            "allowed": true,
+            "reason": "M5 external/minor thread envelope in tapped cap"
+          }
+        ],
+        "passed": true,
+        "full_assembly_release": false
+      },
+      "full_assembly_release": false,
+      "passed": true
+    },
+    "step72": {
+      "step": 72,
+      "two_runs_byte_identical": true,
+      "changed_nodes_outside_K_lower_body": [],
+      "ownership_tolerance_mm": 0.01,
+      "permitted_nodes": [
+        "K_BANT__sac",
+        "K_BANT__celik",
+        "K_ITICI__sac",
+        "K_ITICI__celik"
+      ],
+      "subassembly_audit": {
+        "scope": "new foot mounts + new lower structure; source context and full montage still required",
+        "checks": [
+          {
+            "name": "12 explicit foot connections",
+            "passed": true
+          },
+          {
+            "name": "Nut thread engagement >= nominal screw diameter",
+            "passed": true
+          },
+          {
+            "name": "Screw protrusions 1..3 threads",
+            "passed": true
+          },
+          {
+            "name": "All new foot sheets/plaque DFM",
+            "passed": true
+          },
+          {
+            "name": "All new parts valid CAD solids",
+            "passed": true
+          },
+          {
+            "name": "Zero non-weld intersection with new lower structure",
+            "passed": true
+          }
+        ],
+        "unexpected_intersections": [],
+        "weld_intersections": [],
+        "passed": true,
+        "full_assembly_release": false
+      },
+      "full_assembly_release": false,
+      "passed": true
+    },
+    "step73": {
+      "step": 73,
+      "two_runs_byte_identical": true,
+      "changed_nodes_outside_K_lower_body": [],
+      "ownership_tolerance_mm": 0.01,
+      "permitted_nodes": [
+        "K_GOVDE__kabuk",
+        "K_GOVDE__sac",
+        "K_GOVDE__baglanti"
+      ],
+      "subassembly_audit": {
+        "scope": "K roof pack; whole motion and assembly not certified",
+        "checks": [
+          {
+            "name": "Existing U shaft measured at 4100.0",
+            "passed": true
+          },
+          {
+            "name": "Existing U shaft measured at 4300.0",
+            "passed": true
+          },
+          {
+            "name": "All roof and reinforcement DFM",
+            "passed": true
+          },
+          {
+            "name": "All new roof solids valid",
+            "passed": true
+          },
+          {
+            "name": "M8 engagement >=8mm, protrusion 1..3 threads",
+            "passed": true
+          },
+          {
+            "name": "Unclassified solid overlap zero",
+            "passed": true
+          },
+          {
+            "name": "U geometry unchanged by definition",
+            "passed": true
+          }
+        ],
+        "unexpected_intersections": [],
+        "passed": true,
+        "full_assembly_release": false
+      },
+      "full_assembly_release": false,
+      "passed": true
+    },
+    "support_motion_audit": {
+      "scope": "six bench support arrivals only",
+      "units": "mm",
+      "groups": [
+        {
+          "support": "4060_700",
+          "steps": [
+            {
+              "part": "k71_alt_flans_4060_700",
+              "approach_mm": [
+                0,
+                100,
+                0
+              ],
+              "sample_spacing_mm": 2,
+              "samples": 51,
+              "solid_pair_tests": 0,
+              "final_translation_mm": [
+                0,
+                0,
+                0
+              ],
+              "temporary_support_required": true,
+              "fixture_checked": false
+            },
+            {
+              "part": "k71_dik_destek_4060_700",
+              "approach_mm": [
+                0,
+                100,
+                0
+              ],
+              "sample_spacing_mm": 2,
+              "samples": 51,
+              "solid_pair_tests": 1,
+              "final_translation_mm": [
+                0,
+                0,
+                0
+              ],
+              "temporary_support_required": true,
+              "fixture_checked": false
+            },
+            {
+              "part": "k71_disli_ust_kapak_4060_700",
+              "approach_mm": [
+                0,
+                100,
+                0
+              ],
+              "sample_spacing_mm": 2,
+              "samples": 51,
+              "solid_pair_tests": 1,
+              "final_translation_mm": [
+                0,
+                0,
+                0
+              ],
+              "temporary_support_required": true,
+              "fixture_checked": false
+            }
+          ],
+          "bottom_welds": [
+            "k71_kaynak_4060_700_795_0",
+            "k71_kaynak_4060_700_795_1",
+            "k71_kaynak_4060_700_795_2",
+            "k71_kaynak_4060_700_795_3"
+          ],
+          "top_welds": [
+            "k71_kaynak_4060_700_883_0",
+            "k71_kaynak_4060_700_883_1",
+            "k71_kaynak_4060_700_883_2",
+            "k71_kaynak_4060_700_883_3"
+          ]
+        },
+        {
+          "support": "4060_379",
+          "steps": [
+            {
+              "part": "k71_alt_flans_4060_379",
+              "approach_mm": [
+                0,
+                100,
+                0
+              ],
+              "sample_spacing_mm": 2,
+              "samples": 51,
+              "solid_pair_tests": 0,
+              "final_translation_mm": [
+                0,
+                0,
+                0
+              ],
+              "temporary_support_required": true,
+              "fixture_checked": false
+            },
+            {
+              "part": "k71_dik_destek_4060_379",
+              "approach_mm": [
+                0,
+                100,
+                0
+              ],
+              "sample_spacing_mm": 2,
+              "samples": 51,
+              "solid_pair_tests": 1,
+              "final_translation_mm": [
+                0,
+                0,
+                0
+              ],
+              "temporary_support_required": true,
+              "fixture_checked": false
+            },
+            {
+              "part": "k71_disli_ust_kapak_4060_379",
+              "approach_mm": [
+                0,
+                100,
+                0
+              ],
+              "sample_spacing_mm": 2,
+              "samples": 51,
+              "solid_pair_tests": 1,
+              "final_translation_mm": [
+                0,
+                0,
+                0
+              ],
+              "temporary_support_required": true,
+              "fixture_checked": false
+            }
+          ],
+          "bottom_welds": [
+            "k71_kaynak_4060_379_795_0",
+            "k71_kaynak_4060_379_795_1",
+            "k71_kaynak_4060_379_795_2",
+            "k71_kaynak_4060_379_795_3"
+          ],
+          "top_welds": [
+            "k71_kaynak_4060_379_883_0",
+            "k71_kaynak_4060_379_883_1",
+            "k71_kaynak_4060_379_883_2",
+            "k71_kaynak_4060_379_883_3"
+          ]
+        },
+        {
+          "support": "4060_58",
+          "steps": [
+            {
+              "part": "k71_alt_flans_4060_58",
+              "approach_mm": [
+                0,
+                100,
+                0
+              ],
+              "sample_spacing_mm": 2,
+              "samples": 51,
+              "solid_pair_tests": 0,
+              "final_translation_mm": [
+                0,
+                0,
+                0
+              ],
+              "temporary_support_required": true,
+              "fixture_checked": false
+            },
+            {
+              "part": "k71_dik_destek_4060_58",
+              "approach_mm": [
+                0,
+                100,
+                0
+              ],
+              "sample_spacing_mm": 2,
+              "samples": 51,
+              "solid_pair_tests": 1,
+              "final_translation_mm": [
+                0,
+                0,
+                0
+              ],
+              "temporary_support_required": true,
+              "fixture_checked": false
+            },
+            {
+              "part": "k71_disli_ust_kapak_4060_58",
+              "approach_mm": [
+                0,
+                100,
+                0
+              ],
+              "sample_spacing_mm": 2,
+              "samples": 51,
+              "solid_pair_tests": 1,
+              "final_translation_mm": [
+                0,
+                0,
+                0
+              ],
+              "temporary_support_required": true,
+              "fixture_checked": false
+            }
+          ],
+          "bottom_welds": [
+            "k71_kaynak_4060_58_795_0",
+            "k71_kaynak_4060_58_795_1",
+            "k71_kaynak_4060_58_795_2",
+            "k71_kaynak_4060_58_795_3"
+          ],
+          "top_welds": [
+            "k71_kaynak_4060_58_883_0",
+            "k71_kaynak_4060_58_883_1",
+            "k71_kaynak_4060_58_883_2",
+            "k71_kaynak_4060_58_883_3"
+          ]
+        },
+        {
+          "support": "4340_700",
+          "steps": [
+            {
+              "part": "k71_alt_flans_4340_700",
+              "approach_mm": [
+                0,
+                100,
+                0
+              ],
+              "sample_spacing_mm": 2,
+              "samples": 51,
+              "solid_pair_tests": 0,
+              "final_translation_mm": [
+                0,
+                0,
+                0
+              ],
+              "temporary_support_required": true,
+              "fixture_checked": false
+            },
+            {
+              "part": "k71_dik_destek_4340_700",
+              "approach_mm": [
+                0,
+                100,
+                0
+              ],
+              "sample_spacing_mm": 2,
+              "samples": 51,
+              "solid_pair_tests": 1,
+              "final_translation_mm": [
+                0,
+                0,
+                0
+              ],
+              "temporary_support_required": true,
+              "fixture_checked": false
+            },
+            {
+              "part": "k71_disli_ust_kapak_4340_700",
+              "approach_mm": [
+                0,
+                100,
+                0
+              ],
+              "sample_spacing_mm": 2,
+              "samples": 51,
+              "solid_pair_tests": 1,
+              "final_translation_mm": [
+                0,
+                0,
+                0
+              ],
+              "temporary_support_required": true,
+              "fixture_checked": false
+            }
+          ],
+          "bottom_welds": [
+            "k71_kaynak_4340_700_795_0",
+            "k71_kaynak_4340_700_795_1",
+            "k71_kaynak_4340_700_795_2",
+            "k71_kaynak_4340_700_795_3"
+          ],
+          "top_welds": [
+            "k71_kaynak_4340_700_883_0",
+            "k71_kaynak_4340_700_883_1",
+            "k71_kaynak_4340_700_883_2",
+            "k71_kaynak_4340_700_883_3"
+          ]
+        },
+        {
+          "support": "4340_379",
+          "steps": [
+            {
+              "part": "k71_alt_flans_4340_379",
+              "approach_mm": [
+                0,
+                100,
+                0
+              ],
+              "sample_spacing_mm": 2,
+              "samples": 51,
+              "solid_pair_tests": 0,
+              "final_translation_mm": [
+                0,
+                0,
+                0
+              ],
+              "temporary_support_required": true,
+              "fixture_checked": false
+            },
+            {
+              "part": "k71_dik_destek_4340_379",
+              "approach_mm": [
+                0,
+                100,
+                0
+              ],
+              "sample_spacing_mm": 2,
+              "samples": 51,
+              "solid_pair_tests": 1,
+              "final_translation_mm": [
+                0,
+                0,
+                0
+              ],
+              "temporary_support_required": true,
+              "fixture_checked": false
+            },
+            {
+              "part": "k71_disli_ust_kapak_4340_379",
+              "approach_mm": [
+                0,
+                100,
+                0
+              ],
+              "sample_spacing_mm": 2,
+              "samples": 51,
+              "solid_pair_tests": 1,
+              "final_translation_mm": [
+                0,
+                0,
+                0
+              ],
+              "temporary_support_required": true,
+              "fixture_checked": false
+            }
+          ],
+          "bottom_welds": [
+            "k71_kaynak_4340_379_795_0",
+            "k71_kaynak_4340_379_795_1",
+            "k71_kaynak_4340_379_795_2",
+            "k71_kaynak_4340_379_795_3"
+          ],
+          "top_welds": [
+            "k71_kaynak_4340_379_883_0",
+            "k71_kaynak_4340_379_883_1",
+            "k71_kaynak_4340_379_883_2",
+            "k71_kaynak_4340_379_883_3"
+          ]
+        },
+        {
+          "support": "4340_58",
+          "steps": [
+            {
+              "part": "k71_alt_flans_4340_58",
+              "approach_mm": [
+                0,
+                100,
+                0
+              ],
+              "sample_spacing_mm": 2,
+              "samples": 51,
+              "solid_pair_tests": 0,
+              "final_translation_mm": [
+                0,
+                0,
+                0
+              ],
+              "temporary_support_required": true,
+              "fixture_checked": false
+            },
+            {
+              "part": "k71_dik_destek_4340_58",
+              "approach_mm": [
+                0,
+                100,
+                0
+              ],
+              "sample_spacing_mm": 2,
+              "samples": 51,
+              "solid_pair_tests": 1,
+              "final_translation_mm": [
+                0,
+                0,
+                0
+              ],
+              "temporary_support_required": true,
+              "fixture_checked": false
+            },
+            {
+              "part": "k71_disli_ust_kapak_4340_58",
+              "approach_mm": [
+                0,
+                100,
+                0
+              ],
+              "sample_spacing_mm": 2,
+              "samples": 51,
+              "solid_pair_tests": 1,
+              "final_translation_mm": [
+                0,
+                0,
+                0
+              ],
+              "temporary_support_required": true,
+              "fixture_checked": false
+            }
+          ],
+          "bottom_welds": [
+            "k71_kaynak_4340_58_795_0",
+            "k71_kaynak_4340_58_795_1",
+            "k71_kaynak_4340_58_795_2",
+            "k71_kaynak_4340_58_795_3"
+          ],
+          "top_welds": [
+            "k71_kaynak_4340_58_883_0",
+            "k71_kaynak_4340_58_883_1",
+            "k71_kaynak_4340_58_883_2",
+            "k71_kaynak_4340_58_883_3"
+          ]
+        }
+      ],
+      "samples": 918,
+      "unintended_intersections": [],
+      "arrival_paths_passed": true,
+      "fixture_load_and_torch_verified": false,
+      "installation_in_K_verified": false,
+      "full_assembly_release": false
+    },
+    "source_bending_audit": {
+      "checks": [
+        {
+          "name": "kose_dikmesi_20_42_tapa",
+          "unclassified_vertices": [],
+          "folded_endpoint_max_error_mm": 0.0,
+          "endpoint_passed": true
+        },
+        {
+          "name": "kose_dikmesi_20_-800_tapa",
+          "unclassified_vertices": [],
+          "folded_endpoint_max_error_mm": 0.0,
+          "endpoint_passed": true
+        },
+        {
+          "name": "kose_dikmesi_380_42_tapa",
+          "unclassified_vertices": [],
+          "folded_endpoint_max_error_mm": 0.0,
+          "endpoint_passed": true
+        },
+        {
+          "name": "kose_dikmesi_380_-800_tapa",
+          "unclassified_vertices": [],
+          "folded_endpoint_max_error_mm": 0.0,
+          "endpoint_passed": true
+        },
+        {
+          "name": "taban_sac_3",
+          "unclassified_vertices": [],
+          "folded_endpoint_max_error_mm": 0.0,
+          "endpoint_passed": true
+        },
+        {
+          "name": "sol_sac_urun_girisi",
+          "unclassified_vertices": [],
+          "folded_endpoint_max_error_mm": 4.440892098500626e-16,
+          "endpoint_passed": true
+        },
+        {
+          "name": "sag_sac_E_penceresi",
+          "unclassified_vertices": [],
+          "folded_endpoint_max_error_mm": 0.0,
+          "endpoint_passed": true
+        },
+        {
+          "name": "arka_sac",
+          "unclassified_vertices": [],
+          "folded_endpoint_max_error_mm": 0.0,
+          "endpoint_passed": true
+        },
+        {
+          "name": "govde_kulak_sol_on_841",
+          "unclassified_vertices": [],
+          "folded_endpoint_max_error_mm": 1.7763568394002505e-15,
+          "endpoint_passed": true
+        },
+        {
+          "name": "govde_kulak_sol_on_1150",
+          "unclassified_vertices": [],
+          "folded_endpoint_max_error_mm": 1.7763568394002505e-15,
+          "endpoint_passed": true
+        },
+        {
+          "name": "govde_kulak_sol_on_1600",
+          "unclassified_vertices": [],
+          "folded_endpoint_max_error_mm": 1.7763568394002505e-15,
+          "endpoint_passed": true
+        },
+        {
+          "name": "govde_kulak_sol_on_1810",
+          "unclassified_vertices": [],
+          "folded_endpoint_max_error_mm": 1.7763568394002505e-15,
+          "endpoint_passed": true
+        },
+        {
+          "name": "govde_kulak_sol_arka_841",
+          "unclassified_vertices": [],
+          "folded_endpoint_max_error_mm": 0.0,
+          "endpoint_passed": true
+        },
+        {
+          "name": "govde_kulak_sol_arka_1150",
+          "unclassified_vertices": [],
+          "folded_endpoint_max_error_mm": 0.0,
+          "endpoint_passed": true
+        },
+        {
+          "name": "govde_kulak_sol_arka_1600",
+          "unclassified_vertices": [],
+          "folded_endpoint_max_error_mm": 0.0,
+          "endpoint_passed": true
+        },
+        {
+          "name": "govde_kulak_sol_arka_1720",
+          "unclassified_vertices": [],
+          "folded_endpoint_max_error_mm": 0.0,
+          "endpoint_passed": true
+        },
+        {
+          "name": "govde_kulak_sag_on_841",
+          "unclassified_vertices": [],
+          "folded_endpoint_max_error_mm": 3.552713678800501e-15,
+          "endpoint_passed": true
+        },
+        {
+          "name": "govde_kulak_sag_on_1150",
+          "unclassified_vertices": [],
+          "folded_endpoint_max_error_mm": 3.552713678800501e-15,
+          "endpoint_passed": true
+        },
+        {
+          "name": "govde_kulak_sag_on_1600",
+          "unclassified_vertices": [],
+          "folded_endpoint_max_error_mm": 3.552713678800501e-15,
+          "endpoint_passed": true
+        },
+        {
+          "name": "govde_kulak_sag_on_1810",
+          "unclassified_vertices": [],
+          "folded_endpoint_max_error_mm": 3.552713678800501e-15,
+          "endpoint_passed": true
+        },
+        {
+          "name": "govde_kulak_sag_arka_841",
+          "unclassified_vertices": [],
+          "folded_endpoint_max_error_mm": 0.0,
+          "endpoint_passed": true
+        },
+        {
+          "name": "govde_kulak_sag_arka_1150",
+          "unclassified_vertices": [],
+          "folded_endpoint_max_error_mm": 0.0,
+          "endpoint_passed": true
+        },
+        {
+          "name": "govde_kulak_sag_arka_1600",
+          "unclassified_vertices": [],
+          "folded_endpoint_max_error_mm": 0.0,
+          "endpoint_passed": true
+        },
+        {
+          "name": "govde_kulak_sag_arka_1810",
+          "unclassified_vertices": [],
+          "folded_endpoint_max_error_mm": 0.0,
+          "endpoint_passed": true
+        },
+        {
+          "name": "govde_kulak_ust_on_80",
+          "unclassified_vertices": [],
+          "folded_endpoint_max_error_mm": 0.0,
+          "endpoint_passed": true
+        },
+        {
+          "name": "govde_kulak_ust_on_320",
+          "unclassified_vertices": [],
+          "folded_endpoint_max_error_mm": 0.0,
+          "endpoint_passed": true
+        },
+        {
+          "name": "govde_kulak_ust_arka_80",
+          "unclassified_vertices": [],
+          "folded_endpoint_max_error_mm": 0.0,
+          "endpoint_passed": true
+        },
+        {
+          "name": "govde_kulak_ust_arka_200",
+          "unclassified_vertices": [],
+          "folded_endpoint_max_error_mm": 0.0,
+          "endpoint_passed": true
+        },
+        {
+          "name": "onyuz_kapak_K",
+          "unclassified_vertices": [],
+          "folded_endpoint_max_error_mm": 4.440892098500626e-16,
+          "endpoint_passed": true
+        },
+        {
+          "name": "onyuz_kapak_K_ic_tava",
+          "unclassified_vertices": [],
+          "folded_endpoint_max_error_mm": 8.881784197001252e-16,
+          "endpoint_passed": true
+        },
+        {
+          "name": "onyuz_kapak_K_karsilik_0",
+          "unclassified_vertices": [],
+          "folded_endpoint_max_error_mm": 0.0,
+          "endpoint_passed": true
+        },
+        {
+          "name": "onyuz_kapak_K_karsilik_1",
+          "unclassified_vertices": [],
+          "folded_endpoint_max_error_mm": 0.0,
+          "endpoint_passed": true
+        },
+        {
+          "name": "onyuz_kapak_K_karsilik_2",
+          "unclassified_vertices": [],
+          "folded_endpoint_max_error_mm": 0.0,
+          "endpoint_passed": true
+        }
+      ],
+      "all_screened_sheets_processed": true,
+      "passed": true,
+      "full_assembly_release": false
+    },
+    "k71_context_audit": {
+      "scope": "new lower parts versus retained K/ELK_K only",
+      "pairs_tested": 25,
+      "collisions": [],
+      "unresolved_open_source": [],
+      "reconstructed_source_sides": [
+        {
+          "source": "K_GOVDE__kabuk[0]",
+          "method": "source native solid; every source vertex agrees",
+          "vertices_checked": 830,
+          "max_vertex_distance_mm": 0.00015078554924059082,
+          "continuous_surface_equivalence_claimed": false
+        },
+        {
+          "source": "K_GOVDE__kabuk[1]",
+          "method": "source native solid; every source vertex agrees",
+          "vertices_checked": 694,
+          "max_vertex_distance_mm": 0.000217437744140625,
+          "continuous_surface_equivalence_claimed": false
+        }
+      ],
+      "passed": true,
+      "whole_assembly_release": false
+    },
+    "k72_context_audit": {
+      "scope": "new lower parts versus retained K/ELK_K only",
+      "pairs_tested": 63,
+      "collisions": [],
+      "unresolved_open_source": [],
+      "reconstructed_source_sides": [
+        {
+          "source": "K_GOVDE__kabuk[0]",
+          "method": "source native solid; every source vertex agrees",
+          "vertices_checked": 830,
+          "max_vertex_distance_mm": 0.00015078554924059082,
+          "continuous_surface_equivalence_claimed": false
+        },
+        {
+          "source": "K_GOVDE__kabuk[1]",
+          "method": "source native solid; every source vertex agrees",
+          "vertices_checked": 694,
+          "max_vertex_distance_mm": 0.000217437744140625,
+          "continuous_surface_equivalence_claimed": false
+        }
+      ],
+      "passed": true,
+      "whole_assembly_release": false
+    },
+    "k73_context_audit": {
+      "scope": "30 new reinforcement/weld parts versus all retained stations; local roof patch preserves source outside two seats",
+      "pairs_tested": 6,
+      "collisions": [],
+      "unresolved_open_meshes": [],
+      "allowed_thread_contacts": [
+        {
+          "part": "k73_tavan_baglanti_plakasi_4100_0",
+          "source": "U_KE_GOVDE__paslanmaz[96]",
+          "volume_mm3": 48.02176260948136,
+          "allowed": true,
+          "reason": "M8 external/minor thread envelope in 8mm tapped pack"
+        },
+        {
+          "part": "k73_tavan_baglanti_plakasi_4100_1",
+          "source": "U_KE_GOVDE__paslanmaz[96]",
+          "volume_mm3": 48.021762609481286,
+          "allowed": true,
+          "reason": "M8 external/minor thread envelope in 8mm tapped pack"
+        },
+        {
+          "part": "k73_tavan_baglanti_plakasi_4300_0",
+          "source": "U_KE_GOVDE__paslanmaz[97]",
+          "volume_mm3": 48.01734864711689,
+          "allowed": true,
+          "reason": "M8 external/minor thread envelope in 8mm tapped pack"
+        },
+        {
+          "part": "k73_tavan_baglanti_plakasi_4300_1",
+          "source": "U_KE_GOVDE__paslanmaz[97]",
+          "volume_mm3": 48.01734864711689,
+          "allowed": true,
+          "reason": "M8 external/minor thread envelope in 8mm tapped pack"
+        }
+      ],
+      "local_roof_patch_isolation_passed": true,
+      "legacy_source_contacts_not_certified": true,
+      "passed": true,
+      "full_assembly_release": false
+    }
+  },
+  "publish_allowed": false
+}

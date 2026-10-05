@@ -1,0 +1,609 @@
+{
+  "source_step": 61,
+  "method": "source mesh vertex to native CAD boundary; deterministic sample",
+  "tolerance_mm": 0.01,
+  "bidirectional_equality_checked": false,
+  "publish_allowed": false,
+  "sheets": [
+    {
+      "sheet": "kose_dikmesi_20_42_tapa",
+      "source_component": "K_GOVDE__sac[0]",
+      "bbox_error_mm": 0.000152587890625,
+      "full_surface_equality_verified": false,
+      "suitable_for_final_assembly": false,
+      "sample_count": 16,
+      "source_vertex_count": 16,
+      "max_sample_distance_mm": 2.956390380859375e-05,
+      "worst_point_world_mm": [
+        4005.000114440918,
+        1856.5000295639038,
+        29.500000178813934
+      ],
+      "status": "SAMPLED_VERTICES_MATCH"
+    },
+    {
+      "sheet": "kose_dikmesi_20_-800_tapa",
+      "source_component": "K_GOVDE__sac[1]",
+      "bbox_error_mm": 0.000152587890625,
+      "full_surface_equality_verified": false,
+      "suitable_for_final_assembly": false,
+      "sample_count": 16,
+      "source_vertex_count": 16,
+      "max_sample_distance_mm": 2.956390380859375e-05,
+      "worst_point_world_mm": [
+        4005.000114440918,
+        1856.5000295639038,
+        -812.5
+      ],
+      "status": "SAMPLED_VERTICES_MATCH"
+    },
+    {
+      "sheet": "kose_dikmesi_380_42_tapa",
+      "source_component": "K_GOVDE__sac[2]",
+      "bbox_error_mm": 0.0002288818359375,
+      "full_surface_equality_verified": false,
+      "suitable_for_final_assembly": false,
+      "sample_count": 16,
+      "source_vertex_count": 16,
+      "max_sample_distance_mm": 0.00022891362287410732,
+      "worst_point_world_mm": [
+        4364.999771118164,
+        1858.5000038146973,
+        29.500000178813934
+      ],
+      "status": "SAMPLED_VERTICES_MATCH"
+    },
+    {
+      "sheet": "kose_dikmesi_380_-800_tapa",
+      "source_component": "K_GOVDE__sac[3]",
+      "bbox_error_mm": 0.0002288818359375,
+      "full_surface_equality_verified": false,
+      "suitable_for_final_assembly": false,
+      "sample_count": 16,
+      "source_vertex_count": 16,
+      "max_sample_distance_mm": 0.00022891362287410732,
+      "worst_point_world_mm": [
+        4364.999771118164,
+        1858.5000038146973,
+        -812.5
+      ],
+      "status": "SAMPLED_VERTICES_MATCH"
+    },
+    {
+      "sheet": "taban_sac_3",
+      "source_component": "K_GOVDE__sac[4]",
+      "bbox_error_mm": 0.00012969970703125,
+      "full_surface_equality_verified": false,
+      "suitable_for_final_assembly": false,
+      "sample_count": 60,
+      "source_vertex_count": 60,
+      "max_sample_distance_mm": 0.0001060030985920145,
+      "worst_point_world_mm": [
+        4014.904499053955,
+        787.9999876022339,
+        -574.2075443267822
+      ],
+      "status": "SAMPLED_VERTICES_MATCH"
+    },
+    {
+      "sheet": "istasyon_tabani_3",
+      "source_component": "K_GOVDE__sac[118]",
+      "bbox_error_mm": 43.4999737739563,
+      "full_surface_equality_verified": false,
+      "suitable_for_final_assembly": false,
+      "status": "BBOX_DIFFERS"
+    },
+    {
+      "sheet": "sol_sac_urun_girisi",
+      "source_component": "K_GOVDE__kabuk[0]",
+      "bbox_error_mm": 0.000164031982421875,
+      "full_surface_equality_verified": false,
+      "suitable_for_final_assembly": false,
+      "sample_count": 132,
+      "source_vertex_count": 830,
+      "max_sample_distance_mm": 0.0001507855490823713,
+      "worst_point_world_mm": [
+        4010.441780090332,
+        1101.8235683441162,
+        -828.499972820282
+      ],
+      "status": "SAMPLED_VERTICES_MATCH"
+    },
+    {
+      "sheet": "sag_sac_E_penceresi",
+      "source_component": "K_GOVDE__kabuk[1]",
+      "bbox_error_mm": 0.000217437744140625,
+      "full_surface_equality_verified": false,
+      "suitable_for_final_assembly": false,
+      "sample_count": 130,
+      "source_vertex_count": 694,
+      "max_sample_distance_mm": 0.000217437744140625,
+      "worst_point_world_mm": [
+        4377.999782562256,
+        791.0000085830688,
+        -828.499972820282
+      ],
+      "status": "SAMPLED_VERTICES_MATCH"
+    },
+    {
+      "sheet": "ust_sac",
+      "source_component": "K_GOVDE__kabuk[5]",
+      "bbox_error_mm": 9.5367431640625e-05,
+      "full_surface_equality_verified": false,
+      "suitable_for_final_assembly": false,
+      "sample_count": 133,
+      "source_vertex_count": 788,
+      "max_sample_distance_mm": 0.7502509059471644,
+      "worst_point_world_mm": [
+        4096.103191375732,
+        1861.8800640106201,
+        -697.7499723434448
+      ],
+      "status": "SURFACE_DIFFERS"
+    },
+    {
+      "sheet": "arka_sac",
+      "source_component": "K_GOVDE__kabuk[2]",
+      "bbox_error_mm": 9.5367431640625e-05,
+      "full_surface_equality_verified": false,
+      "suitable_for_final_assembly": false,
+      "sample_count": 132,
+      "source_vertex_count": 460,
+      "max_sample_distance_mm": 0.00023651123046875,
+      "worst_point_world_mm": [
+        4022.9997634887695,
+        791.0000085830688,
+        -826.2500166893005
+      ],
+      "status": "SAMPLED_VERTICES_MATCH"
+    },
+    {
+      "sheet": "govde_kulak_sol_on_841",
+      "source_component": "K_GOVDE__sac[5]",
+      "bbox_error_mm": 0.000225067138671875,
+      "full_surface_equality_verified": false,
+      "suitable_for_final_assembly": false,
+      "sample_count": 54,
+      "source_vertex_count": 54,
+      "max_sample_distance_mm": 0.00022510055380140824,
+      "worst_point_world_mm": [
+        4026.5002250671387,
+        828.9999961853027,
+        27.000000700354576
+      ],
+      "status": "SAMPLED_VERTICES_MATCH"
+    },
+    {
+      "sheet": "govde_kulak_sol_on_1150",
+      "source_component": "K_GOVDE__sac[6]",
+      "bbox_error_mm": 0.000225067138671875,
+      "full_surface_equality_verified": false,
+      "suitable_for_final_assembly": false,
+      "sample_count": 54,
+      "source_vertex_count": 54,
+      "max_sample_distance_mm": 0.0002263275095852919,
+      "worst_point_world_mm": [
+        4026.5002250671387,
+        1162.500023841858,
+        27.000000700354576
+      ],
+      "status": "SAMPLED_VERTICES_MATCH"
+    },
+    {
+      "sheet": "govde_kulak_sol_on_1600",
+      "source_component": "K_GOVDE__sac[7]",
+      "bbox_error_mm": 0.000225067138671875,
+      "full_surface_equality_verified": false,
+      "suitable_for_final_assembly": false,
+      "sample_count": 54,
+      "source_vertex_count": 54,
+      "max_sample_distance_mm": 0.0002263275095852919,
+      "worst_point_world_mm": [
+        4026.5002250671387,
+        1587.499976158142,
+        27.000000700354576
+      ],
+      "status": "SAMPLED_VERTICES_MATCH"
+    },
+    {
+      "sheet": "govde_kulak_sol_on_1810",
+      "source_component": "K_GOVDE__sac[8]",
+      "bbox_error_mm": 0.000225067138671875,
+      "full_surface_equality_verified": false,
+      "suitable_for_final_assembly": false,
+      "sample_count": 54,
+      "source_vertex_count": 54,
+      "max_sample_distance_mm": 0.00022506822833636984,
+      "worst_point_world_mm": [
+        4026.5002250671387,
+        1797.5000143051147,
+        27.000000700354576
+      ],
+      "status": "SAMPLED_VERTICES_MATCH"
+    },
+    {
+      "sheet": "govde_kulak_sol_arka_841",
+      "source_component": "K_GOVDE__sac[9]",
+      "bbox_error_mm": 0.000225067138671875,
+      "full_surface_equality_verified": false,
+      "suitable_for_final_assembly": false,
+      "sample_count": 54,
+      "source_vertex_count": 54,
+      "max_sample_distance_mm": 0.0002266220955542269,
+      "worst_point_world_mm": [
+        4026.5002250671387,
+        828.9999961853027,
+        -785.0000262260437
+      ],
+      "status": "SAMPLED_VERTICES_MATCH"
+    },
+    {
+      "sheet": "govde_kulak_sol_arka_1150",
+      "source_component": "K_GOVDE__sac[10]",
+      "bbox_error_mm": 0.000225067138671875,
+      "full_surface_equality_verified": false,
+      "suitable_for_final_assembly": false,
+      "sample_count": 54,
+      "source_vertex_count": 54,
+      "max_sample_distance_mm": 0.00022784085776429317,
+      "worst_point_world_mm": [
+        4026.5002250671387,
+        1162.500023841858,
+        -785.0000262260437
+      ],
+      "status": "SAMPLED_VERTICES_MATCH"
+    },
+    {
+      "sheet": "govde_kulak_sol_arka_1600",
+      "source_component": "K_GOVDE__sac[11]",
+      "bbox_error_mm": 0.000225067138671875,
+      "full_surface_equality_verified": false,
+      "suitable_for_final_assembly": false,
+      "sample_count": 54,
+      "source_vertex_count": 54,
+      "max_sample_distance_mm": 0.00022784085776429317,
+      "worst_point_world_mm": [
+        4026.5002250671387,
+        1587.499976158142,
+        -785.0000262260437
+      ],
+      "status": "SAMPLED_VERTICES_MATCH"
+    },
+    {
+      "sheet": "govde_kulak_sol_arka_1720",
+      "source_component": "K_GOVDE__sac[12]",
+      "bbox_error_mm": 0.000225067138671875,
+      "full_surface_equality_verified": false,
+      "suitable_for_final_assembly": false,
+      "sample_count": 54,
+      "source_vertex_count": 54,
+      "max_sample_distance_mm": 0.00022739133703567063,
+      "worst_point_world_mm": [
+        4026.5002250671387,
+        1707.4999809265137,
+        -785.0000262260437
+      ],
+      "status": "SAMPLED_VERTICES_MATCH"
+    },
+    {
+      "sheet": "govde_kulak_sol_orta_680",
+      "source_component": "K_GOVDE__sac[40]",
+      "bbox_error_mm": 44.73247051239014,
+      "full_surface_equality_verified": false,
+      "suitable_for_final_assembly": false,
+      "status": "BBOX_DIFFERS"
+    },
+    {
+      "sheet": "govde_kulak_sol_orta_350",
+      "source_component": "K_GOVDE__sac[120]",
+      "bbox_error_mm": 61.49999499320984,
+      "full_surface_equality_verified": false,
+      "suitable_for_final_assembly": false,
+      "status": "BBOX_DIFFERS"
+    },
+    {
+      "sheet": "govde_kulak_sol_orta_20",
+      "source_component": "K_GOVDE__sac[5]",
+      "bbox_error_mm": 34.500000700354576,
+      "full_surface_equality_verified": false,
+      "suitable_for_final_assembly": false,
+      "status": "BBOX_DIFFERS"
+    },
+    {
+      "sheet": "govde_kulak_sag_on_841",
+      "source_component": "K_GOVDE__sac[13]",
+      "bbox_error_mm": 0.00012969970703125,
+      "full_surface_equality_verified": false,
+      "suitable_for_final_assembly": false,
+      "sample_count": 54,
+      "source_vertex_count": 54,
+      "max_sample_distance_mm": 0.00012975768345553857,
+      "worst_point_world_mm": [
+        4373.499870300293,
+        828.9999961853027,
+        27.000000700354576
+      ],
+      "status": "SAMPLED_VERTICES_MATCH"
+    },
+    {
+      "sheet": "govde_kulak_sag_on_1150",
+      "source_component": "K_GOVDE__sac[14]",
+      "bbox_error_mm": 0.00012969970703125,
+      "full_surface_equality_verified": false,
+      "suitable_for_final_assembly": false,
+      "sample_count": 54,
+      "source_vertex_count": 54,
+      "max_sample_distance_mm": 0.00013187470829968673,
+      "worst_point_world_mm": [
+        4373.499870300293,
+        1162.500023841858,
+        27.000000700354576
+      ],
+      "status": "SAMPLED_VERTICES_MATCH"
+    },
+    {
+      "sheet": "govde_kulak_sag_on_1600",
+      "source_component": "K_GOVDE__sac[15]",
+      "bbox_error_mm": 0.00012969970703125,
+      "full_surface_equality_verified": false,
+      "suitable_for_final_assembly": false,
+      "sample_count": 54,
+      "source_vertex_count": 54,
+      "max_sample_distance_mm": 0.00013187470829968673,
+      "worst_point_world_mm": [
+        4373.499870300293,
+        1587.499976158142,
+        27.000000700354576
+      ],
+      "status": "SAMPLED_VERTICES_MATCH"
+    },
+    {
+      "sheet": "govde_kulak_sag_on_1810",
+      "source_component": "K_GOVDE__sac[16]",
+      "bbox_error_mm": 0.00012969970703125,
+      "full_surface_equality_verified": false,
+      "suitable_for_final_assembly": false,
+      "sample_count": 54,
+      "source_vertex_count": 54,
+      "max_sample_distance_mm": 0.00012970159791043202,
+      "worst_point_world_mm": [
+        4373.499870300293,
+        1797.5000143051147,
+        27.000000700354576
+      ],
+      "status": "SAMPLED_VERTICES_MATCH"
+    },
+    {
+      "sheet": "govde_kulak_sag_arka_841",
+      "source_component": "K_GOVDE__sac[17]",
+      "bbox_error_mm": 0.00012969970703125,
+      "full_surface_equality_verified": false,
+      "suitable_for_final_assembly": false,
+      "sample_count": 54,
+      "source_vertex_count": 54,
+      "max_sample_distance_mm": 0.00013237964831285898,
+      "worst_point_world_mm": [
+        4373.499870300293,
+        828.9999961853027,
+        -785.0000262260437
+      ],
+      "status": "SAMPLED_VERTICES_MATCH"
+    },
+    {
+      "sheet": "govde_kulak_sag_arka_1150",
+      "source_component": "K_GOVDE__sac[18]",
+      "bbox_error_mm": 0.00012969970703125,
+      "full_surface_equality_verified": false,
+      "suitable_for_final_assembly": false,
+      "sample_count": 54,
+      "source_vertex_count": 54,
+      "max_sample_distance_mm": 0.0001344553961758915,
+      "worst_point_world_mm": [
+        4373.499870300293,
+        1162.500023841858,
+        -785.0000262260437
+      ],
+      "status": "SAMPLED_VERTICES_MATCH"
+    },
+    {
+      "sheet": "govde_kulak_sag_arka_1600",
+      "source_component": "K_GOVDE__sac[19]",
+      "bbox_error_mm": 0.00012969970703125,
+      "full_surface_equality_verified": false,
+      "suitable_for_final_assembly": false,
+      "sample_count": 54,
+      "source_vertex_count": 54,
+      "max_sample_distance_mm": 0.0001344553961758915,
+      "worst_point_world_mm": [
+        4373.499870300293,
+        1587.499976158142,
+        -785.0000262260437
+      ],
+      "status": "SAMPLED_VERTICES_MATCH"
+    },
+    {
+      "sheet": "govde_kulak_sag_arka_1810",
+      "source_component": "K_GOVDE__sac[20]",
+      "bbox_error_mm": 0.00012969970703125,
+      "full_surface_equality_verified": false,
+      "suitable_for_final_assembly": false,
+      "sample_count": 54,
+      "source_vertex_count": 54,
+      "max_sample_distance_mm": 0.00013232467408691342,
+      "worst_point_world_mm": [
+        4373.499870300293,
+        1797.5000143051147,
+        -785.0000262260437
+      ],
+      "status": "SAMPLED_VERTICES_MATCH"
+    },
+    {
+      "sheet": "govde_kulak_sag_orta_680",
+      "source_component": "K_GOVDE__sac[122]",
+      "bbox_error_mm": 53.49982833862305,
+      "full_surface_equality_verified": false,
+      "suitable_for_final_assembly": false,
+      "status": "BBOX_DIFFERS"
+    },
+    {
+      "sheet": "govde_kulak_sag_orta_350",
+      "source_component": "K_GOVDE__sac[123]",
+      "bbox_error_mm": 61.49999499320984,
+      "full_surface_equality_verified": false,
+      "suitable_for_final_assembly": false,
+      "status": "BBOX_DIFFERS"
+    },
+    {
+      "sheet": "govde_kulak_sag_orta_20",
+      "source_component": "K_GOVDE__sac[13]",
+      "bbox_error_mm": 34.500000700354576,
+      "full_surface_equality_verified": false,
+      "suitable_for_final_assembly": false,
+      "status": "BBOX_DIFFERS"
+    },
+    {
+      "sheet": "govde_kulak_ust_on_80",
+      "source_component": "K_GOVDE__sac[21]",
+      "bbox_error_mm": 0.000209808349609375,
+      "full_surface_equality_verified": false,
+      "suitable_for_final_assembly": false,
+      "sample_count": 54,
+      "source_vertex_count": 54,
+      "max_sample_distance_mm": 0.00021415244648824333,
+      "worst_point_world_mm": [
+        4092.5002098083496,
+        1857.4999570846558,
+        19.500000402331352
+      ],
+      "status": "SAMPLED_VERTICES_MATCH"
+    },
+    {
+      "sheet": "govde_kulak_ust_on_320",
+      "source_component": "K_GOVDE__sac[22]",
+      "bbox_error_mm": 0.00011444091796875,
+      "full_surface_equality_verified": false,
+      "suitable_for_final_assembly": false,
+      "sample_count": 54,
+      "source_vertex_count": 54,
+      "max_sample_distance_mm": 0.0001222229539678221,
+      "worst_point_world_mm": [
+        4307.499885559082,
+        1857.4999570846558,
+        19.500000402331352
+      ],
+      "status": "SAMPLED_VERTICES_MATCH"
+    },
+    {
+      "sheet": "govde_kulak_ust_arka_80",
+      "source_component": "K_GOVDE__sac[23]",
+      "bbox_error_mm": 0.000209808349609375,
+      "full_surface_equality_verified": false,
+      "suitable_for_final_assembly": false,
+      "sample_count": 54,
+      "source_vertex_count": 54,
+      "max_sample_distance_mm": 0.0002141524464882433,
+      "worst_point_world_mm": [
+        4092.5002098083496,
+        1857.4999570846558,
+        -777.4999737739563
+      ],
+      "status": "SAMPLED_VERTICES_MATCH"
+    },
+    {
+      "sheet": "govde_kulak_ust_arka_200",
+      "source_component": "K_GOVDE__sac[24]",
+      "bbox_error_mm": 9.5367431640625e-05,
+      "full_surface_equality_verified": false,
+      "suitable_for_final_assembly": false,
+      "sample_count": 54,
+      "source_vertex_count": 54,
+      "max_sample_distance_mm": 0.00010457855319719938,
+      "worst_point_world_mm": [
+        4212.500095367432,
+        1857.4999570846558,
+        -777.4999737739563
+      ],
+      "status": "SAMPLED_VERTICES_MATCH"
+    },
+    {
+      "sheet": "onyuz_kapak_K",
+      "source_component": "K_GOVDE__on_seffaf[22]",
+      "bbox_error_mm": 0.000308990478515625,
+      "full_surface_equality_verified": false,
+      "suitable_for_final_assembly": false,
+      "sample_count": 120,
+      "source_vertex_count": 120,
+      "max_sample_distance_mm": 0.000217437744140625,
+      "worst_point_world_mm": [
+        4002.999782562256,
+        789.650022983551,
+        75.24999976158142
+      ],
+      "status": "SAMPLED_VERTICES_MATCH"
+    },
+    {
+      "sheet": "onyuz_kapak_K_ic_tava",
+      "source_component": "K_GOVDE__on_seffaf[23]",
+      "bbox_error_mm": 0.000164031982421875,
+      "full_surface_equality_verified": false,
+      "suitable_for_final_assembly": false,
+      "sample_count": 131,
+      "source_vertex_count": 300,
+      "max_sample_distance_mm": 0.0001465589859809737,
+      "worst_point_world_mm": [
+        4395.999908447266,
+        2192.500114440918,
+        74.00000095367432
+      ],
+      "status": "SAMPLED_VERTICES_MATCH"
+    },
+    {
+      "sheet": "onyuz_kapak_K_karsilik_0",
+      "source_component": "K_GOVDE__on_seffaf[19]",
+      "bbox_error_mm": 0.000156402587890625,
+      "full_surface_equality_verified": false,
+      "suitable_for_final_assembly": false,
+      "sample_count": 8,
+      "source_vertex_count": 8,
+      "max_sample_distance_mm": 0.00015641181282297794,
+      "worst_point_world_mm": [
+        4363.999843597412,
+        980.0000190734863,
+        61.500001698732376
+      ],
+      "status": "SAMPLED_VERTICES_MATCH"
+    },
+    {
+      "sheet": "onyuz_kapak_K_karsilik_1",
+      "source_component": "K_GOVDE__on_seffaf[20]",
+      "bbox_error_mm": 0.000156402587890625,
+      "full_surface_equality_verified": false,
+      "suitable_for_final_assembly": false,
+      "sample_count": 8,
+      "source_vertex_count": 8,
+      "max_sample_distance_mm": 0.0001635187816276852,
+      "worst_point_world_mm": [
+        4363.999843597412,
+        1450.0000476837158,
+        61.500001698732376
+      ],
+      "status": "SAMPLED_VERTICES_MATCH"
+    },
+    {
+      "sheet": "onyuz_kapak_K_karsilik_2",
+      "source_component": "K_GOVDE__on_seffaf[21]",
+      "bbox_error_mm": 0.000156402587890625,
+      "full_surface_equality_verified": false,
+      "suitable_for_final_assembly": false,
+      "sample_count": 8,
+      "source_vertex_count": 8,
+      "max_sample_distance_mm": 0.00016497235120902347,
+      "worst_point_world_mm": [
+        4363.999843597412,
+        1820.0000524520874,
+        61.500001698732376
+      ],
+      "status": "SAMPLED_VERTICES_MATCH"
+    }
+  ]
+}

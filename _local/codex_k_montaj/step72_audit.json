@@ -1,0 +1,47 @@
+{
+  "step": 72,
+  "two_runs_byte_identical": true,
+  "changed_nodes_outside_K_lower_body": [],
+  "ownership_tolerance_mm": 0.01,
+  "permitted_nodes": [
+    "K_BANT__sac",
+    "K_BANT__celik",
+    "K_ITICI__sac",
+    "K_ITICI__celik"
+  ],
+  "subassembly_audit": {
+    "scope": "new foot mounts + new lower structure; source context and full montage still required",
+    "checks": [
+      {
+        "name": "12 explicit foot connections",
+        "passed": true
+      },
+      {
+        "name": "Nut thread engagement >= nominal screw diameter",
+        "passed": true
+      },
+      {
+        "name": "Screw protrusions 1..3 threads",
+        "passed": true
+      },
+      {
+        "name": "All new foot sheets/plaque DFM",
+        "passed": true
+      },
+      {
+        "name": "All new parts valid CAD solids",
+        "passed": true
+      },
+      {
+        "name": "Zero non-weld intersection with new lower structure",
+        "passed": true
+      }
+    ],
+    "unexpected_intersections": [],
+    "weld_intersections": [],
+    "passed": true,
+    "full_assembly_release": false
+  },
+  "full_assembly_release": false,
+  "passed": true
+}
