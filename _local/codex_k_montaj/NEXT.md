@@ -1,6 +1,10 @@
 # K active work — no production or site release
 
-Authoritative completed run: iteration32 on local prototype77/r. 849 named parts, 314195 source triangles, 19 insertion-path problems, 76.05 seconds. Zero precedence cycles. Iteration33 is testing local receiving-axis and below-head entry paths; read its terminal result before launching another planner. Do not treat plan_progress as a completed audit.
+Authoritative completed run: iteration38 on local prototype77/r. 849 named parts, 314195 source triangles, ZERO insertion-path problems, 38.42 seconds; zero unplanned parts and precedence cycles. Every path was checked with current grouped parts and pressed hardware. Bench38 currently tests individual manufacture/assembly of the current custom groups; read its terminal result before launching a dependent job. A clean sequence is NOT a production/connection release.
+
+Final sequence decisions: side panels and their wireways follow low X/Z mechanisms; right-panel1150 ears and their own M5 washers/nuts are preassembled on that panel BEFORE its wireways. Independent M8 frame fixings remain separate. Native kesme_cad_v8 supplier DGRF internals travel as the bought cylinder; our mount, M10 bolts, centring bushes, sensor and port fittings remain independent. The cylinder mount is fitted before electrical brackets and pneumatic hangers close access. No new collision exemptions were added.
+
+Candidate evaluation speed: k_yol_hiz.py stops checking a candidate after its first failed segment. Accepted paths still test EVERY segment with the unchanged v6 serbest/CCD/tolerances. This modifies no geometry or collision exemption and never turns a rejected route into a passing one. Shared _altyapi.py is unchanged. k_yol_probe.py now includes PRESS_BY_SHEET hardware, which early probes omitted; those earlier panel probes do not constitute a complete hardware path proof.
 
 Prototype77/r source SHA256: 5c08c6c90a0724360cdc3764a16a6955ea7023989915eb1f51b7c0bce5ad89f4. A/B identical. Source binding checks every cached source triangle at the inherited 0.0001 mm naming grid, max original vertex adjustment below0.000087mm; it does not claim raw floating bytes equal that rounded cache. Model prototypes74–77 remain unregistered/unpublished. Registered70–73 still require replay on latest F/main input before integration.
 

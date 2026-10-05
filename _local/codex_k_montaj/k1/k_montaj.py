@@ -16,6 +16,8 @@ PEM_SAC={};CEVRE=[a for a in P if P[a]['tur']=='cevre'];KAPGRUP=[]
 def bk(x):return x.replace('_',' ')
 def tr(a):return P[a]['ac']
 exec((HERE/'_altyapi.py').read_text(encoding='utf-8'))
+from k_yol_hiz import install as install_candidate_short_circuit
+install_candidate_short_circuit(globals())
 # The cold cabinet is the real stationary support at the K assembly interface.
 if 'cevre_B' in P:
  basla('cevre_B',np.zeros(3),0.0);YER['cevre_B']=0.0;YERINDE.append('cevre_B')
@@ -62,6 +64,14 @@ if all(a in P for a in ('k_govde_on_seffaf_0','k_govde_on_seffaf_1')):
 for prefix in ('itici_X_MY1B10G-250','itici_Z_MY1B10G-350'):
  head=prefix+'_profil';members=[a for a in (head,prefix+'_uc_kapagi_0',prefix+'_uc_kapagi_1',prefix+'_masa') if a in P]
  if len(members)==4:GROUPS[head]=members;done.update(members[1:])
+# Native kesme_cad_v8 builds these inside the purchased DGRF cylinder;
+# deliver the complete supplier assembly. Our mount, bolts, centring bushes,
+# sensor attachments and air-port fittings remain independently verified.
+head='DGRF-C-63-125_govde'
+internal=['DGRF_silindir_borusu','DGRF_uc_kapagi','DGRF_sensor_rayi','DGRF_boyunduruk','DGRF_kilavuz_mili_0','DGRF_kilavuz_mili_1','DGRF_piston_mili','DGRF_piston']+[f'DGRF_gergi_civatasi_{i}' for i in range(4)]
+assert all(a in P for a in [head]+internal)
+GROUPS[head]=[head]+internal;done.update(internal)
+
 # PulsaJet supplier cover and internal electrical socket arrive with the complete nozzle body.
 head='PulsaJet_AAB10000AUH-104210-VIFC'
 if head in P:
@@ -101,9 +111,23 @@ for x,i in ((40,0),(360,2)):
 # The conveyor's custom frame is assembled on the bench, not treated as
 # a purchased module. Individual fabrication and fixings remain audit gates.
 head='bant_yan_-421'
-members=[head,'bant_yan_-3','bant_traversi_0','bant_traversi_1','olu_plaka','kayma_tablasi','avara_rulosu_46','avara_mili_0','avara_mili_1','tahrik_rulosu_EC5000_354','tahrik_rulosu_EC5000_hex_mil']
+members=[head,'bant_yan_-3','bant_traversi_0','bant_traversi_1','olu_plaka','kayma_tablasi','avara_rulosu_46','avara_mili_0','avara_mili_1','tahrik_rulosu_EC5000_354','tahrik_rulosu_EC5000_hex_mil','tahrik_rulosu_EC5000_M8_civata']
 assert all(a in P for a in members)
 GROUPS[head]=members;done.update(members[1:])
+
+# Mount the long left wireway on its own side panel at the bench, before
+# the lower/upper actuators fill the cabinet. It is not an unmounted cable.
+# Its real clips/fixings remain required by the connection release gate.
+GROUPS['sol_sac_urun_girisi']=['sol_sac_urun_girisi','elk_ic_kanal_0'];done.add('elk_ic_kanal_0')
+
+GROUPS['sag_sac_E_penceresi']=['sag_sac_E_penceresi','elk_ic_kanal_6','elk_ic_kanal_7','elk_ic_kanal_8'];done.update(('elk_ic_kanal_6','elk_ic_kanal_7','elk_ic_kanal_8'))
+
+# The two receiving ears at1150 cannot enter around installed wireways.
+# Fit each ear to its own panel's M5 studs on the bench BEFORE the wireways;
+# retain independent M8 frame bolts, which secure this delivered panel in K.
+right_ears=[f'govde_kulak_sag_{side}_1150'+suffix for side in ('on','arka') for suffix in ('','_bag_pul','_bag_somun')]
+assert all(a in P for a in right_ears)
+GROUPS['sag_sac_E_penceresi'][1:1]=right_ears;done.update(right_ears)
 
 # Pressed bottom studs accompany the base sheet; their attachment must precede support installation.
 PEMS=[a for a in P if a.startswith('k71_alt_saplama_')]
@@ -283,7 +307,7 @@ control=[a for a in P if a.startswith(('plc_','guc_24V','din_ray_','klemens_','s
 for a in control:
  before('pano_plakasi',a)
  for b in P:
-  if b.startswith(('elk_ic_kanal_','elk_zincir_kanal_')):before(a,b)
+  if b.startswith(('elk_ic_kanal_','elk_zincir_kanal_')) and b not in ('elk_ic_kanal_0','elk_ic_kanal_6','elk_ic_kanal_7','elk_ic_kanal_8'):before(a,b)
 for i in range(3):
  fixed=f'onyuz_kapak_K_mentese_{i}_sabit';leaf=f'onyuz_kapak_K_mentese_{i}_kanat'
  before(fixed,leaf)
@@ -390,7 +414,7 @@ remaining=set(items);# Correctly separated side returns must be installed before
 for wall in ('sol_sac_urun_girisi','sag_sac_E_penceresi'):
  before(wall,'arka_sac');before(wall,'ust_sac')
  for a in P:
-  if a.startswith(('bant_yan_','cit_','elk_ic_kanal_','elk_zincir_kanal_','itici_','DGRF','PulsaJet','yag_tarti_','yag_pompa_')) or a=='yag_tenekesi_18L':before(wall,a)
+  if (a.startswith(('bant_yan_','cit_','elk_ic_kanal_','elk_zincir_kanal_','itici_','DGRF','PulsaJet','yag_tarti_','yag_pompa_')) or a=='yag_tenekesi_18L') and a not in ('elk_ic_kanal_0','elk_ic_kanal_6','elk_ic_kanal_7','elk_ic_kanal_8'):before(wall,a)
 before('arka_sac','ust_sac')
 # Keep the top access open while fittings that enter through it are installed.
 for a in ('elk_ic_kanal_8','hava_ic_kanal_0','hava_ic_kanal_1','elk_ic_kanal_5','yag_pompa_rafi','yag_pompa_plakasi','hava_ic_aski_2','hava_ic_aski_3','yag_emis_filtresi','yag_geri_basinc_regulatoru_KBP','yag_pompasi_GJ-N21_EagleDrive','elk_zincir_kanal_1','elk_ic_kanal_2','elk_ic_kanal_3'):
@@ -475,6 +499,37 @@ for wall in ('sol_sac_urun_girisi','sag_sac_E_penceresi'):
 for a in P:
  if a.startswith('k72_itici_taban_'):
   edges.discard(('bant_yan_-421',a));before(a,'bant_yan_-421')
+# Side panels carry wireways: insert the lower pneumatic mechanism and its
+# guide/fittings while the sides are open, then install these side panels.
+for wall in ('sol_sac_urun_girisi','sag_sac_E_penceresi'):
+ for a,b in list(edges):
+  if a==wall and (b.startswith(('itici_X_','itici_Z_')) or b in ('itici_sabit_plaka','cit_giris_1')):edges.discard((a,b))
+ for a in P:
+  if a.startswith(('itici_X_','itici_Z_')) or a in ('itici_sabit_plaka','cit_giris_1'):before(a,wall)
+# Each ear is seated on its stud before its washer and nut are fitted.
+for a in P:
+ if a.startswith('govde_kulak_') and P[a]['tur']=='sac':
+  before(a,a+'_bag_pul');before(a,a+'_bag_somun')
+# A nozzle is attached only after its own carrier and clamp seat.
+for a in P:
+ if a.startswith(('nozul_kelepce_','PulsaJet_')):before('nozul_braketi',a)
+# Small probes establish candidate paths; this full run validates the changed order.
+before('nozul_kelepce_blogu','PulsaJet_AAB10000AUH-104210-VIFC')
+before('nozul_kelepce_blogu','bicak_koruma_halkasi')
+before('PulsaJet_AAB10000AUH-104210-VIFC','PulsaJet_uc_TPU11002_PWMD')
+before('elk_ic_kanal_8','elk_ic_kanal_6')
+# This air duct is mounted before the upper actuator and cross beams close access.
+for a in P:
+ if a.startswith('DGRF') or a in ('kopru_kirisi_-126','kopru_kirisi_-286'):before('hava_ic_kanal_0',a)
+# Install side-panel receiving ears after the panel and its real studs;
+# their own receiving-axis paths remain checked, including hardware.
+for a in P:
+ if a.startswith('govde_kulak_sag_') and P[a]['tur']=='sac':before('sag_sac_E_penceresi',a)
+for a in ('hava_ic_kanal_3','hava_ic_aski_4','hava_ic_aski_5','hava_ic_aski_6','hava_ic_aski_7'):
+ before('DGRF_baglanti_plakasi',a);before('DGRF-C-63-125_govde',a)
+# Fit the cylinder's own plate before electrical brackets close its access.
+for a in ('elk_k_celik_2','elk_k_celik_3','elk_k_celik_4','elk_k_celik_5','elk_k_tarti_celik_0'):before('DGRF_baglanti_plakasi',a)
+# Guard supports enter horizontally at head-plate height, not through the ring.
 ordered=[];cycle_breaks=[]
 while remaining:
  ready=[a for a in remaining if not any(b==a and x in remaining for x,b in edges)]
@@ -512,8 +567,13 @@ for a in ordered:
   elif a.startswith('govde_kulak_') and P[a]['tur']=='sac' and ('_on_' in a or '_arka_' in a) and not '_ust_' in a:
    sign=1 if '_sol_' in a else -1
    alternatives=[YOL((0,700,0),(sign*d,0,0)) for d in (30,50,100)]+[YOL((sign*50,0,0))]+AD
-  elif a.startswith('bicak_') or a.startswith('koruma_braketi_'):
+  elif a.startswith('koruma_braketi_'):
+   alternatives=[YOL((0,0,950),(d,0,0),(0,12,0)) for d in (-50,50)]+[YOL((0,0,-950),(d,0,0),(0,12,0)) for d in (-50,50)]+[YOL((0,700,0),(d,0,0)) for d in (-50,50)]+AD
+  elif a.startswith('bicak_'):
    alternatives=[YOL((0,0,950),(0,-d,0)) for d in (60,100)]+[YOL((0,-60,0))]+AD
+  elif a=='nozul_kelepce_blogu':alternatives=[YOL((0,0,950),(0,50,0),(35,0,0))]+AD
+  elif a=='PulsaJet_AAB10000AUH-104210-VIFC':alternatives=[YOL((0,0,950),(35,0,0),(0,50,0))]+AD
+  elif a=='PulsaJet_uc_TPU11002_PWMD':alternatives=[YOL((0,0,950),(35,0,0),(0,-50,0))]+AD
   elif a=='nozul_braketi':alternatives=[YOL((0,0,950),(50,0,0)),YOL((0,700,0),(50,0,0)),YOL((0,700,0),(100,0,0))]+AD
   elif a=='hava_ic_kanal_1':alternatives=[YOL((0,700,0),(0,0,d)) for d in (150,250,350)]+[YOL((0,0,950))]+AD
   elif a in ('elk_ic_kanal_8','hava_ic_kanal_0'):
@@ -522,7 +582,7 @@ for a in ordered:
   elif a=='elk_zincir_kanal_0':alternatives=[YOL((0,35,0))]+AD
   elif a=='elk_zincir_kanal_2':alternatives=[YOL((-35,0,0))]+AD
   elif a=='arka_sac':alternatives=[YOL((0,0,-950))]+AD
-  elif a=='sag_sac_E_penceresi':alternatives=[YOL((650,0,0)),YOL((0,0,950),(24,0,0))]+AD
+  elif a=='sag_sac_E_penceresi':alternatives=[YOL((0,0,950),(0,y,0),(50,0,0)) for y in (150,200,100)]+[YOL((0,0,950),(50,0,0),(0,150,0)),YOL((650,0,0)),YOL((0,0,950),(24,0,0))]+AD
   elif a=='sol_sac_urun_girisi':alternatives=[YOL((-650,0,0)),YOL((0,0,950),(-24,0,0)),YOL((0,0,-950),(-24,0,0))]+AD
   elif a=='bant_yan_-3':alternatives=[YOL((0,700,0),(0,0,-100)),YOL((0,700,0),(0,0,12)),YOL((0,0,950))]+AD
   elif a=='bant_yan_-421':alternatives=[YOL((0,700,0),(0,0,-d)) for d in (50,100,150)]+AD

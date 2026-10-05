@@ -11,26 +11,37 @@ import v2geo as G
 from k_sac_kaynak import load
 D=pickle.load((HERE/'k_parca.pkl').open('rb'));P=D['P'];SAC,_=load(P)
 # Reuse the declared groups without running the station placement loop.
-text=(HERE/'k_montaj.py').read_text(encoding='utf-8');prefix=text.split('# Pressed bottom studs accompany')[0]
+text=(HERE/'k_montaj.py').read_text(encoding='utf-8');prefix=text.split('ordered=[];cycle_breaks=[]')[0]
 initial={'__file__':str(HERE/'k_montaj.py'),'__name__':'bench_initial'};exec(compile(prefix,str(HERE/'k_montaj.py'),'exec'),initial)
 report=[];bench_plans={};t0=time.time()
 for head,members in initial['GROUPS'].items():
  if not any(a in SAC for a in members):continue
- seams=initial['WELDS'].get(head,[]);parts={a:P[a] for a in members+seams}
+ seams=initial['WELDS'].get(head,[]);presses=list(initial['PRESS_BY_SHEET'].get(head,()));parts={a:dict(initial['P'][a]) for a in list(dict.fromkeys(members+seams+presses))}
  ns=dict(bk=lambda a:a.replace('_',' '),tr=lambda a:parts[a]['ac'],P=parts,SAC={a:SAC[a] for a in members if a in SAC},np=np,Y=Y,G=G)
  exec((HERE/'_altyapi.py').read_text(encoding='utf-8'),ns)
+ from k_yol_hiz import install
+ install(ns)
  for pair in initial['HARIC_PLAN']:
   if all(a in parts for a in pair):ns['HARIC_PLAN'].add(pair);ns['HARIC_NEDEN'][pair]=initial['HARIC_NEDEN'].get(pair,'declared source interface')
- tt=0.;operations=[([a],[]) for a in members]
+ tt=0.;operations=[([a],presses if a==head else []) for a in members]
  if head.startswith('k71_alt_flans_'):
   profile=next(a for a in members if a.startswith('k71_dik_destek_'));cap=next(a for a in members if a.startswith('k71_disli_ust_kapak_'))
-  operations=[([head],[]),([profile],[]),([cap],[])]
+  operations=[([head],presses),([profile],[]),([cap],[])]
  if head.startswith('k72_itici_taban_'):
   upper=next(a for a in members if a.startswith('k72_itici_ust_plaka_'))
   fragment=next(a for a in members if a.startswith('itici_taban_'))
   upright=next(a for a in members if a.startswith('k_itici_sac_'))
   assert upper in SAC and fragment in SAC and SAC[upper].record['name']==SAC[fragment].record['name']
-  operations=[([head],[]),([upper,fragment],[]),([upright],[])]
+  operations=[([head],presses),([upper,fragment],[]),([upright],[])]
+ if head=='sag_sac_E_penceresi':
+  ears=[a for a in members if a.startswith('govde_kulak_sag_')]
+  ducts=[a for a in members if a.startswith('elk_ic_kanal_')]
+  # Press the panel studs before installing ears and their washer/nut.
+  operations=[([head],presses)]
+  for side in ('on','arka'):
+   base=f'govde_kulak_sag_{side}_1150'
+   operations += [([base],[]),([base+'_bag_pul'],[]),([base+'_bag_somun'],[])]
+  operations += [([a],[]) for a in ducts]
  if head=='k_govde_on_seffaf_0':
   presses=[a for a in members if '_pem_' in a]
   for a in presses:parts[a]['yan']=[0,0,1];parts[a]['pem_ad']='SP-M5-1'
