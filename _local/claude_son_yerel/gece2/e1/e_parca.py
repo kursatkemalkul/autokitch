@@ -64,6 +64,18 @@ def sinif(a, v):
 
 
 # ---------------------------------------------------------------- 1. adlı parçalar (ent kutusu)
+# zincir 69: preslenmiş somunun deliği (r 2,5) cıvata gövdesiyle çakışık yüzey → tek bağlı bileşen. Üçgen başına ayır:
+# baş + arka sac içindeki gövde (z < −828,5) ve eksenden DIŞA bakan r ≈ 2,5 yüzeyler + uç kapağı → cıvata · diğerleri (gövde dışı, eksene bakan delik) → somun
+for o in [o for o in L if o['dug'] == 'E_GOVDE_BAG__vida']:
+    Q = o['V'][o['F']]; C = Q.mean(1); n = np.cross(Q[:, 1] - Q[:, 0], Q[:, 2] - Q[:, 0])
+    yc = min((float(a.split('_')[-1]) for a in ENT if a.startswith('e_arka_civata_')), key=lambda y: abs(y - (o['lo'][1] + o['hi'][1]) / 2))
+    yc = [v for a, v in ENT.items() if a == 'e_arka_civata_%d' % yc][0]['kutu']; ax = np.array([(yc[0] + yc[1]) / 2, (yc[2] + yc[3]) / 2])
+    rv = C[:, :2] - ax; r = np.linalg.norm(rv, axis=1)
+    civ = (C[:, 2] < -828.5) | ((r < 2.6) & ((np.einsum('ij,ij->i', n[:, :2], rv) > 0) | (np.abs(n[:, 2]) > np.linalg.norm(n[:, :2], axis=1))))
+    for ad_, mm in (('civata', civ), ('pem', ~civ)):
+        Tc = o['F'][mm]; u, inv = np.unique(Tc.reshape(-1), return_inverse=True)
+        L.append(dict(o, V=o['V'][u], F=inv.reshape(-1, 3), lo=o['V'][u].min(0), hi=o['V'][u].max(0)))
+    L.remove(o)
 ENT_DUG = set(v['dugum'] for v in ENT.values())
 TOPLA = collections.defaultdict(list)
 for o in list(L):
