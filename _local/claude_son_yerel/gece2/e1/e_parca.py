@@ -1,23 +1,18 @@
 # -*- coding: utf-8 -*-
-"""F montaj v2 · parça çıkarımı: hat3_v10h (zincir 00–66) → f_parca.pkl (mm, dünya)
-Adlı parçalar: zincir adımlarının _ent.json kayıtları (36 F üst kabin · 38 kapaklar / atış kanalı / baca · 58 acil stop · 59 emniyet · 60 hava emniyet ·
-61 filtre servis) — bileşen kutusu kaydın kutusunun içinde (0,6 mm), birden çok kutuya düşerse EN KÜÇÜK kutu.
-Kalan F bileşenleri (hazır ürünler, elektrik, hava): düğüm + mek ile ürün grupları. F dışı her şey silik çevre.
-Kullanım: python f_parca.py"""
+"""E montaj v2 · parça çıkarımı: hat3_v10h (zincir 00–66) → e_parca.pkl (mm, dünya)
+Adlı parçalar: zincir adımlarının _ent.json kayıtları (35 E gövde / kaide / kapaklar · 59 emniyet) — bileşen kutusu kaydın kutusunun içinde (0,6 mm),
+birden çok kutuya düşerse EN KÜÇÜK kutu.
+Kalan E bileşenleri (şarjör, asansör, besleyici, kutu katlama alt montajları, robot çöpü, elektrik, hava): düğüm + mek ile ürün grupları.
+E dışı her şey silik çevre. Kullanım: python e_parca.py"""
 import sys, os, json, pickle, collections
 import numpy as np
 HERE = os.path.dirname(os.path.abspath(__file__)); os.chdir(HERE)
 sys.stdout.reconfigure(encoding='utf-8')
-BIL = pickle.load(open('f_bil.pkl', 'rb'))
+BIL = pickle.load(open('e_bil.pkl', 'rb'))
 MEK = BIL['MEK']; L = BIL['L']
 P = {}
-ENTF = [('/home/user/main_wt/_local/claude_son_yerel/gece2/adim5e/is/hat3_v9d_ent.json', lambda a, v: v['dugum'].startswith('F_')),
-        ('../t3/is_A/hat3_v9f_ent.json', None),
-        ('/home/user/is/z58A/hat3_v9z_ent.json', lambda a, v: 'KAPAK_F' in v['dugum']),
-        ('/home/user/is/z59A/hat3_v10a_ent.json', lambda a, v: '_F_' in a),
-        ('/home/user/is/z60A/hat3_v10b_ent.json', None),
-        ('/home/user/is/z61A/hat3_v10c_ent.json', None),
-        ('/home/user/is/z67A/hat3_v10i_ent.json', None)]
+ENTF = [('/home/user/main_wt/_local/claude_son_yerel/gece2/adim5e/is/hat3_v9c_ent.json', None),
+        ('/home/user/is/z59A/hat3_v10a_ent.json', lambda a, v: '_E_' in a)]
 ENT = {}
 for f_, s_ in ENTF:
     for a, v in json.load(open(f_, encoding='utf-8'))['parca'].items():
@@ -96,39 +91,48 @@ for o in list(L):
         L.append(dict(o, V=o['V'][u], F=inv.reshape(-1, 3), lo=o['V'][u].min(0), hi=o['V'][u].max(0), artik=True))
     ATANAN.add(id(o))
 for a in sorted(TOPLA):
-    m, t, bom = sinif(a, ENT[a]); grup(a, TOPLA[a], m, t, bom, dugum=ENT[a]['dugum'], kpk='KAPAK_F' in ENT[a]['dugum'])
+    m, t, bom = sinif(a, ENT[a]); grup(a, TOPLA[a], m, t, bom, dugum=ENT[a]['dugum'], kpk=a.startswith(('onyuz_kapak_E', 'sarjor_yan_kapisi')) or a.endswith('aktuator'))
 eks = sorted(a for a in ENT if a not in TOPLA)
 print('adlı parça', len(TOPLA), '· model karşılığı olmayan kayıt', len(eks), eks[:20])
 
-# ---------------------------------------------------------------- 2. F bileşenleri: hazır ürünler + elektrik + hava (düğüm / mek)
-FK = lambda o: kod(o).startswith('F/')
-def g_(ad, f, m, tur, ac):
-    LL = sec(lambda o: FK(o) and f(o))
-    if LL: grup(ad, LL, m, tur, ac)
-g_('tp10_firin', lambda o: o['dug'].startswith(('F_TP10', 'F_CIKIS_PLAKA')) or o['dug'].startswith('F_DONER__RULO_TP'), 'alu', 'mek', 'TP10 tünel fırın (konveyör + IR + gövde · hazır ürün, tek parça)')
-g_('yukleme_bandi_motor', lambda o: o['dug'] == 'F_YUKLEME_BANDI__motor', 'motor', 'mek', 'Yükleme bandı motoru (redüktörlü · hazır)')
-g_('yukleme_bandi', lambda o: o['dug'].startswith(('F_YUKLEME_BANDI', 'F_DONER__RULO_GB')), 'mekanizma', 'mek', 'Yükleme bandı (PTFE bant + rulolar + şase · hazır ürün)')
-g_('kompresor', lambda o: o['dug'].startswith(('HAVA_KOMPRESOR', 'F_KOMP_AYAK')), 'motor', 'mek', 'Kompresör + tank + ayaklar (hazır ürün)')
-g_('hava_emniyet_valfi', lambda o: o['dug'].startswith('HAVA_EMNIYET'), 'mekanizma', 'mek', 'Festo MS6-SV-E emniyet valfi + bobin + susturucu (adım 60)')
-g_('hava_hatti', lambda o: o['dug'].startswith(('HAVA_IC', 'ELK_ZINCIR__hava')) or (o['dug'].startswith('ELK_ZINCIR') and kod(o) == 'F/Hava'), 'hava', 'kablo', 'Hava hattı (hortum + askılar + rakorlar)')
-g_('davlumbaz_fan_filtre', lambda o: o['dug'].startswith('F_DAVLUMBAZ') and o['dug'] not in ('F_DAVLUMBAZ__sac',), 'mekanizma', 'mek', 'Davlumbaz: fan + yağ filtresi + çerçeve (hazır ürün)')
-g_('acil_stop', lambda o: o['dug'].startswith('ACIL_STOP'), 'elektrik', 'mek', 'Acil stop Schneider XB4BS8442 (sağ kapakta, adım 58)')
-for o in sorted(sec(lambda o: FK(o) and o['dug'].startswith('EMNIYET')), key=lambda o: (o['lo'][0], o['dug'])):
-    yan = 'sol' if o['lo'][0] < 3250 else 'sag'
-    tip = 'aktuator' if 'siyah' in o['dug'] else ('braket' if 'paslanmaz' in o['dug'] else 'sensor')
-    grup('emniyet_%s_%s' % (yan, tip), [o], 'koyu' if tip != 'braket' else 'mekanizma', 'mek', {'sensor': 'Kapak emniyet sensörü Schmersal RSS36', 'aktuator': 'RST36 aktüatör (kapakta)', 'braket': 'Sensör braketi 2 mm'}[tip], kpk=tip == 'aktuator')
-KAB = ('kablo',)
+# ---------------------------------------------------------------- 2. E bileşenleri: alt montajlar + elektrik + hava (düğüm / mek)
+EK = lambda o: kod(o).startswith('E/')
+def g_(ad, f, m, tur, ac, **k):
+    LL = sec(lambda o: EK(o) and f(o))
+    if LL: grup(ad, LL, m, tur, ac, **k)
+def ds(*p): return lambda o: o['dug'].startswith(p)
+g_('karton_stok', lambda o: o['dug'].startswith(('E_SARJOR__karton', 'E_KUTU__')), 'karton', 'urun', 'Kutu kartonu yığını (işletmede doldurulur)')
+g_('sarjor_asansor', lambda o: o['dug'].startswith('E_SARJOR') or kod(o) == 'E/Asansör', 'mekanizma', 'mek', 'Şarjör + asansör (yığın kaldırma, motor + vida · hazır alt montaj)')
+g_('besleyici_vakum', lambda o: o['dug'].endswith('__VAC_Y') or (kod(o) == 'E/Hava' and 'vakum' in o['dug']), 'mekanizma', 'mek', 'Vakum kolu (Y ekseni + vantuzlar · alt montaj)')
+g_('besleyici_itici', lambda o: o['dug'].endswith('__ITICI'), 'mekanizma', 'mek', 'İtici (karton sürücü · alt montaj)')
+g_('besleyici_motor', lambda o: o['dug'] in ('E_BESLEYICI__motor', 'E_BESLEYICI__kayis'), 'motor', 'mek', 'Besleyici motoru + kayış')
+g_('besleyici_sasi', lambda o: o['dug'].startswith('E_BESLEYICI') or kod(o) == 'E/Besleyici', 'alu', 'mek', 'Besleyici şasisi (profil + raylar + sensör)')
+for k_, ad_, ac_ in (('KOPRU', 'kopru', 'Köprü (katlama girişi · motor + sensör)'), ('NEST', 'kalip_yuva', 'Kalıp yuvası (nest)'),
+                     ('KATLAYICI', 'kapak_katlayici', 'Kapak katlayıcı kolu'), ('CNR_LIFT', 'kose_kaldirici', 'Köşe kaldırıcılar × 4 (motorlu)'),
+                     ('FRONT_Y', 'parmak_y', 'Ön parmak Y ekseni (motor + kayış)')):
+    g_(ad_, lambda o, k_=k_: o['dug'].endswith('__' + k_), 'mekanizma', 'mek', ac_)
+g_('kose_piston', lambda o: o['dug'].startswith('E_KOSE') and o['dug'].endswith('__PISTON'), 'mekanizma', 'mek', 'Köşe pistonu')
+g_('kose_tutucu', lambda o: o['dug'].startswith('E_KOSE__CNR'), 'mekanizma', 'mek', 'Köşe tutucuları × 4')
+g_('kalip', ds('E_KALIP'), 'alu', 'mek', 'Katlama kalıbı (çerçeve + motor + sensör · alt montaj)')
+g_('kapak_mekanizmasi', ds('E_KAPAK'), 'mekanizma', 'mek', 'Kutu kapağı katlama mekanizması (motorlar + kol)')
+g_('kopru_govde', ds('E_KOPRU'), 'mekanizma', 'mek', 'Köprü gövdesi + motor')
+g_('parmak', ds('E_PARMAK'), 'mekanizma', 'mek', 'Ön parmaklar')
+g_('piston_itici', lambda o: o['dug'].startswith('E_PISTON') and not o['dug'].endswith('__PISTON'), 'mekanizma', 'mek', 'Arka itici (motor + kayış + sensör)')
+g_('piston', ds('E_PISTON'), 'mekanizma', 'mek', 'Arka itici pistonu')
+g_('robot_copu', lambda o: o['dug'].startswith(('E_COP', 'DUZ_E_OLUK')), 'mekanizma', 'mek', 'Robot çöpü (kova + poşet + oluk · sol önde)')
+g_('elk_sensor', lambda o: o['dug'].startswith('E_ELEKTRIK') and o['dug'].endswith(('__sensor', '__aluminyum')) and o['lo'][1] < 1300, 'elektrik', 'mek', 'Asansör / besleyici / katlama uç sensörleri')
+g_('istasyon_kutusu', ds('E_ELEKTRIK'), 'elektrik', 'mek', 'E istasyon panosu (Beckhoff + Siemens + sürücüler + DIN · hazır, arka tavanda)')
+g_('hava_hatti', lambda o: kod(o) == 'E/Hava', 'hava', 'kablo', 'Hava (vakum) hattı + rakor')
 g_('kablo_guc', lambda o: o['dug'].endswith(('__kablo', '__kablo_guc')), 'guc', 'kablo', 'Güç kabloları (kırmızı)')
 g_('kablo_bilgi', lambda o: o['dug'].endswith(('__kablo_sinyal', '__kablo_veri')), 'bilgi', 'kablo', 'Bilgi kabloları (mavi)')
-g_('istasyon_kutusu', lambda o: o['dug'].startswith('ELK_ISTASYON') and o['dug'] != 'ELK_ISTASYON__rakor', 'elektrik', 'mek', 'F istasyon kutusu (pano + DIN + cihazlar · hazır)')
-g_('fis_paneli_sol', lambda o: o['dug'].startswith('ELK_ZINCIR') and kod(o) == 'F/Elektrik' and (o['lo'][0] + o['hi'][0]) / 2 < 3250, 'elektrik', 'mek', 'Fiş paneli sol (Harting + M12 · TOPPING tarafı)')
-g_('fis_paneli_sag', lambda o: o['dug'].startswith('ELK_ZINCIR') and kod(o) == 'F/Elektrik', 'elektrik', 'mek', 'Fiş paneli sağ (Harting + M12 · K tarafı)')
-for o in sorted(sec(lambda o: FK(o) and o['dug'].startswith(('ELK_', 'F_UST_KABIN__plastik'))), key=lambda o: (o['lo'][0], o['lo'][1])):
-    grup('elk_%s_%d_%d' % (o['dug'].split('__')[-1], round(o['lo'][0]), round(o['lo'][1])), [o], 'kanal' if 'kanal' in o['dug'] else 'elektrik', 'mek', '%s (F iç)' % o['dug'].split('__')[-1])
-# F gövde kalan (ent dışı): kapak menteşe gövdesi / gazlı yay / ön şeffaf / ... — kendi bileşenleriyle
-for o in sorted(sec(lambda o: FK(o)), key=lambda o: (o['dug'], o['lo'][0], o['lo'][1], o['lo'][2])):
-    d = o['dug']; kp = 'KAPAK_F' in d or 'YAY_F' in d
-    grup('%s_%d_%d_%d' % (d.lower().replace('__', '_'), round(o['lo'][0]), round(o['lo'][1]), round(o['lo'][2])), [o], 'mekanizma', 'mek', '%s (F)' % d, kpk=kp)
+g_('fis_paneli', lambda o: o['dug'].startswith('ELK_ZINCIR'), 'elektrik', 'mek', 'Fiş paneli (Harting + M12 · K tarafı, sol yan)')
+for o in sorted(sec(lambda o: EK(o) and o['dug'].startswith('EMNIYET')), key=lambda o: (o['lo'][1], o['lo'][0], o['dug'])):
+    tip = 'aktuator' if 'siyah' in o['dug'] else ('braket' if 'paslanmaz' in o['dug'] else 'sensor')
+    grup('emniyet_%s_%d_%d' % (tip, round(o['lo'][0]), round(o['lo'][1])), [o], 'koyu' if tip != 'braket' else 'mekanizma', 'mek',
+         {'sensor': 'Kapak emniyet sensörü Schmersal RSS36', 'aktuator': 'RST36 aktüatör (kapakta)', 'braket': 'Sensör braketi 2 mm'}[tip], kpk=tip == 'aktuator')
+for o in sorted(sec(lambda o: EK(o)), key=lambda o: (o['dug'], o['lo'][0], o['lo'][1], o['lo'][2])):
+    d = o['dug']
+    grup('%s_%d_%d_%d' % (d.lower().replace('__', '_'), round(o['lo'][0]), round(o['lo'][1]), round(o['lo'][2])), [o], 'mekanizma', 'mek', '%s (E)' % d)
 
 # ---------------------------------------------------------------- 3. çevre (silik)
 def cev(ad, f, ac):
@@ -136,14 +140,13 @@ def cev(ad, f, ac):
     if not LL: return
     for o in LL: ATANAN.add(id(o))
     ekle(ad, *birles(LL), 'silik', 'cevre', ac)
-cev('cevre_B', lambda o: o['dug'].startswith(('B_', 'CEK_', 'ELK_DOLAP')) or (o['dug'].startswith('ELK_IC') and o['hi'][1] < 800), 'B dolabı (silik çevre)')
-cev('cevre_U', lambda o: o['dug'].startswith(('U_', 'ELK_ANA_PANO', 'D_PIZZA')) or kod(o).startswith('U/'), 'U üst depo + ana pano (silik çevre)')
-cev('cevre_TOPPING', lambda o: kod(o).startswith('TOPPING/') or o['dug'].startswith(('TOPPING_', 'KAIDE_C')), 'TOPPING (silik çevre)')
+cev('cevre_B', lambda o: o['dug'].startswith(('B_', 'CEK_', 'ELK_DOLAP', 'ELK_IC', 'ELK_ISTASYON')) or kod(o).startswith('B/'), 'B dolabı (silik çevre)')
+cev('cevre_U', lambda o: o['dug'].startswith(('U_', 'ELK_ANA_PANO', 'D_PIZZA')) or kod(o).startswith('U/'), 'U üst depo (silik çevre)')
 cev('cevre_K', lambda o: kod(o).startswith('K/') or o['dug'].startswith('K_'), 'K (silik çevre)')
 cev('cevre_diger', lambda o: True, 'Hat (silik çevre)')
 kalan = [o for o in L if id(o) not in ATANAN]
 print('ATANMAYAN', len(kalan))
-pickle.dump(dict(P=P, ENT=ENT), open('f_parca.pkl', 'wb'))
+pickle.dump(dict(P=P, ENT=ENT), open('e_parca.pkl', 'wb'))
 c = collections.Counter(v['tur'] for v in P.values()); print('tür', dict(c))
 for a in sorted(P):
     if P[a]['tur'] in ('sac', 'profil', 'mek', 'cevre', 'pu', 'kablo'):

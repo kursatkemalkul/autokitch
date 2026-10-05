@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
-"""F MONTAJ ANİMASYONU v2 (model: hat3_v10h · zincir 00–66) · 5 Eki 2026 · Claude · bulut oturumu
-Girdi: f_parca.pkl (f_parca.py), acinim_F (adım 36 F üst kabin + adım 38 kapak / atış kanalı) · Çıktı: plan_f.pkl → f_cikti.py
-Altyapı: _altyapi.py (TOPPING v6 ile aynı: zaman çizelgesi, plan anı yol denetimi, yerleştirici).
-Kapsam: F üst kabin sacları + profiller, TP10 fırın, yükleme bandı, davlumbaz (atış kanalı, fan + filtre, filtre servis ağzı), kompresör + hava hattı +
-emniyet valfi, F istasyon kutusu + kanallar + fiş panelleri + kablolar, iki ön kapak (menteşe, gazlı yay, acil stop, emniyet aktüatörü).
-Baca (U_F içinden çıkar, flanşı U tavanına) ve pizza kutusu stoğu U montajında / işletmede → bu animasyonda yok."""
+"""E (KUTU KATLAMA) MONTAJ ANİMASYONU v2 (model: hat3_v10h · zincir 00–66) · 5 Eki 2026 · Claude · bulut oturumu
+Girdi: e_parca.pkl (e_parca.py), acinim_E (adım 35 E gövde: h3_e_sac_v1) · Çıktı: plan_e.pkl → e_cikti.py
+Altyapı: _altyapi.py (TOPPING v6 / F v2 ile aynı: zaman çizelgesi, plan anı yol denetimi, yerleştirici).
+Kapsam: kaide + ayaklar, kaynaklı alt montaj (taban + ön kasa + kulaklar), şarjör + asansör, besleyici, kalıp / köprü / kapak / köşe / parmak /
+piston mekanizmaları, yan / üst / arka saclar (FHP saplama + içten pul + fiberli somun), E panosu + fiş paneli + kablolar + vakum hattı,
+4 ön kapak + menteşe + bas-aç + emniyet, şarjör yan kapısı, robot çöpü. Karton yığını işletmede doldurulur → bu animasyonda yok."""
 import sys, os, json, pickle, math, time, collections
 import numpy as np
 HERE = os.path.dirname(os.path.abspath(__file__)); os.chdir(HERE)
@@ -12,9 +12,10 @@ sys.path.insert(0, os.path.join(HERE, '..', 'cekmece')); sys.path.insert(0, HERE
 import yol_denetim_v2 as Y
 import v2geo as G
 import sac_morf_t5 as SM
+import re as _re
 T0 = time.time()
-D0 = pickle.load(open('f_parca.pkl', 'rb')); P = D0['P']; ENT = D0['ENT']
-for a in [a for a in P if a.startswith(('baca_', 'arayuz_baca', 'yalitim_baca', 'd_pizza'))]: del P[a]
+D0 = pickle.load(open('e_parca.pkl', 'rb')); P = D0['P']; ENT = D0['ENT']
+for a in [a for a in P if a.startswith('karton_stok')]: del P[a]
 
 # ------------------------------------------------------------------ 1. sac parçaları: açınımdan ağ
 SAC = {}
@@ -26,64 +27,49 @@ for f in sorted(os.listdir(SM.ACN_DIR)):
     V, F = (s.dunya(s.yerel({})), s.F) if s.bukum else (old['V'], old['F'])
     P[ad] = dict(old, V=V, F=F, Vm=old['V'], Fm=old['F'], model_lo=old['V'].min(0), model_hi=old['V'].max(0))
 print('sac', len(SAC))
-AD_TR = {'f_ust_yan_sol': 'F yan sol 1,5', 'f_ust_yan_sag': 'F yan sağ 1,5', 'f_ust_arka_sac': 'F arka sac 1,5', 'f_ust_tavan_sac': 'F tavan 1,5',
-         'f_ust_taban_levhasi': 'F taban levhası 1,5', 'f_ust_taban_yalitim_kilifi_on': 'Taban yalıtım kılıfı ön 0,8', 'f_ust_taban_yalitim_kilifi_arka': 'Taban yalıtım kılıfı arka 0,8',
-         'f_davlumbaz_bolme_duvari': 'Davlumbaz bölme duvarı 1,5', 'f_ust_tavan_kirisi': 'Tavan kirişi 30 × 30', 'f_ust_tavan_kirisi_tapa': 'Tavan kirişi tapası',
-         'govde_fu_kosebent_sol_arka_ust': 'Köşebent sol arka üst', 'f_ust_alt_profil_on': 'Alt profil ön', 'f_ust_alt_profil_orta': 'Alt profil orta', 'f_ust_alt_profil_arka': 'Alt profil arka',
-         'onyuz_f_ust_dikme_0': 'Ön dikme', 'onyuz_f_ust_ust_kayit': 'Ön üst kayıt', 'davlumbaz_atis_kanali_L1': 'Atış kanalı L1 1,5', 'davlumbaz_atis_kanali_L2': 'Atış kanalı L2 1,5',
-         'filtre_servis_tapasi': 'Filtre servis tapası 1,5'}
-import re as _re
+AD_TR = {'taban_sac_3': 'Taban 3 mm', 'sol_sac_pizza_penceresi': 'Yan sol 1,5 (pizza penceresi)', 'sag_sac': 'Yan sağ 1,5 (şarjör açıklığı)',
+         'arka_sac': 'Arka sac 1,5', 'ust_sac': 'Üst sac 1,5', 'govde_kosebent_sag_arka_alt': 'Köşebent sağ arka alt',
+         'kaide_e_ray_on': 'Kaide ön ray 60 × 60', 'kaide_e_ray_arka': 'Kaide arka ray 60 × 60', 'onyuz_dikme_sol': 'Ön dikme sol', 'onyuz_dikme_orta': 'Ön dikme orta',
+         'onyuz_dikme_sag': 'Ön dikme sağ', 'sarjor_yan_kapisi': 'Şarjör yan kapısı 1,5', 'sarjor_yan_kapisi_ic_tava': 'Şarjör kapısı iç tava',
+         'sarjor_yan_kapisi_mentese_lamasi': 'Kapı menteşe laması 3', 'sarjor_yan_kapisi_basac_lamasi': 'Bas-aç laması 3'}
 def bk(x): return x.replace('_', ' ')
 def tr(a):
     if a in AD_TR: return AD_TR[a]
+    m = _re.match(r'onyuz_kapak_E_(alt|ust)_(sol|sag)$', a)
+    if m: return 'Kapak %s %s (dış tava 1,5)' % ({'alt': 'alt', 'ust': 'üst'}[m.group(1)], {'sol': 'sol', 'sag': 'sağ'}[m.group(2)])
     return P[a]['ac'].split('·')[0].split(';')[0].strip() if a in P else a
 CEVRE = [a for a in P if a.startswith('cevre')]
 def kutu(a): return P[a]['V'].min(0), P[a]['V'].max(0)
 def merkez(a): l, h = kutu(a); return (l + h) / 2
 
-# ------------------------------------------------------------------ PEM / saplama → sac (üretimde preslenir, sacla gelir)
+# ------------------------------------------------------------------ PEM / FHP saplama → sac (üretimde preslenir, sacla gelir) · host.json: baş hangi sacın yüzüyle aynı
 PEM_SAC = {}
 def pem_bagla(p, s, yan, ad):
     P[p]['sac'] = s; P[p]['yan'] = np.asarray(yan, float); P[p]['pem_ad'] = ad; PEM_SAC.setdefault(s, []).append(p)
-def yon_disa(p, s):
-    """saplamanın uzun ekseni boyunca sacın merkezinden saplamaya doğru (PEM sacın bu yüzüne preslenir)"""
-    l, h = kutu(p); e = int(np.argmax(h - l)); ls, hs = P[s]['model_lo'] if 'model_lo' in P[s] else kutu(s)[0], P[s]['model_hi'] if 'model_hi' in P[s] else kutu(s)[1]
-    y = np.zeros(3); y[e] = 1.0 if (l[e] + h[e]) / 2 > (ls[e] + hs[e]) / 2 else -1.0
-    return y
-for a in list(P):
-    s = None
-    if a.startswith('govde_fu_bag_') and a.endswith('_saplama'):
-        k = a.split('_')[3]; y_ = a.split('_')[4]
-        if k in ('tavan', 'bolme') and y_ in ('sol', 'sag'): s = 'f_ust_yan_' + y_
-        elif k == 'tavan' and y_ == 'arka': s = 'f_ust_tavan_sac'
-        elif k == 'arka': s = 'f_ust_arka_sac'
-        elif k == 'kosebent': s = 'f_ust_yan_sol' if y_ == 'yan' else 'f_ust_arka_sac'
-    elif a.startswith('govde_fu_pem_m8'): s = 'f_ust_tavan_sac'
-    elif a.startswith('arayuz_mek_f_ust_taban_levhasi'): s = 'f_ust_taban_levhasi'
-    elif a.startswith('arayuz_mek_f_ust_yan_sol') or a.startswith('arayuz_j1_burc'): s = 'f_ust_yan_sol'
-    elif a.startswith('arayuz_mek_f_ust_yan_sag') or a.startswith('arayuz_j2_burc'): s = 'f_ust_yan_sag'
-    elif _re.match(r'onyuz_kapak_F_(sol|sag)_mentese_\d+_pem', a): s = 'onyuz_kapak_F_%s_dis_tava' % a.split('_')[3]
-    if s:
-        pem_bagla(a, s, yon_disa(a, s) if 'kapak' not in a else (0, 0, -1.0), 'PEM SP-M8-1' if 'm8' in a else ('PEM SP-M5-2' if 'kapak' in a else 'PEM FHP-M5'))
+HOST = json.load(open('host.json'))
+for p, h in HOST.items():
+    if p not in P or not h: continue
+    s, yan = h
+    if s not in P: continue
+    pem_bagla(p, s, yan, 'PEM FHP-M6' if 'taban_3' in p or p.startswith('arayuz_mek_taban') else 'PEM FHP-M5')
+for p in [a for a in P if a.startswith('govde_pem_m8_ust')]: pem_bagla(p, 'ust_sac', (0, -1.0, 0), 'PEM SP-M8')
 print('PEM / saplama', {k: len(v) for k, v in PEM_SAC.items()})
-# pul / somun / vida / perçin giriş ekseni: saplamanın ekseni boyunca sacın tarafına
+# pul / somun giriş ekseni: saplamanın ucundan başa doğru (baş = yan)
 for a in list(P):
-    m = _re.match(r'(govde_fu_bag_.+)_(pul|somun)$', a)
-    if m and m.group(1) + '_saplama' in P:
-        sp = m.group(1) + '_saplama'; s = P[sp]['sac']; P[a]['eks'] = -yon_disa(sp, s)
-    elif a.startswith('f_ust_kilif_percin'): P[a]['eks'] = np.array([0, 1.0, 0])
-    elif _re.match(r'onyuz_kapak_F_(sol|sag)_mentese_\d+_vida', a): P[a]['eks'] = np.array([0, 0, 1.0])
+    m = _re.match(r'(.+)_(pul|somun)$', a)
+    if m and m.group(1) + '_saplama' in P and 'yan' in P[m.group(1) + '_saplama']:
+        P[a]['eks'] = P[m.group(1) + '_saplama']['yan'].copy()
+for a in [a for a in P if a.startswith('kaide_e_vida')]: P[a]['eks'] = np.array([0, -1.0, 0])
+for a in [a for a in P if _re.match(r'ayak_\d+(_kontra)?$', a)]: P[a]['eks'] = np.array([0, 1.0, 0])
+for a in [a for a in P if _re.match(r'onyuz_kapak_E_mentese_(sol|sag)_\d_sabit_vida', a)]: P[a]['eks'] = np.array([-1.0 if '_sol_' in a else 1.0, 0, 0])
 
 exec(open(os.path.join(HERE, '_altyapi.py'), encoding='utf-8').read())
 
 # ------------------------------------------------------------------ çevre + beyanlı plan istisnaları
-for a in ('cevre_B',):
-    if a in P: basla(a, np.zeros(3), 0.0); YER[a] = 0.0; YERINDE.append(a)
 for s_, L_ in PEM_SAC.items():
     for p in L_: HARIC_PLAN.add((p, s_))
 def haric(a, b, neden): HARIC_PLAN.add((a, b)); HARIC_NEDEN[(a, b)] = neden
 KAY = lambda pre: sorted(k for k in P if k.startswith(pre) and P[k]['tur'] == 'kaynak')
-UST, ON, ARKA, SOL, SAG = YOL((0, 600, 0)), YOL((0, 0, 900)), YOL((0, 0, -900)), YOL((-700, 0, 0)), YOL((700, 0, 0))
 def koy(adlar, adaylar, metin, **k):
     global t
     if isinstance(adlar, str): adlar = [adlar]
@@ -92,142 +78,127 @@ def sira_tak(adlar, t0, yol, sure=0.5, ara=0.12, ofs0=None):
     tt = t0
     for i, a in enumerate(adlar): tt = tak(a, t0 + i * ara, sure, yol, ofs0=ofs0)
     return tt
-def AD(*yon, lift=(20, 40, 120, 300, 500), yan=(30, -30)):
+def AD(*yon, lift=(20, 40, 120, 300, 500), yan=(30, -30), son=()):
+    """yön(ler)den yaklaş · lift: yukarıdan in · yan: x ofsetle · son: son bacak (saplamaya eksen boyunca oturma)"""
     L_ = []
     for d in yon: L_.append(YOL(d))
     for d in yon:
+        for e in son: L_.append(YOL(d, e))
         for h in lift: L_.append(YOL(d, (0, h, 0)))
         for x in yan: L_.append(YOL(d, (x, 0, 0)))
     return L_
 ON9, ARKA9, UST6 = (0, 0, 900), (0, 0, -900), (0, 600, 0)
+SAG7, SOL7 = (900, 0, 0), (-900, 0, 0)
+SON = [(15, 0, 0), (-15, 0, 0), (0, 15, 0), (0, 0, -15), (0, 0, 15), (30, 0, 0), (-30, 0, 0), (0, 30, 0)]
 def vidala(adlar, t0, yol=30.0):
     tt = t0
     for i_, a_ in enumerate(adlar):
-        for b in [b for b in (a_[:-6] + '_pul',) if a_.endswith('_somun') and b in P]: tt = max(tt, tak(b, t0 + i_ * 0.15, 0.4, yol))
-        tt = max(tt, tak(a_, t0 + i_ * 0.15 + 0.3, 0.5, yol))
+        for b in [b for b in (a_[:-6] + '_pul',) if a_.endswith('_somun') and b in P]: tt = max(tt, tak(b, t0 + i_ * 0.12, 0.4, yol))
+        tt = max(tt, tak(a_, t0 + i_ * 0.12 + 0.3, 0.5, yol))
     return tt
-def somunla(on, t0, yol=25.0):
-    """govde_fu_bag_<on>_*: pul + fiberli somun saplamaya"""
-    return vidala(sorted(a for a in P if a.startswith('govde_fu_bag_' + on) and a.endswith('_somun')), t0, yol)
-
-# ================================================================== PLAN
-# v2 sıra (zincir 67 sonrası): yan sol → tavan / köşebent / bölme (yan saplamalarına −x) → davlumbaz + kompresör (arkadan) → arka sac (yarıklar tavan saplamalarına)
-#   → arka iç elektrik (sağdan) → yan sağ (−x) → somunlar / cıvatalar → alt profil + taban → ön çerçeve → kapaklar
-for a_ in ('f_ust_kabin_paslanmaz_3524_1767_-452', 'f_ust_kabin_paslanmaz_3809_1767_-452'):
-    if a_ in P: pem_bagla(a_, 'f_davlumbaz_bolme_duvari', (0, 0, -1.0), 'PEM FHP-M5 (filtre çerçevesi)'); HARIC_PLAN.add((a_, 'f_davlumbaz_bolme_duvari'))
-for a_ in [a for a in P if a.startswith('f_arka_civata')]: P[a_]['eks'] = np.array([0, 0, 1.0])
-for a_ in [a for a in P if _re.match(r'govde_fu_bag_(arka|kosebent_arka)', a) and a.endswith(('_pul', '_somun'))]: P[a_]['eks'] = np.array([0, 0, -1.0])
-for a_ in [a for a in P if a.startswith('govde_fu_bag_tavan_arka') and a.endswith(('_pul', '_somun'))]: P[a_]['eks'] = np.array([0, 1.0, 0])
-for s_ in ('sol', 'sag'):
-    for o_ in [a for a in P if a.startswith('f_ust_kapak_on_seffaf_yay_f_' + s_)] + ['f_ust_kabin_on_seffaf_%s' % ('2501_1597_-8' if s_ == 'sol' else '3987_1597_-8')]:
-        for st_ in [a for a in P if a.startswith('arayuz_mek_f_ust_yan_' + s_)]: haric(o_, st_, 'gazlı yay ucu / kapak tamponu yandaki saplamaya eksen boyunca geçer (model sıfır boşluk)')
-for a_ in [a for a in P if a.startswith('elk_plastik')]:
-    for o_ in ('f_ust_arka_sac', 'f_davlumbaz_bolme_duvari'): haric(a_, o_, 'kablo geçit lastiği sac deliğine geçer (sıkı geçme)')
-KAM.append([0.0, [5.2, 2.8, 2.6], [3.25, 1.3, -0.4]])
+def somunla(rx, t0, yol=25.0):
+    return vidala(sorted(a for a in P if _re.match(rx, a) and a.endswith('_somun')), t0, yol)
+def var(*adlar): return [a for a in adlar if a in P]
+KAM.append([0.0, [6.4, 2.6, 2.4], [4.8, 1.0, -0.4]])
 t = 0.4
-# ---- 1 ÇEVRE
-adim('B dolabı (silik)', 'F, B dolabının (silik) üstüne kurulur; TOPPING (solda) ve K (sağda) sahada F kurulduktan sonra bağlanır.', 'B (silik)')
-olay(t, 'B dolabı yerinde (silik)'); t += 1.0
-# ---- 2 FIRIN + YÜKLEME BANDI
-adim('TP10 fırın ve yükleme bandı', 'TP10 tünel fırını (hazır ürün) tezgâhta yükleme bandı, bant motoru ve motor kablo kanalıyla birleşik; vinçle B\'nin üstüne iner.',
-     'TP10 fırın · yükleme bandı · bant motoru · kablo kanalı')
-kamera_genel(['tp10_firin'], yon=(0.4, 0.5, 0.85), olcek=0.9)
-FG = ['tp10_firin', 'yukleme_bandi', 'yukleme_bandi_motor'] + [a for a in ('elk_kanal_2765_1106_2',) if a in P]
-t = koy(FG, AD(UST6, lift=(300, 500, 800), yan=()), 'TP10 fırın + yükleme bandı (hazır, tezgâhta birleşik) → vinçle B\'nin üstüne')
-# ---- 3 YAN SOL + TAVAN + KÖŞEBENT + BÖLME
-adim('Yan sol, tavan, bölme duvarı', 'Yan sol (1,5 · 2 büküm, preslenmiş saplamalı) soldan B tavanına; tavan (1,5) sağdan sürülür, dönüşü yan saplamalarına geçer (sağ ucu dayamayla tutulur); köşebent ve davlumbaz bölme duvarı da sağdan yan saplamalarına.',
-     'yan sol · tavan · köşebent · bölme duvarı + 2 filtre saplaması · kablo geçit lastiği')
-kamera_genel(['f_ust_yan_sol', 'f_ust_tavan_sac'], yon=(0.5, 0.5, 0.75), olcek=0.9)
-t = koy('f_ust_yan_sol', AD((-700, 0, 0), UST6, lift=(20, 300, 600), yan=()), 'Yan sol → soldan B tavanına', pem=sorted(PEM_SAC.get('f_ust_yan_sol', [])))
-SAGDAN = AD((1700, 0, 0), lift=(0.5, 1, 2, 5), yan=())
-TAVG = ['f_ust_tavan_sac'] + sorted(a for a in P if a.startswith('f_ust_kabin_paslanmaz') and merkez(a)[1] > 1800 and merkez(a)[2] < -700)
-t = koy(TAVG, SAGDAN, 'Tavan (hortum askıları tezgâhta) → sağdan, dönüşü yan sol saplamalarına (sağ ucu dayamada)', pem=sorted(PEM_SAC.get('f_ust_tavan_sac', [])))
-t = koy('govde_fu_kosebent_sol_arka_ust', AD((400, 0, 0), lift=(0.5, 1, 2), yan=()), 'Köşebent → yan sol saplamasına')
-t = vidala(['govde_fu_bag_kosebent_yan_somun'], t, 20.0)
-BG = ['f_davlumbaz_bolme_duvari'] + [a for a in ('elk_plastik_3578_1780',) if a in P]
-t = koy(BG, SAGDAN, 'Bölme duvarı (servis ağzı açık, 2 filtre saplaması preslenmiş) → sağdan yan sol saplamalarına', pem=sorted(PEM_SAC.get('f_davlumbaz_bolme_duvari', [])))
-t = vidala(sorted(a for a in P if _re.match(r'govde_fu_bag_(tavan|bolme)_sol_.*_somun$', a)), t, 20.0); olay(t - 0.6, 'Tavan + bölme duvarı ↔ yan sol: pul + fiberli somun M5'); t += 0.2
-# ---- 4 DAVLUMBAZ + KOMPRESÖR (arka açıkken)
-adim('Davlumbaz ve kompresör', 'Arka sac takılmadan arkadan: atış kanalı (iki L, boyuna TIG, tezgâhta), davlumbaz fanı + yağ filtresi çerçevesi (hazır; çerçeve bölme duvarının saplamalarına), kompresör + tank (hazır) titreşim ayaklarıyla; Festo emniyet valfi.',
-     'atış kanalı · fan + filtre · kompresör · emniyet valfi')
-kamera_genel(['davlumbaz_fan_filtre', 'kompresor'], yon=(0.4, 0.55, -0.75), olcek=0.9)
-t = koy(['davlumbaz_atis_kanali_L1', 'davlumbaz_atis_kanali_L2'], AD(ARKA9, UST6), 'Atış kanalı (iki L, tezgâhta boyuna TIG) → arkadan bölme duvarına', grup_kaynak=KAY('davlumbaz_atis_kanali_boyuna'))
-t = koy('davlumbaz_fan_filtre', AD(ARKA9, lift=(20, 40, 120)), 'Davlumbaz fanı + yağ filtresi (hazır) → arkadan, çerçeve bölme duvarının saplamalarına')
-t = koy('kompresor', AD(ARKA9, lift=(20, 40, 120)), 'Kompresör + tank (hazır) → arkadan, titreşim ayaklarıyla')
-t = koy(['hava_emniyet_valfi_govde', 'hava_emniyet_valfi_bobin', 'hava_emniyet_valfi_susturucu'], AD(ARKA9), 'Festo emniyet valfi + bobin + susturucu → kompresör çıkışına')
-# ---- 5 ARKA SAC
-adim('Arka sac', 'Arka sac (1,5 · 1 büküm) tezgâhta: 16 panjur lameli TIG, kablo geçit lastikleri. Arkadan sürülür: üst dönüşteki öne açık yarıklar tavan saplamalarına geçer. Yan sol + köşebent: dıştan bombe başlı M5 × 10, içte pul + somun.',
-     'arka sac · panjur × 16 · geçit lastiği · cıvata M5 × 10 × 6 + pul + somun')
-kamera_genel(['f_ust_arka_sac'], yon=(0.4, 0.45, -0.85), olcek=0.9)
-PJ = sorted(a for a in P if a.startswith('f_ust_panjur_lameli') and P[a]['tur'] == 'sac')
-PJK = sorted(a for a in P if a.startswith('f_ust_panjur_lameli') and P[a]['tur'] == 'kaynak')
-GL = sorted(a for a in P if a.startswith('elk_plastik') and a != 'elk_plastik_3578_1780')
-t = koy(['f_ust_arka_sac'] + PJ + GL, AD(ARKA9, lift=(0.5, 1, 2), yan=()), 'Arka sac (panjur TIG + geçit lastikleri tezgâhta) → arkadan, yarıklar tavan saplamalarına', grup_kaynak=PJK)
-t = sira_tak(sorted(a for a in P if _re.match(r'f_arka_civata_(arka_sol|kosebent)', a)), t, 25.0, 0.45, 0.1)
-t = vidala(sorted(a for a in P if _re.match(r'govde_fu_bag_(arka_sol|kosebent_arka).*_somun$', a)), t, 20.0); olay(t - 0.8, 'Arka ↔ yan sol + köşebent: dıştan cıvata M5 × 10, içte pul + fiberli somun'); t += 0.2
-t = vidala(sorted(a for a in P if a.startswith('govde_fu_bag_tavan_arka') and a.endswith('_somun')), t, 15.0); olay(t - 0.6, 'Tavan saplamaları → arka üst dönüşü: alttan pul + fiberli somun'); t += 0.2
-# ---- 6 İÇ ELEKTRİK (sağ açıkken)
-adim('Arka iç elektrik', 'Yan sağ takılmadan sağdan: F istasyon kutusu (hazır) arka sacın iç yüzüne, kablo kanalları, rakorlar; fiş paneli sol yan sacın burçlarına.',
-     'istasyon kutusu · kanallar · rakorlar · fiş paneli sol')
-kamera_genel(['istasyon_kutusu'], yon=(0.8, 0.4, -0.4), olcek=0.8)
-t = koy('istasyon_kutusu', SAGDAN + AD(UST6), 'F istasyon kutusu (hazır) → arka sacın iç yüzüne')
-for a in sorted(a for a in P if a.startswith(('elk_kanal', 'elk_rakor')) and a not in FG and a not in ('elk_kanal_3445_1348', 'elk_rakor_3449_1334')):
-    koy(a, SAGDAN + AD(UST6, ON9), '%s → yerine' % tr(a), sure_bekle=0.03)
-t = bitti()
-t = koy('fis_paneli_sol', SAGDAN + AD(UST6), 'Fiş paneli sol → yan sol burçlarına')
+# ---- 1 KAİDE
+adim('Kaide ve ayaklar', 'Kaide: 304 kare boru 60 × 60 × 3 ön / arka ray + 40 × 60 kayıtlar, tezgâhta TIG; raylara DIN 929 kaynak somunları (ayak M12, taban M8). Ayaklar alttan vidalanır, kontra somun.',
+     'kaide (2 ray + 3 kayıt + 4 tapa) · ayak × 6 + kontra')
+kamera_genel(['kaide_e_ray_on', 'kaide_e_ray_arka'], yon=(0.45, 0.55, 0.75), olcek=1.0)
+KAIDE = var('kaide_e_ray_on', 'kaide_e_ray_arka', 'kaide_e_kayit_sol', 'kaide_e_kayit_orta', 'kaide_e_kayit_sag') + sorted(a for a in P if a.startswith(('kaide_e_ray_on_tapa', 'kaide_e_ray_arka_tapa', 'kaide_e_ayak_somunu', 'kaide_e_somun')))
+t = koy(KAIDE, AD(UST6, lift=(), yan=()), 'Kaide (kaynaklı çerçeve, tezgâhta) → yere', tezgah_kaynak=KAY('kaide_e_kayit'))
+t = sira_tak(sorted(a for a in P if _re.match(r'ayak_\d$', a)), t, 60.0, 0.5, 0.12)
+t = sira_tak(sorted(a for a in P if _re.match(r'ayak_\d_kontra$', a)), t, 30.0, 0.4, 0.08); olay(t - 0.4, 'Ayarlı ayak M12 × 6 → ray kaynak somunlarına · kontra somun'); t += 0.2
+# ---- 2 ALT MONTAJ
+adim('Taban ve ön kasa (kaynaklı alt montaj)', 'Taban 3 mm + ön kasa (sol / orta / sağ dikme, 788 kayıtları, tapalar) + panel kulakları tezgâhta TIG; tabana FHP saplamalar preslenir. Kaidenin üstüne iner: 7 × M8 bombe başlı vida yukarıdan ray kaynak somunlarına.',
+     'taban · dikme × 3 · kayıt × 2 · kulak × 18 · vida M8 × 7')
+kamera_genel(['taban_sac_3', 'onyuz_dikme_sol', 'onyuz_dikme_sag'], yon=(0.45, 0.5, 0.8), olcek=0.9)
+ALT = ['taban_sac_3'] + var('onyuz_dikme_sol', 'onyuz_dikme_orta', 'onyuz_dikme_sag', 'onyuz_kayit_788_sol', 'onyuz_kayit_788_sag') + sorted(a for a in P if a.startswith('onyuz_dikme_') and a.endswith('_tapa')) \
+    + sorted(a for a in P if _re.match(r'govde_kulak_(sol|sag)_(on|taban)_\d+$', a))
+ALT_K = KAY('onyuz_dikme_') + KAY('onyuz_kayit_788') + KAY('govde_kulak_')
+t = koy(ALT, AD(UST6, lift=(), yan=()), 'Taban + ön kasa + kulaklar (tezgâhta TIG) → kaidenin üstüne', pem=sorted(PEM_SAC.get('taban_sac_3', [])), tezgah_kaynak=ALT_K)
+t = sira_tak(sorted(a for a in P if a.startswith('kaide_e_vida')), t, 30.0, 0.45, 0.1); olay(t - 0.5, 'Taban ↔ kaide: M8 bombe başlı vida × 7 (ray içindeki kaynak somununa)'); t += 0.2
+# ---- 3 ŞARJÖR + ASANSÖR
+adim('Şarjör ve asansör', 'Şarjör + asansör (hazır alt montaj: yığın tablası, vida mili, motor, kılavuzlar) arkadan sürülür, tabanın M6 saplamalarına oturur; yan saplamalar yan saclar gelince bağlanır.',
+     'şarjör + asansör · uç sensörleri')
+kamera_genel(['sarjor_asansor'], yon=(0.4, 0.5, -0.8), olcek=0.9)
+t = koy(['sarjor_asansor'], AD(ARKA9, UST6, son=SON), 'Şarjör + asansör → arkadan, tabanın M6 saplamalarına')
+# ---- 4 YAN SOL
+adim('Yan sol', 'Yan sol (1,5 · pizza penceresi, J3 ağzı, preslenmiş FHP saplamalar) soldan: saplamaları ön kasa / taban kulaklarından ve şarjör kulaklarından geçer; içten pul + fiberli somun.',
+     'yan sol · pul + somun M5')
+kamera_genel(['sol_sac_pizza_penceresi'], yon=(-0.8, 0.45, 0.45), olcek=0.8)
+t = koy('sol_sac_pizza_penceresi', AD(SOL7, lift=(0.5, 1, 2), yan=()), 'Yan sol → soldan, saplamalar kulaklara', pem=sorted(PEM_SAC.get('sol_sac_pizza_penceresi', [])))
+t = somunla(r'govde_kulak_sol_(on|taban)_\d+_bag', t, 20.0); olay(t - 0.6, 'Yan sol ↔ kulaklar: pul + fiberli somun M5 × 12'); t += 0.2
+# ---- 5 KATLAMA MEKANİZMALARI (sağ açıkken)
+adim('Katlama mekanizmaları', 'Sağ yan takılmadan sağdan / arkadan: kalıp + yuva (sol saplamalara), köprü, kapak katlama mekanizması, köşe kaldırıcılar ve tutucular, ön parmaklar, arka itici; besleyici şasisi + itici + vakum kolu + motor.',
+     'kalıp · köprü · kapak mekanizması · köşe × 4 · parmak · itici · besleyici')
+kamera_genel(['kalip', 'besleyici_sasi'], yon=(0.8, 0.45, -0.4), olcek=0.9)
+for g_ in ('kalip', 'kalip_yuva', 'kopru_govde', 'kopru', 'kapak_mekanizmasi', 'kapak_katlayici', 'kose_tutucu', 'kose_kaldirici', 'kose_piston', 'parmak', 'parmak_y',
+           'piston', 'piston_itici', 'besleyici_sasi', 'besleyici_motor', 'besleyici_itici', 'besleyici_vakum', 'elk_sensor'):
+    if g_ in P: t = koy(g_, AD(SAG7, ARKA9, UST6, son=SON), '%s → yerine' % tr(g_))
+# ---- 6 ÜST
+adim('Üst sac', 'Üst sac (1,5 · yan dönüşler, Harting ağzı, U ↔ E için 3 × PEM M8, mekanizma askı saplamaları) sağdan sürülür: sol dönüşü yan sol saplamalarına geçer.',
+     'üst sac · pul + somun')
+kamera_genel(['ust_sac'], yon=(0.5, 0.7, 0.5), olcek=0.8)
+t = koy('ust_sac', AD(SAG7, UST6, lift=(0.5, 1, 2, 5), yan=()), 'Üst sac → sağdan, sol dönüşü yan saplamalarına', pem=sorted(PEM_SAC.get('ust_sac', [])))
+t = somunla(r'govde_bag_ust_sol', t, 20.0); olay(t - 0.6, 'Üst ↔ yan sol: pul + fiberli somun'); t += 0.2
 # ---- 7 YAN SAĞ
-adim('Yan sağ', 'Yan sağ (preslenmiş saplamalı, fiş paneli sağ tezgâhta) sağdan sürülür: saplamaları tavan ve bölme duvarı dönüşlerinden geçer; arka sacla dıştan cıvata; içten pul + somunlar.',
-     'yan sağ + fiş paneli sağ · pul + somun · cıvata M5 × 10 × 5')
-kamera_genel(['f_ust_yan_sag'], yon=(0.8, 0.45, 0.4), olcek=0.9)
-t = koy(['f_ust_yan_sag', 'fis_paneli_sag'], AD((700, 0, 0), lift=(0.5, 1, 2), yan=()), 'Yan sağ (fiş paneli tezgâhta) → sağdan', pem=sorted(PEM_SAC.get('f_ust_yan_sag', [])))
-t = vidala(sorted(a for a in P if _re.match(r'govde_fu_bag_(tavan|bolme)_sag_.*_somun$', a)), t, 20.0)
-t = sira_tak(sorted(a for a in P if a.startswith('f_arka_civata_arka_sag')), t, 25.0, 0.45, 0.1)
-t = vidala(sorted(a for a in P if a.startswith('govde_fu_bag_arka_sag') and a.endswith('_somun')), t, 20.0); olay(t - 0.8, 'Yan sağ: pul + somunlar · arka ile dıştan cıvata M5 × 10'); t += 0.2
-# ---- 8 ALT PROFİLLER + TABAN
-adim('Alt profiller ve taban', 'Fırının üstünde: arka alt profil yanlara TIG; arka yalıtım + kılıf; orta profil; ön yalıtım + kılıf; ön profil; kılıflar profillere kör perçinle; taban levhası (delik kaynağı) ve rakor kovanı.',
-     'alt profil × 3 · yalıtım × 2 + kılıf × 2 · kör perçin × 16 · taban levhası · rakor kovanı')
-kamera_genel(['f_ust_taban_levhasi'], yon=(0.4, 0.6, 0.75), olcek=0.9)
-ONUST = AD(ON9, lift=(20, 300, 450), yan=())
-t = koy('f_ust_alt_profil_arka', ONUST, 'Arka alt profil → yanlara (TIG)', grup_kaynak=KAY('f_ust_alt_profil_arka_yan_kaynagi'))
-t = koy(['f_ust_taban_yalitimi_arka', 'f_ust_taban_yalitim_kilifi_arka'], AD(ON9, lift=(5, 10, 20), yan=()), 'Arka taş yünü + kılıf → profilin altına')
-t = koy('f_ust_alt_profil_orta', ONUST, 'Orta alt profil → yanlara (TIG)', grup_kaynak=KAY('f_ust_alt_profil_orta_yan_kaynagi'))
-t = koy(['f_ust_taban_yalitimi_on', 'f_ust_taban_yalitim_kilifi_on'], AD(ON9, lift=(5, 10, 20), yan=()), 'Ön taş yünü + kılıf → profillerin altına')
-t = koy('f_ust_alt_profil_on', ONUST, 'Ön alt profil → yanlara (TIG)', grup_kaynak=KAY('f_ust_alt_profil_on_yan_kaynagi'))
-t = sira_tak(sorted(a for a in P if a.startswith('f_ust_kilif_percin')), t, 20.0, 0.35, 0.06); olay(t - 0.5, 'Kılıflar → profiller: kör perçin Ø3,2 × 16'); t += 0.2
-t = koy('f_ust_taban_levhasi', ONUST, 'Taban levhası → profillerin üstüne (delik kaynağı, kırmızı)', pem=sorted(PEM_SAC.get('f_ust_taban_levhasi', [])), grup_kaynak=KAY('f_ust_taban_levhasi_delik'))
-t = koy(['f_ust_taban_rakor_kovani'] + [a for a in ('elk_kanal_3445_1348', 'elk_rakor_3449_1334') if a in P], AD(ON9, UST6), 'Rakor kovanı + kanal → taban deliğine')
-# ---- 9 ÖN ÇERÇEVE
-adim('Ön çerçeve', 'Ön üst kayıt (bas-aç yuvalarıyla) ve ön dikme TIG; tavan kirişi + tapa; filtre rayları bölme duvarına; servis ağzına tapa + 2 çeyrek tur kilit.',
-     'üst kayıt · dikme · tavan kirişi · filtre rayı × 4 · servis tapası')
-kamera_genel(['onyuz_f_ust_ust_kayit'], yon=(0.4, 0.5, 0.85), olcek=0.9)
-t = koy(['onyuz_f_ust_ust_kayit'] + sorted(a for a in P if a.startswith('f_ust_kabin_paslanmaz') and merkez(a)[2] > 30), AD(ON9, lift=(0.5, 1, 2), yan=()), 'Ön üst kayıt (bas-aç tezgâhta) → yanlara (TIG)', grup_kaynak=KAY('onyuz_f_ust_ust_kayit_yan'))
-t = koy('onyuz_f_ust_dikme_0', AD(ON9, lift=(0.5, 1), yan=()), 'Ön dikme → taban + üst kayıt (TIG)', grup_kaynak=KAY('onyuz_f_ust_dikme_0_'))
-t = koy(['f_ust_tavan_kirisi', 'f_ust_tavan_kirisi_tapa'], AD(ON9, lift=(-0.5, -1, -2), yan=()), 'Tavan kirişi + tapa → üst kayıt + arka (TIG)', grup_kaynak=KAY('f_ust_tavan_kirisi_kaynagi'))
-t = koy(sorted(a for a in P if a.startswith('filtre_ray')), AD(ON9), 'Filtre rayları (3 mm) → bölme duvarına (punta)')
-t = koy(['filtre_servis_tapasi'] + sorted(a for a in P if a.startswith(('filtre_servis_kilidi', 'filtre_servis_kami'))), AD(ON9, lift=(0.5, 1)), 'Servis tapası + 2 çeyrek tur kilit → ağıza')
-buyu('hava_hatti', t, 1.0); olay(t, 'Hava hattı: hortum + askılar (kompresör → istasyonlar)')
-for a in ('kablo_guc', 'kablo_bilgi'): buyu(a, t, 1.0)
-olay(t, 'Güç (kırmızı) ve bilgi (mavi) kabloları kanallar boyunca'); t += 1.2
-# ---- 10 KAPAKLAR
-adim('Ön kapaklar', 'Kapaklar tezgâhta: dış tava (1,5 · 4 büküm, köşeler TIG), omegalar, kayıtlar, menteşe somunları, gazlı yaylar; sağ kapakta acil stop. Emniyet sensörleri ve kapak tamponları gövdeye; kapak menteşeleriyle önden gelir, menteşe vidaları.',
-     'kapak × 2 · menteşe × 4 · gazlı yay × 2 · acil stop · emniyet sensörü × 2')
-kamera_genel(['onyuz_kapak_F_sol_dis_tava', 'onyuz_kapak_F_sag_dis_tava'], yon=(0.35, 0.4, 0.9), olcek=0.9)
-for a in [a for a in P if (a.startswith('emniyet_F_') and not a.endswith('aktuator')) or a.startswith('f_ust_kabin_on_seffaf')]: koy(a, AD(ON9), '%s → gövdeye' % tr(a), sure_bekle=0.02)
+adim('Yan sağ', 'Yan sağ (şarjör kapısı açıklığı, preslenmiş saplamalar) sağdan: saplamaları kulaklardan, üst sacın dönüşünden ve mekanizma kulaklarından geçer; köşebent; içten pul + somunlar.',
+     'yan sağ · köşebent · pul + somun')
+kamera_genel(['sag_sac'], yon=(0.85, 0.45, 0.3), olcek=0.8)
+t = koy('sag_sac', AD(SAG7, lift=(0.5, 1, 2), yan=()), 'Yan sağ → sağdan', pem=sorted(PEM_SAC.get('sag_sac', [])))
+t = somunla(r'govde_(kulak_sag_(on|taban)_\d+_bag|bag_ust_sag)', t, 20.0); olay(t - 0.6, 'Yan sağ: pul + fiberli somunlar'); t += 0.2
+t = koy(var('govde_kosebent_sag_arka_alt'), AD(ARKA9, lift=(0.5, 1), yan=(), son=SON), 'Köşebent → yan sağ saplamasına')
+t = somunla(r'govde_bag_kosebent_yan', t, 20.0)
+# ---- 8 ARKA + PANO
+adim('Arka sac ve E panosu', 'E panosu (Beckhoff + Siemens + sürücüler, hazır) tezgâhta arka sacın iç yüzündeki saplamalara; arka sac (alt + üst dönüş) arkadan sürülür, saplamaları yan dönüşlerden geçer; içten pul + somunlar.',
+     'arka sac + pano · pul + somun')
+kamera_genel(['arka_sac'], yon=(0.4, 0.45, -0.85), olcek=0.8)
+t = koy(['arka_sac', 'istasyon_kutusu'], AD(ARKA9, lift=(0.5, 1, 2), yan=()), 'Arka sac + E panosu (tezgâhta) → arkadan', pem=sorted(PEM_SAC.get('arka_sac', [])))
+t = somunla(r'govde_bag_(arka_(sol|sag)|taban_arka|ust_arka|kosebent_arka)', t, 20.0); olay(t - 0.6, 'Arka ↔ yanlar / taban / üst: pul + fiberli somunlar'); t += 0.2
+# ---- 9 ELEKTRİK
+adim('Elektrik ve vakum', 'Fiş paneli (J3: Harting + M12) yan solun burçlarına; güç (kırmızı) ve bilgi (mavi) kabloları, vakum hattı kanallar boyunca.', 'fiş paneli · kablolar · vakum hattı')
+kamera_genel(['fis_paneli'], yon=(0.6, 0.5, -0.6), olcek=1.2)
+t = koy('fis_paneli', AD(ON9, UST6, son=SON), 'Fiş paneli J3 → yan sol burçlarına')
+for a in ('kablo_guc', 'kablo_bilgi', 'hava_hatti'): buyu(a, t, 1.0)
+olay(t, 'Güç (kırmızı) / bilgi (mavi) kabloları + vakum hattı'); t += 1.2
+# ---- 10 ŞARJÖR YAN KAPISI
+adim('Şarjör yan kapısı', 'İçeriden menteşe laması (arka saplamalara) ve bas-aç laması (yan sağ saplamalarına); kapı (dış sac + iç tava, punta) menteşeleriyle sağdan.', 'lama × 2 · kapı · menteşe × 2 · bas-aç')
+kamera_genel(['sarjor_yan_kapisi'], yon=(0.9, 0.35, 0.2), olcek=1.1)
+t = koy(var('sarjor_yan_kapisi_mentese_lamasi'), AD(ON9, UST6, son=SON), 'Menteşe laması → arka saplamalarına')
+t = somunla(r'govde_bag_kapi_lamasi', t, 20.0)
+t = koy(var('sarjor_yan_kapisi_basac_lamasi', 'sarjor_yan_kapisi_basac'), AD(ON9, UST6, son=SON), 'Bas-aç laması + bas-aç → yan sağ saplamalarına')
+t = somunla(r'govde_bag_kapi_basac', t, 20.0)
+KPI = var('sarjor_yan_kapisi', 'sarjor_yan_kapisi_ic_tava') + sorted(a for a in P if a.startswith('sarjor_yan_kapisi_mentese_') and a != 'sarjor_yan_kapisi_mentese_lamasi')
+t = koy(KPI, AD(SAG7, lift=(0.5, 1), yan=()), 'Şarjör yan kapısı (tezgâhta) → menteşeleriyle sağdan')
+# ---- 11 ROBOT ÇÖPÜ
+adim('Robot çöpü', 'Robot çöpü (kova + poşet + oluk) önden sol alta.', 'robot çöpü')
+t = koy('robot_copu', AD(ON9, lift=(5, 20, 40), son=SON), 'Robot çöpü → önden sol alta')
+# ---- 12 KAPAKLAR
+adim('Ön kapaklar', 'Bas-aç mandalları orta dikmeye, menteşe gövdeleri dikmelere (iç yandan 2 × M5), emniyet sensörleri; 4 kapak tezgâhta (dış tava + iç tava punta, köşeler TIG, karşılıklar; sol üstte robot ağzı kasası) menteşeleriyle önden.',
+     'bas-aç × 6 · menteşe × 12 · emniyet × 4 · kapak × 4')
+kamera_genel(['onyuz_kapak_E_ust_sol', 'onyuz_kapak_E_alt_sag'], yon=(0.35, 0.4, 0.9), olcek=0.9)
+for a in sorted(a for a in P if a.startswith('onyuz_kapak_E_basac')): koy(a, AD(ON9), 'Bas-aç → orta dikmeye', sure_bekle=0.02)
 t = bitti()
-for y_ in ('sol', 'sag'):
-    KP = sorted(a for a in P if (a.startswith('onyuz_kapak_F_%s_' % y_) and not _re.search(r'_vida_\d+$', a)) or a.startswith('f_ust_kapak_on_seffaf_yay_f_' + y_) or a == 'emniyet_F_%s_aktuator' % y_.upper()
-                or (y_ == 'sag' and a.startswith('acil_stop_F')))
-    MN = sorted(a for a in P if a.startswith('f_ust_kapak_celik') and ((merkez(a)[0] < 3250) == (y_ == 'sol')))
-    t = koy(KP + MN, AD(ON9, lift=(20, 40), yan=()), 'Kapak %s (tezgâhta hazır%s) → menteşeleriyle önden' % (y_, ', acil stop' if y_ == 'sag' else ''),
-            pem=sorted(PEM_SAC.get('onyuz_kapak_F_%s_dis_tava' % y_, [])), grup_kaynak=KAY('onyuz_kapak_F_%s_dis_tava_kose' % y_))
-    t = sira_tak(sorted(a for a in P if _re.match(r'onyuz_kapak_F_%s_mentese_\d+_vida' % y_, a)), t, 20.0, 0.4, 0.1); t += 0.2
-olay(t - 0.4, 'Menteşe vidaları M5 × 6 → kapaktaki preslenmiş somunlara')
-# ---- 11 HAT
-adim('Hat bağlantısı', 'Sahada: TOPPING (silik) solda — F sol yanına 4 × M8 (TOPPING sayfası); K (silik) sağda; U (silik) F tavanındaki 4 × M8 somuna, baca U ile gelir (U sayfası).', 'TOPPING · K · U (silik)')
-for a in ('cevre_TOPPING', 'cevre_K', 'cevre_U', 'cevre_diger'):
+for a in sorted(a for a in P if _re.match(r'onyuz_kapak_E_mentese_(sol|sag)_\d_sabit$', a)): koy(a, AD(ON9, lift=(5,), son=SON), 'Menteşe gövdesi → dikmeye', sure_bekle=0.02)
+t = bitti()
+t = sira_tak(sorted(a for a in P if _re.match(r'onyuz_kapak_E_mentese_(sol|sag)_\d_sabit_vida', a)), t, 20.0, 0.4, 0.05); olay(t - 0.4, 'Menteşe gövdeleri: iç yandan 2 × M5'); t += 0.2
+for a in sorted(a for a in P if a.startswith('emniyet_') and not a.endswith('aktuator')): koy(a, AD(ON9, son=SON), '%s → gövdeye' % tr(a), sure_bekle=0.02)
+t = bitti()
+for k_ in ('alt_sol', 'alt_sag', 'ust_sol', 'ust_sag'):
+    y_ = k_.split('_')[1]; u_ = k_.split('_')[0]
+    KP = sorted(a for a in P if a.startswith('onyuz_kapak_E_%s' % k_) and P[a]['tur'] != 'kaynak')
+    KP = ['onyuz_kapak_E_%s' % k_] + [a for a in KP if a != 'onyuz_kapak_E_%s' % k_]
+    KP += sorted(a for a in P if _re.match(r'onyuz_kapak_E_mentese_%s_\d_kanat$' % y_, a) and ((int(a.split('_')[5]) < 3) == (u_ == 'alt')))
+    KP += [a for a in P if a.startswith('emniyet_aktuator') and abs(merkez(a)[1] - (merkez('onyuz_kapak_E_%s' % k_)[1])) < 700 and ((merkez(a)[0] < 4860) == (y_ == 'sol'))]
+    t = koy(KP, AD(ON9, lift=(20, 40), yan=()), 'Kapak %s (tezgâhta hazır) → menteşeleriyle önden' % tr('onyuz_kapak_E_' + k_).split(' (')[0][6:], grup_kaynak=KAY('onyuz_kapak_E_%s_kose' % k_))
+# ---- 13 HAT
+adim('Hat bağlantısı', 'Sahada: K (silik) solda — K ↔ E 3 × M8; U (silik) üstte — U tabanından üst sacın 3 × PEM M8 somununa.', 'K · U (silik)')
+t = sira_tak(sorted(a for a in P if a.startswith('arayuz_uke_m8')), t, 30.0, 0.45, 0.1)
+for a in ('cevre_B', 'cevre_U', 'cevre_K', 'cevre_diger'):
     if a in P: basla(a, np.zeros(3), t); YER[a] = t; YERINDE.append(a)
-olay(t, 'TOPPING, K ve U (silik) yerinde'); t += 1.0
-kam(t, ([5.6, 3.0, 2.9], [3.25, 1.4, -0.4]))
+olay(t, 'K ve U (silik) yerinde · U ↔ E: M8 × 3'); t += 1.0
+kam(t, ([6.6, 2.8, 2.6], [4.8, 1.0, -0.4]))
 TOPLAM = round(bitti() + 2.0, 3)
 SADE = [(r'PEM SP-M(\d)(-\d)?', r'preslenmiş somun M\1'), (r'PEM FHS-M(\d)(-\d)?', r'preslenmiş saplama M\1'), (r'PEM FHP-M(\d)(-\d+)?', r'preslenmiş saplama M\1'),
         (r'PEM S-M(\d)(-\d)?', r'preslenmiş somun M\1'), (r'\bPEM\b', 'preslenmiş'), (r'ISO 4762 ', 'cıvata '), (r'ISO 7380(-1)? ', 'bombe başlı vida '), (r'TEK ÜRÜN', 'hazır ürün')]
@@ -239,4 +210,4 @@ OLAY = [[o[0], sade(o[1])] for o in OLAY]
 for x in ACN: x['ac'] = sade(x['ac'])
 for a in P: P[a]['ac'] = sade(P[a]['ac'])
 KAPGRUP = []
-exec(open(os.path.join(HERE, '_son.py'), encoding='utf-8').read().replace("'plan_a3.pkl'", "'plan_f.pkl'").replace('OLC = 1.75', 'OLC = 1.0'))
+exec(open(os.path.join(HERE, '_son.py'), encoding='utf-8').read().replace("'plan_a3.pkl'", "'plan_e.pkl'").replace('OLC = 1.75', 'OLC = 1.0'))

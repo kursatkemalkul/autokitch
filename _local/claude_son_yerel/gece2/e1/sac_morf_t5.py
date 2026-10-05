@@ -8,7 +8,7 @@ import numpy as np
 import manifold3d as mf
 
 ACN_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "acinim_E")
-OFS = np.zeros(3)
+OFS = np.array([4400.0, 0.0, 0.0])                     # E yereli → dünya (x + 4400)
 
 
 def _yay(c, r, p0, p1, p2, n=12):
@@ -128,15 +128,16 @@ class Sac:
         return k
 
     def dunya(self, X):
-        return X @ self.M[:3, :3].T + self.M[:3, 3] + OFS        # A yereli → dünya (x + 736)
+        return X @ self.M[:3, :3].T + self.M[:3, 3] + OFS        # E yereli → dünya (x + 4400)
 
 
 if __name__ == '__main__':
     import sys, glob
     sys.stdout.reconfigure(encoding='utf-8')
-    ent = json.load(open(os.path.join(ACN_DIR, '..', '..', 'adim8', 'is_tam', 'hat3_v9e_ent.json'), encoding='utf-8'))['parca']
+    ent = json.load(open('/home/user/main_wt/_local/claude_son_yerel/gece2/adim5e/is/hat3_v9c_ent.json', encoding='utf-8'))['parca']
     for f in sorted(glob.glob(os.path.join(ACN_DIR, '*.json'))):
         ad = os.path.basename(f)[:-5]
+        if ad not in ent: continue
         s = Sac(ad); X = s.dunya(s.yerel({}))
         kb = np.array(ent[ad]['kutu']); lo, hi = X.min(0), X.max(0)
         fark = max(np.abs(lo - kb[[0, 2, 4]]).max(), np.abs(hi - kb[[1, 3, 5]]).max())
