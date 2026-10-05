@@ -1,6 +1,6 @@
 import * as T from 'three';
 import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
-const $=id=>document.getElementById(id),res=await fetch('../../../../_local/codex_k_montaj/source_bending.json');
+const $=id=>document.getElementById(id),res=await fetch('../../../../_local/codex_k_montaj/source_bending_updated.json');
 if(!res.ok)throw Error(`Kaynak sac verisi ${res.status}`);
 const data=await res.json(),renderer=new T.WebGLRenderer({antialias:true});renderer.setPixelRatio(Math.min(devicePixelRatio,1.5));document.body.append(renderer.domElement);
 const scene=new T.Scene();scene.background=new T.Color(0xe9edf2);scene.add(new T.HemisphereLight(0xffffff,0x64748b,2));const sun=new T.DirectionalLight(0xffffff,2);sun.position.set(2,3,4);scene.add(sun);
