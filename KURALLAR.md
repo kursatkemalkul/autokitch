@@ -89,7 +89,7 @@ Amaç: animasyonu izleyen usta, parçayı gerçekten **aynı sırayla ve aynı y
       - Sabitlendiği adımda *"N. adımda dayanan X şimdi sabitleniyor"* yazar.
     - **Geçici dayalı parçanın üstüne, o sabitlenmeden yük binen parça konamaz.** Denetim bunu hata sayar.
     - Yalnız oturan parça (ör. elle çıkarılan tepsi, kaset) ancak bilerek böyle tasarlandıysa kabul edilir ve metinde *"oturur, kilit mandalıyla tutulur / elle çıkar"* diye yazılır.
-    - **Hazır (satın alınan) ürünler** (UNO, motor, valf adası, evaporatör, kompresör, menteşe, bas-aç, sensör …) yalnız DIŞ KABUK olarak modellenir: kapladığı yer ve formu önemlidir, iç detay ve kendi bağlantı vidaları EKLENMEZ (Kemal, 5 Eki). Animasyonda yerine gelir; adım metninde nasıl tutturulduğu yazılır (ör. "4 cıvatayla rafa"); denetim bunları "hazır ürün" sayar, bağlantısız uyarısı vermez. Bizim sacımızdaki karşılık (delik / PEM) varsa o modelde kalır.
+    - Hazır ürünün (motor, UNO gövdesi, valf adası, menteşe) bağlantı vidaları da modelde ve animasyonda bulunur; "hazır ürün" diye vidasız bırakılmaz.
 11. Geliş yönü gerçekçi olur:
     - delikli ya da geçmeli parça eksen boyunca gelir;
     - kapalı hacme giren parça açık taraftan, o taraf kapanmadan girer;
