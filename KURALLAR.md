@@ -109,7 +109,8 @@ Amaç: animasyonu izleyen usta, parçayı gerçekten **aynı sırayla ve aynı y
 ## 3. Model zinciri
 - Model değişikliği yalnız zincire yeni numaralı adım olarak yapılır: `arastirma/_uretec/h3/yama_v9`, `zincir.py`, `SIRA.md`.
 - Her adım GLB → GLB çalışır, iki koşuda bayt aynı çıkar ve `SIRA.md`'ye yazılır. Aynı anda tek yazar olur (kilit `KOORDINASYON.md`'de).
-- Tasarım kararı gerektiren her şey **bulunduğu anda** Kemal'e sorulur; iş bitince değil.
+- Kemal (5 Eki): **küçük tasarım kararlarını ajan kendisi verir, sormaz**; iş bitince topluca rapor eder. Yalnız büyük kararlar (yerleşim, istasyon değişikliği, maliyeti / işlevi değiştiren) bulunduğu anda sorulur.
+- **Hazır (satın alınan) ürünün bağlantısı:** ürüne dokunulmaz (dış kabuk); bağlantı BİZİM tarafımızdan basit parçayla yapılır — rafa / duvara kaynaklı ya da vidalı braket, pabuç, köşebent; üründen yalnız "şu yüzde N × M5 dişli delik" istenir (sipariş notu). Kaset gibi sık çıkarılan ürün: kapak takozu / dayama ile kilit (adım 63 örneği).
 
 ---
 
