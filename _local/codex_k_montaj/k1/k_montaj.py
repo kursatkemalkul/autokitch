@@ -516,6 +516,9 @@ for a in P:
 # Small probes establish candidate paths; this full run validates the changed order.
 before('nozul_kelepce_blogu','PulsaJet_AAB10000AUH-104210-VIFC')
 before('nozul_kelepce_blogu','bicak_koruma_halkasi')
+# Seat the central hub ring before the radial blades close its insertion path.
+for blade in ('bicak_0','bicak_1','bicak_2','bicak_3'):
+ before('bicak_gobek_halkasi',blade)
 before('PulsaJet_AAB10000AUH-104210-VIFC','PulsaJet_uc_TPU11002_PWMD')
 before('elk_ic_kanal_8','elk_ic_kanal_6')
 # This air duct is mounted before the upper actuator and cross beams close access.
