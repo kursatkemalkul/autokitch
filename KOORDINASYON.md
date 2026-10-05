@@ -11,11 +11,25 @@ Kemal'in kararı (5 Eki 2026): iki ajan aynı anda, farklı istasyonlarda çalı
 | Robot + ray + QR dolabı + sipariş animasyonları | Codex | `coord/codex-main-integrated-robot-v17` | çalışıyor |
 | TOPPING montaj animasyonu v5 | Claude | `claude/topping-montaj-v5` | yayında (açık 3 küçük madde) |
 | Standart önlemleri · makine: acil stop (58) · 10 kapı emniyet anahtarı (59) · hava emniyet valfi (60) · davlumbaz filtresi servis ağzı (61) · hijyen / R290 / A perdesi kayıt | Claude | `claude/standart-makine` | BİTTİ (cb7d1ec) — Kemal incelemesinde |
-| TOPPING bağsız 63 parça + geçici dayalı 2 parça (KURALLAR §2.3 kural 10) | Claude | `claude/topping-montaj-v5` | sırada |
+| **TOPPING montaj v6**: bağsız 63 parça + geçici dayalı 2 parça bağlanır (KURALLAR §2.3 kural 10), animasyon yeniden üretilir, §5 denetimi | Claude | `claude/topping-montaj-v6` | ÇALIŞIYOR (5 Eki) · zincir adımları **62–69** |
+| **K montaj animasyonu** (KURALLAR §2, yeni yöntem: açınım → abkant → PEM → gerçek bağlantı; bağlı mı denetimi) | Codex | `codex/k-montaj` | Codex başlayacak · zincir adımları **70–79** |
 | Standart önlemleri · robot + QR (madde 10–11): hücre kapısı emniyet anahtarı, robot gözdeyken QR müşteri kapısı kilitli + geri bildirim | Codex | (Codex seçer) | Codex'e bildirildi |
 | Güvenlik devresi şeması (acil stop + kapı anahtarları + robot, tek röle / güvenlik PLC) | Claude + Codex | — | makine anahtarları bitince |
 
 Bir işe başlamadan önce tabloda başka bir ajanın aynı istasyonu ya da aynı dosyaları almadığını kontrol et.
+
+## 1b. Aynı anda çalışma (Kemal, 5 Eki: "sen TOPPING'e, Codex başka birine")
+
+- **İstasyon bölüşümü:** Claude → TOPPING · Codex → K (Codex K400'ü tasarladı). Biri bitince tablodan sıradakini alır: F, E, U, A kontrol, B kaynak (önce yazan alır).
+- **Dosyalar ayrı:** her ajan yalnız kendi istasyonunun `otonom/hat/<ist>-montaj.html`, `otonom/hat3d/v3/<ist>_montaj/` ve üreteç klasörüne yazar
+  (Claude: `_local/claude_son_yerel/gece2/t6/`, Codex: kendi `codex/…` klasörü). Ortak oynatıcı `montaj-oynatici.js`'e dokunmak gerekirse önce buraya not.
+- **Model zinciri aynı anda:** ikisi de **aynı tabandan** (adım 61, `hat3_v10c`) başlar. Adım numaraları ayrılmıştır: Claude **62–69**, Codex **70–79** →
+  iki ajan kendi adımlarını kendi branch'inde, kendi iş klasöründe geliştirir (iki koşu bayt aynı). Kilit yalnız **birleştirirken** alınır:
+  önce biten kendi adımlarını zincire ekler; sonra gelen, kendi adımlarını öncekinin çıktısı üstünde YENİDEN koşar (girdi değişti → SHA değişir,
+  iki koşu bayt aynı yeniden denetlenir) ve ekler. Farklı istasyonlar farklı düğümlere dokunduğu için çakışma beklenmez; aynı düğüme dokunan adım
+  varsa birleştiren öteki ajana / Kemal'e yazar.
+- **Animasyon** zincirin son modelinden üretilir: model birleşince ikisi de kendi animasyonunu son modelle bir kez daha üretir ve denetler.
+- **Yayın** birlikte, Kemal gördükten sonra.
 
 ## 2. Dosya sahipliği
 
