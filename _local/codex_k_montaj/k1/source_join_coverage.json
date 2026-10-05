@@ -1,0 +1,1063 @@
+{
+  "production_release": false,
+  "joins": [
+    {
+      "id": "govde_kulak_sol_on_841_bag",
+      "type": "pem_saplama",
+      "hardware": [
+        "govde_kulak_sol_on_841_bag_saplama",
+        "govde_kulak_sol_on_841_bag_pul",
+        "govde_kulak_sol_on_841_bag_somun"
+      ],
+      "hosts": [
+        "sol_sac_urun_girisi",
+        "govde_kulak_sol_on_841"
+      ],
+      "hardware_present": true,
+      "hosts_present": [
+        "sol_sac_urun_girisi",
+        "govde_kulak_sol_on_841"
+      ],
+      "source_axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "source_point": [
+        0.0,
+        841.5,
+        8.0
+      ]
+    },
+    {
+      "id": "govde_kulak_sol_on_1150_bag",
+      "type": "pem_saplama",
+      "hardware": [
+        "govde_kulak_sol_on_1150_bag_saplama",
+        "govde_kulak_sol_on_1150_bag_pul",
+        "govde_kulak_sol_on_1150_bag_somun"
+      ],
+      "hosts": [
+        "sol_sac_urun_girisi",
+        "govde_kulak_sol_on_1150"
+      ],
+      "hardware_present": true,
+      "hosts_present": [
+        "sol_sac_urun_girisi",
+        "govde_kulak_sol_on_1150"
+      ],
+      "source_axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "source_point": [
+        0.0,
+        1150.0,
+        8.0
+      ]
+    },
+    {
+      "id": "govde_kulak_sol_on_1600_bag",
+      "type": "pem_saplama",
+      "hardware": [
+        "govde_kulak_sol_on_1600_bag_saplama",
+        "govde_kulak_sol_on_1600_bag_pul",
+        "govde_kulak_sol_on_1600_bag_somun"
+      ],
+      "hosts": [
+        "sol_sac_urun_girisi",
+        "govde_kulak_sol_on_1600"
+      ],
+      "hardware_present": true,
+      "hosts_present": [
+        "sol_sac_urun_girisi",
+        "govde_kulak_sol_on_1600"
+      ],
+      "source_axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "source_point": [
+        0.0,
+        1600.0,
+        8.0
+      ]
+    },
+    {
+      "id": "govde_kulak_sol_on_1810_bag",
+      "type": "pem_saplama",
+      "hardware": [
+        "govde_kulak_sol_on_1810_bag_saplama",
+        "govde_kulak_sol_on_1810_bag_pul",
+        "govde_kulak_sol_on_1810_bag_somun"
+      ],
+      "hosts": [
+        "sol_sac_urun_girisi",
+        "govde_kulak_sol_on_1810"
+      ],
+      "hardware_present": true,
+      "hosts_present": [
+        "sol_sac_urun_girisi",
+        "govde_kulak_sol_on_1810"
+      ],
+      "source_axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "source_point": [
+        0.0,
+        1810.0,
+        8.0
+      ]
+    },
+    {
+      "id": "govde_kulak_sol_arka_841_bag",
+      "type": "pem_saplama",
+      "hardware": [
+        "govde_kulak_sol_arka_841_bag_saplama",
+        "govde_kulak_sol_arka_841_bag_pul",
+        "govde_kulak_sol_arka_841_bag_somun"
+      ],
+      "hosts": [
+        "sol_sac_urun_girisi",
+        "govde_kulak_sol_arka_841"
+      ],
+      "hardware_present": true,
+      "hosts_present": [
+        "sol_sac_urun_girisi",
+        "govde_kulak_sol_arka_841"
+      ],
+      "source_axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "source_point": [
+        0.0,
+        841.5,
+        -766.0
+      ]
+    },
+    {
+      "id": "govde_kulak_sol_arka_1150_bag",
+      "type": "pem_saplama",
+      "hardware": [
+        "govde_kulak_sol_arka_1150_bag_saplama",
+        "govde_kulak_sol_arka_1150_bag_pul",
+        "govde_kulak_sol_arka_1150_bag_somun"
+      ],
+      "hosts": [
+        "sol_sac_urun_girisi",
+        "govde_kulak_sol_arka_1150"
+      ],
+      "hardware_present": true,
+      "hosts_present": [
+        "sol_sac_urun_girisi",
+        "govde_kulak_sol_arka_1150"
+      ],
+      "source_axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "source_point": [
+        0.0,
+        1150.0,
+        -766.0
+      ]
+    },
+    {
+      "id": "govde_kulak_sol_arka_1600_bag",
+      "type": "pem_saplama",
+      "hardware": [
+        "govde_kulak_sol_arka_1600_bag_saplama",
+        "govde_kulak_sol_arka_1600_bag_pul",
+        "govde_kulak_sol_arka_1600_bag_somun"
+      ],
+      "hosts": [
+        "sol_sac_urun_girisi",
+        "govde_kulak_sol_arka_1600"
+      ],
+      "hardware_present": true,
+      "hosts_present": [
+        "sol_sac_urun_girisi",
+        "govde_kulak_sol_arka_1600"
+      ],
+      "source_axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "source_point": [
+        0.0,
+        1600.0,
+        -766.0
+      ]
+    },
+    {
+      "id": "govde_kulak_sol_arka_1720_bag",
+      "type": "pem_saplama",
+      "hardware": [
+        "govde_kulak_sol_arka_1720_bag_saplama",
+        "govde_kulak_sol_arka_1720_bag_pul",
+        "govde_kulak_sol_arka_1720_bag_somun"
+      ],
+      "hosts": [
+        "sol_sac_urun_girisi",
+        "govde_kulak_sol_arka_1720"
+      ],
+      "hardware_present": true,
+      "hosts_present": [
+        "sol_sac_urun_girisi",
+        "govde_kulak_sol_arka_1720"
+      ],
+      "source_axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "source_point": [
+        0.0,
+        1720.0,
+        -766.0
+      ]
+    },
+    {
+      "id": "govde_kulak_sol_orta_680_bag",
+      "type": "pem_saplama",
+      "hardware": [
+        "govde_kulak_sol_orta_680_bag_saplama",
+        "govde_kulak_sol_orta_680_bag_pul",
+        "govde_kulak_sol_orta_680_bag_somun"
+      ],
+      "hosts": [
+        "sol_sac_urun_girisi",
+        "govde_kulak_sol_orta_680"
+      ],
+      "hardware_present": false,
+      "hosts_present": [
+        "sol_sac_urun_girisi"
+      ],
+      "source_axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "source_point": [
+        0.0,
+        843.0,
+        -680.0
+      ]
+    },
+    {
+      "id": "govde_kulak_sol_orta_350_bag",
+      "type": "pem_saplama",
+      "hardware": [
+        "govde_kulak_sol_orta_350_bag_saplama",
+        "govde_kulak_sol_orta_350_bag_pul",
+        "govde_kulak_sol_orta_350_bag_somun"
+      ],
+      "hosts": [
+        "sol_sac_urun_girisi",
+        "govde_kulak_sol_orta_350"
+      ],
+      "hardware_present": false,
+      "hosts_present": [
+        "sol_sac_urun_girisi"
+      ],
+      "source_axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "source_point": [
+        0.0,
+        843.0,
+        -350.0
+      ]
+    },
+    {
+      "id": "govde_kulak_sol_orta_20_bag",
+      "type": "pem_saplama",
+      "hardware": [
+        "govde_kulak_sol_orta_20_bag_saplama",
+        "govde_kulak_sol_orta_20_bag_pul",
+        "govde_kulak_sol_orta_20_bag_somun"
+      ],
+      "hosts": [
+        "sol_sac_urun_girisi",
+        "govde_kulak_sol_orta_20"
+      ],
+      "hardware_present": false,
+      "hosts_present": [
+        "sol_sac_urun_girisi"
+      ],
+      "source_axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "source_point": [
+        0.0,
+        843.0,
+        -20.0
+      ]
+    },
+    {
+      "id": "govde_kulak_sag_on_841_bag",
+      "type": "pem_saplama",
+      "hardware": [
+        "govde_kulak_sag_on_841_bag_saplama",
+        "govde_kulak_sag_on_841_bag_pul",
+        "govde_kulak_sag_on_841_bag_somun"
+      ],
+      "hosts": [
+        "sag_sac_E_penceresi",
+        "govde_kulak_sag_on_841"
+      ],
+      "hardware_present": true,
+      "hosts_present": [
+        "sag_sac_E_penceresi",
+        "govde_kulak_sag_on_841"
+      ],
+      "source_axis": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "source_point": [
+        400.0,
+        841.5,
+        8.0
+      ]
+    },
+    {
+      "id": "govde_kulak_sag_on_1150_bag",
+      "type": "pem_saplama",
+      "hardware": [
+        "govde_kulak_sag_on_1150_bag_saplama",
+        "govde_kulak_sag_on_1150_bag_pul",
+        "govde_kulak_sag_on_1150_bag_somun"
+      ],
+      "hosts": [
+        "sag_sac_E_penceresi",
+        "govde_kulak_sag_on_1150"
+      ],
+      "hardware_present": true,
+      "hosts_present": [
+        "sag_sac_E_penceresi",
+        "govde_kulak_sag_on_1150"
+      ],
+      "source_axis": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "source_point": [
+        400.0,
+        1150.0,
+        8.0
+      ]
+    },
+    {
+      "id": "govde_kulak_sag_on_1600_bag",
+      "type": "pem_saplama",
+      "hardware": [
+        "govde_kulak_sag_on_1600_bag_saplama",
+        "govde_kulak_sag_on_1600_bag_pul",
+        "govde_kulak_sag_on_1600_bag_somun"
+      ],
+      "hosts": [
+        "sag_sac_E_penceresi",
+        "govde_kulak_sag_on_1600"
+      ],
+      "hardware_present": true,
+      "hosts_present": [
+        "sag_sac_E_penceresi",
+        "govde_kulak_sag_on_1600"
+      ],
+      "source_axis": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "source_point": [
+        400.0,
+        1600.0,
+        8.0
+      ]
+    },
+    {
+      "id": "govde_kulak_sag_on_1810_bag",
+      "type": "pem_saplama",
+      "hardware": [
+        "govde_kulak_sag_on_1810_bag_saplama",
+        "govde_kulak_sag_on_1810_bag_pul",
+        "govde_kulak_sag_on_1810_bag_somun"
+      ],
+      "hosts": [
+        "sag_sac_E_penceresi",
+        "govde_kulak_sag_on_1810"
+      ],
+      "hardware_present": true,
+      "hosts_present": [
+        "sag_sac_E_penceresi",
+        "govde_kulak_sag_on_1810"
+      ],
+      "source_axis": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "source_point": [
+        400.0,
+        1810.0,
+        8.0
+      ]
+    },
+    {
+      "id": "govde_kulak_sag_arka_841_bag",
+      "type": "pem_saplama",
+      "hardware": [
+        "govde_kulak_sag_arka_841_bag_saplama",
+        "govde_kulak_sag_arka_841_bag_pul",
+        "govde_kulak_sag_arka_841_bag_somun"
+      ],
+      "hosts": [
+        "sag_sac_E_penceresi",
+        "govde_kulak_sag_arka_841"
+      ],
+      "hardware_present": true,
+      "hosts_present": [
+        "sag_sac_E_penceresi",
+        "govde_kulak_sag_arka_841"
+      ],
+      "source_axis": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "source_point": [
+        400.0,
+        841.5,
+        -766.0
+      ]
+    },
+    {
+      "id": "govde_kulak_sag_arka_1150_bag",
+      "type": "pem_saplama",
+      "hardware": [
+        "govde_kulak_sag_arka_1150_bag_saplama",
+        "govde_kulak_sag_arka_1150_bag_pul",
+        "govde_kulak_sag_arka_1150_bag_somun"
+      ],
+      "hosts": [
+        "sag_sac_E_penceresi",
+        "govde_kulak_sag_arka_1150"
+      ],
+      "hardware_present": true,
+      "hosts_present": [
+        "sag_sac_E_penceresi",
+        "govde_kulak_sag_arka_1150"
+      ],
+      "source_axis": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "source_point": [
+        400.0,
+        1150.0,
+        -766.0
+      ]
+    },
+    {
+      "id": "govde_kulak_sag_arka_1600_bag",
+      "type": "pem_saplama",
+      "hardware": [
+        "govde_kulak_sag_arka_1600_bag_saplama",
+        "govde_kulak_sag_arka_1600_bag_pul",
+        "govde_kulak_sag_arka_1600_bag_somun"
+      ],
+      "hosts": [
+        "sag_sac_E_penceresi",
+        "govde_kulak_sag_arka_1600"
+      ],
+      "hardware_present": true,
+      "hosts_present": [
+        "sag_sac_E_penceresi",
+        "govde_kulak_sag_arka_1600"
+      ],
+      "source_axis": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "source_point": [
+        400.0,
+        1600.0,
+        -766.0
+      ]
+    },
+    {
+      "id": "govde_kulak_sag_arka_1810_bag",
+      "type": "pem_saplama",
+      "hardware": [
+        "govde_kulak_sag_arka_1810_bag_saplama",
+        "govde_kulak_sag_arka_1810_bag_pul",
+        "govde_kulak_sag_arka_1810_bag_somun"
+      ],
+      "hosts": [
+        "sag_sac_E_penceresi",
+        "govde_kulak_sag_arka_1810"
+      ],
+      "hardware_present": true,
+      "hosts_present": [
+        "sag_sac_E_penceresi",
+        "govde_kulak_sag_arka_1810"
+      ],
+      "source_axis": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "source_point": [
+        400.0,
+        1810.0,
+        -766.0
+      ]
+    },
+    {
+      "id": "govde_kulak_sag_orta_680_bag",
+      "type": "pem_saplama",
+      "hardware": [
+        "govde_kulak_sag_orta_680_bag_saplama",
+        "govde_kulak_sag_orta_680_bag_pul",
+        "govde_kulak_sag_orta_680_bag_somun"
+      ],
+      "hosts": [
+        "sag_sac_E_penceresi",
+        "govde_kulak_sag_orta_680"
+      ],
+      "hardware_present": false,
+      "hosts_present": [
+        "sag_sac_E_penceresi"
+      ],
+      "source_axis": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "source_point": [
+        400.0,
+        843.0,
+        -680.0
+      ]
+    },
+    {
+      "id": "govde_kulak_sag_orta_350_bag",
+      "type": "pem_saplama",
+      "hardware": [
+        "govde_kulak_sag_orta_350_bag_saplama",
+        "govde_kulak_sag_orta_350_bag_pul",
+        "govde_kulak_sag_orta_350_bag_somun"
+      ],
+      "hosts": [
+        "sag_sac_E_penceresi",
+        "govde_kulak_sag_orta_350"
+      ],
+      "hardware_present": false,
+      "hosts_present": [
+        "sag_sac_E_penceresi"
+      ],
+      "source_axis": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "source_point": [
+        400.0,
+        843.0,
+        -350.0
+      ]
+    },
+    {
+      "id": "govde_kulak_sag_orta_20_bag",
+      "type": "pem_saplama",
+      "hardware": [
+        "govde_kulak_sag_orta_20_bag_saplama",
+        "govde_kulak_sag_orta_20_bag_pul",
+        "govde_kulak_sag_orta_20_bag_somun"
+      ],
+      "hosts": [
+        "sag_sac_E_penceresi",
+        "govde_kulak_sag_orta_20"
+      ],
+      "hardware_present": false,
+      "hosts_present": [
+        "sag_sac_E_penceresi"
+      ],
+      "source_axis": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "source_point": [
+        400.0,
+        843.0,
+        -20.0
+      ]
+    },
+    {
+      "id": "govde_kulak_ust_on_80_bag",
+      "type": "pem_saplama",
+      "hardware": [
+        "govde_kulak_ust_on_80_bag_saplama",
+        "govde_kulak_ust_on_80_bag_pul",
+        "govde_kulak_ust_on_80_bag_somun"
+      ],
+      "hosts": [
+        "ust_sac",
+        "govde_kulak_ust_on_80"
+      ],
+      "hardware_present": true,
+      "hosts_present": [
+        "ust_sac",
+        "govde_kulak_ust_on_80"
+      ],
+      "source_axis": [
+        0.0,
+        -1.0,
+        -0.0
+      ],
+      "source_point": [
+        80.0,
+        1862.0,
+        8.0
+      ]
+    },
+    {
+      "id": "govde_kulak_ust_on_320_bag",
+      "type": "pem_saplama",
+      "hardware": [
+        "govde_kulak_ust_on_320_bag_saplama",
+        "govde_kulak_ust_on_320_bag_pul",
+        "govde_kulak_ust_on_320_bag_somun"
+      ],
+      "hosts": [
+        "ust_sac",
+        "govde_kulak_ust_on_320"
+      ],
+      "hardware_present": true,
+      "hosts_present": [
+        "ust_sac",
+        "govde_kulak_ust_on_320"
+      ],
+      "source_axis": [
+        0.0,
+        -1.0,
+        -0.0
+      ],
+      "source_point": [
+        320.0,
+        1862.0,
+        8.0
+      ]
+    },
+    {
+      "id": "govde_kulak_ust_arka_80_bag",
+      "type": "pem_saplama",
+      "hardware": [
+        "govde_kulak_ust_arka_80_bag_saplama",
+        "govde_kulak_ust_arka_80_bag_pul",
+        "govde_kulak_ust_arka_80_bag_somun"
+      ],
+      "hosts": [
+        "ust_sac",
+        "govde_kulak_ust_arka_80"
+      ],
+      "hardware_present": true,
+      "hosts_present": [
+        "ust_sac",
+        "govde_kulak_ust_arka_80"
+      ],
+      "source_axis": [
+        0.0,
+        -1.0,
+        -0.0
+      ],
+      "source_point": [
+        80.0,
+        1862.0,
+        -766.0
+      ]
+    },
+    {
+      "id": "govde_kulak_ust_arka_200_bag",
+      "type": "pem_saplama",
+      "hardware": [
+        "govde_kulak_ust_arka_200_bag_saplama",
+        "govde_kulak_ust_arka_200_bag_pul",
+        "govde_kulak_ust_arka_200_bag_somun"
+      ],
+      "hosts": [
+        "ust_sac",
+        "govde_kulak_ust_arka_200"
+      ],
+      "hardware_present": true,
+      "hosts_present": [
+        "ust_sac",
+        "govde_kulak_ust_arka_200"
+      ],
+      "source_axis": [
+        0.0,
+        -1.0,
+        -0.0
+      ],
+      "source_point": [
+        200.0,
+        1862.0,
+        -766.0
+      ]
+    },
+    {
+      "id": "govde_bag_arka_sol_850",
+      "type": "pem_saplama",
+      "hardware": [
+        "govde_bag_arka_sol_850_saplama",
+        "govde_bag_arka_sol_850_pul",
+        "govde_bag_arka_sol_850_somun"
+      ],
+      "hosts": [
+        "arka_sac",
+        "sol_sac_urun_girisi"
+      ],
+      "hardware_present": true,
+      "hosts_present": [
+        "arka_sac",
+        "sol_sac_urun_girisi"
+      ],
+      "source_axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "source_point": [
+        12.5,
+        850.0,
+        -830.0
+      ]
+    },
+    {
+      "id": "govde_bag_arka_sol_1100",
+      "type": "pem_saplama",
+      "hardware": [
+        "govde_bag_arka_sol_1100_saplama",
+        "govde_bag_arka_sol_1100_pul",
+        "govde_bag_arka_sol_1100_somun"
+      ],
+      "hosts": [
+        "arka_sac",
+        "sol_sac_urun_girisi"
+      ],
+      "hardware_present": true,
+      "hosts_present": [
+        "arka_sac",
+        "sol_sac_urun_girisi"
+      ],
+      "source_axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "source_point": [
+        12.5,
+        1100.0,
+        -830.0
+      ]
+    },
+    {
+      "id": "govde_bag_arka_sol_1350",
+      "type": "pem_saplama",
+      "hardware": [
+        "govde_bag_arka_sol_1350_saplama",
+        "govde_bag_arka_sol_1350_pul",
+        "govde_bag_arka_sol_1350_somun"
+      ],
+      "hosts": [
+        "arka_sac",
+        "sol_sac_urun_girisi"
+      ],
+      "hardware_present": true,
+      "hosts_present": [
+        "arka_sac",
+        "sol_sac_urun_girisi"
+      ],
+      "source_axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "source_point": [
+        12.5,
+        1350.0,
+        -830.0
+      ]
+    },
+    {
+      "id": "govde_bag_arka_sol_1600",
+      "type": "pem_saplama",
+      "hardware": [
+        "govde_bag_arka_sol_1600_saplama",
+        "govde_bag_arka_sol_1600_pul",
+        "govde_bag_arka_sol_1600_somun"
+      ],
+      "hosts": [
+        "arka_sac",
+        "sol_sac_urun_girisi"
+      ],
+      "hardware_present": true,
+      "hosts_present": [
+        "arka_sac",
+        "sol_sac_urun_girisi"
+      ],
+      "source_axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "source_point": [
+        12.5,
+        1600.0,
+        -830.0
+      ]
+    },
+    {
+      "id": "govde_bag_arka_sol_1830",
+      "type": "pem_saplama",
+      "hardware": [
+        "govde_bag_arka_sol_1830_saplama",
+        "govde_bag_arka_sol_1830_pul",
+        "govde_bag_arka_sol_1830_somun"
+      ],
+      "hosts": [
+        "arka_sac",
+        "sol_sac_urun_girisi"
+      ],
+      "hardware_present": true,
+      "hosts_present": [
+        "arka_sac",
+        "sol_sac_urun_girisi"
+      ],
+      "source_axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "source_point": [
+        12.5,
+        1830.0,
+        -830.0
+      ]
+    },
+    {
+      "id": "govde_bag_arka_sag_850",
+      "type": "pem_saplama",
+      "hardware": [
+        "govde_bag_arka_sag_850_saplama",
+        "govde_bag_arka_sag_850_pul",
+        "govde_bag_arka_sag_850_somun"
+      ],
+      "hosts": [
+        "arka_sac",
+        "sag_sac_E_penceresi"
+      ],
+      "hardware_present": true,
+      "hosts_present": [
+        "arka_sac",
+        "sag_sac_E_penceresi"
+      ],
+      "source_axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "source_point": [
+        387.5,
+        850.0,
+        -830.0
+      ]
+    },
+    {
+      "id": "govde_bag_arka_sag_1100",
+      "type": "pem_saplama",
+      "hardware": [
+        "govde_bag_arka_sag_1100_saplama",
+        "govde_bag_arka_sag_1100_pul",
+        "govde_bag_arka_sag_1100_somun"
+      ],
+      "hosts": [
+        "arka_sac",
+        "sag_sac_E_penceresi"
+      ],
+      "hardware_present": true,
+      "hosts_present": [
+        "arka_sac",
+        "sag_sac_E_penceresi"
+      ],
+      "source_axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "source_point": [
+        387.5,
+        1100.0,
+        -830.0
+      ]
+    },
+    {
+      "id": "govde_bag_arka_sag_1350",
+      "type": "pem_saplama",
+      "hardware": [
+        "govde_bag_arka_sag_1350_saplama",
+        "govde_bag_arka_sag_1350_pul",
+        "govde_bag_arka_sag_1350_somun"
+      ],
+      "hosts": [
+        "arka_sac",
+        "sag_sac_E_penceresi"
+      ],
+      "hardware_present": true,
+      "hosts_present": [
+        "arka_sac",
+        "sag_sac_E_penceresi"
+      ],
+      "source_axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "source_point": [
+        387.5,
+        1350.0,
+        -830.0
+      ]
+    },
+    {
+      "id": "govde_bag_arka_sag_1600",
+      "type": "pem_saplama",
+      "hardware": [
+        "govde_bag_arka_sag_1600_saplama",
+        "govde_bag_arka_sag_1600_pul",
+        "govde_bag_arka_sag_1600_somun"
+      ],
+      "hosts": [
+        "arka_sac",
+        "sag_sac_E_penceresi"
+      ],
+      "hardware_present": true,
+      "hosts_present": [
+        "arka_sac",
+        "sag_sac_E_penceresi"
+      ],
+      "source_axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "source_point": [
+        387.5,
+        1600.0,
+        -830.0
+      ]
+    },
+    {
+      "id": "govde_bag_arka_sag_1830",
+      "type": "pem_saplama",
+      "hardware": [
+        "govde_bag_arka_sag_1830_saplama",
+        "govde_bag_arka_sag_1830_pul",
+        "govde_bag_arka_sag_1830_somun"
+      ],
+      "hosts": [
+        "arka_sac",
+        "sag_sac_E_penceresi"
+      ],
+      "hardware_present": true,
+      "hosts_present": [
+        "arka_sac",
+        "sag_sac_E_penceresi"
+      ],
+      "source_axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "source_point": [
+        387.5,
+        1830.0,
+        -830.0
+      ]
+    },
+    {
+      "id": "govde_bag_arka_ust_40",
+      "type": "pem_saplama",
+      "hardware": [
+        "govde_bag_arka_ust_40_saplama",
+        "govde_bag_arka_ust_40_pul",
+        "govde_bag_arka_ust_40_somun"
+      ],
+      "hosts": [
+        "arka_sac",
+        "ust_sac"
+      ],
+      "hardware_present": true,
+      "hosts_present": [
+        "arka_sac",
+        "ust_sac"
+      ],
+      "source_axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "source_point": [
+        40.0,
+        1849.5,
+        -830.0
+      ]
+    },
+    {
+      "id": "govde_bag_arka_ust_360",
+      "type": "pem_saplama",
+      "hardware": [
+        "govde_bag_arka_ust_360_saplama",
+        "govde_bag_arka_ust_360_pul",
+        "govde_bag_arka_ust_360_somun"
+      ],
+      "hosts": [
+        "arka_sac",
+        "ust_sac"
+      ],
+      "hardware_present": true,
+      "hosts_present": [
+        "arka_sac",
+        "ust_sac"
+      ],
+      "source_axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "source_point": [
+        360.0,
+        1849.5,
+        -830.0
+      ]
+    }
+  ]
+}

@@ -49,6 +49,27 @@ if 'k71_istasyon_rafi' in P:
  members=['k71_istasyon_rafi']+[a for a in ('k71_raf_yan_sac_4005','k71_raf_yan_sac_4395') if a in P]
  GROUPS[members[0]]=members;WELDS[members[0]]=[a for a in P if a.startswith('k71_raf_yan_kaynagi_')]
  done.update(members[1:]);done.update(WELDS[members[0]])
+# Door skins, latch counterplates and hinge leaves are joined on the bench before the lift-off door enters the frame.
+if all(a in P for a in ('k_govde_on_seffaf_0','k_govde_on_seffaf_1')):
+ door=[a for a in P if a.startswith('k_govde_on_seffaf_')]+[a for a in P if a.startswith('onyuz_kapak_K_') and ('_karsilik_' in a or '_kanat' in a or '_pem_' in a)]
+ seams=[a for a in P if P[a]['tur']=='kaynak' and ('onyuz_kapak_K' in a)]
+ GROUPS[door[0]]=door;WELDS[door[0]]=seams;done.update(door[1:]);done.update(seams)
+
+# Supplier-built actuator end caps and moving table are delivered as one unit; our feet, sensors and fittings remain separate.
+for prefix in ('itici_X_MY1B10G-250','itici_Z_MY1B10G-350'):
+ head=prefix+'_profil';members=[a for a in (head,prefix+'_uc_kapagi_0',prefix+'_uc_kapagi_1',prefix+'_masa') if a in P]
+ if len(members)==4:GROUPS[head]=members;done.update(members[1:])
+# PulsaJet supplier cover and internal electrical socket arrive with the complete nozzle body.
+head='PulsaJet_AAB10000AUH-104210-VIFC'
+if head in P:
+ members=[a for a in (head,'PulsaJet_kapak_CP104218-SS','PulsaJet_M8_soketi_9') if a in P]
+ GROUPS[head]=members;done.update(members[1:])
+
+# Build the DIN panel on the rear sheet on a bench, then enter from the rear before the cabinet closes.
+rear_members=['arka_sac']+[a for a in P if a.startswith(('pano_','din_rayi_','plc_','guc_24V','sigorta_','klemens_','valf_','sartlandirici_'))]
+if 'arka_sac' in P and 'pano_plakasi' in rear_members:
+ GROUPS['arka_sac']=rear_members;done.update(rear_members[1:])
+
 # Pressed bottom studs accompany the base sheet; their attachment must precede support installation.
 PEMS=[a for a in P if a.startswith('k71_alt_saplama_')]
 if 'taban_sac_3' in P:
@@ -120,6 +141,32 @@ for a in P:
   THREAD_AXES[a]=[0,0,-40.]
   female=a.replace('_kanat_vida_','_pem_')
   if female in P:haric(a,female,'Source h3_k_sac_v1 hinge leaf: ISO7380 M5×6 into matching SP-M5-1; nominal thread proxy pair on common Z axis')
+# Native DGRF mounting interface: four M10 screws enter from the back along Z.
+for a in P:
+ if a.startswith('DGRF_M10_civata_'):
+  THREAD_AXES[a]=[0,0,-100.]
+  haric(a,'DGRF-C-63-125_govde','Native kesme_cad_v8 DGRF body: four M10 threaded mounting bores, T2 24 mm; nominal cylindrical thread surfaces, axial screw insertion only')
+  for b in ('DGRF_ZBH-12_0','DGRF_ZBH-12_1'):
+   if b in P and np.linalg.norm(((LO[a]+HI[a])/2)[:2]-((LO[b]+HI[b])/2)[:2])<.01:
+    haric(a,b,'Native DGRF ZBH-12-B centring bush Ø10 screw passage: nominal equal-diameter cylindrical mating; same M10 axis, no exception for brackets')
+ if a.startswith('DGRF_ZBH-12_'):
+  THREAD_AXES[a]=[0,0,100.]
+  haric(a,'DGRF_baglanti_plakasi','Native DGRF mounting plate has Ø12 H7 centring seat, 5 mm deep; ZBH-12 exact-diameter fit, axial insertion')
+  haric(a,'DGRF-C-63-125_govde','Native DGRF body has Ø12 × 2.6 centring seat; manufacturer centring bush exact-diameter fit, axial insertion')
+ if a=='tahrik_rulosu_EC5000_M8_civata':THREAD_AXES[a]=[0,0,100.]
+
+for a in P:
+ if a.startswith('itici_X_MY1B10G-250_D-M9N_'):THREAD_AXES[a]=[0,0,100.]
+ if a.startswith('itici_Z_MY1B10G-350_D-M9N_'):THREAD_AXES[a]=[100.,0,0]
+
+if 'k76_tarti_rakor_M16_govde' in P:
+ THREAD_AXES['k76_tarti_rakor_M16_govde']=[-100.,0,0]
+ THREAD_AXES['k76_tarti_rakor_M16_kilit_somunu']=[100.,0,0]
+ haric('k76_tarti_rakor_M16_govde','k76_tarti_rakor_M16_kilit_somunu','Adım76: M16 boyun / M16 kilit somunu ortak X ekseninde nominal dişli yüzey teması; sac ve çevre için istisna yok')
+for a in P:
+ if a.startswith('k75_kiris_vida_') or a.startswith('k75_kiris_pul_bas_'):THREAD_AXES[a]=[0,0,-100.]
+ if a.startswith('k75_kiris_somun_') or a.startswith('k75_kiris_pul_somun_'):THREAD_AXES[a]=[0,0,100.]
+
 # Base first; finished welded supports next, shelf later; enclosing panels last.
 def seqrank(a):
  q=rank(a)
@@ -144,7 +191,8 @@ def before(a,b):
  a=alias.get(a,a);b=alias.get(b,b)
  if b=='k71_istasyon_rafi' and a not in GROUPS and not a.startswith(('k71_alt_somun_','k71_alt_pul_')) and a!='taban_sac_3':return
  if a!=b and a in items and b in items:edges.add((a,b))
-for group in GROUPS:before('taban_sac_3',group);before(group,'k71_istasyon_rafi')
+for group in GROUPS:
+ if group.startswith('k71_alt_flans_') or group=='taban_sac_tasiyici_20':before('taban_sac_3',group);before(group,'k71_istasyon_rafi')
 for a in P:
  if a.startswith('k71_alt_somun_'):before(a,'k71_istasyon_rafi')
 for a in ('sol_sac_urun_girisi','sag_sac_E_penceresi','arka_sac','k_govde_on_seffaf_0','k_govde_on_seffaf_1'):
@@ -184,6 +232,123 @@ for a in THREAD_AXES:
   if receiver:before(receiver,base+'_pul');before(receiver,a)
   if a in ('govde_kulak_ust_arka_80_bag_somun','govde_kulak_ust_arka_200_bag_somun'):
    before(a,'k_elektrik_aluminyum_1');before(a,'k_elektrik_siemens_0')
+# Source-defined assembly precedence: roller shafts before end plates close around them.
+for roller in ('avara_rulosu_46','tahrik_rulosu_EC5000_354','avara_mili_0','tahrik_rulosu_EC5000_hex_mil'):
+ for obstruction in ('bant_yan_-3','bant_yan_-421','bant_traversi_0','bant_traversi_1','kopru_kirisi_-126','kopru_kirisi_-286'):
+  before(roller,obstruction)
+for lower,upper in zip(('yag_tarti_taban_plakasi','yag_tarti_alt_takozu','yag_tarti_yuk_hucresi_PW15AH','yag_tarti_ust_takozu','yag_tarti_platformu'),('yag_tarti_alt_takozu','yag_tarti_yuk_hucresi_PW15AH','yag_tarti_ust_takozu','yag_tarti_platformu','yag_tenekesi_18L')):
+ before(lower,upper)
+# A finished RollerDrive is supplied with its end shaft; the driven roller screw is fitted later.
+# The load-cell stack is assembled from its fixed base towards the removable platform.
+oil_parts=[a for a in P if any(q in a for q in ('tarti','PW15AH','ara_takoz','ara_mesafe'))]
+(HERE/'oil_stack_inventory.json').write_text(json.dumps({a:{'lo':LO[a].tolist(),'hi':HI[a].tolist(),'description':tr(a)} for a in oil_parts},ensure_ascii=False,indent=2),encoding='utf-8')
+
+# Install inner DIN equipment before closing front cable ducts; its own rear plate remains first.
+control=[a for a in P if a.startswith(('plc_','guc_24V','din_ray_','klemens_','sigorta_','valf_','hava_sartlandirici_'))]
+for a in control:
+ before('pano_plakasi',a)
+ for b in P:
+  if b.startswith(('elk_ic_kanal_','elk_zincir_kanal_')):before(a,b)
+for i in range(3):
+ fixed=f'onyuz_kapak_K_mentese_{i}_sabit';leaf=f'onyuz_kapak_K_mentese_{i}_kanat'
+ before(fixed,leaf)
+ for suffix in ('a','b'):before(fixed,fixed+'_vida_'+suffix)
+# Belt supports precede the closed loop; sensor brackets and guides are fitted last.
+for a in P:
+ if a.startswith(('bant_yan_','bant_traversi_','avara_','tahrik_rulosu_')):
+  for b in P:
+   if b.startswith(('cit_braketi_','urun_sensoru_')):before(a,b)
+for a in ('bant_traversi_0','bant_traversi_1'):before(a,'kayma_tablasi')
+
+# Rear wall fasteners are inserted through the source-defined 13.5 mm gap before the DIN panel closes access.
+for a in P:
+ if a.startswith('govde_bag_arka_') and a.endswith(('_pul','_somun')):
+  for b in P:
+   if b.startswith('pano_plakasi') and alias.get(b,b)!='arka_sac':before(a,b)
+for a in ('elk_k_tarti_rakor_0','yag_duvar_gecis_bilezigi_emis','yag_duvar_gecis_bilezigi_donus'):
+ before('sol_sac_urun_girisi',a)
+
+for a in P:
+ if a.startswith('DGRF_ZBH-12_'):
+  before('DGRF_baglanti_plakasi',a);before(a,'DGRF-C-63-125_govde')
+ if a.startswith('DGRF_M10_civata_'):
+  before('DGRF_baglanti_plakasi',a);before('DGRF-C-63-125_govde',a)
+
+for i in range(3):
+ before(f'onyuz_kapak_K_basac_{i}','k_govde_on_seffaf_0')
+ before(f'onyuz_kapak_K_mentese_{i}_sabit','k_govde_on_seffaf_0')
+ for suffix in ('a','b'):before(f'onyuz_kapak_K_mentese_{i}_sabit_vida_{suffix}','k_govde_on_seffaf_0')
+
+for axis in ('X','Z'):
+ prefix='itici_'+axis+('_MY1B10G-250' if axis=='X' else '_MY1B10G-350')
+ for a in P:
+  if a.startswith(prefix+'_D-M9N_'):before(prefix+'_profil',a)
+for a in P:
+ if a.startswith(('itici_','kesici_','nozul_','PulsaJet_','hava_ic_kanal_')):
+  before(a,'yag_pompa_rafi');before(a,'yag_pompa_plakasi')
+
+# The open frame is closed after belt end plates have entered axially; no path is exempted.
+for rail in ('bant_yan_-3','bant_yan_-421'):
+ for post in ('kose_dikmesi_20_42','kose_dikmesi_380_42','kose_dikmesi_20_-800','kose_dikmesi_380_-800','emniyet_sari_0','emniyet_siyah_0'):
+  before(rail,post)
+for a in P:
+ if a.startswith(('itici_X_','itici_Z_')):before('bant_yan_-421',a)
+ if a.startswith(('yag_pompasi_','yag_emis_filtresi','yag_basinc_sensoru_','yag_geri_basinc_','yag_T_parcasi')):
+  before('yag_pompa_rafi',a);before('yag_pompa_plakasi',a)
+  for control_part in control:before(control_part,a)
+ if a.startswith('yag_tarti_') or a=='yag_tenekesi_18L':before('elk_k_tarti_rakor_0',a)
+for i in range(2):before('itici_Z_MY1B10G-350_D-M9N_'+str(i),'itici_Z_yukseltme_97')
+before('kayma_tablasi','itici_Z_MY1B10G-350_profil')
+before('itici_X_MY-J10_blok_0','itici_Z_plaka');before('itici_X_MY-J10_blok_0','itici_X_merkez_yukseltme')
+
+for i in range(2):
+ tag=str(i);before('kopru_kirisi_-286','k75_kiris_pul_bas_'+tag);before('k75_kiris_pul_bas_'+tag,'k75_kiris_vida_'+tag)
+ before('DGRF_baglanti_plakasi','k75_kiris_vida_'+tag);before('k75_kiris_vida_'+tag,'k75_kiris_pul_somun_'+tag);before('k75_kiris_pul_somun_'+tag,'k75_kiris_somun_'+tag)
+for a in P:
+ if a.startswith('k_itici_sac_') or a=='itici_sabit_plaka':before('bant_yan_-421',a)
+ if a.startswith('yag_boru_'):before('yag_pompa_plakasi',a)
+ if a.startswith('emniyet_'):before('tahrik_rulosu_EC5000_M8_civata',a)
+before('itici_X_MY-J10_blok_0','itici_Z_MY1B10G-350_profil');before('itici_X_merkez_yukseltme','itici_Z_MY1B10G-350_profil')
+
+# Access-sensitive installation order; every changed order is checked by the same full path solver.
+for a in P:
+ if a.startswith('bicak_') and a!='bicak_koruma_halkasi':before('bicak_koruma_halkasi',a)
+ if a.startswith(('PulsaJet_','nozul_')):before(a,'kopru_kirisi_yan_20');before(a,'kopru_kirisi_-126')
+ if a.startswith(('itici_Z_yukseltme_','itici_Z_ray_')):before('itici_X_merkez_yukseltme',a)
+ if a.startswith(('hava_ic_kanal_','elk_zincir_paslanmaz_','elk_zincir_etiket_')):
+  before('itici_X_MY-J10_blok_0',a);before('itici_X_merkez_yukseltme',a);before('elk_ic_kanal_6',a)
+ if a.startswith(('yag_emme_lansi_','k_yag_pom_','d3_')):
+  before('sol_sac_urun_girisi',a);before('yag_tenekesi_18L',a)
+for a in ('elk_ic_kanal_6','elk_ic_kanal_8'):before(a,'kopru_kirisi_yan_380')
+before('yag_pompasi_GJ-N21_EagleDrive','elk_ic_kanal_2');before('yag_T_parcasi','elk_ic_kanal_2')
+# The T union is assembled before fitting its pressure transmitter.
+before('yag_T_parcasi','yag_basinc_sensoru_PM1704')
+edges.discard((alias.get('yag_basinc_sensoru_PM1704','yag_basinc_sensoru_PM1704'),alias.get('yag_T_parcasi','yag_T_parcasi')))
+
+for a in P:
+ if a.startswith('bicak_') and a!='bicak_koruma_halkasi':before(a,'kopru_kirisi_-286')
+ if a.startswith(('elk_k_tarti_celik_','elk_zincir_harting_','elk_zincir_rakor_','elk_zincir_hava_')):before('elk_ic_kanal_6',a)
+ if a.startswith('hava_ic_aski_'):
+  before('hava_ic_kanal_0',a);before('hava_ic_kanal_1',a)
+ if a.startswith('yag_pompa_rafi_kosebendi_'):
+  before('elk_zincir_paslanmaz_4',a);before('elk_zincir_paslanmaz_5',a)
+ if a.startswith('yag_boru_') or a=='yag_basinc_sensoru_PM1704':before(a,'elk_ic_kanal_2')
+before('hava_ic_kanal_0','kopru_kirisi_yan_380')
+before('sol_sac_urun_girisi','elk_zincir_kanal_1')
+before('sol_sac_urun_girisi','k76_tarti_rakor_M16_govde')
+before('yag_tarti_taban_plakasi','k76_tarti_rakor_M16_govde')
+before('k76_tarti_rakor_M16_govde','k76_tarti_rakor_M16_kilit_somunu')
+
+for a in P:
+ if a.startswith(('elk_zincir_m12_','elk_zincir_kod_')):before('elk_ic_kanal_6',a)
+ if a in ('elk_k_celik_7','elk_k_celik_1','elk_k_celik_3','elk_ic_kanal_5'):
+  before('hava_ic_kanal_1',a);before('elk_ic_kanal_6',a)
+for i in (0,3):
+ before('elk_zincir_rakor_'+str(i),'elk_zincir_m12_'+str(i));before('elk_zincir_rakor_'+str(i),'elk_zincir_kod_mavi_'+str(i))
+for a in ('elk_zincir_hava_1','elk_zincir_kanal_1'):before('elk_zincir_kanal_0',a)
+before('elk_zincir_kanal_2','elk_zincir_hava_2')
+before('k76_tarti_rakor_M16_kilit_somunu','elk_ic_kanal_1')
+
 remaining=set(items);ordered=[];cycle_breaks=[]
 while remaining:
  ready=[a for a in remaining if not any(b==a and x in remaining for x,b in edges)]
@@ -205,13 +370,24 @@ for a in ordered:
  elif P[a]['tur']=='kablo':
   t=buyu(a,t,0.6)
  else:
-  if a in THREAD_AXES:
+  if a in THREAD_AXES and not a.startswith('govde_bag_arka_'):
    axial=np.array(THREAD_AXES[a],float);axial=axial/np.linalg.norm(axial)*20
    alternatives=[YOL(axial)]
    for q in range(3):
     if abs(axial[q])<1e-5:
      for sign in (-1,1):
       side=np.zeros(3);side[q]=sign*300;alternatives.append(YOL(side,axial))
+  elif a.startswith('govde_bag_arka_') and a.endswith(('_pul','_somun')):
+   axial=np.array([0,0,6. if a.endswith('_somun') else 8.]);alternatives=[]
+   for q in (0,1):
+    for sign in (-1,1):
+     side=np.zeros(3);side[q]=sign*100;alternatives.append(YOL(side,axial))
+  elif a=='elk_zincir_kanal_0':alternatives=[YOL((0,35,0))]+AD
+  elif a=='elk_zincir_kanal_2':alternatives=[YOL((-35,0,0))]+AD
+  elif a=='arka_sac':alternatives=[YOL((0,0,-950))]+AD
+  elif a=='sol_sac_urun_girisi':alternatives=[YOL((0,0,950),(-14,0,0)),YOL((0,0,-950),(-14,0,0)),YOL((-650,0,0),(0,0,12))]+AD
+  elif a=='bant_yan_-3':alternatives=[YOL((0,0,950))]+AD
+  elif a=='bant_yan_-421':alternatives=[YOL((0,0,-950))]+AD
   else:alternatives=AD
   t=yerlestir(GROUPS.get(a,[a]),alternatives,t,tr(a),pem=PRESS_BY_SHEET.get(a,()),tezgah_kaynak=WELDS.get(a,()),sure_bekle=0.02)
  (HERE/'plan_progress.json').write_text(json.dumps({'last_part':a,'installed':len(YER),'problems':PLAN_SORUN,'elapsed_seconds':round(time.time()-T0,2)},ensure_ascii=False,indent=2),encoding='utf-8')
@@ -219,4 +395,4 @@ for a in CEVRE:
  if a not in GOR:basla(a,np.zeros(3),t);YER[a]=t
 TOPLAM=bitti()+2
 exec((HERE/'_son.py').read_text(encoding='utf-8').replace("'plan_a3.pkl'","'plan_k.pkl'").replace('OLC = 1.75','OLC = 1.0'))
-json.dump({'source':'registered step73 on main step66; cached K surface equivalence verified','production_release':False,'plan_problems':PLAN_SORUN,'unplanned':[a for a in P if a not in GOR],'parts':len(P),'seconds':round(time.time()-T0,2)},open('plan_audit.json','w',encoding='utf-8'),ensure_ascii=False,indent=2)
+json.dump({'source':'local steps74-76 prototypes on registered step73; each two runs byte-identical; no production release','production_release':False,'plan_problems':PLAN_SORUN,'unplanned':[a for a in P if a not in GOR],'parts':len(P),'seconds':round(time.time()-T0,2)},open('plan_audit.json','w',encoding='utf-8'),ensure_ascii=False,indent=2)

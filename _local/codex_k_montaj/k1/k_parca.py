@@ -43,10 +43,30 @@ ENT.update(json.loads((Path(HERE)/'k_local_ent.json').read_text(encoding='utf-8'
 for v in json.loads((Path(HERE)/'native_mechanism_names.json').read_text(encoding='utf-8')):
  if v['name'] in ENT:continue
  lo=np.array(v['lo']);hi=np.array(v['hi'])
- candidates=[o for o in L if o['dug'].startswith('K_') and not o['dug'].startswith('K_GOVDE') and o['dug'].endswith('__'+v['material']) and np.all(o['lo']>=lo-.6) and np.all(o['hi']<=hi+.6)]
+ candidates=[o for o in L if o['dug'].startswith('K_') and not o['dug'].startswith('K_GOVDE') and o['dug'].split('__')[1:2]==[v['material']] and np.all(o['lo']>=lo-.6) and np.all(o['hi']<=hi+.6)]
  nodes=set(o['dug'] for o in candidates)
+ if len(nodes)!=1:
+  # Connected components can contain touching native parts. Find a unique node whose triangle-level bounds match the native record on all six faces.
+  pieces=collections.defaultdict(list)
+  for o in L:
+   if not o['dug'].startswith('K_') or o['dug'].startswith('K_GOVDE') or o['dug'].split('__')[1:2]!=[v['material']]:continue
+   if np.any(o['hi']<lo-.6) or np.any(o['lo']>hi+.6):continue
+   q=o['V'][o['F']];m=np.all(q.min(1)>=lo-.6,1)&np.all(q.max(1)<=hi+.6,1)
+   if m.any():pieces[o['dug']].append(q[m].reshape(-1,3))
+  nodes=set()
+  for node,qs in pieces.items():
+   q=np.vstack(qs)
+   if np.max(np.abs(q.min(0)-lo))<=.6 and np.max(np.abs(q.max(0)-hi))<=.6:nodes.add(node)
  if len(nodes)!=1:continue
  ENT[v['name']]={'dugum':nodes.pop(),'kutu':[lo[0],hi[0],lo[1],hi[1],lo[2],hi[2]],'bom':v.get('bom'),'source_group':v['group'],'native_metadata_only':True}
+# Two touching surfaces form one GLB component: separate supplier body from our mounting plate by their native records.
+for v in json.loads((Path(HERE)/'native_mechanism_names.json').read_text(encoding='utf-8')):
+ if v['name'] not in ('DGRF_baglanti_plakasi','DGRF-C-63-125_govde'):continue
+ lo=np.array(v['lo']);hi=np.array(v['hi']);node='K_KESICI__aluminyum'
+ candidates=[o for o in L if o['dug']==node and np.all(o['hi']>=lo) and np.all(o['lo']<=hi)]
+ assert candidates,v['name']
+ ENT[v['name']]={'dugum':node,'kutu':[lo[0],hi[0],lo[1],hi[1],lo[2],hi[2]],'bom':v['bom'],'native_metadata_only':True}
+
 print('ent kayıt', len(ENT), collections.Counter(v['dugum'] for v in ENT.values()).most_common())
 
 
@@ -81,7 +101,7 @@ def sec(f): return [o for o in L if id(o) not in ATANAN and f(o)]
 def sinif(a, v):
     t = v.get('tur', ''); bom = '; '.join(str(x) for x in (v.get('bom') or []) if isinstance(x, str))
     d = v['dugum']
-    if 'hortum' in a or a.startswith(('bant_PU_', 'bant_sarim_')): return 'kablo', 'kablo', bom or 'Flexible hose or belt installed along its route (KURALLAR 2.3/9)'
+    if d=='ELK_ZINCIR__hava' or 'hortum' in a or a.startswith(('bant_PU_', 'bant_sarim_')): return 'kablo', 'kablo', bom or 'Flexible hose or belt installed along its route (KURALLAR 2.3/9)'
     if 'kaynak' in a or 'kaynagi' in a or 'punta' in a: return 'kaynak', 'kaynak', bom or 'TIG dikişi'
     if 'silikon' in a or d.endswith('__conta'): return 'yapistirici', 'silikon', bom
     if d.endswith('__yalitim') or a.startswith('yalitim'): return 'pu', 'pu', bom
@@ -130,7 +150,7 @@ print('adlı parça', len(TOPLA), '· model karşılığı olmayan kayıt', len(
 # Purchased components stay separate from custom supporting brackets.
 FK=lambda o:kod(o).startswith('K/')
 for o in sorted(sec(FK),key=lambda o:(o['dug'],*o['lo'])):
-    d=o['dug'];tip='kablo' if any(w in d for w in ('kablo','hortum')) else 'mek'
+    d=o['dug'];tip='kablo' if d=='ELK_ZINCIR__hava' or any(w in d for w in ('kablo','hortum','pu_bant')) else 'mek'
     mal='guc' if 'kablo_guc' in d else 'bilgi' if 'kablo' in d else 'motor' if 'motor' in d else 'mekanizma'
     ad=d.lower().replace('__','_')+'_'+str(sum(1 for a in P if a.startswith(d.lower().replace('__','_'))))
     grup(ad,[o],mal,tip,d+' · K',dugum=d,kpk='KAPAK_K' in d)
