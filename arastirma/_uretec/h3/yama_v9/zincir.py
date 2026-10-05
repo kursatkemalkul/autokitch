@@ -197,8 +197,10 @@ ADIMLAR = [
      [(".", 'python "{YAMA}/57_kanal_kesik.py" hat3_v9x.glb hat3_v9y.glb')]),
     ("58", "TEK acil stop (Kemal 5 Eki): ana şalterin önündeki kapakta — F sağ üst kapağı (3625, 1600, z 79) · Schneider XB4BS8442 Ø40 + ZBY9330T Ø60 · kapakla döner", ["hat3_v9y.glb"], "hat3_v9z.glb",
      [(".", 'python "{YAMA}/58_acil_stop.py" hat3_v9y.glb hat3_v9z.glb')]),
+    ("59", "kapı emniyet anahtarları (STANDART_DURUM madde 3): 10 ön kapak — Schmersal RSS36 kodlu sensör + aktüatör (K: AZM40 kilitli), mandal tarafında kapak arkası, gerekirse 2 mm braket", ["hat3_v9z.glb"], "hat3_v10a.glb",
+     [(".", 'python "{YAMA}/59_kapi_emniyet.py" hat3_v9z.glb hat3_v10a.glb')]),
 ]
-SON = "hat3_v9z.glb"
+SON = "hat3_v10a.glb"
 
 
 def kur(is_dizin, h3, uretec):
