@@ -1,0 +1,201 @@
+{
+ "parca": "govde_kosebent_sag_arka_alt",
+ "surum": "h3_sac_v1",
+ "malzeme": "AISI 304 2B, dış yüz 240 kum satine, hat boyunca yatay",
+ "t": 3.0,
+ "R": 4.5,
+ "K": 0.41,
+ "adet": 1,
+ "birim": "mm",
+ "ust_yuz": "Z = t yüzü = kök panelin +n yüzü (bütün panellerin yerel z = t yüzü)",
+ "dis_kontur": [
+  {
+   "t": "L",
+   "p": [
+    [
+     796.5,
+     140.0
+    ],
+    [
+     854.50066,
+     140.0
+    ]
+   ]
+  },
+  {
+   "t": "L",
+   "p": [
+    [
+     854.50066,
+     140.0
+    ],
+    [
+     854.50066,
+     220.0
+    ]
+   ]
+  },
+  {
+   "t": "L",
+   "p": [
+    [
+     854.50066,
+     220.0
+    ],
+    [
+     796.5,
+     220.0
+    ]
+   ]
+  },
+  {
+   "t": "L",
+   "p": [
+    [
+     796.5,
+     220.0
+    ],
+    [
+     796.5,
+     140.0
+    ]
+   ]
+  }
+ ],
+ "ek_dis_konturlar": [],
+ "ic_konturlar": [
+  [
+   {
+    "t": "C",
+    "c": [
+     808.0,
+     180.0
+    ],
+    "r": 2.75
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     844.50066,
+     180.0
+    ],
+    "r": 2.75
+   }
+  ]
+ ],
+ "bukumler": [
+  {
+   "no": 1,
+   "ad": "yan_ayak",
+   "aci": 90.0,
+   "yon": "yukari",
+   "R": 4.5,
+   "K": 0.41,
+   "BA": 9.00066,
+   "tip": "flans",
+   "t": 3.0,
+   "V_kalip": 24.0,
+   "cizgi": [
+    [
+     825.50033,
+     140.0
+    ],
+    [
+     825.50033,
+     220.0
+    ]
+   ],
+   "baslangic": [
+    [
+     821.0,
+     140.0
+    ],
+    [
+     821.0,
+     220.0
+    ]
+   ],
+   "bitis": [
+    [
+     830.00066,
+     140.0
+    ],
+    [
+     830.00066,
+     220.0
+    ]
+   ],
+   "nominal_boy": 80.0,
+   "gercek_aralik": [
+    0.0,
+    80.0
+   ],
+   "gercek_boy": 80.0
+  }
+ ],
+ "formlar": [],
+ "kesikler": [
+  {
+   "panel": "arka_ayak",
+   "tip": "vida_deligi",
+   "sekil": "daire",
+   "merkez_duz": [
+    808.0,
+    180.0
+   ],
+   "parca": "ISO 273 orta",
+   "cap": 5.5
+  },
+  {
+   "panel": "yan_ayak",
+   "tip": "vida_deligi",
+   "sekil": "daire",
+   "merkez_duz": [
+    844.5007,
+    180.0
+   ],
+   "parca": "ISO 273 orta",
+   "cap": 5.5
+  }
+ ],
+ "parca_sayisi": 1,
+ "levha": {
+  "boy": 80.0,
+  "en": 58.001,
+  "aci": 0.0,
+  "alan_mm2": 4592.54,
+  "kutle_kg": 0.1093
+ },
+ "sabit_yuz": [
+  798.54167,
+  146.66667
+ ],
+ "donusum_3b": [
+  [
+   1.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  [
+   0.0,
+   1.0,
+   0.0,
+   0.0
+  ],
+  [
+   0.0,
+   0.0,
+   1.0,
+   -828.5
+  ],
+  [
+   0.0,
+   0.0,
+   0.0,
+   1.0
+  ]
+ ]
+}

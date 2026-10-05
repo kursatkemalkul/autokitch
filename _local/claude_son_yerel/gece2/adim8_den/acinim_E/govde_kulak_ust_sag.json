@@ -1,0 +1,180 @@
+{
+ "parca": "govde_kulak_ust_sag",
+ "surum": "h3_sac_v1",
+ "malzeme": "AISI 304 2B, dış yüz 240 kum satine, hat boyunca yatay",
+ "t": 1.5,
+ "R": 2.25,
+ "K": 0.45,
+ "adet": 1,
+ "birim": "mm",
+ "ust_yuz": "Z = t yüzü = kök panelin +n yüzü (bütün panellerin yerel z = t yüzü)",
+ "dis_kontur": [
+  {
+   "t": "L",
+   "p": [
+    [
+     -6.0,
+     -9.75
+    ],
+    [
+     6.0,
+     -9.75
+    ]
+   ]
+  },
+  {
+   "t": "L",
+   "p": [
+    [
+     6.0,
+     -9.75
+    ],
+    [
+     6.0,
+     32.09458
+    ]
+   ]
+  },
+  {
+   "t": "L",
+   "p": [
+    [
+     6.0,
+     32.09458
+    ],
+    [
+     -6.0,
+     32.09458
+    ]
+   ]
+  },
+  {
+   "t": "L",
+   "p": [
+    [
+     -6.0,
+     32.09458
+    ],
+    [
+     -6.0,
+     -9.75
+    ]
+   ]
+  }
+ ],
+ "ek_dis_konturlar": [],
+ "ic_konturlar": [
+  [
+   {
+    "t": "C",
+    "c": [
+     0.0,
+     0.0
+    ],
+    "r": 2.75
+   }
+  ]
+ ],
+ "bukumler": [
+  {
+   "no": 1,
+   "ad": "kaynak_ayagi",
+   "aci": 90.0,
+   "yon": "yukari",
+   "R": 2.25,
+   "K": 0.45,
+   "BA": 4.59458,
+   "tip": "flans",
+   "t": 1.5,
+   "V_kalip": 12.0,
+   "cizgi": [
+    [
+     6.0,
+     17.54729
+    ],
+    [
+     -6.0,
+     17.54729
+    ]
+   ],
+   "baslangic": [
+    [
+     6.0,
+     15.25
+    ],
+    [
+     -6.0,
+     15.25
+    ]
+   ],
+   "bitis": [
+    [
+     6.0,
+     19.84458
+    ],
+    [
+     -6.0,
+     19.84458
+    ]
+   ],
+   "nominal_boy": 12.0,
+   "gercek_aralik": [
+    0.0,
+    12.0
+   ],
+   "gercek_boy": 12.0
+  }
+ ],
+ "formlar": [],
+ "kesikler": [
+  {
+   "panel": "saplama_ayagi",
+   "tip": "vida_deligi",
+   "sekil": "daire",
+   "merkez_duz": [
+    0.0,
+    0.0
+   ],
+   "parca": "ISO 273 orta",
+   "cap": 5.5
+  }
+ ],
+ "parca_sayisi": 1,
+ "levha": {
+  "boy": 41.845,
+  "en": 12.0,
+  "aci": 0.0,
+  "alan_mm2": 478.38,
+  "kutle_kg": 0.0057
+ },
+ "sabit_yuz": [
+  0.0,
+  2.98652
+ ],
+ "donusum_3b": [
+  [
+   1.0,
+   0.0,
+   0.0,
+   817.0
+  ],
+  [
+   0.0,
+   0.0,
+   -1.0,
+   1860.5
+  ],
+  [
+   0.0,
+   1.0,
+   0.0,
+   10.0
+  ],
+  [
+   0.0,
+   0.0,
+   0.0,
+   1.0
+  ]
+ ]
+}

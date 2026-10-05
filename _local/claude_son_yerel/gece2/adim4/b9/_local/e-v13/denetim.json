@@ -1,0 +1,2794 @@
+{
+ "kaynak_sha256": "871764fcbd24f8cbda186cef99b1e1f545c78aa9c8c45f545c969aefc5a35d18",
+ "parca": 435,
+ "gecersiz": [],
+ "dongu_eski": 23.0,
+ "dongu_gercek": 31.96,
+ "zaman_ihlal": [],
+ "hareketler": [
+  {
+   "eksen": "PISTON baskı kafası",
+   "t0": 2.2,
+   "t1": 2.858,
+   "yol": 338.8,
+   "birim": "mm",
+   "v_tepe_eski": 980.4,
+   "v_sinir": 250.0,
+   "phi": 3.922,
+   "kaynak": "SFU1610 (hatve 10) · 1500 dev/dk = 250 mm/s (vida kritik devri ~2760, v10 notu) · NEMA 23 STP-MTR-23079 + GT3 1:1 · düşey, kafa üstünde 6 motor",
+   "sure_eski": 0.658,
+   "T0": 2.435,
+   "T1": 5.015,
+   "sure_gercek": 2.58
+  },
+  {
+   "eksen": "PISTON baskı kafası",
+   "t0": 5.856,
+   "t1": 6.55,
+   "yol": 78.6,
+   "birim": "mm",
+   "v_tepe_eski": 270.0,
+   "v_sinir": 250.0,
+   "phi": 1.949,
+   "kaynak": "SFU1610 (hatve 10) · 1500 dev/dk = 250 mm/s (vida kritik devri ~2760, v10 notu) · NEMA 23 STP-MTR-23079 + GT3 1:1 · düşey, kafa üstünde 6 motor",
+   "sure_eski": 0.694,
+   "T0": 8.46,
+   "T1": 9.813,
+   "sure_gercek": 1.353
+  },
+  {
+   "eksen": "PISTON baskı kafası",
+   "t0": 6.85,
+   "t1": 7.1,
+   "yol": 45.0,
+   "birim": "mm",
+   "v_tepe_eski": 270.0,
+   "v_sinir": 250.0,
+   "phi": 1.434,
+   "kaynak": "SFU1610 (hatve 10) · 1500 dev/dk = 250 mm/s (vida kritik devri ~2760, v10 notu) · NEMA 23 STP-MTR-23079 + GT3 1:1 · düşey, kafa üstünde 6 motor",
+   "sure_eski": 0.25,
+   "T0": 10.14,
+   "T1": 10.499,
+   "sure_gercek": 0.358
+  },
+  {
+   "eksen": "PISTON baskı kafası",
+   "t0": 8.2,
+   "t1": 8.7,
+   "yol": 372.4,
+   "birim": "mm",
+   "v_tepe_eski": 1117.2,
+   "v_sinir": 250.0,
+   "phi": 4.469,
+   "kaynak": "SFU1610 (hatve 10) · 1500 dev/dk = 250 mm/s (vida kritik devri ~2760, v10 notu) · NEMA 23 STP-MTR-23079 + GT3 1:1 · düşey, kafa üstünde 6 motor",
+   "sure_eski": 0.5,
+   "T0": 11.677,
+   "T1": 13.911,
+   "sure_gercek": 2.234
+  },
+  {
+   "eksen": "PISTON baskı kafası",
+   "t0": 13.6,
+   "t1": 13.9,
+   "yol": 11.0,
+   "birim": "mm",
+   "v_tepe_eski": 55.0,
+   "v_sinir": 250.0,
+   "phi": 1.0,
+   "kaynak": "SFU1610 (hatve 10) · 1500 dev/dk = 250 mm/s (vida kritik devri ~2760, v10 notu) · NEMA 23 STP-MTR-23079 + GT3 1:1 · düşey, kafa üstünde 6 motor",
+   "sure_eski": 0.3,
+   "T0": 20.13,
+   "T1": 20.43,
+   "sure_gercek": 0.3
+  },
+  {
+   "eksen": "PISTON baskı kafası",
+   "t0": 14.2,
+   "t1": 15.6,
+   "yol": 317.2,
+   "birim": "mm",
+   "v_tepe_eski": 339.9,
+   "v_sinir": 250.0,
+   "phi": 1.359,
+   "kaynak": "SFU1610 (hatve 10) · 1500 dev/dk = 250 mm/s (vida kritik devri ~2760, v10 notu) · NEMA 23 STP-MTR-23079 + GT3 1:1 · düşey, kafa üstünde 6 motor",
+   "sure_eski": 1.4,
+   "T0": 20.737,
+   "T1": 22.64,
+   "sure_gercek": 1.903
+  },
+  {
+   "eksen": "PISTON baskı kafası",
+   "t0": 15.9,
+   "t1": 16.7,
+   "yol": 328.2,
+   "birim": "mm",
+   "v_tepe_eski": 615.4,
+   "v_sinir": 250.0,
+   "phi": 2.461,
+   "kaynak": "SFU1610 (hatve 10) · 1500 dev/dk = 250 mm/s (vida kritik devri ~2760, v10 notu) · NEMA 23 STP-MTR-23079 + GT3 1:1 · düşey, kafa üstünde 6 motor",
+   "sure_eski": 0.8,
+   "T0": 22.977,
+   "T1": 24.946,
+   "sure_gercek": 1.969
+  },
+  {
+   "eksen": "ITICI vakum besleme arabası",
+   "t0": 0.7,
+   "t1": 1.35,
+   "yol": 411.0,
+   "birim": "mm",
+   "v_tepe_eski": 948.5,
+   "v_sinir": 800.0,
+   "phi": 1.197,
+   "kaynak": "GT3 20T kasnak (60 mm/tur) · 800 dev/dk · NEMA 23",
+   "sure_eski": 0.65,
+   "T0": 0.704,
+   "T1": 1.482,
+   "sure_gercek": 0.778
+  },
+  {
+   "eksen": "ITICI vakum besleme arabası",
+   "t0": 1.92,
+   "t1": 2.6,
+   "yol": 411.0,
+   "birim": "mm",
+   "v_tepe_eski": 906.6,
+   "v_sinir": 800.0,
+   "phi": 1.144,
+   "kaynak": "GT3 20T kasnak (60 mm/tur) · 800 dev/dk · NEMA 23",
+   "sure_eski": 0.68,
+   "T0": 2.059,
+   "T1": 4.003,
+   "sure_gercek": 1.945
+  },
+  {
+   "eksen": "VAC_Y vakum Z",
+   "t0": 0.35,
+   "t1": 0.65,
+   "yol": 20.0,
+   "birim": "mm",
+   "v_tepe_eski": 100.0,
+   "v_sinir": 300.0,
+   "phi": 1.0,
+   "kaynak": "pnömatik kompakt silindir (SMC CQ2 sınıfı) · 50–500 mm/s",
+   "sure_eski": 0.3,
+   "T0": 0.35,
+   "T1": 0.65,
+   "sure_gercek": 0.3
+  },
+  {
+   "eksen": "VAC_Y vakum Z",
+   "t0": 1.4,
+   "t1": 1.65,
+   "yol": 20.0,
+   "birim": "mm",
+   "v_tepe_eski": 120.0,
+   "v_sinir": 300.0,
+   "phi": 1.0,
+   "kaynak": "pnömatik kompakt silindir (SMC CQ2 sınıfı) · 50–500 mm/s",
+   "sure_eski": 0.25,
+   "T0": 1.536,
+   "T1": 1.786,
+   "sure_gercek": 0.25
+  },
+  {
+   "eksen": "VAC_Y vakum Z",
+   "t0": 1.72,
+   "t1": 1.9,
+   "yol": 20.0,
+   "birim": "mm",
+   "v_tepe_eski": 166.6,
+   "v_sinir": 300.0,
+   "phi": 1.0,
+   "kaynak": "pnömatik kompakt silindir (SMC CQ2 sınıfı) · 50–500 mm/s",
+   "sure_eski": 0.18,
+   "T0": 1.856,
+   "T1": 2.037,
+   "sure_gercek": 0.181
+  },
+  {
+   "eksen": "VAC_Y vakum Z",
+   "t0": 22.4,
+   "t1": 22.8,
+   "yol": 20.0,
+   "birim": "mm",
+   "v_tepe_eski": 75.0,
+   "v_sinir": 300.0,
+   "phi": 1.0,
+   "kaynak": "pnömatik kompakt silindir (SMC CQ2 sınıfı) · 50–500 mm/s",
+   "sure_eski": 0.4,
+   "T0": 30.832,
+   "T1": 31.506,
+   "sure_gercek": 0.675
+  },
+  {
+   "eksen": "NEST destek tablası",
+   "t0": 2.7,
+   "t1": 2.858,
+   "yol": 12.0,
+   "birim": "mm",
+   "v_tepe_eski": 76.0,
+   "v_sinir": 80.0,
+   "phi": 1.0,
+   "kaynak": "Tr16×8 (P4) iki ağızlı trapez vida + bronz somun · 600 dev/dk = 80 mm/s",
+   "sure_eski": 0.158,
+   "T0": 4.395,
+   "T1": 5.015,
+   "sure_gercek": 0.62
+  },
+  {
+   "eksen": "NEST destek tablası",
+   "t0": 5.856,
+   "t1": 6.3,
+   "yol": 33.6,
+   "birim": "mm",
+   "v_tepe_eski": 76.0,
+   "v_sinir": 80.0,
+   "phi": 1.0,
+   "kaynak": "Tr16×8 (P4) iki ağızlı trapez vida + bronz somun · 600 dev/dk = 80 mm/s",
+   "sure_eski": 0.444,
+   "T0": 8.46,
+   "T1": 9.325,
+   "sure_gercek": 0.866
+  },
+  {
+   "eksen": "NEST destek tablası",
+   "t0": 22.6,
+   "t1": 22.98,
+   "yol": 45.6,
+   "birim": "mm",
+   "v_tepe_eski": 180.0,
+   "v_sinir": 80.0,
+   "phi": 2.25,
+   "kaynak": "Tr16×8 (P4) iki ağızlı trapez vida + bronz somun · 600 dev/dk = 80 mm/s",
+   "sure_eski": 0.38,
+   "T0": 31.056,
+   "T1": 31.911,
+   "sure_gercek": 0.855
+  },
+  {
+   "eksen": "CNR_LIFT köşe çerçevesi",
+   "t0": 4.0,
+   "t1": 4.5,
+   "yol": 38.0,
+   "birim": "mm",
+   "v_tepe_eski": 114.0,
+   "v_sinir": 80.0,
+   "phi": 1.425,
+   "kaynak": "Tr8×8 (P2) dört ağızlı trapez vida + bronz somun · 600 dev/dk = 80 mm/s",
+   "sure_eski": 0.5,
+   "T0": 6.364,
+   "T1": 7.076,
+   "sure_gercek": 0.712
+  },
+  {
+   "eksen": "CNR_LIFT köşe çerçevesi",
+   "t0": 8.75,
+   "t1": 9.05,
+   "yol": 22.0,
+   "birim": "mm",
+   "v_tepe_eski": 110.0,
+   "v_sinir": 80.0,
+   "phi": 1.375,
+   "kaynak": "Tr8×8 (P2) dört ağızlı trapez vida + bronz somun · 600 dev/dk = 80 mm/s",
+   "sure_eski": 0.3,
+   "T0": 14.038,
+   "T1": 14.451,
+   "sure_gercek": 0.412
+  },
+  {
+   "eksen": "CNR_LIFT köşe çerçevesi",
+   "t0": 9.5,
+   "t1": 9.75,
+   "yol": 22.0,
+   "birim": "mm",
+   "v_tepe_eski": 132.0,
+   "v_sinir": 80.0,
+   "phi": 1.65,
+   "kaynak": "Tr8×8 (P2) dört ağızlı trapez vida + bronz somun · 600 dev/dk = 80 mm/s",
+   "sure_eski": 0.25,
+   "T0": 15.04,
+   "T1": 15.464,
+   "sure_gercek": 0.425
+  },
+  {
+   "eksen": "CNR_LIFT köşe çerçevesi",
+   "t0": 10.25,
+   "t1": 10.55,
+   "yol": 38.0,
+   "birim": "mm",
+   "v_tepe_eski": 190.0,
+   "v_sinir": 80.0,
+   "phi": 2.375,
+   "kaynak": "Tr8×8 (P2) dört ağızlı trapez vida + bronz somun · 600 dev/dk = 80 mm/s",
+   "sure_eski": 0.3,
+   "T0": 16.165,
+   "T1": 16.878,
+   "sure_gercek": 0.712
+  },
+  {
+   "eksen": "CNR köşe parmakları (4)",
+   "t0": 2.858,
+   "t1": 3.7,
+   "yol": 105.0,
+   "birim": "°",
+   "v_tepe_eski": 192.9,
+   "v_sinir": 300.0,
+   "phi": 1.166,
+   "kaynak": "NEMA 23 doğrudan (kaplin) · 50 dev/dk",
+   "sure_eski": 0.842,
+   "T0": 5.015,
+   "T1": 6.052,
+   "sure_gercek": 1.037
+  },
+  {
+   "eksen": "CNR köşe parmakları (4)",
+   "t0": 4.7,
+   "t1": 5.3,
+   "yol": 105.0,
+   "birim": "°",
+   "v_tepe_eski": 262.5,
+   "v_sinir": 300.0,
+   "phi": 1.0,
+   "kaynak": "NEMA 23 doğrudan (kaplin) · 50 dev/dk",
+   "sure_eski": 0.6,
+   "T0": 7.285,
+   "T1": 7.885,
+   "sure_gercek": 0.6
+  },
+  {
+   "eksen": "PARMAK ön dil katlayıcı",
+   "t0": 6.55,
+   "t1": 6.85,
+   "yol": 90.0,
+   "birim": "°",
+   "v_tepe_eski": 450.0,
+   "v_sinir": 900.0,
+   "phi": 1.0,
+   "kaynak": "GT3 20T:20T kayış · NEMA 23 · 150 dev/dk",
+   "sure_eski": 0.3,
+   "T0": 9.813,
+   "T1": 10.14,
+   "sure_gercek": 0.328
+  },
+  {
+   "eksen": "PARMAK ön dil katlayıcı",
+   "t0": 7.2,
+   "t1": 8.0,
+   "yol": 180.0,
+   "birim": "°",
+   "v_tepe_eski": 337.5,
+   "v_sinir": 900.0,
+   "phi": 1.0,
+   "kaynak": "GT3 20T:20T kayış · NEMA 23 · 150 dev/dk",
+   "sure_eski": 0.8,
+   "T0": 10.608,
+   "T1": 11.408,
+   "sure_gercek": 0.8
+  },
+  {
+   "eksen": "PARMAK ön dil katlayıcı",
+   "t0": 9.15,
+   "t1": 9.5,
+   "yol": 180.0,
+   "birim": "°",
+   "v_tepe_eski": 771.4,
+   "v_sinir": 900.0,
+   "phi": 1.191,
+   "kaynak": "GT3 20T:20T kayış · NEMA 23 · 150 dev/dk",
+   "sure_eski": 0.35,
+   "T0": 14.562,
+   "T1": 15.04,
+   "sure_gercek": 0.478
+  },
+  {
+   "eksen": "PARMAK ön dil katlayıcı",
+   "t0": 9.8,
+   "t1": 10.2,
+   "yol": 90.0,
+   "birim": "°",
+   "v_tepe_eski": 337.5,
+   "v_sinir": 900.0,
+   "phi": 1.0,
+   "kaynak": "GT3 20T:20T kayış · NEMA 23 · 150 dev/dk",
+   "sure_eski": 0.4,
+   "T0": 15.549,
+   "T1": 16.077,
+   "sure_gercek": 0.528
+  },
+  {
+   "eksen": "KATLAYICI U flap",
+   "t0": 9.4,
+   "t1": 9.8,
+   "yol": 37.6,
+   "birim": "mm",
+   "v_tepe_eski": 141.0,
+   "v_sinir": 83.0,
+   "phi": 1.699,
+   "kaynak": "SFU1605 (hatve 5) · 1000 dev/dk = 83 mm/s",
+   "sure_eski": 0.4,
+   "T0": 14.87,
+   "T1": 15.549,
+   "sure_gercek": 0.679
+  },
+  {
+   "eksen": "KATLAYICI U flap",
+   "t0": 10.4,
+   "t1": 10.8,
+   "yol": 37.6,
+   "birim": "mm",
+   "v_tepe_eski": 141.0,
+   "v_sinir": 83.0,
+   "phi": 1.699,
+   "kaynak": "SFU1605 (hatve 5) · 1000 dev/dk = 83 mm/s",
+   "sure_eski": 0.4,
+   "T0": 16.522,
+   "T1": 17.316,
+   "sure_gercek": 0.794
+  },
+  {
+   "eksen": "KOPRU pizza köprüsü",
+   "t0": 9.9,
+   "t1": 10.3,
+   "yol": 30.0,
+   "birim": "mm",
+   "v_tepe_eski": 112.5,
+   "v_sinir": 83.0,
+   "phi": 1.355,
+   "kaynak": "SFU1605 (hatve 5) · 1000 dev/dk = 83 mm/s",
+   "sure_eski": 0.4,
+   "T0": 15.671,
+   "T1": 16.284,
+   "sure_gercek": 0.614
+  },
+  {
+   "eksen": "KOPRU pizza köprüsü",
+   "t0": 21.3,
+   "t1": 21.7,
+   "yol": 30.0,
+   "birim": "mm",
+   "v_tepe_eski": 112.5,
+   "v_sinir": 83.0,
+   "phi": 1.355,
+   "kaynak": "SFU1605 (hatve 5) · 1000 dev/dk = 83 mm/s",
+   "sure_eski": 0.4,
+   "T0": 29.582,
+   "T1": 30.124,
+   "sure_gercek": 0.542
+  },
+  {
+   "eksen": "KOL kapak kolu",
+   "t0": 9.8,
+   "t1": 11.1,
+   "yol": 139.2,
+   "birim": "°",
+   "v_tepe_eski": 225.7,
+   "v_sinir": 360.0,
+   "phi": 1.0,
+   "kaynak": "SureGear PGCN23-1025 10:1 · motor 600 dev/dk → kol 60 dev/dk",
+   "sure_eski": 1.3,
+   "T0": 15.549,
+   "T1": 17.63,
+   "sure_gercek": 2.08
+  },
+  {
+   "eksen": "KOL kapak kolu",
+   "t0": 13.9,
+   "t1": 14.2,
+   "yol": 4.7,
+   "birim": "°",
+   "v_tepe_eski": 24.2,
+   "v_sinir": 360.0,
+   "phi": 1.0,
+   "kaynak": "SureGear PGCN23-1025 10:1 · motor 600 dev/dk → kol 60 dev/dk",
+   "sure_eski": 0.3,
+   "T0": 20.43,
+   "T1": 20.737,
+   "sure_gercek": 0.307
+  },
+  {
+   "eksen": "KOL kapak kolu",
+   "t0": 14.25,
+   "t1": 15.2,
+   "yol": 143.9,
+   "birim": "°",
+   "v_tepe_eski": 227.2,
+   "v_sinir": 360.0,
+   "phi": 1.0,
+   "kaynak": "SureGear PGCN23-1025 10:1 · motor 600 dev/dk → kol 60 dev/dk",
+   "sure_eski": 0.95,
+   "T0": 20.805,
+   "T1": 22.097,
+   "sure_gercek": 1.291
+  },
+  {
+   "eksen": "CATAL robot çatalı (FR5 TCP)",
+   "t0": 16.9,
+   "t1": 20.3,
+   "yol": 1655.0,
+   "birim": "mm",
+   "v_tepe_eski": 875.0,
+   "v_sinir": 1000.0,
+   "phi": 1.0,
+   "kaynak": "Fairino FR5 TCP azami ~1 m/s (üretici verisi · TEYİT)",
+   "sure_eski": 3.4,
+   "T0": 25.175,
+   "T1": 28.575,
+   "sure_gercek": 3.4
+  }
+ ],
+ "yakin": {
+  "en_kisa_mm": 4.3,
+  "an": [
+   1.85,
+   "piston_kafasi",
+   "besleyici_arabasi_0"
+  ]
+ },
+ "kesisim": [],
+ "tam": true,
+ "v13_yeni": 37,
+ "v13_degisen": [
+  "kose_CNR_MF_motor_kelepcesi",
+  "kose_CNR_MB_motor_kelepcesi",
+  "kose_CNR_PF_motor_kelepcesi",
+  "kose_CNR_PB_motor_kelepcesi",
+  "parmak_motoru",
+  "plc_S7-1200_1214C",
+  "piston_motoru",
+  "vakum_Z_silindir",
+  "vakum_Z_mil_piston",
+  "vakum_vantuz_0",
+  "vakum_vantuz_sapi_0",
+  "vakum_vantuz_1",
+  "vakum_vantuz_sapi_1",
+  "vakum_vantuz_2",
+  "vakum_vantuz_sapi_2",
+  "vakum_vantuz_3",
+  "vakum_vantuz_sapi_3",
+  "vakum_dagitim_hatti",
+  "vakum_valf_sensor_blogu"
+ ],
+ "v13_durgan": [],
+ "karton": [],
+ "karton_ic": [
+  [
+   2.75,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   8.86
+  ],
+  [
+   2.858,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   28.47
+  ],
+  [
+   3.0,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   28.47
+  ],
+  [
+   3.25,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   28.47
+  ],
+  [
+   3.25,
+   "B_TIRNAK_ARKA_MENTESE",
+   "B_ARKA_MENTESE",
+   77.01
+  ],
+  [
+   3.25,
+   "B_TIRNAK_ON_MENTESE",
+   "B_ARKA_MENTESE",
+   77.01
+  ],
+  [
+   3.5,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   28.47
+  ],
+  [
+   3.5,
+   "B_TIRNAK_ARKA_MENTESE",
+   "B_ARKA_MENTESE",
+   2.88
+  ],
+  [
+   3.5,
+   "B_TIRNAK_ON_MENTESE",
+   "B_ARKA_MENTESE",
+   2.88
+  ],
+  [
+   3.7,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   28.47
+  ],
+  [
+   3.75,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   28.47
+  ],
+  [
+   4.0,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   28.47
+  ],
+  [
+   4.25,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   28.47
+  ],
+  [
+   4.5,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   28.47
+  ],
+  [
+   4.75,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   28.47
+  ],
+  [
+   5.0,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   28.47
+  ],
+  [
+   5.25,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   28.47
+  ],
+  [
+   5.3,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   28.47
+  ],
+  [
+   5.5,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   28.47
+  ],
+  [
+   5.75,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   28.47
+  ],
+  [
+   5.858,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   28.49
+  ],
+  [
+   6.0,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   57.2
+  ],
+  [
+   6.0,
+   "B_ARKA_MENTESE",
+   "B_KAPAK",
+   16.31
+  ],
+  [
+   6.25,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   148.26
+  ],
+  [
+   6.25,
+   "B_TIRNAK_ARKA_MENTESE",
+   "B_ARKA_MENTESE",
+   1.81
+  ],
+  [
+   6.25,
+   "B_TIRNAK_ON_MENTESE",
+   "B_ARKA_MENTESE",
+   1.81
+  ],
+  [
+   6.25,
+   "B_ARKA_MENTESE",
+   "B_KAPAK",
+   97.62
+  ],
+  [
+   6.3,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   204.8
+  ],
+  [
+   6.3,
+   "B_TIRNAK_ARKA_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   6.3,
+   "B_TIRNAK_ON_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   6.3,
+   "B_ARKA_MENTESE",
+   "B_KAPAK",
+   151.2
+  ],
+  [
+   6.5,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   204.8
+  ],
+  [
+   6.5,
+   "B_TIRNAK_ARKA_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   6.5,
+   "B_TIRNAK_ON_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   6.5,
+   "B_ARKA_MENTESE",
+   "B_KAPAK",
+   151.2
+  ],
+  [
+   6.55,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   204.8
+  ],
+  [
+   6.55,
+   "B_TIRNAK_ARKA_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   6.55,
+   "B_TIRNAK_ON_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   6.55,
+   "B_ARKA_MENTESE",
+   "B_KAPAK",
+   151.2
+  ],
+  [
+   6.75,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   204.8
+  ],
+  [
+   6.75,
+   "B_TIRNAK_ARKA_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   6.75,
+   "B_TIRNAK_ON_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   6.75,
+   "B_ARKA_MENTESE",
+   "B_KAPAK",
+   151.2
+  ],
+  [
+   6.85,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   204.8
+  ],
+  [
+   6.85,
+   "B_TIRNAK_ARKA_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   6.85,
+   "B_TIRNAK_ON_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   6.85,
+   "B_ARKA_MENTESE",
+   "B_KAPAK",
+   151.2
+  ],
+  [
+   7.0,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   204.8
+  ],
+  [
+   7.0,
+   "B_TIRNAK_ARKA_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   7.0,
+   "B_TIRNAK_ON_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   7.0,
+   "B_ARKA_MENTESE",
+   "B_KAPAK",
+   151.2
+  ],
+  [
+   7.1,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   204.8
+  ],
+  [
+   7.1,
+   "B_TIRNAK_ARKA_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   7.1,
+   "B_TIRNAK_ON_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   7.1,
+   "B_ARKA_MENTESE",
+   "B_KAPAK",
+   151.2
+  ],
+  [
+   7.25,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   204.8
+  ],
+  [
+   7.25,
+   "B_TIRNAK_ARKA_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   7.25,
+   "B_TIRNAK_ON_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   7.25,
+   "B_ARKA_MENTESE",
+   "B_KAPAK",
+   151.2
+  ],
+  [
+   7.5,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   204.8
+  ],
+  [
+   7.5,
+   "B_TIRNAK_ARKA_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   7.5,
+   "B_TIRNAK_ON_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   7.5,
+   "B_ARKA_MENTESE",
+   "B_KAPAK",
+   151.2
+  ],
+  [
+   7.75,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   204.8
+  ],
+  [
+   7.75,
+   "B_TIRNAK_ARKA_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   7.75,
+   "B_TIRNAK_ON_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   7.75,
+   "B_ARKA_MENTESE",
+   "B_KAPAK",
+   151.2
+  ],
+  [
+   8.0,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   204.8
+  ],
+  [
+   8.0,
+   "B_TIRNAK_ARKA_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   8.0,
+   "B_TIRNAK_ON_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   8.0,
+   "B_ARKA_MENTESE",
+   "B_KAPAK",
+   151.2
+  ],
+  [
+   8.2,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   204.8
+  ],
+  [
+   8.2,
+   "B_TIRNAK_ARKA_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   8.2,
+   "B_TIRNAK_ON_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   8.2,
+   "B_ARKA_MENTESE",
+   "B_KAPAK",
+   151.2
+  ],
+  [
+   8.25,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   204.8
+  ],
+  [
+   8.25,
+   "B_TIRNAK_ARKA_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   8.25,
+   "B_TIRNAK_ON_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   8.25,
+   "B_ARKA_MENTESE",
+   "B_KAPAK",
+   151.2
+  ],
+  [
+   8.5,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   204.8
+  ],
+  [
+   8.5,
+   "B_TIRNAK_ARKA_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   8.5,
+   "B_TIRNAK_ON_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   8.5,
+   "B_ARKA_MENTESE",
+   "B_KAPAK",
+   151.2
+  ],
+  [
+   8.7,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   204.8
+  ],
+  [
+   8.7,
+   "B_TIRNAK_ARKA_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   8.7,
+   "B_TIRNAK_ON_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   8.7,
+   "B_ARKA_MENTESE",
+   "B_KAPAK",
+   151.2
+  ],
+  [
+   8.75,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   204.8
+  ],
+  [
+   8.75,
+   "B_TIRNAK_ARKA_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   8.75,
+   "B_TIRNAK_ON_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   8.75,
+   "B_ARKA_MENTESE",
+   "B_KAPAK",
+   151.2
+  ],
+  [
+   9.0,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   204.8
+  ],
+  [
+   9.0,
+   "B_TIRNAK_ARKA_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   9.0,
+   "B_TIRNAK_ON_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   9.0,
+   "B_ARKA_MENTESE",
+   "B_KAPAK",
+   151.2
+  ],
+  [
+   9.05,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   204.8
+  ],
+  [
+   9.05,
+   "B_TIRNAK_ARKA_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   9.05,
+   "B_TIRNAK_ON_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   9.05,
+   "B_ARKA_MENTESE",
+   "B_KAPAK",
+   151.2
+  ],
+  [
+   9.25,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   204.8
+  ],
+  [
+   9.25,
+   "B_TIRNAK_ARKA_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   9.25,
+   "B_TIRNAK_ON_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   9.25,
+   "B_ARKA_MENTESE",
+   "B_KAPAK",
+   151.2
+  ],
+  [
+   9.5,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   204.8
+  ],
+  [
+   9.5,
+   "B_TIRNAK_ARKA_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   9.5,
+   "B_TIRNAK_ON_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   9.5,
+   "B_ARKA_MENTESE",
+   "B_KAPAK",
+   151.2
+  ],
+  [
+   9.75,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   204.8
+  ],
+  [
+   9.75,
+   "B_TIRNAK_ARKA_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   9.75,
+   "B_TIRNAK_ON_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   9.75,
+   "B_ARKA_MENTESE",
+   "B_KAPAK",
+   151.2
+  ],
+  [
+   9.8,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   204.8
+  ],
+  [
+   9.8,
+   "B_TIRNAK_ARKA_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   9.8,
+   "B_TIRNAK_ON_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   9.8,
+   "B_ARKA_MENTESE",
+   "B_KAPAK",
+   151.2
+  ],
+  [
+   10.0,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   204.8
+  ],
+  [
+   10.0,
+   "B_TIRNAK_ARKA_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   10.0,
+   "B_TIRNAK_ON_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   10.0,
+   "B_ARKA_MENTESE",
+   "B_KAPAK",
+   151.2
+  ],
+  [
+   10.15,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   204.8
+  ],
+  [
+   10.15,
+   "B_TIRNAK_ARKA_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   10.15,
+   "B_TIRNAK_ON_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   10.15,
+   "B_ARKA_MENTESE",
+   "B_KAPAK",
+   151.2
+  ],
+  [
+   10.25,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   204.8
+  ],
+  [
+   10.25,
+   "B_TIRNAK_ARKA_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   10.25,
+   "B_TIRNAK_ON_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   10.25,
+   "B_ARKA_MENTESE",
+   "B_KAPAK",
+   142.45
+  ],
+  [
+   10.5,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   204.8
+  ],
+  [
+   10.5,
+   "B_TIRNAK_ARKA_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   10.5,
+   "B_TIRNAK_ON_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   10.5,
+   "B_ARKA_MENTESE",
+   "B_KAPAK",
+   78.39
+  ],
+  [
+   10.55,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   204.8
+  ],
+  [
+   10.55,
+   "B_TIRNAK_ARKA_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   10.55,
+   "B_TIRNAK_ON_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   10.55,
+   "B_ARKA_MENTESE",
+   "B_KAPAK",
+   64.18
+  ],
+  [
+   10.75,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   204.8
+  ],
+  [
+   10.75,
+   "B_TIRNAK_ARKA_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   10.75,
+   "B_TIRNAK_ON_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   10.75,
+   "B_ARKA_MENTESE",
+   "B_KAPAK",
+   16.16
+  ],
+  [
+   10.8,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   204.8
+  ],
+  [
+   10.8,
+   "B_TIRNAK_ARKA_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   10.8,
+   "B_TIRNAK_ON_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   10.8,
+   "B_ARKA_MENTESE",
+   "B_KAPAK",
+   7.93
+  ],
+  [
+   11.0,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   204.8
+  ],
+  [
+   11.0,
+   "B_TIRNAK_ARKA_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   11.0,
+   "B_TIRNAK_ON_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   11.1,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   204.8
+  ],
+  [
+   11.1,
+   "B_TIRNAK_ARKA_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   11.1,
+   "B_TIRNAK_ON_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   11.25,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   204.8
+  ],
+  [
+   11.25,
+   "B_TIRNAK_ARKA_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   11.25,
+   "B_TIRNAK_ON_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   11.5,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   204.8
+  ],
+  [
+   11.5,
+   "B_TIRNAK_ARKA_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   11.5,
+   "B_TIRNAK_ON_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   11.75,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   204.8
+  ],
+  [
+   11.75,
+   "B_TIRNAK_ARKA_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   11.75,
+   "B_TIRNAK_ON_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   12.0,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   204.8
+  ],
+  [
+   12.0,
+   "B_TIRNAK_ARKA_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   12.0,
+   "B_TIRNAK_ON_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   12.25,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   204.8
+  ],
+  [
+   12.25,
+   "B_TIRNAK_ARKA_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   12.25,
+   "B_TIRNAK_ON_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   12.5,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   204.8
+  ],
+  [
+   12.5,
+   "B_TIRNAK_ARKA_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   12.5,
+   "B_TIRNAK_ON_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   12.75,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   204.8
+  ],
+  [
+   12.75,
+   "B_TIRNAK_ARKA_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   12.75,
+   "B_TIRNAK_ON_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   13.0,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   204.8
+  ],
+  [
+   13.0,
+   "B_TIRNAK_ARKA_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   13.0,
+   "B_TIRNAK_ON_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   13.25,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   204.8
+  ],
+  [
+   13.25,
+   "B_TIRNAK_ARKA_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   13.25,
+   "B_TIRNAK_ON_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   13.5,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   204.8
+  ],
+  [
+   13.5,
+   "B_TIRNAK_ARKA_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   13.5,
+   "B_TIRNAK_ON_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   13.6,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   204.8
+  ],
+  [
+   13.6,
+   "B_TIRNAK_ARKA_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   13.6,
+   "B_TIRNAK_ON_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   13.75,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   204.8
+  ],
+  [
+   13.75,
+   "B_TIRNAK_ARKA_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   13.75,
+   "B_TIRNAK_ON_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   13.9,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   204.8
+  ],
+  [
+   13.9,
+   "B_TIRNAK_ARKA_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   13.9,
+   "B_TIRNAK_ON_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   14.0,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   204.8
+  ],
+  [
+   14.0,
+   "B_TIRNAK_ARKA_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   14.0,
+   "B_TIRNAK_ON_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   14.2,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   204.8
+  ],
+  [
+   14.2,
+   "B_TIRNAK_ARKA_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   14.2,
+   "B_TIRNAK_ON_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   14.25,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   204.8
+  ],
+  [
+   14.25,
+   "B_TIRNAK_ARKA_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   14.25,
+   "B_TIRNAK_ON_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   14.5,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   204.8
+  ],
+  [
+   14.5,
+   "B_TIRNAK_ARKA_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   14.5,
+   "B_TIRNAK_ON_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   14.5,
+   "B_ARKA_MENTESE",
+   "B_KAPAK",
+   10.13
+  ],
+  [
+   14.75,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   204.8
+  ],
+  [
+   14.75,
+   "B_TIRNAK_ARKA_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   14.75,
+   "B_TIRNAK_ON_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   14.75,
+   "B_ARKA_MENTESE",
+   "B_KAPAK",
+   45.63
+  ],
+  [
+   15.0,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   204.8
+  ],
+  [
+   15.0,
+   "B_TIRNAK_ARKA_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   15.0,
+   "B_TIRNAK_ON_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   15.0,
+   "B_ARKA_MENTESE",
+   "B_KAPAK",
+   84.93
+  ],
+  [
+   15.25,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   204.8
+  ],
+  [
+   15.25,
+   "B_TIRNAK_ARKA_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   15.25,
+   "B_TIRNAK_ON_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   15.25,
+   "B_ARKA_MENTESE",
+   "B_KAPAK",
+   123.08
+  ],
+  [
+   15.5,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   204.8
+  ],
+  [
+   15.5,
+   "B_TIRNAK_ARKA_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   15.5,
+   "B_TIRNAK_ON_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   15.5,
+   "B_ARKA_MENTESE",
+   "B_KAPAK",
+   149.13
+  ],
+  [
+   15.6,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   204.8
+  ],
+  [
+   15.6,
+   "B_TIRNAK_ARKA_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   15.6,
+   "B_TIRNAK_ON_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   15.6,
+   "B_ARKA_MENTESE",
+   "B_KAPAK",
+   151.2
+  ],
+  [
+   15.75,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   204.8
+  ],
+  [
+   15.75,
+   "B_TIRNAK_ARKA_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   15.75,
+   "B_TIRNAK_ON_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   15.75,
+   "B_ARKA_MENTESE",
+   "B_KAPAK",
+   151.2
+  ],
+  [
+   15.9,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   204.8
+  ],
+  [
+   15.9,
+   "B_TIRNAK_ARKA_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   15.9,
+   "B_TIRNAK_ON_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   15.9,
+   "B_ARKA_MENTESE",
+   "B_KAPAK",
+   151.2
+  ],
+  [
+   16.0,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   204.8
+  ],
+  [
+   16.0,
+   "B_TIRNAK_ARKA_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   16.0,
+   "B_TIRNAK_ON_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   16.0,
+   "B_ARKA_MENTESE",
+   "B_KAPAK",
+   151.2
+  ],
+  [
+   16.25,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   204.8
+  ],
+  [
+   16.25,
+   "B_TIRNAK_ARKA_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   16.25,
+   "B_TIRNAK_ON_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   16.25,
+   "B_ARKA_MENTESE",
+   "B_KAPAK",
+   151.2
+  ],
+  [
+   16.5,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   204.8
+  ],
+  [
+   16.5,
+   "B_TIRNAK_ARKA_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   16.5,
+   "B_TIRNAK_ON_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   16.5,
+   "B_ARKA_MENTESE",
+   "B_KAPAK",
+   151.2
+  ],
+  [
+   16.7,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   204.8
+  ],
+  [
+   16.7,
+   "B_TIRNAK_ARKA_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   16.7,
+   "B_TIRNAK_ON_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   16.7,
+   "B_ARKA_MENTESE",
+   "B_KAPAK",
+   151.2
+  ],
+  [
+   16.75,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   204.8
+  ],
+  [
+   16.75,
+   "B_TIRNAK_ARKA_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   16.75,
+   "B_TIRNAK_ON_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   16.75,
+   "B_ARKA_MENTESE",
+   "B_KAPAK",
+   151.2
+  ],
+  [
+   17.0,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   204.8
+  ],
+  [
+   17.0,
+   "B_TIRNAK_ARKA_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   17.0,
+   "B_TIRNAK_ON_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   17.0,
+   "B_ARKA_MENTESE",
+   "B_KAPAK",
+   151.2
+  ],
+  [
+   17.25,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   204.8
+  ],
+  [
+   17.25,
+   "B_TIRNAK_ARKA_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   17.25,
+   "B_TIRNAK_ON_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   17.25,
+   "B_ARKA_MENTESE",
+   "B_KAPAK",
+   151.2
+  ],
+  [
+   17.5,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   204.8
+  ],
+  [
+   17.5,
+   "B_TIRNAK_ARKA_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   17.5,
+   "B_TIRNAK_ON_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   17.5,
+   "B_ARKA_MENTESE",
+   "B_KAPAK",
+   151.2
+  ],
+  [
+   17.75,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   204.8
+  ],
+  [
+   17.75,
+   "B_TIRNAK_ARKA_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   17.75,
+   "B_TIRNAK_ON_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   17.75,
+   "B_ARKA_MENTESE",
+   "B_KAPAK",
+   151.2
+  ],
+  [
+   18.0,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   204.8
+  ],
+  [
+   18.0,
+   "B_TIRNAK_ARKA_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   18.0,
+   "B_TIRNAK_ON_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   18.0,
+   "B_ARKA_MENTESE",
+   "B_KAPAK",
+   151.2
+  ],
+  [
+   18.1,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   204.8
+  ],
+  [
+   18.1,
+   "B_TIRNAK_ARKA_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   18.1,
+   "B_TIRNAK_ON_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   18.1,
+   "B_ARKA_MENTESE",
+   "B_KAPAK",
+   151.2
+  ],
+  [
+   18.25,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   204.8
+  ],
+  [
+   18.25,
+   "B_TIRNAK_ARKA_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   18.25,
+   "B_TIRNAK_ON_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   18.25,
+   "B_ARKA_MENTESE",
+   "B_KAPAK",
+   151.2
+  ],
+  [
+   18.5,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   204.8
+  ],
+  [
+   18.5,
+   "B_TIRNAK_ARKA_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   18.5,
+   "B_TIRNAK_ON_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   18.5,
+   "B_ARKA_MENTESE",
+   "B_KAPAK",
+   151.2
+  ],
+  [
+   18.6,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   204.8
+  ],
+  [
+   18.6,
+   "B_TIRNAK_ARKA_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   18.6,
+   "B_TIRNAK_ON_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   18.6,
+   "B_ARKA_MENTESE",
+   "B_KAPAK",
+   151.2
+  ],
+  [
+   18.75,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   204.8
+  ],
+  [
+   18.75,
+   "B_TIRNAK_ARKA_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   18.75,
+   "B_TIRNAK_ON_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   18.75,
+   "B_ARKA_MENTESE",
+   "B_KAPAK",
+   151.2
+  ],
+  [
+   19.0,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   204.8
+  ],
+  [
+   19.0,
+   "B_TIRNAK_ARKA_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   19.0,
+   "B_TIRNAK_ON_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   19.0,
+   "B_ARKA_MENTESE",
+   "B_KAPAK",
+   151.2
+  ],
+  [
+   19.25,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   204.8
+  ],
+  [
+   19.25,
+   "B_TIRNAK_ARKA_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   19.25,
+   "B_TIRNAK_ON_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   19.25,
+   "B_ARKA_MENTESE",
+   "B_KAPAK",
+   151.2
+  ],
+  [
+   19.5,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   204.8
+  ],
+  [
+   19.5,
+   "B_TIRNAK_ARKA_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   19.5,
+   "B_TIRNAK_ON_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   19.5,
+   "B_ARKA_MENTESE",
+   "B_KAPAK",
+   151.2
+  ],
+  [
+   19.75,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   204.8
+  ],
+  [
+   19.75,
+   "B_TIRNAK_ARKA_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   19.75,
+   "B_TIRNAK_ON_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   19.75,
+   "B_ARKA_MENTESE",
+   "B_KAPAK",
+   151.2
+  ],
+  [
+   20.0,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   204.8
+  ],
+  [
+   20.0,
+   "B_TIRNAK_ARKA_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   20.0,
+   "B_TIRNAK_ON_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   20.0,
+   "B_ARKA_MENTESE",
+   "B_KAPAK",
+   151.2
+  ],
+  [
+   20.25,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   204.8
+  ],
+  [
+   20.25,
+   "B_TIRNAK_ARKA_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   20.25,
+   "B_TIRNAK_ON_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   20.25,
+   "B_ARKA_MENTESE",
+   "B_KAPAK",
+   151.2
+  ],
+  [
+   20.3,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   204.8
+  ],
+  [
+   20.3,
+   "B_TIRNAK_ARKA_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   20.3,
+   "B_TIRNAK_ON_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   20.3,
+   "B_ARKA_MENTESE",
+   "B_KAPAK",
+   151.2
+  ],
+  [
+   20.5,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   204.8
+  ],
+  [
+   20.5,
+   "B_TIRNAK_ARKA_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   20.5,
+   "B_TIRNAK_ON_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   20.5,
+   "B_ARKA_MENTESE",
+   "B_KAPAK",
+   151.2
+  ],
+  [
+   20.75,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   204.8
+  ],
+  [
+   20.75,
+   "B_TIRNAK_ARKA_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   20.75,
+   "B_TIRNAK_ON_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   20.75,
+   "B_ARKA_MENTESE",
+   "B_KAPAK",
+   151.2
+  ],
+  [
+   21.0,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   204.8
+  ],
+  [
+   21.0,
+   "B_TIRNAK_ARKA_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   21.0,
+   "B_TIRNAK_ON_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   21.0,
+   "B_ARKA_MENTESE",
+   "B_KAPAK",
+   151.2
+  ],
+  [
+   21.25,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   204.8
+  ],
+  [
+   21.25,
+   "B_TIRNAK_ARKA_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   21.25,
+   "B_TIRNAK_ON_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   21.25,
+   "B_ARKA_MENTESE",
+   "B_KAPAK",
+   151.2
+  ],
+  [
+   21.5,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   204.8
+  ],
+  [
+   21.5,
+   "B_TIRNAK_ARKA_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   21.5,
+   "B_TIRNAK_ON_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   21.5,
+   "B_ARKA_MENTESE",
+   "B_KAPAK",
+   151.2
+  ],
+  [
+   21.7,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   204.8
+  ],
+  [
+   21.7,
+   "B_TIRNAK_ARKA_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   21.7,
+   "B_TIRNAK_ON_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   21.7,
+   "B_ARKA_MENTESE",
+   "B_KAPAK",
+   151.2
+  ],
+  [
+   21.75,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   204.8
+  ],
+  [
+   21.75,
+   "B_TIRNAK_ARKA_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   21.75,
+   "B_TIRNAK_ON_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   21.75,
+   "B_ARKA_MENTESE",
+   "B_KAPAK",
+   151.2
+  ],
+  [
+   22.0,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   204.8
+  ],
+  [
+   22.0,
+   "B_TIRNAK_ARKA_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   22.0,
+   "B_TIRNAK_ON_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   22.0,
+   "B_ARKA_MENTESE",
+   "B_KAPAK",
+   151.2
+  ],
+  [
+   22.25,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   204.8
+  ],
+  [
+   22.25,
+   "B_TIRNAK_ARKA_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   22.25,
+   "B_TIRNAK_ON_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   22.25,
+   "B_ARKA_MENTESE",
+   "B_KAPAK",
+   151.2
+  ],
+  [
+   22.5,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   204.8
+  ],
+  [
+   22.5,
+   "B_TIRNAK_ARKA_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   22.5,
+   "B_TIRNAK_ON_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   22.5,
+   "B_ARKA_MENTESE",
+   "B_KAPAK",
+   151.2
+  ],
+  [
+   22.75,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   204.8
+  ],
+  [
+   22.75,
+   "B_TIRNAK_ARKA_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   22.75,
+   "B_TIRNAK_ON_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   22.75,
+   "B_ARKA_MENTESE",
+   "B_KAPAK",
+   151.2
+  ],
+  [
+   22.8,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   204.8
+  ],
+  [
+   22.8,
+   "B_TIRNAK_ARKA_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   22.8,
+   "B_TIRNAK_ON_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   22.8,
+   "B_ARKA_MENTESE",
+   "B_KAPAK",
+   151.2
+  ],
+  [
+   22.98,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   204.8
+  ],
+  [
+   22.98,
+   "B_TIRNAK_ARKA_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   22.98,
+   "B_TIRNAK_ON_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   22.98,
+   "B_ARKA_MENTESE",
+   "B_KAPAK",
+   151.2
+  ],
+  [
+   23.0,
+   "B_TABAN",
+   "B_ARKA_MENTESE",
+   204.8
+  ],
+  [
+   23.0,
+   "B_TIRNAK_ARKA_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   23.0,
+   "B_TIRNAK_ON_MENTESE",
+   "B_ARKA_MENTESE",
+   1206.4
+  ],
+  [
+   23.0,
+   "B_ARKA_MENTESE",
+   "B_KAPAK",
+   151.2
+  ]
+ ]
+}

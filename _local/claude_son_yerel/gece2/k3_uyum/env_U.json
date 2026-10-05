@@ -1,0 +1,10614 @@
+{
+"ist": "U",
+"mod": "h3_u_sac_v1",
+"gruplar": {
+"U_F": {
+"sac": [
+{
+"ad": "ust_f_taban_sac",
+"rol": "dis",
+"t": 1.5,
+"R": 2.25,
+"K": 0.45,
+"bolge": "gida_disi",
+"birim": "U_F_GOVDE",
+"bukum": [],
+"kose": []
+},
+{
+"ad": "ust_f_yan_sol",
+"rol": "dis",
+"t": 1.5,
+"R": 2.25,
+"K": 0.45,
+"bolge": "gida_disi",
+"birim": "U_F_GOVDE",
+"bukum": [
+{
+"R": 2.25,
+"aci": 90.0,
+"K": 0.45
+},
+{
+"R": 2.25,
+"aci": 90.0,
+"K": 0.45
+}
+],
+"kose": []
+},
+{
+"ad": "ust_f_yan_sag",
+"rol": "dis",
+"t": 1.5,
+"R": 2.25,
+"K": 0.45,
+"bolge": "gida_disi",
+"birim": "U_F_GOVDE",
+"bukum": [
+{
+"R": 2.25,
+"aci": 90.0,
+"K": 0.45
+},
+{
+"R": 2.25,
+"aci": 90.0,
+"K": 0.45
+}
+],
+"kose": []
+},
+{
+"ad": "ust_f_tavan_sac",
+"rol": "dis",
+"t": 1.5,
+"R": 2.25,
+"K": 0.45,
+"bolge": "gida_disi",
+"birim": "U_F_GOVDE",
+"bukum": [
+{
+"R": 2.25,
+"aci": 90.0,
+"K": 0.45
+},
+{
+"R": 2.25,
+"aci": 90.0,
+"K": 0.45
+},
+{
+"R": 2.25,
+"aci": 90.0,
+"K": 0.45
+},
+{
+"R": 2.25,
+"aci": 90.0,
+"K": 0.45
+}
+],
+"kose": null
+},
+{
+"ad": "ust_f_arka_sac",
+"rol": "dis",
+"t": 1.5,
+"R": 2.25,
+"K": 0.45,
+"bolge": "gida_disi",
+"birim": "U_F_GOVDE",
+"bukum": [
+{
+"R": 2.25,
+"aci": 90.0,
+"K": 0.45
+}
+],
+"kose": []
+},
+{
+"ad": "ust_f_giris_cebi",
+"rol": "dis",
+"t": 1.5,
+"R": 2.25,
+"K": 0.45,
+"bolge": "gida_disi",
+"birim": "U_F_GOVDE",
+"bukum": [
+{
+"R": 2.25,
+"aci": 90.0,
+"K": 0.45
+},
+{
+"R": 2.25,
+"aci": 90.0,
+"K": 0.45
+},
+{
+"R": 2.25,
+"aci": 90.0,
+"K": 0.45
+},
+{
+"R": 2.25,
+"aci": 90.0,
+"K": 0.45
+},
+{
+"R": 2.25,
+"aci": 90.0,
+"K": 0.45
+},
+{
+"R": 2.25,
+"aci": 90.0,
+"K": 0.45
+}
+],
+"kose": null
+}
+],
+"profil": [],
+"eleman": [
+{
+"ad": "ust_f_tavan_omegasi_0",
+"bom": [
+"Omega profil AISI 304 haddelenmiş 1,2 · taç 30 · yükseklik 20 · kanat 15 (hazır profil, boy kesim) · tavana punta ≈150",
+1,
+"L 878",
+"özel · AISI 304",
+"ÜRETİM"
+],
+"meta": {
+"tur": "baglanti",
+"std": "özel",
+"malzeme": "AISI 304"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_arka_sol_1890_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-10 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×10",
+"PEM FHP-M5-10 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-10",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 10,
+"tur": "baglanti",
+"std": "PEM FHP-M5-10",
+"malzeme": "A286 pasive"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_arka_sol_1890_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_arka_sol_1890_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_arka_sol_2030_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-10 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×10",
+"PEM FHP-M5-10 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-10",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 10,
+"tur": "baglanti",
+"std": "PEM FHP-M5-10",
+"malzeme": "A286 pasive"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_arka_sol_2030_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_arka_sol_2030_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_arka_sol_2150_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-10 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×10",
+"PEM FHP-M5-10 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-10",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 10,
+"tur": "baglanti",
+"std": "PEM FHP-M5-10",
+"malzeme": "A286 pasive"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_arka_sol_2150_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_arka_sol_2150_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_arka_sag_2060_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-10 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×10",
+"PEM FHP-M5-10 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-10",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 10,
+"tur": "baglanti",
+"std": "PEM FHP-M5-10",
+"malzeme": "A286 pasive"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_arka_sag_2060_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_arka_sag_2060_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_arka_sag_2165_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-10 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×10",
+"PEM FHP-M5-10 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-10",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 10,
+"tur": "baglanti",
+"std": "PEM FHP-M5-10",
+"malzeme": "A286 pasive"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_arka_sag_2165_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_arka_sag_2165_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_tavan_arka_2550_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-10 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×10",
+"PEM FHP-M5-10 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-10",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 10,
+"tur": "baglanti",
+"std": "PEM FHP-M5-10",
+"malzeme": "A286 pasive"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_tavan_arka_2550_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_tavan_arka_2550_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_tavan_arka_2750_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-10 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×10",
+"PEM FHP-M5-10 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-10",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 10,
+"tur": "baglanti",
+"std": "PEM FHP-M5-10",
+"malzeme": "A286 pasive"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_tavan_arka_2750_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_tavan_arka_2750_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_tavan_arka_2950_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-10 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×10",
+"PEM FHP-M5-10 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-10",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 10,
+"tur": "baglanti",
+"std": "PEM FHP-M5-10",
+"malzeme": "A286 pasive"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_tavan_arka_2950_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_tavan_arka_2950_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_tavan_arka_3150_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-10 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×10",
+"PEM FHP-M5-10 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-10",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 10,
+"tur": "baglanti",
+"std": "PEM FHP-M5-10",
+"malzeme": "A286 pasive"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_tavan_arka_3150_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_tavan_arka_3150_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_tavan_arka_3550_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-10 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×10",
+"PEM FHP-M5-10 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-10",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 10,
+"tur": "baglanti",
+"std": "PEM FHP-M5-10",
+"malzeme": "A286 pasive"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_tavan_arka_3550_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_tavan_arka_3550_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_tavan_arka_3750_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-10 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×10",
+"PEM FHP-M5-10 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-10",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 10,
+"tur": "baglanti",
+"std": "PEM FHP-M5-10",
+"malzeme": "A286 pasive"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_tavan_arka_3750_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_tavan_arka_3750_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_tavan_arka_3950_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-10 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×10",
+"PEM FHP-M5-10 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-10",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 10,
+"tur": "baglanti",
+"std": "PEM FHP-M5-10",
+"malzeme": "A286 pasive"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_tavan_arka_3950_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_tavan_arka_3950_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_taban_arka_2570_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12.0,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_taban_arka_2570_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_taban_arka_2570_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_taban_arka_2958_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12.0,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_taban_arka_2958_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_taban_arka_2958_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_taban_arka_3152_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12.0,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_taban_arka_3152_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_taban_arka_3152_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_taban_arka_3347_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12.0,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_taban_arka_3347_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_taban_arka_3347_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_taban_arka_3541_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12.0,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_taban_arka_3541_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_taban_arka_3541_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_taban_arka_3735_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12.0,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_taban_arka_3735_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_taban_arka_3735_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_tavan_sol_790_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12.0,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_tavan_sol_790_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_tavan_sol_790_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_tavan_sol_626_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12.0,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_tavan_sol_626_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_tavan_sol_626_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_tavan_sol_462_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12.0,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_tavan_sol_462_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_tavan_sol_462_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_tavan_sol_298_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12.0,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_tavan_sol_298_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_tavan_sol_298_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_tavan_sol_134_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12.0,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_tavan_sol_134_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_tavan_sol_134_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_tavan_sol_-30_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12.0,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_tavan_sol_-30_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_tavan_sol_-30_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_tavan_sag_790_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12.0,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_tavan_sag_790_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_tavan_sag_790_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_tavan_sag_626_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12.0,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_tavan_sag_626_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_tavan_sag_626_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_tavan_sag_462_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12.0,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_tavan_sag_462_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_tavan_sag_462_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_tavan_sag_298_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12.0,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_tavan_sag_298_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_tavan_sag_298_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_tavan_sag_134_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12.0,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_tavan_sag_134_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_tavan_sag_134_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_tavan_sag_-30_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12.0,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_tavan_sag_-30_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_tavan_sag_-30_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_cep_sol_flans_3903_2095_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-10 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×10",
+"PEM FHP-M5-10 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-10",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 10,
+"tur": "baglanti",
+"std": "PEM FHP-M5-10",
+"malzeme": "A286 pasive"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_cep_sol_flans_3903_2095_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_cep_sol_flans_3903_2095_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_cep_sol_flans_3903_2124_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-10 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×10",
+"PEM FHP-M5-10 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-10",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 10,
+"tur": "baglanti",
+"std": "PEM FHP-M5-10",
+"malzeme": "A286 pasive"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_cep_sol_flans_3903_2124_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_cep_sol_flans_3903_2124_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_cep_sol_flans_3903_2153_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-10 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×10",
+"PEM FHP-M5-10 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-10",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 10,
+"tur": "baglanti",
+"std": "PEM FHP-M5-10",
+"malzeme": "A286 pasive"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_cep_sol_flans_3903_2153_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_cep_sol_flans_3903_2153_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_cep_alt_flans_3935_2069_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-10 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×10",
+"PEM FHP-M5-10 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-10",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 10,
+"tur": "baglanti",
+"std": "PEM FHP-M5-10",
+"malzeme": "A286 pasive"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_cep_alt_flans_3935_2069_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_cep_alt_flans_3935_2069_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_cep_alt_flans_3965_2069_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-10 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×10",
+"PEM FHP-M5-10 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-10",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 10,
+"tur": "baglanti",
+"std": "PEM FHP-M5-10",
+"malzeme": "A286 pasive"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_cep_alt_flans_3965_2069_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_bag_cep_alt_flans_3965_2069_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_m8_firin_2580_790",
+"bom": [
+"Bombe başlı imbus vida M8×16",
+1,
+"M8×16",
+"ISO 7380-1 · A2-70",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M8",
+"boy": 16,
+"tur": "baglanti",
+"std": "ISO 7380-1",
+"malzeme": "A2-70"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_m8_firin_2580_0",
+"bom": [
+"Bombe başlı imbus vida M8×16",
+1,
+"M8×16",
+"ISO 7380-1 · A2-70",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M8",
+"boy": 16,
+"tur": "baglanti",
+"std": "ISO 7380-1",
+"malzeme": "A2-70"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_m8_firin_3250_0",
+"bom": [
+"Bombe başlı imbus vida M8×16",
+1,
+"M8×16",
+"ISO 7380-1 · A2-70",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M8",
+"boy": 16,
+"tur": "baglanti",
+"std": "ISO 7380-1",
+"malzeme": "A2-70"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_m8_firin_3900_0",
+"bom": [
+"Bombe başlı imbus vida M8×16",
+1,
+"M8×16",
+"ISO 7380-1 · A2-70",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M8",
+"boy": 16,
+"tur": "baglanti",
+"std": "ISO 7380-1",
+"malzeme": "A2-70"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_ke_m8_1950_-40_pul1",
+"bom": [
+"Düz pul M8",
+1,
+"8.4/16×1.6",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M8",
+"d1": 8.4,
+"d2": 16.0,
+"h": 1.6,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_ke_m8_1950_-40_vida",
+"bom": [
+"Silindir başlı imbus cıvata M8×16",
+1,
+"M8×16",
+"ISO 4762 · A2-70",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M8",
+"boy": 16.0,
+"tur": "baglanti",
+"std": "ISO 4762",
+"malzeme": "A2-70"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_ke_m8_1950_-40_pul2",
+"bom": [
+"Düz pul M8",
+1,
+"8.4/16×1.6",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M8",
+"d1": 8.4,
+"d2": 16.0,
+"h": 1.6,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_ke_m8_1950_-40_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M8",
+1,
+"M8 s13 m8",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M8",
+"s": 13.0,
+"m": 8.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_ke_m8_2110_-40_pul1",
+"bom": [
+"Düz pul M8",
+1,
+"8.4/16×1.6",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M8",
+"d1": 8.4,
+"d2": 16.0,
+"h": 1.6,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_ke_m8_2110_-40_vida",
+"bom": [
+"Silindir başlı imbus cıvata M8×16",
+1,
+"M8×16",
+"ISO 4762 · A2-70",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M8",
+"boy": 16.0,
+"tur": "baglanti",
+"std": "ISO 4762",
+"malzeme": "A2-70"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_ke_m8_2110_-40_pul2",
+"bom": [
+"Düz pul M8",
+1,
+"8.4/16×1.6",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M8",
+"d1": 8.4,
+"d2": 16.0,
+"h": 1.6,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_ke_m8_2110_-40_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M8",
+1,
+"M8 s13 m8",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M8",
+"s": 13.0,
+"m": 8.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_ke_m8_2030_560_pul1",
+"bom": [
+"Düz pul M8",
+1,
+"8.4/16×1.6",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M8",
+"d1": 8.4,
+"d2": 16.0,
+"h": 1.6,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_ke_m8_2030_560_vida",
+"bom": [
+"Silindir başlı imbus cıvata M8×16",
+1,
+"M8×16",
+"ISO 4762 · A2-70",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M8",
+"boy": 16.0,
+"tur": "baglanti",
+"std": "ISO 4762",
+"malzeme": "A2-70"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_ke_m8_2030_560_pul2",
+"bom": [
+"Düz pul M8",
+1,
+"8.4/16×1.6",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M8",
+"d1": 8.4,
+"d2": 16.0,
+"h": 1.6,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "govde_f_ke_m8_2030_560_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M8",
+1,
+"M8 s13 m8",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M8",
+"s": 13.0,
+"m": 8.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "U_F_GOVDE"
+}
+],
+"arayuz": [
+{
+"ad": "arayuz_mek_ust_f_taban_sac_4",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "arayuz_mek_ust_f_taban_sac_5",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "arayuz_fan_3660_1930_0_0",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "arayuz_fan_3660_1930_0_1",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "arayuz_fan_3660_1930_1_0",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "arayuz_fan_3660_1930_1_1",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "arayuz_fan_3860_1930_0_0",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "arayuz_fan_3860_1930_0_1",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "arayuz_fan_3860_1930_1_0",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "arayuz_fan_3860_1930_1_1",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "arayuz_fan_2640_2075_0_0",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "arayuz_fan_2640_2075_0_1",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "arayuz_fan_2640_2075_1_0",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "arayuz_fan_2640_2075_1_1",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "arayuz_fan_2820_2075_0_0",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "arayuz_fan_2820_2075_0_1",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "arayuz_fan_2820_2075_1_0",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "arayuz_fan_2820_2075_1_1",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "arayuz_mek_ust_f_arka_sac_6",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "arayuz_mek_ust_f_arka_sac_6b",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "U_F_GOVDE"
+}
+],
+"kaynak": [
+{
+"ad": "ust_f_taban_yan_kaynagi_sol_780",
+"bom": [
+"Köşe kaynak dikişi · TIG 141 · dolgu ER308LSi · a 1.5",
+1,
+"40 mm",
+"iç (aralıklı 40 / 200) taban ↔ yan sac",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "kose",
+"yontem": "TIG 141",
+"dolgu": "ER308LSi",
+"a": 1.5,
+"boy": 40.0,
+"taraf": "iç (aralıklı 40 / 200)",
+"iso2553": "a1.5 ◺ 40"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "ust_f_taban_yan_kaynagi_sol_580",
+"bom": [
+"Köşe kaynak dikişi · TIG 141 · dolgu ER308LSi · a 1.5",
+1,
+"40 mm",
+"iç (aralıklı 40 / 200) taban ↔ yan sac",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "kose",
+"yontem": "TIG 141",
+"dolgu": "ER308LSi",
+"a": 1.5,
+"boy": 40.0,
+"taraf": "iç (aralıklı 40 / 200)",
+"iso2553": "a1.5 ◺ 40"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "ust_f_taban_yan_kaynagi_sol_380",
+"bom": [
+"Köşe kaynak dikişi · TIG 141 · dolgu ER308LSi · a 1.5",
+1,
+"40 mm",
+"iç (aralıklı 40 / 200) taban ↔ yan sac",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "kose",
+"yontem": "TIG 141",
+"dolgu": "ER308LSi",
+"a": 1.5,
+"boy": 40.0,
+"taraf": "iç (aralıklı 40 / 200)",
+"iso2553": "a1.5 ◺ 40"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "ust_f_taban_yan_kaynagi_sol_180",
+"bom": [
+"Köşe kaynak dikişi · TIG 141 · dolgu ER308LSi · a 1.5",
+1,
+"40 mm",
+"iç (aralıklı 40 / 200) taban ↔ yan sac",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "kose",
+"yontem": "TIG 141",
+"dolgu": "ER308LSi",
+"a": 1.5,
+"boy": 40.0,
+"taraf": "iç (aralıklı 40 / 200)",
+"iso2553": "a1.5 ◺ 40"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "ust_f_taban_yan_kaynagi_sol_40",
+"bom": [
+"Köşe kaynak dikişi · TIG 141 · dolgu ER308LSi · a 1.5",
+1,
+"40 mm",
+"iç (aralıklı 40 / 200) taban ↔ yan sac",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "kose",
+"yontem": "TIG 141",
+"dolgu": "ER308LSi",
+"a": 1.5,
+"boy": 40.0,
+"taraf": "iç (aralıklı 40 / 200)",
+"iso2553": "a1.5 ◺ 40"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "ust_f_taban_yan_kaynagi_sag_780",
+"bom": [
+"Köşe kaynak dikişi · TIG 141 · dolgu ER308LSi · a 1.5",
+1,
+"40 mm",
+"iç (aralıklı 40 / 200) taban ↔ yan sac",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "kose",
+"yontem": "TIG 141",
+"dolgu": "ER308LSi",
+"a": 1.5,
+"boy": 40.0,
+"taraf": "iç (aralıklı 40 / 200)",
+"iso2553": "a1.5 ◺ 40"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "ust_f_taban_yan_kaynagi_sag_580",
+"bom": [
+"Köşe kaynak dikişi · TIG 141 · dolgu ER308LSi · a 1.5",
+1,
+"40 mm",
+"iç (aralıklı 40 / 200) taban ↔ yan sac",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "kose",
+"yontem": "TIG 141",
+"dolgu": "ER308LSi",
+"a": 1.5,
+"boy": 40.0,
+"taraf": "iç (aralıklı 40 / 200)",
+"iso2553": "a1.5 ◺ 40"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "ust_f_taban_yan_kaynagi_sag_380",
+"bom": [
+"Köşe kaynak dikişi · TIG 141 · dolgu ER308LSi · a 1.5",
+1,
+"40 mm",
+"iç (aralıklı 40 / 200) taban ↔ yan sac",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "kose",
+"yontem": "TIG 141",
+"dolgu": "ER308LSi",
+"a": 1.5,
+"boy": 40.0,
+"taraf": "iç (aralıklı 40 / 200)",
+"iso2553": "a1.5 ◺ 40"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "ust_f_taban_yan_kaynagi_sag_180",
+"bom": [
+"Köşe kaynak dikişi · TIG 141 · dolgu ER308LSi · a 1.5",
+1,
+"40 mm",
+"iç (aralıklı 40 / 200) taban ↔ yan sac",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "kose",
+"yontem": "TIG 141",
+"dolgu": "ER308LSi",
+"a": 1.5,
+"boy": 40.0,
+"taraf": "iç (aralıklı 40 / 200)",
+"iso2553": "a1.5 ◺ 40"
+},
+"birim": "U_F_GOVDE"
+},
+{
+"ad": "ust_f_taban_yan_kaynagi_sag_40",
+"bom": [
+"Köşe kaynak dikişi · TIG 141 · dolgu ER308LSi · a 1.5",
+1,
+"40 mm",
+"iç (aralıklı 40 / 200) taban ↔ yan sac",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "kose",
+"yontem": "TIG 141",
+"dolgu": "ER308LSi",
+"a": 1.5,
+"boy": 40.0,
+"taraf": "iç (aralıklı 40 / 200)",
+"iso2553": "a1.5 ◺ 40"
+},
+"birim": "U_F_GOVDE"
+}
+]
+},
+"U_KE": {
+"sac": [
+{
+"ad": "ust_ke_taban_sac",
+"rol": "dis",
+"t": 1.5,
+"R": 2.25,
+"K": 0.45,
+"bolge": "gida_disi",
+"birim": "U_KE_GOVDE",
+"bukum": [],
+"kose": []
+},
+{
+"ad": "ust_ke_yan_sol",
+"rol": "dis",
+"t": 1.5,
+"R": 2.25,
+"K": 0.45,
+"bolge": "gida_disi",
+"birim": "U_KE_GOVDE",
+"bukum": [
+{
+"R": 2.25,
+"aci": 90.0,
+"K": 0.45
+},
+{
+"R": 2.25,
+"aci": 90.0,
+"K": 0.45
+}
+],
+"kose": []
+},
+{
+"ad": "ust_ke_yan_sag",
+"rol": "dis",
+"t": 1.5,
+"R": 2.25,
+"K": 0.45,
+"bolge": "gida_disi",
+"birim": "U_KE_GOVDE",
+"bukum": [
+{
+"R": 2.25,
+"aci": 90.0,
+"K": 0.45
+},
+{
+"R": 2.25,
+"aci": 90.0,
+"K": 0.45
+}
+],
+"kose": []
+},
+{
+"ad": "ust_ke_tavan_sac",
+"rol": "dis",
+"t": 1.5,
+"R": 2.25,
+"K": 0.45,
+"bolge": "gida_disi",
+"birim": "U_KE_GOVDE",
+"bukum": [
+{
+"R": 2.25,
+"aci": 90.0,
+"K": 0.45
+},
+{
+"R": 2.25,
+"aci": 90.0,
+"K": 0.45
+},
+{
+"R": 2.25,
+"aci": 90.0,
+"K": 0.45
+},
+{
+"R": 2.25,
+"aci": 90.0,
+"K": 0.45
+}
+],
+"kose": null
+},
+{
+"ad": "ust_ke_arka_sac",
+"rol": "dis",
+"t": 1.5,
+"R": 2.25,
+"K": 0.45,
+"bolge": "gida_disi",
+"birim": "U_KE_GOVDE",
+"bukum": [
+{
+"R": 2.25,
+"aci": 90.0,
+"K": 0.45
+}
+],
+"kose": []
+}
+],
+"profil": [],
+"eleman": [
+{
+"ad": "ust_ke_tavan_omegasi_0",
+"bom": [
+"Omega profil AISI 304 haddelenmiş 1,2 · taç 30 · yükseklik 20 · kanat 15 (hazır profil, boy kesim) · tavana punta ≈150",
+1,
+"L 878",
+"özel · AISI 304",
+"ÜRETİM"
+],
+"meta": {
+"tur": "baglanti",
+"std": "özel",
+"malzeme": "AISI 304"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_bag_arka_sol_1890_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-10 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×10",
+"PEM FHP-M5-10 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-10",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 10,
+"tur": "baglanti",
+"std": "PEM FHP-M5-10",
+"malzeme": "A286 pasive"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_bag_arka_sol_1890_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_bag_arka_sol_1890_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_bag_arka_sol_2030_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-10 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×10",
+"PEM FHP-M5-10 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-10",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 10,
+"tur": "baglanti",
+"std": "PEM FHP-M5-10",
+"malzeme": "A286 pasive"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_bag_arka_sol_2030_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_bag_arka_sol_2030_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_bag_arka_sol_2150_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-10 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×10",
+"PEM FHP-M5-10 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-10",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 10,
+"tur": "baglanti",
+"std": "PEM FHP-M5-10",
+"malzeme": "A286 pasive"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_bag_arka_sol_2150_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_bag_arka_sol_2150_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_bag_arka_sag_1890_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-10 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×10",
+"PEM FHP-M5-10 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-10",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 10,
+"tur": "baglanti",
+"std": "PEM FHP-M5-10",
+"malzeme": "A286 pasive"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_bag_arka_sag_1890_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_bag_arka_sag_1890_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_bag_arka_sag_2030_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-10 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×10",
+"PEM FHP-M5-10 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-10",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 10,
+"tur": "baglanti",
+"std": "PEM FHP-M5-10",
+"malzeme": "A286 pasive"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_bag_arka_sag_2030_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_bag_arka_sag_2030_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_bag_arka_sag_2150_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-10 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×10",
+"PEM FHP-M5-10 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-10",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 10,
+"tur": "baglanti",
+"std": "PEM FHP-M5-10",
+"malzeme": "A286 pasive"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_bag_arka_sag_2150_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_bag_arka_sag_2150_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_bag_tavan_arka_4050_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-10 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×10",
+"PEM FHP-M5-10 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-10",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 10,
+"tur": "baglanti",
+"std": "PEM FHP-M5-10",
+"malzeme": "A286 pasive"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_bag_tavan_arka_4050_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_bag_tavan_arka_4050_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_bag_tavan_arka_4238_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-10 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×10",
+"PEM FHP-M5-10 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-10",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 10,
+"tur": "baglanti",
+"std": "PEM FHP-M5-10",
+"malzeme": "A286 pasive"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_bag_tavan_arka_4238_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_bag_tavan_arka_4238_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_bag_tavan_arka_4426_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-10 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×10",
+"PEM FHP-M5-10 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-10",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 10,
+"tur": "baglanti",
+"std": "PEM FHP-M5-10",
+"malzeme": "A286 pasive"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_bag_tavan_arka_4426_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_bag_tavan_arka_4426_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_bag_tavan_arka_4803_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-10 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×10",
+"PEM FHP-M5-10 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-10",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 10,
+"tur": "baglanti",
+"std": "PEM FHP-M5-10",
+"malzeme": "A286 pasive"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_bag_tavan_arka_4803_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_bag_tavan_arka_4803_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_bag_tavan_arka_4991_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-10 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×10",
+"PEM FHP-M5-10 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-10",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 10,
+"tur": "baglanti",
+"std": "PEM FHP-M5-10",
+"malzeme": "A286 pasive"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_bag_tavan_arka_4991_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_bag_tavan_arka_4991_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_bag_tavan_arka_5180_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-10 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×10",
+"PEM FHP-M5-10 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-10",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 10,
+"tur": "baglanti",
+"std": "PEM FHP-M5-10",
+"malzeme": "A286 pasive"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_bag_tavan_arka_5180_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_bag_tavan_arka_5180_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_bag_taban_arka_4070_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12.0,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_bag_taban_arka_4070_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_bag_taban_arka_4070_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_bag_taban_arka_4251_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12.0,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_bag_taban_arka_4251_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_bag_taban_arka_4251_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_bag_taban_arka_4433_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12.0,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_bag_taban_arka_4433_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_bag_taban_arka_4433_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_bag_taban_arka_4615_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12.0,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_bag_taban_arka_4615_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_bag_taban_arka_4615_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_bag_taban_arka_4796_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12.0,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_bag_taban_arka_4796_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_bag_taban_arka_4796_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_bag_taban_arka_4978_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12.0,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_bag_taban_arka_4978_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_bag_taban_arka_4978_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_bag_taban_arka_5160_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12.0,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_bag_taban_arka_5160_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_bag_taban_arka_5160_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_bag_tavan_sol_790_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12.0,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_bag_tavan_sol_790_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_bag_tavan_sol_790_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_bag_tavan_sol_626_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12.0,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_bag_tavan_sol_626_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_bag_tavan_sol_626_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_bag_tavan_sol_462_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12.0,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_bag_tavan_sol_462_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_bag_tavan_sol_462_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_bag_tavan_sol_298_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12.0,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_bag_tavan_sol_298_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_bag_tavan_sol_298_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_bag_tavan_sol_134_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12.0,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_bag_tavan_sol_134_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_bag_tavan_sol_134_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_bag_tavan_sol_-30_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12.0,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_bag_tavan_sol_-30_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_bag_tavan_sol_-30_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_bag_tavan_sag_790_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12.0,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_bag_tavan_sag_790_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_bag_tavan_sag_790_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_bag_tavan_sag_626_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12.0,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_bag_tavan_sag_626_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_bag_tavan_sag_626_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_bag_tavan_sag_462_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12.0,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_bag_tavan_sag_462_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_bag_tavan_sag_462_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_bag_tavan_sag_298_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12.0,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_bag_tavan_sag_298_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_bag_tavan_sag_298_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_bag_tavan_sag_134_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12.0,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_bag_tavan_sag_134_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_bag_tavan_sag_134_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_bag_tavan_sag_-30_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12.0,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_bag_tavan_sag_-30_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_bag_tavan_sag_-30_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_m8_e_4500",
+"bom": [
+"Bombe başlı imbus vida M8×16",
+1,
+"M8×16",
+"ISO 7380-1 · A2-70",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M8",
+"boy": 16,
+"tur": "baglanti",
+"std": "ISO 7380-1",
+"malzeme": "A2-70"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_m8_e_4815",
+"bom": [
+"Bombe başlı imbus vida M8×16",
+1,
+"M8×16",
+"ISO 7380-1 · A2-70",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M8",
+"boy": 16,
+"tur": "baglanti",
+"std": "ISO 7380-1",
+"malzeme": "A2-70"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "govde_ke_m8_e_5130",
+"bom": [
+"Bombe başlı imbus vida M8×16",
+1,
+"M8×16",
+"ISO 7380-1 · A2-70",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M8",
+"boy": 16,
+"tur": "baglanti",
+"std": "ISO 7380-1",
+"malzeme": "A2-70"
+},
+"birim": "U_KE_GOVDE"
+}
+],
+"arayuz": [
+{
+"ad": "arayuz_ke_m8_k_4100",
+"bom": [
+"Bombe başlı imbus vida M8×16",
+1,
+"M8×16",
+"ISO 7380-1 · A2-70",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M8",
+"boy": 16,
+"tur": "baglanti",
+"std": "ISO 7380-1",
+"malzeme": "A2-70"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "arayuz_ke_m8_k_4300",
+"bom": [
+"Bombe başlı imbus vida M8×16",
+1,
+"M8×16",
+"ISO 7380-1 · A2-70",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M8",
+"boy": 16,
+"tur": "baglanti",
+"std": "ISO 7380-1",
+"malzeme": "A2-70"
+},
+"birim": "U_KE_GOVDE"
+}
+],
+"kaynak": [
+{
+"ad": "ust_ke_taban_yan_kaynagi_sol_780",
+"bom": [
+"Köşe kaynak dikişi · TIG 141 · dolgu ER308LSi · a 1.5",
+1,
+"40 mm",
+"iç (aralıklı 40 / 200) taban ↔ yan sac",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "kose",
+"yontem": "TIG 141",
+"dolgu": "ER308LSi",
+"a": 1.5,
+"boy": 40.0,
+"taraf": "iç (aralıklı 40 / 200)",
+"iso2553": "a1.5 ◺ 40"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "ust_ke_taban_yan_kaynagi_sol_580",
+"bom": [
+"Köşe kaynak dikişi · TIG 141 · dolgu ER308LSi · a 1.5",
+1,
+"40 mm",
+"iç (aralıklı 40 / 200) taban ↔ yan sac",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "kose",
+"yontem": "TIG 141",
+"dolgu": "ER308LSi",
+"a": 1.5,
+"boy": 40.0,
+"taraf": "iç (aralıklı 40 / 200)",
+"iso2553": "a1.5 ◺ 40"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "ust_ke_taban_yan_kaynagi_sol_380",
+"bom": [
+"Köşe kaynak dikişi · TIG 141 · dolgu ER308LSi · a 1.5",
+1,
+"40 mm",
+"iç (aralıklı 40 / 200) taban ↔ yan sac",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "kose",
+"yontem": "TIG 141",
+"dolgu": "ER308LSi",
+"a": 1.5,
+"boy": 40.0,
+"taraf": "iç (aralıklı 40 / 200)",
+"iso2553": "a1.5 ◺ 40"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "ust_ke_taban_yan_kaynagi_sol_180",
+"bom": [
+"Köşe kaynak dikişi · TIG 141 · dolgu ER308LSi · a 1.5",
+1,
+"40 mm",
+"iç (aralıklı 40 / 200) taban ↔ yan sac",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "kose",
+"yontem": "TIG 141",
+"dolgu": "ER308LSi",
+"a": 1.5,
+"boy": 40.0,
+"taraf": "iç (aralıklı 40 / 200)",
+"iso2553": "a1.5 ◺ 40"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "ust_ke_taban_yan_kaynagi_sol_40",
+"bom": [
+"Köşe kaynak dikişi · TIG 141 · dolgu ER308LSi · a 1.5",
+1,
+"40 mm",
+"iç (aralıklı 40 / 200) taban ↔ yan sac",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "kose",
+"yontem": "TIG 141",
+"dolgu": "ER308LSi",
+"a": 1.5,
+"boy": 40.0,
+"taraf": "iç (aralıklı 40 / 200)",
+"iso2553": "a1.5 ◺ 40"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "ust_ke_taban_yan_kaynagi_sag_780",
+"bom": [
+"Köşe kaynak dikişi · TIG 141 · dolgu ER308LSi · a 1.5",
+1,
+"40 mm",
+"iç (aralıklı 40 / 200) taban ↔ yan sac",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "kose",
+"yontem": "TIG 141",
+"dolgu": "ER308LSi",
+"a": 1.5,
+"boy": 40.0,
+"taraf": "iç (aralıklı 40 / 200)",
+"iso2553": "a1.5 ◺ 40"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "ust_ke_taban_yan_kaynagi_sag_580",
+"bom": [
+"Köşe kaynak dikişi · TIG 141 · dolgu ER308LSi · a 1.5",
+1,
+"40 mm",
+"iç (aralıklı 40 / 200) taban ↔ yan sac",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "kose",
+"yontem": "TIG 141",
+"dolgu": "ER308LSi",
+"a": 1.5,
+"boy": 40.0,
+"taraf": "iç (aralıklı 40 / 200)",
+"iso2553": "a1.5 ◺ 40"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "ust_ke_taban_yan_kaynagi_sag_380",
+"bom": [
+"Köşe kaynak dikişi · TIG 141 · dolgu ER308LSi · a 1.5",
+1,
+"40 mm",
+"iç (aralıklı 40 / 200) taban ↔ yan sac",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "kose",
+"yontem": "TIG 141",
+"dolgu": "ER308LSi",
+"a": 1.5,
+"boy": 40.0,
+"taraf": "iç (aralıklı 40 / 200)",
+"iso2553": "a1.5 ◺ 40"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "ust_ke_taban_yan_kaynagi_sag_180",
+"bom": [
+"Köşe kaynak dikişi · TIG 141 · dolgu ER308LSi · a 1.5",
+1,
+"40 mm",
+"iç (aralıklı 40 / 200) taban ↔ yan sac",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "kose",
+"yontem": "TIG 141",
+"dolgu": "ER308LSi",
+"a": 1.5,
+"boy": 40.0,
+"taraf": "iç (aralıklı 40 / 200)",
+"iso2553": "a1.5 ◺ 40"
+},
+"birim": "U_KE_GOVDE"
+},
+{
+"ad": "ust_ke_taban_yan_kaynagi_sag_40",
+"bom": [
+"Köşe kaynak dikişi · TIG 141 · dolgu ER308LSi · a 1.5",
+1,
+"40 mm",
+"iç (aralıklı 40 / 200) taban ↔ yan sac",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "kose",
+"yontem": "TIG 141",
+"dolgu": "ER308LSi",
+"a": 1.5,
+"boy": 40.0,
+"taraf": "iç (aralıklı 40 / 200)",
+"iso2553": "a1.5 ◺ 40"
+},
+"birim": "U_KE_GOVDE"
+}
+]
+},
+"F_UST": {
+"sac": [
+{
+"ad": "f_ust_yan_sol",
+"rol": "dis",
+"t": 1.5,
+"R": 2.25,
+"K": 0.45,
+"bolge": "gida_disi",
+"birim": "F_UST_KABIN",
+"bukum": [
+{
+"R": 2.25,
+"aci": 90.0,
+"K": 0.45
+},
+{
+"R": 2.25,
+"aci": 90.0,
+"K": 0.45
+}
+],
+"kose": []
+},
+{
+"ad": "f_ust_yan_sag",
+"rol": "dis",
+"t": 1.5,
+"R": 2.25,
+"K": 0.45,
+"bolge": "gida_disi",
+"birim": "F_UST_KABIN",
+"bukum": [
+{
+"R": 2.25,
+"aci": 90.0,
+"K": 0.45
+},
+{
+"R": 2.25,
+"aci": 90.0,
+"K": 0.45
+}
+],
+"kose": []
+},
+{
+"ad": "f_ust_tavan_kirisi_tapa",
+"rol": "braket",
+"t": 2.0,
+"R": 3.0,
+"K": 0.41,
+"bolge": "gida_disi",
+"birim": "F_UST_KABIN",
+"bukum": [],
+"kose": []
+},
+{
+"ad": "f_ust_taban_levhasi",
+"rol": "dis",
+"t": 1.5,
+"R": 2.25,
+"K": 0.45,
+"bolge": "gida_disi",
+"birim": "F_UST_KABIN",
+"bukum": [],
+"kose": []
+},
+{
+"ad": "f_ust_taban_yalitim_kilifi_on",
+"rol": "ic",
+"t": 0.5,
+"R": 0.75,
+"K": 0.45,
+"bolge": "gida_disi",
+"birim": "F_UST_KABIN",
+"bukum": [
+{
+"R": 0.75,
+"aci": 90.0,
+"K": 0.45
+},
+{
+"R": 0.75,
+"aci": 90.0,
+"K": 0.45
+},
+{
+"R": 0.75,
+"aci": 90.0,
+"K": 0.45
+},
+{
+"R": 0.75,
+"aci": 90.0,
+"K": 0.45
+}
+],
+"kose": null
+},
+{
+"ad": "f_ust_taban_yalitim_kilifi_arka",
+"rol": "ic",
+"t": 0.5,
+"R": 0.75,
+"K": 0.45,
+"bolge": "gida_disi",
+"birim": "F_UST_KABIN",
+"bukum": [
+{
+"R": 0.75,
+"aci": 90.0,
+"K": 0.45
+},
+{
+"R": 0.75,
+"aci": 90.0,
+"K": 0.45
+},
+{
+"R": 0.75,
+"aci": 90.0,
+"K": 0.45
+},
+{
+"R": 0.75,
+"aci": 90.0,
+"K": 0.45
+}
+],
+"kose": null
+},
+{
+"ad": "f_davlumbaz_bolme_duvari",
+"rol": "dis",
+"t": 1.5,
+"R": 2.25,
+"K": 0.45,
+"bolge": "gida_disi",
+"birim": "F_UST_KABIN",
+"bukum": [
+{
+"R": 2.25,
+"aci": 90.0,
+"K": 0.45
+},
+{
+"R": 2.25,
+"aci": 90.0,
+"K": 0.45
+}
+],
+"kose": []
+},
+{
+"ad": "f_ust_tavan_sac",
+"rol": "dis",
+"t": 1.5,
+"R": 2.25,
+"K": 0.45,
+"bolge": "gida_disi",
+"birim": "F_UST_KABIN",
+"bukum": [
+{
+"R": 2.25,
+"aci": 90.0,
+"K": 0.45
+},
+{
+"R": 2.25,
+"aci": 90.0,
+"K": 0.45
+}
+],
+"kose": []
+},
+{
+"ad": "f_ust_arka_sac",
+"rol": "dis",
+"t": 1.5,
+"R": 2.25,
+"K": 0.45,
+"bolge": "gida_disi",
+"birim": "F_UST_KABIN",
+"bukum": [
+{
+"R": 2.25,
+"aci": 90.0,
+"K": 0.45
+}
+],
+"kose": []
+},
+{
+"ad": "govde_fu_kosebent_sol_arka_ust",
+"rol": "braket",
+"t": 3.0,
+"R": 4.5,
+"K": 0.41,
+"bolge": "gida_disi",
+"birim": "F_UST_KABIN",
+"bukum": [
+{
+"R": 4.5,
+"aci": 90.0,
+"K": 0.41
+}
+],
+"kose": []
+}
+],
+"profil": [
+{
+"ad": "f_ust_alt_profil_on",
+"b1": 30.0,
+"b2": 30.0,
+"t": 2.0,
+"Ro": 4.0,
+"std": null,
+"L": 1497.0
+},
+{
+"ad": "f_ust_alt_profil_orta",
+"b1": 30.0,
+"b2": 30.0,
+"t": 2.0,
+"Ro": 4.0,
+"std": null,
+"L": 1497.0
+},
+{
+"ad": "f_ust_alt_profil_arka",
+"b1": 30.0,
+"b2": 30.0,
+"t": 2.0,
+"Ro": 4.0,
+"std": null,
+"L": 1497.0
+},
+{
+"ad": "onyuz_f_ust_ust_kayit",
+"b1": 30.0,
+"b2": 30.0,
+"t": 2.0,
+"Ro": 4.0,
+"std": null,
+"L": 1497.0
+},
+{
+"ad": "onyuz_f_ust_dikme_0",
+"b1": 30.0,
+"b2": 30.0,
+"t": 2.0,
+"Ro": 4.0,
+"std": null,
+"L": 482.5
+},
+{
+"ad": "f_ust_tavan_kirisi",
+"b1": 30.0,
+"b2": 30.0,
+"t": 2.0,
+"Ro": 4.0,
+"std": null,
+"L": 831.0
+}
+],
+"eleman": [
+{
+"ad": "f_ust_taban_yalitimi_on",
+"bom": [
+"Taş yünü levha A1 (EN 13501-1) ≥ 100 kg/m³ · 20 mm · kesilerek yerleştirilir (kılıf tavası içinde, görünmez)",
+1,
+"1494 × 450 × 20",
+"satın alma levha → kesim",
+"SATIN ALMA"
+],
+"meta": {
+"tur": "yalitim",
+"malzeme": "taş yünü",
+"gorunmez": true
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "f_ust_kilif_percin_on_on_2650",
+"bom": [
+"Kör perçin Ø3.2×6 bombe baş A2/A2",
+1,
+"delik Ø3.3",
+"ISO 15983 · A2/A2",
+"SATIN ALMA"
+],
+"meta": {
+"cap": 3.2,
+"boy": 6.0,
+"delik": 3.3,
+"tur": "baglanti",
+"std": "ISO 15983",
+"malzeme": "A2/A2"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "f_ust_kilif_percin_on_on_3050",
+"bom": [
+"Kör perçin Ø3.2×6 bombe baş A2/A2",
+1,
+"delik Ø3.3",
+"ISO 15983 · A2/A2",
+"SATIN ALMA"
+],
+"meta": {
+"cap": 3.2,
+"boy": 6.0,
+"delik": 3.3,
+"tur": "baglanti",
+"std": "ISO 15983",
+"malzeme": "A2/A2"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "f_ust_kilif_percin_on_on_3450",
+"bom": [
+"Kör perçin Ø3.2×6 bombe baş A2/A2",
+1,
+"delik Ø3.3",
+"ISO 15983 · A2/A2",
+"SATIN ALMA"
+],
+"meta": {
+"cap": 3.2,
+"boy": 6.0,
+"delik": 3.3,
+"tur": "baglanti",
+"std": "ISO 15983",
+"malzeme": "A2/A2"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "f_ust_kilif_percin_on_on_3850",
+"bom": [
+"Kör perçin Ø3.2×6 bombe baş A2/A2",
+1,
+"delik Ø3.3",
+"ISO 15983 · A2/A2",
+"SATIN ALMA"
+],
+"meta": {
+"cap": 3.2,
+"boy": 6.0,
+"delik": 3.3,
+"tur": "baglanti",
+"std": "ISO 15983",
+"malzeme": "A2/A2"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "f_ust_kilif_percin_on_orta_2650",
+"bom": [
+"Kör perçin Ø3.2×6 bombe baş A2/A2",
+1,
+"delik Ø3.3",
+"ISO 15983 · A2/A2",
+"SATIN ALMA"
+],
+"meta": {
+"cap": 3.2,
+"boy": 6.0,
+"delik": 3.3,
+"tur": "baglanti",
+"std": "ISO 15983",
+"malzeme": "A2/A2"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "f_ust_kilif_percin_on_orta_3050",
+"bom": [
+"Kör perçin Ø3.2×6 bombe baş A2/A2",
+1,
+"delik Ø3.3",
+"ISO 15983 · A2/A2",
+"SATIN ALMA"
+],
+"meta": {
+"cap": 3.2,
+"boy": 6.0,
+"delik": 3.3,
+"tur": "baglanti",
+"std": "ISO 15983",
+"malzeme": "A2/A2"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "f_ust_kilif_percin_on_orta_3450",
+"bom": [
+"Kör perçin Ø3.2×6 bombe baş A2/A2",
+1,
+"delik Ø3.3",
+"ISO 15983 · A2/A2",
+"SATIN ALMA"
+],
+"meta": {
+"cap": 3.2,
+"boy": 6.0,
+"delik": 3.3,
+"tur": "baglanti",
+"std": "ISO 15983",
+"malzeme": "A2/A2"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "f_ust_kilif_percin_on_orta_3850",
+"bom": [
+"Kör perçin Ø3.2×6 bombe baş A2/A2",
+1,
+"delik Ø3.3",
+"ISO 15983 · A2/A2",
+"SATIN ALMA"
+],
+"meta": {
+"cap": 3.2,
+"boy": 6.0,
+"delik": 3.3,
+"tur": "baglanti",
+"std": "ISO 15983",
+"malzeme": "A2/A2"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "f_ust_taban_v2_kovani",
+"bom": [
+"V2 kanal kovanı AISI 304 1,0 · U büküm (2 büküm) · arka açık (arka profil yüzü kapatır) · kılıfa 2 kör perçin",
+1,
+"45 × 42 × 20",
+"özel · AISI 304",
+"ÜRETİM"
+],
+"meta": {
+"tur": "baglanti",
+"std": "özel",
+"malzeme": "AISI 304"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "f_ust_taban_rakor_kovani",
+"bom": [
+"Rakor kovanı AISI 304 Ø25,4 × 1 (kılıf → taban levhası · yalıtım rakora açılmaz)",
+1,
+"Ø25,4 × 1 × 20,5",
+"özel · AISI 304",
+"ÜRETİM"
+],
+"meta": {
+"tur": "baglanti",
+"std": "özel",
+"malzeme": "AISI 304"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "f_ust_taban_yalitimi_arka",
+"bom": [
+"Taş yünü levha A1 (EN 13501-1) ≥ 100 kg/m³ · 20 mm · kesilerek yerleştirilir (kılıf tavası içinde, görünmez)",
+1,
+"1494 × 338 × 20",
+"satın alma levha → kesim",
+"SATIN ALMA"
+],
+"meta": {
+"tur": "yalitim",
+"malzeme": "taş yünü",
+"gorunmez": true
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "f_ust_kilif_percin_arka_orta_2650",
+"bom": [
+"Kör perçin Ø3.2×6 bombe baş A2/A2",
+1,
+"delik Ø3.3",
+"ISO 15983 · A2/A2",
+"SATIN ALMA"
+],
+"meta": {
+"cap": 3.2,
+"boy": 6.0,
+"delik": 3.3,
+"tur": "baglanti",
+"std": "ISO 15983",
+"malzeme": "A2/A2"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "f_ust_kilif_percin_arka_orta_3050",
+"bom": [
+"Kör perçin Ø3.2×6 bombe baş A2/A2",
+1,
+"delik Ø3.3",
+"ISO 15983 · A2/A2",
+"SATIN ALMA"
+],
+"meta": {
+"cap": 3.2,
+"boy": 6.0,
+"delik": 3.3,
+"tur": "baglanti",
+"std": "ISO 15983",
+"malzeme": "A2/A2"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "f_ust_kilif_percin_arka_orta_3450",
+"bom": [
+"Kör perçin Ø3.2×6 bombe baş A2/A2",
+1,
+"delik Ø3.3",
+"ISO 15983 · A2/A2",
+"SATIN ALMA"
+],
+"meta": {
+"cap": 3.2,
+"boy": 6.0,
+"delik": 3.3,
+"tur": "baglanti",
+"std": "ISO 15983",
+"malzeme": "A2/A2"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "f_ust_kilif_percin_arka_orta_3850",
+"bom": [
+"Kör perçin Ø3.2×6 bombe baş A2/A2",
+1,
+"delik Ø3.3",
+"ISO 15983 · A2/A2",
+"SATIN ALMA"
+],
+"meta": {
+"cap": 3.2,
+"boy": 6.0,
+"delik": 3.3,
+"tur": "baglanti",
+"std": "ISO 15983",
+"malzeme": "A2/A2"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "f_ust_kilif_percin_arka_arka_2650",
+"bom": [
+"Kör perçin Ø3.2×6 bombe baş A2/A2",
+1,
+"delik Ø3.3",
+"ISO 15983 · A2/A2",
+"SATIN ALMA"
+],
+"meta": {
+"cap": 3.2,
+"boy": 6.0,
+"delik": 3.3,
+"tur": "baglanti",
+"std": "ISO 15983",
+"malzeme": "A2/A2"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "f_ust_kilif_percin_arka_arka_3050",
+"bom": [
+"Kör perçin Ø3.2×6 bombe baş A2/A2",
+1,
+"delik Ø3.3",
+"ISO 15983 · A2/A2",
+"SATIN ALMA"
+],
+"meta": {
+"cap": 3.2,
+"boy": 6.0,
+"delik": 3.3,
+"tur": "baglanti",
+"std": "ISO 15983",
+"malzeme": "A2/A2"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "f_ust_kilif_percin_arka_arka_3450",
+"bom": [
+"Kör perçin Ø3.2×6 bombe baş A2/A2",
+1,
+"delik Ø3.3",
+"ISO 15983 · A2/A2",
+"SATIN ALMA"
+],
+"meta": {
+"cap": 3.2,
+"boy": 6.0,
+"delik": 3.3,
+"tur": "baglanti",
+"std": "ISO 15983",
+"malzeme": "A2/A2"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "f_ust_kilif_percin_arka_arka_3850",
+"bom": [
+"Kör perçin Ø3.2×6 bombe baş A2/A2",
+1,
+"delik Ø3.3",
+"ISO 15983 · A2/A2",
+"SATIN ALMA"
+],
+"meta": {
+"cap": 3.2,
+"boy": 6.0,
+"delik": 3.3,
+"tur": "baglanti",
+"std": "ISO 15983",
+"malzeme": "A2/A2"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_bolme_sol_1420_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12.0,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_bolme_sol_1420_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_bolme_sol_1420_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_bolme_sol_1600_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12.0,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_bolme_sol_1600_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_bolme_sol_1600_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_bolme_sol_1790_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12.0,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_bolme_sol_1790_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_bolme_sol_1790_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_bolme_sag_1420_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12.0,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_bolme_sag_1420_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_bolme_sag_1420_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_bolme_sag_1600_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12.0,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_bolme_sag_1600_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_bolme_sag_1600_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_bolme_sag_1790_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12.0,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_bolme_sag_1790_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_bolme_sag_1790_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "f_ust_panjur_lameli_0_0",
+"bom": [
+"Panjur lameli AISI 304 170 × 12 × 1,5 (lazer · arka sacın iç yüzüne iki uçtan dikiş kaynak)",
+1,
+"170 × 12 × 1,5",
+"özel · AISI 304",
+"ÜRETİM"
+],
+"meta": {
+"tur": "baglanti",
+"std": "özel",
+"malzeme": "AISI 304"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "f_ust_panjur_lameli_0_1",
+"bom": [
+"Panjur lameli AISI 304 170 × 12 × 1,5 (lazer · arka sacın iç yüzüne iki uçtan dikiş kaynak)",
+1,
+"170 × 12 × 1,5",
+"özel · AISI 304",
+"ÜRETİM"
+],
+"meta": {
+"tur": "baglanti",
+"std": "özel",
+"malzeme": "AISI 304"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "f_ust_panjur_lameli_0_2",
+"bom": [
+"Panjur lameli AISI 304 170 × 12 × 1,5 (lazer · arka sacın iç yüzüne iki uçtan dikiş kaynak)",
+1,
+"170 × 12 × 1,5",
+"özel · AISI 304",
+"ÜRETİM"
+],
+"meta": {
+"tur": "baglanti",
+"std": "özel",
+"malzeme": "AISI 304"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "f_ust_panjur_lameli_0_3",
+"bom": [
+"Panjur lameli AISI 304 170 × 12 × 1,5 (lazer · arka sacın iç yüzüne iki uçtan dikiş kaynak)",
+1,
+"170 × 12 × 1,5",
+"özel · AISI 304",
+"ÜRETİM"
+],
+"meta": {
+"tur": "baglanti",
+"std": "özel",
+"malzeme": "AISI 304"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "f_ust_panjur_lameli_0_4",
+"bom": [
+"Panjur lameli AISI 304 170 × 12 × 1,5 (lazer · arka sacın iç yüzüne iki uçtan dikiş kaynak)",
+1,
+"170 × 12 × 1,5",
+"özel · AISI 304",
+"ÜRETİM"
+],
+"meta": {
+"tur": "baglanti",
+"std": "özel",
+"malzeme": "AISI 304"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "f_ust_panjur_lameli_0_5",
+"bom": [
+"Panjur lameli AISI 304 170 × 12 × 1,5 (lazer · arka sacın iç yüzüne iki uçtan dikiş kaynak)",
+1,
+"170 × 12 × 1,5",
+"özel · AISI 304",
+"ÜRETİM"
+],
+"meta": {
+"tur": "baglanti",
+"std": "özel",
+"malzeme": "AISI 304"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "f_ust_panjur_lameli_0_6",
+"bom": [
+"Panjur lameli AISI 304 170 × 12 × 1,5 (lazer · arka sacın iç yüzüne iki uçtan dikiş kaynak)",
+1,
+"170 × 12 × 1,5",
+"özel · AISI 304",
+"ÜRETİM"
+],
+"meta": {
+"tur": "baglanti",
+"std": "özel",
+"malzeme": "AISI 304"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "f_ust_panjur_lameli_0_7",
+"bom": [
+"Panjur lameli AISI 304 170 × 12 × 1,5 (lazer · arka sacın iç yüzüne iki uçtan dikiş kaynak)",
+1,
+"170 × 12 × 1,5",
+"özel · AISI 304",
+"ÜRETİM"
+],
+"meta": {
+"tur": "baglanti",
+"std": "özel",
+"malzeme": "AISI 304"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "f_ust_panjur_lameli_1_0",
+"bom": [
+"Panjur lameli AISI 304 170 × 12 × 1,5 (lazer · arka sacın iç yüzüne iki uçtan dikiş kaynak)",
+1,
+"170 × 12 × 1,5",
+"özel · AISI 304",
+"ÜRETİM"
+],
+"meta": {
+"tur": "baglanti",
+"std": "özel",
+"malzeme": "AISI 304"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "f_ust_panjur_lameli_1_1",
+"bom": [
+"Panjur lameli AISI 304 170 × 12 × 1,5 (lazer · arka sacın iç yüzüne iki uçtan dikiş kaynak)",
+1,
+"170 × 12 × 1,5",
+"özel · AISI 304",
+"ÜRETİM"
+],
+"meta": {
+"tur": "baglanti",
+"std": "özel",
+"malzeme": "AISI 304"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "f_ust_panjur_lameli_1_2",
+"bom": [
+"Panjur lameli AISI 304 170 × 12 × 1,5 (lazer · arka sacın iç yüzüne iki uçtan dikiş kaynak)",
+1,
+"170 × 12 × 1,5",
+"özel · AISI 304",
+"ÜRETİM"
+],
+"meta": {
+"tur": "baglanti",
+"std": "özel",
+"malzeme": "AISI 304"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "f_ust_panjur_lameli_1_3",
+"bom": [
+"Panjur lameli AISI 304 170 × 12 × 1,5 (lazer · arka sacın iç yüzüne iki uçtan dikiş kaynak)",
+1,
+"170 × 12 × 1,5",
+"özel · AISI 304",
+"ÜRETİM"
+],
+"meta": {
+"tur": "baglanti",
+"std": "özel",
+"malzeme": "AISI 304"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "f_ust_panjur_lameli_1_4",
+"bom": [
+"Panjur lameli AISI 304 170 × 12 × 1,5 (lazer · arka sacın iç yüzüne iki uçtan dikiş kaynak)",
+1,
+"170 × 12 × 1,5",
+"özel · AISI 304",
+"ÜRETİM"
+],
+"meta": {
+"tur": "baglanti",
+"std": "özel",
+"malzeme": "AISI 304"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "f_ust_panjur_lameli_1_5",
+"bom": [
+"Panjur lameli AISI 304 170 × 12 × 1,5 (lazer · arka sacın iç yüzüne iki uçtan dikiş kaynak)",
+1,
+"170 × 12 × 1,5",
+"özel · AISI 304",
+"ÜRETİM"
+],
+"meta": {
+"tur": "baglanti",
+"std": "özel",
+"malzeme": "AISI 304"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "f_ust_panjur_lameli_1_6",
+"bom": [
+"Panjur lameli AISI 304 170 × 12 × 1,5 (lazer · arka sacın iç yüzüne iki uçtan dikiş kaynak)",
+1,
+"170 × 12 × 1,5",
+"özel · AISI 304",
+"ÜRETİM"
+],
+"meta": {
+"tur": "baglanti",
+"std": "özel",
+"malzeme": "AISI 304"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "f_ust_panjur_lameli_1_7",
+"bom": [
+"Panjur lameli AISI 304 170 × 12 × 1,5 (lazer · arka sacın iç yüzüne iki uçtan dikiş kaynak)",
+1,
+"170 × 12 × 1,5",
+"özel · AISI 304",
+"ÜRETİM"
+],
+"meta": {
+"tur": "baglanti",
+"std": "özel",
+"malzeme": "AISI 304"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_arka_sol_850_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-10 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×10",
+"PEM FHP-M5-10 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-10",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 10,
+"tur": "baglanti",
+"std": "PEM FHP-M5-10",
+"malzeme": "A286 pasive"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_arka_sol_850_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_arka_sol_850_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_arka_sol_1050_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-10 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×10",
+"PEM FHP-M5-10 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-10",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 10,
+"tur": "baglanti",
+"std": "PEM FHP-M5-10",
+"malzeme": "A286 pasive"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_arka_sol_1050_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_arka_sol_1050_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_arka_sol_1250_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-10 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×10",
+"PEM FHP-M5-10 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-10",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 10,
+"tur": "baglanti",
+"std": "PEM FHP-M5-10",
+"malzeme": "A286 pasive"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_arka_sol_1250_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_arka_sol_1250_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_arka_sol_1450_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-10 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×10",
+"PEM FHP-M5-10 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-10",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 10,
+"tur": "baglanti",
+"std": "PEM FHP-M5-10",
+"malzeme": "A286 pasive"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_arka_sol_1450_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_arka_sol_1450_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_arka_sol_1575_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-10 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×10",
+"PEM FHP-M5-10 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-10",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 10,
+"tur": "baglanti",
+"std": "PEM FHP-M5-10",
+"malzeme": "A286 pasive"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_arka_sol_1575_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_arka_sol_1575_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_arka_sag_850_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-10 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×10",
+"PEM FHP-M5-10 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-10",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 10,
+"tur": "baglanti",
+"std": "PEM FHP-M5-10",
+"malzeme": "A286 pasive"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_arka_sag_850_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_arka_sag_850_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_arka_sag_1050_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-10 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×10",
+"PEM FHP-M5-10 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-10",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 10,
+"tur": "baglanti",
+"std": "PEM FHP-M5-10",
+"malzeme": "A286 pasive"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_arka_sag_1050_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_arka_sag_1050_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_arka_sag_1250_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-10 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×10",
+"PEM FHP-M5-10 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-10",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 10,
+"tur": "baglanti",
+"std": "PEM FHP-M5-10",
+"malzeme": "A286 pasive"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_arka_sag_1250_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_arka_sag_1250_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_arka_sag_1450_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-10 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×10",
+"PEM FHP-M5-10 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-10",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 10,
+"tur": "baglanti",
+"std": "PEM FHP-M5-10",
+"malzeme": "A286 pasive"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_arka_sag_1450_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_arka_sag_1450_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_arka_sag_1575_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-10 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×10",
+"PEM FHP-M5-10 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-10",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 10,
+"tur": "baglanti",
+"std": "PEM FHP-M5-10",
+"malzeme": "A286 pasive"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_arka_sag_1575_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_arka_sag_1575_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_tavan_sol_790_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12.0,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_tavan_sol_790_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_tavan_sol_790_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_tavan_sol_595_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12.0,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_tavan_sol_595_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_tavan_sol_595_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_tavan_sol_400_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12.0,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_tavan_sol_400_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_tavan_sol_400_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_tavan_sol_205_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12.0,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_tavan_sol_205_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_tavan_sol_205_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_tavan_sol_10_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12.0,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_tavan_sol_10_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_tavan_sol_10_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_tavan_sag_750_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12.0,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_tavan_sag_750_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_tavan_sag_750_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_tavan_sag_565_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12.0,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_tavan_sag_565_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_tavan_sag_565_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_tavan_sag_380_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12.0,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_tavan_sag_380_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_tavan_sag_380_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_tavan_sag_195_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12.0,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_tavan_sag_195_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_tavan_sag_195_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_tavan_sag_10_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12.0,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_tavan_sag_10_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_tavan_sag_10_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_tavan_arka_2550_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12.0,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_tavan_arka_2550_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_tavan_arka_2550_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_tavan_arka_2741_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12.0,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_tavan_arka_2741_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_tavan_arka_2741_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_tavan_arka_2932_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12.0,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_tavan_arka_2932_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_tavan_arka_2932_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_tavan_arka_3124_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12.0,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_tavan_arka_3124_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_tavan_arka_3124_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_tavan_arka_3315_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12.0,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_tavan_arka_3315_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_tavan_arka_3315_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_tavan_arka_3507_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12.0,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_tavan_arka_3507_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_tavan_arka_3507_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_tavan_arka_3698_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12.0,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_tavan_arka_3698_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_tavan_arka_3698_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_tavan_arka_3890_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12.0,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_tavan_arka_3890_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_tavan_arka_3890_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_kosebent_arka_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12.0,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_kosebent_arka_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_kosebent_arka_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_kosebent_yan_saplama",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12.0,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_kosebent_yan_pul",
+"bom": [
+"Düz pul M5",
+1,
+"5.3/10×1",
+"DIN 125-A / ISO 7089 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"d1": 5.3,
+"d2": 10.0,
+"h": 1.0,
+"tur": "baglanti",
+"std": "DIN 125-A / ISO 7089",
+"malzeme": "A2"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_bag_kosebent_yan_somun",
+"bom": [
+"Fiberli (naylon halkalı) somun M5",
+1,
+"M5 s8 m5",
+"ISO 10511 · A2",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"s": 8.0,
+"m": 5.0,
+"tur": "baglanti",
+"std": "ISO 10511",
+"malzeme": "A2"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_pem_m8_2580_790",
+"bom": [
+"PEM kendinden kenetli somun SP-M8-1 (A286 / sertleştirilmiş paslanmaz · sac ≤ HRB 90 (304 için))",
+1,
+"delik Ø10.50 · gövde Ø12.70 × 5.47",
+"PEM SP-M8-1 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M8",
+"pem_tip": "SP",
+"parca": "SP-M8-1",
+"delik": 10.5,
+"kenar_min": 9.7,
+"min_sac": 1.4,
+"sap": 1.38,
+"T": 5.47,
+"tur": "baglanti",
+"std": "PEM SP-M8-1",
+"malzeme": "A286 pasive"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_pem_m8_2580_0",
+"bom": [
+"PEM kendinden kenetli somun SP-M8-1 (A286 / sertleştirilmiş paslanmaz · sac ≤ HRB 90 (304 için))",
+1,
+"delik Ø10.50 · gövde Ø12.70 × 5.47",
+"PEM SP-M8-1 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M8",
+"pem_tip": "SP",
+"parca": "SP-M8-1",
+"delik": 10.5,
+"kenar_min": 9.7,
+"min_sac": 1.4,
+"sap": 1.38,
+"T": 5.47,
+"tur": "baglanti",
+"std": "PEM SP-M8-1",
+"malzeme": "A286 pasive"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_pem_m8_3250_0",
+"bom": [
+"PEM kendinden kenetli somun SP-M8-1 (A286 / sertleştirilmiş paslanmaz · sac ≤ HRB 90 (304 için))",
+1,
+"delik Ø10.50 · gövde Ø12.70 × 5.47",
+"PEM SP-M8-1 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M8",
+"pem_tip": "SP",
+"parca": "SP-M8-1",
+"delik": 10.5,
+"kenar_min": 9.7,
+"min_sac": 1.4,
+"sap": 1.38,
+"T": 5.47,
+"tur": "baglanti",
+"std": "PEM SP-M8-1",
+"malzeme": "A286 pasive"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "govde_fu_pem_m8_3900_0",
+"bom": [
+"PEM kendinden kenetli somun SP-M8-1 (A286 / sertleştirilmiş paslanmaz · sac ≤ HRB 90 (304 için))",
+1,
+"delik Ø10.50 · gövde Ø12.70 × 5.47",
+"PEM SP-M8-1 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M8",
+"pem_tip": "SP",
+"parca": "SP-M8-1",
+"delik": 10.5,
+"kenar_min": 9.7,
+"min_sac": 1.4,
+"sap": 1.38,
+"T": 5.47,
+"tur": "baglanti",
+"std": "PEM SP-M8-1",
+"malzeme": "A286 pasive"
+},
+"birim": "F_UST_KABIN"
+}
+],
+"arayuz": [
+{
+"ad": "arayuz_j1_burc_1543_661",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-25 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×25",
+"PEM FHP-M5-25 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-25",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 25,
+"tur": "baglanti",
+"std": "PEM FHP-M5-25",
+"malzeme": "A286 pasive"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "arayuz_j1_burc_1566_661",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-25 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×25",
+"PEM FHP-M5-25 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-25",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 25,
+"tur": "baglanti",
+"std": "PEM FHP-M5-25",
+"malzeme": "A286 pasive"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "arayuz_j2_burc_1543_561",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-25 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×25",
+"PEM FHP-M5-25 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-25",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 25,
+"tur": "baglanti",
+"std": "PEM FHP-M5-25",
+"malzeme": "A286 pasive"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "arayuz_j2_burc_1566_561",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-25 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×25",
+"PEM FHP-M5-25 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-25",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 25,
+"tur": "baglanti",
+"std": "PEM FHP-M5-25",
+"malzeme": "A286 pasive"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "arayuz_mek_f_ust_yan_sol_10",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "arayuz_mek_f_ust_yan_sag_11",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "arayuz_mek_f_ust_yan_sag_12",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "arayuz_mek_f_ust_yan_sag_13",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "arayuz_mek_f_ust_taban_levhasi_14",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "arayuz_mek_f_ust_taban_levhasi_15",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "arayuz_mek_f_ust_taban_levhasi_16",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "arayuz_mek_f_ust_taban_levhasi_17",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "arayuz_mek_f_ust_taban_levhasi_20",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "arayuz_mek_f_ust_taban_levhasi_21",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "arayuz_mek_f_ust_taban_levhasi_24",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "arayuz_mek_f_ust_taban_levhasi_25",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "arayuz_mek_f_ust_taban_levhasi_26",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "arayuz_mek_f_ust_taban_levhasi_27",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "arayuz_mek_f_ust_taban_levhasi_28",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "arayuz_mek_f_ust_taban_levhasi_29",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "arayuz_mek_f_davlumbaz_bolme_duvari_30",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "arayuz_mek_f_davlumbaz_bolme_duvari_31",
+"bom": [
+"PEM gömme başlı saplama FHP-M5-12 (A286 · sac ≤ HRB 92 (304 için, gıda servisi))",
+1,
+"delik Ø5.00 · M5×12",
+"PEM FHP-M5-12 · A286 pasive",
+"SATIN ALMA"
+],
+"meta": {
+"dis": "M5",
+"pem_tip": "FHP",
+"parca": "FHP-M5-12",
+"delik": 5.0,
+"kenar_min": 7.2,
+"min_sac": 1.0,
+"boy": 12,
+"tur": "baglanti",
+"std": "PEM FHP-M5-12",
+"malzeme": "A286 pasive"
+},
+"birim": "F_UST_KABIN"
+}
+],
+"kaynak": [
+{
+"ad": "f_ust_alt_profil_on_yan_kaynagi_2501_0",
+"bom": [
+"Köşe kaynak dikişi · TIG 141 · dolgu ER308LSi · a 2.0",
+1,
+"22 mm",
+"dis (köşe) kuşak ucu ↔ dikme · TIG 141 · ER308LSi",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "kose",
+"yontem": "TIG 141",
+"dolgu": "ER308LSi",
+"a": 2.0,
+"boy": 22.0,
+"taraf": "dis (köşe)",
+"iso2553": "a2 ◺ 22"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "f_ust_alt_profil_on_yan_kaynagi_3998_0",
+"bom": [
+"Köşe kaynak dikişi · TIG 141 · dolgu ER308LSi · a 2.0",
+1,
+"22 mm",
+"dis (köşe) kuşak ucu ↔ dikme · TIG 141 · ER308LSi",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "kose",
+"yontem": "TIG 141",
+"dolgu": "ER308LSi",
+"a": 2.0,
+"boy": 22.0,
+"taraf": "dis (köşe)",
+"iso2553": "a2 ◺ 22"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "f_ust_alt_profil_orta_yan_kaynagi_2501_0",
+"bom": [
+"Köşe kaynak dikişi · TIG 141 · dolgu ER308LSi · a 2.0",
+1,
+"22 mm",
+"dis (köşe) kuşak ucu ↔ dikme · TIG 141 · ER308LSi",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "kose",
+"yontem": "TIG 141",
+"dolgu": "ER308LSi",
+"a": 2.0,
+"boy": 22.0,
+"taraf": "dis (köşe)",
+"iso2553": "a2 ◺ 22"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "f_ust_alt_profil_orta_yan_kaynagi_3998_0",
+"bom": [
+"Köşe kaynak dikişi · TIG 141 · dolgu ER308LSi · a 2.0",
+1,
+"22 mm",
+"dis (köşe) kuşak ucu ↔ dikme · TIG 141 · ER308LSi",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "kose",
+"yontem": "TIG 141",
+"dolgu": "ER308LSi",
+"a": 2.0,
+"boy": 22.0,
+"taraf": "dis (köşe)",
+"iso2553": "a2 ◺ 22"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "f_ust_alt_profil_arka_yan_kaynagi_2501_0",
+"bom": [
+"Köşe kaynak dikişi · TIG 141 · dolgu ER308LSi · a 2.0",
+1,
+"22 mm",
+"dis (köşe) kuşak ucu ↔ dikme · TIG 141 · ER308LSi",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "kose",
+"yontem": "TIG 141",
+"dolgu": "ER308LSi",
+"a": 2.0,
+"boy": 22.0,
+"taraf": "dis (köşe)",
+"iso2553": "a2 ◺ 22"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "f_ust_alt_profil_arka_yan_kaynagi_3998_0",
+"bom": [
+"Köşe kaynak dikişi · TIG 141 · dolgu ER308LSi · a 2.0",
+1,
+"22 mm",
+"dis (köşe) kuşak ucu ↔ dikme · TIG 141 · ER308LSi",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "kose",
+"yontem": "TIG 141",
+"dolgu": "ER308LSi",
+"a": 2.0,
+"boy": 22.0,
+"taraf": "dis (köşe)",
+"iso2553": "a2 ◺ 22"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "onyuz_f_ust_ust_kayit_yan_kaynagi_2501_0",
+"bom": [
+"Köşe kaynak dikişi · TIG 141 · dolgu ER308LSi · a 2.0",
+1,
+"22 mm",
+"dis (köşe) kuşak ucu ↔ dikme · TIG 141 · ER308LSi",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "kose",
+"yontem": "TIG 141",
+"dolgu": "ER308LSi",
+"a": 2.0,
+"boy": 22.0,
+"taraf": "dis (köşe)",
+"iso2553": "a2 ◺ 22"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "onyuz_f_ust_ust_kayit_yan_kaynagi_3998_0",
+"bom": [
+"Köşe kaynak dikişi · TIG 141 · dolgu ER308LSi · a 2.0",
+1,
+"22 mm",
+"dis (köşe) kuşak ucu ↔ dikme · TIG 141 · ER308LSi",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "kose",
+"yontem": "TIG 141",
+"dolgu": "ER308LSi",
+"a": 2.0,
+"boy": 22.0,
+"taraf": "dis (köşe)",
+"iso2553": "a2 ◺ 22"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "onyuz_f_ust_dikme_0_alt_kaynagi_0",
+"bom": [
+"Köşe kaynak dikişi · TIG 141 · dolgu ER308LSi · a 2.0",
+1,
+"22 mm",
+"dis (köşe) kuşak ucu ↔ dikme · TIG 141 · ER308LSi",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "kose",
+"yontem": "TIG 141",
+"dolgu": "ER308LSi",
+"a": 2.0,
+"boy": 22.0,
+"taraf": "dis (köşe)",
+"iso2553": "a2 ◺ 22"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "onyuz_f_ust_dikme_0_alt_kaynagi_1",
+"bom": [
+"Köşe kaynak dikişi · TIG 141 · dolgu ER308LSi · a 2.0",
+1,
+"22 mm",
+"dis (köşe) kuşak ucu ↔ dikme · TIG 141 · ER308LSi",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "kose",
+"yontem": "TIG 141",
+"dolgu": "ER308LSi",
+"a": 2.0,
+"boy": 22.0,
+"taraf": "dis (köşe)",
+"iso2553": "a2 ◺ 22"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "onyuz_f_ust_dikme_0_ust_kaynagi_0",
+"bom": [
+"Köşe kaynak dikişi · TIG 141 · dolgu ER308LSi · a 2.0",
+1,
+"22 mm",
+"dis (köşe) kuşak ucu ↔ dikme · TIG 141 · ER308LSi",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "kose",
+"yontem": "TIG 141",
+"dolgu": "ER308LSi",
+"a": 2.0,
+"boy": 22.0,
+"taraf": "dis (köşe)",
+"iso2553": "a2 ◺ 22"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "onyuz_f_ust_dikme_0_ust_kaynagi_1",
+"bom": [
+"Köşe kaynak dikişi · TIG 141 · dolgu ER308LSi · a 2.0",
+1,
+"22 mm",
+"dis (köşe) kuşak ucu ↔ dikme · TIG 141 · ER308LSi",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "kose",
+"yontem": "TIG 141",
+"dolgu": "ER308LSi",
+"a": 2.0,
+"boy": 22.0,
+"taraf": "dis (köşe)",
+"iso2553": "a2 ◺ 22"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "f_ust_tavan_kirisi_kaynagi_0",
+"bom": [
+"Köşe kaynak dikişi · TIG 141 · dolgu ER308LSi · a 2.0",
+1,
+"22 mm",
+"dis (köşe) kuşak ucu ↔ dikme · TIG 141 · ER308LSi",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "kose",
+"yontem": "TIG 141",
+"dolgu": "ER308LSi",
+"a": 2.0,
+"boy": 22.0,
+"taraf": "dis (köşe)",
+"iso2553": "a2 ◺ 22"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "f_ust_tavan_kirisi_kaynagi_1",
+"bom": [
+"Köşe kaynak dikişi · TIG 141 · dolgu ER308LSi · a 2.0",
+1,
+"22 mm",
+"dis (köşe) kuşak ucu ↔ dikme · TIG 141 · ER308LSi",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "kose",
+"yontem": "TIG 141",
+"dolgu": "ER308LSi",
+"a": 2.0,
+"boy": 22.0,
+"taraf": "dis (köşe)",
+"iso2553": "a2 ◺ 22"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "f_ust_taban_levhasi_delik_kaynagi_0",
+"bom": [
+"Delik (yarık) kaynağı · TIG 141 · ER308LSi · yüz taşlanır",
+1,
+"25 × 8 × 1,5",
+"taban levhası ↔ alt profil",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "delik",
+"yontem": "TIG 141"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "f_ust_taban_levhasi_delik_kaynagi_1",
+"bom": [
+"Delik (yarık) kaynağı · TIG 141 · ER308LSi · yüz taşlanır",
+1,
+"25 × 8 × 1,5",
+"taban levhası ↔ alt profil",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "delik",
+"yontem": "TIG 141"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "f_ust_taban_levhasi_delik_kaynagi_2",
+"bom": [
+"Delik (yarık) kaynağı · TIG 141 · ER308LSi · yüz taşlanır",
+1,
+"25 × 8 × 1,5",
+"taban levhası ↔ alt profil",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "delik",
+"yontem": "TIG 141"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "f_ust_taban_levhasi_delik_kaynagi_3",
+"bom": [
+"Delik (yarık) kaynağı · TIG 141 · ER308LSi · yüz taşlanır",
+1,
+"25 × 8 × 1,5",
+"taban levhası ↔ alt profil",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "delik",
+"yontem": "TIG 141"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "f_ust_taban_levhasi_delik_kaynagi_4",
+"bom": [
+"Delik (yarık) kaynağı · TIG 141 · ER308LSi · yüz taşlanır",
+1,
+"25 × 8 × 1,5",
+"taban levhası ↔ alt profil",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "delik",
+"yontem": "TIG 141"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "f_ust_taban_levhasi_delik_kaynagi_5",
+"bom": [
+"Delik (yarık) kaynağı · TIG 141 · ER308LSi · yüz taşlanır",
+1,
+"25 × 8 × 1,5",
+"taban levhası ↔ alt profil",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "delik",
+"yontem": "TIG 141"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "f_ust_taban_levhasi_delik_kaynagi_6",
+"bom": [
+"Delik (yarık) kaynağı · TIG 141 · ER308LSi · yüz taşlanır",
+1,
+"25 × 8 × 1,5",
+"taban levhası ↔ alt profil",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "delik",
+"yontem": "TIG 141"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "f_ust_taban_levhasi_delik_kaynagi_7",
+"bom": [
+"Delik (yarık) kaynağı · TIG 141 · ER308LSi · yüz taşlanır",
+1,
+"25 × 8 × 1,5",
+"taban levhası ↔ alt profil",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "delik",
+"yontem": "TIG 141"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "f_ust_taban_levhasi_delik_kaynagi_8",
+"bom": [
+"Delik (yarık) kaynağı · TIG 141 · ER308LSi · yüz taşlanır",
+1,
+"25 × 8 × 1,5",
+"taban levhası ↔ alt profil",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "delik",
+"yontem": "TIG 141"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "f_ust_taban_levhasi_delik_kaynagi_9",
+"bom": [
+"Delik (yarık) kaynağı · TIG 141 · ER308LSi · yüz taşlanır",
+1,
+"25 × 8 × 1,5",
+"taban levhası ↔ alt profil",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "delik",
+"yontem": "TIG 141"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "f_ust_taban_levhasi_delik_kaynagi_10",
+"bom": [
+"Delik (yarık) kaynağı · TIG 141 · ER308LSi · yüz taşlanır",
+1,
+"25 × 8 × 1,5",
+"taban levhası ↔ alt profil",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "delik",
+"yontem": "TIG 141"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "f_ust_taban_levhasi_delik_kaynagi_11",
+"bom": [
+"Delik (yarık) kaynağı · TIG 141 · ER308LSi · yüz taşlanır",
+1,
+"25 × 8 × 1,5",
+"taban levhası ↔ alt profil",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "delik",
+"yontem": "TIG 141"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "f_ust_taban_levhasi_delik_kaynagi_12",
+"bom": [
+"Delik (yarık) kaynağı · TIG 141 · ER308LSi · yüz taşlanır",
+1,
+"25 × 8 × 1,5",
+"taban levhası ↔ alt profil",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "delik",
+"yontem": "TIG 141"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "f_ust_taban_levhasi_delik_kaynagi_13",
+"bom": [
+"Delik (yarık) kaynağı · TIG 141 · ER308LSi · yüz taşlanır",
+1,
+"25 × 8 × 1,5",
+"taban levhası ↔ alt profil",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "delik",
+"yontem": "TIG 141"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "f_ust_taban_levhasi_delik_kaynagi_14",
+"bom": [
+"Delik (yarık) kaynağı · TIG 141 · ER308LSi · yüz taşlanır",
+1,
+"25 × 8 × 1,5",
+"taban levhası ↔ alt profil",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "delik",
+"yontem": "TIG 141"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "f_ust_panjur_lameli_0_0_kaynak_2557",
+"bom": [
+"Köşe kaynak dikişi · TIG 141 · dolgu ER308LSi · a 1.0",
+1,
+"10 mm",
+"iç lamel ↔ arka sac (2 × 10)",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "kose",
+"yontem": "TIG 141",
+"dolgu": "ER308LSi",
+"a": 1.0,
+"boy": 10.0,
+"taraf": "iç",
+"iso2553": "a1 ◺ 10"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "f_ust_panjur_lameli_0_0_kaynak_2713",
+"bom": [
+"Köşe kaynak dikişi · TIG 141 · dolgu ER308LSi · a 1.0",
+1,
+"10 mm",
+"iç lamel ↔ arka sac (2 × 10)",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "kose",
+"yontem": "TIG 141",
+"dolgu": "ER308LSi",
+"a": 1.0,
+"boy": 10.0,
+"taraf": "iç",
+"iso2553": "a1 ◺ 10"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "f_ust_panjur_lameli_0_1_kaynak_2557",
+"bom": [
+"Köşe kaynak dikişi · TIG 141 · dolgu ER308LSi · a 1.0",
+1,
+"10 mm",
+"iç lamel ↔ arka sac (2 × 10)",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "kose",
+"yontem": "TIG 141",
+"dolgu": "ER308LSi",
+"a": 1.0,
+"boy": 10.0,
+"taraf": "iç",
+"iso2553": "a1 ◺ 10"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "f_ust_panjur_lameli_0_1_kaynak_2713",
+"bom": [
+"Köşe kaynak dikişi · TIG 141 · dolgu ER308LSi · a 1.0",
+1,
+"10 mm",
+"iç lamel ↔ arka sac (2 × 10)",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "kose",
+"yontem": "TIG 141",
+"dolgu": "ER308LSi",
+"a": 1.0,
+"boy": 10.0,
+"taraf": "iç",
+"iso2553": "a1 ◺ 10"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "f_ust_panjur_lameli_0_2_kaynak_2557",
+"bom": [
+"Köşe kaynak dikişi · TIG 141 · dolgu ER308LSi · a 1.0",
+1,
+"10 mm",
+"iç lamel ↔ arka sac (2 × 10)",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "kose",
+"yontem": "TIG 141",
+"dolgu": "ER308LSi",
+"a": 1.0,
+"boy": 10.0,
+"taraf": "iç",
+"iso2553": "a1 ◺ 10"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "f_ust_panjur_lameli_0_2_kaynak_2713",
+"bom": [
+"Köşe kaynak dikişi · TIG 141 · dolgu ER308LSi · a 1.0",
+1,
+"10 mm",
+"iç lamel ↔ arka sac (2 × 10)",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "kose",
+"yontem": "TIG 141",
+"dolgu": "ER308LSi",
+"a": 1.0,
+"boy": 10.0,
+"taraf": "iç",
+"iso2553": "a1 ◺ 10"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "f_ust_panjur_lameli_0_3_kaynak_2557",
+"bom": [
+"Köşe kaynak dikişi · TIG 141 · dolgu ER308LSi · a 1.0",
+1,
+"10 mm",
+"iç lamel ↔ arka sac (2 × 10)",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "kose",
+"yontem": "TIG 141",
+"dolgu": "ER308LSi",
+"a": 1.0,
+"boy": 10.0,
+"taraf": "iç",
+"iso2553": "a1 ◺ 10"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "f_ust_panjur_lameli_0_3_kaynak_2713",
+"bom": [
+"Köşe kaynak dikişi · TIG 141 · dolgu ER308LSi · a 1.0",
+1,
+"10 mm",
+"iç lamel ↔ arka sac (2 × 10)",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "kose",
+"yontem": "TIG 141",
+"dolgu": "ER308LSi",
+"a": 1.0,
+"boy": 10.0,
+"taraf": "iç",
+"iso2553": "a1 ◺ 10"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "f_ust_panjur_lameli_0_4_kaynak_2557",
+"bom": [
+"Köşe kaynak dikişi · TIG 141 · dolgu ER308LSi · a 1.0",
+1,
+"10 mm",
+"iç lamel ↔ arka sac (2 × 10)",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "kose",
+"yontem": "TIG 141",
+"dolgu": "ER308LSi",
+"a": 1.0,
+"boy": 10.0,
+"taraf": "iç",
+"iso2553": "a1 ◺ 10"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "f_ust_panjur_lameli_0_4_kaynak_2713",
+"bom": [
+"Köşe kaynak dikişi · TIG 141 · dolgu ER308LSi · a 1.0",
+1,
+"10 mm",
+"iç lamel ↔ arka sac (2 × 10)",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "kose",
+"yontem": "TIG 141",
+"dolgu": "ER308LSi",
+"a": 1.0,
+"boy": 10.0,
+"taraf": "iç",
+"iso2553": "a1 ◺ 10"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "f_ust_panjur_lameli_0_5_kaynak_2557",
+"bom": [
+"Köşe kaynak dikişi · TIG 141 · dolgu ER308LSi · a 1.0",
+1,
+"10 mm",
+"iç lamel ↔ arka sac (2 × 10)",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "kose",
+"yontem": "TIG 141",
+"dolgu": "ER308LSi",
+"a": 1.0,
+"boy": 10.0,
+"taraf": "iç",
+"iso2553": "a1 ◺ 10"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "f_ust_panjur_lameli_0_5_kaynak_2713",
+"bom": [
+"Köşe kaynak dikişi · TIG 141 · dolgu ER308LSi · a 1.0",
+1,
+"10 mm",
+"iç lamel ↔ arka sac (2 × 10)",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "kose",
+"yontem": "TIG 141",
+"dolgu": "ER308LSi",
+"a": 1.0,
+"boy": 10.0,
+"taraf": "iç",
+"iso2553": "a1 ◺ 10"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "f_ust_panjur_lameli_0_6_kaynak_2557",
+"bom": [
+"Köşe kaynak dikişi · TIG 141 · dolgu ER308LSi · a 1.0",
+1,
+"10 mm",
+"iç lamel ↔ arka sac (2 × 10)",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "kose",
+"yontem": "TIG 141",
+"dolgu": "ER308LSi",
+"a": 1.0,
+"boy": 10.0,
+"taraf": "iç",
+"iso2553": "a1 ◺ 10"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "f_ust_panjur_lameli_0_6_kaynak_2713",
+"bom": [
+"Köşe kaynak dikişi · TIG 141 · dolgu ER308LSi · a 1.0",
+1,
+"10 mm",
+"iç lamel ↔ arka sac (2 × 10)",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "kose",
+"yontem": "TIG 141",
+"dolgu": "ER308LSi",
+"a": 1.0,
+"boy": 10.0,
+"taraf": "iç",
+"iso2553": "a1 ◺ 10"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "f_ust_panjur_lameli_0_7_kaynak_2557",
+"bom": [
+"Köşe kaynak dikişi · TIG 141 · dolgu ER308LSi · a 1.0",
+1,
+"10 mm",
+"iç lamel ↔ arka sac (2 × 10)",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "kose",
+"yontem": "TIG 141",
+"dolgu": "ER308LSi",
+"a": 1.0,
+"boy": 10.0,
+"taraf": "iç",
+"iso2553": "a1 ◺ 10"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "f_ust_panjur_lameli_0_7_kaynak_2713",
+"bom": [
+"Köşe kaynak dikişi · TIG 141 · dolgu ER308LSi · a 1.0",
+1,
+"10 mm",
+"iç lamel ↔ arka sac (2 × 10)",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "kose",
+"yontem": "TIG 141",
+"dolgu": "ER308LSi",
+"a": 1.0,
+"boy": 10.0,
+"taraf": "iç",
+"iso2553": "a1 ◺ 10"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "f_ust_panjur_lameli_1_0_kaynak_3777",
+"bom": [
+"Köşe kaynak dikişi · TIG 141 · dolgu ER308LSi · a 1.0",
+1,
+"10 mm",
+"iç lamel ↔ arka sac (2 × 10)",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "kose",
+"yontem": "TIG 141",
+"dolgu": "ER308LSi",
+"a": 1.0,
+"boy": 10.0,
+"taraf": "iç",
+"iso2553": "a1 ◺ 10"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "f_ust_panjur_lameli_1_0_kaynak_3933",
+"bom": [
+"Köşe kaynak dikişi · TIG 141 · dolgu ER308LSi · a 1.0",
+1,
+"10 mm",
+"iç lamel ↔ arka sac (2 × 10)",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "kose",
+"yontem": "TIG 141",
+"dolgu": "ER308LSi",
+"a": 1.0,
+"boy": 10.0,
+"taraf": "iç",
+"iso2553": "a1 ◺ 10"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "f_ust_panjur_lameli_1_1_kaynak_3777",
+"bom": [
+"Köşe kaynak dikişi · TIG 141 · dolgu ER308LSi · a 1.0",
+1,
+"10 mm",
+"iç lamel ↔ arka sac (2 × 10)",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "kose",
+"yontem": "TIG 141",
+"dolgu": "ER308LSi",
+"a": 1.0,
+"boy": 10.0,
+"taraf": "iç",
+"iso2553": "a1 ◺ 10"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "f_ust_panjur_lameli_1_1_kaynak_3933",
+"bom": [
+"Köşe kaynak dikişi · TIG 141 · dolgu ER308LSi · a 1.0",
+1,
+"10 mm",
+"iç lamel ↔ arka sac (2 × 10)",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "kose",
+"yontem": "TIG 141",
+"dolgu": "ER308LSi",
+"a": 1.0,
+"boy": 10.0,
+"taraf": "iç",
+"iso2553": "a1 ◺ 10"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "f_ust_panjur_lameli_1_2_kaynak_3777",
+"bom": [
+"Köşe kaynak dikişi · TIG 141 · dolgu ER308LSi · a 1.0",
+1,
+"10 mm",
+"iç lamel ↔ arka sac (2 × 10)",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "kose",
+"yontem": "TIG 141",
+"dolgu": "ER308LSi",
+"a": 1.0,
+"boy": 10.0,
+"taraf": "iç",
+"iso2553": "a1 ◺ 10"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "f_ust_panjur_lameli_1_2_kaynak_3933",
+"bom": [
+"Köşe kaynak dikişi · TIG 141 · dolgu ER308LSi · a 1.0",
+1,
+"10 mm",
+"iç lamel ↔ arka sac (2 × 10)",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "kose",
+"yontem": "TIG 141",
+"dolgu": "ER308LSi",
+"a": 1.0,
+"boy": 10.0,
+"taraf": "iç",
+"iso2553": "a1 ◺ 10"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "f_ust_panjur_lameli_1_3_kaynak_3777",
+"bom": [
+"Köşe kaynak dikişi · TIG 141 · dolgu ER308LSi · a 1.0",
+1,
+"10 mm",
+"iç lamel ↔ arka sac (2 × 10)",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "kose",
+"yontem": "TIG 141",
+"dolgu": "ER308LSi",
+"a": 1.0,
+"boy": 10.0,
+"taraf": "iç",
+"iso2553": "a1 ◺ 10"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "f_ust_panjur_lameli_1_3_kaynak_3933",
+"bom": [
+"Köşe kaynak dikişi · TIG 141 · dolgu ER308LSi · a 1.0",
+1,
+"10 mm",
+"iç lamel ↔ arka sac (2 × 10)",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "kose",
+"yontem": "TIG 141",
+"dolgu": "ER308LSi",
+"a": 1.0,
+"boy": 10.0,
+"taraf": "iç",
+"iso2553": "a1 ◺ 10"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "f_ust_panjur_lameli_1_4_kaynak_3777",
+"bom": [
+"Köşe kaynak dikişi · TIG 141 · dolgu ER308LSi · a 1.0",
+1,
+"10 mm",
+"iç lamel ↔ arka sac (2 × 10)",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "kose",
+"yontem": "TIG 141",
+"dolgu": "ER308LSi",
+"a": 1.0,
+"boy": 10.0,
+"taraf": "iç",
+"iso2553": "a1 ◺ 10"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "f_ust_panjur_lameli_1_4_kaynak_3933",
+"bom": [
+"Köşe kaynak dikişi · TIG 141 · dolgu ER308LSi · a 1.0",
+1,
+"10 mm",
+"iç lamel ↔ arka sac (2 × 10)",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "kose",
+"yontem": "TIG 141",
+"dolgu": "ER308LSi",
+"a": 1.0,
+"boy": 10.0,
+"taraf": "iç",
+"iso2553": "a1 ◺ 10"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "f_ust_panjur_lameli_1_5_kaynak_3777",
+"bom": [
+"Köşe kaynak dikişi · TIG 141 · dolgu ER308LSi · a 1.0",
+1,
+"10 mm",
+"iç lamel ↔ arka sac (2 × 10)",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "kose",
+"yontem": "TIG 141",
+"dolgu": "ER308LSi",
+"a": 1.0,
+"boy": 10.0,
+"taraf": "iç",
+"iso2553": "a1 ◺ 10"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "f_ust_panjur_lameli_1_5_kaynak_3933",
+"bom": [
+"Köşe kaynak dikişi · TIG 141 · dolgu ER308LSi · a 1.0",
+1,
+"10 mm",
+"iç lamel ↔ arka sac (2 × 10)",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "kose",
+"yontem": "TIG 141",
+"dolgu": "ER308LSi",
+"a": 1.0,
+"boy": 10.0,
+"taraf": "iç",
+"iso2553": "a1 ◺ 10"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "f_ust_panjur_lameli_1_6_kaynak_3777",
+"bom": [
+"Köşe kaynak dikişi · TIG 141 · dolgu ER308LSi · a 1.0",
+1,
+"10 mm",
+"iç lamel ↔ arka sac (2 × 10)",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "kose",
+"yontem": "TIG 141",
+"dolgu": "ER308LSi",
+"a": 1.0,
+"boy": 10.0,
+"taraf": "iç",
+"iso2553": "a1 ◺ 10"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "f_ust_panjur_lameli_1_6_kaynak_3933",
+"bom": [
+"Köşe kaynak dikişi · TIG 141 · dolgu ER308LSi · a 1.0",
+1,
+"10 mm",
+"iç lamel ↔ arka sac (2 × 10)",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "kose",
+"yontem": "TIG 141",
+"dolgu": "ER308LSi",
+"a": 1.0,
+"boy": 10.0,
+"taraf": "iç",
+"iso2553": "a1 ◺ 10"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "f_ust_panjur_lameli_1_7_kaynak_3777",
+"bom": [
+"Köşe kaynak dikişi · TIG 141 · dolgu ER308LSi · a 1.0",
+1,
+"10 mm",
+"iç lamel ↔ arka sac (2 × 10)",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "kose",
+"yontem": "TIG 141",
+"dolgu": "ER308LSi",
+"a": 1.0,
+"boy": 10.0,
+"taraf": "iç",
+"iso2553": "a1 ◺ 10"
+},
+"birim": "F_UST_KABIN"
+},
+{
+"ad": "f_ust_panjur_lameli_1_7_kaynak_3933",
+"bom": [
+"Köşe kaynak dikişi · TIG 141 · dolgu ER308LSi · a 1.0",
+1,
+"10 mm",
+"iç lamel ↔ arka sac (2 × 10)",
+"ÜRETİM"
+],
+"meta": {
+"tur": "kaynak",
+"tip": "kose",
+"yontem": "TIG 141",
+"dolgu": "ER308LSi",
+"a": 1.0,
+"boy": 10.0,
+"taraf": "iç",
+"iso2553": "a1 ◺ 10"
+},
+"birim": "F_UST_KABIN"
+}
+]
+}
+},
+"sure": 6.7
+}

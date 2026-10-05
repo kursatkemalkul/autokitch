@@ -1,0 +1,194 @@
+{
+ "parca": "dis_taban_1",
+ "surum": "h3_sac_v1",
+ "malzeme": "AISI 304 2B, dış yüz 240 kum satine, hat boyunca yatay",
+ "t": 1.5,
+ "R": 2.25,
+ "K": 0.45,
+ "adet": 1,
+ "birim": "mm",
+ "ust_yuz": "Z = t yüzü = kök panelin +n yüzü (bütün panellerin yerel z = t yüzü)",
+ "dis_kontur": [
+  {
+   "t": "L",
+   "p": [
+    [
+     736.0,
+     -39.0
+    ],
+    [
+     2090.75,
+     -39.0
+    ]
+   ]
+  },
+  {
+   "t": "L",
+   "p": [
+    [
+     2090.75,
+     -39.0
+    ],
+    [
+     2090.75,
+     830.0
+    ]
+   ]
+  },
+  {
+   "t": "L",
+   "p": [
+    [
+     2090.75,
+     830.0
+    ],
+    [
+     736.0,
+     830.0
+    ]
+   ]
+  },
+  {
+   "t": "L",
+   "p": [
+    [
+     736.0,
+     830.0
+    ],
+    [
+     736.0,
+     -39.0
+    ]
+   ]
+  }
+ ],
+ "ek_dis_konturlar": [],
+ "ic_konturlar": [
+  [
+   {
+    "t": "C",
+    "c": [
+     1100.0,
+     110.0
+    ],
+    "r": 7.75
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     1750.0,
+     110.0
+    ],
+    "r": 7.75
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     1100.0,
+     760.0
+    ],
+    "r": 7.75
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     1750.0,
+     760.0
+    ],
+    "r": 7.75
+   }
+  ]
+ ],
+ "bukumler": [],
+ "formlar": [],
+ "kesikler": [
+  {
+   "panel": "levha",
+   "tip": "vida_deligi",
+   "sekil": "daire",
+   "merkez_duz": [
+    1100.0,
+    760.0
+   ],
+   "parca": "taban ↔ alt şase M8 · şase perçin somun başı Ø15 → baş boşluğu Ø15,5",
+   "cap": 15.5
+  },
+  {
+   "panel": "levha",
+   "tip": "vida_deligi",
+   "sekil": "daire",
+   "merkez_duz": [
+    1100.0,
+    110.0
+   ],
+   "parca": "taban ↔ alt şase M8 · şase perçin somun başı Ø15 → baş boşluğu Ø15,5",
+   "cap": 15.5
+  },
+  {
+   "panel": "levha",
+   "tip": "vida_deligi",
+   "sekil": "daire",
+   "merkez_duz": [
+    1750.0,
+    760.0
+   ],
+   "parca": "taban ↔ alt şase M8 · şase perçin somun başı Ø15 → baş boşluğu Ø15,5",
+   "cap": 15.5
+  },
+  {
+   "panel": "levha",
+   "tip": "vida_deligi",
+   "sekil": "daire",
+   "merkez_duz": [
+    1750.0,
+    110.0
+   ],
+   "parca": "taban ↔ alt şase M8 · şase perçin somun başı Ø15 → baş boşluğu Ø15,5",
+   "cap": 15.5
+  }
+ ],
+ "parca_sayisi": 1,
+ "levha": {
+  "boy": 1354.75,
+  "en": 869.0,
+  "aci": 0.0,
+  "alan_mm2": 1176522.98,
+  "kutle_kg": 13.9947
+ },
+ "sabit_yuz": [
+  1413.36754,
+  395.47466
+ ],
+ "donusum_3b": [
+  [
+   1.0,
+   0.0,
+   -0.0,
+   0.0
+  ],
+  [
+   0.0,
+   0.0,
+   1.0,
+   123.0
+  ],
+  [
+   0.0,
+   -1.0,
+   0.0,
+   0.0
+  ],
+  [
+   0.0,
+   0.0,
+   0.0,
+   1.0
+  ]
+ ]
+}

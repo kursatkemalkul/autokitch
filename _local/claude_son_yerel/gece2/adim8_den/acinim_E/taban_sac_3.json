@@ -1,0 +1,488 @@
+{
+ "parca": "taban_sac_3",
+ "surum": "h3_sac_v1",
+ "malzeme": "AISI 304 2B, dış yüz 240 kum satine, hat boyunca yatay",
+ "t": 3.0,
+ "R": 4.5,
+ "K": 0.41,
+ "adet": 1,
+ "birim": "mm",
+ "ust_yuz": "Z = t yüzü = kök panelin +n yüzü (bütün panellerin yerel z = t yüzü)",
+ "dis_kontur": [
+  {
+   "t": "L",
+   "p": [
+    [
+     1.5,
+     -59.0
+    ],
+    [
+     828.5,
+     -59.0
+    ]
+   ]
+  },
+  {
+   "t": "L",
+   "p": [
+    [
+     828.5,
+     -59.0
+    ],
+    [
+     828.5,
+     830.0
+    ]
+   ]
+  },
+  {
+   "t": "L",
+   "p": [
+    [
+     828.5,
+     830.0
+    ],
+    [
+     1.5,
+     830.0
+    ]
+   ]
+  },
+  {
+   "t": "L",
+   "p": [
+    [
+     1.5,
+     830.0
+    ],
+    [
+     1.5,
+     -59.0
+    ]
+   ]
+  }
+ ],
+ "ek_dis_konturlar": [],
+ "ic_konturlar": [
+  [
+   {
+    "t": "C",
+    "c": [
+     230.0,
+     110.0
+    ],
+    "r": 4.5
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     208.99997,
+     406.74999
+    ],
+    "r": 3.0
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     299.99993,
+     364.00001
+    ],
+    "r": 3.0
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     530.0,
+     110.0
+    ],
+    "r": 4.5
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     710.0,
+     110.0
+    ],
+    "r": 4.5
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     499.99998,
+     364.00001
+    ],
+    "r": 3.0
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     478.00014,
+     390.0
+    ],
+    "r": 3.0
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     610.99992,
+     406.74999
+    ],
+    "r": 3.0
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     674.0,
+     390.0
+    ],
+    "r": 3.0
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     120.0,
+     760.0
+    ],
+    "r": 4.5
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     70.0,
+     815.0
+    ],
+    "r": 2.5
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     300.0,
+     760.0
+    ],
+    "r": 4.5
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     242.5,
+     815.0
+    ],
+    "r": 2.5
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     415.0,
+     815.0
+    ],
+    "r": 2.5
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     530.0,
+     760.0
+    ],
+    "r": 4.5
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     587.5,
+     815.0
+    ],
+    "r": 2.5
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     710.0,
+     760.0
+    ],
+    "r": 4.5
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     760.0,
+     815.0
+    ],
+    "r": 2.5
+   }
+  ]
+ ],
+ "bukumler": [],
+ "formlar": [],
+ "kesikler": [
+  {
+   "panel": "taban",
+   "tip": "pem_saplama",
+   "sekil": "daire",
+   "merkez_duz": [
+    70.0,
+    815.0
+   ],
+   "parca": "FHP-M5-12",
+   "cap": 5.0
+  },
+  {
+   "panel": "taban",
+   "tip": "pem_saplama",
+   "sekil": "daire",
+   "merkez_duz": [
+    242.5,
+    815.0
+   ],
+   "parca": "FHP-M5-12",
+   "cap": 5.0
+  },
+  {
+   "panel": "taban",
+   "tip": "pem_saplama",
+   "sekil": "daire",
+   "merkez_duz": [
+    415.0,
+    815.0
+   ],
+   "parca": "FHP-M5-12",
+   "cap": 5.0
+  },
+  {
+   "panel": "taban",
+   "tip": "pem_saplama",
+   "sekil": "daire",
+   "merkez_duz": [
+    587.5,
+    815.0
+   ],
+   "parca": "FHP-M5-12",
+   "cap": 5.0
+  },
+  {
+   "panel": "taban",
+   "tip": "pem_saplama",
+   "sekil": "daire",
+   "merkez_duz": [
+    760.0,
+    815.0
+   ],
+   "parca": "FHP-M5-12",
+   "cap": 5.0
+  },
+  {
+   "panel": "taban",
+   "tip": "vida_deligi",
+   "sekil": "daire",
+   "merkez_duz": [
+    120.0,
+    760.0
+   ],
+   "parca": "taban ↔ kaide M8 (ISO 273 orta)",
+   "cap": 9.0
+  },
+  {
+   "panel": "taban",
+   "tip": "vida_deligi",
+   "sekil": "daire",
+   "merkez_duz": [
+    300.0,
+    760.0
+   ],
+   "parca": "taban ↔ kaide M8 (ISO 273 orta)",
+   "cap": 9.0
+  },
+  {
+   "panel": "taban",
+   "tip": "vida_deligi",
+   "sekil": "daire",
+   "merkez_duz": [
+    530.0,
+    760.0
+   ],
+   "parca": "taban ↔ kaide M8 (ISO 273 orta)",
+   "cap": 9.0
+  },
+  {
+   "panel": "taban",
+   "tip": "vida_deligi",
+   "sekil": "daire",
+   "merkez_duz": [
+    710.0,
+    760.0
+   ],
+   "parca": "taban ↔ kaide M8 (ISO 273 orta)",
+   "cap": 9.0
+  },
+  {
+   "panel": "taban",
+   "tip": "vida_deligi",
+   "sekil": "daire",
+   "merkez_duz": [
+    230.0,
+    110.0
+   ],
+   "parca": "taban ↔ kaide M8 (ISO 273 orta)",
+   "cap": 9.0
+  },
+  {
+   "panel": "taban",
+   "tip": "vida_deligi",
+   "sekil": "daire",
+   "merkez_duz": [
+    530.0,
+    110.0
+   ],
+   "parca": "taban ↔ kaide M8 (ISO 273 orta)",
+   "cap": 9.0
+  },
+  {
+   "panel": "taban",
+   "tip": "vida_deligi",
+   "sekil": "daire",
+   "merkez_duz": [
+    710.0,
+    110.0
+   ],
+   "parca": "taban ↔ kaide M8 (ISO 273 orta)",
+   "cap": 9.0
+  },
+  {
+   "panel": "taban",
+   "tip": "pem_saplama",
+   "sekil": "daire",
+   "merkez_duz": [
+    209.0,
+    406.75
+   ],
+   "parca": "FHP-M6-15",
+   "cap": 6.0
+  },
+  {
+   "panel": "taban",
+   "tip": "pem_saplama",
+   "sekil": "daire",
+   "merkez_duz": [
+    610.9999,
+    406.75
+   ],
+   "parca": "FHP-M6-15",
+   "cap": 6.0
+  },
+  {
+   "panel": "taban",
+   "tip": "pem_saplama",
+   "sekil": "daire",
+   "merkez_duz": [
+    299.9999,
+    364.0
+   ],
+   "parca": "FHP-M6-15",
+   "cap": 6.0
+  },
+  {
+   "panel": "taban",
+   "tip": "pem_saplama",
+   "sekil": "daire",
+   "merkez_duz": [
+    500.0,
+    364.0
+   ],
+   "parca": "FHP-M6-15",
+   "cap": 6.0
+  },
+  {
+   "panel": "taban",
+   "tip": "pem_saplama",
+   "sekil": "daire",
+   "merkez_duz": [
+    478.0001,
+    390.0
+   ],
+   "parca": "FHP-M6-15",
+   "cap": 6.0
+  },
+  {
+   "panel": "taban",
+   "tip": "pem_saplama",
+   "sekil": "daire",
+   "merkez_duz": [
+    674.0,
+    390.0
+   ],
+   "parca": "FHP-M6-15",
+   "cap": 6.0
+  }
+ ],
+ "parca_sayisi": 1,
+ "levha": {
+  "boy": 889.0,
+  "en": 827.0,
+  "aci": 0.0,
+  "alan_mm2": 734489.86,
+  "kutle_kg": 17.4735
+ },
+ "sabit_yuz": [
+  414.96966,
+  385.3841
+ ],
+ "donusum_3b": [
+  [
+   1.0,
+   0.0,
+   -0.0,
+   0.0
+  ],
+  [
+   0.0,
+   0.0,
+   1.0,
+   123.0
+  ],
+  [
+   0.0,
+   -1.0,
+   0.0,
+   0.0
+  ],
+  [
+   0.0,
+   0.0,
+   0.0,
+   1.0
+  ]
+ ]
+}

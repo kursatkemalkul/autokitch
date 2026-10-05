@@ -1,0 +1,79 @@
+{
+  "relieved_A": {
+    "volume_mm3": 38779.42750110326,
+    "mesh_volume_error": 0.0007282854286656537,
+    "closed_mesh": true,
+    "valid": true,
+    "triangles": 17354
+  },
+  "relieved_B": {
+    "volume_mm3": 28902.02007149856,
+    "mesh_volume_error": 0.00040256387898707224,
+    "closed_mesh": true,
+    "valid": true,
+    "triangles": 15796
+  },
+  "relieved_C": {
+    "volume_mm3": 29983.340381930066,
+    "mesh_volume_error": 0.00040264703019476933,
+    "closed_mesh": true,
+    "valid": true,
+    "triangles": 15394
+  },
+  "relieved_D": {
+    "volume_mm3": 19638.10231073411,
+    "mesh_volume_error": 0.00037248865011463295,
+    "closed_mesh": true,
+    "valid": true,
+    "triangles": 6982
+  },
+  "relieved_tube": {
+    "volume_mm3": 80634.33704161279,
+    "mesh_volume_error": 0.00014022368984156763,
+    "closed_mesh": true,
+    "valid": true,
+    "triangles": 5648
+  },
+  "checks": {
+    "flight_OD_mm": 50,
+    "trough_ID_mm": 72,
+    "radial_gap_mm": 11,
+    "retained_sill_mm": 6,
+    "D_flight_end_mm": 196,
+    "rotation_checks": [
+      {
+        "angle_deg": 0,
+        "overlap_mm3": 0.0
+      },
+      {
+        "angle_deg": 45,
+        "overlap_mm3": 0.0
+      },
+      {
+        "angle_deg": 90,
+        "overlap_mm3": 0.0
+      },
+      {
+        "angle_deg": 135,
+        "overlap_mm3": 0.0
+      },
+      {
+        "angle_deg": 180,
+        "overlap_mm3": 0.0
+      },
+      {
+        "angle_deg": 225,
+        "overlap_mm3": 0.0
+      },
+      {
+        "angle_deg": 270,
+        "overlap_mm3": 0.0
+      },
+      {
+        "angle_deg": 315,
+        "overlap_mm3": 0.0
+      }
+    ],
+    "warning": "Untested candidate. Bypass, stagnant stock and nipping at sill remain possible."
+  }
+}

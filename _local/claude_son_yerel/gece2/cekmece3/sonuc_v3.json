@@ -1,0 +1,387 @@
+{
+ "adim": 23,
+ "parca": 111,
+ "cevre": 8,
+ "cift": 1517,
+ "cakisma": 0,
+ "cakismalar": [],
+ "adim_mm": 2.0,
+ "uretim_kare_sorun": [],
+ "belirme": 0,
+ "havada": [],
+ "son_konum": {
+  "arka_kasnak ↔ kayis": {
+   "ucgen": 36,
+   "neden": "kayış dişi kasnak dişine oturur (model teması)"
+  }
+ },
+ "haric": {
+  "kapak_ic ↔ pem_kapak_sol_1": "PEM FHS başı iç panelde kenetli (presleme)",
+  "kapak_ic ↔ pem_kapak_sol_2": "PEM FHS başı iç panelde kenetli (presleme)",
+  "kapak_ic ↔ pem_kapak_sag_1": "PEM FHS başı iç panelde kenetli (presleme)",
+  "kapak_ic ↔ pem_kapak_sag_2": "PEM FHS başı iç panelde kenetli (presleme)",
+  "arka_kasnak ↔ kayis": "kayış dişi kasnak dişine oturur (model teması)"
+ },
+ "vida": [
+  {
+   "eleman": "vida_sol_1",
+   "std": "DIN 7991 M5 × 6",
+   "delik": "ray dış eleman havşası + ara eleman erişim deliği",
+   "karsi": "PEM SP-M5-1 (bölme sacı)",
+   "kavrama_mm": 2.0,
+   "uc_tasma_mm": 0.77,
+   "not_": "uç köpük kapağı iç tabanına 0,23 mm kalır (kapak 1 mm derin)"
+  },
+  {
+   "eleman": "vida_sag_1",
+   "std": "DIN 7991 M5 × 6",
+   "delik": "ray dış eleman havşası + ara eleman erişim deliği",
+   "karsi": "PEM SP-M5-1 (bölme sacı)",
+   "kavrama_mm": 2.0,
+   "uc_tasma_mm": 0.77,
+   "not_": "uç kapağa değmez"
+  },
+  {
+   "eleman": "vida_sol_2",
+   "std": "DIN 7991 M5 × 6",
+   "delik": "ray dış eleman havşası + ara eleman erişim deliği",
+   "karsi": "PEM SP-M5-1 (bölme sacı)",
+   "kavrama_mm": 2.0,
+   "uc_tasma_mm": 0.77,
+   "not_": "uç köpük kapağı iç tabanına 0,23 mm kalır (kapak 1 mm derin)"
+  },
+  {
+   "eleman": "vida_sag_2",
+   "std": "DIN 7991 M5 × 6",
+   "delik": "ray dış eleman havşası + ara eleman erişim deliği",
+   "karsi": "PEM SP-M5-1 (bölme sacı)",
+   "kavrama_mm": 2.0,
+   "uc_tasma_mm": 0.77,
+   "not_": "uç kapağa değmez"
+  },
+  {
+   "eleman": "vida_sol_3",
+   "std": "DIN 7991 M5 × 6",
+   "delik": "ray dış eleman havşası + ara eleman erişim deliği",
+   "karsi": "PEM SP-M5-1 (bölme sacı)",
+   "kavrama_mm": 2.0,
+   "uc_tasma_mm": 0.77,
+   "not_": "uç köpük kapağı iç tabanına 0,23 mm kalır (kapak 1 mm derin)"
+  },
+  {
+   "eleman": "vida_sag_3",
+   "std": "DIN 7991 M5 × 6",
+   "delik": "ray dış eleman havşası + ara eleman erişim deliği",
+   "karsi": "PEM SP-M5-1 (bölme sacı)",
+   "kavrama_mm": 2.0,
+   "uc_tasma_mm": 0.77,
+   "not_": "uç kapağa değmez"
+  },
+  {
+   "eleman": "vida_braket_1",
+   "std": "DIN 7991 M5 × 6",
+   "delik": "motor braketi tabanı Ø5,5 + havşa",
+   "karsi": "PEM SP-M5-1 (arka iç sac, Ø6,4)",
+   "kavrama_mm": 2.0,
+   "uc_tasma_mm": 0.77,
+   "not_": "uç köpük kapağı boşluğunda"
+  },
+  {
+   "eleman": "vida_braket_2",
+   "std": "DIN 7991 M5 × 6",
+   "delik": "motor braketi tabanı Ø5,5 + havşa",
+   "karsi": "PEM SP-M5-1 (arka iç sac, Ø6,4)",
+   "kavrama_mm": 2.0,
+   "uc_tasma_mm": 0.77,
+   "not_": "uç köpük kapağı boşluğunda"
+  },
+  {
+   "eleman": "vida_motor_1",
+   "std": "DIN 7991 M3 × 6",
+   "delik": "motor braketi Ø3,4 + havşa (3 mm sac)",
+   "karsi": "motor yüzü M3 dişli delik (derinlik 5)",
+   "kavrama_mm": 3.0,
+   "uc_tasma_mm": -2.0,
+   "not_": ""
+  },
+  {
+   "eleman": "vida_motor_2",
+   "std": "DIN 7991 M3 × 6",
+   "delik": "motor braketi Ø3,4 + havşa (3 mm sac)",
+   "karsi": "motor yüzü M3 dişli delik (derinlik 5)",
+   "kavrama_mm": 3.0,
+   "uc_tasma_mm": -2.0,
+   "not_": ""
+  },
+  {
+   "eleman": "vida_motor_3",
+   "std": "DIN 7991 M3 × 6",
+   "delik": "motor braketi Ø3,4 + havşa (3 mm sac)",
+   "karsi": "motor yüzü M3 dişli delik (derinlik 5)",
+   "kavrama_mm": 3.0,
+   "uc_tasma_mm": -2.0,
+   "not_": ""
+  },
+  {
+   "eleman": "vida_motor_4",
+   "std": "DIN 7991 M3 × 6",
+   "delik": "motor braketi Ø3,4 + havşa (3 mm sac)",
+   "karsi": "motor yüzü M3 dişli delik (derinlik 5)",
+   "kavrama_mm": 3.0,
+   "uc_tasma_mm": -2.0,
+   "not_": ""
+  },
+  {
+   "eleman": "vida_kose_sol_1",
+   "std": "ISO 7380 M4 × 6",
+   "delik": "köşebent Ø4,5",
+   "karsi": "lamada M4 dişli kör delik (5 derin, 6 mm lama)",
+   "kavrama_mm": 4.5,
+   "uc_tasma_mm": -0.6,
+   "not_": ""
+  },
+  {
+   "eleman": "vida_kose_sol_2",
+   "std": "ISO 7380 M4 × 6",
+   "delik": "köşebent Ø4,5",
+   "karsi": "lamada M4 dişli kör delik (5 derin, 6 mm lama)",
+   "kavrama_mm": 4.5,
+   "uc_tasma_mm": -0.6,
+   "not_": ""
+  },
+  {
+   "eleman": "vida_kose_sag_1",
+   "std": "ISO 7380 M4 × 6",
+   "delik": "köşebent Ø4,5",
+   "karsi": "lamada M4 dişli kör delik (5 derin, 6 mm lama)",
+   "kavrama_mm": 4.5,
+   "uc_tasma_mm": -0.6,
+   "not_": ""
+  },
+  {
+   "eleman": "vida_kose_sag_2",
+   "std": "ISO 7380 M4 × 6",
+   "delik": "köşebent Ø4,5",
+   "karsi": "lamada M4 dişli kör delik (5 derin, 6 mm lama)",
+   "kavrama_mm": 4.5,
+   "uc_tasma_mm": -0.6,
+   "not_": ""
+  },
+  {
+   "eleman": "vida_cene_1",
+   "std": "ISO 7380 M3 × 12",
+   "delik": "tabla + üst çene + ara + alt çene Ø3,4",
+   "karsi": "ISO 4032 M3 somun (alt çenenin altında)",
+   "kavrama_mm": 2.4,
+   "uc_tasma_mm": 0.84,
+   "not_": "somundan taşar (≥ 1 diş)"
+  },
+  {
+   "eleman": "vida_miknatis_1",
+   "std": "ISO 7380 M3 × 8",
+   "delik": "mıknatıs yarığı Ø3,18 × 7,82",
+   "karsi": "PEM CLS-M3-2 (kulak 2 mm)",
+   "kavrama_mm": 1.65,
+   "uc_tasma_mm": -0.35,
+   "not_": ""
+  },
+  {
+   "eleman": "vida_reed_arka_1",
+   "std": "ISO 7380 M3 × 8",
+   "delik": "reed yarığı Ø3,18 × 7,82",
+   "karsi": "PEM CLS-M3-2 (reed plakası 2 mm)",
+   "kavrama_mm": 1.65,
+   "uc_tasma_mm": -0.35,
+   "not_": ""
+  },
+  {
+   "eleman": "vida_reed_on_1",
+   "std": "ISO 7380 M3 × 8",
+   "delik": "reed yarığı Ø3,18 × 7,82",
+   "karsi": "PEM CLS-M3-2 (reed plakası 2 mm)",
+   "kavrama_mm": 1.65,
+   "uc_tasma_mm": -0.35,
+   "not_": ""
+  },
+  {
+   "eleman": "vida_cene_2",
+   "std": "ISO 7380 M3 × 12",
+   "delik": "tabla + üst çene + ara + alt çene Ø3,4",
+   "karsi": "ISO 4032 M3 somun (alt çenenin altında)",
+   "kavrama_mm": 2.4,
+   "uc_tasma_mm": 0.84,
+   "not_": "somundan taşar (≥ 1 diş)"
+  },
+  {
+   "eleman": "vida_miknatis_2",
+   "std": "ISO 7380 M3 × 8",
+   "delik": "mıknatıs yarığı Ø3,18 × 7,82",
+   "karsi": "PEM CLS-M3-2 (kulak 2 mm)",
+   "kavrama_mm": 1.65,
+   "uc_tasma_mm": -0.35,
+   "not_": ""
+  },
+  {
+   "eleman": "vida_reed_arka_2",
+   "std": "ISO 7380 M3 × 8",
+   "delik": "reed yarığı Ø3,18 × 7,82",
+   "karsi": "PEM CLS-M3-2 (reed plakası 2 mm)",
+   "kavrama_mm": 1.65,
+   "uc_tasma_mm": -0.35,
+   "not_": ""
+  },
+  {
+   "eleman": "vida_reed_on_2",
+   "std": "ISO 7380 M3 × 8",
+   "delik": "reed yarığı Ø3,18 × 7,82",
+   "karsi": "PEM CLS-M3-2 (reed plakası 2 mm)",
+   "kavrama_mm": 1.65,
+   "uc_tasma_mm": -0.35,
+   "not_": ""
+  },
+  {
+   "eleman": "setskur",
+   "std": "DIN 913 M3 × 4",
+   "delik": "kasnak göbeği radyal M3 dişli delik",
+   "karsi": "kasnak göbeği (alüminyum)",
+   "kavrama_mm": 14.0,
+   "uc_tasma_mm": 0.0,
+   "not_": "uç mile basar"
+  },
+  {
+   "eleman": "pem_kapak_sol_1",
+   "std": "PEM FHS-M5-10 saplama",
+   "delik": "braket flanşı Ø5,5",
+   "karsi": "DIN 125 M5 pul + ISO 4032 M5 somun",
+   "kavrama_mm": 4.7,
+   "uc_tasma_mm": 1.3,
+   "not_": "somundan 1,3 taşar"
+  },
+  {
+   "eleman": "pem_kapak_sol_2",
+   "std": "PEM FHS-M5-10 saplama",
+   "delik": "braket flanşı Ø5,5",
+   "karsi": "DIN 125 M5 pul + ISO 4032 M5 somun",
+   "kavrama_mm": 4.7,
+   "uc_tasma_mm": 1.3,
+   "not_": "somundan 1,3 taşar"
+  },
+  {
+   "eleman": "pem_kapak_sag_1",
+   "std": "PEM FHS-M5-10 saplama",
+   "delik": "braket flanşı Ø5,5",
+   "karsi": "DIN 125 M5 pul + ISO 4032 M5 somun",
+   "kavrama_mm": 4.7,
+   "uc_tasma_mm": 1.3,
+   "not_": "somundan 1,3 taşar"
+  },
+  {
+   "eleman": "pem_kapak_sag_2",
+   "std": "PEM FHS-M5-10 saplama",
+   "delik": "braket flanşı Ø5,5",
+   "karsi": "DIN 125 M5 pul + ISO 4032 M5 somun",
+   "kavrama_mm": 4.7,
+   "uc_tasma_mm": 1.3,
+   "not_": "somundan 1,3 taşar"
+  }
+ ],
+ "kiyas": {
+  "on_braket_sol": {
+   "kutu_fark": 0.0,
+   "model_hacim": 4119.6,
+   "uretim_hacim": 4119.6,
+   "fark_hacim": 0.0
+  },
+  "on_braket_sag": {
+   "kutu_fark": 0.0001,
+   "model_hacim": 4119.4,
+   "uretim_hacim": 4119.6,
+   "fark_hacim": 0.1
+  },
+  "lama_sol": {
+   "kutu_fark": 0.0,
+   "model_hacim": 63816.7,
+   "uretim_hacim": 63816.6,
+   "fark_hacim": 0.0
+  },
+  "lama_sag": {
+   "kutu_fark": 0.0001,
+   "model_hacim": 63817.2,
+   "uretim_hacim": 63816.6,
+   "fark_hacim": 0.0
+  },
+  "avara_unitesi": {
+   "kutu_fark": 0.0
+  },
+  "kutu": {
+   "kutu_fark": 0.0001,
+   "model_hacim": 829811.8,
+   "uretim_hacim": 829812.0,
+   "fark_hacim": 2.2
+  },
+  "kapak": {
+   "kutu_fark": 0.0,
+   "not_": "model ağı kapalı değil (hacim kıyası yapılamaz) — dış kutu kıyaslandı"
+  }
+ },
+ "eklenen_cevre": [],
+ "delik_acilan": [
+  "motor yüzü 4 × M3 (derinlik 5)"
+ ],
+ "istisna": [
+  "kablo_motor",
+  "kablo_sensor",
+  "kapak_pu",
+  "kayis",
+  "kaynak_avara",
+  "kaynak_avara_cerceve",
+  "kaynak_avara_mili",
+  "kaynak_cene",
+  "kaynak_kol_kutu",
+  "kaynak_kulak",
+  "kaynak_kutu_arka",
+  "kaynak_kutu_on",
+  "kaynak_kutu_yan_sag",
+  "kaynak_kutu_yan_sol",
+  "kaynak_tabla",
+  "punta_braket_sag",
+  "punta_braket_sol",
+  "punta_kose_sag_1",
+  "punta_kose_sag_2",
+  "punta_kose_sol_1",
+  "punta_kose_sol_2",
+  "punta_lama_sag",
+  "punta_lama_sol",
+  "punta_reed_arka",
+  "punta_reed_on"
+ ],
+ "uretilen": [
+  "avara_kolu",
+  "cene_alt",
+  "cene_ust",
+  "kapak_dis",
+  "kapak_ic",
+  "kol",
+  "kose_sag_1",
+  "kose_sag_2",
+  "kose_sol_1",
+  "kose_sol_2",
+  "kulak",
+  "kutu_arka",
+  "kutu_on",
+  "kutu_taban",
+  "kutu_yan_sag",
+  "kutu_yan_sol",
+  "lama_sag",
+  "lama_sol",
+  "motor_braketi",
+  "on_braket_sag",
+  "on_braket_sol",
+  "reed_plaka_arka",
+  "reed_plaka_on",
+  "sensor_lamasi",
+  "tabla"
+ ],
+ "siyirma_mm": 0.75,
+ "oturma_mm": 1.0
+}

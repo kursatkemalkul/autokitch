@@ -1,0 +1,680 @@
+{
+ "parca": "ust_ke_arka_sac",
+ "surum": "h3_sac_v1",
+ "malzeme": "AISI 304 2B, dış yüz 240 kum satine, hat boyunca yatay",
+ "t": 1.5,
+ "R": 2.25,
+ "K": 0.45,
+ "adet": 1,
+ "birim": "mm",
+ "ust_yuz": "Z = t yüzü = kök panelin +n yüzü (bütün panellerin yerel z = t yüzü)",
+ "dis_kontur": [
+  {
+   "t": "L",
+   "p": [
+    [
+     5230.0,
+     2200.0
+    ],
+    [
+     4000.0,
+     2200.0
+    ]
+   ]
+  },
+  {
+   "t": "L",
+   "p": [
+    [
+     4000.0,
+     2200.0
+    ],
+    [
+     4000.0,
+     1867.25
+    ]
+   ]
+  },
+  {
+   "t": "L",
+   "p": [
+    [
+     4000.0,
+     1867.25
+    ],
+    [
+     4017.0,
+     1867.25
+    ]
+   ]
+  },
+  {
+   "t": "L",
+   "p": [
+    [
+     4017.0,
+     1867.25
+    ],
+    [
+     4017.0,
+     1871.75
+    ]
+   ]
+  },
+  {
+   "t": "L",
+   "p": [
+    [
+     4017.0,
+     1871.75
+    ],
+    [
+     4018.5,
+     1871.75
+    ]
+   ]
+  },
+  {
+   "t": "L",
+   "p": [
+    [
+     4018.5,
+     1871.75
+    ],
+    [
+     4018.5,
+     1842.40542
+    ]
+   ]
+  },
+  {
+   "t": "L",
+   "p": [
+    [
+     4018.5,
+     1842.40542
+    ],
+    [
+     5211.5,
+     1842.40542
+    ]
+   ]
+  },
+  {
+   "t": "L",
+   "p": [
+    [
+     5211.5,
+     1842.40542
+    ],
+    [
+     5211.5,
+     1871.75
+    ]
+   ]
+  },
+  {
+   "t": "L",
+   "p": [
+    [
+     5211.5,
+     1871.75
+    ],
+    [
+     5213.0,
+     1871.75
+    ]
+   ]
+  },
+  {
+   "t": "L",
+   "p": [
+    [
+     5213.0,
+     1871.75
+    ],
+    [
+     5213.0,
+     1867.25
+    ]
+   ]
+  },
+  {
+   "t": "L",
+   "p": [
+    [
+     5213.0,
+     1867.25
+    ],
+    [
+     5230.0,
+     1867.25
+    ]
+   ]
+  },
+  {
+   "t": "L",
+   "p": [
+    [
+     5230.0,
+     1867.25
+    ],
+    [
+     5230.0,
+     2200.0
+    ]
+   ]
+  }
+ ],
+ "ek_dis_konturlar": [],
+ "ic_konturlar": [
+  [
+   {
+    "t": "C",
+    "c": [
+     4010.5,
+     1890.0
+    ],
+    "r": 2.5
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     4010.5,
+     2030.0
+    ],
+    "r": 2.5
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     5219.5,
+     1890.0
+    ],
+    "r": 2.5
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     5219.5,
+     2030.0
+    ],
+    "r": 2.5
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     4010.5,
+     2150.0
+    ],
+    "r": 2.5
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     4050.0,
+     2186.0
+    ],
+    "r": 2.5
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     4238.33333,
+     2186.0
+    ],
+    "r": 2.5
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     4426.66667,
+     2186.0
+    ],
+    "r": 2.5
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     4803.33333,
+     2186.0
+    ],
+    "r": 2.5
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     5219.5,
+     2150.0
+    ],
+    "r": 2.5
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     4991.66667,
+     2186.0
+    ],
+    "r": 2.5
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     5180.0,
+     2186.0
+    ],
+    "r": 2.5
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     5160.0,
+     1851.40542
+    ],
+    "r": 2.75
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     4070.0,
+     1851.40542
+    ],
+    "r": 2.75
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     4251.66667,
+     1851.40542
+    ],
+    "r": 2.75
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     4433.33333,
+     1851.40542
+    ],
+    "r": 2.75
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     4615.0,
+     1851.40542
+    ],
+    "r": 2.75
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     4796.66667,
+     1851.40542
+    ],
+    "r": 2.75
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     4978.33333,
+     1851.40542
+    ],
+    "r": 2.75
+   }
+  ]
+ ],
+ "bukumler": [
+  {
+   "no": 1,
+   "ad": "alt_donus",
+   "aci": 90.0,
+   "yon": "yukari",
+   "R": 2.25,
+   "K": 0.45,
+   "BA": 4.59458,
+   "tip": "flans",
+   "t": 1.5,
+   "V_kalip": 12.0,
+   "cizgi": [
+    [
+     4018.5,
+     1864.95271
+    ],
+    [
+     5211.5,
+     1864.95271
+    ]
+   ],
+   "baslangic": [
+    [
+     4018.5,
+     1867.25
+    ],
+    [
+     5211.5,
+     1867.25
+    ]
+   ],
+   "bitis": [
+    [
+     4018.5,
+     1862.65542
+    ],
+    [
+     5211.5,
+     1862.65542
+    ]
+   ],
+   "nominal_boy": 1193.0,
+   "gercek_aralik": [
+    18.5,
+    1211.5
+   ],
+   "gercek_boy": 1193.0
+  }
+ ],
+ "formlar": [],
+ "kesikler": [
+  {
+   "panel": "arka",
+   "tip": "rahatlatma",
+   "sekil": "dikdortgen",
+   "merkez_duz": null,
+   "uc": "bas",
+   "genislik": 1.5,
+   "derinlik": 4.5
+  },
+  {
+   "panel": "arka",
+   "tip": "rahatlatma",
+   "sekil": "dikdortgen",
+   "merkez_duz": null,
+   "uc": "son",
+   "genislik": 1.5,
+   "derinlik": 4.5
+  },
+  {
+   "panel": "arka",
+   "tip": "pem_saplama",
+   "sekil": "daire",
+   "merkez_duz": [
+    4010.5,
+    1890.0
+   ],
+   "parca": "FHP-M5-10",
+   "cap": 5.0
+  },
+  {
+   "panel": "arka",
+   "tip": "pem_saplama",
+   "sekil": "daire",
+   "merkez_duz": [
+    4010.5,
+    2030.0
+   ],
+   "parca": "FHP-M5-10",
+   "cap": 5.0
+  },
+  {
+   "panel": "arka",
+   "tip": "pem_saplama",
+   "sekil": "daire",
+   "merkez_duz": [
+    4010.5,
+    2150.0
+   ],
+   "parca": "FHP-M5-10",
+   "cap": 5.0
+  },
+  {
+   "panel": "arka",
+   "tip": "pem_saplama",
+   "sekil": "daire",
+   "merkez_duz": [
+    5219.5,
+    1890.0
+   ],
+   "parca": "FHP-M5-10",
+   "cap": 5.0
+  },
+  {
+   "panel": "arka",
+   "tip": "pem_saplama",
+   "sekil": "daire",
+   "merkez_duz": [
+    5219.5,
+    2030.0
+   ],
+   "parca": "FHP-M5-10",
+   "cap": 5.0
+  },
+  {
+   "panel": "arka",
+   "tip": "pem_saplama",
+   "sekil": "daire",
+   "merkez_duz": [
+    5219.5,
+    2150.0
+   ],
+   "parca": "FHP-M5-10",
+   "cap": 5.0
+  },
+  {
+   "panel": "arka",
+   "tip": "pem_saplama",
+   "sekil": "daire",
+   "merkez_duz": [
+    4050.0,
+    2186.0
+   ],
+   "parca": "FHP-M5-10",
+   "cap": 5.0
+  },
+  {
+   "panel": "arka",
+   "tip": "pem_saplama",
+   "sekil": "daire",
+   "merkez_duz": [
+    4238.3333,
+    2186.0
+   ],
+   "parca": "FHP-M5-10",
+   "cap": 5.0
+  },
+  {
+   "panel": "arka",
+   "tip": "pem_saplama",
+   "sekil": "daire",
+   "merkez_duz": [
+    4426.6667,
+    2186.0
+   ],
+   "parca": "FHP-M5-10",
+   "cap": 5.0
+  },
+  {
+   "panel": "arka",
+   "tip": "pem_saplama",
+   "sekil": "daire",
+   "merkez_duz": [
+    4803.3333,
+    2186.0
+   ],
+   "parca": "FHP-M5-10",
+   "cap": 5.0
+  },
+  {
+   "panel": "arka",
+   "tip": "pem_saplama",
+   "sekil": "daire",
+   "merkez_duz": [
+    4991.6667,
+    2186.0
+   ],
+   "parca": "FHP-M5-10",
+   "cap": 5.0
+  },
+  {
+   "panel": "arka",
+   "tip": "pem_saplama",
+   "sekil": "daire",
+   "merkez_duz": [
+    5180.0,
+    2186.0
+   ],
+   "parca": "FHP-M5-10",
+   "cap": 5.0
+  },
+  {
+   "panel": "alt_donus",
+   "tip": "vida_deligi",
+   "sekil": "daire",
+   "merkez_duz": [
+    4070.0,
+    1851.4054
+   ],
+   "parca": "ISO 273 orta",
+   "cap": 5.5
+  },
+  {
+   "panel": "alt_donus",
+   "tip": "vida_deligi",
+   "sekil": "daire",
+   "merkez_duz": [
+    4251.6667,
+    1851.4054
+   ],
+   "parca": "ISO 273 orta",
+   "cap": 5.5
+  },
+  {
+   "panel": "alt_donus",
+   "tip": "vida_deligi",
+   "sekil": "daire",
+   "merkez_duz": [
+    4433.3333,
+    1851.4054
+   ],
+   "parca": "ISO 273 orta",
+   "cap": 5.5
+  },
+  {
+   "panel": "alt_donus",
+   "tip": "vida_deligi",
+   "sekil": "daire",
+   "merkez_duz": [
+    4615.0,
+    1851.4054
+   ],
+   "parca": "ISO 273 orta",
+   "cap": 5.5
+  },
+  {
+   "panel": "alt_donus",
+   "tip": "vida_deligi",
+   "sekil": "daire",
+   "merkez_duz": [
+    4796.6667,
+    1851.4054
+   ],
+   "parca": "ISO 273 orta",
+   "cap": 5.5
+  },
+  {
+   "panel": "alt_donus",
+   "tip": "vida_deligi",
+   "sekil": "daire",
+   "merkez_duz": [
+    4978.3333,
+    1851.4054
+   ],
+   "parca": "ISO 273 orta",
+   "cap": 5.5
+  },
+  {
+   "panel": "alt_donus",
+   "tip": "vida_deligi",
+   "sekil": "daire",
+   "merkez_duz": [
+    5160.0,
+    1851.4054
+   ],
+   "parca": "ISO 273 orta",
+   "cap": 5.5
+  }
+ ],
+ "parca_sayisi": 1,
+ "levha": {
+  "boy": 1230.0,
+  "en": 357.595,
+  "aci": 0.0,
+  "alan_mm2": 438506.66,
+  "kutle_kg": 5.216
+ },
+ "sabit_yuz": [
+  4615.0,
+  2033.58949
+ ],
+ "donusum_3b": [
+  [
+   1.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  [
+   0.0,
+   1.0,
+   0.0,
+   0.0
+  ],
+  [
+   0.0,
+   0.0,
+   1.0,
+   -830.0
+  ],
+  [
+   0.0,
+   0.0,
+   0.0,
+   1.0
+  ]
+ ]
+}

@@ -1,0 +1,174 @@
+{
+"adim": 45,
+"ad": "acil stop kaldırıldı",
+"cep": [
+{
+"istasyon": "TOPPING",
+"bilesen": "TOPPING_MODUL__on_seffaf[30]",
+"kutu": [
+1968.75,
+788.0,
+39.0,
+2497.0,
+2197.0,
+79.0
+],
+"hacim_once": 1323662.2,
+"hacim_sonra": 1325012.2,
+"dolan": 1350.0
+},
+{
+"istasyon": "TOPPING",
+"bilesen": "TOPPING_MODUL__on_seffaf[31]",
+"kutu": [
+1970.25,
+789.5,
+39.0,
+2495.5,
+2195.5,
+40.0
+],
+"hacim_once": 221301.0,
+"hacim_sonra": 222201.0,
+"dolan": 900.0
+},
+{
+"istasyon": "B",
+"bilesen": "B_DEPO__pu__CEKMECE[0]",
+"kutu": [
+4004.5,
+458.0,
+40.0,
+4397.5,
+783.5,
+77.5
+],
+"hacim_once": 4687854.6,
+"hacim_sonra": 4721154.6,
+"dolan": 33300.0
+},
+{
+"istasyon": "B",
+"bilesen": "B_DEPO__sac__CEKMECE[6]",
+"kutu": [
+4003.0,
+456.5,
+39.0,
+4399.0,
+785.0,
+79.0
+],
+"hacim_once": 340080.3,
+"hacim_sonra": 342780.3,
+"dolan": 2700.0
+},
+{
+"istasyon": "F",
+"bilesen": "F_UST_KAPAK__on_seffaf__KAPAK_F_SOL[20]",
+"kutu": [
+2500.0,
+1308.0,
+59.0,
+3248.5,
+2197.0,
+79.0
+],
+"hacim_once": 1056863.0,
+"hacim_sonra": 1058213.2,
+"dolan": 1350.19
+},
+{
+"istasyon": "K",
+"bilesen": "K_GOVDE__on_seffaf[22]",
+"kutu": [
+4003.0,
+788.0,
+59.0,
+4399.0,
+2197.0,
+79.0
+],
+"hacim_once": 927749.8,
+"hacim_sonra": 929099.8,
+"dolan": 1350.0
+},
+{
+"istasyon": "K",
+"bilesen": "K_GOVDE__on_seffaf[23]",
+"kutu": [
+4005.0,
+790.0,
+59.0,
+4397.0,
+2195.0,
+74.0
+],
+"hacim_once": 594317.1,
+"hacim_sonra": 595216.8,
+"dolan": 899.74
+},
+{
+"istasyon": "E",
+"bilesen": "E_GOVDE__on_seffaf[43]",
+"kutu": [
+4863.0,
+788.0,
+59.0,
+5230.0,
+2197.0,
+79.0
+],
+"hacim_once": 865549.5,
+"hacim_sonra": 866899.6,
+"dolan": 1350.01
+},
+{
+"istasyon": "E",
+"bilesen": "E_GOVDE__on_seffaf[44]",
+"kutu": [
+4865.0,
+790.0,
+59.0,
+5228.0,
+2195.0,
+74.0
+],
+"hacim_once": 554158.9,
+"hacim_sonra": 555058.9,
+"dolan": 900.07
+},
+{
+"istasyon": "QR",
+"bilesen": "QR_GOVDE__on_seffaf[2]",
+"kutu": [
+4372.5,
+1654.0,
+670.0,
+5227.5,
+2047.0,
+671.5
+],
+"hacim_once": 465905.2,
+"hacim_sonra": 466130.3,
+"dolan": 225.03
+}
+],
+"silinen_dugum": [
+"ACIL_STOP__sari",
+"ACIL_STOP__siyah",
+"ACIL_STOP__kirmizi"
+],
+"log": [
+"  cep kapandı: TOPPING_MODUL__on_seffaf[30]                 TOPPING · +1350.0 mm³",
+"  cep kapandı: TOPPING_MODUL__on_seffaf[31]                 TOPPING · +900.0 mm³",
+"  cep kapandı: B_DEPO__pu__CEKMECE[0]                       B · +33300.0 mm³",
+"  cep kapandı: B_DEPO__sac__CEKMECE[6]                      B · +2700.0 mm³",
+"  cep kapandı: F_UST_KAPAK__on_seffaf__KAPAK_F_SOL[20]      F · +1350.2 mm³",
+"  cep kapandı: K_GOVDE__on_seffaf[22]                       K · +1350.0 mm³",
+"  cep kapandı: K_GOVDE__on_seffaf[23]                       K · +899.7 mm³",
+"  cep kapandı: E_GOVDE__on_seffaf[43]                       E · +1350.0 mm³",
+"  cep kapandı: E_GOVDE__on_seffaf[44]                       E · +900.1 mm³",
+"  cep kapandı: QR_GOVDE__on_seffaf[2]                       QR · +225.0 mm³",
+"  silindi: 3 düğüm (ACIL_STOP__sari, ACIL_STOP__siyah, ACIL_STOP__kirmizi) · 3 ağ · 3 malzeme"
+]
+}

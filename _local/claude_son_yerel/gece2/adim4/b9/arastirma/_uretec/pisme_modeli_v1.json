@@ -1,0 +1,352 @@
+{
+ "Domino's tipi · sıcak hava jeti 250 °C (kalibrasyon: pizza 6–7 dk)": {
+  "Lahmacun": {
+   "kriter": {
+    "hamur ortası ≥ 95": 0.6,
+    "alt yüz ≥ 150": null,
+    "et ortası ≥ 72": 0.37
+   },
+   "pis": null,
+   "son_kriter": "alt yüz ≥ 150",
+   "ust_piste": null,
+   "su_kaybi": null
+  },
+  "Kaşarlı pide": {
+   "kriter": {
+    "hamur ortası ≥ 95": 1.34,
+    "alt yüz ≥ 150": null,
+    "kaşar ≥ 70": 0.72
+   },
+   "pis": null,
+   "son_kriter": "alt yüz ≥ 150",
+   "ust_piste": null,
+   "su_kaybi": null
+  },
+  "Kıymalı pide": {
+   "kriter": {
+    "hamur ortası ≥ 95": 1.47,
+    "alt yüz ≥ 150": null,
+    "et ortası ≥ 72": 0.61
+   },
+   "pis": null,
+   "son_kriter": "alt yüz ≥ 150",
+   "ust_piste": null,
+   "su_kaybi": null
+  },
+  "Kuşbaşılı pide": {
+   "kriter": {
+    "hamur ortası ≥ 95": 2.47,
+    "alt yüz ≥ 150": null,
+    "et ortası ≥ 72": 1.38
+   },
+   "pis": null,
+   "son_kriter": "alt yüz ≥ 150",
+   "ust_piste": null,
+   "su_kaybi": null
+  },
+  "Sucuklu pide": {
+   "kriter": {
+    "hamur ortası ≥ 95": 2.42,
+    "alt yüz ≥ 150": null,
+    "et ortası ≥ 72": 1.13,
+    "kaşar ≥ 70": 1.6
+   },
+   "pis": null,
+   "son_kriter": "alt yüz ≥ 150",
+   "ust_piste": null,
+   "su_kaybi": null
+  },
+  "Pizza": {
+   "kriter": {
+    "hamur ortası ≥ 95": 3.01,
+    "alt yüz ≥ 150": null,
+    "et ortası ≥ 72": 1.23,
+    "kaşar ≥ 70": 2.09
+   },
+   "pis": null,
+   "son_kriter": "alt yüz ≥ 150",
+   "ust_piste": null,
+   "su_kaybi": null
+  }
+ },
+ "Taş fırın 300 °C (kalibrasyon: lahmacun 3–5 dk)": {
+  "Lahmacun": {
+   "kriter": {
+    "hamur ortası ≥ 95": 0.43,
+    "alt yüz ≥ 150": 0.55,
+    "et ortası ≥ 72": 0.39
+   },
+   "pis": 0.55,
+   "son_kriter": "alt yüz ≥ 150",
+   "ust_piste": 100.0,
+   "su_kaybi": 18.3
+  },
+  "Kaşarlı pide": {
+   "kriter": {
+    "hamur ortası ≥ 95": 0.95,
+    "alt yüz ≥ 150": 0.6,
+    "kaşar ≥ 70": 0.67
+   },
+   "pis": 0.95,
+   "son_kriter": "hamur ortası ≥ 95",
+   "ust_piste": 100.0,
+   "su_kaybi": 24.2
+  },
+  "Kıymalı pide": {
+   "kriter": {
+    "hamur ortası ≥ 95": 1.07,
+    "alt yüz ≥ 150": 0.61,
+    "et ortası ≥ 72": 0.81
+   },
+   "pis": 1.07,
+   "son_kriter": "hamur ortası ≥ 95",
+   "ust_piste": 100.0,
+   "su_kaybi": 18.8
+  },
+  "Kuşbaşılı pide": {
+   "kriter": {
+    "hamur ortası ≥ 95": 1.29,
+    "alt yüz ≥ 150": 0.62,
+    "et ortası ≥ 72": 1.5
+   },
+   "pis": 1.5,
+   "son_kriter": "et ortası ≥ 72",
+   "ust_piste": 100.0,
+   "su_kaybi": 12.4
+  },
+  "Sucuklu pide": {
+   "kriter": {
+    "hamur ortası ≥ 95": 1.25,
+    "alt yüz ≥ 150": 0.61,
+    "et ortası ≥ 72": 1.27,
+    "kaşar ≥ 70": 1.46
+   },
+   "pis": 1.46,
+   "son_kriter": "kaşar ≥ 70",
+   "ust_piste": 100.0,
+   "su_kaybi": 18.7
+  },
+  "Pizza": {
+   "kriter": {
+    "hamur ortası ≥ 95": 1.34,
+    "alt yüz ≥ 150": 0.62,
+    "et ortası ≥ 72": 1.43,
+    "kaşar ≥ 70": 1.85
+   },
+   "pis": 1.85,
+   "son_kriter": "kaşar ≥ 70",
+   "ust_piste": 100.0,
+   "su_kaybi": 15.2
+  }
+ },
+ "Kızılötesi bant · eleman 400 °C · hava 250 °C": {
+  "Lahmacun": {
+   "kriter": {
+    "hamur ortası ≥ 95": 0.84,
+    "alt yüz ≥ 150": null,
+    "et ortası ≥ 72": 0.58
+   },
+   "pis": null,
+   "son_kriter": "alt yüz ≥ 150",
+   "ust_piste": null,
+   "su_kaybi": null
+  },
+  "Kaşarlı pide": {
+   "kriter": {
+    "hamur ortası ≥ 95": 1.64,
+    "alt yüz ≥ 150": null,
+    "kaşar ≥ 70": 0.93
+   },
+   "pis": null,
+   "son_kriter": "alt yüz ≥ 150",
+   "ust_piste": null,
+   "su_kaybi": null
+  },
+  "Kıymalı pide": {
+   "kriter": {
+    "hamur ortası ≥ 95": 1.84,
+    "alt yüz ≥ 150": null,
+    "et ortası ≥ 72": 0.96
+   },
+   "pis": null,
+   "son_kriter": "alt yüz ≥ 150",
+   "ust_piste": null,
+   "su_kaybi": null
+  },
+  "Kuşbaşılı pide": {
+   "kriter": {
+    "hamur ortası ≥ 95": 3.0,
+    "alt yüz ≥ 150": null,
+    "et ortası ≥ 72": 1.75
+   },
+   "pis": null,
+   "son_kriter": "alt yüz ≥ 150",
+   "ust_piste": null,
+   "su_kaybi": null
+  },
+  "Sucuklu pide": {
+   "kriter": {
+    "hamur ortası ≥ 95": 2.92,
+    "alt yüz ≥ 150": null,
+    "et ortası ≥ 72": 1.41,
+    "kaşar ≥ 70": 1.93
+   },
+   "pis": null,
+   "son_kriter": "alt yüz ≥ 150",
+   "ust_piste": null,
+   "su_kaybi": null
+  },
+  "Pizza": {
+   "kriter": {
+    "hamur ortası ≥ 95": 3.62,
+    "alt yüz ≥ 150": null,
+    "et ortası ≥ 72": 1.55,
+    "kaşar ≥ 70": 2.45
+   },
+   "pis": null,
+   "son_kriter": "alt yüz ≥ 150",
+   "ust_piste": null,
+   "su_kaybi": null
+  }
+ },
+ "Kızılötesi bant · eleman 450 °C · hava 270 °C": {
+  "Lahmacun": {
+   "kriter": {
+    "hamur ortası ≥ 95": 0.7,
+    "alt yüz ≥ 150": null,
+    "et ortası ≥ 72": 0.46
+   },
+   "pis": null,
+   "son_kriter": "alt yüz ≥ 150",
+   "ust_piste": null,
+   "su_kaybi": null
+  },
+  "Kaşarlı pide": {
+   "kriter": {
+    "hamur ortası ≥ 95": 1.46,
+    "alt yüz ≥ 150": null,
+    "kaşar ≥ 70": 0.8
+   },
+   "pis": null,
+   "son_kriter": "alt yüz ≥ 150",
+   "ust_piste": null,
+   "su_kaybi": null
+  },
+  "Kıymalı pide": {
+   "kriter": {
+    "hamur ortası ≥ 95": 1.61,
+    "alt yüz ≥ 150": null,
+    "et ortası ≥ 72": 0.75
+   },
+   "pis": null,
+   "son_kriter": "alt yüz ≥ 150",
+   "ust_piste": null,
+   "su_kaybi": null
+  },
+  "Kuşbaşılı pide": {
+   "kriter": {
+    "hamur ortası ≥ 95": 2.63,
+    "alt yüz ≥ 150": null,
+    "et ortası ≥ 72": 1.51
+   },
+   "pis": null,
+   "son_kriter": "alt yüz ≥ 150",
+   "ust_piste": null,
+   "su_kaybi": null
+  },
+  "Sucuklu pide": {
+   "kriter": {
+    "hamur ortası ≥ 95": 2.57,
+    "alt yüz ≥ 150": null,
+    "et ortası ≥ 72": 1.26,
+    "kaşar ≥ 70": 1.71
+   },
+   "pis": null,
+   "son_kriter": "alt yüz ≥ 150",
+   "ust_piste": null,
+   "su_kaybi": null
+  },
+  "Pizza": {
+   "kriter": {
+    "hamur ortası ≥ 95": 3.22,
+    "alt yüz ≥ 150": null,
+    "et ortası ≥ 72": 1.36,
+    "kaşar ≥ 70": 2.22
+   },
+   "pis": null,
+   "son_kriter": "alt yüz ≥ 150",
+   "ust_piste": null,
+   "su_kaybi": null
+  }
+ },
+ "Kızılötesi bant · eleman 500 °C · hava 290 °C": {
+  "Lahmacun": {
+   "kriter": {
+    "hamur ortası ≥ 95": 0.59,
+    "alt yüz ≥ 150": null,
+    "et ortası ≥ 72": 0.37
+   },
+   "pis": null,
+   "son_kriter": "alt yüz ≥ 150",
+   "ust_piste": null,
+   "su_kaybi": null
+  },
+  "Kaşarlı pide": {
+   "kriter": {
+    "hamur ortası ≥ 95": 1.3,
+    "alt yüz ≥ 150": null,
+    "kaşar ≥ 70": 0.71
+   },
+   "pis": null,
+   "son_kriter": "alt yüz ≥ 150",
+   "ust_piste": null,
+   "su_kaybi": null
+  },
+  "Kıymalı pide": {
+   "kriter": {
+    "hamur ortası ≥ 95": 1.44,
+    "alt yüz ≥ 150": null,
+    "et ortası ≥ 72": 0.59
+   },
+   "pis": null,
+   "son_kriter": "alt yüz ≥ 150",
+   "ust_piste": null,
+   "su_kaybi": null
+  },
+  "Kuşbaşılı pide": {
+   "kriter": {
+    "hamur ortası ≥ 95": 2.35,
+    "alt yüz ≥ 150": null,
+    "et ortası ≥ 72": 1.37
+   },
+   "pis": null,
+   "son_kriter": "alt yüz ≥ 150",
+   "ust_piste": null,
+   "su_kaybi": null
+  },
+  "Sucuklu pide": {
+   "kriter": {
+    "hamur ortası ≥ 95": 2.31,
+    "alt yüz ≥ 150": null,
+    "et ortası ≥ 72": 1.09,
+    "kaşar ≥ 70": 1.57
+   },
+   "pis": null,
+   "son_kriter": "alt yüz ≥ 150",
+   "ust_piste": null,
+   "su_kaybi": null
+  },
+  "Pizza": {
+   "kriter": {
+    "hamur ortası ≥ 95": 2.82,
+    "alt yüz ≥ 150": null,
+    "et ortası ≥ 72": 1.19,
+    "kaşar ≥ 70": 2.04
+   },
+   "pis": null,
+   "son_kriter": "alt yüz ≥ 150",
+   "ust_piste": null,
+   "su_kaybi": null
+  }
+ }
+}

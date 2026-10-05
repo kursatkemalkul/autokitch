@@ -1,0 +1,97 @@
+{
+ "derinlik": {
+  "kapak": [
+   -84.0,
+   -104.0
+  ],
+  "kaset": [
+   -200.0,
+   -525.0
+  ],
+  "kavrama": [
+   -525.0,
+   -565.0
+  ],
+  "bolme": [
+   -565.0,
+   -630.0
+  ],
+  "kuru": [
+   -630.0,
+   -830.0
+  ],
+  "nis": [
+   0.0,
+   -84.0
+  ],
+  "kuru_mm": 200.0,
+  "tahrik_gerek": 303.0,
+  "kuru_gerek": 200.0,
+  "on_nis": 84.0,
+  "sogutulan_z": 461.0,
+  "dusme": 40.0,
+  "kaset_alti": 10.0
+ },
+ "tabla": {
+  "cap": 360.0,
+  "rpm": 35.0,
+  "doz_sn": 10.0,
+  "r_dis": 105.0,
+  "r_ic": 20.0,
+  "doz_strok": 85.0,
+  "tur_doz": 5.83,
+  "serit_ara": 14.6,
+  "x_doz_hiz": 8.5,
+  "x_gecis_hiz": 200.0,
+  "x_strok": 1300.0
+ },
+ "tahrik": {
+  "t_calisma": 0.25,
+  "t_sikisma": 3.0,
+  "t_tasarim": 6.0,
+  "oran": 10.0,
+  "t_motor": 0.67,
+  "rpm_motor": 420.0,
+  "guc_W": 26.4,
+  "motor": {
+   "ad": "NEMA23 kapalı çevrim step",
+   "g": 57.0,
+   "y": 57.0,
+   "z": 76.0,
+   "tork": 1.2
+  },
+  "reduktor": {
+   "ad": "Planet redüktör i=10",
+   "cap": 60.0,
+   "z": 60.0
+  },
+  "yatak": {
+   "cap_dis": 42.0,
+   "cap_ic": 22.0,
+   "z": 12.0
+  },
+  "kece": {
+   "cap_dis": 35.0,
+   "cap_ic": 22.0,
+   "z": 7.0
+  },
+  "adet": 12
+ },
+ "soguk": {
+  "alan_m2": 3.28,
+  "U": 0.367,
+  "q_duvar": 26.4,
+  "q_urun": 3.5,
+  "q_kapak": 25.0,
+  "q_fan": 24.0,
+  "q_toplam": 79.0,
+  "q_secim": 118.4,
+  "kg2": 35.8
+ },
+ "elektrik": {
+  "motor_A": 2.0,
+  "ayni_anda": 2,
+  "guc_kaynagi_W": 154,
+  "kart": 12
+ }
+}

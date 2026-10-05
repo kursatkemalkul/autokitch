@@ -1,0 +1,554 @@
+{
+ "parca": "arka_sac",
+ "surum": "h3_sac_v1",
+ "malzeme": "AISI 304 2B, dış yüz 240 kum satine, hat boyunca yatay",
+ "t": 1.5,
+ "R": 2.25,
+ "K": 0.45,
+ "adet": 1,
+ "birim": "mm",
+ "ust_yuz": "Z = t yüzü = kök panelin +n yüzü (bütün panellerin yerel z = t yüzü)",
+ "dis_kontur": [
+  {
+   "t": "L",
+   "p": [
+    [
+     700.0,
+     2200.0
+    ],
+    [
+     0.0,
+     2200.0
+    ]
+   ]
+  },
+  {
+   "t": "L",
+   "p": [
+    [
+     0.0,
+     2200.0
+    ],
+    [
+     0.0,
+     791.75
+    ]
+   ]
+  },
+  {
+   "t": "L",
+   "p": [
+    [
+     0.0,
+     791.75
+    ],
+    [
+     21.5,
+     791.75
+    ]
+   ]
+  },
+  {
+   "t": "L",
+   "p": [
+    [
+     21.5,
+     791.75
+    ],
+    [
+     21.5,
+     796.25
+    ]
+   ]
+  },
+  {
+   "t": "L",
+   "p": [
+    [
+     21.5,
+     796.25
+    ],
+    [
+     23.0,
+     796.25
+    ]
+   ]
+  },
+  {
+   "t": "L",
+   "p": [
+    [
+     23.0,
+     796.25
+    ],
+    [
+     23.0,
+     777.40542
+    ]
+   ]
+  },
+  {
+   "t": "L",
+   "p": [
+    [
+     23.0,
+     777.40542
+    ],
+    [
+     677.0,
+     777.40542
+    ]
+   ]
+  },
+  {
+   "t": "L",
+   "p": [
+    [
+     677.0,
+     777.40542
+    ],
+    [
+     677.0,
+     796.25
+    ]
+   ]
+  },
+  {
+   "t": "L",
+   "p": [
+    [
+     677.0,
+     796.25
+    ],
+    [
+     678.5,
+     796.25
+    ]
+   ]
+  },
+  {
+   "t": "L",
+   "p": [
+    [
+     678.5,
+     796.25
+    ],
+    [
+     678.5,
+     791.75
+    ]
+   ]
+  },
+  {
+   "t": "L",
+   "p": [
+    [
+     678.5,
+     791.75
+    ],
+    [
+     700.0,
+     791.75
+    ]
+   ]
+  },
+  {
+   "t": "L",
+   "p": [
+    [
+     700.0,
+     791.75
+    ],
+    [
+     700.0,
+     2200.0
+    ]
+   ]
+  }
+ ],
+ "ek_dis_konturlar": [],
+ "ic_konturlar": [
+  [
+   {
+    "t": "C",
+    "c": [
+     12.5,
+     850.0
+    ],
+    "r": 2.5
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     12.5,
+     1150.0
+    ],
+    "r": 2.5
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     12.5,
+     1450.0
+    ],
+    "r": 2.5
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     687.5,
+     850.0
+    ],
+    "r": 2.5
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     687.5,
+     1150.0
+    ],
+    "r": 2.5
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     687.5,
+     1450.0
+    ],
+    "r": 2.5
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     12.5,
+     1750.0
+    ],
+    "r": 2.5
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     12.5,
+     2050.0
+    ],
+    "r": 2.5
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     60.0,
+     2188.0
+    ],
+    "r": 2.5
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     687.5,
+     1750.0
+    ],
+    "r": 2.5
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     350.0,
+     2188.0
+    ],
+    "r": 2.5
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     687.5,
+     2050.0
+    ],
+    "r": 2.5
+   }
+  ],
+  [
+   {
+    "t": "C",
+    "c": [
+     640.0,
+     2188.0
+    ],
+    "r": 2.5
+   }
+  ]
+ ],
+ "bukumler": [
+  {
+   "no": 1,
+   "ad": "alt_donus",
+   "aci": 90.0,
+   "yon": "yukari",
+   "R": 2.25,
+   "K": 0.45,
+   "BA": 4.59458,
+   "tip": "flans",
+   "t": 1.5,
+   "V_kalip": 12.0,
+   "cizgi": [
+    [
+     23.0,
+     789.45271
+    ],
+    [
+     677.0,
+     789.45271
+    ]
+   ],
+   "baslangic": [
+    [
+     23.0,
+     791.75
+    ],
+    [
+     677.0,
+     791.75
+    ]
+   ],
+   "bitis": [
+    [
+     23.0,
+     787.15542
+    ],
+    [
+     677.0,
+     787.15542
+    ]
+   ],
+   "nominal_boy": 654.0,
+   "gercek_aralik": [
+    23.0,
+    677.0
+   ],
+   "gercek_boy": 654.0
+  }
+ ],
+ "formlar": [],
+ "kesikler": [
+  {
+   "panel": "arka",
+   "tip": "rahatlatma",
+   "sekil": "dikdortgen",
+   "merkez_duz": null,
+   "uc": "bas",
+   "genislik": 1.5,
+   "derinlik": 4.5
+  },
+  {
+   "panel": "arka",
+   "tip": "rahatlatma",
+   "sekil": "dikdortgen",
+   "merkez_duz": null,
+   "uc": "son",
+   "genislik": 1.5,
+   "derinlik": 4.5
+  },
+  {
+   "panel": "arka",
+   "tip": "pem_saplama",
+   "sekil": "daire",
+   "merkez_duz": [
+    12.5,
+    850.0
+   ],
+   "parca": "FHP-M5-12",
+   "cap": 5.0
+  },
+  {
+   "panel": "arka",
+   "tip": "pem_saplama",
+   "sekil": "daire",
+   "merkez_duz": [
+    12.5,
+    1150.0
+   ],
+   "parca": "FHP-M5-12",
+   "cap": 5.0
+  },
+  {
+   "panel": "arka",
+   "tip": "pem_saplama",
+   "sekil": "daire",
+   "merkez_duz": [
+    12.5,
+    1450.0
+   ],
+   "parca": "FHP-M5-12",
+   "cap": 5.0
+  },
+  {
+   "panel": "arka",
+   "tip": "pem_saplama",
+   "sekil": "daire",
+   "merkez_duz": [
+    12.5,
+    1750.0
+   ],
+   "parca": "FHP-M5-12",
+   "cap": 5.0
+  },
+  {
+   "panel": "arka",
+   "tip": "pem_saplama",
+   "sekil": "daire",
+   "merkez_duz": [
+    12.5,
+    2050.0
+   ],
+   "parca": "FHP-M5-12",
+   "cap": 5.0
+  },
+  {
+   "panel": "arka",
+   "tip": "pem_saplama",
+   "sekil": "daire",
+   "merkez_duz": [
+    687.5,
+    850.0
+   ],
+   "parca": "FHP-M5-12",
+   "cap": 5.0
+  },
+  {
+   "panel": "arka",
+   "tip": "pem_saplama",
+   "sekil": "daire",
+   "merkez_duz": [
+    687.5,
+    1150.0
+   ],
+   "parca": "FHP-M5-12",
+   "cap": 5.0
+  },
+  {
+   "panel": "arka",
+   "tip": "pem_saplama",
+   "sekil": "daire",
+   "merkez_duz": [
+    687.5,
+    1450.0
+   ],
+   "parca": "FHP-M5-12",
+   "cap": 5.0
+  },
+  {
+   "panel": "arka",
+   "tip": "pem_saplama",
+   "sekil": "daire",
+   "merkez_duz": [
+    687.5,
+    1750.0
+   ],
+   "parca": "FHP-M5-12",
+   "cap": 5.0
+  },
+  {
+   "panel": "arka",
+   "tip": "pem_saplama",
+   "sekil": "daire",
+   "merkez_duz": [
+    687.5,
+    2050.0
+   ],
+   "parca": "FHP-M5-12",
+   "cap": 5.0
+  },
+  {
+   "panel": "arka",
+   "tip": "pem_saplama",
+   "sekil": "daire",
+   "merkez_duz": [
+    60.0,
+    2188.0
+   ],
+   "parca": "FHP-M5-12",
+   "cap": 5.0
+  },
+  {
+   "panel": "arka",
+   "tip": "pem_saplama",
+   "sekil": "daire",
+   "merkez_duz": [
+    350.0,
+    2188.0
+   ],
+   "parca": "FHP-M5-12",
+   "cap": 5.0
+  },
+  {
+   "panel": "arka",
+   "tip": "pem_saplama",
+   "sekil": "daire",
+   "merkez_duz": [
+    640.0,
+    2188.0
+   ],
+   "parca": "FHP-M5-12",
+   "cap": 5.0
+  }
+ ],
+ "parca_sayisi": 1,
+ "levha": {
+  "boy": 1422.595,
+  "en": 700.0,
+  "aci": 0.0,
+  "alan_mm2": 994887.6,
+  "kutle_kg": 11.8342
+ },
+ "sabit_yuz": [
+  350.0,
+  1495.85239
+ ],
+ "donusum_3b": [
+  [
+   1.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  [
+   0.0,
+   1.0,
+   0.0,
+   0.0
+  ],
+  [
+   0.0,
+   0.0,
+   1.0,
+   -830.0
+  ],
+  [
+   0.0,
+   0.0,
+   0.0,
+   1.0
+  ]
+ ]
+}
