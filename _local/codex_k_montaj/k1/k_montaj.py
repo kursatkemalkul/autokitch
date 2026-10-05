@@ -45,6 +45,28 @@ if 'taban_sac_3' in P:
   P[a]['yan']=np.array([0,1.,0]);P[a]['pem_ad']='PEM FHP-M5-15';P[a]['sac']='taban_sac_3'
   haric(a,'taban_sac_3','PEM FHP-M5-15 preslenmiş saplama: adım71 gerçek taban deliğine üretimde kenetlenir; tabanla gelir')
  done.update(PEMS)
+SHELFPEMS=[a for a in P if a.startswith('k71_raf_PEM_')]
+for a in SHELFPEMS:
+ P[a]['yan']=np.array([0,-1.,0]);P[a]['pem_ad']='PEM SP';P[a]['sac']='k71_istasyon_rafi'
+ haric(a,'k71_istasyon_rafi','PEM SP somun: adım71 eşleşen lazer deliğine preslenir; sacla birlikte gelir, dişli bağlayıcıdır')
+done.update(SHELFPEMS)
+THREAD_AXES={}
+for file in ('k71_lower.json','k72_mounts.json'):
+ data=json.loads((ROOT/'_local/codex_k_montaj'/file).read_text(encoding='utf-8'))
+ for j in data['connections']:
+  members=[a for a in j['parts'] if a in P]
+  if j['id'].startswith('top_'):
+   screw,cap=members[:2]
+   haric(screw,cap,'DIN7991 M5×10 / diş açılmış 6 mm kapak: adım71 doğrulanan 6 mm diş kavraması; düz nominal vida ağı helis diş yerine kullanılır, hareket yalnız diş eksenindedir')
+   THREAD_AXES[screw]=[0,100,0]
+  elif file=='k72_mounts.json':
+   screw=next(a for a in members if 'vida' in a);nut=next(a for a in members if 'somun' in a)
+   haric(screw,nut,'ISO4762 / ISO10511 eş çaplı diş çifti: adım72 kavrama ve 1–3 diş taşması denetlenmiş; nominal düz ağ diş kavramasını temsil eder, montaj yalnız ortak eksende')
+   THREAD_AXES[screw]=[0,100,0];THREAD_AXES[nut]=[0,-100,0]
+   for a in members:
+    if 'alt_pul' in a:THREAD_AXES[a]=[0,-100,0]
+   female='k71_raf_PEM_'+j['id']
+   if female in P:haric(screw,female,'Adım71 PEM SP ve adım72 eş M5/M6 vida: ortak lazer deliğinde belirtilen dişli kavrama; yalnız ortak Y ekseni boyunca takılır')
 # Base first; finished welded supports next, shelf later; enclosing panels last.
 def seqrank(a):
  q=rank(a)
@@ -64,7 +86,7 @@ for a in sorted([a for a in P if a not in CEVRE and a not in done],key=seqrank):
  elif P[a]['tur']=='kablo':
   t=buyu(a,t,0.6)
  else:
-  t=yerlestir(GROUPS.get(a,[a]),AD,t,tr(a),pem=PEMS if a=='taban_sac_3' else (),tezgah_kaynak=WELDS.get(a,()),sure_bekle=0.02)
+  t=yerlestir(GROUPS.get(a,[a]),[YOL(THREAD_AXES[a])] if a in THREAD_AXES else AD,t,tr(a),pem=PEMS if a=='taban_sac_3' else SHELFPEMS if a=='k71_istasyon_rafi' else (),tezgah_kaynak=WELDS.get(a,()),sure_bekle=0.02)
  (HERE/'plan_progress.json').write_text(json.dumps({'last_part':a,'installed':len(YER),'problems':PLAN_SORUN,'elapsed_seconds':round(time.time()-T0,2)},ensure_ascii=False,indent=2),encoding='utf-8')
 for a in CEVRE:
  if a not in GOR:basla(a,np.zeros(3),t);YER[a]=t
