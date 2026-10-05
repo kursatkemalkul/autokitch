@@ -213,8 +213,10 @@ ADIMLAR = [
      [(".", 'python "{YAMA}/65_kanal_daralt.py" hat3_v10f.glb hat3_v10g.glb')]),
     ("66", "TOPPING K1 / K2 kapak emniyet sensörleri vidalı: tabana kaynaklı 2 mm L braket + 2 × PEM S-M4 · sensör önden 2 × M4 × 20 (bağlantı denetimi)", ["hat3_v10g.glb"], "hat3_v10h.glb",
      [(".", 'python "{YAMA}/66_emniyet_braket.py" hat3_v10g.glb hat3_v10h.glb')]),
+    ("67", "F üst kabin: arka sac ↔ yanlar + köşebent 11 preslenmiş saplama yerine dıştan ISO 7380 M5 × 10 cıvata (üç eksenli saplama düğümü kurulamıyordu · F montaj v2 sıra denetimi)", ["hat3_v10h.glb"], "hat3_v10i.glb",
+     [(".", 'python "{YAMA}/67_f_arka_civata.py" hat3_v10h.glb hat3_v10i.glb')]),
 ]
-SON = "hat3_v10h.glb"
+SON = "hat3_v10i.glb"
 
 
 def kur(is_dizin, h3, uretec):
