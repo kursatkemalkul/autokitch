@@ -111,8 +111,10 @@ adim('Kaide ve ayaklar', 'Kaide: 304 kare boru 60 × 60 × 3 ön / arka ray + 40
 kamera_genel(['kaide_e_ray_on', 'kaide_e_ray_arka'], yon=(0.45, 0.55, 0.75), olcek=1.0)
 KAIDE = var('kaide_e_ray_on', 'kaide_e_ray_arka', 'kaide_e_kayit_sol', 'kaide_e_kayit_orta', 'kaide_e_kayit_sag') + sorted(a for a in P if a.startswith(('kaide_e_ray_on_tapa', 'kaide_e_ray_arka_tapa', 'kaide_e_ayak_somunu', 'kaide_e_somun')))
 t = koy(KAIDE, AD(UST6, lift=(), yan=()), 'Kaide (kaynaklı çerçeve, tezgâhta) → yere', tezgah_kaynak=KAY('kaide_e_kayit'))
-t = sira_tak(sorted(a for a in P if _re.match(r'ayak_\d$', a)), t, 60.0, 0.5, 0.12)
-t = sira_tak(sorted(a for a in P if _re.match(r'ayak_\d_kontra$', a)), t, 30.0, 0.4, 0.08); olay(t - 0.4, 'Ayarlı ayak M12 × 6 → ray kaynak somunlarına · kontra somun'); t += 0.2
+for i_, a_ in enumerate(sorted(a for a in P if _re.match(r'ayak_\d$', a))):
+    tt_ = tak(a_, t + i_ * 0.12, 0.5, 60.0)
+    if a_ + '_kontra' in P: tak(a_ + '_kontra', t + i_ * 0.12, 0.5, 60.0)        # kontra somun ayağın milinde, ayakla birlikte gelir
+t = tt_ + 0.4; olay(t - 0.4, 'Ayarlı ayak M12 × 6 (kontra somunu milinde) → ray kaynak somunlarına'); t += 0.2
 # ---- 2 ALT MONTAJ
 adim('Taban ve ön kasa (kaynaklı alt montaj)', 'Taban 3 mm + ön kasa (sol / orta / sağ dikme, 788 kayıtları, tapalar) + panel kulakları tezgâhta TIG; tabana FHP saplamalar preslenir. Kaidenin üstüne iner: 7 × M8 bombe başlı vida yukarıdan ray kaynak somunlarına.',
      'taban · dikme × 3 · kayıt × 2 · kulak × 18 · vida M8 × 7')
@@ -145,7 +147,7 @@ adim('Yan sol', 'Yan sol (1,5 · pizza penceresi, preslenmiş FHP saplamalar) te
      'yan sol + fiş paneli J3 · pul + somun M5')
 kamera_genel(['sol_sac_pizza_penceresi'], yon=(-0.8, 0.45, 0.45), olcek=0.8)
 t = koy(['sol_sac_pizza_penceresi', 'fis_paneli'], AD(SOL7, lift=(0.5, 1, 2), yan=()), 'Yan sol (fiş paneli J3 tezgâhta) → soldan, saplamalar kulaklara', pem=sorted(PEM_SAC.get('sol_sac_pizza_penceresi', [])))
-t = somunla(r'govde_(kulak_sol_(on|taban)_\d+_bag|bag_ust_sol)', t, 20.0); olay(t - 0.6, 'Yan sol ↔ kulaklar + üst: pul + fiberli somun M5'); t += 0.2
+t = somunla(r'govde_(kulak_sol_(on|taban)_\d+_bag|bag_ust_sol)', t, 12.0); olay(t - 0.6, 'Yan sol ↔ kulaklar + üst: pul + fiberli somun M5'); t += 0.2
 # ---- 6b ALT MODÜL
 adim('Alt modül', 'Tezgâhta: kalıp + yuva, köprü, kapak katlama mekanizması + kol, uç sensörleri. Sağdan girer, sol yanın saplamalarına oturur.', 'alt modül (kalıp · köprü · kapak mekanizması)')
 kamera_genel(['kalip'], yon=(0.8, 0.45, 0.4), olcek=0.9)
@@ -165,7 +167,7 @@ adim('Arka sac ve E panosu', 'Tezgâhta arka sacın iç yüzüne: E panosu (Beck
 kamera_genel(['arka_sac'], yon=(0.4, 0.45, -0.85), olcek=0.8)
 ARK = ['arka_sac', 'istasyon_kutusu'] + var('sarjor_yan_kapisi_mentese_lamasi', 'sarjor_yan_kapisi_mentese_0', 'sarjor_yan_kapisi_mentese_1')
 t = koy(ARK, AD(ARKA9, lift=(0.5, 1, 2), yan=()), 'Arka sac + E panosu + menteşe laması (tezgâhta) → arkadan', pem=sorted(PEM_SAC.get('arka_sac', [])))
-t = somunla(r'govde_bag_(arka_(sol|sag)|taban_arka|ust_arka|kosebent_arka|kapi_lamasi)', t, 20.0); olay(t - 0.6, 'Arka ↔ yanlar / taban / üst: pul + fiberli somunlar'); t += 0.2
+t = somunla(r'govde_bag_(arka_(sol|sag)|taban_arka|ust_arka|kosebent_arka|kapi_lamasi)', t, 10.0); olay(t - 0.6, 'Arka ↔ yanlar / taban / üst: pul + fiberli somunlar'); t += 0.2
 # ---- 9 ELEKTRİK
 adim('Kablolar ve vakum hattı', 'Güç (kırmızı) ve bilgi (mavi) kabloları, vakum hattı kanallar boyunca: pano ↔ fiş paneli ↔ motorlar / sensörler.', 'kablolar · vakum hattı')
 kamera_genel(['istasyon_kutusu', 'fis_paneli'], yon=(0.6, 0.5, -0.6), olcek=1.0)
