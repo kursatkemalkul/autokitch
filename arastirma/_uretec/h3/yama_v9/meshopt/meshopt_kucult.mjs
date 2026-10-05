@@ -31,7 +31,7 @@ for (const m of J.meshes) for (const p of m.primitives) {
     const A = acc[p.indices], nv = acc[p.attributes.POSITION].count;
     if ((p.mode ?? 4) !== 4) throw Error('mode != 4');
     if (U16 && A.componentType === 5125 && nv <= 65535) u16Acc.add(p.indices);
-    set(A.bufferView, {mod: IDX === 'tri' ? 'TRIANGLES' : IDX === 'seq' ? 'INDICES' : 'HAM', stride: u16Acc.has(p.indices) ? 2 : 4, count: A.count, acc: p.indices});
+    set(A.bufferView, {mod: IDX === 'tri' ? 'TRIANGLES' : IDX === 'seq' ? 'INDICES' : 'HAM', stride: (u16Acc.has(p.indices) || A.componentType === 5123) ? 2 : 4, count: A.count, acc: p.indices});
   }
 }
 for (const a of (J.animations || [])) for (const s of a.samplers) for (const x of [s.input, s.output]) {
@@ -70,8 +70,9 @@ for (let i = 0; i < bvs.length; i++) {
   if (Buffer.compare(Buffer.from(dec), Buffer.from(data)) === 0) dogru++;
   else if (r.mod === 'TRIANGLES') {
     // üçgen sırası aynı mı, üçgen içi döndürme mi?
-    const T = r.stride === 2 ? Uint16Array : Uint32Array;
-    const a = new T(data.slice().buffer), b = new T(dec.buffer); let ok = true, rot = 0;
+    if (r.count * r.stride !== dec.length || data.length !== dec.length) console.log("UYUSMAZ", i, r.stride, r.count, data.length, dec.length, acc[r.acc].componentType);
+    const T = r.stride === 1 ? Uint8Array : r.stride === 2 ? Uint16Array : Uint32Array;
+    const nb = r.count * r.stride, a = new T(Uint8Array.from(data.subarray(0, nb)).buffer), b = new T(dec.buffer); let ok = true, rot = 0;
     for (let t = 0; t < a.length; t += 3) {
       const x = [a[t], a[t + 1], a[t + 2]], y = [b[t], b[t + 1], b[t + 2]];
       if (x[0] === y[0] && x[1] === y[1] && x[2] === y[2]) continue;
