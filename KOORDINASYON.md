@@ -8,7 +8,7 @@ Kemal'in kararı (5 Eki 2026): iki ajan aynı anda, farklı istasyonlarda çalı
 
 | İş | Kim | Branch | Durum |
 |---|---|---|---|
-| Robot + ray + QR dolabı + sipariş animasyonları | Codex | `coord/codex-dukkan-v26` | v25/adım94: QR sütunu diğer uçta, dolapla aynı333mm derinlik;12göz korunur. Kutu koridorda sola dönerek aynı QR yerine bırakılır. Duvar48cm yaklaşır (X5360), kayıtlı kol/ürün56mm,pano72mm pay; pano200mm gömülü. İki tam koşu bayt aynı;23kapalı kablo/kanal katısı,9hat>=2mm. Hız/ivme kontrolü geçer. Tam robot/fizik, bina gömüsü ve elektrik/emniyet onayı açık. |
+| Robot + ray + QR dolabı + sipariş animasyonları | Codex | `coord/codex-dukkan-v26` | BİTTİ v26/adım95: v25 robot/ray/12QR/8sipariş ve tüm14klip aynen korunur. Dükkân içi4724×4433mm,20.94m²; iki900mm sol kapı,80cm oturma cebi,770mm tezgâh,900mm lavabo. Duvarlar yalnız sınır çizgisi.171kapalı katı; iki koşu bayt aynı; tarayıcı oynatma temiz. Yapı/koruma, su-gider uygulaması ve önceki tam robot/fizik denetimi açık. |
 | TOPPING montaj animasyonu v5 | Claude | `claude/topping-montaj-v5` | yayında (açık 3 küçük madde) |
 | Standart önlemleri · makine: acil stop (58) · 10 kapı emniyet anahtarı (59) · hava emniyet valfi (60) · davlumbaz filtresi servis ağzı (61) · hijyen / R290 / A perdesi kayıt | Claude | `claude/standart-makine` | BİTTİ (cb7d1ec) — Kemal incelemesinde |
 | **TOPPING montaj v6**: bağsız 63 parça + geçici dayalı 2 parça bağlanır (KURALLAR §2.3 kural 10), animasyon yeniden üretilir, §5 denetimi | Claude | `claude/topping-montaj-v6` | YAYINDA (5 Eki, PR #5) · açık: kıyma silindiri flanşı, 5 iç elektrik parçası, 2 kovan contası |
@@ -38,7 +38,7 @@ Bir işe başlamadan önce tabloda başka bir ajanın aynı istasyonu ya da ayn�
 ## 2. Dosya sahipliği
 
 - Her ajan yalnız kendi işinin dosyalarına yazar. Başkasının alanındaki dosyayı değiştirmek gerekirse önce Kemal'e sorulur.
-- Codex'in alanı: `arastirma/_uretec/robot_integrated_v25/`, `otonom/hat/robot-integrated-v25/`, `otonom/hat3d/robot-integrated-v25/`, `_local/codex_robot_v25/`, `otonom/hat/makine.html`; zincir94 ve kaydı. Claude K86–89 / E81–85 dosyaları değiştirilmez.
+- Codex'in alanı: `arastirma/_uretec/robot_integrated_v26/`, `otonom/hat/robot-integrated-v26/`, `otonom/hat3d/robot-integrated-v26/`, `_local/codex_robot_v26/`, `otonom/hat/makine.html`; zincir95 ve kaydı. Claude K86–89 / E81–85 dosyaları değiştirilmez.
 - İstasyon montaj animasyonu alanı (istasyonu alan ajanın): `otonom/hat/<ist>-montaj.html`, `otonom/hat3d/v3/<ist>_montaj/`, kendi üreteç klasörü.
 - Ortak dosyalar (`otonom/hat/ist_montaj/montaj-oynatici.js`, `otonom/hat/hat.css`, `index.html`): değiştirmeden önce tabloya not düş, değişikliği küçük tut, geri uyumlu yap.
 
@@ -63,6 +63,6 @@ Robot entegrasyon adımı94, makine geometrisini koruyan son render/animasyon ad
 - Depo herkese açık. Oturum kayıtları `_local/claude_oturum/` altında durur (Kemal: kalsın); `_local/` siteye kopyalanmaz. Parola, anahtar, kişisel bilgi depoya konmaz.
 - Büyük ara dosyalar (`.pkl`, 100 MB üstü GLB) depoya konmaz; GLB gerekirse kayıpsız `.gz` olarak.
 
-ZİNCİR KİLİDİ: Codex · v26/adım95 · kompakt dükkân kapıları, ara duvar, oturma tezgâhı ve lavabo; yalnız çevre, v25 robot/QR ve makine korunur
+ZİNCİR KİLİDİ: BOŞ
 
 Codex v23/adım92: sağ duvar panosu ve ayrı router bölmesi; gömülü iniş, sıfır kapak, doğru dirsek/kesim ve ayrı kablo yolları. İki tam koşu bayt aynı; kanal/kablo katıları kapalı, modüllerde örtüşme yok, kablo yolunda2mm asgari pay. Elektrik nihai devre/kesit-seçicilik ve döşeme yükü, özel ray ve tam robot çarpışması hâlâ açık. E/K cloud dosyalarına dokunulmadı.

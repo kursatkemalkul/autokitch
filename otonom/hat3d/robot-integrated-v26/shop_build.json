@@ -1,0 +1,2780 @@
+{
+  "version": 26,
+  "source_input": "C:\\Users\\Kemal\\Desktop\\Kemal\\WEBSİTE\\AUTOKITCH_COORDINATION\\worktrees\\codex-dukkan-v26\\otonom\\hat3d\\robot-integrated-v25\\hat3_robot_v25.glb.gz",
+  "source_sha256": "c4c8ebecca5fe29b69847a913a122a7abbc93bcc6cbcd3c9033e1fa43c5b2fcd",
+  "source_binary_preserved": true,
+  "original_node_count": 2390,
+  "original_mesh_count": 2280,
+  "removed_roots": [
+    "ROBOT25_ZEMIN_TEMIZ_0",
+    "ROBOT25_ZEMIN_TEMIZ_1",
+    "ROBOT25_ZEMIN_TEMIZ_2",
+    "ROBOT25_ZEMIN_TEMIZ_3",
+    "ROBOT25_ZEMIN_TEMIZ_4",
+    "ROBOT25_ZEMIN_TEMIZ_5",
+    "ROBOT25_ZEMIN_TEMIZ_6",
+    "ROBOT25_ZEMIN_TEMIZ_7",
+    "ROBOT25_ZEMIN_TEMIZ_8",
+    "ROBOT25_ZEMIN_TEMIZ_9",
+    "ROBOT25_ZEMIN_TEMIZ_10",
+    "ROBOT25_ZEMIN_TEMIZ_11",
+    "ROBOT25_ZEMIN_TEMIZ_12",
+    "ROBOT25_ZEMIN_TEMIZ_13",
+    "ROBOT25_ZEMIN_TEMIZ_14",
+    "ROBOT25_ZEMIN_TEMIZ_15",
+    "ROBOT25_ZEMIN_TEMIZ_16",
+    "ROBOT25_ZEMIN_TEMIZ_17",
+    "ROBOT25_ZEMIN_TEMIZ_18",
+    "ROBOT25_ZEMIN_TEMIZ_19",
+    "ROBOT25_ZEMIN_TEMIZ_20",
+    "ROBOT25_ZEMIN_TEMIZ_21",
+    "ROBOT25_SAG_DUVAR_KOSE_CIZGI_0",
+    "ROBOT25_SAG_DUVAR_KOSE_CIZGI_1",
+    "ROBOT25_SAG_DUVAR_KOSE_CIZGI_2",
+    "ROBOT25_SAG_DUVAR_KOSE_CIZGI_3"
+  ],
+  "new_parts": [
+    {
+      "name": "DUKKAN26_ZEMIN_0",
+      "node": 2390,
+      "mesh": 2280,
+      "lo": [
+        0.5860000252723694,
+        -0.009999999776482582,
+        -0.9300000071525574
+      ],
+      "hi": [
+        5.639999866485596,
+        2.2123243267751244e-16,
+        3.61299991607666
+      ],
+      "connection": "continuous floor, existing flush trench retained; three actual water/drain bores"
+    },
+    {
+      "name": "DUKKAN26_ZEMIN_1",
+      "node": 2391,
+      "mesh": 2281,
+      "lo": [
+        3.7009999752044678,
+        -0.009999999776482582,
+        1.8339999914169312
+      ],
+      "hi": [
+        5.486000061035156,
+        1.205664711888301e-16,
+        1.968999981880188
+      ],
+      "connection": "continuous floor, existing flush trench retained; three actual water/drain bores"
+    },
+    {
+      "name": "DUKKAN26_ZEMIN_2",
+      "node": 2392,
+      "mesh": 2282,
+      "lo": [
+        5.354000091552734,
+        -0.009999999776482582,
+        0.9039999842643738
+      ],
+      "hi": [
+        5.466000080108643,
+        1.0813631562743244e-16,
+        1.7660000324249268
+      ],
+      "connection": "continuous floor, existing flush trench retained; three actual water/drain bores"
+    },
+    {
+      "name": "DUKKAN26_ZEMIN_3",
+      "node": 2393,
+      "mesh": 2283,
+      "lo": [
+        5.294000148773193,
+        -0.009999999776482582,
+        -0.44200000166893005
+      ],
+      "hi": [
+        5.340000152587891,
+        4.0715116842893155e-17,
+        0.6649283170700073
+      ],
+      "connection": "continuous floor, existing flush trench retained; three actual water/drain bores"
+    },
+    {
+      "name": "DUKKAN26_ZEMIN_4",
+      "node": 2394,
+      "mesh": 2284,
+      "lo": [
+        5.265324592590332,
+        -0.009999999776482582,
+        1.7496600151062012
+      ],
+      "hi": [
+        5.285999774932861,
+        1.0813631562743244e-16,
+        1.7660000324249268
+      ],
+      "connection": "continuous floor, existing flush trench retained; three actual water/drain bores"
+    },
+    {
+      "name": "DUKKAN26_ZEMIN_5",
+      "node": 2395,
+      "mesh": 2285,
+      "lo": [
+        5.264310836791992,
+        -0.009999999776482582,
+        1.7657498121261597
+      ],
+      "hi": [
+        5.264862537384033,
+        1.0813631562743244e-16,
+        1.7660000324249268
+      ],
+      "connection": "continuous floor, existing flush trench retained; three actual water/drain bores"
+    },
+    {
+      "name": "DUKKAN26_ZEMIN_6",
+      "node": 2396,
+      "mesh": 2286,
+      "lo": [
+        4.093999862670898,
+        -0.009999999776482582,
+        -0.6060000061988831
+      ],
+      "hi": [
+        5.192175388336182,
+        -3.392271662546907e-17,
+        -0.5540000200271606
+      ],
+      "connection": "continuous floor, existing flush trench retained; three actual water/drain bores"
+    },
+    {
+      "name": "DUKKAN26_ZEMIN_7",
+      "node": 2397,
+      "mesh": 2287,
+      "lo": [
+        4.709822177886963,
+        -0.009999999776482582,
+        1.7640000581741333
+      ],
+      "hi": [
+        5.165999889373779,
+        1.0813631562743244e-16,
+        1.7660000324249268
+      ],
+      "connection": "continuous floor, existing flush trench retained; three actual water/drain bores"
+    },
+    {
+      "name": "DUKKAN26_ZEMIN_8",
+      "node": 2398,
+      "mesh": 2288,
+      "lo": [
+        4.707981109619141,
+        -0.009999999776482582,
+        1.7640000581741333
+      ],
+      "hi": [
+        4.709786891937256,
+        1.0802071548246693e-16,
+        1.764112114906311
+      ],
+      "connection": "continuous floor, existing flush trench retained; three actual water/drain bores"
+    },
+    {
+      "name": "DUKKAN26_ZEMIN_9",
+      "node": 2399,
+      "mesh": 2289,
+      "lo": [
+        4.633999824523926,
+        -0.009999999776482582,
+        1.7640000581741333
+      ],
+      "hi": [
+        4.651352405548096,
+        1.0853759748619417e-16,
+        1.7725534439086914
+      ],
+      "connection": "continuous floor, existing flush trench retained; three actual water/drain bores"
+    },
+    {
+      "name": "DUKKAN26_ZEMIN_10",
+      "node": 2400,
+      "mesh": 2290,
+      "lo": [
+        3.7009999752044678,
+        -0.009999999776482582,
+        1.7419999837875366
+      ],
+      "hi": [
+        4.564815044403076,
+        1.0936095983303965e-16,
+        1.7860000133514404
+      ],
+      "connection": "continuous floor, existing flush trench retained; three actual water/drain bores"
+    },
+    {
+      "name": "DUKKAN26_ZEMIN_11",
+      "node": 2401,
+      "mesh": 2291,
+      "lo": [
+        3.999000072479248,
+        -0.009999999776482582,
+        1.8583508729934692
+      ],
+      "hi": [
+        4.00321626663208,
+        1.147388315721613e-16,
+        1.8738272190093994
+      ],
+      "connection": "continuous floor, existing flush trench retained; three actual water/drain bores"
+    },
+    {
+      "name": "DUKKAN26_ZEMIN_12",
+      "node": 2402,
+      "mesh": 2292,
+      "lo": [
+        3.999000072479248,
+        -0.009999999776482582,
+        1.8738479614257812
+      ],
+      "hi": [
+        3.999699592590332,
+        1.1483912556707214e-16,
+        1.8754652738571167
+      ],
+      "connection": "continuous floor, existing flush trench retained; three actual water/drain bores"
+    },
+    {
+      "name": "DUKKAN26_ZEMIN_13",
+      "node": 2403,
+      "mesh": 2293,
+      "lo": [
+        3.999000072479248,
+        -0.009999999776482582,
+        1.8922065496444702
+      ],
+      "hi": [
+        3.999551773071289,
+        1.1598092597997093e-16,
+        1.894112229347229
+      ],
+      "connection": "continuous floor, existing flush trench retained; three actual water/drain bores"
+    },
+    {
+      "name": "DUKKAN26_ZEMIN_14",
+      "node": 2404,
+      "mesh": 2294,
+      "lo": [
+        3.999000072479248,
+        -0.009999999776482582,
+        1.8760058879852295
+      ],
+      "hi": [
+        3.9994823932647705,
+        1.1494246358663716e-16,
+        1.8771528005599976
+      ],
+      "connection": "continuous floor, existing flush trench retained; three actual water/drain bores"
+    },
+    {
+      "name": "DUKKAN26_ZEMIN_15",
+      "node": 2405,
+      "mesh": 2295,
+      "lo": [
+        3.999000072479248,
+        -0.009999999776482582,
+        1.8902524709701538
+      ],
+      "hi": [
+        3.9993672370910645,
+        1.1581736921181205e-16,
+        1.8914411067962646
+      ],
+      "connection": "continuous floor, existing flush trench retained; three actual water/drain bores"
+    },
+    {
+      "name": "DUKKAN26_ZEMIN_16",
+      "node": 2406,
+      "mesh": 2296,
+      "lo": [
+        3.999000072479248,
+        -0.009999999776482582,
+        1.8781254291534424
+      ],
+      "hi": [
+        3.9993152618408203,
+        1.1504937502644842e-16,
+        1.8788989782333374
+      ],
+      "connection": "continuous floor, existing flush trench retained; three actual water/drain bores"
+    },
+    {
+      "name": "DUKKAN26_ZEMIN_17",
+      "node": 2407,
+      "mesh": 2297,
+      "lo": [
+        3.999000072479248,
+        -0.009999999776482582,
+        1.8882843255996704
+      ],
+      "hi": [
+        3.9992330074310303,
+        1.1566760319882565e-16,
+        1.8889954090118408
+      ],
+      "connection": "continuous floor, existing flush trench retained; three actual water/drain bores"
+    },
+    {
+      "name": "DUKKAN26_ZEMIN_18",
+      "node": 2408,
+      "mesh": 2298,
+      "lo": [
+        3.999000072479248,
+        -0.009999999776482582,
+        1.8802107572555542
+      ],
+      "hi": [
+        3.9991984367370605,
+        1.1516056133566534e-16,
+        1.880714774131775
+      ],
+      "connection": "continuous floor, existing flush trench retained; three actual water/drain bores"
+    },
+    {
+      "name": "DUKKAN26_ZEMIN_19",
+      "node": 2409,
+      "mesh": 2299,
+      "lo": [
+        3.999000072479248,
+        -0.009999999776482582,
+        1.8862992525100708
+      ],
+      "hi": [
+        3.9991490840911865,
+        1.1552891478860256e-16,
+        1.8867303133010864
+      ],
+      "connection": "continuous floor, existing flush trench retained; three actual water/drain bores"
+    },
+    {
+      "name": "DUKKAN26_ZEMIN_20",
+      "node": 2410,
+      "mesh": 2300,
+      "lo": [
+        3.999000072479248,
+        -0.009999999776482582,
+        1.8822658061981201
+      ],
+      "hi": [
+        3.999131679534912,
+        1.152768298425658e-16,
+        1.8826135396957397
+      ],
+      "connection": "continuous floor, existing flush trench retained; three actual water/drain bores"
+    },
+    {
+      "name": "DUKKAN26_ZEMIN_21",
+      "node": 2411,
+      "mesh": 2301,
+      "lo": [
+        3.999000072479248,
+        -0.009999999776482582,
+        1.8842941522598267
+      ],
+      "hi": [
+        3.999115228652954,
+        1.1539919963366444e-16,
+        1.8846118450164795
+      ],
+      "connection": "continuous floor, existing flush trench retained; three actual water/drain bores"
+    },
+    {
+      "name": "DUKKAN26_SAG_DUVAR_1_0",
+      "node": 2412,
+      "mesh": 2302,
+      "lo": [
+        5.357999801635742,
+        0,
+        -0.8820000290870667
+      ],
+      "hi": [
+        5.361999988555908,
+        2.4000000953674316,
+        -0.878000020980835
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "DUKKAN26_SAG_DUVAR_1_1",
+      "node": 2413,
+      "mesh": 2303,
+      "lo": [
+        5.357999801635742,
+        0,
+        -0.8820000290870667
+      ],
+      "hi": [
+        5.361999988555908,
+        2.4000000953674316,
+        -0.878000020980835
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "DUKKAN26_SAG_DUVAR_1_2",
+      "node": 2414,
+      "mesh": 2304,
+      "lo": [
+        5.357999801635742,
+        0,
+        3.5510001182556152
+      ],
+      "hi": [
+        5.361999988555908,
+        2.4000000953674316,
+        3.555000066757202
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "DUKKAN26_SAG_DUVAR_1_3",
+      "node": 2415,
+      "mesh": 2305,
+      "lo": [
+        5.357999801635742,
+        0,
+        3.5510001182556152
+      ],
+      "hi": [
+        5.361999988555908,
+        2.4000000953674316,
+        3.555000066757202
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "DUKKAN26_SAG_DUVAR_2_0",
+      "node": 2416,
+      "mesh": 2306,
+      "lo": [
+        5.357999801635742,
+        -0.0020000000949949026,
+        -0.8799999952316284
+      ],
+      "hi": [
+        5.361999988555908,
+        0.0020000000949949026,
+        3.552999973297119
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "DUKKAN26_SAG_DUVAR_2_1",
+      "node": 2417,
+      "mesh": 2307,
+      "lo": [
+        5.357999801635742,
+        -0.0020000000949949026,
+        -0.8799999952316284
+      ],
+      "hi": [
+        5.361999988555908,
+        0.0020000000949949026,
+        3.552999973297119
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "DUKKAN26_SAG_DUVAR_2_2",
+      "node": 2418,
+      "mesh": 2308,
+      "lo": [
+        5.357999801635742,
+        2.3980000019073486,
+        -0.8799999952316284
+      ],
+      "hi": [
+        5.361999988555908,
+        2.4019999504089355,
+        3.552999973297119
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "DUKKAN26_SAG_DUVAR_2_3",
+      "node": 2419,
+      "mesh": 2309,
+      "lo": [
+        5.357999801635742,
+        2.3980000019073486,
+        -0.8799999952316284
+      ],
+      "hi": [
+        5.361999988555908,
+        2.4019999504089355,
+        3.552999973297119
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "DUKKAN26_SOL_DUVAR_1_0",
+      "node": 2420,
+      "mesh": 2310,
+      "lo": [
+        0.6340000033378601,
+        0,
+        -0.8820000290870667
+      ],
+      "hi": [
+        0.6380000114440918,
+        2.4000000953674316,
+        -0.878000020980835
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "DUKKAN26_SOL_DUVAR_1_1",
+      "node": 2421,
+      "mesh": 2311,
+      "lo": [
+        0.6340000033378601,
+        0,
+        -0.8820000290870667
+      ],
+      "hi": [
+        0.6380000114440918,
+        2.4000000953674316,
+        -0.878000020980835
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "DUKKAN26_SOL_DUVAR_1_2",
+      "node": 2422,
+      "mesh": 2312,
+      "lo": [
+        0.6340000033378601,
+        0,
+        3.5510001182556152
+      ],
+      "hi": [
+        0.6380000114440918,
+        2.4000000953674316,
+        3.555000066757202
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "DUKKAN26_SOL_DUVAR_1_3",
+      "node": 2423,
+      "mesh": 2313,
+      "lo": [
+        0.6340000033378601,
+        0,
+        3.5510001182556152
+      ],
+      "hi": [
+        0.6380000114440918,
+        2.4000000953674316,
+        3.555000066757202
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "DUKKAN26_SOL_DUVAR_2_0",
+      "node": 2424,
+      "mesh": 2314,
+      "lo": [
+        0.6340000033378601,
+        -0.0020000000949949026,
+        -0.8799999952316284
+      ],
+      "hi": [
+        0.6380000114440918,
+        0.0020000000949949026,
+        3.552999973297119
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "DUKKAN26_SOL_DUVAR_2_1",
+      "node": 2425,
+      "mesh": 2315,
+      "lo": [
+        0.6340000033378601,
+        -0.0020000000949949026,
+        -0.8799999952316284
+      ],
+      "hi": [
+        0.6380000114440918,
+        0.0020000000949949026,
+        3.552999973297119
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "DUKKAN26_SOL_DUVAR_2_2",
+      "node": 2426,
+      "mesh": 2316,
+      "lo": [
+        0.6340000033378601,
+        2.3980000019073486,
+        -0.8799999952316284
+      ],
+      "hi": [
+        0.6380000114440918,
+        2.4019999504089355,
+        3.552999973297119
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "DUKKAN26_SOL_DUVAR_2_3",
+      "node": 2427,
+      "mesh": 2317,
+      "lo": [
+        0.6340000033378601,
+        2.3980000019073486,
+        -0.8799999952316284
+      ],
+      "hi": [
+        0.6380000114440918,
+        2.4019999504089355,
+        3.552999973297119
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "DUKKAN26_ARKA_DUVAR_0_0",
+      "node": 2428,
+      "mesh": 2318,
+      "lo": [
+        0.6359999775886536,
+        -0.0020000000949949026,
+        -0.8820000290870667
+      ],
+      "hi": [
+        5.360000133514404,
+        0.0020000000949949026,
+        -0.878000020980835
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "DUKKAN26_ARKA_DUVAR_0_1",
+      "node": 2429,
+      "mesh": 2319,
+      "lo": [
+        0.6359999775886536,
+        2.3980000019073486,
+        -0.8820000290870667
+      ],
+      "hi": [
+        5.360000133514404,
+        2.4019999504089355,
+        -0.878000020980835
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "DUKKAN26_ARKA_DUVAR_0_2",
+      "node": 2430,
+      "mesh": 2320,
+      "lo": [
+        0.6359999775886536,
+        -0.0020000000949949026,
+        -0.8820000290870667
+      ],
+      "hi": [
+        5.360000133514404,
+        0.0020000000949949026,
+        -0.878000020980835
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "DUKKAN26_ARKA_DUVAR_0_3",
+      "node": 2431,
+      "mesh": 2321,
+      "lo": [
+        0.6359999775886536,
+        2.3980000019073486,
+        -0.8820000290870667
+      ],
+      "hi": [
+        5.360000133514404,
+        2.4019999504089355,
+        -0.878000020980835
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "DUKKAN26_ARKA_DUVAR_1_0",
+      "node": 2432,
+      "mesh": 2322,
+      "lo": [
+        0.6340000033378601,
+        0,
+        -0.8820000290870667
+      ],
+      "hi": [
+        0.6380000114440918,
+        2.4000000953674316,
+        -0.878000020980835
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "DUKKAN26_ARKA_DUVAR_1_1",
+      "node": 2433,
+      "mesh": 2323,
+      "lo": [
+        5.357999801635742,
+        0,
+        -0.8820000290870667
+      ],
+      "hi": [
+        5.361999988555908,
+        2.4000000953674316,
+        -0.878000020980835
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "DUKKAN26_ARKA_DUVAR_1_2",
+      "node": 2434,
+      "mesh": 2324,
+      "lo": [
+        0.6340000033378601,
+        0,
+        -0.8820000290870667
+      ],
+      "hi": [
+        0.6380000114440918,
+        2.4000000953674316,
+        -0.878000020980835
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "DUKKAN26_ARKA_DUVAR_1_3",
+      "node": 2435,
+      "mesh": 2325,
+      "lo": [
+        5.357999801635742,
+        0,
+        -0.8820000290870667
+      ],
+      "hi": [
+        5.361999988555908,
+        2.4000000953674316,
+        -0.878000020980835
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "DUKKAN26_ON_DUVAR_KAPI_UST_0_0",
+      "node": 2436,
+      "mesh": 2326,
+      "lo": [
+        0.6359999775886536,
+        2.128000020980835,
+        3.5510001182556152
+      ],
+      "hi": [
+        5.360000133514404,
+        2.131999969482422,
+        3.555000066757202
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "DUKKAN26_ON_DUVAR_KAPI_UST_0_1",
+      "node": 2437,
+      "mesh": 2327,
+      "lo": [
+        0.6359999775886536,
+        2.3980000019073486,
+        3.5510001182556152
+      ],
+      "hi": [
+        5.360000133514404,
+        2.4019999504089355,
+        3.555000066757202
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "DUKKAN26_ON_DUVAR_KAPI_UST_0_2",
+      "node": 2438,
+      "mesh": 2328,
+      "lo": [
+        0.6359999775886536,
+        2.128000020980835,
+        3.5510001182556152
+      ],
+      "hi": [
+        5.360000133514404,
+        2.131999969482422,
+        3.555000066757202
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "DUKKAN26_ON_DUVAR_KAPI_UST_0_3",
+      "node": 2439,
+      "mesh": 2329,
+      "lo": [
+        0.6359999775886536,
+        2.3980000019073486,
+        3.5510001182556152
+      ],
+      "hi": [
+        5.360000133514404,
+        2.4019999504089355,
+        3.555000066757202
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "DUKKAN26_ON_DUVAR_KAPI_UST_1_0",
+      "node": 2440,
+      "mesh": 2330,
+      "lo": [
+        0.6340000033378601,
+        2.130000114440918,
+        3.5510001182556152
+      ],
+      "hi": [
+        0.6380000114440918,
+        2.4000000953674316,
+        3.555000066757202
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "DUKKAN26_ON_DUVAR_KAPI_UST_1_1",
+      "node": 2441,
+      "mesh": 2331,
+      "lo": [
+        5.357999801635742,
+        2.130000114440918,
+        3.5510001182556152
+      ],
+      "hi": [
+        5.361999988555908,
+        2.4000000953674316,
+        3.555000066757202
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "DUKKAN26_ON_DUVAR_KAPI_UST_1_2",
+      "node": 2442,
+      "mesh": 2332,
+      "lo": [
+        0.6340000033378601,
+        2.130000114440918,
+        3.5510001182556152
+      ],
+      "hi": [
+        0.6380000114440918,
+        2.4000000953674316,
+        3.555000066757202
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "DUKKAN26_ON_DUVAR_KAPI_UST_1_3",
+      "node": 2443,
+      "mesh": 2333,
+      "lo": [
+        5.357999801635742,
+        2.130000114440918,
+        3.5510001182556152
+      ],
+      "hi": [
+        5.361999988555908,
+        2.4000000953674316,
+        3.555000066757202
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "DUKKAN26_ON_DUVAR_SAG_0_0",
+      "node": 2444,
+      "mesh": 2334,
+      "lo": [
+        1.6360000371932983,
+        -0.0020000000949949026,
+        3.5510001182556152
+      ],
+      "hi": [
+        5.360000133514404,
+        0.0020000000949949026,
+        3.555000066757202
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "DUKKAN26_ON_DUVAR_SAG_0_1",
+      "node": 2445,
+      "mesh": 2335,
+      "lo": [
+        1.6360000371932983,
+        2.128000020980835,
+        3.5510001182556152
+      ],
+      "hi": [
+        5.360000133514404,
+        2.131999969482422,
+        3.555000066757202
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "DUKKAN26_ON_DUVAR_SAG_0_2",
+      "node": 2446,
+      "mesh": 2336,
+      "lo": [
+        1.6360000371932983,
+        -0.0020000000949949026,
+        3.5510001182556152
+      ],
+      "hi": [
+        5.360000133514404,
+        0.0020000000949949026,
+        3.555000066757202
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "DUKKAN26_ON_DUVAR_SAG_0_3",
+      "node": 2447,
+      "mesh": 2337,
+      "lo": [
+        1.6360000371932983,
+        2.128000020980835,
+        3.5510001182556152
+      ],
+      "hi": [
+        5.360000133514404,
+        2.131999969482422,
+        3.555000066757202
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "DUKKAN26_ON_DUVAR_SAG_1_0",
+      "node": 2448,
+      "mesh": 2338,
+      "lo": [
+        1.6339999437332153,
+        0,
+        3.5510001182556152
+      ],
+      "hi": [
+        1.6380000114440918,
+        2.130000114440918,
+        3.555000066757202
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "DUKKAN26_ON_DUVAR_SAG_1_1",
+      "node": 2449,
+      "mesh": 2339,
+      "lo": [
+        5.357999801635742,
+        0,
+        3.5510001182556152
+      ],
+      "hi": [
+        5.361999988555908,
+        2.130000114440918,
+        3.555000066757202
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "DUKKAN26_ON_DUVAR_SAG_1_2",
+      "node": 2450,
+      "mesh": 2340,
+      "lo": [
+        1.6339999437332153,
+        0,
+        3.5510001182556152
+      ],
+      "hi": [
+        1.6380000114440918,
+        2.130000114440918,
+        3.555000066757202
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "DUKKAN26_ON_DUVAR_SAG_1_3",
+      "node": 2451,
+      "mesh": 2341,
+      "lo": [
+        5.357999801635742,
+        0,
+        3.5510001182556152
+      ],
+      "hi": [
+        5.361999988555908,
+        2.130000114440918,
+        3.555000066757202
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "DUKKAN26_ARA_DUVAR_0_0",
+      "node": 2452,
+      "mesh": 2342,
+      "lo": [
+        1.6360000371932983,
+        -0.0020000000949949026,
+        2.13100004196167
+      ],
+      "hi": [
+        3.5869998931884766,
+        0.0020000000949949026,
+        2.134999990463257
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "DUKKAN26_ARA_DUVAR_0_1",
+      "node": 2453,
+      "mesh": 2343,
+      "lo": [
+        1.6360000371932983,
+        2.0480000972747803,
+        2.13100004196167
+      ],
+      "hi": [
+        3.5869998931884766,
+        2.052000045776367,
+        2.134999990463257
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "DUKKAN26_ARA_DUVAR_0_2",
+      "node": 2454,
+      "mesh": 2344,
+      "lo": [
+        1.6360000371932983,
+        -0.0020000000949949026,
+        2.13100004196167
+      ],
+      "hi": [
+        3.5869998931884766,
+        0.0020000000949949026,
+        2.134999990463257
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "DUKKAN26_ARA_DUVAR_0_3",
+      "node": 2455,
+      "mesh": 2345,
+      "lo": [
+        1.6360000371932983,
+        2.0480000972747803,
+        2.13100004196167
+      ],
+      "hi": [
+        3.5869998931884766,
+        2.052000045776367,
+        2.134999990463257
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "DUKKAN26_ARA_DUVAR_1_0",
+      "node": 2456,
+      "mesh": 2346,
+      "lo": [
+        1.6339999437332153,
+        0,
+        2.13100004196167
+      ],
+      "hi": [
+        1.6380000114440918,
+        2.049999952316284,
+        2.134999990463257
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "DUKKAN26_ARA_DUVAR_1_1",
+      "node": 2457,
+      "mesh": 2347,
+      "lo": [
+        3.5850000381469727,
+        0,
+        2.13100004196167
+      ],
+      "hi": [
+        3.5889999866485596,
+        2.049999952316284,
+        2.134999990463257
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "DUKKAN26_ARA_DUVAR_1_2",
+      "node": 2458,
+      "mesh": 2348,
+      "lo": [
+        1.6339999437332153,
+        0,
+        2.13100004196167
+      ],
+      "hi": [
+        1.6380000114440918,
+        2.049999952316284,
+        2.134999990463257
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "DUKKAN26_ARA_DUVAR_1_3",
+      "node": 2459,
+      "mesh": 2349,
+      "lo": [
+        3.5850000381469727,
+        0,
+        2.13100004196167
+      ],
+      "hi": [
+        3.5889999866485596,
+        2.049999952316284,
+        2.134999990463257
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "DUKKAN26_ARA_DUVAR_QR_BIRLESIM_0_0",
+      "node": 2460,
+      "mesh": 2350,
+      "lo": [
+        3.5869998931884766,
+        -0.0020000000949949026,
+        2.0810000896453857
+      ],
+      "hi": [
+        3.5969998836517334,
+        0.0020000000949949026,
+        2.0850000381469727
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "DUKKAN26_ARA_DUVAR_QR_BIRLESIM_0_1",
+      "node": 2461,
+      "mesh": 2351,
+      "lo": [
+        3.5869998931884766,
+        2.0480000972747803,
+        2.0810000896453857
+      ],
+      "hi": [
+        3.5969998836517334,
+        2.052000045776367,
+        2.0850000381469727
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "DUKKAN26_ARA_DUVAR_QR_BIRLESIM_0_2",
+      "node": 2462,
+      "mesh": 2352,
+      "lo": [
+        3.5869998931884766,
+        -0.0020000000949949026,
+        2.13100004196167
+      ],
+      "hi": [
+        3.5969998836517334,
+        0.0020000000949949026,
+        2.134999990463257
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "DUKKAN26_ARA_DUVAR_QR_BIRLESIM_0_3",
+      "node": 2463,
+      "mesh": 2353,
+      "lo": [
+        3.5869998931884766,
+        2.0480000972747803,
+        2.13100004196167
+      ],
+      "hi": [
+        3.5969998836517334,
+        2.052000045776367,
+        2.134999990463257
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "DUKKAN26_ARA_DUVAR_QR_BIRLESIM_1_0",
+      "node": 2464,
+      "mesh": 2354,
+      "lo": [
+        3.5850000381469727,
+        0,
+        2.0810000896453857
+      ],
+      "hi": [
+        3.5889999866485596,
+        2.049999952316284,
+        2.0850000381469727
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "DUKKAN26_ARA_DUVAR_QR_BIRLESIM_1_1",
+      "node": 2465,
+      "mesh": 2355,
+      "lo": [
+        3.5950000286102295,
+        0,
+        2.0810000896453857
+      ],
+      "hi": [
+        3.5989999771118164,
+        2.049999952316284,
+        2.0850000381469727
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "DUKKAN26_ARA_DUVAR_QR_BIRLESIM_1_2",
+      "node": 2466,
+      "mesh": 2356,
+      "lo": [
+        3.5850000381469727,
+        0,
+        2.13100004196167
+      ],
+      "hi": [
+        3.5889999866485596,
+        2.049999952316284,
+        2.134999990463257
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "DUKKAN26_ARA_DUVAR_QR_BIRLESIM_1_3",
+      "node": 2467,
+      "mesh": 2357,
+      "lo": [
+        3.5950000286102295,
+        0,
+        2.13100004196167
+      ],
+      "hi": [
+        3.5989999771118164,
+        2.049999952316284,
+        2.134999990463257
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "DUKKAN26_ARA_DUVAR_QR_BIRLESIM_2_0",
+      "node": 2468,
+      "mesh": 2358,
+      "lo": [
+        3.5850000381469727,
+        -0.0020000000949949026,
+        2.0829999446868896
+      ],
+      "hi": [
+        3.5889999866485596,
+        0.0020000000949949026,
+        2.132999897003174
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "DUKKAN26_ARA_DUVAR_QR_BIRLESIM_2_1",
+      "node": 2469,
+      "mesh": 2359,
+      "lo": [
+        3.5950000286102295,
+        -0.0020000000949949026,
+        2.0829999446868896
+      ],
+      "hi": [
+        3.5989999771118164,
+        0.0020000000949949026,
+        2.132999897003174
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "DUKKAN26_ARA_DUVAR_QR_BIRLESIM_2_2",
+      "node": 2470,
+      "mesh": 2360,
+      "lo": [
+        3.5850000381469727,
+        2.0480000972747803,
+        2.0829999446868896
+      ],
+      "hi": [
+        3.5889999866485596,
+        2.052000045776367,
+        2.132999897003174
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "DUKKAN26_ARA_DUVAR_QR_BIRLESIM_2_3",
+      "node": 2471,
+      "mesh": 2361,
+      "lo": [
+        3.5950000286102295,
+        2.0480000972747803,
+        2.0829999446868896
+      ],
+      "hi": [
+        3.5989999771118164,
+        2.052000045776367,
+        2.132999897003174
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "DUKKAN26_DUKKAN_GIRIS_SOL_KASA",
+      "node": 2472,
+      "mesh": 2362,
+      "lo": [
+        0.6360000002831221,
+        -5.7220459037665705e-8,
+        3.5350000007748603
+      ],
+      "hi": [
+        0.677999999716878,
+        2.130000057220459,
+        3.5709999992251396
+      ],
+      "connection": "jamb fixed to left wall/floor"
+    },
+    {
+      "name": "DUKKAN26_DUKKAN_GIRIS_SAG_KASA",
+      "node": 2473,
+      "mesh": 2363,
+      "lo": [
+        1.5940000002831218,
+        -5.7220459037665705e-8,
+        3.5350000007748603
+      ],
+      "hi": [
+        1.6359999997168777,
+        2.130000057220459,
+        3.5709999992251396
+      ],
+      "connection": "jamb anchored at partition/front wall"
+    },
+    {
+      "name": "DUKKAN26_DUKKAN_GIRIS_UST_KASA",
+      "node": 2474,
+      "mesh": 2364,
+      "lo": [
+        0.6779999957084655,
+        2.088000000283122,
+        3.5350000007748603
+      ],
+      "hi": [
+        1.5940000042915343,
+        2.129999999716878,
+        3.5709999992251396
+      ],
+      "connection": "header between jambs; clear opening 900 x 2080"
+    },
+    {
+      "name": "DUKKAN26_DUKKAN_GIRIS_KANAT_SOL",
+      "node": 2475,
+      "mesh": 2365,
+      "lo": [
+        0.6889999998137355,
+        0.008000043869018647,
+        3.540999999895692
+      ],
+      "hi": [
+        0.7140000001862645,
+        2.0749999561309815,
+        3.565000000104308
+      ],
+      "connection": "leaf on two jamb hinges"
+    },
+    {
+      "name": "DUKKAN26_DUKKAN_GIRIS_KANAT_SAG",
+      "node": 2476,
+      "mesh": 2366,
+      "lo": [
+        1.5579999998137355,
+        0.008000043869018647,
+        3.540999999895692
+      ],
+      "hi": [
+        1.5830000001862645,
+        2.0749999561309815,
+        3.565000000104308
+      ],
+      "connection": "leaf crossmembers welded"
+    },
+    {
+      "name": "DUKKAN26_DUKKAN_GIRIS_KANAT_ENINE_0.008",
+      "node": 2477,
+      "mesh": 2367,
+      "lo": [
+        0.7140000090599061,
+        0.007999999813735486,
+        3.540999999895692
+      ],
+      "hi": [
+        1.5579999909400941,
+        0.03300000018626452,
+        3.565000000104308
+      ],
+      "connection": "leaf crossmember butt joint"
+    },
+    {
+      "name": "DUKKAN26_DUKKAN_GIRIS_KANAT_ENINE_2.05",
+      "node": 2478,
+      "mesh": 2368,
+      "lo": [
+        0.7140000090599061,
+        2.0499999998137355,
+        3.540999999895692
+      ],
+      "hi": [
+        1.5579999909400941,
+        2.0750000001862645,
+        3.565000000104308
+      ],
+      "connection": "leaf crossmember butt joint"
+    },
+    {
+      "name": "DUKKAN26_DUKKAN_GIRIS_MENTESE_0.26",
+      "node": 2479,
+      "mesh": 2369,
+      "lo": [
+        0.6749999999776484,
+        0.25999999985098843,
+        3.5330000004470348
+      ],
+      "hi": [
+        0.6980000000223519,
+        0.33000000014901165,
+        3.572999999552965
+      ],
+      "connection": "hinge on own jamb and leaf"
+    },
+    {
+      "name": "DUKKAN26_DUKKAN_GIRIS_MENTESE_1.7",
+      "node": 2480,
+      "mesh": 2370,
+      "lo": [
+        0.6749999999776484,
+        1.6999999998509883,
+        3.5330000004470348
+      ],
+      "hi": [
+        0.6980000000223519,
+        1.7700000001490115,
+        3.572999999552965
+      ],
+      "connection": "hinge on own jamb and leaf"
+    },
+    {
+      "name": "DUKKAN26_DUKKAN_GIRIS_KULP",
+      "node": 2481,
+      "mesh": 2371,
+      "lo": [
+        1.4630000591278076,
+        0.921999990940094,
+        3.569999933242798
+      ],
+      "hi": [
+        1.5705000162124634,
+        0.9380000233650208,
+        3.5859999656677246
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "DUKKAN26_DUKKAN_GIRIS_KULP_AYAK",
+      "node": 2482,
+      "mesh": 2372,
+      "lo": [
+        1.5625,
+        0.921999990940094,
+        3.565000057220459
+      ],
+      "hi": [
+        1.5785000324249268,
+        0.9380000233650208,
+        3.578000068664551
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "DUKKAN26_DUKKAN_GIRIS_ACILMA_YAYI_0",
+      "node": 2483,
+      "mesh": 2373,
+      "lo": [
+        1.5797865390777588,
+        0.0017000000225380063,
+        3.552957534790039
+      ],
+      "hi": [
+        1.5842993259429932,
+        0.00430000014603138,
+        3.6115128993988037
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "DUKKAN26_DUKKAN_GIRIS_ACILMA_YAYI_2",
+      "node": 2484,
+      "mesh": 2374,
+      "lo": [
+        1.5645394325256348,
+        0.0017000000225380063,
+        3.66947865486145
+      ],
+      "hi": [
+        1.5766342878341675,
+        0.00430000014603138,
+        3.7276225090026855
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "DUKKAN26_DUKKAN_GIRIS_ACILMA_YAYI_4",
+      "node": 2485,
+      "mesh": 2375,
+      "lo": [
+        1.5343115329742432,
+        0.0017000000225380063,
+        3.7840068340301514
+      ],
+      "hi": [
+        1.5537817478179932,
+        0.00430000014603138,
+        3.8407442569732666
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "DUKKAN26_DUKKAN_GIRIS_ACILMA_YAYI_6",
+      "node": 2486,
+      "mesh": 2376,
+      "lo": [
+        1.4896200895309448,
+        0.0017000000225380063,
+        3.894582509994507
+      ],
+      "hi": [
+        1.5161324739456177,
+        0.00430000014603138,
+        3.9489426612854004
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "DUKKAN26_DUKKAN_GIRIS_ACILMA_YAYI_8",
+      "node": 2487,
+      "mesh": 2377,
+      "lo": [
+        1.431229829788208,
+        0.0017000000225380063,
+        3.9993135929107666
+      ],
+      "hi": [
+        1.4643306732177734,
+        0.00430000014603138,
+        4.050366401672363
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "DUKKAN26_DUKKAN_GIRIS_ACILMA_YAYI_10",
+      "node": 2488,
+      "mesh": 2378,
+      "lo": [
+        1.3601398468017578,
+        0.0017000000225380063,
+        4.096407890319824
+      ],
+      "hi": [
+        1.39926278591156,
+        0.00430000014603138,
+        4.143280029296875
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "DUKKAN26_DUKKAN_GIRIS_ACILMA_YAYI_12",
+      "node": 2489,
+      "mesh": 2379,
+      "lo": [
+        1.2775664329528809,
+        0.0017000000225380063,
+        4.184204578399658
+      ],
+      "hi": [
+        1.3220421075820923,
+        0.00430000014603138,
+        4.226093769073486
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "DUKKAN26_DUKKAN_GIRIS_ACILMA_YAYI_14",
+      "node": 2490,
+      "mesh": 2380,
+      "lo": [
+        1.1849225759506226,
+        0.0017000000225380063,
+        4.26120138168335
+      ],
+      "hi": [
+        1.233989953994751,
+        0.00430000014603138,
+        4.297390460968018
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "DUKKAN26_DUKKAN_GIRIS_ACILMA_YAYI_16",
+      "node": 2491,
+      "mesh": 2381,
+      "lo": [
+        1.08379328250885,
+        0.0017000000225380063,
+        4.326080322265625
+      ],
+      "hi": [
+        1.1366127729415894,
+        0.00430000014603138,
+        4.355950832366943
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "DUKKAN26_DUKKAN_GIRIS_ACILMA_YAYI_18",
+      "node": 2492,
+      "mesh": 2382,
+      "lo": [
+        0.9759089350700378,
+        0.0017000000225380063,
+        4.377731800079346
+      ],
+      "hi": [
+        1.0315768718719482,
+        0.00430000014603138,
+        4.4007720947265625
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "DUKKAN26_DUKKAN_GIRIS_ACILMA_YAYI_20",
+      "node": 2493,
+      "mesh": 2383,
+      "lo": [
+        0.8631155490875244,
+        0.0017000000225380063,
+        4.415271759033203
+      ],
+      "hi": [
+        0.9206794500350952,
+        0.00430000014603138,
+        4.431087970733643
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "DUKKAN26_DUKKAN_GIRIS_ACILMA_YAYI_22",
+      "node": 2494,
+      "mesh": 2384,
+      "lo": [
+        0.7473430037498474,
+        0.0017000000225380063,
+        4.438057899475098
+      ],
+      "hi": [
+        0.8058178424835205,
+        0.00430000014603138,
+        4.446379661560059
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "DUKKAN26_ROBOT_ALANI_GIRIS_SOL_KASA",
+      "node": 2495,
+      "mesh": 2385,
+      "lo": [
+        0.6360000002831221,
+        -5.7220459037665705e-8,
+        2.1150000007748604
+      ],
+      "hi": [
+        0.677999999716878,
+        2.130000057220459,
+        2.1509999992251396
+      ],
+      "connection": "jamb fixed to left wall/floor"
+    },
+    {
+      "name": "DUKKAN26_ROBOT_ALANI_GIRIS_SAG_KASA",
+      "node": 2496,
+      "mesh": 2386,
+      "lo": [
+        1.5940000002831218,
+        -5.7220459037665705e-8,
+        2.1150000007748604
+      ],
+      "hi": [
+        1.6359999997168777,
+        2.130000057220459,
+        2.1509999992251396
+      ],
+      "connection": "jamb anchored at partition/front wall"
+    },
+    {
+      "name": "DUKKAN26_ROBOT_ALANI_GIRIS_UST_KASA",
+      "node": 2497,
+      "mesh": 2387,
+      "lo": [
+        0.6779999957084655,
+        2.088000000283122,
+        2.1150000007748604
+      ],
+      "hi": [
+        1.5940000042915343,
+        2.129999999716878,
+        2.1509999992251396
+      ],
+      "connection": "header between jambs; clear opening 900 x 2080"
+    },
+    {
+      "name": "DUKKAN26_ROBOT_ALANI_GIRIS_KANAT_SOL",
+      "node": 2498,
+      "mesh": 2388,
+      "lo": [
+        0.6889999998137355,
+        0.008000043869018647,
+        2.120999999895692
+      ],
+      "hi": [
+        0.7140000001862645,
+        2.0749999561309815,
+        2.145000000104308
+      ],
+      "connection": "leaf on two jamb hinges"
+    },
+    {
+      "name": "DUKKAN26_ROBOT_ALANI_GIRIS_KANAT_SAG",
+      "node": 2499,
+      "mesh": 2389,
+      "lo": [
+        1.5579999998137355,
+        0.008000043869018647,
+        2.120999999895692
+      ],
+      "hi": [
+        1.5830000001862645,
+        2.0749999561309815,
+        2.145000000104308
+      ],
+      "connection": "leaf crossmembers welded"
+    },
+    {
+      "name": "DUKKAN26_ROBOT_ALANI_GIRIS_KANAT_ENINE_0.008",
+      "node": 2500,
+      "mesh": 2390,
+      "lo": [
+        0.7140000090599061,
+        0.007999999813735486,
+        2.120999999895692
+      ],
+      "hi": [
+        1.5579999909400941,
+        0.03300000018626452,
+        2.145000000104308
+      ],
+      "connection": "leaf crossmember butt joint"
+    },
+    {
+      "name": "DUKKAN26_ROBOT_ALANI_GIRIS_KANAT_ENINE_2.05",
+      "node": 2501,
+      "mesh": 2391,
+      "lo": [
+        0.7140000090599061,
+        2.0499999998137355,
+        2.120999999895692
+      ],
+      "hi": [
+        1.5579999909400941,
+        2.0750000001862645,
+        2.145000000104308
+      ],
+      "connection": "leaf crossmember butt joint"
+    },
+    {
+      "name": "DUKKAN26_ROBOT_ALANI_GIRIS_MENTESE_0.26",
+      "node": 2502,
+      "mesh": 2392,
+      "lo": [
+        0.6749999999776484,
+        0.25999999985098843,
+        2.113000000447035
+      ],
+      "hi": [
+        0.6980000000223519,
+        0.33000000014901165,
+        2.152999999552965
+      ],
+      "connection": "hinge on own jamb and leaf"
+    },
+    {
+      "name": "DUKKAN26_ROBOT_ALANI_GIRIS_MENTESE_1.7",
+      "node": 2503,
+      "mesh": 2393,
+      "lo": [
+        0.6749999999776484,
+        1.6999999998509883,
+        2.113000000447035
+      ],
+      "hi": [
+        0.6980000000223519,
+        1.7700000001490115,
+        2.152999999552965
+      ],
+      "connection": "hinge on own jamb and leaf"
+    },
+    {
+      "name": "DUKKAN26_ROBOT_ALANI_GIRIS_KULP",
+      "node": 2504,
+      "mesh": 2394,
+      "lo": [
+        1.4630000591278076,
+        0.921999990940094,
+        2.1500000953674316
+      ],
+      "hi": [
+        1.5705000162124634,
+        0.9380000233650208,
+        2.1659998893737793
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "DUKKAN26_ROBOT_ALANI_GIRIS_KULP_AYAK",
+      "node": 2505,
+      "mesh": 2395,
+      "lo": [
+        1.5625,
+        0.921999990940094,
+        2.1449999809265137
+      ],
+      "hi": [
+        1.5785000324249268,
+        0.9380000233650208,
+        2.1579999923706055
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "DUKKAN26_ROBOT_ALANI_GIRIS_EMNIYET_YERI",
+      "node": 2506,
+      "mesh": 2396,
+      "lo": [
+        1.5959999992400407,
+        0.9749999998509884,
+        2.1509999998956917
+      ],
+      "hi": [
+        1.628000000759959,
+        1.0450000001490116,
+        2.175000000104308
+      ],
+      "connection": "reserved safety interlock envelope; final circuit not designed"
+    },
+    {
+      "name": "DUKKAN26_ROBOT_ALANI_GIRIS_ACILMA_YAYI_0",
+      "node": 2507,
+      "mesh": 2397,
+      "lo": [
+        1.5797865390777588,
+        0.0017000000225380063,
+        2.1329574584960938
+      ],
+      "hi": [
+        1.5842993259429932,
+        0.00430000014603138,
+        2.1915128231048584
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "DUKKAN26_ROBOT_ALANI_GIRIS_ACILMA_YAYI_2",
+      "node": 2508,
+      "mesh": 2398,
+      "lo": [
+        1.5645394325256348,
+        0.0017000000225380063,
+        2.249478578567505
+      ],
+      "hi": [
+        1.5766342878341675,
+        0.00430000014603138,
+        2.3076224327087402
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "DUKKAN26_ROBOT_ALANI_GIRIS_ACILMA_YAYI_4",
+      "node": 2509,
+      "mesh": 2399,
+      "lo": [
+        1.5343115329742432,
+        0.0017000000225380063,
+        2.364006757736206
+      ],
+      "hi": [
+        1.5537817478179932,
+        0.00430000014603138,
+        2.4207441806793213
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "DUKKAN26_ROBOT_ALANI_GIRIS_ACILMA_YAYI_6",
+      "node": 2510,
+      "mesh": 2400,
+      "lo": [
+        1.4896200895309448,
+        0.0017000000225380063,
+        2.4745824337005615
+      ],
+      "hi": [
+        1.5161324739456177,
+        0.00430000014603138,
+        2.528942584991455
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "DUKKAN26_ROBOT_ALANI_GIRIS_ACILMA_YAYI_8",
+      "node": 2511,
+      "mesh": 2401,
+      "lo": [
+        1.431229829788208,
+        0.0017000000225380063,
+        2.5793135166168213
+      ],
+      "hi": [
+        1.4643306732177734,
+        0.00430000014603138,
+        2.630366325378418
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "DUKKAN26_ROBOT_ALANI_GIRIS_ACILMA_YAYI_10",
+      "node": 2512,
+      "mesh": 2402,
+      "lo": [
+        1.3601398468017578,
+        0.0017000000225380063,
+        2.676408052444458
+      ],
+      "hi": [
+        1.39926278591156,
+        0.00430000014603138,
+        2.7232799530029297
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "DUKKAN26_ROBOT_ALANI_GIRIS_ACILMA_YAYI_12",
+      "node": 2513,
+      "mesh": 2403,
+      "lo": [
+        1.2775664329528809,
+        0.0017000000225380063,
+        2.764204740524292
+      ],
+      "hi": [
+        1.3220421075820923,
+        0.00430000014603138,
+        2.806093692779541
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "DUKKAN26_ROBOT_ALANI_GIRIS_ACILMA_YAYI_14",
+      "node": 2514,
+      "mesh": 2404,
+      "lo": [
+        1.1849225759506226,
+        0.0017000000225380063,
+        2.841201066970825
+      ],
+      "hi": [
+        1.233989953994751,
+        0.00430000014603138,
+        2.8773906230926514
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "DUKKAN26_ROBOT_ALANI_GIRIS_ACILMA_YAYI_16",
+      "node": 2515,
+      "mesh": 2405,
+      "lo": [
+        1.08379328250885,
+        0.0017000000225380063,
+        2.9060802459716797
+      ],
+      "hi": [
+        1.1366127729415894,
+        0.00430000014603138,
+        2.935950756072998
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "DUKKAN26_ROBOT_ALANI_GIRIS_ACILMA_YAYI_18",
+      "node": 2516,
+      "mesh": 2406,
+      "lo": [
+        0.9759089350700378,
+        0.0017000000225380063,
+        2.9577317237854004
+      ],
+      "hi": [
+        1.0315768718719482,
+        0.00430000014603138,
+        2.9807722568511963
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "DUKKAN26_ROBOT_ALANI_GIRIS_ACILMA_YAYI_20",
+      "node": 2517,
+      "mesh": 2407,
+      "lo": [
+        0.8631155490875244,
+        0.0017000000225380063,
+        2.995271682739258
+      ],
+      "hi": [
+        0.9206794500350952,
+        0.00430000014603138,
+        3.0110881328582764
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "DUKKAN26_ROBOT_ALANI_GIRIS_ACILMA_YAYI_22",
+      "node": 2518,
+      "mesh": 2408,
+      "lo": [
+        0.7473430037498474,
+        0.0017000000225380063,
+        3.0180580615997314
+      ],
+      "hi": [
+        0.8058178424835205,
+        0.00430000014603138,
+        3.0263795852661133
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "DUKKAN26_OTURMA_TEZGAHI_TABLA",
+      "node": 2519,
+      "mesh": 2409,
+      "lo": [
+        1.7360000290870667,
+        0.7400000003352761,
+        2.932999997615814
+      ],
+      "hi": [
+        3.0969999709129334,
+        0.7699999996647239,
+        3.5530000023841857
+      ],
+      "connection": "30 mm purchased furniture top on underframe; height 770 mm"
+    },
+    {
+      "name": "DUKKAN26_MASA_AYAK_1.7760000000000002_2.968",
+      "node": 2520,
+      "mesh": 2410,
+      "lo": [
+        1.7610000371932983,
+        0.009999999776482582,
+        2.953000068664551
+      ],
+      "hi": [
+        1.7910000085830688,
+        0.7099999785423279,
+        2.9830000400543213
+      ],
+      "connection": "hollow section, welded to own underframe; foot on floor"
+    },
+    {
+      "name": "DUKKAN26_MASA_AYAK_PABUC_1.7760000000000002_2.968",
+      "node": 2521,
+      "mesh": 2411,
+      "lo": [
+        1.7540000001192095,
+        1.1175870905794083e-10,
+        2.9460000001192093
+      ],
+      "hi": [
+        1.797999999880791,
+        0.009999999888241292,
+        2.9899999998807907
+      ],
+      "connection": "rubber foot seated on floor"
+    },
+    {
+      "name": "DUKKAN26_MASA_AYAK_1.7760000000000002_3.518",
+      "node": 2522,
+      "mesh": 2412,
+      "lo": [
+        1.7610000371932983,
+        0.009999999776482582,
+        3.503000020980835
+      ],
+      "hi": [
+        1.7910000085830688,
+        0.7099999785423279,
+        3.5329999923706055
+      ],
+      "connection": "hollow section, welded to own underframe; foot on floor"
+    },
+    {
+      "name": "DUKKAN26_MASA_AYAK_PABUC_1.7760000000000002_3.518",
+      "node": 2523,
+      "mesh": 2413,
+      "lo": [
+        1.7540000001192095,
+        1.1175870905794083e-10,
+        3.496000000119209
+      ],
+      "hi": [
+        1.797999999880791,
+        0.009999999888241292,
+        3.5399999998807905
+      ],
+      "connection": "rubber foot seated on floor"
+    },
+    {
+      "name": "DUKKAN26_MASA_AYAK_3.057_2.968",
+      "node": 2524,
+      "mesh": 2414,
+      "lo": [
+        3.0420000553131104,
+        0.009999999776482582,
+        2.953000068664551
+      ],
+      "hi": [
+        3.072000026702881,
+        0.7099999785423279,
+        2.9830000400543213
+      ],
+      "connection": "hollow section, welded to own underframe; foot on floor"
+    },
+    {
+      "name": "DUKKAN26_MASA_AYAK_PABUC_3.057_2.968",
+      "node": 2525,
+      "mesh": 2415,
+      "lo": [
+        3.0350000001192092,
+        1.1175870905794083e-10,
+        2.9460000001192093
+      ],
+      "hi": [
+        3.0789999998807907,
+        0.009999999888241292,
+        2.9899999998807907
+      ],
+      "connection": "rubber foot seated on floor"
+    },
+    {
+      "name": "DUKKAN26_MASA_AYAK_3.057_3.518",
+      "node": 2526,
+      "mesh": 2416,
+      "lo": [
+        3.0420000553131104,
+        0.009999999776482582,
+        3.503000020980835
+      ],
+      "hi": [
+        3.072000026702881,
+        0.7099999785423279,
+        3.5329999923706055
+      ],
+      "connection": "hollow section, welded to own underframe; foot on floor"
+    },
+    {
+      "name": "DUKKAN26_MASA_AYAK_PABUC_3.057_3.518",
+      "node": 2527,
+      "mesh": 2417,
+      "lo": [
+        3.0350000001192092,
+        1.1175870905794083e-10,
+        3.496000000119209
+      ],
+      "hi": [
+        3.0789999998807907,
+        0.009999999888241292,
+        3.5399999998807905
+      ],
+      "connection": "rubber foot seated on floor"
+    },
+    {
+      "name": "DUKKAN26_MASA_UST_KUSAK_2.968",
+      "node": 2528,
+      "mesh": 2418,
+      "lo": [
+        1.7610000371932983,
+        0.7099999785423279,
+        2.953000068664551
+      ],
+      "hi": [
+        3.072000026702881,
+        0.7400000095367432,
+        2.9830000400543213
+      ],
+      "connection": "hollow section, welded to own underframe; foot on floor"
+    },
+    {
+      "name": "DUKKAN26_MASA_UST_KUSAK_3.518",
+      "node": 2529,
+      "mesh": 2419,
+      "lo": [
+        1.7610000371932983,
+        0.7099999785423279,
+        3.503000020980835
+      ],
+      "hi": [
+        3.072000026702881,
+        0.7400000095367432,
+        3.5329999923706055
+      ],
+      "connection": "hollow section, welded to own underframe; foot on floor"
+    },
+    {
+      "name": "DUKKAN26_MASA_YAN_KUSAK_1.7760000000000002",
+      "node": 2530,
+      "mesh": 2420,
+      "lo": [
+        1.7610000371932983,
+        0.7099999785423279,
+        2.9830000400543213
+      ],
+      "hi": [
+        1.7910000085830688,
+        0.7400000095367432,
+        3.503000020980835
+      ],
+      "connection": "hollow section, welded to own underframe; foot on floor"
+    },
+    {
+      "name": "DUKKAN26_MASA_YAN_KUSAK_3.057",
+      "node": 2531,
+      "mesh": 2421,
+      "lo": [
+        3.0420000553131104,
+        0.7099999785423279,
+        2.9830000400543213
+      ],
+      "hi": [
+        3.072000026702881,
+        0.7400000095367432,
+        3.503000020980835
+      ],
+      "connection": "hollow section, welded to own underframe; foot on floor"
+    },
+    {
+      "name": "DUKKAN26_SANDALYE_OTURAK",
+      "node": 2532,
+      "mesh": 2422,
+      "lo": [
+        2.209999995827675,
+        0.4450000003352761,
+        2.3479999964237215
+      ],
+      "hi": [
+        2.670000004172325,
+        0.47499999966472384,
+        2.778000003576279
+      ],
+      "connection": "generic seat on welded frame"
+    },
+    {
+      "name": "DUKKAN26_SANDALYE_AYAK_2.255_2.3930000000000002",
+      "node": 2533,
+      "mesh": 2423,
+      "lo": [
+        2.24399995803833,
+        0,
+        2.381999969482422
+      ],
+      "hi": [
+        2.2660000324249268,
+        0.4449999928474426,
+        2.4040000438690186
+      ],
+      "connection": "hollow section, welded to own underframe; foot on floor"
+    },
+    {
+      "name": "DUKKAN26_SANDALYE_AYAK_2.255_2.733",
+      "node": 2534,
+      "mesh": 2424,
+      "lo": [
+        2.24399995803833,
+        0,
+        2.7219998836517334
+      ],
+      "hi": [
+        2.2660000324249268,
+        0.4449999928474426,
+        2.74399995803833
+      ],
+      "connection": "hollow section, welded to own underframe; foot on floor"
+    },
+    {
+      "name": "DUKKAN26_SANDALYE_AYAK_2.625_2.3930000000000002",
+      "node": 2535,
+      "mesh": 2425,
+      "lo": [
+        2.614000082015991,
+        0,
+        2.381999969482422
+      ],
+      "hi": [
+        2.635999917984009,
+        0.4449999928474426,
+        2.4040000438690186
+      ],
+      "connection": "hollow section, welded to own underframe; foot on floor"
+    },
+    {
+      "name": "DUKKAN26_SANDALYE_AYAK_2.625_2.733",
+      "node": 2536,
+      "mesh": 2426,
+      "lo": [
+        2.614000082015991,
+        0,
+        2.7219998836517334
+      ],
+      "hi": [
+        2.635999917984009,
+        0.4449999928474426,
+        2.74399995803833
+      ],
+      "connection": "hollow section, welded to own underframe; foot on floor"
+    },
+    {
+      "name": "DUKKAN26_SANDALYE_ARKA_DESTEK_2.255",
+      "node": 2537,
+      "mesh": 2427,
+      "lo": [
+        2.24399995803833,
+        0.4449999928474426,
+        2.381999969482422
+      ],
+      "hi": [
+        2.2660000324249268,
+        0.8799999952316284,
+        2.4040000438690186
+      ],
+      "connection": "hollow section, welded to own underframe; foot on floor"
+    },
+    {
+      "name": "DUKKAN26_SANDALYE_ARKA_DESTEK_2.625",
+      "node": 2538,
+      "mesh": 2428,
+      "lo": [
+        2.614000082015991,
+        0.4449999928474426,
+        2.381999969482422
+      ],
+      "hi": [
+        2.635999917984009,
+        0.8799999952316284,
+        2.4040000438690186
+      ],
+      "connection": "hollow section, welded to own underframe; foot on floor"
+    },
+    {
+      "name": "DUKKAN26_SANDALYE_SIRT",
+      "node": 2539,
+      "mesh": 2429,
+      "lo": [
+        2.209999995827675,
+        0.6800000005960465,
+        2.3710000000596048
+      ],
+      "hi": [
+        2.670000004172325,
+        0.8999999994039536,
+        2.3929999999403955
+      ],
+      "connection": "backrest on two rear uprights"
+    },
+    {
+      "name": "DUKKAN26_LAVABO_AYAK_3.132_2.968",
+      "node": 2540,
+      "mesh": 2430,
+      "lo": [
+        3.117000102996826,
+        0.009999999776482582,
+        2.953000068664551
+      ],
+      "hi": [
+        3.1470000743865967,
+        0.8650000095367432,
+        2.9830000400543213
+      ],
+      "connection": "hollow section, welded to own underframe; foot on floor"
+    },
+    {
+      "name": "DUKKAN26_LAVABO_AYAK_3.132_3.518",
+      "node": 2541,
+      "mesh": 2431,
+      "lo": [
+        3.117000102996826,
+        0.009999999776482582,
+        3.503000020980835
+      ],
+      "hi": [
+        3.1470000743865967,
+        0.8650000095367432,
+        3.5329999923706055
+      ],
+      "connection": "hollow section, welded to own underframe; foot on floor"
+    },
+    {
+      "name": "DUKKAN26_LAVABO_AYAK_3.562_2.968",
+      "node": 2542,
+      "mesh": 2432,
+      "lo": [
+        3.546999931335449,
+        0.009999999776482582,
+        2.953000068664551
+      ],
+      "hi": [
+        3.5769999027252197,
+        0.8650000095367432,
+        2.9830000400543213
+      ],
+      "connection": "hollow section, welded to own underframe; foot on floor"
+    },
+    {
+      "name": "DUKKAN26_LAVABO_AYAK_3.562_3.518",
+      "node": 2543,
+      "mesh": 2433,
+      "lo": [
+        3.546999931335449,
+        0.009999999776482582,
+        3.503000020980835
+      ],
+      "hi": [
+        3.5769999027252197,
+        0.8650000095367432,
+        3.5329999923706055
+      ],
+      "connection": "hollow section, welded to own underframe; foot on floor"
+    },
+    {
+      "name": "DUKKAN26_LAVABO_UST_KUSAK_2.968",
+      "node": 2544,
+      "mesh": 2434,
+      "lo": [
+        3.117000102996826,
+        0.8650000095367432,
+        2.953000068664551
+      ],
+      "hi": [
+        3.5769999027252197,
+        0.8949999809265137,
+        2.9830000400543213
+      ],
+      "connection": "hollow section, welded to own underframe; foot on floor"
+    },
+    {
+      "name": "DUKKAN26_LAVABO_UST_KUSAK_3.518",
+      "node": 2545,
+      "mesh": 2435,
+      "lo": [
+        3.117000102996826,
+        0.8650000095367432,
+        3.503000020980835
+      ],
+      "hi": [
+        3.5769999027252197,
+        0.8949999809265137,
+        3.5329999923706055
+      ],
+      "connection": "hollow section, welded to own underframe; foot on floor"
+    },
+    {
+      "name": "DUKKAN26_LAVABO_YAN_KUSAK_3.132",
+      "node": 2546,
+      "mesh": 2436,
+      "lo": [
+        3.117000102996826,
+        0.8650000095367432,
+        2.9830000400543213
+      ],
+      "hi": [
+        3.1470000743865967,
+        0.8949999809265137,
+        3.503000020980835
+      ],
+      "connection": "hollow section, welded to own underframe; foot on floor"
+    },
+    {
+      "name": "DUKKAN26_LAVABO_YAN_KUSAK_3.562",
+      "node": 2547,
+      "mesh": 2437,
+      "lo": [
+        3.546999931335449,
+        0.8650000095367432,
+        2.9830000400543213
+      ],
+      "hi": [
+        3.5769999027252197,
+        0.8949999809265137,
+        3.503000020980835
+      ],
+      "connection": "hollow section, welded to own underframe; foot on floor"
+    },
+    {
+      "name": "DUKKAN26_LAVABO_TABLA",
+      "node": 2548,
+      "mesh": 2438,
+      "lo": [
+        3.0969998836517334,
+        0.896999999973923,
+        2.933000087738037
+      ],
+      "hi": [
+        3.5969998836517334,
+        0.9000000000000002,
+        3.552999973297119
+      ],
+      "connection": "own welded stainless sheet; nominal layout, not OEM CAD"
+    },
+    {
+      "name": "DUKKAN26_LAVABO_HAZNE_DUVAR",
+      "node": 2549,
+      "mesh": 2439,
+      "lo": [
+        3.196000099182129,
+        0.7469999940395355,
+        3.01200008392334
+      ],
+      "hi": [
+        3.497999906539917,
+        0.8970000000000002,
+        3.313999891281128
+      ],
+      "connection": "own welded stainless sheet; nominal layout, not OEM CAD"
+    },
+    {
+      "name": "DUKKAN26_LAVABO_HAZNE_TABAN",
+      "node": 2550,
+      "mesh": 2440,
+      "lo": [
+        3.196000099182129,
+        0.7469999999525025,
+        3.01200008392334
+      ],
+      "hi": [
+        3.497999906539917,
+        0.7480000000000002,
+        3.313999891281128
+      ],
+      "connection": "own welded stainless sheet; nominal layout, not OEM CAD"
+    },
+    {
+      "name": "DUKKAN26_LAVABO_SICRAMA_ETEGI",
+      "node": 2551,
+      "mesh": 2441,
+      "lo": [
+        3.097,
+        0.8999999992549419,
+        3.5499999999869614
+      ],
+      "hi": [
+        3.597,
+        1.000000000745058,
+        3.5530000000130384
+      ],
+      "connection": "TIG to rear edge of sink top"
+    },
+    {
+      "name": "DUKKAN26_EL_YIKAMA_BATARYA",
+      "node": 2552,
+      "mesh": 2442,
+      "lo": [
+        3.3350000381469727,
+        0.8999999761581421,
+        3.203000068664551
+      ],
+      "hi": [
+        3.3589999675750732,
+        1.0720000267028809,
+        3.3949999809265137
+      ],
+      "connection": "generic elbow-operated hot/cold mixer envelope on sink deck"
+    },
+    {
+      "name": "DUKKAN26_BATARYA_DIRSEK_KOLU",
+      "node": 2553,
+      "mesh": 2443,
+      "lo": [
+        3.344132661819458,
+        1.0159038305282593,
+        3.378000020980835
+      ],
+      "hi": [
+        3.4498672485351562,
+        1.0940961837768555,
+        3.388000011444092
+      ],
+      "connection": "mixer operating lever"
+    },
+    {
+      "name": "DUKKAN26_SOGUK_SU",
+      "node": 2554,
+      "mesh": 2444,
+      "lo": [
+        3.2820000648498535,
+        -0.08799999952316284,
+        3.3750267028808594
+      ],
+      "hi": [
+        3.336973190307617,
+        0.8999999761581421,
+        3.578000068664551
+      ],
+      "connection": "hollow pipe, unions at mixer/trap; building connection concealed in front wall"
+    },
+    {
+      "name": "DUKKAN26_SU_KESME_VANASI_0",
+      "node": 2555,
+      "mesh": 2445,
+      "lo": [
+        3.276999999731779,
+        0.5150000003352762,
+        3.456999999731779
+      ],
+      "hi": [
+        3.303000000268221,
+        0.5449999996647239,
+        3.4830000002682207
+      ],
+      "connection": "isolation valve retained in pipe under basin"
+    },
+    {
+      "name": "DUKKAN26_SICAK_SU",
+      "node": 2556,
+      "mesh": 2446,
+      "lo": [
+        3.316999912261963,
+        -0.08799999952316284,
+        3.375023365020752
+      ],
+      "hi": [
+        3.372976779937744,
+        0.8999999761581421,
+        3.578000068664551
+      ],
+      "connection": "hollow pipe, unions at mixer/trap; building connection concealed in front wall"
+    },
+    {
+      "name": "DUKKAN26_SU_KESME_VANASI_1",
+      "node": 2557,
+      "mesh": 2447,
+      "lo": [
+        3.3119999997317793,
+        0.5150000003352762,
+        3.456999999731779
+      ],
+      "hi": [
+        3.338000000268221,
+        0.5449999996647239,
+        3.4830000002682207
+      ],
+      "connection": "isolation valve retained in pipe under basin"
+    },
+    {
+      "name": "DUKKAN26_LAVABO_SIFON",
+      "node": 2558,
+      "mesh": 2448,
+      "lo": [
+        3.3310000896453857,
+        -0.11596772819757462,
+        3.1470000743865967
+      ],
+      "hi": [
+        3.4709677696228027,
+        0.746999979019165,
+        3.578000068664551
+      ],
+      "connection": "hollow pipe, unions at mixer/trap; building connection concealed in front wall"
+    },
+    {
+      "name": "DUKKAN26_SABUNLUK",
+      "node": 2559,
+      "mesh": 2449,
+      "lo": [
+        3.111999999254942,
+        1.0199999979138374,
+        3.4730000008940696
+      ],
+      "hi": [
+        3.212000000745058,
+        1.2500000020861626,
+        3.5529999991059302
+      ],
+      "connection": "wall-mounted refillable soap dispenser, generic envelope"
+    },
+    {
+      "name": "DUKKAN26_KAGIT_HAVLULUK",
+      "node": 2560,
+      "mesh": 2450,
+      "lo": [
+        3.2769999994039534,
+        1.1800000029802322,
+        3.4629999982118607
+      ],
+      "hi": [
+        3.5570000005960463,
+        1.5299999970197677,
+        3.5530000017881394
+      ],
+      "connection": "wall-mounted paper dispenser, generic envelope"
+    }
+  ],
+  "animations_unchanged": true,
+  "raw_web_sha256": "768490f9711ee128f6c63de1b6250834c4ed0597cf0eb9e064c8c2d1f0bdc02f",
+  "raw_web_bytes": 169310776,
+  "gzip_sha256": "096e9fb30ed33f6d33c607fa2dda94c9b6270679f743bf2b776f0e8551475e0e",
+  "gzip_bytes": 77264640,
+  "passed": true
+}
