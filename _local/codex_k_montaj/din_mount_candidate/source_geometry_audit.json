@@ -1,0 +1,206 @@
+{
+  "scope": "Four panel mounting joints and four DIN endpoint joints, not purchased device clip certification",
+  "input_sha256": "58f75466944354b35995d02f0e998dc936db0c494975789dd91a6633767836ff",
+  "output_sha256": "0a9dc9699ed91a9fb25b654553afa9628897f5bd289a9db4a442cd99c41cc262",
+  "a_b_byte_identical": true,
+  "candidate_audit_sha256": "e0688905d840427dc37bb63c16ed491605030916bced55ea834d21f44113266e",
+  "rebind_sha256": "bcf251c64b9442026e587cfcf7c8f21f6653dfb078e469b57d1b49a46a8f201a",
+  "verified_parts_sha256": "e1b076206a456516fb56ee923142f34d75af1ec75d7e3a2107d7f05b7532d2f1",
+  "parts": 873,
+  "triangles": 424730,
+  "changed_nodes": [
+    "K_ELEKTRIK__celik",
+    "K_ELEKTRIK__sac"
+  ],
+  "changed_nodes_outside_scope": [],
+  "actual_one_to_one_triangles_matched": 424730,
+  "maximum_actual_recompression_vertex_distance_mm": 0.0002967160636359619,
+  "joints": [
+    {
+      "id": "panel_mount_0",
+      "measured_engagement_mm": 5.0,
+      "measured_protrusion_mm": 2.0,
+      "hosts": [
+        {
+          "part": "pano_plakasi",
+          "bore_vertices": 504,
+          "passed": true
+        },
+        {
+          "part": "arka_sac",
+          "bore_vertices": 180,
+          "passed": true
+        },
+        {
+          "part": "pano_ara_burcu_0",
+          "bore_vertices": 504,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "panel_mount_1",
+      "measured_engagement_mm": 5.0,
+      "measured_protrusion_mm": 2.0,
+      "hosts": [
+        {
+          "part": "pano_plakasi",
+          "bore_vertices": 504,
+          "passed": true
+        },
+        {
+          "part": "arka_sac",
+          "bore_vertices": 180,
+          "passed": true
+        },
+        {
+          "part": "pano_ara_burcu_1",
+          "bore_vertices": 504,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "panel_mount_2",
+      "measured_engagement_mm": 5.0,
+      "measured_protrusion_mm": 2.0,
+      "hosts": [
+        {
+          "part": "pano_plakasi",
+          "bore_vertices": 504,
+          "passed": true
+        },
+        {
+          "part": "arka_sac",
+          "bore_vertices": 192,
+          "passed": true
+        },
+        {
+          "part": "pano_ara_burcu_2",
+          "bore_vertices": 504,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "panel_mount_3",
+      "measured_engagement_mm": 5.0,
+      "measured_protrusion_mm": 2.0,
+      "hosts": [
+        {
+          "part": "pano_plakasi",
+          "bore_vertices": 504,
+          "passed": true
+        },
+        {
+          "part": "arka_sac",
+          "bore_vertices": 192,
+          "passed": true
+        },
+        {
+          "part": "pano_ara_burcu_3",
+          "bore_vertices": 504,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "din_mount_0_0",
+      "measured_engagement_mm": 5.0,
+      "measured_protrusion_mm": 1.0,
+      "hosts": [
+        {
+          "part": "pano_plakasi",
+          "bore_vertices": 504,
+          "passed": true
+        },
+        {
+          "part": "din_rayi_0",
+          "opening": "supplier stock15x6.2 slot",
+          "measured_axis_to_slot_wall_mm": 3.099999999999909,
+          "clearance_around_nominal5.5mm_passage_mm": 0.34999999999990905,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "din_mount_0_1",
+      "measured_engagement_mm": 5.0,
+      "measured_protrusion_mm": 1.0,
+      "hosts": [
+        {
+          "part": "pano_plakasi",
+          "bore_vertices": 504,
+          "passed": true
+        },
+        {
+          "part": "din_rayi_0",
+          "opening": "supplier stock15x6.2 slot",
+          "measured_axis_to_slot_wall_mm": 3.099999999999909,
+          "clearance_around_nominal5.5mm_passage_mm": 0.34999999999990905,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "din_mount_1_0",
+      "measured_engagement_mm": 5.0,
+      "measured_protrusion_mm": 1.0,
+      "hosts": [
+        {
+          "part": "pano_plakasi",
+          "bore_vertices": 504,
+          "passed": true
+        },
+        {
+          "part": "din_rayi_1",
+          "opening": "supplier stock15x6.2 slot",
+          "measured_axis_to_slot_wall_mm": 3.099999999999909,
+          "clearance_around_nominal5.5mm_passage_mm": 0.34999999999990905,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "din_mount_1_1",
+      "measured_engagement_mm": 5.0,
+      "measured_protrusion_mm": 1.0,
+      "hosts": [
+        {
+          "part": "pano_plakasi",
+          "bore_vertices": 504,
+          "passed": true
+        },
+        {
+          "part": "din_rayi_1",
+          "opening": "supplier stock15x6.2 slot",
+          "measured_axis_to_slot_wall_mm": 3.099999999999909,
+          "clearance_around_nominal5.5mm_passage_mm": 0.34999999999990905,
+          "passed": true
+        }
+      ],
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "source_activation": false,
+  "manufacturing_release": false,
+  "production_release": false,
+  "remaining_checks": [
+    "install/remove path",
+    "panel load/overhang check",
+    "assembly ordering",
+    "source-chain A/B replay",
+    "re-extraction and whole-station audits",
+    "supplier rail radii/CAD",
+    "each device factory DIN clip proof",
+    "rail/panel assembly paths"
+  ]
+}

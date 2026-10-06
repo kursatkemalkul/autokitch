@@ -1,0 +1,44 @@
+{
+  "source_model_sha256": "0a9dc9699ed91a9fb25b654553afa9628897f5bd289a9db4a442cd99c41cc262",
+  "parts": 873,
+  "triangles": 424730,
+  "closed_physical_sheets": 68,
+  "measured_panel_and_DIN_joints": 8,
+  "rigid_paths_passed": true,
+  "tested_pairs": 9420,
+  "bend_sampling_passed": true,
+  "artifacts_sha256": {
+    "current_source_manifest.json": "939cf0617726d444e38671224c3d9f6350dddb26dba99e14bd238c286fa99697",
+    "plan_audit.json": "dd4027516ce9049b96317c9a159de28c0144cc6b3ab42dc72e962398e0a8907b",
+    "bench_prototype_audit.json": "2840df2dd8628d43e62f769095cfabd9de5a1c7aaca6348de807db6fa7db7599",
+    "bench_integration_audit.json": "209e0ca5dcf61a10cfca6a895f06ae3bfad5995a23ca7335efffdb99abe07ad1",
+    "plan_source_binding_audit.json": "d8634967b5699b0b42a07ebfa314550c440ba1559e49e324866a12d5e6c0beb5",
+    "full_ccd_plan_k_full.json": "4d8dc331c4996fbb9c0b2876f79b74acbaaa2f6f215d82468bc4c681b7c6a4cc",
+    "dense_bend_morph_audit.json": "5d0f5347ea0d14de4432bc1e96f9351aae6aeea72c169146ed84a1dc5b0a1471",
+    "physical_sheet_closure_audit.json": "55628b3fefd86f26b6d6bd4c4a2abbd2409abdc45324a9aa07808b6eff3f2559",
+    "current_sheet_encoding_audit.json": "49d7485cdc62581b696c6d7397d7cff882c4eec682df32ac1993ab8715e5ad34",
+    "surface_ownership_registry.json": "205284ba2dfd5534d58aea8aa95a8b795930025bc57ed5183f0393ae18730362",
+    "body_connection_measured_audit.json": "438d5bb28f0f38fcd5fc986be189a20137ecf48c2afdc228041979ae07228325",
+    "lower_connection_measured_audit.json": "d0de8f840fe2003511a3a823a60d947bd70438e416f3856505ed315237ffe528",
+    "mount_connection_measured_audit.json": "542541d2edad051c680973951ae02f651609f7b3fbe7d18279d22024f607ed29"
+  },
+  "whole_station_connections_verified": false,
+  "manufacturing_release": false,
+  "production_release": false,
+  "k_completed": false,
+  "u_started": false,
+  "remaining": [
+    "Actual fixtures and temporary-load support",
+    "Whole-station supplier clips, mounting and connections",
+    "Sheet forming tooling and self-contact",
+    "Countersink secondary machining animation",
+    "Custom stock and hinges conformity",
+    "Shared-chain registration and whole-source replay",
+    "Final player generation and browser review"
+  ],
+  "previous_structural_joints_rechecked_on_current_source": {
+    "body_connection_measured_audit.json": 32,
+    "lower_connection_measured_audit.json": 24,
+    "mount_connection_measured_audit.json": 12
+  }
+}

@@ -271,11 +271,19 @@
         "din_rayi_0",
         "din_rayi_1",
         "guc_24V_NDR-240-24",
+        "k_din_M5_pul_0_0",
+        "k_din_M5_pul_0_1",
+        "k_din_M5_somun_0_1",
+        "k_din_M5_pul_1_0",
+        "k_din_M5_pul_1_1",
+        "k_din_M5_somun_1_1",
+        "k_din_M5_somun_0_0",
+        "k_din_M5_somun_1_0",
+        "k_din_M5x12_havsa_0_0",
+        "k_din_M5x12_havsa_0_1",
+        "k_din_M5x12_havsa_1_0",
+        "k_din_M5x12_havsa_1_1",
         "klemens_sirasi",
-        "pano_ara_burcu_0",
-        "pano_ara_burcu_1",
-        "pano_ara_burcu_2",
-        "pano_ara_burcu_3",
         "pano_plakasi",
         "plc_S7-1200_1214C",
         "plc_tarti_modulu_SIWAREX_WP231",
@@ -292,12 +300,30 @@
         "valf_SY3120_2_rakor_0",
         "valf_SY3120_2_rakor_1",
         "valf_adasi_SS5Y3-20-04",
-        "valf_kor_plaka"
+        "valf_kor_plaka",
+        "k_pano_M5x20_havsa_0",
+        "k_pano_M5_pul_0",
+        "pano_ara_burcu_0",
+        "k_pano_M5x20_havsa_2",
+        "k_pano_M5_pul_2",
+        "pano_ara_burcu_2",
+        "k_pano_M5_somun_0",
+        "k_pano_M5_somun_2",
+        "k_pano_M5x20_havsa_1",
+        "k_pano_M5_pul_1",
+        "pano_ara_burcu_1",
+        "k_pano_M5x20_havsa_3",
+        "k_pano_M5_pul_3",
+        "pano_ara_burcu_3",
+        "k_pano_M5_somun_1",
+        "k_pano_M5_somun_3"
       ],
       "source_sheet_members": [
-        "arka_sac"
+        "arka_sac",
+        "pano_plakasi"
       ],
       "laser_timeline_parts": [
+        "pano_plakasi",
         "arka_sac"
       ],
       "bend_frame_parts": [
@@ -306,7 +332,7 @@
       "plan_problems": [],
       "welds_to_verify": [],
       "connection_release": false,
-      "seconds": 26.469999999999985
+      "seconds": 37.3
     },
     {
       "head": "ust_sac",
@@ -395,8 +421,8 @@
         "k72_itici_ara_kaynagi_4040.0_-755.0_2",
         "k72_itici_ara_kaynagi_4040.0_-755.0_3",
         "k72_itici_ayak_kaynagi_4040.0_-755.0_0",
-        "k72_itici_ayak_kaynagi_4040.0_-755.0_2",
         "k72_itici_ayak_kaynagi_4040.0_-755.0_1",
+        "k72_itici_ayak_kaynagi_4040.0_-755.0_2",
         "k72_itici_ayak_kaynagi_4040.0_-755.0_3"
       ],
       "connection_release": false,
@@ -427,8 +453,8 @@
         "k72_itici_ara_kaynagi_4040.0_-645.0_2",
         "k72_itici_ara_kaynagi_4040.0_-645.0_3",
         "k72_itici_ayak_kaynagi_4040.0_-645.0_0",
-        "k72_itici_ayak_kaynagi_4040.0_-645.0_2",
         "k72_itici_ayak_kaynagi_4040.0_-645.0_1",
+        "k72_itici_ayak_kaynagi_4040.0_-645.0_2",
         "k72_itici_ayak_kaynagi_4040.0_-645.0_3"
       ],
       "connection_release": false,
@@ -585,6 +611,6 @@
       "seconds": 11.349999999999998
     }
   ],
-  "execution_seconds": 10.220530986785889,
+  "execution_seconds": 52.32526421546936,
   "production_release": false
 }

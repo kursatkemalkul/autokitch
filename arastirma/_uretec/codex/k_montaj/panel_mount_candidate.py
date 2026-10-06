@@ -31,8 +31,8 @@ def solid(v,f,origin):
     assert str(s.status())=='Error.NoError',str(s.status())
     return s
 
-def build():
-    panel=K.kutu(4067.5,4332.5,1467,1857,-822,-818)
+def build(panel_bounds=(4067.5,4332.5,1467,1857,-822,-818)):
+    panel=K.kutu(*panel_bounds)
     pieces=[];joins=[]
     for i,(x,y) in enumerate(CENTRES):
         panel=panel.cut(cylinder(x,y,-823,2.75,6,axis=(0,0,1)))
@@ -50,7 +50,7 @@ def build():
                       'nominal_protrusion_mm':2.,'protrusion_threads':2.5,
                       'head_flush':True,'tool_hex_mm':3.,'minimum_tool_envelope_radius_mm':4.,
                       'method':'DIN7991 M5x20, bored spacer, ISO7089 washer, ISO10511 nut'})
-    pieces.insert(0,S._bp('pano_plakasi',panel,'laser plate 304','K panel mounting plate','265x390x4',malzeme='AISI304',birim='K_ELEKTRIK',uretim=True,mal='sac'))
+    pieces.insert(0,S._bp('pano_plakasi',panel,'laser plate 304','K panel mounting plate',f'{panel_bounds[1]-panel_bounds[0]:g}x{panel_bounds[3]-panel_bounds[2]:g}x4',malzeme='AISI304',birim='K_ELEKTRIK',uretim=True,mal='sac'))
     return pieces,joins
 
 def audit(pieces,joins):

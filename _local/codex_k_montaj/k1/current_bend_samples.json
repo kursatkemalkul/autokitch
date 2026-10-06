@@ -1,6 +1,6 @@
 {
-  "source_encoding_sha256": "d91dcfa0c46dca20fc824cc5505f34b0b3c9347d573159e11afa48f3cc9fd627",
-  "physical_sheets": 67,
+  "source_encoding_sha256": "cbd0b807959af9beafd1da0ed2ffda646770830b7e6fd98f52d977675086edb5",
+  "physical_sheets": 68,
   "checks": [
     {
       "sheet": "kose_dikmesi_20_42_tapa",
@@ -3146,6 +3146,18 @@
       "decoder_reference_error_mm": 0.0,
       "endpoint_error_mm": 0.0,
       "passed_sampling_only": true
+    },
+    {
+      "sheet": "pano_plakasi",
+      "phase_samples": [
+        0.0,
+        1.0
+      ],
+      "sample_count": 2,
+      "maximum_vertex_step_mm": 0.0,
+      "decoder_reference_error_mm": 0.0,
+      "endpoint_error_mm": 0.0,
+      "passed_sampling_only": true
     }
   ],
   "maximum_step_mm": 2.0,
@@ -3155,5 +3167,5 @@
   "self_collision_checked": false,
   "tool_access_checked": false,
   "production_release": false,
-  "elapsed_seconds": 0.5133066177368164
+  "elapsed_seconds": 0.6704552173614502
 }

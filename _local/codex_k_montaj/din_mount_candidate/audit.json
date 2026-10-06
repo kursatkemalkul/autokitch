@@ -1,0 +1,649 @@
+{
+  "source_parts_sha256": "af3a7589ef00c122992867f6138477bf84fe3aa67f675c42cb5ba1ddd3faebdb",
+  "source_model_sha256": "58f75466944354b35995d02f0e998dc936db0c494975789dd91a6633767836ff",
+  "units": "mm",
+  "scope": "Four panel mounts and four rail endpoint joints; purchased device clips still open",
+  "joints": [
+    {
+      "id": "panel_mount_0",
+      "centre_mm": [
+        4080.0,
+        1477.0,
+        -818
+      ],
+      "axis": [
+        0,
+        0,
+        -1
+      ],
+      "parts": [
+        "k_pano_M5x20_havsa_0",
+        "pano_ara_burcu_0",
+        "k_pano_M5_pul_0",
+        "k_pano_M5_somun_0"
+      ],
+      "clearance_diameter_mm": 5.5,
+      "nominal_engagement_mm": 5.0,
+      "nominal_protrusion_mm": 2.0,
+      "protrusion_threads": 2.5,
+      "head_flush": true,
+      "tool_hex_mm": 3.0,
+      "minimum_tool_envelope_radius_mm": 4.0,
+      "method": "DIN7991 M5x20, bored spacer, ISO7089 washer, ISO10511 nut",
+      "measured_engagement_mm": 5.0,
+      "measured_protrusion_mm": 2.0,
+      "thread_stack_passed": true,
+      "front_tool_blockers": [],
+      "front_tool_access_passed": true,
+      "rear_socket_clearance_envelope_diameter_mm": 13.0,
+      "rear_tool_blockers": [],
+      "rear_tool_access_passed": true,
+      "rear_service_condition": "Machine pulled forward before rear service; shop wall excluded, K station geometry retained"
+    },
+    {
+      "id": "panel_mount_1",
+      "centre_mm": [
+        4320.0,
+        1477.0,
+        -818
+      ],
+      "axis": [
+        0,
+        0,
+        -1
+      ],
+      "parts": [
+        "k_pano_M5x20_havsa_1",
+        "pano_ara_burcu_1",
+        "k_pano_M5_pul_1",
+        "k_pano_M5_somun_1"
+      ],
+      "clearance_diameter_mm": 5.5,
+      "nominal_engagement_mm": 5.0,
+      "nominal_protrusion_mm": 2.0,
+      "protrusion_threads": 2.5,
+      "head_flush": true,
+      "tool_hex_mm": 3.0,
+      "minimum_tool_envelope_radius_mm": 4.0,
+      "method": "DIN7991 M5x20, bored spacer, ISO7089 washer, ISO10511 nut",
+      "measured_engagement_mm": 5.0,
+      "measured_protrusion_mm": 2.0,
+      "thread_stack_passed": true,
+      "front_tool_blockers": [],
+      "front_tool_access_passed": true,
+      "rear_socket_clearance_envelope_diameter_mm": 13.0,
+      "rear_tool_blockers": [],
+      "rear_tool_access_passed": true,
+      "rear_service_condition": "Machine pulled forward before rear service; shop wall excluded, K station geometry retained"
+    },
+    {
+      "id": "panel_mount_2",
+      "centre_mm": [
+        4080.0,
+        1690.0,
+        -818
+      ],
+      "axis": [
+        0,
+        0,
+        -1
+      ],
+      "parts": [
+        "k_pano_M5x20_havsa_2",
+        "pano_ara_burcu_2",
+        "k_pano_M5_pul_2",
+        "k_pano_M5_somun_2"
+      ],
+      "clearance_diameter_mm": 5.5,
+      "nominal_engagement_mm": 5.0,
+      "nominal_protrusion_mm": 2.0,
+      "protrusion_threads": 2.5,
+      "head_flush": true,
+      "tool_hex_mm": 3.0,
+      "minimum_tool_envelope_radius_mm": 4.0,
+      "method": "DIN7991 M5x20, bored spacer, ISO7089 washer, ISO10511 nut",
+      "measured_engagement_mm": 5.0,
+      "measured_protrusion_mm": 2.0,
+      "thread_stack_passed": true,
+      "front_tool_blockers": [],
+      "front_tool_access_passed": true,
+      "rear_socket_clearance_envelope_diameter_mm": 13.0,
+      "rear_tool_blockers": [],
+      "rear_tool_access_passed": true,
+      "rear_service_condition": "Machine pulled forward before rear service; shop wall excluded, K station geometry retained"
+    },
+    {
+      "id": "panel_mount_3",
+      "centre_mm": [
+        4320.0,
+        1690.0,
+        -818
+      ],
+      "axis": [
+        0,
+        0,
+        -1
+      ],
+      "parts": [
+        "k_pano_M5x20_havsa_3",
+        "pano_ara_burcu_3",
+        "k_pano_M5_pul_3",
+        "k_pano_M5_somun_3"
+      ],
+      "clearance_diameter_mm": 5.5,
+      "nominal_engagement_mm": 5.0,
+      "nominal_protrusion_mm": 2.0,
+      "protrusion_threads": 2.5,
+      "head_flush": true,
+      "tool_hex_mm": 3.0,
+      "minimum_tool_envelope_radius_mm": 4.0,
+      "method": "DIN7991 M5x20, bored spacer, ISO7089 washer, ISO10511 nut",
+      "measured_engagement_mm": 5.0,
+      "measured_protrusion_mm": 2.0,
+      "thread_stack_passed": true,
+      "front_tool_blockers": [],
+      "front_tool_access_passed": true,
+      "rear_socket_clearance_envelope_diameter_mm": 13.0,
+      "rear_tool_blockers": [],
+      "rear_tool_access_passed": true,
+      "rear_service_condition": "Machine pulled forward before rear service; shop wall excluded, K station geometry retained"
+    }
+  ],
+  "intersections": [],
+  "unverified_source_geometry": [],
+  "open_mesh_surface_checks": [
+    {
+      "candidate": "pano_plakasi",
+      "source_part": "cevre_U",
+      "roi_triangles": 0,
+      "passed": true
+    },
+    {
+      "candidate": "pano_plakasi",
+      "source_part": "cevre_F",
+      "roi_triangles": 0,
+      "passed": true
+    },
+    {
+      "candidate": "pano_plakasi",
+      "source_part": "cevre_diger",
+      "roi_triangles": 0,
+      "passed": true
+    },
+    {
+      "candidate": "pano_ara_burcu_0",
+      "source_part": "cevre_F",
+      "roi_triangles": 0,
+      "passed": true
+    },
+    {
+      "candidate": "pano_ara_burcu_0",
+      "source_part": "cevre_diger",
+      "roi_triangles": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k_pano_M5x20_havsa_0",
+      "source_part": "cevre_F",
+      "roi_triangles": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k_pano_M5x20_havsa_0",
+      "source_part": "cevre_diger",
+      "roi_triangles": 0,
+      "passed": true
+    },
+    {
+      "candidate": "pano_ara_burcu_1",
+      "source_part": "cevre_F",
+      "roi_triangles": 0,
+      "passed": true
+    },
+    {
+      "candidate": "pano_ara_burcu_1",
+      "source_part": "cevre_diger",
+      "roi_triangles": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k_pano_M5x20_havsa_1",
+      "source_part": "cevre_F",
+      "roi_triangles": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k_pano_M5x20_havsa_1",
+      "source_part": "cevre_diger",
+      "roi_triangles": 0,
+      "passed": true
+    },
+    {
+      "candidate": "pano_ara_burcu_2",
+      "source_part": "cevre_F",
+      "roi_triangles": 0,
+      "passed": true
+    },
+    {
+      "candidate": "pano_ara_burcu_2",
+      "source_part": "cevre_diger",
+      "roi_triangles": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k_pano_M5x20_havsa_2",
+      "source_part": "cevre_F",
+      "roi_triangles": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k_pano_M5x20_havsa_2",
+      "source_part": "cevre_diger",
+      "roi_triangles": 0,
+      "passed": true
+    },
+    {
+      "candidate": "pano_ara_burcu_3",
+      "source_part": "cevre_F",
+      "roi_triangles": 0,
+      "passed": true
+    },
+    {
+      "candidate": "pano_ara_burcu_3",
+      "source_part": "cevre_diger",
+      "roi_triangles": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k_pano_M5x20_havsa_3",
+      "source_part": "cevre_F",
+      "roi_triangles": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k_pano_M5x20_havsa_3",
+      "source_part": "cevre_diger",
+      "roi_triangles": 0,
+      "passed": true
+    },
+    {
+      "candidate": "din_rayi_0",
+      "source_part": "cevre_F",
+      "roi_triangles": 0,
+      "passed": true
+    },
+    {
+      "candidate": "din_rayi_0",
+      "source_part": "cevre_diger",
+      "roi_triangles": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k_din_M5x12_havsa_0_0",
+      "source_part": "cevre_F",
+      "roi_triangles": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k_din_M5x12_havsa_0_0",
+      "source_part": "cevre_diger",
+      "roi_triangles": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k_din_M5_pul_0_0",
+      "source_part": "cevre_F",
+      "roi_triangles": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k_din_M5_pul_0_0",
+      "source_part": "cevre_diger",
+      "roi_triangles": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k_din_M5_somun_0_0",
+      "source_part": "cevre_F",
+      "roi_triangles": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k_din_M5_somun_0_0",
+      "source_part": "cevre_diger",
+      "roi_triangles": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k_din_M5x12_havsa_0_1",
+      "source_part": "cevre_F",
+      "roi_triangles": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k_din_M5x12_havsa_0_1",
+      "source_part": "cevre_diger",
+      "roi_triangles": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k_din_M5_pul_0_1",
+      "source_part": "cevre_F",
+      "roi_triangles": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k_din_M5_pul_0_1",
+      "source_part": "cevre_diger",
+      "roi_triangles": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k_din_M5_somun_0_1",
+      "source_part": "cevre_F",
+      "roi_triangles": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k_din_M5_somun_0_1",
+      "source_part": "cevre_diger",
+      "roi_triangles": 0,
+      "passed": true
+    },
+    {
+      "candidate": "din_rayi_1",
+      "source_part": "cevre_F",
+      "roi_triangles": 0,
+      "passed": true
+    },
+    {
+      "candidate": "din_rayi_1",
+      "source_part": "cevre_diger",
+      "roi_triangles": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k_din_M5x12_havsa_1_0",
+      "source_part": "cevre_F",
+      "roi_triangles": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k_din_M5x12_havsa_1_0",
+      "source_part": "cevre_diger",
+      "roi_triangles": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k_din_M5_pul_1_0",
+      "source_part": "cevre_F",
+      "roi_triangles": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k_din_M5_pul_1_0",
+      "source_part": "cevre_diger",
+      "roi_triangles": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k_din_M5_somun_1_0",
+      "source_part": "cevre_F",
+      "roi_triangles": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k_din_M5_somun_1_0",
+      "source_part": "cevre_diger",
+      "roi_triangles": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k_din_M5x12_havsa_1_1",
+      "source_part": "cevre_F",
+      "roi_triangles": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k_din_M5x12_havsa_1_1",
+      "source_part": "cevre_diger",
+      "roi_triangles": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k_din_M5_pul_1_1",
+      "source_part": "cevre_F",
+      "roi_triangles": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k_din_M5_pul_1_1",
+      "source_part": "cevre_diger",
+      "roi_triangles": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k_din_M5_somun_1_1",
+      "source_part": "cevre_F",
+      "roi_triangles": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k_din_M5_somun_1_1",
+      "source_part": "cevre_diger",
+      "roi_triangles": 0,
+      "passed": true
+    }
+  ],
+  "rear_added_volume_mm3": 0.0,
+  "rear_change_is_subtractive_only": true,
+  "changed_existing_parts": [
+    "din_rayi_0",
+    "din_rayi_1",
+    "pano_plakasi"
+  ],
+  "added_parts": [
+    "k_din_M5x12_havsa_0_0",
+    "k_din_M5_pul_0_0",
+    "k_din_M5_somun_0_0",
+    "k_din_M5x12_havsa_0_1",
+    "k_din_M5_pul_0_1",
+    "k_din_M5_somun_0_1",
+    "k_din_M5x12_havsa_1_0",
+    "k_din_M5_pul_1_0",
+    "k_din_M5_somun_1_0",
+    "k_din_M5x12_havsa_1_1",
+    "k_din_M5_pul_1_1",
+    "k_din_M5_somun_1_1"
+  ],
+  "device_coordinates_unchanged": true,
+  "purchased_equipment_unchanged": true,
+  "passed": true,
+  "production_release": false,
+  "source_activation": false,
+  "remaining_checks": [
+    "install/remove path",
+    "panel load/overhang check",
+    "assembly ordering",
+    "source-chain A/B replay",
+    "re-extraction and whole-station audits",
+    "supplier rail radii/CAD",
+    "each device factory DIN clip proof",
+    "rail/panel assembly paths"
+  ],
+  "rail_joints": [
+    {
+      "id": "din_mount_0_0",
+      "centre_mm": [
+        4067.5,
+        1760.0,
+        -822
+      ],
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "parts": [
+        "k_din_M5x12_havsa_0_0",
+        "din_rayi_0",
+        "k_din_M5_pul_0_0",
+        "k_din_M5_somun_0_0"
+      ],
+      "rail_mount_slot_mm": [
+        15,
+        6.2
+      ],
+      "panel_hole_diameter_mm": 5.5,
+      "nominal_engagement_mm": 5.0,
+      "nominal_protrusion_mm": 1.0,
+      "protrusion_threads": 1.25,
+      "method": "DIN7991 M5x12 rear flush, ISO7089 washer, ISO10511 nut",
+      "front_socket_radius_mm": 6.5,
+      "rear_hex_tool_radius_mm": 4.0,
+      "measured_engagement_mm": 5.0,
+      "measured_protrusion_mm": 1.0,
+      "thread_stack_passed": true,
+      "tool_blockers": [],
+      "tool_access_passed": true,
+      "front_socket_envelope_mm": {
+        "diameter": 13.0,
+        "length": 23.0
+      },
+      "rear_allen_condition": "Rail bolts tightened on free panel bench before mounting panel on rear wall; supplier equipment retained"
+    },
+    {
+      "id": "din_mount_0_1",
+      "centre_mm": [
+        4345.0,
+        1760.0,
+        -822
+      ],
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "parts": [
+        "k_din_M5x12_havsa_0_1",
+        "din_rayi_0",
+        "k_din_M5_pul_0_1",
+        "k_din_M5_somun_0_1"
+      ],
+      "rail_mount_slot_mm": [
+        15,
+        6.2
+      ],
+      "panel_hole_diameter_mm": 5.5,
+      "nominal_engagement_mm": 5.0,
+      "nominal_protrusion_mm": 1.0,
+      "protrusion_threads": 1.25,
+      "method": "DIN7991 M5x12 rear flush, ISO7089 washer, ISO10511 nut",
+      "front_socket_radius_mm": 6.5,
+      "rear_hex_tool_radius_mm": 4.0,
+      "measured_engagement_mm": 5.0,
+      "measured_protrusion_mm": 1.0,
+      "thread_stack_passed": true,
+      "tool_blockers": [],
+      "tool_access_passed": true,
+      "front_socket_envelope_mm": {
+        "diameter": 13.0,
+        "length": 23.0
+      },
+      "rear_allen_condition": "Rail bolts tightened on free panel bench before mounting panel on rear wall; supplier equipment retained"
+    },
+    {
+      "id": "din_mount_1_0",
+      "centre_mm": [
+        4067.5,
+        1640.0,
+        -822
+      ],
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "parts": [
+        "k_din_M5x12_havsa_1_0",
+        "din_rayi_1",
+        "k_din_M5_pul_1_0",
+        "k_din_M5_somun_1_0"
+      ],
+      "rail_mount_slot_mm": [
+        15,
+        6.2
+      ],
+      "panel_hole_diameter_mm": 5.5,
+      "nominal_engagement_mm": 5.0,
+      "nominal_protrusion_mm": 1.0,
+      "protrusion_threads": 1.25,
+      "method": "DIN7991 M5x12 rear flush, ISO7089 washer, ISO10511 nut",
+      "front_socket_radius_mm": 6.5,
+      "rear_hex_tool_radius_mm": 4.0,
+      "measured_engagement_mm": 5.0,
+      "measured_protrusion_mm": 1.0,
+      "thread_stack_passed": true,
+      "tool_blockers": [],
+      "tool_access_passed": true,
+      "front_socket_envelope_mm": {
+        "diameter": 13.0,
+        "length": 23.0
+      },
+      "rear_allen_condition": "Rail bolts tightened on free panel bench before mounting panel on rear wall; supplier equipment retained"
+    },
+    {
+      "id": "din_mount_1_1",
+      "centre_mm": [
+        4270.0,
+        1640.0,
+        -822
+      ],
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "parts": [
+        "k_din_M5x12_havsa_1_1",
+        "din_rayi_1",
+        "k_din_M5_pul_1_1",
+        "k_din_M5_somun_1_1"
+      ],
+      "rail_mount_slot_mm": [
+        15,
+        6.2
+      ],
+      "panel_hole_diameter_mm": 5.5,
+      "nominal_engagement_mm": 5.0,
+      "nominal_protrusion_mm": 1.0,
+      "protrusion_threads": 1.25,
+      "method": "DIN7991 M5x12 rear flush, ISO7089 washer, ISO10511 nut",
+      "front_socket_radius_mm": 6.5,
+      "rear_hex_tool_radius_mm": 4.0,
+      "measured_engagement_mm": 5.0,
+      "measured_protrusion_mm": 1.0,
+      "thread_stack_passed": true,
+      "tool_blockers": [],
+      "tool_access_passed": true,
+      "front_socket_envelope_mm": {
+        "diameter": 13.0,
+        "length": 23.0
+      },
+      "rear_allen_condition": "Rail bolts tightened on free panel bench before mounting panel on rear wall; supplier equipment retained"
+    }
+  ],
+  "purchased_rail_source": "https://www.phoenixcontact.com/en-us/products/din-rail-ns-35-75-perf-2000mm-0801733",
+  "rail_cut_lengths_mm": [
+    310.0,
+    235.0
+  ],
+  "panel_size_mm": [
+    305.0,
+    390.0,
+    4.0
+  ],
+  "supplier_factory_clip_geometry_verified": false,
+  "supplier_radius_verified": false,
+  "previous_verified_panel_hardware_and_rear_retained": true
+}

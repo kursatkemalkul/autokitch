@@ -54,9 +54,27 @@ for head,members in initial['GROUPS'].items():
   other=[a for a in members if a not in outer+counter+presses+['k_govde_on_seffaf_1']]
   other.sort(key=lambda a:('_vida_' in a,a))
   operations=[(['k_govde_on_seffaf_1'],presses)]+[([a],[]) for a in counter]+[(outer,[])]+[([a],[]) for a in other]
+ if head=='arka_sac' and any(a.startswith('k_din_') for a in members):
+  # DIN countersunk screws enter the rear of the FREE panel before the
+  # enclosure back wall closes this access. No hidden wall exception.
+  ds=sorted(a for a in members if a.startswith('k_din_') and 'havsa' in a)
+  rails=sorted(a for a in members if a.startswith('din_rayi_'))
+  dn=sorted((a for a in members if a.startswith('k_din_') and a not in ds),key=lambda a:('somun' in a,a))
+  spacers=sorted(a for a in members if a.startswith('pano_ara_burcu_'))
+  ps=sorted(a for a in members if a.startswith('k_pano_') and 'havsa' in a)
+  pn=sorted((a for a in members if a.startswith('k_pano_') and a not in ps),key=lambda a:('somun' in a,a))
+  known=set(['pano_plakasi',head]+ds+rails+dn+spacers+ps+pn)
+  devices=[a for a in members if a not in known]
+  operations=[(['pano_plakasi'],[])]+[([a],[]) for a in ds+rails+dn+devices+spacers]+[([head],presses)]+[([a],[]) for a in ps+pn]
+  assert len(ds)==4 and len(ps)==4 and len(dn)==8 and len(pn)==8
+  assert set(a for names,_ in operations for a in names)==set(members)
  for names,presses in operations:
   a=names[0];directions=[ns['YOL'](q) for q in [(0,0,950),(0,0,-950),(0,700,0),(-650,0,0),(650,0,0),(0,-650,0)]]
   if '_kanat_vida_' in a:directions=[ns['YOL']((0,0,-40))]+directions
+  if a.startswith('k_din_'):
+   directions=[ns['YOL']((0,0,-60 if 'havsa' in a else 60))]
+  elif a.startswith('k_pano_'):
+   directions=[ns['YOL']((0,0,60 if 'havsa' in a else -60))]
   tt=ns['yerlestir'](names,directions,tt,P[a]['ac'],pem=presses,sure_bekle=.02)
   # Separate GLB fragments of one physical source sheet bend together.
   for child in names[1:]:

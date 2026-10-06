@@ -1,7 +1,7 @@
 {
-  "source_plan_sha256": "9774886ea36383a985e59865bdec7c457ab25e4f95f3582329de75428f8b6c40",
-  "source_model_sha256": "415044b5baa2e454c6976f99a72460a52c6ed8b5c5c42a396a3deb22af856f75",
-  "combined_plan_sha256": "e93dab6ee1acdbc7e5d3bd2a1ef517dd6cbe43f21e8b1aadcc19f7adc0416239",
+  "source_plan_sha256": "f24ec7ae9e53b0e2d6639071e2ad4029ca1f89f31fb0b93121954f52a2e2bf1c",
+  "source_model_sha256": "0a9dc9699ed91a9fb25b654553afa9628897f5bd289a9db4a442cd99c41cc262",
+  "combined_plan_sha256": "3df351fe7daefec4bd709f2f3fbad8c71069fcc7f35f95c899727c3ef054566f",
   "groups": [
     {
       "head": "k71_alt_flans_4060_379",
@@ -797,6 +797,30 @@
         "govde_bag_arka_ust_360_saplama",
         "govde_bag_arka_ust_40_saplama",
         "guc_24V_NDR-240-24",
+        "k_din_M5_pul_0_0",
+        "k_din_M5_pul_0_1",
+        "k_din_M5_pul_1_0",
+        "k_din_M5_pul_1_1",
+        "k_din_M5_somun_0_0",
+        "k_din_M5_somun_0_1",
+        "k_din_M5_somun_1_0",
+        "k_din_M5_somun_1_1",
+        "k_din_M5x12_havsa_0_0",
+        "k_din_M5x12_havsa_0_1",
+        "k_din_M5x12_havsa_1_0",
+        "k_din_M5x12_havsa_1_1",
+        "k_pano_M5_pul_0",
+        "k_pano_M5_pul_1",
+        "k_pano_M5_pul_2",
+        "k_pano_M5_pul_3",
+        "k_pano_M5_somun_0",
+        "k_pano_M5_somun_1",
+        "k_pano_M5_somun_2",
+        "k_pano_M5_somun_3",
+        "k_pano_M5x20_havsa_0",
+        "k_pano_M5x20_havsa_1",
+        "k_pano_M5x20_havsa_2",
+        "k_pano_M5x20_havsa_3",
         "klemens_sirasi",
         "pano_ara_burcu_0",
         "pano_ara_burcu_1",
@@ -821,7 +845,7 @@
         "valf_kor_plaka"
       ],
       "base_seconds": 464.908443,
-      "departure_seconds": 499.2514996774393,
+      "departure_seconds": 510.0814996774393,
       "bench_offset_m": [
         -2.0,
         0.129,
@@ -854,7 +878,7 @@
           -0.95
         ]
       ],
-      "added_seconds": 32.823056677439354,
+      "added_seconds": 43.653056677439366,
       "bench_paths_passed": true,
       "fixture_verified": false,
       "joining_verified": false
@@ -898,8 +922,8 @@
         "k73_tavan_kaynagi_4300_1860.5_3",
         "ust_sac"
       ],
-      "base_seconds": 535.7335,
-      "departure_seconds": 551.8614271247462,
+      "base_seconds": 546.2245,
+      "departure_seconds": 562.3524271247462,
       "bench_offset_m": [
         -2.0,
         -0.9205,
@@ -965,8 +989,8 @@
         "onyuz_kapak_K_mentese_2_pem_a",
         "onyuz_kapak_K_mentese_2_pem_b"
       ],
-      "base_seconds": 556.171427,
-      "departure_seconds": 580.7702983996153,
+      "base_seconds": 566.662427,
+      "departure_seconds": 591.2612983996153,
       "bench_offset_m": [
         -2.0,
         0.13,
@@ -1009,6 +1033,6 @@
   "group_count": 17,
   "production_release": false,
   "full_ccd_checked": false,
-  "parts": 849,
-  "duration_seconds": 655.120299
+  "parts": 873,
+  "duration_seconds": 665.611299
 }

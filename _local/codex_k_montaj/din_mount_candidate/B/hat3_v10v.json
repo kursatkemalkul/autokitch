@@ -1,0 +1,58 @@
+{
+  "step": 79,
+  "input_sha256": "58f75466944354b35995d02f0e998dc936db0c494975789dd91a6633767836ff",
+  "payload_sha256": "6fc1cde737d0741c442f0c82df9ecb99b11277eeb98be0a42e4aa60e4ad06afd",
+  "output_sha256": "0a9dc9699ed91a9fb25b654553afa9628897f5bd289a9db4a442cd99c41cc262",
+  "matched_source_triangles": {
+    "pano_plakasi": 12124,
+    "din_rayi_0": 12,
+    "din_rayi_1": 12
+  },
+  "naming_grid_mm": 0.0001,
+  "maximum_naming_grid_adjustment_mm": 8.503557144779388e-05,
+  "repairs": [
+    {
+      "part": "pano_plakasi",
+      "closed_status": "Error.NoError",
+      "volume_mm3": 474551.1231614614,
+      "maximum_declared_precision_adjustment_mm": 0.0,
+      "purpose": "real bored and countersunk panel mounting",
+      "supplier_equipment_modified": false
+    },
+    {
+      "part": "din_rayi_0",
+      "closed_status": "Error.NoError",
+      "volume_mm3": 13820.65557417155,
+      "maximum_declared_precision_adjustment_mm": 0.0,
+      "purpose": "real bored and countersunk panel mounting",
+      "supplier_equipment_modified": false
+    },
+    {
+      "part": "din_rayi_1",
+      "closed_status": "Error.NoError",
+      "volume_mm3": 10474.897959393746,
+      "maximum_declared_precision_adjustment_mm": 0.0,
+      "purpose": "real bored and countersunk panel mounting",
+      "supplier_equipment_modified": false
+    }
+  ],
+  "source_labels_retained": true,
+  "source_interfaces_intended_unchanged": false,
+  "unrelated_geometry_audit_required": true,
+  "reextraction_required": true,
+  "production_release": false,
+  "added_parts": [
+    "k_din_M5x12_havsa_0_0",
+    "k_din_M5_pul_0_0",
+    "k_din_M5_somun_0_0",
+    "k_din_M5x12_havsa_0_1",
+    "k_din_M5_pul_0_1",
+    "k_din_M5_somun_0_1",
+    "k_din_M5x12_havsa_1_0",
+    "k_din_M5_pul_1_0",
+    "k_din_M5_somun_1_0",
+    "k_din_M5x12_havsa_1_1",
+    "k_din_M5_pul_1_1",
+    "k_din_M5_somun_1_1"
+  ]
+}

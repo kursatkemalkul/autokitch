@@ -1,12 +1,12 @@
 {
-  "source_parts_sha256": "739bf01b06f66c9e1d8a9c313c8331bdcefd847eeab8d13935e9779673959c05",
-  "source_plan_sha256": "9774886ea36383a985e59865bdec7c457ab25e4f95f3582329de75428f8b6c40",
-  "source_connection_audit_sha256": "1587293706b0f48371b0339899dd1584572960f995d1c3cce0b5b04f123d6854",
+  "source_parts_sha256": "e1b076206a456516fb56ee923142f34d75af1ec75d7e3a2107d7f05b7532d2f1",
+  "source_plan_sha256": "f24ec7ae9e53b0e2d6639071e2ad4029ca1f89f31fb0b93121954f52a2e2bf1c",
+  "source_connection_audit_sha256": "f45c776c1b6fe2d854d8576adc1f25d7556c1f17ad59ea5388e7e79fb611f25b",
   "production_release": false,
-  "count": 242,
+  "count": 236,
   "categories": {
-    "ACIK": 223,
-    "GRUP": 19
+    "ACIK": 214,
+    "GRUP": 22
   },
   "new_unresolved_parts": [
     "k_e4_sol_yama_40x40",
@@ -17,7 +17,13 @@
     "onyuz_kapak_K_karsilik_2"
   ],
   "not_in_current_unresolved_list": [
-    "arka_sac"
+    "arka_sac",
+    "pano_ara_burcu_0",
+    "pano_ara_burcu_1",
+    "pano_ara_burcu_2",
+    "pano_ara_burcu_3",
+    "pano_plakasi",
+    "valf_adasi_SS5Y3-20-04"
   ],
   "note": "A changed classifier result is not proof of a real fastening. Supplier internals and group membership require explicit evidence.",
   "unresolved": [
@@ -994,16 +1000,16 @@
         "SATIN ALMA"
       ],
       "lo_mm": [
-        4070.0002,
+        4045.0001,
         1742.4999,
         -818.0
       ],
       "hi_mm": [
-        4329.9999,
+        4355.0,
         1777.5,
         -810.5
       ],
-      "classifier_category": "ACIK",
+      "classifier_category": "GRUP",
       "assembly_step": 49,
       "release_resolved": false,
       "previously_listed": true
@@ -1013,16 +1019,16 @@
       "role": "custom_connection_required",
       "native_bom": [],
       "lo_mm": [
-        4070.0002,
+        4045.0001,
         1622.4999,
         -818.0
       ],
       "hi_mm": [
-        4260.0002,
+        4280.0002,
         1657.5,
         -810.5
       ],
-      "classifier_category": "ACIK",
+      "classifier_category": "GRUP",
       "assembly_step": 49,
       "release_resolved": false,
       "previously_listed": true
@@ -4100,113 +4106,6 @@
       "previously_listed": false
     },
     {
-      "part": "pano_ara_burcu_0",
-      "role": "purchased_mount_or_fit_requires_proof",
-      "native_bom": [
-        "Ara burç M5 × 6,5 paslanmaz",
-        4,
-        "",
-        "katalog",
-        "SATIN ALMA"
-      ],
-      "lo_mm": [
-        4075.1452,
-        1477.0365,
-        -828.5
-      ],
-      "hi_mm": [
-        4085.0,
-        1486.9635,
-        -822.0
-      ],
-      "classifier_category": "GRUP",
-      "assembly_step": 49,
-      "release_resolved": false,
-      "previously_listed": true
-    },
-    {
-      "part": "pano_ara_burcu_1",
-      "role": "custom_connection_required",
-      "native_bom": [],
-      "lo_mm": [
-        4315.1455,
-        1477.0365,
-        -828.5
-      ],
-      "hi_mm": [
-        4324.9998,
-        1486.9635,
-        -822.0
-      ],
-      "classifier_category": "GRUP",
-      "assembly_step": 49,
-      "release_resolved": false,
-      "previously_listed": true
-    },
-    {
-      "part": "pano_ara_burcu_2",
-      "role": "custom_connection_required",
-      "native_bom": [],
-      "lo_mm": [
-        4075.1452,
-        1842.0365,
-        -828.5
-      ],
-      "hi_mm": [
-        4085.0,
-        1851.9635,
-        -822.0
-      ],
-      "classifier_category": "GRUP",
-      "assembly_step": 49,
-      "release_resolved": false,
-      "previously_listed": true
-    },
-    {
-      "part": "pano_ara_burcu_3",
-      "role": "custom_connection_required",
-      "native_bom": [],
-      "lo_mm": [
-        4315.1455,
-        1842.0365,
-        -828.5
-      ],
-      "hi_mm": [
-        4324.9998,
-        1851.9635,
-        -822.0
-      ],
-      "classifier_category": "GRUP",
-      "assembly_step": 49,
-      "release_resolved": false,
-      "previously_listed": true
-    },
-    {
-      "part": "pano_plakasi",
-      "role": "custom_connection_required",
-      "native_bom": [
-        "Pano montaj plakası 304 4 mm (arka sacta)",
-        1,
-        "265 × 385",
-        "üretim",
-        "ÜRETİM"
-      ],
-      "lo_mm": [
-        4067.5001,
-        1472.0,
-        -822.0
-      ],
-      "hi_mm": [
-        4332.5,
-        1857.0,
-        -818.0
-      ],
-      "classifier_category": "ACIK",
-      "assembly_step": 49,
-      "release_resolved": false,
-      "previously_listed": true
-    },
-    {
       "part": "plc_S7-1200_1214C",
       "role": "purchased_mount_or_fit_requires_proof",
       "native_bom": [
@@ -4301,7 +4200,7 @@
         1575.0,
         -815.7
       ],
-      "classifier_category": "ACIK",
+      "classifier_category": "GRUP",
       "assembly_step": 49,
       "release_resolved": false,
       "previously_listed": true
@@ -4559,7 +4458,7 @@
         1548.9,
         -769.0
       ],
-      "classifier_category": "ACIK",
+      "classifier_category": "GRUP",
       "assembly_step": 49,
       "release_resolved": false,
       "previously_listed": true
@@ -4616,7 +4515,7 @@
         1548.9,
         -769.0
       ],
-      "classifier_category": "ACIK",
+      "classifier_category": "GRUP",
       "assembly_step": 49,
       "release_resolved": false,
       "previously_listed": true
@@ -4673,7 +4572,7 @@
         1548.9,
         -769.0
       ],
-      "classifier_category": "ACIK",
+      "classifier_category": "GRUP",
       "assembly_step": 49,
       "release_resolved": false,
       "previously_listed": true
@@ -4717,31 +4616,6 @@
       "previously_listed": true
     },
     {
-      "part": "valf_adasi_SS5Y3-20-04",
-      "role": "purchased_mount_or_fit_requires_proof",
-      "native_bom": [
-        "SMC SS5Y3-20-04 manifold (4 istasyon · 10,5 hatve · P/EA/EB 1/8)",
-        1,
-        "69,5 × 49 × 20 · 87 g",
-        "SMC SY3000 katalog 1-4-45 (2005) [güncel CAD ile teyit]",
-        "SATIN ALMA"
-      ],
-      "lo_mm": [
-        4072.0,
-        1482.0,
-        -818.0
-      ],
-      "hi_mm": [
-        4141.5,
-        1531.0,
-        -798.0
-      ],
-      "classifier_category": "ACIK",
-      "assembly_step": 49,
-      "release_resolved": false,
-      "previously_listed": true
-    },
-    {
       "part": "valf_kor_plaka",
       "role": "purchased_mount_or_fit_requires_proof",
       "native_bom": [
@@ -4761,7 +4635,7 @@
         1531.0,
         -788.0
       ],
-      "classifier_category": "ACIK",
+      "classifier_category": "GRUP",
       "assembly_step": 49,
       "release_resolved": false,
       "previously_listed": true

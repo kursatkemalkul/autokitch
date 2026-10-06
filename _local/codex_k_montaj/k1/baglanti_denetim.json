@@ -256,8 +256,8 @@
  },
  "ust_sac": {
   "sinif": "HEMEN",
-  "gelis": 358.178,
-  "bag": 358.178,
+  "gelis": 357.839,
+  "bag": 357.839,
   "adim": 53,
   "neyle": [
    "govde_bag_arka_ust_360_saplama",
@@ -301,7 +301,7 @@
  "bant_ayagi_335_-3": {
   "sinif": "GECICI",
   "gelis": 81.87,
-  "bag": 388.208,
+  "bag": 387.869,
   "adim": 6,
   "bag_adim": 55,
   "neyle": [
@@ -313,7 +313,7 @@
  "bant_ayagi_65_-3": {
   "sinif": "GECICI",
   "gelis": 84.77,
-  "bag": 383.408,
+  "bag": 383.069,
   "adim": 8,
   "bag_adim": 55,
   "neyle": [
@@ -521,16 +521,16 @@
   "gelis": 319.126,
   "adim": 49,
   "grup": true,
-  "kategori": "ACIK",
-  "neden": "bağlantı elemanı yok · kategori yok"
+  "kategori": "GRUP",
+  "neden": "tezgâh grubunda bağlı parçaya değiyor: ['pano_plakasi']"
  },
  "din_rayi_1": {
   "sinif": "BAGLANTISIZ",
   "gelis": 319.126,
   "adim": 49,
   "grup": true,
-  "kategori": "ACIK",
-  "neden": "bağlantı elemanı yok · kategori yok"
+  "kategori": "GRUP",
+  "neden": "tezgâh grubunda bağlı parçaya değiyor: ['pano_plakasi']"
  },
  "govde_kulak_sag_arka_1150": {
   "sinif": "HEMEN",
@@ -715,7 +715,7 @@
  "govde_kulak_ust_arka_200": {
   "sinif": "GECICI",
   "gelis": 186.963,
-  "bag": 358.178,
+  "bag": 357.839,
   "adim": 30,
   "bag_adim": 53,
   "neyle": [
@@ -727,7 +727,7 @@
  "govde_kulak_ust_arka_80": {
   "sinif": "GECICI",
   "gelis": 188.633,
-  "bag": 358.178,
+  "bag": 357.839,
   "adim": 30,
   "bag_adim": 53,
   "neyle": [
@@ -739,7 +739,7 @@
  "govde_kulak_ust_on_320": {
   "sinif": "GECICI",
   "gelis": 190.303,
-  "bag": 358.178,
+  "bag": 357.839,
   "adim": 30,
   "bag_adim": 53,
   "neyle": [
@@ -751,7 +751,7 @@
  "govde_kulak_ust_on_80": {
   "sinif": "GECICI",
   "gelis": 191.973,
-  "bag": 358.178,
+  "bag": 357.839,
   "adim": 31,
   "bag_adim": 53,
   "neyle": [
@@ -1130,6 +1130,26 @@
    "k72_itici_ust_plaka_4040.0_-645.0"
   ]
  },
+ "k_itici_sac_2": {
+  "sinif": "HEMEN",
+  "gelis": 55.85,
+  "bag": 55.85,
+  "adim": 4,
+  "neyle": [
+   "k72_itici_ayak_kaynagi_4360.0_-755.0_0",
+   "k72_itici_ust_plaka_4360.0_-755.0"
+  ]
+ },
+ "k_itici_sac_3": {
+  "sinif": "HEMEN",
+  "gelis": 59.79,
+  "bag": 59.79,
+  "adim": 4,
+  "neyle": [
+   "k72_itici_ayak_kaynagi_4360.0_-645.0_0",
+   "k72_itici_ust_plaka_4360.0_-645.0"
+  ]
+ },
  "itici_yatay_kol": {
   "sinif": "BAGLANTISIZ",
   "gelis": 245.949,
@@ -1393,7 +1413,7 @@
  "k72_bant_ayagi_4065.0_-421.0": {
   "sinif": "GECICI",
   "gelis": 87.67,
-  "bag": 385.808,
+  "bag": 385.469,
   "adim": 10,
   "bag_adim": 55,
   "neyle": [
@@ -1405,7 +1425,7 @@
  "k72_bant_ayagi_4335.0_-421.0": {
   "sinif": "GECICI",
   "gelis": 89.8,
-  "bag": 390.608,
+  "bag": 390.269,
   "adim": 12,
   "bag_adim": 55,
   "neyle": [
@@ -1417,7 +1437,7 @@
  "k72_bant_ayak_flansi_4065.0_-3.0": {
   "sinif": "GECICI",
   "gelis": 49.75,
-  "bag": 383.408,
+  "bag": 383.069,
   "adim": 4,
   "bag_adim": 55,
   "neyle": [
@@ -1431,7 +1451,7 @@
  "k72_bant_ayak_flansi_4065.0_-421.0": {
   "sinif": "GECICI",
   "gelis": 50.47,
-  "bag": 385.808,
+  "bag": 385.469,
   "adim": 4,
   "bag_adim": 55,
   "neyle": [
@@ -1445,7 +1465,7 @@
  "k72_bant_ayak_flansi_4335.0_-3.0": {
   "sinif": "GECICI",
   "gelis": 51.19,
-  "bag": 388.208,
+  "bag": 387.869,
   "adim": 4,
   "bag_adim": 55,
   "neyle": [
@@ -1459,7 +1479,7 @@
  "k72_bant_ayak_flansi_4335.0_-421.0": {
   "sinif": "GECICI",
   "gelis": 51.91,
-  "bag": 390.608,
+  "bag": 390.269,
   "adim": 4,
   "bag_adim": 55,
   "neyle": [
@@ -1592,8 +1612,8 @@
  },
  "k73_tavan_baglanti_plakasi_4100_0": {
   "sinif": "HEMEN",
-  "gelis": 358.178,
-  "bag": 358.178,
+  "gelis": 357.839,
+  "bag": 357.839,
   "adim": 53,
   "neyle": [
    "k73_tavan_kaynagi_4100_1853.5_0",
@@ -1602,8 +1622,8 @@
  },
  "k73_tavan_baglanti_plakasi_4100_1": {
   "sinif": "HEMEN",
-  "gelis": 358.178,
-  "bag": 358.178,
+  "gelis": 357.839,
+  "bag": 357.839,
   "adim": 53,
   "neyle": [
    "k73_tavan_kaynagi_4100_1853.5_0",
@@ -1612,8 +1632,8 @@
  },
  "k73_tavan_baglanti_plakasi_4100_2": {
   "sinif": "HEMEN",
-  "gelis": 358.178,
-  "bag": 358.178,
+  "gelis": 357.839,
+  "bag": 357.839,
   "adim": 53,
   "neyle": [
    "k73_tavan_kaynagi_4100_1857.5_0",
@@ -1622,8 +1642,8 @@
  },
  "k73_tavan_baglanti_plakasi_4300_0": {
   "sinif": "HEMEN",
-  "gelis": 358.178,
-  "bag": 358.178,
+  "gelis": 357.839,
+  "bag": 357.839,
   "adim": 53,
   "neyle": [
    "k73_tavan_kaynagi_4300_1853.5_0",
@@ -1632,8 +1652,8 @@
  },
  "k73_tavan_baglanti_plakasi_4300_1": {
   "sinif": "HEMEN",
-  "gelis": 358.178,
-  "bag": 358.178,
+  "gelis": 357.839,
+  "bag": 357.839,
   "adim": 53,
   "neyle": [
    "k73_tavan_kaynagi_4300_1853.5_0",
@@ -1642,8 +1662,8 @@
  },
  "k73_tavan_baglanti_plakasi_4300_2": {
   "sinif": "HEMEN",
-  "gelis": 358.178,
-  "bag": 358.178,
+  "gelis": 357.839,
+  "bag": 357.839,
   "adim": 53,
   "neyle": [
    "k73_tavan_kaynagi_4300_1857.5_0",
@@ -1708,7 +1728,7 @@
  "kopru_kirisi_yan_20": {
   "sinif": "GECICI",
   "gelis": 151.608,
-  "bag": 397.808,
+  "bag": 397.469,
   "adim": 27,
   "bag_adim": 56,
   "neyle": [
@@ -1723,7 +1743,7 @@
  "kopru_kirisi_yan_380": {
   "sinif": "GECICI",
   "gelis": 168.946,
-  "bag": 399.008,
+  "bag": 398.669,
   "adim": 30,
   "bag_adim": 56,
   "neyle": [
@@ -1804,7 +1824,7 @@
  "onyuz_kayit_1840_-800": {
   "sinif": "GECICI",
   "gelis": 97.174,
-  "bag": 412.208,
+  "bag": 411.869,
   "adim": 13,
   "bag_adim": 56,
   "neyle": [
@@ -1850,7 +1870,7 @@
  "onyuz_kayit_1840_42": {
   "sinif": "GECICI",
   "gelis": 97.894,
-  "bag": 413.408,
+  "bag": 413.069,
   "adim": 13,
   "bag_adim": 56,
   "neyle": [
@@ -1886,7 +1906,7 @@
  "kose_dikmesi_380_42": {
   "sinif": "GECICI",
   "gelis": 81.15,
-  "bag": 375.608,
+  "bag": 375.269,
   "adim": 5,
   "bag_adim": 55,
   "neyle": [
@@ -1967,7 +1987,7 @@
  },
  "onyuz_kapak_K_karsilik_0": {
   "sinif": "BAGLANTISIZ",
-  "gelis": 366.008,
+  "gelis": 365.669,
   "adim": 55,
   "grup": true,
   "kategori": "GRUP",
@@ -1975,7 +1995,7 @@
  },
  "onyuz_kapak_K_karsilik_1": {
   "sinif": "BAGLANTISIZ",
-  "gelis": 366.008,
+  "gelis": 365.669,
   "adim": 55,
   "grup": true,
   "kategori": "GRUP",
@@ -1983,7 +2003,7 @@
  },
  "onyuz_kapak_K_karsilik_2": {
   "sinif": "BAGLANTISIZ",
-  "gelis": 366.008,
+  "gelis": 365.669,
   "adim": 55,
   "grup": true,
   "kategori": "GRUP",
@@ -1991,8 +2011,8 @@
  },
  "k_govde_on_seffaf_1": {
   "sinif": "HEMEN",
-  "gelis": 366.008,
-  "bag": 366.008,
+  "gelis": 365.669,
+  "bag": 365.669,
   "adim": 55,
   "neyle": [
    "onyuz_kapak_K_mentese_0_kanat_vida_a",
@@ -2001,8 +2021,8 @@
  },
  "onyuz_kapak_K_mentese_0_kanat": {
   "sinif": "HEMEN",
-  "gelis": 366.008,
-  "bag": 366.008,
+  "gelis": 365.669,
+  "bag": 365.669,
   "adim": 55,
   "neyle": [
    "onyuz_kapak_K_mentese_0_kanat_vida_a",
@@ -2023,8 +2043,8 @@
  },
  "onyuz_kapak_K_mentese_1_kanat": {
   "sinif": "HEMEN",
-  "gelis": 366.008,
-  "bag": 366.008,
+  "gelis": 365.669,
+  "bag": 365.669,
   "adim": 55,
   "neyle": [
    "onyuz_kapak_K_mentese_1_kanat_vida_a",
@@ -2045,8 +2065,8 @@
  },
  "onyuz_kapak_K_mentese_2_kanat": {
   "sinif": "HEMEN",
-  "gelis": 366.008,
-  "bag": 366.008,
+  "gelis": 365.669,
+  "bag": 365.669,
   "adim": 55,
   "neyle": [
    "onyuz_kapak_K_mentese_2_kanat_vida_a",
@@ -2068,7 +2088,7 @@
  "onyuz_kayit_140_-800": {
   "sinif": "GECICI",
   "gelis": 31.59,
-  "bag": 366.608,
+  "bag": 366.269,
   "adim": 4,
   "bag_adim": 55,
   "neyle": [
@@ -2085,7 +2105,7 @@
  "onyuz_kayit_140_42": {
   "sinif": "GECICI",
   "gelis": 32.31,
-  "bag": 368.408,
+  "bag": 368.069,
   "adim": 4,
   "bag_adim": 55,
   "neyle": [
@@ -2099,45 +2119,15 @@
    "taban_sac_tasiyici_380"
   ]
  },
- "pano_ara_burcu_0": {
-  "sinif": "BAGLANTISIZ",
-  "gelis": 319.126,
-  "adim": 49,
-  "grup": true,
-  "kategori": "GRUP",
-  "neden": "tezgâh grubunda bağlı parçaya değiyor: ['arka_sac']"
- },
- "pano_ara_burcu_1": {
-  "sinif": "BAGLANTISIZ",
-  "gelis": 319.126,
-  "adim": 49,
-  "grup": true,
-  "kategori": "GRUP",
-  "neden": "tezgâh grubunda bağlı parçaya değiyor: ['arka_sac']"
- },
- "pano_ara_burcu_2": {
-  "sinif": "BAGLANTISIZ",
-  "gelis": 319.126,
-  "adim": 49,
-  "grup": true,
-  "kategori": "GRUP",
-  "neden": "tezgâh grubunda bağlı parçaya değiyor: ['arka_sac']"
- },
- "pano_ara_burcu_3": {
-  "sinif": "BAGLANTISIZ",
-  "gelis": 319.126,
-  "adim": 49,
-  "grup": true,
-  "kategori": "GRUP",
-  "neden": "tezgâh grubunda bağlı parçaya değiyor: ['arka_sac']"
- },
  "pano_plakasi": {
-  "sinif": "BAGLANTISIZ",
+  "sinif": "HEMEN",
   "gelis": 319.126,
+  "bag": 319.126,
   "adim": 49,
-  "grup": true,
-  "kategori": "ACIK",
-  "neden": "bağlantı elemanı yok · kategori yok"
+  "neyle": [
+   "k_pano_M5x20_havsa_0",
+   "arka_sac"
+  ]
  },
  "plc_S7-1200_1214C": {
   "sinif": "BAGLANTISIZ",
@@ -2168,8 +2158,8 @@
   "gelis": 319.126,
   "adim": 49,
   "grup": true,
-  "kategori": "ACIK",
-  "neden": "bağlantı elemanı yok · kategori yok"
+  "kategori": "GRUP",
+  "neden": "tezgâh grubunda bağlı parçaya değiyor: ['pano_plakasi']"
  },
  "sigorta_C10": {
   "sinif": "BAGLANTISIZ",
@@ -2190,7 +2180,7 @@
  "taban_sac_tasiyici_20": {
   "sinif": "GECICI",
   "gelis": 33.88,
-  "bag": 370.208,
+  "bag": 369.869,
   "adim": 4,
   "bag_adim": 55,
   "neyle": [
@@ -2205,7 +2195,7 @@
  "taban_sac_tasiyici_380": {
   "sinif": "GECICI",
   "gelis": 38.42,
-  "bag": 372.008,
+  "bag": 371.669,
   "adim": 4,
   "bag_adim": 55,
   "neyle": [
@@ -2312,8 +2302,8 @@
   "gelis": 319.126,
   "adim": 49,
   "grup": true,
-  "kategori": "ACIK",
-  "neden": "bağlantı elemanı yok · kategori yok"
+  "kategori": "GRUP",
+  "neden": "tezgâh grubunda bağlı parçaya değiyor: ['valf_adasi_SS5Y3-20-04']"
  },
  "valf_SY3120_0_rakor_0": {
   "sinif": "BAGLANTISIZ",
@@ -2336,8 +2326,8 @@
   "gelis": 319.126,
   "adim": 49,
   "grup": true,
-  "kategori": "ACIK",
-  "neden": "bağlantı elemanı yok · kategori yok"
+  "kategori": "GRUP",
+  "neden": "tezgâh grubunda bağlı parçaya değiyor: ['valf_adasi_SS5Y3-20-04']"
  },
  "valf_SY3120_1_rakor_0": {
   "sinif": "BAGLANTISIZ",
@@ -2360,8 +2350,8 @@
   "gelis": 319.126,
   "adim": 49,
   "grup": true,
-  "kategori": "ACIK",
-  "neden": "bağlantı elemanı yok · kategori yok"
+  "kategori": "GRUP",
+  "neden": "tezgâh grubunda bağlı parçaya değiyor: ['valf_adasi_SS5Y3-20-04']"
  },
  "valf_SY3120_2_rakor_0": {
   "sinif": "BAGLANTISIZ",
@@ -2380,20 +2370,22 @@
   "neden": "bağlantı elemanı yok · kategori yok"
  },
  "valf_adasi_SS5Y3-20-04": {
-  "sinif": "BAGLANTISIZ",
+  "sinif": "HEMEN",
   "gelis": 319.126,
+  "bag": 319.126,
   "adim": 49,
-  "grup": true,
-  "kategori": "ACIK",
-  "neden": "bağlantı elemanı yok · kategori yok"
+  "neyle": [
+   "k_pano_M5x20_havsa_0",
+   "arka_sac"
+  ]
  },
  "valf_kor_plaka": {
   "sinif": "BAGLANTISIZ",
   "gelis": 319.126,
   "adim": 49,
   "grup": true,
-  "kategori": "ACIK",
-  "neden": "bağlantı elemanı yok · kategori yok"
+  "kategori": "GRUP",
+  "neden": "tezgâh grubunda bağlı parçaya değiyor: ['valf_adasi_SS5Y3-20-04']"
  },
  "yag_T_parcasi": {
   "sinif": "BAGLANTISIZ",
@@ -3124,6 +3116,46 @@
   "kategori": "ACIK",
   "neden": "bağlantı elemanı yok · kategori yok"
  },
+ "pano_ara_burcu_0": {
+  "sinif": "HEMEN",
+  "gelis": 319.126,
+  "bag": 319.126,
+  "adim": 49,
+  "neyle": [
+   "k_pano_M5x20_havsa_0",
+   "arka_sac"
+  ]
+ },
+ "pano_ara_burcu_2": {
+  "sinif": "HEMEN",
+  "gelis": 319.126,
+  "bag": 319.126,
+  "adim": 49,
+  "neyle": [
+   "k_pano_M5x20_havsa_2",
+   "arka_sac"
+  ]
+ },
+ "pano_ara_burcu_1": {
+  "sinif": "HEMEN",
+  "gelis": 319.126,
+  "bag": 319.126,
+  "adim": 49,
+  "neyle": [
+   "k_pano_M5x20_havsa_1",
+   "arka_sac"
+  ]
+ },
+ "pano_ara_burcu_3": {
+  "sinif": "HEMEN",
+  "gelis": 319.126,
+  "bag": 319.126,
+  "adim": 49,
+  "neyle": [
+   "k_pano_M5x20_havsa_3",
+   "arka_sac"
+  ]
+ },
  "k_elektrik_sac_0": {
   "sinif": "BAGLANTISIZ",
   "gelis": 132.821,
@@ -3154,8 +3186,8 @@
  },
  "k_govde_on_seffaf_0": {
   "sinif": "HEMEN",
-  "gelis": 366.008,
-  "bag": 366.008,
+  "gelis": 365.669,
+  "bag": 365.669,
   "adim": 55,
   "neyle": [
    "onyuz_kapak_K_kose_kaynagi_4",
@@ -3164,7 +3196,7 @@
  },
  "k_govde_on_seffaf_2": {
   "sinif": "BAGLANTISIZ",
-  "gelis": 366.008,
+  "gelis": 365.669,
   "adim": 55,
   "grup": true,
   "kategori": "GRUP",
@@ -3172,31 +3204,11 @@
  },
  "k_govde_on_seffaf_3": {
   "sinif": "BAGLANTISIZ",
-  "gelis": 366.008,
+  "gelis": 365.669,
   "adim": 55,
   "grup": true,
   "kategori": "GRUP",
   "neden": "tezgâh grubunda bağlı parçaya değiyor: ['k_govde_on_seffaf_0']"
- },
- "k_itici_sac_2": {
-  "sinif": "HEMEN",
-  "gelis": 55.85,
-  "bag": 55.85,
-  "adim": 4,
-  "neyle": [
-   "k72_itici_ayak_kaynagi_4360.0_-755.0_0",
-   "k72_itici_ust_plaka_4360.0_-755.0"
-  ]
- },
- "k_itici_sac_3": {
-  "sinif": "HEMEN",
-  "gelis": 59.79,
-  "bag": 59.79,
-  "adim": 4,
-  "neyle": [
-   "k72_itici_ayak_kaynagi_4360.0_-645.0_0",
-   "k72_itici_ust_plaka_4360.0_-645.0"
-  ]
  },
  "k_yag_pom_0": {
   "sinif": "BAGLANTISIZ",

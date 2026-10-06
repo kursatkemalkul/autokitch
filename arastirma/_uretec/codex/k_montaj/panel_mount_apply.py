@@ -10,8 +10,8 @@ import manifold3d as mf
 spec=importlib.util.spec_from_file_location('k_panel_writer',Path(__file__).with_name('78_k_sac_topolojisi.py'))
 writer=importlib.util.module_from_spec(spec);spec.loader.exec_module(writer)
 
-def apply(source,dest):
-    folder=OUT/'panel_mount_candidate'
+def apply(source,dest,folder=None):
+    folder=folder or OUT/'panel_mount_candidate'
     audit=json.loads((folder/'audit.json').read_text(encoding='utf-8'))
     recipe=json.loads(gzip.decompress((folder/'geometry.json.gz').read_bytes()))
     actual=hashlib.sha256(source.read_bytes()).hexdigest()
@@ -29,8 +29,11 @@ def apply(source,dest):
                                  'maximum_declared_precision_adjustment_mm':0.,'purpose':'real bored and countersunk panel mounting',
                                  'supplier_equipment_modified':False}}
         else:
-            extra[a]={'source_template':'pano_ara_burcu_0','vertices':v.tolist(),'triangles':f.tolist()}
+            template='din_rayi_0' if folder.name=='din_mount_candidate' else 'pano_ara_burcu_0'
+            extra[a]={'source_template':template,'vertices':v.tolist(),'triangles':f.tolist()}
     expected={'pano_plakasi','arka_sac'}|{f'pano_ara_burcu_{i}' for i in range(4)}
+    if folder.name=='din_mount_candidate':
+        expected={'pano_plakasi','din_rayi_0','din_rayi_1'}
     assert set(repairs)==expected and set(extra)==set(audit['added_parts']) and len(extra)==12
     payload=folder/'source_repair_recipe.json.gz'
     payload.write_bytes(gzip.compress(json.dumps({'source_model_sha256':actual,'repairs':repairs},separators=(',',':')).encode(),mtime=0))
@@ -47,4 +50,4 @@ def apply(source,dest):
     dest.with_name(dest.stem+'_ent.json').write_text(json.dumps({'adim':79,'prototype':'panel refinement','parca':entries},indent=2),encoding='utf-8')
 
 if __name__=='__main__':
-    apply(*map(Path,sys.argv[1:3]));sys.stdout.flush();os._exit(0)
+    apply(*map(Path,sys.argv[1:4]));sys.stdout.flush();os._exit(0)

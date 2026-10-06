@@ -79,7 +79,7 @@ if head in P:
  GROUPS[head]=members;done.update(members[1:])
 
 # Build the DIN panel on the rear sheet on a bench, then enter from the rear before the cabinet closes.
-rear_members=['arka_sac']+[a for a in P if a.startswith(('pano_','din_rayi_','plc_','guc_24V','sigorta_','klemens_','valf_','sartlandirici_'))]
+rear_members=['arka_sac']+[a for a in P if a.startswith(('pano_','k_pano_','k_din_','din_rayi_','plc_','guc_24V','sigorta_','klemens_','valf_','sartlandirici_'))]
 if 'arka_sac' in P and 'pano_plakasi' in rear_members:
  GROUPS['arka_sac']=rear_members;done.update(rear_members[1:])
 
@@ -564,6 +564,11 @@ for a in ordered:
       side=np.zeros(3);side[q]=sign*300;alternatives.append(YOL(side,axial))
   elif a.startswith('govde_bag_arka_') and a.endswith(('_pul','_somun')):
    axial=np.array([0,0,6. if a.endswith('_somun') else 8.]);alternatives=[]
+   if a in ('govde_bag_arka_sag_1600_pul','govde_bag_arka_sol_1600_pul'):
+    # A100mm lateral lead crossed the widened panel. Both20mm leads
+    # remain inside the side gap, then seat on the same real stud axis.
+    side=np.array([-20.,0,0]) if '_sag_' in a else np.array([20.,0,0])
+    alternatives.append(YOL(side,axial))
    for q in (0,1):
     for sign in (-1,1):
      side=np.zeros(3);side[q]=sign*100;alternatives.append(YOL(side,axial))

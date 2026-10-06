@@ -1,16 +1,18 @@
 {
   "stage": 79,
-  "source_model_sha256": "415044b5baa2e454c6976f99a72460a52c6ed8b5c5c42a396a3deb22af856f75",
-  "raw_parts_file": "k_parca79_raw.pkl",
-  "raw_parts_sha256": "173e6aac60ec31bc207552a198a7de73a9427b1f273133924dd1f82dca895d16",
-  "previous_verified_parts_file": "iteration45/k_parca.pkl",
-  "previous_registry_file": "iteration45/surface_ownership_registry.json",
-  "current_parts_sha256": "739bf01b06f66c9e1d8a9c313c8331bdcefd847eeab8d13935e9779673959c05",
-  "registry_sha256": "df9566a36e15c0c455b60580ad8bc70d87e72b3aa73bb5d110bd572db30f75bc",
+  "local_refinement": "panel_and_DIN_mounts",
+  "source_model_sha256": "0a9dc9699ed91a9fb25b654553afa9628897f5bd289a9db4a442cd99c41cc262",
+  "raw_parts_file": "k_parca_din_raw.pkl",
+  "raw_parts_sha256": "f470a613f31752c78d0a925c83b10ec43ff7cb111d14a16073c326d7a8900e64",
+  "previous_verified_parts_file": "iteration46_before_panel/k_parca.pkl",
+  "previous_registry_file": "iteration46_before_panel/surface_ownership_registry.json",
+  "current_parts_sha256": "e1b076206a456516fb56ee923142f34d75af1ec75d7e3a2107d7f05b7532d2f1",
+  "registry_sha256": "205284ba2dfd5534d58aea8aa95a8b795930025bc57ed5183f0393ae18730362",
+  "source_sheets": 68,
   "full_montage_checks_need_refresh": false,
-  "production_release": false,
-  "rigid_montage_plan_sha256": "e93dab6ee1acdbc7e5d3bd2a1ef517dd6cbe43f21e8b1aadcc19f7adc0416239",
   "rigid_montage_checks_current": true,
   "whole_station_connection_release": false,
-  "manufacturing_release": false
+  "manufacturing_release": false,
+  "production_release": false,
+  "rigid_montage_plan_sha256": "3df351fe7daefec4bd709f2f3fbad8c71069fcc7f35f95c899727c3ef054566f"
 }
