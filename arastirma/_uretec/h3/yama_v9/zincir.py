@@ -221,8 +221,15 @@ ADIMLAR = [
      [(".", 'python "{YAMA}/69_e_arka_pem.py" hat3_v10j.glb hat3_v10k.glb')]),
     ("80", "E kapıları + emniyet sensörleri bağlı: üst sol sensör E gövdesine taşındı · 4 sensöre dikmeye kaynaklı 1,5 mm L braket + PEM + M4 · aktüatörler PEM + havşa M4 · menteşe kanatları / karşılıklar / şarjör kapısı punta (E montaj v2 bağlantı denetimi)", ["hat3_v10k.glb"], "hat3_v10l.glb",
      [(".", 'python "{YAMA}/80_e_baglanti.py" hat3_v10k.glb hat3_v10l.glb')]),
+    # --- E mekanizma montajı (6 Eki · 2. oturum · KURALLAR §2.2 / §5): mekanizma iç parçaları vida vida · bileşen adları veri/e_mek_parcalar.json · motor e_mek_bag.py ---
+    ("81", "E kalıp + kalıp yuvası + köprü mekanizmaları vidalı: kolonlar, yataklar, motorlar (NEMA flanşından), kaplin setskurları, vida mili segmanları, yuva milleri, sensörler (E mekanizma envanteri: mekanizma vidası 0)", ["hat3_v10l.glb"], "hat3_v10m.glb",
+     [(".", 'python "{YAMA}/81_e_kalip_kopru.py" hat3_v10l.glb hat3_v10m.glb')]),
+    ("82", "E kapak katlama mekanizması vidalı: şasi ayakları (kirişe + kalıp tabanına M6), motor plakaları, dişli kutulu motor, yatak ayakları / yataklar, tahrik mili setskur + segman, sensör braketleri + M8 somun, alt motor bloğu, kaplin, dik mil göbeği, katlayıcı kol / dişli pim, 2 yeni palet braketi (6 mm kademeli lama), kılavuz direkler + miller, dik rodlar", ["hat3_v10m.glb"], "hat3_v10n.glb",
+     [(".", 'python "{YAMA}/82_e_kapak.py" hat3_v10m.glb hat3_v10n.glb')]),
+    ("83", "E köşe kaldırıcı (4 köşe tutucu, 2,77° eğik eksende) + köşe pistonu vidalı: motorlar NEMA flanşından eğik plakaya, göbek setskur + Ø3 pimler, bayrak bilezikleri, çene–parmak, çene–mafsal TIG dikişi, kılavuz blok paketleri, sensör somunları, uç blok L köşebentleri (yeni), bronz somun kelepçesi (yeni), piston motor plakası L köşebentleri (yeni), kaplin / çubuk setskurları + segmanlar", ["hat3_v10n.glb"], "hat3_v10o.glb",
+     [(".", 'python "{YAMA}/83_e_kose.py" hat3_v10n.glb hat3_v10o.glb')]),
 ]
-SON = "hat3_v10l.glb"
+SON = "hat3_v10o.glb"
 
 
 def kur(is_dizin, h3, uretec):
