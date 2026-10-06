@@ -8,7 +8,7 @@ Kemal'in kararı (5 Eki 2026): iki ajan aynı anda, farklı istasyonlarda çalı
 
 | İş | Kim | Branch | Durum |
 |---|---|---|---|
-| Robot + ray + QR dolabı + sipariş animasyonları | Codex | `coord/codex-qr-donus-v25` | v25/adım94: QR sütunu diğer uçta, dolapla aynı333mm derinlik;12göz korunur. Kutu koridorda sola dönerek aynı QR yerine bırakılır. Duvar48cm yaklaşır (X5360), kayıtlı kol/ürün56mm,pano72mm pay; pano200mm gömülü. İki tam koşu bayt aynı;23kapalı kablo/kanal katısı,9hat>=2mm. Hız/ivme kontrolü geçer. Tam robot/fizik, bina gömüsü ve elektrik/emniyet onayı açık. |
+| Robot + ray + QR dolabı + sipariş animasyonları | Codex | `coord/codex-dukkan-v26` | v25/adım94: QR sütunu diğer uçta, dolapla aynı333mm derinlik;12göz korunur. Kutu koridorda sola dönerek aynı QR yerine bırakılır. Duvar48cm yaklaşır (X5360), kayıtlı kol/ürün56mm,pano72mm pay; pano200mm gömülü. İki tam koşu bayt aynı;23kapalı kablo/kanal katısı,9hat>=2mm. Hız/ivme kontrolü geçer. Tam robot/fizik, bina gömüsü ve elektrik/emniyet onayı açık. |
 | TOPPING montaj animasyonu v5 | Claude | `claude/topping-montaj-v5` | yayında (açık 3 küçük madde) |
 | Standart önlemleri · makine: acil stop (58) · 10 kapı emniyet anahtarı (59) · hava emniyet valfi (60) · davlumbaz filtresi servis ağzı (61) · hijyen / R290 / A perdesi kayıt | Claude | `claude/standart-makine` | BİTTİ (cb7d1ec) — Kemal incelemesinde |
 | **TOPPING montaj v6**: bağsız 63 parça + geçici dayalı 2 parça bağlanır (KURALLAR §2.3 kural 10), animasyon yeniden üretilir, §5 denetimi | Claude | `claude/topping-montaj-v6` | YAYINDA (5 Eki, PR #5) · açık: kıyma silindiri flanşı, 5 iç elektrik parçası, 2 kovan contası |
@@ -63,6 +63,6 @@ Robot entegrasyon adımı94, makine geometrisini koruyan son render/animasyon ad
 - Depo herkese açık. Oturum kayıtları `_local/claude_oturum/` altında durur (Kemal: kalsın); `_local/` siteye kopyalanmaz. Parola, anahtar, kişisel bilgi depoya konmaz.
 - Büyük ara dosyalar (`.pkl`, 100 MB üstü GLB) depoya konmaz; GLB gerekirse kayıpsız `.gz` olarak.
 
-ZİNCİR KİLİDİ: BOŞ
+ZİNCİR KİLİDİ: Codex · v26/adım95 · kompakt dükkân kapıları, ara duvar, oturma tezgâhı ve lavabo; yalnız çevre, v25 robot/QR ve makine korunur
 
 Codex v23/adım92: sağ duvar panosu ve ayrı router bölmesi; gömülü iniş, sıfır kapak, doğru dirsek/kesim ve ayrı kablo yolları. İki tam koşu bayt aynı; kanal/kablo katıları kapalı, modüllerde örtüşme yok, kablo yolunda2mm asgari pay. Elektrik nihai devre/kesit-seçicilik ve döşeme yükü, özel ray ve tam robot çarpışması hâlâ açık. E/K cloud dosyalarına dokunulmadı.
