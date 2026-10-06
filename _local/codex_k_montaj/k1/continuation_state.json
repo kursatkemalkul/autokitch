@@ -1,7 +1,7 @@
 {
   "task": "codex-k-montaj-v3",
   "branch": "codex/k-montaj",
-  "latest_checkpoint": "3133325e",
+  "latest_checkpoint": "19441452",
   "goal_active": true,
   "k_completed": false,
   "u_started": false,
@@ -21,16 +21,16 @@
       "issues": 0
     }
   },
-  "current_candidate": "plan_k_cap_full.pkl",
-  "current_candidate_sha256": "cf4a09dfdd91a84d6a58835a37a4b093b6d2d22b45cb1e8f67dfd93d699b1f41",
+  "current_candidate": "k_parca_head_verified.pkl",
+  "current_candidate_sha256": "b3bcc7691182d32674d2e7d5b2ddb4892be2487c2d6946541d1ee38871d9bec9",
   "running_ccd_session_id": null,
   "next": [
-    "Finish cutting-head fabrication and integrate candidate into batched source recipe.",
-    "Complete remaining K connections on cached source; full manufacturing/connection gates still not passed.",
-    "Full K render/browser/ready after final source binding, then U."
+    "Integrate cutting-head fabrication and real threaded assembly order using existing v6 infrastructure.",
+    "Finish remaining K connections, final mandatory checks and browser verification.",
+    "After full K completion start U; do not activate unfinished candidate."
   ],
   "active_processes": [],
-  "last_verified_work": "Current cap plan4 source-defined weld connection records closed;208 open. Cutting-head candidate18 records/7M8 joints/3continuous fillet rings passed source/own geometry,6weld contacts and7axial tool approaches. No activation.",
-  "next_required": "Bind cutting-head supplied M8 interface rendering correction and actual weld access/sequence, then batch remaining K connections before a large source rebuild.",
+  "last_verified_work": "Private head source1021 parts and785424 triangles exactly rebound. All1696 apparent missing triangles proved exact repeated source float32 vertices/zero area; no tolerance waiver. A/Bidentical andglobaloutsideKunchanged.119 sheets closed,4new head flat-stock endpoint error0. Manufacturing/connection release remain false.",
+  "next_required": "Integrate four flat head layers, three rod welds and seven M8 joints into cap/v6 assembly benches and order; then continue remaining K connections before final CCD/export/browser verification.",
   "goal_status": "active"
 }

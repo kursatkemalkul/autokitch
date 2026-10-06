@@ -89,6 +89,7 @@ for i,(x,z) in enumerate(centres):
     assert abs(P[name]['V'][:,1].min()-1174.5) < .001
     bore = solid_shape(ns['cylinder'](x,1174.49,z,4.05,16.01))
     save_repair(name,before-bore,before,'Bottom M8 blind thread; nominal cosmetic bore8.1, tap drill6.8, depth16')
+    repairs[name]['tur'] = 'mek'  # Turned rod, not a sheet blank.
     bolt = S.vida('DIN7991','M8',20.,(x,1166.5,z),(0,1,0),ad='k79_kafa_alt_M8x20_'+str(i),birim='K_KESICI')
     bolt['tur']='baglanti'; pieces.append(bolt)
     joins.append({'id':name,'screw':bolt['ad'],'axis':[0,1,0],'center_mm':[x,1166.5,z],

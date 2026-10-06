@@ -46,6 +46,7 @@ for i,(x,z) in enumerate([(4160.,-226.),(4160.,-186.),(4240.,-226.),(4240.,-186.
                   'factory_yoke_nominal_M8_bore_depth_mm':17.,'seat_depth_mm':4.4,'seat_outer_diameter_mm':16.1})
 ns['ns']['save_repair']('kafa_adaptoru',adaptor,original_adaptor,'Lower6mm stock, four actual adaptor clearances and flush heads')
 ns['ns']['save_repair'](yoke,after_yoke,original_yoke,'Supplied catalogue M8 female mounting interface omitted by native approximate rendering; no supplier shop modification')
+repairs[yoke]['tur']='mek'  # Purchased yoke is delivered assembled, never abkant stock.
 replacement=ns['ns']['make_piece'](upper['ad'],upper_solid,4.)
 parts[parts.index(upper)]=replacement
 r=helper['audit_clamps'](parts,joins,repairs,holes)

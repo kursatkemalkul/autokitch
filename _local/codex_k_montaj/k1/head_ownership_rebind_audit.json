@@ -1,0 +1,28 @@
+{
+  "raw_parts_sha256": "fed962b608af701deea42a975774c49c6cc2c8354eceff796f14cc3db6315ee7",
+  "previous_parts_sha256": "9a599433c1160266de75b4aaf01d6efd307f0466abd8b03c948dfa91cdef36fe",
+  "repair_payload_sha256": "6bb2950a36200b907279646d3f49e4e7b994cac6fe63353668100706ca9fa0a8",
+  "source_float32_zero_area_triangles": {
+    "kafa_adaptoru": {
+      "count": 976,
+      "expected_triangles_sha256": "7ceeecab139f6337b30b59c0fd27b60a6ac1e30341b7b1c32ae818f6f5ef8bd2",
+      "reason": "Exact repeated float32 source vertex: zero-area stored triangle",
+      "maximum_vertex_rounding_mm": 0.00023967818476255641
+    },
+    "kafa_plakasi_8": {
+      "count": 720,
+      "expected_triangles_sha256": "92497c5dd765294405862842d9ebd7f552b0b37720282274ca7d70747d3be81a",
+      "reason": "Exact repeated float32 source vertex: zero-area stored triangle",
+      "maximum_vertex_rounding_mm": 0.00024248426610153304
+    }
+  },
+  "raw_triangles": 785424,
+  "expected_triangles": 785424,
+  "matched_triangles": 785424,
+  "maximum_recompression_vertex_distance_mm": 0.00029677909730528194,
+  "ambiguous": [],
+  "unmatched_expected_count": 0,
+  "unmatched_expected_parts": {},
+  "passed": true,
+  "production_release": false
+}

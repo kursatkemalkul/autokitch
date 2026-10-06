@@ -1,0 +1,80 @@
+{
+  "step": 79,
+  "input_sha256": "c0c004f133fa4d715aebeb5c21b35df688367bbdb630a35c656aef4b4ff4341b",
+  "payload_sha256": "8bdd8d3a3092a520136bd154d41f11f19435132dd0022a8b72e09f149e631e01",
+  "output_sha256": "5f00073a06682f0f231bef4e93019abc7ecd06ad33be6b1bdd9baeaa206ffc27",
+  "matched_source_triangles": {
+    "DGRF_boyunduruk": 196,
+    "kelebek_somun_0": 48,
+    "ara_dikme_0": 48,
+    "ara_dikme_1": 48,
+    "ara_dikme_2": 48,
+    "kafa_plakasi_8": 48,
+    "kafa_adaptoru": 48
+  },
+  "naming_grid_mm": 0.0001,
+  "maximum_naming_grid_adjustment_mm": 7.916364767689833e-05,
+  "repairs": [
+    {
+      "part": "DGRF_boyunduruk",
+      "closed_status": "Error.NoError",
+      "maximum_declared_precision_adjustment_mm": 0.001,
+      "purpose": "Supplied catalogue M8 female mounting interface omitted by native approximate rendering; no supplier shop modification"
+    },
+    {
+      "part": "ara_dikme_0",
+      "closed_status": "Error.NoError",
+      "maximum_declared_precision_adjustment_mm": 0.001,
+      "purpose": "Bottom M8 blind thread; nominal cosmetic bore8.1, tap drill6.8, depth16"
+    },
+    {
+      "part": "ara_dikme_1",
+      "closed_status": "Error.NoError",
+      "maximum_declared_precision_adjustment_mm": 0.001,
+      "purpose": "Bottom M8 blind thread; nominal cosmetic bore8.1, tap drill6.8, depth16"
+    },
+    {
+      "part": "ara_dikme_2",
+      "closed_status": "Error.NoError",
+      "maximum_declared_precision_adjustment_mm": 0.001,
+      "purpose": "Bottom M8 blind thread; nominal cosmetic bore8.1, tap drill6.8, depth16"
+    },
+    {
+      "part": "kafa_adaptoru",
+      "closed_status": "Error.NoError",
+      "maximum_declared_precision_adjustment_mm": 0.001,
+      "purpose": "Lower6mm stock, four actual adaptor clearances and flush heads"
+    },
+    {
+      "part": "kafa_plakasi_8",
+      "closed_status": "Error.NoError",
+      "maximum_declared_precision_adjustment_mm": 0.001,
+      "purpose": "Permitted lower6mm stock; original faceted outline retained"
+    },
+    {
+      "part": "kelebek_somun_0",
+      "closed_status": "Error.NoError",
+      "maximum_declared_precision_adjustment_mm": 0.001,
+      "purpose": "Unchanged exact moving-head render template"
+    }
+  ],
+  "source_labels_retained": true,
+  "source_interfaces_intended_unchanged": false,
+  "unrelated_geometry_audit_required": true,
+  "reextraction_required": true,
+  "production_release": false,
+  "added_parts": [
+    "k79_kafa_ust_plaka_2",
+    "k79_kafa_adaptor_ust_plaka_4",
+    "k79_kafa_alt_M8x20_0",
+    "k79_kafa_alt_M8x20_1",
+    "k79_kafa_alt_M8x20_2",
+    "k79_kafa_dikme_TIG_0",
+    "k79_kafa_dikme_TIG_1",
+    "k79_kafa_dikme_TIG_2",
+    "k79_kafa_yoke_M8x25_0",
+    "k79_kafa_yoke_M8x25_1",
+    "k79_kafa_yoke_M8x25_2",
+    "k79_kafa_yoke_M8x25_3"
+  ]
+}

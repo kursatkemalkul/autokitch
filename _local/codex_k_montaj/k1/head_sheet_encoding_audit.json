@@ -1,0 +1,58 @@
+{
+  "source_model_sha256": "5f00073a06682f0f231bef4e93019abc7ecd06ad33be6b1bdd9baeaa206ffc27",
+  "source_parts_sha256": "b3bcc7691182d32674d2e7d5b2ddb4892be2487c2d6946541d1ee38871d9bec9",
+  "checks": [
+    {
+      "name": "kafa_plakasi_8",
+      "thickness_mm": 6.0,
+      "vertices": 5321,
+      "triangles": 10668,
+      "endpoint_error_mm": 0.0,
+      "flat_stock": true,
+      "bends_required": false,
+      "actual_source_holes_preserved": true,
+      "secondary_operations": "Laser exact faceted outer outline and central/clearance holes; countersink lower plates to the measured M8 seating depth4.4mm; deburr and passivate",
+      "machining_release": false
+    },
+    {
+      "name": "k79_kafa_ust_plaka_2",
+      "thickness_mm": 2.0,
+      "vertices": 1538,
+      "triangles": 3084,
+      "endpoint_error_mm": 0.0,
+      "flat_stock": true,
+      "bends_required": false,
+      "actual_source_holes_preserved": true,
+      "secondary_operations": "Laser exact faceted outer outline and central/clearance holes; countersink lower plates to the measured M8 seating depth4.4mm; deburr and passivate",
+      "machining_release": false
+    },
+    {
+      "name": "kafa_adaptoru",
+      "thickness_mm": 6.0,
+      "vertices": 7082,
+      "triangles": 14192,
+      "endpoint_error_mm": 0.0,
+      "flat_stock": true,
+      "bends_required": false,
+      "actual_source_holes_preserved": true,
+      "secondary_operations": "Laser exact faceted outer outline and central/clearance holes; countersink lower plates to the measured M8 seating depth4.4mm; deburr and passivate",
+      "machining_release": false
+    },
+    {
+      "name": "k79_kafa_adaptor_ust_plaka_4",
+      "thickness_mm": 4.0,
+      "vertices": 2042,
+      "triangles": 4096,
+      "endpoint_error_mm": 0.0,
+      "flat_stock": true,
+      "bends_required": false,
+      "actual_source_holes_preserved": true,
+      "secondary_operations": "Laser exact faceted outer outline and central/clearance holes; countersink lower plates to the measured M8 seating depth4.4mm; deburr and passivate",
+      "machining_release": false
+    }
+  ],
+  "physical_sheets": 119,
+  "passed_endpoint_and_stock": true,
+  "manufacturing_release": false,
+  "production_release": false
+}
