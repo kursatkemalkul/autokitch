@@ -1,0 +1,253 @@
+{
+  "source_parts_sha256": "739bf01b06f66c9e1d8a9c313c8331bdcefd847eeab8d13935e9779673959c05",
+  "scope": "Four custom pusher posts and their16 bottom welds; no whole-station release",
+  "checks": [
+    {
+      "part": "k_itici_sac_0",
+      "outer_radius_mm": 4,
+      "inner_radius_mm": 2,
+      "outer_arc_vertices": 112,
+      "inner_arc_vertices": 112,
+      "maximum_arc_radius_error_mm": 0.0002546831080860734,
+      "unclassified_cross_section_vertices": 0,
+      "maximum_envelope_error_mm": 0.0001999999999497959,
+      "manifold_status": "Error.NoError",
+      "actual_volume_mm3": 7749.364340123325,
+      "analytic_rounded_profile_volume_mm3": 7754.548486898495,
+      "relative_volume_error": 0.0006685298033700952,
+      "welds": [
+        {
+          "part": "k72_itici_ayak_kaynagi_4040.0_-755.0_0",
+          "actual_flat_landing_span_mm": [
+            -6.000100000000202,
+            6.0
+          ],
+          "post_contact_error_mm": 0.0,
+          "plate_contact_error_mm": 0.0,
+          "weld_contact_error_mm": 0.0,
+          "passed": true
+        },
+        {
+          "part": "k72_itici_ayak_kaynagi_4040.0_-755.0_1",
+          "actual_flat_landing_span_mm": [
+            -6.0,
+            6.0
+          ],
+          "post_contact_error_mm": 0.0001999999999497959,
+          "plate_contact_error_mm": 0.0,
+          "weld_contact_error_mm": 0.0001999999999497959,
+          "passed": true
+        },
+        {
+          "part": "k72_itici_ayak_kaynagi_4040.0_-755.0_2",
+          "actual_flat_landing_span_mm": [
+            -6.000100000000202,
+            6.0
+          ],
+          "post_contact_error_mm": 0.0,
+          "plate_contact_error_mm": 0.0,
+          "weld_contact_error_mm": 0.0,
+          "passed": true
+        },
+        {
+          "part": "k72_itici_ayak_kaynagi_4040.0_-755.0_3",
+          "actual_flat_landing_span_mm": [
+            -6.0,
+            6.0
+          ],
+          "post_contact_error_mm": 0.0001999999999497959,
+          "plate_contact_error_mm": 0.0,
+          "weld_contact_error_mm": 0.0001999999999497959,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "k_itici_sac_1",
+      "outer_radius_mm": 4,
+      "inner_radius_mm": 2,
+      "outer_arc_vertices": 112,
+      "inner_arc_vertices": 112,
+      "maximum_arc_radius_error_mm": 0.0002546831080860734,
+      "unclassified_cross_section_vertices": 0,
+      "maximum_envelope_error_mm": 0.0001999999999497959,
+      "manifold_status": "Error.NoError",
+      "actual_volume_mm3": 7749.373267260388,
+      "analytic_rounded_profile_volume_mm3": 7754.548486898495,
+      "relative_volume_error": 0.0006673785903654282,
+      "welds": [
+        {
+          "part": "k72_itici_ayak_kaynagi_4040.0_-645.0_0",
+          "actual_flat_landing_span_mm": [
+            -6.000100000000202,
+            6.0
+          ],
+          "post_contact_error_mm": 0.0,
+          "plate_contact_error_mm": 0.0,
+          "weld_contact_error_mm": 0.0,
+          "passed": true
+        },
+        {
+          "part": "k72_itici_ayak_kaynagi_4040.0_-645.0_1",
+          "actual_flat_landing_span_mm": [
+            -6.0,
+            6.0
+          ],
+          "post_contact_error_mm": 0.0001999999999497959,
+          "plate_contact_error_mm": 0.0,
+          "weld_contact_error_mm": 0.0001999999999497959,
+          "passed": true
+        },
+        {
+          "part": "k72_itici_ayak_kaynagi_4040.0_-645.0_2",
+          "actual_flat_landing_span_mm": [
+            -6.000100000000202,
+            6.0
+          ],
+          "post_contact_error_mm": 0.0,
+          "plate_contact_error_mm": 0.0,
+          "weld_contact_error_mm": 0.0,
+          "passed": true
+        },
+        {
+          "part": "k72_itici_ayak_kaynagi_4040.0_-645.0_3",
+          "actual_flat_landing_span_mm": [
+            -6.0,
+            6.0
+          ],
+          "post_contact_error_mm": 0.0001999999999497959,
+          "plate_contact_error_mm": 0.0,
+          "weld_contact_error_mm": 0.0001999999999497959,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "k_itici_sac_2",
+      "outer_radius_mm": 4,
+      "inner_radius_mm": 2,
+      "outer_arc_vertices": 112,
+      "inner_arc_vertices": 112,
+      "maximum_arc_radius_error_mm": 0.00027449816875391164,
+      "unclassified_cross_section_vertices": 0,
+      "maximum_envelope_error_mm": 0.00010000000020227162,
+      "manifold_status": "Error.NoError",
+      "actual_volume_mm3": 7749.342602268377,
+      "analytic_rounded_profile_volume_mm3": 7754.548486898495,
+      "relative_volume_error": 0.0006713330426540476,
+      "welds": [
+        {
+          "part": "k72_itici_ayak_kaynagi_4360.0_-755.0_0",
+          "actual_flat_landing_span_mm": [
+            -5.999899999999798,
+            6.0002000000004045
+          ],
+          "post_contact_error_mm": 0.0,
+          "plate_contact_error_mm": 0.0,
+          "weld_contact_error_mm": 0.0,
+          "passed": true
+        },
+        {
+          "part": "k72_itici_ayak_kaynagi_4360.0_-755.0_1",
+          "actual_flat_landing_span_mm": [
+            -6.0,
+            6.0
+          ],
+          "post_contact_error_mm": 0.00010000000020227162,
+          "plate_contact_error_mm": 0.0,
+          "weld_contact_error_mm": 0.00010000000020227162,
+          "passed": true
+        },
+        {
+          "part": "k72_itici_ayak_kaynagi_4360.0_-755.0_2",
+          "actual_flat_landing_span_mm": [
+            -5.999899999999798,
+            6.0002000000004045
+          ],
+          "post_contact_error_mm": 0.0,
+          "plate_contact_error_mm": 0.0,
+          "weld_contact_error_mm": 0.0,
+          "passed": true
+        },
+        {
+          "part": "k72_itici_ayak_kaynagi_4360.0_-755.0_3",
+          "actual_flat_landing_span_mm": [
+            -6.0,
+            6.0
+          ],
+          "post_contact_error_mm": 0.00010000000020227162,
+          "plate_contact_error_mm": 0.0,
+          "weld_contact_error_mm": 0.00010000000020227162,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "k_itici_sac_3",
+      "outer_radius_mm": 4,
+      "inner_radius_mm": 2,
+      "outer_arc_vertices": 112,
+      "inner_arc_vertices": 112,
+      "maximum_arc_radius_error_mm": 0.0002505653479514258,
+      "unclassified_cross_section_vertices": 0,
+      "maximum_envelope_error_mm": 0.00010000000020227162,
+      "manifold_status": "Error.NoError",
+      "actual_volume_mm3": 7749.351533764467,
+      "analytic_rounded_profile_volume_mm3": 7754.548486898495,
+      "relative_volume_error": 0.0006701812675242983,
+      "welds": [
+        {
+          "part": "k72_itici_ayak_kaynagi_4360.0_-645.0_0",
+          "actual_flat_landing_span_mm": [
+            -5.999899999999798,
+            6.0002000000004045
+          ],
+          "post_contact_error_mm": 0.0,
+          "plate_contact_error_mm": 0.0,
+          "weld_contact_error_mm": 0.0,
+          "passed": true
+        },
+        {
+          "part": "k72_itici_ayak_kaynagi_4360.0_-645.0_1",
+          "actual_flat_landing_span_mm": [
+            -6.0,
+            6.0
+          ],
+          "post_contact_error_mm": 0.00010000000020227162,
+          "plate_contact_error_mm": 0.0,
+          "weld_contact_error_mm": 0.00010000000020227162,
+          "passed": true
+        },
+        {
+          "part": "k72_itici_ayak_kaynagi_4360.0_-645.0_2",
+          "actual_flat_landing_span_mm": [
+            -5.999899999999798,
+            6.0002000000004045
+          ],
+          "post_contact_error_mm": 0.0,
+          "plate_contact_error_mm": 0.0,
+          "weld_contact_error_mm": 0.0,
+          "passed": true
+        },
+        {
+          "part": "k72_itici_ayak_kaynagi_4360.0_-645.0_3",
+          "actual_flat_landing_span_mm": [
+            -6.0,
+            6.0
+          ],
+          "post_contact_error_mm": 0.00010000000020227162,
+          "plate_contact_error_mm": 0.0,
+          "weld_contact_error_mm": 0.00010000000020227162,
+          "passed": true
+        }
+      ],
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "production_release": false,
+  "weld_strength_and_torch_access_verified": false
+}

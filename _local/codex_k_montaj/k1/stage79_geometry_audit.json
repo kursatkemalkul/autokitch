@@ -1,0 +1,19 @@
+{
+  "source_model_sha256": "e2536654cfa017ae8012acb58270176f412c6acd2a680e0e340a0055629cda22",
+  "output_model_sha256": "415044b5baa2e454c6976f99a72460a52c6ed8b5c5c42a396a3deb22af856f75",
+  "a_b_byte_identical": true,
+  "comparison_grid_mm": 0.001,
+  "compared_nodes": 809,
+  "changed_nodes_outside_declared_scope": [],
+  "declared_removed_triangles": 256,
+  "declared_added_triangles": 1920,
+  "rounded_grid_missing_keys": 388,
+  "rounded_grid_extra_keys": 388,
+  "rounded_grid_note": "Rounding-bin differences must pass actual cyclic vertex distance and one-to-one matching; triangle counts alone do not pass.",
+  "one_to_one_actual_geometry_rebind_verified": true,
+  "maximum_actual_vertex_distance_mm": 0.00027451596218141367,
+  "rebind_audit_sha256": "948a4d8b77d9d682172d5deb60a2ecb5f1ff16f1c0c303902ee814f346a8a42f",
+  "passed": true,
+  "production_release": false,
+  "reextraction_and_movement_audits_required": true
+}

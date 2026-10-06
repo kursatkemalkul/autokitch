@@ -1,0 +1,59 @@
+{
+  "iteration": 46,
+  "source_stage": 79,
+  "source_model_sha256": "415044b5baa2e454c6976f99a72460a52c6ed8b5c5c42a396a3deb22af856f75",
+  "parts": 849,
+  "triangles": 315958,
+  "physical_sheets": 67,
+  "closed_sheets": 67,
+  "combined_rigid_ccd_pairs": 8174,
+  "combined_rigid_ccd_passed": true,
+  "dense_bend_sampling_passed": true,
+  "measured_body_connections_passed": 32,
+  "connection_classes": {
+    "GECICI": 41,
+    "BAGLANTISIZ": 242,
+    "HEMEN": 69
+  },
+  "artifacts_sha256": {
+    "current_source_manifest.json": "c60aaec80c69df367c9615e9cef94eadc97d5035d9eae19cfa36d290f7d01e5d",
+    "surface_ownership_registry.json": "df9566a36e15c0c455b60580ad8bc70d87e72b3aa73bb5d110bd572db30f75bc",
+    "ownership_replay_audit.json": "c9c79dd6b7e0565f85424a48c0c692492b19f9277d6b158031696224b8056322",
+    "current_sheet_bending.json": "d91dcfa0c46dca20fc824cc5505f34b0b3c9347d573159e11afa48f3cc9fd627",
+    "physical_sheet_closure_audit.json": "fe2b50fc4ad9d9152c91934d55614da0fce995488530c06230d5bc40c4790396",
+    "plan_source_binding_audit.json": "d3af344aecc06bbc94938a490cbdead04129047746f3ed90f6ea45d8a2cac6cc",
+    "plan_audit.json": "adaaece8606e687a7b082c28a86c3ff280ef5a71c819a378c01d76e0f097ad44",
+    "bench_prototype_audit.json": "03b23a1e323629486f526b02f74260b1e3cf3210a3a23aa14502e1ceef9d4d51",
+    "bench_integration_audit.json": "a71227a95f6195587571585dc2998a47fcf58bd916e997f32d7a2951176ca469",
+    "current_bend_samples.json": "872cfeaf116063bf2e22d2e39ba470e96610b6e43b53b7d3aa8cbe13340cda3b",
+    "dense_bend_morph_audit.json": "6dbb922e064154d4d8ebc902cd9f908740a63e01bc5b59dc74d9235efdfa012a",
+    "full_ccd_plan_k_full.json": "3a88c1907aa18ee0c980f276b99f22132c4f7472f25515039a6d4eddf1313173",
+    "body_connection_measured_audit.json": "6ddc2d3504cc5dd973ed37f08de209ddc329381318780d40926a3143cdde41e3",
+    "baglanti_denetim.json": "1587293706b0f48371b0339899dd1584572960f995d1c3cce0b5b04f123d6854",
+    "topology_repair_recipe.json.gz": "e856f5492e28c98102412097987a055c8bbd929feb3ab78535f86e5455c10597",
+    "topology_recipe_serialization_audit.json": "aa8f9c680c8f9bdb8326ed42664b5afe9a033104003dcd6b1a65dc5b5d948d05",
+    "mount_connection_measured_audit.json": "d6131d2cf2a21a36908bfe2704453f2cd6671081573888a7540f9b5ba04f90fe",
+    "lower_connection_measured_audit.json": "0ddd72c45cedecbbfbaf7ef0c3dd8a55255eefbc87ad446b860aa23f28123aa2",
+    "step79_source_audit.json": "6a81bb4811a861e2fc033f034f5e1866d36442e9ea5935ac97c92520a6df3241",
+    "stage79_geometry_audit.json": "0ee9c3aa037ad2e8c20d76171172b3cfb93fcc0a908790442698dcfc3e770ee5",
+    "stage79_post_geometry_audit.json": "65c8fb0ca7b74102a8a89d35b6cf7cf45d38ab1a6d18071dacba287aa4595dea",
+    "rounded_post_recipe.json.gz": "3aad677ca0f82d28411a1f17993e4ba930ff454defa438f48bbf2ebfd12c8204",
+    "step79_ownership_rebind_audit.json": "948a4d8b77d9d682172d5deb60a2ecb5f1ff16f1c0c303902ee814f346a8a42f"
+  },
+  "production_release": false,
+  "k_completed": false,
+  "u_started": false,
+  "open_work": [
+    "Whole-station fasteners, supplier mounts and temporary-load support",
+    "Bend self-collision, press tooling, fixtures and weld access",
+    "Custom stock thickness and profile radius conformity",
+    "Registered deterministic chain replay on latest shared model",
+    "Audited player output and browser review before publication"
+  ],
+  "measured_mounting_connection_counts": {
+    "mount_connection_measured_audit.json": 12,
+    "lower_connection_measured_audit.json": 24
+  },
+  "four_pusher_profiles_and16_weld_landings_corrected_and_measured": true,
+  "connection_release": false
+}

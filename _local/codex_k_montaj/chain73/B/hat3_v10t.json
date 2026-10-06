@@ -1,0 +1,273 @@
+{
+  "step": 79,
+  "input_sha256": "e2536654cfa017ae8012acb58270176f412c6acd2a680e0e340a0055629cda22",
+  "payload_sha256": "3aad677ca0f82d28411a1f17993e4ba930ff454defa438f48bbf2ebfd12c8204",
+  "output_sha256": "415044b5baa2e454c6976f99a72460a52c6ed8b5c5c42a396a3deb22af856f75",
+  "matched_source_triangles": {
+    "k_itici_sac_0": 32,
+    "k_itici_sac_1": 32,
+    "k_itici_sac_2": 32,
+    "k_itici_sac_3": 32,
+    "k72_itici_ayak_kaynagi_4040.0_-755.0_0": 8,
+    "k72_itici_ayak_kaynagi_4040.0_-755.0_1": 8,
+    "k72_itici_ayak_kaynagi_4040.0_-755.0_2": 8,
+    "k72_itici_ayak_kaynagi_4040.0_-755.0_3": 8,
+    "k72_itici_ayak_kaynagi_4040.0_-645.0_0": 8,
+    "k72_itici_ayak_kaynagi_4040.0_-645.0_1": 8,
+    "k72_itici_ayak_kaynagi_4040.0_-645.0_2": 8,
+    "k72_itici_ayak_kaynagi_4040.0_-645.0_3": 8,
+    "k72_itici_ayak_kaynagi_4360.0_-755.0_0": 8,
+    "k72_itici_ayak_kaynagi_4360.0_-755.0_1": 8,
+    "k72_itici_ayak_kaynagi_4360.0_-755.0_2": 8,
+    "k72_itici_ayak_kaynagi_4360.0_-755.0_3": 8,
+    "k72_itici_ayak_kaynagi_4360.0_-645.0_0": 8,
+    "k72_itici_ayak_kaynagi_4360.0_-645.0_1": 8,
+    "k72_itici_ayak_kaynagi_4360.0_-645.0_2": 8,
+    "k72_itici_ayak_kaynagi_4360.0_-645.0_3": 8
+  },
+  "naming_grid_mm": 0.0001,
+  "maximum_naming_grid_adjustment_mm": 5.54958699865899e-05,
+  "repairs": [
+    {
+      "part": "k_itici_sac_0",
+      "closed_status": "Error.NoError",
+      "volume_mm3": 7749.234767615727,
+      "maximum_declared_precision_adjustment_mm": 0.0,
+      "purpose": "rounded stock post",
+      "supplier_component": false,
+      "outer_radius_mm": 4.0,
+      "inner_radius_mm": 2.0,
+      "wall_mm": 2.0,
+      "envelope_mm": [
+        [
+          4030.0,
+          900,
+          -765.0
+        ],
+        [
+          4050.0,
+          958,
+          -745.0
+        ]
+      ],
+      "original_outer_radius_mm": 0.0,
+      "stock_profile_rule": "Ro=2t",
+      "stock_family": "20x20x2 AISI304 hollow profile",
+      "load_capacity_not_yet_checked": true
+    },
+    {
+      "part": "k72_itici_ayak_kaynagi_4040.0_-755.0_0",
+      "closed_status": "Error.NoError",
+      "volume_mm3": 6.0,
+      "maximum_declared_precision_adjustment_mm": 0.0,
+      "purpose": "weld only along actual12mm flat landing",
+      "supplier_component": false
+    },
+    {
+      "part": "k72_itici_ayak_kaynagi_4040.0_-755.0_1",
+      "closed_status": "Error.NoError",
+      "volume_mm3": 5.999999999999773,
+      "maximum_declared_precision_adjustment_mm": 0.0,
+      "purpose": "weld only along actual12mm flat landing",
+      "supplier_component": false
+    },
+    {
+      "part": "k72_itici_ayak_kaynagi_4040.0_-755.0_2",
+      "closed_status": "Error.NoError",
+      "volume_mm3": 5.999999999999886,
+      "maximum_declared_precision_adjustment_mm": 0.0,
+      "purpose": "weld only along actual12mm flat landing",
+      "supplier_component": false
+    },
+    {
+      "part": "k72_itici_ayak_kaynagi_4040.0_-755.0_3",
+      "closed_status": "Error.NoError",
+      "volume_mm3": 6.000000000000227,
+      "maximum_declared_precision_adjustment_mm": 0.0,
+      "purpose": "weld only along actual12mm flat landing",
+      "supplier_component": false
+    },
+    {
+      "part": "k_itici_sac_1",
+      "closed_status": "Error.NoError",
+      "volume_mm3": 7749.234767615738,
+      "maximum_declared_precision_adjustment_mm": 0.0,
+      "purpose": "rounded stock post",
+      "supplier_component": false,
+      "outer_radius_mm": 4.0,
+      "inner_radius_mm": 2.0,
+      "wall_mm": 2.0,
+      "envelope_mm": [
+        [
+          4030.0,
+          900,
+          -655.0
+        ],
+        [
+          4050.0,
+          958,
+          -635.0
+        ]
+      ],
+      "original_outer_radius_mm": 0.0,
+      "stock_profile_rule": "Ro=2t",
+      "stock_family": "20x20x2 AISI304 hollow profile",
+      "load_capacity_not_yet_checked": true
+    },
+    {
+      "part": "k72_itici_ayak_kaynagi_4040.0_-645.0_0",
+      "closed_status": "Error.NoError",
+      "volume_mm3": 6.0,
+      "maximum_declared_precision_adjustment_mm": 0.0,
+      "purpose": "weld only along actual12mm flat landing",
+      "supplier_component": false
+    },
+    {
+      "part": "k72_itici_ayak_kaynagi_4040.0_-645.0_1",
+      "closed_status": "Error.NoError",
+      "volume_mm3": 6.0,
+      "maximum_declared_precision_adjustment_mm": 0.0,
+      "purpose": "weld only along actual12mm flat landing",
+      "supplier_component": false
+    },
+    {
+      "part": "k72_itici_ayak_kaynagi_4040.0_-645.0_2",
+      "closed_status": "Error.NoError",
+      "volume_mm3": 5.999999999999886,
+      "maximum_declared_precision_adjustment_mm": 0.0,
+      "purpose": "weld only along actual12mm flat landing",
+      "supplier_component": false
+    },
+    {
+      "part": "k72_itici_ayak_kaynagi_4040.0_-645.0_3",
+      "closed_status": "Error.NoError",
+      "volume_mm3": 6.0,
+      "maximum_declared_precision_adjustment_mm": 0.0,
+      "purpose": "weld only along actual12mm flat landing",
+      "supplier_component": false
+    },
+    {
+      "part": "k_itici_sac_2",
+      "closed_status": "Error.NoError",
+      "volume_mm3": 7749.241801023498,
+      "maximum_declared_precision_adjustment_mm": 0.0,
+      "purpose": "rounded stock post",
+      "supplier_component": false,
+      "outer_radius_mm": 4.0,
+      "inner_radius_mm": 2.0,
+      "wall_mm": 2.0,
+      "envelope_mm": [
+        [
+          4350.0,
+          900,
+          -765.0
+        ],
+        [
+          4370.0,
+          958,
+          -745.0
+        ]
+      ],
+      "original_outer_radius_mm": 0.0,
+      "stock_profile_rule": "Ro=2t",
+      "stock_family": "20x20x2 AISI304 hollow profile",
+      "load_capacity_not_yet_checked": true
+    },
+    {
+      "part": "k72_itici_ayak_kaynagi_4360.0_-755.0_0",
+      "closed_status": "Error.NoError",
+      "volume_mm3": 6.0,
+      "maximum_declared_precision_adjustment_mm": 0.0,
+      "purpose": "weld only along actual12mm flat landing",
+      "supplier_component": false
+    },
+    {
+      "part": "k72_itici_ayak_kaynagi_4360.0_-755.0_1",
+      "closed_status": "Error.NoError",
+      "volume_mm3": 6.000000000000682,
+      "maximum_declared_precision_adjustment_mm": 0.0,
+      "purpose": "weld only along actual12mm flat landing",
+      "supplier_component": false
+    },
+    {
+      "part": "k72_itici_ayak_kaynagi_4360.0_-755.0_2",
+      "closed_status": "Error.NoError",
+      "volume_mm3": 6.000000000000114,
+      "maximum_declared_precision_adjustment_mm": 0.0,
+      "purpose": "weld only along actual12mm flat landing",
+      "supplier_component": false
+    },
+    {
+      "part": "k72_itici_ayak_kaynagi_4360.0_-755.0_3",
+      "closed_status": "Error.NoError",
+      "volume_mm3": 6.000000000000227,
+      "maximum_declared_precision_adjustment_mm": 0.0,
+      "purpose": "weld only along actual12mm flat landing",
+      "supplier_component": false
+    },
+    {
+      "part": "k_itici_sac_3",
+      "closed_status": "Error.NoError",
+      "volume_mm3": 7749.241801023458,
+      "maximum_declared_precision_adjustment_mm": 0.0,
+      "purpose": "rounded stock post",
+      "supplier_component": false,
+      "outer_radius_mm": 4.0,
+      "inner_radius_mm": 2.0,
+      "wall_mm": 2.0,
+      "envelope_mm": [
+        [
+          4350.0,
+          900,
+          -655.0
+        ],
+        [
+          4370.0,
+          958,
+          -635.0
+        ]
+      ],
+      "original_outer_radius_mm": 0.0,
+      "stock_profile_rule": "Ro=2t",
+      "stock_family": "20x20x2 AISI304 hollow profile",
+      "load_capacity_not_yet_checked": true
+    },
+    {
+      "part": "k72_itici_ayak_kaynagi_4360.0_-645.0_0",
+      "closed_status": "Error.NoError",
+      "volume_mm3": 6.0,
+      "maximum_declared_precision_adjustment_mm": 0.0,
+      "purpose": "weld only along actual12mm flat landing",
+      "supplier_component": false
+    },
+    {
+      "part": "k72_itici_ayak_kaynagi_4360.0_-645.0_1",
+      "closed_status": "Error.NoError",
+      "volume_mm3": 6.0,
+      "maximum_declared_precision_adjustment_mm": 0.0,
+      "purpose": "weld only along actual12mm flat landing",
+      "supplier_component": false
+    },
+    {
+      "part": "k72_itici_ayak_kaynagi_4360.0_-645.0_2",
+      "closed_status": "Error.NoError",
+      "volume_mm3": 6.000000000000114,
+      "maximum_declared_precision_adjustment_mm": 0.0,
+      "purpose": "weld only along actual12mm flat landing",
+      "supplier_component": false
+    },
+    {
+      "part": "k72_itici_ayak_kaynagi_4360.0_-645.0_3",
+      "closed_status": "Error.NoError",
+      "volume_mm3": 6.0,
+      "maximum_declared_precision_adjustment_mm": 0.0,
+      "purpose": "weld only along actual12mm flat landing",
+      "supplier_component": false
+    }
+  ],
+  "source_labels_retained": true,
+  "source_interfaces_intended_unchanged": true,
+  "unrelated_geometry_audit_required": true,
+  "reextraction_required": true,
+  "production_release": false
+}
