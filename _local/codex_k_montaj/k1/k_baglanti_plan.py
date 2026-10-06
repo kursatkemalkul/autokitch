@@ -31,14 +31,14 @@ KURAL = [
     (r'^DGRF_port_(on|arka)_QSL$', 'BEYAN:DIS', dict(neden='Festo QSL-G3/8 rakor silindir portuna dişli (G3/8)')),
     (r'^PulsaJet_AAB', 'BEYAN:KELEPCE', dict(karsi='nozul_kelepce_blogu', neden='nozül gövdesi iki yarım kelepçe bloğunun arasında sıkılır (2 × M4)')),
     (r'^PulsaJet_(M8_kablo|M8_soketi|giris_dirsegi|kapak|uc)', 'BEYAN:DIS', dict(neden='nozülün dişli parçası (M8 soket / 1/8 BSPT dirsek / kapak / uç)')),
-    (r'^avara_mili_\d$', 'VIDA', dict(d=6, n=1, bas='b', destek='bant_yan', dis_a=True, merkez=True, std='ISO 4762', neden='avara mili bant yan sacına dıştan M6 (milin ucunda diş)')),
+    (r'^avara_mili_\d$', 'MIL_UCU', dict(d=8, destek='bant_yan', std='ISO 4762', neden='avara mili bant yan sacına dıştan M6 (milin ucunda diş)')),
     (r'^avara_rulosu_', 'BEYAN:MIL', dict(karsi='avara_mili_0', neden='rulmanlı avara rulosu iki mil ucuna takılı (Interroll · milde döner)')),
     (r'^bant_traversi_\d$', 'TIG', dict(destek=['bant_yan_-3', 'bant_yan_-421'], neden='bant traversi iki yan profile TIG (uçlar)')),
     (r'^bicak_\d$', 'BEYAN:URUN', dict(karsi='bicak_gobek_halkasi', neden='yıldız bıçak seti tek ürün: 6 dilim göbeğe fabrikada kaynaklı (set olarak sökülür, yıkanır)')),
     (r'^bicak_gobek_halkasi$', 'SAPLAMA_KELEBEK', dict(d=8, neden='bıçak seti göbeği: merkez M8 saplama kafa plakasından geçer, üstte kelebek somun (aletsiz söküm, yıkama) · 2 × Ø6 pim dönmeyi engeller')),
     (r'^bicak_koruma_halkasi$', 'TIG', dict(minp=1, destek=['koruma_braketi_%d' % i for i in range(6)], neden='koruma halkası 6 brakete TIG')),
     (r'^koruma_braketi_\d$', 'TIG', dict(minp=1, tasi='kafa_plakasi_8', destek=['kafa_plakasi_8', 'bicak_koruma_halkasi'], neden='koruma braketi kafa plakası kenarına yaslanır, plakaya ve koruma halkasına TIG')),
-    (r'^cit_(on|arka_a|arka_b)$', 'VIDA', dict(d=4, n=2, destek='cit_braketi', std='ISO 7380', bas='b', dis_a=True, neden='POM çit brakete M4 bombe başlı (baş braket dışında, POM çitte dişli delik)')),
+    (r'^cit_(on|arka_a|arka_b)$', 'VIDA', dict(d=3, n=2, destek='cit_braketi', std='ISO 7380', bas='b', dis_a=True, neden='POM çit brakete M3 bombe başlı (baş braket dışında, POM çitte dişli delik)')),
     (r'^cit_giris_-?1$', 'BEYAN:TEK_PARCA', dict(neden='çit giriş eğimi aynı POM çit çubuğunun ısıyla bükülmüş ucu (tek parça)')),
     (r'^cit_braketi_\d$', 'TIG', dict(destek=['bant_yan_-3', 'bant_yan_-421'], neden='çit braketi bant yan profiline TIG')),
     (r'^d3_kaplin_(emis|donus)$', 'BEYAN:DIS', dict(karsi=None, neden='CPC hızlı kaplin duvar geçiş bileziğinde, hortuma geçme (kapamalı)')),
@@ -51,7 +51,7 @@ KURAL = [
     (r'^elk_zincir_(etiket|kod_kirmizi|kod_mavi)_\d$', 'BEYAN:ETIKET', dict(neden='yapışkan etiket / renk kodu halkası')),
     (r'^elk_zincir_(m12|rakor)_\d$', 'BEYAN:DIS', dict(neden='panel tipi M12 soket / kablo rakoru: kendi kilit somunuyla panel deliğine')),
     (r'^elk_zincir_harting_[12]$', 'BEYAN:GECME', dict(neden='Harting başlık tabana kilit koluyla kilitlenir')),
-    (r'^elk_zincir_harting_[03]$', 'VIDA', dict(d=4, n=2, std='ISO 7380', neden='Harting taban panele 2 × M4')),
+    (r'^elk_zincir_harting_[03]$', 'VIDA', dict(d=4, n=2, std='ISO 7380', sonra_desen='harting_[12]', neden='Harting taban panele 2 × M4')),
     (r'^elk_zincir_paslanmaz_[0-36-9]$', 'TIG', dict(neden='panel mesafe parçası yan saca TIG')),
     (r'^elk_zincir_paslanmaz_[45]$', 'VIDA', dict(d=4, n=2, std='ISO 7380', destek=None, neden='fiş paneli mesafe parçalarına M4')),
     (r'^elk_zincir_kanal_\d$', 'VIDA', dict(d=4, n=2, std='ISO 7380', yapisal=True, neden='kablo kanalı saca M4 (perçin somun)')),
@@ -60,8 +60,8 @@ KURAL = [
     (r'^(guc_24V|plc_|sigorta_C10|klemens_sirasi)', 'BEYAN:DIN', dict(karsi=None, neden='DIN raya yaylı tırnakla geçer (EN 60715)')),
     (r'^hava_ic_aski_\d+$', 'BEYAN:YAPISTIRMA', dict(neden='kendinden yapışkanlı kablo bağı tabanı (hortum askısı)')),
     (r'^hava_ic_kanal_\d$', 'BEYAN:KABLO', dict(neden='hava hortumu: askılar boyunca uzar (kablo / hortum istisnası)')),
-    (r'^itici_X_ray_-?\d+$', 'RAY', dict(d=3, adim=40.0, destek='itici_sabit_plaka', neden='HIWIN MGNR15R ray X taban plakasına M3 × 40 adım (dişli delik)')),
-    (r'^itici_Z_ray_\d+$', 'RAY', dict(d=3, adim=40.0, destek=None, neden='HIWIN MGNR15R ray Z yükseltmesine M3 × 40 adım')),
+    (r'^itici_X_ray_-?\d+$', 'RAY', dict(d=3, adim=40.0, gomme=5.5, destek='itici_sabit_plaka', neden='HIWIN MGNR15R ray X taban plakasına M3 × 40 adım (dişli delik)')),
+    (r'^itici_Z_ray_\d+$', 'RAY', dict(d=3, adim=40.0, gomme=5.5, destek=None, neden='HIWIN MGNR15R ray Z yükseltmesine M3 × 40 adım')),
     (r'^itici_[XZ]_blok_-?\d+$', 'BEYAN:KIZAK', dict(neden='HIWIN MGN15H blok rayda (bilyeli kızak); üst yüzü 4 × M3 ile taşıdığı plakaya')),
     (r'^itici_X_ara_-?\d+$', 'VIDA', dict(d=3, n=4, destek=['itici_X_blok_-645', 'itici_X_blok_-755'], bas='a', neden='X ara plakası bloğa 4 × M3')),
     (r'^itici_Z_kopru$', 'VIDA', dict(d=3, n=4, destek=['itici_Z_blok_53', 'itici_Z_blok_97'], bas='a', neden='Z köprüsü iki bloğa 4 × M3')),
@@ -93,7 +93,7 @@ KURAL = [
     (r'^nozul_kelepce_blogu$', 'VIDA', dict(d=4, n=2, destek='nozul_braketi', bas='a', neden='kelepçe bloğu brakete 2 × M4')),
     (r'^olu_plaka$', 'TIG', dict(neden='çıkış ölü plakası TIG')),
     (r'^onyuz_kapak_K_karsilik_\d$', 'PUNTA', dict(neden='bas-aç karşılığı kapı iç tavasına punta')),
-    (r'^sartlandirici_braketi$', 'VIDA', dict(d=5, n=2, destek='pano_plakasi', bas='a', neden='şartlandırıcı braketi pano plakasına 2 × M5 (PEM)')),
+    (r'^sartlandirici_braketi$', 'BEYAN:URUN_MONTAJ', dict(karsi='pano_plakasi', neden='SMC B240A braketi pano plakasına 2 × M5 — braketin kendi kulak delikleri regülatör izinin dışında; modeldeki braket sadeleştirilmiş (AÇIK NOT: gerçek braket geometrisi)')),
     (r'^sartlandirici_AW20', 'BEYAN:DIS', dict(karsi='sartlandirici_braketi', neden='AW20 braket halka somunuyla (gövde dişine)')),
     (r'^tahrik_rulosu_EC5000_kablo$', 'BEYAN:DIS', dict(neden='EC5000 M8 fişi motor soketine dişli')),
     (r'^urun_sensoru_.*_braket_\d$', 'TIG', dict(neden='sensör L braketi bant yan profiline TIG')),
@@ -135,6 +135,8 @@ def patch(a, b, tol=0.3, minp=3):
     if m.sum() < minp: return None
     n = tm(b).face_normals[tri[m]]
     e = n.mean(0); e /= np.linalg.norm(e) + 1e-12
+    ca = (LO[a] + HI[a]) / 2
+    if (ca - S[m].mean(0)) @ e < 0 and np.ptp(P[a]['V'] @ e) > 0.5: e = -e        # normal b'den a'ya baksın
     return S[m], e
 
 
@@ -213,7 +215,7 @@ def katalog_alt(L):
     return k0
 
 
-def vida_tasarla(a, b, p, e, d, bas='a', dis_a=False, dis_b=False, std='ISO 4762', no=0):
+def vida_tasarla(a, b, p, e, d, bas='a', dis_a=False, dis_b=False, std='ISO 4762', no=0, gomme=0.0, sonra=()):
     """p: temas noktası, e: b → a birim (temas yüzeyinin normali). bas='a': baş a'nın dış yüzünde, b'ye; bas='b': baş b'nin dış yüzünde, a'ya."""
     h_bas = {'ISO 4762': d * 1.0, 'ISO 7380': d * 0.55, 'DIN 7991': 0.0}[std]
     r_bas = {'ISO 4762': d * 0.75, 'ISO 7380': d * 0.88, 'DIN 7991': d}[std]
@@ -223,8 +225,9 @@ def vida_tasarla(a, b, p, e, d, bas='a', dis_a=False, dis_b=False, std='ISO 4762
     t_ust = ray_ilk(ust, p - eu * 0.05, eu)                                       # üst parçanın kalınlığı (temastan dış yüzüne)
     t_alt = ray_ilk(alt, p + eu * 0.05, -eu)                                      # alt parçanın kalınlığı
     if t_ust is None or t_alt is None: return None, 'ışın kalınlık bulamadı'
+    t_ust = t_ust - gomme                                                         # baş üst parçanın havşa yuvasında (ör. HIWIN ray: 5,5)
     bas0 = p + eu * t_ust                                                         # baş oturma yüzeyi
-    dis_alt = (dis_b if bas == 'a' else dis_a) or t_alt >= 1.5 * d + P_          # alt parçada dişli delik
+    dis_alt = ((dis_b if bas == 'a' else dis_a) and t_alt >= 1.0 * d + P_) or t_alt >= 1.5 * d + P_   # alt parçada dişli delik (yeterli et varsa)
     if dis_alt:
         L = katalog_alt(t_ust + min(t_alt - P_, 2.0 * d))
         if L is None or L < t_ust + 1.0 * d: return None, 'diş tutuşu < 1d (alt kalınlık %.1f)' % t_alt
@@ -244,9 +247,9 @@ def vida_tasarla(a, b, p, e, d, bas='a', dis_a=False, dis_b=False, std='ISO 4762
     else:
         bas_sil = (bas0, bas0 + eu * h_bas, r_bas)
     # boş hacim denetimi
-    hr = [a, b]
+    hr = [a, b] + list(sonra)
     if bas_sil:
-        x = engel_var(bas_sil[0] + eu * 0.05, bas_sil[1] + eu * 8.0, r_bas + 0.3, hr)   # baş + anahtar yolu 8 mm
+        x = engel_var(bas_sil[0] + eu * 0.05, bas_sil[1] + eu * (8.0 if not gomme else 0.5), r_bas + 0.3, hr)   # baş + anahtar yolu 8 mm
         if x: return None, 'baş / anahtar yolu dolu: %s' % x[:3]
     g = engel_var(bas0 - eu * 0.05, uc, d / 2 + 0.2, hr)
     if g and not dis_alt and re.match(r'(sol_sac|sag_sac|arka_sac|ust_sac)', alt) and bas == 'a':
@@ -344,6 +347,27 @@ for a in sorted(TEMAS):
         if x_: ACIK.append((a, 'merkez saplama / pim hacmi dolu %s' % sorted(set(x_))[:4])); continue
         SONUC[a] = dict(yontem='SAPLAMA_KELEBEK', neden=p['neden'], eleman=el)
         continue
+    if y == 'MIL_UCU':
+        # avara mili ucu M8 dişli: bant yanının gergi deliğinden geçer, dışta ISO 10511 fiberli somun + pul (gergi ayarı)
+        el = []
+        for b in destekler(a, p):
+            pt = patch(a, b, tol=0.3, minp=1)
+            if pt is None: continue
+            S, e = pt
+            ax = int(np.argmax(np.abs(e))); c = (LO[a] + HI[a]) / 2; c[ax] = S.mean(0)[ax]
+            t_b = ray_ilk(b, c + e * 0.05, -e) or 2.0
+            q0 = c + e * 0.0; q1 = c - e * (t_b + 8.0 + 2.0)
+            n0 = c - e * t_b; n1 = c - e * (t_b + 8.0)
+            x_ = engel_var(q0 - e * 0.05, q1, 4.2, [a, b]) + engel_var(n0 - e * 0.05, n1 - e * 3, 6.8, [a, b])
+            if x_: continue
+            el += [dict(ad='kb_%s_saplama' % a, tip='saplama', d=8, govde=[list(map(float, c + e * 6.0)), list(map(float, q1)), 4.0], eks=list(map(float, -e)), parca=[a, b],
+                        bom='Avara mili ucu M8 dişli (milin parçası, gergi deliğinden geçer)'),
+                   dict(ad='kb_%s_somun' % a, tip='somun', d=8, sil=[list(map(float, n0)), list(map(float, n1)), 6.5], eks=list(map(float, e)), parca=[a, b], somun_tur='altigen',
+                        bom='ISO 10511 fiberli somun M8 A2 + ISO 7089 pul (gergi)')]
+            break
+        if el: SONUC[a] = dict(yontem='VIDA', neden='avara mili ucu M8 bant yanından geçer, dıştan fiberli somun (gergi)', eleman=el)
+        else: ACIK.append((a, 'mil ucu: temas / hacim yok'))
+        continue
     if y == 'RAY':
         b = destekler(a, p)
         b = b[0] if b else [x[0] for x in TEMAS[a] if x[1] < 0.3][0]
@@ -358,7 +382,7 @@ for a in sorted(TEMAS):
             if q[ax] < lo[ax] + 5 or q[ax] > hi[ax] - 5: continue
             # temas düzlemine indir
             s = (S.mean(0) - q) @ e; q = q + e * s
-            r, m = vida_tasarla(a, b, q, e, p['d'], bas='a', dis_b=True, no=j)
+            r, m = vida_tasarla(a, b, q, e, p['d'], bas='a', dis_b=True, no=j, gomme=p.get('gomme', 0.0))
             if r: el += r
             else: neden.append(m)
         if el: SONUC[a] = dict(yontem='VIDA', neden=p['neden'], eleman=el, not_=neden[:3])
@@ -374,10 +398,15 @@ for a in sorted(TEMAS):
             n_ = p.get('n', 2) if len(dl) == 1 else max(1, p.get('n', 2) // len(dl))
             ad_ = [S.mean(0)] if p.get('merkez') else merkezler(S, e, 15, p['d'])
             iyi = []
-            for c in ad_:
-                r, m = vida_tasarla(a, b, c, e, p['d'], bas=p.get('bas', 'a'), dis_a=p.get('dis_a', False), dis_b=p.get('dis_b', False), std=p.get('std', 'ISO 4762'), no=len(el) + len(iyi))
-                if r: iyi.append((c, r))
-                else: neden.append(m)
+            sonra = [x for x in P if p.get('sonra_desen') and re.search(p['sonra_desen'], x)]
+            b0 = p.get('bas', 'a')
+            for bas_ in (b0, 'b' if b0 == 'a' else 'a'):
+                for c in ad_:
+                    r, m = vida_tasarla(a, b, c, e, p['d'], bas=bas_, dis_a=p.get('dis_a', False) if bas_ == b0 else p.get('dis_b', False),
+                                        dis_b=p.get('dis_b', False) if bas_ == b0 else p.get('dis_a', False), std=p.get('std', 'ISO 4762'), no=len(el) + len(iyi), sonra=sonra)
+                    if r: iyi.append((c, r))
+                    else: neden.append(m)
+                if len(iyi) >= n_: break
             if iyi:
                 idx = np.linspace(0, len(iyi) - 1, min(n_, len(iyi))).round().astype(int)
                 for k_ in sorted(set(idx)):
