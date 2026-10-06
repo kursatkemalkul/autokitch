@@ -1,0 +1,204 @@
+{
+  "source_model_sha256": "a636ab79e1eb76aa72464791fda0abe9a857264599f18dcc77e6cd5274fc6323",
+  "source_parts_sha256": "2b27c57e44faad527cf30652b6714eb2fbdcdc957ffc7b08fb008dc31d185e06",
+  "checks": [
+    {
+      "a": "k79_yag_raf_M5_pul_sol_0",
+      "b": "yag_pompa_rafi_kosebendi_sol",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true,
+      "joint": "sol_0"
+    },
+    {
+      "a": "k79_yag_raf_M5_pul_sol_0",
+      "b": "k79_yag_raf_M5_somun_sol_0",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true,
+      "joint": "sol_0"
+    },
+    {
+      "a": "k79_yag_raf_M5_somun_sol_0",
+      "b": "k79_yag_raf_FHP_M5x12_sol_0",
+      "minimum_sampled_surface_distance_mm": 0.029845770219594926,
+      "contact_within_0_6_mm": true,
+      "joint": "sol_0"
+    },
+    {
+      "a": "k79_yag_raf_FHP_M5x12_sol_0",
+      "b": "sol_sac_urun_girisi",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true,
+      "joint": "sol_0"
+    },
+    {
+      "a": "k79_yag_raf_M5_pul_sol_1",
+      "b": "yag_pompa_rafi_kosebendi_sol",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true,
+      "joint": "sol_1"
+    },
+    {
+      "a": "k79_yag_raf_M5_pul_sol_1",
+      "b": "k79_yag_raf_M5_somun_sol_1",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true,
+      "joint": "sol_1"
+    },
+    {
+      "a": "k79_yag_raf_M5_somun_sol_1",
+      "b": "k79_yag_raf_FHP_M5x12_sol_1",
+      "minimum_sampled_surface_distance_mm": 0.029845770219594926,
+      "contact_within_0_6_mm": true,
+      "joint": "sol_1"
+    },
+    {
+      "a": "k79_yag_raf_FHP_M5x12_sol_1",
+      "b": "sol_sac_urun_girisi",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true,
+      "joint": "sol_1"
+    },
+    {
+      "a": "k79_yag_raf_M5_pul_sol_2",
+      "b": "yag_pompa_rafi_kosebendi_sol",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true,
+      "joint": "sol_2"
+    },
+    {
+      "a": "k79_yag_raf_M5_pul_sol_2",
+      "b": "k79_yag_raf_M5_somun_sol_2",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true,
+      "joint": "sol_2"
+    },
+    {
+      "a": "k79_yag_raf_M5_somun_sol_2",
+      "b": "k79_yag_raf_FHP_M5x12_sol_2",
+      "minimum_sampled_surface_distance_mm": 0.02984577021956274,
+      "contact_within_0_6_mm": true,
+      "joint": "sol_2"
+    },
+    {
+      "a": "k79_yag_raf_FHP_M5x12_sol_2",
+      "b": "sol_sac_urun_girisi",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true,
+      "joint": "sol_2"
+    },
+    {
+      "a": "k79_yag_raf_M5_pul_sag_0",
+      "b": "yag_pompa_rafi_kosebendi_sag",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true,
+      "joint": "sag_0"
+    },
+    {
+      "a": "k79_yag_raf_M5_pul_sag_0",
+      "b": "k79_yag_raf_M5_somun_sag_0",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true,
+      "joint": "sag_0"
+    },
+    {
+      "a": "k79_yag_raf_M5_somun_sag_0",
+      "b": "k79_yag_raf_FHP_M5x12_sag_0",
+      "minimum_sampled_surface_distance_mm": 0.029845770219594926,
+      "contact_within_0_6_mm": true,
+      "joint": "sag_0"
+    },
+    {
+      "a": "k79_yag_raf_FHP_M5x12_sag_0",
+      "b": "sag_sac_E_penceresi",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true,
+      "joint": "sag_0"
+    },
+    {
+      "a": "k79_yag_raf_M5_pul_sag_1",
+      "b": "yag_pompa_rafi_kosebendi_sag",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true,
+      "joint": "sag_1"
+    },
+    {
+      "a": "k79_yag_raf_M5_pul_sag_1",
+      "b": "k79_yag_raf_M5_somun_sag_1",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true,
+      "joint": "sag_1"
+    },
+    {
+      "a": "k79_yag_raf_M5_somun_sag_1",
+      "b": "k79_yag_raf_FHP_M5x12_sag_1",
+      "minimum_sampled_surface_distance_mm": 0.029845770219594926,
+      "contact_within_0_6_mm": true,
+      "joint": "sag_1"
+    },
+    {
+      "a": "k79_yag_raf_FHP_M5x12_sag_1",
+      "b": "sag_sac_E_penceresi",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true,
+      "joint": "sag_1"
+    },
+    {
+      "a": "k79_yag_raf_M5_pul_sag_2",
+      "b": "yag_pompa_rafi_kosebendi_sag",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true,
+      "joint": "sag_2"
+    },
+    {
+      "a": "k79_yag_raf_M5_pul_sag_2",
+      "b": "k79_yag_raf_M5_somun_sag_2",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true,
+      "joint": "sag_2"
+    },
+    {
+      "a": "k79_yag_raf_M5_somun_sag_2",
+      "b": "k79_yag_raf_FHP_M5x12_sag_2",
+      "minimum_sampled_surface_distance_mm": 0.02984577021956274,
+      "contact_within_0_6_mm": true,
+      "joint": "sag_2"
+    },
+    {
+      "a": "k79_yag_raf_FHP_M5x12_sag_2",
+      "b": "sag_sac_E_penceresi",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true,
+      "joint": "sag_2"
+    },
+    {
+      "a": "k79_yag_raf_kose_kaynagi_sol",
+      "b": "yag_pompa_rafi_kosebendi_sol",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true
+    },
+    {
+      "a": "k79_yag_raf_kose_kaynagi_sol",
+      "b": "k79_yag_raf_yatay_kosebent_sol",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true
+    },
+    {
+      "a": "k79_yag_raf_kose_kaynagi_sag",
+      "b": "yag_pompa_rafi_kosebendi_sag",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true
+    },
+    {
+      "a": "k79_yag_raf_kose_kaynagi_sag",
+      "b": "k79_yag_raf_yatay_kosebent_sag",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true
+    }
+  ],
+  "passed_selected_geometry_contacts": true,
+  "method": "bidirectional vertices against actual source triangle surfaces; 0.6mm contact classification only",
+  "tool_access_checked": false,
+  "load_capacity_checked": false,
+  "production_release": false,
+  "remaining": "Shelf-to-brackets and pump plate-to-shelf fastening, assembly paths and manufacturing processes."
+}

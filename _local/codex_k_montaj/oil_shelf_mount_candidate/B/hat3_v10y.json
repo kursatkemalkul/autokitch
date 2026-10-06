@@ -1,0 +1,104 @@
+{
+  "step": 79,
+  "input_sha256": "4efd0b660ccb56dfd4d53d307efdfcf218185ed7c1c95df793a47e353b8ff5c0",
+  "payload_sha256": "f20fc4a0fbc58eb80d822a3833cd905c2b2bb89ed6ffbb19f8c54b7442e727ce",
+  "output_sha256": "a636ab79e1eb76aa72464791fda0abe9a857264599f18dcc77e6cd5274fc6323",
+  "matched_source_triangles": {
+    "k79_bant_disli_plaka_kaynagi_4065_-421": 3272,
+    "k71_alt_saplama_4060_379_-32.0": 506,
+    "k71_alt_pul_4060_379_-32.0": 408,
+    "k71_alt_somun_4060_379_-32.0": 228,
+    "sol_sac_urun_girisi": 1800,
+    "sag_sac_E_penceresi": 1524,
+    "yag_pompa_rafi_kosebendi_sol": 20,
+    "yag_pompa_rafi_kosebendi_sag": 20,
+    "yag_pompa_plakasi": 12
+  },
+  "naming_grid_mm": 0.0001,
+  "maximum_naming_grid_adjustment_mm": 7.189096855716874e-05,
+  "repairs": [
+    {
+      "part": "k71_alt_pul_4060_379_-32.0",
+      "closed_status": "Error.NoError",
+      "maximum_declared_precision_adjustment_mm": 0.001,
+      "purpose": "Unchanged exact render template"
+    },
+    {
+      "part": "k71_alt_saplama_4060_379_-32.0",
+      "closed_status": "Error.NoError",
+      "maximum_declared_precision_adjustment_mm": 0.001,
+      "purpose": "Unchanged exact render template"
+    },
+    {
+      "part": "k71_alt_somun_4060_379_-32.0",
+      "closed_status": "Error.NoError",
+      "maximum_declared_precision_adjustment_mm": 0.001,
+      "purpose": "Unchanged exact render template"
+    },
+    {
+      "part": "k79_bant_disli_plaka_kaynagi_4065_-421",
+      "closed_status": "Error.NoError",
+      "maximum_declared_precision_adjustment_mm": 0.001,
+      "purpose": "Unchanged exact render template"
+    },
+    {
+      "part": "sag_sac_E_penceresi",
+      "closed_status": "Error.NoError",
+      "maximum_declared_precision_adjustment_mm": 0.001,
+      "purpose": "Refine six native Ø5 PEM wall bores; preserve original wall material outside declared hole cylinders."
+    },
+    {
+      "part": "sol_sac_urun_girisi",
+      "closed_status": "Error.NoError",
+      "maximum_declared_precision_adjustment_mm": 0.001,
+      "purpose": "Refine six native Ø5 PEM wall bores; preserve original wall material outside declared hole cylinders."
+    },
+    {
+      "part": "yag_pompa_plakasi",
+      "closed_status": "Error.NoError",
+      "maximum_declared_precision_adjustment_mm": 0.001,
+      "purpose": "Unchanged exact render template"
+    },
+    {
+      "part": "yag_pompa_rafi_kosebendi_sag",
+      "closed_status": "Error.NoError",
+      "maximum_declared_precision_adjustment_mm": 0.001,
+      "purpose": "Replace own3mm bracket with drilled vertical leg; horizontal leg/seam added separately"
+    },
+    {
+      "part": "yag_pompa_rafi_kosebendi_sol",
+      "closed_status": "Error.NoError",
+      "maximum_declared_precision_adjustment_mm": 0.001,
+      "purpose": "Replace own3mm bracket with drilled vertical leg; horizontal leg/seam added separately"
+    }
+  ],
+  "source_labels_retained": true,
+  "source_interfaces_intended_unchanged": false,
+  "unrelated_geometry_audit_required": true,
+  "reextraction_required": true,
+  "production_release": false,
+  "added_parts": [
+    "k79_yag_raf_FHP_M5x12_sol_0",
+    "k79_yag_raf_M5_pul_sol_0",
+    "k79_yag_raf_M5_somun_sol_0",
+    "k79_yag_raf_FHP_M5x12_sol_1",
+    "k79_yag_raf_M5_pul_sol_1",
+    "k79_yag_raf_M5_somun_sol_1",
+    "k79_yag_raf_FHP_M5x12_sol_2",
+    "k79_yag_raf_M5_pul_sol_2",
+    "k79_yag_raf_M5_somun_sol_2",
+    "k79_yag_raf_yatay_kosebent_sol",
+    "k79_yag_raf_kose_kaynagi_sol",
+    "k79_yag_raf_FHP_M5x12_sag_0",
+    "k79_yag_raf_M5_pul_sag_0",
+    "k79_yag_raf_M5_somun_sag_0",
+    "k79_yag_raf_FHP_M5x12_sag_1",
+    "k79_yag_raf_M5_pul_sag_1",
+    "k79_yag_raf_M5_somun_sag_1",
+    "k79_yag_raf_FHP_M5x12_sag_2",
+    "k79_yag_raf_M5_pul_sag_2",
+    "k79_yag_raf_M5_somun_sag_2",
+    "k79_yag_raf_yatay_kosebent_sag",
+    "k79_yag_raf_kose_kaynagi_sag"
+  ]
+}

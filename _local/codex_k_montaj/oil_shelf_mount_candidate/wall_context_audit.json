@@ -1,0 +1,99 @@
+{
+  "source_parts_sha256": "7c29b5297dbb0a75257a8e857b3e0227d2549e5a44d744a8fa73b71a8dcc1c64",
+  "candidate_recipe_sha256": "f5fa46c2c5727164eac57bfd32b02afb99c67ba95f093a0251f1b5490fec3211",
+  "checks": [
+    {
+      "part": "sag_sac_E_penceresi",
+      "closed_status": "Error.NoError",
+      "added_material_mm3": 4.2012834183813297e-19,
+      "removed_material_mm3": 3.39206898680003,
+      "before_lo_mm": [
+        4377.9998,
+        791.0,
+        -828.5
+      ],
+      "before_hi_mm": [
+        4400.0001,
+        1860.5,
+        59.0
+      ],
+      "after_lo_mm": [
+        4377.999801635742,
+        791.0,
+        -828.5
+      ],
+      "after_hi_mm": [
+        4400.000106811523,
+        1860.5,
+        59.0
+      ],
+      "native_wall_hole_centers": [
+        [
+          4400.0,
+          1625.0,
+          -580.0
+        ],
+        [
+          4400.0,
+          1625.0,
+          -517.0
+        ],
+        [
+          4400.0,
+          1625.0,
+          -455.0
+        ]
+      ],
+      "passed_removal_only_context": true
+    },
+    {
+      "part": "sol_sac_urun_girisi",
+      "closed_status": "Error.NoError",
+      "added_material_mm3": 4.607859233063394e-19,
+      "removed_material_mm3": 3.3920689867999974,
+      "before_lo_mm": [
+        4000.0,
+        791.0,
+        -828.5
+      ],
+      "before_hi_mm": [
+        4021.9998,
+        1860.5,
+        59.0
+      ],
+      "after_lo_mm": [
+        4000.0,
+        791.0,
+        -828.5
+      ],
+      "after_hi_mm": [
+        4021.999801635742,
+        1860.5,
+        59.0
+      ],
+      "native_wall_hole_centers": [
+        [
+          4000.0,
+          1625.0,
+          -580.0
+        ],
+        [
+          4000.0,
+          1625.0,
+          -517.0
+        ],
+        [
+          4000.0,
+          1625.0,
+          -455.0
+        ]
+      ],
+      "passed_removal_only_context": true
+    }
+  ],
+  "passed_removal_only_context": true,
+  "proof": "Each wall was constructed as original source solid minus the three declared native \u00d85 hole cylinders; no wall material added, so unchanged-source intersections cannot increase. Bracket/fastener new solids were audited separately.",
+  "precision_mm": 0.001,
+  "canonical_source_changed": false,
+  "production_release": false
+}

@@ -1,0 +1,177 @@
+{
+  "source_model_sha256": "4efd0b660ccb56dfd4d53d307efdfcf218185ed7c1c95df793a47e353b8ff5c0",
+  "source_plan_sha256": "a149ebe21fc0d120902362b18eafa608b54325852f76ed37f8b9d69ac4291937",
+  "checks": [
+    {
+      "group": "mount_plate_fixed",
+      "load": "DGRF-C-63-125_govde",
+      "fasteners": [
+        "k75_kiris_somun_0",
+        "k75_kiris_somun_1"
+      ],
+      "fixed_s": 512.70587,
+      "load_begins_s": 514.56587,
+      "load_seated_s": 515.66387,
+      "passed": true
+    },
+    {
+      "group": "mount_plate_fixed",
+      "load": "elk_k_celik_3",
+      "fasteners": [
+        "k75_kiris_somun_0",
+        "k75_kiris_somun_1"
+      ],
+      "fixed_s": 512.70587,
+      "load_begins_s": 517.60387,
+      "load_seated_s": 518.32387,
+      "passed": true
+    },
+    {
+      "group": "mount_plate_fixed",
+      "load": "elk_k_celik_4",
+      "fasteners": [
+        "k75_kiris_somun_0",
+        "k75_kiris_somun_1"
+      ],
+      "fixed_s": 512.70587,
+      "load_begins_s": 512.70587,
+      "load_seated_s": 513.67587,
+      "passed": true
+    },
+    {
+      "group": "mount_plate_fixed",
+      "load": "elk_k_celik_5",
+      "fasteners": [
+        "k75_kiris_somun_0",
+        "k75_kiris_somun_1"
+      ],
+      "fixed_s": 512.70587,
+      "load_begins_s": 516.63387,
+      "load_seated_s": 517.60387,
+      "passed": true
+    },
+    {
+      "group": "mount_plate_fixed",
+      "load": "elk_k_tarti_celik_0",
+      "fasteners": [
+        "k75_kiris_somun_0",
+        "k75_kiris_somun_1"
+      ],
+      "fixed_s": 512.70587,
+      "load_begins_s": 515.66387,
+      "load_seated_s": 516.63387,
+      "passed": true
+    },
+    {
+      "group": "actuator_fixed",
+      "load": "DGRF_port_on_QSL",
+      "fasteners": [
+        "DGRF_M10_civata_0",
+        "DGRF_M10_civata_1",
+        "DGRF_M10_civata_2",
+        "DGRF_M10_civata_3"
+      ],
+      "fixed_s": 527.35387,
+      "load_begins_s": 529.04387,
+      "load_seated_s": 529.76387,
+      "passed": true
+    },
+    {
+      "group": "actuator_fixed",
+      "load": "DGRF_port_arka_QSL",
+      "fasteners": [
+        "DGRF_M10_civata_0",
+        "DGRF_M10_civata_1",
+        "DGRF_M10_civata_2",
+        "DGRF_M10_civata_3"
+      ],
+      "fixed_s": 527.35387,
+      "load_begins_s": 531.35387,
+      "load_seated_s": 532.07387,
+      "passed": true
+    },
+    {
+      "group": "actuator_fixed",
+      "load": "DGRF_SMT-8M_0",
+      "fasteners": [
+        "DGRF_M10_civata_0",
+        "DGRF_M10_civata_1",
+        "DGRF_M10_civata_2",
+        "DGRF_M10_civata_3"
+      ],
+      "fixed_s": 527.35387,
+      "load_begins_s": 530.58387,
+      "load_seated_s": 531.30387,
+      "passed": true
+    },
+    {
+      "group": "actuator_fixed",
+      "load": "DGRF_SMT-8M_1",
+      "fasteners": [
+        "DGRF_M10_civata_0",
+        "DGRF_M10_civata_1",
+        "DGRF_M10_civata_2",
+        "DGRF_M10_civata_3"
+      ],
+      "fixed_s": 527.35387,
+      "load_begins_s": 529.81387,
+      "load_seated_s": 530.53387,
+      "passed": true
+    },
+    {
+      "group": "actuator_fixed",
+      "load": "kopru_kirisi_-126",
+      "fasteners": [
+        "DGRF_M10_civata_0",
+        "DGRF_M10_civata_1",
+        "DGRF_M10_civata_2",
+        "DGRF_M10_civata_3"
+      ],
+      "fixed_s": 527.35387,
+      "load_begins_s": 527.35387,
+      "load_seated_s": 528.07387,
+      "passed": true
+    },
+    {
+      "group": "actuator_fixed",
+      "load": "elk_k_celik_2",
+      "fasteners": [
+        "DGRF_M10_civata_0",
+        "DGRF_M10_civata_1",
+        "DGRF_M10_civata_2",
+        "DGRF_M10_civata_3"
+      ],
+      "fixed_s": 527.35387,
+      "load_begins_s": 528.07387,
+      "load_seated_s": 529.04387,
+      "passed": true
+    },
+    {
+      "group": "ear_on_seated_post",
+      "ear": "govde_kulak_sol_arka_841",
+      "post": "kose_dikmesi_20_-800",
+      "source_welds": [
+        "govde_kulak_sol_arka_841_kaynak_a",
+        "govde_kulak_sol_arka_841_kaynak_b"
+      ],
+      "post_seated_s": 187.006698,
+      "ear_begins_s": 188.206698,
+      "passed": true
+    },
+    {
+      "group": "ear_on_seated_post",
+      "ear": "govde_kulak_sol_on_841",
+      "post": "kose_dikmesi_20_42",
+      "source_welds": [
+        "govde_kulak_sol_on_841_kaynak_a",
+        "govde_kulak_sol_on_841_kaynak_b"
+      ],
+      "post_seated_s": 191.496698,
+      "ear_begins_s": 192.696698,
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "production_release": false,
+  "note": "Selected mounting/load sequence proof only; no fixture, strength, torch or whole-station release."
+}

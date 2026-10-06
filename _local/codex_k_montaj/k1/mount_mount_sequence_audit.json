@@ -1,0 +1,46 @@
+{
+  "source_model_sha256": "4efd0b660ccb56dfd4d53d307efdfcf218185ed7c1c95df793a47e353b8ff5c0",
+  "source_plan_sha256": "a149ebe21fc0d120902362b18eafa608b54325852f76ed37f8b9d69ac4291937",
+  "scope": "four station clamps before subsequent pusher loads; bench fixtures are separate",
+  "checks": [
+    {
+      "id": "4065_-421",
+      "frame_seated_seconds": 274.006625,
+      "washer_seated_seconds": 275.366625,
+      "screw_seated_seconds": 275.836625,
+      "first_subsequent_mechanism_seated_seconds": 278.636625,
+      "load_margin_seconds": 2.7999999999999545,
+      "passed": true
+    },
+    {
+      "id": "4335_-421",
+      "frame_seated_seconds": 274.006625,
+      "washer_seated_seconds": 277.146625,
+      "screw_seated_seconds": 277.616625,
+      "first_subsequent_mechanism_seated_seconds": 278.636625,
+      "load_margin_seconds": 1.0199999999999818,
+      "passed": true
+    },
+    {
+      "id": "4065_-3",
+      "frame_seated_seconds": 274.006625,
+      "washer_seated_seconds": 274.476625,
+      "screw_seated_seconds": 274.946625,
+      "first_subsequent_mechanism_seated_seconds": 278.636625,
+      "load_margin_seconds": 3.6899999999999977,
+      "passed": true
+    },
+    {
+      "id": "4335_-3",
+      "frame_seated_seconds": 274.006625,
+      "washer_seated_seconds": 276.256625,
+      "screw_seated_seconds": 276.726625,
+      "first_subsequent_mechanism_seated_seconds": 278.636625,
+      "load_margin_seconds": 1.9099999999999682,
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "fixtures_verified": false,
+  "production_release": false
+}

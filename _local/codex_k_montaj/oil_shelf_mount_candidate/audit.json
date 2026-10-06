@@ -1,0 +1,815 @@
+{
+  "source_model_sha256": "4efd0b660ccb56dfd4d53d307efdfcf218185ed7c1c95df793a47e353b8ff5c0",
+  "source_parts_sha256": "7c29b5297dbb0a75257a8e857b3e0227d2549e5a44d744a8fa73b71a8dcc1c64",
+  "joins": [
+    {
+      "id": "sol_0",
+      "bracket": "yag_pompa_rafi_kosebendi_sol",
+      "wall": "sol_sac_urun_girisi",
+      "center_mm": [
+        4000.0,
+        1625.0,
+        -580.0
+      ],
+      "axis": [
+        1,
+        0,
+        0
+      ],
+      "stud": "k79_yag_raf_FHP_M5x12_sol_0",
+      "washer": "k79_yag_raf_M5_pul_sol_0",
+      "nut": "k79_yag_raf_M5_somun_sol_0",
+      "wall_thickness_mm": 1.5,
+      "bracket_thickness_mm": 3.0,
+      "wall_hole_mm": 5.0,
+      "bracket_hole_mm": 5.5,
+      "engagement_mm": 5.0,
+      "nominal_diameter_mm": 5.0,
+      "pitch_mm": 0.8,
+      "protrusion_mm": 1.5,
+      "passed_stack": true,
+      "supplier_press_process_checked": false,
+      "corner_weld_process_checked": false,
+      "horizontal_leg": "k79_yag_raf_yatay_kosebent_sol",
+      "corner_seam": "k79_yag_raf_kose_kaynagi_sol"
+    },
+    {
+      "id": "sol_1",
+      "bracket": "yag_pompa_rafi_kosebendi_sol",
+      "wall": "sol_sac_urun_girisi",
+      "center_mm": [
+        4000.0,
+        1625.0,
+        -517.0
+      ],
+      "axis": [
+        1,
+        0,
+        0
+      ],
+      "stud": "k79_yag_raf_FHP_M5x12_sol_1",
+      "washer": "k79_yag_raf_M5_pul_sol_1",
+      "nut": "k79_yag_raf_M5_somun_sol_1",
+      "wall_thickness_mm": 1.5,
+      "bracket_thickness_mm": 3.0,
+      "wall_hole_mm": 5.0,
+      "bracket_hole_mm": 5.5,
+      "engagement_mm": 5.0,
+      "nominal_diameter_mm": 5.0,
+      "pitch_mm": 0.8,
+      "protrusion_mm": 1.5,
+      "passed_stack": true,
+      "supplier_press_process_checked": false,
+      "corner_weld_process_checked": false,
+      "horizontal_leg": "k79_yag_raf_yatay_kosebent_sol",
+      "corner_seam": "k79_yag_raf_kose_kaynagi_sol"
+    },
+    {
+      "id": "sol_2",
+      "bracket": "yag_pompa_rafi_kosebendi_sol",
+      "wall": "sol_sac_urun_girisi",
+      "center_mm": [
+        4000.0,
+        1625.0,
+        -455.0
+      ],
+      "axis": [
+        1,
+        0,
+        0
+      ],
+      "stud": "k79_yag_raf_FHP_M5x12_sol_2",
+      "washer": "k79_yag_raf_M5_pul_sol_2",
+      "nut": "k79_yag_raf_M5_somun_sol_2",
+      "wall_thickness_mm": 1.5,
+      "bracket_thickness_mm": 3.0,
+      "wall_hole_mm": 5.0,
+      "bracket_hole_mm": 5.5,
+      "engagement_mm": 5.0,
+      "nominal_diameter_mm": 5.0,
+      "pitch_mm": 0.8,
+      "protrusion_mm": 1.5,
+      "passed_stack": true,
+      "supplier_press_process_checked": false,
+      "corner_weld_process_checked": false,
+      "horizontal_leg": "k79_yag_raf_yatay_kosebent_sol",
+      "corner_seam": "k79_yag_raf_kose_kaynagi_sol"
+    },
+    {
+      "id": "sag_0",
+      "bracket": "yag_pompa_rafi_kosebendi_sag",
+      "wall": "sag_sac_E_penceresi",
+      "center_mm": [
+        4400.0,
+        1625.0,
+        -580.0
+      ],
+      "axis": [
+        -1,
+        0,
+        0
+      ],
+      "stud": "k79_yag_raf_FHP_M5x12_sag_0",
+      "washer": "k79_yag_raf_M5_pul_sag_0",
+      "nut": "k79_yag_raf_M5_somun_sag_0",
+      "wall_thickness_mm": 1.5,
+      "bracket_thickness_mm": 3.0,
+      "wall_hole_mm": 5.0,
+      "bracket_hole_mm": 5.5,
+      "engagement_mm": 5.0,
+      "nominal_diameter_mm": 5.0,
+      "pitch_mm": 0.8,
+      "protrusion_mm": 1.5,
+      "passed_stack": true,
+      "supplier_press_process_checked": false,
+      "corner_weld_process_checked": false,
+      "horizontal_leg": "k79_yag_raf_yatay_kosebent_sag",
+      "corner_seam": "k79_yag_raf_kose_kaynagi_sag"
+    },
+    {
+      "id": "sag_1",
+      "bracket": "yag_pompa_rafi_kosebendi_sag",
+      "wall": "sag_sac_E_penceresi",
+      "center_mm": [
+        4400.0,
+        1625.0,
+        -517.0
+      ],
+      "axis": [
+        -1,
+        0,
+        0
+      ],
+      "stud": "k79_yag_raf_FHP_M5x12_sag_1",
+      "washer": "k79_yag_raf_M5_pul_sag_1",
+      "nut": "k79_yag_raf_M5_somun_sag_1",
+      "wall_thickness_mm": 1.5,
+      "bracket_thickness_mm": 3.0,
+      "wall_hole_mm": 5.0,
+      "bracket_hole_mm": 5.5,
+      "engagement_mm": 5.0,
+      "nominal_diameter_mm": 5.0,
+      "pitch_mm": 0.8,
+      "protrusion_mm": 1.5,
+      "passed_stack": true,
+      "supplier_press_process_checked": false,
+      "corner_weld_process_checked": false,
+      "horizontal_leg": "k79_yag_raf_yatay_kosebent_sag",
+      "corner_seam": "k79_yag_raf_kose_kaynagi_sag"
+    },
+    {
+      "id": "sag_2",
+      "bracket": "yag_pompa_rafi_kosebendi_sag",
+      "wall": "sag_sac_E_penceresi",
+      "center_mm": [
+        4400.0,
+        1625.0,
+        -455.0
+      ],
+      "axis": [
+        -1,
+        0,
+        0
+      ],
+      "stud": "k79_yag_raf_FHP_M5x12_sag_2",
+      "washer": "k79_yag_raf_M5_pul_sag_2",
+      "nut": "k79_yag_raf_M5_somun_sag_2",
+      "wall_thickness_mm": 1.5,
+      "bracket_thickness_mm": 3.0,
+      "wall_hole_mm": 5.0,
+      "bracket_hole_mm": 5.5,
+      "engagement_mm": 5.0,
+      "nominal_diameter_mm": 5.0,
+      "pitch_mm": 0.8,
+      "protrusion_mm": 1.5,
+      "passed_stack": true,
+      "supplier_press_process_checked": false,
+      "corner_weld_process_checked": false,
+      "horizontal_leg": "k79_yag_raf_yatay_kosebent_sag",
+      "corner_seam": "k79_yag_raf_kose_kaynagi_sag"
+    }
+  ],
+  "added_parts": [
+    "k79_yag_raf_FHP_M5x12_sol_0",
+    "k79_yag_raf_M5_pul_sol_0",
+    "k79_yag_raf_M5_somun_sol_0",
+    "k79_yag_raf_FHP_M5x12_sol_1",
+    "k79_yag_raf_M5_pul_sol_1",
+    "k79_yag_raf_M5_somun_sol_1",
+    "k79_yag_raf_FHP_M5x12_sol_2",
+    "k79_yag_raf_M5_pul_sol_2",
+    "k79_yag_raf_M5_somun_sol_2",
+    "k79_yag_raf_yatay_kosebent_sol",
+    "k79_yag_raf_kose_kaynagi_sol",
+    "k79_yag_raf_FHP_M5x12_sag_0",
+    "k79_yag_raf_M5_pul_sag_0",
+    "k79_yag_raf_M5_somun_sag_0",
+    "k79_yag_raf_FHP_M5x12_sag_1",
+    "k79_yag_raf_M5_pul_sag_1",
+    "k79_yag_raf_M5_somun_sag_1",
+    "k79_yag_raf_FHP_M5x12_sag_2",
+    "k79_yag_raf_M5_pul_sag_2",
+    "k79_yag_raf_M5_somun_sag_2",
+    "k79_yag_raf_yatay_kosebent_sag",
+    "k79_yag_raf_kose_kaynagi_sag"
+  ],
+  "changed_parts": [
+    "yag_pompa_rafi_kosebendi_sol",
+    "yag_pompa_rafi_kosebendi_sag"
+  ],
+  "source_clashes": [],
+  "own_clashes": [],
+  "open_surface_checks": [
+    {
+      "part": "k79_yag_raf_FHP_M5x12_sol_0",
+      "source": "elk_k_tarti_kablo_sinyal_0",
+      "crossing_pairs": 0
+    },
+    {
+      "part": "k79_yag_raf_FHP_M5x12_sol_0",
+      "source": "elk_k_kablo_0",
+      "crossing_pairs": 0
+    },
+    {
+      "part": "k79_yag_raf_FHP_M5x12_sol_0",
+      "source": "elk_zincir_kablo_veri_0",
+      "crossing_pairs": 0
+    },
+    {
+      "part": "k79_yag_raf_FHP_M5x12_sol_0",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "part": "k79_yag_raf_FHP_M5x12_sol_0",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "part": "k79_yag_raf_M5_pul_sol_0",
+      "source": "elk_k_tarti_kablo_sinyal_0",
+      "crossing_pairs": 0
+    },
+    {
+      "part": "k79_yag_raf_M5_pul_sol_0",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "part": "k79_yag_raf_M5_pul_sol_0",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "part": "k79_yag_raf_M5_somun_sol_0",
+      "source": "elk_k_tarti_kablo_sinyal_0",
+      "crossing_pairs": 0
+    },
+    {
+      "part": "k79_yag_raf_M5_somun_sol_0",
+      "source": "elk_k_kablo_0",
+      "crossing_pairs": 0
+    },
+    {
+      "part": "k79_yag_raf_M5_somun_sol_0",
+      "source": "elk_zincir_kablo_veri_0",
+      "crossing_pairs": 0
+    },
+    {
+      "part": "k79_yag_raf_M5_somun_sol_0",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "part": "k79_yag_raf_M5_somun_sol_0",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "part": "k79_yag_raf_FHP_M5x12_sol_1",
+      "source": "elk_k_tarti_kablo_sinyal_0",
+      "crossing_pairs": 0
+    },
+    {
+      "part": "k79_yag_raf_FHP_M5x12_sol_1",
+      "source": "elk_k_kablo_0",
+      "crossing_pairs": 0
+    },
+    {
+      "part": "k79_yag_raf_FHP_M5x12_sol_1",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "part": "k79_yag_raf_FHP_M5x12_sol_1",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "part": "k79_yag_raf_M5_pul_sol_1",
+      "source": "elk_k_tarti_kablo_sinyal_0",
+      "crossing_pairs": 0
+    },
+    {
+      "part": "k79_yag_raf_M5_pul_sol_1",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "part": "k79_yag_raf_M5_pul_sol_1",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "part": "k79_yag_raf_M5_somun_sol_1",
+      "source": "elk_k_tarti_kablo_sinyal_0",
+      "crossing_pairs": 0
+    },
+    {
+      "part": "k79_yag_raf_M5_somun_sol_1",
+      "source": "elk_k_kablo_0",
+      "crossing_pairs": 0
+    },
+    {
+      "part": "k79_yag_raf_M5_somun_sol_1",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "part": "k79_yag_raf_M5_somun_sol_1",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "part": "k79_yag_raf_FHP_M5x12_sol_2",
+      "source": "elk_k_tarti_kablo_sinyal_0",
+      "crossing_pairs": 0
+    },
+    {
+      "part": "k79_yag_raf_FHP_M5x12_sol_2",
+      "source": "elk_k_kablo_0",
+      "crossing_pairs": 0
+    },
+    {
+      "part": "k79_yag_raf_FHP_M5x12_sol_2",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "part": "k79_yag_raf_FHP_M5x12_sol_2",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "part": "k79_yag_raf_M5_pul_sol_2",
+      "source": "elk_k_tarti_kablo_sinyal_0",
+      "crossing_pairs": 0
+    },
+    {
+      "part": "k79_yag_raf_M5_pul_sol_2",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "part": "k79_yag_raf_M5_pul_sol_2",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "part": "k79_yag_raf_M5_somun_sol_2",
+      "source": "elk_k_tarti_kablo_sinyal_0",
+      "crossing_pairs": 0
+    },
+    {
+      "part": "k79_yag_raf_M5_somun_sol_2",
+      "source": "elk_k_kablo_0",
+      "crossing_pairs": 0
+    },
+    {
+      "part": "k79_yag_raf_M5_somun_sol_2",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "part": "k79_yag_raf_M5_somun_sol_2",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "part": "yag_pompa_rafi_kosebendi_sol",
+      "source": "elk_k_tarti_kablo_sinyal_0",
+      "crossing_pairs": 0
+    },
+    {
+      "part": "yag_pompa_rafi_kosebendi_sol",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "part": "yag_pompa_rafi_kosebendi_sol",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "part": "k79_yag_raf_yatay_kosebent_sol",
+      "source": "elk_k_tarti_kablo_sinyal_0",
+      "crossing_pairs": 0
+    },
+    {
+      "part": "k79_yag_raf_yatay_kosebent_sol",
+      "source": "elk_k_kablo_0",
+      "crossing_pairs": 0
+    },
+    {
+      "part": "k79_yag_raf_yatay_kosebent_sol",
+      "source": "elk_k_kablo_sinyal_0",
+      "crossing_pairs": 0
+    },
+    {
+      "part": "k79_yag_raf_yatay_kosebent_sol",
+      "source": "elk_k_kablo_sinyal_1",
+      "crossing_pairs": 0
+    },
+    {
+      "part": "k79_yag_raf_yatay_kosebent_sol",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "part": "k79_yag_raf_yatay_kosebent_sol",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "part": "k79_yag_raf_kose_kaynagi_sol",
+      "source": "elk_k_tarti_kablo_sinyal_0",
+      "crossing_pairs": 0
+    },
+    {
+      "part": "k79_yag_raf_kose_kaynagi_sol",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "part": "k79_yag_raf_kose_kaynagi_sol",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "part": "k79_yag_raf_FHP_M5x12_sag_0",
+      "source": "elk_k_kablo_1",
+      "crossing_pairs": 0
+    },
+    {
+      "part": "k79_yag_raf_FHP_M5x12_sag_0",
+      "source": "elk_zincir_kablo_veri_1",
+      "crossing_pairs": 0
+    },
+    {
+      "part": "k79_yag_raf_FHP_M5x12_sag_0",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "part": "k79_yag_raf_FHP_M5x12_sag_0",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "part": "k79_yag_raf_M5_pul_sag_0",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "part": "k79_yag_raf_M5_pul_sag_0",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "part": "k79_yag_raf_M5_somun_sag_0",
+      "source": "elk_k_kablo_1",
+      "crossing_pairs": 0
+    },
+    {
+      "part": "k79_yag_raf_M5_somun_sag_0",
+      "source": "elk_zincir_kablo_veri_1",
+      "crossing_pairs": 0
+    },
+    {
+      "part": "k79_yag_raf_M5_somun_sag_0",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "part": "k79_yag_raf_M5_somun_sag_0",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "part": "k79_yag_raf_FHP_M5x12_sag_1",
+      "source": "elk_k_kablo_1",
+      "crossing_pairs": 0
+    },
+    {
+      "part": "k79_yag_raf_FHP_M5x12_sag_1",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "part": "k79_yag_raf_FHP_M5x12_sag_1",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "part": "k79_yag_raf_M5_pul_sag_1",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "part": "k79_yag_raf_M5_pul_sag_1",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "part": "k79_yag_raf_M5_somun_sag_1",
+      "source": "elk_k_kablo_1",
+      "crossing_pairs": 0
+    },
+    {
+      "part": "k79_yag_raf_M5_somun_sag_1",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "part": "k79_yag_raf_M5_somun_sag_1",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "part": "k79_yag_raf_FHP_M5x12_sag_2",
+      "source": "elk_k_kablo_1",
+      "crossing_pairs": 0
+    },
+    {
+      "part": "k79_yag_raf_FHP_M5x12_sag_2",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "part": "k79_yag_raf_FHP_M5x12_sag_2",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "part": "k79_yag_raf_M5_pul_sag_2",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "part": "k79_yag_raf_M5_pul_sag_2",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "part": "k79_yag_raf_M5_somun_sag_2",
+      "source": "elk_k_kablo_1",
+      "crossing_pairs": 0
+    },
+    {
+      "part": "k79_yag_raf_M5_somun_sag_2",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "part": "k79_yag_raf_M5_somun_sag_2",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "part": "yag_pompa_rafi_kosebendi_sag",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "part": "yag_pompa_rafi_kosebendi_sag",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "part": "k79_yag_raf_yatay_kosebent_sag",
+      "source": "elk_k_kablo_1",
+      "crossing_pairs": 0
+    },
+    {
+      "part": "k79_yag_raf_yatay_kosebent_sag",
+      "source": "elk_k_kablo_sinyal_6",
+      "crossing_pairs": 0
+    },
+    {
+      "part": "k79_yag_raf_yatay_kosebent_sag",
+      "source": "elk_k_kablo_sinyal_7",
+      "crossing_pairs": 0
+    },
+    {
+      "part": "k79_yag_raf_yatay_kosebent_sag",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "part": "k79_yag_raf_yatay_kosebent_sag",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "part": "k79_yag_raf_kose_kaynagi_sag",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "part": "k79_yag_raf_kose_kaynagi_sag",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    }
+  ],
+  "declared_press_heads": [
+    {
+      "stud": "k79_yag_raf_FHP_M5x12_sol_0",
+      "wall": "sol_sac_urun_girisi",
+      "method": "FHP own wall press head, not an insertion waiver",
+      "hole_mm": 5.0
+    },
+    {
+      "stud": "k79_yag_raf_FHP_M5x12_sol_1",
+      "wall": "sol_sac_urun_girisi",
+      "method": "FHP own wall press head, not an insertion waiver",
+      "hole_mm": 5.0
+    },
+    {
+      "stud": "k79_yag_raf_FHP_M5x12_sol_2",
+      "wall": "sol_sac_urun_girisi",
+      "method": "FHP own wall press head, not an insertion waiver",
+      "hole_mm": 5.0
+    },
+    {
+      "stud": "k79_yag_raf_FHP_M5x12_sag_0",
+      "wall": "sag_sac_E_penceresi",
+      "method": "FHP own wall press head, not an insertion waiver",
+      "hole_mm": 5.0
+    },
+    {
+      "stud": "k79_yag_raf_FHP_M5x12_sag_1",
+      "wall": "sag_sac_E_penceresi",
+      "method": "FHP own wall press head, not an insertion waiver",
+      "hole_mm": 5.0
+    },
+    {
+      "stud": "k79_yag_raf_FHP_M5x12_sag_2",
+      "wall": "sag_sac_E_penceresi",
+      "method": "FHP own wall press head, not an insertion waiver",
+      "hole_mm": 5.0
+    }
+  ],
+  "original_coarse_wall_bores": [
+    {
+      "id": "sag_0",
+      "clear_core_mm": 4.9,
+      "original_material_mm3": 0.19435621041373058
+    },
+    {
+      "id": "sag_1",
+      "clear_core_mm": 4.9,
+      "original_material_mm3": 0.19428022940977335
+    },
+    {
+      "id": "sag_2",
+      "clear_core_mm": 4.9,
+      "original_material_mm3": 0.19451789026622668
+    },
+    {
+      "id": "sol_0",
+      "clear_core_mm": 4.9,
+      "original_material_mm3": 0.19435621041372178
+    },
+    {
+      "id": "sol_1",
+      "clear_core_mm": 4.9,
+      "original_material_mm3": 0.19428022940977213
+    },
+    {
+      "id": "sol_2",
+      "clear_core_mm": 4.9,
+      "original_material_mm3": 0.19451789026621763
+    }
+  ],
+  "wall_refinements": {
+    "sag_sac_E_penceresi": {
+      "removed_material_mm3": 3.39206898680003,
+      "added_material_mm3": 4.2012834183813297e-19
+    },
+    "sol_sac_urun_girisi": {
+      "removed_material_mm3": 3.3920689867999974,
+      "added_material_mm3": 4.607859233063394e-19
+    }
+  },
+  "native_wall_bores": [
+    {
+      "id": "sol_0",
+      "wall": "sol_sac_urun_girisi",
+      "center_mm": [
+        4000.0,
+        1625.0,
+        -580.0
+      ],
+      "native_hole_mm": 5.0,
+      "checked_clear_core_mm": 4.9,
+      "wall_material_in_clear_core_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "id": "sol_1",
+      "wall": "sol_sac_urun_girisi",
+      "center_mm": [
+        4000.0,
+        1625.0,
+        -517.0
+      ],
+      "native_hole_mm": 5.0,
+      "checked_clear_core_mm": 4.9,
+      "wall_material_in_clear_core_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "id": "sol_2",
+      "wall": "sol_sac_urun_girisi",
+      "center_mm": [
+        4000.0,
+        1625.0,
+        -455.0
+      ],
+      "native_hole_mm": 5.0,
+      "checked_clear_core_mm": 4.9,
+      "wall_material_in_clear_core_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "id": "sag_0",
+      "wall": "sag_sac_E_penceresi",
+      "center_mm": [
+        4400.0,
+        1625.0,
+        -580.0
+      ],
+      "native_hole_mm": 5.0,
+      "checked_clear_core_mm": 4.9,
+      "wall_material_in_clear_core_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "id": "sag_1",
+      "wall": "sag_sac_E_penceresi",
+      "center_mm": [
+        4400.0,
+        1625.0,
+        -517.0
+      ],
+      "native_hole_mm": 5.0,
+      "checked_clear_core_mm": 4.9,
+      "wall_material_in_clear_core_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "id": "sag_2",
+      "wall": "sag_sac_E_penceresi",
+      "center_mm": [
+        4400.0,
+        1625.0,
+        -455.0
+      ],
+      "native_hole_mm": 5.0,
+      "checked_clear_core_mm": 4.9,
+      "wall_material_in_clear_core_mm3": 0.0,
+      "passed": true
+    }
+  ],
+  "nominal_face_touches": [
+    {
+      "part": "yag_pompa_rafi_kosebendi_sol",
+      "source": "sol_sac_urun_girisi",
+      "native_plane_x_mm": 4001.5,
+      "maximum_mesh_plane_error_mm": 0.0001068115234375,
+      "volume_mm3": 0.4682331467853243,
+      "reason": "Retained bracket and wall share native flush plane; compressed wall vertices deviate less than1 micron. No movement penetration exemption."
+    }
+  ],
+  "bracket_fabrication": "two flat3mm laser-cut legs joined by real165mm TIG fillet; no invented zero-radius bend",
+  "closed_parts": 24,
+  "passed_stack_and_geometry_only": true,
+  "shelf_attached_to_brackets": false,
+  "pump_plate_attached_to_shelf": false,
+  "refined_wall_full_context_checked": false,
+  "wall_bores_measured": true,
+  "press_tool_checked": false,
+  "mounting_tool_checked": false,
+  "corner_weld_checked": false,
+  "production_release": false
+}
