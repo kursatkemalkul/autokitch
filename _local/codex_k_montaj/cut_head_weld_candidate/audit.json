@@ -1,0 +1,348 @@
+{
+  "source_model_sha256": "c0c004f133fa4d715aebeb5c21b35df688367bbdb630a35c656aef4b4ff4341b",
+  "source_parts_sha256": "9a599433c1160266de75b4aaf01d6efd307f0466abd8b03c948dfa91cdef36fe",
+  "joins": [
+    {
+      "id": "ara_dikme_0",
+      "screw": "k79_kafa_alt_M8x20_0",
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "center_mm": [
+        4260.6219,
+        1166.5,
+        -171.0
+      ],
+      "catalog_standard": "DIN7991",
+      "nominal_length_mm": 20.0,
+      "clamped_stock_mm": 8.0,
+      "engagement_mm": 12.0,
+      "blind_bottom_clearance_mm": 4.0,
+      "pitch_mm": 1.25,
+      "passed_stack": true,
+      "tool_checked": false,
+      "upper_rod_and_actuator_attachment_verified": false
+    },
+    {
+      "id": "ara_dikme_1",
+      "screw": "k79_kafa_alt_M8x20_1",
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "center_mm": [
+        4139.3784,
+        1166.5,
+        -171.0
+      ],
+      "catalog_standard": "DIN7991",
+      "nominal_length_mm": 20.0,
+      "clamped_stock_mm": 8.0,
+      "engagement_mm": 12.0,
+      "blind_bottom_clearance_mm": 4.0,
+      "pitch_mm": 1.25,
+      "passed_stack": true,
+      "tool_checked": false,
+      "upper_rod_and_actuator_attachment_verified": false
+    },
+    {
+      "id": "ara_dikme_2",
+      "screw": "k79_kafa_alt_M8x20_2",
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "center_mm": [
+        4200.0002,
+        1166.5,
+        -276.0
+      ],
+      "catalog_standard": "DIN7991",
+      "nominal_length_mm": 20.0,
+      "clamped_stock_mm": 8.0,
+      "engagement_mm": 12.0,
+      "blind_bottom_clearance_mm": 4.0,
+      "pitch_mm": 1.25,
+      "passed_stack": true,
+      "tool_checked": false,
+      "upper_rod_and_actuator_attachment_verified": false
+    }
+  ],
+  "new_parts": [
+    "k79_kafa_ust_plaka_2",
+    "k79_kafa_adaptor_ust_plaka_4",
+    "k79_kafa_alt_M8x20_0",
+    "k79_kafa_alt_M8x20_1",
+    "k79_kafa_alt_M8x20_2",
+    "k79_kafa_dikme_TIG_0",
+    "k79_kafa_dikme_TIG_1",
+    "k79_kafa_dikme_TIG_2"
+  ],
+  "source_clashes": [],
+  "own_clashes": [],
+  "surface_checks": [
+    {
+      "a": "k79_kafa_ust_plaka_2",
+      "source": "elk_k_kablo_sinyal_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_kafa_ust_plaka_2",
+      "source": "elk_k_kablo_sinyal_6",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_kafa_ust_plaka_2",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_kafa_ust_plaka_2",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_kafa_adaptor_ust_plaka_4",
+      "source": "elk_k_kablo_sinyal_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_kafa_adaptor_ust_plaka_4",
+      "source": "elk_k_kablo_sinyal_1",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_kafa_adaptor_ust_plaka_4",
+      "source": "elk_k_kablo_sinyal_6",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_kafa_adaptor_ust_plaka_4",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_kafa_adaptor_ust_plaka_4",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_kafa_alt_M8x20_0",
+      "source": "elk_k_kablo_sinyal_6",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_kafa_alt_M8x20_0",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_kafa_alt_M8x20_0",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_kafa_alt_M8x20_1",
+      "source": "elk_k_kablo_sinyal_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_kafa_alt_M8x20_1",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_kafa_alt_M8x20_1",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_kafa_alt_M8x20_2",
+      "source": "elk_k_kablo_sinyal_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_kafa_alt_M8x20_2",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_kafa_alt_M8x20_2",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_kafa_dikme_TIG_0",
+      "source": "elk_k_kablo_sinyal_6",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_kafa_dikme_TIG_0",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_kafa_dikme_TIG_0",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_kafa_dikme_TIG_1",
+      "source": "elk_k_kablo_sinyal_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_kafa_dikme_TIG_1",
+      "source": "elk_k_kablo_sinyal_1",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_kafa_dikme_TIG_1",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_kafa_dikme_TIG_1",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_kafa_dikme_TIG_2",
+      "source": "elk_k_kablo_sinyal_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_kafa_dikme_TIG_2",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_kafa_dikme_TIG_2",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    }
+  ],
+  "drilled_holes": [
+    {
+      "center_mm": [
+        4260.6219,
+        1166.5,
+        -171.0
+      ],
+      "diameter_mm": 9.0,
+      "layers": [
+        "kafa_plakasi_8",
+        "k79_kafa_ust_plaka_2"
+      ],
+      "seat_depth_mm": 4.4,
+      "seat_outer_diameter_mm": 16.1
+    },
+    {
+      "center_mm": [
+        4139.3784,
+        1166.5,
+        -171.0
+      ],
+      "diameter_mm": 9.0,
+      "layers": [
+        "kafa_plakasi_8",
+        "k79_kafa_ust_plaka_2"
+      ],
+      "seat_depth_mm": 4.4,
+      "seat_outer_diameter_mm": 16.1
+    },
+    {
+      "center_mm": [
+        4200.0002,
+        1166.5,
+        -276.0
+      ],
+      "diameter_mm": 9.0,
+      "layers": [
+        "kafa_plakasi_8",
+        "k79_kafa_ust_plaka_2"
+      ],
+      "seat_depth_mm": 4.4,
+      "seat_outer_diameter_mm": 16.1
+    }
+  ],
+  "supplier_equipment_bodies_changed": false,
+  "passed_geometry_and_stacks": true,
+  "pad_force_and_material_approval_checked": false,
+  "manufacturing_release": false,
+  "production_release": false,
+  "continuous_rod_welds": [
+    {
+      "rod": "ara_dikme_0",
+      "adaptor": "kafa_adaptoru",
+      "weld": "k79_kafa_dikme_TIG_0",
+      "process": "Continuous TIG141 ER308LSi; finished fillet leg2mm; passivate",
+      "root_y_mm": 1244.5,
+      "native_outline_segments": 13,
+      "continuous_closed_root": true,
+      "leg_mm": 2.0,
+      "throat_mm": 1.414213562373095,
+      "weld_volume_mm3": 108.09977242103679,
+      "bench_sequence": "Weld rods to lower6mm adaptor before upper4mm layer or supplier yoke is fitted; finish and passivate; bolt6+2mm head stack from below",
+      "supplier_body_modified": false,
+      "torch_access_checked": false
+    },
+    {
+      "rod": "ara_dikme_1",
+      "adaptor": "kafa_adaptoru",
+      "weld": "k79_kafa_dikme_TIG_1",
+      "process": "Continuous TIG141 ER308LSi; finished fillet leg2mm; passivate",
+      "root_y_mm": 1244.5,
+      "native_outline_segments": 13,
+      "continuous_closed_root": true,
+      "leg_mm": 2.0,
+      "throat_mm": 1.414213562373095,
+      "weld_volume_mm3": 108.10037151479865,
+      "bench_sequence": "Weld rods to lower6mm adaptor before upper4mm layer or supplier yoke is fitted; finish and passivate; bolt6+2mm head stack from below",
+      "supplier_body_modified": false,
+      "torch_access_checked": false
+    },
+    {
+      "rod": "ara_dikme_2",
+      "adaptor": "kafa_adaptoru",
+      "weld": "k79_kafa_dikme_TIG_2",
+      "process": "Continuous TIG141 ER308LSi; finished fillet leg2mm; passivate",
+      "root_y_mm": 1244.5,
+      "native_outline_segments": 13,
+      "continuous_closed_root": true,
+      "leg_mm": 2.0,
+      "throat_mm": 1.414213562373095,
+      "weld_volume_mm3": 108.100316289489,
+      "bench_sequence": "Weld rods to lower6mm adaptor before upper4mm layer or supplier yoke is fitted; finish and passivate; bolt6+2mm head stack from below",
+      "supplier_body_modified": false,
+      "torch_access_checked": false
+    }
+  ],
+  "stock_layers": [
+    {
+      "original": "kafa_plakasi_8",
+      "lower_mm": 6.0,
+      "upper": "k79_kafa_ust_plaka_2",
+      "upper_mm": 2.0,
+      "split_y_mm": 1172.5,
+      "native_outline_retained": true,
+      "layer_retention_verified": false
+    },
+    {
+      "original": "kafa_adaptoru",
+      "lower_mm": 6.0,
+      "upper": "k79_kafa_adaptor_ust_plaka_4",
+      "upper_mm": 4.0,
+      "split_y_mm": 1250.5,
+      "native_outline_retained": true,
+      "layer_retention_verified": false
+    }
+  ],
+  "adaptor_layer_fastening_verified": false,
+  "supplier_yoke_mount_verified": false,
+  "whole_head_connected": false
+}

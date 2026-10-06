@@ -1,0 +1,99 @@
+{
+  "source_model_sha256": "c0c004f133fa4d715aebeb5c21b35df688367bbdb630a35c656aef4b4ff4341b",
+  "source_parts_sha256": "9a599433c1160266de75b4aaf01d6efd307f0466abd8b03c948dfa91cdef36fe",
+  "candidate_geometry_sha256": "3f651e3a281f13348309ea74d4033eec7a4abb624a0a542fb80e527948c5a09b",
+  "bottom_tool_checks": [
+    {
+      "joint": "ara_dikme_0",
+      "hex_mm": 5.0,
+      "tool_clearance_envelope_diameter_mm": 10.0,
+      "axial_approach_mm": 80.0,
+      "issues": [],
+      "passed": true
+    },
+    {
+      "joint": "ara_dikme_1",
+      "hex_mm": 5.0,
+      "tool_clearance_envelope_diameter_mm": 10.0,
+      "axial_approach_mm": 80.0,
+      "issues": [],
+      "passed": true
+    },
+    {
+      "joint": "ara_dikme_2",
+      "hex_mm": 5.0,
+      "tool_clearance_envelope_diameter_mm": 10.0,
+      "axial_approach_mm": 80.0,
+      "issues": [],
+      "passed": true
+    }
+  ],
+  "weld_contacts": [
+    {
+      "weld": "k79_kafa_dikme_TIG_0",
+      "touches": "ara_dikme_0",
+      "source_surface_vertices": 156,
+      "xz_contact_extent_mm": [
+        15.767601013183594,
+        15.883399963378906
+      ],
+      "passed": true
+    },
+    {
+      "weld": "k79_kafa_dikme_TIG_0",
+      "touches": "kafa_adaptoru",
+      "source_surface_vertices": 156,
+      "xz_contact_extent_mm": [
+        19.827476501464844,
+        19.97308349609375
+      ],
+      "passed": true
+    },
+    {
+      "weld": "k79_kafa_dikme_TIG_1",
+      "touches": "ara_dikme_1",
+      "source_surface_vertices": 156,
+      "xz_contact_extent_mm": [
+        15.767498016357422,
+        15.883399963378906
+      ],
+      "passed": true
+    },
+    {
+      "weld": "k79_kafa_dikme_TIG_1",
+      "touches": "kafa_adaptoru",
+      "source_surface_vertices": 156,
+      "xz_contact_extent_mm": [
+        19.827362060546875,
+        19.97308349609375
+      ],
+      "passed": true
+    },
+    {
+      "weld": "k79_kafa_dikme_TIG_2",
+      "touches": "ara_dikme_2",
+      "source_surface_vertices": 156,
+      "xz_contact_extent_mm": [
+        15.767600059509277,
+        15.883403778076172
+      ],
+      "passed": true
+    },
+    {
+      "weld": "k79_kafa_dikme_TIG_2",
+      "touches": "kafa_adaptoru",
+      "source_surface_vertices": 156,
+      "xz_contact_extent_mm": [
+        19.827473640441895,
+        19.97308349609375
+      ],
+      "passed": true
+    }
+  ],
+  "passed_bottom_tool_access": true,
+  "passed_continuous_weld_contacts": true,
+  "supplier_yoke_mount_verified": false,
+  "adaptor_layer_retention_verified": false,
+  "manufacturing_release": false,
+  "production_release": false
+}

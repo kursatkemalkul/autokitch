@@ -18,6 +18,7 @@ ccd = read('full_ccd_plan_k_cap_full.json')
 dense = read('cap_dense_bend_morph_audit.json')
 display = read('cap_weld_display_audit.json')
 interfaces = read('catalog_supplier_interfaces.json')
+connections = read('cap_connection_evidence.json')
 torch = read('cap_torch_access.json')
 model = baseline['source_model_sha256']
 full_hash = sha('plan_k_cap_full.pkl')
@@ -34,7 +35,8 @@ assert display['physical_product_geometry_unchanged'] and display['common_player
 assert display['marker_count'] == 32
 assert all(c['maximum_surface_distance_mm'] <= .01 and c['same_motion_as_real_cap'] for c in display['source_surface_checks'])
 assert interfaces['remaining_count'] == 212
-files = ['cap_plan_source_binding_audit.json', 'cap_plan_audit.json', 'cap_bench_prototype_audit.json', 'cap_bench_integration_audit.json', 'full_ccd_plan_k_cap_full.json', 'cap_dense_bend_morph_audit.json', 'cap_weld_display_audit.json', 'cap_torch_access.json', 'catalog_supplier_interfaces.json']
+assert connections['remaining_count'] == 208 and connections['source_plan_sha256'] == full_hash
+files = ['cap_plan_source_binding_audit.json', 'cap_plan_audit.json', 'cap_bench_prototype_audit.json', 'cap_bench_integration_audit.json', 'full_ccd_plan_k_cap_full.json', 'cap_dense_bend_morph_audit.json', 'cap_weld_display_audit.json', 'cap_torch_access.json', 'catalog_supplier_interfaces.json', 'cap_connection_evidence.json']
 result = {
     'source_model_sha256': model,
     'source_plan_sha256': full_hash,
@@ -47,7 +49,8 @@ result = {
     'display_surface_markers': 32,
     'display_hook_checked': True,
     'whole_animation_rendered_in_browser': False,
-    'remaining_connection_records': 212,
+    'remaining_connection_records': 208,
+    'current_plan_cap_connections_verified': 4,
     'connection_inventory_reference_plan_sha256': sha('plan_k_catalog_full.pkl'),
     'connection_inventory_rebound_to_cap_plan': False,
     'artifacts_sha256': {name: sha(name) for name in files},

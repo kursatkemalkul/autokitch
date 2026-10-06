@@ -1,7 +1,7 @@
 {
   "task": "codex-k-montaj-v3",
   "branch": "codex/k-montaj",
-  "latest_checkpoint": "249124c6",
+  "latest_checkpoint": "3133325e",
   "goal_active": true,
   "k_completed": false,
   "u_started": false,
@@ -25,12 +25,12 @@
   "current_candidate_sha256": "cf4a09dfdd91a84d6a58835a37a4b093b6d2d22b45cb1e8f67dfd93d699b1f41",
   "running_ccd_session_id": null,
   "next": [
-    "Complete cutting-head upper connections and stock-layer retention against current source cache.",
-    "Batch remaining actual K connections, rebind final plan and run release audits.",
-    "Finish K full browser animation audit, then start U."
+    "Finish cutting-head fabrication and integrate candidate into batched source recipe.",
+    "Complete remaining K connections on cached source; full manufacturing/connection gates still not passed.",
+    "Full K render/browser/ready after final source binding, then U."
   ],
   "active_processes": [],
-  "last_verified_work": "Cap fullCCD17789 pairs0; cut-head candidate10 records/3realM8bottom joins passed geometry and stacks, no activation",
-  "next_required": "Cut-head upper rod/adapter attachment, layer retention and tool access; candidate geometry is saved but not activated",
+  "last_verified_work": "Current cap plan4 source-defined weld connection records closed;208 open. Cutting-head candidate18 records/7M8 joints/3continuous fillet rings passed source/own geometry,6weld contacts and7axial tool approaches. No activation.",
+  "next_required": "Bind cutting-head supplied M8 interface rendering correction and actual weld access/sequence, then batch remaining K connections before a large source rebuild.",
   "goal_status": "active"
 }

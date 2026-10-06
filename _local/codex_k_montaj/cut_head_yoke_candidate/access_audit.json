@@ -1,0 +1,231 @@
+{
+  "source_model_sha256": "c0c004f133fa4d715aebeb5c21b35df688367bbdb630a35c656aef4b4ff4341b",
+  "source_parts_sha256": "9a599433c1160266de75b4aaf01d6efd307f0466abd8b03c948dfa91cdef36fe",
+  "candidate_geometry_sha256": "5aee174e0d9d18156be0e1d1f8faaf4f90a12150c5ff62cc489319da8a3efc53",
+  "bottom_tool_checks": [
+    {
+      "joint": "ara_dikme_0",
+      "hex_mm": 5.0,
+      "tool_clearance_envelope_diameter_mm": 10.0,
+      "axial_approach_mm": 80.0,
+      "issues": [],
+      "passed": true,
+      "must_be_installed_after_torquing_this_joint": []
+    },
+    {
+      "joint": "ara_dikme_1",
+      "hex_mm": 5.0,
+      "tool_clearance_envelope_diameter_mm": 10.0,
+      "axial_approach_mm": 80.0,
+      "issues": [],
+      "passed": true,
+      "must_be_installed_after_torquing_this_joint": []
+    },
+    {
+      "joint": "ara_dikme_2",
+      "hex_mm": 5.0,
+      "tool_clearance_envelope_diameter_mm": 10.0,
+      "axial_approach_mm": 80.0,
+      "issues": [],
+      "passed": true,
+      "must_be_installed_after_torquing_this_joint": []
+    },
+    {
+      "joint": "yoke_0",
+      "hex_mm": 5.0,
+      "tool_clearance_envelope_diameter_mm": 10.0,
+      "axial_approach_mm": 80.0,
+      "issues": [],
+      "passed": true,
+      "must_be_installed_after_torquing_this_joint": [
+        "bicak_0",
+        "bicak_1",
+        "bicak_2",
+        "bicak_3",
+        "bicak_4",
+        "bicak_5",
+        "bicak_gobek_halkasi",
+        "bicak_koruma_halkasi",
+        "kafa_plakasi_8",
+        "kelebek_somun_0",
+        "kelebek_somun_1",
+        "kelebek_somun_2",
+        "koruma_braketi_0",
+        "koruma_braketi_1",
+        "koruma_braketi_2",
+        "koruma_braketi_3",
+        "koruma_braketi_4",
+        "koruma_braketi_5",
+        "k79_kafa_ust_plaka_2",
+        "k79_kafa_alt_M8x20_0",
+        "k79_kafa_alt_M8x20_1",
+        "k79_kafa_alt_M8x20_2"
+      ]
+    },
+    {
+      "joint": "yoke_1",
+      "hex_mm": 5.0,
+      "tool_clearance_envelope_diameter_mm": 10.0,
+      "axial_approach_mm": 80.0,
+      "issues": [],
+      "passed": true,
+      "must_be_installed_after_torquing_this_joint": [
+        "bicak_0",
+        "bicak_1",
+        "bicak_2",
+        "bicak_3",
+        "bicak_4",
+        "bicak_5",
+        "bicak_gobek_halkasi",
+        "bicak_koruma_halkasi",
+        "kafa_plakasi_8",
+        "kelebek_somun_0",
+        "kelebek_somun_1",
+        "kelebek_somun_2",
+        "koruma_braketi_0",
+        "koruma_braketi_1",
+        "koruma_braketi_2",
+        "koruma_braketi_3",
+        "koruma_braketi_4",
+        "koruma_braketi_5",
+        "k79_kafa_ust_plaka_2",
+        "k79_kafa_alt_M8x20_0",
+        "k79_kafa_alt_M8x20_1",
+        "k79_kafa_alt_M8x20_2"
+      ]
+    },
+    {
+      "joint": "yoke_2",
+      "hex_mm": 5.0,
+      "tool_clearance_envelope_diameter_mm": 10.0,
+      "axial_approach_mm": 80.0,
+      "issues": [],
+      "passed": true,
+      "must_be_installed_after_torquing_this_joint": [
+        "bicak_0",
+        "bicak_1",
+        "bicak_2",
+        "bicak_3",
+        "bicak_4",
+        "bicak_5",
+        "bicak_gobek_halkasi",
+        "bicak_koruma_halkasi",
+        "kafa_plakasi_8",
+        "kelebek_somun_0",
+        "kelebek_somun_1",
+        "kelebek_somun_2",
+        "koruma_braketi_0",
+        "koruma_braketi_1",
+        "koruma_braketi_2",
+        "koruma_braketi_3",
+        "koruma_braketi_4",
+        "koruma_braketi_5",
+        "k79_kafa_ust_plaka_2",
+        "k79_kafa_alt_M8x20_0",
+        "k79_kafa_alt_M8x20_1",
+        "k79_kafa_alt_M8x20_2"
+      ]
+    },
+    {
+      "joint": "yoke_3",
+      "hex_mm": 5.0,
+      "tool_clearance_envelope_diameter_mm": 10.0,
+      "axial_approach_mm": 80.0,
+      "issues": [],
+      "passed": true,
+      "must_be_installed_after_torquing_this_joint": [
+        "bicak_0",
+        "bicak_1",
+        "bicak_2",
+        "bicak_3",
+        "bicak_4",
+        "bicak_5",
+        "bicak_gobek_halkasi",
+        "bicak_koruma_halkasi",
+        "kafa_plakasi_8",
+        "kelebek_somun_0",
+        "kelebek_somun_1",
+        "kelebek_somun_2",
+        "koruma_braketi_0",
+        "koruma_braketi_1",
+        "koruma_braketi_2",
+        "koruma_braketi_3",
+        "koruma_braketi_4",
+        "koruma_braketi_5",
+        "k79_kafa_ust_plaka_2",
+        "k79_kafa_alt_M8x20_0",
+        "k79_kafa_alt_M8x20_1",
+        "k79_kafa_alt_M8x20_2"
+      ]
+    }
+  ],
+  "weld_contacts": [
+    {
+      "weld": "k79_kafa_dikme_TIG_0",
+      "touches": "ara_dikme_0",
+      "source_surface_vertices": 156,
+      "xz_contact_extent_mm": [
+        15.767601013183594,
+        15.883399963378906
+      ],
+      "passed": true
+    },
+    {
+      "weld": "k79_kafa_dikme_TIG_0",
+      "touches": "kafa_adaptoru",
+      "source_surface_vertices": 156,
+      "xz_contact_extent_mm": [
+        19.827476501464844,
+        19.97308349609375
+      ],
+      "passed": true
+    },
+    {
+      "weld": "k79_kafa_dikme_TIG_1",
+      "touches": "ara_dikme_1",
+      "source_surface_vertices": 156,
+      "xz_contact_extent_mm": [
+        15.767498016357422,
+        15.883399963378906
+      ],
+      "passed": true
+    },
+    {
+      "weld": "k79_kafa_dikme_TIG_1",
+      "touches": "kafa_adaptoru",
+      "source_surface_vertices": 156,
+      "xz_contact_extent_mm": [
+        19.827362060546875,
+        19.97308349609375
+      ],
+      "passed": true
+    },
+    {
+      "weld": "k79_kafa_dikme_TIG_2",
+      "touches": "ara_dikme_2",
+      "source_surface_vertices": 156,
+      "xz_contact_extent_mm": [
+        15.767600059509277,
+        15.883403778076172
+      ],
+      "passed": true
+    },
+    {
+      "weld": "k79_kafa_dikme_TIG_2",
+      "touches": "kafa_adaptoru",
+      "source_surface_vertices": 156,
+      "xz_contact_extent_mm": [
+        19.827473640441895,
+        19.97308349609375
+      ],
+      "passed": true
+    }
+  ],
+  "passed_bottom_tool_access": true,
+  "passed_continuous_weld_contacts": true,
+  "supplier_yoke_mount_verified": false,
+  "adaptor_layer_retention_verified": false,
+  "stage_exclusions_are_order_constraints_not_permanent_exceptions": true,
+  "manufacturing_release": false,
+  "production_release": false
+}
