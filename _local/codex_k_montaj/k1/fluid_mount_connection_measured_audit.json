@@ -1,0 +1,371 @@
+{
+  "source_parts_sha256": "9f9e9ec06ce860fc24d1727545c5a2751987938b9023ad228e350ae51ef39d10",
+  "source_plan_sha256": "fb881f45335bea36940695c384f314e3e3135c732df041c17ac20fc38576dfb4",
+  "source_join_definitions_sha256": "1b7c0923423535e1c67c14328079dcc8932452fe5ab64d526b63312719dfc4e7",
+  "scope": "8 surviving pusher mounting bolts only; four conveyor clamps superseded and audited separately; no full station release",
+  "checks": [
+    {
+      "id": "M5_4054.0_-769.0",
+      "male": "k72_vida_M5_4054.0_-769.0",
+      "female": "k72_alt_somun_M5_4054.0_-769.0",
+      "male_measurement": {
+        "interval_mm": [
+          -5.0,
+          20.0
+        ],
+        "axis_error_mm": 3.06856443409781e-05,
+        "circular_fit_residual_mm": 0.00021476203754522416
+      },
+      "female_measurement": {
+        "interval_mm": [
+          13.620000000000005,
+          18.620000000000005
+        ],
+        "axis_error_mm": 1.739645408942168e-05,
+        "circular_fit_residual_mm": 0.0002185119169673122
+      },
+      "actual_engagement_mm": 5.0,
+      "actual_protrusion_mm": 1.3799999999999955,
+      "actual_protrusion_threads": 1.7249999999999943,
+      "host_holes": [
+        {
+          "host": "k72_itici_taban_4040.0_-755.0",
+          "hole_diameter_mm": 5.5,
+          "circular_wall_vertices": 102,
+          "maximum_radius_error_mm": 0.00020877934763241512,
+          "passed": true
+        },
+        {
+          "host": "k72_itici_ust_plaka_4040.0_-755.0",
+          "hole_diameter_mm": 5.5,
+          "circular_wall_vertices": 102,
+          "maximum_radius_error_mm": 0.00020877934763241512,
+          "passed": true
+        }
+      ],
+      "all_hardware_seated_seconds": 177.766698,
+      "supported_station_load": "itici_sabit_plaka",
+      "supported_station_load_seated_seconds": 278.636625,
+      "load_after_mount_hardware": true,
+      "passed": true
+    },
+    {
+      "id": "M5_4054.0_-741.0",
+      "male": "k72_vida_M5_4054.0_-741.0",
+      "female": "k72_alt_somun_M5_4054.0_-741.0",
+      "male_measurement": {
+        "interval_mm": [
+          -5.0,
+          20.0
+        ],
+        "axis_error_mm": 2.950736945605111e-05,
+        "circular_fit_residual_mm": 0.00021527973497592612
+      },
+      "female_measurement": {
+        "interval_mm": [
+          13.620000000000005,
+          18.620000000000005
+        ],
+        "axis_error_mm": 1.681338637514085e-05,
+        "circular_fit_residual_mm": 0.0002208188187577953
+      },
+      "actual_engagement_mm": 5.0,
+      "actual_protrusion_mm": 1.3799999999999955,
+      "actual_protrusion_threads": 1.7249999999999943,
+      "host_holes": [
+        {
+          "host": "k72_itici_taban_4040.0_-755.0",
+          "hole_diameter_mm": 5.5,
+          "circular_wall_vertices": 102,
+          "maximum_radius_error_mm": 0.00020877934763241512,
+          "passed": true
+        },
+        {
+          "host": "k72_itici_ust_plaka_4040.0_-755.0",
+          "hole_diameter_mm": 5.5,
+          "circular_wall_vertices": 102,
+          "maximum_radius_error_mm": 0.00020877934763241512,
+          "passed": true
+        }
+      ],
+      "all_hardware_seated_seconds": 175.636698,
+      "supported_station_load": "itici_sabit_plaka",
+      "supported_station_load_seated_seconds": 278.636625,
+      "load_after_mount_hardware": true,
+      "passed": true
+    },
+    {
+      "id": "M5_4054.0_-659.0",
+      "male": "k72_vida_M5_4054.0_-659.0",
+      "female": "k72_alt_somun_M5_4054.0_-659.0",
+      "male_measurement": {
+        "interval_mm": [
+          -5.0,
+          20.0
+        ],
+        "axis_error_mm": 3.751885356612336e-05,
+        "circular_fit_residual_mm": 0.00021897058277220438
+      },
+      "female_measurement": {
+        "interval_mm": [
+          13.620000000000005,
+          18.620000000000005
+        ],
+        "axis_error_mm": 2.1048936433951733e-05,
+        "circular_fit_residual_mm": 0.00022009202074846357
+      },
+      "actual_engagement_mm": 5.0,
+      "actual_protrusion_mm": 1.3799999999999955,
+      "actual_protrusion_threads": 1.7249999999999943,
+      "host_holes": [
+        {
+          "host": "k72_itici_taban_4040.0_-645.0",
+          "hole_diameter_mm": 5.5,
+          "circular_wall_vertices": 102,
+          "maximum_radius_error_mm": 0.00020877934763241512,
+          "passed": true
+        },
+        {
+          "host": "k72_itici_ust_plaka_4040.0_-645.0",
+          "hole_diameter_mm": 5.5,
+          "circular_wall_vertices": 102,
+          "maximum_radius_error_mm": 0.00020877934763241512,
+          "passed": true
+        }
+      ],
+      "all_hardware_seated_seconds": 173.506698,
+      "supported_station_load": "itici_sabit_plaka",
+      "supported_station_load_seated_seconds": 278.636625,
+      "load_after_mount_hardware": true,
+      "passed": true
+    },
+    {
+      "id": "M5_4054.0_-631.0",
+      "male": "k72_vida_M5_4054.0_-631.0",
+      "female": "k72_alt_somun_M5_4054.0_-631.0",
+      "male_measurement": {
+        "interval_mm": [
+          -5.0,
+          20.0
+        ],
+        "axis_error_mm": 3.875672243022501e-05,
+        "circular_fit_residual_mm": 0.00021481475570039876
+      },
+      "female_measurement": {
+        "interval_mm": [
+          13.620000000000005,
+          18.620000000000005
+        ],
+        "axis_error_mm": 1.859436235304124e-05,
+        "circular_fit_residual_mm": 0.00021916654352294174
+      },
+      "actual_engagement_mm": 5.0,
+      "actual_protrusion_mm": 1.3799999999999955,
+      "actual_protrusion_threads": 1.7249999999999943,
+      "host_holes": [
+        {
+          "host": "k72_itici_taban_4040.0_-645.0",
+          "hole_diameter_mm": 5.5,
+          "circular_wall_vertices": 102,
+          "maximum_radius_error_mm": 0.00020877934763241512,
+          "passed": true
+        },
+        {
+          "host": "k72_itici_ust_plaka_4040.0_-645.0",
+          "hole_diameter_mm": 5.5,
+          "circular_wall_vertices": 102,
+          "maximum_radius_error_mm": 0.00020877934763241512,
+          "passed": true
+        }
+      ],
+      "all_hardware_seated_seconds": 171.376698,
+      "supported_station_load": "itici_sabit_plaka",
+      "supported_station_load_seated_seconds": 278.636625,
+      "load_after_mount_hardware": true,
+      "passed": true
+    },
+    {
+      "id": "M5_4346.0_-769.0",
+      "male": "k72_vida_M5_4346.0_-769.0",
+      "female": "k72_alt_somun_M5_4346.0_-769.0",
+      "male_measurement": {
+        "interval_mm": [
+          -5.0,
+          20.0
+        ],
+        "axis_error_mm": 9.841442304867654e-06,
+        "circular_fit_residual_mm": 0.00021599465580024457
+      },
+      "female_measurement": {
+        "interval_mm": [
+          13.620000000000005,
+          18.620000000000005
+        ],
+        "axis_error_mm": 1.794745319926431e-05,
+        "circular_fit_residual_mm": 0.00025139410309682475
+      },
+      "actual_engagement_mm": 5.0,
+      "actual_protrusion_mm": 1.3799999999999955,
+      "actual_protrusion_threads": 1.7249999999999943,
+      "host_holes": [
+        {
+          "host": "k72_itici_taban_4360.0_-755.0",
+          "hole_diameter_mm": 5.5,
+          "circular_wall_vertices": 102,
+          "maximum_radius_error_mm": 0.00023694838970822474,
+          "passed": true
+        },
+        {
+          "host": "k72_itici_ust_plaka_4360.0_-755.0",
+          "hole_diameter_mm": 5.5,
+          "circular_wall_vertices": 102,
+          "maximum_radius_error_mm": 0.00023694838970822474,
+          "passed": true
+        }
+      ],
+      "all_hardware_seated_seconds": 186.286698,
+      "supported_station_load": "itici_sabit_plaka",
+      "supported_station_load_seated_seconds": 278.636625,
+      "load_after_mount_hardware": true,
+      "passed": true
+    },
+    {
+      "id": "M5_4346.0_-741.0",
+      "male": "k72_vida_M5_4346.0_-741.0",
+      "female": "k72_alt_somun_M5_4346.0_-741.0",
+      "male_measurement": {
+        "interval_mm": [
+          -5.0,
+          20.0
+        ],
+        "axis_error_mm": 7.725141428397334e-06,
+        "circular_fit_residual_mm": 0.0002152067815868186
+      },
+      "female_measurement": {
+        "interval_mm": [
+          13.620000000000005,
+          18.620000000000005
+        ],
+        "axis_error_mm": 1.8247622560701924e-05,
+        "circular_fit_residual_mm": 0.00024855049981864497
+      },
+      "actual_engagement_mm": 5.0,
+      "actual_protrusion_mm": 1.3799999999999955,
+      "actual_protrusion_threads": 1.7249999999999943,
+      "host_holes": [
+        {
+          "host": "k72_itici_taban_4360.0_-755.0",
+          "hole_diameter_mm": 5.5,
+          "circular_wall_vertices": 102,
+          "maximum_radius_error_mm": 0.00021589879765748776,
+          "passed": true
+        },
+        {
+          "host": "k72_itici_ust_plaka_4360.0_-755.0",
+          "hole_diameter_mm": 5.5,
+          "circular_wall_vertices": 102,
+          "maximum_radius_error_mm": 0.00021589879765748776,
+          "passed": true
+        }
+      ],
+      "all_hardware_seated_seconds": 184.156698,
+      "supported_station_load": "itici_sabit_plaka",
+      "supported_station_load_seated_seconds": 278.636625,
+      "load_after_mount_hardware": true,
+      "passed": true
+    },
+    {
+      "id": "M5_4346.0_-659.0",
+      "male": "k72_vida_M5_4346.0_-659.0",
+      "female": "k72_alt_somun_M5_4346.0_-659.0",
+      "male_measurement": {
+        "interval_mm": [
+          -5.0,
+          20.0
+        ],
+        "axis_error_mm": 1.0205589126427266e-05,
+        "circular_fit_residual_mm": 0.00020157755447991477
+      },
+      "female_measurement": {
+        "interval_mm": [
+          13.620000000000005,
+          18.620000000000005
+        ],
+        "axis_error_mm": 1.7269888170721807e-05,
+        "circular_fit_residual_mm": 0.00025233475247166126
+      },
+      "actual_engagement_mm": 5.0,
+      "actual_protrusion_mm": 1.3799999999999955,
+      "actual_protrusion_threads": 1.7249999999999943,
+      "host_holes": [
+        {
+          "host": "k72_itici_taban_4360.0_-645.0",
+          "hole_diameter_mm": 5.5,
+          "circular_wall_vertices": 102,
+          "maximum_radius_error_mm": 0.00023694838970822474,
+          "passed": true
+        },
+        {
+          "host": "k72_itici_ust_plaka_4360.0_-645.0",
+          "hole_diameter_mm": 5.5,
+          "circular_wall_vertices": 102,
+          "maximum_radius_error_mm": 0.00023694838970822474,
+          "passed": true
+        }
+      ],
+      "all_hardware_seated_seconds": 182.026698,
+      "supported_station_load": "itici_sabit_plaka",
+      "supported_station_load_seated_seconds": 278.636625,
+      "load_after_mount_hardware": true,
+      "passed": true
+    },
+    {
+      "id": "M5_4346.0_-631.0",
+      "male": "k72_vida_M5_4346.0_-631.0",
+      "female": "k72_alt_somun_M5_4346.0_-631.0",
+      "male_measurement": {
+        "interval_mm": [
+          -5.0,
+          20.0
+        ],
+        "axis_error_mm": 1.3144346546886261e-05,
+        "circular_fit_residual_mm": 0.00019960642820615604
+      },
+      "female_measurement": {
+        "interval_mm": [
+          13.620000000000005,
+          18.620000000000005
+        ],
+        "axis_error_mm": 1.8361596540768632e-05,
+        "circular_fit_residual_mm": 0.0002523347501028894
+      },
+      "actual_engagement_mm": 5.0,
+      "actual_protrusion_mm": 1.3799999999999955,
+      "actual_protrusion_threads": 1.7249999999999943,
+      "host_holes": [
+        {
+          "host": "k72_itici_taban_4360.0_-645.0",
+          "hole_diameter_mm": 5.5,
+          "circular_wall_vertices": 102,
+          "maximum_radius_error_mm": 0.00023694838970822474,
+          "passed": true
+        },
+        {
+          "host": "k72_itici_ust_plaka_4360.0_-645.0",
+          "hole_diameter_mm": 5.5,
+          "circular_wall_vertices": 102,
+          "maximum_radius_error_mm": 0.00023694838970822474,
+          "passed": true
+        }
+      ],
+      "all_hardware_seated_seconds": 179.896698,
+      "supported_station_load": "itici_sabit_plaka",
+      "supported_station_load_seated_seconds": 278.636625,
+      "load_after_mount_hardware": true,
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "unresolved": [],
+  "production_release": false
+}

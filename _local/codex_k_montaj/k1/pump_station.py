@@ -32,6 +32,8 @@ code=code.replace(anchor,"""for j in _pump['joins']:
   if a.startswith('yag_pompasi_'):before(a,j['portal'])
  before(j['portal'],j['screw']);before(j['screw'],j['shim'])
  before(j['shim'],j['washer']);before(j['washer'],j['nut'])
+ for a in ('yag_boru_filtre_pompa','yag_boru_pompa_T','yag_boru_T_regulator'):
+  before(j['nut'],a)
 """+anchor)
 anchor="  elif a=='DGRF-C-63-125_govde':"
 code=code.replace(anchor,"""  elif a.startswith('k79_pompa_portal_'):

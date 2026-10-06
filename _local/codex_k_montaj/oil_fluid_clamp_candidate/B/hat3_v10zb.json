@@ -1,0 +1,109 @@
+{
+  "step": 79,
+  "input_sha256": "41fdb2034a5999c5710fdcfc10b8356c5da6d71ed65e7580cd6062fbcec92b3b",
+  "payload_sha256": "8a26c4988b9df47fbb15e8dae17f7ebdff84f53ec221dd2501024330fbc933b2",
+  "output_sha256": "105ce33453c921ce00ee83f24c67ada72539f619fba61ae83499fead0c60dc88",
+  "matched_source_triangles": {
+    "k79_bant_disli_plaka_kaynagi_4065_-421": 3272,
+    "k71_alt_pul_4060_379_-32.0": 408,
+    "k71_alt_saplama_4060_379_-32.0": 506,
+    "k71_alt_somun_4060_379_-32.0": 228,
+    "k79_yag_M5x16_plaka_4": 3536,
+    "k_govde_conta_0": 100,
+    "yag_pompa_plakasi": 16172,
+    "yag_pompa_rafi": 21764
+  },
+  "naming_grid_mm": 0.0001,
+  "maximum_naming_grid_adjustment_mm": 7.404847259439296e-05,
+  "repairs": [
+    {
+      "part": "k71_alt_pul_4060_379_-32.0",
+      "closed_status": "Error.NoError",
+      "maximum_declared_precision_adjustment_mm": 0.001,
+      "purpose": "Unchanged exact render template"
+    },
+    {
+      "part": "k71_alt_saplama_4060_379_-32.0",
+      "closed_status": "Error.NoError",
+      "maximum_declared_precision_adjustment_mm": 0.001,
+      "purpose": "Unchanged exact render template"
+    },
+    {
+      "part": "k71_alt_somun_4060_379_-32.0",
+      "closed_status": "Error.NoError",
+      "maximum_declared_precision_adjustment_mm": 0.001,
+      "purpose": "Unchanged exact render template"
+    },
+    {
+      "part": "k79_bant_disli_plaka_kaynagi_4065_-421",
+      "closed_status": "Error.NoError",
+      "maximum_declared_precision_adjustment_mm": 0.001,
+      "purpose": "Unchanged exact render template"
+    },
+    {
+      "part": "k79_yag_M5x16_plaka_4",
+      "closed_status": "Error.NoError",
+      "maximum_declared_precision_adjustment_mm": 0.001,
+      "purpose": "Unchanged exact render template"
+    },
+    {
+      "part": "k_govde_conta_0",
+      "closed_status": "Error.NoError",
+      "maximum_declared_precision_adjustment_mm": 0.001,
+      "purpose": "Unchanged exact render template"
+    },
+    {
+      "part": "yag_pompa_plakasi",
+      "closed_status": "Error.NoError",
+      "maximum_declared_precision_adjustment_mm": 0.001,
+      "purpose": "Four actual Ø5.5 clamp holes; supplier equipment is unchanged"
+    },
+    {
+      "part": "yag_pompa_rafi",
+      "closed_status": "Error.NoError",
+      "maximum_declared_precision_adjustment_mm": 0.001,
+      "purpose": "Four actual Ø5.5 clamp holes; supplier equipment is unchanged"
+    }
+  ],
+  "source_labels_retained": true,
+  "source_interfaces_intended_unchanged": false,
+  "unrelated_geometry_audit_required": true,
+  "reextraction_required": true,
+  "production_release": false,
+  "added_parts": [
+    "k79_yag_akis_portal_0",
+    "k79_yag_akis_ust_pad_0",
+    "k79_yag_akis_pad_yapistirici_0",
+    "k79_yag_akis_ayak_0_on",
+    "k79_yag_akis_M5_ara_plaka_0_on",
+    "k79_yag_akis_M5x20_0_on",
+    "k79_yag_akis_M5_pul_0_on",
+    "k79_yag_akis_M5_somun_0_on",
+    "k79_yag_akis_ayak_kaynagi_0_on_sol",
+    "k79_yag_akis_ayak_kaynagi_0_on_sag",
+    "k79_yag_akis_ayak_0_arka",
+    "k79_yag_akis_M5_ara_plaka_0_arka",
+    "k79_yag_akis_M5x20_0_arka",
+    "k79_yag_akis_M5_pul_0_arka",
+    "k79_yag_akis_M5_somun_0_arka",
+    "k79_yag_akis_ayak_kaynagi_0_arka_sol",
+    "k79_yag_akis_ayak_kaynagi_0_arka_sag",
+    "k79_yag_akis_portal_1",
+    "k79_yag_akis_ust_pad_1",
+    "k79_yag_akis_pad_yapistirici_1",
+    "k79_yag_akis_ayak_1_on",
+    "k79_yag_akis_M5_ara_plaka_1_on",
+    "k79_yag_akis_M5x20_1_on",
+    "k79_yag_akis_M5_pul_1_on",
+    "k79_yag_akis_M5_somun_1_on",
+    "k79_yag_akis_ayak_kaynagi_1_on_sol",
+    "k79_yag_akis_ayak_kaynagi_1_on_sag",
+    "k79_yag_akis_ayak_1_arka",
+    "k79_yag_akis_M5_ara_plaka_1_arka",
+    "k79_yag_akis_M5x20_1_arka",
+    "k79_yag_akis_M5_pul_1_arka",
+    "k79_yag_akis_M5_somun_1_arka",
+    "k79_yag_akis_ayak_kaynagi_1_arka_sol",
+    "k79_yag_akis_ayak_kaynagi_1_arka_sag"
+  ]
+}

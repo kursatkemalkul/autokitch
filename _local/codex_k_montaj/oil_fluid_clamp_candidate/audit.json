@@ -1,0 +1,872 @@
+{
+  "source_model_sha256": "41fdb2034a5999c5710fdcfc10b8356c5da6d71ed65e7580cd6062fbcec92b3b",
+  "source_parts_sha256": "f92fd8f7d1282cfcd801d5a02fd3d642a7440dc70ad1c1595591d5623a2440f6",
+  "joins": [
+    {
+      "id": "0_on",
+      "portal": "k79_yag_akis_portal_0",
+      "foot": "k79_yag_akis_ayak_0_on",
+      "shim": "k79_yag_akis_M5_ara_plaka_0_on",
+      "seams": [
+        "k79_yag_akis_ayak_kaynagi_0_on_sol",
+        "k79_yag_akis_ayak_kaynagi_0_on_sag"
+      ],
+      "screw": "k79_yag_akis_M5x20_0_on",
+      "washer": "k79_yag_akis_M5_pul_0_on",
+      "nut": "k79_yag_akis_M5_somun_0_on",
+      "center_mm": [
+        4089.0,
+        1647.5,
+        -548.0
+      ],
+      "supplier_body": "yag_emis_filtresi",
+      "axis": [
+        0,
+        -1,
+        0
+      ],
+      "engagement_mm": 5.0,
+      "pitch_mm": 0.8,
+      "protrusion_mm": 2.0,
+      "passed_stack": true,
+      "tool_checked": false
+    },
+    {
+      "id": "0_arka",
+      "portal": "k79_yag_akis_portal_0",
+      "foot": "k79_yag_akis_ayak_0_arka",
+      "shim": "k79_yag_akis_M5_ara_plaka_0_arka",
+      "seams": [
+        "k79_yag_akis_ayak_kaynagi_0_arka_sol",
+        "k79_yag_akis_ayak_kaynagi_0_arka_sag"
+      ],
+      "screw": "k79_yag_akis_M5x20_0_arka",
+      "washer": "k79_yag_akis_M5_pul_0_arka",
+      "nut": "k79_yag_akis_M5_somun_0_arka",
+      "center_mm": [
+        4089.0,
+        1647.5,
+        -492.0
+      ],
+      "supplier_body": "yag_emis_filtresi",
+      "axis": [
+        0,
+        -1,
+        0
+      ],
+      "engagement_mm": 5.0,
+      "pitch_mm": 0.8,
+      "protrusion_mm": 2.0,
+      "passed_stack": true,
+      "tool_checked": false
+    },
+    {
+      "id": "1_on",
+      "portal": "k79_yag_akis_portal_1",
+      "foot": "k79_yag_akis_ayak_1_on",
+      "shim": "k79_yag_akis_M5_ara_plaka_1_on",
+      "seams": [
+        "k79_yag_akis_ayak_kaynagi_1_on_sol",
+        "k79_yag_akis_ayak_kaynagi_1_on_sag"
+      ],
+      "screw": "k79_yag_akis_M5x20_1_on",
+      "washer": "k79_yag_akis_M5_pul_1_on",
+      "nut": "k79_yag_akis_M5_somun_1_on",
+      "center_mm": [
+        4313.0,
+        1647.5,
+        -562.5
+      ],
+      "supplier_body": "yag_geri_basinc_regulatoru_KBP",
+      "axis": [
+        0,
+        -1,
+        0
+      ],
+      "engagement_mm": 5.0,
+      "pitch_mm": 0.8,
+      "protrusion_mm": 2.0,
+      "passed_stack": true,
+      "tool_checked": false
+    },
+    {
+      "id": "1_arka",
+      "portal": "k79_yag_akis_portal_1",
+      "foot": "k79_yag_akis_ayak_1_arka",
+      "shim": "k79_yag_akis_M5_ara_plaka_1_arka",
+      "seams": [
+        "k79_yag_akis_ayak_kaynagi_1_arka_sol",
+        "k79_yag_akis_ayak_kaynagi_1_arka_sag"
+      ],
+      "screw": "k79_yag_akis_M5x20_1_arka",
+      "washer": "k79_yag_akis_M5_pul_1_arka",
+      "nut": "k79_yag_akis_M5_somun_1_arka",
+      "center_mm": [
+        4313.0,
+        1647.5,
+        -477.5
+      ],
+      "supplier_body": "yag_geri_basinc_regulatoru_KBP",
+      "axis": [
+        0,
+        -1,
+        0
+      ],
+      "engagement_mm": 5.0,
+      "pitch_mm": 0.8,
+      "protrusion_mm": 2.0,
+      "passed_stack": true,
+      "tool_checked": false
+    }
+  ],
+  "new_parts": [
+    "k79_yag_akis_portal_0",
+    "k79_yag_akis_ust_pad_0",
+    "k79_yag_akis_pad_yapistirici_0",
+    "k79_yag_akis_ayak_0_on",
+    "k79_yag_akis_M5_ara_plaka_0_on",
+    "k79_yag_akis_M5x20_0_on",
+    "k79_yag_akis_M5_pul_0_on",
+    "k79_yag_akis_M5_somun_0_on",
+    "k79_yag_akis_ayak_kaynagi_0_on_sol",
+    "k79_yag_akis_ayak_kaynagi_0_on_sag",
+    "k79_yag_akis_ayak_0_arka",
+    "k79_yag_akis_M5_ara_plaka_0_arka",
+    "k79_yag_akis_M5x20_0_arka",
+    "k79_yag_akis_M5_pul_0_arka",
+    "k79_yag_akis_M5_somun_0_arka",
+    "k79_yag_akis_ayak_kaynagi_0_arka_sol",
+    "k79_yag_akis_ayak_kaynagi_0_arka_sag",
+    "k79_yag_akis_portal_1",
+    "k79_yag_akis_ust_pad_1",
+    "k79_yag_akis_pad_yapistirici_1",
+    "k79_yag_akis_ayak_1_on",
+    "k79_yag_akis_M5_ara_plaka_1_on",
+    "k79_yag_akis_M5x20_1_on",
+    "k79_yag_akis_M5_pul_1_on",
+    "k79_yag_akis_M5_somun_1_on",
+    "k79_yag_akis_ayak_kaynagi_1_on_sol",
+    "k79_yag_akis_ayak_kaynagi_1_on_sag",
+    "k79_yag_akis_ayak_1_arka",
+    "k79_yag_akis_M5_ara_plaka_1_arka",
+    "k79_yag_akis_M5x20_1_arka",
+    "k79_yag_akis_M5_pul_1_arka",
+    "k79_yag_akis_M5_somun_1_arka",
+    "k79_yag_akis_ayak_kaynagi_1_arka_sol",
+    "k79_yag_akis_ayak_kaynagi_1_arka_sag"
+  ],
+  "source_clashes": [],
+  "own_clashes": [],
+  "surface_checks": [
+    {
+      "a": "k79_yag_akis_portal_0",
+      "source": "elk_k_tarti_kablo_sinyal_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_portal_0",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_portal_0",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_ust_pad_0",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_ust_pad_0",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_pad_yapistirici_0",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_pad_yapistirici_0",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_ayak_0_on",
+      "source": "elk_k_tarti_kablo_sinyal_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_ayak_0_on",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_ayak_0_on",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_M5_ara_plaka_0_on",
+      "source": "elk_k_tarti_kablo_sinyal_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_M5_ara_plaka_0_on",
+      "source": "elk_k_kablo_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_M5_ara_plaka_0_on",
+      "source": "elk_k_kablo_sinyal_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_M5_ara_plaka_0_on",
+      "source": "elk_k_kablo_sinyal_1",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_M5_ara_plaka_0_on",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_M5_ara_plaka_0_on",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_M5x20_0_on",
+      "source": "elk_k_tarti_kablo_sinyal_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_M5x20_0_on",
+      "source": "elk_k_kablo_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_M5x20_0_on",
+      "source": "elk_k_kablo_sinyal_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_M5x20_0_on",
+      "source": "elk_k_kablo_sinyal_1",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_M5x20_0_on",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_M5x20_0_on",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_M5_pul_0_on",
+      "source": "elk_k_tarti_kablo_sinyal_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_M5_pul_0_on",
+      "source": "elk_k_kablo_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_M5_pul_0_on",
+      "source": "elk_k_kablo_sinyal_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_M5_pul_0_on",
+      "source": "elk_k_kablo_sinyal_1",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_M5_pul_0_on",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_M5_pul_0_on",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_M5_somun_0_on",
+      "source": "elk_k_tarti_kablo_sinyal_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_M5_somun_0_on",
+      "source": "elk_k_kablo_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_M5_somun_0_on",
+      "source": "elk_k_kablo_sinyal_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_M5_somun_0_on",
+      "source": "elk_k_kablo_sinyal_1",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_M5_somun_0_on",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_M5_somun_0_on",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_ayak_kaynagi_0_on_sol",
+      "source": "elk_k_tarti_kablo_sinyal_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_ayak_kaynagi_0_on_sol",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_ayak_kaynagi_0_on_sol",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_ayak_kaynagi_0_on_sag",
+      "source": "elk_k_tarti_kablo_sinyal_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_ayak_kaynagi_0_on_sag",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_ayak_kaynagi_0_on_sag",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_ayak_0_arka",
+      "source": "elk_k_tarti_kablo_sinyal_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_ayak_0_arka",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_ayak_0_arka",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_M5_ara_plaka_0_arka",
+      "source": "elk_k_tarti_kablo_sinyal_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_M5_ara_plaka_0_arka",
+      "source": "elk_k_kablo_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_M5_ara_plaka_0_arka",
+      "source": "elk_k_kablo_sinyal_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_M5_ara_plaka_0_arka",
+      "source": "elk_k_kablo_sinyal_1",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_M5_ara_plaka_0_arka",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_M5_ara_plaka_0_arka",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_M5x20_0_arka",
+      "source": "elk_k_tarti_kablo_sinyal_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_M5x20_0_arka",
+      "source": "elk_k_kablo_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_M5x20_0_arka",
+      "source": "elk_k_kablo_sinyal_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_M5x20_0_arka",
+      "source": "elk_k_kablo_sinyal_1",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_M5x20_0_arka",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_M5x20_0_arka",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_M5_pul_0_arka",
+      "source": "elk_k_tarti_kablo_sinyal_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_M5_pul_0_arka",
+      "source": "elk_k_kablo_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_M5_pul_0_arka",
+      "source": "elk_k_kablo_sinyal_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_M5_pul_0_arka",
+      "source": "elk_k_kablo_sinyal_1",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_M5_pul_0_arka",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_M5_pul_0_arka",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_M5_somun_0_arka",
+      "source": "elk_k_tarti_kablo_sinyal_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_M5_somun_0_arka",
+      "source": "elk_k_kablo_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_M5_somun_0_arka",
+      "source": "elk_k_kablo_sinyal_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_M5_somun_0_arka",
+      "source": "elk_k_kablo_sinyal_1",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_M5_somun_0_arka",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_M5_somun_0_arka",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_ayak_kaynagi_0_arka_sol",
+      "source": "elk_k_tarti_kablo_sinyal_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_ayak_kaynagi_0_arka_sol",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_ayak_kaynagi_0_arka_sol",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_ayak_kaynagi_0_arka_sag",
+      "source": "elk_k_tarti_kablo_sinyal_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_ayak_kaynagi_0_arka_sag",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_ayak_kaynagi_0_arka_sag",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_portal_1",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_portal_1",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_ust_pad_1",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_ust_pad_1",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_pad_yapistirici_1",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_pad_yapistirici_1",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_ayak_1_on",
+      "source": "elk_k_tarti_kablo_sinyal_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_ayak_1_on",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_ayak_1_on",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_M5_ara_plaka_1_on",
+      "source": "elk_k_tarti_kablo_sinyal_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_M5_ara_plaka_1_on",
+      "source": "elk_k_kablo_1",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_M5_ara_plaka_1_on",
+      "source": "elk_k_kablo_sinyal_6",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_M5_ara_plaka_1_on",
+      "source": "elk_k_kablo_sinyal_7",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_M5_ara_plaka_1_on",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_M5_ara_plaka_1_on",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_M5x20_1_on",
+      "source": "elk_k_kablo_1",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_M5x20_1_on",
+      "source": "elk_k_kablo_sinyal_6",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_M5x20_1_on",
+      "source": "elk_k_kablo_sinyal_7",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_M5x20_1_on",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_M5x20_1_on",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_M5_pul_1_on",
+      "source": "elk_k_kablo_1",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_M5_pul_1_on",
+      "source": "elk_k_kablo_sinyal_6",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_M5_pul_1_on",
+      "source": "elk_k_kablo_sinyal_7",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_M5_pul_1_on",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_M5_pul_1_on",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_M5_somun_1_on",
+      "source": "elk_k_kablo_1",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_M5_somun_1_on",
+      "source": "elk_k_kablo_sinyal_6",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_M5_somun_1_on",
+      "source": "elk_k_kablo_sinyal_7",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_M5_somun_1_on",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_M5_somun_1_on",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_ayak_kaynagi_1_on_sol",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_ayak_kaynagi_1_on_sol",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_ayak_kaynagi_1_on_sag",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_ayak_kaynagi_1_on_sag",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_ayak_1_arka",
+      "source": "elk_k_tarti_kablo_sinyal_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_ayak_1_arka",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_ayak_1_arka",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_M5_ara_plaka_1_arka",
+      "source": "elk_k_tarti_kablo_sinyal_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_M5_ara_plaka_1_arka",
+      "source": "elk_k_kablo_1",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_M5_ara_plaka_1_arka",
+      "source": "elk_k_kablo_sinyal_6",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_M5_ara_plaka_1_arka",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_M5_ara_plaka_1_arka",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_M5x20_1_arka",
+      "source": "elk_k_kablo_1",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_M5x20_1_arka",
+      "source": "elk_k_kablo_sinyal_6",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_M5x20_1_arka",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_M5x20_1_arka",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_M5_pul_1_arka",
+      "source": "elk_k_kablo_1",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_M5_pul_1_arka",
+      "source": "elk_k_kablo_sinyal_6",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_M5_pul_1_arka",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_M5_pul_1_arka",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_M5_somun_1_arka",
+      "source": "elk_k_kablo_1",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_M5_somun_1_arka",
+      "source": "elk_k_kablo_sinyal_6",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_M5_somun_1_arka",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_M5_somun_1_arka",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_ayak_kaynagi_1_arka_sol",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_ayak_kaynagi_1_arka_sol",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_ayak_kaynagi_1_arka_sag",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_yag_akis_ayak_kaynagi_1_arka_sag",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    }
+  ],
+  "drilled_holes": [
+    {
+      "center_mm": [
+        4089.0,
+        1641.5,
+        -548.0
+      ],
+      "diameter_mm": 5.5,
+      "parts": [
+        "yag_pompa_rafi",
+        "yag_pompa_plakasi"
+      ]
+    },
+    {
+      "center_mm": [
+        4089.0,
+        1641.5,
+        -492.0
+      ],
+      "diameter_mm": 5.5,
+      "parts": [
+        "yag_pompa_rafi",
+        "yag_pompa_plakasi"
+      ]
+    },
+    {
+      "center_mm": [
+        4313.0,
+        1641.5,
+        -562.5
+      ],
+      "diameter_mm": 5.5,
+      "parts": [
+        "yag_pompa_rafi",
+        "yag_pompa_plakasi"
+      ]
+    },
+    {
+      "center_mm": [
+        4313.0,
+        1641.5,
+        -477.5
+      ],
+      "diameter_mm": 5.5,
+      "parts": [
+        "yag_pompa_rafi",
+        "yag_pompa_plakasi"
+      ]
+    }
+  ],
+  "supplier_equipment_bodies_changed": false,
+  "passed_geometry_and_stacks": true,
+  "pad_force_and_material_approval_checked": false,
+  "manufacturing_release": false,
+  "production_release": false
+}

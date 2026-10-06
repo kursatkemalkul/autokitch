@@ -1,0 +1,45 @@
+{
+  "step": 79,
+  "input_sha256": "105ce33453c921ce00ee83f24c67ada72539f619fba61ae83499fead0c60dc88",
+  "payload_sha256": "463b3afc710e7686f70e1a6ce6635513ab2497dcb4c0381c2851a8847651ac1a",
+  "output_sha256": "c0c004f133fa4d715aebeb5c21b35df688367bbdb630a35c656aef4b4ff4341b",
+  "matched_source_triangles": {
+    "DGRF_M10_civata_0": 100,
+    "DGRF_M10_civata_1": 100,
+    "DGRF_M10_civata_2": 100,
+    "DGRF_M10_civata_3": 100
+  },
+  "naming_grid_mm": 0.0001,
+  "maximum_naming_grid_adjustment_mm": 6.50169656299275e-05,
+  "repairs": [
+    {
+      "part": "DGRF_M10_civata_0",
+      "closed_status": "Error.NoError",
+      "maximum_declared_precision_adjustment_mm": 0.001,
+      "purpose": "Our ISO4762 M10x35 A2-70 bolt: actual35mm stem,8mm hex drive,18.5mm blind engagement; factory housing unchanged"
+    },
+    {
+      "part": "DGRF_M10_civata_1",
+      "closed_status": "Error.NoError",
+      "maximum_declared_precision_adjustment_mm": 0.001,
+      "purpose": "Our ISO4762 M10x35 A2-70 bolt: actual35mm stem,8mm hex drive,18.5mm blind engagement; factory housing unchanged"
+    },
+    {
+      "part": "DGRF_M10_civata_2",
+      "closed_status": "Error.NoError",
+      "maximum_declared_precision_adjustment_mm": 0.001,
+      "purpose": "Our ISO4762 M10x35 A2-70 bolt: actual35mm stem,8mm hex drive,18.5mm blind engagement; factory housing unchanged"
+    },
+    {
+      "part": "DGRF_M10_civata_3",
+      "closed_status": "Error.NoError",
+      "maximum_declared_precision_adjustment_mm": 0.001,
+      "purpose": "Our ISO4762 M10x35 A2-70 bolt: actual35mm stem,8mm hex drive,18.5mm blind engagement; factory housing unchanged"
+    }
+  ],
+  "source_labels_retained": true,
+  "source_interfaces_intended_unchanged": true,
+  "unrelated_geometry_audit_required": true,
+  "reextraction_required": true,
+  "production_release": false
+}

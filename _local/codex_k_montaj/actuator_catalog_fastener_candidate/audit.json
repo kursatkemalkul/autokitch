@@ -1,0 +1,227 @@
+{
+  "source_model_sha256": "105ce33453c921ce00ee83f24c67ada72539f619fba61ae83499fead0c60dc88",
+  "source_parts_sha256": "9f9e9ec06ce860fc24d1727545c5a2751987938b9023ad228e350ae51ef39d10",
+  "joins": [
+    {
+      "id": "DGRF_M10_civata_0",
+      "catalog_standard": "ISO4762",
+      "material": "A2-70",
+      "nominal_length_mm": 35.0,
+      "old_non_catalog_length_mm": 33.5,
+      "center_mm": [
+        4160.0,
+        1304.5,
+        -266.0
+      ],
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "mounting_plate_thickness_mm": 16.5,
+      "blind_thread_depth_mm": 24.0,
+      "engagement_mm": 18.5,
+      "blind_bottom_clearance_mm": 5.5,
+      "minimum_required_engagement_mm": 10.0,
+      "pitch_mm": 1.5,
+      "passed_stack": true,
+      "supplier_body_changed": false
+    },
+    {
+      "id": "DGRF_M10_civata_1",
+      "catalog_standard": "ISO4762",
+      "material": "A2-70",
+      "nominal_length_mm": 35.0,
+      "old_non_catalog_length_mm": 33.5,
+      "center_mm": [
+        4160.0,
+        1344.5,
+        -266.0
+      ],
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "mounting_plate_thickness_mm": 16.5,
+      "blind_thread_depth_mm": 24.0,
+      "engagement_mm": 18.5,
+      "blind_bottom_clearance_mm": 5.5,
+      "minimum_required_engagement_mm": 10.0,
+      "pitch_mm": 1.5,
+      "passed_stack": true,
+      "supplier_body_changed": false
+    },
+    {
+      "id": "DGRF_M10_civata_2",
+      "catalog_standard": "ISO4762",
+      "material": "A2-70",
+      "nominal_length_mm": 35.0,
+      "old_non_catalog_length_mm": 33.5,
+      "center_mm": [
+        4240.0,
+        1304.5,
+        -266.0
+      ],
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "mounting_plate_thickness_mm": 16.5,
+      "blind_thread_depth_mm": 24.0,
+      "engagement_mm": 18.5,
+      "blind_bottom_clearance_mm": 5.5,
+      "minimum_required_engagement_mm": 10.0,
+      "pitch_mm": 1.5,
+      "passed_stack": true,
+      "supplier_body_changed": false
+    },
+    {
+      "id": "DGRF_M10_civata_3",
+      "catalog_standard": "ISO4762",
+      "material": "A2-70",
+      "nominal_length_mm": 35.0,
+      "old_non_catalog_length_mm": 33.5,
+      "center_mm": [
+        4240.0,
+        1344.5,
+        -266.0
+      ],
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "mounting_plate_thickness_mm": 16.5,
+      "blind_thread_depth_mm": 24.0,
+      "engagement_mm": 18.5,
+      "blind_bottom_clearance_mm": 5.5,
+      "minimum_required_engagement_mm": 10.0,
+      "pitch_mm": 1.5,
+      "passed_stack": true,
+      "supplier_body_changed": false
+    }
+  ],
+  "new_parts": [],
+  "source_clashes": [],
+  "own_clashes": [],
+  "surface_checks": [
+    {
+      "a": "DGRF_M10_civata_0",
+      "source": "DGRF-C-63-125_govde",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "DGRF_M10_civata_0",
+      "source": "DGRF_baglanti_plakasi",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "DGRF_M10_civata_0",
+      "source": "elk_k_kablo_sinyal_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "DGRF_M10_civata_0",
+      "source": "elk_k_kablo_sinyal_1",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "DGRF_M10_civata_0",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "DGRF_M10_civata_0",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "DGRF_M10_civata_1",
+      "source": "DGRF-C-63-125_govde",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "DGRF_M10_civata_1",
+      "source": "DGRF_baglanti_plakasi",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "DGRF_M10_civata_1",
+      "source": "elk_k_kablo_sinyal_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "DGRF_M10_civata_1",
+      "source": "elk_k_kablo_sinyal_1",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "DGRF_M10_civata_1",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "DGRF_M10_civata_1",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "DGRF_M10_civata_2",
+      "source": "DGRF-C-63-125_govde",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "DGRF_M10_civata_2",
+      "source": "DGRF_baglanti_plakasi",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "DGRF_M10_civata_2",
+      "source": "elk_k_kablo_sinyal_6",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "DGRF_M10_civata_2",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "DGRF_M10_civata_2",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "DGRF_M10_civata_3",
+      "source": "DGRF-C-63-125_govde",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "DGRF_M10_civata_3",
+      "source": "DGRF_baglanti_plakasi",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "DGRF_M10_civata_3",
+      "source": "elk_k_kablo_sinyal_6",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "DGRF_M10_civata_3",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "DGRF_M10_civata_3",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    }
+  ],
+  "drilled_holes": [],
+  "supplier_equipment_bodies_changed": false,
+  "passed_geometry_and_stacks": true,
+  "pad_force_and_material_approval_checked": false,
+  "manufacturing_release": false,
+  "production_release": false
+}
