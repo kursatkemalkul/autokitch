@@ -1,0 +1,17 @@
+# Ana sahne v23 / zincir92
+
+Girdi: main adım80 `_local/claude_son_yerel/hat3_v10l.glb.gz`. İstasyon vertexleri aynı; yalnız istenen eski dış tesisat temizlenir. Claude E81–85 / K86–89 birleştirilince bu son render adımı o birleşik makineyle yeniden çalıştırılır. Robot içeren eski v22 çıktısı girdi değildir.
+
+`python arastirma/_uretec/robot_integrated_v23/run.py _local/claude_son_yerel/hat3_v10l.glb.gz --repeat 2`
+
+Python numpy/scipy/trimesh/Shapely2 + Node gerekir; AUTOKITCH_NODE ile Node yolu verilir. Meshopt/Three bağımlılıkları v22 klasöründen değişmeden okunur. CadQuery yalnız ray cache yeniden çıkarılacaksa gerekir. Büyük native/ara GLB commit dışıdır; sitenin gzip dosyası yaklaşık75MB. Yeni katılar 20 adet kapalı kanal/kablo süpürmesi; `routing_audit.json`, `geometry_audit.json`, `integration_audit.json`, `repeat_build.json` kanıttır.
+
+Koordinatlar metre, Y yukarı. Isaac görev kaydı Z yukarı; sahnede X etrafında−90° dönüşüm. Ray dünyaZ=.960, robot montajY=.130; rayX=.978..5.058, araba merkeziX=1.376..4.860. QR yüzZ=1.750; 3kolon X=3.769/4.256/4.743; 4raf Y=.588/.850/1.112/1.374. UR kutusu X4.355..4.830,Y.100...523,Z1.775..2.043. Satın alınmış gövde boy zarfı475×423×268, kendi destekli kaidesinde; gerçek motor/sürücü seçimi açık.
+
+Sağ duvar iç yüzüX6.216; panoX5.946..6.196,Y1.000..1.700,Z−.450...150 (600×700×250). Schneider iSW4P ve iID B ailesi, iC60N çıkışlar, DIN/klemens/PE ve bölmeli ER605 router yerleşimi. Bunlar katalog zarfı ve basitleştirilmiş görünüm; hazır ürünlerin imalat CAD'i değildir. Şalter63A zarfı akım boyutlandırmasının sonucu değildir; sigorta eğrisi/akımı, RCD tipi/hassasiyeti/seçicilik ve kablo kesitleri nihai devre hesabına bağlıdır. WAN, bina ONT/modeminden gelir; ER605 kablolu routerdır, kablosuz erişim noktası değildir.
+
+Duvar içinden kapak üstüY=0 gömülü kanala inilir. Makine, QR, UR kutusu ve eksen sürücüsü ayrı hatlar; sürücü→motor ayrı yol. Alt güç/üst veri bölmesi yatay sacla ayrılır. Köşeler tek boşluklu süpürme; hiçbir kesim kutusu köşede diğerinin içine girmez. Kapaklar6mm, yan sac1.5mm; açık geçişler, modül derzi ve çevre destekleri vardır. Kablolar ayrı sürekli süpürmeler; sınanan ayrı hat yüzeyleri arasında en az2mm pay. UR çıkışı R60 sabit yol→R65 geçiş→R150/80bakla hareketli zincir→kendi braketi ve delikli Pklipsler→robot. Robot soket yönü OEM onayına tabidir. Zincir içi mavi segmentler korunan demetin görsel temsili; fiziksel esnek kablo çözümü değildir.
+
+UR kablo kaynağı: https://www.universal-robots.com/manuals/EN/HTML/SW5_25_1/Content/prod-cable/cable-product-description.htm (Ø14.6mm, statik4D=58.4, dinamik8D=116.8). Router: https://www.tp-link.com/us/business-networking/vpn-router/er605/v2/ (158×101×25mm,12V). Ana ayırıcı: https://eshop.se.com/sg/a9s65463-acti9-isw-switch-4p-63a-415vac.html . Btipi koruma ailesi: https://www.se.com/nl/en/product/A9Z61463/residual-current-circuit-breaker-rccb-acti9-iid-4p-63a-bsi-type-30ma-double-terminal/ . Orijinal igus STEP `_local/codex_robot_v22/igus_ZLW_20200_3000.stp`, SHA2c6462714c47b7cfb665d1a7e579d27576ff2f4d923c7fbdf1cb4d82f892cd94;3000mm kaynak,3684mm özel strok konsepti tedarikçi onayı bekler.
+
+Ana sayfada sipariş seç→Oynat, Baştan. Hamur/içecek/tatlı/kutu ayrı izlenir; patatesli/tavuklu kutu hazır sinyalini bekler. Sekiz ideal tutuş kaydı ve gerçek makinenin altı yerel animasyonu korunur. Tam robot yolu/12QR rotası, kavrama fiziği, özel ray/adaptör/motor-sürücü, döşeme yükü ve koruma/güvenlik devresi onayı açık. Model üretime hazır veya emniyet sertifikalı değildir.

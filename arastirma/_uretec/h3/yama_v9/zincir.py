@@ -226,7 +226,9 @@ ADIMLAR.append(("90", "Robot/ray merkezleme, üretici igus CAD, QR/robot/makine 
     [(".", 'python "{YAMA}/90_robot_ray_tesisat.py" hat3_v10l.glb hat3_v10m_robot.glb')]))
 ADIMLAR.append(("91", "Eski simulator tabanı/kutu temizliği; tek gömülü kablo kanalı ve sıfır kotlu kapaklar", ["hat3_v10l.glb"], "hat3_v10n_robot.glb",
     [(".", 'python "{YAMA}/91_robot_zemin_temiz.py" hat3_v10l.glb hat3_v10n_robot.glb')]))
-SON = "hat3_v10n_robot.glb"
+ADIMLAR.append(("92", "Sag duvar panosu, gomulu hat, duzgun kanal dirsekleri ve ayri kablo yolları", ["hat3_v10l.glb"], "hat3_v10o_robot.glb",
+    [(".", 'python "{YAMA}/92_kanal_birlesim.py" hat3_v10l.glb hat3_v10o_robot.glb')]))
+SON = "hat3_v10o_robot.glb"
 
 
 def kur(is_dizin, h3, uretec):
