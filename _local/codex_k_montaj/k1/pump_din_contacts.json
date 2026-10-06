@@ -1,0 +1,120 @@
+{
+  "source_model_sha256": "41fdb2034a5999c5710fdcfc10b8356c5da6d71ed65e7580cd6062fbcec92b3b",
+  "source_parts_sha256": "f92fd8f7d1282cfcd801d5a02fd3d642a7440dc70ad1c1595591d5623a2440f6",
+  "checks": [
+    {
+      "a": "k_din_M5_pul_0_0",
+      "b": "din_rayi_0",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true,
+      "joint": "din_mount_0_0"
+    },
+    {
+      "a": "k_din_M5_somun_0_0",
+      "b": "k_din_M5_pul_0_0",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true,
+      "joint": "din_mount_0_0"
+    },
+    {
+      "a": "k_din_M5x12_havsa_0_0",
+      "b": "k_din_M5_somun_0_0",
+      "minimum_sampled_surface_distance_mm": 0.04961703336540011,
+      "contact_within_0_6_mm": true,
+      "joint": "din_mount_0_0"
+    },
+    {
+      "a": "k_din_M5x12_havsa_0_0",
+      "b": "pano_plakasi",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true,
+      "joint": "din_mount_0_0"
+    },
+    {
+      "a": "k_din_M5_pul_0_1",
+      "b": "din_rayi_0",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true,
+      "joint": "din_mount_0_1"
+    },
+    {
+      "a": "k_din_M5_somun_0_1",
+      "b": "k_din_M5_pul_0_1",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true,
+      "joint": "din_mount_0_1"
+    },
+    {
+      "a": "k_din_M5x12_havsa_0_1",
+      "b": "k_din_M5_somun_0_1",
+      "minimum_sampled_surface_distance_mm": 0.04956984970795091,
+      "contact_within_0_6_mm": true,
+      "joint": "din_mount_0_1"
+    },
+    {
+      "a": "k_din_M5x12_havsa_0_1",
+      "b": "pano_plakasi",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true,
+      "joint": "din_mount_0_1"
+    },
+    {
+      "a": "k_din_M5_pul_1_0",
+      "b": "din_rayi_1",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true,
+      "joint": "din_mount_1_0"
+    },
+    {
+      "a": "k_din_M5_somun_1_0",
+      "b": "k_din_M5_pul_1_0",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true,
+      "joint": "din_mount_1_0"
+    },
+    {
+      "a": "k_din_M5x12_havsa_1_0",
+      "b": "k_din_M5_somun_1_0",
+      "minimum_sampled_surface_distance_mm": 0.04961703336540011,
+      "contact_within_0_6_mm": true,
+      "joint": "din_mount_1_0"
+    },
+    {
+      "a": "k_din_M5x12_havsa_1_0",
+      "b": "pano_plakasi",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true,
+      "joint": "din_mount_1_0"
+    },
+    {
+      "a": "k_din_M5_pul_1_1",
+      "b": "din_rayi_1",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true,
+      "joint": "din_mount_1_1"
+    },
+    {
+      "a": "k_din_M5_somun_1_1",
+      "b": "k_din_M5_pul_1_1",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true,
+      "joint": "din_mount_1_1"
+    },
+    {
+      "a": "k_din_M5x12_havsa_1_1",
+      "b": "k_din_M5_somun_1_1",
+      "minimum_sampled_surface_distance_mm": 0.04965803056846058,
+      "contact_within_0_6_mm": true,
+      "joint": "din_mount_1_1"
+    },
+    {
+      "a": "k_din_M5x12_havsa_1_1",
+      "b": "pano_plakasi",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true,
+      "joint": "din_mount_1_1"
+    }
+  ],
+  "passed_selected_geometry_contacts": true,
+  "production_release": false
+}

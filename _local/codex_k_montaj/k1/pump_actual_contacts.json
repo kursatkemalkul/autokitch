@@ -1,0 +1,310 @@
+{
+  "source_model_sha256": "41fdb2034a5999c5710fdcfc10b8356c5da6d71ed65e7580cd6062fbcec92b3b",
+  "source_parts_sha256": "f92fd8f7d1282cfcd801d5a02fd3d642a7440dc70ad1c1595591d5623a2440f6",
+  "checks": [
+    {
+      "a": "k79_pompa_M5x20_0_on",
+      "b": "k79_pompa_ayak_0_on",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true,
+      "joint": "0_on"
+    },
+    {
+      "a": "k79_pompa_ayak_0_on",
+      "b": "yag_pompa_plakasi",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true,
+      "joint": "0_on"
+    },
+    {
+      "a": "k79_pompa_M5_ara_plaka_0_on",
+      "b": "yag_pompa_rafi",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true,
+      "joint": "0_on"
+    },
+    {
+      "a": "k79_pompa_M5_pul_0_on",
+      "b": "k79_pompa_M5_ara_plaka_0_on",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true,
+      "joint": "0_on"
+    },
+    {
+      "a": "k79_pompa_M5_somun_0_on",
+      "b": "k79_pompa_M5_pul_0_on",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true,
+      "joint": "0_on"
+    },
+    {
+      "a": "k79_pompa_M5x20_0_on",
+      "b": "k79_pompa_M5_somun_0_on",
+      "minimum_sampled_surface_distance_mm": 0.04959999999937281,
+      "contact_within_0_6_mm": true,
+      "joint": "0_on"
+    },
+    {
+      "a": "k79_pompa_ayak_kaynagi_0_on_sol",
+      "b": "k79_pompa_portal_0",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true
+    },
+    {
+      "a": "k79_pompa_ayak_kaynagi_0_on_sol",
+      "b": "k79_pompa_ayak_0_on",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true
+    },
+    {
+      "a": "k79_pompa_ayak_kaynagi_0_on_sag",
+      "b": "k79_pompa_portal_0",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true
+    },
+    {
+      "a": "k79_pompa_ayak_kaynagi_0_on_sag",
+      "b": "k79_pompa_ayak_0_on",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true
+    },
+    {
+      "a": "k79_pompa_M5x20_0_arka",
+      "b": "k79_pompa_ayak_0_arka",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true,
+      "joint": "0_arka"
+    },
+    {
+      "a": "k79_pompa_ayak_0_arka",
+      "b": "yag_pompa_plakasi",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true,
+      "joint": "0_arka"
+    },
+    {
+      "a": "k79_pompa_M5_ara_plaka_0_arka",
+      "b": "yag_pompa_rafi",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true,
+      "joint": "0_arka"
+    },
+    {
+      "a": "k79_pompa_M5_pul_0_arka",
+      "b": "k79_pompa_M5_ara_plaka_0_arka",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true,
+      "joint": "0_arka"
+    },
+    {
+      "a": "k79_pompa_M5_somun_0_arka",
+      "b": "k79_pompa_M5_pul_0_arka",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true,
+      "joint": "0_arka"
+    },
+    {
+      "a": "k79_pompa_M5x20_0_arka",
+      "b": "k79_pompa_M5_somun_0_arka",
+      "minimum_sampled_surface_distance_mm": 0.04959999999937281,
+      "contact_within_0_6_mm": true,
+      "joint": "0_arka"
+    },
+    {
+      "a": "k79_pompa_ayak_kaynagi_0_arka_sol",
+      "b": "k79_pompa_portal_0",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true
+    },
+    {
+      "a": "k79_pompa_ayak_kaynagi_0_arka_sol",
+      "b": "k79_pompa_ayak_0_arka",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true
+    },
+    {
+      "a": "k79_pompa_ayak_kaynagi_0_arka_sag",
+      "b": "k79_pompa_portal_0",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true
+    },
+    {
+      "a": "k79_pompa_ayak_kaynagi_0_arka_sag",
+      "b": "k79_pompa_ayak_0_arka",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true
+    },
+    {
+      "a": "k79_pompa_M5x20_1_on",
+      "b": "k79_pompa_ayak_1_on",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true,
+      "joint": "1_on"
+    },
+    {
+      "a": "k79_pompa_ayak_1_on",
+      "b": "yag_pompa_plakasi",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true,
+      "joint": "1_on"
+    },
+    {
+      "a": "k79_pompa_M5_ara_plaka_1_on",
+      "b": "yag_pompa_rafi",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true,
+      "joint": "1_on"
+    },
+    {
+      "a": "k79_pompa_M5_pul_1_on",
+      "b": "k79_pompa_M5_ara_plaka_1_on",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true,
+      "joint": "1_on"
+    },
+    {
+      "a": "k79_pompa_M5_somun_1_on",
+      "b": "k79_pompa_M5_pul_1_on",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true,
+      "joint": "1_on"
+    },
+    {
+      "a": "k79_pompa_M5x20_1_on",
+      "b": "k79_pompa_M5_somun_1_on",
+      "minimum_sampled_surface_distance_mm": 0.049652895181980995,
+      "contact_within_0_6_mm": true,
+      "joint": "1_on"
+    },
+    {
+      "a": "k79_pompa_ayak_kaynagi_1_on_sol",
+      "b": "k79_pompa_portal_1",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true
+    },
+    {
+      "a": "k79_pompa_ayak_kaynagi_1_on_sol",
+      "b": "k79_pompa_ayak_1_on",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true
+    },
+    {
+      "a": "k79_pompa_ayak_kaynagi_1_on_sag",
+      "b": "k79_pompa_portal_1",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true
+    },
+    {
+      "a": "k79_pompa_ayak_kaynagi_1_on_sag",
+      "b": "k79_pompa_ayak_1_on",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true
+    },
+    {
+      "a": "k79_pompa_M5x20_1_arka",
+      "b": "k79_pompa_ayak_1_arka",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true,
+      "joint": "1_arka"
+    },
+    {
+      "a": "k79_pompa_ayak_1_arka",
+      "b": "yag_pompa_plakasi",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true,
+      "joint": "1_arka"
+    },
+    {
+      "a": "k79_pompa_M5_ara_plaka_1_arka",
+      "b": "yag_pompa_rafi",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true,
+      "joint": "1_arka"
+    },
+    {
+      "a": "k79_pompa_M5_pul_1_arka",
+      "b": "k79_pompa_M5_ara_plaka_1_arka",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true,
+      "joint": "1_arka"
+    },
+    {
+      "a": "k79_pompa_M5_somun_1_arka",
+      "b": "k79_pompa_M5_pul_1_arka",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true,
+      "joint": "1_arka"
+    },
+    {
+      "a": "k79_pompa_M5x20_1_arka",
+      "b": "k79_pompa_M5_somun_1_arka",
+      "minimum_sampled_surface_distance_mm": 0.049652895181980995,
+      "contact_within_0_6_mm": true,
+      "joint": "1_arka"
+    },
+    {
+      "a": "k79_pompa_ayak_kaynagi_1_arka_sol",
+      "b": "k79_pompa_portal_1",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true
+    },
+    {
+      "a": "k79_pompa_ayak_kaynagi_1_arka_sol",
+      "b": "k79_pompa_ayak_1_arka",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true
+    },
+    {
+      "a": "k79_pompa_ayak_kaynagi_1_arka_sag",
+      "b": "k79_pompa_portal_1",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true
+    },
+    {
+      "a": "k79_pompa_ayak_kaynagi_1_arka_sag",
+      "b": "k79_pompa_ayak_1_arka",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true
+    },
+    {
+      "a": "k79_pompa_ust_pad_0",
+      "b": "yag_pompasi_GJ-N21_EagleDrive",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true
+    },
+    {
+      "a": "k79_pompa_ust_pad_0",
+      "b": "k79_pompa_pad_yapistirici_0",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true
+    },
+    {
+      "a": "k79_pompa_pad_yapistirici_0",
+      "b": "k79_pompa_portal_0",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true
+    },
+    {
+      "a": "k79_pompa_ust_pad_1",
+      "b": "yag_pompasi_GJ-N21_EagleDrive",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true
+    },
+    {
+      "a": "k79_pompa_ust_pad_1",
+      "b": "k79_pompa_pad_yapistirici_1",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true
+    },
+    {
+      "a": "k79_pompa_pad_yapistirici_1",
+      "b": "k79_pompa_portal_1",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true
+    }
+  ],
+  "passed_selected_geometry_contacts": true,
+  "tool_access_checked": false,
+  "load_capacity_checked": false,
+  "production_release": false
+}

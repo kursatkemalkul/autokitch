@@ -1,0 +1,42 @@
+{
+  "source_model_sha256": "41fdb2034a5999c5710fdcfc10b8356c5da6d71ed65e7580cd6062fbcec92b3b",
+  "parts": 975,
+  "triangles": 666662,
+  "closed_sheets": 105,
+  "bench_groups": 22,
+  "rigid_paths_passed": true,
+  "tested_pairs": 15631,
+  "measured_joint_counts": {
+    "pump_body_connection_measured_audit.json": 32,
+    "pump_lower_connection_measured_audit.json": 24,
+    "pump_mount_connection_measured_audit.json": 8,
+    "pump_panel_join_audit.json": 8
+  },
+  "new_pump_contacts": 46,
+  "oil_and_pump_load_order_checks": 18,
+  "selected_tool_axial_envelopes": 8,
+  "bend_sampling_passed": true,
+  "remaining_connection_records": 232,
+  "artifacts_sha256": {
+    "pump_body_connection_measured_audit.json": "b0cb575cc6c9050d7a307e6be541ab62f451a6c9bd4645a966a2a54f54fdbed7",
+    "pump_lower_connection_measured_audit.json": "59cd9202c51155fef74cad20191e3fd6373a0dcbb83dac3969729a1bc4fc416f",
+    "pump_mount_connection_measured_audit.json": "89dd4ac227f92ae897e5d1effac49453aecb14b4147a34ee4ba433bcbf3846b7",
+    "pump_panel_join_audit.json": "aa007b594c1ec043811e7e3ee042d91384d2443aec08c5ab8ff09768d289880a",
+    "pump_actual_contacts.json": "51608370280a56ee67d9061afa955abbcab3f4980fa2b6e0deb4c82fb9d3e652",
+    "pump_din_contacts.json": "5abd2b2870eeeec939e2c599f9a58d92183cc82c4dc0de2354d23d171722ea1e",
+    "pump_load_order_audit.json": "963a44c2439f1cade38638c3a7fbbf364dda55261331d89c05f4d0af00130429",
+    "pump_tool_axial_access.json": "00cfaab9005a39be1d89c82ae251d64282cbd2e8117340b5d4ef105fc4c67b81",
+    "full_ccd_plan_k_pump_full.json": "d81973229c81eac340e30729dccde9da2e0570a402e0c5993dc5832c1a59d3f2",
+    "pump_dense_bend_morph_audit.json": "19855c5433d33156cb6f034968515a7c3d0fb09def6f4ea048d39cb3b6e5c3cf",
+    "pump_din_evidence.json": "5225b39202f3c3d9166f883d8e32c6f77db0d0579a32e1e6536e9df00b6cf0a9",
+    "pump_bench_integration_audit.json": "0e43c73374834290451d034e5bbdac5d82e3d32d32da52b133274c19304250be",
+    "pump_plan_source_binding_audit.json": "14b377b2f6ac07ea618371408047f421da51ed619996e3f29976420141cafe64",
+    "physical_sheet_closure_audit_pump.json": "e86df01b09705975d4e07060d4fda85c8f2f341e861694c98f9aaeaefff12a96"
+  },
+  "canonical_source_changed": false,
+  "whole_station_connections_verified": false,
+  "manufacturing_release": false,
+  "production_release": false,
+  "k_completed": false,
+  "u_started": false
+}

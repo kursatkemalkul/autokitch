@@ -22,11 +22,9 @@ for i in (0,1):
  GROUPS[head]=[head]+[j['foot'] for j in js]+[f'k79_pompa_ust_pad_{i}',f'k79_pompa_pad_yapistirici_{i}']
  WELDS[head]=[a for j in js for a in j['seams']]
  done.update(GROUPS[head][1:]);done.update(WELDS[head])
-for j in _pump['joins']:
- THREAD_AXES[j['screw']]=[0,100.,0]
- for a in (j['shim'],j['washer'],j['nut']):THREAD_AXES[a]=[0,-100.,0]
- haric(j['screw'],j['nut'],'Measured M5x20 / ISO10511 pair:5mm engagement and2mm protrusion, common Y-axis only')
 """+anchor)
+anchor='# Base first; finished welded supports next, shelf later; enclosing panels last.'
+code=code.replace(anchor,"for j in _pump['joins']:\n THREAD_AXES[j['screw']]=[0,100.,0]\n for a in (j['shim'],j['washer'],j['nut']):THREAD_AXES[a]=[0,-100.,0]\n haric(j['screw'],j['nut'],'Measured M5x20 / ISO10511 pair:5mm engagement and2mm protrusion, common Y-axis only')\n"+anchor)
 anchor='ordered=[];cycle_breaks=[]'
 code=code.replace(anchor,"""for j in _pump['joins']:
  before('yag_pompa_plakasi',j['portal'])

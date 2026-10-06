@@ -1,0 +1,180 @@
+{
+  "source_parts_sha256": "f92fd8f7d1282cfcd801d5a02fd3d642a7440dc70ad1c1595591d5623a2440f6",
+  "scope": "eight panel/DIN fasteners only; device clips are not covered",
+  "checks": [
+    {
+      "id": "panel_mount_0",
+      "measured_engagement_mm": 5.0,
+      "measured_protrusion_mm": 2.0,
+      "hosts": [
+        {
+          "part": "pano_plakasi",
+          "bore_vertices": 504,
+          "passed": true
+        },
+        {
+          "part": "arka_sac",
+          "bore_vertices": 180,
+          "passed": true
+        },
+        {
+          "part": "pano_ara_burcu_0",
+          "bore_vertices": 504,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "panel_mount_1",
+      "measured_engagement_mm": 5.0,
+      "measured_protrusion_mm": 2.0,
+      "hosts": [
+        {
+          "part": "pano_plakasi",
+          "bore_vertices": 504,
+          "passed": true
+        },
+        {
+          "part": "arka_sac",
+          "bore_vertices": 180,
+          "passed": true
+        },
+        {
+          "part": "pano_ara_burcu_1",
+          "bore_vertices": 504,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "panel_mount_2",
+      "measured_engagement_mm": 5.0,
+      "measured_protrusion_mm": 2.0,
+      "hosts": [
+        {
+          "part": "pano_plakasi",
+          "bore_vertices": 504,
+          "passed": true
+        },
+        {
+          "part": "arka_sac",
+          "bore_vertices": 192,
+          "passed": true
+        },
+        {
+          "part": "pano_ara_burcu_2",
+          "bore_vertices": 504,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "panel_mount_3",
+      "measured_engagement_mm": 5.0,
+      "measured_protrusion_mm": 2.0,
+      "hosts": [
+        {
+          "part": "pano_plakasi",
+          "bore_vertices": 504,
+          "passed": true
+        },
+        {
+          "part": "arka_sac",
+          "bore_vertices": 192,
+          "passed": true
+        },
+        {
+          "part": "pano_ara_burcu_3",
+          "bore_vertices": 504,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "din_mount_0_0",
+      "measured_engagement_mm": 5.0,
+      "measured_protrusion_mm": 1.0,
+      "hosts": [
+        {
+          "part": "pano_plakasi",
+          "bore_vertices": 504,
+          "passed": true
+        },
+        {
+          "part": "din_rayi_0",
+          "opening": "supplier stock15x6.2 slot",
+          "measured_axis_to_slot_wall_mm": 3.099999999999909,
+          "clearance_around_nominal5.5mm_passage_mm": 0.34999999999990905,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "din_mount_0_1",
+      "measured_engagement_mm": 5.0,
+      "measured_protrusion_mm": 1.0,
+      "hosts": [
+        {
+          "part": "pano_plakasi",
+          "bore_vertices": 504,
+          "passed": true
+        },
+        {
+          "part": "din_rayi_0",
+          "opening": "supplier stock15x6.2 slot",
+          "measured_axis_to_slot_wall_mm": 3.099999999999909,
+          "clearance_around_nominal5.5mm_passage_mm": 0.34999999999990905,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "din_mount_1_0",
+      "measured_engagement_mm": 5.0,
+      "measured_protrusion_mm": 1.0,
+      "hosts": [
+        {
+          "part": "pano_plakasi",
+          "bore_vertices": 504,
+          "passed": true
+        },
+        {
+          "part": "din_rayi_1",
+          "opening": "supplier stock15x6.2 slot",
+          "measured_axis_to_slot_wall_mm": 3.099999999999909,
+          "clearance_around_nominal5.5mm_passage_mm": 0.34999999999990905,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "din_mount_1_1",
+      "measured_engagement_mm": 5.0,
+      "measured_protrusion_mm": 1.0,
+      "hosts": [
+        {
+          "part": "pano_plakasi",
+          "bore_vertices": 504,
+          "passed": true
+        },
+        {
+          "part": "din_rayi_1",
+          "opening": "supplier stock15x6.2 slot",
+          "measured_axis_to_slot_wall_mm": 3.099999999999909,
+          "clearance_around_nominal5.5mm_passage_mm": 0.34999999999990905,
+          "passed": true
+        }
+      ],
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "production_release": false
+}
