@@ -330,6 +330,31 @@ class Mek:
         LOG("  somunlu %-31s %s×%-3g ×%d  %s → %s · pul + fiberli somun · taşma %s" % (ad, dis, out[0]["meta"]["boy"], len(out), A, B, [o_["mek_bag"]["kav"] for o_ in out]))
         return out
 
+    # ------------------------------------------------------------ PEM gömme başlı saplama (sacın dış yüzünde flush) + B arkasında pul + fiberli somun
+    def saplamali(s, ad, A, B, dis="M4", tip="FHP", yon=None, duzlem=None, pts=None, n=2, pay=None, not_=""):
+        """A: sac (saplama A'nın dış yüzünden preslenir, baş sacla aynı düzlemde → dışta çıkıntı yok) · B: içerideki parça (geçiş deliği) ·
+        yon: A → B · duzlem: A ↔ B temas koordinatı · boy SAPLAMA_BOY'dan (B + pul + somun + 0,5 d)"""
+        d = S.D_NOM[dis]
+        e, ax, c, l2, h2 = s._duzlem(ad, A, B, yon, duzlem); o = [k for k in range(3) if k != ax]
+        if pts is None: pts = s.desen(l2, h2, n, pay if pay is not None else max(1.0 * d + 1.0, 4.0))
+        PA = s.P(A); PB = s.P(B); out = []; ph = S.DIN125[dis][2]; sm = S.ISO10511[dis][1]
+        for i, pt in enumerate(pts):
+            p = s._nokta(pt, o, ax, c)
+            a0, b0, b1 = s._ab(ad, i, PA, PB, p, e)
+            L = -a0 + b1 + ph + sm + 0.5 * d
+            Lb = next((x for x in S.SAPLAMA_BOY if x >= L - 1e-6), None); assert Lb, "%s: saplama boyu %.1f katalog dışı" % (ad, L)
+            nokta = tuple((p + e * a0).tolist()); ek = tuple(e.tolist()); nm = "%s_%d" % (ad, i) if len(pts) > 1 else ad
+            v, _c = S.pem_saplama(tip, dis, float(Lb), nokta, ek, ad=nm)
+            v["mek_bag"] = dict(A=A, B=B, eks=e.tolist(), seat=float(p[ax] + e[ax] * a0), kav=round(float(Lb + a0 - b1), 2), hedef=[A, B], bas_bos=False, not_=not_,
+                                somunlu=True, saplama=True, tA=round(-a0, 1), tB=round(b1 - b0, 1))
+            pu = S.pul("DIN125", dis, tuple((p + e * b1).tolist()), ek, ad=nm + "_pul")
+            so = S.somun("ISO10511", dis, tuple((p + e * (b1 + ph)).tolist()), ek, ad=nm + "_somun")
+            for q in (pu, so): q["mek_bag"] = dict(A=A, B=B, eks=e.tolist(), hacim=True)
+            out.append(v); s.DIGER += [pu, so]
+        s.VIDA += out
+        LOG("  saplamalı %-29s PEM %s %s×%-3g ×%d  %s → %s · pul + fiberli somun · sac %s" % (ad, tip, dis, out[0]["meta"]["boy"], len(out), A, B, [o_["mek_bag"]["tA"] for o_ in out]))
+        return out
+
     # ------------------------------------------------------------ hazır ürün: motor (NEMA flanşı)
     def motor(s, ad, M, B, yon, flans=None, kare=None, dis=None, boy_flans=10.0, kav=14.0, merkez=None, n=4, not_="", hedef_ek=(), merkez3=None, u_vec=None):
         """M motor, B bizim parça (dişli) · yon: motordan B'ye (motor ekseni) · flans: flanş düzleminin koordinatı (B'nin yüzü) ·
@@ -366,7 +391,7 @@ class Mek:
         return out
 
     # ------------------------------------------------------------ setskur (DIN 916) · A dış yüzünden B'ye basar
-    def setskur(s, ad, A, B, yon, pts=None, dis="M4", n=1, bat=0.4, not_=""):
+    def setskur(s, ad, A, B, yon, pts=None, dis="M4", n=1, bat=0.4, not_="", gomulu=False):
         e = vek(yon); ax = int(np.argmax(np.abs(e))); o = [k for k in range(3) if k != ax]
         la, ha = s.kutu(A); lb, hb = s.kutu(B); d = S.D_NOM[dis]
         if pts is None:
@@ -384,7 +409,7 @@ class Mek:
             t0 = ta[0][0]; tbb = [x for x in tb if x[0] > t0]
             assert tbb, "%s #%d: B, A'nın dış yüzünden sonra değil" % (ad, i)
             t1 = tbb[0][0] + bat; L = t1 - t0
-            Lb = next(x for x in BOY if x >= L - 1e-6)
+            Lb = max(x for x in BOY if x <= L - 0.5) if gomulu else next(x for x in BOY if x >= L - 1e-6)   # gömülü: dış ucu A yüzünün altında (göbeksiz kasnak: kayış üstünden geçer)
             nokta = o0 + e * (t1 - Lb)                                        # katalog boyu: dış ucu A yüzünden (Lb − L) kadar taşar
             sh = cq.Solid.makeCylinder(d / 2 - 0.02, Lb, cq.Vector(*nokta), cq.Vector(*e))
             nm = "%s_%d" % (ad, i) if len(pts) > 1 else ad
@@ -466,7 +491,7 @@ class Mek:
         sh = cq.Solid.makeCylinder(d / 2 - 0.02, boy + 1.0, cq.Vector(*c), cq.Vector(*e))
         q = S._bp(ad, sh, "ürün sapı", "Vantuz dişli sapı %s×%g (ürünün kendi)" % (dis, boy), "%s×%g" % (dis, boy), "A2", meta=dict(dis=dis, boy=boy, sap=True))
         q["bom"] = ("Vantuz dişli sapı (vida) %s×%g · ürünün kendi · bara dişli deliğe" % (dis, boy),) + tuple(q["bom"][1:])
-        q["mek_bag"] = dict(A=flans, B=bar, eks=e.tolist(), seat=float(c[ax]), kav=boy, hedef=[flans, bar], bas_bos=False, not_="vantuz sapı bardaki dişli deliğe")
+        q["mek_bag"] = dict(A=flans, B=bar, eks=e.tolist(), seat=float(c[ax]), kav=boy, hedef=[bar], ops=[flans], bas_bos=False, not_="vantuz sapı flanşın kendi deliğinden bardaki dişli deliğe")
         s.VIDA.append(q)
         LOG("  vantuz sapı %-27s %s×%g · %s → %s" % (ad, dis, boy, flans, bar))
         return q
@@ -517,13 +542,14 @@ class Mek:
             bek = v["mek_bag"]["hedef"]; ops = v["mek_bag"].get("ops", [])
             bulunan = []
             for d, b, vol in vur:
-                if vol <= 0: continue
+                if vol == 0: continue
                 adlar = [a for a in list(bek) + list(ops) if a and s.ait(a, d, b)]
+                if vol < 0 and not adlar: continue                            # açık (manifold kurulamayan) bileşen: yalnız beklenen parçaya aitse sayılır (delik_ac → acik_cep)
                 bulunan.append((d, b["no"], round(vol, 1), adlar[0] if adlar else None))
             adl = [x[3] for x in bulunan if x[3]]
             eksik = [a for a in bek if a and a not in adl and a not in s.YENI]
             fazla = [x for x in bulunan if not x[3]]
-            if eksik or fazla: kotu.append((v["ad"], "eksik %s" % eksik if eksik else "", "fazla %s" % fazla if fazla else ""))
+            if eksik or fazla: kotu.append((v["ad"], "eksik %s" % eksik if eksik else "", "fazla %s" % fazla if fazla else "", "bulunan %s" % bulunan if eksik else ""))
             s.hedefler[v["ad"]] = bulunan
         return kotu
 
@@ -553,7 +579,7 @@ class Mek:
         kk = s.kavrama_kotu()
         assert not kk, "ADIM %s DUR: diş tutuşu < 1×d: %s" % (adim, kk)
         kd = s.denetle_delik()
-        for k in kd: LOG("  DELİK: %s %s %s" % k)
+        for k in kd: LOG("  DELİK: " + " ".join(str(x) for x in k))
         assert not kd, "ADIM %s DUR: %d vida beklenen parçaları delmiyor" % (adim, len(kd))
         LOG("  denetim: %d vida + %d diğer · baş hacmi boş · hedefler tam · kavrama ≥ 1×d · %.0f sn" % (len(s.VIDA), len(s.DIGER), time.time() - t0))
         kayit = s.delik_ac()

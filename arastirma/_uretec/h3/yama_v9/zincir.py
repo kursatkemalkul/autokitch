@@ -228,8 +228,12 @@ ADIMLAR = [
      [(".", 'python "{YAMA}/82_e_kapak.py" hat3_v10m.glb hat3_v10n.glb')]),
     ("83", "E köşe kaldırıcı (4 köşe tutucu, 2,77° eğik eksende) + köşe pistonu vidalı: motorlar NEMA flanşından eğik plakaya, göbek setskur + Ø3 pimler, bayrak bilezikleri, çene–parmak, çene–mafsal TIG dikişi, kılavuz blok paketleri, sensör somunları, uç blok L köşebentleri (yeni), bronz somun kelepçesi (yeni), piston motor plakası L köşebentleri (yeni), kaplin / çubuk setskurları + segmanlar", ["hat3_v10n.glb"], "hat3_v10o.glb",
      [(".", 'python "{YAMA}/83_e_kose.py" hat3_v10n.glb hat3_v10o.glb')]),
+    ("84", "E parmak (Y kolu) + arka itici / piston vidalı: MGN15 rayları kendi havşa yuvalarından (gömme 5) taşıyıcıya, arabalar piston plakasına, somun braketi, piston başı TIG köşe dikişi, lamalar, üst L bloklar, sensör bloğu + M8 somunlar, üst yatak / yatak plakaları, 3 yeni 2 mm Z köşebent (taşıyıcı üst flanşı ↔ yatak plakası / motor direkleri), motorlar NEMA flanşından, kasnak pimi / setskurları (parmak kasnağı kayışın sarmadığı taraftan radyal), sensör laması + braket punta, kol punta, bıçak havşa M3", ["hat3_v10o.glb"], "hat3_v10p.glb",
+     [(".", 'python "{YAMA}/84_e_parmak_itici.py" hat3_v10o.glb hat3_v10p.glb')]),
+    ("85", "E besleyici + besleyici iticisi + vakum barı vidalı: 4 dikme ↔ plaka yeni 3 mm L köşebentle, MGN15 rayları kendi havşa yuvalarından plakaya, arabalar kızak plakalarına, kollar TIG, kılavuz / orta blok / ped kirişe, kayış kelepçesi, mil yatağı + segman, göbeksiz kasnaklarda gömülü setskur, motor NEMA flanşından yuvaya, yuva tabanı yeni köşebentle sağ yan saca (PEM FHP saplama + somun), vakum mili orta eksenel M5, Ø12 miller segmanla, vakum bloğu, vantuz sapları, M8 sensör somunları, E3Z sensörleri 4 mm dile kendi deliklerinden, 3 sensör tutucusunun PEM saplamalarına somun", ["hat3_v10p.glb"], "hat3_v10q.glb",
+     [(".", 'python "{YAMA}/85_e_besleyici.py" hat3_v10p.glb hat3_v10q.glb')]),
 ]
-SON = "hat3_v10o.glb"
+SON = "hat3_v10q.glb"
 
 
 def kur(is_dizin, h3, uretec):

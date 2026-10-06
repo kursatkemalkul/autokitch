@@ -37,11 +37,11 @@ def kutu(x0, y0, z0, x1, y1, z1):
 # ---------------------------------------------------------------- İTİCİ (sabit taşıyıcı) · raylar · arabalar · piston plakası
 for i, xr in ((0, 4600.0), (1, 4740.0)):
     M.vida("itici_ray_%d_vida" % i, "itici_ray_%d" % i, "itici_tasiyici", dis="M4", yon=ZM, duzlem=-389.0, pts=[(xr, 1380.0 + 60.0 * k) for k in range(8)],
-           kavrama=5.0, urun="A", bas_bos=False, not_="MGN15 rayı kendi deliklerinden (60 mm aralık, havşa yuvalı) 5 mm taşıyıcı plakaya (dişli)")
+           kavrama=5.0, urun="A", bas_bos=False, gomme=5.0, not_="MGN15 rayı kendi deliklerinden (60 mm aralık, havşa yuvalı) 5 mm taşıyıcı plakaya (dişli)")
 for i, (xc, yc) in ((0, (4600.0, 1750.0)), (1, (4600.0, 1810.0)), (2, (4740.0, 1750.0)), (3, (4740.0, 1810.0))):
     M.vida("piston_araba_%d_vida" % i, "piston_plaka", "piston_araba_%d" % i, dis="M4", std="DIN7991", yon=ZM, duzlem=-361.0, pts=[(xc + fx * 8.0, yc + fy * 10.0) for fx in (-1, 1) for fy in (-1, 1)],
            kavrama=5.0, not_="10 mm piston plakasından (havşa; üst arabanın başları motor flanş plakasının altında kalıyor) MGN15C arabasının 4 dişli deliğine (ürün)")
-M.vida("piston_somun_braketi_vida", "piston_plaka", "piston_somun_braketi", dis="M5", yon=Z, duzlem=-351.0, pts=[(4650.0, 1779.0), (4690.0, 1779.0)],
+M.vida("piston_somun_braketi_vida", "piston_plaka", "piston_somun_braketi", dis="M5", yon=Z, duzlem=-351.0, pts=[(4643.0, 1779.0), (4697.0, 1779.0)],
        not_="plakanın arkasından (başlar plaka ile taşıyıcı arasında) 52 mm somun braketine")
 # piston başı ↔ piston plakası: baş plakanın alt kenarına köşe teması ile bitişik (üreteç) → iç köşeye 3 parça TIG köşe dikişi (lamaların dışında)
 for i, (x0, x1) in enumerate(((4576.0, 4594.0), (4606.0, 4714.0), (4726.0, 4764.0))):
@@ -70,7 +70,7 @@ ZB = [("itici_yatak_z_braketi", 4646.0, 4694.0, -345.0, "itici_yatak_plakasi_0",
       ("itici_motor_z_braketi_1", 4748.0, 4772.0, -350.0, "itici_motor_blogu", [(4752.0, 1853.0), (4760.0, 1853.0)], [(4768.0, 1852.0)], 5.0, 1846.0)]
 for ad, x0, x1, zb, B, ptsA, ptsB, kavB, yB in ZB:   # yB: ön bacağın alt kenarı (motor direkleri: piston plakasının üstünde, y > 1845)
     sh = (kutu(x0, 1848.0, -380.0, x1, 1858.0, -378.0).union(kutu(x0, 1856.0, -380.0, x1, 1858.0, zb)).union(kutu(x0, yB, zb - 2.0, x1, 1858.0, zb))).val()
-    M.yeni(ad, sh, ["Z köşebent AISI 304 2 mm · %g × 10 / 20 × %g (taşıyıcı üst flanşının ön yüzü ↔ %s arka yüzü)" % (x1 - x0, -378.0 - zb + 2.0, B), 1, "2 × %g × %g" % (x1 - x0, -378.0 - zb + 2.0), "lazer + 2 büküm · 0.02 kg", "ÜRETİM"],
+    M.yeni(ad, sh, ["Z köşebent AISI 304 2 mm · %g × 10 / 20 × %g (taşıyıcı üst flanşının ön yüzü ↔ %s arka yüzü)" % (x1 - x0, abs(-378.0 - zb + 2.0), B), 1, "2 × %g × %g" % (x1 - x0, abs(-378.0 - zb + 2.0)), "lazer + 2 büküm · 0.02 kg", "ÜRETİM"],
            "E_MEK_BAG__celik", aile="itici", kontrol=[((x0, 1848.0, -380.0), (x1, 1858.0, -378.0)), ((x0, 1856.0, -378.0), (x1, 1858.0, zb - 2.0)), ((x0, yB, zb - 2.0), (x1, 1858.0, zb))])
     M.vida("%s_tasiyici_vida" % ad, ad, "itici_tasiyici", dis="M4", yon=ZM, duzlem=-380.0, pts=ptsA, kavrama=5.0, not_="Z köşebent arka bacağından taşıyıcının üst flanşına (14 mm, dişli)")
     M.vida("%s_vida" % ad, ad, B, dis="M4", yon=Z, duzlem=zb, pts=ptsB, kavrama=kavB, not_="Z köşebent ön bacağından %s'e (dişli)" % B)
@@ -86,7 +86,8 @@ M.vida("parmak_tasiyici_vida", "parmak_tasiyici", "piston_lama_0", dis="M5", yon
 M.vida("parmak_motor_braketi_vida", "parmak_motor_braketi", "piston_lama_1", dis="M5", yon=YM, duzlem=1380.0, pts=[(4720.0, z) for z in (-150.0, -120.0, -90.0, -70.0)], kavrama=7.5,
        not_="motor braketinin 6 mm tabanından lama 1'in üst kenarına (8 mm, dişli)")
 M.motor("parmak_motor_vida", "parmak_motor", "parmak_motor_braketi", yon=Z, flans=-5.0, boy_flans=8.0, kav=5.5, dis="M5", kare=47.14, merkez=(4740.0, 1509.5))
-M.setskur("parmak_kasnak_setskur", "parmak_kasnak", "parmak_gobek", yon=X, pts=[(1352.0, 12.5)], dis="M4")
+M.setskur("parmak_kasnak_setskur", "parmak_kasnak", "parmak_gobek", yon=(-0.836, -0.549, 0.0), pts=[(4500.8 + 8.36, 1351.9 + 5.49, 12.5)], dis="M4",
+           not_="kayışın sarmadığı motor tarafından radyal (kayıştan geçmez)")
 M.setskur("parmak_motor_kasnagi_setskur", "parmak_motor_kasnagi", "parmak_motor", yon=X, pts=[(1509.5, 10.0)], dis="M4")
 M.vida("parmak_sensor_lamasi_vida", "parmak_motor_braketi", "parmak_sensor_lamasi", dis="M4", yon=ZM, duzlem=-5.0, pts=[(4771.5, 1505.0), (4771.5, 1515.0)], kavrama=6.0,
        not_="braket plakasının +z yüzünden (6 mm) 6 × 20 sensör lamasının ucuna (dişli)")
