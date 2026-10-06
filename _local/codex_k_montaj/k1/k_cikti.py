@@ -203,6 +203,11 @@ for a in P:
     if a in ROT: PARCA[a]['r'] = [r for r in ROT[a] if abs(r[2]) > 1e-9]
     if a in IST: PARCA[a]['k'] = 1
     o0 = ofs_t(a, -1.0) / 1000.0; LOt = np.minimum(LOt, V.min(0) + np.minimum(o0, 0)); HIt = np.maximum(HIt, V.max(0) + np.maximum(o0, 0))
+# Ground-flush welds are marked on existing source surfaces. These display
+# annotations never enter the physical geometry, contact or release checks.
+from k_flush_weld_display import export_markers
+_marker_meshes, _marker_parts, _marker_records = export_markers(D, MATAD)
+dug.extend(_marker_meshes); PARCA.update(_marker_parts)
 n = G.glb_yaz(os.path.join(OUT, 'k_montaj.glb'), dug, MATS)
 MA = {('%s ↔ %s' % k): v for k, v in HARIC.items() if v.startswith('MODEL AÇIĞI')}
 DEN = dict(model_acigi=len(MA), yuzey_temasi=TEMAS, adim=len(D['ADIM']), parca=len(GOS), cevre=len(CEV), cift=DN.ciftsay, cakisma=len(CAK), cakismalar=CAK, adim_mm=2.0,
@@ -216,6 +221,11 @@ OUTJ = dict(surum='k_montaj_v2', ist='K', tarih='5 Eki 2026',
             sayim=dict(gosterilen=len(GOS), cevre=len(CEV), ucgen=int(sum(len(P[a]['F']) for a in P)), uretilen=len(FR),
                        sac=len(D['SAC_AD']), baglanti=sum(1 for a in GOS if P[a]['tur'] == 'baglanti'), kaynak=sum(1 for a in GOS if P[a]['tur'] == 'kaynak')), denetim=DEN,
             aciklama=None, istisna_metin='Kaynak dikişleri ve punta işaretleri birleşme anında belirir ve kalır; kablolar ve hava hortumları kanal boyunca uzar. Baca ve pizza kutusu stoğu U montajında / işletmede.')
+OUTJ['process_markings'] = _marker_records
+OUTJ['sayim']['process_markings'] = len(_marker_records)
+OUTJ['sayim']['physical_product_parts'] = len(GOS)
+OUTJ['sayim']['gosterilen'] += len(_marker_records)
+OUTJ['sayim']['ucgen'] += sum(len(m['F']) for m in _marker_meshes)
 OUTJ.pop('aciklama')
 json.dump(OUTJ, open(os.path.join(OUT, 'k_montaj.json'), 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'), default=float)
 json.dump(DEN, open('sonuc_k.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1, default=str)
