@@ -8,7 +8,7 @@ Kemal'in kararı (5 Eki 2026): iki ajan aynı anda, farklı istasyonlarda çalı
 
 | İş | Kim | Branch | Durum |
 |---|---|---|---|
-| Robot + ray + QR dolabı + sipariş animasyonları | Codex | `coord/codex-zemin-v27` | BİTTİ v27/adım96: kapı/ara duvar/masa/sandalye/lavabo-su boruları kaldırıldı. İç zemin4724×3050mm14.408m²;8düz OBO OKA-G nominal kanal;kapakY0,alın derzi0.2mm,robot çıkışı80×70.81kapalı katı;9kabloda29223örnek2mm yüzey payı temiz;iki koşu bayt aynı. Kaynak makine/robot/12QR/14klip/8sipariş korunur. OEM ölçü zarfı sade modeli;nihai üretici aksesuarı/yük/elektrik ve eski tam robot/fizik açık. |
+| Robot + ray + QR dolabı + sipariş animasyonları | Codex | `coord/codex-kutu-donus-v28` | ÇALIŞIYOR v28/adım97: v27 üstüne, kutu dönüşü açık tarafta; ray geri kaçışı ve kolun içine katlanan yol düzeltiliyor. |
 | TOPPING montaj animasyonu v5 | Claude | `claude/topping-montaj-v5` | yayında (açık 3 küçük madde) |
 | Standart önlemleri · makine: acil stop (58) · 10 kapı emniyet anahtarı (59) · hava emniyet valfi (60) · davlumbaz filtresi servis ağzı (61) · hijyen / R290 / A perdesi kayıt | Claude | `claude/standart-makine` | BİTTİ (cb7d1ec) — Kemal incelemesinde |
 | **TOPPING montaj v6**: bağsız 63 parça + geçici dayalı 2 parça bağlanır (KURALLAR §2.3 kural 10), animasyon yeniden üretilir, §5 denetimi | Claude | `claude/topping-montaj-v6` | YAYINDA (5 Eki, PR #5) · açık: kıyma silindiri flanşı, 5 iç elektrik parçası, 2 kovan contası |
@@ -63,6 +63,6 @@ Robot entegrasyon adımı94, makine geometrisini koruyan son render/animasyon ad
 - Depo herkese açık. Oturum kayıtları `_local/claude_oturum/` altında durur (Kemal: kalsın); `_local/` siteye kopyalanmaz. Parola, anahtar, kişisel bilgi depoya konmaz.
 - Büyük ara dosyalar (`.pkl`, 100 MB üstü GLB) depoya konmaz; GLB gerekirse kayıpsız `.gz` olarak.
 
-ZİNCİR KİLİDİ: BOŞ
+ZİNCİR KİLİDİ: Codex · v28/adım97 · kutu dönüşü, rayda gereksiz geri hareket kaldırılır; robot ve kutu self-collision denetimi
 
 Codex v23/adım92: sağ duvar panosu ve ayrı router bölmesi; gömülü iniş, sıfır kapak, doğru dirsek/kesim ve ayrı kablo yolları. İki tam koşu bayt aynı; kanal/kablo katıları kapalı, modüllerde örtüşme yok, kablo yolunda2mm asgari pay. Elektrik nihai devre/kesit-seçicilik ve döşeme yükü, özel ray ve tam robot çarpışması hâlâ açık. E/K cloud dosyalarına dokunulmadı.
