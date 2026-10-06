@@ -1,0 +1,861 @@
+{
+  "version": 27,
+  "source_geometry_binary_preserved": true,
+  "source_nodes_unchanged": true,
+  "all14_animation_clips_byte_same": true,
+  "orders_preserved": 8,
+  "qr_bays_preserved": 12,
+  "new_meshes": [
+    {
+      "name": "FLOOR27_ZEMIN_0",
+      "triangles": 60,
+      "closed": true,
+      "volume_m3": 0.11977400176231578,
+      "degenerate": 0
+    },
+    {
+      "name": "FLOOR27_ZEMIN_1",
+      "triangles": 12,
+      "closed": true,
+      "volume_m3": 0.002448000282883633,
+      "degenerate": 0
+    },
+    {
+      "name": "FLOOR27_ANA_ALT_500_TABAN_0",
+      "triangles": 12,
+      "closed": true,
+      "volume_m3": 0.001139394543273737,
+      "degenerate": 0
+    },
+    {
+      "name": "FLOOR27_ANA_ALT_500_YAN_0",
+      "triangles": 20,
+      "closed": true,
+      "volume_m3": 0.00026983219235178664,
+      "degenerate": 0
+    },
+    {
+      "name": "FLOOR27_ANA_ALT_500_YAN_1",
+      "triangles": 132,
+      "closed": true,
+      "volume_m3": 0.00013267082963006795,
+      "degenerate": 0
+    },
+    {
+      "name": "FLOOR27_ANA_ALT_500_YAN_2",
+      "triangles": 72,
+      "closed": true,
+      "volume_m3": 0.000004151814877052535,
+      "degenerate": 0
+    },
+    {
+      "name": "FLOOR27_ANA_ALT_500_AYIRICI_0",
+      "triangles": 28,
+      "closed": true,
+      "volume_m3": 0.0011068248340538808,
+      "degenerate": 0
+    },
+    {
+      "name": "FLOOR27_ANA_ALT_500_KAPAK_0",
+      "triangles": 28,
+      "closed": true,
+      "volume_m3": 0.0022371096550365247,
+      "degenerate": 0
+    },
+    {
+      "name": "FLOOR27_ANA_ALT_500_KAPAK_DESTEK_0",
+      "triangles": 20,
+      "closed": true,
+      "volume_m3": 0.00003758131055775915,
+      "degenerate": 0
+    },
+    {
+      "name": "FLOOR27_ANA_ALT_500_KAPAK_DESTEK_1",
+      "triangles": 140,
+      "closed": true,
+      "volume_m3": 7.866307595435807e-7,
+      "degenerate": 0
+    },
+    {
+      "name": "FLOOR27_ANA_ALT_500_KAPAK_DESTEK_2",
+      "triangles": 268,
+      "closed": true,
+      "volume_m3": 0.000019014246026216958,
+      "degenerate": 0
+    },
+    {
+      "name": "FLOOR27_ANA_UST_500_TABAN_0",
+      "triangles": 12,
+      "closed": true,
+      "volume_m3": 0.0009294784767013226,
+      "degenerate": 0
+    },
+    {
+      "name": "FLOOR27_ANA_UST_500_YAN_0",
+      "triangles": 20,
+      "closed": true,
+      "volume_m3": 0.0002323963594550449,
+      "degenerate": 0
+    },
+    {
+      "name": "FLOOR27_ANA_UST_500_YAN_1",
+      "triangles": 72,
+      "closed": true,
+      "volume_m3": 0.00011244834130027963,
+      "degenerate": 0
+    },
+    {
+      "name": "FLOOR27_ANA_UST_500_AYIRICI_0",
+      "triangles": 48,
+      "closed": true,
+      "volume_m3": 0.0008666744814513235,
+      "degenerate": 0
+    },
+    {
+      "name": "FLOOR27_ANA_UST_500_KAPAK_0",
+      "triangles": 48,
+      "closed": true,
+      "volume_m3": 0.0017873129719519088,
+      "degenerate": 0
+    },
+    {
+      "name": "FLOOR27_ANA_UST_500_KAPAK_DESTEK_0",
+      "triangles": 20,
+      "closed": true,
+      "volume_m3": 0.00003233119088561572,
+      "degenerate": 0
+    },
+    {
+      "name": "FLOOR27_ANA_UST_500_KAPAK_DESTEK_1",
+      "triangles": 140,
+      "closed": true,
+      "volume_m3": 0.000015973898984393293,
+      "degenerate": 0
+    },
+    {
+      "name": "FLOOR27_MAKINE_300_TABAN_0",
+      "triangles": 12,
+      "closed": true,
+      "volume_m3": 0.0004226281937302476,
+      "degenerate": 0
+    },
+    {
+      "name": "FLOOR27_MAKINE_300_YAN_0",
+      "triangles": 12,
+      "closed": true,
+      "volume_m3": 0.00012565074705827347,
+      "degenerate": 0
+    },
+    {
+      "name": "FLOOR27_MAKINE_300_YAN_1",
+      "triangles": 12,
+      "closed": true,
+      "volume_m3": 0.00012565074705829168,
+      "degenerate": 0
+    },
+    {
+      "name": "FLOOR27_MAKINE_300_AYIRICI_0",
+      "triangles": 12,
+      "closed": true,
+      "volume_m3": 0.0004226281937302475,
+      "degenerate": 0
+    },
+    {
+      "name": "FLOOR27_MAKINE_300_KAPAK_0",
+      "triangles": 12,
+      "closed": true,
+      "volume_m3": 0.000845256387460505,
+      "degenerate": 0
+    },
+    {
+      "name": "FLOOR27_MAKINE_300_KAPAK_DESTEK_0",
+      "triangles": 12,
+      "closed": true,
+      "volume_m3": 0.000017621238269190686,
+      "degenerate": 0
+    },
+    {
+      "name": "FLOOR27_MAKINE_300_KAPAK_DESTEK_1",
+      "triangles": 12,
+      "closed": true,
+      "volume_m3": 0.000017621322293882445,
+      "degenerate": 0
+    },
+    {
+      "name": "FLOOR27_MAKINE_DIRSEK_300_TABAN_0",
+      "triangles": 12,
+      "closed": true,
+      "volume_m3": 0.000211269157399112,
+      "degenerate": 0
+    },
+    {
+      "name": "FLOOR27_MAKINE_DIRSEK_300_YAN_0",
+      "triangles": 96,
+      "closed": true,
+      "volume_m3": 0.00016528639268325197,
+      "degenerate": 0
+    },
+    {
+      "name": "FLOOR27_MAKINE_DIRSEK_300_AYIRICI_0",
+      "triangles": 32,
+      "closed": true,
+      "volume_m3": 0.00018568462674215173,
+      "degenerate": 0
+    },
+    {
+      "name": "FLOOR27_MAKINE_DIRSEK_300_KAPAK_0",
+      "triangles": 32,
+      "closed": true,
+      "volume_m3": 0.00039791322711896877,
+      "degenerate": 0
+    },
+    {
+      "name": "FLOOR27_MAKINE_DIRSEK_300_KAPAK_DESTEK_0",
+      "triangles": 164,
+      "closed": true,
+      "volume_m3": 0.00002260236123407683,
+      "degenerate": 0
+    },
+    {
+      "name": "FLOOR27_ROBOT_QR_400_TABAN_0",
+      "triangles": 12,
+      "closed": true,
+      "volume_m3": 0.0012412593468810206,
+      "degenerate": 0
+    },
+    {
+      "name": "FLOOR27_ROBOT_QR_400_YAN_0",
+      "triangles": 12,
+      "closed": true,
+      "volume_m3": 0.00027673107153874943,
+      "degenerate": 0
+    },
+    {
+      "name": "FLOOR27_ROBOT_QR_400_YAN_1",
+      "triangles": 12,
+      "closed": true,
+      "volume_m3": 0.0002767310715387841,
+      "degenerate": 0
+    },
+    {
+      "name": "FLOOR27_ROBOT_QR_400_AYIRICI_0",
+      "triangles": 84,
+      "closed": true,
+      "volume_m3": 0.0011102935077504888,
+      "degenerate": 0
+    },
+    {
+      "name": "FLOOR27_ROBOT_QR_400_KAPAK_0",
+      "triangles": 84,
+      "closed": true,
+      "volume_m3": 0.0023288750640295423,
+      "degenerate": 0
+    },
+    {
+      "name": "FLOOR27_ROBOT_QR_400_KAPAK_DESTEK_0",
+      "triangles": 12,
+      "closed": true,
+      "volume_m3": 0.00003880890097736377,
+      "degenerate": 0
+    },
+    {
+      "name": "FLOOR27_ROBOT_QR_400_KAPAK_DESTEK_1",
+      "triangles": 12,
+      "closed": true,
+      "volume_m3": 0.00002686135757193624,
+      "degenerate": 0
+    },
+    {
+      "name": "FLOOR27_ROBOT_QR_400_KAPAK_DESTEK_2",
+      "triangles": 12,
+      "closed": true,
+      "volume_m3": 0.00000987378557680866,
+      "degenerate": 0
+    },
+    {
+      "name": "FLOOR27_ZINCIR_DIRSEK_400_TABAN_0",
+      "triangles": 12,
+      "closed": true,
+      "volume_m3": 0.00023976013666227193,
+      "degenerate": 0
+    },
+    {
+      "name": "FLOOR27_ZINCIR_DIRSEK_400_YAN_0",
+      "triangles": 20,
+      "closed": true,
+      "volume_m3": 0.0001067188919835118,
+      "degenerate": 0
+    },
+    {
+      "name": "FLOOR27_ZINCIR_DIRSEK_400_YAN_1",
+      "triangles": 68,
+      "closed": true,
+      "volume_m3": 1.4084387881141068e-7,
+      "degenerate": 0
+    },
+    {
+      "name": "FLOOR27_ZINCIR_DIRSEK_400_AYIRICI_0",
+      "triangles": 12,
+      "closed": true,
+      "volume_m3": 0.0002397601366622718,
+      "degenerate": 0
+    },
+    {
+      "name": "FLOOR27_ZINCIR_DIRSEK_400_KAPAK_0",
+      "triangles": 12,
+      "closed": true,
+      "volume_m3": 0.0004795202733245271,
+      "degenerate": 0
+    },
+    {
+      "name": "FLOOR27_ZINCIR_DIRSEK_400_KAPAK_DESTEK_0",
+      "triangles": 20,
+      "closed": true,
+      "volume_m3": 0.000014705682891887897,
+      "degenerate": 0
+    },
+    {
+      "name": "FLOOR27_ZINCIR_DIRSEK_400_KAPAK_DESTEK_1",
+      "triangles": 132,
+      "closed": true,
+      "volume_m3": 2.2414025514356197e-7,
+      "degenerate": 0
+    },
+    {
+      "name": "FLOOR27_ZINCIR_SABIT_400_TABAN_0",
+      "triangles": 12,
+      "closed": true,
+      "volume_m3": 0.00030872558221708166,
+      "degenerate": 0
+    },
+    {
+      "name": "FLOOR27_ZINCIR_SABIT_400_YAN_0",
+      "triangles": 28,
+      "closed": true,
+      "volume_m3": 0.0001907355853439617,
+      "degenerate": 0
+    },
+    {
+      "name": "FLOOR27_ZINCIR_SABIT_400_AYIRICI_0",
+      "triangles": 20,
+      "closed": true,
+      "volume_m3": 0.00026284960225170717,
+      "degenerate": 0
+    },
+    {
+      "name": "FLOOR27_ZINCIR_SABIT_400_KAPAK_0",
+      "triangles": 28,
+      "closed": true,
+      "volume_m3": 0.0005480251212986966,
+      "degenerate": 0
+    },
+    {
+      "name": "FLOOR27_ZINCIR_SABIT_400_KAPAK_DESTEK_0",
+      "triangles": 20,
+      "closed": true,
+      "volume_m3": 0.000008157475020307713,
+      "degenerate": 0
+    },
+    {
+      "name": "FLOOR27_ZINCIR_SABIT_400_KAPAK_DESTEK_1",
+      "triangles": 20,
+      "closed": true,
+      "volume_m3": 0.000012832548359118423,
+      "degenerate": 0
+    },
+    {
+      "name": "FLOOR27_MOTOR_200_TABAN_0",
+      "triangles": 12,
+      "closed": true,
+      "volume_m3": 0.0000643756724683832,
+      "degenerate": 0
+    },
+    {
+      "name": "FLOOR27_MOTOR_200_YAN_0",
+      "triangles": 28,
+      "closed": true,
+      "volume_m3": 0.0000837761538574097,
+      "degenerate": 0
+    },
+    {
+      "name": "FLOOR27_MOTOR_200_AYIRICI_0",
+      "triangles": 32,
+      "closed": true,
+      "volume_m3": 0.0000407126621242178,
+      "degenerate": 0
+    },
+    {
+      "name": "FLOOR27_MOTOR_200_KAPAK_0",
+      "triangles": 32,
+      "closed": true,
+      "volume_m3": 0.00010676928585638191,
+      "degenerate": 0
+    },
+    {
+      "name": "FLOOR27_MOTOR_200_KAPAK_DESTEK_0",
+      "triangles": 28,
+      "closed": true,
+      "volume_m3": 0.000011227598836876712,
+      "degenerate": 0
+    },
+    {
+      "name": "FLOOR27_UR_KONTROL_CIKIS_80",
+      "triangles": 224,
+      "closed": true,
+      "volume_m3": 0.00004410189303378533,
+      "degenerate": 0
+    },
+    {
+      "name": "FLOOR27_CIKIS_YAKA_0",
+      "triangles": 32,
+      "closed": true,
+      "volume_m3": 0.000020904001509200783,
+      "degenerate": 0
+    },
+    {
+      "name": "FLOOR27_CIKIS_YAKA_1",
+      "triangles": 32,
+      "closed": true,
+      "volume_m3": 0.00003734399604448681,
+      "degenerate": 0
+    },
+    {
+      "name": "FLOOR27_CIKIS_YAKA_2",
+      "triangles": 32,
+      "closed": true,
+      "volume_m3": 0.000015743987988942328,
+      "degenerate": 0
+    },
+    {
+      "name": "FLOOR27_CIKIS_YAKA_3",
+      "triangles": 68,
+      "closed": true,
+      "volume_m3": 0.00004179052504431913,
+      "degenerate": 0
+    },
+    {
+      "name": "FLOOR27_CIKIS_YAKA_4",
+      "triangles": 32,
+      "closed": true,
+      "volume_m3": 0.00001694400090974692,
+      "degenerate": 0
+    },
+    {
+      "name": "FLOOR27_CIKIS_YAKA_5",
+      "triangles": 52,
+      "closed": true,
+      "volume_m3": 0.00002964794846375946,
+      "degenerate": 0
+    },
+    {
+      "name": "FLOOR27_CIKIS_YAKA_6",
+      "triangles": 32,
+      "closed": true,
+      "volume_m3": 0.000018990020960356788,
+      "degenerate": 0
+    },
+    {
+      "name": "FLOOR27_CIKIS_YAKA_7",
+      "triangles": 32,
+      "closed": true,
+      "volume_m3": 0.000028383083725673288,
+      "degenerate": 0
+    },
+    {
+      "name": "FLOOR27_SAG_DUVAR_1_0",
+      "triangles": 64,
+      "closed": true,
+      "volume_m3": 0.000029390590211643568,
+      "degenerate": 0
+    },
+    {
+      "name": "FLOOR27_SAG_DUVAR_1_1",
+      "triangles": 64,
+      "closed": true,
+      "volume_m3": 0.000029390590211643568,
+      "degenerate": 0
+    },
+    {
+      "name": "FLOOR27_SAG_DUVAR_1_2",
+      "triangles": 64,
+      "closed": true,
+      "volume_m3": 0.00002939049348670674,
+      "degenerate": 0
+    },
+    {
+      "name": "FLOOR27_SAG_DUVAR_1_3",
+      "triangles": 64,
+      "closed": true,
+      "volume_m3": 0.00002939049348670674,
+      "degenerate": 0
+    },
+    {
+      "name": "FLOOR27_SAG_DUVAR_2_0",
+      "triangles": 64,
+      "closed": true,
+      "volume_m3": 0.000037350620891676506,
+      "degenerate": 0
+    },
+    {
+      "name": "FLOOR27_SAG_DUVAR_2_1",
+      "triangles": 64,
+      "closed": true,
+      "volume_m3": 0.000037350620891676506,
+      "degenerate": 0
+    },
+    {
+      "name": "FLOOR27_SAG_DUVAR_2_2",
+      "triangles": 64,
+      "closed": true,
+      "volume_m3": 0.00003735041819924655,
+      "degenerate": 0
+    },
+    {
+      "name": "FLOOR27_SAG_DUVAR_2_3",
+      "triangles": 64,
+      "closed": true,
+      "volume_m3": 0.00003735041819924655,
+      "degenerate": 0
+    },
+    {
+      "name": "FLOOR27_ARKA_DUVAR_0_0",
+      "triangles": 64,
+      "closed": true,
+      "volume_m3": 0.000057849370615633846,
+      "degenerate": 0
+    },
+    {
+      "name": "FLOOR27_ARKA_DUVAR_0_1",
+      "triangles": 64,
+      "closed": true,
+      "volume_m3": 0.000057849056689131,
+      "degenerate": 0
+    },
+    {
+      "name": "FLOOR27_ARKA_DUVAR_0_2",
+      "triangles": 64,
+      "closed": true,
+      "volume_m3": 0.000057849370615633846,
+      "degenerate": 0
+    },
+    {
+      "name": "FLOOR27_ARKA_DUVAR_0_3",
+      "triangles": 64,
+      "closed": true,
+      "volume_m3": 0.000057849056689131,
+      "degenerate": 0
+    },
+    {
+      "name": "FLOOR27_ARKA_DUVAR_1_0",
+      "triangles": 64,
+      "closed": true,
+      "volume_m3": 0.000029390083348051976,
+      "degenerate": 0
+    },
+    {
+      "name": "FLOOR27_ARKA_DUVAR_1_1",
+      "triangles": 64,
+      "closed": true,
+      "volume_m3": 0.000029390590211643568,
+      "degenerate": 0
+    },
+    {
+      "name": "FLOOR27_ARKA_DUVAR_1_2",
+      "triangles": 64,
+      "closed": true,
+      "volume_m3": 0.000029390083348051976,
+      "degenerate": 0
+    },
+    {
+      "name": "FLOOR27_ARKA_DUVAR_1_3",
+      "triangles": 64,
+      "closed": true,
+      "volume_m3": 0.000029390590211643568,
+      "degenerate": 0
+    }
+  ],
+  "removed_roots": [
+    "ROBOT25_GOMULU_KANAL_TABAN_0",
+    "ROBOT25_GOMULU_KANAL_YAN_0",
+    "ROBOT25_GOMULU_KANAL_YAN_1",
+    "ROBOT25_GOMULU_KANAL_YAN_2",
+    "ROBOT25_GOMULU_KANAL_YAN_3",
+    "ROBOT25_GOMULU_KANAL_YAN_4",
+    "ROBOT25_GOMULU_KANAL_YAN_5",
+    "ROBOT25_GOMULU_KANAL_YAN_6",
+    "ROBOT25_GOMULU_KANAL_YAN_7",
+    "ROBOT25_GOMULU_KANAL_YAN_8",
+    "ROBOT25_GOMULU_KANAL_YAN_9",
+    "ROBOT25_GOMULU_KANAL_YAN_10",
+    "ROBOT25_GOMULU_KANAL_YAN_11",
+    "ROBOT25_GOMULU_KANAL_YAN_12",
+    "ROBOT25_GOMULU_KANAL_YAN_13",
+    "ROBOT25_GOMULU_KANAL_YAN_14",
+    "ROBOT25_GOMULU_KANAL_YAN_15",
+    "ROBOT25_GOMULU_KANAL_YAN_16",
+    "ROBOT25_GOMULU_KANAL_YAN_17",
+    "ROBOT25_GOMULU_KANAL_YAN_18",
+    "ROBOT25_GOMULU_KANAL_YAN_19",
+    "ROBOT25_GOMULU_KANAL_YAN_20",
+    "ROBOT25_GOMULU_KANAL_YAN_21",
+    "ROBOT25_GOMULU_KANAL_YAN_22",
+    "ROBOT25_GOMULU_KANAL_YAN_23",
+    "ROBOT25_GOMULU_KANAL_YAN_24",
+    "ROBOT25_GOMULU_KANAL_YAN_25",
+    "ROBOT25_GOMULU_KANAL_YAN_26",
+    "ROBOT25_GOMULU_KANAL_YAN_27",
+    "ROBOT25_GOMULU_KANAL_YAN_28",
+    "ROBOT25_GOMULU_KANAL_YAN_29",
+    "ROBOT25_GOMULU_KANAL_YAN_30",
+    "ROBOT25_GOMULU_KANAL_YAN_31",
+    "ROBOT25_GOMULU_KANAL_YAN_32",
+    "ROBOT25_GOMULU_KANAL_YAN_33",
+    "ROBOT25_GOMULU_KANAL_YAN_34",
+    "ROBOT25_GOMULU_KANAL_YAN_35",
+    "ROBOT25_GOMULU_KANAL_YAN_36",
+    "ROBOT25_GOMULU_KANAL_YAN_37",
+    "ROBOT25_GOMULU_KANAL_YAN_38",
+    "ROBOT25_GOMULU_KANAL_YAN_39",
+    "ROBOT25_GOMULU_KANAL_YAN_40",
+    "ROBOT25_GOMULU_KANAL_YAN_41",
+    "ROBOT25_GOMULU_KANAL_YAN_42",
+    "ROBOT25_GOMULU_KANAL_YAN_43",
+    "ROBOT25_GOMULU_KANAL_YAN_44",
+    "ROBOT25_GOMULU_KANAL_YAN_45",
+    "ROBOT25_GOMULU_KANAL_YAN_46",
+    "ROBOT25_GOMULU_KANAL_YAN_47",
+    "ROBOT25_GOMULU_KANAL_YAN_48",
+    "ROBOT25_GOMULU_KANAL_YAN_49",
+    "ROBOT25_GOMULU_KANAL_YAN_50",
+    "ROBOT25_GOMULU_KANAL_YAN_51",
+    "ROBOT25_GOMULU_KANAL_AYIRICI_0",
+    "ROBOT25_ZEMIN_SIFIR_KAPAK_0",
+    "ROBOT25_ZEMIN_SIFIR_KAPAK_1",
+    "ROBOT25_ZEMIN_SIFIR_KAPAK_2",
+    "ROBOT25_ZEMIN_SIFIR_KAPAK_3",
+    "ROBOT25_ZEMIN_SIFIR_KAPAK_4",
+    "ROBOT25_ZEMIN_SIFIR_KAPAK_5",
+    "ROBOT25_ZEMIN_SIFIR_KAPAK_6",
+    "ROBOT25_ZEMIN_SIFIR_KAPAK_7",
+    "ROBOT25_ZEMIN_SIFIR_KAPAK_8",
+    "ROBOT25_ZEMIN_SIFIR_KAPAK_9",
+    "ROBOT25_ZEMIN_SIFIR_KAPAK_10",
+    "ROBOT25_ZEMIN_SIFIR_KAPAK_11",
+    "ROBOT25_ZEMIN_SIFIR_KAPAK_12",
+    "ROBOT25_ZEMIN_SIFIR_KAPAK_13",
+    "ROBOT25_ZEMIN_SIFIR_KAPAK_14",
+    "ROBOT25_ZEMIN_SIFIR_KAPAK_15",
+    "ROBOT25_ZEMIN_SIFIR_KAPAK_16",
+    "ROBOT25_ZEMIN_SIFIR_KAPAK_17",
+    "ROBOT25_ZEMIN_SIFIR_KAPAK_18",
+    "ROBOT25_ZEMIN_SIFIR_KAPAK_19",
+    "ROBOT25_ZEMIN_SIFIR_KAPAK_20",
+    "ROBOT25_ZEMIN_SIFIR_KAPAK_21",
+    "ROBOT25_ZEMIN_SIFIR_KAPAK_22",
+    "ROBOT25_ZEMIN_SIFIR_KAPAK_23",
+    "ROBOT25_ZEMIN_SIFIR_KAPAK_24",
+    "ROBOT25_CIKIS_SIFIR_YAKA_0",
+    "ROBOT25_CIKIS_SIFIR_YAKA_1",
+    "ROBOT25_CIKIS_SIFIR_YAKA_2",
+    "ROBOT25_CIKIS_SIFIR_YAKA_3",
+    "ROBOT25_CIKIS_SIFIR_YAKA_4",
+    "ROBOT25_CIKIS_SIFIR_YAKA_5",
+    "ROBOT25_CIKIS_SIFIR_YAKA_6",
+    "ROBOT25_CIKIS_SIFIR_YAKA_7",
+    "ROBOT25_CIKIS_SIFIR_YAKA_8",
+    "ROBOT25_CIKIS_SIFIR_YAKA_9",
+    "ROBOT25_KAPAK_DERZ_DESTEK_0",
+    "ROBOT25_KAPAK_DERZ_DESTEK_1",
+    "ROBOT25_KAPAK_DERZ_DESTEK_2",
+    "ROBOT25_KAPAK_DERZ_DESTEK_3",
+    "ROBOT25_KAPAK_DERZ_DESTEK_4",
+    "ROBOT25_KAPAK_DERZ_DESTEK_5",
+    "ROBOT25_KAPAK_DERZ_DESTEK_6",
+    "ROBOT25_KAPAK_DERZ_DESTEK_7",
+    "ROBOT25_KAPAK_DERZ_DESTEK_8",
+    "ROBOT25_UR_CIKIS",
+    "DUKKAN26_ZEMIN_0",
+    "DUKKAN26_ZEMIN_1",
+    "DUKKAN26_ZEMIN_2",
+    "DUKKAN26_ZEMIN_3",
+    "DUKKAN26_ZEMIN_4",
+    "DUKKAN26_ZEMIN_5",
+    "DUKKAN26_ZEMIN_6",
+    "DUKKAN26_ZEMIN_7",
+    "DUKKAN26_ZEMIN_8",
+    "DUKKAN26_ZEMIN_9",
+    "DUKKAN26_ZEMIN_10",
+    "DUKKAN26_ZEMIN_11",
+    "DUKKAN26_ZEMIN_12",
+    "DUKKAN26_ZEMIN_13",
+    "DUKKAN26_ZEMIN_14",
+    "DUKKAN26_ZEMIN_15",
+    "DUKKAN26_ZEMIN_16",
+    "DUKKAN26_ZEMIN_17",
+    "DUKKAN26_ZEMIN_18",
+    "DUKKAN26_ZEMIN_19",
+    "DUKKAN26_ZEMIN_20",
+    "DUKKAN26_ZEMIN_21",
+    "DUKKAN26_SAG_DUVAR_1_0",
+    "DUKKAN26_SAG_DUVAR_1_1",
+    "DUKKAN26_SAG_DUVAR_1_2",
+    "DUKKAN26_SAG_DUVAR_1_3",
+    "DUKKAN26_SAG_DUVAR_2_0",
+    "DUKKAN26_SAG_DUVAR_2_1",
+    "DUKKAN26_SAG_DUVAR_2_2",
+    "DUKKAN26_SAG_DUVAR_2_3",
+    "DUKKAN26_SOL_DUVAR_1_0",
+    "DUKKAN26_SOL_DUVAR_1_1",
+    "DUKKAN26_SOL_DUVAR_1_2",
+    "DUKKAN26_SOL_DUVAR_1_3",
+    "DUKKAN26_SOL_DUVAR_2_0",
+    "DUKKAN26_SOL_DUVAR_2_1",
+    "DUKKAN26_SOL_DUVAR_2_2",
+    "DUKKAN26_SOL_DUVAR_2_3",
+    "DUKKAN26_ARKA_DUVAR_0_0",
+    "DUKKAN26_ARKA_DUVAR_0_1",
+    "DUKKAN26_ARKA_DUVAR_0_2",
+    "DUKKAN26_ARKA_DUVAR_0_3",
+    "DUKKAN26_ARKA_DUVAR_1_0",
+    "DUKKAN26_ARKA_DUVAR_1_1",
+    "DUKKAN26_ARKA_DUVAR_1_2",
+    "DUKKAN26_ARKA_DUVAR_1_3",
+    "DUKKAN26_ON_DUVAR_KAPI_UST_0_0",
+    "DUKKAN26_ON_DUVAR_KAPI_UST_0_1",
+    "DUKKAN26_ON_DUVAR_KAPI_UST_0_2",
+    "DUKKAN26_ON_DUVAR_KAPI_UST_0_3",
+    "DUKKAN26_ON_DUVAR_KAPI_UST_1_0",
+    "DUKKAN26_ON_DUVAR_KAPI_UST_1_1",
+    "DUKKAN26_ON_DUVAR_KAPI_UST_1_2",
+    "DUKKAN26_ON_DUVAR_KAPI_UST_1_3",
+    "DUKKAN26_ON_DUVAR_SAG_0_0",
+    "DUKKAN26_ON_DUVAR_SAG_0_1",
+    "DUKKAN26_ON_DUVAR_SAG_0_2",
+    "DUKKAN26_ON_DUVAR_SAG_0_3",
+    "DUKKAN26_ON_DUVAR_SAG_1_0",
+    "DUKKAN26_ON_DUVAR_SAG_1_1",
+    "DUKKAN26_ON_DUVAR_SAG_1_2",
+    "DUKKAN26_ON_DUVAR_SAG_1_3",
+    "DUKKAN26_ARA_DUVAR_0_0",
+    "DUKKAN26_ARA_DUVAR_0_1",
+    "DUKKAN26_ARA_DUVAR_0_2",
+    "DUKKAN26_ARA_DUVAR_0_3",
+    "DUKKAN26_ARA_DUVAR_1_0",
+    "DUKKAN26_ARA_DUVAR_1_1",
+    "DUKKAN26_ARA_DUVAR_1_2",
+    "DUKKAN26_ARA_DUVAR_1_3",
+    "DUKKAN26_ARA_DUVAR_QR_BIRLESIM_0_0",
+    "DUKKAN26_ARA_DUVAR_QR_BIRLESIM_0_1",
+    "DUKKAN26_ARA_DUVAR_QR_BIRLESIM_0_2",
+    "DUKKAN26_ARA_DUVAR_QR_BIRLESIM_0_3",
+    "DUKKAN26_ARA_DUVAR_QR_BIRLESIM_1_0",
+    "DUKKAN26_ARA_DUVAR_QR_BIRLESIM_1_1",
+    "DUKKAN26_ARA_DUVAR_QR_BIRLESIM_1_2",
+    "DUKKAN26_ARA_DUVAR_QR_BIRLESIM_1_3",
+    "DUKKAN26_ARA_DUVAR_QR_BIRLESIM_2_0",
+    "DUKKAN26_ARA_DUVAR_QR_BIRLESIM_2_1",
+    "DUKKAN26_ARA_DUVAR_QR_BIRLESIM_2_2",
+    "DUKKAN26_ARA_DUVAR_QR_BIRLESIM_2_3",
+    "DUKKAN26_DUKKAN_GIRIS_SOL_KASA",
+    "DUKKAN26_DUKKAN_GIRIS_SAG_KASA",
+    "DUKKAN26_DUKKAN_GIRIS_UST_KASA",
+    "DUKKAN26_DUKKAN_GIRIS_KANAT_SOL",
+    "DUKKAN26_DUKKAN_GIRIS_KANAT_SAG",
+    "DUKKAN26_DUKKAN_GIRIS_KANAT_ENINE_0.008",
+    "DUKKAN26_DUKKAN_GIRIS_KANAT_ENINE_2.05",
+    "DUKKAN26_DUKKAN_GIRIS_MENTESE_0.26",
+    "DUKKAN26_DUKKAN_GIRIS_MENTESE_1.7",
+    "DUKKAN26_DUKKAN_GIRIS_KULP",
+    "DUKKAN26_DUKKAN_GIRIS_KULP_AYAK",
+    "DUKKAN26_DUKKAN_GIRIS_ACILMA_YAYI_0",
+    "DUKKAN26_DUKKAN_GIRIS_ACILMA_YAYI_2",
+    "DUKKAN26_DUKKAN_GIRIS_ACILMA_YAYI_4",
+    "DUKKAN26_DUKKAN_GIRIS_ACILMA_YAYI_6",
+    "DUKKAN26_DUKKAN_GIRIS_ACILMA_YAYI_8",
+    "DUKKAN26_DUKKAN_GIRIS_ACILMA_YAYI_10",
+    "DUKKAN26_DUKKAN_GIRIS_ACILMA_YAYI_12",
+    "DUKKAN26_DUKKAN_GIRIS_ACILMA_YAYI_14",
+    "DUKKAN26_DUKKAN_GIRIS_ACILMA_YAYI_16",
+    "DUKKAN26_DUKKAN_GIRIS_ACILMA_YAYI_18",
+    "DUKKAN26_DUKKAN_GIRIS_ACILMA_YAYI_20",
+    "DUKKAN26_DUKKAN_GIRIS_ACILMA_YAYI_22",
+    "DUKKAN26_ROBOT_ALANI_GIRIS_SOL_KASA",
+    "DUKKAN26_ROBOT_ALANI_GIRIS_SAG_KASA",
+    "DUKKAN26_ROBOT_ALANI_GIRIS_UST_KASA",
+    "DUKKAN26_ROBOT_ALANI_GIRIS_KANAT_SOL",
+    "DUKKAN26_ROBOT_ALANI_GIRIS_KANAT_SAG",
+    "DUKKAN26_ROBOT_ALANI_GIRIS_KANAT_ENINE_0.008",
+    "DUKKAN26_ROBOT_ALANI_GIRIS_KANAT_ENINE_2.05",
+    "DUKKAN26_ROBOT_ALANI_GIRIS_MENTESE_0.26",
+    "DUKKAN26_ROBOT_ALANI_GIRIS_MENTESE_1.7",
+    "DUKKAN26_ROBOT_ALANI_GIRIS_KULP",
+    "DUKKAN26_ROBOT_ALANI_GIRIS_KULP_AYAK",
+    "DUKKAN26_ROBOT_ALANI_GIRIS_EMNIYET_YERI",
+    "DUKKAN26_ROBOT_ALANI_GIRIS_ACILMA_YAYI_0",
+    "DUKKAN26_ROBOT_ALANI_GIRIS_ACILMA_YAYI_2",
+    "DUKKAN26_ROBOT_ALANI_GIRIS_ACILMA_YAYI_4",
+    "DUKKAN26_ROBOT_ALANI_GIRIS_ACILMA_YAYI_6",
+    "DUKKAN26_ROBOT_ALANI_GIRIS_ACILMA_YAYI_8",
+    "DUKKAN26_ROBOT_ALANI_GIRIS_ACILMA_YAYI_10",
+    "DUKKAN26_ROBOT_ALANI_GIRIS_ACILMA_YAYI_12",
+    "DUKKAN26_ROBOT_ALANI_GIRIS_ACILMA_YAYI_14",
+    "DUKKAN26_ROBOT_ALANI_GIRIS_ACILMA_YAYI_16",
+    "DUKKAN26_ROBOT_ALANI_GIRIS_ACILMA_YAYI_18",
+    "DUKKAN26_ROBOT_ALANI_GIRIS_ACILMA_YAYI_20",
+    "DUKKAN26_ROBOT_ALANI_GIRIS_ACILMA_YAYI_22",
+    "DUKKAN26_OTURMA_TEZGAHI_TABLA",
+    "DUKKAN26_MASA_AYAK_1.7760000000000002_2.968",
+    "DUKKAN26_MASA_AYAK_PABUC_1.7760000000000002_2.968",
+    "DUKKAN26_MASA_AYAK_1.7760000000000002_3.518",
+    "DUKKAN26_MASA_AYAK_PABUC_1.7760000000000002_3.518",
+    "DUKKAN26_MASA_AYAK_3.057_2.968",
+    "DUKKAN26_MASA_AYAK_PABUC_3.057_2.968",
+    "DUKKAN26_MASA_AYAK_3.057_3.518",
+    "DUKKAN26_MASA_AYAK_PABUC_3.057_3.518",
+    "DUKKAN26_MASA_UST_KUSAK_2.968",
+    "DUKKAN26_MASA_UST_KUSAK_3.518",
+    "DUKKAN26_MASA_YAN_KUSAK_1.7760000000000002",
+    "DUKKAN26_MASA_YAN_KUSAK_3.057",
+    "DUKKAN26_SANDALYE_OTURAK",
+    "DUKKAN26_SANDALYE_AYAK_2.255_2.3930000000000002",
+    "DUKKAN26_SANDALYE_AYAK_2.255_2.733",
+    "DUKKAN26_SANDALYE_AYAK_2.625_2.3930000000000002",
+    "DUKKAN26_SANDALYE_AYAK_2.625_2.733",
+    "DUKKAN26_SANDALYE_ARKA_DESTEK_2.255",
+    "DUKKAN26_SANDALYE_ARKA_DESTEK_2.625",
+    "DUKKAN26_SANDALYE_SIRT",
+    "DUKKAN26_LAVABO_AYAK_3.132_2.968",
+    "DUKKAN26_LAVABO_AYAK_3.132_3.518",
+    "DUKKAN26_LAVABO_AYAK_3.562_2.968",
+    "DUKKAN26_LAVABO_AYAK_3.562_3.518",
+    "DUKKAN26_LAVABO_UST_KUSAK_2.968",
+    "DUKKAN26_LAVABO_UST_KUSAK_3.518",
+    "DUKKAN26_LAVABO_YAN_KUSAK_3.132",
+    "DUKKAN26_LAVABO_YAN_KUSAK_3.562",
+    "DUKKAN26_LAVABO_TABLA",
+    "DUKKAN26_LAVABO_HAZNE_DUVAR",
+    "DUKKAN26_LAVABO_HAZNE_TABAN",
+    "DUKKAN26_LAVABO_SICRAMA_ETEGI",
+    "DUKKAN26_EL_YIKAMA_BATARYA",
+    "DUKKAN26_BATARYA_DIRSEK_KOLU",
+    "DUKKAN26_SOGUK_SU",
+    "DUKKAN26_SU_KESME_VANASI_0",
+    "DUKKAN26_SICAK_SU",
+    "DUKKAN26_SU_KESME_VANASI_1",
+    "DUKKAN26_LAVABO_SIFON",
+    "DUKKAN26_SABUNLUK",
+    "DUKKAN26_KAGIT_HAVLULUK"
+  ],
+  "modules": 8,
+  "floor_inner_size_m": [
+    4.724,
+    3.05
+  ],
+  "flush_cover_top_y_m": 0,
+  "cable_routes_preserved": 9,
+  "minimum_planar_cable_clearance_m": 0.035999999999999144,
+  "passed": true,
+  "errors": [],
+  "full_preexisting_robot_station_collision_certified": false,
+  "oem_step_imported": false
+}

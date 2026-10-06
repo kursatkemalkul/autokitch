@@ -1,0 +1,63 @@
+{
+  "version": 27,
+  "sample_step_m": 0.002,
+  "required_clearance_m": 0.002,
+  "cables": [
+    {
+      "cable": "MAKINE_BESLEME",
+      "subfloor_samples": 2478,
+      "new_shell_collisions": 0,
+      "source_route_unchanged": true
+    },
+    {
+      "cable": "QR_GUC",
+      "subfloor_samples": 4393,
+      "new_shell_collisions": 0,
+      "source_route_unchanged": true
+    },
+    {
+      "cable": "ROBOT_BESLEME",
+      "subfloor_samples": 3863,
+      "new_shell_collisions": 0,
+      "source_route_unchanged": true
+    },
+    {
+      "cable": "SURUCU_BESLEME",
+      "subfloor_samples": 3922,
+      "new_shell_collisions": 0,
+      "source_route_unchanged": true
+    },
+    {
+      "cable": "SERVO_MOTOR_KABLO",
+      "subfloor_samples": 2218,
+      "new_shell_collisions": 0,
+      "source_route_unchanged": true
+    },
+    {
+      "cable": "UR_HIGH_FLEX_12M_SABIT",
+      "subfloor_samples": 1996,
+      "new_shell_collisions": 0,
+      "source_route_unchanged": true
+    },
+    {
+      "cable": "MAKINE_ETHERNET",
+      "subfloor_samples": 2462,
+      "new_shell_collisions": 0,
+      "source_route_unchanged": true
+    },
+    {
+      "cable": "QR_ETHERNET",
+      "subfloor_samples": 4277,
+      "new_shell_collisions": 0,
+      "source_route_unchanged": true
+    },
+    {
+      "cable": "UR_ETHERNET",
+      "subfloor_samples": 3614,
+      "new_shell_collisions": 0,
+      "source_route_unchanged": true
+    }
+  ],
+  "errors": [],
+  "passed": true
+}
