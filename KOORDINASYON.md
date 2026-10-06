@@ -16,7 +16,8 @@ Kemal'in kararı (5 Eki 2026): iki ajan aynı anda, farklı istasyonlarda çalı
 | **K montaj animasyonu** (KURALLAR §2, yeni yöntem: açınım → abkant → PEM → gerçek bağlantı; bağlı mı denetimi) | Codex | `codex/k-montaj` | ÇALIŞIYOR · TOPPING v6 altyapısı, 70–73 K düzeltmeleri; dört dosya kaydı 06b99c4 |
 | Standart önlemleri · robot + QR (madde 10–11): hücre kapısı emniyet anahtarı, robot gözdeyken QR müşteri kapısı kilitli + geri bildirim | Codex | (Codex seçer) | Codex'e bildirildi |
 | **E mekanizma montajı**: alt / üst modül mekanizmaları parça parça + vida vida (bugün iki blok geliyor), mevcut E animasyonuna ekleme | Claude (2. oturum) | `claude/e-mekanizma` | BAŞLIYOR (6 Eki) · zincir adımları **81–85** |
-| **A kontrol** · B kaynak görünürlüğü · elektrik + bilgi görünümü · son denetim | Claude (1. oturum) | `claude/a-kontrol` | BAŞLIYOR (6 Eki) · zincir adımları **86–89** |
+| **K montajı — Codex'ten devralındı** (Kemal, 6 Eki: Codex'in yarım işini Claude kendi yöntemiyle bitirir): devir `codex/k-montaj` 10f02d3b, 199 açık bağlantı + üretim / bağlantı denetimi + yeni plan | Claude (1. oturum) | `claude/k-montaj` | ÇALIŞIYOR (6 Eki) · zincir adımları **86–89** |
+| A kontrol · B kaynak görünürlüğü · elektrik + bilgi görünümü · son denetim | Claude (1. oturum) | `claude/a-kontrol` | BEKLİYOR (K bitince) |
 | Güvenlik devresi şeması (acil stop + kapı anahtarları + robot, tek röle / güvenlik PLC) | Claude + Codex | — | makine anahtarları bitince |
 
 Bir işe başlamadan önce tabloda başka bir ajanın aynı istasyonu ya da aynı dosyaları almadığını kontrol et.
