@@ -14,20 +14,23 @@ TM = {}
 def tm(a):
     if a not in TM: TM[a] = trimesh.Trimesh(P[a]['V'], P[a]['F'], process=False)
     return TM[a]
-OUT = {}
-for i, a in enumerate(ACIK):
-    S, fi = trimesh.sample.sample_surface_even(tm(a), 3000, seed=1) if len(P[a]['F']) else (np.zeros((0, 3)), None)
+def bir(a):
+    S = trimesh.sample.sample_surface_even(tm(a), 1500, seed=1)[0] if len(P[a]['F']) else np.zeros((0, 3))
     S = np.vstack([S, P[a]['V']])
     L = []
     for b in ADAY:
         if b == a or np.any(LO[b] > HI[a] + 3) or np.any(HI[b] < LO[a] - 3): continue
-        cp, d, tri = trimesh.proximity.closest_point(tm(b), S)
+        Sb = S[np.all(S >= LO[b] - 3, 1) & np.all(S <= HI[b] + 3, 1)]
+        if not len(Sb): continue
+        cp, d, tri = trimesh.proximity.closest_point(tm(b), Sb)
         m = d < 0.3
         n = tm(b).face_normals[tri[m]].mean(0) if m.any() else np.zeros(3)
         L.append((b, round(float(d.min()), 3), int(m.sum()), [round(float(x), 3) for x in n]))
     L.sort(key=lambda x: (-x[2], x[1]))
-    OUT[a] = L[:6]
-    if i % 20 == 0: print(i, len(ACIK), flush=True)
+    return a, L[:6]
+from multiprocessing import Pool
+with Pool(8) as pool:
+    OUT = dict(pool.map(bir, ACIK, chunksize=2))
 json.dump(OUT, open('k_temas.json', 'w'), ensure_ascii=False, indent=0)
 for a in ACIK:
     L = OUT[a]
