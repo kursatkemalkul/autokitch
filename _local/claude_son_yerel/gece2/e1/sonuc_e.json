@@ -1,0 +1,1123 @@
+{
+ "model_acigi": 37,
+ "yuzey_temasi": [
+  "arka_sac ↔ ust_sac",
+  "besleyici_kasnak_0_setskur ↔ besleyici_kasnak_0",
+  "besleyici_kasnak_1_setskur ↔ besleyici_kasnak_1",
+  "besleyici_sensor_somun_dis ↔ besleyici_sensor",
+  "besleyici_sensor_somun_ic ↔ besleyici_sensor",
+  "emniyet_E_ALT_SAG_0_somun ↔ emniyet_E_ALT_SAG_0_vida",
+  "emniyet_E_ALT_SAG_1_somun ↔ emniyet_E_ALT_SAG_1_vida",
+  "emniyet_E_ALT_SOL_0_somun ↔ emniyet_E_ALT_SOL_0_vida",
+  "emniyet_E_ALT_SOL_1_somun ↔ emniyet_E_ALT_SOL_1_vida",
+  "emniyet_E_UST_SAG_0_somun ↔ emniyet_E_UST_SAG_0_vida",
+  "emniyet_E_UST_SAG_1_somun ↔ emniyet_E_UST_SAG_1_vida",
+  "emniyet_E_UST_SOL_0_somun ↔ emniyet_E_UST_SOL_0_vida",
+  "emniyet_E_UST_SOL_1_somun ↔ emniyet_E_UST_SOL_1_vida",
+  "govde_bag_kosebent_arka_saplama ↔ govde_kosebent_sag_arka_alt",
+  "govde_bag_kosebent_yan_saplama ↔ govde_kosebent_sag_arka_alt",
+  "govde_kulak_sag_on_1100 ↔ govde_kulak_sag_on_250",
+  "govde_kulak_sag_on_1100 ↔ govde_kulak_sag_on_450",
+  "govde_kulak_sag_on_1100 ↔ govde_kulak_sag_on_620",
+  "govde_kulak_sag_on_1100 ↔ govde_kulak_sag_on_850",
+  "govde_kulak_sag_on_1300 ↔ govde_kulak_sag_on_250",
+  "govde_kulak_sag_on_1300 ↔ govde_kulak_sag_on_450",
+  "govde_kulak_sag_on_1300 ↔ govde_kulak_sag_on_620",
+  "govde_kulak_sag_on_1300 ↔ govde_kulak_sag_on_850",
+  "govde_kulak_sag_on_1500 ↔ govde_kulak_sag_on_250",
+  "govde_kulak_sag_on_1500 ↔ govde_kulak_sag_on_450",
+  "govde_kulak_sag_on_1500 ↔ govde_kulak_sag_on_620",
+  "govde_kulak_sag_on_1500 ↔ govde_kulak_sag_on_850",
+  "govde_kulak_sag_on_1700 ↔ govde_kulak_sag_on_250",
+  "govde_kulak_sag_on_1700 ↔ govde_kulak_sag_on_450",
+  "govde_kulak_sag_on_1700 ↔ govde_kulak_sag_on_620",
+  "govde_kulak_sag_on_1700 ↔ govde_kulak_sag_on_850",
+  "govde_kulak_sag_on_1820 ↔ govde_kulak_sag_on_250",
+  "govde_kulak_sag_on_1820 ↔ govde_kulak_sag_on_450",
+  "govde_kulak_sag_on_1820 ↔ govde_kulak_sag_on_620",
+  "govde_kulak_sag_on_1820 ↔ govde_kulak_sag_on_850",
+  "govde_kulak_sol_on_1100 ↔ govde_kulak_sol_on_250",
+  "govde_kulak_sol_on_1100 ↔ govde_kulak_sol_on_450",
+  "govde_kulak_sol_on_1100 ↔ govde_kulak_sol_on_620",
+  "govde_kulak_sol_on_1100 ↔ govde_kulak_sol_on_850",
+  "govde_kulak_sol_on_1300 ↔ govde_kulak_sol_on_250",
+  "govde_kulak_sol_on_1300 ↔ govde_kulak_sol_on_450",
+  "govde_kulak_sol_on_1300 ↔ govde_kulak_sol_on_620",
+  "govde_kulak_sol_on_1300 ↔ govde_kulak_sol_on_850",
+  "govde_kulak_sol_on_1500 ↔ govde_kulak_sol_on_250",
+  "govde_kulak_sol_on_1500 ↔ govde_kulak_sol_on_450",
+  "govde_kulak_sol_on_1500 ↔ govde_kulak_sol_on_620",
+  "govde_kulak_sol_on_1500 ↔ govde_kulak_sol_on_850",
+  "govde_kulak_sol_on_1700 ↔ govde_kulak_sol_on_250",
+  "govde_kulak_sol_on_1700 ↔ govde_kulak_sol_on_450",
+  "govde_kulak_sol_on_1700 ↔ govde_kulak_sol_on_620",
+  "govde_kulak_sol_on_1700 ↔ govde_kulak_sol_on_850",
+  "govde_kulak_sol_on_1820 ↔ govde_kulak_sol_on_250",
+  "govde_kulak_sol_on_1820 ↔ govde_kulak_sol_on_450",
+  "govde_kulak_sol_on_1820 ↔ govde_kulak_sol_on_620",
+  "govde_kulak_sol_on_1820 ↔ govde_kulak_sol_on_850",
+  "itici_motor_vida_0 ↔ itici_motor",
+  "itici_motor_vida_1 ↔ itici_motor",
+  "itici_motor_vida_2 ↔ itici_motor",
+  "itici_motor_vida_3 ↔ itici_motor",
+  "itici_motor_z_braketi_0 ↔ itici_motor_z_braketi_0_tasiyici_vida_0",
+  "itici_motor_z_braketi_0 ↔ itici_motor_z_braketi_0_tasiyici_vida_1",
+  "itici_motor_z_braketi_1 ↔ itici_motor_z_braketi_1_tasiyici_vida_0",
+  "itici_motor_z_braketi_1 ↔ itici_motor_z_braketi_1_tasiyici_vida_1",
+  "itici_sensor_somun_ic ↔ itici_sensor",
+  "itici_yatak_z_braketi ↔ itici_yatak_z_braketi_tasiyici_vida_0",
+  "itici_yatak_z_braketi ↔ itici_yatak_z_braketi_tasiyici_vida_1",
+  "kaide_e_vida_arka_120 ↔ taban_sac_3",
+  "kaide_e_vida_arka_300 ↔ taban_sac_3",
+  "kaide_e_vida_arka_530 ↔ taban_sac_3",
+  "kaide_e_vida_arka_710 ↔ taban_sac_3",
+  "kaide_e_vida_on_230 ↔ taban_sac_3",
+  "kaide_e_vida_on_530 ↔ taban_sac_3",
+  "kaide_e_vida_on_710 ↔ taban_sac_3",
+  "kalip_rulman_blogu_vida_0 ↔ kalip_motor_flansi",
+  "kalip_rulman_blogu_vida_1 ↔ kalip_motor_flansi",
+  "kapak_disli_motor_vida_0 ↔ kapak_disli_motor",
+  "kapak_disli_motor_vida_2 ↔ kapak_disli_motor",
+  "kapak_katlayici_gobek_setskur_0 ↔ kapak_sensor_blogu_1",
+  "kapak_kilavuz_mil_0_alt_vida ↔ kapak_profil_ayak_0",
+  "kapak_kilavuz_mil_1_alt_vida ↔ kapak_profil_ayak_1",
+  "kapak_motor_alt_vida_1 ↔ kapak_motor_alt",
+  "kapak_motor_alt_vida_3 ↔ kapak_motor_alt",
+  "kapak_sasi_kiris_vida_2 ↔ kapak_profil_ayak_0",
+  "kapak_sasi_kiris_vida_3 ↔ kapak_profil_ayak_1",
+  "kapak_sensor_0_somun ↔ kapak_sensor_0",
+  "kapak_sensor_1_somun ↔ kapak_sensor_1",
+  "kopru_motor_vida_1 ↔ kopru_motor",
+  "kopru_motor_vida_3 ↔ kopru_motor",
+  "kopru_sensor_somun ↔ kopru_sensor",
+  "kose_tutucu_sag_arka_cene_parmak_vida ↔ kose_tutucu_sag_arka_cene",
+  "kose_tutucu_sag_arka_gobek_pim ↔ kose_tutucu_sag_arka_gobek",
+  "kose_tutucu_sag_arka_kol_vida_0 ↔ kose_tutucu_sag_arka_kol",
+  "kose_tutucu_sag_arka_kol_vida_1 ↔ kose_tutucu_sag_arka_kol",
+  "kose_tutucu_sag_arka_mafsal_pim ↔ kose_tutucu_sag_arka_mafsal",
+  "kose_tutucu_sag_arka_sensor_somun_dis ↔ kose_sensor_sag_arka",
+  "kose_tutucu_sag_on_cene_parmak_vida ↔ kose_tutucu_sag_on_cene",
+  "kose_tutucu_sag_on_gobek_pim ↔ kose_tutucu_sag_on_gobek",
+  "kose_tutucu_sag_on_gobek_setskur ↔ kose_sasi",
+  "kose_tutucu_sag_on_kol_vida_0 ↔ kose_tutucu_sag_on_kol",
+  "kose_tutucu_sag_on_kol_vida_1 ↔ kose_tutucu_sag_on_kol",
+  "kose_tutucu_sag_on_mafsal_pim ↔ kose_tutucu_sag_on_mafsal",
+  "kose_tutucu_sag_on_sensor_somun_dis ↔ kose_sensor_sag_on",
+  "kose_tutucu_sol_arka_cene_parmak_vida ↔ kose_tutucu_sol_arka_cene",
+  "kose_tutucu_sol_arka_kol_vida_0 ↔ kose_tutucu_sol_arka_kol",
+  "kose_tutucu_sol_arka_kol_vida_1 ↔ kose_sasi",
+  "kose_tutucu_sol_arka_kol_vida_1 ↔ kose_tutucu_sol_arka_kol",
+  "kose_tutucu_sol_arka_mafsal_pim ↔ kose_tutucu_sol_arka_mafsal",
+  "kose_tutucu_sol_arka_sensor_somun_dis ↔ kose_sensor_sol_arka",
+  "kose_tutucu_sol_on_cene_parmak_vida ↔ kose_tutucu_sol_on_cene",
+  "kose_tutucu_sol_on_gobek_setskur ↔ kose_sasi",
+  "kose_tutucu_sol_on_mafsal_pim ↔ kose_tutucu_sol_on_mafsal",
+  "kose_tutucu_sol_on_sensor_somun_dis ↔ kose_sensor_sol_on",
+  "kose_uc_kapak_sag_vida_0 ↔ kose_piston_kol",
+  "kose_uc_kapak_sag_vida_0 ↔ kose_piston_sensor_somun_0",
+  "kose_uc_kapak_sag_vida_1 ↔ kose_piston_kol",
+  "kose_uc_kapak_sag_vida_1 ↔ kose_piston_sensor_somun_0",
+  "parmak_motor_vida_1 ↔ parmak_motor",
+  "parmak_motor_vida_3 ↔ parmak_motor",
+  "parmak_sensor_somun_dis ↔ parmak_sensor",
+  "piston_lama_0_vida_0 ↔ piston_bas",
+  "piston_lama_0_vida_1 ↔ piston_bas",
+  "piston_lama_0_vida_2 ↔ piston_bas",
+  "piston_lama_0_vida_3 ↔ piston_bas",
+  "piston_lama_1_vida_0 ↔ piston_bas",
+  "piston_lama_1_vida_1 ↔ piston_bas",
+  "piston_lama_1_vida_2 ↔ piston_bas",
+  "piston_lama_1_vida_3 ↔ piston_bas",
+  "itici_sensor_blogu ↔ itici_tasiyici",
+  "kalip_kaplin ↔ kalip_motor",
+  "kapak_kaplin ↔ kapak_motor_alt",
+  "kapak_katlayici_blok_arka ↔ kapak_profil_0",
+  "kopru_kaplin ↔ kopru_motor",
+  "kose_kilavuz_sag_arka_0 ↔ kose_tutucu_sag_arka_mil",
+  "kose_kilavuz_sag_arka_1 ↔ kose_tutucu_sag_arka_mil",
+  "kose_kilavuz_sag_on_0 ↔ kose_tutucu_sag_on_mil",
+  "kose_kilavuz_sag_on_1 ↔ kose_tutucu_sag_on_mil",
+  "kose_kilavuz_sol_arka_0 ↔ kose_tutucu_sol_arka_mil",
+  "kose_kilavuz_sol_arka_1 ↔ kose_tutucu_sol_arka_mil",
+  "kose_kilavuz_sol_on_0 ↔ kose_tutucu_sol_on_mil",
+  "kose_kilavuz_sol_on_1 ↔ kose_tutucu_sol_on_mil",
+  "kose_piston_kaplin ↔ kose_piston_motor",
+  "kose_piston_kol ↔ kose_piston_mil_sol",
+  "kose_piston_kol ↔ kose_piston_plaka",
+  "kose_sasi ↔ kose_tutucu_sag_arka_mil",
+  "kose_sasi ↔ kose_tutucu_sag_on_mil",
+  "kose_sasi ↔ kose_tutucu_sol_arka_mil",
+  "kose_sasi ↔ kose_tutucu_sol_on_mil",
+  "kose_tutucu_sag_arka_mafsal ↔ kose_tutucu_sag_arka_mil",
+  "kose_tutucu_sag_on_mafsal ↔ kose_tutucu_sag_on_mil",
+  "kose_tutucu_sol_arka_mafsal ↔ kose_tutucu_sol_arka_mil",
+  "kose_tutucu_sol_on_mafsal ↔ kose_tutucu_sol_on_mil",
+  "parmak_gobek ↔ parmak_mafsal_plaka_1",
+  "parmak_motor ↔ parmak_motor_kasnagi",
+  "parmak_sensor ↔ parmak_sensor_braketi",
+  "parmak_sensor ↔ parmak_sensor_lamasi"
+ ],
+ "adim": 13,
+ "parca": 1340,
+ "cevre": 4,
+ "cift": 4029,
+ "cakisma": 15,
+ "cakismalar": [
+  {
+   "a": "itici_ray_0_vida_0",
+   "b": "itici_ray_0",
+   "t": 111.64,
+   "w": [
+    111.37,
+    111.77
+   ],
+   "derin": 1.0,
+   "yon": "oteleme",
+   "hareket": "itici_ray_0_vida_0",
+   "kesisim": {
+    "t": 111.37,
+    "ucgen": 2
+   }
+  },
+  {
+   "a": "itici_ray_0_vida_1",
+   "b": "itici_ray_0",
+   "t": 111.72,
+   "w": [
+    111.45,
+    111.85
+   ],
+   "derin": 1.0,
+   "yon": "oteleme",
+   "hareket": "itici_ray_0_vida_1",
+   "kesisim": {
+    "t": 111.45,
+    "ucgen": 2
+   }
+  },
+  {
+   "a": "itici_ray_0_vida_2",
+   "b": "itici_ray_0",
+   "t": 111.8,
+   "w": [
+    111.53,
+    111.93
+   ],
+   "derin": 1.0,
+   "yon": "oteleme",
+   "hareket": "itici_ray_0_vida_2",
+   "kesisim": {
+    "t": 111.53,
+    "ucgen": 2
+   }
+  },
+  {
+   "a": "itici_ray_0_vida_3",
+   "b": "itici_ray_0",
+   "t": 111.88,
+   "w": [
+    111.61,
+    112.01
+   ],
+   "derin": 1.0,
+   "yon": "oteleme",
+   "hareket": "itici_ray_0_vida_3",
+   "kesisim": {
+    "t": 111.61,
+    "ucgen": 2
+   }
+  },
+  {
+   "a": "itici_ray_1_vida_0",
+   "b": "itici_ray_1",
+   "t": 112.76,
+   "w": [
+    112.49,
+    112.89
+   ],
+   "derin": 1.0,
+   "yon": "oteleme",
+   "hareket": "itici_ray_1_vida_0",
+   "kesisim": {
+    "t": 112.49,
+    "ucgen": 2
+   }
+  },
+  {
+   "a": "itici_ray_1_vida_1",
+   "b": "itici_ray_1",
+   "t": 112.84,
+   "w": [
+    112.57,
+    112.97
+   ],
+   "derin": 1.0,
+   "yon": "oteleme",
+   "hareket": "itici_ray_1_vida_1",
+   "kesisim": {
+    "t": 112.57,
+    "ucgen": 2
+   }
+  },
+  {
+   "a": "itici_ray_1_vida_2",
+   "b": "itici_ray_1",
+   "t": 112.92,
+   "w": [
+    112.65,
+    113.05
+   ],
+   "derin": 1.0,
+   "yon": "oteleme",
+   "hareket": "itici_ray_1_vida_2",
+   "kesisim": {
+    "t": 112.65,
+    "ucgen": 2
+   }
+  },
+  {
+   "a": "itici_ray_1_vida_3",
+   "b": "itici_ray_1",
+   "t": 113.0,
+   "w": [
+    112.73,
+    113.13
+   ],
+   "derin": 1.0,
+   "yon": "oteleme",
+   "hareket": "itici_ray_1_vida_3",
+   "kesisim": {
+    "t": 112.73,
+    "ucgen": 2
+   }
+  },
+  {
+   "a": "kose_piston_braket_0_direk_vida_1",
+   "b": "kose_piston_braket_0_plaka_vida_0",
+   "t": 144.15,
+   "w": [
+    143.95,
+    144.35
+   ],
+   "derin": 1.5,
+   "yon": "oteleme",
+   "hareket": "kose_piston_braket_0_plaka_vida_0",
+   "kesisim": {
+    "t": 143.95,
+    "ucgen": 4
+   }
+  },
+  {
+   "a": "kose_piston_braket_1_direk_vida_1",
+   "b": "kose_piston_braket_1_plaka_vida_0",
+   "t": 145.94,
+   "w": [
+    145.74,
+    146.14
+   ],
+   "derin": 1.5,
+   "yon": "oteleme",
+   "hareket": "kose_piston_braket_1_plaka_vida_0",
+   "kesisim": {
+    "t": 145.74,
+    "ucgen": 4
+   }
+  },
+  {
+   "a": "kose_tutucu_sag_on_gobek_pim",
+   "b": "kose_sasi",
+   "t": 157.05,
+   "w": [
+    156.81,
+    157.21
+   ],
+   "derin": 1.2,
+   "yon": "oteleme",
+   "hareket": "kose_tutucu_sag_on_gobek_pim",
+   "kesisim": {
+    "t": 156.81,
+    "ucgen": 2
+   }
+  },
+  {
+   "a": "kose_uc_blok_sag_braket",
+   "b": "kose_uc_blok_sag_braket_ray_vida_0",
+   "t": 147.44,
+   "w": [
+    147.21,
+    147.61
+   ],
+   "derin": 1.3,
+   "yon": "oteleme",
+   "hareket": "kose_uc_blok_sag_braket_ray_vida_0",
+   "kesisim": {
+    "t": 147.415,
+    "ucgen": 1
+   }
+  },
+  {
+   "a": "kose_uc_blok_sag_braket",
+   "b": "kose_uc_blok_sag_braket_ray_vida_1",
+   "t": 147.52,
+   "w": [
+    147.29,
+    147.69
+   ],
+   "derin": 1.3,
+   "yon": "oteleme",
+   "hareket": "kose_uc_blok_sag_braket_ray_vida_1",
+   "kesisim": {
+    "t": 147.495,
+    "ucgen": 1
+   }
+  },
+  {
+   "a": "kose_uc_blok_sag_braket_blok_vida_0",
+   "b": "kose_uc_blok_sag_braket_ray_vida_0",
+   "t": 147.42,
+   "w": [
+    147.21,
+    147.61
+   ],
+   "derin": 1.4,
+   "yon": "oteleme",
+   "hareket": "kose_uc_blok_sag_braket_ray_vida_0",
+   "kesisim": {
+    "t": 147.302,
+    "ucgen": 2
+   }
+  },
+  {
+   "a": "kose_uc_blok_sag_braket_blok_vida_1",
+   "b": "kose_uc_blok_sag_braket_ray_vida_1",
+   "t": 147.5,
+   "w": [
+    147.29,
+    147.69
+   ],
+   "derin": 1.4,
+   "yon": "oteleme",
+   "hareket": "kose_uc_blok_sag_braket_ray_vida_1",
+   "kesisim": {
+    "t": 147.382,
+    "ucgen": 2
+   }
+  }
+ ],
+ "adim_mm": 2.0,
+ "uretim_kare_sorun": [],
+ "belirme": 0,
+ "belirme_liste": [],
+ "havada": [],
+ "son_konum": {
+  "itici_ray_0 ↔ itici_ray_0_vida_0": {
+   "ucgen": 17,
+   "neden": ""
+  },
+  "itici_ray_0 ↔ itici_ray_0_vida_1": {
+   "ucgen": 17,
+   "neden": ""
+  },
+  "itici_ray_0 ↔ itici_ray_0_vida_2": {
+   "ucgen": 17,
+   "neden": ""
+  },
+  "itici_ray_0 ↔ itici_ray_0_vida_3": {
+   "ucgen": 17,
+   "neden": ""
+  },
+  "itici_ray_1 ↔ itici_ray_1_vida_0": {
+   "ucgen": 17,
+   "neden": ""
+  },
+  "itici_ray_1 ↔ itici_ray_1_vida_1": {
+   "ucgen": 17,
+   "neden": ""
+  },
+  "itici_ray_1 ↔ itici_ray_1_vida_2": {
+   "ucgen": 17,
+   "neden": ""
+  },
+  "itici_ray_1 ↔ itici_ray_1_vida_3": {
+   "ucgen": 17,
+   "neden": ""
+  },
+  "sarjor_yan_kapisi ↔ sarjor_yan_kapisi_punta_0": {
+   "ucgen": 1,
+   "neden": "kaynak dikişi / punta / yapıştırıcı / silikon: birleşme anında yerinde belirir, birleştirdiği yüzeyde kalır"
+  },
+  "sarjor_yan_kapisi ↔ sarjor_yan_kapisi_punta_1": {
+   "ucgen": 1,
+   "neden": "kaynak dikişi / punta / yapıştırıcı / silikon: birleşme anında yerinde belirir, birleştirdiği yüzeyde kalır"
+  },
+  "sarjor_yan_kapisi ↔ sarjor_yan_kapisi_punta_2": {
+   "ucgen": 1,
+   "neden": "kaynak dikişi / punta / yapıştırıcı / silikon: birleşme anında yerinde belirir, birleştirdiği yüzeyde kalır"
+  },
+  "sarjor_yan_kapisi ↔ sarjor_yan_kapisi_punta_3": {
+   "ucgen": 1,
+   "neden": "kaynak dikişi / punta / yapıştırıcı / silikon: birleşme anında yerinde belirir, birleştirdiği yüzeyde kalır"
+  },
+  "sarjor_yan_kapisi_ic_tava ↔ sarjor_yan_kapisi_punta_0": {
+   "ucgen": 3,
+   "neden": "kaynak dikişi / punta / yapıştırıcı / silikon: birleşme anında yerinde belirir, birleştirdiği yüzeyde kalır"
+  },
+  "sarjor_yan_kapisi_ic_tava ↔ sarjor_yan_kapisi_punta_1": {
+   "ucgen": 2,
+   "neden": "kaynak dikişi / punta / yapıştırıcı / silikon: birleşme anında yerinde belirir, birleştirdiği yüzeyde kalır"
+  },
+  "sarjor_yan_kapisi_ic_tava ↔ sarjor_yan_kapisi_punta_2": {
+   "ucgen": 2,
+   "neden": "kaynak dikişi / punta / yapıştırıcı / silikon: birleşme anında yerinde belirir, birleştirdiği yüzeyde kalır"
+  },
+  "sarjor_yan_kapisi_ic_tava ↔ sarjor_yan_kapisi_punta_3": {
+   "ucgen": 3,
+   "neden": "kaynak dikişi / punta / yapıştırıcı / silikon: birleşme anında yerinde belirir, birleştirdiği yüzeyde kalır"
+  },
+  "sarjor_yan_kapisi_ic_tava ↔ sarjor_yan_kapisi_punta_4": {
+   "ucgen": 5,
+   "neden": "kaynak dikişi / punta / yapıştırıcı / silikon: birleşme anında yerinde belirir, birleştirdiği yüzeyde kalır"
+  },
+  "sarjor_yan_kapisi_ic_tava ↔ sarjor_yan_kapisi_punta_5": {
+   "ucgen": 1,
+   "neden": "kaynak dikişi / punta / yapıştırıcı / silikon: birleşme anında yerinde belirir, birleştirdiği yüzeyde kalır"
+  },
+  "besleyici_kasnak_0 ↔ besleyici_kasnak_mili": {
+   "ucgen": 41,
+   "neden": "MODEL AÇIĞI (E mekanizma üreteci): son konumda iç içe 41 üçgen — sıkı geçme / göbek ↔ mil / kasnak ↔ kayış (üreteçte boşluk yok)"
+  },
+  "besleyici_kasnak_1 ↔ besleyici_motor": {
+   "ucgen": 44,
+   "neden": "MODEL AÇIĞI (E mekanizma üreteci): son konumda iç içe 44 üçgen — sıkı geçme / göbek ↔ mil / kasnak ↔ kayış (üreteçte boşluk yok)"
+  },
+  "itici_kasnak_mil ↔ itici_vida_mili": {
+   "ucgen": 50,
+   "neden": "MODEL AÇIĞI (E mekanizma üreteci): son konumda iç içe 50 üçgen — sıkı geçme / göbek ↔ mil / kasnak ↔ kayış (üreteçte boşluk yok)"
+  },
+  "kapak_katlayici_kol ↔ kapak_katlayici_plaka": {
+   "ucgen": 31,
+   "neden": "MODEL AÇIĞI (E mekanizma üreteci): son konumda iç içe 31 üçgen — sıkı geçme / göbek ↔ mil / kasnak ↔ kayış (üreteçte boşluk yok)"
+  },
+  "kapak_kol ↔ kapak_tahrik_mili": {
+   "ucgen": 65,
+   "neden": "MODEL AÇIĞI (E mekanizma üreteci): son konumda iç içe 65 üçgen — sıkı geçme / göbek ↔ mil / kasnak ↔ kayış (üreteçte boşluk yok)"
+  },
+  "kose_sasi ↔ kose_tutucu_sag_arka_gobek": {
+   "ucgen": 1,
+   "neden": "MODEL AÇIĞI (E mekanizma üreteci): son konumda iç içe 1 üçgen — sıkı geçme / göbek ↔ mil / kasnak ↔ kayış (üreteçte boşluk yok)"
+  },
+  "kose_sasi ↔ kose_tutucu_sag_on_gobek": {
+   "ucgen": 4,
+   "neden": "MODEL AÇIĞI (E mekanizma üreteci): son konumda iç içe 4 üçgen — sıkı geçme / göbek ↔ mil / kasnak ↔ kayış (üreteçte boşluk yok)"
+  },
+  "kose_sasi ↔ kose_tutucu_sol_arka_gobek": {
+   "ucgen": 2,
+   "neden": "MODEL AÇIĞI (E mekanizma üreteci): son konumda iç içe 2 üçgen — sıkı geçme / göbek ↔ mil / kasnak ↔ kayış (üreteçte boşluk yok)"
+  },
+  "kose_sasi ↔ kose_tutucu_sol_on_gobek": {
+   "ucgen": 5,
+   "neden": "MODEL AÇIĞI (E mekanizma üreteci): son konumda iç içe 5 üçgen — sıkı geçme / göbek ↔ mil / kasnak ↔ kayış (üreteçte boşluk yok)"
+  },
+  "kose_tutucu_sag_arka_gobek ↔ kose_tutucu_sag_arka_kol": {
+   "ucgen": 46,
+   "neden": "MODEL AÇIĞI (E mekanizma üreteci): son konumda iç içe 46 üçgen — sıkı geçme / göbek ↔ mil / kasnak ↔ kayış (üreteçte boşluk yok)"
+  },
+  "kose_tutucu_sag_on_gobek ↔ kose_tutucu_sag_on_kol": {
+   "ucgen": 44,
+   "neden": "MODEL AÇIĞI (E mekanizma üreteci): son konumda iç içe 44 üçgen — sıkı geçme / göbek ↔ mil / kasnak ↔ kayış (üreteçte boşluk yok)"
+  },
+  "kose_tutucu_sol_arka_gobek ↔ kose_tutucu_sol_arka_kol": {
+   "ucgen": 46,
+   "neden": "MODEL AÇIĞI (E mekanizma üreteci): son konumda iç içe 46 üçgen — sıkı geçme / göbek ↔ mil / kasnak ↔ kayış (üreteçte boşluk yok)"
+  },
+  "kose_tutucu_sol_on_gobek ↔ kose_tutucu_sol_on_kol": {
+   "ucgen": 45,
+   "neden": "MODEL AÇIĞI (E mekanizma üreteci): son konumda iç içe 45 üçgen — sıkı geçme / göbek ↔ mil / kasnak ↔ kayış (üreteçte boşluk yok)"
+  },
+  "parmak_kasnak ↔ parmak_kayis": {
+   "ucgen": 34,
+   "neden": "MODEL AÇIĞI (E mekanizma üreteci): son konumda iç içe 34 üçgen — sıkı geçme / göbek ↔ mil / kasnak ↔ kayış (üreteçte boşluk yok)"
+  },
+  "parmak_kayis ↔ parmak_motor_kasnagi": {
+   "ucgen": 25,
+   "neden": "MODEL AÇIĞI (E mekanizma üreteci): son konumda iç içe 25 üçgen — sıkı geçme / göbek ↔ mil / kasnak ↔ kayış (üreteçte boşluk yok)"
+  },
+  "parmak_mafsal_plaka_1 ↔ parmak_tasiyici": {
+   "ucgen": 6,
+   "neden": "MODEL AÇIĞI (E mekanizma üreteci): son konumda iç içe 6 üçgen — sıkı geçme / göbek ↔ mil / kasnak ↔ kayış (üreteçte boşluk yok)"
+  },
+  "cevre_B ↔ cevre_K": {
+   "ucgen": 4,
+   "neden": "silik çevre: B ↔ K kaynak modelde (E montajı dışı)"
+  }
+ },
+ "son_beyansiz": 8,
+ "haric": {
+  "arayuz_j3_burc_1543_561 ↔ fis_paneli": "arayüz saplaması mekanizma kulağındaki deliğe eksen boyunca geçer (model sıfır boşluk)",
+  "arayuz_j3_burc_1543_561 ↔ sol_sac_pizza_penceresi": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "arayuz_j3_burc_1566_561 ↔ fis_paneli": "arayüz saplaması mekanizma kulağındaki deliğe eksen boyunca geçer (model sıfır boşluk)",
+  "arayuz_j3_burc_1566_561 ↔ sol_sac_pizza_penceresi": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "arayuz_mek_arka_21 ↔ arka_sac": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "arayuz_mek_arka_21 ↔ istasyon_kutusu": "arayüz saplaması mekanizma kulağındaki deliğe eksen boyunca geçer (model sıfır boşluk)",
+  "arayuz_mek_arka_22 ↔ arka_sac": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "arayuz_mek_arka_22 ↔ istasyon_kutusu": "arayüz saplaması mekanizma kulağındaki deliğe eksen boyunca geçer (model sıfır boşluk)",
+  "arayuz_mek_arka_23 ↔ arka_sac": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "arayuz_mek_arka_23 ↔ istasyon_kutusu": "arayüz saplaması mekanizma kulağındaki deliğe eksen boyunca geçer (model sıfır boşluk)",
+  "arayuz_mek_arka_24 ↔ arka_sac": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "arayuz_mek_arka_24 ↔ istasyon_kutusu": "arayüz saplaması mekanizma kulağındaki deliğe eksen boyunca geçer (model sıfır boşluk)",
+  "arayuz_mek_sag_12 ↔ sag_sac": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "arayuz_mek_sag_12 ↔ sarjor_asansor": "arayüz saplaması mekanizma kulağındaki deliğe eksen boyunca geçer (model sıfır boşluk)",
+  "arayuz_mek_sag_13 ↔ sag_sac": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "arayuz_mek_sag_13 ↔ sarjor_asansor": "arayüz saplaması mekanizma kulağındaki deliğe eksen boyunca geçer (model sıfır boşluk)",
+  "arayuz_mek_sag_14 ↔ besleyici_motor": "arayüz saplaması mekanizma kulağındaki deliğe eksen boyunca geçer (model sıfır boşluk)",
+  "arayuz_mek_sag_14 ↔ besleyici_motor_yuvasi": "arayüz saplaması mekanizma kulağındaki deliğe eksen boyunca geçer (model sıfır boşluk)",
+  "arayuz_mek_sag_14 ↔ sag_sac": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "arayuz_mek_sag_15 ↔ kalip_taban": "arayüz saplaması mekanizma kulağındaki deliğe eksen boyunca geçer (model sıfır boşluk)",
+  "arayuz_mek_sag_15 ↔ sag_sac": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "arayuz_mek_sag_16 ↔ kalip_taban": "arayüz saplaması mekanizma kulağındaki deliğe eksen boyunca geçer (model sıfır boşluk)",
+  "arayuz_mek_sag_16 ↔ sag_sac": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "arayuz_mek_sag_17 ↔ asansor_sensor_tutucu": "arayüz saplaması mekanizma kulağındaki deliğe eksen boyunca geçer (model sıfır boşluk)",
+  "arayuz_mek_sag_17 ↔ sag_sac": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "arayuz_mek_sag_18 ↔ besleyici_uc_sensor_tutucu": "arayüz saplaması mekanizma kulağındaki deliğe eksen boyunca geçer (model sıfır boşluk)",
+  "arayuz_mek_sag_18 ↔ sag_sac": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "arayuz_mek_sol_0 ↔ sarjor_asansor": "arayüz saplaması mekanizma kulağındaki deliğe eksen boyunca geçer (model sıfır boşluk)",
+  "arayuz_mek_sol_0 ↔ sol_sac_pizza_penceresi": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "arayuz_mek_sol_1 ↔ sarjor_asansor": "arayüz saplaması mekanizma kulağındaki deliğe eksen boyunca geçer (model sıfır boşluk)",
+  "arayuz_mek_sol_1 ↔ sol_sac_pizza_penceresi": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "arayuz_mek_sol_10 ↔ fis_paneli": "arayüz saplaması mekanizma kulağındaki deliğe eksen boyunca geçer (model sıfır boşluk)",
+  "arayuz_mek_sol_10 ↔ sol_sac_pizza_penceresi": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "arayuz_mek_sol_11 ↔ fis_paneli": "arayüz saplaması mekanizma kulağındaki deliğe eksen boyunca geçer (model sıfır boşluk)",
+  "arayuz_mek_sol_11 ↔ sol_sac_pizza_penceresi": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "arayuz_mek_sol_4 ↔ kalip_taban": "arayüz saplaması mekanizma kulağındaki deliğe eksen boyunca geçer (model sıfır boşluk)",
+  "arayuz_mek_sol_4 ↔ sol_sac_pizza_penceresi": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "arayuz_mek_sol_5 ↔ kalip_taban": "arayüz saplaması mekanizma kulağındaki deliğe eksen boyunca geçer (model sıfır boşluk)",
+  "arayuz_mek_sol_5 ↔ sol_sac_pizza_penceresi": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "arayuz_mek_sol_6 ↔ kopru_motor_blogu": "arayüz saplaması mekanizma kulağındaki deliğe eksen boyunca geçer (model sıfır boşluk)",
+  "arayuz_mek_sol_6 ↔ sol_sac_pizza_penceresi": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "arayuz_mek_sol_7 ↔ kopru_tasiyici": "arayüz saplaması mekanizma kulağındaki deliğe eksen boyunca geçer (model sıfır boşluk)",
+  "arayuz_mek_sol_7 ↔ sol_sac_pizza_penceresi": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "arayuz_mek_sol_8 ↔ kopru_tasiyici": "arayüz saplaması mekanizma kulağındaki deliğe eksen boyunca geçer (model sıfır boşluk)",
+  "arayuz_mek_sol_8 ↔ sol_sac_pizza_penceresi": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "arayuz_mek_sol_9 ↔ katlama_sensor_tutucu": "arayüz saplaması mekanizma kulağındaki deliğe eksen boyunca geçer (model sıfır boşluk)",
+  "arayuz_mek_sol_9 ↔ sol_sac_pizza_penceresi": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "arayuz_mek_taban_32 ↔ sarjor_asansor": "arayüz saplaması mekanizma kulağındaki deliğe eksen boyunca geçer (model sıfır boşluk)",
+  "arayuz_mek_taban_32 ↔ taban_sac_3": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "arayuz_mek_taban_33 ↔ sarjor_asansor": "arayüz saplaması mekanizma kulağındaki deliğe eksen boyunca geçer (model sıfır boşluk)",
+  "arayuz_mek_taban_33 ↔ taban_sac_3": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "arayuz_mek_taban_34 ↔ sarjor_asansor": "arayüz saplaması mekanizma kulağındaki deliğe eksen boyunca geçer (model sıfır boşluk)",
+  "arayuz_mek_taban_34 ↔ taban_sac_3": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "arayuz_mek_taban_35 ↔ sarjor_asansor": "arayüz saplaması mekanizma kulağındaki deliğe eksen boyunca geçer (model sıfır boşluk)",
+  "arayuz_mek_taban_35 ↔ taban_sac_3": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "arayuz_mek_taban_36 ↔ sarjor_asansor": "arayüz saplaması mekanizma kulağındaki deliğe eksen boyunca geçer (model sıfır boşluk)",
+  "arayuz_mek_taban_36 ↔ taban_sac_3": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "arayuz_mek_taban_37 ↔ sarjor_asansor": "arayüz saplaması mekanizma kulağındaki deliğe eksen boyunca geçer (model sıfır boşluk)",
+  "arayuz_mek_taban_37 ↔ taban_sac_3": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "arayuz_mek_ust_25 ↔ besleyici_profil_0": "arayüz saplaması mekanizma kulağındaki deliğe eksen boyunca geçer (model sıfır boşluk)",
+  "arayuz_mek_ust_25 ↔ ust_sac": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "arayuz_mek_ust_26 ↔ besleyici_profil_1": "arayüz saplaması mekanizma kulağındaki deliğe eksen boyunca geçer (model sıfır boşluk)",
+  "arayuz_mek_ust_26 ↔ ust_sac": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "arayuz_mek_ust_27 ↔ besleyici_profil_2": "arayüz saplaması mekanizma kulağındaki deliğe eksen boyunca geçer (model sıfır boşluk)",
+  "arayuz_mek_ust_27 ↔ ust_sac": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "arayuz_mek_ust_28 ↔ besleyici_profil_3": "arayüz saplaması mekanizma kulağındaki deliğe eksen boyunca geçer (model sıfır boşluk)",
+  "arayuz_mek_ust_28 ↔ ust_sac": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "arayuz_mek_ust_29 ↔ itici_tasiyici": "arayüz saplaması mekanizma kulağındaki deliğe eksen boyunca geçer (model sıfır boşluk)",
+  "arayuz_mek_ust_29 ↔ ust_sac": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "arayuz_mek_ust_30 ↔ itici_tasiyici": "arayüz saplaması mekanizma kulağındaki deliğe eksen boyunca geçer (model sıfır boşluk)",
+  "arayuz_mek_ust_30 ↔ ust_sac": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "arayuz_mek_ust_31 ↔ itici_motor_blogu": "arayüz saplaması mekanizma kulağındaki deliğe eksen boyunca geçer (model sıfır boşluk)",
+  "arayuz_mek_ust_31 ↔ ust_sac": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "besleyici_kasnak_0 ↔ besleyici_kasnak_mili": "MODEL AÇIĞI (E mekanizma üreteci): son konumda iç içe 41 üçgen — sıkı geçme / göbek ↔ mil / kasnak ↔ kayış (üreteçte boşluk yok)",
+  "besleyici_kasnak_1 ↔ besleyici_motor": "MODEL AÇIĞI (E mekanizma üreteci): son konumda iç içe 44 üçgen — sıkı geçme / göbek ↔ mil / kasnak ↔ kayış (üreteçte boşluk yok)",
+  "besleyici_kasnak_mili ↔ besleyici_mil_yatagi": "MODEL AÇIĞI (E mekanizma üreteci): GÖMÜLÜ — mil / motor mili / blok karşı parçanın içinde deliksiz modellenmiş (gerçekte delik / yuva var; üreteçte açılacak)",
+  "besleyici_motor_yuvasi_braketi_saplama ↔ sag_sac": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "e_arka_pem_345 ↔ sol_sac_pizza_penceresi": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "e_arka_pem_530 ↔ sol_sac_pizza_penceresi": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "e_arka_pem_714 ↔ sol_sac_pizza_penceresi": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "e_arka_pem_898 ↔ sol_sac_pizza_penceresi": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "emniyet_E_ALT_SAG_0_somun ↔ emniyet_E_ALT_SAG_braket": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "emniyet_E_ALT_SAG_1_somun ↔ emniyet_E_ALT_SAG_braket": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "emniyet_E_ALT_SOL_0_somun ↔ emniyet_E_ALT_SOL_braket": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "emniyet_E_ALT_SOL_1_somun ↔ emniyet_E_ALT_SOL_braket": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "emniyet_E_UST_SAG_0_somun ↔ emniyet_E_UST_SAG_braket": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "emniyet_E_UST_SAG_1_somun ↔ emniyet_E_UST_SAG_braket": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "emniyet_E_UST_SOL_0_somun ↔ emniyet_E_UST_SOL_braket": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "emniyet_E_UST_SOL_1_somun ↔ emniyet_E_UST_SOL_braket": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "arka_sac ↔ govde_bag_arka_sag_1035_saplama": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "arka_sac ↔ govde_bag_arka_sag_1231_saplama": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "arka_sac ↔ govde_bag_arka_sag_1427_saplama": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "arka_sac ↔ govde_bag_arka_sag_1820_saplama": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "arka_sac ↔ govde_bag_arka_sol_1082_saplama": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "arka_sac ↔ govde_bag_arka_sol_1267_saplama": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "arka_sac ↔ govde_bag_arka_sol_1451_saplama": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "arka_sac ↔ govde_bag_arka_sol_161_saplama": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "arka_sac ↔ govde_bag_arka_sol_1820_saplama": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "govde_bag_kapi_basac_592_saplama ↔ sag_sac": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "govde_bag_kapi_basac_628_saplama ↔ sag_sac": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "arka_sac ↔ govde_bag_kapi_lamasi_420_saplama": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "arka_sac ↔ govde_bag_kapi_lamasi_600_saplama": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "arka_sac ↔ govde_bag_kapi_lamasi_780_saplama": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "arka_sac ↔ govde_bag_kosebent_arka_saplama": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "govde_bag_kosebent_yan_saplama ↔ sag_sac": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "govde_bag_taban_arka_242_saplama ↔ taban_sac_3": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "govde_bag_taban_arka_415_saplama ↔ taban_sac_3": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "govde_bag_taban_arka_587_saplama ↔ taban_sac_3": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "govde_bag_taban_arka_70_saplama ↔ taban_sac_3": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "govde_bag_taban_arka_760_saplama ↔ taban_sac_3": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "govde_bag_ust_arka_232_saplama ↔ ust_sac": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "govde_bag_ust_arka_415_saplama ↔ ust_sac": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "govde_bag_ust_arka_50_saplama ↔ ust_sac": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "govde_bag_ust_arka_597_saplama ↔ ust_sac": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "govde_bag_ust_arka_780_saplama ↔ ust_sac": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "govde_bag_ust_sag_10_saplama ↔ sag_sac": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "govde_bag_ust_sag_202_saplama ↔ sag_sac": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "govde_bag_ust_sag_395_saplama ↔ sag_sac": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "govde_bag_ust_sag_587_saplama ↔ sag_sac": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "govde_bag_ust_sag_780_saplama ↔ sag_sac": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "govde_bag_ust_sol_10_saplama ↔ sol_sac_pizza_penceresi": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "govde_bag_ust_sol_202_saplama ↔ sol_sac_pizza_penceresi": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "govde_bag_ust_sol_395_saplama ↔ sol_sac_pizza_penceresi": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "govde_bag_ust_sol_587_saplama ↔ sol_sac_pizza_penceresi": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "govde_bag_ust_sol_780_saplama ↔ sol_sac_pizza_penceresi": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "govde_kulak_sag_on_1100_bag_saplama ↔ sag_sac": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "govde_kulak_sag_on_1300_bag_saplama ↔ sag_sac": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "govde_kulak_sag_on_1500_bag_saplama ↔ sag_sac": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "govde_kulak_sag_on_1700_bag_saplama ↔ sag_sac": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "govde_kulak_sag_on_1820_bag_saplama ↔ sag_sac": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "govde_kulak_sag_on_250_bag_saplama ↔ sag_sac": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "govde_kulak_sag_on_450_bag_saplama ↔ sag_sac": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "govde_kulak_sag_on_620_bag_saplama ↔ sag_sac": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "govde_kulak_sag_on_850_bag_saplama ↔ sag_sac": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "govde_kulak_sag_taban_150_bag_saplama ↔ sag_sac": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "govde_kulak_sag_taban_300_bag_saplama ↔ sag_sac": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "govde_kulak_sag_taban_30_bag_saplama ↔ sag_sac": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "govde_kulak_sag_taban_470_bag_saplama ↔ sag_sac": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "govde_kulak_sag_taban_620_bag_saplama ↔ sag_sac": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "govde_kulak_sag_taban_760_bag_saplama ↔ sag_sac": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "govde_kulak_sol_on_1100_bag_saplama ↔ sol_sac_pizza_penceresi": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "govde_kulak_sol_on_1300_bag_saplama ↔ sol_sac_pizza_penceresi": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "govde_kulak_sol_on_1500_bag_saplama ↔ sol_sac_pizza_penceresi": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "govde_kulak_sol_on_1700_bag_saplama ↔ sol_sac_pizza_penceresi": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "govde_kulak_sol_on_1820_bag_saplama ↔ sol_sac_pizza_penceresi": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "govde_kulak_sol_on_250_bag_saplama ↔ sol_sac_pizza_penceresi": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "govde_kulak_sol_on_450_bag_saplama ↔ sol_sac_pizza_penceresi": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "govde_kulak_sol_on_620_bag_saplama ↔ sol_sac_pizza_penceresi": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "govde_kulak_sol_on_850_bag_saplama ↔ sol_sac_pizza_penceresi": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "govde_kulak_sol_taban_470_bag_saplama ↔ sol_sac_pizza_penceresi": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "govde_kulak_sol_taban_620_bag_saplama ↔ sol_sac_pizza_penceresi": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "govde_kulak_sol_taban_790_bag_saplama ↔ sol_sac_pizza_penceresi": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "govde_kulak_ust_orta_bag_saplama ↔ ust_sac": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "govde_kulak_ust_sag_bag_saplama ↔ ust_sac": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "govde_kulak_ust_sol_bag_saplama ↔ ust_sac": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "govde_pem_m8_ust_100 ↔ ust_sac": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "govde_pem_m8_ust_415 ↔ ust_sac": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "govde_pem_m8_ust_730 ↔ ust_sac": "PEM / saplama / kaynak burcu kendi sacına üretimde preslenir / puntalanır (sacla birlikte gelir)",
+  "itici_kasnak_mil ↔ itici_vida_mili": "MODEL AÇIĞI (E mekanizma üreteci): son konumda iç içe 50 üçgen — sıkı geçme / göbek ↔ mil / kasnak ↔ kayış (üreteçte boşluk yok)",
+  "kalip_rulman ↔ kalip_rulman_blogu": "MODEL AÇIĞI (E mekanizma üreteci): GÖMÜLÜ — mil / motor mili / blok karşı parçanın içinde deliksiz modellenmiş (gerçekte delik / yuva var; üreteçte açılacak)",
+  "kalip_sensor ↔ kalip_sensor_blogu": "MODEL AÇIĞI (E mekanizma üreteci): GÖMÜLÜ — mil / motor mili / blok karşı parçanın içinde deliksiz modellenmiş (gerçekte delik / yuva var; üreteçte açılacak)",
+  "kapak_katlayici_kol ↔ kapak_katlayici_plaka": "MODEL AÇIĞI (E mekanizma üreteci): son konumda iç içe 31 üçgen — sıkı geçme / göbek ↔ mil / kasnak ↔ kayış (üreteçte boşluk yok)",
+  "kapak_kol ↔ kapak_tahrik_mili": "MODEL AÇIĞI (E mekanizma üreteci): son konumda iç içe 65 üçgen — sıkı geçme / göbek ↔ mil / kasnak ↔ kayış (üreteçte boşluk yok)",
+  "kapak_profil_0 ↔ kapak_profil_kapak_0": "MODEL AÇIĞI (E mekanizma üreteci): GÖMÜLÜ — mil / motor mili / blok karşı parçanın içinde deliksiz modellenmiş (gerçekte delik / yuva var; üreteçte açılacak)",
+  "kapak_profil_1 ↔ kapak_profil_kapak_1": "MODEL AÇIĞI (E mekanizma üreteci): GÖMÜLÜ — mil / motor mili / blok karşı parçanın içinde deliksiz modellenmiş (gerçekte delik / yuva var; üreteçte açılacak)",
+  "kose_kilavuz_sag_arka_0 ↔ kose_sasi": "MODEL AÇIĞI (E mekanizma üreteci): GÖMÜLÜ — mil / motor mili / blok karşı parçanın içinde deliksiz modellenmiş (gerçekte delik / yuva var; üreteçte açılacak)",
+  "kose_kilavuz_sag_arka_1 ↔ kose_sasi": "MODEL AÇIĞI (E mekanizma üreteci): GÖMÜLÜ — mil / motor mili / blok karşı parçanın içinde deliksiz modellenmiş (gerçekte delik / yuva var; üreteçte açılacak)",
+  "kose_kilavuz_sag_on_0 ↔ kose_sasi": "MODEL AÇIĞI (E mekanizma üreteci): GÖMÜLÜ — mil / motor mili / blok karşı parçanın içinde deliksiz modellenmiş (gerçekte delik / yuva var; üreteçte açılacak)",
+  "kose_kilavuz_sag_on_1 ↔ kose_sasi": "MODEL AÇIĞI (E mekanizma üreteci): GÖMÜLÜ — mil / motor mili / blok karşı parçanın içinde deliksiz modellenmiş (gerçekte delik / yuva var; üreteçte açılacak)",
+  "kose_kilavuz_sol_arka_0 ↔ kose_sasi": "MODEL AÇIĞI (E mekanizma üreteci): GÖMÜLÜ — mil / motor mili / blok karşı parçanın içinde deliksiz modellenmiş (gerçekte delik / yuva var; üreteçte açılacak)",
+  "kose_kilavuz_sol_arka_1 ↔ kose_sasi": "MODEL AÇIĞI (E mekanizma üreteci): GÖMÜLÜ — mil / motor mili / blok karşı parçanın içinde deliksiz modellenmiş (gerçekte delik / yuva var; üreteçte açılacak)",
+  "kose_kilavuz_sol_on_0 ↔ kose_sasi": "MODEL AÇIĞI (E mekanizma üreteci): GÖMÜLÜ — mil / motor mili / blok karşı parçanın içinde deliksiz modellenmiş (gerçekte delik / yuva var; üreteçte açılacak)",
+  "kose_kilavuz_sol_on_1 ↔ kose_sasi": "MODEL AÇIĞI (E mekanizma üreteci): GÖMÜLÜ — mil / motor mili / blok karşı parçanın içinde deliksiz modellenmiş (gerçekte delik / yuva var; üreteçte açılacak)",
+  "kose_motor_sag_arka ↔ kose_tutucu_sag_arka_gobek": "MODEL AÇIĞI (E mekanizma üreteci): GÖMÜLÜ — mil / motor mili / blok karşı parçanın içinde deliksiz modellenmiş (gerçekte delik / yuva var; üreteçte açılacak)",
+  "kose_motor_sag_on ↔ kose_tutucu_sag_on_gobek": "MODEL AÇIĞI (E mekanizma üreteci): GÖMÜLÜ — mil / motor mili / blok karşı parçanın içinde deliksiz modellenmiş (gerçekte delik / yuva var; üreteçte açılacak)",
+  "kose_motor_sol_arka ↔ kose_tutucu_sol_arka_gobek": "MODEL AÇIĞI (E mekanizma üreteci): GÖMÜLÜ — mil / motor mili / blok karşı parçanın içinde deliksiz modellenmiş (gerçekte delik / yuva var; üreteçte açılacak)",
+  "kose_motor_sol_on ↔ kose_tutucu_sol_on_gobek": "MODEL AÇIĞI (E mekanizma üreteci): GÖMÜLÜ — mil / motor mili / blok karşı parçanın içinde deliksiz modellenmiş (gerçekte delik / yuva var; üreteçte açılacak)",
+  "kose_piston_kol ↔ kose_sasi": "MODEL AÇIĞI (E mekanizma üreteci): GÖMÜLÜ — mil / motor mili / blok karşı parçanın içinde deliksiz modellenmiş (gerçekte delik / yuva var; üreteçte açılacak)",
+  "kose_sasi ↔ kose_tutucu_sag_arka_gobek": "MODEL AÇIĞI (E mekanizma üreteci): son konumda iç içe 1 üçgen — sıkı geçme / göbek ↔ mil / kasnak ↔ kayış (üreteçte boşluk yok)",
+  "kose_sasi ↔ kose_tutucu_sag_on_gobek": "MODEL AÇIĞI (E mekanizma üreteci): son konumda iç içe 4 üçgen — sıkı geçme / göbek ↔ mil / kasnak ↔ kayış (üreteçte boşluk yok)",
+  "kose_sasi ↔ kose_tutucu_sol_arka_gobek": "MODEL AÇIĞI (E mekanizma üreteci): son konumda iç içe 2 üçgen — sıkı geçme / göbek ↔ mil / kasnak ↔ kayış (üreteçte boşluk yok)",
+  "kose_sasi ↔ kose_tutucu_sol_on_gobek": "MODEL AÇIĞI (E mekanizma üreteci): son konumda iç içe 5 üçgen — sıkı geçme / göbek ↔ mil / kasnak ↔ kayış (üreteçte boşluk yok)",
+  "kose_tutucu_sag_arka_gobek ↔ kose_tutucu_sag_arka_kol": "MODEL AÇIĞI (E mekanizma üreteci): son konumda iç içe 46 üçgen — sıkı geçme / göbek ↔ mil / kasnak ↔ kayış (üreteçte boşluk yok)",
+  "kose_tutucu_sag_on_gobek ↔ kose_tutucu_sag_on_kol": "MODEL AÇIĞI (E mekanizma üreteci): son konumda iç içe 44 üçgen — sıkı geçme / göbek ↔ mil / kasnak ↔ kayış (üreteçte boşluk yok)",
+  "kose_tutucu_sol_arka_gobek ↔ kose_tutucu_sol_arka_kol": "MODEL AÇIĞI (E mekanizma üreteci): son konumda iç içe 46 üçgen — sıkı geçme / göbek ↔ mil / kasnak ↔ kayış (üreteçte boşluk yok)",
+  "kose_tutucu_sol_on_gobek ↔ kose_tutucu_sol_on_kol": "MODEL AÇIĞI (E mekanizma üreteci): son konumda iç içe 45 üçgen — sıkı geçme / göbek ↔ mil / kasnak ↔ kayış (üreteçte boşluk yok)",
+  "onyuz_dikme_orta ↔ onyuz_kapak_E_basac_sag_0": "bas-aç gövdesi orta dikmenin Ø12,2 deliğine geçme (yaylı tırnak; model sıfır boşluk)",
+  "onyuz_dikme_orta ↔ onyuz_kapak_E_basac_sag_1": "bas-aç gövdesi orta dikmenin Ø12,2 deliğine geçme (yaylı tırnak; model sıfır boşluk)",
+  "onyuz_dikme_orta ↔ onyuz_kapak_E_basac_sag_2": "bas-aç gövdesi orta dikmenin Ø12,2 deliğine geçme (yaylı tırnak; model sıfır boşluk)",
+  "onyuz_dikme_orta ↔ onyuz_kapak_E_basac_sol_0": "bas-aç gövdesi orta dikmenin Ø12,2 deliğine geçme (yaylı tırnak; model sıfır boşluk)",
+  "onyuz_dikme_orta ↔ onyuz_kapak_E_basac_sol_1": "bas-aç gövdesi orta dikmenin Ø12,2 deliğine geçme (yaylı tırnak; model sıfır boşluk)",
+  "onyuz_dikme_orta ↔ onyuz_kapak_E_basac_sol_2": "bas-aç gövdesi orta dikmenin Ø12,2 deliğine geçme (yaylı tırnak; model sıfır boşluk)",
+  "parmak_gobek ↔ parmak_kasnak": "MODEL AÇIĞI (E mekanizma üreteci): GÖMÜLÜ — mil / motor mili / blok karşı parçanın içinde deliksiz modellenmiş (gerçekte delik / yuva var; üreteçte açılacak)",
+  "parmak_gobek ↔ parmak_mafsal_plaka_0": "MODEL AÇIĞI (E mekanizma üreteci): GÖMÜLÜ — mil / motor mili / blok karşı parçanın içinde deliksiz modellenmiş (gerçekte delik / yuva var; üreteçte açılacak)",
+  "parmak_kasnak ↔ parmak_kayis": "MODEL AÇIĞI (E mekanizma üreteci): son konumda iç içe 34 üçgen — sıkı geçme / göbek ↔ mil / kasnak ↔ kayış (üreteçte boşluk yok)",
+  "parmak_kayis ↔ parmak_motor_kasnagi": "MODEL AÇIĞI (E mekanizma üreteci): son konumda iç içe 25 üçgen — sıkı geçme / göbek ↔ mil / kasnak ↔ kayış (üreteçte boşluk yok)",
+  "parmak_mafsal_plaka_1 ↔ parmak_tasiyici": "MODEL AÇIĞI (E mekanizma üreteci): son konumda iç içe 6 üçgen — sıkı geçme / göbek ↔ mil / kasnak ↔ kayış (üreteçte boşluk yok)",
+  "piston_somun_blogu ↔ piston_somun_braketi": "MODEL AÇIĞI (E mekanizma üreteci): GÖMÜLÜ — mil / motor mili / blok karşı parçanın içinde deliksiz modellenmiş (gerçekte delik / yuva var; üreteçte açılacak)",
+  "besleyici_motor ↔ besleyici_sasi": "ÖNCEDEN VAR (kaynak model hat3_v10j): aynı hazır alt montajın parçaları, tezgâhta birlikte gelir (montajdan doğmaz)",
+  "kose_kaldirici ↔ kose_tutucu": "ÖNCEDEN VAR (kaynak model hat3_v10j): aynı hazır alt montajın parçaları, tezgâhta birlikte gelir (montajdan doğmaz)",
+  "parmak ↔ parmak_y": "ÖNCEDEN VAR (kaynak model hat3_v10j): aynı hazır alt montajın parçaları, tezgâhta birlikte gelir (montajdan doğmaz)",
+  "cevre_B ↔ cevre_K": "silik çevre: B ↔ K kaynak modelde (E montajı dışı)"
+ },
+ "vida": [
+  {
+   "eleman": "kaide_e_vida_arka_120",
+   "std": "ISO 7380 M8 (bombe başlı)",
+   "karsi": "DIN 929 M8 kaynak somunu (kaide rayı)",
+   "kavrama_mm": 6.5,
+   "dis_boyu_mm": 6.5,
+   "uc_tasma_mm": 3.5,
+   "delik_gecis": "TEMİZ",
+   "gecilen": [
+    "taban_sac_3"
+   ]
+  },
+  {
+   "eleman": "kaide_e_vida_arka_300",
+   "std": "ISO 7380 M8 (bombe başlı)",
+   "karsi": "DIN 929 M8 kaynak somunu (kaide rayı)",
+   "kavrama_mm": 6.5,
+   "dis_boyu_mm": 6.5,
+   "uc_tasma_mm": 3.5,
+   "delik_gecis": "TEMİZ",
+   "gecilen": [
+    "taban_sac_3"
+   ]
+  },
+  {
+   "eleman": "kaide_e_vida_arka_530",
+   "std": "ISO 7380 M8 (bombe başlı)",
+   "karsi": "DIN 929 M8 kaynak somunu (kaide rayı)",
+   "kavrama_mm": 6.5,
+   "dis_boyu_mm": 6.5,
+   "uc_tasma_mm": 3.5,
+   "delik_gecis": "TEMİZ",
+   "gecilen": [
+    "taban_sac_3"
+   ]
+  },
+  {
+   "eleman": "kaide_e_vida_arka_710",
+   "std": "ISO 7380 M8 (bombe başlı)",
+   "karsi": "DIN 929 M8 kaynak somunu (kaide rayı)",
+   "kavrama_mm": 6.5,
+   "dis_boyu_mm": 6.5,
+   "uc_tasma_mm": 3.5,
+   "delik_gecis": "TEMİZ",
+   "gecilen": [
+    "taban_sac_3"
+   ]
+  },
+  {
+   "eleman": "kaide_e_vida_on_230",
+   "std": "ISO 7380 M8 (bombe başlı)",
+   "karsi": "DIN 929 M8 kaynak somunu (kaide rayı)",
+   "kavrama_mm": 6.5,
+   "dis_boyu_mm": 6.5,
+   "uc_tasma_mm": 3.5,
+   "delik_gecis": "TEMİZ",
+   "gecilen": [
+    "taban_sac_3"
+   ]
+  },
+  {
+   "eleman": "kaide_e_vida_on_530",
+   "std": "ISO 7380 M8 (bombe başlı)",
+   "karsi": "DIN 929 M8 kaynak somunu (kaide rayı)",
+   "kavrama_mm": 6.5,
+   "dis_boyu_mm": 6.5,
+   "uc_tasma_mm": 3.5,
+   "delik_gecis": "TEMİZ",
+   "gecilen": [
+    "taban_sac_3"
+   ]
+  },
+  {
+   "eleman": "kaide_e_vida_on_710",
+   "std": "ISO 7380 M8 (bombe başlı)",
+   "karsi": "DIN 929 M8 kaynak somunu (kaide rayı)",
+   "kavrama_mm": 6.5,
+   "dis_boyu_mm": 6.5,
+   "uc_tasma_mm": 3.5,
+   "delik_gecis": "TEMİZ",
+   "gecilen": [
+    "taban_sac_3"
+   ]
+  },
+  {
+   "eleman": "arayuz_uke_m8_100",
+   "std": "ISO 7380 M8 × 16 (U tabanından)",
+   "karsi": "PEM SP-M8 (üst sac)",
+   "kavrama_mm": 5.47,
+   "dis_boyu_mm": 5.47,
+   "uc_tasma_mm": 8.91,
+   "delik_gecis": "TEMİZ",
+   "gecilen": []
+  },
+  {
+   "eleman": "arayuz_uke_m8_415",
+   "std": "ISO 7380 M8 × 16 (U tabanından)",
+   "karsi": "PEM SP-M8 (üst sac)",
+   "kavrama_mm": 5.47,
+   "dis_boyu_mm": 5.47,
+   "uc_tasma_mm": 8.91,
+   "delik_gecis": "TEMİZ",
+   "gecilen": []
+  },
+  {
+   "eleman": "arayuz_uke_m8_730",
+   "std": "ISO 7380 M8 × 16 (U tabanından)",
+   "karsi": "PEM SP-M8 (üst sac)",
+   "kavrama_mm": 5.47,
+   "dis_boyu_mm": 5.47,
+   "uc_tasma_mm": 8.91,
+   "delik_gecis": "TEMİZ",
+   "gecilen": []
+  }
+ ],
+ "sac_model": [
+  [
+   "govde_kosebent_sag_arka_alt",
+   0.0002
+  ],
+  [
+   "govde_kulak_sag_taban_150",
+   0.0002
+  ],
+  [
+   "govde_kulak_sag_taban_30",
+   0.0002
+  ],
+  [
+   "govde_kulak_sag_taban_300",
+   0.0002
+  ],
+  [
+   "govde_kulak_sag_taban_470",
+   0.0002
+  ],
+  [
+   "govde_kulak_sag_taban_620",
+   0.0002
+  ],
+  [
+   "govde_kulak_sag_taban_760",
+   0.0002
+  ],
+  [
+   "govde_kulak_sol_on_1100",
+   0.0002
+  ],
+  [
+   "govde_kulak_sol_on_1300",
+   0.0002
+  ],
+  [
+   "govde_kulak_sol_on_1500",
+   0.0002
+  ]
+ ],
+ "plan_sorun": [],
+ "istisna": [
+  "asansor_sensor_dili_kaynak",
+  "besleyici_kayis",
+  "besleyici_motor_yuvasi_kaynak",
+  "besleyici_uc_sensor_dili_kaynak",
+  "bitici_kol_0_alt_kaynak",
+  "bitici_kol_0_ust_kaynak_0",
+  "bitici_kol_0_ust_kaynak_1",
+  "bitici_kol_1_alt_kaynak",
+  "bitici_kol_1_ust_kaynak_0",
+  "bitici_kol_1_ust_kaynak_1",
+  "emniyet_E_ALT_SAG_braket_kaynak",
+  "emniyet_E_ALT_SOL_braket_kaynak",
+  "emniyet_E_UST_SAG_braket_kaynak",
+  "emniyet_E_UST_SOL_braket_kaynak",
+  "govde_kulak_sag_on_1100_kaynak_a",
+  "govde_kulak_sag_on_1100_kaynak_b",
+  "govde_kulak_sag_on_1300_kaynak_a",
+  "govde_kulak_sag_on_1300_kaynak_b",
+  "govde_kulak_sag_on_1500_kaynak_a",
+  "govde_kulak_sag_on_1500_kaynak_b",
+  "govde_kulak_sag_on_1700_kaynak_a",
+  "govde_kulak_sag_on_1700_kaynak_b",
+  "govde_kulak_sag_on_1820_kaynak_a",
+  "govde_kulak_sag_on_1820_kaynak_b",
+  "govde_kulak_sag_on_250_kaynak_a",
+  "govde_kulak_sag_on_250_kaynak_b",
+  "govde_kulak_sag_on_450_kaynak_a",
+  "govde_kulak_sag_on_450_kaynak_b",
+  "govde_kulak_sag_on_620_kaynak_a",
+  "govde_kulak_sag_on_620_kaynak_b",
+  "govde_kulak_sag_on_850_kaynak_a",
+  "govde_kulak_sag_on_850_kaynak_b",
+  "govde_kulak_sag_taban_150_kaynak_a",
+  "govde_kulak_sag_taban_150_kaynak_b",
+  "govde_kulak_sag_taban_300_kaynak_a",
+  "govde_kulak_sag_taban_300_kaynak_b",
+  "govde_kulak_sag_taban_30_kaynak_a",
+  "govde_kulak_sag_taban_30_kaynak_b",
+  "govde_kulak_sag_taban_470_kaynak_a",
+  "govde_kulak_sag_taban_470_kaynak_b",
+  "govde_kulak_sag_taban_620_kaynak_a",
+  "govde_kulak_sag_taban_620_kaynak_b",
+  "govde_kulak_sag_taban_760_kaynak_a",
+  "govde_kulak_sag_taban_760_kaynak_b",
+  "govde_kulak_sol_on_1100_kaynak_a",
+  "govde_kulak_sol_on_1100_kaynak_b",
+  "govde_kulak_sol_on_1300_kaynak_a",
+  "govde_kulak_sol_on_1300_kaynak_b",
+  "govde_kulak_sol_on_1500_kaynak_a",
+  "govde_kulak_sol_on_1500_kaynak_b",
+  "govde_kulak_sol_on_1700_kaynak_a",
+  "govde_kulak_sol_on_1700_kaynak_b",
+  "govde_kulak_sol_on_1820_kaynak_a",
+  "govde_kulak_sol_on_1820_kaynak_b",
+  "govde_kulak_sol_on_250_kaynak_a",
+  "govde_kulak_sol_on_250_kaynak_b",
+  "govde_kulak_sol_on_450_kaynak_a",
+  "govde_kulak_sol_on_450_kaynak_b",
+  "govde_kulak_sol_on_620_kaynak_a",
+  "govde_kulak_sol_on_620_kaynak_b",
+  "govde_kulak_sol_on_850_kaynak_a",
+  "govde_kulak_sol_on_850_kaynak_b",
+  "govde_kulak_sol_taban_470_kaynak_a",
+  "govde_kulak_sol_taban_470_kaynak_b",
+  "govde_kulak_sol_taban_620_kaynak_a",
+  "govde_kulak_sol_taban_620_kaynak_b",
+  "govde_kulak_sol_taban_790_kaynak_a",
+  "govde_kulak_sol_taban_790_kaynak_b",
+  "hava_hatti",
+  "itici_kayis",
+  "kablo_bilgi",
+  "kablo_guc",
+  "kaide_e_kayit_orta_kaynak_140_0",
+  "kaide_e_kayit_orta_kaynak_140_1",
+  "kaide_e_kayit_orta_kaynak_730_0",
+  "kaide_e_kayit_orta_kaynak_730_1",
+  "kaide_e_kayit_sag_kaynak_140_0",
+  "kaide_e_kayit_sag_kaynak_730_0",
+  "kaide_e_kayit_sol_kaynak_140_0",
+  "kaide_e_kayit_sol_kaynak_730_0",
+  "kapak_katlayici_blok_on_kaynak",
+  "kose_tutucu_sag_arka_cene_kaynak",
+  "kose_tutucu_sag_on_cene_kaynak",
+  "kose_tutucu_sol_arka_cene_kaynak",
+  "kose_tutucu_sol_on_cene_kaynak",
+  "onyuz_dikme_orta_taban_kaynagi_arka",
+  "onyuz_dikme_orta_taban_kaynagi_sag",
+  "onyuz_dikme_orta_taban_kaynagi_sol",
+  "onyuz_dikme_sag_taban_kaynagi_arka",
+  "onyuz_dikme_sag_taban_kaynagi_sol",
+  "onyuz_dikme_sol_taban_kaynagi_arka",
+  "onyuz_dikme_sol_taban_kaynagi_sag",
+  "onyuz_kapak_E_alt_sag_kose_kaynagi_1",
+  "onyuz_kapak_E_alt_sag_kose_kaynagi_2",
+  "onyuz_kapak_E_alt_sag_kose_kaynagi_3",
+  "onyuz_kapak_E_alt_sag_kose_kaynagi_4",
+  "onyuz_kapak_E_alt_sag_punta_karsilik_700_0",
+  "onyuz_kapak_E_alt_sag_punta_karsilik_700_1",
+  "onyuz_kapak_E_alt_sag_punta_mentese_0_0",
+  "onyuz_kapak_E_alt_sag_punta_mentese_0_1",
+  "onyuz_kapak_E_alt_sag_punta_mentese_1_0",
+  "onyuz_kapak_E_alt_sag_punta_mentese_1_1",
+  "onyuz_kapak_E_alt_sag_punta_mentese_2_0",
+  "onyuz_kapak_E_alt_sag_punta_mentese_2_1",
+  "onyuz_kapak_E_alt_sol_kose_kaynagi_1",
+  "onyuz_kapak_E_alt_sol_kose_kaynagi_2",
+  "onyuz_kapak_E_alt_sol_kose_kaynagi_3",
+  "onyuz_kapak_E_alt_sol_kose_kaynagi_4",
+  "onyuz_kapak_E_alt_sol_punta_karsilik_700_0",
+  "onyuz_kapak_E_alt_sol_punta_karsilik_700_1",
+  "onyuz_kapak_E_alt_sol_punta_mentese_0_0",
+  "onyuz_kapak_E_alt_sol_punta_mentese_0_1",
+  "onyuz_kapak_E_alt_sol_punta_mentese_1_0",
+  "onyuz_kapak_E_alt_sol_punta_mentese_1_1",
+  "onyuz_kapak_E_alt_sol_punta_mentese_2_0",
+  "onyuz_kapak_E_alt_sol_punta_mentese_2_1",
+  "onyuz_kapak_E_ust_sag_kose_kaynagi_1",
+  "onyuz_kapak_E_ust_sag_kose_kaynagi_2",
+  "onyuz_kapak_E_ust_sag_kose_kaynagi_3",
+  "onyuz_kapak_E_ust_sag_kose_kaynagi_4",
+  "onyuz_kapak_E_ust_sag_punta_karsilik_1000_0",
+  "onyuz_kapak_E_ust_sag_punta_karsilik_1000_1",
+  "onyuz_kapak_E_ust_sag_punta_karsilik_1700_0",
+  "onyuz_kapak_E_ust_sag_punta_karsilik_1700_1",
+  "onyuz_kapak_E_ust_sag_punta_mentese_3_0",
+  "onyuz_kapak_E_ust_sag_punta_mentese_3_1",
+  "onyuz_kapak_E_ust_sag_punta_mentese_4_0",
+  "onyuz_kapak_E_ust_sag_punta_mentese_4_1",
+  "onyuz_kapak_E_ust_sag_punta_mentese_5_0",
+  "onyuz_kapak_E_ust_sag_punta_mentese_5_1",
+  "onyuz_kapak_E_ust_sol_kose_kaynagi_1",
+  "onyuz_kapak_E_ust_sol_kose_kaynagi_2",
+  "onyuz_kapak_E_ust_sol_kose_kaynagi_3",
+  "onyuz_kapak_E_ust_sol_kose_kaynagi_4",
+  "onyuz_kapak_E_ust_sol_punta_karsilik_1700_0",
+  "onyuz_kapak_E_ust_sol_punta_karsilik_1700_1",
+  "onyuz_kapak_E_ust_sol_punta_mentese_3_0",
+  "onyuz_kapak_E_ust_sol_punta_mentese_3_1",
+  "onyuz_kapak_E_ust_sol_punta_mentese_4_0",
+  "onyuz_kapak_E_ust_sol_punta_mentese_4_1",
+  "onyuz_kapak_E_ust_sol_punta_mentese_5_0",
+  "onyuz_kapak_E_ust_sol_punta_mentese_5_1",
+  "onyuz_kayit_788_sag_kaynak_481_0",
+  "onyuz_kayit_788_sag_kaynak_481_1",
+  "onyuz_kayit_788_sag_kaynak_808_0",
+  "onyuz_kayit_788_sag_kaynak_808_1",
+  "onyuz_kayit_788_sol_kaynak_21_0",
+  "onyuz_kayit_788_sol_kaynak_21_1",
+  "onyuz_kayit_788_sol_kaynak_441_0",
+  "onyuz_kayit_788_sol_kaynak_441_1",
+  "parmak_kayis",
+  "parmak_kol_kaynak",
+  "parmak_sensor_braketi_kaynak",
+  "piston_bas_kaynak_0",
+  "piston_bas_kaynak_1",
+  "piston_bas_kaynak_2",
+  "sarjor_yan_kapisi_punta_0",
+  "sarjor_yan_kapisi_punta_1",
+  "sarjor_yan_kapisi_punta_2",
+  "sarjor_yan_kapisi_punta_3",
+  "sarjor_yan_kapisi_punta_4",
+  "sarjor_yan_kapisi_punta_5",
+  "vakum_hortum"
+ ],
+ "uretilen": [
+  "arka_sac",
+  "govde_kosebent_sag_arka_alt",
+  "govde_kulak_sag_on_1100",
+  "govde_kulak_sag_on_1300",
+  "govde_kulak_sag_on_1500",
+  "govde_kulak_sag_on_1700",
+  "govde_kulak_sag_on_1820",
+  "govde_kulak_sag_on_250",
+  "govde_kulak_sag_on_450",
+  "govde_kulak_sag_on_620",
+  "govde_kulak_sag_on_850",
+  "govde_kulak_sag_taban_150",
+  "govde_kulak_sag_taban_30",
+  "govde_kulak_sag_taban_300",
+  "govde_kulak_sag_taban_470",
+  "govde_kulak_sag_taban_620",
+  "govde_kulak_sag_taban_760",
+  "govde_kulak_sol_on_1100",
+  "govde_kulak_sol_on_1300",
+  "govde_kulak_sol_on_1500",
+  "govde_kulak_sol_on_1700",
+  "govde_kulak_sol_on_1820",
+  "govde_kulak_sol_on_250",
+  "govde_kulak_sol_on_450",
+  "govde_kulak_sol_on_620",
+  "govde_kulak_sol_on_850",
+  "govde_kulak_sol_taban_470",
+  "govde_kulak_sol_taban_620",
+  "govde_kulak_sol_taban_790",
+  "onyuz_kapak_E_alt_sag",
+  "onyuz_kapak_E_alt_sol",
+  "onyuz_kapak_E_ust_sag",
+  "onyuz_kapak_E_ust_sol",
+  "sag_sac",
+  "sol_sac_pizza_penceresi",
+  "ust_sac"
+ ],
+ "siyirma_mm": 0.75,
+ "oturma_mm": 1.0
+}

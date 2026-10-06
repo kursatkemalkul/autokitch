@@ -1,0 +1,64 @@
+  vida itici_ray_0_vida                   M4×20  ×8  itici_ray_0 → itici_tasiyici · eksen [0.0, 0.0, -1.0] · A [15.0, 15.0, 9.7, 9.7, 9.7, 15.0, 15.0, 9.7] · B [5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0] · kavrama [5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0]
+  vida itici_ray_1_vida                   M4×20  ×8  itici_ray_1 → itici_tasiyici · eksen [0.0, 0.0, -1.0] · A [15.0, 15.0, 9.7, 9.7, 9.7, 15.0, 15.0, 9.7] · B [5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0] · kavrama [5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0]
+  vida piston_araba_0_vida                M4×16  ×4  piston_plaka → piston_araba_0 · eksen [0.0, 0.0, -1.0] · A [10.0, 10.0, 10.0, 10.0] · B [23.2, 23.2, 23.2, 23.2] · kavrama [5.5, 5.5, 5.5, 5.5]
+  vida piston_araba_1_vida                M4×16  ×4  piston_plaka → piston_araba_1 · eksen [0.0, 0.0, -1.0] · A [10.0, 10.0, 10.0, 10.0] · B [23.2, 23.2, 23.2, 23.2] · kavrama [5.5, 5.5, 5.5, 5.5]
+  vida piston_araba_2_vida                M4×16  ×4  piston_plaka → piston_araba_2 · eksen [0.0, 0.0, -1.0] · A [10.0, 10.0, 10.0, 10.0] · B [23.2, 23.2, 23.2, 23.2] · kavrama [5.5, 5.5, 5.5, 5.5]
+  vida piston_araba_3_vida                M4×16  ×4  piston_plaka → piston_araba_3 · eksen [0.0, 0.0, -1.0] · A [10.0, 10.0, 10.0, 10.0] · B [23.2, 23.2, 23.2, 23.2] · kavrama [5.5, 5.5, 5.5, 5.5]
+  vida piston_somun_braketi_vida          M5×20  ×2  piston_plaka → piston_somun_braketi · eksen [0.0, 0.0, 1.0] · A [10.0, 10.0] · B [52.0, 52.0] · kavrama [10.0, 10.0]
+  yeni parça piston_bas_kaynak_0          E_MEK_BAG__kaynak · kutu [4576.0, 1330.0, -351.0] → [4594.0, 1334.0, -347.0]
+  yeni parça piston_bas_kaynak_1          E_MEK_BAG__kaynak · kutu [4606.0, 1330.0, -351.0] → [4714.0, 1334.0, -347.0]
+  yeni parça piston_bas_kaynak_2          E_MEK_BAG__kaynak · kutu [4726.0, 1330.0, -351.0] → [4764.0, 1334.0, -347.0]
+  vida piston_lama_0_vida                 M5×30  ×4  piston_bas → piston_lama_0 · eksen [0.0, 1.0, 0.0] · A [20.0, 20.0, 20.0, 20.0] · B [50.0, 50.0, 50.0, 50.0] · kavrama [10.0, 10.0, 10.0, 10.0]
+  vida piston_lama_1_vida                 M5×30  ×4  piston_bas → piston_lama_1 · eksen [0.0, 1.0, 0.0] · A [20.0, 20.0, 20.0, 20.0] · B [50.0, 50.0, 50.0, 50.0] · kavrama [10.0, 10.0, 10.0, 10.0]
+  vida itici_ust_blok_0_vida              M4×8   ×2  itici_ust_blok_0 → itici_tasiyici · eksen [0.0, 0.0, 1.0] · A [3.0, 3.0] · B [5.0, 5.0] · kavrama [5.0, 5.0]
+  vida itici_ust_blok_0_taban_vida        M4×8   ×2  itici_ust_blok_0 → besleyici_plaka · eksen [0.0, -1.0, 0.0] · A [3.0, 3.0] · B [5.0, 5.0] · kavrama [5.0, 5.0]
+  vida itici_ust_blok_1_vida              M4×8   ×2  itici_ust_blok_1 → itici_tasiyici · eksen [0.0, 0.0, 1.0] · A [3.0, 3.0] · B [5.0, 5.0] · kavrama [5.0, 5.0]
+  vida itici_ust_blok_1_taban_vida        M4×8   ×2  itici_ust_blok_1 → besleyici_plaka · eksen [0.0, -1.0, 0.0] · A [3.0, 3.0] · B [5.0, 5.0] · kavrama [5.0, 5.0]
+  vida itici_sensor_blogu_vida            M4×8   ×2  itici_sensor_blogu → itici_tasiyici · eksen [0.0, 0.0, 1.0] · A [3.0, 3.0] · B [5.0, 5.0] · kavrama [5.0, 5.0]
+  sensör somunu itici_sensor_somun_dis    ISO 4032 M8 · itici_sensor → itici_sensor_blogu
+  sensör somunu itici_sensor_somun_ic     ISO 4035 ince M8 · itici_sensor → itici_sensor_blogu
+  vida itici_yatak_plakasi_1_vida         M4×40  ×2  itici_ust_yatak → itici_yatak_plakasi_1 · eksen [0.0, 1.0, 0.0] · A [32.5, 32.5] · B [38.0, 38.0] · kavrama [7.5, 7.5]
+  yeni parça itici_yatak_z_braketi        E_MEK_BAG__celik · kutu [4646.0, 1838.0, -380.0] → [4694.0, 1858.0, -345.0]
+  vida itici_yatak_z_braketi_tasiyici_vida M4×8   ×2  itici_yatak_z_braketi → itici_tasiyici · eksen [0.0, 0.0, -1.0] · A [2.0, 2.0] · B [14.0, 14.0] · kavrama [6.0, 6.0]
+  vida itici_yatak_z_braketi_vida         M4×8   ×2  itici_yatak_z_braketi → itici_yatak_plakasi_0 · eksen [0.0, 0.0, 1.0] · A [2.0, 2.0] · B [6.0, 6.0] · kavrama [6.0, 6.0]
+  yeni parça itici_motor_z_braketi_0      E_MEK_BAG__celik · kutu [4706.0, 1846.0, -380.0] → [4728.0, 1858.0, -350.0]
+  vida itici_motor_z_braketi_0_tasiyici_vida M4×8   ×2  itici_motor_z_braketi_0 → itici_tasiyici · eksen [0.0, 0.0, -1.0] · A [2.0, 2.0] · B [14.0, 5.1] · kavrama [6.0, 4.0]
+  vida itici_motor_z_braketi_0_vida       M4×8   ×1  itici_motor_z_braketi_0 → itici_motor_blogu · eksen [0.0, 0.0, 1.0] · A [2.0] · B [14.0] · kavrama [6.0]
+  yeni parça itici_motor_z_braketi_1      E_MEK_BAG__celik · kutu [4748.0, 1846.0, -380.0] → [4772.0, 1858.0, -350.0]
+  vida itici_motor_z_braketi_1_tasiyici_vida M4×8   ×2  itici_motor_z_braketi_1 → itici_tasiyici · eksen [0.0, 0.0, -1.0] · A [2.0, 2.0] · B [14.0, 14.0] · kavrama [6.0, 6.0]
+  vida itici_motor_z_braketi_1_vida       M4×8   ×1  itici_motor_z_braketi_1 → itici_motor_blogu · eksen [0.0, 0.0, 1.0] · A [2.0] · B [14.0] · kavrama [6.0]
+  motor itici_motor_vida                  M4×12  ×4  itici_motor → itici_motor_blogu · flanş y=1822.0 · kare 47.14
+  pim itici_kasnak_mil_pim                Ø3×12  ×1  itici_kasnak_mil → itici_vida_mili · eksen [1.0, 0.0, 0.0]
+  vida itici_kasnak_motor_vida            M3×8   ×1  itici_motor_mili → itici_kasnak_motor · eksen [0.0, -1.0, 0.0] · A [2.5] · B [13.0] · kavrama [5.5]
+  vida parmak_tasiyici_vida               M5×14  ×4  parmak_tasiyici → piston_lama_0 · eksen [0.0, -1.0, 0.0] · A [6.0, 6.0, 6.0, 6.0] · B [50.0, 50.0, 50.0, 50.0] · kavrama [8.0, 8.0, 8.0, 8.0]
+  vida parmak_motor_braketi_vida          M5×14  ×4  parmak_motor_braketi → piston_lama_1 · eksen [0.0, -1.0, 0.0] · A [6.0, 6.0, 6.0, 6.0] · B [50.0, 50.0, 50.0, 50.0] · kavrama [8.0, 8.0, 8.0, 8.0]
+  motor parmak_motor_vida                 M5×14  ×4  parmak_motor → parmak_motor_braketi · flanş z=-5.0 · kare 47.14
+  setskur parmak_kasnak_setskur           M4×5   ×1  parmak_kasnak → parmak_gobek · eksen [1.0, 0.0, 0.0]
+  setskur parmak_motor_kasnagi_setskur    M4×8   ×1  parmak_motor_kasnagi → parmak_motor · eksen [1.0, 0.0, 0.0]
+  vida parmak_sensor_lamasi_vida          M4×12  ×2  parmak_motor_braketi → parmak_sensor_lamasi · eksen [0.0, 0.0, -1.0] · A [6.0, 6.0] · B [90.3, 90.3] · kavrama [6.0, 6.0]
+  yeni parça parmak_sensor_braketi_kaynak E_MEK_BAG__kaynak · kutu [4774.5, 1517.5, -91.8] → [4776.5, 1519.5, -78.8]
+  sensör somunu parmak_sensor_somun_dis   ISO 4032 M8 · parmak_sensor → parmak_sensor_braketi
+  sensör somunu parmak_sensor_somun_ic    ISO 4035 ince M8 · parmak_sensor → parmak_sensor_lamasi · cep: parmak_sensor_lamasi
+  yeni parça parmak_kol_kaynak            E_MEK_BAG__kaynak · kutu [4479.0, 1408.0, -27.0] → [4484.0, 1410.0, -20.0]
+  vida parmak_bicak_vida                  M3×5   ×4  parmak_bicak → parmak_kol · eksen [0.0, 1.0, 0.0] · A [2.0, 2.0, 2.0, 2.0] · B [3.0, 3.0, 3.0, 3.0] · kavrama [3.0, 3.0, 3.0, 3.0]
+  DELİK: itici_ray_0_vida_6  fazla [('E_PISTON__celik__PISTON', 0, 153.8, None)]
+  DELİK: itici_ray_1_vida_6  fazla [('E_PISTON__celik__PISTON', 2, 153.8, None)]
+  DELİK: piston_somun_braketi_vida_0  fazla [('E_PISTON__celik__PISTON', 4, 0.2, None)]
+  DELİK: itici_yatak_z_braketi_tasiyici_vida_0 eksik ['itici_tasiyici'] 
+  DELİK: itici_yatak_z_braketi_tasiyici_vida_1 eksik ['itici_tasiyici'] 
+  DELİK: itici_motor_z_braketi_0_tasiyici_vida_0 eksik ['itici_tasiyici'] 
+  DELİK: itici_motor_z_braketi_0_tasiyici_vida_1 eksik ['itici_tasiyici'] 
+  DELİK: itici_motor_z_braketi_1_tasiyici_vida_0 eksik ['itici_tasiyici'] 
+  DELİK: itici_motor_z_braketi_1_tasiyici_vida_1 eksik ['itici_tasiyici'] 
+  DELİK: parmak_kasnak_setskur  fazla [('E_PARMAK__kayis__FRONT_Y', 0, 11.0, None)]
+Traceback (most recent call last):
+  File "/home/user/autokitch/arastirma/_uretec/h3/yama_v9/84_e_parmak_itici.py", line 102, in <module>
+    M.bitir(go, "E_MEK_BAG__vida", "84", mek=36, mek_kod="E/Kutu katlama", ek=dict(aile=["parmak", "itici", "piston"]),
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            ek_dugum={"_sablon": {"E_MEK_BAG__kaynak": "E_GOVDE__sac", "E_MEK_BAG__celik": "E_GOVDE__celik"}})
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/autokitch/arastirma/_uretec/h3/yama_v9/e_mek_bag.py", line 557, in bitir
+    assert not kd, "ADIM %s DUR: %d vida beklenen parçaları delmiyor" % (adim, len(kd))
+           ^^^^^^
+AssertionError: ADIM 84 DUR: 10 vida beklenen parçaları delmiyor
+BITTI

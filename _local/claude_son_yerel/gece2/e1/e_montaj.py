@@ -58,6 +58,7 @@ for p in [a for a in P if a.startswith('e_arka_civata_')]: P[p]['eks'] = np.arra
 for p in [a for a in P if _re.match(r'emniyet_E_([A-Z]+_[A-Z]+)_\d_somun$', a)]:
     pem_bagla(p, 'emniyet_E_%s_braket' % _re.match(r'emniyet_E_([A-Z]+_[A-Z]+)_', p).group(1), (0, 0, -1.0), 'PEM S-M4-2 (sensör braketi)')
 for p in [a for a in P if _re.match(r'emniyet_E_[A-Z]+_[A-Z]+_\d_vida$', a)]: P[p]['eks'] = np.array([0, 0, -1.0])
+pem_bagla('besleyici_motor_yuvasi_braketi_saplama', 'sag_sac', (1.0, 0, 0), 'PEM FHP-M4 (zincir 85 · motor yuvası köşebendi)')
 print('PEM / saplama', {k: len(v) for k, v in PEM_SAC.items()})
 # pul / somun giriş ekseni: saplamanın ucundan başa doğru (baş = yan)
 for a in list(P):
@@ -69,6 +70,19 @@ for a in [a for a in P if _re.match(r'ayak_\d+(_kontra)?$', a)]: P[a]['eks'] = n
 for a in [a for a in P if _re.match(r'onyuz_kapak_E_mentese_(sol|sag)_\d_sabit_vida', a)]: P[a]['eks'] = np.array([-1.0 if '_sol_' in a else 1.0, 0, 0])
 
 exec(open(os.path.join(HERE, '_altyapi.py'), encoding='utf-8').read())
+# yerel 6 Eki: CCD temas bulunca hareket boyunca 2 mm adımla GERÇEK kesişim (0,3 mm) aranır — sıfır boşluklu delikte eksen boyunca kayma çarpışma sayılmaz
+# (e_cikti 1b doğrulamasıyla aynı ölçüt; son denetim yine tam ağla yapılır)
+def _gercek_kesisim(a, b, ofs, v_m):
+    A0 = tri(a) + np.asarray(ofs, float) / 1000.0; B = tri(b); n_ = max(2, int(np.ceil(np.linalg.norm(v_m) * 1000.0 / 2.0)) + 1)
+    lo_b = B.min((0, 1)); hi_b = B.max((0, 1))
+    for s_ in np.linspace(0.0, 1.0, n_):
+        A = A0 + s_ * v_m; sa = np.all(A.min(1) <= hi_b, 1) & np.all(A.max(1) >= lo_b, 1)
+        if sa.any() and int(Y.poz_kesisim(np.ascontiguousarray(A[sa]), np.ascontiguousarray(B), 3e-4).sum()): return True
+    return False
+_serbest0 = serbest
+def serbest(adlar, ofs, yerinde, ofs2=None):
+    ofs_ = np.asarray(ofs, float); ofs2_ = np.zeros(3) if ofs2 is None else np.asarray(ofs2, float)
+    return [(a, b) for a, b in _serbest0(adlar, ofs, yerinde, ofs2) if _gercek_kesisim(a, b, ofs_, (ofs2_ - ofs_) / 1000.0)]
 
 _kg = kamera_genel
 def kamera_genel(adlar, **k):                                                    # E dar ve uzun: adım kamerası 1,6 kat geride (bütün istasyon görünsün)
@@ -77,6 +91,9 @@ def kamera_genel(adlar, **k):                                                   
 for s_, L_ in PEM_SAC.items():
     for p in L_: HARIC_PLAN.add((p, s_))
 def haric(a, b, neden): HARIC_PLAN.add((a, b)); HARIC_NEDEN[(a, b)] = neden
+for a_, b_, n_ in json.load(open(os.path.join(HERE, 'mek_ic_ice.json'), encoding='utf-8')):
+    haric(a_, b_, ('MODEL AÇIĞI (E mekanizma üreteci): son konumda iç içe %d üçgen — sıkı geçme / göbek ↔ mil / kasnak ↔ kayış (üreteçte boşluk yok)' % n_) if n_ else
+          'MODEL AÇIĞI (E mekanizma üreteci): GÖMÜLÜ — mil / motor mili / blok karşı parçanın içinde deliksiz modellenmiş (gerçekte delik / yuva var; üreteçte açılacak)')
 for st_ in [a for a in P if a.startswith(('arayuz_mek', 'arayuz_j3'))]:
     lo_, hi_ = kutu(st_)
     for m_ in [m for m in P if P[m]['tur'] in ('mek',) and np.all(kutu(m)[0] <= hi_ + 1) and np.all(kutu(m)[1] >= lo_ - 1)]:
@@ -111,6 +128,191 @@ def vidala(adlar, t0, yol=30.0):
 def somunla(rx, t0, yol=25.0):
     return vidala(sorted(a for a in P if _re.match(rx, a) and a.endswith('_somun')), t0, yol)
 def var(*adlar): return [a for a in adlar if a in P]
+# ------------------------------------------------------------------ E MEKANİZMA TEZGÂHI (zincir 81–85 · yerel oturum 6 Eki): modül parça parça tezgâhta kurulur, her bağlantı elemanı
+# kendi ekseninde tek tek; sonra modül bütün olarak yerine. Tezgâh = makinenin önünde TEZ ofsetinde (aynı ofsetteki parçalar arasında yol denetimi).
+BAG = {}
+for s_ in 'mnopq': BAG.update(json.load(open(os.path.join(HERE, 'ent', 'hat3_v10%s_ent.json' % s_), encoding='utf-8'))['baglanti'])
+for f_, b_ in BAG.items():
+    if f_ in P and 'eks' in b_: P[f_]['eks'] = np.asarray(b_['eks'], float) * (1.0 if 'hedef' in b_ else -1.0)   # vida / pim / setskur: eksen boyunca · somun / pul / segman: yüze doğru
+MEKAD = {a: P[a]['aile'] for a in P if P[a].get('mek_ad')}
+TEZ = np.array([0.0, 0.0, 1500.0]); TEZ_YER = []; TEZDE = set()
+def _ic(a, b, tol=0.6): return np.all(LO_[a] <= HI_[b] + tol) and np.all(HI_[a] >= LO_[b] - tol)
+LO_ = {a: P[a]['V'].min(0) for a in P}; HI_ = {a: P[a]['V'].max(0) for a in P}
+YENI81 = [a for a in P if a in BAG and BAG[a].get('yeni')]                     # zincir 81–85 yeni braketler + kaynak dikişleri
+def tez_yol(adlar, adaylar):
+    global YERINDE
+    k_ = YERINDE; YERINDE = TEZ_YER
+    try: return yol_sec(list(adlar), adaylar)
+    finally: YERINDE = k_
+TEZ_AD = [YOL((0, 150, 0)), YOL((0, 0, 150)), YOL((0, 0, -150)), YOL((150, 0, 0)), YOL((-150, 0, 0)), YOL((0, -150, 0)),
+          YOL((0, 150, 0), (0, 0, 40)), YOL((0, 150, 0), (0, 0, -40)), YOL((0, 150, 0), (40, 0, 0)), YOL((0, 150, 0), (-40, 0, 0)),
+          YOL((0, 0, 150), (0, 30, 0)), YOL((0, 0, -150), (0, 30, 0)), YOL((150, 0, 0), (0, 30, 0)), YOL((-150, 0, 0), (0, 30, 0)), YOL((0, 400, 0)), YOL((0, 0, 400)), YOL((0, 0, -400))]
+def tez_koy(adlar, tt, metin=None, sure=0.45, yol=None):
+    if isinstance(adlar, str): adlar = [adlar]
+    yol = tez_yol(adlar, ([yol] if yol is not None else []) + TEZ_AD)
+    for a in adlar: basla(a, TEZ + yol[0], tt)
+    for p0, p1 in zip(yol[:-1], yol[1:]):
+        su = max(sure * float(np.linalg.norm(p1 - p0)) / 150.0, 0.25)
+        for a in adlar: git(a, TEZ + p1, tt, su)
+        tt += su
+    vurgu(adlar, tt, tt + 0.9); TEZ_YER.extend(adlar); TEZDE.update(adlar)
+    if metin: olay(tt - 0.2, metin)
+    return tt
+def tez_buyu(a, tt, sure=0.5):
+    basla(a, TEZ, tt); ISTISNA.add(a); MF[a] = dict(buyu=[round(tt, 3), round(tt + sure, 3)]); VU[a].append([round(tt, 3), round(tt + sure + 0.8, 3)])
+    TEZ_YER.append(a); TEZDE.add(a); return tt + sure
+TAKMA = {'e_sag_sac': 'sag_sac', 'e_saplama_asansor': 'arayuz_mek_sag_17', 'e_saplama_besleyici_uc': 'arayuz_mek_sag_18', 'e_saplama_katlama': 'arayuz_mek_sol_9'}   # 85: sac / önceki saplama takma adları
+def gerek(f):
+    b = BAG[f]; return [TAKMA.get(x, x) for x in (b.get('A'), b.get('B')) if x]
+def bag_hazir(yerde):
+    """tüm parçaları yerinde olan, henüz takılmamış bağlantı elemanları (vida önce, pul / somun cıvatasından sonra)"""
+    out = []
+    for f in sorted(BAG):
+        if f not in P or f in GOR or 'eks' not in BAG[f] or BAG[f].get('saplama'): continue
+        if not all(x in yerde for x in gerek(f)): continue
+        m_ = _re.match(r'(.+)_(pul|somun)$', f)
+        if m_ and m_.group(1) in BAG and m_.group(1) not in GOR and m_.group(1) not in out: continue
+        if f.endswith('_somun') and f[:-6] + '_pul' in BAG and f[:-6] + '_pul' not in GOR and f[:-6] + '_pul' not in out: continue
+        out.append(f)
+    return out
+def kaynak_hazir(yerde):
+    return [k for k in YENI81 if P[k]['tur'] == 'kaynak' and k not in GOR and all(b in yerde for b in [b for b in MEKAD if _ic(k, b, 0.3)] or ['_yok_'])]
+def yol_sec_f(f, yerde):
+    """bağlantı elemanının giriş yönü + mesafesi: önce kendi ekseni (25 → 3 mm); segman yandan (radyal, yivine geçer); pim ters yönden de çakılabilir.
+    dönüş (yön, mm, temiz mi)"""
+    e0 = np.asarray(P[f]['eks'], float); ad_ = []
+    if P[f].get('std', '').startswith('DIN 471') or '_segman' in f:
+        o_ = [k for k in range(3) if abs(e0[k]) < 0.5]
+        for k in o_:
+            for sg in (1.0, -1.0):
+                r = np.zeros(3); r[k] = sg; ad_.append(r)
+        ad_.append(e0)
+    else:
+        ad_.append(e0)
+        if '_pim' in f: ad_.append(-e0)
+    for e_ in ad_:
+        for L_ in (25.0, 15.0, 10.0, 6.0, 3.0):
+            if not serbest([f], -e_ * L_, yerde, ofs2=np.zeros(3)): return e_, L_, True
+    return e0, 3.0, False
+def grupla(L_):
+    """aynı parça çiftini bağlayanlar (paralel eksenler) bir grup; gruplar SIRAYLA (birinin yolu ötekinin başlangıcından geçmesin)"""
+    G_ = collections.OrderedDict()
+    for f in L_: G_.setdefault(tuple(sorted(str(x) for x in gerek(f))) + (_re.sub(r'_(pul|somun)$', '', f).rsplit('_', 1)[0],), []).append(f)
+    return list(G_.values())
+def _gruplar_tak(L_, yerde, tt, ofs0, ara, sure, ekle):
+    """gruplar: yolu şu an temiz olanlar önce (başka grubun elemanı yolunu kesmeden önce takılır); kalanlar tekrar denenir"""
+    kal = grupla(L_)
+    while kal:
+        sec_ = None
+        for G_ in kal:
+            Y_ = [yol_sec_f(f, yerde) for f in G_]
+            if all(y[2] for y in Y_): sec_ = (G_, Y_); break
+        if sec_ is None: G_ = kal[0]; sec_ = (G_, [yol_sec_f(f, yerde) for f in G_])
+        G_, Y_ = sec_; kal.remove(G_); t1 = tt
+        for i_, (f, (e_, L_, _)) in enumerate(zip(G_, Y_)):
+            P[f]['eks'] = e_; t1 = max(t1, tak(f, tt + i_ * ara, sure, L_, ofs0=ofs0)); ekle(f)
+        tt = t1 + 0.03
+    return tt
+def tez_baglar(tt, ara=0.08):
+    def ekle(f): TEZDE.add(f); TEZ_YER.append(f)
+    while True:
+        L_ = bag_hazir(TEZDE)
+        if not L_: break
+        tt = _gruplar_tak(L_, TEZ_YER, tt, TEZ, ara, 0.4, ekle)
+    for k in kaynak_hazir(TEZDE): tt = tez_buyu(k, tt, 0.4)
+    return tt
+ROL_SIRA = {'tasiyici': 0, 'parca': 1, 'burc': 2, 'mil': 3, 'somun': 3, 'motor': 4, 'kayis': 5, 'sensor': 6, 'vantuz': 6, 'hortum': 7}
+def adaylar_(a):
+    """tezgâh giriş yolları: eksenler + parçanın kendi ana ekseni (PCA) boyunca 150 / 400 / 800, yukarıdan iki bacaklı"""
+    V_ = P[a]['V']; c_ = V_ - V_.mean(0); w_, U_ = np.linalg.eigh(c_.T @ c_); ax_ = U_[:, -1]
+    out = []
+    for d_ in ((0, 1, 0), (0, 0, 1), (0, 0, -1), (1, 0, 0), (-1, 0, 0), (0, -1, 0), tuple(ax_), tuple(-ax_)):   # 150 mm'de çarpan yön, daha uzunda da çarpar (aynı son bacak) → yalnız 150
+        out.append(YOL(tuple(np.asarray(d_, float) * 150.0)))
+    for d_ in ((0, 0, 1), (0, 0, -1), (1, 0, 0), (-1, 0, 0)):
+        out.append(YOL((0, 300.0, 0), tuple(np.asarray(d_, float) * 120.0)))
+    return out
+SOK_KAYIT = {}
+PROF = '--prof' in sys.argv
+def sira_bul(adlar):
+    import __main__, sok_paralel as SP, hashlib
+    ANH = hashlib.md5(('|'.join(adlar) + '|' + str(os.path.getmtime(os.path.join(HERE, 'e_parca.pkl')))).encode()).hexdigest()[:12]
+    CF = os.path.join(HERE, 'sira_cache_%s.pkl' % ANH)                           # önbellek: aynı parça listesi + aynı e_parca.pkl → aynı sıra
+    if os.path.exists(CF): print('sökerek sıra önbellekten', CF); return pickle.load(open(CF, 'rb'))
+    tercih = lambda a: (-ROL_SIRA.get(P[a].get('rol', 'parca'), 1), -adlar.index(a))
+    f_ = __main__.__dict__.pop('__file__', None)                                # Windows spawn: işçiler bu betiği yeniden çalıştırmasın
+    try: S_ = SP.sira_bul_paralel(adlar, adaylar_, tercih, os.path.join(HERE, 'e_parca.pkl'), isci=16)
+    finally:
+        if f_: __main__.__file__ = f_
+    pickle.dump(S_, open(CF, 'wb')); return S_
+def sira_bul_tek(adlar):
+    """sökerek montaj sırası: tam modülden yolu serbest olan parça çıkarılır (tercih: sonra gelmesi gereken roller önce); ters sıra = montaj sırası + giriş yolu.
+    Hız: bir parça denendiğinde onu engelleyenler kaydedilir; o engellerden biri çıkmadıkça yeniden denenmez."""
+    kal = list(adlar); cik = []; engel = {}
+    tercih = lambda a: (-ROL_SIRA.get(P[a].get('rol', 'parca'), 1), -adlar.index(a))
+    aday = {a: adaylar_(a) for a in adlar}
+    while kal:
+        kset = set(kal); bul_a = None
+        for a in sorted(kal, key=tercih):
+            if a in engel and not (engel[a] - kset) and engel[a]: continue          # engelleri hâlâ yerinde
+            dig = [b for b in kal if b != a]; eng = set(); _t0 = time.time()
+            for yol in aday[a]:
+                s_ = []
+                for p0, p1 in zip(yol[:-1], yol[1:]):
+                    s_ += serbest([a], p0, dig, ofs2=p1)
+                    if s_: break
+                if not s_: bul_a = (a, yol); break
+                eng |= set(b for _, b in s_)
+            if PROF: print('    dene %-34s %s %.2f s' % (a, 'OK' if bul_a else 'X', time.time() - _t0), flush=True)
+            if bul_a: break
+            engel[a] = eng
+        if bul_a is None:
+            a = sorted(kal, key=tercih)[0]; bul_a = (a, None); SOK_KAYIT[a] = 'sökülemedi: %s' % sorted(engel.get(a, ()))[:4]
+        cik.append(bul_a); kal.remove(bul_a[0]); engel.pop(bul_a[0], None)
+        if len(cik) % 20 == 0: print('  sökme', len(cik), '/', len(adlar), flush=True)
+    return list(reversed(cik))
+def modul_kur(aileler, ad, haric_=()):
+    """aileler sırasıyla: her parça tezgâhta yerine, ardından hazır olan bağlantılar; yeni braketler bağlandıkları parça gelince"""
+    global t
+    adlar = [a for fa in aileler for a in sorted((a for a in MEKAD if MEKAD[a] == fa and a not in haric_), key=lambda a: (ROL_SIRA.get(P[a].get('rol', 'parca'), 1), a))]
+    def es(b): return set(x for f in BAG for x in (BAG[f].get('A'), BAG[f].get('B')) if b in (BAG[f].get('A'), BAG[f].get('B')) and x and x != b)
+    yeni_br = [b for b in YENI81 if P[b]['tur'] != 'kaynak' and b not in haric_ and es(b) & set(adlar)]
+    yeni_br = [b for b in yeni_br]
+    katilar = [a for a in adlar if P[a].get('rol', 'parca') not in ('kayis', 'hortum')] + yeni_br
+    SIRA = sira_bul(katilar); YOLU = dict(SIRA)
+    print('sökerek sıra', ad, len(SIRA), 'yolsuz', [a for a, y in SIRA if y is None])
+    sargi = [a for a in adlar if P[a].get('rol', 'parca') in ('kayis', 'hortum')]
+    for a, _ in SIRA:
+        if a in yeni_br: t = tez_koy(a, t, '%s (yeni)' % P[a]['ac'].split('·')[0].strip(), yol=YOLU[a]); t = tez_baglar(t); continue
+        t = tez_koy(a, t, tr(a), yol=YOLU[a])
+        for k_ in [k_ for k_ in sargi if k_ not in TEZDE and all(b in TEZDE for b in adlar if b != k_ and _ic(k_, b, 0.5) and P[b].get('rol', 'parca') != 'kayis')]:
+            t = tez_buyu(k_, t, 0.6); olay(t - 0.3, '%s: kasnaklara / rakorlara sarılır' % tr(k_))
+        t = tez_baglar(t)
+    for k_ in [k_ for k_ in sargi if k_ not in TEZDE]: t = tez_buyu(k_, t, 0.6)
+    t = tez_baglar(t)
+    return adlar + [b for b in yeni_br if b in TEZDE]
+def modul_tasi(adlar_tum, adaylar, metin):
+    """tezgâhtaki modül (parçalar + bağlantı elemanları + kaynaklar) bütün olarak yerine · yol makinede yerinde olanlara göre denetlenir"""
+    global t
+    yol = None
+    for yol_ in adaylar:
+        s_ = []
+        for p0, p1 in zip(yol_[:-1], yol_[1:]): s_ += serbest([a for a in adlar_tum if P[a]['tur'] not in ('kaynak', 'kablo')], p0, YERINDE, ofs2=p1)
+        if not s_: yol = yol_; break
+    if yol is None:
+        yol = adaylar[0]; PLAN_SORUN.append(dict(parca=adlar_tum[:4], sorun=s_[:4], tum=[]))
+    tt = t
+    for p0, p1 in zip(yol[:-1], yol[1:]):
+        su = max(1.0 * float(np.linalg.norm(p1 - p0)) / 900.0, 0.4)
+        for a in adlar_tum: git(a, CUR[a] + (p1 - p0), tt, su)
+        tt += su
+    olay(tt - 0.3, metin); vurgu([a for a in adlar_tum if P[a]['tur'] == 'mek'], tt, tt + 1.0)
+    for a in adlar_tum: YER[a] = tt
+    YERINDE.extend(adlar_tum); TEZ_YER.clear(); TEZDE.clear()
+    t = tt + 0.2
+def makine_baglar(t0, ara=0.1):
+    L_ = bag_hazir(set(YERINDE))
+    tt = _gruplar_tak(L_, YERINDE, t0, None, ara, 0.45, lambda f: None)
+    return tt + (0.1 if L_ else 0.0)
 KAM.append([0.0, [6.4, 2.6, 2.4], [4.8, 1.0, -0.4]])
 t = 0.4
 # ---- 1 KAİDE
@@ -123,63 +325,108 @@ for i_, a_ in enumerate(sorted(a for a in P if _re.match(r'ayak_\d$', a))):
     tt_ = tak(a_, t + i_ * 0.12, 0.5, 60.0)
     if a_ + '_kontra' in P: tak(a_ + '_kontra', t + i_ * 0.12, 0.5, 60.0)        # kontra somun ayağın milinde, ayakla birlikte gelir
 t = tt_ + 0.4; olay(t - 0.4, 'Ayarlı ayak M12 × 6 (kontra somunu milinde) → ray kaynak somunlarına'); t += 0.2
-# ---- 2 ALT MONTAJ
-adim('Taban ve ön kasa (kaynaklı alt montaj)', 'Taban 3 mm + ön kasa (sol / orta / sağ dikme, 788 kayıtları, tapalar) + panel kulakları tezgâhta TIG; tabana FHP saplamalar preslenir. Kaidenin üstüne iner: 7 × M8 bombe başlı vida yukarıdan ray kaynak somunlarına.',
-     'taban · dikme × 3 · kayıt × 2 · kulak × 18 · vida M8 × 7')
+# ---- 2 TABAN + ÖN KASA (parça parça · Kemal 6 Eki: tek parça gelmesin)
+adim('Taban ve ön kasa', 'Taban 3 mm (lazer açınım, FHP saplamalar preslenir) kaidenin üstüne iner, 7 × M8 bombe başlı vida ray kaynak somunlarına. Sonra 3 dikme yukarıdan tabana (her biri TIG), 788 kayıtları önden dikmeler arasına (TIG), tapalar, 18 panel kulağı tek tek (TIG), 4 emniyet sensörü braketi orta dikmeye (TIG).',
+     'taban · vida M8 × 7 · dikme × 3 · kayıt × 2 · tapa × 3 · kulak × 18 · braket × 4')
 kamera_genel(['taban_sac_3', 'onyuz_dikme_sol', 'onyuz_dikme_sag'], yon=(0.45, 0.5, 0.8), olcek=0.9)
-ALT = ['taban_sac_3'] + var('onyuz_dikme_sol', 'onyuz_dikme_orta', 'onyuz_dikme_sag', 'onyuz_kayit_788_sol', 'onyuz_kayit_788_sag') + sorted(a for a in P if a.startswith('onyuz_dikme_') and a.endswith('_tapa')) \
-    + sorted(a for a in P if _re.match(r'govde_kulak_(sol|sag)_(on|taban)_\d+$', a)) + sorted(a for a in P if _re.match(r'emniyet_E_[A-Z]+_[A-Z]+_braket$', a))
-ALT_K = KAY('onyuz_dikme_') + KAY('onyuz_kayit_788') + KAY('govde_kulak_') + sorted(a for a in P if _re.match(r'emniyet_E_.*_braket_kaynak$', a))
-t = koy(ALT, AD(UST6, lift=(), yan=()), 'Taban + ön kasa + kulaklar + sensör braketleri (tezgâhta TIG) → kaidenin üstüne',
-        pem=sorted(PEM_SAC.get('taban_sac_3', [])) + sorted(p for b in ALT for p in PEM_SAC.get(b, []) if b.startswith('emniyet_')), tezgah_kaynak=ALT_K)
+t = koy('taban_sac_3', AD(UST6, lift=(), yan=()), 'Taban 3 mm → kaidenin üstüne', pem=sorted(PEM_SAC.get('taban_sac_3', [])))
 t = sira_tak(sorted(a for a in P if a.startswith('kaide_e_vida')), t, 30.0, 0.45, 0.1); olay(t - 0.5, 'Taban ↔ kaide: M8 bombe başlı vida × 7 (ray içindeki kaynak somununa)'); t += 0.2
+for a in var('onyuz_dikme_sol', 'onyuz_dikme_orta', 'onyuz_dikme_sag'):
+    t = koy(a, AD(UST6, ON9, lift=(20,), yan=(), son=SON), '%s → yukarıdan tabana, TIG' % tr(a), grup_kaynak=KAY(a + '_taban'))
+for a in var('onyuz_kayit_788_sol', 'onyuz_kayit_788_sag'):
+    t = koy(a, AD(ON9, UST6, lift=(20,), yan=(), son=SON), '%s → önden dikmeler arasına, TIG' % tr(a), grup_kaynak=KAY(a + '_kaynak'))
+for a in sorted(a for a in P if a.startswith('onyuz_dikme_') and a.endswith('_tapa')):
+    koy(a, AD(UST6, lift=(5,), yan=(), son=SON), 'Dikme tapası → üstten', sure_bekle=0.02)
+t = bitti()
+olay(t, 'Panel kulakları 18 × (2 mm, taban kenarına ve dikmelere TIG)')
+for a in sorted(a for a in P if _re.match(r'govde_kulak_(sol|sag)_(on|taban)_\d+$', a)):
+    koy(a, ([YOL((0, 1900.0, 0)), YOL((0, 1900.0, 0), (0, 0, 30.0)), YOL((0, 1900.0, 0), (30.0 if '_sag_' in a else -30.0, 0, 0))] if '_on_' in a else []) + AD(ON9, UST6, SOL7 if '_sol_' in a else SAG7, lift=(20,), yan=(), son=SON), None, grup_kaynak=KAY(a + '_kaynak'), sure_bekle=0.02)
+t = bitti()
+for a in sorted(a for a in P if _re.match(r'emniyet_E_[A-Z]+_[A-Z]+_braket$', a)):
+    t = koy(a, AD(ON9, lift=(20,), yan=(), son=SON), 'Emniyet sensörü braketi (1,5 mm L, 2 × PEM) → orta dikmeye, TIG', pem=sorted(PEM_SAC.get(a, [])), grup_kaynak=KAY(a + '_kaynak'))
 # ---- 3 ROBOT ÇÖPÜ + ŞARJÖR + ASANSÖR
 adim('Robot çöpü, şarjör ve asansör', 'Robot çöpü (kova + poşet + oluk) yukarıdan sol öne; şarjör + asansör (hazır alt montaj: yığın tablası, vida mili, motor, kılavuzlar) yukarıdan tabanın M6 saplamalarına; yan saplamalar yan saclar gelince bağlanır.',
      'robot çöpü · şarjör + asansör')
 kamera_genel(['sarjor_asansor'], yon=(0.4, 0.6, 0.7), olcek=0.9)
 t = koy('robot_copu', AD(UST6, ON9, lift=(5, 20), son=SON), 'Robot çöpü (kova + poşet) → yukarıdan sol öne: kılavuzunda oturur, boşaltmak için elle çıkar')
 t = koy(['sarjor_asansor'], AD(UST6, ARKA9, lift=(), son=SON), 'Şarjör + asansör → yukarıdan, tabanın M6 saplamalarına')
-# ---- 4 ÜST MODÜL (üst + yanlar açıkken)
-adim('Üst modül', 'Tezgâhta: besleyici şasisi + motor + itici + vakum kolu, köşe kaldırıcılar + tutucular + piston, ön parmaklar, arka itici. Yukarıdan şarjörün üstüne iner (montaj dayamasında); üst sac gelince askı saplamaları kulaklarından geçer. Besleyici motoru GEÇİCİ OLARAK DAYALI — 8. adımda yan sağın saplamasına sabitlenecek.',
-     'üst modül (besleyici · köşe × 4 · parmak · itici)')
-kamera_genel(['besleyici_sasi'], yon=(-0.7, 0.45, 0.5), olcek=0.9)
-USTM = var('besleyici_sasi', 'besleyici_motor', 'besleyici_itici', 'besleyici_vakum', 'kose_tutucu', 'kose_kaldirici', 'kose_piston', 'parmak', 'parmak_y', 'piston', 'piston_itici')
-for a_ in USTM: P[a_]['tezgah'] = True                                   # üst sac gelene kadar montaj dayamasında
-olay(t + 0.1, '⚠ GEÇİCİ DAYALI: besleyici motoru — 8. adımda (yan sağ) M5 saplamaya sabitlenecek')
-t = koy(USTM, AD(UST6, SOL7, lift=(), yan=(), son=SON), 'Üst modül (besleyici + köşe + parmak + itici, tezgâhta) → yukarıdan, dayamaya')
+# ---- 4 ÜST MODÜL (tezgâhta parça parça · zincir 81–85)
+adim('Üst modül (tezgâhta)', 'Tezgâhta parça parça: besleyici (plaka, dikmeler + köşebentler, raylar, mil yatağı, kasnaklar, motor yuvası + motor, kayış, sensör), besleyici iticisi (kızak plakaları + arabalar, kollar TIG, kiriş, kılavuz / orta blok, ped, kelepçe), vakum barı (miller + segman, blok, vantuzlar, hortum), köşe kaldırıcı + 4 köşe tutucu + köşe pistonu, arka itici + piston, ön parmak. Her vida kendi deliğine tek tek. Modül bütün olarak yukarıdan şarjörün üstüne iner (montaj dayamasında); üst sac gelince askı saplamaları geçer. Motor yuvası köşebendi GEÇİCİ OLARAK DAYALI — 7. adımda yan sağın preslenmiş saplamasına somunla sabitlenecek.',
+     'besleyici · itici · vakum · köşe kaldırıcı × 4 · köşe pistonu · arka itici + piston · ön parmak')
+kamera_genel([a for a in MEKAD if MEKAD[a] in ('besleyici', 'kose', 'piston')], yon=(-0.55, 0.5, 0.65), olcek=0.75, ofs=TEZ)
+USTM = modul_kur(['besleyici', 'itici_b', 'vakum', 'kose', 'kose_tutucu', 'kose_piston', 'itici', 'piston', 'parmak'], 'üst', haric_=('besleyici_uc_sensor_tutucu', 'besleyici_uc_sensor'))
+USTM_TUM = [a for a in list(TEZ_YER)]
+for a_ in USTM_TUM: P[a_]['tezgah'] = True                                   # üst sac gelene kadar montaj dayamasında
+olay(t + 0.1, '⚠ GEÇİCİ DAYALI: üst modül montaj dayamasında — üst sacın askı saplamaları (5. adım) ve yan sağın motor yuvası saplaması (7. adım) bağlar')
+kamera_genel(['sarjor_asansor'], yon=(-0.6, 0.55, 0.6), olcek=1.3)
+modul_tasi(USTM_TUM, [[TEZ, TEZ + np.array([0, 900.0, 0]), np.array([0, 900.0, 0]), np.zeros(3)], [TEZ, TEZ + np.array([0, 1200.0, 0]), np.array([0, 1200.0, 0]), np.zeros(3)],
+                      [TEZ, TEZ + np.array([0, 700.0, 0]), np.array([0, 700.0, 0]), np.zeros(3)]], 'Üst modül (tezgâhta kuruldu) → yukarıdan, dayamaya')
 # ---- 5 ÜST
 adim('Üst sac', 'Üst sac (1,5 · yan dönüşler, Harting ağzı, U ↔ E için 3 × PEM M8, mekanizma askı saplamaları) yukarıdan ön kasanın tepesine iner (arkası montaj dayamasında): askı saplamaları üst modülün kulaklarına geçer; yanlar gelince yan saplamalar dönüşlerinden geçer.',
      'üst sac')
 kamera_genel(['ust_sac'], yon=(0.5, 0.7, 0.5), olcek=0.8)
 t = koy('ust_sac', AD(UST6, lift=(), yan=()), 'Üst sac → yukarıdan ön kasaya, askı saplamaları üst modüle', pem=sorted(PEM_SAC.get('ust_sac', [])))
 t = somunla(r'govde_kulak_ust_[a-z]+_bag', t, 20.0); t += 0.2
+t = makine_baglar(t)
 # ---- 6 YAN SOL
 adim('Yan sol', 'Yan sol (1,5 · pizza penceresi, preslenmiş FHP saplamalar) tezgâhta fiş paneli J3 ile birlikte soldan: saplamaları kulaklardan, üst sacın sol dönüşünden ve şarjör kulaklarından geçer; içten pul + fiberli somun.',
      'yan sol + fiş paneli J3 · pul + somun M5')
 kamera_genel(['sol_sac_pizza_penceresi'], yon=(-0.8, 0.45, 0.45), olcek=0.8)
 t = koy(['sol_sac_pizza_penceresi', 'fis_paneli'], AD(SOL7, lift=(0.5, 1, 2), yan=()), 'Yan sol (fiş paneli J3 tezgâhta) → soldan, saplamalar kulaklara', pem=sorted(PEM_SAC.get('sol_sac_pizza_penceresi', [])))
 t = somunla(r'govde_(kulak_sol_(on|taban)_\d+_bag|bag_ust_sol)', t, 12.0); olay(t - 0.6, 'Yan sol ↔ kulaklar + üst: pul + fiberli somun M5'); t += 0.2
-# ---- 6b ALT MODÜL
-adim('Alt modül', 'Tezgâhta: kalıp + yuva, köprü, kapak katlama mekanizması + kol, uç sensörleri. Sağdan girer, sol yanın saplamalarına oturur.', 'alt modül (kalıp · köprü · kapak mekanizması)')
-kamera_genel(['kalip'], yon=(0.8, 0.45, 0.4), olcek=0.9)
-ALTM = var('kalip', 'kalip_yuva', 'kopru_govde', 'kopru', 'kapak_mekanizmasi', 'kapak_katlayici', 'elk_sensor')
-t = koy(ALTM, AD(SAG7, ARKA9, lift=(), yan=(), son=SON), 'Alt modül (kalıp + köprü + kapak mekanizması, tezgâhta) → sağdan, sol saplamalara')
+# ---- 6b ALT MODÜL (tezgâhta parça parça · zincir 81–85)
+adim('Alt modül (tezgâhta)', 'Tezgâhta parça parça: kalıp (taban, kolonlar, yataklar, vida mili + segmanlar, motor, sensör), kalıp yuvası (milleri, plakalar), köprü (taşıyıcı, motor bloğu, motor, sensör), kapak katlama (şasi, motor plakaları, dişli kutulu motor, yataklar, tahrik mili, palet braketleri, kılavuzlar) + katlayıcı kolu. Her vida kendi deliğine tek tek. Modül sağdan girer, sol yanın saplamalarına oturur.',
+     'kalıp · kalıp yuvası · köprü · kapak katlama · katlayıcı kol')
+kamera_genel([a for a in MEKAD if MEKAD[a] in ('kalip', 'kapak')], yon=(0.6, 0.5, 0.65), olcek=0.8, ofs=TEZ)
+ALTM = modul_kur(['kalip', 'kalip_yuva', 'kopru', 'kapak', 'kapak_katlayici'], 'alt')
+ALTM_TUM = [a for a in list(TEZ_YER)]
+kamera_genel(['sarjor_asansor'], yon=(0.8, 0.45, 0.45), olcek=1.3)
+modul_tasi(ALTM_TUM, [[TEZ, np.array([900.0, 0, 1500.0]), np.array([900.0, 0, 0]), np.zeros(3)], [TEZ, np.array([0, 0, 1500.0]) + np.array([0, 0, 0]), np.array([0, 0, 900.0]), np.zeros(3)],
+                      [TEZ, np.array([900.0, 120.0, 1500.0]), np.array([900.0, 120.0, 0]), np.array([0, 120.0, 0]), np.zeros(3)]], 'Alt modül (tezgâhta kuruldu) → sağdan, sol saplamalara')
+t = makine_baglar(t)
+# katlama sensörü tutucusu (sol yan sacın preslenmiş M5 saplamasına) + sensör
+t = koy('katlama_sensor_tutucu', AD((60, 0, 0), (60, 0, 300), lift=(), yan=(), son=SON), 'Katlama sensörü tutucusu → sol yanın M5 saplamasına (içeriden)')
+t = koy('katlama_sensor', AD((0, -60, 0), (60, 0, 0), (0, 0, 300), lift=(), yan=()), 'Katlama sensörü (Omron E3Z) → tutucusunun altına')
+t = makine_baglar(t)
 # ---- 7 YAN SAĞ
-adim('Yan sağ', 'Yan sağ (şarjör kapısı açıklığı, preslenmiş saplamalar; bas-aç laması tezgâhta) sağdan: saplamaları kulaklardan, üst sacın dönüşünden ve mekanizma kulaklarından geçer; köşebent; içten pul + somunlar. 5. adımda dayanan besleyici motoru şimdi sabitleniyor.',
+adim('Yan sağ', 'Yan sağ (şarjör kapısı açıklığı, preslenmiş saplamalar; bas-aç laması tezgâhta) sağdan: saplamaları kulaklardan, üst sacın dönüşünden ve mekanizma kulaklarından geçer; köşebent; içten pul + somunlar. Üst modülün motor yuvası köşebendi saplamasına somunla sabitlenir; asansör ve besleyici uç sensörlerinin tutucuları (E3Z + 4 mm dil) yan sağın saplamalarına.',
      'yan sağ + bas-aç laması · köşebent · pul + somun')
 kamera_genel(['sag_sac'], yon=(0.85, 0.45, 0.3), olcek=0.8)
 t = koy(['sag_sac'] + var('sarjor_yan_kapisi_basac_lamasi', 'sarjor_yan_kapisi_basac'), AD(SAG7, lift=(0.5, 1, 2), yan=()), 'Yan sağ (bas-aç laması tezgâhta) → sağdan', pem=sorted(PEM_SAC.get('sag_sac', [])))
 t = somunla(r'govde_(kulak_sag_(on|taban)_\d+_bag|bag_ust_sag|bag_kapi_basac)', t, 20.0); olay(t - 0.6, 'Yan sağ: pul + fiberli somunlar'); t += 0.2
 t = koy(var('govde_kosebent_sag_arka_alt'), AD(ARKA9, lift=(0.5, 1), yan=(), son=SON), 'Köşebent → yan sağ saplamasına')
 t = somunla(r'govde_bag_kosebent_yan', t, 20.0)
-# ---- 8 ARKA + PANO
-adim('Arka sac ve E panosu', 'Tezgâhta arka sacın iç yüzüne: E panosu (Beckhoff + Siemens + sürücüler, hazır) ve şarjör kapısı menteşe laması + menteşe gövdeleri. Arka sac (alt + üst dönüş) arkadan sürülür, saplamaları yan dönüşlerden geçer; içten pul + somunlar.',
-     'arka sac + pano + menteşe laması · pul + somun')
+t = makine_baglar(t); olay(t - 0.4, 'Motor yuvası köşebendi: yan sağın preslenmiş M4 saplamasına pul + fiberli somun (3. adımdaki geçici dayama bitti)')
+for ad_, tut_ in (('asansor', 'asansor_sensor_tutucu'), ('besleyici_uc', 'besleyici_uc_sensor_tutucu')):
+    t = koy([tut_, ad_ + '_sensor_dili'], AD((-60, 0, 0), (-60, 0, 300), (-60, 300, 0), lift=(), yan=(), son=SON), '%s (dili tezgâhta TIG) → yan sağın M5 saplamasına (içeriden)' % tr(tut_),
+            tezgah_kaynak=[ad_ + '_sensor_dili_kaynak'])
+    t = koy(ad_ + '_sensor', AD((0, -60, 0), (-60, 0, 0), (0, 0, 300), lift=(), yan=()), 'Omron E3Z → dilin yanına')
+    t = makine_baglar(t)
+# ---- 8 ARKA + PANO (tezgâhta parça parça · Kemal 6 Eki: tek parça gelmesin)
+adim('Arka sac ve E panosu', 'Arka sac (lazer açınım, alt + üst dönüş, preslenmiş FHP saplamalar) makinenin arkasındaki tezgâhta durur: E panosu (Beckhoff + Siemens + sürücüler, hazır) iç yüzündeki 4 saplamaya, şarjör kapısı menteşe laması 3 saplamaya + somun, 2 menteşe gövdesi lamaya takılır. Sonra arka sac panosuyla arkadan sürülür, saplamaları yan dönüşlerden geçer; içten pul + somunlar.',
+     'arka sac · E panosu · menteşe laması + somun × 3 · menteşe × 2 · pul + somun')
+OFFA = np.array([0.0, 0.0, -1200.0])
+kamera_genel(['arka_sac'], yon=(0.4, 0.45, -0.85), olcek=0.8, ofs=OFFA)
+t = yerlestir(['arka_sac'], [[OFFA, OFFA]], t, 'Arka sac (açınım → büküm → PEM) → makinenin arkasındaki tezgâha', pem=sorted(PEM_SAC.get('arka_sac', [])))
+def arka_koy(a, tt, metin, d=(0.0, 0.0, 300.0)):
+    """tezgâhtaki arka sacın iç yüzüne (önden, +z) gelen parça"""
+    basla(a, OFFA + np.asarray(d, float), tt); git(a, OFFA, tt, 0.6); vurgu([a], tt + 0.6, tt + 1.5); YER[a] = tt + 0.6; olay(tt + 0.4, metin); return tt + 0.75
+olay(t, '⚠ AÇIK: E panosu 4 arayüz saplamasına oturur, somunları modelde yok (31 arayüz saplaması somunsuz — üreteç)')
+t = arka_koy('istasyon_kutusu', t, 'E panosu (hazır) → arka sacın iç yüzündeki 4 saplamaya')
+t = arka_koy('sarjor_yan_kapisi_mentese_lamasi', t, 'Menteşe laması 3 mm → arka sacın 3 saplamasına')
+ARK_SOM = sorted(a for a in P if _re.match(r'govde_bag_kapi_lamasi_\d+_(pul|somun)$', a))
+tt_ = t
+for i_, a in enumerate(ARK_SOM): tt_ = max(tt_, tak(a, t + i_ * 0.1, 0.4, 12.0, ofs0=OFFA)); YER[a] = tt_
+olay(t, 'Menteşe laması: pul + fiberli somun × 3'); t = tt_ + 0.2
+for a in var('sarjor_yan_kapisi_mentese_0', 'sarjor_yan_kapisi_mentese_1'):
+    t = arka_koy(a, t, 'Menteşe gövdesi → lamaya', d=(200.0, 0.0, 0.0))
+ARK_TUM = ['arka_sac', 'istasyon_kutusu', 'sarjor_yan_kapisi_mentese_lamasi'] + ARK_SOM + var('sarjor_yan_kapisi_mentese_0', 'sarjor_yan_kapisi_mentese_1') + sorted(PEM_SAC.get('arka_sac', []))
 kamera_genel(['arka_sac'], yon=(0.4, 0.45, -0.85), olcek=0.8)
-ARK = ['arka_sac', 'istasyon_kutusu'] + var('sarjor_yan_kapisi_mentese_lamasi', 'sarjor_yan_kapisi_mentese_0', 'sarjor_yan_kapisi_mentese_1')
-t = koy(ARK, AD(ARKA9, lift=(0.5, 1, 2), yan=()), 'Arka sac + E panosu + menteşe laması (tezgâhta) → arkadan', pem=sorted(PEM_SAC.get('arka_sac', [])))
-t = somunla(r'govde_bag_(arka_sag|taban_arka|ust_arka|kosebent_arka|kapi_lamasi)', t, 10.0)
+modul_tasi(ARK_TUM, [[OFFA, OFFA + np.array([0, 0.5, 0]), np.array([0, 0.5, 0]), np.zeros(3)], [OFFA, OFFA + np.array([0, 1.0, 0]), np.array([0, 1.0, 0]), np.zeros(3)], [OFFA, OFFA + np.array([0, 2.0, 0]), np.array([0, 2.0, 0]), np.zeros(3)]],
+           'Arka sac (pano + menteşe lamasıyla, tezgâhta) → arkadan, saplamalar yan dönüşlere')
+t = somunla(r'govde_bag_(arka_sag|taban_arka|ust_arka|kosebent_arka)', t, 10.0)
 t = somunla(r'govde_bag_arka_sol', t, 12.0)
+t = makine_baglar(t)
 t = sira_tak(sorted(a for a in P if a.startswith('e_arka_civata_')), t, 25.0, 0.45, 0.1); olay(t - 0.5, 'Şarjör arkası 4 nokta: dıştan M5 × 6 bombe başlı cıvata → yan sol dönüşündeki preslenmiş somuna (zincir 69)'); t += 0.2; olay(t - 0.6, 'Arka ↔ yanlar / taban / üst: pul + fiberli somunlar'); t += 0.2
 # ---- 9 ELEKTRİK
 adim('Kablolar ve vakum hattı', 'Güç (kırmızı) ve bilgi (mavi) kabloları, vakum hattı kanallar boyunca: pano ↔ fiş paneli ↔ motorlar / sensörler.', 'kablolar · vakum hattı')
