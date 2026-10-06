@@ -1,0 +1,192 @@
+{
+  "source_parts_sha256": "3e5bbd454332d89120d9cf9ab31a4c26878e9b5dfc79a1de4db000bba73fe051",
+  "candidate_geometry_sha256": "bb45efabdcda715a3d4b3286ecc3832c77c740e24124c6f392a39e67a7e9de30",
+  "checks": [
+    {
+      "id": "4065_-421",
+      "tool_AF_mm": 4.9,
+      "actual_socket_AF_nominal_mm": 5.0,
+      "tool_body_diameter_mm": 10.0,
+      "required_AF_plus_5_mm": 10.0,
+      "tool_body_length_mm": 60.0,
+      "tool_paths": [
+        {
+          "side_sign": -1,
+          "sample_count": 53,
+          "step_mm": 2.0,
+          "failures": [
+            {
+              "sample": 15,
+              "offset_mm": [
+                -70.0,
+                -4.0,
+                0.0
+              ],
+              "collisions": [
+                {
+                  "part": "cevre_F",
+                  "crossing_triangles": 84,
+                  "vertices_inside": 0
+                }
+              ]
+            }
+          ],
+          "passed": false
+        },
+        {
+          "side_sign": 1,
+          "sample_count": 53,
+          "step_mm": 2.0,
+          "failures": [],
+          "passed": true
+        }
+      ],
+      "fixing_paths": [
+        {
+          "part": "k79_bant_M6_genis_pul_4065_-421",
+          "sample_count": 11,
+          "step_mm": 2.0,
+          "failures": [],
+          "passed": true
+        },
+        {
+          "part": "k79_bant_M6x16_alttan_4065_-421",
+          "sample_count": 11,
+          "step_mm": 2.0,
+          "failures": [],
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "4335_-421",
+      "tool_AF_mm": 4.9,
+      "actual_socket_AF_nominal_mm": 5.0,
+      "tool_body_diameter_mm": 10.0,
+      "required_AF_plus_5_mm": 10.0,
+      "tool_body_length_mm": 60.0,
+      "tool_paths": [
+        {
+          "side_sign": -1,
+          "sample_count": 53,
+          "step_mm": 2.0,
+          "failures": [],
+          "passed": true
+        }
+      ],
+      "fixing_paths": [
+        {
+          "part": "k79_bant_M6_genis_pul_4335_-421",
+          "sample_count": 11,
+          "step_mm": 2.0,
+          "failures": [],
+          "passed": true
+        },
+        {
+          "part": "k79_bant_M6x16_alttan_4335_-421",
+          "sample_count": 11,
+          "step_mm": 2.0,
+          "failures": [],
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "4065_-3",
+      "tool_AF_mm": 4.9,
+      "actual_socket_AF_nominal_mm": 5.0,
+      "tool_body_diameter_mm": 10.0,
+      "required_AF_plus_5_mm": 10.0,
+      "tool_body_length_mm": 60.0,
+      "tool_paths": [
+        {
+          "side_sign": -1,
+          "sample_count": 53,
+          "step_mm": 2.0,
+          "failures": [
+            {
+              "sample": 15,
+              "offset_mm": [
+                -70.0,
+                -4.0,
+                0.0
+              ],
+              "collisions": [
+                {
+                  "part": "cevre_F",
+                  "crossing_triangles": 168,
+                  "vertices_inside": 0
+                }
+              ]
+            }
+          ],
+          "passed": false
+        },
+        {
+          "side_sign": 1,
+          "sample_count": 53,
+          "step_mm": 2.0,
+          "failures": [],
+          "passed": true
+        }
+      ],
+      "fixing_paths": [
+        {
+          "part": "k79_bant_M6_genis_pul_4065_-3",
+          "sample_count": 11,
+          "step_mm": 2.0,
+          "failures": [],
+          "passed": true
+        },
+        {
+          "part": "k79_bant_M6x16_alttan_4065_-3",
+          "sample_count": 11,
+          "step_mm": 2.0,
+          "failures": [],
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "4335_-3",
+      "tool_AF_mm": 4.9,
+      "actual_socket_AF_nominal_mm": 5.0,
+      "tool_body_diameter_mm": 10.0,
+      "required_AF_plus_5_mm": 10.0,
+      "tool_body_length_mm": 60.0,
+      "tool_paths": [
+        {
+          "side_sign": -1,
+          "sample_count": 53,
+          "step_mm": 2.0,
+          "failures": [],
+          "passed": true
+        }
+      ],
+      "fixing_paths": [
+        {
+          "part": "k79_bant_M6_genis_pul_4335_-3",
+          "sample_count": 11,
+          "step_mm": 2.0,
+          "failures": [],
+          "passed": true
+        },
+        {
+          "part": "k79_bant_M6x16_alttan_4335_-3",
+          "sample_count": 11,
+          "step_mm": 2.0,
+          "failures": [],
+          "passed": true
+        }
+      ],
+      "passed": true
+    }
+  ],
+  "passed_access_and_insertion_only": true,
+  "production_release": false,
+  "torch_access_verified": false,
+  "elapsed_seconds": 22.132029056549072
+}

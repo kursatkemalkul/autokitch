@@ -1,0 +1,165 @@
+{
+  "step": 79,
+  "input_sha256": "f4db3b6eafc01ef0b62fc3ffac62f6c3dcaf80bbfdf5da5a1fd0be18b2790300",
+  "payload_sha256": "74465ff1cc75e25e718ae5c1214f97826f19247958523d927a248928933d9eb3",
+  "output_sha256": "4efd0b660ccb56dfd4d53d307efdfcf218185ed7c1c95df793a47e353b8ff5c0",
+  "matched_source_triangles": {
+    "k72_vida_M6_4065.0_-421.0": 428,
+    "k72_ust_pul_M6_4065.0_-421.0": 408,
+    "k72_alt_pul_M6_4065.0_-421.0_0": 408,
+    "k72_alt_somun_M6_4065.0_-421.0": 228,
+    "k72_vida_M6_4065.0_-3.0": 428,
+    "k72_ust_pul_M6_4065.0_-3.0": 408,
+    "k72_alt_pul_M6_4065.0_-3.0_0": 408,
+    "k72_alt_somun_M6_4065.0_-3.0": 228,
+    "k72_vida_M6_4335.0_-421.0": 428,
+    "k72_ust_pul_M6_4335.0_-421.0": 408,
+    "k72_alt_pul_M6_4335.0_-421.0_0": 408,
+    "k72_alt_somun_M6_4335.0_-421.0": 228,
+    "k72_vida_M6_4335.0_-3.0": 428,
+    "k72_ust_pul_M6_4335.0_-3.0": 408,
+    "k72_alt_pul_M6_4335.0_-3.0_0": 408,
+    "k72_alt_somun_M6_4335.0_-3.0": 228,
+    "k72_bant_ayak_flansi_4065.0_-421.0": 220,
+    "k72_bant_ayak_flansi_4065.0_-3.0": 332,
+    "k72_bant_ayak_flansi_4335.0_-3.0": 332,
+    "k79_bant_tapa_cevre_kaynagi_4065_-421": 2280,
+    "k71_raf_PEM_M6_4065.0_-421.0": 612,
+    "k71_raf_PEM_M6_4065.0_-3.0": 612,
+    "k71_raf_PEM_M6_4335.0_-421.0": 612,
+    "k71_raf_PEM_M6_4335.0_-3.0": 612
+  },
+  "naming_grid_mm": 0.0001,
+  "maximum_naming_grid_adjustment_mm": 7.480971900511553e-05,
+  "repairs": [
+    {
+      "part": "k72_bant_ayak_flansi_4065.0_-421.0",
+      "closed_status": "Error.NoError",
+      "maximum_declared_precision_adjustment_mm": 0.0,
+      "purpose": "unchanged render template, exact same source triangles"
+    },
+    {
+      "part": "k79_bant_tapa_cevre_kaynagi_4065_-421",
+      "closed_status": "Error.NoError",
+      "maximum_declared_precision_adjustment_mm": 0.0,
+      "purpose": "unchanged render template, exact same source triangles"
+    },
+    {
+      "part": "k72_bant_ayak_flansi_4065.0_-3.0",
+      "closed_status": "Error.NoError",
+      "maximum_declared_precision_adjustment_mm": 0.0,
+      "purpose": "Restore own32x32x3 laser flange and original6.6mm M6 hole, remove overlapping/nonmanifold source surfaces"
+    },
+    {
+      "part": "k72_bant_ayak_flansi_4335.0_-3.0",
+      "closed_status": "Error.NoError",
+      "maximum_declared_precision_adjustment_mm": 0.0,
+      "purpose": "Restore own32x32x3 laser flange and original6.6mm M6 hole, remove overlapping/nonmanifold source surfaces"
+    }
+  ],
+  "source_labels_retained": true,
+  "source_interfaces_intended_unchanged": false,
+  "unrelated_geometry_audit_required": true,
+  "reextraction_required": true,
+  "production_release": false,
+  "removed_parts": {
+    "k72_vida_M6_4065.0_-421.0": {
+      "reason": "Top-insert M6 support clamp and shelf PEM superseded by bottom-access screw and welded6mm threaded insert",
+      "source_triangles": 428
+    },
+    "k72_ust_pul_M6_4065.0_-421.0": {
+      "reason": "Top-insert M6 support clamp and shelf PEM superseded by bottom-access screw and welded6mm threaded insert",
+      "source_triangles": 408
+    },
+    "k72_alt_pul_M6_4065.0_-421.0_0": {
+      "reason": "Top-insert M6 support clamp and shelf PEM superseded by bottom-access screw and welded6mm threaded insert",
+      "source_triangles": 408
+    },
+    "k72_alt_somun_M6_4065.0_-421.0": {
+      "reason": "Top-insert M6 support clamp and shelf PEM superseded by bottom-access screw and welded6mm threaded insert",
+      "source_triangles": 228
+    },
+    "k71_raf_PEM_M6_4065.0_-421.0": {
+      "reason": "Top-insert M6 support clamp and shelf PEM superseded by bottom-access screw and welded6mm threaded insert",
+      "source_triangles": 612
+    },
+    "k72_vida_M6_4065.0_-3.0": {
+      "reason": "Top-insert M6 support clamp and shelf PEM superseded by bottom-access screw and welded6mm threaded insert",
+      "source_triangles": 428
+    },
+    "k72_ust_pul_M6_4065.0_-3.0": {
+      "reason": "Top-insert M6 support clamp and shelf PEM superseded by bottom-access screw and welded6mm threaded insert",
+      "source_triangles": 408
+    },
+    "k72_alt_pul_M6_4065.0_-3.0_0": {
+      "reason": "Top-insert M6 support clamp and shelf PEM superseded by bottom-access screw and welded6mm threaded insert",
+      "source_triangles": 408
+    },
+    "k72_alt_somun_M6_4065.0_-3.0": {
+      "reason": "Top-insert M6 support clamp and shelf PEM superseded by bottom-access screw and welded6mm threaded insert",
+      "source_triangles": 228
+    },
+    "k71_raf_PEM_M6_4065.0_-3.0": {
+      "reason": "Top-insert M6 support clamp and shelf PEM superseded by bottom-access screw and welded6mm threaded insert",
+      "source_triangles": 612
+    },
+    "k72_vida_M6_4335.0_-421.0": {
+      "reason": "Top-insert M6 support clamp and shelf PEM superseded by bottom-access screw and welded6mm threaded insert",
+      "source_triangles": 428
+    },
+    "k72_ust_pul_M6_4335.0_-421.0": {
+      "reason": "Top-insert M6 support clamp and shelf PEM superseded by bottom-access screw and welded6mm threaded insert",
+      "source_triangles": 408
+    },
+    "k72_alt_pul_M6_4335.0_-421.0_0": {
+      "reason": "Top-insert M6 support clamp and shelf PEM superseded by bottom-access screw and welded6mm threaded insert",
+      "source_triangles": 408
+    },
+    "k72_alt_somun_M6_4335.0_-421.0": {
+      "reason": "Top-insert M6 support clamp and shelf PEM superseded by bottom-access screw and welded6mm threaded insert",
+      "source_triangles": 228
+    },
+    "k71_raf_PEM_M6_4335.0_-421.0": {
+      "reason": "Top-insert M6 support clamp and shelf PEM superseded by bottom-access screw and welded6mm threaded insert",
+      "source_triangles": 612
+    },
+    "k72_vida_M6_4335.0_-3.0": {
+      "reason": "Top-insert M6 support clamp and shelf PEM superseded by bottom-access screw and welded6mm threaded insert",
+      "source_triangles": 428
+    },
+    "k72_ust_pul_M6_4335.0_-3.0": {
+      "reason": "Top-insert M6 support clamp and shelf PEM superseded by bottom-access screw and welded6mm threaded insert",
+      "source_triangles": 408
+    },
+    "k72_alt_pul_M6_4335.0_-3.0_0": {
+      "reason": "Top-insert M6 support clamp and shelf PEM superseded by bottom-access screw and welded6mm threaded insert",
+      "source_triangles": 408
+    },
+    "k72_alt_somun_M6_4335.0_-3.0": {
+      "reason": "Top-insert M6 support clamp and shelf PEM superseded by bottom-access screw and welded6mm threaded insert",
+      "source_triangles": 228
+    },
+    "k71_raf_PEM_M6_4335.0_-3.0": {
+      "reason": "Top-insert M6 support clamp and shelf PEM superseded by bottom-access screw and welded6mm threaded insert",
+      "source_triangles": 612
+    }
+  },
+  "added_parts": [
+    "k79_bant_disli_plaka_4065_-421",
+    "k79_bant_disli_plaka_kaynagi_4065_-421",
+    "k79_bant_M6x16_alttan_4065_-421",
+    "k79_bant_M6_genis_pul_4065_-421",
+    "k79_bant_disli_plaka_4335_-421",
+    "k79_bant_disli_plaka_kaynagi_4335_-421",
+    "k79_bant_M6x16_alttan_4335_-421",
+    "k79_bant_M6_genis_pul_4335_-421",
+    "k79_bant_disli_plaka_4065_-3",
+    "k79_bant_disli_plaka_kaynagi_4065_-3",
+    "k79_bant_M6x16_alttan_4065_-3",
+    "k79_bant_M6_genis_pul_4065_-3",
+    "k79_bant_disli_plaka_4335_-3",
+    "k79_bant_disli_plaka_kaynagi_4335_-3",
+    "k79_bant_M6x16_alttan_4335_-3",
+    "k79_bant_M6_genis_pul_4335_-3"
+  ]
+}

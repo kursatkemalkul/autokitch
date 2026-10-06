@@ -1,0 +1,65 @@
+{
+  "source_plan_sha256": "1340e74ec1f00d2bdecd4f3e9fcd5f1482048c97cfe0a3f953a3c89831c00a98",
+  "source_model_sha256": "4efd0b660ccb56dfd4d53d307efdfcf218185ed7c1c95df793a47e353b8ff5c0",
+  "parts": 885,
+  "step_mm": 2.0,
+  "triangle_boundary_tolerance_mm": 0.75,
+  "resting_contact_tolerance_mm": 1.0,
+  "tested_pairs": 9895,
+  "path_issues": [
+    {
+      "a": "k71_istasyon_rafi",
+      "b": "k72_bant_ayak_flansi_4065.0_-3.0",
+      "t": 255.02,
+      "w": [
+        247.93,
+        255.29
+      ],
+      "derin": 48.0,
+      "yon": "oteleme",
+      "hareket": "k72_bant_ayak_flansi_4065.0_-3.0"
+    },
+    {
+      "a": "k71_istasyon_rafi",
+      "b": "k72_bant_ayak_flansi_4065.0_-421.0",
+      "t": 255.02,
+      "w": [
+        247.93,
+        255.29
+      ],
+      "derin": 48.0,
+      "yon": "oteleme",
+      "hareket": "k72_bant_ayak_flansi_4065.0_-421.0"
+    },
+    {
+      "a": "k71_istasyon_rafi",
+      "b": "k72_bant_ayak_flansi_4335.0_-3.0",
+      "t": 255.02,
+      "w": [
+        247.93,
+        255.29
+      ],
+      "derin": 48.0,
+      "yon": "oteleme",
+      "hareket": "k72_bant_ayak_flansi_4335.0_-3.0"
+    },
+    {
+      "a": "k71_istasyon_rafi",
+      "b": "k72_bant_ayak_flansi_4335.0_-421.0",
+      "t": 255.02,
+      "w": [
+        247.93,
+        255.29
+      ],
+      "derin": 48.0,
+      "yon": "oteleme",
+      "hareket": "k72_bant_ayak_flansi_4335.0_-421.0"
+    }
+  ],
+  "rigid_path_passed": false,
+  "bending_self_collision_checked": false,
+  "fixture_checked": false,
+  "connection_checked": false,
+  "production_release": false,
+  "elapsed_seconds": 262.22582840919495
+}

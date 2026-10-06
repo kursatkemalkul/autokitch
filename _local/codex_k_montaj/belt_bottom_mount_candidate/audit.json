@@ -1,0 +1,452 @@
+{
+  "source_parts_sha256": "3e5bbd454332d89120d9cf9ab31a4c26878e9b5dfc79a1de4db000bba73fe051",
+  "superseded_parts": [
+    "k72_vida_M6_4065.0_-421.0",
+    "k72_ust_pul_M6_4065.0_-421.0",
+    "k72_alt_pul_M6_4065.0_-421.0_0",
+    "k72_alt_somun_M6_4065.0_-421.0",
+    "k71_raf_PEM_M6_4065.0_-421.0",
+    "k72_vida_M6_4065.0_-3.0",
+    "k72_ust_pul_M6_4065.0_-3.0",
+    "k72_alt_pul_M6_4065.0_-3.0_0",
+    "k72_alt_somun_M6_4065.0_-3.0",
+    "k71_raf_PEM_M6_4065.0_-3.0",
+    "k72_vida_M6_4335.0_-421.0",
+    "k72_ust_pul_M6_4335.0_-421.0",
+    "k72_alt_pul_M6_4335.0_-421.0_0",
+    "k72_alt_somun_M6_4335.0_-421.0",
+    "k71_raf_PEM_M6_4335.0_-421.0",
+    "k72_vida_M6_4335.0_-3.0",
+    "k72_ust_pul_M6_4335.0_-3.0",
+    "k72_alt_pul_M6_4335.0_-3.0_0",
+    "k72_alt_somun_M6_4335.0_-3.0",
+    "k71_raf_PEM_M6_4335.0_-3.0"
+  ],
+  "joints": [
+    {
+      "id": "4065_-421",
+      "post": "k72_bant_ayagi_4065.0_-421.0",
+      "side_plate": "bant_yan_-421",
+      "insert": "k79_bant_disli_plaka_4065_-421",
+      "insert_weld": "k79_bant_disli_plaka_kaynagi_4065_-421",
+      "screw": "k79_bant_M6x16_alttan_4065_-421",
+      "washer": "k79_bant_M6_genis_pul_4065_-421",
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "screw_head_seat_y_mm": 887.4,
+      "screw_tip_y_mm": 903.4,
+      "thread_bottom_y_mm": 895.5,
+      "thread_top_y_mm": 901.5,
+      "engagement_mm": 6.0,
+      "nominal_diameter_mm": 6.0,
+      "protrusion_mm": 1.9,
+      "pitch_mm": 1.0,
+      "washer_standard": "ISO7093 M6",
+      "washer_dimensions_mm": [
+        6.4,
+        18,
+        1.6
+      ],
+      "thread_proxy_nominal_only": true,
+      "machining_tap_verified": false,
+      "torch_access_verified": false,
+      "production_release": false
+    },
+    {
+      "id": "4335_-421",
+      "post": "k72_bant_ayagi_4335.0_-421.0",
+      "side_plate": "bant_yan_-421",
+      "insert": "k79_bant_disli_plaka_4335_-421",
+      "insert_weld": "k79_bant_disli_plaka_kaynagi_4335_-421",
+      "screw": "k79_bant_M6x16_alttan_4335_-421",
+      "washer": "k79_bant_M6_genis_pul_4335_-421",
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "screw_head_seat_y_mm": 887.4,
+      "screw_tip_y_mm": 903.4,
+      "thread_bottom_y_mm": 895.5,
+      "thread_top_y_mm": 901.5,
+      "engagement_mm": 6.0,
+      "nominal_diameter_mm": 6.0,
+      "protrusion_mm": 1.9,
+      "pitch_mm": 1.0,
+      "washer_standard": "ISO7093 M6",
+      "washer_dimensions_mm": [
+        6.4,
+        18,
+        1.6
+      ],
+      "thread_proxy_nominal_only": true,
+      "machining_tap_verified": false,
+      "torch_access_verified": false,
+      "production_release": false
+    },
+    {
+      "id": "4065_-3",
+      "post": "bant_ayagi_65_-3",
+      "side_plate": "bant_yan_-3",
+      "insert": "k79_bant_disli_plaka_4065_-3",
+      "insert_weld": "k79_bant_disli_plaka_kaynagi_4065_-3",
+      "screw": "k79_bant_M6x16_alttan_4065_-3",
+      "washer": "k79_bant_M6_genis_pul_4065_-3",
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "screw_head_seat_y_mm": 887.4,
+      "screw_tip_y_mm": 903.4,
+      "thread_bottom_y_mm": 895.5,
+      "thread_top_y_mm": 901.5,
+      "engagement_mm": 6.0,
+      "nominal_diameter_mm": 6.0,
+      "protrusion_mm": 1.9,
+      "pitch_mm": 1.0,
+      "washer_standard": "ISO7093 M6",
+      "washer_dimensions_mm": [
+        6.4,
+        18,
+        1.6
+      ],
+      "thread_proxy_nominal_only": true,
+      "machining_tap_verified": false,
+      "torch_access_verified": false,
+      "production_release": false
+    },
+    {
+      "id": "4335_-3",
+      "post": "bant_ayagi_335_-3",
+      "side_plate": "bant_yan_-3",
+      "insert": "k79_bant_disli_plaka_4335_-3",
+      "insert_weld": "k79_bant_disli_plaka_kaynagi_4335_-3",
+      "screw": "k79_bant_M6x16_alttan_4335_-3",
+      "washer": "k79_bant_M6_genis_pul_4335_-3",
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "screw_head_seat_y_mm": 887.4,
+      "screw_tip_y_mm": 903.4,
+      "thread_bottom_y_mm": 895.5,
+      "thread_top_y_mm": 901.5,
+      "engagement_mm": 6.0,
+      "nominal_diameter_mm": 6.0,
+      "protrusion_mm": 1.9,
+      "pitch_mm": 1.0,
+      "washer_standard": "ISO7093 M6",
+      "washer_dimensions_mm": [
+        6.4,
+        18,
+        1.6
+      ],
+      "thread_proxy_nominal_only": true,
+      "machining_tap_verified": false,
+      "torch_access_verified": false,
+      "production_release": false
+    }
+  ],
+  "repaired_front_flange_names": [
+    "k72_bant_ayak_flansi_4065.0_-3.0",
+    "k72_bant_ayak_flansi_4335.0_-3.0"
+  ],
+  "geometry_checks": [
+    {
+      "id": "4065_-421",
+      "actual_engagement_mm": 6.0,
+      "actual_protrusion_mm": 1.8999999999999773,
+      "washer_bottom_mm": 887.4,
+      "washer_top_mm": 889.0,
+      "passed": true
+    },
+    {
+      "id": "4335_-421",
+      "actual_engagement_mm": 6.0,
+      "actual_protrusion_mm": 1.8999999999999773,
+      "washer_bottom_mm": 887.4,
+      "washer_top_mm": 889.0,
+      "passed": true
+    },
+    {
+      "id": "4065_-3",
+      "actual_engagement_mm": 6.0,
+      "actual_protrusion_mm": 1.8999999999999773,
+      "washer_bottom_mm": 887.4,
+      "washer_top_mm": 889.0,
+      "passed": true
+    },
+    {
+      "id": "4335_-3",
+      "actual_engagement_mm": 6.0,
+      "actual_protrusion_mm": 1.8999999999999773,
+      "washer_bottom_mm": 887.4,
+      "washer_top_mm": 889.0,
+      "passed": true
+    }
+  ],
+  "clashes": [],
+  "open_mesh_surface_checks": [
+    {
+      "candidate": "k72_bant_ayak_flansi_4065.0_-3.0",
+      "source": "cevre_F",
+      "crossing_triangles": 0,
+      "vertices_inside": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k72_bant_ayak_flansi_4065.0_-3.0",
+      "source": "cevre_diger",
+      "crossing_triangles": 0,
+      "vertices_inside": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k72_bant_ayak_flansi_4335.0_-3.0",
+      "source": "cevre_F",
+      "crossing_triangles": 0,
+      "vertices_inside": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k72_bant_ayak_flansi_4335.0_-3.0",
+      "source": "cevre_diger",
+      "crossing_triangles": 0,
+      "vertices_inside": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k79_bant_disli_plaka_4065_-421",
+      "source": "cevre_F",
+      "crossing_triangles": 0,
+      "vertices_inside": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k79_bant_disli_plaka_4065_-421",
+      "source": "cevre_diger",
+      "crossing_triangles": 0,
+      "vertices_inside": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k79_bant_disli_plaka_kaynagi_4065_-421",
+      "source": "cevre_F",
+      "crossing_triangles": 0,
+      "vertices_inside": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k79_bant_disli_plaka_kaynagi_4065_-421",
+      "source": "cevre_diger",
+      "crossing_triangles": 0,
+      "vertices_inside": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k79_bant_M6x16_alttan_4065_-421",
+      "source": "cevre_F",
+      "crossing_triangles": 0,
+      "vertices_inside": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k79_bant_M6x16_alttan_4065_-421",
+      "source": "cevre_diger",
+      "crossing_triangles": 0,
+      "vertices_inside": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k79_bant_M6_genis_pul_4065_-421",
+      "source": "cevre_F",
+      "crossing_triangles": 0,
+      "vertices_inside": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k79_bant_M6_genis_pul_4065_-421",
+      "source": "cevre_diger",
+      "crossing_triangles": 0,
+      "vertices_inside": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k79_bant_disli_plaka_4335_-421",
+      "source": "cevre_F",
+      "crossing_triangles": 0,
+      "vertices_inside": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k79_bant_disli_plaka_4335_-421",
+      "source": "cevre_diger",
+      "crossing_triangles": 0,
+      "vertices_inside": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k79_bant_disli_plaka_kaynagi_4335_-421",
+      "source": "cevre_F",
+      "crossing_triangles": 0,
+      "vertices_inside": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k79_bant_disli_plaka_kaynagi_4335_-421",
+      "source": "cevre_diger",
+      "crossing_triangles": 0,
+      "vertices_inside": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k79_bant_M6x16_alttan_4335_-421",
+      "source": "cevre_F",
+      "crossing_triangles": 0,
+      "vertices_inside": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k79_bant_M6x16_alttan_4335_-421",
+      "source": "cevre_diger",
+      "crossing_triangles": 0,
+      "vertices_inside": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k79_bant_M6_genis_pul_4335_-421",
+      "source": "cevre_F",
+      "crossing_triangles": 0,
+      "vertices_inside": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k79_bant_M6_genis_pul_4335_-421",
+      "source": "cevre_diger",
+      "crossing_triangles": 0,
+      "vertices_inside": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k79_bant_disli_plaka_4065_-3",
+      "source": "cevre_F",
+      "crossing_triangles": 0,
+      "vertices_inside": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k79_bant_disli_plaka_4065_-3",
+      "source": "cevre_diger",
+      "crossing_triangles": 0,
+      "vertices_inside": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k79_bant_disli_plaka_kaynagi_4065_-3",
+      "source": "cevre_F",
+      "crossing_triangles": 0,
+      "vertices_inside": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k79_bant_disli_plaka_kaynagi_4065_-3",
+      "source": "cevre_diger",
+      "crossing_triangles": 0,
+      "vertices_inside": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k79_bant_M6x16_alttan_4065_-3",
+      "source": "cevre_F",
+      "crossing_triangles": 0,
+      "vertices_inside": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k79_bant_M6x16_alttan_4065_-3",
+      "source": "cevre_diger",
+      "crossing_triangles": 0,
+      "vertices_inside": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k79_bant_M6_genis_pul_4065_-3",
+      "source": "cevre_F",
+      "crossing_triangles": 0,
+      "vertices_inside": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k79_bant_M6_genis_pul_4065_-3",
+      "source": "cevre_diger",
+      "crossing_triangles": 0,
+      "vertices_inside": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k79_bant_disli_plaka_4335_-3",
+      "source": "cevre_F",
+      "crossing_triangles": 0,
+      "vertices_inside": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k79_bant_disli_plaka_4335_-3",
+      "source": "cevre_diger",
+      "crossing_triangles": 0,
+      "vertices_inside": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k79_bant_disli_plaka_kaynagi_4335_-3",
+      "source": "cevre_F",
+      "crossing_triangles": 0,
+      "vertices_inside": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k79_bant_disli_plaka_kaynagi_4335_-3",
+      "source": "cevre_diger",
+      "crossing_triangles": 0,
+      "vertices_inside": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k79_bant_M6x16_alttan_4335_-3",
+      "source": "cevre_F",
+      "crossing_triangles": 0,
+      "vertices_inside": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k79_bant_M6x16_alttan_4335_-3",
+      "source": "cevre_diger",
+      "crossing_triangles": 0,
+      "vertices_inside": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k79_bant_M6_genis_pul_4335_-3",
+      "source": "cevre_F",
+      "crossing_triangles": 0,
+      "vertices_inside": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k79_bant_M6_genis_pul_4335_-3",
+      "source": "cevre_diger",
+      "crossing_triangles": 0,
+      "vertices_inside": 0,
+      "passed": true
+    }
+  ],
+  "passed_geometry_only": true,
+  "tool_access_verified": false,
+  "full_montage_verified": false,
+  "production_release": false
+}

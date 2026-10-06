@@ -1,0 +1,55 @@
+{
+  "source_model_sha256": "4efd0b660ccb56dfd4d53d307efdfcf218185ed7c1c95df793a47e353b8ff5c0",
+  "parts": 885,
+  "triangles": 475090,
+  "closed_source_sheets": 80,
+  "bench_groups": 17,
+  "rigid_paths_passed": true,
+  "tested_pairs": 9934,
+  "measured_joint_counts": {
+    "bottom_body_connection_measured_audit.json": 32,
+    "bottom_lower_connection_measured_audit.json": 24,
+    "bottom_mount_connection_measured_audit.json": 8,
+    "bottom_panel_join_audit.json": 8
+  },
+  "measured_bottom_clamps": 4,
+  "bottom_clamp_access_and_insertion_passed": true,
+  "subsequent_load_order_passed": true,
+  "bend_sampling_passed": true,
+  "artifacts_sha256": {
+    "bottom_body_connection_measured_audit.json": "c6797bc7cc7cb471953b498ee969f12631cb89da19e6874b47e05d1497da3c53",
+    "bottom_lower_connection_measured_audit.json": "ea3c251b300158ef31513f8cf1c456f0508bededa9540142e20d3e4cd5cdf77c",
+    "bottom_mount_connection_measured_audit.json": "fbc8b7e0ca94f05a2467fb49d680bb5e2d9aceea2cedbe995d1e77d0d1378cc2",
+    "bottom_panel_join_audit.json": "995fde2339ae43d43d86b387594f119de94a85225e157afc82368a5996592d01",
+    "bottom_plan_audit.json": "2fa39e071525ecea419bf40e0ec62df7434aeb406f54ffb5505464983206bb98",
+    "bottom_plan_source_binding_audit.json": "8383f84e40fa381161d96fb987e66a3285170d21995bbdc65e3c84a5796f6f97",
+    "bottom_bench_prototype_audit.json": "ba0f1d6d9745d03199916e2185fafc12636b7259abbde54ceb5680d54b8041c1",
+    "bottom_bench_integration_audit.json": "3453055822fdb35c1fdf5f1493683ba05a1afa1a8d4a717d63ab551b15cf89b0",
+    "full_ccd_plan_k_bottom_full.json": "9ef4e2226c8140d66d2b5f7e4139888ddec5344adf0fc61523141f719561d8ef",
+    "bottom_dense_bend_morph_audit.json": "78f269c77652ca88b5bb68304645502ab5963149de398ecf0980dac5e5592a29",
+    "physical_sheet_closure_audit_bottom.json": "5540a1cfdf24047a9b4541587ad84135f339f8a840a89ff9d491e34ef959abdf",
+    "current_sheet_encoding_audit_bottom.json": "e7bc1594c53c61cefc7b66498dce7c02e5e7b5e03d12c0f6853c977692d150d9",
+    "bottom_mount_sequence_audit.json": "50948ea15864832c6b5bfe9ab744f177d69cd34e99572dbb43d353cd88d74278",
+    "bottom_connection_worklist.json": "9a10db8b0054944995ae8a1384389419e87c4c572614cb9a253435eaebb293b0",
+    "surface_ownership_registry_bottom.json.gz": "0c1844b3b938cc6eaa131bafed90cf1eb933a15d73beef6e3cdd04e49c553e05"
+  },
+  "contact_classifier_unresolved": 235,
+  "contact_classifier_categories": {
+    "ACIK": 227,
+    "GRUP": 8
+  },
+  "canonical_source_changed": false,
+  "manufacturing_release": false,
+  "whole_station_connections_verified": false,
+  "production_release": false,
+  "k_completed": false,
+  "u_started": false,
+  "remaining": [
+    "Whole-station connections, supplier clips and mounting",
+    "Actual temporary fixtures, support and weld torch/heat protection",
+    "Actual forming tooling, self-contact and secondary machining",
+    "Custom stock and hinge conformity",
+    "Shared-chain lock, registration and current-source replay",
+    "Final common-player generation, browser review and release"
+  ]
+}

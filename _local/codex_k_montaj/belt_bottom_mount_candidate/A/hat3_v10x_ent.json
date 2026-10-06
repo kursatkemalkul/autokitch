@@ -1,0 +1,370 @@
+{
+  "adim": 79,
+  "prototype": "bottom-access belt supports",
+  "removed_parts": [
+    "k72_vida_M6_4065.0_-421.0",
+    "k72_ust_pul_M6_4065.0_-421.0",
+    "k72_alt_pul_M6_4065.0_-421.0_0",
+    "k72_alt_somun_M6_4065.0_-421.0",
+    "k71_raf_PEM_M6_4065.0_-421.0",
+    "k72_vida_M6_4065.0_-3.0",
+    "k72_ust_pul_M6_4065.0_-3.0",
+    "k72_alt_pul_M6_4065.0_-3.0_0",
+    "k72_alt_somun_M6_4065.0_-3.0",
+    "k71_raf_PEM_M6_4065.0_-3.0",
+    "k72_vida_M6_4335.0_-421.0",
+    "k72_ust_pul_M6_4335.0_-421.0",
+    "k72_alt_pul_M6_4335.0_-421.0_0",
+    "k72_alt_somun_M6_4335.0_-421.0",
+    "k71_raf_PEM_M6_4335.0_-421.0",
+    "k72_vida_M6_4335.0_-3.0",
+    "k72_ust_pul_M6_4335.0_-3.0",
+    "k72_alt_pul_M6_4335.0_-3.0_0",
+    "k72_alt_somun_M6_4335.0_-3.0",
+    "k71_raf_PEM_M6_4335.0_-3.0"
+  ],
+  "parca": {
+    "k72_bant_ayak_flansi_4065.0_-3.0": {
+      "dugum": "K_BANT__sac",
+      "kutu": [
+        4049.0,
+        4081.0,
+        892.0,
+        895.0,
+        -19.0,
+        13.0
+      ],
+      "tur": "sac",
+      "bom": [
+        "Single closed conveyor foot flange; remove old overlapping source surfaces",
+        1,
+        "32x32x3; M6 clearance6.6; original axes",
+        "laser AISI3043mm \u00b7 AISI304",
+        "\u00dcRET\u0130M"
+      ]
+    },
+    "k72_bant_ayak_flansi_4335.0_-3.0": {
+      "dugum": "K_BANT__sac",
+      "kutu": [
+        4319.0,
+        4351.0,
+        892.0,
+        895.0,
+        -19.0,
+        13.0
+      ],
+      "tur": "sac",
+      "bom": [
+        "Single closed conveyor foot flange; remove old overlapping source surfaces",
+        1,
+        "32x32x3; M6 clearance6.6; original axes",
+        "laser AISI3043mm \u00b7 AISI304",
+        "\u00dcRET\u0130M"
+      ]
+    },
+    "k79_bant_disli_plaka_4065_-421": {
+      "dugum": "K_BANT__sac",
+      "kutu": [
+        4057.0,
+        4073.0,
+        895.5,
+        901.5,
+        -429.0,
+        -413.0
+      ],
+      "tur": "sac",
+      "bom": [
+        "Tapped conveyor support insert",
+        1,
+        "16x16x6 R2; M6 through",
+        "AISI3046mm laser + tap M6 \u00b7 AISI304",
+        "\u00dcRET\u0130M"
+      ]
+    },
+    "k79_bant_disli_plaka_kaynagi_4065_-421": {
+      "dugum": "K_BANT__sac",
+      "kutu": [
+        4057.0,
+        4073.0,
+        901.5,
+        902.9,
+        -429.0,
+        -413.0
+      ],
+      "tur": "kaynak",
+      "bom": [
+        "Internal continuous insert/support weld",
+        1,
+        "leg1.4 throat0.99",
+        "TIG141 ER308LSi \u00b7 ER308LSi",
+        "\u00dcRET\u0130M"
+      ]
+    },
+    "k79_bant_M6x16_alttan_4065_-421": {
+      "dugum": "K_BANT__celik",
+      "kutu": [
+        4060.0,
+        4070.0,
+        881.4,
+        903.4,
+        -426.0,
+        -416.0
+      ],
+      "tur": "baglanti",
+      "bom": [
+        "Silindir ba\u015fl\u0131 imbus c\u0131vata M6\u00d716",
+        1,
+        "M6\u00d716",
+        "ISO 4762 \u00b7 A2-70",
+        "SATIN ALMA"
+      ]
+    },
+    "k79_bant_M6_genis_pul_4065_-421": {
+      "dugum": "K_BANT__celik",
+      "kutu": [
+        4056.0,
+        4074.0,
+        887.4,
+        889.0,
+        -430.0,
+        -412.0
+      ],
+      "tur": "baglanti",
+      "bom": [
+        "Geni\u015f pul M6",
+        1,
+        "6.4/18\u00d71.6",
+        "DIN 9021 / ISO 7093 \u00b7 A2",
+        "SATIN ALMA"
+      ]
+    },
+    "k79_bant_disli_plaka_4335_-421": {
+      "dugum": "K_BANT__sac",
+      "kutu": [
+        4327.0,
+        4343.0,
+        895.5,
+        901.5,
+        -429.0,
+        -413.0
+      ],
+      "tur": "sac",
+      "bom": [
+        "Tapped conveyor support insert",
+        1,
+        "16x16x6 R2; M6 through",
+        "AISI3046mm laser + tap M6 \u00b7 AISI304",
+        "\u00dcRET\u0130M"
+      ]
+    },
+    "k79_bant_disli_plaka_kaynagi_4335_-421": {
+      "dugum": "K_BANT__sac",
+      "kutu": [
+        4327.0,
+        4343.0,
+        901.5,
+        902.9,
+        -429.0,
+        -413.0
+      ],
+      "tur": "kaynak",
+      "bom": [
+        "Internal continuous insert/support weld",
+        1,
+        "leg1.4 throat0.99",
+        "TIG141 ER308LSi \u00b7 ER308LSi",
+        "\u00dcRET\u0130M"
+      ]
+    },
+    "k79_bant_M6x16_alttan_4335_-421": {
+      "dugum": "K_BANT__celik",
+      "kutu": [
+        4330.0,
+        4340.0,
+        881.4,
+        903.4,
+        -426.0,
+        -416.0
+      ],
+      "tur": "baglanti",
+      "bom": [
+        "Silindir ba\u015fl\u0131 imbus c\u0131vata M6\u00d716",
+        1,
+        "M6\u00d716",
+        "ISO 4762 \u00b7 A2-70",
+        "SATIN ALMA"
+      ]
+    },
+    "k79_bant_M6_genis_pul_4335_-421": {
+      "dugum": "K_BANT__celik",
+      "kutu": [
+        4326.0,
+        4344.0,
+        887.4,
+        889.0,
+        -430.0,
+        -412.0
+      ],
+      "tur": "baglanti",
+      "bom": [
+        "Geni\u015f pul M6",
+        1,
+        "6.4/18\u00d71.6",
+        "DIN 9021 / ISO 7093 \u00b7 A2",
+        "SATIN ALMA"
+      ]
+    },
+    "k79_bant_disli_plaka_4065_-3": {
+      "dugum": "K_BANT__sac",
+      "kutu": [
+        4057.0,
+        4073.0,
+        895.5,
+        901.5,
+        -11.0,
+        5.0
+      ],
+      "tur": "sac",
+      "bom": [
+        "Tapped conveyor support insert",
+        1,
+        "16x16x6 R2; M6 through",
+        "AISI3046mm laser + tap M6 \u00b7 AISI304",
+        "\u00dcRET\u0130M"
+      ]
+    },
+    "k79_bant_disli_plaka_kaynagi_4065_-3": {
+      "dugum": "K_BANT__sac",
+      "kutu": [
+        4057.0,
+        4073.0,
+        901.5,
+        902.9,
+        -11.0,
+        5.0
+      ],
+      "tur": "kaynak",
+      "bom": [
+        "Internal continuous insert/support weld",
+        1,
+        "leg1.4 throat0.99",
+        "TIG141 ER308LSi \u00b7 ER308LSi",
+        "\u00dcRET\u0130M"
+      ]
+    },
+    "k79_bant_M6x16_alttan_4065_-3": {
+      "dugum": "K_BANT__celik",
+      "kutu": [
+        4060.0,
+        4070.0,
+        881.4,
+        903.4,
+        -8.0,
+        2.0
+      ],
+      "tur": "baglanti",
+      "bom": [
+        "Silindir ba\u015fl\u0131 imbus c\u0131vata M6\u00d716",
+        1,
+        "M6\u00d716",
+        "ISO 4762 \u00b7 A2-70",
+        "SATIN ALMA"
+      ]
+    },
+    "k79_bant_M6_genis_pul_4065_-3": {
+      "dugum": "K_BANT__celik",
+      "kutu": [
+        4056.0,
+        4074.0,
+        887.4,
+        889.0,
+        -12.0,
+        6.0
+      ],
+      "tur": "baglanti",
+      "bom": [
+        "Geni\u015f pul M6",
+        1,
+        "6.4/18\u00d71.6",
+        "DIN 9021 / ISO 7093 \u00b7 A2",
+        "SATIN ALMA"
+      ]
+    },
+    "k79_bant_disli_plaka_4335_-3": {
+      "dugum": "K_BANT__sac",
+      "kutu": [
+        4327.0,
+        4343.0,
+        895.5,
+        901.5,
+        -11.0,
+        5.0
+      ],
+      "tur": "sac",
+      "bom": [
+        "Tapped conveyor support insert",
+        1,
+        "16x16x6 R2; M6 through",
+        "AISI3046mm laser + tap M6 \u00b7 AISI304",
+        "\u00dcRET\u0130M"
+      ]
+    },
+    "k79_bant_disli_plaka_kaynagi_4335_-3": {
+      "dugum": "K_BANT__sac",
+      "kutu": [
+        4327.0,
+        4343.0,
+        901.5,
+        902.9,
+        -11.0,
+        5.0
+      ],
+      "tur": "kaynak",
+      "bom": [
+        "Internal continuous insert/support weld",
+        1,
+        "leg1.4 throat0.99",
+        "TIG141 ER308LSi \u00b7 ER308LSi",
+        "\u00dcRET\u0130M"
+      ]
+    },
+    "k79_bant_M6x16_alttan_4335_-3": {
+      "dugum": "K_BANT__celik",
+      "kutu": [
+        4330.0,
+        4340.0,
+        881.4,
+        903.4,
+        -8.0,
+        2.0
+      ],
+      "tur": "baglanti",
+      "bom": [
+        "Silindir ba\u015fl\u0131 imbus c\u0131vata M6\u00d716",
+        1,
+        "M6\u00d716",
+        "ISO 4762 \u00b7 A2-70",
+        "SATIN ALMA"
+      ]
+    },
+    "k79_bant_M6_genis_pul_4335_-3": {
+      "dugum": "K_BANT__celik",
+      "kutu": [
+        4326.0,
+        4344.0,
+        887.4,
+        889.0,
+        -12.0,
+        6.0
+      ],
+      "tur": "baglanti",
+      "bom": [
+        "Geni\u015f pul M6",
+        1,
+        "6.4/18\u00d71.6",
+        "DIN 9021 / ISO 7093 \u00b7 A2",
+        "SATIN ALMA"
+      ]
+    }
+  }
+}

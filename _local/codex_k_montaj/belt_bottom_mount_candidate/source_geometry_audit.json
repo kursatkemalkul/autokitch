@@ -1,0 +1,101 @@
+{
+  "input_sha256": "f4db3b6eafc01ef0b62fc3ffac62f6c3dcaf80bbfdf5da5a1fd0be18b2790300",
+  "output_sha256": "4efd0b660ccb56dfd4d53d307efdfcf218185ed7c1c95df793a47e353b8ff5c0",
+  "a_b_byte_identical": true,
+  "verified_parts_sha256": "7c29b5297dbb0a75257a8e857b3e0227d2549e5a44d744a8fa73b71a8dcc1c64",
+  "rebind_sha256": "f243d425b0e4e60ccfc88037697f726f91343fccd091494cc0cbc87eaf1f20fc",
+  "changed_nodes": [
+    "K_BANT__celik",
+    "K_BANT__sac",
+    "K_GOVDE__celik"
+  ],
+  "allowed_nodes": [
+    "K_BANT__celik",
+    "K_BANT__sac",
+    "K_GOVDE__celik"
+  ],
+  "changed_nodes_outside_scope": [],
+  "parts": 885,
+  "triangles": 475090,
+  "matched_triangles": 475090,
+  "removed_parts": [
+    "k72_vida_M6_4065.0_-421.0",
+    "k72_ust_pul_M6_4065.0_-421.0",
+    "k72_alt_pul_M6_4065.0_-421.0_0",
+    "k72_alt_somun_M6_4065.0_-421.0",
+    "k71_raf_PEM_M6_4065.0_-421.0",
+    "k72_vida_M6_4065.0_-3.0",
+    "k72_ust_pul_M6_4065.0_-3.0",
+    "k72_alt_pul_M6_4065.0_-3.0_0",
+    "k72_alt_somun_M6_4065.0_-3.0",
+    "k71_raf_PEM_M6_4065.0_-3.0",
+    "k72_vida_M6_4335.0_-421.0",
+    "k72_ust_pul_M6_4335.0_-421.0",
+    "k72_alt_pul_M6_4335.0_-421.0_0",
+    "k72_alt_somun_M6_4335.0_-421.0",
+    "k71_raf_PEM_M6_4335.0_-421.0",
+    "k72_vida_M6_4335.0_-3.0",
+    "k72_ust_pul_M6_4335.0_-3.0",
+    "k72_alt_pul_M6_4335.0_-3.0_0",
+    "k72_alt_somun_M6_4335.0_-3.0",
+    "k71_raf_PEM_M6_4335.0_-3.0"
+  ],
+  "measured_joints": [
+    {
+      "id": "4065_-421",
+      "insert_stock_mm": [
+        15.99980000000005,
+        6.0,
+        16.0
+      ],
+      "actual_engagement_mm": 6.0,
+      "actual_protrusion_mm": 1.8999999999999773,
+      "actual_washer_seat_y_mm": 889.0,
+      "post_bottom_y_mm": 895.0,
+      "passed": true
+    },
+    {
+      "id": "4335_-421",
+      "insert_stock_mm": [
+        15.999799999999595,
+        6.0,
+        16.0
+      ],
+      "actual_engagement_mm": 6.0,
+      "actual_protrusion_mm": 1.8999999999999773,
+      "actual_washer_seat_y_mm": 889.0,
+      "post_bottom_y_mm": 895.0,
+      "passed": true
+    },
+    {
+      "id": "4065_-3",
+      "insert_stock_mm": [
+        15.99980000000005,
+        6.0,
+        16.0
+      ],
+      "actual_engagement_mm": 6.0,
+      "actual_protrusion_mm": 1.8999999999999773,
+      "actual_washer_seat_y_mm": 889.0,
+      "post_bottom_y_mm": 895.0,
+      "passed": true
+    },
+    {
+      "id": "4335_-3",
+      "insert_stock_mm": [
+        15.999799999999595,
+        6.0,
+        16.0
+      ],
+      "actual_engagement_mm": 6.0,
+      "actual_protrusion_mm": 1.8999999999999773,
+      "actual_washer_seat_y_mm": 889.0,
+      "post_bottom_y_mm": 895.0,
+      "passed": true
+    }
+  ],
+  "passed_source_geometry_only": true,
+  "torch_load_manufacturing_verified": false,
+  "full_montage_verified": false,
+  "production_release": false
+}
