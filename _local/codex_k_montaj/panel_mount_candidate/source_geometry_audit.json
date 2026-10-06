@@ -1,0 +1,124 @@
+{
+  "scope": "Four panel mount joints, exact panel/rear/spacer replacements and12 added fasteners only",
+  "input_sha256": "415044b5baa2e454c6976f99a72460a52c6ed8b5c5c42a396a3deb22af856f75",
+  "output_sha256": "58f75466944354b35995d02f0e998dc936db0c494975789dd91a6633767836ff",
+  "a_b_byte_identical": true,
+  "candidate_audit_sha256": "d356571c7e999e11bb7d16a202774fdee0044d46c856ab265284550381be44e8",
+  "rebind_sha256": "a1abd86a06506f6d7a1490720c7285bdc10ed97a5d283c212a628d16ec2546db",
+  "verified_parts_sha256": "af3a7589ef00c122992867f6138477bf84fe3aa67f675c42cb5ba1ddd3faebdb",
+  "parts": 861,
+  "triangles": 363766,
+  "changed_nodes": [
+    "K_ELEKTRIK__celik",
+    "K_ELEKTRIK__sac",
+    "K_GOVDE__kabuk"
+  ],
+  "changed_nodes_outside_scope": [],
+  "actual_one_to_one_triangles_matched": 363766,
+  "maximum_actual_recompression_vertex_distance_mm": 0.0002937164000471603,
+  "joints": [
+    {
+      "id": "panel_mount_0",
+      "measured_engagement_mm": 5.0,
+      "measured_protrusion_mm": 2.0,
+      "host_holes": [
+        {
+          "part": "pano_plakasi",
+          "bore_vertices": 504,
+          "passed": true
+        },
+        {
+          "part": "arka_sac",
+          "bore_vertices": 180,
+          "passed": true
+        },
+        {
+          "part": "pano_ara_burcu_0",
+          "bore_vertices": 504,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "panel_mount_1",
+      "measured_engagement_mm": 5.0,
+      "measured_protrusion_mm": 2.0,
+      "host_holes": [
+        {
+          "part": "pano_plakasi",
+          "bore_vertices": 504,
+          "passed": true
+        },
+        {
+          "part": "arka_sac",
+          "bore_vertices": 180,
+          "passed": true
+        },
+        {
+          "part": "pano_ara_burcu_1",
+          "bore_vertices": 504,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "panel_mount_2",
+      "measured_engagement_mm": 5.0,
+      "measured_protrusion_mm": 2.0,
+      "host_holes": [
+        {
+          "part": "pano_plakasi",
+          "bore_vertices": 504,
+          "passed": true
+        },
+        {
+          "part": "arka_sac",
+          "bore_vertices": 192,
+          "passed": true
+        },
+        {
+          "part": "pano_ara_burcu_2",
+          "bore_vertices": 504,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "panel_mount_3",
+      "measured_engagement_mm": 5.0,
+      "measured_protrusion_mm": 2.0,
+      "host_holes": [
+        {
+          "part": "pano_plakasi",
+          "bore_vertices": 504,
+          "passed": true
+        },
+        {
+          "part": "arka_sac",
+          "bore_vertices": 192,
+          "passed": true
+        },
+        {
+          "part": "pano_ara_burcu_3",
+          "bore_vertices": 504,
+          "passed": true
+        }
+      ],
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "source_activation": false,
+  "manufacturing_release": false,
+  "production_release": false,
+  "remaining_checks": [
+    "install/remove path",
+    "panel load/overhang check",
+    "assembly ordering",
+    "source-chain A/B replay",
+    "re-extraction and whole-station audits"
+  ]
+}

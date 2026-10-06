@@ -18,7 +18,7 @@ def key(t):
  # Preserve winding; tolerate cyclic starting-vertex permutations only.
  return min(np.roll(q,i,axis=0).tobytes() for i in range(3))
 
-def apply(source,dest,payload,expected_names=None,step=78,source_nodes=('K_GOVDE__kabuk',)):
+def apply(source,dest,payload,expected_names=None,step=78,source_nodes=('K_GOVDE__kabuk',),additional_parts=None):
  if payload.name.endswith('.json.gz'):
   proposal=json.loads(gzip.decompress(payload.read_bytes()))
   assert hashlib.sha256(source.read_bytes()).hexdigest()==proposal['source_model_sha256']
@@ -57,9 +57,18 @@ def apply(source,dest,payload,expected_names=None,step=78,source_nodes=('K_GOVDE
   assert proof['maximum_declared_precision_adjustment_mm']<=.001
   p,(kat,mek,kpk)=templates[a]
   g._ekle_dunya(p,r['vertices'][r['triangles']],kat,mek,kpk)
+ for a,r in (additional_parts or {}).items():
+  assert a not in repairs,'Added part must not replace an existing part'
+  p,(kat,mek,kpk)=templates[r['source_template']]
+  v=np.asarray(r['vertices'],dtype=float);f=np.asarray(r['triangles'],dtype=int)
+  assert len(v)>0 and len(f)>0 and np.isfinite(v).all()
+  g._ekle_dunya(p,v[f],kat,mek,kpk)
  dest.parent.mkdir(parents=True,exist_ok=True);raw=dest.with_suffix('.raw.glb');g.kaydet(str(raw));del g
  subprocess.run([sys.executable,str(Y/'50_sikilastir.py'),str(raw),str(dest)],env=dict(os.environ,YAMA_IS_KOK=str(Y/'kaynak')),check=True);raw.unlink()
  report={'step':step,'input_sha256':hashlib.sha256(source.read_bytes()).hexdigest(),'payload_sha256':hashlib.sha256(payload.read_bytes()).hexdigest(),'output_sha256':hashlib.sha256(dest.read_bytes()).hexdigest(),'matched_source_triangles':dict(matched),'naming_grid_mm':.0001,'maximum_naming_grid_adjustment_mm':max(adjustments),'repairs':[r['proof'] for r in repairs.values()],'source_labels_retained':True,'source_interfaces_intended_unchanged':True,'unrelated_geometry_audit_required':True,'reextraction_required':True,'production_release':False}
+ if additional_parts:
+  report['added_parts']=list(additional_parts)
+  report['source_interfaces_intended_unchanged']=False
  dest.with_suffix('.json').write_text(json.dumps(report,indent=2,ensure_ascii=False),encoding='utf-8')
  print('STEP'+str(step),report['output_sha256'],dict(matched),flush=True)
 

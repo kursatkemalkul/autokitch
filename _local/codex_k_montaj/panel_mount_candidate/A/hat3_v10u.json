@@ -1,0 +1,85 @@
+{
+  "step": 79,
+  "input_sha256": "415044b5baa2e454c6976f99a72460a52c6ed8b5c5c42a396a3deb22af856f75",
+  "payload_sha256": "09adb24e682d90912cf121d5546344c97d445177ce6b87877da47fc74941ba2f",
+  "output_sha256": "58f75466944354b35995d02f0e998dc936db0c494975789dd91a6633767836ff",
+  "matched_source_triangles": {
+    "pano_plakasi": 12,
+    "pano_ara_burcu_0": 48,
+    "pano_ara_burcu_1": 48,
+    "pano_ara_burcu_2": 48,
+    "pano_ara_burcu_3": 48,
+    "arka_sac": 980
+  },
+  "naming_grid_mm": 0.0001,
+  "maximum_naming_grid_adjustment_mm": 7.909965348543437e-05,
+  "repairs": [
+    {
+      "part": "pano_plakasi",
+      "closed_status": "Error.NoError",
+      "volume_mm3": 412775.5615848288,
+      "maximum_declared_precision_adjustment_mm": 0.0,
+      "purpose": "real bored and countersunk panel mounting",
+      "supplier_equipment_modified": false
+    },
+    {
+      "part": "pano_ara_burcu_0",
+      "closed_status": "Error.NoError",
+      "volume_mm3": 356.0428502075374,
+      "maximum_declared_precision_adjustment_mm": 0.0,
+      "purpose": "real bored and countersunk panel mounting",
+      "supplier_equipment_modified": false
+    },
+    {
+      "part": "pano_ara_burcu_1",
+      "closed_status": "Error.NoError",
+      "volume_mm3": 356.0428502075374,
+      "maximum_declared_precision_adjustment_mm": 0.0,
+      "purpose": "real bored and countersunk panel mounting",
+      "supplier_equipment_modified": false
+    },
+    {
+      "part": "pano_ara_burcu_2",
+      "closed_status": "Error.NoError",
+      "volume_mm3": 356.0429244876286,
+      "maximum_declared_precision_adjustment_mm": 0.0,
+      "purpose": "real bored and countersunk panel mounting",
+      "supplier_equipment_modified": false
+    },
+    {
+      "part": "pano_ara_burcu_3",
+      "closed_status": "Error.NoError",
+      "volume_mm3": 356.0429244876286,
+      "maximum_declared_precision_adjustment_mm": 0.0,
+      "purpose": "real bored and countersunk panel mounting",
+      "supplier_equipment_modified": false
+    },
+    {
+      "part": "arka_sac",
+      "closed_status": "Error.NoError",
+      "volume_mm3": 647350.6146889115,
+      "maximum_declared_precision_adjustment_mm": 0.0,
+      "purpose": "real bored and countersunk panel mounting",
+      "supplier_equipment_modified": false
+    }
+  ],
+  "source_labels_retained": true,
+  "source_interfaces_intended_unchanged": false,
+  "unrelated_geometry_audit_required": true,
+  "reextraction_required": true,
+  "production_release": false,
+  "added_parts": [
+    "k_pano_M5x20_havsa_0",
+    "k_pano_M5_pul_0",
+    "k_pano_M5_somun_0",
+    "k_pano_M5x20_havsa_1",
+    "k_pano_M5_pul_1",
+    "k_pano_M5_somun_1",
+    "k_pano_M5x20_havsa_2",
+    "k_pano_M5_pul_2",
+    "k_pano_M5_somun_2",
+    "k_pano_M5x20_havsa_3",
+    "k_pano_M5_pul_3",
+    "k_pano_M5_somun_3"
+  ]
+}
