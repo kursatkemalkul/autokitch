@@ -85,7 +85,9 @@ KAT = [  # (sınama, kategori, açıklama) — sıra önemli, ilk tutan
     (lambda a: 'basac' in a and not a.endswith('lamasi'), 'GECME', 'bas-aç mandalı: dikme / lama deliğine yaylı tırnakla geçer (kendi gövdesi)'),
     # E mekanizma (zincir 81–85, yerel 6 Eki): vidasız durması bilerek olan parçalar
     (lambda a: P[a].get('rol') == 'burc' or a.endswith(('_burc', '_burc_0', '_burc_1')) or 'lm12' in a, 'GECME', 'burç / LM12 lineer burç: bloğun deliğine sıkı geçme (pres)'),
-    (lambda a: P[a].get('rol') == 'vantuz', 'GECME', 'vantuz: kendi flanşı + sapıyla bara (sapı vidalı, kauçuk kısmı ürünün)'),
+    (lambda a: P[a].get('rol') == 'vantuz' or a.startswith('vantuz_flans'), 'URUN', 'vantuz ürünü (kauçuk + flanş + dişli sap tek ürün): sapı bara vidalı'),
+    (lambda a: 'katlayici_kizak' in a, 'GECME', 'kızak burcu: katlayıcı bloğunun deliğine preslenmiş, kılavuz milinde kayar'),
+    (lambda a: a == 'katlama_sensor', 'ACIK', 'Omron E3Z yan delikli; sol yan saca 1 mm → vidası takılamıyor (üreteç: sensör +x ≥ 4 mm kaymalı) · Kemal kararı'),
     (lambda a: P[a].get('rol') in ('kayis', 'hortum'), 'GECME', 'kayış / vakum hortumu: kasnaklara sarılı / rakorlara geçer (kural 9 istisnası)'),
     (lambda a: 'rulman_disk' in a or a.endswith('_rulman') or a.startswith('parmak_rulman'), 'GECME', 'flanşlı rulman diski: göbeğe sıkı geçme'),
     (lambda a: a.endswith(('_araba_0', '_araba_1', '_araba_2', '_araba_3')) or '_araba' in a and P[a].get('rol') == 'parca' and 'celik' in P[a].get('ac', ''), 'KIZAK', 'MGN lineer araba: rayının üstünde kayar (ürün; taşıdığı plaka vidalı)'),

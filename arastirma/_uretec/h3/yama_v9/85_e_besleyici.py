@@ -123,6 +123,20 @@ for ad, tut, sap, (lo, hi), zc, xs in (("asansor", "asansor_sensor_tutucu", "e_s
 M.V["e_saplama_katlama"] = dict(dug="E_GOVDE__celik", lo=[4400.0, 1111.1, -243.5], hi=[4412.0, 1117.9, -236.6], aile="govde", rol="saplama", tip="PEM M5 saplama (sol yan sac)", ek=[])
 M.somun_mil("katlama_tutucu_somun", "e_saplama_katlama", "katlama_sensor_tutucu", yon=X, dis="M5", yuz=4404.5)
 
+# ---------------------------------------------------------------- 81 / 82 açıkları (E montaj v3 bağlantı denetimi, yerel 6 Eki): yalnız dayanan parçalar
+# kalıp duvarları + ön kılavuzlar üst plakanın üstünde duruyordu (vidasız) → 6 mm üst plakanın altından kenarlarına
+for ad, x, dis_ in (("kalip_duvar_arka", None, "M3"), ("kalip_duvar_sol", 4495.65, "M3"), ("kalip_duvar_sag", 4825.1, "M4")):
+    pts = [(x_, -370.85) for x_ in (4540.0, 4652.0, 4765.0)] if x is None else [(x, z_) for z_ in (-270.0, -206.0, -140.0)]
+    M.vida("%s_vida" % ad, "kalip_ust_plaka", ad, dis=dis_, yon=Y, duzlem=918.0, pts=pts, not_="6 mm üst plakanın altından duvarın alt kenarına (dişli)")
+for i, (x0, x1) in enumerate(((4500.0, 4555.0), (4585.0, 4645.0), (4675.0, 4735.0), (4765.0, 4805.0))):
+    xm = (x0 + x1) / 2.0; d_ = (x1 - x0) / 2.0 - 8.0
+    M.vida("kalip_on_kilavuz_%d_vida" % i, "kalip_ust_plaka", "kalip_on_kilavuz_%d" % i, dis="M4", yon=Y, duzlem=918.0, pts=[(xm - d_, -40.9), (xm + d_, -40.9)],
+           not_="6 mm üst plakanın altından ön kılavuzun alt kenarına (dişli)")
+# kapak katlayıcı ön bloğu: kolun pimine yalnız 3 mm şeritte değiyordu (vidasız) → pim ↔ blok iç köşesine TIG dikişi (ikisi de alüminyum)
+M.yeni("kapak_katlayici_blok_on_kaynak", kutu(5157.0, 900.0, -88.0, 5160.0, 903.0, -62.0).val(),
+       ["TIG 141 köşe dikişi a 3 · ER5356 · 26 mm · pim üst yüzü ↔ ön blok yan yüzü", 1, "a 3 × 26", "TIG 141", "ÜRETİM"],
+       "E_MEK_BAG__kaynak", aile="kapak_katlayici", rol="kaynak", tur="kaynak")
+
 M.bitir(go, "E_MEK_BAG__vida", "85", mek=36, mek_kod="E/Kutu katlama", ek=dict(aile=["besleyici", "itici_b", "vakum"]),
         ek_dugum={"_sablon": {"E_MEK_BAG__kaynak": "E_GOVDE__sac", "E_MEK_BAG__celik": "E_GOVDE__celik"}})
 LOG("%.0f sn" % (time.time() - t0))

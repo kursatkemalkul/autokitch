@@ -177,26 +177,48 @@ def bag_hazir(yerde):
     return out
 def kaynak_hazir(yerde):
     return [k for k in YENI81 if P[k]['tur'] == 'kaynak' and k not in GOR and all(b in yerde for b in [b for b in MEKAD if _ic(k, b, 0.3)] or ['_yok_'])]
-def yol_mm(f, yerde):
-    """bağlantı elemanının ekseni boyunca geri çekilme: 25 → 3 mm, yerindeki parçalara çarpmayan ilki (iki bacak arası boşluğa kısa mesafeden)"""
-    e_ = np.asarray(P[f]['eks'], float)
-    for L_ in (25.0, 15.0, 10.0, 6.0, 3.0):
-        if not serbest([f], -e_ * L_, yerde, ofs2=np.zeros(3)): return L_
-    return 3.0
+def yol_sec_f(f, yerde):
+    """bağlantı elemanının giriş yönü + mesafesi: önce kendi ekseni (25 → 3 mm); segman yandan (radyal, yivine geçer); pim ters yönden de çakılabilir.
+    dönüş (yön, mm, temiz mi)"""
+    e0 = np.asarray(P[f]['eks'], float); ad_ = []
+    if P[f].get('std', '').startswith('DIN 471') or '_segman' in f:
+        o_ = [k for k in range(3) if abs(e0[k]) < 0.5]
+        for k in o_:
+            for sg in (1.0, -1.0):
+                r = np.zeros(3); r[k] = sg; ad_.append(r)
+        ad_.append(e0)
+    else:
+        ad_.append(e0)
+        if '_pim' in f: ad_.append(-e0)
+    for e_ in ad_:
+        for L_ in (25.0, 15.0, 10.0, 6.0, 3.0):
+            if not serbest([f], -e_ * L_, yerde, ofs2=np.zeros(3)): return e_, L_, True
+    return e0, 3.0, False
 def grupla(L_):
     """aynı parça çiftini bağlayanlar (paralel eksenler) bir grup; gruplar SIRAYLA (birinin yolu ötekinin başlangıcından geçmesin)"""
     G_ = collections.OrderedDict()
     for f in L_: G_.setdefault(tuple(sorted(str(x) for x in gerek(f))) + (_re.sub(r'_(pul|somun)$', '', f).rsplit('_', 1)[0],), []).append(f)
     return list(G_.values())
+def _gruplar_tak(L_, yerde, tt, ofs0, ara, sure, ekle):
+    """gruplar: yolu şu an temiz olanlar önce (başka grubun elemanı yolunu kesmeden önce takılır); kalanlar tekrar denenir"""
+    kal = grupla(L_)
+    while kal:
+        sec_ = None
+        for G_ in kal:
+            Y_ = [yol_sec_f(f, yerde) for f in G_]
+            if all(y[2] for y in Y_): sec_ = (G_, Y_); break
+        if sec_ is None: G_ = kal[0]; sec_ = (G_, [yol_sec_f(f, yerde) for f in G_])
+        G_, Y_ = sec_; kal.remove(G_); t1 = tt
+        for i_, (f, (e_, L_, _)) in enumerate(zip(G_, Y_)):
+            P[f]['eks'] = e_; t1 = max(t1, tak(f, tt + i_ * ara, sure, L_, ofs0=ofs0)); ekle(f)
+        tt = t1 + 0.03
+    return tt
 def tez_baglar(tt, ara=0.08):
+    def ekle(f): TEZDE.add(f); TEZ_YER.append(f)
     while True:
         L_ = bag_hazir(TEZDE)
         if not L_: break
-        for G_ in grupla(L_):
-            t1 = tt
-            for i_, f in enumerate(G_):
-                t1 = max(t1, tak(f, tt + i_ * ara, 0.4, yol_mm(f, TEZ_YER), ofs0=TEZ)); TEZDE.add(f); TEZ_YER.append(f)
-            tt = t1 + 0.03
+        tt = _gruplar_tak(L_, TEZ_YER, tt, TEZ, ara, 0.4, ekle)
     for k in kaynak_hazir(TEZDE): tt = tez_buyu(k, tt, 0.4)
     return tt
 ROL_SIRA = {'tasiyici': 0, 'parca': 1, 'burc': 2, 'mil': 3, 'somun': 3, 'motor': 4, 'kayis': 5, 'sensor': 6, 'vantuz': 6, 'hortum': 7}
@@ -284,11 +306,8 @@ def modul_tasi(adlar_tum, adaylar, metin):
     YERINDE.extend(adlar_tum); TEZ_YER.clear(); TEZDE.clear()
     t = tt + 0.2
 def makine_baglar(t0, ara=0.1):
-    yerde = set(YERINDE); L_ = bag_hazir(yerde); tt = t0
-    for G_ in grupla(L_):
-        t1 = tt
-        for i_, f in enumerate(G_): t1 = max(t1, tak(f, tt + i_ * ara, 0.45, yol_mm(f, YERINDE)))
-        tt = t1 + 0.03
+    L_ = bag_hazir(set(YERINDE))
+    tt = _gruplar_tak(L_, YERINDE, t0, None, ara, 0.45, lambda f: None)
     return tt + (0.1 if L_ else 0.0)
 KAM.append([0.0, [6.4, 2.6, 2.4], [4.8, 1.0, -0.4]])
 t = 0.4

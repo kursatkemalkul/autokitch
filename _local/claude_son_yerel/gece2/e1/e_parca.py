@@ -153,7 +153,8 @@ def mek_m(k, v):
     if 'aluminyum' in d or 'plastik' in d: return 'alu'
     return 'mekanizma'
 for k in sorted(MTOP):
-    v = MEKV[k]; grup(k, MTOP[k], mek_m(k, v), 'mek', '%s · %s' % (v.get('tip', ''), k.replace('_', ' ')), aile=v['aile'], rol=v['rol'], mek_ad=True)
+    v = MEKV[k]; bg_ = v['rol'] == 'somun'                                      # sensör / mil somunu (ürünün): bağlantı elemanı
+    grup(k, MTOP[k], 'baglanti' if bg_ else mek_m(k, v), 'baglanti' if bg_ else 'mek', '%s · %s' % (v.get('tip', ''), k.replace('_', ' ')), aile=v['aile'], rol=v['rol'], mek_ad=True)
 print('mekanizma parçası (adlı)', len(MTOP), '/', len(MEKV), '· eksik', sorted(set(MEKV) - set(MTOP))[:30])
 
 # ---------------------------------------------------------------- 2. E bileşenleri: alt montajlar + elektrik + hava (düğüm / mek)
