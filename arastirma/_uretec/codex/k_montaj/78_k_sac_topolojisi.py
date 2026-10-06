@@ -7,7 +7,7 @@ production release. Re-extraction and all manufacturing audits remain required.
 """
 from lower_support import *
 from pathlib import Path
-import pickle,hashlib,subprocess
+import pickle,hashlib,subprocess,gzip
 from collections import Counter
 Y=H/'yama_v9'
 for path in (Y,Y/'kaynak',Y/'kaynak/gece'):sys.path.insert(0,str(path))
@@ -19,7 +19,13 @@ def key(t):
  return min(np.roll(q,i,axis=0).tobytes() for i in range(3))
 
 def apply(source,dest,payload):
- proposal=pickle.load(payload.open('rb'));repairs=proposal['repairs']
+ if payload.name.endswith('.json.gz'):
+  proposal=json.loads(gzip.decompress(payload.read_bytes()))
+  assert hashlib.sha256(source.read_bytes()).hexdigest()==proposal['source_model_sha256']
+  for r in proposal['repairs'].values():
+   for k in ('original_triangles','vertices','triangles'):r[k]=np.asarray(r[k],dtype=np.int64 if k=='triangles' else np.float64)
+ else:proposal=pickle.load(payload.open('rb')) # Local legacy cache only.
+ repairs=proposal['repairs']
  assert set(repairs)=={'sol_sac_urun_girisi','sag_sac_E_penceresi','ust_sac'}
  wanted={a:Counter(key(t) for t in r['original_triangles']) for a,r in repairs.items()}
  assert not (set(wanted['sol_sac_urun_girisi'])&set(wanted['sag_sac_E_penceresi']))

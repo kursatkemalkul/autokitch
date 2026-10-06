@@ -1,5 +1,5 @@
 {
-  "source_encoding_sha256": "a4e8e3287322bf6ae768e4df950dabd53a5fca787511e1dfdd7dc066802a12b1",
+  "source_encoding_sha256": "fe19c6194255f543cdae65e044060f13810fc9dd4ea99f037fa9613122af9f21",
   "checks": [
     {
       "physical_sheet": "kose_dikmesi_20_42_tapa",
@@ -71,26 +71,26 @@
       "fragments": [
         "sol_sac_urun_girisi"
       ],
-      "vertices": 830,
-      "triangles": 1744,
+      "vertices": 844,
+      "triangles": 1800,
       "analysis_merge_tolerance_mm": 0.001,
-      "merge_helper_used": true,
-      "manifold_status": "Error.NotManifold",
-      "volume_mm3": 0.0,
-      "closed_nonempty_solid": false
+      "merge_helper_used": false,
+      "manifold_status": "Error.NoError",
+      "volume_mm3": 1382428.3511376013,
+      "closed_nonempty_solid": true
     },
     {
       "physical_sheet": "sag_sac_E_penceresi",
       "fragments": [
         "sag_sac_E_penceresi"
       ],
-      "vertices": 698,
-      "triangles": 1456,
+      "vertices": 716,
+      "triangles": 1524,
       "analysis_merge_tolerance_mm": 0.001,
-      "merge_helper_used": true,
-      "manifold_status": "Error.NotManifold",
-      "volume_mm3": 0.0,
-      "closed_nonempty_solid": false
+      "merge_helper_used": false,
+      "manifold_status": "Error.NoError",
+      "volume_mm3": 1426111.9401019241,
+      "closed_nonempty_solid": true
     },
     {
       "physical_sheet": "arka_sac",
@@ -450,13 +450,13 @@
       "fragments": [
         "ust_sac"
       ],
-      "vertices": 1170,
-      "triangles": 2313,
+      "vertices": 1132,
+      "triangles": 2288,
       "analysis_merge_tolerance_mm": 0.001,
-      "merge_helper_used": true,
-      "manifold_status": "Error.NotManifold",
-      "volume_mm3": 0.0,
-      "closed_nonempty_solid": false
+      "merge_helper_used": false,
+      "manifold_status": "Error.NoError",
+      "volume_mm3": 547529.4206742862,
+      "closed_nonempty_solid": true
     },
     {
       "physical_sheet": "k_e4_sol_yama_40x40",
@@ -880,13 +880,9 @@
     }
   ],
   "physical_sheet_count": 67,
-  "passed_closure_only": false,
-  "open_sheets": [
-    "sol_sac_urun_girisi",
-    "sag_sac_E_penceresi",
-    "ust_sac"
-  ],
+  "passed_closure_only": true,
+  "open_sheets": [],
   "original_geometry_changed": false,
   "production_release": false,
-  "elapsed_seconds": 0.04109334945678711
+  "elapsed_seconds": 0.04009079933166504
 }

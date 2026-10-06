@@ -46,7 +46,7 @@ for head,members in initial['GROUPS'].items():
    base=f'govde_kulak_sag_{side}_1150'
    operations += [([base],[]),([base+'_bag_pul'],[]),([base+'_bag_somun'],[])]
   operations += [([a],[]) for a in ducts]
- if head=='k_govde_on_seffaf_0':
+ if head in ('k_govde_on_seffaf_0','k_govde_on_seffaf_1'):
   presses=[a for a in members if '_pem_' in a]
   for a in presses:parts[a]['yan']=[0,0,1];parts[a]['pem_ad']='SP-M5-1'
   outer=[a for a in members if a in SAC and SAC[a].record['name']=='onyuz_kapak_K']

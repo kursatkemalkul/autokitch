@@ -5,6 +5,8 @@ from collections import Counter
 import numpy as np
 from k_yuz_etiket import apply
 H=Path(__file__).resolve().parent;rawpath=H/'k_parca77_raw.pkl';currentpath=H/'k_parca.pkl';registry=H/'surface_ownership_registry.json'
+manifest=H/'current_source_manifest.json'
+if manifest.exists():rawpath=H/json.loads(manifest.read_text(encoding='utf-8'))['raw_parts_file']
 R=json.loads(registry.read_text(encoding='utf-8'));raw=pickle.load(rawpath.open('rb'))['P'];current=pickle.load(currentpath.open('rb'))['P']
 def faces(p):return Counter(hashlib.sha256(np.asarray(t,dtype='<f8').tobytes()).hexdigest() for t in p['V'][p['F']])
 before=Counter()

@@ -10,7 +10,10 @@ import json,pickle,hashlib,itertools
 import numpy as np
 from scipy.spatial import cKDTree
 H=Path(__file__).resolve().parent
-old=pickle.load((H/'k_parca.pkl').open('rb'))['P'];rawD=pickle.load((H/'k_parca78_raw.pkl').open('rb'));raw=rawD['P']
+previous_path=H/'k_parca.pkl'
+manifest=H/'current_source_manifest.json'
+if manifest.exists():previous_path=H/json.loads(manifest.read_text(encoding='utf-8'))['previous_verified_parts_file']
+old=pickle.load(previous_path.open('rb'))['P'];rawD=pickle.load((H/'k_parca78_raw.pkl').open('rb'));raw=rawD['P']
 repairs=pickle.load((H/'topology_repair_proposal.pkl').open('rb'))['repairs']
 def key(t):
  q=np.round(t,4);return min(np.roll(q,i,axis=0).tobytes() for i in range(3))
@@ -44,7 +47,7 @@ for a,i,t in pending:
  if len(labels)>1:candidates=[r for r in candidates if expected[r[1]][0]==a]
  distance,j=min(candidates);used.add(j);maximum=max(maximum,distance);assignments.append((a,i,expected[j][0],t,distance))
 unmatched_expected=[j for j in range(len(expected)) if j not in used]
-report={'raw_parts_sha256':hashlib.sha256((H/'k_parca78_raw.pkl').read_bytes()).hexdigest(),'previous_parts_sha256':hashlib.sha256((H/'k_parca.pkl').read_bytes()).hexdigest(),'repair_payload_sha256':hashlib.sha256((H/'topology_repair_proposal.pkl').read_bytes()).hexdigest(),'raw_triangles':sum(len(p['F']) for p in raw.values()),'expected_triangles':len(expected),'matched_triangles':len(assignments),'maximum_recompression_vertex_distance_mm':maximum,'ambiguous':ambiguous,'unmatched_expected_count':len(unmatched_expected),'unmatched_expected_parts':dict(Counter(expected[j][0] for j in unmatched_expected)),'passed':not ambiguous and not unmatched_expected and len(assignments)==len(expected),'production_release':False}
+report={'raw_parts_sha256':hashlib.sha256((H/'k_parca78_raw.pkl').read_bytes()).hexdigest(),'previous_parts_sha256':hashlib.sha256(previous_path.read_bytes()).hexdigest(),'repair_payload_sha256':hashlib.sha256((H/'topology_repair_proposal.pkl').read_bytes()).hexdigest(),'raw_triangles':sum(len(p['F']) for p in raw.values()),'expected_triangles':len(expected),'matched_triangles':len(assignments),'maximum_recompression_vertex_distance_mm':maximum,'ambiguous':ambiguous,'unmatched_expected_count':len(unmatched_expected),'unmatched_expected_parts':dict(Counter(expected[j][0] for j in unmatched_expected)),'passed':not ambiguous and not unmatched_expected and len(assignments)==len(expected),'production_release':False}
 (H/'step78_ownership_rebind_audit.json').write_text(json.dumps(report,indent=2),encoding='utf-8')
 print('REBIND78',report['passed'],len(assignments),'ambiguous',len(ambiguous),'expected_left',len(unmatched_expected),'maximum_mm',maximum,flush=True)
 if not report['passed']:raise SystemExit(2)

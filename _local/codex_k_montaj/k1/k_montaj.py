@@ -606,7 +606,7 @@ for a in CEVRE:
  if a not in GOR:basla(a,np.zeros(3),t);YER[a]=t
 TOPLAM=bitti()+2
 exec((HERE/'_son.py').read_text(encoding='utf-8').replace("'plan_a3.pkl'","'plan_k.pkl'").replace('OLC = 1.75','OLC = 1.0'))
-json.dump({'source':'local steps74-77 prototypes on registered step73; each two runs byte-identical; no production release','production_release':False,'plan_problems':PLAN_SORUN,'unplanned':[a for a in P if a not in GOR],'parts':len(P),'seconds':round(time.time()-T0,2)},open('plan_audit.json','w',encoding='utf-8'),ensure_ascii=False,indent=2)
+json.dump({'source':'local steps74-78 prototypes on registered step73; deterministic source-bound current mesh; no production release','production_release':False,'plan_problems':PLAN_SORUN,'unplanned':[a for a in P if a not in GOR],'parts':len(P),'seconds':round(time.time()-T0,2)},open('plan_audit.json','w',encoding='utf-8'),ensure_ascii=False,indent=2)
 
 from k_son_kaynak import bind as bind_full_source
 bind_full_source()

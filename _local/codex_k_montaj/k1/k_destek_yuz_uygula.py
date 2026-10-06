@@ -16,7 +16,10 @@ elif 'native_planes' in C:
  assert all(r['after']['status']=='Error.NoError' for r in C['checks'] if r['before']['status']=='Error.NoError')
  assert all(r['maximum_native_face_distance_mm']<=.001 for r in C['proposed_changes'])
 else:assert all(r['after']['status']=='Error.NoError' for r in C['checks'])
-D=pickle.load(src.open('rb'));rawD=pickle.load((H/'k_parca77_raw.pkl').open('rb'));P=D['P'];raw=rawD['P']
+rawpath=H/'k_parca77_raw.pkl'
+manifest=H/'current_source_manifest.json'
+if manifest.exists():rawpath=H/json.loads(manifest.read_text(encoding='utf-8'))['raw_parts_file']
+D=pickle.load(src.open('rb'));rawD=pickle.load(rawpath.open('rb'));P=D['P'];raw=rawD['P']
 regpath=H/'surface_ownership_registry.json';R=json.loads(regpath.read_text(encoding='utf-8'))
 old={(r['from'],r['triangle']):r for r in R['changes']};lookup=defaultdict(list)
 def digest(t):return hashlib.sha256(np.asarray(t,dtype='<f8').tobytes()).hexdigest()
