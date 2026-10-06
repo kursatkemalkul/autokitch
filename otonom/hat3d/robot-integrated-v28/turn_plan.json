@@ -1,0 +1,52 @@
+{
+  "version": 28,
+  "begin_index": 10801,
+  "end_index": 11942,
+  "old_begin_s": 161.9230044325471,
+  "old_end_s": 198.0901040657329,
+  "new_end_s": 185.64307296934228,
+  "shift_s": -12.447031096390617,
+  "pull_z_m": 0.7,
+  "stages": [
+    {
+      "stage": "Kutu · açık dönüş için yataktan uzaklaştır",
+      "start_s": 161.9230044325471,
+      "end_s": 165.5980044325471,
+      "frames": 240,
+      "speed_stretch": 1.05
+    },
+    {
+      "stage": "Kutu · ray sabitken açık taraftan dön",
+      "start_s": 165.5980044325471,
+      "end_s": 173.96411842029983,
+      "frames": 720,
+      "speed_stretch": 1.1951591411075302
+    },
+    {
+      "stage": "Kutu · QR girişine ileri taşı",
+      "start_s": 173.96411842029983,
+      "end_s": 185.59057296934228,
+      "frames": 480,
+      "speed_stretch": 2.3252909098084893
+    },
+    {
+      "stage": "Kutu · QR giriş hizasını koru",
+      "start_s": 185.59057296934228,
+      "end_s": 185.64307296934228,
+      "frames": 3,
+      "speed_stretch": 1.05
+    }
+  ],
+  "exact_entry_delta_rad": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "rail_during_turn_m": 4.2,
+  "rail_backtracking_m": 0,
+  "turn_shoulder_angle_rad": 3.14159265358979,
+  "grasp": "ideal rigid attachment; physics not claimed"
+}
