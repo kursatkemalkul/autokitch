@@ -1,0 +1,18 @@
+{
+  "version": 28,
+  "method": "source primitive convex hulls; GJK separation, exact native joint FK",
+  "sampling": "all authored turn frames, subdivisions until every body point moves <=2mm",
+  "frames": 1445,
+  "subframes": 2949,
+  "self_checks": 6043,
+  "payload_checks": 645,
+  "environment_checks": 275,
+  "failures": [],
+  "min_machine_box_clearance_m": 0.03497470895476813,
+  "max_x_m": 5.225873561759032,
+  "wall_clearance_m": 0.13412643824096815,
+  "maximum_payload_tilt_deg": 0.004117247119499924,
+  "minimum_self_distance_m": 0.024268801626376152,
+  "rail_backtracking_m": 0,
+  "passed": true
+}

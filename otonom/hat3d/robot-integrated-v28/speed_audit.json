@@ -1,0 +1,75 @@
+{
+  "version": 28,
+  "frames": 12807,
+  "worst": {
+    "joint_velocity": [
+      0.7640559258850682,
+      0.44151159253076677,
+      0.5689569223022564,
+      0.40663586781053096,
+      0.8121641414012318,
+      0.7986960286291123
+    ],
+    "joint_acceleration": [
+      1.4213246878610004,
+      0.8314569101281183,
+      1.5514662476166787,
+      0.9690490126009353,
+      1.4202777841731518,
+      0.6750774457432267
+    ],
+    "tcp_velocity": 0.6563524152685367,
+    "tcp_acceleration": 0.6526042369717616,
+    "rail_velocity": 0.42198954134336997,
+    "rail_acceleration": 0.377383974417728,
+    "joint_min": [
+      -1.4289796079806913,
+      -3.0927798926155172,
+      -2.143605816139767,
+      -2.110715124121,
+      -0.9643645282636273,
+      -2.1473210036435115
+    ],
+    "joint_max": [
+      4.66262431845933,
+      -0.9840104298107847,
+      1.8080572313465675,
+      0.6077897809914548,
+      7.192583469938763,
+      3.1420760592679047
+    ]
+  },
+  "limits": {
+    "joint_velocity_rad_s": [
+      2.0943951023931953,
+      2.0943951023931953,
+      3.141592653589793,
+      3.141592653589793,
+      3.141592653589793,
+      3.141592653589793
+    ],
+    "tcp_hardware_max_m_s": 4,
+    "tcp_operating_cap_m_s": 1,
+    "tcp_near_product_m_s": 0.12,
+    "joint_acceleration_rad_s2": 2,
+    "tcp_acceleration_m_s2": 1,
+    "rail_velocity_m_s": 0.5,
+    "rail_acceleration_m_s2": 0.6,
+    "jaw_velocity_deg_s": 45,
+    "drawer_velocity_m_s": 0.19,
+    "drawer_acceleration_m_s2": 0.633,
+    "sources": {
+      "joint_speed": "https://www.universal-robots.com/media/1807466/ur10e_e-series_datasheets_web.pdf",
+      "tcp_speed": "https://www.universal-robots.com/media/1807466/ur10e_e-series_datasheets_web.pdf"
+    },
+    "assumptions": [
+      "1 m/s working TCP cap; 4 m/s datasheet ceiling is not attainable at every pose.",
+      "Joint/TCP accelerations, rail and gripper limits are configured trial values, not manufacturer certification.",
+      "Speed limits depend on hardware revision, payload, safety settings and controller; Isaac must revalidate dynamics."
+    ]
+  },
+  "turn_duration_s": 23.720068536795196,
+  "old_turn_duration_s": 36.16709963318581,
+  "errors": [],
+  "passed": true
+}

@@ -307,3 +307,9 @@ All171 new closed meshes checked; conservative recorded front boundary checked, 
 ## 96 · v27 kompakt zemin ve standart gömme kanal
 Adım95/v26 üstüne; iki kapı, ara duvar, masa, sandalye, lavabo ve su/gider tamamen sahneden kaldırılır. İç zemin4724×3050mm (14.408m²). OBO OKA-G 200/300/400/500mm nominal kanallar, seçilen100mm yükseklik; 8 düz modül, 0.2mm alın derzi, birleşimlerde açık yan port. Kapak üstY0; kör eski delik yok. 80×70mm robot kontrol çıkışı.
 Üretici katalog ölçülerine göre basitleştirilmiş geometri; OEM STEP ithali veya üretim çizimi değildir. Son kapak/yaya yükü, parça kombinasyonu ve elektrik projesi açık. İki koşu SHA ca43896a83e2a468b25276a63329f906705c3cbea3e111be4b8fe07727108d35;81kapalı mesh;9kabloda29223örnek ve2mm pay kontrolü geçer. Makine/robot/12QR/14klip/8sipariş ve kabloların kaynak geometrisi korunur;270eski kök sahneden çıkarılır. Tam eski robot-fizik doğrulaması hâlâ açık.
+
+
+## 97 · v28 kutu donusu
+Adim96/v27 geometrisi aynen korunur. Kutu yataktan aciga alinir, ray4200mm sabitken omuz180 derece acik tarafa doner; sonra ray yalniz ileri4763mm konumuna gelir. Uc noktasinda sabit IK donusu ve400mm geri kacis kaldirildi. Kutu yatay: en cok0.00412deg egim. Yeni bolum23.720s, once36.167s.
+1445kare+2949alt-ornek: kaynak robot meshlerinin konveks zarflari/GJK,6043self645urun275cevre dar-faz kontrolu; yeni donuste bulgu0. Makineye kutu en az34.97mm, robot kendi govdeleri24.27mm, sag duvar134.13mm. QR kolon/raf/sirt/tavan zarflari kontrol edilir. Yapilandirilan hiz/ivme limitleri gecer; sekiz siparis ayni yolu kullanir.
+Iki GLB ve gzip kosusu bayt ayni: raw59e76ade2e8d32b22de81c8a582ae343b6c09a0707e3fc9cdc208241a81fdddc; gzipe25827955bcdb60b69410554a0b5f7078b983ed21cd3280bddac869606433436. Tum kaynak geometrisi/BIN oneki ve6makine klibi ayni. Denetim sadece degisen kutu donusudur; tam siparis/12goz fizik, gercek kavrama, eklem pozisyon sarimlari/hardware dinamikleri ve emniyet onayi acik.
