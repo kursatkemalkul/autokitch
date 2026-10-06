@@ -8,7 +8,7 @@ Kemal'in kararı (5 Eki 2026): iki ajan aynı anda, farklı istasyonlarda çalı
 
 | İş | Kim | Branch | Durum |
 |---|---|---|---|
-| Robot + ray + QR dolabı + sipariş animasyonları | Codex | `coord/codex-robot-ray-v21-final` | v10l üstünde v21 / adım90: igus üretici CAD + merkezleme + üç tesisat kolu + hareketli zincir + cam/eski dış tesisat temizliği. 8 kayıt korunur; tam hareket/üretim/güvenlik onayı açık. |
+| Robot + ray + QR dolabı + sipariş animasyonları | Codex | `coord/codex-robot-zemin-v22` | v10l üstünde v21 / adım90: igus üretici CAD + merkezleme + üç tesisat kolu + hareketli zincir + cam/eski dış tesisat temizliği. 8 kayıt korunur; tam hareket/üretim/güvenlik onayı açık. |
 | TOPPING montaj animasyonu v5 | Claude | `claude/topping-montaj-v5` | yayında (açık 3 küçük madde) |
 | Standart önlemleri · makine: acil stop (58) · 10 kapı emniyet anahtarı (59) · hava emniyet valfi (60) · davlumbaz filtresi servis ağzı (61) · hijyen / R290 / A perdesi kayıt | Claude | `claude/standart-makine` | BİTTİ (cb7d1ec) — Kemal incelemesinde |
 | **TOPPING montaj v6**: bağsız 63 parça + geçici dayalı 2 parça bağlanır (KURALLAR §2.3 kural 10), animasyon yeniden üretilir, §5 denetimi | Claude | `claude/topping-montaj-v6` | YAYINDA (5 Eki, PR #5) · açık: kıyma silindiri flanşı, 5 iç elektrik parçası, 2 kovan contası |
@@ -63,4 +63,4 @@ Robot entegrasyon adımı90, makine geometrisini koruyan son render/animasyon ad
 - Depo herkese açık. Oturum kayıtları `_local/claude_oturum/` altında durur (Kemal: kalsın); `_local/` siteye kopyalanmaz. Parola, anahtar, kişisel bilgi depoya konmaz.
 - Büyük ara dosyalar (`.pkl`, 100 MB üstü GLB) depoya konmaz; GLB gerekirse kayıpsız `.gz` olarak.
 
-ZİNCİR KİLİDİ: boş
+ZİNCİR KİLİDİ: Codex · codex-robot-zemin-v22 · adım91: eski robot tabanı/kutu + gömülü zemin tesisatı; K86–89/E81–85 değişmez
