@@ -140,11 +140,12 @@ kamera_genel(['sarjor_asansor'], yon=(0.4, 0.6, 0.7), olcek=0.9)
 t = koy('robot_copu', AD(UST6, ON9, lift=(5, 20), son=SON), 'Robot çöpü (kova + poşet) → yukarıdan sol öne: kılavuzunda oturur, boşaltmak için elle çıkar')
 t = koy(['sarjor_asansor'], AD(UST6, ARKA9, lift=(), son=SON), 'Şarjör + asansör → yukarıdan, tabanın M6 saplamalarına')
 # ---- 4 ÜST MODÜL (üst + yanlar açıkken)
-adim('Üst modül', 'Tezgâhta: besleyici şasisi + motor + itici + vakum kolu, köşe kaldırıcılar + tutucular + piston, ön parmaklar, arka itici. Yukarıdan şarjörün üstüne iner (montaj dayamasında); üst sac gelince askı saplamaları kulaklarından geçer.',
+adim('Üst modül', 'Tezgâhta: besleyici şasisi + motor + itici + vakum kolu, köşe kaldırıcılar + tutucular + piston, ön parmaklar, arka itici. Yukarıdan şarjörün üstüne iner (montaj dayamasında); üst sac gelince askı saplamaları kulaklarından geçer. Besleyici motoru GEÇİCİ OLARAK DAYALI — 8. adımda yan sağın saplamasına sabitlenecek.',
      'üst modül (besleyici · köşe × 4 · parmak · itici)')
 kamera_genel(['besleyici_sasi'], yon=(-0.7, 0.45, 0.5), olcek=0.9)
 USTM = var('besleyici_sasi', 'besleyici_motor', 'besleyici_itici', 'besleyici_vakum', 'kose_tutucu', 'kose_kaldirici', 'kose_piston', 'parmak', 'parmak_y', 'piston', 'piston_itici')
 for a_ in USTM: P[a_]['tezgah'] = True                                   # üst sac gelene kadar montaj dayamasında
+olay(t + 0.1, '⚠ GEÇİCİ DAYALI: besleyici motoru — 8. adımda (yan sağ) M5 saplamaya sabitlenecek')
 t = koy(USTM, AD(UST6, SOL7, lift=(), yan=(), son=SON), 'Üst modül (besleyici + köşe + parmak + itici, tezgâhta) → yukarıdan, dayamaya')
 # ---- 5 ÜST
 adim('Üst sac', 'Üst sac (1,5 · yan dönüşler, Harting ağzı, U ↔ E için 3 × PEM M8, mekanizma askı saplamaları) yukarıdan ön kasanın tepesine iner (arkası montaj dayamasında): askı saplamaları üst modülün kulaklarına geçer; yanlar gelince yan saplamalar dönüşlerinden geçer.',
@@ -164,7 +165,7 @@ kamera_genel(['kalip'], yon=(0.8, 0.45, 0.4), olcek=0.9)
 ALTM = var('kalip', 'kalip_yuva', 'kopru_govde', 'kopru', 'kapak_mekanizmasi', 'kapak_katlayici', 'elk_sensor')
 t = koy(ALTM, AD(SAG7, ARKA9, lift=(), yan=(), son=SON), 'Alt modül (kalıp + köprü + kapak mekanizması, tezgâhta) → sağdan, sol saplamalara')
 # ---- 7 YAN SAĞ
-adim('Yan sağ', 'Yan sağ (şarjör kapısı açıklığı, preslenmiş saplamalar; bas-aç laması tezgâhta) sağdan: saplamaları kulaklardan, üst sacın dönüşünden ve mekanizma kulaklarından geçer; köşebent; içten pul + somunlar.',
+adim('Yan sağ', 'Yan sağ (şarjör kapısı açıklığı, preslenmiş saplamalar; bas-aç laması tezgâhta) sağdan: saplamaları kulaklardan, üst sacın dönüşünden ve mekanizma kulaklarından geçer; köşebent; içten pul + somunlar. 5. adımda dayanan besleyici motoru şimdi sabitleniyor.',
      'yan sağ + bas-aç laması · köşebent · pul + somun')
 kamera_genel(['sag_sac'], yon=(0.85, 0.45, 0.3), olcek=0.8)
 t = koy(['sag_sac'] + var('sarjor_yan_kapisi_basac_lamasi', 'sarjor_yan_kapisi_basac'), AD(SAG7, lift=(0.5, 1, 2), yan=()), 'Yan sağ (bas-aç laması tezgâhta) → sağdan', pem=sorted(PEM_SAC.get('sag_sac', [])))
