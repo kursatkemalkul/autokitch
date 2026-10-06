@@ -1,0 +1,1584 @@
+{
+  "version": 27,
+  "source_input": "C:\\Users\\Kemal\\Desktop\\Kemal\\WEBSİTE\\AUTOKITCH_COORDINATION\\worktrees\\codex-zemin-v27\\otonom\\hat3d\\robot-integrated-v26\\hat3_robot_v26.glb.gz",
+  "source_sha256": "768490f9711ee128f6c63de1b6250834c4ed0597cf0eb9e064c8c2d1f0bdc02f",
+  "source_binary_preserved": true,
+  "original_node_count": 2561,
+  "original_mesh_count": 2451,
+  "removed_roots": [
+    "ROBOT25_GOMULU_KANAL_TABAN_0",
+    "ROBOT25_GOMULU_KANAL_YAN_0",
+    "ROBOT25_GOMULU_KANAL_YAN_1",
+    "ROBOT25_GOMULU_KANAL_YAN_2",
+    "ROBOT25_GOMULU_KANAL_YAN_3",
+    "ROBOT25_GOMULU_KANAL_YAN_4",
+    "ROBOT25_GOMULU_KANAL_YAN_5",
+    "ROBOT25_GOMULU_KANAL_YAN_6",
+    "ROBOT25_GOMULU_KANAL_YAN_7",
+    "ROBOT25_GOMULU_KANAL_YAN_8",
+    "ROBOT25_GOMULU_KANAL_YAN_9",
+    "ROBOT25_GOMULU_KANAL_YAN_10",
+    "ROBOT25_GOMULU_KANAL_YAN_11",
+    "ROBOT25_GOMULU_KANAL_YAN_12",
+    "ROBOT25_GOMULU_KANAL_YAN_13",
+    "ROBOT25_GOMULU_KANAL_YAN_14",
+    "ROBOT25_GOMULU_KANAL_YAN_15",
+    "ROBOT25_GOMULU_KANAL_YAN_16",
+    "ROBOT25_GOMULU_KANAL_YAN_17",
+    "ROBOT25_GOMULU_KANAL_YAN_18",
+    "ROBOT25_GOMULU_KANAL_YAN_19",
+    "ROBOT25_GOMULU_KANAL_YAN_20",
+    "ROBOT25_GOMULU_KANAL_YAN_21",
+    "ROBOT25_GOMULU_KANAL_YAN_22",
+    "ROBOT25_GOMULU_KANAL_YAN_23",
+    "ROBOT25_GOMULU_KANAL_YAN_24",
+    "ROBOT25_GOMULU_KANAL_YAN_25",
+    "ROBOT25_GOMULU_KANAL_YAN_26",
+    "ROBOT25_GOMULU_KANAL_YAN_27",
+    "ROBOT25_GOMULU_KANAL_YAN_28",
+    "ROBOT25_GOMULU_KANAL_YAN_29",
+    "ROBOT25_GOMULU_KANAL_YAN_30",
+    "ROBOT25_GOMULU_KANAL_YAN_31",
+    "ROBOT25_GOMULU_KANAL_YAN_32",
+    "ROBOT25_GOMULU_KANAL_YAN_33",
+    "ROBOT25_GOMULU_KANAL_YAN_34",
+    "ROBOT25_GOMULU_KANAL_YAN_35",
+    "ROBOT25_GOMULU_KANAL_YAN_36",
+    "ROBOT25_GOMULU_KANAL_YAN_37",
+    "ROBOT25_GOMULU_KANAL_YAN_38",
+    "ROBOT25_GOMULU_KANAL_YAN_39",
+    "ROBOT25_GOMULU_KANAL_YAN_40",
+    "ROBOT25_GOMULU_KANAL_YAN_41",
+    "ROBOT25_GOMULU_KANAL_YAN_42",
+    "ROBOT25_GOMULU_KANAL_YAN_43",
+    "ROBOT25_GOMULU_KANAL_YAN_44",
+    "ROBOT25_GOMULU_KANAL_YAN_45",
+    "ROBOT25_GOMULU_KANAL_YAN_46",
+    "ROBOT25_GOMULU_KANAL_YAN_47",
+    "ROBOT25_GOMULU_KANAL_YAN_48",
+    "ROBOT25_GOMULU_KANAL_YAN_49",
+    "ROBOT25_GOMULU_KANAL_YAN_50",
+    "ROBOT25_GOMULU_KANAL_YAN_51",
+    "ROBOT25_GOMULU_KANAL_AYIRICI_0",
+    "ROBOT25_ZEMIN_SIFIR_KAPAK_0",
+    "ROBOT25_ZEMIN_SIFIR_KAPAK_1",
+    "ROBOT25_ZEMIN_SIFIR_KAPAK_2",
+    "ROBOT25_ZEMIN_SIFIR_KAPAK_3",
+    "ROBOT25_ZEMIN_SIFIR_KAPAK_4",
+    "ROBOT25_ZEMIN_SIFIR_KAPAK_5",
+    "ROBOT25_ZEMIN_SIFIR_KAPAK_6",
+    "ROBOT25_ZEMIN_SIFIR_KAPAK_7",
+    "ROBOT25_ZEMIN_SIFIR_KAPAK_8",
+    "ROBOT25_ZEMIN_SIFIR_KAPAK_9",
+    "ROBOT25_ZEMIN_SIFIR_KAPAK_10",
+    "ROBOT25_ZEMIN_SIFIR_KAPAK_11",
+    "ROBOT25_ZEMIN_SIFIR_KAPAK_12",
+    "ROBOT25_ZEMIN_SIFIR_KAPAK_13",
+    "ROBOT25_ZEMIN_SIFIR_KAPAK_14",
+    "ROBOT25_ZEMIN_SIFIR_KAPAK_15",
+    "ROBOT25_ZEMIN_SIFIR_KAPAK_16",
+    "ROBOT25_ZEMIN_SIFIR_KAPAK_17",
+    "ROBOT25_ZEMIN_SIFIR_KAPAK_18",
+    "ROBOT25_ZEMIN_SIFIR_KAPAK_19",
+    "ROBOT25_ZEMIN_SIFIR_KAPAK_20",
+    "ROBOT25_ZEMIN_SIFIR_KAPAK_21",
+    "ROBOT25_ZEMIN_SIFIR_KAPAK_22",
+    "ROBOT25_ZEMIN_SIFIR_KAPAK_23",
+    "ROBOT25_ZEMIN_SIFIR_KAPAK_24",
+    "ROBOT25_CIKIS_SIFIR_YAKA_0",
+    "ROBOT25_CIKIS_SIFIR_YAKA_1",
+    "ROBOT25_CIKIS_SIFIR_YAKA_2",
+    "ROBOT25_CIKIS_SIFIR_YAKA_3",
+    "ROBOT25_CIKIS_SIFIR_YAKA_4",
+    "ROBOT25_CIKIS_SIFIR_YAKA_5",
+    "ROBOT25_CIKIS_SIFIR_YAKA_6",
+    "ROBOT25_CIKIS_SIFIR_YAKA_7",
+    "ROBOT25_CIKIS_SIFIR_YAKA_8",
+    "ROBOT25_CIKIS_SIFIR_YAKA_9",
+    "ROBOT25_KAPAK_DERZ_DESTEK_0",
+    "ROBOT25_KAPAK_DERZ_DESTEK_1",
+    "ROBOT25_KAPAK_DERZ_DESTEK_2",
+    "ROBOT25_KAPAK_DERZ_DESTEK_3",
+    "ROBOT25_KAPAK_DERZ_DESTEK_4",
+    "ROBOT25_KAPAK_DERZ_DESTEK_5",
+    "ROBOT25_KAPAK_DERZ_DESTEK_6",
+    "ROBOT25_KAPAK_DERZ_DESTEK_7",
+    "ROBOT25_KAPAK_DERZ_DESTEK_8",
+    "ROBOT25_UR_CIKIS",
+    "DUKKAN26_ZEMIN_0",
+    "DUKKAN26_ZEMIN_1",
+    "DUKKAN26_ZEMIN_2",
+    "DUKKAN26_ZEMIN_3",
+    "DUKKAN26_ZEMIN_4",
+    "DUKKAN26_ZEMIN_5",
+    "DUKKAN26_ZEMIN_6",
+    "DUKKAN26_ZEMIN_7",
+    "DUKKAN26_ZEMIN_8",
+    "DUKKAN26_ZEMIN_9",
+    "DUKKAN26_ZEMIN_10",
+    "DUKKAN26_ZEMIN_11",
+    "DUKKAN26_ZEMIN_12",
+    "DUKKAN26_ZEMIN_13",
+    "DUKKAN26_ZEMIN_14",
+    "DUKKAN26_ZEMIN_15",
+    "DUKKAN26_ZEMIN_16",
+    "DUKKAN26_ZEMIN_17",
+    "DUKKAN26_ZEMIN_18",
+    "DUKKAN26_ZEMIN_19",
+    "DUKKAN26_ZEMIN_20",
+    "DUKKAN26_ZEMIN_21",
+    "DUKKAN26_SAG_DUVAR_1_0",
+    "DUKKAN26_SAG_DUVAR_1_1",
+    "DUKKAN26_SAG_DUVAR_1_2",
+    "DUKKAN26_SAG_DUVAR_1_3",
+    "DUKKAN26_SAG_DUVAR_2_0",
+    "DUKKAN26_SAG_DUVAR_2_1",
+    "DUKKAN26_SAG_DUVAR_2_2",
+    "DUKKAN26_SAG_DUVAR_2_3",
+    "DUKKAN26_SOL_DUVAR_1_0",
+    "DUKKAN26_SOL_DUVAR_1_1",
+    "DUKKAN26_SOL_DUVAR_1_2",
+    "DUKKAN26_SOL_DUVAR_1_3",
+    "DUKKAN26_SOL_DUVAR_2_0",
+    "DUKKAN26_SOL_DUVAR_2_1",
+    "DUKKAN26_SOL_DUVAR_2_2",
+    "DUKKAN26_SOL_DUVAR_2_3",
+    "DUKKAN26_ARKA_DUVAR_0_0",
+    "DUKKAN26_ARKA_DUVAR_0_1",
+    "DUKKAN26_ARKA_DUVAR_0_2",
+    "DUKKAN26_ARKA_DUVAR_0_3",
+    "DUKKAN26_ARKA_DUVAR_1_0",
+    "DUKKAN26_ARKA_DUVAR_1_1",
+    "DUKKAN26_ARKA_DUVAR_1_2",
+    "DUKKAN26_ARKA_DUVAR_1_3",
+    "DUKKAN26_ON_DUVAR_KAPI_UST_0_0",
+    "DUKKAN26_ON_DUVAR_KAPI_UST_0_1",
+    "DUKKAN26_ON_DUVAR_KAPI_UST_0_2",
+    "DUKKAN26_ON_DUVAR_KAPI_UST_0_3",
+    "DUKKAN26_ON_DUVAR_KAPI_UST_1_0",
+    "DUKKAN26_ON_DUVAR_KAPI_UST_1_1",
+    "DUKKAN26_ON_DUVAR_KAPI_UST_1_2",
+    "DUKKAN26_ON_DUVAR_KAPI_UST_1_3",
+    "DUKKAN26_ON_DUVAR_SAG_0_0",
+    "DUKKAN26_ON_DUVAR_SAG_0_1",
+    "DUKKAN26_ON_DUVAR_SAG_0_2",
+    "DUKKAN26_ON_DUVAR_SAG_0_3",
+    "DUKKAN26_ON_DUVAR_SAG_1_0",
+    "DUKKAN26_ON_DUVAR_SAG_1_1",
+    "DUKKAN26_ON_DUVAR_SAG_1_2",
+    "DUKKAN26_ON_DUVAR_SAG_1_3",
+    "DUKKAN26_ARA_DUVAR_0_0",
+    "DUKKAN26_ARA_DUVAR_0_1",
+    "DUKKAN26_ARA_DUVAR_0_2",
+    "DUKKAN26_ARA_DUVAR_0_3",
+    "DUKKAN26_ARA_DUVAR_1_0",
+    "DUKKAN26_ARA_DUVAR_1_1",
+    "DUKKAN26_ARA_DUVAR_1_2",
+    "DUKKAN26_ARA_DUVAR_1_3",
+    "DUKKAN26_ARA_DUVAR_QR_BIRLESIM_0_0",
+    "DUKKAN26_ARA_DUVAR_QR_BIRLESIM_0_1",
+    "DUKKAN26_ARA_DUVAR_QR_BIRLESIM_0_2",
+    "DUKKAN26_ARA_DUVAR_QR_BIRLESIM_0_3",
+    "DUKKAN26_ARA_DUVAR_QR_BIRLESIM_1_0",
+    "DUKKAN26_ARA_DUVAR_QR_BIRLESIM_1_1",
+    "DUKKAN26_ARA_DUVAR_QR_BIRLESIM_1_2",
+    "DUKKAN26_ARA_DUVAR_QR_BIRLESIM_1_3",
+    "DUKKAN26_ARA_DUVAR_QR_BIRLESIM_2_0",
+    "DUKKAN26_ARA_DUVAR_QR_BIRLESIM_2_1",
+    "DUKKAN26_ARA_DUVAR_QR_BIRLESIM_2_2",
+    "DUKKAN26_ARA_DUVAR_QR_BIRLESIM_2_3",
+    "DUKKAN26_DUKKAN_GIRIS_SOL_KASA",
+    "DUKKAN26_DUKKAN_GIRIS_SAG_KASA",
+    "DUKKAN26_DUKKAN_GIRIS_UST_KASA",
+    "DUKKAN26_DUKKAN_GIRIS_KANAT_SOL",
+    "DUKKAN26_DUKKAN_GIRIS_KANAT_SAG",
+    "DUKKAN26_DUKKAN_GIRIS_KANAT_ENINE_0.008",
+    "DUKKAN26_DUKKAN_GIRIS_KANAT_ENINE_2.05",
+    "DUKKAN26_DUKKAN_GIRIS_MENTESE_0.26",
+    "DUKKAN26_DUKKAN_GIRIS_MENTESE_1.7",
+    "DUKKAN26_DUKKAN_GIRIS_KULP",
+    "DUKKAN26_DUKKAN_GIRIS_KULP_AYAK",
+    "DUKKAN26_DUKKAN_GIRIS_ACILMA_YAYI_0",
+    "DUKKAN26_DUKKAN_GIRIS_ACILMA_YAYI_2",
+    "DUKKAN26_DUKKAN_GIRIS_ACILMA_YAYI_4",
+    "DUKKAN26_DUKKAN_GIRIS_ACILMA_YAYI_6",
+    "DUKKAN26_DUKKAN_GIRIS_ACILMA_YAYI_8",
+    "DUKKAN26_DUKKAN_GIRIS_ACILMA_YAYI_10",
+    "DUKKAN26_DUKKAN_GIRIS_ACILMA_YAYI_12",
+    "DUKKAN26_DUKKAN_GIRIS_ACILMA_YAYI_14",
+    "DUKKAN26_DUKKAN_GIRIS_ACILMA_YAYI_16",
+    "DUKKAN26_DUKKAN_GIRIS_ACILMA_YAYI_18",
+    "DUKKAN26_DUKKAN_GIRIS_ACILMA_YAYI_20",
+    "DUKKAN26_DUKKAN_GIRIS_ACILMA_YAYI_22",
+    "DUKKAN26_ROBOT_ALANI_GIRIS_SOL_KASA",
+    "DUKKAN26_ROBOT_ALANI_GIRIS_SAG_KASA",
+    "DUKKAN26_ROBOT_ALANI_GIRIS_UST_KASA",
+    "DUKKAN26_ROBOT_ALANI_GIRIS_KANAT_SOL",
+    "DUKKAN26_ROBOT_ALANI_GIRIS_KANAT_SAG",
+    "DUKKAN26_ROBOT_ALANI_GIRIS_KANAT_ENINE_0.008",
+    "DUKKAN26_ROBOT_ALANI_GIRIS_KANAT_ENINE_2.05",
+    "DUKKAN26_ROBOT_ALANI_GIRIS_MENTESE_0.26",
+    "DUKKAN26_ROBOT_ALANI_GIRIS_MENTESE_1.7",
+    "DUKKAN26_ROBOT_ALANI_GIRIS_KULP",
+    "DUKKAN26_ROBOT_ALANI_GIRIS_KULP_AYAK",
+    "DUKKAN26_ROBOT_ALANI_GIRIS_EMNIYET_YERI",
+    "DUKKAN26_ROBOT_ALANI_GIRIS_ACILMA_YAYI_0",
+    "DUKKAN26_ROBOT_ALANI_GIRIS_ACILMA_YAYI_2",
+    "DUKKAN26_ROBOT_ALANI_GIRIS_ACILMA_YAYI_4",
+    "DUKKAN26_ROBOT_ALANI_GIRIS_ACILMA_YAYI_6",
+    "DUKKAN26_ROBOT_ALANI_GIRIS_ACILMA_YAYI_8",
+    "DUKKAN26_ROBOT_ALANI_GIRIS_ACILMA_YAYI_10",
+    "DUKKAN26_ROBOT_ALANI_GIRIS_ACILMA_YAYI_12",
+    "DUKKAN26_ROBOT_ALANI_GIRIS_ACILMA_YAYI_14",
+    "DUKKAN26_ROBOT_ALANI_GIRIS_ACILMA_YAYI_16",
+    "DUKKAN26_ROBOT_ALANI_GIRIS_ACILMA_YAYI_18",
+    "DUKKAN26_ROBOT_ALANI_GIRIS_ACILMA_YAYI_20",
+    "DUKKAN26_ROBOT_ALANI_GIRIS_ACILMA_YAYI_22",
+    "DUKKAN26_OTURMA_TEZGAHI_TABLA",
+    "DUKKAN26_MASA_AYAK_1.7760000000000002_2.968",
+    "DUKKAN26_MASA_AYAK_PABUC_1.7760000000000002_2.968",
+    "DUKKAN26_MASA_AYAK_1.7760000000000002_3.518",
+    "DUKKAN26_MASA_AYAK_PABUC_1.7760000000000002_3.518",
+    "DUKKAN26_MASA_AYAK_3.057_2.968",
+    "DUKKAN26_MASA_AYAK_PABUC_3.057_2.968",
+    "DUKKAN26_MASA_AYAK_3.057_3.518",
+    "DUKKAN26_MASA_AYAK_PABUC_3.057_3.518",
+    "DUKKAN26_MASA_UST_KUSAK_2.968",
+    "DUKKAN26_MASA_UST_KUSAK_3.518",
+    "DUKKAN26_MASA_YAN_KUSAK_1.7760000000000002",
+    "DUKKAN26_MASA_YAN_KUSAK_3.057",
+    "DUKKAN26_SANDALYE_OTURAK",
+    "DUKKAN26_SANDALYE_AYAK_2.255_2.3930000000000002",
+    "DUKKAN26_SANDALYE_AYAK_2.255_2.733",
+    "DUKKAN26_SANDALYE_AYAK_2.625_2.3930000000000002",
+    "DUKKAN26_SANDALYE_AYAK_2.625_2.733",
+    "DUKKAN26_SANDALYE_ARKA_DESTEK_2.255",
+    "DUKKAN26_SANDALYE_ARKA_DESTEK_2.625",
+    "DUKKAN26_SANDALYE_SIRT",
+    "DUKKAN26_LAVABO_AYAK_3.132_2.968",
+    "DUKKAN26_LAVABO_AYAK_3.132_3.518",
+    "DUKKAN26_LAVABO_AYAK_3.562_2.968",
+    "DUKKAN26_LAVABO_AYAK_3.562_3.518",
+    "DUKKAN26_LAVABO_UST_KUSAK_2.968",
+    "DUKKAN26_LAVABO_UST_KUSAK_3.518",
+    "DUKKAN26_LAVABO_YAN_KUSAK_3.132",
+    "DUKKAN26_LAVABO_YAN_KUSAK_3.562",
+    "DUKKAN26_LAVABO_TABLA",
+    "DUKKAN26_LAVABO_HAZNE_DUVAR",
+    "DUKKAN26_LAVABO_HAZNE_TABAN",
+    "DUKKAN26_LAVABO_SICRAMA_ETEGI",
+    "DUKKAN26_EL_YIKAMA_BATARYA",
+    "DUKKAN26_BATARYA_DIRSEK_KOLU",
+    "DUKKAN26_SOGUK_SU",
+    "DUKKAN26_SU_KESME_VANASI_0",
+    "DUKKAN26_SICAK_SU",
+    "DUKKAN26_SU_KESME_VANASI_1",
+    "DUKKAN26_LAVABO_SIFON",
+    "DUKKAN26_SABUNLUK",
+    "DUKKAN26_KAGIT_HAVLULUK"
+  ],
+  "new_parts": [
+    {
+      "name": "FLOOR27_ZEMIN_0",
+      "node": 2561,
+      "mesh": 2451,
+      "lo": [
+        0.6359999775886536,
+        -0.009999999776482582,
+        -0.8799999952316284
+      ],
+      "hi": [
+        5.639999866485596,
+        1.328741775497903e-16,
+        2.1700000762939453
+      ],
+      "connection": "compact continuous floor, old sink bores and former channel footprint filled"
+    },
+    {
+      "name": "FLOOR27_ZEMIN_1",
+      "node": 2562,
+      "mesh": 2452,
+      "lo": [
+        4.199999809265137,
+        -0.009999999776482582,
+        -0.8799999952316284
+      ],
+      "hi": [
+        5.639999866485596,
+        -4.347495863456203e-17,
+        -0.7099999785423279
+      ],
+      "connection": "compact continuous floor, old sink bores and former channel footprint filled"
+    },
+    {
+      "name": "FLOOR27_ANA_ALT_500_TABAN_0",
+      "node": 2563,
+      "mesh": 2453,
+      "lo": [
+        5.140100002288818,
+        -0.10000000001303852,
+        -0.7099000215530396
+      ],
+      "hi": [
+        5.639900207519531,
+        -0.09849999999999995,
+        0.8098999857902527
+      ],
+      "connection": "catalogue channel part; butt joint, supported in screed"
+    },
+    {
+      "name": "FLOOR27_ANA_ALT_500_YAN_0",
+      "node": 2564,
+      "mesh": 2454,
+      "lo": [
+        5.140100002288818,
+        -0.09849999982118607,
+        -0.7099000215530396
+      ],
+      "hi": [
+        5.639900207519531,
+        -0.0029999999999999506,
+        0.8098999857902527
+      ],
+      "connection": "catalogue channel part; butt joint, supported in screed"
+    },
+    {
+      "name": "FLOOR27_ANA_ALT_500_YAN_1",
+      "node": 2565,
+      "mesh": 2455,
+      "lo": [
+        5.140100002288818,
+        -0.09849999982118607,
+        -0.4114950895309448
+      ],
+      "hi": [
+        5.141499996185303,
+        -0.0029999999999999645,
+        0.5814951062202454
+      ],
+      "connection": "catalogue channel part; butt joint, supported in screed"
+    },
+    {
+      "name": "FLOOR27_ANA_ALT_500_YAN_2",
+      "node": 2566,
+      "mesh": 2456,
+      "lo": [
+        5.140100002288818,
+        -0.09849999982118607,
+        0.7785049080848694
+      ],
+      "hi": [
+        5.141499996185303,
+        -0.0029999999999999506,
+        0.8098999857902527
+      ],
+      "connection": "catalogue channel part; butt joint, supported in screed"
+    },
+    {
+      "name": "FLOOR27_ANA_ALT_500_AYIRICI_0",
+      "node": 2567,
+      "mesh": 2457,
+      "lo": [
+        5.140100002288818,
+        -0.039000000013038515,
+        -0.7099000215530396
+      ],
+      "hi": [
+        5.639900207519531,
+        -0.03749999999999995,
+        0.8098999857902527
+      ],
+      "connection": "separate mains/data tiers; apertures only at actual equipment risers"
+    },
+    {
+      "name": "FLOOR27_ANA_ALT_500_KAPAK_0",
+      "node": 2568,
+      "mesh": 2458,
+      "lo": [
+        5.140100002288818,
+        -0.003000000026077032,
+        -0.7099000215530396
+      ],
+      "hi": [
+        5.639900207519531,
+        4.9592071760954975e-17,
+        0.8098999857902527
+      ],
+      "connection": "flush removable cover, nominal catalogue layout; load approval pending"
+    },
+    {
+      "name": "FLOOR27_ANA_ALT_500_KAPAK_DESTEK_0",
+      "node": 2569,
+      "mesh": 2459,
+      "lo": [
+        5.140100002288818,
+        -0.004500000013038516,
+        -0.7085000276565552
+      ],
+      "hi": [
+        5.638500213623047,
+        -0.0029999999999999506,
+        0.8098999857902527
+      ],
+      "connection": "continuous ledge at inner wall face; cover supported"
+    },
+    {
+      "name": "FLOOR27_ANA_ALT_500_KAPAK_DESTEK_1",
+      "node": 2570,
+      "mesh": 2460,
+      "lo": [
+        5.140100002288818,
+        -0.004500000013038516,
+        0.7660049200057983
+      ],
+      "hi": [
+        5.1539998054504395,
+        -0.0029999999999999506,
+        0.8098999857902527
+      ],
+      "connection": "continuous ledge at inner wall face; cover supported"
+    },
+    {
+      "name": "FLOOR27_ANA_ALT_500_KAPAK_DESTEK_2",
+      "node": 2571,
+      "mesh": 2461,
+      "lo": [
+        5.140100002288818,
+        -0.004500000013038516,
+        -0.42399507761001587
+      ],
+      "hi": [
+        5.1539998054504395,
+        -0.0029999999999999636,
+        0.5939950942993164
+      ],
+      "connection": "continuous ledge at inner wall face; cover supported"
+    },
+    {
+      "name": "FLOOR27_ANA_UST_500_TABAN_0",
+      "node": 2572,
+      "mesh": 2462,
+      "lo": [
+        5.140100002288818,
+        -0.10000000001303852,
+        0.8101000189781189
+      ],
+      "hi": [
+        5.639900207519531,
+        -0.09849999999999988,
+        2.0499000549316406
+      ],
+      "connection": "catalogue channel part; butt joint, supported in screed"
+    },
+    {
+      "name": "FLOOR27_ANA_UST_500_YAN_0",
+      "node": 2573,
+      "mesh": 2463,
+      "lo": [
+        5.140100002288818,
+        -0.09849999982118607,
+        0.8101000189781189
+      ],
+      "hi": [
+        5.639900207519531,
+        -0.0029999999999998747,
+        2.0499000549316406
+      ],
+      "connection": "catalogue channel part; butt joint, supported in screed"
+    },
+    {
+      "name": "FLOOR27_ANA_UST_500_YAN_1",
+      "node": 2574,
+      "mesh": 2464,
+      "lo": [
+        5.140100002288818,
+        -0.09849999982118607,
+        0.8101000189781189
+      ],
+      "hi": [
+        5.141499996185303,
+        -0.002999999999999899,
+        1.651495099067688
+      ],
+      "connection": "catalogue channel part; butt joint, supported in screed"
+    },
+    {
+      "name": "FLOOR27_ANA_UST_500_AYIRICI_0",
+      "node": 2575,
+      "mesh": 2465,
+      "lo": [
+        5.140100002288818,
+        -0.039000000013038515,
+        0.8101000189781189
+      ],
+      "hi": [
+        5.639900207519531,
+        -0.037499999999999874,
+        2.0499000549316406
+      ],
+      "connection": "separate mains/data tiers; apertures only at actual equipment risers"
+    },
+    {
+      "name": "FLOOR27_ANA_UST_500_KAPAK_0",
+      "node": 2576,
+      "mesh": 2466,
+      "lo": [
+        5.140100002288818,
+        -0.003000000026077032,
+        0.8101000189781189
+      ],
+      "hi": [
+        5.639900207519531,
+        1.2552017132727946e-16,
+        2.0499000549316406
+      ],
+      "connection": "flush removable cover, nominal catalogue layout; load approval pending"
+    },
+    {
+      "name": "FLOOR27_ANA_UST_500_KAPAK_DESTEK_0",
+      "node": 2577,
+      "mesh": 2467,
+      "lo": [
+        5.140100002288818,
+        -0.004500000013038516,
+        0.8101000189781189
+      ],
+      "hi": [
+        5.638500213623047,
+        -0.0029999999999998747,
+        2.0485000610351562
+      ],
+      "connection": "continuous ledge at inner wall face; cover supported"
+    },
+    {
+      "name": "FLOOR27_ANA_UST_500_KAPAK_DESTEK_1",
+      "node": 2578,
+      "mesh": 2468,
+      "lo": [
+        5.140100002288818,
+        -0.004500000013038516,
+        0.8101000189781189
+      ],
+      "hi": [
+        5.1539998054504395,
+        -0.002999999999999898,
+        1.6639951467514038
+      ],
+      "connection": "continuous ledge at inner wall face; cover supported"
+    },
+    {
+      "name": "FLOOR27_MAKINE_300_TABAN_0",
+      "node": 2579,
+      "mesh": 2469,
+      "lo": [
+        4.200099945068359,
+        -0.10000000001303852,
+        -0.7099000215530396
+      ],
+      "hi": [
+        5.139900207519531,
+        -0.09850000000000003,
+        -0.4101000130176544
+      ],
+      "connection": "catalogue channel part; butt joint, supported in screed"
+    },
+    {
+      "name": "FLOOR27_MAKINE_300_YAN_0",
+      "node": 2580,
+      "mesh": 2470,
+      "lo": [
+        4.200099945068359,
+        -0.09849999982118607,
+        -0.4115000069141388
+      ],
+      "hi": [
+        5.139900207519531,
+        -0.003000000000000025,
+        -0.4101000130176544
+      ],
+      "connection": "catalogue channel part; butt joint, supported in screed"
+    },
+    {
+      "name": "FLOOR27_MAKINE_300_YAN_1",
+      "node": 2581,
+      "mesh": 2471,
+      "lo": [
+        4.200099945068359,
+        -0.09849999982118607,
+        -0.7099000215530396
+      ],
+      "hi": [
+        5.139900207519531,
+        -0.0030000000000000434,
+        -0.7085000276565552
+      ],
+      "connection": "catalogue channel part; butt joint, supported in screed"
+    },
+    {
+      "name": "FLOOR27_MAKINE_300_AYIRICI_0",
+      "node": 2582,
+      "mesh": 2472,
+      "lo": [
+        4.200099945068359,
+        -0.039000000013038515,
+        -0.7099000215530396
+      ],
+      "hi": [
+        5.139900207519531,
+        -0.037500000000000026,
+        -0.4101000130176544
+      ],
+      "connection": "separate mains/data tiers; apertures only at actual equipment risers"
+    },
+    {
+      "name": "FLOOR27_MAKINE_300_KAPAK_0",
+      "node": 2583,
+      "mesh": 2473,
+      "lo": [
+        4.200099945068359,
+        -0.003000000026077032,
+        -0.7099000215530396
+      ],
+      "hi": [
+        5.139900207519531,
+        -2.5111383599762304e-17,
+        -0.4101000130176544
+      ],
+      "connection": "flush removable cover, nominal catalogue layout; load approval pending"
+    },
+    {
+      "name": "FLOOR27_MAKINE_300_KAPAK_DESTEK_0",
+      "node": 2584,
+      "mesh": 2474,
+      "lo": [
+        4.200099945068359,
+        -0.004500000013038516,
+        -0.42399999499320984
+      ],
+      "hi": [
+        5.139900207519531,
+        -0.003000000000000025,
+        -0.4115000069141388
+      ],
+      "connection": "continuous ledge at inner wall face; cover supported"
+    },
+    {
+      "name": "FLOOR27_MAKINE_300_KAPAK_DESTEK_1",
+      "node": 2585,
+      "mesh": 2475,
+      "lo": [
+        4.200099945068359,
+        -0.004500000013038516,
+        -0.7085000276565552
+      ],
+      "hi": [
+        5.139900207519531,
+        -0.0030000000000000426,
+        -0.6959999799728394
+      ],
+      "connection": "continuous ledge at inner wall face; cover supported"
+    },
+    {
+      "name": "FLOOR27_MAKINE_DIRSEK_300_TABAN_0",
+      "node": 2586,
+      "mesh": 2476,
+      "lo": [
+        3.900099992752075,
+        -0.10000000001303852,
+        -0.8798999786376953
+      ],
+      "hi": [
+        4.199900150299072,
+        -0.09850000000000003,
+        -0.4101000130176544
+      ],
+      "connection": "catalogue channel part; butt joint, supported in screed"
+    },
+    {
+      "name": "FLOOR27_MAKINE_DIRSEK_300_YAN_0",
+      "node": 2587,
+      "mesh": 2477,
+      "lo": [
+        3.900099992752075,
+        -0.09849999982118607,
+        -0.8798999786376953
+      ],
+      "hi": [
+        4.199900150299072,
+        -0.003000000000000025,
+        -0.4101000130176544
+      ],
+      "connection": "catalogue channel part; butt joint, supported in screed"
+    },
+    {
+      "name": "FLOOR27_MAKINE_DIRSEK_300_AYIRICI_0",
+      "node": 2588,
+      "mesh": 2478,
+      "lo": [
+        3.900099992752075,
+        -0.039000000013038515,
+        -0.8798999786376953
+      ],
+      "hi": [
+        4.199900150299072,
+        -0.037500000000000026,
+        -0.4101000130176544
+      ],
+      "connection": "separate mains/data tiers; apertures only at actual equipment risers"
+    },
+    {
+      "name": "FLOOR27_MAKINE_DIRSEK_300_KAPAK_0",
+      "node": 2589,
+      "mesh": 2479,
+      "lo": [
+        3.900099992752075,
+        -0.003000000026077032,
+        -0.8798999786376953
+      ],
+      "hi": [
+        4.199900150299072,
+        -2.5111383599762304e-17,
+        -0.4101000130176544
+      ],
+      "connection": "flush removable cover, nominal catalogue layout; load approval pending"
+    },
+    {
+      "name": "FLOOR27_MAKINE_DIRSEK_300_KAPAK_DESTEK_0",
+      "node": 2590,
+      "mesh": 2480,
+      "lo": [
+        3.9014999866485596,
+        -0.004500000013038516,
+        -0.8784999847412109
+      ],
+      "hi": [
+        4.199900150299072,
+        -0.003000000000000025,
+        -0.4115000069141388
+      ],
+      "connection": "continuous ledge at inner wall face; cover supported"
+    },
+    {
+      "name": "FLOOR27_ROBOT_QR_400_TABAN_0",
+      "node": 2591,
+      "mesh": 2481,
+      "lo": [
+        3.0701000690460205,
+        -0.10000000001303852,
+        1.6500999927520752
+      ],
+      "hi": [
+        5.139900207519531,
+        -0.09849999999999988,
+        2.0499000549316406
+      ],
+      "connection": "catalogue channel part; butt joint, supported in screed"
+    },
+    {
+      "name": "FLOOR27_ROBOT_QR_400_YAN_0",
+      "node": 2592,
+      "mesh": 2482,
+      "lo": [
+        3.0701000690460205,
+        -0.09849999982118607,
+        2.0485000610351562
+      ],
+      "hi": [
+        5.139900207519531,
+        -0.0029999999999998747,
+        2.0499000549316406
+      ],
+      "connection": "catalogue channel part; butt joint, supported in screed"
+    },
+    {
+      "name": "FLOOR27_ROBOT_QR_400_YAN_1",
+      "node": 2593,
+      "mesh": 2483,
+      "lo": [
+        3.0701000690460205,
+        -0.09849999982118607,
+        1.6500999927520752
+      ],
+      "hi": [
+        5.139900207519531,
+        -0.002999999999999899,
+        1.6514999866485596
+      ],
+      "connection": "catalogue channel part; butt joint, supported in screed"
+    },
+    {
+      "name": "FLOOR27_ROBOT_QR_400_AYIRICI_0",
+      "node": 2594,
+      "mesh": 2484,
+      "lo": [
+        3.0701000690460205,
+        -0.039000000013038515,
+        1.6500999927520752
+      ],
+      "hi": [
+        5.139900207519531,
+        -0.037499999999999874,
+        2.0499000549316406
+      ],
+      "connection": "separate mains/data tiers; apertures only at actual equipment risers"
+    },
+    {
+      "name": "FLOOR27_ROBOT_QR_400_KAPAK_0",
+      "node": 2595,
+      "mesh": 2485,
+      "lo": [
+        3.0701000690460205,
+        -0.003000000026077032,
+        1.6500999927520752
+      ],
+      "hi": [
+        5.139900207519531,
+        1.2552017132727946e-16,
+        2.0499000549316406
+      ],
+      "connection": "flush removable cover, nominal catalogue layout; load approval pending"
+    },
+    {
+      "name": "FLOOR27_ROBOT_QR_400_KAPAK_DESTEK_0",
+      "node": 2596,
+      "mesh": 2486,
+      "lo": [
+        3.0701000690460205,
+        -0.004500000013038516,
+        1.6514999866485596
+      ],
+      "hi": [
+        5.139900207519531,
+        -0.002999999999999898,
+        1.6640000343322754
+      ],
+      "connection": "continuous ledge at inner wall face; cover supported"
+    },
+    {
+      "name": "FLOOR27_ROBOT_QR_400_KAPAK_DESTEK_1",
+      "node": 2597,
+      "mesh": 2487,
+      "lo": [
+        3.7072999477386475,
+        -0.004500000013038516,
+        2.0360000133514404
+      ],
+      "hi": [
+        5.139900207519531,
+        -0.0029999999999998747,
+        2.0485000610351562
+      ],
+      "connection": "continuous ledge at inner wall face; cover supported"
+    },
+    {
+      "name": "FLOOR27_ROBOT_QR_400_KAPAK_DESTEK_2",
+      "node": 2598,
+      "mesh": 2488,
+      "lo": [
+        3.0701000690460205,
+        -0.004500000013038516,
+        2.0360000133514404
+      ],
+      "hi": [
+        3.5966999530792236,
+        -0.0029999999999998747,
+        2.0485000610351562
+      ],
+      "connection": "continuous ledge at inner wall face; cover supported"
+    },
+    {
+      "name": "FLOOR27_ZINCIR_DIRSEK_400_TABAN_0",
+      "node": 2599,
+      "mesh": 2489,
+      "lo": [
+        2.670099973678589,
+        -0.10000000001303852,
+        1.6500999927520752
+      ],
+      "hi": [
+        3.0699000358581543,
+        -0.09849999999999988,
+        2.0499000549316406
+      ],
+      "connection": "catalogue channel part; butt joint, supported in screed"
+    },
+    {
+      "name": "FLOOR27_ZINCIR_DIRSEK_400_YAN_0",
+      "node": 2600,
+      "mesh": 2490,
+      "lo": [
+        2.670099973678589,
+        -0.09849999982118607,
+        1.6500999927520752
+      ],
+      "hi": [
+        3.0699000358581543,
+        -0.0029999999999998747,
+        2.0499000549316406
+      ],
+      "connection": "catalogue channel part; butt joint, supported in screed"
+    },
+    {
+      "name": "FLOOR27_ZINCIR_DIRSEK_400_YAN_1",
+      "node": 2601,
+      "mesh": 2491,
+      "lo": [
+        3.068504810333252,
+        -0.09849999982118607,
+        1.6500999927520752
+      ],
+      "hi": [
+        3.0699000358581543,
+        -0.002999999999999899,
+        1.651495099067688
+      ],
+      "connection": "catalogue channel part; butt joint, supported in screed"
+    },
+    {
+      "name": "FLOOR27_ZINCIR_DIRSEK_400_AYIRICI_0",
+      "node": 2602,
+      "mesh": 2492,
+      "lo": [
+        2.670099973678589,
+        -0.039000000013038515,
+        1.6500999927520752
+      ],
+      "hi": [
+        3.0699000358581543,
+        -0.037499999999999874,
+        2.0499000549316406
+      ],
+      "connection": "separate mains/data tiers; apertures only at actual equipment risers"
+    },
+    {
+      "name": "FLOOR27_ZINCIR_DIRSEK_400_KAPAK_0",
+      "node": 2603,
+      "mesh": 2493,
+      "lo": [
+        2.670099973678589,
+        -0.003000000026077032,
+        1.6500999927520752
+      ],
+      "hi": [
+        3.0699000358581543,
+        1.2552017132727946e-16,
+        2.0499000549316406
+      ],
+      "connection": "flush removable cover, nominal catalogue layout; load approval pending"
+    },
+    {
+      "name": "FLOOR27_ZINCIR_DIRSEK_400_KAPAK_DESTEK_0",
+      "node": 2604,
+      "mesh": 2494,
+      "lo": [
+        2.6714999675750732,
+        -0.004500000013038516,
+        1.6500999927520752
+      ],
+      "hi": [
+        3.0699000358581543,
+        -0.0029999999999998747,
+        2.0485000610351562
+      ],
+      "connection": "continuous ledge at inner wall face; cover supported"
+    },
+    {
+      "name": "FLOOR27_ZINCIR_DIRSEK_400_KAPAK_DESTEK_1",
+      "node": 2605,
+      "mesh": 2495,
+      "lo": [
+        3.0560050010681152,
+        -0.004500000013038516,
+        1.6500999927520752
+      ],
+      "hi": [
+        3.0699000358581543,
+        -0.002999999999999898,
+        1.6639951467514038
+      ],
+      "connection": "continuous ledge at inner wall face; cover supported"
+    },
+    {
+      "name": "FLOOR27_ZINCIR_SABIT_400_TABAN_0",
+      "node": 2606,
+      "mesh": 2496,
+      "lo": [
+        2.670099973678589,
+        -0.10000000001303852,
+        1.13510000705719
+      ],
+      "hi": [
+        3.0699000358581543,
+        -0.09849999999999991,
+        1.649899959564209
+      ],
+      "connection": "catalogue channel part; butt joint, supported in screed"
+    },
+    {
+      "name": "FLOOR27_ZINCIR_SABIT_400_YAN_0",
+      "node": 2607,
+      "mesh": 2497,
+      "lo": [
+        2.670099973678589,
+        -0.09849999982118607,
+        1.13510000705719
+      ],
+      "hi": [
+        3.0699000358581543,
+        -0.002999999999999899,
+        1.649899959564209
+      ],
+      "connection": "catalogue channel part; butt joint, supported in screed"
+    },
+    {
+      "name": "FLOOR27_ZINCIR_SABIT_400_AYIRICI_0",
+      "node": 2608,
+      "mesh": 2498,
+      "lo": [
+        2.670099973678589,
+        -0.039000000013038515,
+        1.13510000705719
+      ],
+      "hi": [
+        3.0699000358581543,
+        -0.037499999999999895,
+        1.649899959564209
+      ],
+      "connection": "separate mains/data tiers; apertures only at actual equipment risers"
+    },
+    {
+      "name": "FLOOR27_ZINCIR_SABIT_400_KAPAK_0",
+      "node": 2609,
+      "mesh": 2499,
+      "lo": [
+        2.670099973678589,
+        -0.003000000026077032,
+        1.13510000705719
+      ],
+      "hi": [
+        3.0699000358581543,
+        1.010272342755761e-16,
+        1.649899959564209
+      ],
+      "connection": "flush removable cover, nominal catalogue layout; load approval pending"
+    },
+    {
+      "name": "FLOOR27_ZINCIR_SABIT_400_KAPAK_DESTEK_0",
+      "node": 2610,
+      "mesh": 2500,
+      "lo": [
+        3.055999994277954,
+        -0.004500000013038516,
+        1.1365000009536743
+      ],
+      "hi": [
+        3.06850004196167,
+        -0.002999999999999899,
+        1.649899959564209
+      ],
+      "connection": "continuous ledge at inner wall face; cover supported"
+    },
+    {
+      "name": "FLOOR27_ZINCIR_SABIT_400_KAPAK_DESTEK_1",
+      "node": 2611,
+      "mesh": 2501,
+      "lo": [
+        2.6714999675750732,
+        -0.004500000013038516,
+        1.1365000009536743
+      ],
+      "hi": [
+        2.8550000190734863,
+        -0.002999999999999899,
+        1.649899959564209
+      ],
+      "connection": "continuous ledge at inner wall face; cover supported"
+    },
+    {
+      "name": "FLOOR27_MOTOR_200_TABAN_0",
+      "node": 2612,
+      "mesh": 2502,
+      "lo": [
+        4.925099849700928,
+        -0.10000000001303852,
+        0.5800999999046326
+      ],
+      "hi": [
+        5.139900207519531,
+        -0.09849999999999996,
+        0.7799000144004822
+      ],
+      "connection": "catalogue channel part; butt joint, supported in screed"
+    },
+    {
+      "name": "FLOOR27_MOTOR_200_YAN_0",
+      "node": 2613,
+      "mesh": 2503,
+      "lo": [
+        4.925099849700928,
+        -0.09849999982118607,
+        0.5800999999046326
+      ],
+      "hi": [
+        5.139900207519531,
+        -0.0029999999999999524,
+        0.7799000144004822
+      ],
+      "connection": "catalogue channel part; butt joint, supported in screed"
+    },
+    {
+      "name": "FLOOR27_MOTOR_200_AYIRICI_0",
+      "node": 2614,
+      "mesh": 2504,
+      "lo": [
+        4.925099849700928,
+        -0.039000000013038515,
+        0.5800999999046326
+      ],
+      "hi": [
+        5.139900207519531,
+        -0.03749999999999995,
+        0.7799000144004822
+      ],
+      "connection": "separate mains/data tiers; apertures only at actual equipment risers"
+    },
+    {
+      "name": "FLOOR27_MOTOR_200_KAPAK_0",
+      "node": 2615,
+      "mesh": 2505,
+      "lo": [
+        4.925099849700928,
+        -0.003000000026077032,
+        0.5800999999046326
+      ],
+      "hi": [
+        5.139900207519531,
+        4.7755102143821714e-17,
+        0.7799000144004822
+      ],
+      "connection": "flush removable cover, nominal catalogue layout; load approval pending"
+    },
+    {
+      "name": "FLOOR27_MOTOR_200_KAPAK_DESTEK_0",
+      "node": 2616,
+      "mesh": 2506,
+      "lo": [
+        4.926499843597412,
+        -0.004500000013038516,
+        0.5814999938011169
+      ],
+      "hi": [
+        5.139900207519531,
+        -0.0029999999999999524,
+        0.7785000205039978
+      ],
+      "connection": "continuous ledge at inner wall face; cover supported"
+    },
+    {
+      "name": "FLOOR27_UR_KONTROL_CIKIS_80",
+      "node": 2617,
+      "mesh": 2507,
+      "lo": [
+        4.670000076293945,
+        0,
+        1.784999966621399
+      ],
+      "hi": [
+        4.75,
+        0.10000000149011612,
+        1.8550000190734863
+      ],
+      "connection": "80x70 hollow exit sleeve; unchanged controller gland and cable"
+    },
+    {
+      "name": "FLOOR27_CIKIS_YAKA_0",
+      "node": 2618,
+      "mesh": 2508,
+      "lo": [
+        5.4816999435424805,
+        -0.003000000026077032,
+        1.0592000484466553
+      ],
+      "hi": [
+        5.550300121307373,
+        7.377272497036241e-17,
+        1.204800009727478
+      ],
+      "connection": "flush collar, actual equipment throat cutout; no empty floor holes"
+    },
+    {
+      "name": "FLOOR27_CIKIS_YAKA_1",
+      "node": 2619,
+      "mesh": 2509,
+      "lo": [
+        5.343699932098389,
+        -0.003000000026077032,
+        0.6947000026702881
+      ],
+      "hi": [
+        5.464300155639648,
+        5.665828530474637e-17,
+        0.9253000020980835
+      ],
+      "connection": "flush collar, actual equipment throat cutout; no empty floor holes"
+    },
+    {
+      "name": "FLOOR27_CIKIS_YAKA_2",
+      "node": 2620,
+      "mesh": 2510,
+      "lo": [
+        4.9822001457214355,
+        -0.003000000026077032,
+        0.6371999979019165
+      ],
+      "hi": [
+        5.067800045013428,
+        4.4258735426013174e-17,
+        0.7228000164031982
+      ],
+      "connection": "flush collar, actual equipment throat cutout; no empty floor holes"
+    },
+    {
+      "name": "FLOOR27_CIKIS_YAKA_3",
+      "node": 2621,
+      "mesh": 2511,
+      "lo": [
+        4.559700012207031,
+        -0.003000000026077032,
+        1.7647000551223755
+      ],
+      "hi": [
+        4.770299911499023,
+        1.1896219078673045e-16,
+        1.9428000450134277
+      ],
+      "connection": "flush collar, actual equipment throat cutout; no empty floor holes"
+    },
+    {
+      "name": "FLOOR27_CIKIS_YAKA_4",
+      "node": 2622,
+      "mesh": 2512,
+      "lo": [
+        4.001699924468994,
+        -0.003000000026077032,
+        -0.8422999978065491
+      ],
+      "hi": [
+        4.092299938201904,
+        -4.602834938022747e-17,
+        -0.7516999840736389
+      ],
+      "connection": "flush collar, actual equipment throat cutout; no empty floor holes"
+    },
+    {
+      "name": "FLOOR27_CIKIS_YAKA_5",
+      "node": 2623,
+      "mesh": 2513,
+      "lo": [
+        3.9196999073028564,
+        -0.003000000026077032,
+        1.8846999406814575
+      ],
+      "hi": [
+        4.085299968719482,
+        1.2095224175674523e-16,
+        1.9752999544143677
+      ],
+      "connection": "flush collar, actual equipment throat cutout; no empty floor holes"
+    },
+    {
+      "name": "FLOOR27_CIKIS_YAKA_6",
+      "node": 2624,
+      "mesh": 2514,
+      "lo": [
+        3.5966999530792236,
+        -0.003000000026077032,
+        1.947700023651123
+      ],
+      "hi": [
+        3.7072999477386475,
+        1.2552629908125725e-16,
+        2.049999952316284
+      ],
+      "connection": "flush collar, actual equipment throat cutout; no empty floor holes"
+    },
+    {
+      "name": "FLOOR27_CIKIS_YAKA_7",
+      "node": 2625,
+      "mesh": 2515,
+      "lo": [
+        2.8550000190734863,
+        -0.003000000026077032,
+        1.1349999904632568
+      ],
+      "hi": [
+        3.065000057220459,
+        7.625263891657599e-17,
+        1.245300054550171
+      ],
+      "connection": "flush collar, actual equipment throat cutout; no empty floor holes"
+    },
+    {
+      "name": "FLOOR27_SAG_DUVAR_1_0",
+      "node": 2626,
+      "mesh": 2516,
+      "lo": [
+        5.357999801635742,
+        0,
+        -0.8820000290870667
+      ],
+      "hi": [
+        5.361999988555908,
+        2.4000000953674316,
+        -0.878000020980835
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "FLOOR27_SAG_DUVAR_1_1",
+      "node": 2627,
+      "mesh": 2517,
+      "lo": [
+        5.357999801635742,
+        0,
+        -0.8820000290870667
+      ],
+      "hi": [
+        5.361999988555908,
+        2.4000000953674316,
+        -0.878000020980835
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "FLOOR27_SAG_DUVAR_1_2",
+      "node": 2628,
+      "mesh": 2518,
+      "lo": [
+        5.357999801635742,
+        0,
+        2.1679999828338623
+      ],
+      "hi": [
+        5.361999988555908,
+        2.4000000953674316,
+        2.171999931335449
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "FLOOR27_SAG_DUVAR_1_3",
+      "node": 2629,
+      "mesh": 2519,
+      "lo": [
+        5.357999801635742,
+        0,
+        2.1679999828338623
+      ],
+      "hi": [
+        5.361999988555908,
+        2.4000000953674316,
+        2.171999931335449
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "FLOOR27_SAG_DUVAR_2_0",
+      "node": 2630,
+      "mesh": 2520,
+      "lo": [
+        5.357999801635742,
+        -0.0020000000949949026,
+        -0.8799999952316284
+      ],
+      "hi": [
+        5.361999988555908,
+        0.0020000000949949026,
+        2.1700000762939453
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "FLOOR27_SAG_DUVAR_2_1",
+      "node": 2631,
+      "mesh": 2521,
+      "lo": [
+        5.357999801635742,
+        -0.0020000000949949026,
+        -0.8799999952316284
+      ],
+      "hi": [
+        5.361999988555908,
+        0.0020000000949949026,
+        2.1700000762939453
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "FLOOR27_SAG_DUVAR_2_2",
+      "node": 2632,
+      "mesh": 2522,
+      "lo": [
+        5.357999801635742,
+        2.3980000019073486,
+        -0.8799999952316284
+      ],
+      "hi": [
+        5.361999988555908,
+        2.4019999504089355,
+        2.1700000762939453
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "FLOOR27_SAG_DUVAR_2_3",
+      "node": 2633,
+      "mesh": 2523,
+      "lo": [
+        5.357999801635742,
+        2.3980000019073486,
+        -0.8799999952316284
+      ],
+      "hi": [
+        5.361999988555908,
+        2.4019999504089355,
+        2.1700000762939453
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "FLOOR27_ARKA_DUVAR_0_0",
+      "node": 2634,
+      "mesh": 2524,
+      "lo": [
+        0.6359999775886536,
+        -0.0020000000949949026,
+        -0.8820000290870667
+      ],
+      "hi": [
+        5.360000133514404,
+        0.0020000000949949026,
+        -0.878000020980835
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "FLOOR27_ARKA_DUVAR_0_1",
+      "node": 2635,
+      "mesh": 2525,
+      "lo": [
+        0.6359999775886536,
+        2.3980000019073486,
+        -0.8820000290870667
+      ],
+      "hi": [
+        5.360000133514404,
+        2.4019999504089355,
+        -0.878000020980835
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "FLOOR27_ARKA_DUVAR_0_2",
+      "node": 2636,
+      "mesh": 2526,
+      "lo": [
+        0.6359999775886536,
+        -0.0020000000949949026,
+        -0.8820000290870667
+      ],
+      "hi": [
+        5.360000133514404,
+        0.0020000000949949026,
+        -0.878000020980835
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "FLOOR27_ARKA_DUVAR_0_3",
+      "node": 2637,
+      "mesh": 2527,
+      "lo": [
+        0.6359999775886536,
+        2.3980000019073486,
+        -0.8820000290870667
+      ],
+      "hi": [
+        5.360000133514404,
+        2.4019999504089355,
+        -0.878000020980835
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "FLOOR27_ARKA_DUVAR_1_0",
+      "node": 2638,
+      "mesh": 2528,
+      "lo": [
+        0.6340000033378601,
+        0,
+        -0.8820000290870667
+      ],
+      "hi": [
+        0.6380000114440918,
+        2.4000000953674316,
+        -0.878000020980835
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "FLOOR27_ARKA_DUVAR_1_1",
+      "node": 2639,
+      "mesh": 2529,
+      "lo": [
+        5.357999801635742,
+        0,
+        -0.8820000290870667
+      ],
+      "hi": [
+        5.361999988555908,
+        2.4000000953674316,
+        -0.878000020980835
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "FLOOR27_ARKA_DUVAR_1_2",
+      "node": 2640,
+      "mesh": 2530,
+      "lo": [
+        0.6340000033378601,
+        0,
+        -0.8820000290870667
+      ],
+      "hi": [
+        0.6380000114440918,
+        2.4000000953674316,
+        -0.878000020980835
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    },
+    {
+      "name": "FLOOR27_ARKA_DUVAR_1_3",
+      "node": 2641,
+      "mesh": 2531,
+      "lo": [
+        5.357999801635742,
+        0,
+        -0.8820000290870667
+      ],
+      "hi": [
+        5.361999988555908,
+        2.4000000953674316,
+        -0.878000020980835
+      ],
+      "connection": "visual architectural boundary; no opaque wall"
+    }
+  ],
+  "animations_unchanged": true,
+  "raw_web_sha256": "ca43896a83e2a468b25276a63329f906705c3cbea3e111be4b8fe07727108d35",
+  "raw_web_bytes": 169182456,
+  "gzip_sha256": "d3a9f3f203565017cc69aaff8de5746436e6fa97e5c7975aa55ec55e6afa25ee",
+  "gzip_bytes": 77200013,
+  "passed": true
+}

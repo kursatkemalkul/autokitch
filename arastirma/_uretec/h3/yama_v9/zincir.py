@@ -234,7 +234,9 @@ ADIMLAR.append(("94", "QR solda ayni derinlik tek govde; kutu koridor icinden do
     [(".", 'python "{YAMA}/94_qr_donus.py" hat3_v10l.glb hat3_v10q_robot.glb')]))
 ADIMLAR.append(("95", "Kompakt dükkan: iki sol kapi, ara duvar, 80cm oturma cebi, lavabo; robot/QR ve siparis kanallari aynen korunur", ["hat3_v10q_robot.glb"], "hat3_v10r_dukkan.glb",
     [(".", 'python "{YAMA}/95_dukkan_yerlesim.py" hat3_v10q_robot.glb hat3_v10r_dukkan.glb')]))
-SON = "hat3_v10r_dukkan.glb"
+ADIMLAR.append(("96", "Kapı/mobilya/lavabo kaldırılır; kompakt zemin ve standart OBO kanal yerleşimi, kablolar ve robot hareketleri korunur", ["hat3_v10r_dukkan.glb"], "hat3_v10s_zemin.glb",
+    [(".", 'python "{YAMA}/96_zemin_kanal.py" hat3_v10r_dukkan.glb hat3_v10s_zemin.glb')]))
+SON = "hat3_v10s_zemin.glb"
 
 
 def kur(is_dizin, h3, uretec):
