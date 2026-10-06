@@ -1,0 +1,57 @@
+{
+  "source_model_sha256": "5c08c6c90a0724360cdc3764a16a6955ea7023989915eb1f51b7c0bce5ad89f4",
+  "proposal_sha256": "16e3d6a3755ea05b4a0f068d3ddd5f1e1a791e9b73947c0a145b12d463cc3f32",
+  "source_triangle_multiset_unchanged": true,
+  "applied_changes": 64,
+  "registry_total": 9226,
+  "checks": [
+    {
+      "part": "itici_sabit_plaka",
+      "status": "Error.NoError",
+      "volume_mm3": 387599.69399999786
+    },
+    {
+      "part": "itici_taban_360_-645",
+      "status": "Error.NotManifold",
+      "volume_mm3": null
+    },
+    {
+      "part": "itici_taban_360_-755",
+      "status": "Error.NotManifold",
+      "volume_mm3": null
+    },
+    {
+      "part": "itici_taban_40_-645",
+      "status": "Error.NotManifold",
+      "volume_mm3": null
+    },
+    {
+      "part": "itici_taban_40_-755",
+      "status": "Error.NotManifold",
+      "volume_mm3": null
+    },
+    {
+      "part": "k_itici_sac_0",
+      "status": "Error.NoError",
+      "volume_mm3": 8352.18560000018
+    },
+    {
+      "part": "k_itici_sac_1",
+      "status": "Error.NoError",
+      "volume_mm3": 8352.185600000152
+    },
+    {
+      "part": "k_itici_sac_2",
+      "status": "Error.NoError",
+      "volume_mm3": 8352.1856000003
+    },
+    {
+      "part": "k_itici_sac_3",
+      "status": "Error.NoError",
+      "volume_mm3": 8352.185600000214
+    }
+  ],
+  "coincident_same_label_occurrences": [],
+  "geometry_changed": false,
+  "production_release": false
+}

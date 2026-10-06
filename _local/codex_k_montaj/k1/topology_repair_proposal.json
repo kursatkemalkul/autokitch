@@ -1,0 +1,45 @@
+{
+  "source_encoding_sha256": "a4e8e3287322bf6ae768e4df950dabd53a5fca787511e1dfdd7dc066802a12b1",
+  "checks": [
+    {
+      "sheet": "sol_sac_urun_girisi",
+      "source_triangles": 1744,
+      "proposed_triangles": 1800,
+      "subdivided_faces": 14,
+      "removed_degenerate_faces": 0,
+      "maximum_declared_precision_adjustment_mm": 8.088913286405588e-05,
+      "bounding_box_change_mm": 0.0,
+      "closed_status": "Error.NoError",
+      "volume_mm3": 1382428.3511376071,
+      "source_modified": false
+    },
+    {
+      "sheet": "sag_sac_E_penceresi",
+      "source_triangles": 1456,
+      "proposed_triangles": 1524,
+      "subdivided_faces": 18,
+      "removed_degenerate_faces": 0,
+      "maximum_declared_precision_adjustment_mm": 8.088913286405588e-05,
+      "bounding_box_change_mm": 0.0,
+      "closed_status": "Error.NoError",
+      "volume_mm3": 1426111.9401019085,
+      "source_modified": false
+    },
+    {
+      "sheet": "ust_sac",
+      "source_triangles": 2313,
+      "proposed_triangles": 2288,
+      "subdivided_faces": 0,
+      "removed_degenerate_faces": 25,
+      "maximum_declared_precision_adjustment_mm": 0.0005587684870598552,
+      "bounding_box_change_mm": 0.0,
+      "closed_status": "Error.NoError",
+      "volume_mm3": 547529.4206508794,
+      "source_modified": false
+    }
+  ],
+  "all_proposed_repairs_closed": true,
+  "source_modified": false,
+  "requires_deterministic_source_step": true,
+  "production_release": false
+}

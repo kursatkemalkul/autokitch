@@ -1,0 +1,55 @@
+{
+  "iteration": 43,
+  "source_model_sha256": "5c08c6c90a0724360cdc3764a16a6955ea7023989915eb1f51b7c0bce5ad89f4",
+  "source_face_ownership_replay_passed": true,
+  "parts": 849,
+  "triangles": 314195,
+  "ownership_rows": 9538,
+  "current_closed_sheets": 64,
+  "physical_sheets": 67,
+  "open_sheets": [
+    "sol_sac_urun_girisi",
+    "sag_sac_E_penceresi",
+    "ust_sac"
+  ],
+  "three_topology_repairs_proposed_not_applied": true,
+  "plan_problems": [],
+  "combined_rigid_ccd_passed": true,
+  "combined_rigid_path_issues": [],
+  "dense_bend_sampling_passed": true,
+  "body_connection_unresolved": [
+    "govde_bag_arka_ust_40",
+    "govde_bag_arka_ust_360"
+  ],
+  "connection_classes": {
+    "GECICI": 41,
+    "BAGLANTISIZ": 242,
+    "HEMEN": 69
+  },
+  "artifacts_sha256": {
+    "surface_ownership_registry.json": "c5813933691d76592801f3f2edf4aa225b5a7ee35d0d1dd7d13edfa2eb4384cb",
+    "ownership_replay_audit.json": "e81595da081966df207e38bb6cbe21e738ecaacceb5ed530e76063bad292555e",
+    "current_sheet_bending.json": "a4e8e3287322bf6ae768e4df950dabd53a5fca787511e1dfdd7dc066802a12b1",
+    "physical_sheet_closure_audit.json": "2fe25325b2a735442835bd56333a4886e35af5a95c874324369d855acaa9345f",
+    "plan_source_binding_audit.json": "0f6fa610e80ea8e037149580401551ef7ad01273e198571797415b51b33b99b1",
+    "bench_prototype_audit.json": "79876e8c9c90c611ede28a442c87565c9e1bc457af3e2f9a41eb3a2f318f724d",
+    "bench_integration_audit.json": "01984e15084450a7e6414d307b713eb5faf903b1e5a7c7aa303708c1af8514ba",
+    "current_bend_samples.json": "23bbb11837cc86e4c622b3f43c49b08df7ff21aee94c556771c0dc218a313c09",
+    "dense_bend_morph_audit.json": "5efdcdb399fdc038e51dc688a721b81832ee5f114a94131771d7958a55c4b6f3",
+    "full_ccd_plan_k_full.json": "1cef9c70aeff17de6542d927fbda31b083c65272b795d14ca3a6fb31246087b2",
+    "body_connection_measured_audit.json": "6cb1ae6377b47b8b80cc8f4e3e802d75df096a229aa675c355fc24b4de034ca7",
+    "baglanti_denetim.json": "7fb47c7e3f6dd44287c0f8d394e18047cf01df94f8bdb3f3cb61562e027b89fe",
+    "topology_repair_proposal.json": "de045ba98a604e99a51f800e4796f289daed846c26b9c2dcd7f8d660f255a09d"
+  },
+  "historical_native4240_note": "The original native-plane proposal was overwritten by a later diagnostic. The current complete canonical registry is independently replay-verified against every raw source triangle; the historical intermediate proposal hash is not claimed present.",
+  "production_release": false,
+  "k_completed": false,
+  "u_started": false,
+  "open_work": [
+    "Apply deterministic topology source correction, rebuild extraction and names",
+    "Resolve whole-station connection worklist and current slot-specific audit",
+    "Verify bend self-collision, press tooling, fixtures and weld access",
+    "Replay registered chain over latest shared model under coordination lock",
+    "Generate audited player output and browser review before final publication"
+  ]
+}

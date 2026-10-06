@@ -593,6 +593,10 @@ for a in ordered:
    sign=1 if a.endswith('_20') else -1
    alternatives=[YOL((0,700,0),(sign*d,0,0)) for d in (50,100,150)]+[YOL((0,700,0))]
    assert all(abs(p[2])<1e-9 for path in alternatives for p in path)
+  elif a.startswith('k72_itici_taban_'):
+   # Feet seat vertically on the shelf. Do not slide a seated plate through
+   # the shelf plane; keep the whole preassembled pack above its landing face.
+   alternatives=[YOL((0,700,0))]
   elif a in ('itici_taban_360_-755','itici_taban_40_-755','itici_sabit_plaka','itici_X_ray_-755','itici_X_blok_-755','cit_giris_1','kopru_kirisi_yan_20','kopru_kirisi_yan_380','elk_ic_kanal_0','hava_ic_kanal_0','hava_ic_aski_2','hava_ic_aski_3') or a.startswith(('k_itici_sac_','k72_itici_taban_')):
    alternatives=[YOL((0,700,0),(0,0,d)) for d in (100,-100,200,-200)]+[YOL((0,700,0),(d,0,0)) for d in (50,-50)]+AD
   else:alternatives=AD

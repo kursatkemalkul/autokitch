@@ -1,0 +1,983 @@
+{
+  "source_model_sha256": "5c08c6c90a0724360cdc3764a16a6955ea7023989915eb1f51b7c0bce5ad89f4",
+  "proposal_sha256": "e213f5f2a3a8435ea81e3b8df99320b7cdf208553a3a7dee9691039600afa2a1",
+  "source_triangle_multiset_unchanged": true,
+  "applied_changes": 4240,
+  "registry_total": 9162,
+  "checks": [
+    {
+      "part": "arka_sac",
+      "status": "Error.NoError",
+      "volume_mm3": 647492.492914044
+    },
+    {
+      "part": "govde_kulak_sag_arka_1150",
+      "status": "Error.NoError",
+      "volume_mm3": 3526.4549970498874
+    },
+    {
+      "part": "govde_kulak_sag_arka_1150_kaynak_a",
+      "status": "Error.NoError",
+      "volume_mm3": 78.74955000000136
+    },
+    {
+      "part": "govde_kulak_sag_arka_1150_kaynak_b",
+      "status": "Error.NoError",
+      "volume_mm3": 78.74954999999864
+    },
+    {
+      "part": "govde_kulak_sag_arka_1600",
+      "status": "Error.NoError",
+      "volume_mm3": 3526.455501346234
+    },
+    {
+      "part": "govde_kulak_sag_arka_1600_kaynak_a",
+      "status": "Error.NoError",
+      "volume_mm3": 78.74954999999954
+    },
+    {
+      "part": "govde_kulak_sag_arka_1600_kaynak_b",
+      "status": "Error.NoError",
+      "volume_mm3": 78.74954999999864
+    },
+    {
+      "part": "govde_kulak_sag_arka_1810",
+      "status": "Error.NoError",
+      "volume_mm3": 3526.4543181351673
+    },
+    {
+      "part": "govde_kulak_sag_arka_1810_kaynak_a",
+      "status": "Error.NoError",
+      "volume_mm3": 78.74954999999864
+    },
+    {
+      "part": "govde_kulak_sag_arka_1810_kaynak_b",
+      "status": "Error.NoError",
+      "volume_mm3": 78.74955000000227
+    },
+    {
+      "part": "govde_kulak_sag_arka_841",
+      "status": "Error.NoError",
+      "volume_mm3": 3526.454590007033
+    },
+    {
+      "part": "govde_kulak_sag_arka_841_kaynak_a",
+      "status": "Error.NoError",
+      "volume_mm3": 78.74954999999954
+    },
+    {
+      "part": "govde_kulak_sag_arka_841_kaynak_b",
+      "status": "Error.NoError",
+      "volume_mm3": 78.74955000000045
+    },
+    {
+      "part": "govde_kulak_sag_on_1150",
+      "status": "Error.NoError",
+      "volume_mm3": 3526.455501346297
+    },
+    {
+      "part": "govde_kulak_sag_on_1150_kaynak_a",
+      "status": "Error.NoError",
+      "volume_mm3": 78.74954999999909
+    },
+    {
+      "part": "govde_kulak_sag_on_1150_kaynak_b",
+      "status": "Error.NoError",
+      "volume_mm3": 78.74954999999864
+    },
+    {
+      "part": "govde_kulak_sag_on_1600",
+      "status": "Error.NoError",
+      "volume_mm3": 3526.4549970499634
+    },
+    {
+      "part": "govde_kulak_sag_on_1600_kaynak_a",
+      "status": "Error.NoError",
+      "volume_mm3": 78.74955000000273
+    },
+    {
+      "part": "govde_kulak_sag_on_1600_kaynak_b",
+      "status": "Error.NoError",
+      "volume_mm3": 78.74955000000227
+    },
+    {
+      "part": "govde_kulak_sag_on_1810",
+      "status": "Error.NoError",
+      "volume_mm3": 3526.4543181352137
+    },
+    {
+      "part": "govde_kulak_sag_on_1810_kaynak_a",
+      "status": "Error.NoError",
+      "volume_mm3": 78.74954999999909
+    },
+    {
+      "part": "govde_kulak_sag_on_1810_kaynak_b",
+      "status": "Error.NoError",
+      "volume_mm3": 78.749549999995
+    },
+    {
+      "part": "govde_kulak_sag_on_841",
+      "status": "Error.NoError",
+      "volume_mm3": 3526.454318135221
+    },
+    {
+      "part": "govde_kulak_sag_on_841_kaynak_a",
+      "status": "Error.NoError",
+      "volume_mm3": 78.74954999999909
+    },
+    {
+      "part": "govde_kulak_sag_on_841_kaynak_b",
+      "status": "Error.NoError",
+      "volume_mm3": 78.74954999999864
+    },
+    {
+      "part": "govde_kulak_sol_arka_1150",
+      "status": "Error.NoError",
+      "volume_mm3": 3526.456928846293
+    },
+    {
+      "part": "govde_kulak_sol_arka_1150_kaynak_a",
+      "status": "Error.NoError",
+      "volume_mm3": 78.7517999999991
+    },
+    {
+      "part": "govde_kulak_sol_arka_1150_kaynak_b",
+      "status": "Error.NoError",
+      "volume_mm3": 78.75179999999546
+    },
+    {
+      "part": "govde_kulak_sol_arka_1600",
+      "status": "Error.NoError",
+      "volume_mm3": 3526.4564245499428
+    },
+    {
+      "part": "govde_kulak_sol_arka_1600_kaynak_a",
+      "status": "Error.NoError",
+      "volume_mm3": 78.75179999999727
+    },
+    {
+      "part": "govde_kulak_sol_arka_1600_kaynak_b",
+      "status": "Error.NoError",
+      "volume_mm3": 78.75179999999546
+    },
+    {
+      "part": "govde_kulak_sol_arka_1720",
+      "status": "Error.NoError",
+      "volume_mm3": 3526.455066720459
+    },
+    {
+      "part": "govde_kulak_sol_arka_1720_kaynak_a",
+      "status": "Error.NoError",
+      "volume_mm3": 78.7517999999991
+    },
+    {
+      "part": "govde_kulak_sol_arka_1720_kaynak_b",
+      "status": "Error.NoError",
+      "volume_mm3": 78.75179999999546
+    },
+    {
+      "part": "govde_kulak_sol_arka_841",
+      "status": "Error.NoError",
+      "volume_mm3": 3526.455745635193
+    },
+    {
+      "part": "govde_kulak_sol_arka_841_kaynak_a",
+      "status": "Error.NoError",
+      "volume_mm3": 78.75179999999636
+    },
+    {
+      "part": "govde_kulak_sol_arka_841_kaynak_b",
+      "status": "Error.NoError",
+      "volume_mm3": 78.75179999999818
+    },
+    {
+      "part": "govde_kulak_sol_on_1150",
+      "status": "Error.NoError",
+      "volume_mm3": 3526.4564245498864
+    },
+    {
+      "part": "govde_kulak_sol_on_1150_kaynak_a",
+      "status": "Error.NoError",
+      "volume_mm3": 78.7517999999991
+    },
+    {
+      "part": "govde_kulak_sol_on_1150_kaynak_b",
+      "status": "Error.NoError",
+      "volume_mm3": 78.7517999999991
+    },
+    {
+      "part": "govde_kulak_sol_on_1600",
+      "status": "Error.NoError",
+      "volume_mm3": 3526.4569288463003
+    },
+    {
+      "part": "govde_kulak_sol_on_1600_kaynak_a",
+      "status": "Error.NoError",
+      "volume_mm3": 78.7517999999991
+    },
+    {
+      "part": "govde_kulak_sol_on_1600_kaynak_b",
+      "status": "Error.NoError",
+      "volume_mm3": 78.7517999999991
+    },
+    {
+      "part": "govde_kulak_sol_on_1810",
+      "status": "Error.NoError",
+      "volume_mm3": 3526.455745635194
+    },
+    {
+      "part": "govde_kulak_sol_on_1810_kaynak_a",
+      "status": "Error.NoError",
+      "volume_mm3": 78.75179999999546
+    },
+    {
+      "part": "govde_kulak_sol_on_1810_kaynak_b",
+      "status": "Error.NoError",
+      "volume_mm3": 78.7517999999991
+    },
+    {
+      "part": "govde_kulak_sol_on_841",
+      "status": "Error.NoError",
+      "volume_mm3": 3526.4560175070474
+    },
+    {
+      "part": "govde_kulak_sol_on_841_kaynak_a",
+      "status": "Error.NoError",
+      "volume_mm3": 78.7517999999991
+    },
+    {
+      "part": "govde_kulak_sol_on_841_kaynak_b",
+      "status": "Error.NoError",
+      "volume_mm3": 78.7517999999991
+    },
+    {
+      "part": "govde_kulak_ust_arka_200",
+      "status": "Error.NoError",
+      "volume_mm3": 3526.5589010717977
+    },
+    {
+      "part": "govde_kulak_ust_arka_200_kaynak_a",
+      "status": "Error.NoError",
+      "volume_mm3": 78.74475000000257
+    },
+    {
+      "part": "govde_kulak_ust_arka_200_kaynak_b",
+      "status": "Error.NoError",
+      "volume_mm3": 78.74474999997574
+    },
+    {
+      "part": "govde_kulak_ust_arka_80",
+      "status": "Error.NoError",
+      "volume_mm3": 3526.5586291817217
+    },
+    {
+      "part": "govde_kulak_ust_arka_80_kaynak_a",
+      "status": "Error.NoError",
+      "volume_mm3": 78.75525000001198
+    },
+    {
+      "part": "govde_kulak_ust_arka_80_kaynak_b",
+      "status": "Error.NoError",
+      "volume_mm3": 78.7447499999912
+    },
+    {
+      "part": "govde_kulak_ust_on_320",
+      "status": "Error.NoError",
+      "volume_mm3": 3526.558629181819
+    },
+    {
+      "part": "govde_kulak_ust_on_320_kaynak_a",
+      "status": "Error.NoError",
+      "volume_mm3": 78.74474999999848
+    },
+    {
+      "part": "govde_kulak_ust_on_320_kaynak_b",
+      "status": "Error.NoError",
+      "volume_mm3": 78.74474999997938
+    },
+    {
+      "part": "govde_kulak_ust_on_80",
+      "status": "Error.NoError",
+      "volume_mm3": 3526.5592288217426
+    },
+    {
+      "part": "govde_kulak_ust_on_80_kaynak_a",
+      "status": "Error.NoError",
+      "volume_mm3": 78.74474999999597
+    },
+    {
+      "part": "govde_kulak_ust_on_80_kaynak_b",
+      "status": "Error.NoError",
+      "volume_mm3": 78.75525000002062
+    },
+    {
+      "part": "itici_taban_360_-645",
+      "status": "Error.NotManifold",
+      "volume_mm3": null
+    },
+    {
+      "part": "itici_taban_360_-755",
+      "status": "Error.NotManifold",
+      "volume_mm3": null
+    },
+    {
+      "part": "itici_taban_40_-645",
+      "status": "Error.NotManifold",
+      "volume_mm3": null
+    },
+    {
+      "part": "itici_taban_40_-755",
+      "status": "Error.NotManifold",
+      "volume_mm3": null
+    },
+    {
+      "part": "k71_istasyon_rafi",
+      "status": "Error.NoError",
+      "volume_mm3": 1010469.7743496939
+    },
+    {
+      "part": "k71_raf_yan_kaynagi_4005",
+      "status": "Error.NoError",
+      "volume_mm3": 896.6847750000995
+    },
+    {
+      "part": "k72_alt_pul_M5_4054.0_-631.0_0",
+      "status": "Error.NoError",
+      "volume_mm3": 56.33432809500004
+    },
+    {
+      "part": "k72_alt_pul_M5_4054.0_-659.0_0",
+      "status": "Error.NoError",
+      "volume_mm3": 56.33424386499982
+    },
+    {
+      "part": "k72_alt_pul_M5_4054.0_-741.0_0",
+      "status": "Error.NoError",
+      "volume_mm3": 56.33417571999962
+    },
+    {
+      "part": "k72_alt_pul_M5_4054.0_-769.0_0",
+      "status": "Error.NoError",
+      "volume_mm3": 56.334125679999936
+    },
+    {
+      "part": "k72_alt_pul_M5_4346.0_-631.0_0",
+      "status": "Error.NoError",
+      "volume_mm3": 56.336076389997785
+    },
+    {
+      "part": "k72_alt_pul_M5_4346.0_-659.0_0",
+      "status": "Error.NoError",
+      "volume_mm3": 56.33599205999836
+    },
+    {
+      "part": "k72_alt_pul_M5_4346.0_-741.0_0",
+      "status": "Error.NoError",
+      "volume_mm3": 56.33592401999821
+    },
+    {
+      "part": "k72_alt_pul_M5_4346.0_-769.0_0",
+      "status": "Error.NoError",
+      "volume_mm3": 56.33587396999828
+    },
+    {
+      "part": "k72_alt_pul_M6_4065.0_-3.0_0",
+      "status": "Error.NoError",
+      "volume_mm3": 129.15799260799918
+    },
+    {
+      "part": "k72_alt_pul_M6_4065.0_-421.0_0",
+      "status": "Error.NoError",
+      "volume_mm3": 129.15786897599958
+    },
+    {
+      "part": "k72_alt_pul_M6_4335.0_-3.0_0",
+      "status": "Error.NoError",
+      "volume_mm3": 129.15766556800457
+    },
+    {
+      "part": "k72_alt_pul_M6_4335.0_-421.0_0",
+      "status": "Error.NoError",
+      "volume_mm3": 129.15754198400464
+    },
+    {
+      "part": "k72_alt_somun_M5_4054.0_-631.0",
+      "status": "Error.NoError",
+      "volume_mm3": 179.199746275009
+    },
+    {
+      "part": "k72_alt_somun_M5_4054.0_-659.0",
+      "status": "Error.NoError",
+      "volume_mm3": 179.1998497500071
+    },
+    {
+      "part": "k72_alt_somun_M5_4054.0_-741.0",
+      "status": "Error.NoError",
+      "volume_mm3": 179.1994898750074
+    },
+    {
+      "part": "k72_alt_somun_M5_4054.0_-769.0",
+      "status": "Error.NoError",
+      "volume_mm3": 179.19971995001004
+    },
+    {
+      "part": "k72_alt_somun_M5_4346.0_-631.0",
+      "status": "Error.NoError",
+      "volume_mm3": 179.19753479999642
+    },
+    {
+      "part": "k72_alt_somun_M5_4346.0_-659.0",
+      "status": "Error.NoError",
+      "volume_mm3": 179.19763827499372
+    },
+    {
+      "part": "k72_alt_somun_M5_4346.0_-741.0",
+      "status": "Error.NoError",
+      "volume_mm3": 179.19727782499217
+    },
+    {
+      "part": "k72_alt_somun_M5_4346.0_-769.0",
+      "status": "Error.NoError",
+      "volume_mm3": 179.19750812499618
+    },
+    {
+      "part": "k72_alt_somun_M6_4065.0_-3.0",
+      "status": "Error.NoError",
+      "volume_mm3": 350.4155785200108
+    },
+    {
+      "part": "k72_alt_somun_M6_4065.0_-421.0",
+      "status": "Error.NoError",
+      "volume_mm3": 350.4094062600064
+    },
+    {
+      "part": "k72_alt_somun_M6_4335.0_-3.0",
+      "status": "Error.NoError",
+      "volume_mm3": 350.41599426004007
+    },
+    {
+      "part": "k72_alt_somun_M6_4335.0_-421.0",
+      "status": "Error.NoError",
+      "volume_mm3": 350.40982182004103
+    },
+    {
+      "part": "k72_bant_ayagi_4065.0_-421.0",
+      "status": "Error.NoError",
+      "volume_mm3": 5010.354460875032
+    },
+    {
+      "part": "k72_bant_ayagi_4335.0_-421.0",
+      "status": "Error.NoError",
+      "volume_mm3": 5010.370201125126
+    },
+    {
+      "part": "k72_bant_ayak_flansi_4065.0_-421.0",
+      "status": "Error.NoError",
+      "volume_mm3": 2969.6340827549807
+    },
+    {
+      "part": "k72_bant_ayak_flansi_4335.0_-421.0",
+      "status": "Error.NoError",
+      "volume_mm3": 2969.623420499999
+    },
+    {
+      "part": "k72_itici_taban_4040.0_-645.0",
+      "status": "Error.NoError",
+      "volume_mm3": 13266.321841359957
+    },
+    {
+      "part": "k72_itici_taban_4040.0_-755.0",
+      "status": "Error.NoError",
+      "volume_mm3": 13266.322418919954
+    },
+    {
+      "part": "k72_itici_taban_4360.0_-645.0",
+      "status": "Error.NoError",
+      "volume_mm3": 13266.412632220026
+    },
+    {
+      "part": "k72_itici_taban_4360.0_-755.0",
+      "status": "Error.NoError",
+      "volume_mm3": 13266.413208900041
+    },
+    {
+      "part": "k72_itici_ust_plaka_4040.0_-645.0",
+      "status": "Error.NotManifold",
+      "volume_mm3": null
+    },
+    {
+      "part": "k72_itici_ust_plaka_4040.0_-755.0",
+      "status": "Error.NotManifold",
+      "volume_mm3": null
+    },
+    {
+      "part": "k72_itici_ust_plaka_4360.0_-645.0",
+      "status": "Error.NotManifold",
+      "volume_mm3": null
+    },
+    {
+      "part": "k72_itici_ust_plaka_4360.0_-755.0",
+      "status": "Error.NotManifold",
+      "volume_mm3": null
+    },
+    {
+      "part": "k72_ust_pul_M5_4054.0_-631.0",
+      "status": "Error.NoError",
+      "volume_mm3": 56.334328095000195
+    },
+    {
+      "part": "k72_ust_pul_M5_4054.0_-659.0",
+      "status": "Error.NoError",
+      "volume_mm3": 56.33424386499992
+    },
+    {
+      "part": "k72_ust_pul_M5_4054.0_-741.0",
+      "status": "Error.NoError",
+      "volume_mm3": 56.334175719999465
+    },
+    {
+      "part": "k72_ust_pul_M5_4054.0_-769.0",
+      "status": "Error.NoError",
+      "volume_mm3": 56.334125679999794
+    },
+    {
+      "part": "k72_ust_pul_M5_4346.0_-631.0",
+      "status": "Error.NoError",
+      "volume_mm3": 56.33607638999756
+    },
+    {
+      "part": "k72_ust_pul_M5_4346.0_-659.0",
+      "status": "Error.NoError",
+      "volume_mm3": 56.335992059998276
+    },
+    {
+      "part": "k72_ust_pul_M5_4346.0_-741.0",
+      "status": "Error.NoError",
+      "volume_mm3": 56.33592401999815
+    },
+    {
+      "part": "k72_ust_pul_M5_4346.0_-769.0",
+      "status": "Error.NoError",
+      "volume_mm3": 56.335873969998154
+    },
+    {
+      "part": "k72_ust_pul_M6_4065.0_-3.0",
+      "status": "Error.NoError",
+      "volume_mm3": 129.1579926079988
+    },
+    {
+      "part": "k72_ust_pul_M6_4065.0_-421.0",
+      "status": "Error.NoError",
+      "volume_mm3": 129.15786897599892
+    },
+    {
+      "part": "k72_ust_pul_M6_4335.0_-3.0",
+      "status": "Error.NoError",
+      "volume_mm3": 129.1576655680047
+    },
+    {
+      "part": "k72_ust_pul_M6_4335.0_-421.0",
+      "status": "Error.NoError",
+      "volume_mm3": 129.15754198400433
+    },
+    {
+      "part": "k72_vida_M5_4054.0_-631.0",
+      "status": "Error.NoError",
+      "volume_mm3": 624.6982271032065
+    },
+    {
+      "part": "k72_vida_M5_4054.0_-659.0",
+      "status": "Error.NoError",
+      "volume_mm3": 624.6964300032072
+    },
+    {
+      "part": "k72_vida_M5_4054.0_-741.0",
+      "status": "Error.NoError",
+      "volume_mm3": 624.6994418032099
+    },
+    {
+      "part": "k72_vida_M5_4054.0_-769.0",
+      "status": "Error.NoError",
+      "volume_mm3": 624.7002201532075
+    },
+    {
+      "part": "k72_vida_M5_4346.0_-631.0",
+      "status": "Error.NoError",
+      "volume_mm3": 624.7020645390949
+    },
+    {
+      "part": "k72_vida_M5_4346.0_-659.0",
+      "status": "Error.NoError",
+      "volume_mm3": 624.7002674890954
+    },
+    {
+      "part": "k72_vida_M5_4346.0_-741.0",
+      "status": "Error.NoError",
+      "volume_mm3": 624.7032791640913
+    },
+    {
+      "part": "k72_vida_M5_4346.0_-769.0",
+      "status": "Error.NoError",
+      "volume_mm3": 624.704057489095
+    },
+    {
+      "part": "k72_vida_M6_4065.0_-3.0",
+      "status": "Error.NoError",
+      "volume_mm3": 947.029561490206
+    },
+    {
+      "part": "k72_vida_M6_4065.0_-421.0",
+      "status": "Error.NoError",
+      "volume_mm3": 947.0277845001059
+    },
+    {
+      "part": "k72_vida_M6_4335.0_-3.0",
+      "status": "Error.NoError",
+      "volume_mm3": 947.0285798701881
+    },
+    {
+      "part": "k72_vida_M6_4335.0_-421.0",
+      "status": "Error.NoError",
+      "volume_mm3": 947.0268025800781
+    },
+    {
+      "part": "k73_tavan_baglanti_plakasi_4100_0",
+      "status": "Error.NoError",
+      "volume_mm3": 2159.1729432741085
+    },
+    {
+      "part": "k73_tavan_baglanti_plakasi_4100_1",
+      "status": "Error.NoError",
+      "volume_mm3": 2159.1189652999933
+    },
+    {
+      "part": "k73_tavan_baglanti_plakasi_4100_2",
+      "status": "Error.NoError",
+      "volume_mm3": 1537.649433329992
+    },
+    {
+      "part": "k73_tavan_baglanti_plakasi_4300_0",
+      "status": "Error.NoError",
+      "volume_mm3": 2159.126731538792
+    },
+    {
+      "part": "k73_tavan_baglanti_plakasi_4300_1",
+      "status": "Error.NoError",
+      "volume_mm3": 2159.0727547199317
+    },
+    {
+      "part": "k73_tavan_baglanti_plakasi_4300_2",
+      "status": "Error.NoError",
+      "volume_mm3": 1537.6067968499726
+    },
+    {
+      "part": "kose_dikmesi_20_-800",
+      "status": "Error.NoError",
+      "volume_mm3": 226298.6640405695
+    },
+    {
+      "part": "kose_dikmesi_20_-800_tapa",
+      "status": "Error.NoError",
+      "volume_mm3": 1774.9815000000012
+    },
+    {
+      "part": "kose_dikmesi_20_42",
+      "status": "Error.NotManifold",
+      "volume_mm3": null
+    },
+    {
+      "part": "kose_dikmesi_20_42_tapa",
+      "status": "Error.NoError",
+      "volume_mm3": 1774.981499999998
+    },
+    {
+      "part": "kose_dikmesi_380_-800",
+      "status": "Error.NoError",
+      "volume_mm3": 226311.28753024896
+    },
+    {
+      "part": "kose_dikmesi_380_-800_tapa",
+      "status": "Error.NoError",
+      "volume_mm3": 1775.0114999999923
+    },
+    {
+      "part": "kose_dikmesi_380_42",
+      "status": "Error.NotManifold",
+      "volume_mm3": null
+    },
+    {
+      "part": "kose_dikmesi_380_42_tapa",
+      "status": "Error.NoError",
+      "volume_mm3": 1775.0114999999955
+    },
+    {
+      "part": "sag_sac_E_penceresi",
+      "status": "Error.NotManifold",
+      "volume_mm3": null
+    },
+    {
+      "part": "sol_sac_urun_girisi",
+      "status": "Error.NotManifold",
+      "volume_mm3": null
+    },
+    {
+      "part": "taban_sac_3",
+      "status": "Error.NoError",
+      "volume_mm3": 1056535.6591767357
+    },
+    {
+      "part": "taban_sac_tasiyici_20",
+      "status": "Error.NotManifold",
+      "volume_mm3": null
+    },
+    {
+      "part": "ust_sac",
+      "status": "Error.NotManifold",
+      "volume_mm3": null
+    }
+  ],
+  "coincident_same_label_occurrences": [
+    {
+      "owner": "kose_dikmesi_20_42_tapa",
+      "triangle_sha256": "845a28ae0d707149a0839a7bad9f304498908417c441d1dc5994fec44dd58769",
+      "equivalent_raw_occurrences": [
+        [
+          "kose_dikmesi_20_42_tapa",
+          8
+        ],
+        [
+          "kose_dikmesi_20_42_tapa",
+          166
+        ]
+      ],
+      "destination": "kose_dikmesi_20_42"
+    },
+    {
+      "owner": "kose_dikmesi_20_42_tapa",
+      "triangle_sha256": "bbc77a242e0fc2bc76312e1b779e7be2600871f75db88c46899b375e102578c9",
+      "equivalent_raw_occurrences": [
+        [
+          "kose_dikmesi_20_42_tapa",
+          10
+        ],
+        [
+          "kose_dikmesi_20_42_tapa",
+          168
+        ]
+      ],
+      "destination": "kose_dikmesi_20_42"
+    },
+    {
+      "owner": "kose_dikmesi_20_42_tapa",
+      "triangle_sha256": "c0fcd366cfc8084441591a3448eb49fb042ba0a6a4d92e246ea77b077e2eec8c",
+      "equivalent_raw_occurrences": [
+        [
+          "kose_dikmesi_20_42_tapa",
+          12
+        ],
+        [
+          "kose_dikmesi_20_42_tapa",
+          171
+        ]
+      ],
+      "destination": "kose_dikmesi_20_42"
+    },
+    {
+      "owner": "kose_dikmesi_20_42_tapa",
+      "triangle_sha256": "6b006cb3e5a0b061e1cce18a768572593625282121923647c6cf0e38d609d415",
+      "equivalent_raw_occurrences": [
+        [
+          "kose_dikmesi_20_42_tapa",
+          13
+        ],
+        [
+          "kose_dikmesi_20_42_tapa",
+          169
+        ]
+      ],
+      "destination": "kose_dikmesi_20_42"
+    },
+    {
+      "owner": "kose_dikmesi_20_42_tapa",
+      "triangle_sha256": "05a0ac97f209cc40b7730c14cfb107d742f8723dd70116839f744112a882fb99",
+      "equivalent_raw_occurrences": [
+        [
+          "kose_dikmesi_20_42_tapa",
+          28
+        ],
+        [
+          "kose_dikmesi_20_42_tapa",
+          422
+        ]
+      ],
+      "destination": "kose_dikmesi_20_42"
+    },
+    {
+      "owner": "kose_dikmesi_20_42_tapa",
+      "triangle_sha256": "cc1e4e43c4ba4b50efefa5761b44c5348c32812e298408642e7acd2432db599f",
+      "equivalent_raw_occurrences": [
+        [
+          "kose_dikmesi_20_42_tapa",
+          29
+        ],
+        [
+          "kose_dikmesi_20_42_tapa",
+          423
+        ]
+      ],
+      "destination": "kose_dikmesi_20_42"
+    },
+    {
+      "owner": "kose_dikmesi_20_42_tapa",
+      "triangle_sha256": "2773d11b30ac31888101d199efb8373398cda4fe8da58cc6138651dbea9b2dd0",
+      "equivalent_raw_occurrences": [
+        [
+          "kose_dikmesi_20_42_tapa",
+          31
+        ],
+        [
+          "kose_dikmesi_20_42_tapa",
+          424
+        ]
+      ],
+      "destination": "kose_dikmesi_20_42"
+    },
+    {
+      "owner": "kose_dikmesi_20_42_tapa",
+      "triangle_sha256": "6c3ec4df5426e67ab1520ca79dfdb77d4e28797a846858a35ecb1e57eaccd9f1",
+      "equivalent_raw_occurrences": [
+        [
+          "kose_dikmesi_20_42_tapa",
+          32
+        ],
+        [
+          "kose_dikmesi_20_42_tapa",
+          425
+        ]
+      ],
+      "destination": "kose_dikmesi_20_42"
+    },
+    {
+      "owner": "kose_dikmesi_380_42_tapa",
+      "triangle_sha256": "bec690c83145c9b740ce3d38b97a0642beee00da87ce479f720bdd686c7b5fa2",
+      "equivalent_raw_occurrences": [
+        [
+          "kose_dikmesi_380_42_tapa",
+          8
+        ],
+        [
+          "kose_dikmesi_380_42_tapa",
+          166
+        ]
+      ],
+      "destination": "kose_dikmesi_380_42"
+    },
+    {
+      "owner": "kose_dikmesi_380_42_tapa",
+      "triangle_sha256": "e476cb2823a99ec87d3ad135421fcf7e39e01a65358861861dfcd9b987410114",
+      "equivalent_raw_occurrences": [
+        [
+          "kose_dikmesi_380_42_tapa",
+          10
+        ],
+        [
+          "kose_dikmesi_380_42_tapa",
+          168
+        ]
+      ],
+      "destination": "kose_dikmesi_380_42"
+    },
+    {
+      "owner": "kose_dikmesi_380_42_tapa",
+      "triangle_sha256": "8b30b08c7af523add31041c5e50d2975b38338af2bb50a03301dc74b6f8d49de",
+      "equivalent_raw_occurrences": [
+        [
+          "kose_dikmesi_380_42_tapa",
+          12
+        ],
+        [
+          "kose_dikmesi_380_42_tapa",
+          171
+        ]
+      ],
+      "destination": "kose_dikmesi_380_42"
+    },
+    {
+      "owner": "kose_dikmesi_380_42_tapa",
+      "triangle_sha256": "d19a6e81231e227a88fd2f93c1ac3e657e6492ae888fc722c37484bb99d109a7",
+      "equivalent_raw_occurrences": [
+        [
+          "kose_dikmesi_380_42_tapa",
+          13
+        ],
+        [
+          "kose_dikmesi_380_42_tapa",
+          169
+        ]
+      ],
+      "destination": "kose_dikmesi_380_42"
+    },
+    {
+      "owner": "kose_dikmesi_380_42_tapa",
+      "triangle_sha256": "74fc160d76590ea8c98fbf388ad4a5514aa7557617a3cb6de53abde9daa80616",
+      "equivalent_raw_occurrences": [
+        [
+          "kose_dikmesi_380_42_tapa",
+          28
+        ],
+        [
+          "kose_dikmesi_380_42_tapa",
+          422
+        ]
+      ],
+      "destination": "kose_dikmesi_380_42"
+    },
+    {
+      "owner": "kose_dikmesi_380_42_tapa",
+      "triangle_sha256": "84d21a6c49b105c5a73515505b030fdfc6e3972d5aed72c1f5836d3a55cc4a04",
+      "equivalent_raw_occurrences": [
+        [
+          "kose_dikmesi_380_42_tapa",
+          29
+        ],
+        [
+          "kose_dikmesi_380_42_tapa",
+          423
+        ]
+      ],
+      "destination": "kose_dikmesi_380_42"
+    },
+    {
+      "owner": "kose_dikmesi_380_42_tapa",
+      "triangle_sha256": "10a845f881699408b5d104f7ea43029c3d123ebfa3cce1b8c9e6f6b0afcfe296",
+      "equivalent_raw_occurrences": [
+        [
+          "kose_dikmesi_380_42_tapa",
+          31
+        ],
+        [
+          "kose_dikmesi_380_42_tapa",
+          424
+        ]
+      ],
+      "destination": "kose_dikmesi_380_42"
+    },
+    {
+      "owner": "kose_dikmesi_380_42_tapa",
+      "triangle_sha256": "87ea93ada0ba7549db5d728eaf96c98d44946655e3bdcd95cdddb9bb66bcb2eb",
+      "equivalent_raw_occurrences": [
+        [
+          "kose_dikmesi_380_42_tapa",
+          32
+        ],
+        [
+          "kose_dikmesi_380_42_tapa",
+          425
+        ]
+      ],
+      "destination": "kose_dikmesi_380_42"
+    }
+  ],
+  "geometry_changed": false,
+  "production_release": false
+}

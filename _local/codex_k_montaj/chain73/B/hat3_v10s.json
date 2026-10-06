@@ -1,0 +1,56 @@
+{
+  "step": 78,
+  "input_sha256": "5c08c6c90a0724360cdc3764a16a6955ea7023989915eb1f51b7c0bce5ad89f4",
+  "payload_sha256": "e5a591535ddb32928a610ab39eb6c7e46c931156565c7cd6cdaad8e104f6dca0",
+  "output_sha256": "e2536654cfa017ae8012acb58270176f412c6acd2a680e0e340a0055629cda22",
+  "matched_source_triangles": {
+    "sol_sac_urun_girisi": 1744,
+    "sag_sac_E_penceresi": 1456,
+    "ust_sac": 2313
+  },
+  "naming_grid_mm": 0.0001,
+  "maximum_naming_grid_adjustment_mm": 7.407295422261852e-05,
+  "repairs": [
+    {
+      "sheet": "sol_sac_urun_girisi",
+      "source_triangles": 1744,
+      "proposed_triangles": 1800,
+      "subdivided_faces": 14,
+      "removed_degenerate_faces": 0,
+      "maximum_declared_precision_adjustment_mm": 8.088913286405588e-05,
+      "bounding_box_change_mm": 0.0,
+      "closed_status": "Error.NoError",
+      "volume_mm3": 1382428.3511376071,
+      "source_modified": false
+    },
+    {
+      "sheet": "sag_sac_E_penceresi",
+      "source_triangles": 1456,
+      "proposed_triangles": 1524,
+      "subdivided_faces": 18,
+      "removed_degenerate_faces": 0,
+      "maximum_declared_precision_adjustment_mm": 8.088913286405588e-05,
+      "bounding_box_change_mm": 0.0,
+      "closed_status": "Error.NoError",
+      "volume_mm3": 1426111.9401019085,
+      "source_modified": false
+    },
+    {
+      "sheet": "ust_sac",
+      "source_triangles": 2313,
+      "proposed_triangles": 2288,
+      "subdivided_faces": 0,
+      "removed_degenerate_faces": 25,
+      "maximum_declared_precision_adjustment_mm": 0.0005587684870598552,
+      "bounding_box_change_mm": 0.0,
+      "closed_status": "Error.NoError",
+      "volume_mm3": 547529.4206508794,
+      "source_modified": false
+    }
+  ],
+  "source_labels_retained": true,
+  "source_interfaces_intended_unchanged": true,
+  "unrelated_geometry_audit_required": true,
+  "reextraction_required": true,
+  "production_release": false
+}

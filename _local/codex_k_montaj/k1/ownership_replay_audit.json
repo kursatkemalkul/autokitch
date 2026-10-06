@@ -1,0 +1,4260 @@
+{
+  "source_model_sha256": "5c08c6c90a0724360cdc3764a16a6955ea7023989915eb1f51b7c0bce5ad89f4",
+  "raw_cache_sha256": "7058a8909b4d8ad814a14a790a7df60be372b3529374de5658e35122329f1074",
+  "current_parts_sha256": "6a3bf10aef6e689d95086b574181c708e976b22e0f78dcfde9aba350e9c0b7b5",
+  "registry_sha256": "c5813933691d76592801f3f2edf4aa225b5a7ee35d0d1dd7d13edfa2eb4384cb",
+  "registry_rows": 9538,
+  "parts": 849,
+  "source_triangles": 314195,
+  "checks": [
+    {
+      "part": "DGRF-C-63-125_govde",
+      "source_triangles": 446,
+      "replay_exact": true
+    },
+    {
+      "part": "DGRF_M10_civata_0",
+      "source_triangles": 100,
+      "replay_exact": true
+    },
+    {
+      "part": "DGRF_M10_civata_1",
+      "source_triangles": 100,
+      "replay_exact": true
+    },
+    {
+      "part": "DGRF_M10_civata_2",
+      "source_triangles": 100,
+      "replay_exact": true
+    },
+    {
+      "part": "DGRF_M10_civata_3",
+      "source_triangles": 100,
+      "replay_exact": true
+    },
+    {
+      "part": "DGRF_SMT-8M_0",
+      "source_triangles": 12,
+      "replay_exact": true
+    },
+    {
+      "part": "DGRF_SMT-8M_1",
+      "source_triangles": 12,
+      "replay_exact": true
+    },
+    {
+      "part": "DGRF_ZBH-12_0",
+      "source_triangles": 104,
+      "replay_exact": true
+    },
+    {
+      "part": "DGRF_ZBH-12_1",
+      "source_triangles": 104,
+      "replay_exact": true
+    },
+    {
+      "part": "DGRF_baglanti_plakasi",
+      "source_triangles": 514,
+      "replay_exact": true
+    },
+    {
+      "part": "DGRF_boyunduruk",
+      "source_triangles": 196,
+      "replay_exact": true
+    },
+    {
+      "part": "DGRF_gergi_civatasi_0",
+      "source_triangles": 48,
+      "replay_exact": true
+    },
+    {
+      "part": "DGRF_gergi_civatasi_1",
+      "source_triangles": 48,
+      "replay_exact": true
+    },
+    {
+      "part": "DGRF_gergi_civatasi_2",
+      "source_triangles": 48,
+      "replay_exact": true
+    },
+    {
+      "part": "DGRF_gergi_civatasi_3",
+      "source_triangles": 48,
+      "replay_exact": true
+    },
+    {
+      "part": "DGRF_kilavuz_mili_0",
+      "source_triangles": 48,
+      "replay_exact": true
+    },
+    {
+      "part": "DGRF_kilavuz_mili_1",
+      "source_triangles": 48,
+      "replay_exact": true
+    },
+    {
+      "part": "DGRF_piston",
+      "source_triangles": 48,
+      "replay_exact": true
+    },
+    {
+      "part": "DGRF_piston_mili",
+      "source_triangles": 48,
+      "replay_exact": true
+    },
+    {
+      "part": "DGRF_port_arka_QSL",
+      "source_triangles": 106,
+      "replay_exact": true
+    },
+    {
+      "part": "DGRF_port_on_QSL",
+      "source_triangles": 148,
+      "replay_exact": true
+    },
+    {
+      "part": "DGRF_sensor_rayi",
+      "source_triangles": 12,
+      "replay_exact": true
+    },
+    {
+      "part": "DGRF_silindir_borusu",
+      "source_triangles": 63,
+      "replay_exact": true
+    },
+    {
+      "part": "DGRF_uc_kapagi",
+      "source_triangles": 101,
+      "replay_exact": true
+    },
+    {
+      "part": "PulsaJet_AAB10000AUH-104210-VIFC",
+      "source_triangles": 36,
+      "replay_exact": true
+    },
+    {
+      "part": "PulsaJet_M8_kablo_9",
+      "source_triangles": 101,
+      "replay_exact": true
+    },
+    {
+      "part": "PulsaJet_M8_soketi_9",
+      "source_triangles": 59,
+      "replay_exact": true
+    },
+    {
+      "part": "PulsaJet_giris_dirsegi_9",
+      "source_triangles": 112,
+      "replay_exact": true
+    },
+    {
+      "part": "PulsaJet_kapak_CP104218-SS",
+      "source_triangles": 20,
+      "replay_exact": true
+    },
+    {
+      "part": "PulsaJet_uc_TPU11002_PWMD",
+      "source_triangles": 48,
+      "replay_exact": true
+    },
+    {
+      "part": "ara_dikme_0",
+      "source_triangles": 48,
+      "replay_exact": true
+    },
+    {
+      "part": "ara_dikme_1",
+      "source_triangles": 48,
+      "replay_exact": true
+    },
+    {
+      "part": "ara_dikme_2",
+      "source_triangles": 48,
+      "replay_exact": true
+    },
+    {
+      "part": "arka_sac",
+      "source_triangles": 980,
+      "replay_exact": true
+    },
+    {
+      "part": "avara_mili_0",
+      "source_triangles": 48,
+      "replay_exact": true
+    },
+    {
+      "part": "avara_mili_1",
+      "source_triangles": 48,
+      "replay_exact": true
+    },
+    {
+      "part": "avara_rulosu_46",
+      "source_triangles": 48,
+      "replay_exact": true
+    },
+    {
+      "part": "bant_PU_alt",
+      "source_triangles": 16,
+      "replay_exact": true
+    },
+    {
+      "part": "bant_PU_ust",
+      "source_triangles": 16,
+      "replay_exact": true
+    },
+    {
+      "part": "bant_ayagi_335_-3",
+      "source_triangles": 336,
+      "replay_exact": true
+    },
+    {
+      "part": "bant_ayagi_65_-3",
+      "source_triangles": 336,
+      "replay_exact": true
+    },
+    {
+      "part": "bant_traversi_0",
+      "source_triangles": 32,
+      "replay_exact": true
+    },
+    {
+      "part": "bant_traversi_1",
+      "source_triangles": 32,
+      "replay_exact": true
+    },
+    {
+      "part": "bant_yan_-3",
+      "source_triangles": 124,
+      "replay_exact": true
+    },
+    {
+      "part": "bant_yan_-421",
+      "source_triangles": 96,
+      "replay_exact": true
+    },
+    {
+      "part": "bicak_0",
+      "source_triangles": 18,
+      "replay_exact": true
+    },
+    {
+      "part": "bicak_1",
+      "source_triangles": 12,
+      "replay_exact": true
+    },
+    {
+      "part": "bicak_2",
+      "source_triangles": 12,
+      "replay_exact": true
+    },
+    {
+      "part": "bicak_3",
+      "source_triangles": 18,
+      "replay_exact": true
+    },
+    {
+      "part": "bicak_4",
+      "source_triangles": 12,
+      "replay_exact": true
+    },
+    {
+      "part": "bicak_5",
+      "source_triangles": 12,
+      "replay_exact": true
+    },
+    {
+      "part": "bicak_gobek_halkasi",
+      "source_triangles": 184,
+      "replay_exact": true
+    },
+    {
+      "part": "bicak_koruma_halkasi",
+      "source_triangles": 104,
+      "replay_exact": true
+    },
+    {
+      "part": "cevre_B",
+      "source_triangles": 8307,
+      "replay_exact": true
+    },
+    {
+      "part": "cevre_F",
+      "source_triangles": 39405,
+      "replay_exact": true
+    },
+    {
+      "part": "cevre_U",
+      "source_triangles": 45672,
+      "replay_exact": true
+    },
+    {
+      "part": "cevre_diger",
+      "source_triangles": 53619,
+      "replay_exact": true
+    },
+    {
+      "part": "cit_arka_a",
+      "source_triangles": 10,
+      "replay_exact": true
+    },
+    {
+      "part": "cit_arka_b",
+      "source_triangles": 12,
+      "replay_exact": true
+    },
+    {
+      "part": "cit_braketi_0",
+      "source_triangles": 20,
+      "replay_exact": true
+    },
+    {
+      "part": "cit_braketi_1",
+      "source_triangles": 20,
+      "replay_exact": true
+    },
+    {
+      "part": "cit_braketi_2",
+      "source_triangles": 20,
+      "replay_exact": true
+    },
+    {
+      "part": "cit_braketi_3",
+      "source_triangles": 20,
+      "replay_exact": true
+    },
+    {
+      "part": "cit_giris_-1",
+      "source_triangles": 18,
+      "replay_exact": true
+    },
+    {
+      "part": "cit_giris_1",
+      "source_triangles": 16,
+      "replay_exact": true
+    },
+    {
+      "part": "cit_on",
+      "source_triangles": 12,
+      "replay_exact": true
+    },
+    {
+      "part": "d3_kaplin_donus",
+      "source_triangles": 404,
+      "replay_exact": true
+    },
+    {
+      "part": "d3_kaplin_emis",
+      "source_triangles": 404,
+      "replay_exact": true
+    },
+    {
+      "part": "d3_seviye_salteri_M12_fis",
+      "source_triangles": 404,
+      "replay_exact": true
+    },
+    {
+      "part": "din_rayi_0",
+      "source_triangles": 12,
+      "replay_exact": true
+    },
+    {
+      "part": "din_rayi_1",
+      "source_triangles": 12,
+      "replay_exact": true
+    },
+    {
+      "part": "elk_ic_kanal_0",
+      "source_triangles": 492,
+      "replay_exact": true
+    },
+    {
+      "part": "elk_ic_kanal_1",
+      "source_triangles": 96,
+      "replay_exact": true
+    },
+    {
+      "part": "elk_ic_kanal_2",
+      "source_triangles": 418,
+      "replay_exact": true
+    },
+    {
+      "part": "elk_ic_kanal_3",
+      "source_triangles": 48,
+      "replay_exact": true
+    },
+    {
+      "part": "elk_ic_kanal_4",
+      "source_triangles": 48,
+      "replay_exact": true
+    },
+    {
+      "part": "elk_ic_kanal_5",
+      "source_triangles": 108,
+      "replay_exact": true
+    },
+    {
+      "part": "elk_ic_kanal_6",
+      "source_triangles": 384,
+      "replay_exact": true
+    },
+    {
+      "part": "elk_ic_kanal_7",
+      "source_triangles": 264,
+      "replay_exact": true
+    },
+    {
+      "part": "elk_ic_kanal_8",
+      "source_triangles": 204,
+      "replay_exact": true
+    },
+    {
+      "part": "elk_k_celik_0",
+      "source_triangles": 36,
+      "replay_exact": true
+    },
+    {
+      "part": "elk_k_celik_1",
+      "source_triangles": 348,
+      "replay_exact": true
+    },
+    {
+      "part": "elk_k_celik_2",
+      "source_triangles": 348,
+      "replay_exact": true
+    },
+    {
+      "part": "elk_k_celik_3",
+      "source_triangles": 348,
+      "replay_exact": true
+    },
+    {
+      "part": "elk_k_celik_4",
+      "source_triangles": 36,
+      "replay_exact": true
+    },
+    {
+      "part": "elk_k_celik_5",
+      "source_triangles": 36,
+      "replay_exact": true
+    },
+    {
+      "part": "elk_k_celik_6",
+      "source_triangles": 348,
+      "replay_exact": true
+    },
+    {
+      "part": "elk_k_celik_7",
+      "source_triangles": 348,
+      "replay_exact": true
+    },
+    {
+      "part": "elk_k_celik_8",
+      "source_triangles": 36,
+      "replay_exact": true
+    },
+    {
+      "part": "elk_k_kablo_0",
+      "source_triangles": 1856,
+      "replay_exact": true
+    },
+    {
+      "part": "elk_k_kablo_1",
+      "source_triangles": 2624,
+      "replay_exact": true
+    },
+    {
+      "part": "elk_k_kablo_2",
+      "source_triangles": 161,
+      "replay_exact": true
+    },
+    {
+      "part": "elk_k_kablo_sinyal_0",
+      "source_triangles": 1856,
+      "replay_exact": true
+    },
+    {
+      "part": "elk_k_kablo_sinyal_1",
+      "source_triangles": 1344,
+      "replay_exact": true
+    },
+    {
+      "part": "elk_k_kablo_sinyal_2",
+      "source_triangles": 576,
+      "replay_exact": true
+    },
+    {
+      "part": "elk_k_kablo_sinyal_3",
+      "source_triangles": 1088,
+      "replay_exact": true
+    },
+    {
+      "part": "elk_k_kablo_sinyal_4",
+      "source_triangles": 1344,
+      "replay_exact": true
+    },
+    {
+      "part": "elk_k_kablo_sinyal_5",
+      "source_triangles": 320,
+      "replay_exact": true
+    },
+    {
+      "part": "elk_k_kablo_sinyal_6",
+      "source_triangles": 1600,
+      "replay_exact": true
+    },
+    {
+      "part": "elk_k_kablo_sinyal_7",
+      "source_triangles": 2368,
+      "replay_exact": true
+    },
+    {
+      "part": "elk_k_tarti_celik_0",
+      "source_triangles": 128,
+      "replay_exact": true
+    },
+    {
+      "part": "elk_k_tarti_celik_1",
+      "source_triangles": 128,
+      "replay_exact": true
+    },
+    {
+      "part": "elk_k_tarti_kablo_sinyal_0",
+      "source_triangles": 2112,
+      "replay_exact": true
+    },
+    {
+      "part": "elk_zincir_etiket_0",
+      "source_triangles": 12,
+      "replay_exact": true
+    },
+    {
+      "part": "elk_zincir_etiket_1",
+      "source_triangles": 12,
+      "replay_exact": true
+    },
+    {
+      "part": "elk_zincir_harting_0",
+      "source_triangles": 12,
+      "replay_exact": true
+    },
+    {
+      "part": "elk_zincir_harting_1",
+      "source_triangles": 12,
+      "replay_exact": true
+    },
+    {
+      "part": "elk_zincir_harting_2",
+      "source_triangles": 12,
+      "replay_exact": true
+    },
+    {
+      "part": "elk_zincir_harting_3",
+      "source_triangles": 12,
+      "replay_exact": true
+    },
+    {
+      "part": "elk_zincir_hava_0",
+      "source_triangles": 432,
+      "replay_exact": true
+    },
+    {
+      "part": "elk_zincir_hava_1",
+      "source_triangles": 240,
+      "replay_exact": true
+    },
+    {
+      "part": "elk_zincir_hava_2",
+      "source_triangles": 432,
+      "replay_exact": true
+    },
+    {
+      "part": "elk_zincir_kablo_guc_0",
+      "source_triangles": 320,
+      "replay_exact": true
+    },
+    {
+      "part": "elk_zincir_kablo_guc_1",
+      "source_triangles": 320,
+      "replay_exact": true
+    },
+    {
+      "part": "elk_zincir_kablo_veri_0",
+      "source_triangles": 624,
+      "replay_exact": true
+    },
+    {
+      "part": "elk_zincir_kablo_veri_1",
+      "source_triangles": 624,
+      "replay_exact": true
+    },
+    {
+      "part": "elk_zincir_kanal_0",
+      "source_triangles": 216,
+      "replay_exact": true
+    },
+    {
+      "part": "elk_zincir_kanal_1",
+      "source_triangles": 271,
+      "replay_exact": true
+    },
+    {
+      "part": "elk_zincir_kanal_2",
+      "source_triangles": 108,
+      "replay_exact": true
+    },
+    {
+      "part": "elk_zincir_kod_kirmizi_0",
+      "source_triangles": 12,
+      "replay_exact": true
+    },
+    {
+      "part": "elk_zincir_kod_kirmizi_1",
+      "source_triangles": 12,
+      "replay_exact": true
+    },
+    {
+      "part": "elk_zincir_kod_mavi_0",
+      "source_triangles": 80,
+      "replay_exact": true
+    },
+    {
+      "part": "elk_zincir_kod_mavi_1",
+      "source_triangles": 80,
+      "replay_exact": true
+    },
+    {
+      "part": "elk_zincir_kod_mavi_2",
+      "source_triangles": 80,
+      "replay_exact": true
+    },
+    {
+      "part": "elk_zincir_kod_mavi_3",
+      "source_triangles": 80,
+      "replay_exact": true
+    },
+    {
+      "part": "elk_zincir_m12_0",
+      "source_triangles": 12,
+      "replay_exact": true
+    },
+    {
+      "part": "elk_zincir_m12_1",
+      "source_triangles": 80,
+      "replay_exact": true
+    },
+    {
+      "part": "elk_zincir_m12_2",
+      "source_triangles": 80,
+      "replay_exact": true
+    },
+    {
+      "part": "elk_zincir_m12_3",
+      "source_triangles": 12,
+      "replay_exact": true
+    },
+    {
+      "part": "elk_zincir_paslanmaz_0",
+      "source_triangles": 48,
+      "replay_exact": true
+    },
+    {
+      "part": "elk_zincir_paslanmaz_1",
+      "source_triangles": 48,
+      "replay_exact": true
+    },
+    {
+      "part": "elk_zincir_paslanmaz_2",
+      "source_triangles": 48,
+      "replay_exact": true
+    },
+    {
+      "part": "elk_zincir_paslanmaz_3",
+      "source_triangles": 48,
+      "replay_exact": true
+    },
+    {
+      "part": "elk_zincir_paslanmaz_4",
+      "source_triangles": 48,
+      "replay_exact": true
+    },
+    {
+      "part": "elk_zincir_paslanmaz_5",
+      "source_triangles": 48,
+      "replay_exact": true
+    },
+    {
+      "part": "elk_zincir_paslanmaz_6",
+      "source_triangles": 48,
+      "replay_exact": true
+    },
+    {
+      "part": "elk_zincir_paslanmaz_7",
+      "source_triangles": 48,
+      "replay_exact": true
+    },
+    {
+      "part": "elk_zincir_paslanmaz_8",
+      "source_triangles": 48,
+      "replay_exact": true
+    },
+    {
+      "part": "elk_zincir_paslanmaz_9",
+      "source_triangles": 48,
+      "replay_exact": true
+    },
+    {
+      "part": "elk_zincir_rakor_0",
+      "source_triangles": 104,
+      "replay_exact": true
+    },
+    {
+      "part": "elk_zincir_rakor_1",
+      "source_triangles": 80,
+      "replay_exact": true
+    },
+    {
+      "part": "elk_zincir_rakor_2",
+      "source_triangles": 80,
+      "replay_exact": true
+    },
+    {
+      "part": "elk_zincir_rakor_3",
+      "source_triangles": 104,
+      "replay_exact": true
+    },
+    {
+      "part": "emniyet_sari_0",
+      "source_triangles": 12,
+      "replay_exact": true
+    },
+    {
+      "part": "emniyet_siyah_0",
+      "source_triangles": 12,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_bag_arka_sag_1100_pul",
+      "source_triangles": 123,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_bag_arka_sag_1100_saplama",
+      "source_triangles": 126,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_bag_arka_sag_1100_somun",
+      "source_triangles": 57,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_bag_arka_sag_1350_pul",
+      "source_triangles": 123,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_bag_arka_sag_1350_saplama",
+      "source_triangles": 126,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_bag_arka_sag_1350_somun",
+      "source_triangles": 57,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_bag_arka_sag_1600_pul",
+      "source_triangles": 123,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_bag_arka_sag_1600_saplama",
+      "source_triangles": 126,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_bag_arka_sag_1600_somun",
+      "source_triangles": 57,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_bag_arka_sag_1830_pul",
+      "source_triangles": 123,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_bag_arka_sag_1830_saplama",
+      "source_triangles": 126,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_bag_arka_sag_1830_somun",
+      "source_triangles": 57,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_bag_arka_sag_850_pul",
+      "source_triangles": 123,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_bag_arka_sag_850_saplama",
+      "source_triangles": 126,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_bag_arka_sag_850_somun",
+      "source_triangles": 57,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_bag_arka_sol_1100_pul",
+      "source_triangles": 123,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_bag_arka_sol_1100_saplama",
+      "source_triangles": 126,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_bag_arka_sol_1100_somun",
+      "source_triangles": 57,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_bag_arka_sol_1350_pul",
+      "source_triangles": 123,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_bag_arka_sol_1350_saplama",
+      "source_triangles": 126,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_bag_arka_sol_1350_somun",
+      "source_triangles": 57,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_bag_arka_sol_1600_pul",
+      "source_triangles": 123,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_bag_arka_sol_1600_saplama",
+      "source_triangles": 126,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_bag_arka_sol_1600_somun",
+      "source_triangles": 57,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_bag_arka_sol_1830_pul",
+      "source_triangles": 123,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_bag_arka_sol_1830_saplama",
+      "source_triangles": 126,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_bag_arka_sol_1830_somun",
+      "source_triangles": 57,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_bag_arka_sol_850_pul",
+      "source_triangles": 123,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_bag_arka_sol_850_saplama",
+      "source_triangles": 126,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_bag_arka_sol_850_somun",
+      "source_triangles": 57,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_bag_arka_ust_360_pul",
+      "source_triangles": 123,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_bag_arka_ust_360_saplama",
+      "source_triangles": 126,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_bag_arka_ust_360_somun",
+      "source_triangles": 57,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_bag_arka_ust_40_pul",
+      "source_triangles": 123,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_bag_arka_ust_40_saplama",
+      "source_triangles": 126,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_bag_arka_ust_40_somun",
+      "source_triangles": 57,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sag_arka_1150",
+      "source_triangles": 108,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sag_arka_1150_bag_pul",
+      "source_triangles": 123,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sag_arka_1150_bag_saplama",
+      "source_triangles": 126,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sag_arka_1150_bag_somun",
+      "source_triangles": 57,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sag_arka_1150_kaynak_a",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sag_arka_1150_kaynak_b",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sag_arka_1600",
+      "source_triangles": 108,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sag_arka_1600_bag_pul",
+      "source_triangles": 123,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sag_arka_1600_bag_saplama",
+      "source_triangles": 126,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sag_arka_1600_bag_somun",
+      "source_triangles": 57,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sag_arka_1600_kaynak_a",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sag_arka_1600_kaynak_b",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sag_arka_1810",
+      "source_triangles": 108,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sag_arka_1810_bag_pul",
+      "source_triangles": 123,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sag_arka_1810_bag_saplama",
+      "source_triangles": 126,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sag_arka_1810_bag_somun",
+      "source_triangles": 57,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sag_arka_1810_kaynak_a",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sag_arka_1810_kaynak_b",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sag_arka_841",
+      "source_triangles": 108,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sag_arka_841_bag_pul",
+      "source_triangles": 123,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sag_arka_841_bag_saplama",
+      "source_triangles": 126,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sag_arka_841_bag_somun",
+      "source_triangles": 57,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sag_arka_841_kaynak_a",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sag_arka_841_kaynak_b",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sag_on_1150",
+      "source_triangles": 108,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sag_on_1150_bag_pul",
+      "source_triangles": 123,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sag_on_1150_bag_saplama",
+      "source_triangles": 126,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sag_on_1150_bag_somun",
+      "source_triangles": 57,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sag_on_1150_kaynak_a",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sag_on_1150_kaynak_b",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sag_on_1600",
+      "source_triangles": 108,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sag_on_1600_bag_pul",
+      "source_triangles": 123,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sag_on_1600_bag_saplama",
+      "source_triangles": 126,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sag_on_1600_bag_somun",
+      "source_triangles": 57,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sag_on_1600_kaynak_a",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sag_on_1600_kaynak_b",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sag_on_1810",
+      "source_triangles": 108,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sag_on_1810_bag_pul",
+      "source_triangles": 123,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sag_on_1810_bag_saplama",
+      "source_triangles": 126,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sag_on_1810_bag_somun",
+      "source_triangles": 57,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sag_on_1810_kaynak_a",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sag_on_1810_kaynak_b",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sag_on_841",
+      "source_triangles": 108,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sag_on_841_bag_pul",
+      "source_triangles": 123,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sag_on_841_bag_saplama",
+      "source_triangles": 126,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sag_on_841_bag_somun",
+      "source_triangles": 57,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sag_on_841_kaynak_a",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sag_on_841_kaynak_b",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sol_arka_1150",
+      "source_triangles": 108,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sol_arka_1150_bag_pul",
+      "source_triangles": 123,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sol_arka_1150_bag_saplama",
+      "source_triangles": 126,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sol_arka_1150_bag_somun",
+      "source_triangles": 57,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sol_arka_1150_kaynak_a",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sol_arka_1150_kaynak_b",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sol_arka_1600",
+      "source_triangles": 108,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sol_arka_1600_bag_pul",
+      "source_triangles": 123,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sol_arka_1600_bag_saplama",
+      "source_triangles": 126,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sol_arka_1600_bag_somun",
+      "source_triangles": 57,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sol_arka_1600_kaynak_a",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sol_arka_1600_kaynak_b",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sol_arka_1720",
+      "source_triangles": 108,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sol_arka_1720_bag_pul",
+      "source_triangles": 123,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sol_arka_1720_bag_saplama",
+      "source_triangles": 126,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sol_arka_1720_bag_somun",
+      "source_triangles": 57,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sol_arka_1720_kaynak_a",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sol_arka_1720_kaynak_b",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sol_arka_841",
+      "source_triangles": 108,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sol_arka_841_bag_pul",
+      "source_triangles": 123,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sol_arka_841_bag_saplama",
+      "source_triangles": 126,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sol_arka_841_bag_somun",
+      "source_triangles": 57,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sol_arka_841_kaynak_a",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sol_arka_841_kaynak_b",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sol_on_1150",
+      "source_triangles": 108,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sol_on_1150_bag_pul",
+      "source_triangles": 123,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sol_on_1150_bag_saplama",
+      "source_triangles": 126,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sol_on_1150_bag_somun",
+      "source_triangles": 57,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sol_on_1150_kaynak_a",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sol_on_1150_kaynak_b",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sol_on_1600",
+      "source_triangles": 108,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sol_on_1600_bag_pul",
+      "source_triangles": 123,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sol_on_1600_bag_saplama",
+      "source_triangles": 126,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sol_on_1600_bag_somun",
+      "source_triangles": 57,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sol_on_1600_kaynak_a",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sol_on_1600_kaynak_b",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sol_on_1810",
+      "source_triangles": 108,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sol_on_1810_bag_pul",
+      "source_triangles": 123,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sol_on_1810_bag_saplama",
+      "source_triangles": 126,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sol_on_1810_bag_somun",
+      "source_triangles": 57,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sol_on_1810_kaynak_a",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sol_on_1810_kaynak_b",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sol_on_841",
+      "source_triangles": 108,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sol_on_841_bag_pul",
+      "source_triangles": 123,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sol_on_841_bag_saplama",
+      "source_triangles": 126,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sol_on_841_bag_somun",
+      "source_triangles": 57,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sol_on_841_kaynak_a",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_sol_on_841_kaynak_b",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_ust_arka_200",
+      "source_triangles": 108,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_ust_arka_200_bag_pul",
+      "source_triangles": 123,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_ust_arka_200_bag_saplama",
+      "source_triangles": 126,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_ust_arka_200_bag_somun",
+      "source_triangles": 57,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_ust_arka_200_kaynak_a",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_ust_arka_200_kaynak_b",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_ust_arka_80",
+      "source_triangles": 108,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_ust_arka_80_bag_pul",
+      "source_triangles": 123,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_ust_arka_80_bag_saplama",
+      "source_triangles": 126,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_ust_arka_80_bag_somun",
+      "source_triangles": 57,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_ust_arka_80_kaynak_a",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_ust_arka_80_kaynak_b",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_ust_on_320",
+      "source_triangles": 108,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_ust_on_320_bag_pul",
+      "source_triangles": 123,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_ust_on_320_bag_saplama",
+      "source_triangles": 126,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_ust_on_320_bag_somun",
+      "source_triangles": 57,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_ust_on_320_kaynak_a",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_ust_on_320_kaynak_b",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_ust_on_80",
+      "source_triangles": 108,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_ust_on_80_bag_pul",
+      "source_triangles": 123,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_ust_on_80_bag_saplama",
+      "source_triangles": 126,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_ust_on_80_bag_somun",
+      "source_triangles": 57,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_ust_on_80_kaynak_a",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_kulak_ust_on_80_kaynak_b",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_m8_E_1100_800",
+      "source_triangles": 260,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_m8_E_1750_800",
+      "source_triangles": 260,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_m8_E_877_100",
+      "source_triangles": 260,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_m8_F_1000_800",
+      "source_triangles": 260,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_m8_F_1700_-42",
+      "source_triangles": 260,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_m8_F_1825_800",
+      "source_triangles": 260,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_m8_F_877_720",
+      "source_triangles": 260,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_m8_ara_pul_E_1100_800",
+      "source_triangles": 104,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_m8_ara_pul_E_1750_800",
+      "source_triangles": 104,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_m8_ara_pul_E_877_100",
+      "source_triangles": 104,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_m8_ara_pul_F_1000_800",
+      "source_triangles": 104,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_m8_ara_pul_F_1700_-42",
+      "source_triangles": 104,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_m8_ara_pul_F_1825_800",
+      "source_triangles": 104,
+      "replay_exact": true
+    },
+    {
+      "part": "govde_m8_ara_pul_F_877_720",
+      "source_triangles": 104,
+      "replay_exact": true
+    },
+    {
+      "part": "guc_24V_NDR-240-24",
+      "source_triangles": 2044,
+      "replay_exact": true
+    },
+    {
+      "part": "hava_hortumu_DGRF_arka",
+      "source_triangles": 827,
+      "replay_exact": true
+    },
+    {
+      "part": "hava_hortumu_DGRF_on",
+      "source_triangles": 165,
+      "replay_exact": true
+    },
+    {
+      "part": "hava_hortumu_X_0",
+      "source_triangles": 1185,
+      "replay_exact": true
+    },
+    {
+      "part": "hava_hortumu_X_1",
+      "source_triangles": 703,
+      "replay_exact": true
+    },
+    {
+      "part": "hava_hortumu_giris",
+      "source_triangles": 677,
+      "replay_exact": true
+    },
+    {
+      "part": "hava_hortumu_manifold",
+      "source_triangles": 432,
+      "replay_exact": true
+    },
+    {
+      "part": "hava_ic_aski_0",
+      "source_triangles": 12,
+      "replay_exact": true
+    },
+    {
+      "part": "hava_ic_aski_1",
+      "source_triangles": 12,
+      "replay_exact": true
+    },
+    {
+      "part": "hava_ic_aski_10",
+      "source_triangles": 12,
+      "replay_exact": true
+    },
+    {
+      "part": "hava_ic_aski_11",
+      "source_triangles": 12,
+      "replay_exact": true
+    },
+    {
+      "part": "hava_ic_aski_2",
+      "source_triangles": 12,
+      "replay_exact": true
+    },
+    {
+      "part": "hava_ic_aski_3",
+      "source_triangles": 12,
+      "replay_exact": true
+    },
+    {
+      "part": "hava_ic_aski_4",
+      "source_triangles": 12,
+      "replay_exact": true
+    },
+    {
+      "part": "hava_ic_aski_5",
+      "source_triangles": 12,
+      "replay_exact": true
+    },
+    {
+      "part": "hava_ic_aski_6",
+      "source_triangles": 12,
+      "replay_exact": true
+    },
+    {
+      "part": "hava_ic_aski_7",
+      "source_triangles": 12,
+      "replay_exact": true
+    },
+    {
+      "part": "hava_ic_aski_8",
+      "source_triangles": 12,
+      "replay_exact": true
+    },
+    {
+      "part": "hava_ic_aski_9",
+      "source_triangles": 12,
+      "replay_exact": true
+    },
+    {
+      "part": "hava_ic_kanal_0",
+      "source_triangles": 1032,
+      "replay_exact": true
+    },
+    {
+      "part": "hava_ic_kanal_1",
+      "source_triangles": 444,
+      "replay_exact": true
+    },
+    {
+      "part": "hava_ic_kanal_2",
+      "source_triangles": 12,
+      "replay_exact": true
+    },
+    {
+      "part": "hava_ic_kanal_3",
+      "source_triangles": 216,
+      "replay_exact": true
+    },
+    {
+      "part": "itici_X_MY-J10_blok_0",
+      "source_triangles": 12,
+      "replay_exact": true
+    },
+    {
+      "part": "itici_X_MY-J10_blok_1",
+      "source_triangles": 12,
+      "replay_exact": true
+    },
+    {
+      "part": "itici_X_MY-J10_pim_0",
+      "source_triangles": 48,
+      "replay_exact": true
+    },
+    {
+      "part": "itici_X_MY-J10_pim_1",
+      "source_triangles": 48,
+      "replay_exact": true
+    },
+    {
+      "part": "itici_X_MY1B10G-250_AS1201F_0",
+      "source_triangles": 84,
+      "replay_exact": true
+    },
+    {
+      "part": "itici_X_MY1B10G-250_AS1201F_1",
+      "source_triangles": 84,
+      "replay_exact": true
+    },
+    {
+      "part": "itici_X_MY1B10G-250_D-M9N_0",
+      "source_triangles": 12,
+      "replay_exact": true
+    },
+    {
+      "part": "itici_X_MY1B10G-250_D-M9N_1",
+      "source_triangles": 12,
+      "replay_exact": true
+    },
+    {
+      "part": "itici_X_MY1B10G-250_masa",
+      "source_triangles": 12,
+      "replay_exact": true
+    },
+    {
+      "part": "itici_X_MY1B10G-250_profil",
+      "source_triangles": 24,
+      "replay_exact": true
+    },
+    {
+      "part": "itici_X_MY1B10G-250_uc_kapagi_0",
+      "source_triangles": 22,
+      "replay_exact": true
+    },
+    {
+      "part": "itici_X_MY1B10G-250_uc_kapagi_1",
+      "source_triangles": 22,
+      "replay_exact": true
+    },
+    {
+      "part": "itici_X_RB0805_0",
+      "source_triangles": 100,
+      "replay_exact": true
+    },
+    {
+      "part": "itici_X_RB0805_1",
+      "source_triangles": 100,
+      "replay_exact": true
+    },
+    {
+      "part": "itici_X_ara_-645",
+      "source_triangles": 24,
+      "replay_exact": true
+    },
+    {
+      "part": "itici_X_ara_-755",
+      "source_triangles": 24,
+      "replay_exact": true
+    },
+    {
+      "part": "itici_X_blok_-645",
+      "source_triangles": 28,
+      "replay_exact": true
+    },
+    {
+      "part": "itici_X_blok_-755",
+      "source_triangles": 28,
+      "replay_exact": true
+    },
+    {
+      "part": "itici_X_durdurucu_0",
+      "source_triangles": 76,
+      "replay_exact": true
+    },
+    {
+      "part": "itici_X_durdurucu_1",
+      "source_triangles": 76,
+      "replay_exact": true
+    },
+    {
+      "part": "itici_X_merkez_yukseltme",
+      "source_triangles": 28,
+      "replay_exact": true
+    },
+    {
+      "part": "itici_X_ray_-645",
+      "source_triangles": 12,
+      "replay_exact": true
+    },
+    {
+      "part": "itici_X_ray_-755",
+      "source_triangles": 12,
+      "replay_exact": true
+    },
+    {
+      "part": "itici_Z_MY1B10G-350_AS1201F_0",
+      "source_triangles": 84,
+      "replay_exact": true
+    },
+    {
+      "part": "itici_Z_MY1B10G-350_AS1201F_1",
+      "source_triangles": 84,
+      "replay_exact": true
+    },
+    {
+      "part": "itici_Z_MY1B10G-350_D-M9N_0",
+      "source_triangles": 12,
+      "replay_exact": true
+    },
+    {
+      "part": "itici_Z_MY1B10G-350_D-M9N_1",
+      "source_triangles": 12,
+      "replay_exact": true
+    },
+    {
+      "part": "itici_Z_MY1B10G-350_masa",
+      "source_triangles": 12,
+      "replay_exact": true
+    },
+    {
+      "part": "itici_Z_MY1B10G-350_profil",
+      "source_triangles": 22,
+      "replay_exact": true
+    },
+    {
+      "part": "itici_Z_MY1B10G-350_uc_kapagi_0",
+      "source_triangles": 22,
+      "replay_exact": true
+    },
+    {
+      "part": "itici_Z_MY1B10G-350_uc_kapagi_1",
+      "source_triangles": 22,
+      "replay_exact": true
+    },
+    {
+      "part": "itici_Z_blok_53",
+      "source_triangles": 28,
+      "replay_exact": true
+    },
+    {
+      "part": "itici_Z_blok_97",
+      "source_triangles": 28,
+      "replay_exact": true
+    },
+    {
+      "part": "itici_Z_kopru",
+      "source_triangles": 12,
+      "replay_exact": true
+    },
+    {
+      "part": "itici_Z_plaka",
+      "source_triangles": 14,
+      "replay_exact": true
+    },
+    {
+      "part": "itici_Z_ray_53",
+      "source_triangles": 12,
+      "replay_exact": true
+    },
+    {
+      "part": "itici_Z_ray_97",
+      "source_triangles": 12,
+      "replay_exact": true
+    },
+    {
+      "part": "itici_Z_yukseltme_53",
+      "source_triangles": 32,
+      "replay_exact": true
+    },
+    {
+      "part": "itici_Z_yukseltme_97",
+      "source_triangles": 32,
+      "replay_exact": true
+    },
+    {
+      "part": "itici_alt_dudak",
+      "source_triangles": 12,
+      "replay_exact": true
+    },
+    {
+      "part": "itici_dusey_kol",
+      "source_triangles": 14,
+      "replay_exact": true
+    },
+    {
+      "part": "itici_one_kol",
+      "source_triangles": 12,
+      "replay_exact": true
+    },
+    {
+      "part": "itici_sabit_plaka",
+      "source_triangles": 12,
+      "replay_exact": true
+    },
+    {
+      "part": "itici_taban_360_-645",
+      "source_triangles": 204,
+      "replay_exact": true
+    },
+    {
+      "part": "itici_taban_360_-755",
+      "source_triangles": 204,
+      "replay_exact": true
+    },
+    {
+      "part": "itici_taban_40_-645",
+      "source_triangles": 204,
+      "replay_exact": true
+    },
+    {
+      "part": "itici_taban_40_-755",
+      "source_triangles": 204,
+      "replay_exact": true
+    },
+    {
+      "part": "itici_yatay_kol",
+      "source_triangles": 10,
+      "replay_exact": true
+    },
+    {
+      "part": "itici_yuz",
+      "source_triangles": 12,
+      "replay_exact": true
+    },
+    {
+      "part": "itici_yuz_kilavuz_kovani",
+      "source_triangles": 32,
+      "replay_exact": true
+    },
+    {
+      "part": "itici_yuzer_baglanti",
+      "source_triangles": 12,
+      "replay_exact": true
+    },
+    {
+      "part": "itici_yuzer_kilavuz",
+      "source_triangles": 12,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_alt_flans_4060_379",
+      "source_triangles": 428,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_alt_flans_4060_58",
+      "source_triangles": 428,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_alt_flans_4060_700",
+      "source_triangles": 428,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_alt_flans_4340_379",
+      "source_triangles": 428,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_alt_flans_4340_58",
+      "source_triangles": 428,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_alt_flans_4340_700",
+      "source_triangles": 428,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_alt_pul_4060_379_-32.0",
+      "source_triangles": 408,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_alt_pul_4060_379_32.0",
+      "source_triangles": 408,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_alt_pul_4060_58_-32.0",
+      "source_triangles": 408,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_alt_pul_4060_58_32.0",
+      "source_triangles": 408,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_alt_pul_4060_700_-32.0",
+      "source_triangles": 408,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_alt_pul_4060_700_32.0",
+      "source_triangles": 408,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_alt_pul_4340_379_-32.0",
+      "source_triangles": 408,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_alt_pul_4340_379_32.0",
+      "source_triangles": 408,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_alt_pul_4340_58_-32.0",
+      "source_triangles": 408,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_alt_pul_4340_58_32.0",
+      "source_triangles": 408,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_alt_pul_4340_700_-32.0",
+      "source_triangles": 408,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_alt_pul_4340_700_32.0",
+      "source_triangles": 408,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_alt_saplama_4060_379_-32.0",
+      "source_triangles": 506,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_alt_saplama_4060_379_32.0",
+      "source_triangles": 506,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_alt_saplama_4060_58_-32.0",
+      "source_triangles": 506,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_alt_saplama_4060_58_32.0",
+      "source_triangles": 506,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_alt_saplama_4060_700_-32.0",
+      "source_triangles": 506,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_alt_saplama_4060_700_32.0",
+      "source_triangles": 506,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_alt_saplama_4340_379_-32.0",
+      "source_triangles": 506,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_alt_saplama_4340_379_32.0",
+      "source_triangles": 506,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_alt_saplama_4340_58_-32.0",
+      "source_triangles": 506,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_alt_saplama_4340_58_32.0",
+      "source_triangles": 506,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_alt_saplama_4340_700_-32.0",
+      "source_triangles": 506,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_alt_saplama_4340_700_32.0",
+      "source_triangles": 506,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_alt_somun_4060_379_-32.0",
+      "source_triangles": 228,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_alt_somun_4060_379_32.0",
+      "source_triangles": 228,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_alt_somun_4060_58_-32.0",
+      "source_triangles": 228,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_alt_somun_4060_58_32.0",
+      "source_triangles": 228,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_alt_somun_4060_700_-32.0",
+      "source_triangles": 228,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_alt_somun_4060_700_32.0",
+      "source_triangles": 228,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_alt_somun_4340_379_-32.0",
+      "source_triangles": 228,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_alt_somun_4340_379_32.0",
+      "source_triangles": 228,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_alt_somun_4340_58_-32.0",
+      "source_triangles": 228,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_alt_somun_4340_58_32.0",
+      "source_triangles": 228,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_alt_somun_4340_700_-32.0",
+      "source_triangles": 228,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_alt_somun_4340_700_32.0",
+      "source_triangles": 228,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_dik_destek_4060_379",
+      "source_triangles": 448,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_dik_destek_4060_58",
+      "source_triangles": 448,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_dik_destek_4060_700",
+      "source_triangles": 448,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_dik_destek_4340_379",
+      "source_triangles": 448,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_dik_destek_4340_58",
+      "source_triangles": 448,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_dik_destek_4340_700",
+      "source_triangles": 448,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_disli_ust_kapak_4060_379",
+      "source_triangles": 428,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_disli_ust_kapak_4060_58",
+      "source_triangles": 428,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_disli_ust_kapak_4060_700",
+      "source_triangles": 428,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_disli_ust_kapak_4340_379",
+      "source_triangles": 428,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_disli_ust_kapak_4340_58",
+      "source_triangles": 428,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_disli_ust_kapak_4340_700",
+      "source_triangles": 428,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_istasyon_rafi",
+      "source_triangles": 8116,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_kaynak_4060_379_795_0",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_kaynak_4060_379_795_1",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_kaynak_4060_379_795_2",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_kaynak_4060_379_795_3",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_kaynak_4060_379_883_0",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_kaynak_4060_379_883_1",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_kaynak_4060_379_883_2",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_kaynak_4060_379_883_3",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_kaynak_4060_58_795_0",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_kaynak_4060_58_795_1",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_kaynak_4060_58_795_2",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_kaynak_4060_58_795_3",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_kaynak_4060_58_883_0",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_kaynak_4060_58_883_1",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_kaynak_4060_58_883_2",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_kaynak_4060_58_883_3",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_kaynak_4060_700_795_0",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_kaynak_4060_700_795_1",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_kaynak_4060_700_795_2",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_kaynak_4060_700_795_3",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_kaynak_4060_700_883_0",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_kaynak_4060_700_883_1",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_kaynak_4060_700_883_2",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_kaynak_4060_700_883_3",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_kaynak_4340_379_795_0",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_kaynak_4340_379_795_1",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_kaynak_4340_379_795_2",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_kaynak_4340_379_795_3",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_kaynak_4340_379_883_0",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_kaynak_4340_379_883_1",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_kaynak_4340_379_883_2",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_kaynak_4340_379_883_3",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_kaynak_4340_58_795_0",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_kaynak_4340_58_795_1",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_kaynak_4340_58_795_2",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_kaynak_4340_58_795_3",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_kaynak_4340_58_883_0",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_kaynak_4340_58_883_1",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_kaynak_4340_58_883_2",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_kaynak_4340_58_883_3",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_kaynak_4340_700_795_0",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_kaynak_4340_700_795_1",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_kaynak_4340_700_795_2",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_kaynak_4340_700_795_3",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_kaynak_4340_700_883_0",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_kaynak_4340_700_883_1",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_kaynak_4340_700_883_2",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_kaynak_4340_700_883_3",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_raf_PEM_M5_4054.0_-631.0",
+      "source_triangles": 612,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_raf_PEM_M5_4054.0_-659.0",
+      "source_triangles": 612,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_raf_PEM_M5_4054.0_-741.0",
+      "source_triangles": 612,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_raf_PEM_M5_4054.0_-769.0",
+      "source_triangles": 612,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_raf_PEM_M5_4346.0_-631.0",
+      "source_triangles": 612,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_raf_PEM_M5_4346.0_-659.0",
+      "source_triangles": 612,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_raf_PEM_M5_4346.0_-741.0",
+      "source_triangles": 612,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_raf_PEM_M5_4346.0_-769.0",
+      "source_triangles": 612,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_raf_PEM_M6_4065.0_-3.0",
+      "source_triangles": 612,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_raf_PEM_M6_4065.0_-421.0",
+      "source_triangles": 612,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_raf_PEM_M6_4335.0_-3.0",
+      "source_triangles": 612,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_raf_PEM_M6_4335.0_-421.0",
+      "source_triangles": 612,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_raf_yan_kaynagi_4005",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_raf_yan_kaynagi_4395",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_raf_yan_sac_4005",
+      "source_triangles": 220,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_raf_yan_sac_4395",
+      "source_triangles": 220,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_ust_havsa_4060_379_-10.0",
+      "source_triangles": 520,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_ust_havsa_4060_379_10.0",
+      "source_triangles": 520,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_ust_havsa_4060_58_-10.0",
+      "source_triangles": 520,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_ust_havsa_4060_58_10.0",
+      "source_triangles": 520,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_ust_havsa_4060_700_-10.0",
+      "source_triangles": 520,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_ust_havsa_4060_700_10.0",
+      "source_triangles": 520,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_ust_havsa_4340_379_-10.0",
+      "source_triangles": 520,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_ust_havsa_4340_379_10.0",
+      "source_triangles": 520,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_ust_havsa_4340_58_-10.0",
+      "source_triangles": 520,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_ust_havsa_4340_58_10.0",
+      "source_triangles": 520,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_ust_havsa_4340_700_-10.0",
+      "source_triangles": 520,
+      "replay_exact": true
+    },
+    {
+      "part": "k71_ust_havsa_4340_700_10.0",
+      "source_triangles": 520,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_alt_pul_M5_4054.0_-631.0_0",
+      "source_triangles": 408,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_alt_pul_M5_4054.0_-659.0_0",
+      "source_triangles": 408,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_alt_pul_M5_4054.0_-741.0_0",
+      "source_triangles": 408,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_alt_pul_M5_4054.0_-769.0_0",
+      "source_triangles": 408,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_alt_pul_M5_4346.0_-631.0_0",
+      "source_triangles": 408,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_alt_pul_M5_4346.0_-659.0_0",
+      "source_triangles": 408,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_alt_pul_M5_4346.0_-741.0_0",
+      "source_triangles": 408,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_alt_pul_M5_4346.0_-769.0_0",
+      "source_triangles": 408,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_alt_pul_M6_4065.0_-3.0_0",
+      "source_triangles": 408,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_alt_pul_M6_4065.0_-421.0_0",
+      "source_triangles": 408,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_alt_pul_M6_4335.0_-3.0_0",
+      "source_triangles": 408,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_alt_pul_M6_4335.0_-421.0_0",
+      "source_triangles": 408,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_alt_somun_M5_4054.0_-631.0",
+      "source_triangles": 228,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_alt_somun_M5_4054.0_-659.0",
+      "source_triangles": 228,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_alt_somun_M5_4054.0_-741.0",
+      "source_triangles": 228,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_alt_somun_M5_4054.0_-769.0",
+      "source_triangles": 228,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_alt_somun_M5_4346.0_-631.0",
+      "source_triangles": 228,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_alt_somun_M5_4346.0_-659.0",
+      "source_triangles": 228,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_alt_somun_M5_4346.0_-741.0",
+      "source_triangles": 228,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_alt_somun_M5_4346.0_-769.0",
+      "source_triangles": 228,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_alt_somun_M6_4065.0_-3.0",
+      "source_triangles": 228,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_alt_somun_M6_4065.0_-421.0",
+      "source_triangles": 228,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_alt_somun_M6_4335.0_-3.0",
+      "source_triangles": 228,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_alt_somun_M6_4335.0_-421.0",
+      "source_triangles": 228,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_bant_ayagi_4065.0_-421.0",
+      "source_triangles": 448,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_bant_ayagi_4335.0_-421.0",
+      "source_triangles": 448,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_bant_ayak_flansi_4065.0_-3.0",
+      "source_triangles": 332,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_bant_ayak_flansi_4065.0_-421.0",
+      "source_triangles": 220,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_bant_ayak_flansi_4335.0_-3.0",
+      "source_triangles": 332,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_bant_ayak_flansi_4335.0_-421.0",
+      "source_triangles": 220,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_bant_ayak_kaynagi_4065.0_-3.0_0",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_bant_ayak_kaynagi_4065.0_-3.0_1",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_bant_ayak_kaynagi_4065.0_-3.0_2",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_bant_ayak_kaynagi_4065.0_-3.0_3",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_bant_ayak_kaynagi_4065.0_-421.0_0",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_bant_ayak_kaynagi_4065.0_-421.0_1",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_bant_ayak_kaynagi_4065.0_-421.0_2",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_bant_ayak_kaynagi_4065.0_-421.0_3",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_bant_ayak_kaynagi_4335.0_-3.0_0",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_bant_ayak_kaynagi_4335.0_-3.0_1",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_bant_ayak_kaynagi_4335.0_-3.0_2",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_bant_ayak_kaynagi_4335.0_-3.0_3",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_bant_ayak_kaynagi_4335.0_-421.0_0",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_bant_ayak_kaynagi_4335.0_-421.0_1",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_bant_ayak_kaynagi_4335.0_-421.0_2",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_bant_ayak_kaynagi_4335.0_-421.0_3",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_itici_ara_kaynagi_4040.0_-645.0_0",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_itici_ara_kaynagi_4040.0_-645.0_1",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_itici_ara_kaynagi_4040.0_-645.0_2",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_itici_ara_kaynagi_4040.0_-645.0_3",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_itici_ara_kaynagi_4040.0_-755.0_0",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_itici_ara_kaynagi_4040.0_-755.0_1",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_itici_ara_kaynagi_4040.0_-755.0_2",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_itici_ara_kaynagi_4040.0_-755.0_3",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_itici_ara_kaynagi_4360.0_-645.0_0",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_itici_ara_kaynagi_4360.0_-645.0_1",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_itici_ara_kaynagi_4360.0_-645.0_2",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_itici_ara_kaynagi_4360.0_-645.0_3",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_itici_ara_kaynagi_4360.0_-755.0_0",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_itici_ara_kaynagi_4360.0_-755.0_1",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_itici_ara_kaynagi_4360.0_-755.0_2",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_itici_ara_kaynagi_4360.0_-755.0_3",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_itici_ayak_kaynagi_4040.0_-645.0_0",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_itici_ayak_kaynagi_4040.0_-645.0_1",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_itici_ayak_kaynagi_4040.0_-645.0_2",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_itici_ayak_kaynagi_4040.0_-645.0_3",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_itici_ayak_kaynagi_4040.0_-755.0_0",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_itici_ayak_kaynagi_4040.0_-755.0_1",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_itici_ayak_kaynagi_4040.0_-755.0_2",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_itici_ayak_kaynagi_4040.0_-755.0_3",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_itici_ayak_kaynagi_4360.0_-645.0_0",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_itici_ayak_kaynagi_4360.0_-645.0_1",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_itici_ayak_kaynagi_4360.0_-645.0_2",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_itici_ayak_kaynagi_4360.0_-645.0_3",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_itici_ayak_kaynagi_4360.0_-755.0_0",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_itici_ayak_kaynagi_4360.0_-755.0_1",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_itici_ayak_kaynagi_4360.0_-755.0_2",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_itici_ayak_kaynagi_4360.0_-755.0_3",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_itici_taban_4040.0_-645.0",
+      "source_triangles": 428,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_itici_taban_4040.0_-755.0",
+      "source_triangles": 428,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_itici_taban_4360.0_-645.0",
+      "source_triangles": 428,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_itici_taban_4360.0_-755.0",
+      "source_triangles": 428,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_itici_ust_plaka_4040.0_-645.0",
+      "source_triangles": 224,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_itici_ust_plaka_4040.0_-755.0",
+      "source_triangles": 224,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_itici_ust_plaka_4360.0_-645.0",
+      "source_triangles": 224,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_itici_ust_plaka_4360.0_-755.0",
+      "source_triangles": 224,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_ust_pul_M5_4054.0_-631.0",
+      "source_triangles": 408,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_ust_pul_M5_4054.0_-659.0",
+      "source_triangles": 408,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_ust_pul_M5_4054.0_-741.0",
+      "source_triangles": 408,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_ust_pul_M5_4054.0_-769.0",
+      "source_triangles": 408,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_ust_pul_M5_4346.0_-631.0",
+      "source_triangles": 408,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_ust_pul_M5_4346.0_-659.0",
+      "source_triangles": 408,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_ust_pul_M5_4346.0_-741.0",
+      "source_triangles": 408,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_ust_pul_M5_4346.0_-769.0",
+      "source_triangles": 408,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_ust_pul_M6_4065.0_-3.0",
+      "source_triangles": 408,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_ust_pul_M6_4065.0_-421.0",
+      "source_triangles": 408,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_ust_pul_M6_4335.0_-3.0",
+      "source_triangles": 408,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_ust_pul_M6_4335.0_-421.0",
+      "source_triangles": 408,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_vida_M5_4054.0_-631.0",
+      "source_triangles": 428,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_vida_M5_4054.0_-659.0",
+      "source_triangles": 428,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_vida_M5_4054.0_-741.0",
+      "source_triangles": 428,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_vida_M5_4054.0_-769.0",
+      "source_triangles": 428,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_vida_M5_4346.0_-631.0",
+      "source_triangles": 428,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_vida_M5_4346.0_-659.0",
+      "source_triangles": 428,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_vida_M5_4346.0_-741.0",
+      "source_triangles": 428,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_vida_M5_4346.0_-769.0",
+      "source_triangles": 428,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_vida_M6_4065.0_-3.0",
+      "source_triangles": 428,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_vida_M6_4065.0_-421.0",
+      "source_triangles": 428,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_vida_M6_4335.0_-3.0",
+      "source_triangles": 428,
+      "replay_exact": true
+    },
+    {
+      "part": "k72_vida_M6_4335.0_-421.0",
+      "source_triangles": 428,
+      "replay_exact": true
+    },
+    {
+      "part": "k73_tavan_baglanti_plakasi_4100_0",
+      "source_triangles": 220,
+      "replay_exact": true
+    },
+    {
+      "part": "k73_tavan_baglanti_plakasi_4100_1",
+      "source_triangles": 220,
+      "replay_exact": true
+    },
+    {
+      "part": "k73_tavan_baglanti_plakasi_4100_2",
+      "source_triangles": 220,
+      "replay_exact": true
+    },
+    {
+      "part": "k73_tavan_baglanti_plakasi_4300_0",
+      "source_triangles": 220,
+      "replay_exact": true
+    },
+    {
+      "part": "k73_tavan_baglanti_plakasi_4300_1",
+      "source_triangles": 220,
+      "replay_exact": true
+    },
+    {
+      "part": "k73_tavan_baglanti_plakasi_4300_2",
+      "source_triangles": 220,
+      "replay_exact": true
+    },
+    {
+      "part": "k73_tavan_kaynagi_4100_1853.5_0",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k73_tavan_kaynagi_4100_1853.5_1",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k73_tavan_kaynagi_4100_1853.5_2",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k73_tavan_kaynagi_4100_1853.5_3",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k73_tavan_kaynagi_4100_1857.5_0",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k73_tavan_kaynagi_4100_1857.5_1",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k73_tavan_kaynagi_4100_1857.5_2",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k73_tavan_kaynagi_4100_1857.5_3",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k73_tavan_kaynagi_4100_1860.5_0",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k73_tavan_kaynagi_4100_1860.5_1",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k73_tavan_kaynagi_4100_1860.5_2",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k73_tavan_kaynagi_4100_1860.5_3",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k73_tavan_kaynagi_4300_1853.5_0",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k73_tavan_kaynagi_4300_1853.5_1",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k73_tavan_kaynagi_4300_1853.5_2",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k73_tavan_kaynagi_4300_1853.5_3",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k73_tavan_kaynagi_4300_1857.5_0",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k73_tavan_kaynagi_4300_1857.5_1",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k73_tavan_kaynagi_4300_1857.5_2",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k73_tavan_kaynagi_4300_1857.5_3",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k73_tavan_kaynagi_4300_1860.5_0",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k73_tavan_kaynagi_4300_1860.5_1",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k73_tavan_kaynagi_4300_1860.5_2",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k73_tavan_kaynagi_4300_1860.5_3",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k75_kiris_pul_bas_0",
+      "source_triangles": 510,
+      "replay_exact": true
+    },
+    {
+      "part": "k75_kiris_pul_bas_1",
+      "source_triangles": 510,
+      "replay_exact": true
+    },
+    {
+      "part": "k75_kiris_pul_somun_0",
+      "source_triangles": 465,
+      "replay_exact": true
+    },
+    {
+      "part": "k75_kiris_pul_somun_1",
+      "source_triangles": 465,
+      "replay_exact": true
+    },
+    {
+      "part": "k75_kiris_somun_0",
+      "source_triangles": 171,
+      "replay_exact": true
+    },
+    {
+      "part": "k75_kiris_somun_1",
+      "source_triangles": 171,
+      "replay_exact": true
+    },
+    {
+      "part": "k75_kiris_vida_0",
+      "source_triangles": 326,
+      "replay_exact": true
+    },
+    {
+      "part": "k75_kiris_vida_1",
+      "source_triangles": 326,
+      "replay_exact": true
+    },
+    {
+      "part": "k76_tarti_rakor_M16_govde",
+      "source_triangles": 612,
+      "replay_exact": true
+    },
+    {
+      "part": "k76_tarti_rakor_M16_kilit_somunu",
+      "source_triangles": 408,
+      "replay_exact": true
+    },
+    {
+      "part": "k_bant_pu_bant_0",
+      "source_triangles": 112,
+      "replay_exact": true
+    },
+    {
+      "part": "k_e4_sol_yama_40x40",
+      "source_triangles": 12,
+      "replay_exact": true
+    },
+    {
+      "part": "k_elektrik_sac_0",
+      "source_triangles": 68,
+      "replay_exact": true
+    },
+    {
+      "part": "k_govde_conta_0",
+      "source_triangles": 100,
+      "replay_exact": true
+    },
+    {
+      "part": "k_govde_conta_1",
+      "source_triangles": 100,
+      "replay_exact": true
+    },
+    {
+      "part": "k_govde_on_seffaf_0",
+      "source_triangles": 236,
+      "replay_exact": true
+    },
+    {
+      "part": "k_govde_on_seffaf_1",
+      "source_triangles": 632,
+      "replay_exact": true
+    },
+    {
+      "part": "k_govde_on_seffaf_2",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k_govde_on_seffaf_3",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "k_itici_sac_0",
+      "source_triangles": 32,
+      "replay_exact": true
+    },
+    {
+      "part": "k_itici_sac_1",
+      "source_triangles": 32,
+      "replay_exact": true
+    },
+    {
+      "part": "k_itici_sac_2",
+      "source_triangles": 32,
+      "replay_exact": true
+    },
+    {
+      "part": "k_itici_sac_3",
+      "source_triangles": 32,
+      "replay_exact": true
+    },
+    {
+      "part": "k_yag_pom_0",
+      "source_triangles": 204,
+      "replay_exact": true
+    },
+    {
+      "part": "kafa_adaptoru",
+      "source_triangles": 48,
+      "replay_exact": true
+    },
+    {
+      "part": "kafa_plakasi_8",
+      "source_triangles": 48,
+      "replay_exact": true
+    },
+    {
+      "part": "kayma_tablasi",
+      "source_triangles": 12,
+      "replay_exact": true
+    },
+    {
+      "part": "kelebek_somun_0",
+      "source_triangles": 48,
+      "replay_exact": true
+    },
+    {
+      "part": "kelebek_somun_1",
+      "source_triangles": 48,
+      "replay_exact": true
+    },
+    {
+      "part": "kelebek_somun_2",
+      "source_triangles": 48,
+      "replay_exact": true
+    },
+    {
+      "part": "klemens_sirasi",
+      "source_triangles": 12,
+      "replay_exact": true
+    },
+    {
+      "part": "kopru_kirisi_-126",
+      "source_triangles": 32,
+      "replay_exact": true
+    },
+    {
+      "part": "kopru_kirisi_-286",
+      "source_triangles": 256,
+      "replay_exact": true
+    },
+    {
+      "part": "kopru_kirisi_yan_20",
+      "source_triangles": 32,
+      "replay_exact": true
+    },
+    {
+      "part": "kopru_kirisi_yan_380",
+      "source_triangles": 32,
+      "replay_exact": true
+    },
+    {
+      "part": "koruma_braketi_0",
+      "source_triangles": 20,
+      "replay_exact": true
+    },
+    {
+      "part": "koruma_braketi_1",
+      "source_triangles": 20,
+      "replay_exact": true
+    },
+    {
+      "part": "koruma_braketi_2",
+      "source_triangles": 20,
+      "replay_exact": true
+    },
+    {
+      "part": "koruma_braketi_3",
+      "source_triangles": 20,
+      "replay_exact": true
+    },
+    {
+      "part": "koruma_braketi_4",
+      "source_triangles": 20,
+      "replay_exact": true
+    },
+    {
+      "part": "koruma_braketi_5",
+      "source_triangles": 20,
+      "replay_exact": true
+    },
+    {
+      "part": "kose_dikmesi_20_-800",
+      "source_triangles": 272,
+      "replay_exact": true
+    },
+    {
+      "part": "kose_dikmesi_20_-800_tapa",
+      "source_triangles": 28,
+      "replay_exact": true
+    },
+    {
+      "part": "kose_dikmesi_20_42",
+      "source_triangles": 9232,
+      "replay_exact": true
+    },
+    {
+      "part": "kose_dikmesi_20_42_tapa",
+      "source_triangles": 28,
+      "replay_exact": true
+    },
+    {
+      "part": "kose_dikmesi_380_-800",
+      "source_triangles": 272,
+      "replay_exact": true
+    },
+    {
+      "part": "kose_dikmesi_380_-800_tapa",
+      "source_triangles": 28,
+      "replay_exact": true
+    },
+    {
+      "part": "kose_dikmesi_380_42",
+      "source_triangles": 5124,
+      "replay_exact": true
+    },
+    {
+      "part": "kose_dikmesi_380_42_tapa",
+      "source_triangles": 28,
+      "replay_exact": true
+    },
+    {
+      "part": "kose_dikmesi_kopru_kaynagi_20_-785_0",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "kose_dikmesi_kopru_kaynagi_20_-785_1",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "kose_dikmesi_kopru_kaynagi_20_27_0",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "kose_dikmesi_kopru_kaynagi_20_27_1",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "kose_dikmesi_kopru_kaynagi_380_-785_0",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "kose_dikmesi_kopru_kaynagi_380_-785_1",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "kose_dikmesi_kopru_kaynagi_380_27_0",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "kose_dikmesi_kopru_kaynagi_380_27_1",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "nozul_braketi",
+      "source_triangles": 28,
+      "replay_exact": true
+    },
+    {
+      "part": "nozul_kelepce_blogu",
+      "source_triangles": 48,
+      "replay_exact": true
+    },
+    {
+      "part": "olu_plaka",
+      "source_triangles": 12,
+      "replay_exact": true
+    },
+    {
+      "part": "onyuz_kapak_K_basac_0",
+      "source_triangles": 152,
+      "replay_exact": true
+    },
+    {
+      "part": "onyuz_kapak_K_basac_1",
+      "source_triangles": 152,
+      "replay_exact": true
+    },
+    {
+      "part": "onyuz_kapak_K_basac_2",
+      "source_triangles": 152,
+      "replay_exact": true
+    },
+    {
+      "part": "onyuz_kapak_K_karsilik_0",
+      "source_triangles": 12,
+      "replay_exact": true
+    },
+    {
+      "part": "onyuz_kapak_K_karsilik_1",
+      "source_triangles": 12,
+      "replay_exact": true
+    },
+    {
+      "part": "onyuz_kapak_K_karsilik_2",
+      "source_triangles": 12,
+      "replay_exact": true
+    },
+    {
+      "part": "onyuz_kapak_K_kose_kaynagi_3",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "onyuz_kapak_K_kose_kaynagi_4",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "onyuz_kapak_K_mentese_0_kanat",
+      "source_triangles": 104,
+      "replay_exact": true
+    },
+    {
+      "part": "onyuz_kapak_K_mentese_0_kanat_vida_a",
+      "source_triangles": 246,
+      "replay_exact": true
+    },
+    {
+      "part": "onyuz_kapak_K_mentese_0_kanat_vida_b",
+      "source_triangles": 246,
+      "replay_exact": true
+    },
+    {
+      "part": "onyuz_kapak_K_mentese_0_pem_a",
+      "source_triangles": 156,
+      "replay_exact": true
+    },
+    {
+      "part": "onyuz_kapak_K_mentese_0_pem_b",
+      "source_triangles": 156,
+      "replay_exact": true
+    },
+    {
+      "part": "onyuz_kapak_K_mentese_0_sabit",
+      "source_triangles": 116,
+      "replay_exact": true
+    },
+    {
+      "part": "onyuz_kapak_K_mentese_0_sabit_vida_a",
+      "source_triangles": 220,
+      "replay_exact": true
+    },
+    {
+      "part": "onyuz_kapak_K_mentese_0_sabit_vida_b",
+      "source_triangles": 220,
+      "replay_exact": true
+    },
+    {
+      "part": "onyuz_kapak_K_mentese_1_kanat",
+      "source_triangles": 104,
+      "replay_exact": true
+    },
+    {
+      "part": "onyuz_kapak_K_mentese_1_kanat_vida_a",
+      "source_triangles": 246,
+      "replay_exact": true
+    },
+    {
+      "part": "onyuz_kapak_K_mentese_1_kanat_vida_b",
+      "source_triangles": 246,
+      "replay_exact": true
+    },
+    {
+      "part": "onyuz_kapak_K_mentese_1_pem_a",
+      "source_triangles": 156,
+      "replay_exact": true
+    },
+    {
+      "part": "onyuz_kapak_K_mentese_1_pem_b",
+      "source_triangles": 156,
+      "replay_exact": true
+    },
+    {
+      "part": "onyuz_kapak_K_mentese_1_sabit",
+      "source_triangles": 116,
+      "replay_exact": true
+    },
+    {
+      "part": "onyuz_kapak_K_mentese_1_sabit_vida_a",
+      "source_triangles": 220,
+      "replay_exact": true
+    },
+    {
+      "part": "onyuz_kapak_K_mentese_1_sabit_vida_b",
+      "source_triangles": 220,
+      "replay_exact": true
+    },
+    {
+      "part": "onyuz_kapak_K_mentese_2_kanat",
+      "source_triangles": 104,
+      "replay_exact": true
+    },
+    {
+      "part": "onyuz_kapak_K_mentese_2_kanat_vida_a",
+      "source_triangles": 246,
+      "replay_exact": true
+    },
+    {
+      "part": "onyuz_kapak_K_mentese_2_kanat_vida_b",
+      "source_triangles": 246,
+      "replay_exact": true
+    },
+    {
+      "part": "onyuz_kapak_K_mentese_2_pem_a",
+      "source_triangles": 156,
+      "replay_exact": true
+    },
+    {
+      "part": "onyuz_kapak_K_mentese_2_pem_b",
+      "source_triangles": 156,
+      "replay_exact": true
+    },
+    {
+      "part": "onyuz_kapak_K_mentese_2_sabit",
+      "source_triangles": 116,
+      "replay_exact": true
+    },
+    {
+      "part": "onyuz_kapak_K_mentese_2_sabit_vida_a",
+      "source_triangles": 220,
+      "replay_exact": true
+    },
+    {
+      "part": "onyuz_kapak_K_mentese_2_sabit_vida_b",
+      "source_triangles": 220,
+      "replay_exact": true
+    },
+    {
+      "part": "onyuz_kayit_140_-800",
+      "source_triangles": 160,
+      "replay_exact": true
+    },
+    {
+      "part": "onyuz_kayit_140_42",
+      "source_triangles": 160,
+      "replay_exact": true
+    },
+    {
+      "part": "onyuz_kayit_1840_-800",
+      "source_triangles": 160,
+      "replay_exact": true
+    },
+    {
+      "part": "onyuz_kayit_1840_42",
+      "source_triangles": 160,
+      "replay_exact": true
+    },
+    {
+      "part": "onyuz_kayit_kaynak_alt_-800_35_0",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "onyuz_kayit_kaynak_alt_-800_365_0",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "onyuz_kayit_kaynak_alt_42_35_0",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "onyuz_kayit_kaynak_alt_42_365_0",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "onyuz_kayit_kaynak_ust_-800_35_0",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "onyuz_kayit_kaynak_ust_-800_365_0",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "onyuz_kayit_kaynak_ust_42_35_0",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "onyuz_kayit_kaynak_ust_42_365_0",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "pano_ara_burcu_0",
+      "source_triangles": 48,
+      "replay_exact": true
+    },
+    {
+      "part": "pano_ara_burcu_1",
+      "source_triangles": 48,
+      "replay_exact": true
+    },
+    {
+      "part": "pano_ara_burcu_2",
+      "source_triangles": 48,
+      "replay_exact": true
+    },
+    {
+      "part": "pano_ara_burcu_3",
+      "source_triangles": 48,
+      "replay_exact": true
+    },
+    {
+      "part": "pano_plakasi",
+      "source_triangles": 12,
+      "replay_exact": true
+    },
+    {
+      "part": "plc_S7-1200_1214C",
+      "source_triangles": 12,
+      "replay_exact": true
+    },
+    {
+      "part": "plc_tarti_modulu_SIWAREX_WP231",
+      "source_triangles": 12,
+      "replay_exact": true
+    },
+    {
+      "part": "sag_sac_E_penceresi",
+      "source_triangles": 1456,
+      "replay_exact": true
+    },
+    {
+      "part": "sartlandirici_AW20-F02-A",
+      "source_triangles": 168,
+      "replay_exact": true
+    },
+    {
+      "part": "sartlandirici_braketi",
+      "source_triangles": 12,
+      "replay_exact": true
+    },
+    {
+      "part": "sigorta_C10",
+      "source_triangles": 12,
+      "replay_exact": true
+    },
+    {
+      "part": "sol_sac_urun_girisi",
+      "source_triangles": 1744,
+      "replay_exact": true
+    },
+    {
+      "part": "taban_sac_3",
+      "source_triangles": 2620,
+      "replay_exact": true
+    },
+    {
+      "part": "taban_sac_dikis_kaynagi_-800_110",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "taban_sac_dikis_kaynagi_-800_200",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "taban_sac_dikis_kaynagi_-800_290",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "taban_sac_dikis_kaynagi_42_110",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "taban_sac_dikis_kaynagi_42_200",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "taban_sac_dikis_kaynagi_42_290",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "taban_sac_dikis_kaynagi_x20_-160",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "taban_sac_dikis_kaynagi_x20_-380",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "taban_sac_dikis_kaynagi_x20_-600",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "taban_sac_dikis_kaynagi_x380_-160",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "taban_sac_dikis_kaynagi_x380_-380",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "taban_sac_dikis_kaynagi_x380_-600",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "taban_sac_tasiyici_20",
+      "source_triangles": 332,
+      "replay_exact": true
+    },
+    {
+      "part": "taban_sac_tasiyici_20_kovan_480",
+      "source_triangles": 104,
+      "replay_exact": true
+    },
+    {
+      "part": "taban_sac_tasiyici_20_kovan_570",
+      "source_triangles": 104,
+      "replay_exact": true
+    },
+    {
+      "part": "taban_sac_tasiyici_20_kovan_kaynagi_480",
+      "source_triangles": 104,
+      "replay_exact": true
+    },
+    {
+      "part": "taban_sac_tasiyici_20_kovan_kaynagi_570",
+      "source_triangles": 104,
+      "replay_exact": true
+    },
+    {
+      "part": "taban_sac_tasiyici_380",
+      "source_triangles": 160,
+      "replay_exact": true
+    },
+    {
+      "part": "taban_sac_tasiyici_kaynak_20_-785_0",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "taban_sac_tasiyici_kaynak_20_27_0",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "taban_sac_tasiyici_kaynak_380_-785_0",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "taban_sac_tasiyici_kaynak_380_27_0",
+      "source_triangles": 8,
+      "replay_exact": true
+    },
+    {
+      "part": "tahrik_rulosu_EC5000_354",
+      "source_triangles": 48,
+      "replay_exact": true
+    },
+    {
+      "part": "tahrik_rulosu_EC5000_M8_civata",
+      "source_triangles": 100,
+      "replay_exact": true
+    },
+    {
+      "part": "tahrik_rulosu_EC5000_hex_mil",
+      "source_triangles": 20,
+      "replay_exact": true
+    },
+    {
+      "part": "tahrik_rulosu_EC5000_kablo",
+      "source_triangles": 48,
+      "replay_exact": true
+    },
+    {
+      "part": "urun_sensoru_durus_alici",
+      "source_triangles": 12,
+      "replay_exact": true
+    },
+    {
+      "part": "urun_sensoru_durus_braket_0",
+      "source_triangles": 20,
+      "replay_exact": true
+    },
+    {
+      "part": "urun_sensoru_durus_braket_1",
+      "source_triangles": 20,
+      "replay_exact": true
+    },
+    {
+      "part": "urun_sensoru_durus_verici",
+      "source_triangles": 12,
+      "replay_exact": true
+    },
+    {
+      "part": "urun_sensoru_giris_alici",
+      "source_triangles": 12,
+      "replay_exact": true
+    },
+    {
+      "part": "urun_sensoru_giris_braket_0",
+      "source_triangles": 20,
+      "replay_exact": true
+    },
+    {
+      "part": "urun_sensoru_giris_braket_1",
+      "source_triangles": 20,
+      "replay_exact": true
+    },
+    {
+      "part": "urun_sensoru_giris_verici",
+      "source_triangles": 12,
+      "replay_exact": true
+    },
+    {
+      "part": "ust_sac",
+      "source_triangles": 2313,
+      "replay_exact": true
+    },
+    {
+      "part": "valf_SY3120_0",
+      "source_triangles": 14,
+      "replay_exact": true
+    },
+    {
+      "part": "valf_SY3120_0_rakor_0",
+      "source_triangles": 48,
+      "replay_exact": true
+    },
+    {
+      "part": "valf_SY3120_0_rakor_1",
+      "source_triangles": 48,
+      "replay_exact": true
+    },
+    {
+      "part": "valf_SY3120_1",
+      "source_triangles": 12,
+      "replay_exact": true
+    },
+    {
+      "part": "valf_SY3120_1_rakor_0",
+      "source_triangles": 48,
+      "replay_exact": true
+    },
+    {
+      "part": "valf_SY3120_1_rakor_1",
+      "source_triangles": 48,
+      "replay_exact": true
+    },
+    {
+      "part": "valf_SY3120_2",
+      "source_triangles": 10,
+      "replay_exact": true
+    },
+    {
+      "part": "valf_SY3120_2_rakor_0",
+      "source_triangles": 48,
+      "replay_exact": true
+    },
+    {
+      "part": "valf_SY3120_2_rakor_1",
+      "source_triangles": 48,
+      "replay_exact": true
+    },
+    {
+      "part": "valf_adasi_SS5Y3-20-04",
+      "source_triangles": 12,
+      "replay_exact": true
+    },
+    {
+      "part": "valf_kor_plaka",
+      "source_triangles": 12,
+      "replay_exact": true
+    },
+    {
+      "part": "yag_T_parcasi",
+      "source_triangles": 12,
+      "replay_exact": true
+    },
+    {
+      "part": "yag_basinc_hortumu_TLM1008",
+      "source_triangles": 294,
+      "replay_exact": true
+    },
+    {
+      "part": "yag_basinc_sensoru_PM1704",
+      "source_triangles": 48,
+      "replay_exact": true
+    },
+    {
+      "part": "yag_boru_T_regulator",
+      "source_triangles": 48,
+      "replay_exact": true
+    },
+    {
+      "part": "yag_boru_filtre_pompa",
+      "source_triangles": 48,
+      "replay_exact": true
+    },
+    {
+      "part": "yag_boru_pompa_T",
+      "source_triangles": 48,
+      "replay_exact": true
+    },
+    {
+      "part": "yag_damlama_tavasi_F",
+      "source_triangles": 420,
+      "replay_exact": true
+    },
+    {
+      "part": "yag_donus_hortumu_TLM0806",
+      "source_triangles": 299,
+      "replay_exact": true
+    },
+    {
+      "part": "yag_duvar_gecis_bilezigi_donus",
+      "source_triangles": 208,
+      "replay_exact": true
+    },
+    {
+      "part": "yag_duvar_gecis_bilezigi_emis",
+      "source_triangles": 208,
+      "replay_exact": true
+    },
+    {
+      "part": "yag_emis_filtresi",
+      "source_triangles": 48,
+      "replay_exact": true
+    },
+    {
+      "part": "yag_emis_hortumu_TLM1008",
+      "source_triangles": 505,
+      "replay_exact": true
+    },
+    {
+      "part": "yag_emme_lansi_1038304",
+      "source_triangles": 204,
+      "replay_exact": true
+    },
+    {
+      "part": "yag_geri_basinc_regulatoru_KBP",
+      "source_triangles": 48,
+      "replay_exact": true
+    },
+    {
+      "part": "yag_pompa_plakasi",
+      "source_triangles": 12,
+      "replay_exact": true
+    },
+    {
+      "part": "yag_pompa_rafi",
+      "source_triangles": 28,
+      "replay_exact": true
+    },
+    {
+      "part": "yag_pompa_rafi_kosebendi_sag",
+      "source_triangles": 20,
+      "replay_exact": true
+    },
+    {
+      "part": "yag_pompa_rafi_kosebendi_sol",
+      "source_triangles": 20,
+      "replay_exact": true
+    },
+    {
+      "part": "yag_pompasi_GJ-N21_EagleDrive",
+      "source_triangles": 12,
+      "replay_exact": true
+    },
+    {
+      "part": "yag_tarti_alt_takozu",
+      "source_triangles": 12,
+      "replay_exact": true
+    },
+    {
+      "part": "yag_tarti_platformu",
+      "source_triangles": 16,
+      "replay_exact": true
+    },
+    {
+      "part": "yag_tarti_taban_plakasi",
+      "source_triangles": 404,
+      "replay_exact": true
+    },
+    {
+      "part": "yag_tarti_ust_takozu",
+      "source_triangles": 12,
+      "replay_exact": true
+    },
+    {
+      "part": "yag_tarti_yuk_hucresi_PW15AH",
+      "source_triangles": 12,
+      "replay_exact": true
+    },
+    {
+      "part": "yag_tenekesi_18L",
+      "source_triangles": 128,
+      "replay_exact": true
+    }
+  ],
+  "source_face_multiset_preserved_exactly": true,
+  "current_labels_replay_exactly": true,
+  "geometry_modified": false,
+  "production_release": false
+}

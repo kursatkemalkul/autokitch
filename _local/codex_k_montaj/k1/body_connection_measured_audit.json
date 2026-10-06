@@ -1075,7 +1075,7 @@
         {
           "host": "ust_sac",
           "nominal_diameter_mm": 5.0,
-          "nearest_circular_surface_radius_error_mm": 6.838009437792891e-06,
+          "nearest_circular_surface_radius_error_mm": 0.00010000000020227162,
           "passed": true
         }
       ],
@@ -1663,8 +1663,8 @@
         {
           "host": "ust_sac",
           "nominal_diameter_mm": 5.5,
-          "nearest_circular_surface_radius_error_mm": 0.0,
-          "passed": true
+          "nearest_circular_surface_radius_error_mm": null,
+          "passed": false
         },
         {
           "host": "arka_sac",
@@ -1673,7 +1673,7 @@
           "passed": true
         }
       ],
-      "passed": true
+      "passed": false
     },
     {
       "id": "govde_bag_arka_ust_360",
@@ -1717,8 +1717,8 @@
         {
           "host": "ust_sac",
           "nominal_diameter_mm": 5.5,
-          "nearest_circular_surface_radius_error_mm": 1.8181816052731392e-09,
-          "passed": true
+          "nearest_circular_surface_radius_error_mm": null,
+          "passed": false
         },
         {
           "host": "arka_sac",
@@ -1727,11 +1727,14 @@
           "passed": true
         }
       ],
-      "passed": true
+      "passed": false
     }
   ],
-  "passed": true,
+  "passed": false,
   "count": 32,
-  "unresolved": [],
+  "unresolved": [
+    "govde_bag_arka_ust_40",
+    "govde_bag_arka_ust_360"
+  ],
   "full_station_release": false
 }

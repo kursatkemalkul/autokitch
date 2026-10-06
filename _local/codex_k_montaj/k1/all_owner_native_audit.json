@@ -1,0 +1,32 @@
+{
+  "source_model_sha256": "5c08c6c90a0724360cdc3764a16a6955ea7023989915eb1f51b7c0bce5ad89f4",
+  "proposal_sha256": "dd192ed98603a474573abe54d9a2df738705599d5b6aed79392c267677acb708",
+  "source_triangle_multiset_unchanged": true,
+  "applied_changes": 96,
+  "registry_total": 9478,
+  "checks": [
+    {
+      "part": "cevre_F",
+      "status": "Error.NotManifold",
+      "volume_mm3": null
+    },
+    {
+      "part": "cevre_diger",
+      "status": "Error.NotManifold",
+      "volume_mm3": null
+    },
+    {
+      "part": "sag_sac_E_penceresi",
+      "status": "Error.NotManifold",
+      "volume_mm3": null
+    },
+    {
+      "part": "sol_sac_urun_girisi",
+      "status": "Error.NotManifold",
+      "volume_mm3": null
+    }
+  ],
+  "coincident_same_label_occurrences": [],
+  "geometry_changed": false,
+  "production_release": false
+}
