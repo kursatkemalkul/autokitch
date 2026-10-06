@@ -1,0 +1,678 @@
+{
+  "adim": 79,
+  "prototype": "two removable portal pump clamps; four M5x20 hold-downs; source-bound geometry only",
+  "parca": {
+    "k79_pompa_portal_0": {
+      "dugum": "K_YAG__sac",
+      "kutu": [
+        4111.0,
+        4114.0,
+        1647.5,
+        1734.8,
+        -574.05,
+        -477.95
+      ],
+      "tur": "sac",
+      "bom": [
+        "Sac k79_pompa_portal_0 \u00b7 AISI 304 t 3 \u00b7 0 b\u00fck\u00fcm (R 4.5, K 0.41) \u00b7 a\u00e7\u0131n\u0131m 96 \u00d7 87",
+        1,
+        "3.0 \u00d7 87.3 \u00d7 96.1",
+        "lazer + abkant \u00b7 0.04 kg",
+        "\u00dcRET\u0130M"
+      ]
+    },
+    "k79_pompa_ust_pad_0": {
+      "dugum": "K_GOVDE__conta",
+      "kutu": [
+        4111.0,
+        4114.0,
+        1724.8,
+        1726.7,
+        -554.05,
+        -485.95
+      ],
+      "tur": "mek",
+      "bom": [
+        "Our removable pump mounting",
+        1,
+        "EPDM1.9mm pad against unchanged pump upper surface",
+        "laser stock or declared pad \u00b7 EPDM food-compatible",
+        "\u00dcRET\u0130M"
+      ]
+    },
+    "k79_pompa_pad_yapistirici_0": {
+      "dugum": "K_GOVDE__conta",
+      "kutu": [
+        4111.0,
+        4114.0,
+        1726.7,
+        1726.8,
+        -554.05,
+        -485.95
+      ],
+      "tur": "silikon",
+      "bom": [
+        "Our removable pump mounting",
+        1,
+        "0.1mm silicone adhesive film retaining the compression pad",
+        "laser stock or declared pad \u00b7 food-compatible silicone",
+        "\u00dcRET\u0130M"
+      ]
+    },
+    "k79_pompa_ayak_0_on": {
+      "dugum": "K_YAG__sac",
+      "kutu": [
+        4103.0,
+        4122.0,
+        1644.5,
+        1647.5,
+        -590.0,
+        -567.05
+      ],
+      "tur": "sac",
+      "bom": [
+        "Our removable pump mounting",
+        1,
+        "3mm laser-cut clamp foot; M5 clearance5.5/countersink2.8",
+        "laser stock or declared pad \u00b7 AISI304",
+        "\u00dcRET\u0130M"
+      ]
+    },
+    "k79_pompa_M5_ara_plaka_0_on": {
+      "dugum": "K_YAG__sac",
+      "kutu": [
+        4106.5,
+        4118.5,
+        1635.5,
+        1638.5,
+        -587.0,
+        -575.0
+      ],
+      "tur": "sac",
+      "bom": [
+        "Our removable pump mounting",
+        1,
+        "12x12x3; catalog-length mounting stack",
+        "laser stock or declared pad \u00b7 AISI304",
+        "\u00dcRET\u0130M"
+      ]
+    },
+    "k79_pompa_M5x20_0_on": {
+      "dugum": "K_GOVDE__celik",
+      "kutu": [
+        4107.5,
+        4117.5,
+        1627.5,
+        1647.5,
+        -586.0,
+        -576.0
+      ],
+      "tur": "baglanti",
+      "bom": [
+        "Hav\u015fa ba\u015fl\u0131 imbus vida M5\u00d720",
+        1,
+        "M5\u00d720",
+        "DIN 7991 / ISO 10642 \u00b7 A2-70",
+        "SATIN ALMA"
+      ]
+    },
+    "k79_pompa_M5_pul_0_on": {
+      "dugum": "K_GOVDE__celik",
+      "kutu": [
+        4107.5,
+        4117.5,
+        1634.5,
+        1635.5,
+        -586.0,
+        -576.0
+      ],
+      "tur": "baglanti",
+      "bom": [
+        "D\u00fcz pul M5",
+        1,
+        "5.3/10\u00d71",
+        "DIN 125-A / ISO 7089 \u00b7 A2",
+        "SATIN ALMA"
+      ]
+    },
+    "k79_pompa_M5_somun_0_on": {
+      "dugum": "K_GOVDE__celik",
+      "kutu": [
+        4108.5,
+        4116.5,
+        1629.5,
+        1634.5,
+        -585.618802153517,
+        -576.381197846483
+      ],
+      "tur": "baglanti",
+      "bom": [
+        "Fiberli (naylon halkal\u0131) somun M5",
+        1,
+        "M5 s8 m5",
+        "ISO 10511 \u00b7 A2",
+        "SATIN ALMA"
+      ]
+    },
+    "k79_pompa_ayak_kaynagi_0_on_sol": {
+      "dugum": "K_BANT__sac",
+      "kutu": [
+        4109.5,
+        4111.0,
+        1647.5,
+        1649.0,
+        -574.05,
+        -568.05
+      ],
+      "tur": "kaynak",
+      "bom": [
+        "K\u00f6\u015fe kaynak diki\u015fi \u00b7 TIG 141 \u00b7 dolgu ER308LSi \u00b7 a 1.5",
+        1,
+        "6 mm",
+        "ic TIG141 ER308LSi; own portal-to-foot seam, tool/fixture gate remains open",
+        "\u00dcRET\u0130M"
+      ]
+    },
+    "k79_pompa_ayak_kaynagi_0_on_sag": {
+      "dugum": "K_BANT__sac",
+      "kutu": [
+        4114.0,
+        4115.5,
+        1647.5,
+        1649.0,
+        -574.05,
+        -568.05
+      ],
+      "tur": "kaynak",
+      "bom": [
+        "K\u00f6\u015fe kaynak diki\u015fi \u00b7 TIG 141 \u00b7 dolgu ER308LSi \u00b7 a 1.5",
+        1,
+        "6 mm",
+        "ic TIG141 ER308LSi; own portal-to-foot seam, tool/fixture gate remains open",
+        "\u00dcRET\u0130M"
+      ]
+    },
+    "k79_pompa_ayak_0_arka": {
+      "dugum": "K_YAG__sac",
+      "kutu": [
+        4103.0,
+        4122.0,
+        1644.5,
+        1647.5,
+        -484.95,
+        -460.0
+      ],
+      "tur": "sac",
+      "bom": [
+        "Our removable pump mounting",
+        1,
+        "3mm laser-cut clamp foot; M5 clearance5.5/countersink2.8",
+        "laser stock or declared pad \u00b7 AISI304",
+        "\u00dcRET\u0130M"
+      ]
+    },
+    "k79_pompa_M5_ara_plaka_0_arka": {
+      "dugum": "K_YAG__sac",
+      "kutu": [
+        4106.5,
+        4118.5,
+        1635.5,
+        1638.5,
+        -474.0,
+        -462.0
+      ],
+      "tur": "sac",
+      "bom": [
+        "Our removable pump mounting",
+        1,
+        "12x12x3; catalog-length mounting stack",
+        "laser stock or declared pad \u00b7 AISI304",
+        "\u00dcRET\u0130M"
+      ]
+    },
+    "k79_pompa_M5x20_0_arka": {
+      "dugum": "K_GOVDE__celik",
+      "kutu": [
+        4107.5,
+        4117.5,
+        1627.5,
+        1647.5,
+        -473.0,
+        -463.0
+      ],
+      "tur": "baglanti",
+      "bom": [
+        "Hav\u015fa ba\u015fl\u0131 imbus vida M5\u00d720",
+        1,
+        "M5\u00d720",
+        "DIN 7991 / ISO 10642 \u00b7 A2-70",
+        "SATIN ALMA"
+      ]
+    },
+    "k79_pompa_M5_pul_0_arka": {
+      "dugum": "K_GOVDE__celik",
+      "kutu": [
+        4107.5,
+        4117.5,
+        1634.5,
+        1635.5,
+        -473.0,
+        -463.0
+      ],
+      "tur": "baglanti",
+      "bom": [
+        "D\u00fcz pul M5",
+        1,
+        "5.3/10\u00d71",
+        "DIN 125-A / ISO 7089 \u00b7 A2",
+        "SATIN ALMA"
+      ]
+    },
+    "k79_pompa_M5_somun_0_arka": {
+      "dugum": "K_GOVDE__celik",
+      "kutu": [
+        4108.5,
+        4116.5,
+        1629.5,
+        1634.5,
+        -472.618802153517,
+        -463.381197846483
+      ],
+      "tur": "baglanti",
+      "bom": [
+        "Fiberli (naylon halkal\u0131) somun M5",
+        1,
+        "M5 s8 m5",
+        "ISO 10511 \u00b7 A2",
+        "SATIN ALMA"
+      ]
+    },
+    "k79_pompa_ayak_kaynagi_0_arka_sol": {
+      "dugum": "K_BANT__sac",
+      "kutu": [
+        4109.5,
+        4111.0,
+        1647.5,
+        1649.0,
+        -483.95,
+        -477.95
+      ],
+      "tur": "kaynak",
+      "bom": [
+        "K\u00f6\u015fe kaynak diki\u015fi \u00b7 TIG 141 \u00b7 dolgu ER308LSi \u00b7 a 1.5",
+        1,
+        "6 mm",
+        "ic TIG141 ER308LSi; own portal-to-foot seam, tool/fixture gate remains open",
+        "\u00dcRET\u0130M"
+      ]
+    },
+    "k79_pompa_ayak_kaynagi_0_arka_sag": {
+      "dugum": "K_BANT__sac",
+      "kutu": [
+        4114.0,
+        4115.5,
+        1647.5,
+        1649.0,
+        -483.95,
+        -477.95
+      ],
+      "tur": "kaynak",
+      "bom": [
+        "K\u00f6\u015fe kaynak diki\u015fi \u00b7 TIG 141 \u00b7 dolgu ER308LSi \u00b7 a 1.5",
+        1,
+        "6 mm",
+        "ic TIG141 ER308LSi; own portal-to-foot seam, tool/fixture gate remains open",
+        "\u00dcRET\u0130M"
+      ]
+    },
+    "k79_pompa_portal_1": {
+      "dugum": "K_YAG__sac",
+      "kutu": [
+        4186.0,
+        4189.0,
+        1647.5,
+        1734.8,
+        -574.05,
+        -477.95
+      ],
+      "tur": "sac",
+      "bom": [
+        "Sac k79_pompa_portal_1 \u00b7 AISI 304 t 3 \u00b7 0 b\u00fck\u00fcm (R 4.5, K 0.41) \u00b7 a\u00e7\u0131n\u0131m 96 \u00d7 87",
+        1,
+        "3.0 \u00d7 87.3 \u00d7 96.1",
+        "lazer + abkant \u00b7 0.04 kg",
+        "\u00dcRET\u0130M"
+      ]
+    },
+    "k79_pompa_ust_pad_1": {
+      "dugum": "K_GOVDE__conta",
+      "kutu": [
+        4186.0,
+        4189.0,
+        1724.8,
+        1726.7,
+        -554.05,
+        -485.95
+      ],
+      "tur": "mek",
+      "bom": [
+        "Our removable pump mounting",
+        1,
+        "EPDM1.9mm pad against unchanged pump upper surface",
+        "laser stock or declared pad \u00b7 EPDM food-compatible",
+        "\u00dcRET\u0130M"
+      ]
+    },
+    "k79_pompa_pad_yapistirici_1": {
+      "dugum": "K_GOVDE__conta",
+      "kutu": [
+        4186.0,
+        4189.0,
+        1726.7,
+        1726.8,
+        -554.05,
+        -485.95
+      ],
+      "tur": "silikon",
+      "bom": [
+        "Our removable pump mounting",
+        1,
+        "0.1mm silicone adhesive film retaining the compression pad",
+        "laser stock or declared pad \u00b7 food-compatible silicone",
+        "\u00dcRET\u0130M"
+      ]
+    },
+    "k79_pompa_ayak_1_on": {
+      "dugum": "K_YAG__sac",
+      "kutu": [
+        4178.0,
+        4197.0,
+        1644.5,
+        1647.5,
+        -590.0,
+        -567.05
+      ],
+      "tur": "sac",
+      "bom": [
+        "Our removable pump mounting",
+        1,
+        "3mm laser-cut clamp foot; M5 clearance5.5/countersink2.8",
+        "laser stock or declared pad \u00b7 AISI304",
+        "\u00dcRET\u0130M"
+      ]
+    },
+    "k79_pompa_M5_ara_plaka_1_on": {
+      "dugum": "K_YAG__sac",
+      "kutu": [
+        4181.5,
+        4193.5,
+        1635.5,
+        1638.5,
+        -587.0,
+        -575.0
+      ],
+      "tur": "sac",
+      "bom": [
+        "Our removable pump mounting",
+        1,
+        "12x12x3; catalog-length mounting stack",
+        "laser stock or declared pad \u00b7 AISI304",
+        "\u00dcRET\u0130M"
+      ]
+    },
+    "k79_pompa_M5x20_1_on": {
+      "dugum": "K_GOVDE__celik",
+      "kutu": [
+        4182.5,
+        4192.5,
+        1627.5,
+        1647.5,
+        -586.0,
+        -576.0
+      ],
+      "tur": "baglanti",
+      "bom": [
+        "Hav\u015fa ba\u015fl\u0131 imbus vida M5\u00d720",
+        1,
+        "M5\u00d720",
+        "DIN 7991 / ISO 10642 \u00b7 A2-70",
+        "SATIN ALMA"
+      ]
+    },
+    "k79_pompa_M5_pul_1_on": {
+      "dugum": "K_GOVDE__celik",
+      "kutu": [
+        4182.5,
+        4192.5,
+        1634.5,
+        1635.5,
+        -586.0,
+        -576.0
+      ],
+      "tur": "baglanti",
+      "bom": [
+        "D\u00fcz pul M5",
+        1,
+        "5.3/10\u00d71",
+        "DIN 125-A / ISO 7089 \u00b7 A2",
+        "SATIN ALMA"
+      ]
+    },
+    "k79_pompa_M5_somun_1_on": {
+      "dugum": "K_GOVDE__celik",
+      "kutu": [
+        4183.5,
+        4191.5,
+        1629.5,
+        1634.5,
+        -585.618802153517,
+        -576.381197846483
+      ],
+      "tur": "baglanti",
+      "bom": [
+        "Fiberli (naylon halkal\u0131) somun M5",
+        1,
+        "M5 s8 m5",
+        "ISO 10511 \u00b7 A2",
+        "SATIN ALMA"
+      ]
+    },
+    "k79_pompa_ayak_kaynagi_1_on_sol": {
+      "dugum": "K_BANT__sac",
+      "kutu": [
+        4184.5,
+        4186.0,
+        1647.5,
+        1649.0,
+        -574.05,
+        -568.05
+      ],
+      "tur": "kaynak",
+      "bom": [
+        "K\u00f6\u015fe kaynak diki\u015fi \u00b7 TIG 141 \u00b7 dolgu ER308LSi \u00b7 a 1.5",
+        1,
+        "6 mm",
+        "ic TIG141 ER308LSi; own portal-to-foot seam, tool/fixture gate remains open",
+        "\u00dcRET\u0130M"
+      ]
+    },
+    "k79_pompa_ayak_kaynagi_1_on_sag": {
+      "dugum": "K_BANT__sac",
+      "kutu": [
+        4189.0,
+        4190.5,
+        1647.5,
+        1649.0,
+        -574.05,
+        -568.05
+      ],
+      "tur": "kaynak",
+      "bom": [
+        "K\u00f6\u015fe kaynak diki\u015fi \u00b7 TIG 141 \u00b7 dolgu ER308LSi \u00b7 a 1.5",
+        1,
+        "6 mm",
+        "ic TIG141 ER308LSi; own portal-to-foot seam, tool/fixture gate remains open",
+        "\u00dcRET\u0130M"
+      ]
+    },
+    "k79_pompa_ayak_1_arka": {
+      "dugum": "K_YAG__sac",
+      "kutu": [
+        4178.0,
+        4197.0,
+        1644.5,
+        1647.5,
+        -484.95,
+        -460.0
+      ],
+      "tur": "sac",
+      "bom": [
+        "Our removable pump mounting",
+        1,
+        "3mm laser-cut clamp foot; M5 clearance5.5/countersink2.8",
+        "laser stock or declared pad \u00b7 AISI304",
+        "\u00dcRET\u0130M"
+      ]
+    },
+    "k79_pompa_M5_ara_plaka_1_arka": {
+      "dugum": "K_YAG__sac",
+      "kutu": [
+        4181.5,
+        4193.5,
+        1635.5,
+        1638.5,
+        -474.0,
+        -462.0
+      ],
+      "tur": "sac",
+      "bom": [
+        "Our removable pump mounting",
+        1,
+        "12x12x3; catalog-length mounting stack",
+        "laser stock or declared pad \u00b7 AISI304",
+        "\u00dcRET\u0130M"
+      ]
+    },
+    "k79_pompa_M5x20_1_arka": {
+      "dugum": "K_GOVDE__celik",
+      "kutu": [
+        4182.5,
+        4192.5,
+        1627.5,
+        1647.5,
+        -473.0,
+        -463.0
+      ],
+      "tur": "baglanti",
+      "bom": [
+        "Hav\u015fa ba\u015fl\u0131 imbus vida M5\u00d720",
+        1,
+        "M5\u00d720",
+        "DIN 7991 / ISO 10642 \u00b7 A2-70",
+        "SATIN ALMA"
+      ]
+    },
+    "k79_pompa_M5_pul_1_arka": {
+      "dugum": "K_GOVDE__celik",
+      "kutu": [
+        4182.5,
+        4192.5,
+        1634.5,
+        1635.5,
+        -473.0,
+        -463.0
+      ],
+      "tur": "baglanti",
+      "bom": [
+        "D\u00fcz pul M5",
+        1,
+        "5.3/10\u00d71",
+        "DIN 125-A / ISO 7089 \u00b7 A2",
+        "SATIN ALMA"
+      ]
+    },
+    "k79_pompa_M5_somun_1_arka": {
+      "dugum": "K_GOVDE__celik",
+      "kutu": [
+        4183.5,
+        4191.5,
+        1629.5,
+        1634.5,
+        -472.618802153517,
+        -463.381197846483
+      ],
+      "tur": "baglanti",
+      "bom": [
+        "Fiberli (naylon halkal\u0131) somun M5",
+        1,
+        "M5 s8 m5",
+        "ISO 10511 \u00b7 A2",
+        "SATIN ALMA"
+      ]
+    },
+    "k79_pompa_ayak_kaynagi_1_arka_sol": {
+      "dugum": "K_BANT__sac",
+      "kutu": [
+        4184.5,
+        4186.0,
+        1647.5,
+        1649.0,
+        -483.95,
+        -477.95
+      ],
+      "tur": "kaynak",
+      "bom": [
+        "K\u00f6\u015fe kaynak diki\u015fi \u00b7 TIG 141 \u00b7 dolgu ER308LSi \u00b7 a 1.5",
+        1,
+        "6 mm",
+        "ic TIG141 ER308LSi; own portal-to-foot seam, tool/fixture gate remains open",
+        "\u00dcRET\u0130M"
+      ]
+    },
+    "k79_pompa_ayak_kaynagi_1_arka_sag": {
+      "dugum": "K_BANT__sac",
+      "kutu": [
+        4189.0,
+        4190.5,
+        1647.5,
+        1649.0,
+        -483.95,
+        -477.95
+      ],
+      "tur": "kaynak",
+      "bom": [
+        "K\u00f6\u015fe kaynak diki\u015fi \u00b7 TIG 141 \u00b7 dolgu ER308LSi \u00b7 a 1.5",
+        1,
+        "6 mm",
+        "ic TIG141 ER308LSi; own portal-to-foot seam, tool/fixture gate remains open",
+        "\u00dcRET\u0130M"
+      ]
+    },
+    "yag_pompa_rafi": {
+      "dugum": "K_YAG__sac",
+      "kutu": [
+        4004.4998931884766,
+        4395.500198364258,
+        1638.5,
+        1641.5,
+        -600.0,
+        -438.0
+      ],
+      "tur": "sac",
+      "bom": null
+    },
+    "yag_pompa_plakasi": {
+      "dugum": "K_YAG__sac",
+      "kutu": [
+        4040.0,
+        4360.000106811523,
+        1641.5,
+        1644.5,
+        -600.0,
+        -440.0
+      ],
+      "tur": "sac",
+      "bom": null
+    }
+  }
+}

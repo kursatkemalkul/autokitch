@@ -1,0 +1,993 @@
+{
+  "source_model_sha256": "1851b125e39994864f88451e1c9f72eb5c1b56800cbf9f72cd9e86c2bb4c00e8",
+  "source_parts_sha256": "67844120cd00b49858703bcf1cb4a4b8e2c36d8d7830dfe1499e1438a59a04c4",
+  "joins": [
+    {
+      "id": "0_on",
+      "portal": "k79_pompa_portal_0",
+      "foot": "k79_pompa_ayak_0_on",
+      "shim": "k79_pompa_M5_ara_plaka_0_on",
+      "seams": [
+        "k79_pompa_ayak_kaynagi_0_on_sol",
+        "k79_pompa_ayak_kaynagi_0_on_sag"
+      ],
+      "screw": "k79_pompa_M5x20_0_on",
+      "washer": "k79_pompa_M5_pul_0_on",
+      "nut": "k79_pompa_M5_somun_0_on",
+      "center_mm": [
+        4112.5,
+        1647.5,
+        -581.0
+      ],
+      "axis": [
+        0,
+        -1,
+        0
+      ],
+      "engagement_mm": 5.0,
+      "pitch_mm": 0.8,
+      "protrusion_mm": 2.0,
+      "passed_stack": true,
+      "tool_checked": false
+    },
+    {
+      "id": "0_arka",
+      "portal": "k79_pompa_portal_0",
+      "foot": "k79_pompa_ayak_0_arka",
+      "shim": "k79_pompa_M5_ara_plaka_0_arka",
+      "seams": [
+        "k79_pompa_ayak_kaynagi_0_arka_sol",
+        "k79_pompa_ayak_kaynagi_0_arka_sag"
+      ],
+      "screw": "k79_pompa_M5x20_0_arka",
+      "washer": "k79_pompa_M5_pul_0_arka",
+      "nut": "k79_pompa_M5_somun_0_arka",
+      "center_mm": [
+        4112.5,
+        1647.5,
+        -468.0
+      ],
+      "axis": [
+        0,
+        -1,
+        0
+      ],
+      "engagement_mm": 5.0,
+      "pitch_mm": 0.8,
+      "protrusion_mm": 2.0,
+      "passed_stack": true,
+      "tool_checked": false
+    },
+    {
+      "id": "1_on",
+      "portal": "k79_pompa_portal_1",
+      "foot": "k79_pompa_ayak_1_on",
+      "shim": "k79_pompa_M5_ara_plaka_1_on",
+      "seams": [
+        "k79_pompa_ayak_kaynagi_1_on_sol",
+        "k79_pompa_ayak_kaynagi_1_on_sag"
+      ],
+      "screw": "k79_pompa_M5x20_1_on",
+      "washer": "k79_pompa_M5_pul_1_on",
+      "nut": "k79_pompa_M5_somun_1_on",
+      "center_mm": [
+        4187.5,
+        1647.5,
+        -581.0
+      ],
+      "axis": [
+        0,
+        -1,
+        0
+      ],
+      "engagement_mm": 5.0,
+      "pitch_mm": 0.8,
+      "protrusion_mm": 2.0,
+      "passed_stack": true,
+      "tool_checked": false
+    },
+    {
+      "id": "1_arka",
+      "portal": "k79_pompa_portal_1",
+      "foot": "k79_pompa_ayak_1_arka",
+      "shim": "k79_pompa_M5_ara_plaka_1_arka",
+      "seams": [
+        "k79_pompa_ayak_kaynagi_1_arka_sol",
+        "k79_pompa_ayak_kaynagi_1_arka_sag"
+      ],
+      "screw": "k79_pompa_M5x20_1_arka",
+      "washer": "k79_pompa_M5_pul_1_arka",
+      "nut": "k79_pompa_M5_somun_1_arka",
+      "center_mm": [
+        4187.5,
+        1647.5,
+        -468.0
+      ],
+      "axis": [
+        0,
+        -1,
+        0
+      ],
+      "engagement_mm": 5.0,
+      "pitch_mm": 0.8,
+      "protrusion_mm": 2.0,
+      "passed_stack": true,
+      "tool_checked": false
+    }
+  ],
+  "new_parts": [
+    "k79_pompa_portal_0",
+    "k79_pompa_ust_pad_0",
+    "k79_pompa_pad_yapistirici_0",
+    "k79_pompa_ayak_0_on",
+    "k79_pompa_M5_ara_plaka_0_on",
+    "k79_pompa_M5x20_0_on",
+    "k79_pompa_M5_pul_0_on",
+    "k79_pompa_M5_somun_0_on",
+    "k79_pompa_ayak_kaynagi_0_on_sol",
+    "k79_pompa_ayak_kaynagi_0_on_sag",
+    "k79_pompa_ayak_0_arka",
+    "k79_pompa_M5_ara_plaka_0_arka",
+    "k79_pompa_M5x20_0_arka",
+    "k79_pompa_M5_pul_0_arka",
+    "k79_pompa_M5_somun_0_arka",
+    "k79_pompa_ayak_kaynagi_0_arka_sol",
+    "k79_pompa_ayak_kaynagi_0_arka_sag",
+    "k79_pompa_portal_1",
+    "k79_pompa_ust_pad_1",
+    "k79_pompa_pad_yapistirici_1",
+    "k79_pompa_ayak_1_on",
+    "k79_pompa_M5_ara_plaka_1_on",
+    "k79_pompa_M5x20_1_on",
+    "k79_pompa_M5_pul_1_on",
+    "k79_pompa_M5_somun_1_on",
+    "k79_pompa_ayak_kaynagi_1_on_sol",
+    "k79_pompa_ayak_kaynagi_1_on_sag",
+    "k79_pompa_ayak_1_arka",
+    "k79_pompa_M5_ara_plaka_1_arka",
+    "k79_pompa_M5x20_1_arka",
+    "k79_pompa_M5_pul_1_arka",
+    "k79_pompa_M5_somun_1_arka",
+    "k79_pompa_ayak_kaynagi_1_arka_sol",
+    "k79_pompa_ayak_kaynagi_1_arka_sag"
+  ],
+  "source_clashes": [],
+  "own_clashes": [],
+  "surface_checks": [
+    {
+      "a": "k79_pompa_portal_0",
+      "source": "elk_k_tarti_kablo_sinyal_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_portal_0",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_portal_0",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_ust_pad_0",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_ust_pad_0",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_pad_yapistirici_0",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_pad_yapistirici_0",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_ayak_0_on",
+      "source": "elk_k_tarti_kablo_sinyal_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_ayak_0_on",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_ayak_0_on",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5_ara_plaka_0_on",
+      "source": "elk_k_tarti_kablo_sinyal_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5_ara_plaka_0_on",
+      "source": "elk_k_kablo_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5_ara_plaka_0_on",
+      "source": "elk_k_kablo_sinyal_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5_ara_plaka_0_on",
+      "source": "elk_k_kablo_sinyal_1",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5_ara_plaka_0_on",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5_ara_plaka_0_on",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5x20_0_on",
+      "source": "elk_k_tarti_kablo_sinyal_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5x20_0_on",
+      "source": "elk_k_kablo_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5x20_0_on",
+      "source": "elk_k_kablo_sinyal_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5x20_0_on",
+      "source": "elk_k_kablo_sinyal_1",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5x20_0_on",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5x20_0_on",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5_pul_0_on",
+      "source": "elk_k_tarti_kablo_sinyal_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5_pul_0_on",
+      "source": "elk_k_kablo_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5_pul_0_on",
+      "source": "elk_k_kablo_sinyal_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5_pul_0_on",
+      "source": "elk_k_kablo_sinyal_1",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5_pul_0_on",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5_pul_0_on",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5_somun_0_on",
+      "source": "elk_k_tarti_kablo_sinyal_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5_somun_0_on",
+      "source": "elk_k_kablo_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5_somun_0_on",
+      "source": "elk_k_kablo_sinyal_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5_somun_0_on",
+      "source": "elk_k_kablo_sinyal_1",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5_somun_0_on",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5_somun_0_on",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_ayak_kaynagi_0_on_sol",
+      "source": "elk_k_tarti_kablo_sinyal_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_ayak_kaynagi_0_on_sol",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_ayak_kaynagi_0_on_sol",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_ayak_kaynagi_0_on_sag",
+      "source": "elk_k_tarti_kablo_sinyal_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_ayak_kaynagi_0_on_sag",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_ayak_kaynagi_0_on_sag",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_ayak_0_arka",
+      "source": "elk_k_tarti_kablo_sinyal_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_ayak_0_arka",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_ayak_0_arka",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5_ara_plaka_0_arka",
+      "source": "elk_k_tarti_kablo_sinyal_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5_ara_plaka_0_arka",
+      "source": "elk_k_kablo_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5_ara_plaka_0_arka",
+      "source": "elk_k_kablo_sinyal_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5_ara_plaka_0_arka",
+      "source": "elk_k_kablo_sinyal_1",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5_ara_plaka_0_arka",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5_ara_plaka_0_arka",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5x20_0_arka",
+      "source": "elk_k_tarti_kablo_sinyal_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5x20_0_arka",
+      "source": "elk_k_kablo_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5x20_0_arka",
+      "source": "elk_k_kablo_sinyal_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5x20_0_arka",
+      "source": "elk_k_kablo_sinyal_1",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5x20_0_arka",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5x20_0_arka",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5_pul_0_arka",
+      "source": "elk_k_tarti_kablo_sinyal_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5_pul_0_arka",
+      "source": "elk_k_kablo_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5_pul_0_arka",
+      "source": "elk_k_kablo_sinyal_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5_pul_0_arka",
+      "source": "elk_k_kablo_sinyal_1",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5_pul_0_arka",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5_pul_0_arka",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5_somun_0_arka",
+      "source": "elk_k_tarti_kablo_sinyal_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5_somun_0_arka",
+      "source": "elk_k_kablo_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5_somun_0_arka",
+      "source": "elk_k_kablo_sinyal_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5_somun_0_arka",
+      "source": "elk_k_kablo_sinyal_1",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5_somun_0_arka",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5_somun_0_arka",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_ayak_kaynagi_0_arka_sol",
+      "source": "elk_k_tarti_kablo_sinyal_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_ayak_kaynagi_0_arka_sol",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_ayak_kaynagi_0_arka_sol",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_ayak_kaynagi_0_arka_sag",
+      "source": "elk_k_tarti_kablo_sinyal_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_ayak_kaynagi_0_arka_sag",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_ayak_kaynagi_0_arka_sag",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_portal_1",
+      "source": "elk_ic_kanal_2",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_portal_1",
+      "source": "elk_k_tarti_kablo_sinyal_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_portal_1",
+      "source": "elk_k_kablo_sinyal_2",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_portal_1",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_portal_1",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_ust_pad_1",
+      "source": "elk_ic_kanal_2",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_ust_pad_1",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_ust_pad_1",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_pad_yapistirici_1",
+      "source": "elk_ic_kanal_2",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_pad_yapistirici_1",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_pad_yapistirici_1",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_ayak_1_on",
+      "source": "elk_ic_kanal_2",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_ayak_1_on",
+      "source": "elk_k_tarti_kablo_sinyal_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_ayak_1_on",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_ayak_1_on",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5_ara_plaka_1_on",
+      "source": "elk_ic_kanal_2",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5_ara_plaka_1_on",
+      "source": "elk_k_tarti_kablo_sinyal_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5_ara_plaka_1_on",
+      "source": "elk_k_kablo_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5_ara_plaka_1_on",
+      "source": "elk_k_kablo_sinyal_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5_ara_plaka_1_on",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5_ara_plaka_1_on",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5x20_1_on",
+      "source": "elk_ic_kanal_2",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5x20_1_on",
+      "source": "elk_k_tarti_kablo_sinyal_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5x20_1_on",
+      "source": "elk_k_kablo_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5x20_1_on",
+      "source": "elk_k_kablo_sinyal_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5x20_1_on",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5x20_1_on",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5_pul_1_on",
+      "source": "elk_ic_kanal_2",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5_pul_1_on",
+      "source": "elk_k_tarti_kablo_sinyal_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5_pul_1_on",
+      "source": "elk_k_kablo_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5_pul_1_on",
+      "source": "elk_k_kablo_sinyal_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5_pul_1_on",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5_pul_1_on",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5_somun_1_on",
+      "source": "elk_ic_kanal_2",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5_somun_1_on",
+      "source": "elk_k_tarti_kablo_sinyal_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5_somun_1_on",
+      "source": "elk_k_kablo_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5_somun_1_on",
+      "source": "elk_k_kablo_sinyal_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5_somun_1_on",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5_somun_1_on",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_ayak_kaynagi_1_on_sol",
+      "source": "elk_ic_kanal_2",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_ayak_kaynagi_1_on_sol",
+      "source": "elk_k_tarti_kablo_sinyal_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_ayak_kaynagi_1_on_sol",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_ayak_kaynagi_1_on_sol",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_ayak_kaynagi_1_on_sag",
+      "source": "elk_ic_kanal_2",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_ayak_kaynagi_1_on_sag",
+      "source": "elk_k_tarti_kablo_sinyal_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_ayak_kaynagi_1_on_sag",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_ayak_kaynagi_1_on_sag",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_ayak_1_arka",
+      "source": "elk_ic_kanal_2",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_ayak_1_arka",
+      "source": "elk_k_tarti_kablo_sinyal_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_ayak_1_arka",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_ayak_1_arka",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5_ara_plaka_1_arka",
+      "source": "elk_ic_kanal_2",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5_ara_plaka_1_arka",
+      "source": "elk_k_tarti_kablo_sinyal_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5_ara_plaka_1_arka",
+      "source": "elk_k_kablo_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5_ara_plaka_1_arka",
+      "source": "elk_k_kablo_sinyal_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5_ara_plaka_1_arka",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5_ara_plaka_1_arka",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5x20_1_arka",
+      "source": "elk_ic_kanal_2",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5x20_1_arka",
+      "source": "elk_k_tarti_kablo_sinyal_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5x20_1_arka",
+      "source": "elk_k_kablo_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5x20_1_arka",
+      "source": "elk_k_kablo_sinyal_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5x20_1_arka",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5x20_1_arka",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5_pul_1_arka",
+      "source": "elk_ic_kanal_2",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5_pul_1_arka",
+      "source": "elk_k_tarti_kablo_sinyal_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5_pul_1_arka",
+      "source": "elk_k_kablo_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5_pul_1_arka",
+      "source": "elk_k_kablo_sinyal_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5_pul_1_arka",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5_pul_1_arka",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5_somun_1_arka",
+      "source": "elk_ic_kanal_2",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5_somun_1_arka",
+      "source": "elk_k_tarti_kablo_sinyal_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5_somun_1_arka",
+      "source": "elk_k_kablo_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5_somun_1_arka",
+      "source": "elk_k_kablo_sinyal_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5_somun_1_arka",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_M5_somun_1_arka",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_ayak_kaynagi_1_arka_sol",
+      "source": "elk_ic_kanal_2",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_ayak_kaynagi_1_arka_sol",
+      "source": "elk_k_tarti_kablo_sinyal_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_ayak_kaynagi_1_arka_sol",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_ayak_kaynagi_1_arka_sol",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_ayak_kaynagi_1_arka_sag",
+      "source": "elk_ic_kanal_2",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_ayak_kaynagi_1_arka_sag",
+      "source": "elk_k_tarti_kablo_sinyal_0",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_ayak_kaynagi_1_arka_sag",
+      "source": "cevre_F",
+      "crossing_pairs": 0
+    },
+    {
+      "a": "k79_pompa_ayak_kaynagi_1_arka_sag",
+      "source": "cevre_diger",
+      "crossing_pairs": 0
+    }
+  ],
+  "drilled_holes": [
+    {
+      "center_mm": [
+        4112.5,
+        1641.5,
+        -581.0
+      ],
+      "diameter_mm": 5.5,
+      "parts": [
+        "yag_pompa_rafi",
+        "yag_pompa_plakasi"
+      ]
+    },
+    {
+      "center_mm": [
+        4112.5,
+        1641.5,
+        -468.0
+      ],
+      "diameter_mm": 5.5,
+      "parts": [
+        "yag_pompa_rafi",
+        "yag_pompa_plakasi"
+      ]
+    },
+    {
+      "center_mm": [
+        4187.5,
+        1641.5,
+        -581.0
+      ],
+      "diameter_mm": 5.5,
+      "parts": [
+        "yag_pompa_rafi",
+        "yag_pompa_plakasi"
+      ]
+    },
+    {
+      "center_mm": [
+        4187.5,
+        1641.5,
+        -468.0
+      ],
+      "diameter_mm": 5.5,
+      "parts": [
+        "yag_pompa_rafi",
+        "yag_pompa_plakasi"
+      ]
+    }
+  ],
+  "supplier_pump_body_changed": false,
+  "passed_geometry_and_stacks": true,
+  "pad_force_and_material_approval_checked": false,
+  "manufacturing_release": false,
+  "production_release": false
+}

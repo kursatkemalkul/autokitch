@@ -1,0 +1,263 @@
+{
+  "step": 79,
+  "input_sha256": "a636ab79e1eb76aa72464791fda0abe9a857264599f18dcc77e6cd5274fc6323",
+  "payload_sha256": "7bd82a951c2ff08474195de19121f56055063f885acef71004984c59c37bf47b",
+  "output_sha256": "1851b125e39994864f88451e1c9f72eb5c1b56800cbf9f72cd9e86c2bb4c00e8",
+  "matched_source_triangles": {
+    "k79_bant_disli_plaka_kaynagi_4065_-421": 3272,
+    "k79_yag_raf_kose_kaynagi_sol": 8,
+    "k79_yag_raf_kose_kaynagi_sag": 8,
+    "k71_alt_pul_4060_379_-32.0": 408,
+    "k71_alt_saplama_4060_379_-32.0": 506,
+    "k71_alt_somun_4060_379_-32.0": 228,
+    "k79_yag_raf_FHP_M5x12_sol_0": 2516,
+    "k79_yag_raf_M5_pul_sol_0": 2016,
+    "k79_yag_raf_M5_somun_sol_0": 1032,
+    "k79_yag_raf_FHP_M5x12_sol_1": 2516,
+    "k79_yag_raf_M5_pul_sol_1": 2016,
+    "k79_yag_raf_M5_somun_sol_1": 1032,
+    "k79_yag_raf_FHP_M5x12_sol_2": 2516,
+    "k79_yag_raf_M5_pul_sol_2": 2016,
+    "k79_yag_raf_M5_somun_sol_2": 1032,
+    "k79_yag_raf_FHP_M5x12_sag_0": 2516,
+    "k79_yag_raf_M5_pul_sag_0": 2016,
+    "k79_yag_raf_M5_somun_sag_0": 1032,
+    "k79_yag_raf_FHP_M5x12_sag_1": 2516,
+    "k79_yag_raf_M5_pul_sag_1": 2016,
+    "k79_yag_raf_M5_somun_sag_1": 1032,
+    "k79_yag_raf_FHP_M5x12_sag_2": 2516,
+    "k79_yag_raf_M5_pul_sag_2": 2016,
+    "k79_yag_raf_M5_somun_sag_2": 1032,
+    "yag_pompa_rafi_kosebendi_sag": 3048,
+    "yag_pompa_rafi_kosebendi_sol": 3048,
+    "yag_pompa_rafi": 28,
+    "yag_pompa_plakasi": 12,
+    "k79_yag_raf_yatay_kosebent_sol": 12,
+    "k79_yag_raf_yatay_kosebent_sag": 12
+  },
+  "naming_grid_mm": 0.0001,
+  "maximum_naming_grid_adjustment_mm": 7.940531324180679e-05,
+  "repairs": [
+    {
+      "part": "k71_alt_pul_4060_379_-32.0",
+      "closed_status": "Error.NoError",
+      "maximum_declared_precision_adjustment_mm": 0.001,
+      "purpose": "Unchanged exact render template"
+    },
+    {
+      "part": "k71_alt_saplama_4060_379_-32.0",
+      "closed_status": "Error.NoError",
+      "maximum_declared_precision_adjustment_mm": 0.001,
+      "purpose": "Unchanged exact render template"
+    },
+    {
+      "part": "k71_alt_somun_4060_379_-32.0",
+      "closed_status": "Error.NoError",
+      "maximum_declared_precision_adjustment_mm": 0.001,
+      "purpose": "Unchanged exact render template"
+    },
+    {
+      "part": "k79_bant_disli_plaka_kaynagi_4065_-421",
+      "closed_status": "Error.NoError",
+      "maximum_declared_precision_adjustment_mm": 0.001,
+      "purpose": "Unchanged exact render template"
+    },
+    {
+      "part": "k79_yag_raf_FHP_M5x12_sag_0",
+      "closed_status": "Error.NoError",
+      "maximum_declared_precision_adjustment_mm": 0.001,
+      "purpose": "Replace own3mm bracket with drilled vertical leg; horizontal leg/seam added separately"
+    },
+    {
+      "part": "k79_yag_raf_FHP_M5x12_sag_1",
+      "closed_status": "Error.NoError",
+      "maximum_declared_precision_adjustment_mm": 0.001,
+      "purpose": "Replace own3mm bracket with drilled vertical leg; horizontal leg/seam added separately"
+    },
+    {
+      "part": "k79_yag_raf_FHP_M5x12_sag_2",
+      "closed_status": "Error.NoError",
+      "maximum_declared_precision_adjustment_mm": 0.001,
+      "purpose": "Replace own3mm bracket with drilled vertical leg; horizontal leg/seam added separately"
+    },
+    {
+      "part": "k79_yag_raf_FHP_M5x12_sol_0",
+      "closed_status": "Error.NoError",
+      "maximum_declared_precision_adjustment_mm": 0.001,
+      "purpose": "Replace own3mm bracket with drilled vertical leg; horizontal leg/seam added separately"
+    },
+    {
+      "part": "k79_yag_raf_FHP_M5x12_sol_1",
+      "closed_status": "Error.NoError",
+      "maximum_declared_precision_adjustment_mm": 0.001,
+      "purpose": "Replace own3mm bracket with drilled vertical leg; horizontal leg/seam added separately"
+    },
+    {
+      "part": "k79_yag_raf_FHP_M5x12_sol_2",
+      "closed_status": "Error.NoError",
+      "maximum_declared_precision_adjustment_mm": 0.001,
+      "purpose": "Replace own3mm bracket with drilled vertical leg; horizontal leg/seam added separately"
+    },
+    {
+      "part": "k79_yag_raf_M5_pul_sag_0",
+      "closed_status": "Error.NoError",
+      "maximum_declared_precision_adjustment_mm": 0.001,
+      "purpose": "Replace own3mm bracket with drilled vertical leg; horizontal leg/seam added separately"
+    },
+    {
+      "part": "k79_yag_raf_M5_pul_sag_1",
+      "closed_status": "Error.NoError",
+      "maximum_declared_precision_adjustment_mm": 0.001,
+      "purpose": "Replace own3mm bracket with drilled vertical leg; horizontal leg/seam added separately"
+    },
+    {
+      "part": "k79_yag_raf_M5_pul_sag_2",
+      "closed_status": "Error.NoError",
+      "maximum_declared_precision_adjustment_mm": 0.001,
+      "purpose": "Replace own3mm bracket with drilled vertical leg; horizontal leg/seam added separately"
+    },
+    {
+      "part": "k79_yag_raf_M5_pul_sol_0",
+      "closed_status": "Error.NoError",
+      "maximum_declared_precision_adjustment_mm": 0.001,
+      "purpose": "Replace own3mm bracket with drilled vertical leg; horizontal leg/seam added separately"
+    },
+    {
+      "part": "k79_yag_raf_M5_pul_sol_1",
+      "closed_status": "Error.NoError",
+      "maximum_declared_precision_adjustment_mm": 0.001,
+      "purpose": "Replace own3mm bracket with drilled vertical leg; horizontal leg/seam added separately"
+    },
+    {
+      "part": "k79_yag_raf_M5_pul_sol_2",
+      "closed_status": "Error.NoError",
+      "maximum_declared_precision_adjustment_mm": 0.001,
+      "purpose": "Replace own3mm bracket with drilled vertical leg; horizontal leg/seam added separately"
+    },
+    {
+      "part": "k79_yag_raf_M5_somun_sag_0",
+      "closed_status": "Error.NoError",
+      "maximum_declared_precision_adjustment_mm": 0.001,
+      "purpose": "Replace own3mm bracket with drilled vertical leg; horizontal leg/seam added separately"
+    },
+    {
+      "part": "k79_yag_raf_M5_somun_sag_1",
+      "closed_status": "Error.NoError",
+      "maximum_declared_precision_adjustment_mm": 0.001,
+      "purpose": "Replace own3mm bracket with drilled vertical leg; horizontal leg/seam added separately"
+    },
+    {
+      "part": "k79_yag_raf_M5_somun_sag_2",
+      "closed_status": "Error.NoError",
+      "maximum_declared_precision_adjustment_mm": 0.001,
+      "purpose": "Replace own3mm bracket with drilled vertical leg; horizontal leg/seam added separately"
+    },
+    {
+      "part": "k79_yag_raf_M5_somun_sol_0",
+      "closed_status": "Error.NoError",
+      "maximum_declared_precision_adjustment_mm": 0.001,
+      "purpose": "Replace own3mm bracket with drilled vertical leg; horizontal leg/seam added separately"
+    },
+    {
+      "part": "k79_yag_raf_M5_somun_sol_1",
+      "closed_status": "Error.NoError",
+      "maximum_declared_precision_adjustment_mm": 0.001,
+      "purpose": "Replace own3mm bracket with drilled vertical leg; horizontal leg/seam added separately"
+    },
+    {
+      "part": "k79_yag_raf_M5_somun_sol_2",
+      "closed_status": "Error.NoError",
+      "maximum_declared_precision_adjustment_mm": 0.001,
+      "purpose": "Replace own3mm bracket with drilled vertical leg; horizontal leg/seam added separately"
+    },
+    {
+      "part": "k79_yag_raf_kose_kaynagi_sag",
+      "closed_status": "Error.NoError",
+      "maximum_declared_precision_adjustment_mm": 0.001,
+      "purpose": "Replace own3mm bracket with drilled vertical leg; horizontal leg/seam added separately"
+    },
+    {
+      "part": "k79_yag_raf_kose_kaynagi_sol",
+      "closed_status": "Error.NoError",
+      "maximum_declared_precision_adjustment_mm": 0.001,
+      "purpose": "Replace own3mm bracket with drilled vertical leg; horizontal leg/seam added separately"
+    },
+    {
+      "part": "k79_yag_raf_yatay_kosebent_sag",
+      "closed_status": "Error.NoError",
+      "maximum_declared_precision_adjustment_mm": 0.001,
+      "purpose": "Replace own3mm bracket with drilled vertical leg; horizontal leg/seam added separately"
+    },
+    {
+      "part": "k79_yag_raf_yatay_kosebent_sol",
+      "closed_status": "Error.NoError",
+      "maximum_declared_precision_adjustment_mm": 0.001,
+      "purpose": "Replace own3mm bracket with drilled vertical leg; horizontal leg/seam added separately"
+    },
+    {
+      "part": "yag_pompa_plakasi",
+      "closed_status": "Error.NoError",
+      "maximum_declared_precision_adjustment_mm": 0.001,
+      "purpose": "Replace own3mm bracket with drilled vertical leg; horizontal leg/seam added separately"
+    },
+    {
+      "part": "yag_pompa_rafi",
+      "closed_status": "Error.NoError",
+      "maximum_declared_precision_adjustment_mm": 0.001,
+      "purpose": "Replace own3mm bracket with drilled vertical leg; horizontal leg/seam added separately"
+    },
+    {
+      "part": "yag_pompa_rafi_kosebendi_sag",
+      "closed_status": "Error.NoError",
+      "maximum_declared_precision_adjustment_mm": 0.001,
+      "purpose": "Replace own3mm bracket with drilled vertical leg; horizontal leg/seam added separately"
+    },
+    {
+      "part": "yag_pompa_rafi_kosebendi_sol",
+      "closed_status": "Error.NoError",
+      "maximum_declared_precision_adjustment_mm": 0.001,
+      "purpose": "Replace own3mm bracket with drilled vertical leg; horizontal leg/seam added separately"
+    }
+  ],
+  "source_labels_retained": true,
+  "source_interfaces_intended_unchanged": false,
+  "unrelated_geometry_audit_required": true,
+  "reextraction_required": true,
+  "production_release": false,
+  "added_parts": [
+    "k79_yag_M5_ara_plaka_raf_0",
+    "k79_yag_M5x16_raf_0",
+    "k79_yag_M5_pul_raf_0",
+    "k79_yag_M5_somun_raf_0",
+    "k79_yag_M5_ara_plaka_raf_1",
+    "k79_yag_M5x16_raf_1",
+    "k79_yag_M5_pul_raf_1",
+    "k79_yag_M5_somun_raf_1",
+    "k79_yag_M5_ara_plaka_raf_2",
+    "k79_yag_M5x16_raf_2",
+    "k79_yag_M5_pul_raf_2",
+    "k79_yag_M5_somun_raf_2",
+    "k79_yag_M5_ara_plaka_raf_3",
+    "k79_yag_M5x16_raf_3",
+    "k79_yag_M5_pul_raf_3",
+    "k79_yag_M5_somun_raf_3",
+    "k79_yag_M5_ara_plaka_plaka_4",
+    "k79_yag_M5x16_plaka_4",
+    "k79_yag_M5_pul_plaka_4",
+    "k79_yag_M5_somun_plaka_4",
+    "k79_yag_M5_ara_plaka_plaka_5",
+    "k79_yag_M5x16_plaka_5",
+    "k79_yag_M5_pul_plaka_5",
+    "k79_yag_M5_somun_plaka_5",
+    "k79_yag_M5_ara_plaka_plaka_6",
+    "k79_yag_M5x16_plaka_6",
+    "k79_yag_M5_pul_plaka_6",
+    "k79_yag_M5_somun_plaka_6",
+    "k79_yag_M5_ara_plaka_plaka_7",
+    "k79_yag_M5x16_plaka_7",
+    "k79_yag_M5_pul_plaka_7",
+    "k79_yag_M5_somun_plaka_7",
+    "k79_yag_raf_on_dayama",
+    "k79_yag_raf_on_dayama_kaynagi"
+  ]
+}

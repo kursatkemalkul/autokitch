@@ -1,0 +1,29 @@
+{
+  "input_sha256": "a636ab79e1eb76aa72464791fda0abe9a857264599f18dcc77e6cd5274fc6323",
+  "output_sha256": "1851b125e39994864f88451e1c9f72eb5c1b56800cbf9f72cd9e86c2bb4c00e8",
+  "a_b_byte_identical": true,
+  "allowed_nodes": [
+    "K_BANT__sac",
+    "K_GOVDE__celik",
+    "K_YAG__celik",
+    "K_YAG__sac"
+  ],
+  "changed_nodes": [
+    "K_BANT__sac",
+    "K_GOVDE__celik",
+    "K_YAG__celik",
+    "K_YAG__sac"
+  ],
+  "changed_nodes_outside_scope": [],
+  "matched_source_report_sha256": "0f6f07afefdadc9a9779113d1d99967085ae1945148cf5918e2f8624691fe924",
+  "candidate_recipe_sha256": "d56c75663aa08729e96de19f4eb0575c9d2281f62507690aff72c0b731f92ae0",
+  "passed_byte_determinism_and_global_scope": true,
+  "expected_product_parts": 941,
+  "full_triangle_rebind_passed": true,
+  "verified_parts_sha256": "67844120cd00b49858703bcf1cb4a4b8e2c36d8d7830dfe1499e1438a59a04c4",
+  "triangle_rebind_report_sha256": "4da40f2a3a6e255093f7322b078e6c1bba40444e56355ea850f55a2de650b2b4",
+  "matched_triangles": 615806,
+  "complete_animation_checked": false,
+  "production_release": false,
+  "next": "Measure actual joints and integrate the new mounting pieces into the checked assembly plan before source activation."
+}
