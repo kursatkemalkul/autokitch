@@ -8,7 +8,7 @@ Kemal'in kararı (5 Eki 2026): iki ajan aynı anda, farklı istasyonlarda çalı
 
 | İş | Kim | Branch | Durum |
 |---|---|---|---|
-| Robot + ray + QR dolabı + sipariş animasyonları | Codex | `coord/codex-robot-ray-tesisat-v21` | v10l üstünde: ray merkezleme, üretici CAD, robot/QR/makine beslemeleri ve eski dış tesisat temizliği; adım 90 |
+| Robot + ray + QR dolabı + sipariş animasyonları | Codex | `coord/codex-robot-ray-tesisat-v21` | v10l üstünde v21 / adım90: igus üretici CAD + merkezleme + üç tesisat kolu + hareketli zincir + cam/eski dış tesisat temizliği. 8 kayıt korunur; tam hareket/üretim/güvenlik onayı açık. |
 | TOPPING montaj animasyonu v5 | Claude | `claude/topping-montaj-v5` | yayında (açık 3 küçük madde) |
 | Standart önlemleri · makine: acil stop (58) · 10 kapı emniyet anahtarı (59) · hava emniyet valfi (60) · davlumbaz filtresi servis ağzı (61) · hijyen / R290 / A perdesi kayıt | Claude | `claude/standart-makine` | BİTTİ (cb7d1ec) — Kemal incelemesinde |
 | **TOPPING montaj v6**: bağsız 63 parça + geçici dayalı 2 parça bağlanır (KURALLAR §2.3 kural 10), animasyon yeniden üretilir, §5 denetimi | Claude | `claude/topping-montaj-v6` | YAYINDA (5 Eki, PR #5) · açık: kıyma silindiri flanşı, 5 iç elektrik parçası, 2 kovan contası |
@@ -38,7 +38,7 @@ Bir işe başlamadan önce tabloda başka bir ajanın aynı istasyonu ya da ayn�
 ## 2. Dosya sahipliği
 
 - Her ajan yalnız kendi işinin dosyalarına yazar. Başkasının alanındaki dosyayı değiştirmek gerekirse önce Kemal'e sorulur.
-- Codex'in alanı: `arastirma/_uretec/robot_integrated_v17/`, `otonom/hat/robot-integrated-v17/`, `otonom/hat3d/robot-integrated-v17/`, `otonom/hat/makine.html`.
+- Codex'in alanı: `arastirma/_uretec/robot_integrated_v21/`, `otonom/hat/robot-integrated-v21/`, `otonom/hat3d/robot-integrated-v21/`, `_local/codex_robot_v21/`, `otonom/hat/makine.html`; zincir90 ve kaydı. Claude K86–89 / E81–85 dosyaları değiştirilmez.
 - İstasyon montaj animasyonu alanı (istasyonu alan ajanın): `otonom/hat/<ist>-montaj.html`, `otonom/hat3d/v3/<ist>_montaj/`, kendi üreteç klasörü.
 - Ortak dosyalar (`otonom/hat/ist_montaj/montaj-oynatici.js`, `otonom/hat/hat.css`, `index.html`): değiştirmeden önce tabloya not düş, değişikliği küçük tut, geri uyumlu yap.
 
@@ -47,6 +47,8 @@ Bir işe başlamadan önce tabloda başka bir ajanın aynı istasyonu ya da ayn�
 - Zincire yeni adım (58, 59 …) yalnız bir ajan yazar. Yazmaya başlamadan bu dosyanın en altındaki **ZİNCİR KİLİDİ** satırını kendi adınla doldur, commit + push et; adım bitince (iki koşu bayt aynı, SIRA.md kaydı) boşalt.
 - Kilit doluyken öteki ajan model değiştirmez; gerekiyorsa kilit sahibine / Kemal'e yazar.
 - Son model: `_local/claude_son_yerel/hat3_v10l.glb.gz` (adım 80 · zincir 67 F, 68–69 + 80 E; E montaj yayında) · önceki: `hat3_v10h.glb.gz` (adım 66) — branch `claude/topping-montaj-v6` (zincir betikleri 56–66 orada; 56–61 `claude/standart-makine`'de de; main'e birlikte birleştirilecek). Yeni adım çıkınca bu satır güncellenir.
+
+Robot entegrasyon adımı90, makine geometrisini koruyan son render/animasyon adımıdır. Kaynak makine v10l (80) korunur; E81–85 / K86–89 birleştirilince 90 bu yeni birleşik SON girdisiyle yeniden çalıştırılır. Native GLB büyük olduğu için commit dışı; sitedeki v21 gzip ve üreteç/provenance/iki-koşu kayıtları commitlidir. Özel3684 strok, eksen motor/sürücü seçimi, tam robot çarpışma ve cam kaldırıldıktan sonra koruma/güvenlik devresi açık.
 
 ## 4. Branch, birleştirme, yayın
 
@@ -61,4 +63,4 @@ Bir işe başlamadan önce tabloda başka bir ajanın aynı istasyonu ya da ayn�
 - Depo herkese açık. Oturum kayıtları `_local/claude_oturum/` altında durur (Kemal: kalsın); `_local/` siteye kopyalanmaz. Parola, anahtar, kişisel bilgi depoya konmaz.
 - Büyük ara dosyalar (`.pkl`, 100 MB üstü GLB) depoya konmaz; GLB gerekirse kayıpsız `.gz` olarak.
 
-ZİNCİR KİLİDİ: Codex · robot/ray/QR dış tesisat adım 90 · 6 Eki 2026 · `coord/codex-robot-ray-tesisat-v21`; Claude K 86–89 / E 81–85 dosyaları değiştirilmez.
+ZİNCİR KİLİDİ: boş

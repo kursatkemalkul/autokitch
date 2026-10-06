@@ -1,0 +1,44 @@
+{
+  "step": 90,
+  "input": "hat3_v10l.glb.gz",
+  "runs": [
+    {
+      "source_cleaned.glb": {
+        "sha256": "949c3f4c77b6f065b7d70cadabbb37d77c6711ca72940c779cdadb03d5ae8500",
+        "bytes": 301276492
+      },
+      "combined_native.glb": {
+        "sha256": "e09f704ff811d9c6e270b877f4cab26448741a5d865c0bcd6834b6b825784fe2",
+        "bytes": 764777108
+      },
+      "combined_meshopt.glb": {
+        "sha256": "500bc084ce63f0a880cfa337c58d0e098908a810c5e80bf08a142389aab121ca",
+        "bytes": 149937612
+      },
+      "hat3_robot_v21.glb.gz": {
+        "sha256": "5ece2b51b569f93465fd598e0d2f21b15288fa5a3e63703a55de6475fb8a669f",
+        "bytes": 71002688
+      }
+    },
+    {
+      "source_cleaned.glb": {
+        "sha256": "949c3f4c77b6f065b7d70cadabbb37d77c6711ca72940c779cdadb03d5ae8500",
+        "bytes": 301276492
+      },
+      "combined_native.glb": {
+        "sha256": "e09f704ff811d9c6e270b877f4cab26448741a5d865c0bcd6834b6b825784fe2",
+        "bytes": 764777108
+      },
+      "combined_meshopt.glb": {
+        "sha256": "500bc084ce63f0a880cfa337c58d0e098908a810c5e80bf08a142389aab121ca",
+        "bytes": 149937612
+      },
+      "hat3_robot_v21.glb.gz": {
+        "sha256": "5ece2b51b569f93465fd598e0d2f21b15288fa5a3e63703a55de6475fb8a669f",
+        "bytes": 71002688
+      }
+    }
+  ],
+  "byte_identical": true,
+  "full_collision_certified": false
+}

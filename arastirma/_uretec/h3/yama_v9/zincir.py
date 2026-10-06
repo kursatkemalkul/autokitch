@@ -222,7 +222,9 @@ ADIMLAR = [
     ("80", "E kapıları + emniyet sensörleri bağlı: üst sol sensör E gövdesine taşındı · 4 sensöre dikmeye kaynaklı 1,5 mm L braket + PEM + M4 · aktüatörler PEM + havşa M4 · menteşe kanatları / karşılıklar / şarjör kapısı punta (E montaj v2 bağlantı denetimi)", ["hat3_v10k.glb"], "hat3_v10l.glb",
      [(".", 'python "{YAMA}/80_e_baglanti.py" hat3_v10k.glb hat3_v10l.glb')]),
 ]
-SON = "hat3_v10l.glb"
+ADIMLAR.append(("90", "Robot/ray merkezleme, üretici igus CAD, QR/robot/makine dış tesisatı ve hareketli kablo zinciri; eski tezgâh/dış tesisat ve istenen cam kaldırılır", ["hat3_v10l.glb"], "hat3_v10m_robot.glb",
+    [(".", 'python "{YAMA}/90_robot_ray_tesisat.py" hat3_v10l.glb hat3_v10m_robot.glb')]))
+SON = "hat3_v10m_robot.glb"
 
 
 def kur(is_dizin, h3, uretec):
