@@ -1,0 +1,287 @@
+{
+  "source_parts_sha256": "b3bcc7691182d32674d2e7d5b2ddb4892be2487c2d6946541d1ee38871d9bec9",
+  "native_inventory_sha256": "7e9b2dd4ab6aaee3d53938bd66f647b671c8319c8434d1a5025922ab7a7c5f09",
+  "clips": [
+    {
+      "part": "elk_k_celik_1",
+      "native_bbox_candidates": [
+        {
+          "unit": "ELK_K",
+          "name": "kablo_K_urun_sensoru_giris_alici_kelepce_2",
+          "max_bbox_difference_mm": 0.00020000000040454324
+        }
+      ],
+      "mounting_face_candidates": [
+        {
+          "part": "kopru_kirisi_-286",
+          "faces": [
+            {
+              "axis": "y",
+              "side": "lo",
+              "plane_mm": 1459.5,
+              "vertex_count": 4,
+              "max_distance_mm": 0.0
+            }
+          ],
+          "stock_bbox_mm": [
+            [
+              4034.9998,
+              1419.5,
+              -306.0
+            ],
+            [
+              4364.9998,
+              1459.5,
+              -266.0
+            ]
+          ]
+        }
+      ],
+      "lo_mm": [
+        4181.0002,
+        1459.5,
+        -300.7
+      ],
+      "hi_mm": [
+        4197.0,
+        1641.0,
+        -288.7
+      ],
+      "mount_verified": false
+    },
+    {
+      "part": "elk_k_celik_2",
+      "native_bbox_candidates": [
+        {
+          "unit": "ELK_K",
+          "name": "kablo_K_urun_sensoru_giris_alici_kelepce_1",
+          "max_bbox_difference_mm": 0.00020000000040454324
+        }
+      ],
+      "mounting_face_candidates": [
+        {
+          "part": "DGRF-C-63-125_govde",
+          "faces": [
+            {
+              "axis": "z",
+              "side": "lo",
+              "plane_mm": -165.5,
+              "vertex_count": 4,
+              "max_distance_mm": 0.0
+            }
+          ],
+          "stock_bbox_mm": [
+            [
+              4119.0,
+              1286.0,
+              -249.5
+            ],
+            [
+              4281.0001,
+              1391.0,
+              -165.5
+            ]
+          ]
+        }
+      ],
+      "lo_mm": [
+        4184.9999,
+        1304.0,
+        -165.5
+      ],
+      "hi_mm": [
+        4201.0002,
+        1316.0,
+        -109.7
+      ],
+      "mount_verified": false
+    },
+    {
+      "part": "elk_k_celik_3",
+      "native_bbox_candidates": [
+        {
+          "unit": "ELK_K",
+          "name": "kablo_K_DGRF_SMT8M_0_kelepce_0",
+          "max_bbox_difference_mm": 0.00020000000040454324
+        }
+      ],
+      "mounting_face_candidates": [],
+      "lo_mm": [
+        4191.9999,
+        1459.5,
+        -271.0
+      ],
+      "hi_mm": [
+        4208.0002,
+        1644.3,
+        -259.0
+      ],
+      "mount_verified": false
+    },
+    {
+      "part": "elk_k_celik_6",
+      "native_bbox_candidates": [
+        {
+          "unit": "ELK_K",
+          "name": "kablo_K_DGRF_SMT8M_1_kelepce_0",
+          "max_bbox_difference_mm": 0.00020000000040454324
+        }
+      ],
+      "mounting_face_candidates": [
+        {
+          "part": "kopru_kirisi_-286",
+          "faces": [
+            {
+              "axis": "y",
+              "side": "lo",
+              "plane_mm": 1459.5,
+              "vertex_count": 4,
+              "max_distance_mm": 5.684341886080802e-14
+            }
+          ],
+          "stock_bbox_mm": [
+            [
+              4034.9998,
+              1419.5,
+              -306.0
+            ],
+            [
+              4364.9998,
+              1459.5,
+              -266.0
+            ]
+          ]
+        }
+      ],
+      "lo_mm": [
+        4208.0002,
+        1459.5,
+        -293.0
+      ],
+      "hi_mm": [
+        4224.0,
+        1643.3001,
+        -281.0
+      ],
+      "mount_verified": false
+    },
+    {
+      "part": "elk_k_celik_7",
+      "native_bbox_candidates": [
+        {
+          "unit": "ELK_K",
+          "name": "kablo_K_urun_sensoru_durus_alici_kelepce_2",
+          "max_bbox_difference_mm": 9.999999997489795e-05
+        }
+      ],
+      "mounting_face_candidates": [
+        {
+          "part": "sag_sac_E_penceresi",
+          "faces": [
+            {
+              "axis": "x",
+              "side": "hi",
+              "plane_mm": 4398.5,
+              "vertex_count": 4,
+              "max_distance_mm": 5.684341886080802e-14
+            }
+          ],
+          "stock_bbox_mm": [
+            [
+              4377.9998,
+              791.0,
+              -828.5
+            ],
+            [
+              4400.0001,
+              1860.5,
+              59.0
+            ]
+          ]
+        }
+      ],
+      "lo_mm": [
+        4243.0,
+        1633.9999,
+        -314.7
+      ],
+      "hi_mm": [
+        4398.5,
+        1650.0,
+        -302.7
+      ],
+      "mount_verified": false
+    },
+    {
+      "part": "elk_k_tarti_celik_0",
+      "native_bbox_candidates": [
+        {
+          "unit": "ELK_K_TARTI",
+          "name": "kablo_K_tarti_yuk_hucresi_kelepce_0",
+          "max_bbox_difference_mm": 0.04019999999997026
+        }
+      ],
+      "mounting_face_candidates": [],
+      "lo_mm": [
+        4152.0,
+        1378.9999,
+        -299.5
+      ],
+      "hi_mm": [
+        4164.0,
+        1395.0,
+        -266.1598
+      ],
+      "mount_verified": false
+    },
+    {
+      "part": "elk_k_tarti_celik_1",
+      "native_bbox_candidates": [
+        {
+          "unit": "ELK_K_TARTI",
+          "name": "kablo_K_tarti_yuk_hucresi_kelepce_1",
+          "max_bbox_difference_mm": 0.00010000000020227162
+        }
+      ],
+      "mounting_face_candidates": [
+        {
+          "part": "sag_sac_E_penceresi",
+          "faces": [
+            {
+              "axis": "x",
+              "side": "hi",
+              "plane_mm": 4398.5,
+              "vertex_count": 4,
+              "max_distance_mm": 5.684341886080802e-14
+            }
+          ],
+          "stock_bbox_mm": [
+            [
+              4377.9998,
+              791.0,
+              -828.5
+            ],
+            [
+              4400.0001,
+              1860.5,
+              59.0
+            ]
+          ]
+        }
+      ],
+      "lo_mm": [
+        4300.4999,
+        1503.0,
+        -328.0
+      ],
+      "hi_mm": [
+        4398.5,
+        1515.0,
+        -312.0
+      ],
+      "mount_verified": false
+    }
+  ],
+  "native_helper": "h3_elk_ortak.kelepce: fused ring/tongue/tab, no mounting hole or screw",
+  "production_release": false
+}

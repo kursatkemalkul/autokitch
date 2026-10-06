@@ -1,0 +1,108 @@
+{
+  "source_parts_sha256": "b3bcc7691182d32674d2e7d5b2ddb4892be2487c2d6946541d1ee38871d9bec9",
+  "joins": [
+    {
+      "clip": "elk_k_celik_1",
+      "host": "kopru_kirisi_-286",
+      "seams": [
+        "k79_elk_k_celik_1_TIG_0",
+        "k79_elk_k_celik_1_TIG_1",
+        "k79_elk_k_celik_1_TIG_2",
+        "k79_elk_k_celik_1_TIG_3"
+      ],
+      "method": "Continuous foot-perimeter TIG141 ER308LSi; grind and passivate",
+      "prerequisites": [
+        "Install clip on bare bridge/side sheet before any cable",
+        "Hold foot with clamp until all four seams complete"
+      ],
+      "source_role_candidates": [
+        {
+          "unit": "ELK_K",
+          "name": "kablo_K_urun_sensoru_giris_alici_kelepce_2",
+          "max_bbox_difference_mm": 0.00020000000040454324
+        }
+      ],
+      "source_geometry_contact_verified": true,
+      "torch_path_verified": false,
+      "connection_closed": false
+    },
+    {
+      "clip": "elk_k_celik_6",
+      "host": "kopru_kirisi_-286",
+      "seams": [
+        "k79_elk_k_celik_6_TIG_0",
+        "k79_elk_k_celik_6_TIG_1",
+        "k79_elk_k_celik_6_TIG_2",
+        "k79_elk_k_celik_6_TIG_3"
+      ],
+      "method": "Continuous foot-perimeter TIG141 ER308LSi; grind and passivate",
+      "prerequisites": [
+        "Install clip on bare bridge/side sheet before any cable",
+        "Hold foot with clamp until all four seams complete"
+      ],
+      "source_role_candidates": [
+        {
+          "unit": "ELK_K",
+          "name": "kablo_K_DGRF_SMT8M_1_kelepce_0",
+          "max_bbox_difference_mm": 0.00020000000040454324
+        }
+      ],
+      "source_geometry_contact_verified": true,
+      "torch_path_verified": false,
+      "connection_closed": false
+    },
+    {
+      "clip": "elk_k_celik_7",
+      "host": "sag_sac_E_penceresi",
+      "seams": [
+        "k79_elk_k_celik_7_TIG_0",
+        "k79_elk_k_celik_7_TIG_1",
+        "k79_elk_k_celik_7_TIG_2",
+        "k79_elk_k_celik_7_TIG_3"
+      ],
+      "method": "Continuous foot-perimeter TIG141 ER308LSi; grind and passivate",
+      "prerequisites": [
+        "Install clip on bare bridge/side sheet before any cable",
+        "Hold foot with clamp until all four seams complete"
+      ],
+      "source_role_candidates": [
+        {
+          "unit": "ELK_K",
+          "name": "kablo_K_urun_sensoru_durus_alici_kelepce_2",
+          "max_bbox_difference_mm": 9.999999997489795e-05
+        }
+      ],
+      "source_geometry_contact_verified": true,
+      "torch_path_verified": false,
+      "connection_closed": false
+    },
+    {
+      "clip": "elk_k_tarti_celik_1",
+      "host": "sag_sac_E_penceresi",
+      "seams": [
+        "k79_elk_k_tarti_celik_1_TIG_0",
+        "k79_elk_k_tarti_celik_1_TIG_1",
+        "k79_elk_k_tarti_celik_1_TIG_2",
+        "k79_elk_k_tarti_celik_1_TIG_3"
+      ],
+      "method": "Continuous foot-perimeter TIG141 ER308LSi; grind and passivate",
+      "prerequisites": [
+        "Install clip on bare bridge/side sheet before any cable",
+        "Hold foot with clamp until all four seams complete"
+      ],
+      "source_role_candidates": [
+        {
+          "unit": "ELK_K_TARTI",
+          "name": "kablo_K_tarti_yuk_hucresi_kelepce_1",
+          "max_bbox_difference_mm": 0.00010000000020227162
+        }
+      ],
+      "source_geometry_contact_verified": true,
+      "torch_path_verified": false,
+      "connection_closed": false
+    }
+  ],
+  "supplier_body_modified": false,
+  "shared_chain_registered": false,
+  "production_release": false
+}

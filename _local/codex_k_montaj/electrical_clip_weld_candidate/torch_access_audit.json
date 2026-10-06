@@ -1,0 +1,698 @@
+{
+  "source_parts_sha256": "b3bcc7691182d32674d2e7d5b2ddb4892be2487c2d6946541d1ee38871d9bec9",
+  "candidate_geometry_sha256": "68c24c39b9d66944541ed8950cc7b34baf9fc05b9b2d2cd1f790f2ad6777424e",
+  "checks": [
+    {
+      "seam": "k79_elk_k_celik_1_TIG_0",
+      "stage_parts": [
+        "kopru_kirisi_-286",
+        "elk_k_celik_1",
+        "elk_k_celik_6"
+      ],
+      "axis": [
+        0.0,
+        0.7071067811865476,
+        -0.7071067811865476
+      ],
+      "base_angle_deg": 45,
+      "tangent_skew_deg": 0,
+      "trials": [
+        {
+          "base_angle_deg": 45,
+          "tangent_skew_deg": 0,
+          "passed": true
+        }
+      ],
+      "surfaces": [
+        {
+          "part": "kopru_kirisi_-286",
+          "minimum_clearance_mm": 0.44710678118643954,
+          "passed": true
+        },
+        {
+          "part": "elk_k_celik_1",
+          "minimum_clearance_mm": 0.4471067811865532,
+          "passed": true
+        },
+        {
+          "part": "elk_k_celik_6",
+          "minimum_clearance_mm": 13.58499348032644,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "seam": "k79_elk_k_celik_1_TIG_1",
+      "stage_parts": [
+        "kopru_kirisi_-286",
+        "elk_k_celik_1",
+        "elk_k_celik_6"
+      ],
+      "axis": [
+        0.0,
+        0.7071067811865476,
+        0.7071067811865476
+      ],
+      "base_angle_deg": 45,
+      "tangent_skew_deg": 0,
+      "trials": [
+        {
+          "base_angle_deg": 45,
+          "tangent_skew_deg": 0,
+          "passed": true
+        }
+      ],
+      "surfaces": [
+        {
+          "part": "kopru_kirisi_-286",
+          "minimum_clearance_mm": 0.44710678118643954,
+          "passed": true
+        },
+        {
+          "part": "elk_k_celik_1",
+          "minimum_clearance_mm": 0.4471067811865532,
+          "passed": true
+        },
+        {
+          "part": "elk_k_celik_6",
+          "minimum_clearance_mm": 10.56112307305935,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "seam": "k79_elk_k_celik_1_TIG_2",
+      "stage_parts": [
+        "kopru_kirisi_-286",
+        "elk_k_celik_1",
+        "elk_k_celik_6"
+      ],
+      "axis": [
+        -0.7071067811865476,
+        0.7071067811865476,
+        0.0
+      ],
+      "base_angle_deg": 45,
+      "tangent_skew_deg": 0,
+      "trials": [
+        {
+          "base_angle_deg": 45,
+          "tangent_skew_deg": 0,
+          "passed": true
+        }
+      ],
+      "surfaces": [
+        {
+          "part": "kopru_kirisi_-286",
+          "minimum_clearance_mm": 0.44710678118643954,
+          "passed": true
+        },
+        {
+          "part": "elk_k_celik_1",
+          "minimum_clearance_mm": 0.4471067811866669,
+          "passed": true
+        },
+        {
+          "part": "elk_k_celik_6",
+          "minimum_clearance_mm": 27.447106781186665,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "seam": "k79_elk_k_celik_1_TIG_3",
+      "stage_parts": [
+        "kopru_kirisi_-286",
+        "elk_k_celik_1",
+        "elk_k_celik_6"
+      ],
+      "axis": [
+        0.6123724356957945,
+        0.6123724356957945,
+        -0.4999999999999999
+      ],
+      "base_angle_deg": 45,
+      "tangent_skew_deg": -30,
+      "trials": [
+        {
+          "base_angle_deg": 45,
+          "tangent_skew_deg": 0,
+          "passed": false
+        },
+        {
+          "base_angle_deg": 30,
+          "tangent_skew_deg": 0,
+          "passed": false
+        },
+        {
+          "base_angle_deg": 20,
+          "tangent_skew_deg": 0,
+          "passed": false
+        },
+        {
+          "base_angle_deg": 45,
+          "tangent_skew_deg": -30,
+          "passed": true
+        }
+      ],
+      "surfaces": [
+        {
+          "part": "kopru_kirisi_-286",
+          "minimum_clearance_mm": 0.35237243569576093,
+          "passed": true
+        },
+        {
+          "part": "elk_k_celik_1",
+          "minimum_clearance_mm": 0.35237243569576093,
+          "passed": true
+        },
+        {
+          "part": "elk_k_celik_6",
+          "minimum_clearance_mm": 5.515864167827312,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "seam": "k79_elk_k_celik_6_TIG_0",
+      "stage_parts": [
+        "kopru_kirisi_-286",
+        "elk_k_celik_1",
+        "elk_k_celik_6"
+      ],
+      "axis": [
+        0.0,
+        0.7071067811865476,
+        -0.7071067811865476
+      ],
+      "base_angle_deg": 45,
+      "tangent_skew_deg": 0,
+      "trials": [
+        {
+          "base_angle_deg": 45,
+          "tangent_skew_deg": 0,
+          "passed": true
+        }
+      ],
+      "surfaces": [
+        {
+          "part": "kopru_kirisi_-286",
+          "minimum_clearance_mm": 0.44710678118643954,
+          "passed": true
+        },
+        {
+          "part": "elk_k_celik_1",
+          "minimum_clearance_mm": 10.56112307305935,
+          "passed": true
+        },
+        {
+          "part": "elk_k_celik_6",
+          "minimum_clearance_mm": 0.4471067811865532,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "seam": "k79_elk_k_celik_6_TIG_1",
+      "stage_parts": [
+        "kopru_kirisi_-286",
+        "elk_k_celik_1",
+        "elk_k_celik_6"
+      ],
+      "axis": [
+        0.0,
+        0.7071067811865476,
+        0.7071067811865476
+      ],
+      "base_angle_deg": 45,
+      "tangent_skew_deg": 0,
+      "trials": [
+        {
+          "base_angle_deg": 45,
+          "tangent_skew_deg": 0,
+          "passed": true
+        }
+      ],
+      "surfaces": [
+        {
+          "part": "kopru_kirisi_-286",
+          "minimum_clearance_mm": 0.44710678118643954,
+          "passed": true
+        },
+        {
+          "part": "elk_k_celik_1",
+          "minimum_clearance_mm": 13.58499348032644,
+          "passed": true
+        },
+        {
+          "part": "elk_k_celik_6",
+          "minimum_clearance_mm": 0.4471067811865532,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "seam": "k79_elk_k_celik_6_TIG_2",
+      "stage_parts": [
+        "kopru_kirisi_-286",
+        "elk_k_celik_1",
+        "elk_k_celik_6"
+      ],
+      "axis": [
+        -0.29619813272602386,
+        0.8137976813493738,
+        -0.5
+      ],
+      "base_angle_deg": 20,
+      "tangent_skew_deg": -30,
+      "trials": [
+        {
+          "base_angle_deg": 45,
+          "tangent_skew_deg": 0,
+          "passed": false
+        },
+        {
+          "base_angle_deg": 30,
+          "tangent_skew_deg": 0,
+          "passed": false
+        },
+        {
+          "base_angle_deg": 20,
+          "tangent_skew_deg": 0,
+          "passed": false
+        },
+        {
+          "base_angle_deg": 45,
+          "tangent_skew_deg": -30,
+          "passed": false
+        },
+        {
+          "base_angle_deg": 30,
+          "tangent_skew_deg": -30,
+          "passed": false
+        },
+        {
+          "base_angle_deg": 20,
+          "tangent_skew_deg": -30,
+          "passed": true
+        }
+      ],
+      "surfaces": [
+        {
+          "part": "kopru_kirisi_-286",
+          "minimum_clearance_mm": 0.5537976813493424,
+          "passed": true
+        },
+        {
+          "part": "elk_k_celik_1",
+          "minimum_clearance_mm": 0.2546308941880744,
+          "passed": true
+        },
+        {
+          "part": "elk_k_celik_6",
+          "minimum_clearance_mm": 0.03619813272620376,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "seam": "k79_elk_k_celik_6_TIG_3",
+      "stage_parts": [
+        "kopru_kirisi_-286",
+        "elk_k_celik_1",
+        "elk_k_celik_6"
+      ],
+      "axis": [
+        0.7071067811865476,
+        0.7071067811865476,
+        0.0
+      ],
+      "base_angle_deg": 45,
+      "tangent_skew_deg": 0,
+      "trials": [
+        {
+          "base_angle_deg": 45,
+          "tangent_skew_deg": 0,
+          "passed": true
+        }
+      ],
+      "surfaces": [
+        {
+          "part": "kopru_kirisi_-286",
+          "minimum_clearance_mm": 0.44710678118643954,
+          "passed": true
+        },
+        {
+          "part": "elk_k_celik_1",
+          "minimum_clearance_mm": 27.447106781186665,
+          "passed": true
+        },
+        {
+          "part": "elk_k_celik_6",
+          "minimum_clearance_mm": 0.4471067811866669,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "seam": "k79_elk_k_celik_7_TIG_0",
+      "stage_parts": [
+        "sag_sac_E_penceresi",
+        "elk_k_celik_7",
+        "elk_k_tarti_celik_1"
+      ],
+      "axis": [
+        -0.7071067811865476,
+        0.0,
+        -0.7071067811865476
+      ],
+      "base_angle_deg": 45,
+      "tangent_skew_deg": 0,
+      "trials": [
+        {
+          "base_angle_deg": 45,
+          "tangent_skew_deg": 0,
+          "passed": true
+        }
+      ],
+      "surfaces": [
+        {
+          "part": "sag_sac_E_penceresi",
+          "minimum_clearance_mm": 0.4471067811866669,
+          "passed": true
+        },
+        {
+          "part": "elk_k_celik_7",
+          "minimum_clearance_mm": 0.4471067811865532,
+          "passed": true
+        },
+        {
+          "part": "elk_k_tarti_celik_1",
+          "minimum_clearance_mm": 116.4214769445498,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "seam": "k79_elk_k_celik_7_TIG_1",
+      "stage_parts": [
+        "sag_sac_E_penceresi",
+        "elk_k_celik_7",
+        "elk_k_tarti_celik_1"
+      ],
+      "axis": [
+        -0.7071067811865476,
+        0.0,
+        0.7071067811865476
+      ],
+      "base_angle_deg": 45,
+      "tangent_skew_deg": 0,
+      "trials": [
+        {
+          "base_angle_deg": 45,
+          "tangent_skew_deg": 0,
+          "passed": true
+        }
+      ],
+      "surfaces": [
+        {
+          "part": "sag_sac_E_penceresi",
+          "minimum_clearance_mm": 0.4471067811866669,
+          "passed": true
+        },
+        {
+          "part": "elk_k_celik_7",
+          "minimum_clearance_mm": 0.4471067811865532,
+          "passed": true
+        },
+        {
+          "part": "elk_k_tarti_celik_1",
+          "minimum_clearance_mm": 118.99510333558439,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "seam": "k79_elk_k_celik_7_TIG_2",
+      "stage_parts": [
+        "sag_sac_E_penceresi",
+        "elk_k_celik_7",
+        "elk_k_tarti_celik_1"
+      ],
+      "axis": [
+        -0.7071067811865476,
+        -0.7071067811865476,
+        0.0
+      ],
+      "base_angle_deg": 45,
+      "tangent_skew_deg": 0,
+      "trials": [
+        {
+          "base_angle_deg": 45,
+          "tangent_skew_deg": 0,
+          "passed": true
+        }
+      ],
+      "surfaces": [
+        {
+          "part": "sag_sac_E_penceresi",
+          "minimum_clearance_mm": 0.4471067811866669,
+          "passed": true
+        },
+        {
+          "part": "elk_k_celik_7",
+          "minimum_clearance_mm": 0.44710678118643954,
+          "passed": true
+        },
+        {
+          "part": "elk_k_tarti_celik_1",
+          "minimum_clearance_mm": 78.10501522271899,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "seam": "k79_elk_k_celik_7_TIG_3",
+      "stage_parts": [
+        "sag_sac_E_penceresi",
+        "elk_k_celik_7",
+        "elk_k_tarti_celik_1"
+      ],
+      "axis": [
+        -0.7071067811865476,
+        0.7071067811865476,
+        0.0
+      ],
+      "base_angle_deg": 45,
+      "tangent_skew_deg": 0,
+      "trials": [
+        {
+          "base_angle_deg": 45,
+          "tangent_skew_deg": 0,
+          "passed": true
+        }
+      ],
+      "surfaces": [
+        {
+          "part": "sag_sac_E_penceresi",
+          "minimum_clearance_mm": 0.4471067811866669,
+          "passed": true
+        },
+        {
+          "part": "elk_k_celik_7",
+          "minimum_clearance_mm": 0.44710678118643954,
+          "passed": true
+        },
+        {
+          "part": "elk_k_tarti_celik_1",
+          "minimum_clearance_mm": 135.44710678118645,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "seam": "k79_elk_k_tarti_celik_1_TIG_0",
+      "stage_parts": [
+        "sag_sac_E_penceresi",
+        "elk_k_celik_7",
+        "elk_k_tarti_celik_1"
+      ],
+      "axis": [
+        -0.7071067811865476,
+        0.0,
+        -0.7071067811865476
+      ],
+      "base_angle_deg": 45,
+      "tangent_skew_deg": 0,
+      "trials": [
+        {
+          "base_angle_deg": 45,
+          "tangent_skew_deg": 0,
+          "passed": true
+        }
+      ],
+      "surfaces": [
+        {
+          "part": "sag_sac_E_penceresi",
+          "minimum_clearance_mm": 0.4471067811866669,
+          "passed": true
+        },
+        {
+          "part": "elk_k_celik_7",
+          "minimum_clearance_mm": 119.51164807994253,
+          "passed": true
+        },
+        {
+          "part": "elk_k_tarti_celik_1",
+          "minimum_clearance_mm": 0.4471067811865532,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "seam": "k79_elk_k_tarti_celik_1_TIG_1",
+      "stage_parts": [
+        "sag_sac_E_penceresi",
+        "elk_k_celik_7",
+        "elk_k_tarti_celik_1"
+      ],
+      "axis": [
+        -0.7071067811865476,
+        0.0,
+        0.7071067811865476
+      ],
+      "base_angle_deg": 45,
+      "tangent_skew_deg": 0,
+      "trials": [
+        {
+          "base_angle_deg": 45,
+          "tangent_skew_deg": 0,
+          "passed": true
+        }
+      ],
+      "surfaces": [
+        {
+          "part": "sag_sac_E_penceresi",
+          "minimum_clearance_mm": 0.4471067811866669,
+          "passed": true
+        },
+        {
+          "part": "elk_k_celik_7",
+          "minimum_clearance_mm": 117.47127609970251,
+          "passed": true
+        },
+        {
+          "part": "elk_k_tarti_celik_1",
+          "minimum_clearance_mm": 0.4471067811865532,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "seam": "k79_elk_k_tarti_celik_1_TIG_2",
+      "stage_parts": [
+        "sag_sac_E_penceresi",
+        "elk_k_celik_7",
+        "elk_k_tarti_celik_1"
+      ],
+      "axis": [
+        -0.7071067811865476,
+        -0.7071067811865476,
+        0.0
+      ],
+      "base_angle_deg": 45,
+      "tangent_skew_deg": 0,
+      "trials": [
+        {
+          "base_angle_deg": 45,
+          "tangent_skew_deg": 0,
+          "passed": true
+        }
+      ],
+      "surfaces": [
+        {
+          "part": "sag_sac_E_penceresi",
+          "minimum_clearance_mm": 0.4471067811866669,
+          "passed": true
+        },
+        {
+          "part": "elk_k_celik_7",
+          "minimum_clearance_mm": 131.44700678118647,
+          "passed": true
+        },
+        {
+          "part": "elk_k_tarti_celik_1",
+          "minimum_clearance_mm": 0.44710678118643954,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "seam": "k79_elk_k_tarti_celik_1_TIG_3",
+      "stage_parts": [
+        "sag_sac_E_penceresi",
+        "elk_k_celik_7",
+        "elk_k_tarti_celik_1"
+      ],
+      "axis": [
+        -0.7071067811865476,
+        0.7071067811865476,
+        0.0
+      ],
+      "base_angle_deg": 45,
+      "tangent_skew_deg": 0,
+      "trials": [
+        {
+          "base_angle_deg": 45,
+          "tangent_skew_deg": 0,
+          "passed": true
+        }
+      ],
+      "surfaces": [
+        {
+          "part": "sag_sac_E_penceresi",
+          "minimum_clearance_mm": 0.4471067811866669,
+          "passed": true
+        },
+        {
+          "part": "elk_k_celik_7",
+          "minimum_clearance_mm": 84.77511762137337,
+          "passed": true
+        },
+        {
+          "part": "elk_k_tarti_celik_1",
+          "minimum_clearance_mm": 0.44710678118643954,
+          "passed": true
+        }
+      ],
+      "passed": true
+    }
+  ],
+  "passed_all_preassembly_envelopes": true,
+  "tool_envelope": {
+    "length_mm": 50,
+    "maximum_radius_mm": 6,
+    "root_step_mm": 1,
+    "axis_step_mm": 1,
+    "root_process_zone_mm": 1
+  },
+  "cables_installed_during_welding": false,
+  "particular_purchased_torch_certified": false,
+  "fixture_geometry_checked": false,
+  "production_release": false
+}

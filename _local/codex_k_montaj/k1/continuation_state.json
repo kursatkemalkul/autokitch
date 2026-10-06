@@ -1,13 +1,13 @@
 {
   "task": "codex-k-montaj-v3",
   "branch": "codex/k-montaj",
-  "latest_checkpoint": "78dac2f3",
+  "latest_checkpoint": "878cd4cf",
   "goal_active": true,
   "k_completed": false,
   "u_started": false,
   "canonical_source_changed": false,
   "production_release": false,
-  "source_model_sha256": "c0c004f133fa4d715aebeb5c21b35df688367bbdb630a35c656aef4b4ff4341b",
+  "source_model_sha256": "5f00073a06682f0f231bef4e93019abc7ecd06ad33be6b1bdd9baeaa206ffc27",
   "verified_checkpoints": {
     "site_welds": {
       "commit": "1b2c5efb",
@@ -23,21 +23,14 @@
   },
   "current_candidate": "plan_k_head_full.pkl",
   "current_candidate_sha256": "aff0a08e934204cbaf6161ab64bc7430d8ce67e03923cdeb41c1fcd9e386537e",
-  "running_ccd_session_id": 49367,
+  "running_ccd_session_id": null,
   "next": [
-    "Poll full corrected CCD handle49367; source plan aff0a08e934204cbaf6161ab64bc7430d8ce67e03923cdeb41c1fcd9e386537e must remain unchanged while audit runs.",
-    "Upper4 adapter spacer and lower6+2 cassette need support warning/release events at measured screw completion; current geometry paths are verified for head family.",
-    "Finish remaining203 K connection records, complete final manufacture/export/browser checks, then U."
+    "Integrate four own cable-clip foot welds into private source and preassembly sequence; two supplier-body/unsupported clips still need simple own supports.",
+    "Keep actual mount evidence separate from classifier categories; finish remaining203 connections including knife guards and cable channels.",
+    "Complete manufacturing/fixture/release gates, shared-chain coordination and visual checks; finish K then start U."
   ],
-  "active_processes": [
-    {
-      "session_id": 49367,
-      "task": "Full corrected head+K CCD",
-      "command": "k_full_ccd.py plan_k_head_full.pkl",
-      "log": "head_full_ccd_fixed_run.log"
-    }
-  ],
-  "last_verified_work": "Head source1021parts bound;119sheets closed;station PLAN_SORUN0/unplanned0;30benches path issues0;head-focused CCD1001pairs0issues;7M8 joint stacks and3rod welds current-plan bound,5previous head records closed/203remain. Full corrected CCD is live; no activation.",
-  "next_required": "Poll exact live CCD session49367 (do not restart on timeout). Add explicit temporary support warning/release events for upper spacer and lower cassette AFTER CCD finishes; finish source-bound head release evidence and remaining K connections. K and U still incomplete.",
+  "active_processes": [],
+  "last_verified_work": "Full K rigid-path audit completed: 18513 pairs, zero issues, aff0a08e parent plan. Temporary support text child inherits exact equal motion proof. Four cable-clip foot weld candidates:16 real seams with both-carrier contacts; all16 limiting preassembly TIG envelopes pass, geometry repeats byte-identically. Private only; remaining203 records not closed until actual source/assembly integration.",
+  "next_required": "Integrate four own cable-clip foot welds into private source and preassembly sequence; two supplier-body/unsupported clips still need simple own supports.",
   "goal_status": "active"
 }

@@ -1,0 +1,25 @@
+{
+  "parent_plan_sha256": "aff0a08e934204cbaf6161ab64bc7430d8ce67e03923cdeb41c1fcd9e386537e",
+  "supported_plan_sha256": "3be75faaef05dc4ce65689400a76f8f69cce540d0a02decf0683b1851c506018",
+  "source_model_sha256": "5f00073a06682f0f231bef4e93019abc7ecd06ad33be6b1bdd9baeaa206ffc27",
+  "exact_unchanged_fields": [
+    "P",
+    "HAR",
+    "GOR",
+    "MF",
+    "FRAMES",
+    "ROT",
+    "ISTISNA",
+    "HARIC_PLAN",
+    "HARIC_NEDEN",
+    "FABRICATION_JOINS"
+  ],
+  "tested_pairs": 18513,
+  "path_issues": [],
+  "rigid_path_passed": true,
+  "evidence_method": "Exact geometry, rigid motion, visibility and collision-exception equality with fully tested parent",
+  "fixture_checked": false,
+  "connection_checked": false,
+  "bending_self_collision_checked": false,
+  "production_release": false
+}
