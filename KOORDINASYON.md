@@ -8,7 +8,7 @@ Kemal'in kararı (5 Eki 2026): iki ajan aynı anda, farklı istasyonlarda çalı
 
 | İş | Kim | Branch | Durum |
 |---|---|---|---|
-| Robot + ray + QR dolabı + sipariş animasyonları | Codex | `coord/codex-main-integrated-robot-v17` | çalışıyor |
+| Robot + ray + QR dolabı + sipariş animasyonları | Codex | `coord/codex-robot-ray-tesisat-v21` | v10l üstünde: ray merkezleme, üretici CAD, robot/QR/makine beslemeleri ve eski dış tesisat temizliği; adım 90 |
 | TOPPING montaj animasyonu v5 | Claude | `claude/topping-montaj-v5` | yayında (açık 3 küçük madde) |
 | Standart önlemleri · makine: acil stop (58) · 10 kapı emniyet anahtarı (59) · hava emniyet valfi (60) · davlumbaz filtresi servis ağzı (61) · hijyen / R290 / A perdesi kayıt | Claude | `claude/standart-makine` | BİTTİ (cb7d1ec) — Kemal incelemesinde |
 | **TOPPING montaj v6**: bağsız 63 parça + geçici dayalı 2 parça bağlanır (KURALLAR §2.3 kural 10), animasyon yeniden üretilir, §5 denetimi | Claude | `claude/topping-montaj-v6` | YAYINDA (5 Eki, PR #5) · açık: kıyma silindiri flanşı, 5 iç elektrik parçası, 2 kovan contası |
@@ -61,4 +61,4 @@ Bir işe başlamadan önce tabloda başka bir ajanın aynı istasyonu ya da ayn�
 - Depo herkese açık. Oturum kayıtları `_local/claude_oturum/` altında durur (Kemal: kalsın); `_local/` siteye kopyalanmaz. Parola, anahtar, kişisel bilgi depoya konmaz.
 - Büyük ara dosyalar (`.pkl`, 100 MB üstü GLB) depoya konmaz; GLB gerekirse kayıpsız `.gz` olarak.
 
-ZİNCİR KİLİDİ: boş
+ZİNCİR KİLİDİ: Codex · robot/ray/QR dış tesisat adım 90 · 6 Eki 2026 · `coord/codex-robot-ray-tesisat-v21`; Claude K 86–89 / E 81–85 dosyaları değiştirilmez.
