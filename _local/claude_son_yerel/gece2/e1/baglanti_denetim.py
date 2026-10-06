@@ -86,6 +86,7 @@ KAT = [  # (sınama, kategori, açıklama) — sıra önemli, ilk tutan
     # E mekanizma (zincir 81–85, yerel 6 Eki): vidasız durması bilerek olan parçalar
     (lambda a: P[a].get('rol') == 'burc' or a.endswith(('_burc', '_burc_0', '_burc_1')) or 'lm12' in a, 'GECME', 'burç / LM12 lineer burç: bloğun deliğine sıkı geçme (pres)'),
     (lambda a: P[a].get('rol') == 'vantuz' or a.startswith('vantuz_flans'), 'URUN', 'vantuz ürünü (kauçuk + flanş + dişli sap tek ürün): sapı bara vidalı'),
+    (lambda a: a.endswith('_tapa') and a.startswith(('onyuz_dikme', 'kaide_e')), 'GECME', 'profil tapası: kare borunun ucuna çakılır (plastik, kendi tırnağı)'),
     (lambda a: 'katlayici_kizak' in a, 'GECME', 'kızak burcu: katlayıcı bloğunun deliğine preslenmiş, kılavuz milinde kayar'),
     (lambda a: a == 'katlama_sensor', 'ACIK', 'Omron E3Z yan delikli; sol yan saca 1 mm → vidası takılamıyor (üreteç: sensör +x ≥ 4 mm kaymalı) · Kemal kararı'),
     (lambda a: P[a].get('rol') in ('kayis', 'hortum'), 'GECME', 'kayış / vakum hortumu: kasnaklara sarılı / rakorlara geçer (kural 9 istisnası)'),

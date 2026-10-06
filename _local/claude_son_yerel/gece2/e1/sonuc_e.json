@@ -1,6 +1,7 @@
 {
  "model_acigi": 37,
  "yuzey_temasi": [
+  "arka_sac ↔ ust_sac",
   "besleyici_kasnak_0_setskur ↔ besleyici_kasnak_0",
   "besleyici_kasnak_1_setskur ↔ besleyici_kasnak_1",
   "besleyici_sensor_somun_dis ↔ besleyici_sensor",
@@ -13,7 +14,48 @@
   "emniyet_E_UST_SAG_1_somun ↔ emniyet_E_UST_SAG_1_vida",
   "emniyet_E_UST_SOL_0_somun ↔ emniyet_E_UST_SOL_0_vida",
   "emniyet_E_UST_SOL_1_somun ↔ emniyet_E_UST_SOL_1_vida",
+  "govde_bag_kosebent_arka_saplama ↔ govde_kosebent_sag_arka_alt",
   "govde_bag_kosebent_yan_saplama ↔ govde_kosebent_sag_arka_alt",
+  "govde_kulak_sag_on_1100 ↔ govde_kulak_sag_on_250",
+  "govde_kulak_sag_on_1100 ↔ govde_kulak_sag_on_450",
+  "govde_kulak_sag_on_1100 ↔ govde_kulak_sag_on_620",
+  "govde_kulak_sag_on_1100 ↔ govde_kulak_sag_on_850",
+  "govde_kulak_sag_on_1300 ↔ govde_kulak_sag_on_250",
+  "govde_kulak_sag_on_1300 ↔ govde_kulak_sag_on_450",
+  "govde_kulak_sag_on_1300 ↔ govde_kulak_sag_on_620",
+  "govde_kulak_sag_on_1300 ↔ govde_kulak_sag_on_850",
+  "govde_kulak_sag_on_1500 ↔ govde_kulak_sag_on_250",
+  "govde_kulak_sag_on_1500 ↔ govde_kulak_sag_on_450",
+  "govde_kulak_sag_on_1500 ↔ govde_kulak_sag_on_620",
+  "govde_kulak_sag_on_1500 ↔ govde_kulak_sag_on_850",
+  "govde_kulak_sag_on_1700 ↔ govde_kulak_sag_on_250",
+  "govde_kulak_sag_on_1700 ↔ govde_kulak_sag_on_450",
+  "govde_kulak_sag_on_1700 ↔ govde_kulak_sag_on_620",
+  "govde_kulak_sag_on_1700 ↔ govde_kulak_sag_on_850",
+  "govde_kulak_sag_on_1820 ↔ govde_kulak_sag_on_250",
+  "govde_kulak_sag_on_1820 ↔ govde_kulak_sag_on_450",
+  "govde_kulak_sag_on_1820 ↔ govde_kulak_sag_on_620",
+  "govde_kulak_sag_on_1820 ↔ govde_kulak_sag_on_850",
+  "govde_kulak_sol_on_1100 ↔ govde_kulak_sol_on_250",
+  "govde_kulak_sol_on_1100 ↔ govde_kulak_sol_on_450",
+  "govde_kulak_sol_on_1100 ↔ govde_kulak_sol_on_620",
+  "govde_kulak_sol_on_1100 ↔ govde_kulak_sol_on_850",
+  "govde_kulak_sol_on_1300 ↔ govde_kulak_sol_on_250",
+  "govde_kulak_sol_on_1300 ↔ govde_kulak_sol_on_450",
+  "govde_kulak_sol_on_1300 ↔ govde_kulak_sol_on_620",
+  "govde_kulak_sol_on_1300 ↔ govde_kulak_sol_on_850",
+  "govde_kulak_sol_on_1500 ↔ govde_kulak_sol_on_250",
+  "govde_kulak_sol_on_1500 ↔ govde_kulak_sol_on_450",
+  "govde_kulak_sol_on_1500 ↔ govde_kulak_sol_on_620",
+  "govde_kulak_sol_on_1500 ↔ govde_kulak_sol_on_850",
+  "govde_kulak_sol_on_1700 ↔ govde_kulak_sol_on_250",
+  "govde_kulak_sol_on_1700 ↔ govde_kulak_sol_on_450",
+  "govde_kulak_sol_on_1700 ↔ govde_kulak_sol_on_620",
+  "govde_kulak_sol_on_1700 ↔ govde_kulak_sol_on_850",
+  "govde_kulak_sol_on_1820 ↔ govde_kulak_sol_on_250",
+  "govde_kulak_sol_on_1820 ↔ govde_kulak_sol_on_450",
+  "govde_kulak_sol_on_1820 ↔ govde_kulak_sol_on_620",
+  "govde_kulak_sol_on_1820 ↔ govde_kulak_sol_on_850",
   "itici_motor_vida_0 ↔ itici_motor",
   "itici_motor_vida_1 ↔ itici_motor",
   "itici_motor_vida_2 ↔ itici_motor",
@@ -118,246 +160,246 @@
  "adim": 13,
  "parca": 1340,
  "cevre": 4,
- "cift": 3924,
+ "cift": 4029,
  "cakisma": 15,
  "cakismalar": [
   {
    "a": "itici_ray_0_vida_0",
    "b": "itici_ray_0",
-   "t": 75.94,
+   "t": 111.64,
    "w": [
-    75.67,
-    76.07
+    111.37,
+    111.77
    ],
    "derin": 1.0,
    "yon": "oteleme",
    "hareket": "itici_ray_0_vida_0",
    "kesisim": {
-    "t": 75.67,
+    "t": 111.37,
     "ucgen": 2
    }
   },
   {
    "a": "itici_ray_0_vida_1",
    "b": "itici_ray_0",
-   "t": 76.02,
+   "t": 111.72,
    "w": [
-    75.75,
-    76.15
+    111.45,
+    111.85
    ],
    "derin": 1.0,
    "yon": "oteleme",
    "hareket": "itici_ray_0_vida_1",
    "kesisim": {
-    "t": 75.75,
+    "t": 111.45,
     "ucgen": 2
    }
   },
   {
    "a": "itici_ray_0_vida_2",
    "b": "itici_ray_0",
-   "t": 76.1,
+   "t": 111.8,
    "w": [
-    75.83,
-    76.23
+    111.53,
+    111.93
    ],
    "derin": 1.0,
    "yon": "oteleme",
    "hareket": "itici_ray_0_vida_2",
    "kesisim": {
-    "t": 75.83,
+    "t": 111.53,
     "ucgen": 2
    }
   },
   {
    "a": "itici_ray_0_vida_3",
    "b": "itici_ray_0",
-   "t": 76.18,
+   "t": 111.88,
    "w": [
-    75.91,
-    76.31
+    111.61,
+    112.01
    ],
    "derin": 1.0,
    "yon": "oteleme",
    "hareket": "itici_ray_0_vida_3",
    "kesisim": {
-    "t": 75.91,
+    "t": 111.61,
     "ucgen": 2
    }
   },
   {
    "a": "itici_ray_1_vida_0",
    "b": "itici_ray_1",
-   "t": 77.06,
+   "t": 112.76,
    "w": [
-    76.79,
-    77.19
+    112.49,
+    112.89
    ],
    "derin": 1.0,
    "yon": "oteleme",
    "hareket": "itici_ray_1_vida_0",
    "kesisim": {
-    "t": 76.79,
+    "t": 112.49,
     "ucgen": 2
    }
   },
   {
    "a": "itici_ray_1_vida_1",
    "b": "itici_ray_1",
-   "t": 77.14,
+   "t": 112.84,
    "w": [
-    76.87,
-    77.27
+    112.57,
+    112.97
    ],
    "derin": 1.0,
    "yon": "oteleme",
    "hareket": "itici_ray_1_vida_1",
    "kesisim": {
-    "t": 76.87,
+    "t": 112.57,
     "ucgen": 2
    }
   },
   {
    "a": "itici_ray_1_vida_2",
    "b": "itici_ray_1",
-   "t": 77.22,
+   "t": 112.92,
    "w": [
-    76.95,
-    77.35
+    112.65,
+    113.05
    ],
    "derin": 1.0,
    "yon": "oteleme",
    "hareket": "itici_ray_1_vida_2",
    "kesisim": {
-    "t": 76.95,
+    "t": 112.65,
     "ucgen": 2
    }
   },
   {
    "a": "itici_ray_1_vida_3",
    "b": "itici_ray_1",
-   "t": 77.3,
+   "t": 113.0,
    "w": [
-    77.03,
-    77.43
+    112.73,
+    113.13
    ],
    "derin": 1.0,
    "yon": "oteleme",
    "hareket": "itici_ray_1_vida_3",
    "kesisim": {
-    "t": 77.03,
+    "t": 112.73,
     "ucgen": 2
    }
   },
   {
    "a": "kose_piston_braket_0_direk_vida_1",
    "b": "kose_piston_braket_0_plaka_vida_0",
-   "t": 108.45,
+   "t": 144.15,
    "w": [
-    108.25,
-    108.65
+    143.95,
+    144.35
    ],
    "derin": 1.5,
    "yon": "oteleme",
    "hareket": "kose_piston_braket_0_plaka_vida_0",
    "kesisim": {
-    "t": 108.25,
+    "t": 143.95,
     "ucgen": 4
    }
   },
   {
    "a": "kose_piston_braket_1_direk_vida_1",
    "b": "kose_piston_braket_1_plaka_vida_0",
-   "t": 110.24,
+   "t": 145.94,
    "w": [
-    110.04,
-    110.44
+    145.74,
+    146.14
    ],
    "derin": 1.5,
    "yon": "oteleme",
    "hareket": "kose_piston_braket_1_plaka_vida_0",
    "kesisim": {
-    "t": 110.04,
+    "t": 145.74,
     "ucgen": 4
    }
   },
   {
    "a": "kose_tutucu_sag_on_gobek_pim",
    "b": "kose_sasi",
-   "t": 121.35,
+   "t": 157.05,
    "w": [
-    121.11,
-    121.51
+    156.81,
+    157.21
    ],
    "derin": 1.2,
    "yon": "oteleme",
    "hareket": "kose_tutucu_sag_on_gobek_pim",
    "kesisim": {
-    "t": 121.11,
+    "t": 156.81,
     "ucgen": 2
    }
   },
   {
    "a": "kose_uc_blok_sag_braket",
    "b": "kose_uc_blok_sag_braket_ray_vida_0",
-   "t": 111.74,
+   "t": 147.44,
    "w": [
-    111.51,
-    111.91
+    147.21,
+    147.61
    ],
    "derin": 1.3,
    "yon": "oteleme",
    "hareket": "kose_uc_blok_sag_braket_ray_vida_0",
    "kesisim": {
-    "t": 111.721,
+    "t": 147.415,
     "ucgen": 1
    }
   },
   {
    "a": "kose_uc_blok_sag_braket",
    "b": "kose_uc_blok_sag_braket_ray_vida_1",
-   "t": 111.82,
+   "t": 147.52,
    "w": [
-    111.59,
-    111.99
+    147.29,
+    147.69
    ],
    "derin": 1.3,
    "yon": "oteleme",
    "hareket": "kose_uc_blok_sag_braket_ray_vida_1",
    "kesisim": {
-    "t": 111.801,
+    "t": 147.495,
     "ucgen": 1
    }
   },
   {
    "a": "kose_uc_blok_sag_braket_blok_vida_0",
    "b": "kose_uc_blok_sag_braket_ray_vida_0",
-   "t": 111.72,
+   "t": 147.42,
    "w": [
-    111.51,
-    111.91
+    147.21,
+    147.61
    ],
    "derin": 1.4,
    "yon": "oteleme",
    "hareket": "kose_uc_blok_sag_braket_ray_vida_0",
    "kesisim": {
-    "t": 111.605,
+    "t": 147.302,
     "ucgen": 2
    }
   },
   {
    "a": "kose_uc_blok_sag_braket_blok_vida_1",
    "b": "kose_uc_blok_sag_braket_ray_vida_1",
-   "t": 111.8,
+   "t": 147.5,
    "w": [
-    111.59,
-    111.99
+    147.29,
+    147.69
    ],
    "derin": 1.4,
    "yon": "oteleme",
    "hareket": "kose_uc_blok_sag_braket_ray_vida_1",
    "kesisim": {
-    "t": 111.685,
+    "t": 147.382,
     "ucgen": 2
    }
   }
@@ -1041,6 +1083,33 @@
  "uretilen": [
   "arka_sac",
   "govde_kosebent_sag_arka_alt",
+  "govde_kulak_sag_on_1100",
+  "govde_kulak_sag_on_1300",
+  "govde_kulak_sag_on_1500",
+  "govde_kulak_sag_on_1700",
+  "govde_kulak_sag_on_1820",
+  "govde_kulak_sag_on_250",
+  "govde_kulak_sag_on_450",
+  "govde_kulak_sag_on_620",
+  "govde_kulak_sag_on_850",
+  "govde_kulak_sag_taban_150",
+  "govde_kulak_sag_taban_30",
+  "govde_kulak_sag_taban_300",
+  "govde_kulak_sag_taban_470",
+  "govde_kulak_sag_taban_620",
+  "govde_kulak_sag_taban_760",
+  "govde_kulak_sol_on_1100",
+  "govde_kulak_sol_on_1300",
+  "govde_kulak_sol_on_1500",
+  "govde_kulak_sol_on_1700",
+  "govde_kulak_sol_on_1820",
+  "govde_kulak_sol_on_250",
+  "govde_kulak_sol_on_450",
+  "govde_kulak_sol_on_620",
+  "govde_kulak_sol_on_850",
+  "govde_kulak_sol_taban_470",
+  "govde_kulak_sol_taban_620",
+  "govde_kulak_sol_taban_790",
   "onyuz_kapak_E_alt_sag",
   "onyuz_kapak_E_alt_sol",
   "onyuz_kapak_E_ust_sag",
