@@ -221,8 +221,10 @@ ADIMLAR = [
      [(".", 'python "{YAMA}/72_k_mekanizma_baglantilari.py" hat3_v10l.glb hat3_v10m.glb')]),
     ("73", "K tavan dişli takviye bağlantıları", ["hat3_v10m.glb"], "hat3_v10n.glb",
      [(".", 'python "{YAMA}/73_k_tavan_baglantilari.py" hat3_v10m.glb hat3_v10n.glb')]),
+    ("86", "K: Codex devrindeki 212 bağlantısız parçanın gerçek bağlantıları (vida / somun / perçin somun / PEM saplama / pim / kaynak; bıçak seti merkez saplama + kelebek; koruma braketleri yaslandı) — Codex K prototipi hat3_v10ze üstüne (Claude, 6 Eki)", ["hat3_v10ze.glb"], "hat3_v10zf.glb",
+     [(".", 'python "{YAMA}/86_k_baglanti.py" hat3_v10ze.glb hat3_v10zf.glb')]),
 ]
-SON = "hat3_v10n.glb"
+SON = "hat3_v10zf.glb"
 
 
 def kur(is_dizin, h3, uretec):

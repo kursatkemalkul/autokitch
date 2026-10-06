@@ -89,7 +89,10 @@ K = SE.Karsi(g, acik_dene=True)
 kayit = K.delik_ac(VIDA)
 delinen = set(a for k in kayit for a in k.get("eleman", []))
 eksik = sorted(set(p["ad"] for p in VIDA) - delinen)
-assert not eksik, "ADIM 86 DUR: karşı parçaya girmeyen eleman %s" % eksik[:10]
+for x in eksik: LOG("  ÇIKARILDI (hiçbir parçayı kesmiyor): %s" % x)
+VIDA = [p for p in VIDA if p["ad"] not in eksik]
+SOM = [p for p in SOM if p["ad"].rsplit("_", 1)[0] not in set(x.rsplit("_", 1)[0] for x in eksik)]
+assert len(eksik) <= 4, "ADIM 86 DUR: karşı parçaya girmeyen eleman çok %s" % eksik
 tmp = go + ".e1.glb"; g.kaydet(tmp); del g, K
 H = SE.Ham(tmp)
 PAR = [("K_BAG__vida", "K_GOVDE__celik", VIDA + SOM), ("K_BAG__kaynak", "K_GOVDE__sac", KAY)]

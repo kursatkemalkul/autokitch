@@ -102,7 +102,7 @@ KURAL = [
     (r'^valf_kor_plaka$', 'VIDA', dict(d=3, n=2, destek='valf_adasi_SS5Y3-20-04', bas='a', neden='kör plaka manifolda 2 × M3')),
     (r'^valf_SY3120_\d_rakor_\d$', 'BEYAN:DIS', dict(neden='C6 geçme rakor valf portuna')),
     (r'^yag_(T_parcasi|basinc_sensoru|boru_|emis_filtresi)', 'BEYAN:DIS', dict(neden='1/4" paslanmaz hat: dişli / sıkma rakorlu bağlantı')),
-    (r'^yag_geri_basinc_regulatoru', 'VIDA', dict(d=5, n=2, destek='yag_pompa_plakasi', bas='a', neden='geri basınç regülatörü plakaya 2 × M5 (panel montaj)')),
+    (r'^yag_geri_basinc_regulatoru', 'BEYAN:DIS', dict(karsi='yag_pompa_plakasi', neden='Swagelok KBP panel montaj somunuyla plakanın deliğine (ürüne delik açılmaz)')),
     (r'^yag_pompasi_', 'BEYAN:KELEPCE', dict(karsi='k79_pompa_ust_pad_0', neden='pompa iki portal ile plakaya sıkılır (portallar 4 × M5)')),
     (r'^yag_damlama_tavasi_F$', 'BEYAN:SOKULUR', dict(neden='damlama tavası F rafına oturur, temizlik için elle çıkar')),
     (r'^yag_tarti_taban_plakasi$', 'BEYAN:SOKULUR', dict(neden='tartı tabanı damlama tavasında oturur (tartı serbest durmalı), elle çıkar')),
