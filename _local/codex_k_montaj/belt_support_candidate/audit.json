@@ -1,0 +1,450 @@
+{
+  "source_model_sha256": "0a9dc9699ed91a9fb25b654553afa9628897f5bd289a9db4a442cd99c41cc262",
+  "source_parts_sha256": "e1b076206a456516fb56ee923142f34d75af1ec75d7e3a2107d7f05b7532d2f1",
+  "changed_parts": [
+    "k72_bant_ayagi_4065.0_-421.0",
+    "k72_bant_ayagi_4335.0_-421.0",
+    "bant_ayagi_65_-3",
+    "bant_ayagi_335_-3"
+  ],
+  "unchanged_render_template": "k72_bant_ayak_kaynagi_4065.0_-421.0_0",
+  "added_parts": [
+    "k79_bant_ust_tapa_4065_-421",
+    "k79_bant_tapa_cevre_kaynagi_4065_-421",
+    "k79_bant_ust_kaynagi_4065_-421_-1",
+    "k79_bant_ust_kaynagi_4065_-421_1",
+    "k79_bant_ust_tapa_4335_-421",
+    "k79_bant_tapa_cevre_kaynagi_4335_-421",
+    "k79_bant_ust_kaynagi_4335_-421_-1",
+    "k79_bant_ust_kaynagi_4335_-421_1",
+    "k79_bant_ust_tapa_4065_-3",
+    "k79_bant_tapa_cevre_kaynagi_4065_-3",
+    "k79_bant_ust_kaynagi_4065_-3_-1",
+    "k79_bant_ust_kaynagi_4065_-3_1",
+    "k79_bant_ust_tapa_4335_-3",
+    "k79_bant_tapa_cevre_kaynagi_4335_-3",
+    "k79_bant_ust_kaynagi_4335_-3_-1",
+    "k79_bant_ust_kaynagi_4335_-3_1"
+  ],
+  "joints": [
+    {
+      "id": "4065_-421",
+      "post": "k72_bant_ayagi_4065.0_-421.0",
+      "cap": "k79_bant_ust_tapa_4065_-421",
+      "plate": "bant_yan_-421",
+      "cap_weld": "k79_bant_tapa_cevre_kaynagi_4065_-421",
+      "plate_welds": [
+        "k79_bant_ust_kaynagi_4065_-421_-1",
+        "k79_bant_ust_kaynagi_4065_-421_1"
+      ],
+      "bottom_y_mm": 895.0,
+      "post_top_y_mm": 930.5,
+      "cap_top_and_belt_seat_y_mm": 932.5,
+      "cap_t_mm": 2.0,
+      "stock_profile": "20x20x2 R4/R2",
+      "continuous_cap_weld_length_mm": 73.13274122871833,
+      "weld_leg_mm": 1.4,
+      "effective_throat_mm": 0.9899494936611664,
+      "supplier_parts_modified": false,
+      "manufacturing_order": "Post/cap bench-weld first; mount and tighten foot to shelf; lower belt frame on caps, weld plate/cap before rollers and belt are installed",
+      "torch_path_and_load_release": false
+    },
+    {
+      "id": "4335_-421",
+      "post": "k72_bant_ayagi_4335.0_-421.0",
+      "cap": "k79_bant_ust_tapa_4335_-421",
+      "plate": "bant_yan_-421",
+      "cap_weld": "k79_bant_tapa_cevre_kaynagi_4335_-421",
+      "plate_welds": [
+        "k79_bant_ust_kaynagi_4335_-421_-1",
+        "k79_bant_ust_kaynagi_4335_-421_1"
+      ],
+      "bottom_y_mm": 895.0,
+      "post_top_y_mm": 930.5,
+      "cap_top_and_belt_seat_y_mm": 932.5,
+      "cap_t_mm": 2.0,
+      "stock_profile": "20x20x2 R4/R2",
+      "continuous_cap_weld_length_mm": 73.13274122871833,
+      "weld_leg_mm": 1.4,
+      "effective_throat_mm": 0.9899494936611664,
+      "supplier_parts_modified": false,
+      "manufacturing_order": "Post/cap bench-weld first; mount and tighten foot to shelf; lower belt frame on caps, weld plate/cap before rollers and belt are installed",
+      "torch_path_and_load_release": false
+    },
+    {
+      "id": "4065_-3",
+      "post": "bant_ayagi_65_-3",
+      "cap": "k79_bant_ust_tapa_4065_-3",
+      "plate": "bant_yan_-3",
+      "cap_weld": "k79_bant_tapa_cevre_kaynagi_4065_-3",
+      "plate_welds": [
+        "k79_bant_ust_kaynagi_4065_-3_-1",
+        "k79_bant_ust_kaynagi_4065_-3_1"
+      ],
+      "bottom_y_mm": 895.0,
+      "post_top_y_mm": 930.5,
+      "cap_top_and_belt_seat_y_mm": 932.5,
+      "cap_t_mm": 2.0,
+      "stock_profile": "20x20x2 R4/R2",
+      "continuous_cap_weld_length_mm": 73.13274122871833,
+      "weld_leg_mm": 1.4,
+      "effective_throat_mm": 0.9899494936611664,
+      "supplier_parts_modified": false,
+      "manufacturing_order": "Post/cap bench-weld first; mount and tighten foot to shelf; lower belt frame on caps, weld plate/cap before rollers and belt are installed",
+      "torch_path_and_load_release": false
+    },
+    {
+      "id": "4335_-3",
+      "post": "bant_ayagi_335_-3",
+      "cap": "k79_bant_ust_tapa_4335_-3",
+      "plate": "bant_yan_-3",
+      "cap_weld": "k79_bant_tapa_cevre_kaynagi_4335_-3",
+      "plate_welds": [
+        "k79_bant_ust_kaynagi_4335_-3_-1",
+        "k79_bant_ust_kaynagi_4335_-3_1"
+      ],
+      "bottom_y_mm": 895.0,
+      "post_top_y_mm": 930.5,
+      "cap_top_and_belt_seat_y_mm": 932.5,
+      "cap_t_mm": 2.0,
+      "stock_profile": "20x20x2 R4/R2",
+      "continuous_cap_weld_length_mm": 73.13274122871833,
+      "weld_leg_mm": 1.4,
+      "effective_throat_mm": 0.9899494936611664,
+      "supplier_parts_modified": false,
+      "manufacturing_order": "Post/cap bench-weld first; mount and tighten foot to shelf; lower belt frame on caps, weld plate/cap before rollers and belt are installed",
+      "torch_path_and_load_release": false
+    }
+  ],
+  "contacts": [
+    {
+      "id": "4065_-421",
+      "cap_top_slice_mm3": 7.999999999992724,
+      "plate_bottom_slice_mm3": 6.000000000005424,
+      "cap_expected_slice_mm3": 8.0,
+      "plate_expected_slice_mm3": 6.0,
+      "seat_gap_mm": 0.0,
+      "cap_closed_solid": "Error.NoError",
+      "post_closed_solid": "Error.NoError",
+      "passed": true
+    },
+    {
+      "id": "4335_-421",
+      "cap_top_slice_mm3": 7.999999999992724,
+      "plate_bottom_slice_mm3": 6.00000000000544,
+      "cap_expected_slice_mm3": 8.0,
+      "plate_expected_slice_mm3": 6.0,
+      "seat_gap_mm": 0.0,
+      "cap_closed_solid": "Error.NoError",
+      "post_closed_solid": "Error.NoError",
+      "passed": true
+    },
+    {
+      "id": "4065_-3",
+      "cap_top_slice_mm3": 7.999999999992724,
+      "plate_bottom_slice_mm3": 6.000000000005424,
+      "cap_expected_slice_mm3": 8.0,
+      "plate_expected_slice_mm3": 6.0,
+      "seat_gap_mm": 0.0,
+      "cap_closed_solid": "Error.NoError",
+      "post_closed_solid": "Error.NoError",
+      "passed": true
+    },
+    {
+      "id": "4335_-3",
+      "cap_top_slice_mm3": 7.999999999992724,
+      "plate_bottom_slice_mm3": 6.00000000000544,
+      "cap_expected_slice_mm3": 8.0,
+      "plate_expected_slice_mm3": 6.0,
+      "seat_gap_mm": 0.0,
+      "cap_closed_solid": "Error.NoError",
+      "post_closed_solid": "Error.NoError",
+      "passed": true
+    }
+  ],
+  "clashes": [],
+  "open_mesh_surface_checks": [
+    {
+      "candidate": "k72_bant_ayagi_4065.0_-421.0",
+      "source": "cevre_F",
+      "crossing_triangles": 0,
+      "vertices_inside": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k72_bant_ayagi_4065.0_-421.0",
+      "source": "cevre_diger",
+      "crossing_triangles": 0,
+      "vertices_inside": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k79_bant_ust_tapa_4065_-421",
+      "source": "cevre_F",
+      "crossing_triangles": 0,
+      "vertices_inside": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k79_bant_ust_tapa_4065_-421",
+      "source": "cevre_diger",
+      "crossing_triangles": 0,
+      "vertices_inside": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k79_bant_tapa_cevre_kaynagi_4065_-421",
+      "source": "cevre_F",
+      "crossing_triangles": 0,
+      "vertices_inside": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k79_bant_tapa_cevre_kaynagi_4065_-421",
+      "source": "cevre_diger",
+      "crossing_triangles": 0,
+      "vertices_inside": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k79_bant_ust_kaynagi_4065_-421_-1",
+      "source": "cevre_F",
+      "crossing_triangles": 0,
+      "vertices_inside": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k79_bant_ust_kaynagi_4065_-421_-1",
+      "source": "cevre_diger",
+      "crossing_triangles": 0,
+      "vertices_inside": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k79_bant_ust_kaynagi_4065_-421_1",
+      "source": "cevre_F",
+      "crossing_triangles": 0,
+      "vertices_inside": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k79_bant_ust_kaynagi_4065_-421_1",
+      "source": "cevre_diger",
+      "crossing_triangles": 0,
+      "vertices_inside": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k72_bant_ayagi_4335.0_-421.0",
+      "source": "cevre_F",
+      "crossing_triangles": 0,
+      "vertices_inside": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k72_bant_ayagi_4335.0_-421.0",
+      "source": "cevre_diger",
+      "crossing_triangles": 0,
+      "vertices_inside": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k79_bant_ust_tapa_4335_-421",
+      "source": "cevre_F",
+      "crossing_triangles": 0,
+      "vertices_inside": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k79_bant_ust_tapa_4335_-421",
+      "source": "cevre_diger",
+      "crossing_triangles": 0,
+      "vertices_inside": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k79_bant_tapa_cevre_kaynagi_4335_-421",
+      "source": "cevre_F",
+      "crossing_triangles": 0,
+      "vertices_inside": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k79_bant_tapa_cevre_kaynagi_4335_-421",
+      "source": "cevre_diger",
+      "crossing_triangles": 0,
+      "vertices_inside": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k79_bant_ust_kaynagi_4335_-421_-1",
+      "source": "cevre_F",
+      "crossing_triangles": 0,
+      "vertices_inside": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k79_bant_ust_kaynagi_4335_-421_-1",
+      "source": "cevre_diger",
+      "crossing_triangles": 0,
+      "vertices_inside": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k79_bant_ust_kaynagi_4335_-421_1",
+      "source": "cevre_F",
+      "crossing_triangles": 0,
+      "vertices_inside": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k79_bant_ust_kaynagi_4335_-421_1",
+      "source": "cevre_diger",
+      "crossing_triangles": 0,
+      "vertices_inside": 0,
+      "passed": true
+    },
+    {
+      "candidate": "bant_ayagi_65_-3",
+      "source": "cevre_F",
+      "crossing_triangles": 0,
+      "vertices_inside": 0,
+      "passed": true
+    },
+    {
+      "candidate": "bant_ayagi_65_-3",
+      "source": "cevre_diger",
+      "crossing_triangles": 0,
+      "vertices_inside": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k79_bant_ust_tapa_4065_-3",
+      "source": "cevre_F",
+      "crossing_triangles": 0,
+      "vertices_inside": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k79_bant_ust_tapa_4065_-3",
+      "source": "cevre_diger",
+      "crossing_triangles": 0,
+      "vertices_inside": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k79_bant_tapa_cevre_kaynagi_4065_-3",
+      "source": "cevre_F",
+      "crossing_triangles": 0,
+      "vertices_inside": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k79_bant_tapa_cevre_kaynagi_4065_-3",
+      "source": "cevre_diger",
+      "crossing_triangles": 0,
+      "vertices_inside": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k79_bant_ust_kaynagi_4065_-3_-1",
+      "source": "cevre_F",
+      "crossing_triangles": 0,
+      "vertices_inside": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k79_bant_ust_kaynagi_4065_-3_-1",
+      "source": "cevre_diger",
+      "crossing_triangles": 0,
+      "vertices_inside": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k79_bant_ust_kaynagi_4065_-3_1",
+      "source": "cevre_F",
+      "crossing_triangles": 0,
+      "vertices_inside": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k79_bant_ust_kaynagi_4065_-3_1",
+      "source": "cevre_diger",
+      "crossing_triangles": 0,
+      "vertices_inside": 0,
+      "passed": true
+    },
+    {
+      "candidate": "bant_ayagi_335_-3",
+      "source": "cevre_F",
+      "crossing_triangles": 0,
+      "vertices_inside": 0,
+      "passed": true
+    },
+    {
+      "candidate": "bant_ayagi_335_-3",
+      "source": "cevre_diger",
+      "crossing_triangles": 0,
+      "vertices_inside": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k79_bant_ust_tapa_4335_-3",
+      "source": "cevre_F",
+      "crossing_triangles": 0,
+      "vertices_inside": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k79_bant_ust_tapa_4335_-3",
+      "source": "cevre_diger",
+      "crossing_triangles": 0,
+      "vertices_inside": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k79_bant_tapa_cevre_kaynagi_4335_-3",
+      "source": "cevre_F",
+      "crossing_triangles": 0,
+      "vertices_inside": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k79_bant_tapa_cevre_kaynagi_4335_-3",
+      "source": "cevre_diger",
+      "crossing_triangles": 0,
+      "vertices_inside": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k79_bant_ust_kaynagi_4335_-3_-1",
+      "source": "cevre_F",
+      "crossing_triangles": 0,
+      "vertices_inside": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k79_bant_ust_kaynagi_4335_-3_-1",
+      "source": "cevre_diger",
+      "crossing_triangles": 0,
+      "vertices_inside": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k79_bant_ust_kaynagi_4335_-3_1",
+      "source": "cevre_F",
+      "crossing_triangles": 0,
+      "vertices_inside": 0,
+      "passed": true
+    },
+    {
+      "candidate": "k79_bant_ust_kaynagi_4335_-3_1",
+      "source": "cevre_diger",
+      "crossing_triangles": 0,
+      "vertices_inside": 0,
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "production_release": false
+}

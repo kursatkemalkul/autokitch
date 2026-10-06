@@ -1,0 +1,231 @@
+{
+  "source_parts_sha256": "3e5bbd454332d89120d9cf9ab31a4c26878e9b5dfc79a1de4db000bba73fe051",
+  "source_sheet_encoding_sha256": "80c603386201e484344963662942e7f66a6f1aeaae5d7256e47dab10ed01d401",
+  "sides": [
+    {
+      "side_plate": "bant_yan_-421",
+      "members": [
+        "bant_yan_-421",
+        "k72_bant_ayak_flansi_4065.0_-421.0",
+        "k72_bant_ayagi_4065.0_-421.0",
+        "k79_bant_ust_tapa_4065_-421",
+        "k72_bant_ayak_flansi_4335.0_-421.0",
+        "k72_bant_ayagi_4335.0_-421.0",
+        "k79_bant_ust_tapa_4335_-421"
+      ],
+      "welds": [
+        "k72_bant_ayak_kaynagi_4065.0_-421.0_0",
+        "k72_bant_ayak_kaynagi_4065.0_-421.0_1",
+        "k72_bant_ayak_kaynagi_4065.0_-421.0_2",
+        "k72_bant_ayak_kaynagi_4065.0_-421.0_3",
+        "k79_bant_tapa_cevre_kaynagi_4065_-421",
+        "k79_bant_ust_kaynagi_4065_-421_-1",
+        "k79_bant_ust_kaynagi_4065_-421_1",
+        "k72_bant_ayak_kaynagi_4335.0_-421.0_0",
+        "k72_bant_ayak_kaynagi_4335.0_-421.0_1",
+        "k72_bant_ayak_kaynagi_4335.0_-421.0_2",
+        "k72_bant_ayak_kaynagi_4335.0_-421.0_3",
+        "k79_bant_tapa_cevre_kaynagi_4335_-421",
+        "k79_bant_ust_kaynagi_4335_-421_-1",
+        "k79_bant_ust_kaynagi_4335_-421_1"
+      ],
+      "events": [
+        {
+          "parts": [
+            "k72_bant_ayak_flansi_4065.0_-421.0"
+          ],
+          "arrival_seconds": 0.72,
+          "welds_after_arrival": [],
+          "finished_seconds": 0.72
+        },
+        {
+          "parts": [
+            "k72_bant_ayagi_4065.0_-421.0"
+          ],
+          "arrival_seconds": 1.49,
+          "welds_after_arrival": [
+            "k72_bant_ayak_kaynagi_4065.0_-421.0_0",
+            "k72_bant_ayak_kaynagi_4065.0_-421.0_1",
+            "k72_bant_ayak_kaynagi_4065.0_-421.0_2",
+            "k72_bant_ayak_kaynagi_4065.0_-421.0_3"
+          ],
+          "finished_seconds": 3.89
+        },
+        {
+          "parts": [
+            "k79_bant_ust_tapa_4065_-421"
+          ],
+          "arrival_seconds": 5.06,
+          "welds_after_arrival": [
+            "k79_bant_tapa_cevre_kaynagi_4065_-421"
+          ],
+          "finished_seconds": 5.659999999999999
+        },
+        {
+          "parts": [
+            "k72_bant_ayak_flansi_4335.0_-421.0"
+          ],
+          "arrival_seconds": 6.379999999999999,
+          "welds_after_arrival": [],
+          "finished_seconds": 6.379999999999999
+        },
+        {
+          "parts": [
+            "k72_bant_ayagi_4335.0_-421.0"
+          ],
+          "arrival_seconds": 7.149999999999999,
+          "welds_after_arrival": [
+            "k72_bant_ayak_kaynagi_4335.0_-421.0_0",
+            "k72_bant_ayak_kaynagi_4335.0_-421.0_1",
+            "k72_bant_ayak_kaynagi_4335.0_-421.0_2",
+            "k72_bant_ayak_kaynagi_4335.0_-421.0_3"
+          ],
+          "finished_seconds": 9.549999999999997
+        },
+        {
+          "parts": [
+            "k79_bant_ust_tapa_4335_-421"
+          ],
+          "arrival_seconds": 10.719999999999995,
+          "welds_after_arrival": [
+            "k79_bant_tapa_cevre_kaynagi_4335_-421"
+          ],
+          "finished_seconds": 11.319999999999995
+        },
+        {
+          "parts": [
+            "bant_yan_-421"
+          ],
+          "arrival_seconds": 12.489999999999993,
+          "welds_after_arrival": [
+            "k79_bant_ust_kaynagi_4065_-421_-1",
+            "k79_bant_ust_kaynagi_4065_-421_1",
+            "k79_bant_ust_kaynagi_4335_-421_-1",
+            "k79_bant_ust_kaynagi_4335_-421_1"
+          ],
+          "finished_seconds": 14.889999999999992
+        }
+      ],
+      "plan_problems": [],
+      "supplier_rollers_in_weld_phase": false,
+      "temporary_support_warning_shown": true,
+      "fixtures_verified": false,
+      "torch_access_verified": false,
+      "production_release": false
+    },
+    {
+      "side_plate": "bant_yan_-3",
+      "members": [
+        "bant_yan_-3",
+        "k72_bant_ayak_flansi_4065.0_-3.0",
+        "bant_ayagi_65_-3",
+        "k79_bant_ust_tapa_4065_-3",
+        "k72_bant_ayak_flansi_4335.0_-3.0",
+        "bant_ayagi_335_-3",
+        "k79_bant_ust_tapa_4335_-3"
+      ],
+      "welds": [
+        "k72_bant_ayak_kaynagi_4065.0_-3.0_0",
+        "k72_bant_ayak_kaynagi_4065.0_-3.0_1",
+        "k72_bant_ayak_kaynagi_4065.0_-3.0_2",
+        "k72_bant_ayak_kaynagi_4065.0_-3.0_3",
+        "k79_bant_tapa_cevre_kaynagi_4065_-3",
+        "k79_bant_ust_kaynagi_4065_-3_-1",
+        "k79_bant_ust_kaynagi_4065_-3_1",
+        "k72_bant_ayak_kaynagi_4335.0_-3.0_0",
+        "k72_bant_ayak_kaynagi_4335.0_-3.0_1",
+        "k72_bant_ayak_kaynagi_4335.0_-3.0_2",
+        "k72_bant_ayak_kaynagi_4335.0_-3.0_3",
+        "k79_bant_tapa_cevre_kaynagi_4335_-3",
+        "k79_bant_ust_kaynagi_4335_-3_-1",
+        "k79_bant_ust_kaynagi_4335_-3_1"
+      ],
+      "events": [
+        {
+          "parts": [
+            "k72_bant_ayak_flansi_4065.0_-3.0"
+          ],
+          "arrival_seconds": 0.72,
+          "welds_after_arrival": [],
+          "finished_seconds": 0.72
+        },
+        {
+          "parts": [
+            "bant_ayagi_65_-3"
+          ],
+          "arrival_seconds": 1.49,
+          "welds_after_arrival": [
+            "k72_bant_ayak_kaynagi_4065.0_-3.0_0",
+            "k72_bant_ayak_kaynagi_4065.0_-3.0_1",
+            "k72_bant_ayak_kaynagi_4065.0_-3.0_2",
+            "k72_bant_ayak_kaynagi_4065.0_-3.0_3"
+          ],
+          "finished_seconds": 3.89
+        },
+        {
+          "parts": [
+            "k79_bant_ust_tapa_4065_-3"
+          ],
+          "arrival_seconds": 5.06,
+          "welds_after_arrival": [
+            "k79_bant_tapa_cevre_kaynagi_4065_-3"
+          ],
+          "finished_seconds": 5.659999999999999
+        },
+        {
+          "parts": [
+            "k72_bant_ayak_flansi_4335.0_-3.0"
+          ],
+          "arrival_seconds": 6.379999999999999,
+          "welds_after_arrival": [],
+          "finished_seconds": 6.379999999999999
+        },
+        {
+          "parts": [
+            "bant_ayagi_335_-3"
+          ],
+          "arrival_seconds": 7.149999999999999,
+          "welds_after_arrival": [
+            "k72_bant_ayak_kaynagi_4335.0_-3.0_0",
+            "k72_bant_ayak_kaynagi_4335.0_-3.0_1",
+            "k72_bant_ayak_kaynagi_4335.0_-3.0_2",
+            "k72_bant_ayak_kaynagi_4335.0_-3.0_3"
+          ],
+          "finished_seconds": 9.549999999999997
+        },
+        {
+          "parts": [
+            "k79_bant_ust_tapa_4335_-3"
+          ],
+          "arrival_seconds": 10.719999999999995,
+          "welds_after_arrival": [
+            "k79_bant_tapa_cevre_kaynagi_4335_-3"
+          ],
+          "finished_seconds": 11.319999999999995
+        },
+        {
+          "parts": [
+            "bant_yan_-3"
+          ],
+          "arrival_seconds": 12.489999999999993,
+          "welds_after_arrival": [
+            "k79_bant_ust_kaynagi_4065_-3_-1",
+            "k79_bant_ust_kaynagi_4065_-3_1",
+            "k79_bant_ust_kaynagi_4335_-3_-1",
+            "k79_bant_ust_kaynagi_4335_-3_1"
+          ],
+          "finished_seconds": 14.889999999999992
+        }
+      ],
+      "plan_problems": [],
+      "supplier_rollers_in_weld_phase": false,
+      "temporary_support_warning_shown": true,
+      "fixtures_verified": false,
+      "torch_access_verified": false,
+      "production_release": false
+    }
+  ],
+  "passed_paths_only": true,
+  "production_release": false,
+  "elapsed_seconds": 1.3691670894622803
+}

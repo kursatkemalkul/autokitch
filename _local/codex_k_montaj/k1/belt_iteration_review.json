@@ -1,0 +1,171 @@
+{
+  "candidate": "sealed conveyor supports",
+  "candidate_parts": 889,
+  "candidate_full_plan_issues": 8,
+  "issues": [
+    {
+      "parts": [
+        "k72_ust_pul_M6_4065.0_-421.0"
+      ],
+      "failed_pairs": [
+        [
+          "k72_ust_pul_M6_4065.0_-421.0",
+          "bant_yan_-421"
+        ],
+        [
+          "k72_ust_pul_M6_4065.0_-421.0",
+          "k79_bant_ust_tapa_4065_-421"
+        ],
+        [
+          "k72_ust_pul_M6_4065.0_-421.0",
+          "k79_bant_ust_kaynagi_4065_-421_-1"
+        ],
+        [
+          "k72_ust_pul_M6_4065.0_-421.0",
+          "k79_bant_ust_kaynagi_4065_-421_1"
+        ]
+      ]
+    },
+    {
+      "parts": [
+        "k72_ust_pul_M6_4335.0_-421.0"
+      ],
+      "failed_pairs": [
+        [
+          "k72_ust_pul_M6_4335.0_-421.0",
+          "bant_yan_-421"
+        ],
+        [
+          "k72_ust_pul_M6_4335.0_-421.0",
+          "k79_bant_ust_tapa_4335_-421"
+        ],
+        [
+          "k72_ust_pul_M6_4335.0_-421.0",
+          "k79_bant_ust_kaynagi_4335_-421_-1"
+        ],
+        [
+          "k72_ust_pul_M6_4335.0_-421.0",
+          "k79_bant_ust_kaynagi_4335_-421_1"
+        ]
+      ]
+    },
+    {
+      "parts": [
+        "avara_rulosu_46",
+        "avara_mili_0",
+        "avara_mili_1"
+      ],
+      "failed_pairs": [
+        [
+          "avara_mili_0",
+          "bant_yan_-421"
+        ]
+      ]
+    },
+    {
+      "parts": [
+        "tahrik_rulosu_EC5000_354",
+        "tahrik_rulosu_EC5000_hex_mil"
+      ],
+      "failed_pairs": [
+        [
+          "tahrik_rulosu_EC5000_hex_mil",
+          "bant_yan_-421"
+        ]
+      ]
+    },
+    {
+      "parts": [
+        "bant_yan_-3",
+        "k72_bant_ayak_flansi_4065.0_-3.0",
+        "bant_ayagi_65_-3",
+        "k79_bant_ust_tapa_4065_-3"
+      ],
+      "failed_pairs": [
+        [
+          "bant_yan_-3",
+          "avara_rulosu_46"
+        ],
+        [
+          "bant_yan_-3",
+          "tahrik_rulosu_EC5000_354"
+        ],
+        [
+          "k72_bant_ayak_flansi_4065.0_-3.0",
+          "avara_rulosu_46"
+        ],
+        [
+          "bant_ayagi_65_-3",
+          "avara_rulosu_46"
+        ]
+      ]
+    },
+    {
+      "parts": [
+        "k72_ust_pul_M6_4065.0_-3.0"
+      ],
+      "failed_pairs": [
+        [
+          "k72_ust_pul_M6_4065.0_-3.0",
+          "bant_yan_-3"
+        ],
+        [
+          "k72_ust_pul_M6_4065.0_-3.0",
+          "k79_bant_ust_tapa_4065_-3"
+        ],
+        [
+          "k72_ust_pul_M6_4065.0_-3.0",
+          "k79_bant_ust_kaynagi_4065_-3_-1"
+        ],
+        [
+          "k72_ust_pul_M6_4065.0_-3.0",
+          "k79_bant_ust_kaynagi_4065_-3_1"
+        ]
+      ]
+    },
+    {
+      "parts": [
+        "k72_ust_pul_M6_4335.0_-3.0"
+      ],
+      "failed_pairs": [
+        [
+          "k72_ust_pul_M6_4335.0_-3.0",
+          "bant_yan_-3"
+        ],
+        [
+          "k72_ust_pul_M6_4335.0_-3.0",
+          "k79_bant_ust_tapa_4335_-3"
+        ],
+        [
+          "k72_ust_pul_M6_4335.0_-3.0",
+          "k79_bant_ust_kaynagi_4335_-3_-1"
+        ],
+        [
+          "k72_ust_pul_M6_4335.0_-3.0",
+          "k79_bant_ust_kaynagi_4335_-3_1"
+        ]
+      ]
+    },
+    {
+      "parts": [
+        "tahrik_rulosu_EC5000_M8_civata"
+      ],
+      "failed_pairs": [
+        [
+          "tahrik_rulosu_EC5000_M8_civata",
+          "emniyet_sari_0"
+        ]
+      ]
+    }
+  ],
+  "source_sheet_closure_passed": true,
+  "source_sheet_count": 72,
+  "side_weldment_bench_paths_passed_only": true,
+  "active_source_changed": false,
+  "candidate_accepted": false,
+  "production_release": false,
+  "shared_chain_changed": false,
+  "diagnosis": "Sealed caps and welded side plates block top insertion/access to existing M6 support screws. Two-sided factory roller insertion and M8 fixing paths also need explicit approach/access checks.",
+  "next_design": "Prototype bottom-access M6 screws through existing shelf holes into our own 6mm tapped plate welded inside the support profile. Remove only superseded shelf PEM and top-insert support hardware in a bound source repair. Verify exact engagement, head/washer seating, underside tool access, load path, and full insertion paths before source activation.",
+  "canonical_source_manifest_sha256": "939cf0617726d444e38671224c3d9f6350dddb26dba99e14bd238c286fa99697"
+}

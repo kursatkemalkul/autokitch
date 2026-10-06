@@ -1,0 +1,171 @@
+{
+  "input_sha256": "0a9dc9699ed91a9fb25b654553afa9628897f5bd289a9db4a442cd99c41cc262",
+  "output_sha256": "f4db3b6eafc01ef0b62fc3ffac62f6c3dcaf80bbfdf5da5a1fd0be18b2790300",
+  "a_b_byte_identical": true,
+  "candidate_audit_sha256": "b0493492615d9e9c2d27775541550c633e9adec27c5cf23214c5959595d49cad",
+  "rebind_sha256": "d6b113cd24dae8899879a81ecbe1f712aa7d89812310ab63c4e8d4108bbb8d3d",
+  "verified_parts_sha256": "3e5bbd454332d89120d9cf9ab31a4c26878e9b5dfc79a1de4db000bba73fe051",
+  "parts": 889,
+  "triangles": 444618,
+  "changed_nodes": [
+    "K_BANT__sac"
+  ],
+  "changed_nodes_outside_scope": [],
+  "matched_triangles": 444618,
+  "measured_joints": [
+    {
+      "id": "4065_-421",
+      "post_bottom_y_mm": 895.0,
+      "post_top_y_mm": 930.5,
+      "cap_bottom_y_mm": 930.5,
+      "cap_top_y_mm": 932.5,
+      "actual_seat_gap_mm": 0.0,
+      "profile_corner_radius_error_mm": 0.00046281104863510336,
+      "post_volume_mm3": 4746.274466060795,
+      "analytic_post_volume_mm3": 4746.318470429252,
+      "cap_volume_mm3": 772.5211178619649,
+      "analytic_cap_volume_mm3": 772.5309649148734,
+      "continuous_cap_weld_volume_mm3": 74.519923281323,
+      "analytic_continuous_cap_weld_volume_mm3": 74.54359648462744,
+      "cap_seat_slice_mm3": 7.999999345695917,
+      "plate_seat_slice_mm3": 6.0000000000054285,
+      "plate_seams": [
+        {
+          "part": "k79_bant_ust_kaynagi_4065_-421_-1",
+          "length_mm": 20.0,
+          "measured_leg_y_mm": 1.3999999999999773,
+          "measured_leg_z_mm": 1.3999999999999773,
+          "actual_volume_mm3": 19.59990921022844,
+          "passed": true
+        },
+        {
+          "part": "k79_bant_ust_kaynagi_4065_-421_1",
+          "length_mm": 20.0,
+          "measured_leg_y_mm": 1.3999999999999773,
+          "measured_leg_z_mm": 1.3999999999999773,
+          "actual_volume_mm3": 19.59990921022844,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "4335_-421",
+      "post_bottom_y_mm": 895.0,
+      "post_top_y_mm": 930.5,
+      "cap_bottom_y_mm": 930.5,
+      "cap_top_y_mm": 932.5,
+      "actual_seat_gap_mm": 0.0,
+      "profile_corner_radius_error_mm": 0.00046281104863510336,
+      "post_volume_mm3": 4746.277527306135,
+      "analytic_post_volume_mm3": 4746.318470429252,
+      "cap_volume_mm3": 772.5209150974407,
+      "analytic_cap_volume_mm3": 772.5309649148734,
+      "continuous_cap_weld_volume_mm3": 74.52013915209254,
+      "analytic_continuous_cap_weld_volume_mm3": 74.54359648462744,
+      "cap_seat_slice_mm3": 7.999999345695617,
+      "plate_seat_slice_mm3": 6.000000000005424,
+      "plate_seams": [
+        {
+          "part": "k79_bant_ust_kaynagi_4335_-421_-1",
+          "length_mm": 20.0,
+          "measured_leg_y_mm": 1.3999999999999773,
+          "measured_leg_z_mm": 1.3999999999999773,
+          "actual_volume_mm3": 19.599909210228432,
+          "passed": true
+        },
+        {
+          "part": "k79_bant_ust_kaynagi_4335_-421_1",
+          "length_mm": 20.0,
+          "measured_leg_y_mm": 1.3999999999999773,
+          "measured_leg_z_mm": 1.3999999999999773,
+          "actual_volume_mm3": 19.599909210228432,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "4065_-3",
+      "post_bottom_y_mm": 895.0,
+      "post_top_y_mm": 930.5,
+      "cap_bottom_y_mm": 930.5,
+      "cap_top_y_mm": 932.5,
+      "actual_seat_gap_mm": 0.0,
+      "profile_corner_radius_error_mm": 0.00046281104863399314,
+      "post_volume_mm3": 4746.275886063351,
+      "analytic_post_volume_mm3": 4746.318470429252,
+      "cap_volume_mm3": 772.5211892342194,
+      "analytic_cap_volume_mm3": 772.5309649148734,
+      "continuous_cap_weld_volume_mm3": 74.51986580458481,
+      "analytic_continuous_cap_weld_volume_mm3": 74.54359648462744,
+      "cap_seat_slice_mm3": 7.999999345695931,
+      "plate_seat_slice_mm3": 6.0000000000054285,
+      "plate_seams": [
+        {
+          "part": "k79_bant_ust_kaynagi_4065_-3_-1",
+          "length_mm": 20.0,
+          "measured_leg_y_mm": 1.3999999999999773,
+          "measured_leg_z_mm": 1.4000000000000004,
+          "actual_volume_mm3": 19.599909210228404,
+          "passed": true
+        },
+        {
+          "part": "k79_bant_ust_kaynagi_4065_-3_1",
+          "length_mm": 20.0,
+          "measured_leg_y_mm": 1.3999999999999773,
+          "measured_leg_z_mm": 1.4,
+          "actual_volume_mm3": 19.59990921022836,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "4335_-3",
+      "post_bottom_y_mm": 895.0,
+      "post_top_y_mm": 930.5,
+      "cap_bottom_y_mm": 930.5,
+      "cap_top_y_mm": 932.5,
+      "actual_seat_gap_mm": 0.0,
+      "profile_corner_radius_error_mm": 0.00046281104863399314,
+      "post_volume_mm3": 4746.278947223969,
+      "analytic_post_volume_mm3": 4746.318470429252,
+      "cap_volume_mm3": 772.5209864778443,
+      "analytic_cap_volume_mm3": 772.5309649148734,
+      "continuous_cap_weld_volume_mm3": 74.52009650176046,
+      "analytic_continuous_cap_weld_volume_mm3": 74.54359648462744,
+      "cap_seat_slice_mm3": 7.999999345695617,
+      "plate_seat_slice_mm3": 6.000000000005424,
+      "plate_seams": [
+        {
+          "part": "k79_bant_ust_kaynagi_4335_-3_-1",
+          "length_mm": 20.0,
+          "measured_leg_y_mm": 1.3999999999999773,
+          "measured_leg_z_mm": 1.4000000000000004,
+          "actual_volume_mm3": 19.599909210228397,
+          "passed": true
+        },
+        {
+          "part": "k79_bant_ust_kaynagi_4335_-3_1",
+          "length_mm": 20.0,
+          "measured_leg_y_mm": 1.3999999999999773,
+          "measured_leg_z_mm": 1.4,
+          "actual_volume_mm3": 19.59990921022836,
+          "passed": true
+        }
+      ],
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "source_activation": false,
+  "manufacturing_release": false,
+  "production_release": false,
+  "remaining": [
+    "Foot/cap bench order and actual temporary support",
+    "Plate weld sequence before supplier roller/belt insertion",
+    "Weld torch access/load check",
+    "Whole-station motions and shared-chain replay"
+  ]
+}
