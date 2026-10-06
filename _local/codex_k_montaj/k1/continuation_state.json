@@ -1,7 +1,7 @@
 {
   "task": "codex-k-montaj-v3",
   "branch": "codex/k-montaj",
-  "latest_checkpoint": "19441452",
+  "latest_checkpoint": "78dac2f3",
   "goal_active": true,
   "k_completed": false,
   "u_started": false,
@@ -21,16 +21,23 @@
       "issues": 0
     }
   },
-  "current_candidate": "k_parca_head_verified.pkl",
-  "current_candidate_sha256": "b3bcc7691182d32674d2e7d5b2ddb4892be2487c2d6946541d1ee38871d9bec9",
-  "running_ccd_session_id": null,
+  "current_candidate": "plan_k_head_full.pkl",
+  "current_candidate_sha256": "aff0a08e934204cbaf6161ab64bc7430d8ce67e03923cdeb41c1fcd9e386537e",
+  "running_ccd_session_id": 49367,
   "next": [
-    "Integrate cutting-head fabrication and real threaded assembly order using existing v6 infrastructure.",
-    "Finish remaining K connections, final mandatory checks and browser verification.",
-    "After full K completion start U; do not activate unfinished candidate."
+    "Poll full corrected CCD handle49367; source plan aff0a08e934204cbaf6161ab64bc7430d8ce67e03923cdeb41c1fcd9e386537e must remain unchanged while audit runs.",
+    "Upper4 adapter spacer and lower6+2 cassette need support warning/release events at measured screw completion; current geometry paths are verified for head family.",
+    "Finish remaining203 K connection records, complete final manufacture/export/browser checks, then U."
   ],
-  "active_processes": [],
-  "last_verified_work": "Private head source1021 parts and785424 triangles exactly rebound. All1696 apparent missing triangles proved exact repeated source float32 vertices/zero area; no tolerance waiver. A/Bidentical andglobaloutsideKunchanged.119 sheets closed,4new head flat-stock endpoint error0. Manufacturing/connection release remain false.",
-  "next_required": "Integrate four flat head layers, three rod welds and seven M8 joints into cap/v6 assembly benches and order; then continue remaining K connections before final CCD/export/browser verification.",
+  "active_processes": [
+    {
+      "session_id": 49367,
+      "task": "Full corrected head+K CCD",
+      "command": "k_full_ccd.py plan_k_head_full.pkl",
+      "log": "head_full_ccd_fixed_run.log"
+    }
+  ],
+  "last_verified_work": "Head source1021parts bound;119sheets closed;station PLAN_SORUN0/unplanned0;30benches path issues0;head-focused CCD1001pairs0issues;7M8 joint stacks and3rod welds current-plan bound,5previous head records closed/203remain. Full corrected CCD is live; no activation.",
+  "next_required": "Poll exact live CCD session49367 (do not restart on timeout). Add explicit temporary support warning/release events for upper spacer and lower cassette AFTER CCD finishes; finish source-bound head release evidence and remaining K connections. K and U still incomplete.",
   "goal_status": "active"
 }
