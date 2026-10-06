@@ -1,0 +1,96 @@
+{
+  "published_source_sha256": "949c3f4c77b6f065b7d70cadabbb37d77c6711ca72940c779cdadb03d5ae8500",
+  "removed_user_requested_bench": true,
+  "version": 21,
+  "source_sha256": "9f975f18c333517fce419b3d1cd3ec521aa458b97a49c8de9821c848b3e1a920",
+  "preserved_source_nodes": 1383,
+  "preserved_geometry_buffer_bytes": 305346412,
+  "stock_triangle_union_checked": true,
+  "orders": [
+    {
+      "recipe": "kasarli",
+      "channels": 578,
+      "frames": 11858,
+      "robot_and_carriage_centres_match": true,
+      "rail_centre_min_m": 1.376069188117981,
+      "rail_centre_max_m": 4.860000133514404,
+      "gate": null
+    },
+    {
+      "recipe": "kiymali",
+      "channels": 578,
+      "frames": 11858,
+      "robot_and_carriage_centres_match": true,
+      "rail_centre_min_m": 1.376069188117981,
+      "rail_centre_max_m": 4.860000133514404,
+      "gate": null
+    },
+    {
+      "recipe": "kusbasili",
+      "channels": 578,
+      "frames": 11858,
+      "robot_and_carriage_centres_match": true,
+      "rail_centre_min_m": 1.376069188117981,
+      "rail_centre_max_m": 4.860000133514404,
+      "gate": null
+    },
+    {
+      "recipe": "sucuklu",
+      "channels": 578,
+      "frames": 11858,
+      "robot_and_carriage_centres_match": true,
+      "rail_centre_min_m": 1.376069188117981,
+      "rail_centre_max_m": 4.860000133514404,
+      "gate": null
+    },
+    {
+      "recipe": "lahmacun",
+      "channels": 578,
+      "frames": 11858,
+      "robot_and_carriage_centres_match": true,
+      "rail_centre_min_m": 1.376069188117981,
+      "rail_centre_max_m": 4.860000133514404,
+      "gate": null
+    },
+    {
+      "recipe": "pizza",
+      "channels": 578,
+      "frames": 11858,
+      "robot_and_carriage_centres_match": true,
+      "rail_centre_min_m": 1.376069188117981,
+      "rail_centre_max_m": 4.860000133514404,
+      "gate": null
+    },
+    {
+      "recipe": "patatesli",
+      "channels": 356,
+      "frames": 11857,
+      "robot_and_carriage_centres_match": true,
+      "rail_centre_min_m": 1.376069188117981,
+      "rail_centre_max_m": 4.860000133514404,
+      "gate": {
+        "index": 9484,
+        "time_s": 140.00695514476675,
+        "event": "machine.box_ready"
+      }
+    },
+    {
+      "recipe": "tavuklu",
+      "channels": 356,
+      "frames": 11857,
+      "robot_and_carriage_centres_match": true,
+      "rail_centre_min_m": 1.376069188117981,
+      "rail_centre_max_m": 4.860000133514404,
+      "gate": {
+        "index": 9484,
+        "time_s": 140.00695514476675,
+        "event": "machine.box_ready"
+      }
+    }
+  ],
+  "errors": [],
+  "passed": true,
+  "scope": "source preservation, chain channel continuity, catalogue cable radius, manufacturer CAD provenance; full motion clearance not certified",
+  "full_collision_certified": false,
+  "production_ready": false
+}
