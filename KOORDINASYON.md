@@ -15,7 +15,7 @@ Kemal'in kararı (5 Eki 2026): iki ajan aynı anda, farklı istasyonlarda çalı
 | **F montaj animasyonu** (TOPPING v6 yöntemiyle: açınım → büküm → montaj, her parça vidalı / kaynaklı, yol + bağlantı denetimi) | Claude | `claude/f-montaj` | ÇALIŞIYOR (5 Eki) · zincir adımları **67–69** + gerekirse 80–89 |
 | **K montaj animasyonu** (KURALLAR §2, yeni yöntem: açınım → abkant → PEM → gerçek bağlantı; bağlı mı denetimi) | Codex | `codex/k-montaj` | ÇALIŞIYOR · TOPPING v6 altyapısı, 70–73 K düzeltmeleri; dört dosya kaydı 06b99c4 |
 | Standart önlemleri · robot + QR (madde 10–11): hücre kapısı emniyet anahtarı, robot gözdeyken QR müşteri kapısı kilitli + geri bildirim | Codex | (Codex seçer) | Codex'e bildirildi |
-| **E mekanizma montajı**: alt / üst modül mekanizmaları parça parça + vida vida (bugün iki blok geliyor), mevcut E animasyonuna ekleme | Claude (2. oturum) | `claude/e-mekanizma` | BAŞLIYOR (6 Eki) · zincir adımları **81–85** |
+| **E mekanizma montajı**: alt / üst modül mekanizmaları parça parça + vida vida (bugün iki blok geliyor), mevcut E animasyonuna ekleme | Claude (2. oturum) → yerel oturuma devredildi | `claude/e-mekanizma` | SÜRÜYOR (6 Eki) · zincir **81–83 bitti**, 84 yarım, 85 + animasyon kaldı · devir notu `_local/claude_son_yerel/gece2/e1/devir_e_mek/DEVIR.md` |
 | **A kontrol** · B kaynak görünürlüğü · elektrik + bilgi görünümü · son denetim | Claude (1. oturum) | `claude/a-kontrol` | BAŞLIYOR (6 Eki) · zincir adımları **86–89** |
 | Güvenlik devresi şeması (acil stop + kapı anahtarları + robot, tek röle / güvenlik PLC) | Claude + Codex | — | makine anahtarları bitince |
 
