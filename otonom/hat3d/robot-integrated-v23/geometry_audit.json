@@ -1,0 +1,129 @@
+{
+  "version": 23,
+  "cable_duct_meshes": [
+    {
+      "name": "ROBOT23_MAKINE_DIK",
+      "watertight": true,
+      "consistent_winding": true,
+      "volume_m3": 3.579469664711487e-05
+    },
+    {
+      "name": "ROBOT23_QR_DIK",
+      "watertight": true,
+      "consistent_winding": true,
+      "volume_m3": 0.0007471345891125855
+    },
+    {
+      "name": "ROBOT23_UR_GIRIS",
+      "watertight": true,
+      "consistent_winding": true,
+      "volume_m3": 4.25988083501954e-05
+    },
+    {
+      "name": "ROBOT23_UR_CIKIS",
+      "watertight": true,
+      "consistent_winding": true,
+      "volume_m3": 3.8098661894274063e-05
+    },
+    {
+      "name": "ROBOT23_SURUCU_GIRIS",
+      "watertight": true,
+      "consistent_winding": true,
+      "volume_m3": 1.1639633261387693e-05
+    },
+    {
+      "name": "ROBOT23_SURUCU_CIKIS",
+      "watertight": true,
+      "consistent_winding": true,
+      "volume_m3": 1.1640558326618417e-05
+    },
+    {
+      "name": "ROBOT23_MOTOR_DIK",
+      "watertight": true,
+      "consistent_winding": true,
+      "volume_m3": 3.3755293657393e-05
+    },
+    {
+      "name": "ROBOT23_ZINCIR_GECIS",
+      "watertight": true,
+      "consistent_winding": true,
+      "volume_m3": 4.762226131312824e-05
+    },
+    {
+      "name": "ROBOT23_DUVAR_GUC",
+      "watertight": true,
+      "consistent_winding": true,
+      "volume_m3": 0.0008856671000469644
+    },
+    {
+      "name": "ROBOT23_DUVAR_VERI",
+      "watertight": true,
+      "consistent_winding": true,
+      "volume_m3": 0.00043621368428765976
+    },
+    {
+      "name": "ROBOT23_MAKINE_BESLEME",
+      "watertight": true,
+      "consistent_winding": true,
+      "volume_m3": 0.0003046129413708818
+    },
+    {
+      "name": "ROBOT23_QR_GUC",
+      "watertight": true,
+      "consistent_winding": true,
+      "volume_m3": 0.00039992235945321896
+    },
+    {
+      "name": "ROBOT23_ROBOT_BESLEME",
+      "watertight": true,
+      "consistent_winding": true,
+      "volume_m3": 0.00043340009437185394
+    },
+    {
+      "name": "ROBOT23_SURUCU_BESLEME",
+      "watertight": true,
+      "consistent_winding": true,
+      "volume_m3": 0.00030965322957700894
+    },
+    {
+      "name": "ROBOT23_SERVO_MOTOR_KABLO",
+      "watertight": true,
+      "consistent_winding": true,
+      "volume_m3": 0.00015872871136128096
+    },
+    {
+      "name": "ROBOT23_UR_HIGH_FLEX_12M_SABIT",
+      "watertight": true,
+      "consistent_winding": true,
+      "volume_m3": 0.0004906268445767871
+    },
+    {
+      "name": "ROBOT23_MAKINE_ETHERNET",
+      "watertight": true,
+      "consistent_winding": true,
+      "volume_m3": 0.00011573954756670156
+    },
+    {
+      "name": "ROBOT23_QR_ETHERNET",
+      "watertight": true,
+      "consistent_winding": true,
+      "volume_m3": 0.00022437417076893844
+    },
+    {
+      "name": "ROBOT23_UR_ETHERNET",
+      "watertight": true,
+      "consistent_winding": true,
+      "volume_m3": 0.0001567533721341924
+    },
+    {
+      "name": "ROBOT23_UR_HIGH_FLEX_ARABA",
+      "watertight": true,
+      "consistent_winding": true,
+      "volume_m3": 9.881954104947085e-05
+    }
+  ],
+  "butt_cut_wall_and_lid_modules_checked": true,
+  "errors": [],
+  "passed": true,
+  "scope": "closed swept new cable/duct geometry, winding, wall/lid non-overlap; full moving robot collision not certified"
+}
