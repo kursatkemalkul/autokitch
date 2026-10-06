@@ -11473,152 +11473,6 @@
 "bom": "ISO 4762 M3 × 16 A2-70"
 },
 {
-"ad": "kb_yag_geri_basinc_regulatoru_KBP_0_vida",
-"tip": "vida",
-"d": 5,
-"std": "ISO 4762",
-"L": 100,
-"bas": [
-[
-4304.9729868270515,
-1761.5499999997658,
--540.4757030551817
-],
-[
-4304.9729868270515,
-1766.5499999997608,
--540.4757030551817
-],
-3.75
-],
-"govde": [
-[
-4304.9729868270515,
-1761.5499999997658,
--540.4757030551817
-],
-[
-4304.9729868270515,
-1661.5499999998658,
--540.4757030551817
-],
-2.5
-],
-"eks": [
--0.0,
--0.9999999999989999,
--0.0
-],
-"parca": [
-"yag_geri_basinc_regulatoru_KBP",
-"yag_pompa_plakasi"
-],
-"havsa": false,
-"bom": "ISO 4762 M5 × 100 A2-70 + ISO 4032 somun"
-},
-{
-"ad": "kb_yag_geri_basinc_regulatoru_KBP_0_somun",
-"tip": "somun",
-"d": 5,
-"sil": [
-[
-4304.9729868270515,
-1641.4500000000062,
--540.4757030551817
-],
-[
-4304.9729868270515,
-1637.45000000001,
--540.4757030551817
-],
-4.5
-],
-"eks": [
-0.0,
-0.9999999999989999,
-0.0
-],
-"parca": [
-"yag_geri_basinc_regulatoru_KBP",
-"yag_pompa_plakasi"
-],
-"somun_tur": "altigen",
-"bom": "ISO 4032 somun M5 A2"
-},
-{
-"ad": "kb_yag_geri_basinc_regulatoru_KBP_2_vida",
-"tip": "vida",
-"d": 5,
-"std": "ISO 4762",
-"L": 100,
-"bas": [
-[
-4285.383562683056,
-1761.5499999997658,
--499.050536173367
-],
-[
-4285.383562683056,
-1766.5499999997608,
--499.050536173367
-],
-3.75
-],
-"govde": [
-[
-4285.383562683056,
-1761.5499999997658,
--499.050536173367
-],
-[
-4285.383562683056,
-1661.5499999998658,
--499.050536173367
-],
-2.5
-],
-"eks": [
--0.0,
--0.9999999999989999,
--0.0
-],
-"parca": [
-"yag_geri_basinc_regulatoru_KBP",
-"yag_pompa_plakasi"
-],
-"havsa": false,
-"bom": "ISO 4762 M5 × 100 A2-70 + ISO 4032 somun"
-},
-{
-"ad": "kb_yag_geri_basinc_regulatoru_KBP_2_somun",
-"tip": "somun",
-"d": 5,
-"sil": [
-[
-4285.383562683056,
-1641.4500000000062,
--499.050536173367
-],
-[
-4285.383562683056,
-1637.45000000001,
--499.050536173367
-],
-4.5
-],
-"eks": [
-0.0,
-0.9999999999989999,
-0.0
-],
-"parca": [
-"yag_geri_basinc_regulatoru_KBP",
-"yag_pompa_plakasi"
-],
-"somun_tur": "altigen",
-"bom": "ISO 4032 somun M5 A2"
-},
-{
 "ad": "kb_yag_tarti_alt_takozu_0_vida",
 "tip": "vida",
 "d": 6,
@@ -12281,6 +12135,11 @@
 "yontem": "BEYAN:SOKULUR",
 "neden": "emme lansı tenekeye daldırılır, kapak adaptöründen geçer",
 "karsi": "k_yag_pom_0"
+},
+"yag_geri_basinc_regulatoru_KBP": {
+"yontem": "BEYAN:DIS",
+"neden": "Swagelok KBP panel montaj somunuyla plakanın deliğine (ürüne delik açılmaz)",
+"karsi": "yag_pompa_plakasi"
 },
 "yag_pompasi_GJ-N21_EagleDrive": {
 "yontem": "BEYAN:KELEPCE",
@@ -13126,8 +12985,8 @@
 "neden": "emme lansı tenekeye daldırılır, kapak adaptöründen geçer"
 },
 "yag_geri_basinc_regulatoru_KBP": {
-"yontem": "VIDA",
-"neden": "geri basınç regülatörü plakaya 2 × M5 (panel montaj)"
+"yontem": "BEYAN:DIS",
+"neden": "Swagelok KBP panel montaj somunuyla plakanın deliğine (ürüne delik açılmaz)"
 },
 "yag_pompasi_GJ-N21_EagleDrive": {
 "yontem": "BEYAN:KELEPCE",
