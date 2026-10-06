@@ -1,0 +1,64 @@
+{
+  "version": 25,
+  "turn_side": "corridor/left, away from right wall",
+  "box_level": true,
+  "pickup_preserved": true,
+  "release_preserved": true,
+  "source": "order_v16.json",
+  "original_box_transfer_s": 4.391623689801264,
+  "new_box_transfer_s": 36.16609963318581,
+  "stages": [
+    {
+      "stage": "Kutu · duvardan uzak koridora çek",
+      "frames": 160,
+      "duration_s": 12.369987291043465,
+      "maximum_ik_position_m": 0.000009713742294684717,
+      "maximum_ik_orientation_deg": 0.0023217425619129137
+    },
+    {
+      "stage": "Kutu · rayda sola taşı",
+      "frames": 120,
+      "duration_s": 2.3138571785696,
+      "maximum_ik_position_m": 5.2665473603058265e-9,
+      "maximum_ik_orientation_deg": 5.305043329803056e-7
+    },
+    {
+      "stage": "Kutu · koridor içinde dönüş konumuna al",
+      "frames": 140,
+      "duration_s": 2.592,
+      "maximum_ik_position_m": 0.000009911569372654936,
+      "maximum_ik_orientation_deg": 0.00014000989969624334
+    },
+    {
+      "stage": "Kutu · duvarın ters tarafından yatay dön",
+      "frames": 360,
+      "duration_s": 4.32,
+      "maximum_ik_position_m": 0.000009990333373869615,
+      "maximum_ik_orientation_deg": 0.001400368950503907
+    },
+    {
+      "stage": "Kutu · QR önüne koridordan taşı",
+      "frames": 180,
+      "duration_s": 10.634862949257878,
+      "maximum_ik_position_m": 0.000009919336048530755,
+      "maximum_ik_orientation_deg": 0.0016331046779689067
+    },
+    {
+      "stage": "Box · QR girişine taşı",
+      "frames": 180,
+      "duration_s": 3.635392214314863,
+      "maximum_ik_position_m": 0.000009576780480891485,
+      "maximum_ik_orientation_deg": 0.001553073336114513
+    }
+  ],
+  "final_joint_difference_rad": [
+    0.00045588499214677114,
+    0.0001272507692768876,
+    -0.00006151818628352679,
+    -0.000022284404118055878,
+    0.0005466328942080878,
+    -0.000009521479550578249
+  ],
+  "passed": true,
+  "full_collision_certified": false
+}
