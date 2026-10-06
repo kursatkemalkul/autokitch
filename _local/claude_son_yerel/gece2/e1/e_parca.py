@@ -13,11 +13,17 @@ MEK = BIL['MEK']; L = BIL['L']
 P = {}
 ENTF = [('/home/user/main_wt/_local/claude_son_yerel/gece2/adim5e/is/hat3_v9c_ent.json', None),
         ('/home/user/is/z59A/hat3_v10a_ent.json', lambda a, v: '_E_' in a),
-        ('/home/user/is/z69A/hat3_v10k_ent.json', None)]
+        ('/home/user/is/z69A/hat3_v10k_ent.json', None),
+        ('/home/user/is/z80A/hat3_v10l_ent.json', None)]
 ENT = {}
 for f_, s_ in ENTF:
     for a, v in json.load(open(f_, encoding='utf-8'))['parca'].items():
         if s_ is None or s_(a, v): ENT[a] = v
+# zincir 80: üst sol sensör + aktüatör x −20 · y −100 · sağdaki iki sensör + aktüatör x +1 (kayıt kutuları adım 59'dan)
+for a_, d_ in (('emniyet_E_UST_SOL_sensor', (-20, -100)), ('emniyet_E_UST_SOL_aktuator', (-20, -100)), ('emniyet_E_ALT_SAG_sensor', (1, 0)),
+               ('emniyet_E_ALT_SAG_aktuator', (1, 0)), ('emniyet_E_UST_SAG_sensor', (1, 0)), ('emniyet_E_UST_SAG_aktuator', (1, 0))):
+    if a_ in ENT:
+        k_ = list(ENT[a_]['kutu']); k_[0] += d_[0]; k_[1] += d_[0]; k_[2] += d_[1]; k_[3] += d_[1]; ENT[a_] = dict(ENT[a_], kutu=k_)
 print('ent kayıt', len(ENT), collections.Counter(v['dugum'] for v in ENT.values()).most_common())
 
 

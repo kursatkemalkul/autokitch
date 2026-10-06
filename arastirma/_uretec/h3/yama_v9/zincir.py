@@ -219,8 +219,10 @@ ADIMLAR = [
      [(".", 'python "{YAMA}/68_e_arka_yarik.py" hat3_v10i.glb hat3_v10j.glb')]),
     ("69", "E gövdesi: arka ↔ yan sol 4 bağlantı (şarjör kılavuzu arkası) saplama + somun yerine yan dönüşte PEM S-M5 + dıştan ISO 7380 M5 × 6 (somun şarjörden sonra takılamıyordu · E montaj v2 yol denetimi)", ["hat3_v10j.glb"], "hat3_v10k.glb",
      [(".", 'python "{YAMA}/69_e_arka_pem.py" hat3_v10j.glb hat3_v10k.glb')]),
+    ("80", "E kapıları + emniyet sensörleri bağlı: üst sol sensör E gövdesine taşındı · 4 sensöre dikmeye kaynaklı 1,5 mm L braket + PEM + M4 · aktüatörler PEM + havşa M4 · menteşe kanatları / karşılıklar / şarjör kapısı punta (E montaj v2 bağlantı denetimi)", ["hat3_v10k.glb"], "hat3_v10l.glb",
+     [(".", 'python "{YAMA}/80_e_baglanti.py" hat3_v10k.glb hat3_v10l.glb')]),
 ]
-SON = "hat3_v10k.glb"
+SON = "hat3_v10l.glb"
 
 
 def kur(is_dizin, h3, uretec):

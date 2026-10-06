@@ -81,6 +81,11 @@ for a in TAS:
     out[a] = dict(sinif='GECICI', gelis=g, bag=en, adim=ag, bag_adim=ab, neyle=neyle, ustune=ustune)
 # v6 · grup düzeyi + kategori: bağlantı elemanı değmeyen parça neden öyle (bilerek) ya da AÇIK
 KAT = [  # (sınama, kategori, açıklama) — sıra önemli, ilk tutan
+    # E (6 Eki): bas-aç geçme · modül iç parçaları · çöp kovası
+    (lambda a: 'basac' in a and not a.endswith('lamasi'), 'GECME', 'bas-aç mandalı: dikme / lama deliğine yaylı tırnakla geçer (kendi gövdesi)'),
+    (lambda a: a in ('besleyici_vakum', 'kose_kaldirici', 'kose_piston', 'kose_tutucu', 'parmak', 'parmak_y', 'kapak_katlayici'), 'UNITE',
+     'tezgâhta kurulan E mekanizma modülünün iç parçası (üst / alt modül, mekanizma üreteci); modül bütün olarak askı / yan saplamalarına bağlanır'),
+    (lambda a: a == 'robot_copu', 'SOKULUR', 'robot çöpü kovası + poşet tabandaki kılavuzda oturur, boşaltmak için elle çıkar (bilerek)'),
     (lambda a: a in ('kaset_kasar', 'kaset_sucuk'), 'SOKULUR', 'kaset: dil kanalında + kapak K2 POM takozu kilitler (adım 63) · iki günde bir sökülür'),
     (lambda a: a.endswith('_conta') and a.startswith('kaset_'), 'ACIK', 'kovan contası raf deliğinde değmiyor (kovan iç duvarına 3 mm · v5ten) → conta biçimi düzeltilecek'),
     (lambda a: a.endswith('_raf_conta') or a.endswith('_mandal') or a.startswith(('burc_', 'basac_')), 'GECME', 'sıkı geçme / kendi yaylı tırnağı (conta, POM burç, bas-aç, kaset mandalı)'),
