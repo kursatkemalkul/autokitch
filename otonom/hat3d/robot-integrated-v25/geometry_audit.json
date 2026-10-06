@@ -1,0 +1,147 @@
+{
+  "version": 25,
+  "cable_duct_meshes": [
+    {
+      "name": "ROBOT25_MAKINE_DIK",
+      "watertight": true,
+      "consistent_winding": true,
+      "volume_m3": 3.579469664711487e-05
+    },
+    {
+      "name": "ROBOT25_QR_IC_GIRIS",
+      "watertight": true,
+      "consistent_winding": true,
+      "volume_m3": 8.220055492804985e-05
+    },
+    {
+      "name": "ROBOT25_UR_GIRIS",
+      "watertight": true,
+      "consistent_winding": true,
+      "volume_m3": 4.25988083501954e-05
+    },
+    {
+      "name": "ROBOT25_UR_CIKIS",
+      "watertight": true,
+      "consistent_winding": true,
+      "volume_m3": 3.8098661894274063e-05
+    },
+    {
+      "name": "ROBOT25_SURUCU_GIRIS",
+      "watertight": true,
+      "consistent_winding": true,
+      "volume_m3": 1.1639633261387693e-05
+    },
+    {
+      "name": "ROBOT25_SURUCU_CIKIS",
+      "watertight": true,
+      "consistent_winding": true,
+      "volume_m3": 1.1640558326618417e-05
+    },
+    {
+      "name": "ROBOT25_MOTOR_DIK",
+      "watertight": true,
+      "consistent_winding": true,
+      "volume_m3": 3.3755293657393e-05
+    },
+    {
+      "name": "ROBOT25_ZINCIR_GECIS",
+      "watertight": true,
+      "consistent_winding": true,
+      "volume_m3": 4.762226131312824e-05
+    },
+    {
+      "name": "ROBOT25_DUVAR_GUC",
+      "watertight": true,
+      "consistent_winding": true,
+      "volume_m3": 0.0008535455647042736
+    },
+    {
+      "name": "ROBOT25_DUVAR_VERI",
+      "watertight": true,
+      "consistent_winding": true,
+      "volume_m3": 0.0004050463714158215
+    },
+    {
+      "name": "ROBOT25_MAKINE_BESLEME",
+      "watertight": true,
+      "consistent_winding": true,
+      "volume_m3": 0.0003395799548875625
+    },
+    {
+      "name": "ROBOT25_QR_GUC",
+      "watertight": true,
+      "consistent_winding": true,
+      "volume_m3": 0.00036417366831394495
+    },
+    {
+      "name": "ROBOT25_ROBOT_BESLEME",
+      "watertight": true,
+      "consistent_winding": true,
+      "volume_m3": 0.0004644795974244814
+    },
+    {
+      "name": "ROBOT25_SURUCU_BESLEME",
+      "watertight": true,
+      "consistent_winding": true,
+      "volume_m3": 0.00031915436732121927
+    },
+    {
+      "name": "ROBOT25_SERVO_MOTOR_KABLO",
+      "watertight": true,
+      "consistent_winding": true,
+      "volume_m3": 0.00014697216387556903
+    },
+    {
+      "name": "ROBOT25_UR_HIGH_FLEX_12M_SABIT",
+      "watertight": true,
+      "consistent_winding": true,
+      "volume_m3": 0.0004906268445767871
+    },
+    {
+      "name": "ROBOT25_MAKINE_ETHERNET",
+      "watertight": true,
+      "consistent_winding": true,
+      "volume_m3": 0.00012439051119900489
+    },
+    {
+      "name": "ROBOT25_QR_ETHERNET",
+      "watertight": true,
+      "consistent_winding": true,
+      "volume_m3": 0.00019772266733954964
+    },
+    {
+      "name": "ROBOT25_UR_ETHERNET",
+      "watertight": true,
+      "consistent_winding": true,
+      "volume_m3": 0.0001654051115664578
+    },
+    {
+      "name": "ROBOT25_QR_OKUYUCU_USB",
+      "watertight": true,
+      "consistent_winding": true,
+      "volume_m3": 2.4445998249693787e-05
+    },
+    {
+      "name": "ROBOT25_QR_TUS_USB",
+      "watertight": true,
+      "consistent_winding": true,
+      "volume_m3": 1.969051425541292e-05
+    },
+    {
+      "name": "ROBOT25_QR_KEYPAD_MATRIX",
+      "watertight": true,
+      "consistent_winding": true,
+      "volume_m3": 1.6531156885675642e-07
+    },
+    {
+      "name": "ROBOT25_UR_HIGH_FLEX_ARABA",
+      "watertight": true,
+      "consistent_winding": true,
+      "volume_m3": 9.881954104947085e-05
+    }
+  ],
+  "butt_cut_wall_and_lid_modules_checked": true,
+  "errors": [],
+  "passed": true,
+  "scope": "closed swept new cable/duct geometry, winding, wall/lid non-overlap; full moving robot collision not certified"
+}
