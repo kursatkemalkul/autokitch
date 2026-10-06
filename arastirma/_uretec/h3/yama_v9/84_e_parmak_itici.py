@@ -36,8 +36,8 @@ def kutu(x0, y0, z0, x1, y1, z1):
 
 # ---------------------------------------------------------------- İTİCİ (sabit taşıyıcı) · raylar · arabalar · piston plakası
 for i, xr in ((0, 4600.0), (1, 4740.0)):
-    M.vida("itici_ray_%d_vida" % i, "itici_ray_%d" % i, "itici_tasiyici", dis="M4", yon=ZM, duzlem=-389.0, pts=[(xr, 1380.0 + 60.0 * k) for k in range(8)],
-           kavrama=5.0, urun="A", bas_bos=False, gomme=5.0, not_="MGN15 rayı kendi deliklerinden (60 mm aralık, havşa yuvalı) 5 mm taşıyıcı plakaya (dişli)")
+    M.vida("itici_ray_%d_vida" % i, "itici_ray_%d" % i, "itici_tasiyici", dis="M4", yon=ZM, duzlem=-389.0, pts=[(xr, y) for y in (1409.5, 1469.5, 1649.5, 1709.5)],
+           kavrama=5.0, urun="A", bas_bos=False, gomme=5.0, not_="MGN15 rayı kendi deliklerinden (havşa yuvalı; rayın ölçülen havşalı delikleri; uçtaki 1349,5 / 1769,5 deliklerinde vida ucu arkadaki L bloğa / sensör bloğuna girerdi → boş) 5 mm taşıyıcı plakaya (dişli)")
 for i, (xc, yc) in ((0, (4600.0, 1750.0)), (1, (4600.0, 1810.0)), (2, (4740.0, 1750.0)), (3, (4740.0, 1810.0))):
     M.vida("piston_araba_%d_vida" % i, "piston_plaka", "piston_araba_%d" % i, dis="M4", std="DIN7991", yon=ZM, duzlem=-361.0, pts=[(xc + fx * 8.0, yc + fy * 10.0) for fx in (-1, 1) for fy in (-1, 1)],
            kavrama=5.0, not_="10 mm piston plakasından (havşa; üst arabanın başları motor flanş plakasının altında kalıyor) MGN15C arabasının 4 dişli deliğine (ürün)")

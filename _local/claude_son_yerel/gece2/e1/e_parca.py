@@ -14,7 +14,8 @@ P = {}
 ENTF = [(os.path.join(HERE, 'ent', 'hat3_v9c_ent.json'), None),                              # adım 35 E gövde
         (os.path.join(HERE, 'ent', 'hat3_v10a_ent.json'), lambda a, v: '_E_' in a),          # adım 59 emniyet
         (os.path.join(HERE, 'ent', 'hat3_v10k_ent.json'), None),                             # adım 69 arka PEM + cıvata
-        (os.path.join(HERE, 'ent', 'hat3_v10l_ent.json'), None)]                             # adım 80 kapı + sensör bağlantıları
+        (os.path.join(HERE, 'ent', 'hat3_v10l_ent.json'), None)] + \
+       [(os.path.join(HERE, 'ent', 'hat3_v10%s_ent.json' % s_), None) for s_ in 'mnopq']     # adım 81–85 E mekanizma bağlantıları + yeni braketler + kaynaklar
 ENT = {}
 for f_, s_ in ENTF:
     for a, v in json.load(open(f_, encoding='utf-8'))['parca'].items():
@@ -61,7 +62,8 @@ def sinif(a, v):
     if 'kaynak' in a or 'kaynagi' in a or 'punta' in a: return 'kaynak', 'kaynak', bom or 'TIG dikişi'
     if 'silikon' in a or d.endswith('__conta'): return 'yapistirici', 'silikon', bom
     if d.endswith('__yalitim') or a.startswith('yalitim'): return 'pu', 'pu', bom
-    if t in ('arayuz',) or any(w in a for w in ('_pem', 'pem_', '_vida', 'vida_', '_percin', 'percin_', '_somun', '_pul', '_saplama', 'arayuz_', 'civata')) \
+    if t in ('arayuz', 'baglanti') or any(w in a for w in ('_pem', 'pem_', '_vida', 'vida_', '_percin', 'percin_', '_somun', '_pul', '_saplama', 'arayuz_', 'civata',
+                                                           '_setskur', '_segman', '_pim', '_sap')) \
             or any(w in bom for w in ('cıvata', 'vida', 'PEM', 'perçin', 'somun', 'pul ', 'saplama')):
         return 'baglanti', 'baglanti', bom
     if t == 'profil' or 'omega' in a or 'profil' in a: return 'profil', 'profil', bom
@@ -113,6 +115,46 @@ for a in sorted(TOPLA):
     m, t, bom = sinif(a, ENT[a]); grup(a, TOPLA[a], m, t, bom, dugum=ENT[a]['dugum'], kpk=a.startswith(('onyuz_kapak_E', 'sarjor_yan_kapisi')) or a.endswith('aktuator'))
 eks = sorted(a for a in ENT if a not in TOPLA)
 print('adlı parça', len(TOPLA), '· model karşılığı olmayan kayıt', len(eks), eks[:20])
+
+# ---------------------------------------------------------------- 1b. E mekanizma parçaları tek tek (zincir 81–85 · veri/e_mek_parcalar.json kutuları; 'ek' kutuları aynı parçaya)
+MEKV = json.load(open(os.path.join(HERE, '..', '..', '..', '..', 'arastirma', '_uretec', 'h3', 'yama_v9', 'veri', 'e_mek_parcalar.json'), encoding='utf-8'))
+MEK_KUTU = [(k, d, np.array(lo), np.array(hi), float(np.prod(np.subtract(hi, lo)))) for k, v in MEKV.items()
+            for d, lo, hi in [(v['dug'], v['lo'], v['hi'])] + [(e['dug'], e['lo'], e['hi']) for e in v.get('ek', [])]]
+MTOP = collections.defaultdict(list)
+for o in L:
+    if id(o) in ATANAN: continue
+    en, hc = None, None
+    for k, d, lo, hi, h in MEK_KUTU:
+        if d == o['dug'] and h < (hc if hc is not None else np.inf) and ic(o, lo, hi, 0.8): en, hc = k, h
+    ic_ic = en and any(k != en and d == o['dug'] and h < hc and np.all(lo >= o['lo'] - 0.8) and np.all(hi <= o['hi'] + 0.8) for k, d, lo, hi, h in MEK_KUTU)
+    if en and not ic_ic: MTOP[en].append(o); continue                         # bileşenin içinde başka (küçük) adlı parça kutusu yoksa bütün olarak
+    # delik açma (zincir 81–85) değen parçaları aynı ağda birleştirmiş olabilir: üçgen başına en küçük kutuya ayır
+    KD = [(k, lo, hi, h) for k, d, lo, hi, h in MEK_KUTU if d == o['dug'] and np.all(o['hi'] >= lo - 0.8) and np.all(o['lo'] <= hi + 0.8)]
+    if not KD: continue
+    Q = o['V'][o['F']]; Tl = Q.min(1); Th = Q.max(1); lab = np.full(len(Q), '', dtype=object); hcv = np.full(len(Q), np.inf)
+    for k, lo, hi, h in KD:
+        m = np.all(Tl >= lo - 0.8, 1) & np.all(Th <= hi + 0.8, 1) & (h < hcv); lab[m] = k; hcv[m] = h
+    C = Q.mean(1); hc2 = np.full(len(Q), np.inf); bos_ = lab == ''                 # kalan (iki parçaya taşan) üçgenler: merkezine göre
+    for k, lo, hi, h in KD:
+        m = bos_ & np.all(C >= lo - 0.8, 1) & np.all(C <= hi + 0.8, 1) & (h < hc2); lab[m] = k; hc2[m] = h
+    if not (lab != '').any(): continue
+    for k in sorted(set(lab) - {''}):
+        mm = lab == k; Tc = o['F'][mm]; u, inv = np.unique(Tc.reshape(-1), return_inverse=True)
+        MTOP[k].append(dict(o, V=o['V'][u], F=inv.reshape(-1, 3), lo=o['V'][u].min(0), hi=o['V'][u].max(0)))
+    if (lab == '').any():
+        mm = lab == ''; Tc = o['F'][mm]; u, inv = np.unique(Tc.reshape(-1), return_inverse=True)
+        L.append(dict(o, V=o['V'][u], F=inv.reshape(-1, 3), lo=o['V'][u].min(0), hi=o['V'][u].max(0), artik=True))
+    ATANAN.add(id(o))
+def mek_m(k, v):
+    d = v['dug']; r = v['rol']
+    if r == 'motor' or d.endswith('__motor') or '__motor__' in d: return 'motor'
+    if r in ('sensor',) or '__sensor' in d: return 'sensor'
+    if r in ('kayis', 'vantuz', 'hortum') or 'kayis' in d or 'kaucuk' in d: return 'koyu'
+    if 'aluminyum' in d or 'plastik' in d: return 'alu'
+    return 'mekanizma'
+for k in sorted(MTOP):
+    v = MEKV[k]; grup(k, MTOP[k], mek_m(k, v), 'mek', '%s · %s' % (v.get('tip', ''), k.replace('_', ' ')), aile=v['aile'], rol=v['rol'], mek_ad=True)
+print('mekanizma parçası (adlı)', len(MTOP), '/', len(MEKV), '· eksik', sorted(set(MEKV) - set(MTOP))[:30])
 
 # ---------------------------------------------------------------- 2. E bileşenleri: alt montajlar + elektrik + hava (düğüm / mek)
 EK = lambda o: kod(o).startswith('E/')

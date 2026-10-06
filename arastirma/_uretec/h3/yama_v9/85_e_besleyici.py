@@ -45,7 +45,7 @@ for i, (xd, zc, sg) in enumerate(((4560.0, -590.0, 1), (4560.0, -410.0, 1), (504
     M.vida("%s_plaka_vida" % ad, ad, "besleyici_plaka", dis="M4", yon=YM, duzlem=1337.0, pts=[(xd + sg * 13.0, zc)], kavrama=5.0,
            not_="köşebent ayağından 5 mm besleyici plakasına (dişli)")
 # ---------------------------------------------------------------- raylar ↔ plaka (ray plakanın altında; vida raydan yukarı)
-RAY_Z = [-810.5, -750.5, -690.5, -630.5, -570.5, -510.5, -450.5, -390.5]
+RAY_Z = [-810.5, -750.5, -690.5, -510.5, -450.5, -390.5]          # rayın ölçülen 6 havşalı deliği (0,25 mm tarama; ortadaki düz delikler havşasız)
 for i, xr in ((0, 4550.0), (1, 5050.0)):
     M.vida("besleyici_ray_%d_vida" % i, "besleyici_ray_%d" % i, "besleyici_plaka", dis="M4", yon=Y, duzlem=1332.0, pts=[(xr, z) for z in RAY_Z],
            urun="A", bas_bos=False, not_="MGN15 rayı kendi havşa yuvalarından (60 mm aralık; baş yuvanın tabanında) 5 mm plakaya (dişli)")

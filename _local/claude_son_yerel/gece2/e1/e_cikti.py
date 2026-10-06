@@ -186,8 +186,8 @@ DEN = dict(model_acigi=len(MA), yuzey_temasi=TEMAS, adim=len(D['ADIM']), parca=l
            uretim_kare_sorun=[list(x) for x in KARE_SORUN], belirme=len(BELIRME), belirme_liste=BELIRME, havada=HAVADA, son_konum=son_rap, son_beyansiz=len(BEYANSIZ_SON),
            haric={'%s ↔ %s' % k: v for k, v in HARIC.items() if not v.startswith(('kaynak dikişi /', 'kablo / hortum'))}, vida=VD, sac_model=SK[:10], plan_sorun=D['PLAN_SORUN'],
            istisna=sorted(IST), uretilen=sorted(FR), siyirma_mm=Y.SINIR * 1000, oturma_mm=Y.OTURMA * 1000)
-OUTJ = dict(surum='e_montaj_v2', ist='E', tarih='5 Eki 2026',
-            kaynak='hat3_v10h.glb (zincir 00–66) · E gövde h3_e_sac_v1 (açınım) + ana model · üretim: e_parca.py + e_montaj.py + e_cikti.py',
+OUTJ = dict(surum='e_montaj_v3', ist='E', tarih='6 Eki 2026',
+            kaynak='hat3_v10q.glb (zincir 00–85 · E mekanizmaları vida vida) · E gövde h3_e_sac_v1 (açınım) + ana model · üretim: e_parca.py + e_montaj.py + e_cikti.py',
             sehpa=False, birim='m', toplam=D['TOPLAM'], zarf=[np.round(np.maximum(LOt, [-1, 0, -3]), 3).tolist(), np.round(np.minimum(HIt, [5, 4, 3]), 3).tolist()], ghost=[], ghost_t=0.0,
             adimlar=D['ADIM'], olaylar=sorted(D['OLAY'], key=lambda o: o[0]), kamera=D['KAM'], parcalar=PARCA, acinim=D['ACN'],
             sayim=dict(gosterilen=len(GOS), cevre=len(CEV), ucgen=int(sum(len(P[a]['F']) for a in P)), uretilen=len(FR),

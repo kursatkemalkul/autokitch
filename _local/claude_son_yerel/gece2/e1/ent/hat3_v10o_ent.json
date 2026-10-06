@@ -3823,7 +3823,7 @@
 "  segman kose_piston_mil_sol_segman       DIN 471 d12 · kose_piston_mil_sol · yüz y=1496.0",
 "  setskur kose_piston_mil_sag_setskur     M5×12  ×1  kose_piston_kol → kose_piston_mil_sag · eksen [0.0, 0.0, 1.0]",
 "  segman kose_piston_mil_sag_segman       DIN 471 d12 · kose_piston_mil_sag · yüz y=1496.0",
-"  denetim: 84 vida + 19 diğer · baş hacmi boş · hedefler tam · kavrama ≥ 1×d · 10 sn",
+"  denetim: 84 vida + 19 diğer · baş hacmi boş · hedefler tam · kavrama ≥ 1×d · 9 sn",
 "  delik: E_KOSE__CNR_MB[0]                  ← kose_tutucu_sag_arka_gobek_pim, kose_tutucu_sag_arka_gobek_setskur, kose_tutucu_sag_arka_kol_vida_0, kose_tutu · −174.2 mm³",
 "  delik: E_KOSE__CNR_MB[1]                  ← kose_tutucu_sag_arka_gobek_pim, kose_tutucu_sag_arka_mafsal_pim · −107.3 mm³",
 "  delik: E_KOSE__CNR_MB[2]                  ← kose_tutucu_sag_arka_mafsal_pim · −50.0 mm³",
@@ -4061,6 +4061,7 @@
 "kose_tutucu_sol_arka_kol",
 "kose_tutucu_sol_arka_gobek"
 ],
+"ops": [],
 "bas_bos": true,
 "not_": "bayrak bileziğinin −z′ duvarından göbeğe (havşa; bilezik 2 mm)",
 "tA": 1.9,
@@ -4083,6 +4084,7 @@
 "kose_tutucu_sol_arka_kol",
 "kose_tutucu_sol_arka_gobek"
 ],
+"ops": [],
 "bas_bos": true,
 "not_": "bayrak bileziğinin +z′ duvarından göbeğe (havşa)",
 "tA": 1.9,
@@ -4105,6 +4107,7 @@
 "kose_tutucu_sol_arka_cene",
 "kose_tutucu_sol_arka_parmak"
 ],
+"ops": [],
 "bas_bos": true,
 "not_": "çene kolunun dik bacağı üstünden parmağa (parmak 10 × 5,6 kesit, dişli)",
 "tA": 17.0,
@@ -4128,6 +4131,7 @@
 "kose_kilavuz_sol_arka_1",
 "kose_kilavuz_sol_arka_0"
 ],
+"ops": [],
 "bas_bos": true,
 "not_": "alt dudaktan (3 mm, havşa) blok 0 (7, geçiş) + perde (9, geçiş) üstünden blok 1'e dişli (eğik eksen)",
 "tA": 3.0,
@@ -4151,6 +4155,7 @@
 "kose_kilavuz_sol_arka_1",
 "kose_kilavuz_sol_arka_0"
 ],
+"ops": [],
 "bas_bos": true,
 "not_": "alt dudaktan (3 mm, havşa) blok 0 (7, geçiş) + perde (9, geçiş) üstünden blok 1'e dişli (eğik eksen)",
 "tA": 3.0,
@@ -4321,6 +4326,7 @@
 "kose_tutucu_sol_on_kol",
 "kose_tutucu_sol_on_gobek"
 ],
+"ops": [],
 "bas_bos": true,
 "not_": "bayrak bileziğinin −z′ duvarından göbeğe (havşa; bilezik 2 mm)",
 "tA": 1.9,
@@ -4343,6 +4349,7 @@
 "kose_tutucu_sol_on_kol",
 "kose_tutucu_sol_on_gobek"
 ],
+"ops": [],
 "bas_bos": true,
 "not_": "bayrak bileziğinin +z′ duvarından göbeğe (havşa)",
 "tA": 1.8,
@@ -4365,6 +4372,7 @@
 "kose_tutucu_sol_on_cene",
 "kose_tutucu_sol_on_parmak"
 ],
+"ops": [],
 "bas_bos": true,
 "not_": "çene kolunun dik bacağı üstünden parmağa (parmak 10 × 5,6 kesit, dişli)",
 "tA": 17.0,
@@ -4388,6 +4396,7 @@
 "kose_kilavuz_sol_on_1",
 "kose_kilavuz_sol_on_0"
 ],
+"ops": [],
 "bas_bos": true,
 "not_": "alt dudaktan (3 mm, havşa) blok 0 (7, geçiş) + perde (9, geçiş) üstünden blok 1'e dişli (eğik eksen)",
 "tA": 3.0,
@@ -4411,6 +4420,7 @@
 "kose_kilavuz_sol_on_1",
 "kose_kilavuz_sol_on_0"
 ],
+"ops": [],
 "bas_bos": true,
 "not_": "alt dudaktan (3 mm, havşa) blok 0 (7, geçiş) + perde (9, geçiş) üstünden blok 1'e dişli (eğik eksen)",
 "tA": 3.0,
@@ -4581,6 +4591,7 @@
 "kose_tutucu_sag_arka_kol",
 "kose_tutucu_sag_arka_gobek"
 ],
+"ops": [],
 "bas_bos": true,
 "not_": "bayrak bileziğinin −z′ duvarından göbeğe (havşa; bilezik 2 mm)",
 "tA": 1.9,
@@ -4603,6 +4614,7 @@
 "kose_tutucu_sag_arka_kol",
 "kose_tutucu_sag_arka_gobek"
 ],
+"ops": [],
 "bas_bos": true,
 "not_": "bayrak bileziğinin +z′ duvarından göbeğe (havşa)",
 "tA": 1.9,
@@ -4625,6 +4637,7 @@
 "kose_tutucu_sag_arka_cene",
 "kose_tutucu_sag_arka_parmak"
 ],
+"ops": [],
 "bas_bos": true,
 "not_": "çene kolunun dik bacağı üstünden parmağa (parmak 10 × 5,6 kesit, dişli)",
 "tA": 17.0,
@@ -4648,6 +4661,7 @@
 "kose_kilavuz_sag_arka_1",
 "kose_kilavuz_sag_arka_0"
 ],
+"ops": [],
 "bas_bos": true,
 "not_": "alt dudaktan (3 mm, havşa) blok 0 (7, geçiş) + perde (9, geçiş) üstünden blok 1'e dişli (eğik eksen)",
 "tA": 3.0,
@@ -4671,6 +4685,7 @@
 "kose_kilavuz_sag_arka_1",
 "kose_kilavuz_sag_arka_0"
 ],
+"ops": [],
 "bas_bos": true,
 "not_": "alt dudaktan (3 mm, havşa) blok 0 (7, geçiş) + perde (9, geçiş) üstünden blok 1'e dişli (eğik eksen)",
 "tA": 3.0,
@@ -4841,6 +4856,7 @@
 "kose_tutucu_sag_on_kol",
 "kose_tutucu_sag_on_gobek"
 ],
+"ops": [],
 "bas_bos": true,
 "not_": "bayrak bileziğinin −z′ duvarından göbeğe (havşa; bilezik 2 mm)",
 "tA": 1.9,
@@ -4863,6 +4879,7 @@
 "kose_tutucu_sag_on_kol",
 "kose_tutucu_sag_on_gobek"
 ],
+"ops": [],
 "bas_bos": true,
 "not_": "bayrak bileziğinin +z′ duvarından göbeğe (havşa)",
 "tA": 1.9,
@@ -4885,6 +4902,7 @@
 "kose_tutucu_sag_on_cene",
 "kose_tutucu_sag_on_parmak"
 ],
+"ops": [],
 "bas_bos": true,
 "not_": "çene kolunun dik bacağı üstünden parmağa (parmak 10 × 5,6 kesit, dişli)",
 "tA": 17.0,
@@ -4908,6 +4926,7 @@
 "kose_kilavuz_sag_on_1",
 "kose_kilavuz_sag_on_0"
 ],
+"ops": [],
 "bas_bos": true,
 "not_": "alt dudaktan (3 mm, havşa) blok 0 (7, geçiş) + perde (9, geçiş) üstünden blok 1'e dişli (eğik eksen)",
 "tA": 3.0,
@@ -4931,6 +4950,7 @@
 "kose_kilavuz_sag_on_1",
 "kose_kilavuz_sag_on_0"
 ],
+"ops": [],
 "bas_bos": true,
 "not_": "alt dudaktan (3 mm, havşa) blok 0 (7, geçiş) + perde (9, geçiş) üstünden blok 1'e dişli (eğik eksen)",
 "tA": 3.0,
@@ -4953,6 +4973,7 @@
 "kose_uc_blok_sol_braket",
 "kose_sasi"
 ],
+"ops": [],
 "bas_bos": true,
 "not_": "köşebent yatay bacağından rayın altına (6 mm, dişli)",
 "tA": 2.0,
@@ -4975,6 +4996,7 @@
 "kose_uc_blok_sol_braket",
 "kose_sasi"
 ],
+"ops": [],
 "bas_bos": true,
 "not_": "köşebent yatay bacağından rayın altına (6 mm, dişli)",
 "tA": 2.0,
@@ -4997,6 +5019,7 @@
 "kose_uc_blok_sol_braket",
 "kose_uc_blok_sol"
 ],
+"ops": [],
 "bas_bos": true,
 "not_": "köşebent dik bacağından bloğun iç duvarına (dişli; LM12 burç deliğine 2 mm kala biter)",
 "tA": 2.0,
@@ -5019,6 +5042,7 @@
 "kose_uc_blok_sol_braket",
 "kose_uc_blok_sol"
 ],
+"ops": [],
 "bas_bos": true,
 "not_": "köşebent dik bacağından bloğun iç duvarına (dişli; LM12 burç deliğine 2 mm kala biter)",
 "tA": 2.0,
@@ -5041,6 +5065,7 @@
 "kose_uc_blok_sag_braket",
 "kose_sasi"
 ],
+"ops": [],
 "bas_bos": true,
 "not_": "köşebent yatay bacağından rayın altına (6 mm, dişli)",
 "tA": 2.0,
@@ -5063,6 +5088,7 @@
 "kose_uc_blok_sag_braket",
 "kose_sasi"
 ],
+"ops": [],
 "bas_bos": true,
 "not_": "köşebent yatay bacağından rayın altına (6 mm, dişli)",
 "tA": 2.0,
@@ -5085,6 +5111,7 @@
 "kose_uc_blok_sag_braket",
 "kose_uc_blok_sag"
 ],
+"ops": [],
 "bas_bos": true,
 "not_": "köşebent dik bacağından bloğun iç duvarına (dişli; LM12 burç deliğine 2 mm kala biter)",
 "tA": 2.0,
@@ -5107,6 +5134,7 @@
 "kose_uc_blok_sag_braket",
 "kose_uc_blok_sag"
 ],
+"ops": [],
 "bas_bos": true,
 "not_": "köşebent dik bacağından bloğun iç duvarına (dişli; LM12 burç deliğine 2 mm kala biter)",
 "tA": 2.0,
@@ -5129,6 +5157,7 @@
 "kose_uc_kapak_sag",
 "kose_uc_blok_sag"
 ],
+"ops": [],
 "bas_bos": true,
 "not_": "2 mm kapaktan bloğun dış duvarına (5,7 mm) · havşa",
 "tA": 2.0,
@@ -5151,6 +5180,7 @@
 "kose_uc_kapak_sag",
 "kose_uc_blok_sag"
 ],
+"ops": [],
 "bas_bos": true,
 "not_": "2 mm kapaktan bloğun dış duvarına (5,7 mm) · havşa",
 "tA": 2.0,
@@ -5213,6 +5243,7 @@
 "kose_somun_kelepce",
 "kose_sasi"
 ],
+"ops": [],
 "bas_bos": true,
 "not_": "kelepçe bileziğinden çerçeve plakasına (6 mm, dişli)",
 "tA": 8.0,
@@ -5235,6 +5266,7 @@
 "kose_somun_kelepce",
 "kose_sasi"
 ],
+"ops": [],
 "bas_bos": true,
 "not_": "kelepçe bileziğinden çerçeve plakasına (6 mm, dişli)",
 "tA": 8.0,
@@ -5257,6 +5289,7 @@
 "kose_somun_kelepce",
 "kose_sasi"
 ],
+"ops": [],
 "bas_bos": true,
 "not_": "kelepçe bileziğinden çerçeve plakasına (6 mm, dişli)",
 "tA": 8.0,
@@ -5279,6 +5312,7 @@
 "kose_somun_kelepce",
 "kose_sasi"
 ],
+"ops": [],
 "bas_bos": true,
 "not_": "kelepçe bileziğinden çerçeve plakasına (6 mm, dişli)",
 "tA": 8.0,
@@ -5435,6 +5469,7 @@
 "kose_piston_braket_0",
 "kose_piston_motor_plakasi"
 ],
+"ops": [],
 "bas_bos": true,
 "not_": "köşebent yatay bacağından motor plakasına (6 mm, dişli)",
 "tA": 2.0,
@@ -5457,6 +5492,7 @@
 "kose_piston_braket_0",
 "kose_piston_motor_plakasi"
 ],
+"ops": [],
 "bas_bos": true,
 "not_": "köşebent yatay bacağından motor plakasına (6 mm, dişli)",
 "tA": 2.0,
@@ -5479,6 +5515,7 @@
 "kose_piston_kol",
 "kose_piston_plaka"
 ],
+"ops": [],
 "bas_bos": true,
 "not_": "direğin dış yüzünden (4 mm) 10 mm plakanın çentik yüzüne (dişli)",
 "tA": 4.0,
@@ -5547,6 +5584,7 @@
 "kose_piston_braket_1",
 "kose_piston_motor_plakasi"
 ],
+"ops": [],
 "bas_bos": true,
 "not_": "köşebent yatay bacağından motor plakasına (6 mm, dişli)",
 "tA": 2.0,
@@ -5569,6 +5607,7 @@
 "kose_piston_braket_1",
 "kose_piston_motor_plakasi"
 ],
+"ops": [],
 "bas_bos": true,
 "not_": "köşebent yatay bacağından motor plakasına (6 mm, dişli)",
 "tA": 2.0,
@@ -5591,6 +5630,7 @@
 "kose_piston_kol",
 "kose_piston_plaka"
 ],
+"ops": [],
 "bas_bos": true,
 "not_": "direğin dış yüzünden (4 mm) 10 mm plakanın çentik yüzüne (dişli)",
 "tA": 4.0,

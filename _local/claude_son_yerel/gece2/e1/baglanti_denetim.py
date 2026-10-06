@@ -83,8 +83,14 @@ for a in TAS:
 KAT = [  # (sınama, kategori, açıklama) — sıra önemli, ilk tutan
     # E (6 Eki): bas-aç geçme · modül iç parçaları · çöp kovası
     (lambda a: 'basac' in a and not a.endswith('lamasi'), 'GECME', 'bas-aç mandalı: dikme / lama deliğine yaylı tırnakla geçer (kendi gövdesi)'),
-    (lambda a: a in ('besleyici_vakum', 'kose_kaldirici', 'kose_piston', 'kose_tutucu', 'parmak', 'parmak_y', 'kapak_katlayici'), 'UNITE',
-     'tezgâhta kurulan E mekanizma modülünün iç parçası (üst / alt modül, mekanizma üreteci); modül bütün olarak askı / yan saplamalarına bağlanır'),
+    # E mekanizma (zincir 81–85, yerel 6 Eki): vidasız durması bilerek olan parçalar
+    (lambda a: P[a].get('rol') == 'burc' or a.endswith(('_burc', '_burc_0', '_burc_1')) or 'lm12' in a, 'GECME', 'burç / LM12 lineer burç: bloğun deliğine sıkı geçme (pres)'),
+    (lambda a: P[a].get('rol') == 'vantuz', 'GECME', 'vantuz: kendi flanşı + sapıyla bara (sapı vidalı, kauçuk kısmı ürünün)'),
+    (lambda a: P[a].get('rol') in ('kayis', 'hortum'), 'GECME', 'kayış / vakum hortumu: kasnaklara sarılı / rakorlara geçer (kural 9 istisnası)'),
+    (lambda a: 'rulman_disk' in a or a.endswith('_rulman') or a.startswith('parmak_rulman'), 'GECME', 'flanşlı rulman diski: göbeğe sıkı geçme'),
+    (lambda a: a.endswith(('_araba_0', '_araba_1', '_araba_2', '_araba_3')) or '_araba' in a and P[a].get('rol') == 'parca' and 'celik' in P[a].get('ac', ''), 'KIZAK', 'MGN lineer araba: rayının üstünde kayar (ürün; taşıdığı plaka vidalı)'),
+    (lambda a: P[a].get('rol') == 'mil', 'KIZAK', 'mil: yatak / burç içinde döner ya da kayar (segman / setskur / pim ile eksenel tutulu; değmiyorsa yatağın içinde)'),
+    (lambda a: a.endswith('flansli_somun') or a == 'piston_somun', 'GECME', 'flanşlı vida mili somunu: braketle aynı katmanda geçme'),
     (lambda a: a == 'robot_copu', 'SOKULUR', 'robot çöpü kovası + poşet tabandaki kılavuzda oturur, boşaltmak için elle çıkar (bilerek)'),
     (lambda a: a in ('kaset_kasar', 'kaset_sucuk'), 'SOKULUR', 'kaset: dil kanalında + kapak K2 POM takozu kilitler (adım 63) · iki günde bir sökülür'),
     (lambda a: a.endswith('_conta') and a.startswith('kaset_'), 'ACIK', 'kovan contası raf deliğinde değmiyor (kovan iç duvarına 3 mm · v5ten) → conta biçimi düzeltilecek'),

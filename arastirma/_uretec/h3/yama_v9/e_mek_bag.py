@@ -257,12 +257,16 @@ class Mek:
         u, w = pt; p = np.zeros(3); p[o[0]] = u; p[o[1]] = w; p[ax] = c
         return p
 
-    def _ab(s, ad, i, PA, PB, p, e):
-        """düzlem noktası p'den A (geri) ve B (ileri) katı aralıkları (t: e boyunca, p'de 0) · bitişik aralıklar birleşik"""
+    def _ab(s, ad, i, PA, PB, p, e, A_kutu=None):
+        """düzlem noktası p'den A (geri) ve B (ileri) katı aralıkları (t: e boyunca, p'de 0) · bitişik aralıklar birleşik ·
+        A_kutu (hazır ürünün kendi deliği): ışın A'nın deliğinden geçip katı bulamazsa A kalınlığı kutusundan"""
         o0 = p - e * 300.0
         ta = s._birlestir([(t0 - 300.0, t1 - 300.0) for t0, t1 in kati_araliklari(PA, o0, e, 600.0)])
         tb = s._birlestir([(t0 - 300.0, t1 - 300.0) for t0, t1 in kati_araliklari(PB, o0, e, 600.0)])
         ia = [x for x in ta if x[1] <= 0.8 and x[1] >= -80.0]; ib = [x for x in tb if x[0] >= -0.8 and x[0] <= 80.0]
+        if not ia and A_kutu is not None:
+            lo_, hi_ = A_kutu; C_ = np.array([[x, y, z] for x in (lo_[0], hi_[0]) for y in (lo_[1], hi_[1]) for z in (lo_[2], hi_[2])])
+            ia = [(float(((C_ - p) @ e).min()), 0.0)]
         assert ia and ib, "%s #%d: ışın A/B'yi bulamadı · A %s · B %s · nokta %s" % (ad, i, [tuple(round(v, 1) for v in x) for x in ta], [tuple(round(v, 1) for v in x) for x in tb], np.round(p, 1).tolist())
         a0 = max(ia, key=lambda x: x[1])[0]; b0, b1 = min(ib, key=lambda x: x[0])
         return float(a0), float(b0), float(b1)
@@ -278,7 +282,7 @@ class Mek:
         PA = s.P(A); PB = s.P(B); out = []
         for i, pt in enumerate(pts):
             p = s._nokta(pt, o, ax, c)
-            a0, b0, b1 = s._ab(ad, i, PA, PB, p, e)
+            a0, b0, b1 = s._ab(ad, i, PA, PB, p, e, A_kutu=s.kutu(A) if urun == "A" else None)
             st = a0 + gomme                                                   # baş oturma (t)
             dB = b1 - b0
             if kavrama is not None and kavrama >= 1.0 * d - 1e-6 and kavrama <= dB + 1e-6: kav = kavrama   # açık verilen tutuş (≥ 1×d, B içinde)
