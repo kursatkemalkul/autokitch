@@ -8,7 +8,7 @@ Kemal'in kararı (5 Eki 2026): iki ajan aynı anda, farklı istasyonlarda çalı
 
 | İş | Kim | Branch | Durum |
 |---|---|---|---|
-| Robot + ray + QR dolabı + sipariş animasyonları | Codex | `coord/codex-dukkan-v26` | BİTTİ v26/adım95: v25 robot/ray/12QR/8sipariş ve tüm14klip aynen korunur. Dükkân içi4724×4433mm,20.94m²; iki900mm sol kapı,80cm oturma cebi,770mm tezgâh,900mm lavabo. Duvarlar yalnız sınır çizgisi.171kapalı katı; iki koşu bayt aynı; tarayıcı oynatma temiz. Yapı/koruma, su-gider uygulaması ve önceki tam robot/fizik denetimi açık. |
+| Robot + ray + QR dolabı + sipariş animasyonları | Codex | `coord/codex-zemin-v27` | BİTTİ v26/adım95: v25 robot/ray/12QR/8sipariş ve tüm14klip aynen korunur. Dükkân içi4724×4433mm,20.94m²; iki900mm sol kapı,80cm oturma cebi,770mm tezgâh,900mm lavabo. Duvarlar yalnız sınır çizgisi.171kapalı katı; iki koşu bayt aynı; tarayıcı oynatma temiz. Yapı/koruma, su-gider uygulaması ve önceki tam robot/fizik denetimi açık. |
 | TOPPING montaj animasyonu v5 | Claude | `claude/topping-montaj-v5` | yayında (açık 3 küçük madde) |
 | Standart önlemleri · makine: acil stop (58) · 10 kapı emniyet anahtarı (59) · hava emniyet valfi (60) · davlumbaz filtresi servis ağzı (61) · hijyen / R290 / A perdesi kayıt | Claude | `claude/standart-makine` | BİTTİ (cb7d1ec) — Kemal incelemesinde |
 | **TOPPING montaj v6**: bağsız 63 parça + geçici dayalı 2 parça bağlanır (KURALLAR §2.3 kural 10), animasyon yeniden üretilir, §5 denetimi | Claude | `claude/topping-montaj-v6` | YAYINDA (5 Eki, PR #5) · açık: kıyma silindiri flanşı, 5 iç elektrik parçası, 2 kovan contası |
@@ -63,6 +63,6 @@ Robot entegrasyon adımı94, makine geometrisini koruyan son render/animasyon ad
 - Depo herkese açık. Oturum kayıtları `_local/claude_oturum/` altında durur (Kemal: kalsın); `_local/` siteye kopyalanmaz. Parola, anahtar, kişisel bilgi depoya konmaz.
 - Büyük ara dosyalar (`.pkl`, 100 MB üstü GLB) depoya konmaz; GLB gerekirse kayıpsız `.gz` olarak.
 
-ZİNCİR KİLİDİ: BOŞ
+ZİNCİR KİLİDİ: Codex · v27/adım96 · kapı/mobilya/lavabo kaldırma; küçük zemin ve standart OBO gömme kanal; makine/robot/QR korunur
 
 Codex v23/adım92: sağ duvar panosu ve ayrı router bölmesi; gömülü iniş, sıfır kapak, doğru dirsek/kesim ve ayrı kablo yolları. İki tam koşu bayt aynı; kanal/kablo katıları kapalı, modüllerde örtüşme yok, kablo yolunda2mm asgari pay. Elektrik nihai devre/kesit-seçicilik ve döşeme yükü, özel ray ve tam robot çarpışması hâlâ açık. E/K cloud dosyalarına dokunulmadı.
