@@ -1,0 +1,498 @@
+{
+  "version": 16,
+  "recipes": [
+    {
+      "id": "kasarli",
+      "name": "Kaşarlı pide",
+      "source": "published v10l native machine timeline",
+      "units": 1,
+      "events": [
+        {
+          "name": "ÇEKMECE",
+          "time_s": 0
+        },
+        {
+          "name": "ROBOT",
+          "time_s": 4.97
+        },
+        {
+          "name": "AÇICI",
+          "time_s": 10.34
+        },
+        {
+          "name": "KASAR",
+          "time_s": 18.42
+        },
+        {
+          "name": "AKTARMA",
+          "time_s": 34.97
+        },
+        {
+          "name": "FIRIN",
+          "time_s": 36.92
+        },
+        {
+          "name": "KESME",
+          "time_s": 240.08
+        },
+        {
+          "name": "K BANDI + İTİCİ",
+          "time_s": 246.38
+        },
+        {
+          "name": "KUTU",
+          "time_s": 250.6
+        },
+        {
+          "name": "ROBOT → QR",
+          "time_s": 258.01
+        },
+        {
+          "name": "QR DOLABI",
+          "time_s": 260.91
+        }
+      ],
+      "processing_after_dough_s": 247.67,
+      "ready": "modelled",
+      "motion_certified": false
+    },
+    {
+      "id": "kiymali",
+      "name": "Kıymalı pide",
+      "source": "published v10l native machine timeline",
+      "units": 1,
+      "events": [
+        {
+          "name": "ÇEKMECE",
+          "time_s": 0
+        },
+        {
+          "name": "ROBOT",
+          "time_s": 4.97
+        },
+        {
+          "name": "AÇICI",
+          "time_s": 10.35
+        },
+        {
+          "name": "KIYMA",
+          "time_s": 17.18
+        },
+        {
+          "name": "AKTARMA",
+          "time_s": 34.22
+        },
+        {
+          "name": "FIRIN",
+          "time_s": 36.18
+        },
+        {
+          "name": "KESME",
+          "time_s": 239.33
+        },
+        {
+          "name": "K BANDI + İTİCİ",
+          "time_s": 245.63
+        },
+        {
+          "name": "KUTU",
+          "time_s": 249.85
+        },
+        {
+          "name": "ROBOT → QR",
+          "time_s": 257.27
+        },
+        {
+          "name": "QR DOLABI",
+          "time_s": 260.17
+        }
+      ],
+      "processing_after_dough_s": 246.92,
+      "ready": "modelled",
+      "motion_certified": false
+    },
+    {
+      "id": "kusbasili",
+      "name": "Kuşbaşılı pide",
+      "source": "published v10l native machine timeline",
+      "units": 1,
+      "events": [
+        {
+          "name": "ÇEKMECE",
+          "time_s": 0
+        },
+        {
+          "name": "ROBOT",
+          "time_s": 4.97
+        },
+        {
+          "name": "AÇICI",
+          "time_s": 10.35
+        },
+        {
+          "name": "KUSBASI",
+          "time_s": 17.11
+        },
+        {
+          "name": "AKTARMA",
+          "time_s": 33.3
+        },
+        {
+          "name": "FIRIN",
+          "time_s": 35.26
+        },
+        {
+          "name": "KESME",
+          "time_s": 238.41
+        },
+        {
+          "name": "K BANDI + İTİCİ",
+          "time_s": 244.71
+        },
+        {
+          "name": "KUTU",
+          "time_s": 248.93
+        },
+        {
+          "name": "ROBOT → QR",
+          "time_s": 256.35
+        },
+        {
+          "name": "QR DOLABI",
+          "time_s": 259.25
+        }
+      ],
+      "processing_after_dough_s": 246.00000000000003,
+      "ready": "modelled",
+      "motion_certified": false
+    },
+    {
+      "id": "sucuklu",
+      "name": "Sucuklu pide",
+      "source": "published v10l native machine timeline",
+      "units": 1,
+      "events": [
+        {
+          "name": "ÇEKMECE",
+          "time_s": 0
+        },
+        {
+          "name": "ROBOT",
+          "time_s": 4.97
+        },
+        {
+          "name": "AÇICI",
+          "time_s": 10.35
+        },
+        {
+          "name": "KASAR",
+          "time_s": 18.42
+        },
+        {
+          "name": "SUCUK",
+          "time_s": 29.34
+        },
+        {
+          "name": "AKTARMA",
+          "time_s": 43.7
+        },
+        {
+          "name": "FIRIN",
+          "time_s": 45.65
+        },
+        {
+          "name": "KESME",
+          "time_s": 248.81
+        },
+        {
+          "name": "K BANDI + İTİCİ",
+          "time_s": 255.11
+        },
+        {
+          "name": "KUTU",
+          "time_s": 259.33
+        },
+        {
+          "name": "ROBOT → QR",
+          "time_s": 266.74
+        },
+        {
+          "name": "QR DOLABI",
+          "time_s": 269.64
+        }
+      ],
+      "processing_after_dough_s": 256.39,
+      "ready": "modelled",
+      "motion_certified": false
+    },
+    {
+      "id": "lahmacun",
+      "name": "Lahmacun (2 adet)",
+      "source": "published v10l native machine timeline",
+      "units": 2,
+      "events": [
+        {
+          "name": "ÇEKMECE (1)",
+          "time_s": 0
+        },
+        {
+          "name": "ROBOT (1)",
+          "time_s": 4.97
+        },
+        {
+          "name": "AÇICI (1)",
+          "time_s": 9.01
+        },
+        {
+          "name": "HARC (1)",
+          "time_s": 17.75
+        },
+        {
+          "name": "AKTARMA (1)",
+          "time_s": 24.43
+        },
+        {
+          "name": "FIRIN (1)",
+          "time_s": 26.39
+        },
+        {
+          "name": "ÇEKMECE (2)",
+          "time_s": 28.5
+        },
+        {
+          "name": "ROBOT (2)",
+          "time_s": 33.47
+        },
+        {
+          "name": "AÇICI (2)",
+          "time_s": 37.51
+        },
+        {
+          "name": "HARC (2)",
+          "time_s": 46.25
+        },
+        {
+          "name": "AKTARMA (2)",
+          "time_s": 52.93
+        },
+        {
+          "name": "FIRIN (2)",
+          "time_s": 54.89
+        },
+        {
+          "name": "KESME (1)",
+          "time_s": 229.54
+        },
+        {
+          "name": "K BANDI + İTİCİ (1)",
+          "time_s": 235.84
+        },
+        {
+          "name": "KUTU (1)",
+          "time_s": 240.06
+        },
+        {
+          "name": "KESME (2)",
+          "time_s": 258.04
+        },
+        {
+          "name": "K BANDI + İTİCİ (2)",
+          "time_s": 264.34
+        },
+        {
+          "name": "KUTU (2)",
+          "time_s": 268.56
+        },
+        {
+          "name": "ROBOT → QR",
+          "time_s": 275.97
+        },
+        {
+          "name": "QR DOLABI",
+          "time_s": 278.87
+        }
+      ],
+      "processing_after_dough_s": 266.96000000000004,
+      "ready": "modelled",
+      "motion_certified": false
+    },
+    {
+      "id": "pizza",
+      "name": "Pizza",
+      "source": "published v10l native machine timeline",
+      "units": 1,
+      "events": [
+        {
+          "name": "ÇEKMECE",
+          "time_s": 0
+        },
+        {
+          "name": "ROBOT",
+          "time_s": 4.97
+        },
+        {
+          "name": "AÇICI",
+          "time_s": 10.35
+        },
+        {
+          "name": "SOS",
+          "time_s": 16.36
+        },
+        {
+          "name": "KASAR",
+          "time_s": 21.47
+        },
+        {
+          "name": "SUCUK",
+          "time_s": 33.39
+        },
+        {
+          "name": "AKTARMA",
+          "time_s": 48.25
+        },
+        {
+          "name": "FIRIN",
+          "time_s": 50.2
+        },
+        {
+          "name": "KESME",
+          "time_s": 253.36
+        },
+        {
+          "name": "K BANDI + İTİCİ",
+          "time_s": 259.66
+        },
+        {
+          "name": "KUTU",
+          "time_s": 263.88
+        },
+        {
+          "name": "ROBOT → QR",
+          "time_s": 271.29
+        },
+        {
+          "name": "QR DOLABI",
+          "time_s": 274.19
+        }
+      ],
+      "processing_after_dough_s": 260.94,
+      "ready": "modelled",
+      "motion_certified": false
+    },
+    {
+      "id": "patatesli",
+      "name": "Patatesli pide",
+      "source": "Kemal request / Claude menu7 pending",
+      "units": 1,
+      "events": [],
+      "processing_after_dough_s": null,
+      "ready": "requires machine.ready event",
+      "motion_certified": false
+    },
+    {
+      "id": "tavuklu",
+      "name": "Tavuklu pide",
+      "source": "Kemal request / Claude menu7 pending",
+      "units": 1,
+      "events": [],
+      "processing_after_dough_s": null,
+      "ready": "requires machine.ready event",
+      "motion_certified": false
+    }
+  ],
+  "limits": {
+    "joint_velocity_rad_s": [
+      2.0943951023931953,
+      2.0943951023931953,
+      3.141592653589793,
+      3.141592653589793,
+      3.141592653589793,
+      3.141592653589793
+    ],
+    "tcp_hardware_max_m_s": 4,
+    "tcp_operating_cap_m_s": 1,
+    "tcp_near_product_m_s": 0.12,
+    "joint_acceleration_rad_s2": 2,
+    "tcp_acceleration_m_s2": 1,
+    "rail_velocity_m_s": 0.5,
+    "rail_acceleration_m_s2": 0.6,
+    "jaw_velocity_deg_s": 45,
+    "drawer_velocity_m_s": 0.19,
+    "drawer_acceleration_m_s2": 0.633,
+    "sources": {
+      "joint_speed": "https://www.universal-robots.com/media/1807466/ur10e_e-series_datasheets_web.pdf",
+      "tcp_speed": "https://www.universal-robots.com/media/1807466/ur10e_e-series_datasheets_web.pdf"
+    },
+    "assumptions": [
+      "1 m/s working TCP cap; 4 m/s datasheet ceiling is not attainable at every pose.",
+      "Joint/TCP accelerations, rail and gripper limits are configured trial values, not manufacturer certification.",
+      "Speed limits depend on hardware revision, payload, safety settings and controller; Isaac must revalidate dynamics."
+    ]
+  },
+  "phase_schema": {
+    "coordinate_frame": "Isaac right-handed Z-up metres; web maps (x,y,z) to (x,z,-y)",
+    "joint_order": [
+      "shoulder_pan_joint",
+      "shoulder_lift_joint",
+      "elbow_joint",
+      "wrist_1_joint",
+      "wrist_2_joint",
+      "wrist_3_joint"
+    ],
+    "joint_units": "radians",
+    "rail_units": "metres",
+    "gripper_units": "degrees",
+    "payloads": "rigid ideal grip in web only",
+    "checkpoints": [
+      "drawer.opened",
+      "grasp.confirmed",
+      "table.robot_clear",
+      "machine.box_ready",
+      "qr.robot_clear",
+      "order.complete"
+    ],
+    "isaac_policy": "Follow time-stamped q and rail targets through articulation drives; synchronize sensor events. Rework contact grasp/release separately. Never overwrite rigid-body transforms to claim physical success.",
+    "trajectory_actor_coordinates": "Web Y-up metres; to Isaac [x,y,z] -> [x,-z,y]"
+  },
+  "targets": {
+    "table": [
+      1.0861165201199048,
+      1.0238560228202322,
+      -0.16993614608605556
+    ],
+    "qr": {
+      "column": 2,
+      "floor_mm": 850,
+      "products": {
+        "Dough": [
+          1.0861165201199048,
+          1.0238560228202322,
+          -0.16993614608605556
+        ],
+        "Cola": [
+          5.122498536131686,
+          0.908481839174732,
+          1.8819949175632056
+        ],
+        "Dessert": [
+          5.122210954746434,
+          0.8808579686685056,
+          1.7974958739887261
+        ],
+        "Box": [
+          4.913012691688799,
+          0.8734991379345529,
+          1.9120000071693786
+        ]
+      }
+    },
+    "machine_frame": "unchanged v15; future mounting transform supplied by integration adapter"
+  },
+  "known_limitations": [
+    "Single order motion checked at QR right850 only; demand simulation is separate and not a 12-bay trajectory certificate.",
+    "Two-lahmacun second dough pickup and bridge need native path validation.",
+    "New patates/tavuk recipes await real machine completion signal.",
+    "Recipe selection uses the shared current 42-stock dough demonstration motion; actual recipe-specific dough drawer and size bindings need verification before production.",
+    "Load estimate uses current task durations and no motion connector for every sequence; no production throughput guarantee."
+  ]
+}
