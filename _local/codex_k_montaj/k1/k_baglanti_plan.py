@@ -106,10 +106,10 @@ KURAL = [
     (r'^yag_pompasi_', 'BEYAN:KELEPCE', dict(karsi='k79_pompa_ust_pad_0', neden='pompa iki portal ile plakaya sıkılır (portallar 4 × M5)')),
     (r'^yag_damlama_tavasi_F$', 'BEYAN:SOKULUR', dict(neden='damlama tavası F rafına oturur, temizlik için elle çıkar')),
     (r'^yag_tarti_taban_plakasi$', 'BEYAN:SOKULUR', dict(neden='tartı tabanı damlama tavasında oturur (tartı serbest durmalı), elle çıkar')),
-    (r'^yag_tarti_alt_takozu$', 'VIDA', dict(d=8, n=2, destek='yag_tarti_taban_plakasi', bas='a', neden='yük hücresi alt takozu taban plakasına 2 × M8')),
-    (r'^yag_tarti_yuk_hucresi', 'VIDA', dict(d=6, n=2, destek='yag_tarti_alt_takozu', bas='a', neden='yük hücresi alt takoza 2 × M6')),
-    (r'^yag_tarti_ust_takozu$', 'VIDA', dict(d=6, n=2, destek='yag_tarti_yuk_hucresi_PW15AH', bas='a', std='DIN 7991', neden='üst takoz yük hücresine 2 × M6')),
-    (r'^yag_tarti_platformu$', 'VIDA', dict(d=6, n=2, destek='yag_tarti_ust_takozu', bas='a', neden='platform üst takoza 2 × M6')),
+    (r'^yag_tarti_alt_takozu$', 'YIGIN', dict(d=6, katman=['yag_tarti_taban_plakasi', 'yag_tarti_alt_takozu'], hucre='yag_tarti_yuk_hucresi_PW15AH', yon=1.0, neden='taban plakası + alt takoz yük hücresine alttan 2 × DIN 7991 M6 (baş taban altında yüzeyle aynı, hücrenin dişli deliğine)')),
+    (r'^yag_tarti_yuk_hucresi', 'BEYAN:YIGIN', dict(neden='yük hücresi alttan ve üstten 2 × M6 ile takozlara (YIGIN vidaları)')),
+    (r'^yag_tarti_ust_takozu$', 'YIGIN', dict(d=6, katman=['yag_tarti_platformu', 'yag_tarti_ust_takozu'], hucre='yag_tarti_yuk_hucresi_PW15AH', yon=-1.0, sonra=['yag_tenekesi_18L'], neden='platform + üst takoz yük hücresine üstten 2 × DIN 7991 M6 (baş platform yüzeyiyle aynı, hücrenin dişli deliğine)')),
+    (r'^yag_tarti_platformu$', 'BEYAN:YIGIN', dict(neden='platform üst takozla birlikte hücreye 2 × M6 (YIGIN vidaları)')),
     (r'^yag_tenekesi_18L$', 'BEYAN:SOKULUR', dict(neden='18 L teneke platforma oturur, boşalınca elle değişir')),
     (r'^yag_emme_lansi', 'BEYAN:SOKULUR', dict(karsi='k_yag_pom_0', neden='emme lansı tenekeye daldırılır, kapak adaptöründen geçer')),
 ]
@@ -305,7 +305,7 @@ for a in sorted(TEMAS):
     if y.startswith('BEYAN'):
         k = p.get('karsi')
         kars = [x for x in TEMAS[a] if x[1] < 0.3 and (k is None or x[0] == k)]
-        if y in ('BEYAN:KABLO', 'BEYAN:YAPISTIRMA', 'BEYAN:SOKULUR', 'BEYAN:MEVCUT', 'BEYAN:ETIKET') or kars or (y == 'BEYAN:DIS' and p.get('karsi', 0) is None):
+        if y in ('BEYAN:KABLO', 'BEYAN:YAPISTIRMA', 'BEYAN:SOKULUR', 'BEYAN:MEVCUT', 'BEYAN:ETIKET', 'BEYAN:YIGIN') or kars or (y == 'BEYAN:DIS' and p.get('karsi', 0) is None):
             SONUC[a] = dict(yontem=y, neden=p['neden'], karsi=kars[0][0] if kars else None)
         else:
             ACIK.append((a, '%s: karşı parçaya temas yok (%s)' % (y, k)))
@@ -367,6 +367,24 @@ for a in sorted(TEMAS):
             break
         if el: SONUC[a] = dict(yontem='VIDA', neden='avara mili ucu M8 bant yanından geçer, dıştan fiberli somun (gergi)', eleman=el)
         else: ACIK.append((a, 'mil ucu: temas / hacim yok'))
+        continue
+    if y == 'YIGIN':
+        # katmanlar (dış → iç) delinerek hücrenin dişli deliğine; baş dış katmanda havşa (yüzeyle aynı)
+        ka = p['katman']; h = p['hucre']; yy = p['yon']; e = np.array([0, yy, 0.0])
+        tk = ka[1]; lo, hi = LO[tk], HI[tk]
+        dis_y = LO[ka[0]][1] if yy > 0 else HI[ka[0]][1]                         # dış yüz
+        hc_y = LO[h][1] if yy > 0 else HI[h][1]                                    # hücre yüzü
+        el = []; x_ = []
+        for j, fx in enumerate((0.25, 0.75)):
+            c = np.array([lo[0] + (hi[0] - lo[0]) * fx, dis_y, (lo[2] + hi[2]) / 2])
+            q1 = c + e * (abs(hc_y - dis_y) + 9.0)
+            x_ += engel_var(c + e * 0.05, q1, 3.2, ka + [h] + p.get('sonra', []))
+            L_ = katalog_alt(abs(hc_y - dis_y) + 9.0)
+            el.append(dict(ad='kb_%s_%d_vida' % (a, j), tip='vida', d=6, std='DIN 7991', L=L_, bas=None, havsa=True,
+                           govde=[list(map(float, c)), list(map(float, c + e * L_)), 3.0], eks=list(map(float, e)), parca=ka + [h],
+                           bom='DIN 7991 M6 × %d A2-70 (havşa, %s → yük hücresinin dişli deliğine)' % (L_, ' + '.join(ka))))
+        if x_: ACIK.append((a, 'yığın vidası hacmi dolu %s' % sorted(set(x_))[:4])); continue
+        SONUC[a] = dict(yontem='VIDA', neden=p['neden'], eleman=el)
         continue
     if y == 'RAY':
         b = destekler(a, p)
