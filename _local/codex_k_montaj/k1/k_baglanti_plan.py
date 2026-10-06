@@ -106,7 +106,7 @@ KURAL = [
     (r'^yag_pompasi_', 'BEYAN:KELEPCE', dict(karsi='k79_pompa_ust_pad_0', neden='pompa iki portal ile plakaya sıkılır (portallar 4 × M5)')),
     (r'^yag_damlama_tavasi_F$', 'BEYAN:SOKULUR', dict(neden='damlama tavası F rafına oturur, temizlik için elle çıkar')),
     (r'^yag_tarti_taban_plakasi$', 'BEYAN:SOKULUR', dict(neden='tartı tabanı damlama tavasında oturur (tartı serbest durmalı), elle çıkar')),
-    (r'^yag_tarti_alt_takozu$', 'YIGIN', dict(d=6, katman=['yag_tarti_taban_plakasi', 'yag_tarti_alt_takozu'], hucre='yag_tarti_yuk_hucresi_PW15AH', yon=1.0, neden='taban plakası + alt takoz yük hücresine alttan 2 × DIN 7991 M6 (baş taban altında yüzeyle aynı, hücrenin dişli deliğine)')),
+    (r'^yag_tarti_alt_takozu$', 'YIGIN', dict(d=6, katman=['yag_tarti_taban_plakasi', 'yag_tarti_alt_takozu'], hucre='yag_tarti_yuk_hucresi_PW15AH', yon=1.0, sonra=['yag_damlama_tavasi_F'], neden='taban plakası + alt takoz yük hücresine alttan 2 × DIN 7991 M6 (baş taban altında yüzeyle aynı, hücrenin dişli deliğine)')),
     (r'^yag_tarti_yuk_hucresi', 'BEYAN:YIGIN', dict(neden='yük hücresi alttan ve üstten 2 × M6 ile takozlara (YIGIN vidaları)')),
     (r'^yag_tarti_ust_takozu$', 'YIGIN', dict(d=6, katman=['yag_tarti_platformu', 'yag_tarti_ust_takozu'], hucre='yag_tarti_yuk_hucresi_PW15AH', yon=-1.0, sonra=['yag_tenekesi_18L'], neden='platform + üst takoz yük hücresine üstten 2 × DIN 7991 M6 (baş platform yüzeyiyle aynı, hücrenin dişli deliğine)')),
     (r'^yag_tarti_platformu$', 'BEYAN:YIGIN', dict(neden='platform üst takozla birlikte hücreye 2 × M6 (YIGIN vidaları)')),
