@@ -1,0 +1,36 @@
+{
+  "task": "codex-k-montaj-v3",
+  "branch": "codex/k-montaj",
+  "latest_checkpoint": "fa561c82ce706b4614475b861d32f1b45e6b3c8e",
+  "goal_active": true,
+  "k_completed": false,
+  "u_started": false,
+  "canonical_source_changed": false,
+  "production_release": false,
+  "source_model_sha256": "c0c004f133fa4d715aebeb5c21b35df688367bbdb630a35c656aef4b4ff4341b",
+  "verified_checkpoints": {
+    "site_welds": {
+      "commit": "1b2c5efb",
+      "ccd_pairs": 11286,
+      "issues": 0,
+      "immediate_connections_improved": 20
+    },
+    "actuator_mount_path": {
+      "commit": "367461fc",
+      "ccd_pairs": 11291,
+      "issues": 0
+    }
+  },
+  "current_candidate": "plan_k_catalog_full.pkl",
+  "current_candidate_sha256": "b788f49cf5dd8fb304a9636b3e2f7af1616c7e9af44d45cc68ca252f66a30283",
+  "running_ccd_session_id": null,
+  "next": [
+    "Complete source-defined post cap weld fabrication and common-player representation.",
+    "Batch remaining actual connection/stock corrections against cache before another large source rebuild.",
+    "Finish full K release gates and animation, then start U."
+  ],
+  "active_processes": [],
+  "last_verified_work": "Catalog source1009/721438, completeCCD17448pairs0,115closed,4M10actualjoins/4toolpaths;216connection records remain",
+  "next_required": "Finish remaining K connections; no active existing CCD to poll",
+  "goal_status": "active"
+}

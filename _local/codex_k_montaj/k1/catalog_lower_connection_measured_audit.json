@@ -1,0 +1,971 @@
+{
+  "source_parts_sha256": "9a599433c1160266de75b4aaf01d6efd307f0466abd8b03c948dfa91cdef36fe",
+  "source_plan_sha256": "b788f49cf5dd8fb304a9636b3e2f7af1616c7e9af44d45cc68ca252f66a30283",
+  "source_join_definitions_sha256": "9c251cf508a313a9d040fb7e59b9d153c67e3f1bde05099041281e512f8eeaac",
+  "scope": "24 lower-support base/cap joints only; no full-station release",
+  "checks": [
+    {
+      "id": "base_4060_700_-32.0",
+      "male": "k71_alt_saplama_4060_700_-32.0",
+      "female": "k71_alt_somun_4060_700_-32.0",
+      "female_type": "ISO10511 nut",
+      "male_measurement": {
+        "axial_interval_mm": [
+          -10.5,
+          4.5
+        ],
+        "axis_error_mm": 5.026529647893518e-06,
+        "radius_fit_error_mm": 7.773528346799452e-06,
+        "bore_or_shaft_vertices": 153
+      },
+      "female_measurement": {
+        "axial_interval_mm": [
+          -2.5,
+          2.5
+        ],
+        "axis_error_mm": 2.01814829423891e-05,
+        "radius_fit_error_mm": 1.872774740263594e-05,
+        "bore_or_shaft_vertices": 102
+      },
+      "clearance_hole_measurement": {
+        "axial_interval_mm": [
+          -7.5,
+          -3.5
+        ],
+        "axis_error_mm": 4.146009555775932e-05,
+        "radius_fit_error_mm": 6.592124046189696e-06,
+        "bore_or_shaft_vertices": 102
+      },
+      "measured_engagement_mm": 5.0,
+      "measured_protrusion_mm": 2.0,
+      "measured_protrusion_threads": 2.5,
+      "all_joint_parts_seated_seconds": 85.094563,
+      "supported_station_load": "k71_istasyon_rafi",
+      "supported_station_load_seated_seconds": 111.62099,
+      "passed": true
+    },
+    {
+      "id": "base_4060_700_32.0",
+      "male": "k71_alt_saplama_4060_700_32.0",
+      "female": "k71_alt_somun_4060_700_32.0",
+      "female_type": "ISO10511 nut",
+      "male_measurement": {
+        "axial_interval_mm": [
+          -10.5,
+          4.5
+        ],
+        "axis_error_mm": 6.620597757102635e-06,
+        "radius_fit_error_mm": 9.760241277412263e-06,
+        "bore_or_shaft_vertices": 153
+      },
+      "female_measurement": {
+        "axial_interval_mm": [
+          -2.5,
+          2.5
+        ],
+        "axis_error_mm": 2.050626708253766e-05,
+        "radius_fit_error_mm": 1.906633116055545e-05,
+        "bore_or_shaft_vertices": 102
+      },
+      "clearance_hole_measurement": {
+        "axial_interval_mm": [
+          -7.5,
+          -3.5
+        ],
+        "axis_error_mm": 4.0207229067298966e-05,
+        "radius_fit_error_mm": 1.0122135553292111e-05,
+        "bore_or_shaft_vertices": 102
+      },
+      "measured_engagement_mm": 5.0,
+      "measured_protrusion_mm": 2.0,
+      "measured_protrusion_threads": 2.5,
+      "all_joint_parts_seated_seconds": 85.814563,
+      "supported_station_load": "k71_istasyon_rafi",
+      "supported_station_load_seated_seconds": 111.62099,
+      "passed": true
+    },
+    {
+      "id": "top_4060_700_-10.0",
+      "male": "k71_ust_havsa_4060_700_-10.0",
+      "female": "k71_disli_ust_kapak_4060_700",
+      "female_type": "source-defined tapped6mm AISI304 cap,4.2mm core",
+      "male_measurement": {
+        "axial_interval_mm": [
+          -6.0,
+          4.0
+        ],
+        "axis_error_mm": 1.6490919946315783e-05,
+        "radius_fit_error_mm": 1.1442434814767921e-05,
+        "bore_or_shaft_vertices": 153
+      },
+      "female_measurement": {
+        "axial_interval_mm": [
+          -3.0,
+          3.0
+        ],
+        "axis_error_mm": 3.1030364317406646e-05,
+        "radius_fit_error_mm": 5.661112012500524e-06,
+        "bore_or_shaft_vertices": 102
+      },
+      "clearance_hole_measurement": {
+        "axial_interval_mm": [
+          -3.2000000000000455,
+          -3.0
+        ],
+        "axis_error_mm": 5.213937588514758e-06,
+        "radius_fit_error_mm": 1.6063460802850926e-05,
+        "bore_or_shaft_vertices": 102
+      },
+      "measured_engagement_mm": 6.0,
+      "measured_protrusion_mm": 1.0,
+      "measured_protrusion_threads": 1.25,
+      "all_joint_parts_seated_seconds": 117.88099,
+      "supported_station_load": "k72_itici_taban_4040.0_-755.0",
+      "supported_station_load_seated_seconds": 134.007417,
+      "passed": true
+    },
+    {
+      "id": "top_4060_700_10.0",
+      "male": "k71_ust_havsa_4060_700_10.0",
+      "female": "k71_disli_ust_kapak_4060_700",
+      "female_type": "source-defined tapped6mm AISI304 cap,4.2mm core",
+      "male_measurement": {
+        "axial_interval_mm": [
+          -6.0,
+          4.0
+        ],
+        "axis_error_mm": 1.6808417345801804e-05,
+        "radius_fit_error_mm": 1.0190050174774257e-05,
+        "bore_or_shaft_vertices": 153
+      },
+      "female_measurement": {
+        "axial_interval_mm": [
+          -3.0,
+          3.0
+        ],
+        "axis_error_mm": 4.202943017408156e-05,
+        "radius_fit_error_mm": 9.131264198991573e-06,
+        "bore_or_shaft_vertices": 102
+      },
+      "clearance_hole_measurement": {
+        "axial_interval_mm": [
+          -3.2000000000000455,
+          -3.0
+        ],
+        "axis_error_mm": 1.0687526419435054e-05,
+        "radius_fit_error_mm": 1.7395804120745595e-05,
+        "bore_or_shaft_vertices": 102
+      },
+      "measured_engagement_mm": 6.0,
+      "measured_protrusion_mm": 1.0,
+      "measured_protrusion_threads": 1.25,
+      "all_joint_parts_seated_seconds": 118.30099,
+      "supported_station_load": "k72_itici_taban_4040.0_-755.0",
+      "supported_station_load_seated_seconds": 134.007417,
+      "passed": true
+    },
+    {
+      "id": "base_4060_379_-32.0",
+      "male": "k71_alt_saplama_4060_379_-32.0",
+      "female": "k71_alt_somun_4060_379_-32.0",
+      "female_type": "ISO10511 nut",
+      "male_measurement": {
+        "axial_interval_mm": [
+          -10.5,
+          4.5
+        ],
+        "axis_error_mm": 6.2224602890962725e-06,
+        "radius_fit_error_mm": 1.2924542625469826e-05,
+        "bore_or_shaft_vertices": 153
+      },
+      "female_measurement": {
+        "axial_interval_mm": [
+          -2.5,
+          2.5
+        ],
+        "axis_error_mm": 1.476941977501628e-05,
+        "radius_fit_error_mm": 1.9375894121598236e-05,
+        "bore_or_shaft_vertices": 102
+      },
+      "clearance_hole_measurement": {
+        "axial_interval_mm": [
+          -7.5,
+          -3.5
+        ],
+        "axis_error_mm": 4.0228121963489663e-05,
+        "radius_fit_error_mm": 1.0395286887732169e-05,
+        "bore_or_shaft_vertices": 102
+      },
+      "measured_engagement_mm": 5.0,
+      "measured_protrusion_mm": 2.0,
+      "measured_protrusion_threads": 2.5,
+      "all_joint_parts_seated_seconds": 82.214563,
+      "supported_station_load": "k71_istasyon_rafi",
+      "supported_station_load_seated_seconds": 111.62099,
+      "passed": true
+    },
+    {
+      "id": "base_4060_379_32.0",
+      "male": "k71_alt_saplama_4060_379_32.0",
+      "female": "k71_alt_somun_4060_379_32.0",
+      "female_type": "ISO10511 nut",
+      "male_measurement": {
+        "axial_interval_mm": [
+          -10.5,
+          4.5
+        ],
+        "axis_error_mm": 3.819641233149096e-06,
+        "radius_fit_error_mm": 1.1851783982663733e-05,
+        "bore_or_shaft_vertices": 153
+      },
+      "female_measurement": {
+        "axial_interval_mm": [
+          -2.5,
+          2.5
+        ],
+        "axis_error_mm": 1.4853560973736959e-05,
+        "radius_fit_error_mm": 1.6490148584402675e-05,
+        "bore_or_shaft_vertices": 102
+      },
+      "clearance_hole_measurement": {
+        "axial_interval_mm": [
+          -7.5,
+          -3.5
+        ],
+        "axis_error_mm": 4.078984784963727e-05,
+        "radius_fit_error_mm": 1.192387725712507e-05,
+        "bore_or_shaft_vertices": 102
+      },
+      "measured_engagement_mm": 5.0,
+      "measured_protrusion_mm": 2.0,
+      "measured_protrusion_threads": 2.5,
+      "all_joint_parts_seated_seconds": 82.934563,
+      "supported_station_load": "k71_istasyon_rafi",
+      "supported_station_load_seated_seconds": 111.62099,
+      "passed": true
+    },
+    {
+      "id": "top_4060_379_-10.0",
+      "male": "k71_ust_havsa_4060_379_-10.0",
+      "female": "k71_disli_ust_kapak_4060_379",
+      "female_type": "source-defined tapped6mm AISI304 cap,4.2mm core",
+      "male_measurement": {
+        "axial_interval_mm": [
+          -6.0,
+          4.0
+        ],
+        "axis_error_mm": 7.140458368505594e-06,
+        "radius_fit_error_mm": 1.2096722477927813e-05,
+        "bore_or_shaft_vertices": 153
+      },
+      "female_measurement": {
+        "axial_interval_mm": [
+          -3.0,
+          3.0
+        ],
+        "axis_error_mm": 2.6703987843651607e-05,
+        "radius_fit_error_mm": 3.4798644188427375e-07,
+        "bore_or_shaft_vertices": 102
+      },
+      "clearance_hole_measurement": {
+        "axial_interval_mm": [
+          -3.2000000000000455,
+          -3.0
+        ],
+        "axis_error_mm": 5.675276937557404e-06,
+        "radius_fit_error_mm": 1.7216669370601068e-05,
+        "bore_or_shaft_vertices": 102
+      },
+      "measured_engagement_mm": 6.0,
+      "measured_protrusion_mm": 1.0,
+      "measured_protrusion_threads": 1.25,
+      "all_joint_parts_seated_seconds": 116.20099,
+      "supported_station_load": "k72_itici_taban_4040.0_-755.0",
+      "supported_station_load_seated_seconds": 134.007417,
+      "passed": true
+    },
+    {
+      "id": "top_4060_379_10.0",
+      "male": "k71_ust_havsa_4060_379_10.0",
+      "female": "k71_disli_ust_kapak_4060_379",
+      "female_type": "source-defined tapped6mm AISI304 cap,4.2mm core",
+      "male_measurement": {
+        "axial_interval_mm": [
+          -6.0,
+          4.0
+        ],
+        "axis_error_mm": 8.276149397576238e-06,
+        "radius_fit_error_mm": 1.0844354224825992e-05,
+        "bore_or_shaft_vertices": 153
+      },
+      "female_measurement": {
+        "axial_interval_mm": [
+          -3.0,
+          3.0
+        ],
+        "axis_error_mm": 4.013578162595486e-05,
+        "radius_fit_error_mm": 1.5140342756847502e-05,
+        "bore_or_shaft_vertices": 102
+      },
+      "clearance_hole_measurement": {
+        "axial_interval_mm": [
+          -3.2000000000000455,
+          -3.0
+        ],
+        "axis_error_mm": 2.771366006956872e-06,
+        "radius_fit_error_mm": 1.8549034299208955e-05,
+        "bore_or_shaft_vertices": 102
+      },
+      "measured_engagement_mm": 6.0,
+      "measured_protrusion_mm": 1.0,
+      "measured_protrusion_threads": 1.25,
+      "all_joint_parts_seated_seconds": 116.62099,
+      "supported_station_load": "k72_itici_taban_4040.0_-755.0",
+      "supported_station_load_seated_seconds": 134.007417,
+      "passed": true
+    },
+    {
+      "id": "base_4060_58_-32.0",
+      "male": "k71_alt_saplama_4060_58_-32.0",
+      "female": "k71_alt_somun_4060_58_-32.0",
+      "female_type": "ISO10511 nut",
+      "male_measurement": {
+        "axial_interval_mm": [
+          -10.5,
+          4.5
+        ],
+        "axis_error_mm": 1.1382960469549728e-07,
+        "radius_fit_error_mm": 1.1864383116844124e-05,
+        "bore_or_shaft_vertices": 153
+      },
+      "female_measurement": {
+        "axial_interval_mm": [
+          -2.5,
+          2.5
+        ],
+        "axis_error_mm": 1.4769419775860523e-05,
+        "radius_fit_error_mm": 1.9375894120710058e-05,
+        "bore_or_shaft_vertices": 102
+      },
+      "clearance_hole_measurement": {
+        "axial_interval_mm": [
+          -7.5,
+          -3.5
+        ],
+        "axis_error_mm": 4.022812196367549e-05,
+        "radius_fit_error_mm": 1.0395286886399902e-05,
+        "bore_or_shaft_vertices": 102
+      },
+      "measured_engagement_mm": 5.0,
+      "measured_protrusion_mm": 2.0,
+      "measured_protrusion_threads": 2.5,
+      "all_joint_parts_seated_seconds": 83.654563,
+      "supported_station_load": "k71_istasyon_rafi",
+      "supported_station_load_seated_seconds": 111.62099,
+      "passed": true
+    },
+    {
+      "id": "base_4060_58_32.0",
+      "male": "k71_alt_saplama_4060_58_32.0",
+      "female": "k71_alt_somun_4060_58_32.0",
+      "female_type": "ISO10511 nut",
+      "male_measurement": {
+        "axial_interval_mm": [
+          -10.5,
+          4.5
+        ],
+        "axis_error_mm": 1.1382960501594e-07,
+        "radius_fit_error_mm": 1.1864383115955945e-05,
+        "bore_or_shaft_vertices": 153
+      },
+      "female_measurement": {
+        "axial_interval_mm": [
+          -2.5,
+          2.5
+        ],
+        "axis_error_mm": 1.4769419776458577e-05,
+        "radius_fit_error_mm": 1.9375894121154147e-05,
+        "bore_or_shaft_vertices": 102
+      },
+      "clearance_hole_measurement": {
+        "axial_interval_mm": [
+          -7.5,
+          -3.5
+        ],
+        "axis_error_mm": 4.0228121963271176e-05,
+        "radius_fit_error_mm": 1.039528688684399e-05,
+        "bore_or_shaft_vertices": 102
+      },
+      "measured_engagement_mm": 5.0,
+      "measured_protrusion_mm": 2.0,
+      "measured_protrusion_threads": 2.5,
+      "all_joint_parts_seated_seconds": 84.374563,
+      "supported_station_load": "k71_istasyon_rafi",
+      "supported_station_load_seated_seconds": 111.62099,
+      "passed": true
+    },
+    {
+      "id": "top_4060_58_-10.0",
+      "male": "k71_ust_havsa_4060_58_-10.0",
+      "female": "k71_disli_ust_kapak_4060_58",
+      "female_type": "source-defined tapped6mm AISI304 cap,4.2mm core",
+      "male_measurement": {
+        "axial_interval_mm": [
+          -6.0,
+          4.0
+        ],
+        "axis_error_mm": 1.1451716206424988e-05,
+        "radius_fit_error_mm": 1.0309845638101223e-05,
+        "bore_or_shaft_vertices": 153
+      },
+      "female_measurement": {
+        "axial_interval_mm": [
+          -3.0,
+          3.0
+        ],
+        "axis_error_mm": 2.768692469827053e-05,
+        "radius_fit_error_mm": 1.1806155688631748e-06,
+        "bore_or_shaft_vertices": 102
+      },
+      "clearance_hole_measurement": {
+        "axial_interval_mm": [
+          -3.2000000000000455,
+          -3.0
+        ],
+        "axis_error_mm": 7.466768642837887e-06,
+        "radius_fit_error_mm": 1.6631892850949015e-05,
+        "bore_or_shaft_vertices": 102
+      },
+      "measured_engagement_mm": 6.0,
+      "measured_protrusion_mm": 1.0,
+      "measured_protrusion_threads": 1.25,
+      "all_joint_parts_seated_seconds": 117.04099,
+      "supported_station_load": "k72_itici_taban_4040.0_-755.0",
+      "supported_station_load_seated_seconds": 134.007417,
+      "passed": true
+    },
+    {
+      "id": "top_4060_58_10.0",
+      "male": "k71_ust_havsa_4060_58_10.0",
+      "female": "k71_disli_ust_kapak_4060_58",
+      "female_type": "source-defined tapped6mm AISI304 cap,4.2mm core",
+      "male_measurement": {
+        "axial_interval_mm": [
+          -6.0,
+          4.0
+        ],
+        "axis_error_mm": 1.2591359873071691e-05,
+        "radius_fit_error_mm": 9.0574993216741e-06,
+        "bore_or_shaft_vertices": 153
+      },
+      "female_measurement": {
+        "axial_interval_mm": [
+          -3.0,
+          3.0
+        ],
+        "axis_error_mm": 4.052683534431348e-05,
+        "radius_fit_error_mm": 1.3611763474141725e-05,
+        "bore_or_shaft_vertices": 102
+      },
+      "clearance_hole_measurement": {
+        "axial_interval_mm": [
+          -3.2000000000000455,
+          -3.0
+        ],
+        "axis_error_mm": 3.182591282822335e-06,
+        "radius_fit_error_mm": 1.796424909672467e-05,
+        "bore_or_shaft_vertices": 102
+      },
+      "measured_engagement_mm": 6.0,
+      "measured_protrusion_mm": 1.0,
+      "measured_protrusion_threads": 1.25,
+      "all_joint_parts_seated_seconds": 117.46099,
+      "supported_station_load": "k72_itici_taban_4040.0_-755.0",
+      "supported_station_load_seated_seconds": 134.007417,
+      "passed": true
+    },
+    {
+      "id": "base_4340_700_-32.0",
+      "male": "k71_alt_saplama_4340_700_-32.0",
+      "female": "k71_alt_somun_4340_700_-32.0",
+      "female_type": "ISO10511 nut",
+      "male_measurement": {
+        "axial_interval_mm": [
+          -10.5,
+          4.5
+        ],
+        "axis_error_mm": 4.33346573892864e-05,
+        "radius_fit_error_mm": 1.2384248012420329e-05,
+        "bore_or_shaft_vertices": 153
+      },
+      "female_measurement": {
+        "axial_interval_mm": [
+          -2.5,
+          2.5
+        ],
+        "axis_error_mm": 5.815521136191415e-05,
+        "radius_fit_error_mm": 4.426318456651757e-06,
+        "bore_or_shaft_vertices": 102
+      },
+      "clearance_hole_measurement": {
+        "axial_interval_mm": [
+          -7.5,
+          -3.5
+        ],
+        "axis_error_mm": 1.2384749361007828e-05,
+        "radius_fit_error_mm": 1.019744284969093e-05,
+        "bore_or_shaft_vertices": 102
+      },
+      "measured_engagement_mm": 5.0,
+      "measured_protrusion_mm": 2.0,
+      "measured_protrusion_threads": 2.5,
+      "all_joint_parts_seated_seconds": 89.414563,
+      "supported_station_load": "k71_istasyon_rafi",
+      "supported_station_load_seated_seconds": 111.62099,
+      "passed": true
+    },
+    {
+      "id": "base_4340_700_32.0",
+      "male": "k71_alt_saplama_4340_700_32.0",
+      "female": "k71_alt_somun_4340_700_32.0",
+      "female_type": "ISO10511 nut",
+      "male_measurement": {
+        "axial_interval_mm": [
+          -10.5,
+          4.5
+        ],
+        "axis_error_mm": 3.93437140945508e-05,
+        "radius_fit_error_mm": 1.0397518779736714e-05,
+        "bore_or_shaft_vertices": 153
+      },
+      "female_measurement": {
+        "axial_interval_mm": [
+          -2.5,
+          2.5
+        ],
+        "axis_error_mm": 5.800494262945608e-05,
+        "radius_fit_error_mm": 4.0877266491712305e-06,
+        "bore_or_shaft_vertices": 102
+      },
+      "clearance_hole_measurement": {
+        "axial_interval_mm": [
+          -7.5,
+          -3.5
+        ],
+        "axis_error_mm": 1.4785984871451963e-05,
+        "radius_fit_error_mm": 6.667483363198556e-06,
+        "bore_or_shaft_vertices": 102
+      },
+      "measured_engagement_mm": 5.0,
+      "measured_protrusion_mm": 2.0,
+      "measured_protrusion_threads": 2.5,
+      "all_joint_parts_seated_seconds": 90.134563,
+      "supported_station_load": "k71_istasyon_rafi",
+      "supported_station_load_seated_seconds": 111.62099,
+      "passed": true
+    },
+    {
+      "id": "top_4340_700_-10.0",
+      "male": "k71_ust_havsa_4340_700_-10.0",
+      "female": "k71_disli_ust_kapak_4340_700",
+      "female_type": "source-defined tapped6mm AISI304 cap,4.2mm core",
+      "male_measurement": {
+        "axial_interval_mm": [
+          -6.0,
+          4.0
+        ],
+        "axis_error_mm": 2.3155783389525997e-05,
+        "radius_fit_error_mm": 2.0749223850202725e-07,
+        "bore_or_shaft_vertices": 153
+      },
+      "female_measurement": {
+        "axial_interval_mm": [
+          -3.0,
+          3.0
+        ],
+        "axis_error_mm": 3.7013221218164514e-05,
+        "radius_fit_error_mm": 9.086221532950134e-06,
+        "bore_or_shaft_vertices": 102
+      },
+      "clearance_hole_measurement": {
+        "axial_interval_mm": [
+          -3.2000000000000455,
+          -3.0
+        ],
+        "axis_error_mm": 1.517311125802172e-05,
+        "radius_fit_error_mm": 5.036201520258743e-06,
+        "bore_or_shaft_vertices": 102
+      },
+      "measured_engagement_mm": 6.0,
+      "measured_protrusion_mm": 1.0,
+      "measured_protrusion_threads": 1.25,
+      "all_joint_parts_seated_seconds": 120.40099,
+      "supported_station_load": "k72_itici_taban_4040.0_-755.0",
+      "supported_station_load_seated_seconds": 134.007417,
+      "passed": true
+    },
+    {
+      "id": "top_4340_700_10.0",
+      "male": "k71_ust_havsa_4340_700_10.0",
+      "female": "k71_disli_ust_kapak_4340_700",
+      "female_type": "source-defined tapped6mm AISI304 cap,4.2mm core",
+      "male_measurement": {
+        "axial_interval_mm": [
+          -6.0,
+          4.0
+        ],
+        "axis_error_mm": 3.4778444489275666e-05,
+        "radius_fit_error_mm": 9.461567285651284e-06,
+        "bore_or_shaft_vertices": 153
+      },
+      "female_measurement": {
+        "axial_interval_mm": [
+          -3.0,
+          3.0
+        ],
+        "axis_error_mm": 7.164637220121835e-06,
+        "radius_fit_error_mm": 4.323832003105821e-06,
+        "bore_or_shaft_vertices": 102
+      },
+      "clearance_hole_measurement": {
+        "axial_interval_mm": [
+          -3.2000000000000455,
+          -3.0
+        ],
+        "axis_error_mm": 1.0910428939113526e-05,
+        "radius_fit_error_mm": 2.5569845512052325e-06,
+        "bore_or_shaft_vertices": 102
+      },
+      "measured_engagement_mm": 6.0,
+      "measured_protrusion_mm": 1.0,
+      "measured_protrusion_threads": 1.25,
+      "all_joint_parts_seated_seconds": 120.82099,
+      "supported_station_load": "k72_itici_taban_4040.0_-755.0",
+      "supported_station_load_seated_seconds": 134.007417,
+      "passed": true
+    },
+    {
+      "id": "base_4340_379_-32.0",
+      "male": "k71_alt_saplama_4340_379_-32.0",
+      "female": "k71_alt_somun_4340_379_-32.0",
+      "female_type": "ISO10511 nut",
+      "male_measurement": {
+        "axial_interval_mm": [
+          -10.5,
+          4.5
+        ],
+        "axis_error_mm": 3.394202038711277e-05,
+        "radius_fit_error_mm": 7.233191509747883e-06,
+        "bore_or_shaft_vertices": 153
+      },
+      "female_measurement": {
+        "axial_interval_mm": [
+          -2.5,
+          2.5
+        ],
+        "axis_error_mm": 5.2875772542340074e-05,
+        "radius_fit_error_mm": 3.778032968693168e-06,
+        "bore_or_shaft_vertices": 102
+      },
+      "clearance_hole_measurement": {
+        "axial_interval_mm": [
+          -7.5,
+          -3.5
+        ],
+        "axis_error_mm": 1.46338403425039e-05,
+        "radius_fit_error_mm": 6.394316973246106e-06,
+        "bore_or_shaft_vertices": 102
+      },
+      "measured_engagement_mm": 5.0,
+      "measured_protrusion_mm": 2.0,
+      "measured_protrusion_threads": 2.5,
+      "all_joint_parts_seated_seconds": 86.534563,
+      "supported_station_load": "k71_istasyon_rafi",
+      "supported_station_load_seated_seconds": 111.62099,
+      "passed": true
+    },
+    {
+      "id": "base_4340_379_32.0",
+      "male": "k71_alt_saplama_4340_379_32.0",
+      "female": "k71_alt_somun_4340_379_32.0",
+      "female_type": "ISO10511 nut",
+      "male_measurement": {
+        "axial_interval_mm": [
+          -10.5,
+          4.5
+        ],
+        "axis_error_mm": 4.267431139415973e-05,
+        "radius_fit_error_mm": 8.30595908052345e-06,
+        "bore_or_shaft_vertices": 153
+      },
+      "female_measurement": {
+        "axial_interval_mm": [
+          -2.5,
+          2.5
+        ],
+        "axis_error_mm": 5.294683512573057e-05,
+        "radius_fit_error_mm": 6.66375362401439e-06,
+        "bore_or_shaft_vertices": 102
+      },
+      "clearance_hole_measurement": {
+        "axial_interval_mm": [
+          -7.5,
+          -3.5
+        ],
+        "axis_error_mm": 2.2159514766716536e-05,
+        "radius_fit_error_mm": 4.8657467992541115e-06,
+        "bore_or_shaft_vertices": 102
+      },
+      "measured_engagement_mm": 5.0,
+      "measured_protrusion_mm": 2.0,
+      "measured_protrusion_threads": 2.5,
+      "all_joint_parts_seated_seconds": 87.254563,
+      "supported_station_load": "k71_istasyon_rafi",
+      "supported_station_load_seated_seconds": 111.62099,
+      "passed": true
+    },
+    {
+      "id": "top_4340_379_-10.0",
+      "male": "k71_ust_havsa_4340_379_-10.0",
+      "female": "k71_disli_ust_kapak_4340_379",
+      "female_type": "source-defined tapped6mm AISI304 cap,4.2mm core",
+      "male_measurement": {
+        "axial_interval_mm": [
+          -6.0,
+          4.0
+        ],
+        "axis_error_mm": 1.9813277203974298e-05,
+        "radius_fit_error_mm": 4.467582077616328e-07,
+        "bore_or_shaft_vertices": 153
+      },
+      "female_measurement": {
+        "axial_interval_mm": [
+          -3.0,
+          3.0
+        ],
+        "axis_error_mm": 3.947089330216574e-05,
+        "radius_fit_error_mm": 1.5095382016827585e-05,
+        "bore_or_shaft_vertices": 102
+      },
+      "clearance_hole_measurement": {
+        "axial_interval_mm": [
+          -3.2000000000000455,
+          -3.0
+        ],
+        "axis_error_mm": 7.2379650360751325e-06,
+        "radius_fit_error_mm": 3.882979252800567e-06,
+        "bore_or_shaft_vertices": 102
+      },
+      "measured_engagement_mm": 6.0,
+      "measured_protrusion_mm": 1.0,
+      "measured_protrusion_threads": 1.25,
+      "all_joint_parts_seated_seconds": 118.72099,
+      "supported_station_load": "k72_itici_taban_4040.0_-755.0",
+      "supported_station_load_seated_seconds": 134.007417,
+      "passed": true
+    },
+    {
+      "id": "top_4340_379_10.0",
+      "male": "k71_ust_havsa_4340_379_10.0",
+      "female": "k71_disli_ust_kapak_4340_379",
+      "female_type": "source-defined tapped6mm AISI304 cap,4.2mm core",
+      "male_measurement": {
+        "axial_interval_mm": [
+          -6.0,
+          4.0
+        ],
+        "axis_error_mm": 3.394237818628744e-05,
+        "radius_fit_error_mm": 8.807316300263324e-06,
+        "bore_or_shaft_vertices": 153
+      },
+      "female_measurement": {
+        "axial_interval_mm": [
+          -3.0,
+          3.0
+        ],
+        "axis_error_mm": 1.0951894402416857e-05,
+        "radius_fit_error_mm": 1.6853384323667342e-06,
+        "bore_or_shaft_vertices": 102
+      },
+      "clearance_hole_measurement": {
+        "axial_interval_mm": [
+          -3.2000000000000455,
+          -3.0
+        ],
+        "axis_error_mm": 3.1801037501250734e-06,
+        "radius_fit_error_mm": 1.4037621962614821e-06,
+        "bore_or_shaft_vertices": 102
+      },
+      "measured_engagement_mm": 6.0,
+      "measured_protrusion_mm": 1.0,
+      "measured_protrusion_threads": 1.25,
+      "all_joint_parts_seated_seconds": 119.14099,
+      "supported_station_load": "k72_itici_taban_4040.0_-755.0",
+      "supported_station_load_seated_seconds": 134.007417,
+      "passed": true
+    },
+    {
+      "id": "base_4340_58_-32.0",
+      "male": "k71_alt_saplama_4340_58_-32.0",
+      "female": "k71_alt_somun_4340_58_-32.0",
+      "female_type": "ISO10511 nut",
+      "male_measurement": {
+        "axial_interval_mm": [
+          -10.5,
+          4.5
+        ],
+        "axis_error_mm": 3.928079107206122e-05,
+        "radius_fit_error_mm": 8.293359779365517e-06,
+        "bore_or_shaft_vertices": 153
+      },
+      "female_measurement": {
+        "axial_interval_mm": [
+          -2.5,
+          2.5
+        ],
+        "axis_error_mm": 5.2875772543289856e-05,
+        "radius_fit_error_mm": 3.7780329678049895e-06,
+        "bore_or_shaft_vertices": 102
+      },
+      "clearance_hole_measurement": {
+        "axial_interval_mm": [
+          -7.5,
+          -3.5
+        ],
+        "axis_error_mm": 1.4633840343624189e-05,
+        "radius_fit_error_mm": 6.3943169745783734e-06,
+        "bore_or_shaft_vertices": 102
+      },
+      "measured_engagement_mm": 5.0,
+      "measured_protrusion_mm": 2.0,
+      "measured_protrusion_threads": 2.5,
+      "all_joint_parts_seated_seconds": 87.974563,
+      "supported_station_load": "k71_istasyon_rafi",
+      "supported_station_load_seated_seconds": 111.62099,
+      "passed": true
+    },
+    {
+      "id": "base_4340_58_32.0",
+      "male": "k71_alt_saplama_4340_58_32.0",
+      "female": "k71_alt_somun_4340_58_32.0",
+      "female_type": "ISO10511 nut",
+      "male_measurement": {
+        "axial_interval_mm": [
+          -10.5,
+          4.5
+        ],
+        "axis_error_mm": 3.928079107259533e-05,
+        "radius_fit_error_mm": 8.293359780697784e-06,
+        "bore_or_shaft_vertices": 153
+      },
+      "female_measurement": {
+        "axial_interval_mm": [
+          -2.5,
+          2.5
+        ],
+        "axis_error_mm": 5.287577254374715e-05,
+        "radius_fit_error_mm": 3.7780329682490787e-06,
+        "bore_or_shaft_vertices": 102
+      },
+      "clearance_hole_measurement": {
+        "axial_interval_mm": [
+          -7.5,
+          -3.5
+        ],
+        "axis_error_mm": 1.4633840344463754e-05,
+        "radius_fit_error_mm": 6.394316974134284e-06,
+        "bore_or_shaft_vertices": 102
+      },
+      "measured_engagement_mm": 5.0,
+      "measured_protrusion_mm": 2.0,
+      "measured_protrusion_threads": 2.5,
+      "all_joint_parts_seated_seconds": 88.694563,
+      "supported_station_load": "k71_istasyon_rafi",
+      "supported_station_load_seated_seconds": 111.62099,
+      "passed": true
+    },
+    {
+      "id": "top_4340_58_-10.0",
+      "male": "k71_ust_havsa_4340_58_-10.0",
+      "female": "k71_disli_ust_kapak_4340_58",
+      "female_type": "source-defined tapped6mm AISI304 cap,4.2mm core",
+      "male_measurement": {
+        "axial_interval_mm": [
+          -6.0,
+          4.0
+        ],
+        "axis_error_mm": 2.4141522813350668e-05,
+        "radius_fit_error_mm": 1.3401845051497219e-06,
+        "bore_or_shaft_vertices": 153
+      },
+      "female_measurement": {
+        "axial_interval_mm": [
+          -3.0,
+          3.0
+        ],
+        "axis_error_mm": 3.8852137992382474e-05,
+        "radius_fit_error_mm": 1.3566846326362736e-05,
+        "bore_or_shaft_vertices": 102
+      },
+      "clearance_hole_measurement": {
+        "axial_interval_mm": [
+          -3.2000000000000455,
+          -3.0
+        ],
+        "axis_error_mm": 6.8114161895539645e-06,
+        "radius_fit_error_mm": 4.467771501648343e-06,
+        "bore_or_shaft_vertices": 102
+      },
+      "measured_engagement_mm": 6.0,
+      "measured_protrusion_mm": 1.0,
+      "measured_protrusion_threads": 1.25,
+      "all_joint_parts_seated_seconds": 119.56099,
+      "supported_station_load": "k72_itici_taban_4040.0_-755.0",
+      "supported_station_load_seated_seconds": 134.007417,
+      "passed": true
+    },
+    {
+      "id": "top_4340_58_10.0",
+      "male": "k71_ust_havsa_4340_58_10.0",
+      "female": "k71_disli_ust_kapak_4340_58",
+      "female_type": "source-defined tapped6mm AISI304 cap,4.2mm core",
+      "male_measurement": {
+        "axial_interval_mm": [
+          -6.0,
+          4.0
+        ],
+        "axis_error_mm": 3.827464319639339e-05,
+        "radius_fit_error_mm": 1.0594268514019234e-05,
+        "bore_or_shaft_vertices": 153
+      },
+      "female_measurement": {
+        "axial_interval_mm": [
+          -3.0,
+          3.0
+        ],
+        "axis_error_mm": 9.964579319043608e-06,
+        "radius_fit_error_mm": 1.5677782405632001e-07,
+        "bore_or_shaft_vertices": 102
+      },
+      "clearance_hole_measurement": {
+        "axial_interval_mm": [
+          -3.2000000000000455,
+          -3.0
+        ],
+        "axis_error_mm": 2.369977888467545e-06,
+        "radius_fit_error_mm": 1.9885521127527284e-06,
+        "bore_or_shaft_vertices": 102
+      },
+      "measured_engagement_mm": 6.0,
+      "measured_protrusion_mm": 1.0,
+      "measured_protrusion_threads": 1.25,
+      "all_joint_parts_seated_seconds": 119.98099,
+      "supported_station_load": "k72_itici_taban_4040.0_-755.0",
+      "supported_station_load_seated_seconds": 134.007417,
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "unresolved": [],
+  "production_release": false
+}

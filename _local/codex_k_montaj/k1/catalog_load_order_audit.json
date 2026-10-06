@@ -1,0 +1,581 @@
+{
+  "source_model_sha256": "c0c004f133fa4d715aebeb5c21b35df688367bbdb630a35c656aef4b4ff4341b",
+  "source_plan_sha256": "b788f49cf5dd8fb304a9636b3e2f7af1616c7e9af44d45cc68ca252f66a30283",
+  "checks": [
+    {
+      "joint": "sol_0",
+      "parts": [
+        "sol_sac_urun_girisi",
+        "yag_pompa_rafi_kosebendi_sol",
+        "k79_yag_raf_M5_pul_sol_0",
+        "k79_yag_raf_M5_somun_sol_0",
+        "yag_pompa_rafi"
+      ],
+      "seated_seconds": [
+        451.96987,
+        479.388493,
+        551.882493,
+        554.402493,
+        565.22242
+      ],
+      "passed": true
+    },
+    {
+      "joint": "sol_1",
+      "parts": [
+        "sol_sac_urun_girisi",
+        "yag_pompa_rafi_kosebendi_sol",
+        "k79_yag_raf_M5_pul_sol_1",
+        "k79_yag_raf_M5_somun_sol_1",
+        "yag_pompa_rafi"
+      ],
+      "seated_seconds": [
+        451.96987,
+        479.388493,
+        552.302493,
+        554.822493,
+        565.22242
+      ],
+      "passed": true
+    },
+    {
+      "joint": "sol_2",
+      "parts": [
+        "sol_sac_urun_girisi",
+        "yag_pompa_rafi_kosebendi_sol",
+        "k79_yag_raf_M5_pul_sol_2",
+        "k79_yag_raf_M5_somun_sol_2",
+        "yag_pompa_rafi"
+      ],
+      "seated_seconds": [
+        451.96987,
+        479.388493,
+        552.722493,
+        555.242493,
+        565.22242
+      ],
+      "passed": true
+    },
+    {
+      "joint": "sag_0",
+      "parts": [
+        "sag_sac_E_penceresi",
+        "yag_pompa_rafi_kosebendi_sag",
+        "k79_yag_raf_M5_pul_sag_0",
+        "k79_yag_raf_M5_somun_sag_0",
+        "yag_pompa_rafi"
+      ],
+      "seated_seconds": [
+        353.636884,
+        468.908493,
+        550.622493,
+        553.142493,
+        565.22242
+      ],
+      "passed": true
+    },
+    {
+      "joint": "sag_1",
+      "parts": [
+        "sag_sac_E_penceresi",
+        "yag_pompa_rafi_kosebendi_sag",
+        "k79_yag_raf_M5_pul_sag_1",
+        "k79_yag_raf_M5_somun_sag_1",
+        "yag_pompa_rafi"
+      ],
+      "seated_seconds": [
+        353.636884,
+        468.908493,
+        551.042493,
+        553.562493,
+        565.22242
+      ],
+      "passed": true
+    },
+    {
+      "joint": "sag_2",
+      "parts": [
+        "sag_sac_E_penceresi",
+        "yag_pompa_rafi_kosebendi_sag",
+        "k79_yag_raf_M5_pul_sag_2",
+        "k79_yag_raf_M5_somun_sag_2",
+        "yag_pompa_rafi"
+      ],
+      "seated_seconds": [
+        353.636884,
+        468.908493,
+        551.462493,
+        553.982493,
+        565.22242
+      ],
+      "passed": true
+    },
+    {
+      "joint": "raf_0",
+      "parts": [
+        "k79_yag_raf_yatay_kosebent_sol",
+        "yag_pompa_rafi",
+        "k79_yag_M5x16_raf_0",
+        "k79_yag_M5_ara_plaka_raf_0",
+        "k79_yag_M5_pul_raf_0",
+        "k79_yag_M5_somun_raf_0"
+      ],
+      "seated_seconds": [
+        479.388493,
+        565.22242,
+        565.69242,
+        566.61242,
+        571.05242,
+        571.52242
+      ],
+      "load_seated_seconds": {
+        "yag_pompa_plakasi": 575.36242
+      },
+      "passed": true
+    },
+    {
+      "joint": "raf_1",
+      "parts": [
+        "k79_yag_raf_yatay_kosebent_sol",
+        "yag_pompa_rafi",
+        "k79_yag_M5x16_raf_1",
+        "k79_yag_M5_ara_plaka_raf_1",
+        "k79_yag_M5_pul_raf_1",
+        "k79_yag_M5_somun_raf_1"
+      ],
+      "seated_seconds": [
+        479.388493,
+        565.22242,
+        567.03242,
+        567.95242,
+        571.94242,
+        572.41242
+      ],
+      "load_seated_seconds": {
+        "yag_pompa_plakasi": 575.36242
+      },
+      "passed": true
+    },
+    {
+      "joint": "raf_2",
+      "parts": [
+        "k79_yag_raf_yatay_kosebent_sag",
+        "yag_pompa_rafi",
+        "k79_yag_M5x16_raf_2",
+        "k79_yag_M5_ara_plaka_raf_2",
+        "k79_yag_M5_pul_raf_2",
+        "k79_yag_M5_somun_raf_2"
+      ],
+      "seated_seconds": [
+        468.908493,
+        565.22242,
+        568.37242,
+        569.29242,
+        572.83242,
+        573.30242
+      ],
+      "load_seated_seconds": {
+        "yag_pompa_plakasi": 575.36242
+      },
+      "passed": true
+    },
+    {
+      "joint": "raf_3",
+      "parts": [
+        "k79_yag_raf_yatay_kosebent_sag",
+        "yag_pompa_rafi",
+        "k79_yag_M5x16_raf_3",
+        "k79_yag_M5_ara_plaka_raf_3",
+        "k79_yag_M5_pul_raf_3",
+        "k79_yag_M5_somun_raf_3"
+      ],
+      "seated_seconds": [
+        468.908493,
+        565.22242,
+        569.71242,
+        570.63242,
+        573.72242,
+        574.19242
+      ],
+      "load_seated_seconds": {
+        "yag_pompa_plakasi": 575.36242
+      },
+      "passed": true
+    },
+    {
+      "joint": "plaka_4",
+      "parts": [
+        "yag_pompa_rafi",
+        "yag_pompa_plakasi",
+        "k79_yag_M5x16_plaka_4",
+        "k79_yag_M5_ara_plaka_plaka_4",
+        "k79_yag_M5_pul_plaka_4",
+        "k79_yag_M5_somun_plaka_4"
+      ],
+      "seated_seconds": [
+        565.22242,
+        575.36242,
+        575.83242,
+        576.75242,
+        581.19242,
+        581.66242
+      ],
+      "load_seated_seconds": {
+        "yag_T_parcasi": 696.380185,
+        "yag_basinc_sensoru_PM1704": 697.150185,
+        "yag_boru_T_regulator": 729.154185,
+        "yag_boru_filtre_pompa": 729.874185,
+        "yag_boru_pompa_T": 730.844185,
+        "yag_emis_filtresi": 640.826476,
+        "yag_geri_basinc_regulatoru_KBP": 654.727404,
+        "yag_pompasi_GJ-N21_EagleDrive": 668.628331
+      },
+      "passed": true
+    },
+    {
+      "joint": "plaka_5",
+      "parts": [
+        "yag_pompa_rafi",
+        "yag_pompa_plakasi",
+        "k79_yag_M5x16_plaka_5",
+        "k79_yag_M5_ara_plaka_plaka_5",
+        "k79_yag_M5_pul_plaka_5",
+        "k79_yag_M5_somun_plaka_5"
+      ],
+      "seated_seconds": [
+        565.22242,
+        575.36242,
+        577.17242,
+        578.09242,
+        582.08242,
+        582.55242
+      ],
+      "load_seated_seconds": {
+        "yag_T_parcasi": 696.380185,
+        "yag_basinc_sensoru_PM1704": 697.150185,
+        "yag_boru_T_regulator": 729.154185,
+        "yag_boru_filtre_pompa": 729.874185,
+        "yag_boru_pompa_T": 730.844185,
+        "yag_emis_filtresi": 640.826476,
+        "yag_geri_basinc_regulatoru_KBP": 654.727404,
+        "yag_pompasi_GJ-N21_EagleDrive": 668.628331
+      },
+      "passed": true
+    },
+    {
+      "joint": "plaka_6",
+      "parts": [
+        "yag_pompa_rafi",
+        "yag_pompa_plakasi",
+        "k79_yag_M5x16_plaka_6",
+        "k79_yag_M5_ara_plaka_plaka_6",
+        "k79_yag_M5_pul_plaka_6",
+        "k79_yag_M5_somun_plaka_6"
+      ],
+      "seated_seconds": [
+        565.22242,
+        575.36242,
+        578.51242,
+        579.43242,
+        582.97242,
+        583.44242
+      ],
+      "load_seated_seconds": {
+        "yag_T_parcasi": 696.380185,
+        "yag_basinc_sensoru_PM1704": 697.150185,
+        "yag_boru_T_regulator": 729.154185,
+        "yag_boru_filtre_pompa": 729.874185,
+        "yag_boru_pompa_T": 730.844185,
+        "yag_emis_filtresi": 640.826476,
+        "yag_geri_basinc_regulatoru_KBP": 654.727404,
+        "yag_pompasi_GJ-N21_EagleDrive": 668.628331
+      },
+      "passed": true
+    },
+    {
+      "joint": "plaka_7",
+      "parts": [
+        "yag_pompa_rafi",
+        "yag_pompa_plakasi",
+        "k79_yag_M5x16_plaka_7",
+        "k79_yag_M5_ara_plaka_plaka_7",
+        "k79_yag_M5_pul_plaka_7",
+        "k79_yag_M5_somun_plaka_7"
+      ],
+      "seated_seconds": [
+        565.22242,
+        575.36242,
+        579.85242,
+        580.77242,
+        583.86242,
+        584.33242
+      ],
+      "load_seated_seconds": {
+        "yag_T_parcasi": 696.380185,
+        "yag_basinc_sensoru_PM1704": 697.150185,
+        "yag_boru_T_regulator": 729.154185,
+        "yag_boru_filtre_pompa": 729.874185,
+        "yag_boru_pompa_T": 730.844185,
+        "yag_emis_filtresi": 640.826476,
+        "yag_geri_basinc_regulatoru_KBP": 654.727404,
+        "yag_pompasi_GJ-N21_EagleDrive": 668.628331
+      },
+      "passed": true
+    },
+    {
+      "joint": "0_on",
+      "parts": [
+        "yag_pompa_plakasi",
+        "yag_pompasi_GJ-N21_EagleDrive",
+        "k79_pompa_portal_0",
+        "k79_pompa_M5x20_0_on",
+        "k79_pompa_M5_ara_plaka_0_on",
+        "k79_pompa_M5_pul_0_on",
+        "k79_pompa_M5_somun_0_on"
+      ],
+      "seated_seconds": [
+        575.36242,
+        668.628331,
+        681.809258,
+        712.104185,
+        713.024185,
+        722.374185,
+        722.844185
+      ],
+      "passed": true
+    },
+    {
+      "joint": "0_arka",
+      "parts": [
+        "yag_pompa_plakasi",
+        "yag_pompasi_GJ-N21_EagleDrive",
+        "k79_pompa_portal_0",
+        "k79_pompa_M5x20_0_arka",
+        "k79_pompa_M5_ara_plaka_0_arka",
+        "k79_pompa_M5_pul_0_arka",
+        "k79_pompa_M5_somun_0_arka"
+      ],
+      "seated_seconds": [
+        575.36242,
+        668.628331,
+        681.809258,
+        710.764185,
+        711.684185,
+        721.484185,
+        721.954185
+      ],
+      "passed": true
+    },
+    {
+      "joint": "1_on",
+      "parts": [
+        "yag_pompa_plakasi",
+        "yag_pompasi_GJ-N21_EagleDrive",
+        "k79_pompa_portal_1",
+        "k79_pompa_M5x20_1_on",
+        "k79_pompa_M5_ara_plaka_1_on",
+        "k79_pompa_M5_pul_1_on",
+        "k79_pompa_M5_somun_1_on"
+      ],
+      "seated_seconds": [
+        575.36242,
+        668.628331,
+        694.940185,
+        714.784185,
+        715.704185,
+        724.154185,
+        724.624185
+      ],
+      "passed": true
+    },
+    {
+      "joint": "1_arka",
+      "parts": [
+        "yag_pompa_plakasi",
+        "yag_pompasi_GJ-N21_EagleDrive",
+        "k79_pompa_portal_1",
+        "k79_pompa_M5x20_1_arka",
+        "k79_pompa_M5_ara_plaka_1_arka",
+        "k79_pompa_M5_pul_1_arka",
+        "k79_pompa_M5_somun_1_arka"
+      ],
+      "seated_seconds": [
+        575.36242,
+        668.628331,
+        694.940185,
+        713.444185,
+        714.364185,
+        723.264185,
+        723.734185
+      ],
+      "passed": true
+    },
+    {
+      "joint": "0_on",
+      "parts": [
+        "yag_pompa_plakasi",
+        "yag_emis_filtresi",
+        "k79_yag_akis_portal_0",
+        "k79_yag_akis_M5x20_0_on",
+        "k79_yag_akis_M5_ara_plaka_0_on",
+        "k79_yag_akis_M5_pul_0_on",
+        "k79_yag_akis_M5_somun_0_on"
+      ],
+      "seated_seconds": [
+        575.36242,
+        640.826476,
+        654.007404,
+        717.464185,
+        718.384185,
+        725.934185,
+        726.404185
+      ],
+      "load_seated_seconds": {
+        "yag_boru_filtre_pompa": 729.874185,
+        "yag_boru_pompa_T": 730.844185,
+        "yag_boru_T_regulator": 729.154185,
+        "yag_emis_hortumu_TLM1008": 802.992983,
+        "yag_donus_hortumu_TLM0806": 803.592983
+      },
+      "passed": true
+    },
+    {
+      "joint": "0_arka",
+      "parts": [
+        "yag_pompa_plakasi",
+        "yag_emis_filtresi",
+        "k79_yag_akis_portal_0",
+        "k79_yag_akis_M5x20_0_arka",
+        "k79_yag_akis_M5_ara_plaka_0_arka",
+        "k79_yag_akis_M5_pul_0_arka",
+        "k79_yag_akis_M5_somun_0_arka"
+      ],
+      "seated_seconds": [
+        575.36242,
+        640.826476,
+        654.007404,
+        716.124185,
+        717.044185,
+        725.044185,
+        725.514185
+      ],
+      "load_seated_seconds": {
+        "yag_boru_filtre_pompa": 729.874185,
+        "yag_boru_pompa_T": 730.844185,
+        "yag_boru_T_regulator": 729.154185,
+        "yag_emis_hortumu_TLM1008": 802.992983,
+        "yag_donus_hortumu_TLM0806": 803.592983
+      },
+      "passed": true
+    },
+    {
+      "joint": "1_on",
+      "parts": [
+        "yag_pompa_plakasi",
+        "yag_geri_basinc_regulatoru_KBP",
+        "k79_yag_akis_portal_1",
+        "k79_yag_akis_M5x20_1_on",
+        "k79_yag_akis_M5_ara_plaka_1_on",
+        "k79_yag_akis_M5_pul_1_on",
+        "k79_yag_akis_M5_somun_1_on"
+      ],
+      "seated_seconds": [
+        575.36242,
+        654.727404,
+        667.908331,
+        720.144185,
+        721.064185,
+        727.714185,
+        728.184185
+      ],
+      "load_seated_seconds": {
+        "yag_boru_filtre_pompa": 729.874185,
+        "yag_boru_pompa_T": 730.844185,
+        "yag_boru_T_regulator": 729.154185,
+        "yag_emis_hortumu_TLM1008": 802.992983,
+        "yag_donus_hortumu_TLM0806": 803.592983
+      },
+      "passed": true
+    },
+    {
+      "joint": "1_arka",
+      "parts": [
+        "yag_pompa_plakasi",
+        "yag_geri_basinc_regulatoru_KBP",
+        "k79_yag_akis_portal_1",
+        "k79_yag_akis_M5x20_1_arka",
+        "k79_yag_akis_M5_ara_plaka_1_arka",
+        "k79_yag_akis_M5_pul_1_arka",
+        "k79_yag_akis_M5_somun_1_arka"
+      ],
+      "seated_seconds": [
+        575.36242,
+        654.727404,
+        667.908331,
+        718.804185,
+        719.724185,
+        726.824185,
+        727.294185
+      ],
+      "load_seated_seconds": {
+        "yag_boru_filtre_pompa": 729.874185,
+        "yag_boru_pompa_T": 730.844185,
+        "yag_boru_T_regulator": 729.154185,
+        "yag_emis_hortumu_TLM1008": 802.992983,
+        "yag_donus_hortumu_TLM0806": 803.592983
+      },
+      "passed": true
+    },
+    {
+      "joint": "0_on_pipes_after_fixed",
+      "parts": [
+        "k79_pompa_M5_somun_0_on"
+      ],
+      "load_seated_seconds": {
+        "yag_boru_filtre_pompa": 729.874185,
+        "yag_boru_pompa_T": 730.844185,
+        "yag_boru_T_regulator": 729.154185
+      },
+      "passed": true
+    },
+    {
+      "joint": "0_arka_pipes_after_fixed",
+      "parts": [
+        "k79_pompa_M5_somun_0_arka"
+      ],
+      "load_seated_seconds": {
+        "yag_boru_filtre_pompa": 729.874185,
+        "yag_boru_pompa_T": 730.844185,
+        "yag_boru_T_regulator": 729.154185
+      },
+      "passed": true
+    },
+    {
+      "joint": "1_on_pipes_after_fixed",
+      "parts": [
+        "k79_pompa_M5_somun_1_on"
+      ],
+      "load_seated_seconds": {
+        "yag_boru_filtre_pompa": 729.874185,
+        "yag_boru_pompa_T": 730.844185,
+        "yag_boru_T_regulator": 729.154185
+      },
+      "passed": true
+    },
+    {
+      "joint": "1_arka_pipes_after_fixed",
+      "parts": [
+        "k79_pompa_M5_somun_1_arka"
+      ],
+      "load_seated_seconds": {
+        "yag_boru_filtre_pompa": 729.874185,
+        "yag_boru_pompa_T": 730.844185,
+        "yag_boru_T_regulator": 729.154185
+      },
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "fixture_and_load_strength_checked": false,
+  "production_release": false
+}

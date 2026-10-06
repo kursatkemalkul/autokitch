@@ -1,0 +1,58 @@
+{
+  "source_parts_sha256": "9a599433c1160266de75b4aaf01d6efd307f0466abd8b03c948dfa91cdef36fe",
+  "checks": [
+    {
+      "joint": "0_on",
+      "tool": "hex_key_shaft",
+      "issues": [],
+      "passed": true
+    },
+    {
+      "joint": "0_on",
+      "tool": "socket_body",
+      "issues": [],
+      "passed": true
+    },
+    {
+      "joint": "0_arka",
+      "tool": "hex_key_shaft",
+      "issues": [],
+      "passed": true
+    },
+    {
+      "joint": "0_arka",
+      "tool": "socket_body",
+      "issues": [],
+      "passed": true
+    },
+    {
+      "joint": "1_on",
+      "tool": "hex_key_shaft",
+      "issues": [],
+      "passed": true
+    },
+    {
+      "joint": "1_on",
+      "tool": "socket_body",
+      "issues": [],
+      "passed": true
+    },
+    {
+      "joint": "1_arka",
+      "tool": "hex_key_shaft",
+      "issues": [],
+      "passed": true
+    },
+    {
+      "joint": "1_arka",
+      "tool": "socket_body",
+      "issues": [],
+      "passed": true
+    }
+  ],
+  "passed_axial_envelopes_only": true,
+  "envelope_assumptions": "4mm shaft envelope for M5 countersunk drive;14mm OD socket with9.6mm hollow clearance;60mm top approach,25mm bottom approach",
+  "tool_catalog_and_torque_checked": false,
+  "handle_swing_checked": false,
+  "production_release": false
+}

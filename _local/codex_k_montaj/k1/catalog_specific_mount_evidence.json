@@ -1,0 +1,4759 @@
+{
+  "source_parts_sha256": "9a599433c1160266de75b4aaf01d6efd307f0466abd8b03c948dfa91cdef36fe",
+  "source_plan_sha256": "b788f49cf5dd8fb304a9636b3e2f7af1616c7e9af44d45cc68ca252f66a30283",
+  "source_model_sha256": "c0c004f133fa4d715aebeb5c21b35df688367bbdb630a35c656aef4b4ff4341b",
+  "previous_report_sha256": "f3b37f216ab9a8e1c2a6b756ec0453f070387ec196ea361e1e0b7d50f13b92d7",
+  "specific_evidence": [
+    {
+      "part": "yag_pompasi_GJ-N21_EagleDrive",
+      "type": "removable_external_hold_down",
+      "joints": [
+        "0_on",
+        "0_arka",
+        "1_on",
+        "1_arka"
+      ],
+      "contact_report": "catalog_pump_contacts.json",
+      "contact_report_sha256": "c632cf6d2861e9a06877380fd6e026e0a2a9851fbeab9687d69ef2af3fdba3a6",
+      "fix_before_pipe_and_hose_load_report": "catalog_load_order_audit.json",
+      "load_capacity_certification_claimed": false
+    },
+    {
+      "part": "yag_emis_filtresi",
+      "type": "removable_external_hold_down",
+      "joints": [
+        "0_on",
+        "0_arka"
+      ],
+      "contact_report": "catalog_actual_contacts.json",
+      "contact_report_sha256": "d30b5fa52f42b852249256d29607f8bb42d9a8650d48978b32961d556430559e",
+      "fix_before_pipe_and_hose_load_report": "catalog_load_order_audit.json",
+      "load_capacity_certification_claimed": false
+    },
+    {
+      "part": "yag_geri_basinc_regulatoru_KBP",
+      "type": "removable_external_hold_down",
+      "joints": [
+        "1_on",
+        "1_arka"
+      ],
+      "contact_report": "catalog_actual_contacts.json",
+      "contact_report_sha256": "d30b5fa52f42b852249256d29607f8bb42d9a8650d48978b32961d556430559e",
+      "fix_before_pipe_and_hose_load_report": "catalog_load_order_audit.json",
+      "load_capacity_certification_claimed": false
+    },
+    {
+      "part": "DGRF_silindir_borusu",
+      "type": "supplier_internal_delivered_assembly",
+      "supplier_unit": "DGRF-C-63-125_govde",
+      "supplier_document": "https://media.festo.com/media/202791_documentation.pdf",
+      "explicit_native_member": true,
+      "same_full_plan_motion_and_visibility_as_unit": true,
+      "external_unit_mount_verified_by_this_record": false,
+      "note": "Only this named factory-internal part is accepted as delivered assembled. Our brackets, sensors, fittings and the unit external mounting are not covered."
+    },
+    {
+      "part": "DGRF_boyunduruk",
+      "type": "supplier_internal_delivered_assembly",
+      "supplier_unit": "DGRF-C-63-125_govde",
+      "supplier_document": "https://media.festo.com/media/202791_documentation.pdf",
+      "explicit_native_member": true,
+      "same_full_plan_motion_and_visibility_as_unit": true,
+      "external_unit_mount_verified_by_this_record": false,
+      "note": "Only this named factory-internal part is accepted as delivered assembled. Our brackets, sensors, fittings and the unit external mounting are not covered."
+    },
+    {
+      "part": "DGRF_kilavuz_mili_0",
+      "type": "supplier_internal_delivered_assembly",
+      "supplier_unit": "DGRF-C-63-125_govde",
+      "supplier_document": "https://media.festo.com/media/202791_documentation.pdf",
+      "explicit_native_member": true,
+      "same_full_plan_motion_and_visibility_as_unit": true,
+      "external_unit_mount_verified_by_this_record": false,
+      "note": "Only this named factory-internal part is accepted as delivered assembled. Our brackets, sensors, fittings and the unit external mounting are not covered."
+    },
+    {
+      "part": "DGRF_kilavuz_mili_1",
+      "type": "supplier_internal_delivered_assembly",
+      "supplier_unit": "DGRF-C-63-125_govde",
+      "supplier_document": "https://media.festo.com/media/202791_documentation.pdf",
+      "explicit_native_member": true,
+      "same_full_plan_motion_and_visibility_as_unit": true,
+      "external_unit_mount_verified_by_this_record": false,
+      "note": "Only this named factory-internal part is accepted as delivered assembled. Our brackets, sensors, fittings and the unit external mounting are not covered."
+    },
+    {
+      "part": "DGRF_piston_mili",
+      "type": "supplier_internal_delivered_assembly",
+      "supplier_unit": "DGRF-C-63-125_govde",
+      "supplier_document": "https://media.festo.com/media/202791_documentation.pdf",
+      "explicit_native_member": true,
+      "same_full_plan_motion_and_visibility_as_unit": true,
+      "external_unit_mount_verified_by_this_record": false,
+      "note": "Only this named factory-internal part is accepted as delivered assembled. Our brackets, sensors, fittings and the unit external mounting are not covered."
+    },
+    {
+      "part": "DGRF_piston",
+      "type": "supplier_internal_delivered_assembly",
+      "supplier_unit": "DGRF-C-63-125_govde",
+      "supplier_document": "https://media.festo.com/media/202791_documentation.pdf",
+      "explicit_native_member": true,
+      "same_full_plan_motion_and_visibility_as_unit": true,
+      "external_unit_mount_verified_by_this_record": false,
+      "note": "Only this named factory-internal part is accepted as delivered assembled. Our brackets, sensors, fittings and the unit external mounting are not covered."
+    },
+    {
+      "part": "itici_X_MY1B10G-250_uc_kapagi_0",
+      "type": "supplier_internal_delivered_assembly",
+      "supplier_unit": "itici_X_MY1B10G-250_profil",
+      "supplier_document": "https://www.smcworld.com/catalog/BEST-5-2-en/pdf/2-p1211-1325-my1b_en.pdf",
+      "explicit_native_member": true,
+      "same_full_plan_motion_and_visibility_as_unit": true,
+      "external_unit_mount_verified_by_this_record": false,
+      "note": "Only this named factory-internal part is accepted as delivered assembled. Our brackets, sensors, fittings and the unit external mounting are not covered."
+    },
+    {
+      "part": "itici_X_MY1B10G-250_uc_kapagi_1",
+      "type": "supplier_internal_delivered_assembly",
+      "supplier_unit": "itici_X_MY1B10G-250_profil",
+      "supplier_document": "https://www.smcworld.com/catalog/BEST-5-2-en/pdf/2-p1211-1325-my1b_en.pdf",
+      "explicit_native_member": true,
+      "same_full_plan_motion_and_visibility_as_unit": true,
+      "external_unit_mount_verified_by_this_record": false,
+      "note": "Only this named factory-internal part is accepted as delivered assembled. Our brackets, sensors, fittings and the unit external mounting are not covered."
+    },
+    {
+      "part": "itici_X_MY1B10G-250_masa",
+      "type": "supplier_internal_delivered_assembly",
+      "supplier_unit": "itici_X_MY1B10G-250_profil",
+      "supplier_document": "https://www.smcworld.com/catalog/BEST-5-2-en/pdf/2-p1211-1325-my1b_en.pdf",
+      "explicit_native_member": true,
+      "same_full_plan_motion_and_visibility_as_unit": true,
+      "external_unit_mount_verified_by_this_record": false,
+      "note": "Only this named factory-internal part is accepted as delivered assembled. Our brackets, sensors, fittings and the unit external mounting are not covered."
+    },
+    {
+      "part": "itici_Z_MY1B10G-350_uc_kapagi_0",
+      "type": "supplier_internal_delivered_assembly",
+      "supplier_unit": "itici_Z_MY1B10G-350_profil",
+      "supplier_document": "https://www.smcworld.com/catalog/BEST-5-2-en/pdf/2-p1211-1325-my1b_en.pdf",
+      "explicit_native_member": true,
+      "same_full_plan_motion_and_visibility_as_unit": true,
+      "external_unit_mount_verified_by_this_record": false,
+      "note": "Only this named factory-internal part is accepted as delivered assembled. Our brackets, sensors, fittings and the unit external mounting are not covered."
+    },
+    {
+      "part": "itici_Z_MY1B10G-350_uc_kapagi_1",
+      "type": "supplier_internal_delivered_assembly",
+      "supplier_unit": "itici_Z_MY1B10G-350_profil",
+      "supplier_document": "https://www.smcworld.com/catalog/BEST-5-2-en/pdf/2-p1211-1325-my1b_en.pdf",
+      "explicit_native_member": true,
+      "same_full_plan_motion_and_visibility_as_unit": true,
+      "external_unit_mount_verified_by_this_record": false,
+      "note": "Only this named factory-internal part is accepted as delivered assembled. Our brackets, sensors, fittings and the unit external mounting are not covered."
+    },
+    {
+      "part": "itici_Z_MY1B10G-350_masa",
+      "type": "supplier_internal_delivered_assembly",
+      "supplier_unit": "itici_Z_MY1B10G-350_profil",
+      "supplier_document": "https://www.smcworld.com/catalog/BEST-5-2-en/pdf/2-p1211-1325-my1b_en.pdf",
+      "explicit_native_member": true,
+      "same_full_plan_motion_and_visibility_as_unit": true,
+      "external_unit_mount_verified_by_this_record": false,
+      "note": "Only this named factory-internal part is accepted as delivered assembled. Our brackets, sensors, fittings and the unit external mounting are not covered."
+    }
+  ],
+  "resolved_named_records": 15,
+  "remaining_unresolved": [
+    {
+      "part": "DGRF_SMT-8M_0",
+      "role": "purchased_mount_or_fit_requires_proof",
+      "native_bom": [
+        "Festo SMT-8M-A-PS-24V-E-0,3-M8D yakınlık sensörü (ev / kesim sonu)",
+        2,
+        "sensör rayında",
+        "Festo DGRF-C katalog s. 12 [ölçü V]",
+        "SATIN ALMA"
+      ],
+      "lo_mm": [
+        4197.7,
+        1521.3,
+        -166.5
+      ],
+      "hi_mm": [
+        4202.3001,
+        1545.3,
+        -161.3
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 45,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "DGRF_SMT-8M_1",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4197.7,
+        1396.3,
+        -166.5
+      ],
+      "hi_mm": [
+        4202.3001,
+        1420.3,
+        -161.3
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 45,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "DGRF_port_arka_QSL",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4198.9088,
+        1551.8547,
+        -168.5
+      ],
+      "hi_mm": [
+        4213.8,
+        1579.3,
+        -147.5437
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 46,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "DGRF_port_on_QSL",
+      "role": "purchased_mount_or_fit_requires_proof",
+      "native_bom": [
+        "Festo QSL-G3/8-6 dirsek geçme rakor",
+        2,
+        "Ø6 hortum (valf SY3120 C6)",
+        "festo.com [V]",
+        "SATIN ALMA"
+      ],
+      "lo_mm": [
+        4199.018,
+        1366.5547,
+        -165.5
+      ],
+      "hi_mm": [
+        4231.9999,
+        1386.0,
+        -147.5
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 45,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "DGRF_sensor_rayi",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4196.0001,
+        1391.0,
+        -168.5
+      ],
+      "hi_mm": [
+        4204.0,
+        1546.8,
+        -166.5
+      ],
+      "classifier_category": "GRUP",
+      "assembly_step": 42,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "PulsaJet_AAB10000AUH-104210-VIFC",
+      "role": "purchased_mount_or_fit_requires_proof",
+      "native_bom": [
+        "Gıda sınıfı elektrikli sprey nozülü Spraying Systems AAB10000AUH-104210-VIFC (1/8 BSPT · FDA Viton · EC 1935/2004)",
+        1,
+        "24 VDC 0,36 A · PWM (PLC Q0.0) · ≤ 7 bar · ≤ 93 °C · 0,26 kg · gövde −5° döndürülür (kırlangıç 5° ofset) · BSPT kodu kuraldan [V: SSCo teyit] · v10: rafine ayçiçek yağı (15 °C ≈ 85 mPa·s) · ısıtıcı yok",
+        "Spraying Systems veri sayfası 104210 rev 4 + Bülten 711A s. 12–14 (spray.com)",
+        "SATIN ALMA"
+      ],
+      "lo_mm": [
+        4009.9502,
+        1155.4,
+        -188.9
+      ],
+      "hi_mm": [
+        4040.05,
+        1194.3001,
+        -151.1
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 36,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "PulsaJet_M8_kablo_9",
+      "role": "purchased_mount_or_fit_requires_proof",
+      "native_bom": [
+        "M8 3 kutuplu 90° dişi kablo 5 m (Spraying Systems 50699-5-S-PUR)",
+        1,
+        "",
+        "Spraying Systems veri sayfası 104210 rev 4 + Bülten 711A s. 12–14 (spray.com)",
+        "SATIN ALMA"
+      ],
+      "lo_mm": [
+        4020.0,
+        1202.4,
+        -163.8635
+      ],
+      "hi_mm": [
+        4030.0002,
+        1214.3,
+        -128.9
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 36,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "PulsaJet_M8_soketi_9",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4020.1454,
+        1194.3001,
+        -163.8635
+      ],
+      "hi_mm": [
+        4030.0002,
+        1202.4,
+        -153.9365
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 36,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "PulsaJet_giris_dirsegi_9",
+      "role": "purchased_mount_or_fit_requires_proof",
+      "native_bom": [
+        "Paslanmaz 90° dirsek 1/8 BSPT + süzgeç (SSCo CP12290-7-SS 200 mesh sınıfı)",
+        1,
+        "",
+        "[V]",
+        "SATIN ALMA"
+      ],
+      "lo_mm": [
+        4019.0001,
+        1194.3001,
+        -192.0
+      ],
+      "hi_mm": [
+        4031.0001,
+        1215.9562,
+        -164.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 36,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "PulsaJet_kapak_CP104218-SS",
+      "role": "purchased_mount_or_fit_requires_proof",
+      "native_bom": [
+        "Uç kapağı Spraying Systems CP104218-SS (13/16\" altıgen · 303 SS)",
+        1,
+        "kapak yüksekliği [V]",
+        "Spraying Systems veri sayfası 104210 rev 4 + Bülten 711A s. 12–14 (spray.com)",
+        "SATIN ALMA"
+      ],
+      "lo_mm": [
+        4013.1063,
+        1145.6,
+        -180.3
+      ],
+      "hi_mm": [
+        4036.8934,
+        1155.4,
+        -159.7
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 36,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "PulsaJet_uc_TPU11002_PWMD",
+      "role": "purchased_mount_or_fit_requires_proof",
+      "native_bom": [
+        "Yassı uç UniJet TPU11002 PWMD-SS (110° @ 2,76 bar · 0,20 gpm su)",
+        1,
+        "ayçiçek yağı ≈ 12 g/s tam açık (0,79 L/dk × 0,915 · SG düzeltmesi; viskozite düşürür → tartarak kalibre)",
+        "Spraying Systems Katalog 76 s. D12 (PWMD) + D4",
+        "SATIN ALMA"
+      ],
+      "lo_mm": [
+        4020.1454,
+        1141.0,
+        -174.9635
+      ],
+      "hi_mm": [
+        4030.0002,
+        1145.6,
+        -165.0365
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 36,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "ara_dikme_0",
+      "role": "custom_connection_required",
+      "native_bom": [
+        "Ara dikme Ø16 × 70 paslanmaz (iki ucu M8)",
+        3,
+        "v7: 50 — PulsaJet dik sığsın diye 70",
+        "üretim",
+        "ÜRETİM"
+      ],
+      "lo_mm": [
+        4252.8543,
+        1174.5,
+        -178.9417
+      ],
+      "hi_mm": [
+        4268.6219,
+        1244.5,
+        -163.0583
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 18,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "ara_dikme_1",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4131.6109,
+        1174.5,
+        -178.9417
+      ],
+      "hi_mm": [
+        4147.3784,
+        1244.5,
+        -163.0583
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 18,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "ara_dikme_2",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4192.2326,
+        1174.5,
+        -283.9417
+      ],
+      "hi_mm": [
+        4208.0002,
+        1244.5,
+        -268.0583
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 18,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "avara_mili_0",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4040.1745,
+        963.0437,
+        -426.0
+      ],
+      "hi_mm": [
+        4052.0,
+        974.9563,
+        -411.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 12,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "avara_mili_1",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4040.1745,
+        963.0437,
+        -13.0
+      ],
+      "hi_mm": [
+        4052.0,
+        974.9563,
+        2.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 12,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "avara_rulosu_46",
+      "role": "purchased_mount_or_fit_requires_proof",
+      "native_bom": [
+        "Avara rulo ø50 paslanmaz, rulmanlı (Interroll 1700 sınıfı) · gergi uzun delikli",
+        1,
+        "RL 398",
+        "Interroll 1700 [V]",
+        "SATIN ALMA"
+      ],
+      "lo_mm": [
+        4021.7266,
+        944.1823,
+        -411.0
+      ],
+      "hi_mm": [
+        4071.0001,
+        993.8177,
+        -13.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 12,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "bant_traversi_0",
+      "role": "custom_connection_required",
+      "native_bom": [
+        "Bant traversi 304 kutu 20 × 12 × 1 (kayma tablası altı, yan profillere kaynaklı)",
+        2,
+        "412",
+        "üretim",
+        "ÜRETİM"
+      ],
+      "lo_mm": [
+        4110.0001,
+        976.0,
+        -418.0
+      ],
+      "hi_mm": [
+        4130.0001,
+        988.0,
+        -6.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 12,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "bant_traversi_1",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4270.0,
+        976.0,
+        -418.0
+      ],
+      "hi_mm": [
+        4290.0,
+        988.0,
+        -6.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 12,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "bicak_0",
+      "role": "custom_connection_required",
+      "native_bom": [
+        "Yıldız bıçak seti 6 dilim Ø296 (sertleştirilmiş paslanmaz, bulaşık makinesinde yıkanır)",
+        1,
+        "6 × 133 × 45 × 1,5 · göbek Ø40",
+        "Q-T-S PC1018 / PC5000 bıçak seti sınıfı (q-t-s.com) [V: ölçü bize göre]"
+      ],
+      "lo_mm": [
+        4215.0002,
+        1121.5,
+        -206.75
+      ],
+      "hi_mm": [
+        4348.0,
+        1166.5,
+        -205.25
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 34,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "bicak_1",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4206.8505,
+        1121.5,
+        -193.3846
+      ],
+      "hi_mm": [
+        4274.6496,
+        1166.5,
+        -77.4532
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 34,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "bicak_2",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4125.3505,
+        1121.5,
+        -193.3846
+      ],
+      "hi_mm": [
+        4193.1496,
+        1166.5,
+        -77.4532
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 34,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "bicak_3",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4052.0,
+        1121.5,
+        -206.75
+      ],
+      "hi_mm": [
+        4184.9999,
+        1166.5,
+        -205.25
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 35,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "bicak_4",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4125.3505,
+        1121.5,
+        -334.5468
+      ],
+      "hi_mm": [
+        4193.1496,
+        1166.5,
+        -218.6154
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 34,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "bicak_5",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4206.8505,
+        1121.5,
+        -334.5468
+      ],
+      "hi_mm": [
+        4274.6496,
+        1166.5,
+        -218.6154
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 34,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "bicak_gobek_halkasi",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4180.0141,
+        1154.5,
+        -225.738
+      ],
+      "hi_mm": [
+        4219.986,
+        1166.5,
+        -186.262
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 34,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "bicak_koruma_halkasi",
+      "role": "custom_connection_required",
+      "native_bom": [
+        "Bıçak koruma + sprey perdesi halkası Ø316 × 37 (1,5 mm 304)",
+        1,
+        "",
+        "üretim"
+      ],
+      "lo_mm": [
+        4046.5913,
+        1129.5,
+        -362.848
+      ],
+      "hi_mm": [
+        4357.9998,
+        1166.5,
+        -49.152
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 34,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "cit_arka_a",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4099.9999,
+        996.3,
+        -364.0
+      ],
+      "hi_mm": [
+        4244.0,
+        1001.3,
+        -358.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 34,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "cit_arka_b",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4263.9999,
+        996.3,
+        -364.0
+      ],
+      "hi_mm": [
+        4400.0001,
+        1001.3,
+        -358.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 34,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "cit_braketi_0",
+      "role": "custom_connection_required",
+      "native_bom": [
+        "Çit braketi 304 · 2 mm (POM çit → bant yan profili)",
+        4,
+        "16 genişlik",
+        "üretim",
+        "ÜRETİM"
+      ],
+      "lo_mm": [
+        4142.0002,
+        987.5,
+        -54.0
+      ],
+      "hi_mm": [
+        4158.0,
+        1003.3,
+        0.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 33,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "cit_braketi_1",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4311.9998,
+        987.5,
+        -54.0
+      ],
+      "hi_mm": [
+        4328.0001,
+        1003.3,
+        0.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 33,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "cit_braketi_2",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4142.0002,
+        987.5,
+        -424.0
+      ],
+      "hi_mm": [
+        4158.0,
+        1003.3,
+        -358.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 33,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "cit_braketi_3",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4311.9998,
+        987.5,
+        -424.0
+      ],
+      "hi_mm": [
+        4328.0001,
+        1003.3,
+        -358.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 33,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "cit_giris_-1",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4007.8697,
+        996.3,
+        -367.9972
+      ],
+      "hi_mm": [
+        4099.9999,
+        1001.3,
+        -358.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 34,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "cit_giris_1",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4006.0892,
+        996.3,
+        -53.3129
+      ],
+      "hi_mm": [
+        4099.9999,
+        1001.3,
+        26.95
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 18,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "cit_on",
+      "role": "custom_connection_required",
+      "native_bom": [
+        "Kılavuz çit POM beyaz 5 × 6 (ön · arka · giriş eğik)",
+        5,
+        "ürünü 36 mm z −206'ya kaydırır",
+        "üretim",
+        "ÜRETİM"
+      ],
+      "lo_mm": [
+        4099.9999,
+        996.3,
+        -54.0
+      ],
+      "hi_mm": [
+        4400.0001,
+        1001.3,
+        -48.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 34,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "d3_kaplin_donus",
+      "role": "fluid_fit_requires_proof",
+      "native_bom": [],
+      "lo_mm": [
+        3974.4999,
+        1818.5037,
+        -189.4848
+      ],
+      "hi_mm": [
+        3996.0001,
+        1834.4963,
+        -173.5
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 40,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "d3_kaplin_emis",
+      "role": "fluid_fit_requires_proof",
+      "native_bom": [],
+      "lo_mm": [
+        3948.0,
+        1817.0048,
+        -259.981
+      ],
+      "hi_mm": [
+        3992.0001,
+        1836.9952,
+        -240.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 40,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "d3_seviye_salteri_M12_fis",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        3880.0001,
+        1806.5035,
+        -207.4858
+      ],
+      "hi_mm": [
+        3924.2001,
+        1821.4965,
+        -192.5
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 40,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "elk_ic_kanal_0",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4001.9999,
+        1025.0,
+        -755.0
+      ],
+      "hi_mm": [
+        4032.0001,
+        1252.0,
+        25.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 32,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "elk_ic_kanal_1",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4010.5,
+        1252.0,
+        -311.0
+      ],
+      "hi_mm": [
+        4032.0001,
+        1400.0,
+        -281.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 69,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "elk_ic_kanal_2",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4184.9999,
+        1620.0,
+        -718.0
+      ],
+      "hi_mm": [
+        4235.0001,
+        1855.9999,
+        -215.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 94,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "elk_ic_kanal_3",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4203.0001,
+        1700.0,
+        -575.0
+      ],
+      "hi_mm": [
+        4232.9998,
+        1826.0,
+        -545.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 76,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "elk_ic_kanal_4",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4211.0,
+        1622.0,
+        -215.0
+      ],
+      "hi_mm": [
+        4224.9999,
+        1636.0,
+        -166.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 69,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "elk_ic_kanal_5",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4214.0002,
+        1405.0,
+        -166.0
+      ],
+      "hi_mm": [
+        4222.4998,
+        1636.0,
+        -146.5
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 69,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "elk_ic_kanal_6",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4344.9998,
+        1028.0,
+        -765.0
+      ],
+      "hi_mm": [
+        4383.9998,
+        1140.0,
+        12.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 26,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "elk_ic_kanal_7",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4362.0,
+        975.0,
+        -636.0
+      ],
+      "hi_mm": [
+        4394.0001,
+        1112.0,
+        -440.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 26,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "elk_ic_kanal_8",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4363.9998,
+        1140.0,
+        -760.0
+      ],
+      "hi_mm": [
+        4394.0001,
+        1235.0,
+        -737.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 26,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "elk_k_celik_0",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4080.9999,
+        1210.0,
+        -828.5
+      ],
+      "hi_mm": [
+        4119.0,
+        1230.0,
+        -765.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 18,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "elk_k_celik_1",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4181.0002,
+        1459.5,
+        -300.7
+      ],
+      "hi_mm": [
+        4197.0,
+        1641.0,
+        -288.7
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 29,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "elk_k_celik_2",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4184.9999,
+        1304.0,
+        -165.5
+      ],
+      "hi_mm": [
+        4201.0002,
+        1316.0,
+        -109.7
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 45,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "elk_k_celik_3",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4191.9999,
+        1459.5,
+        -271.0
+      ],
+      "hi_mm": [
+        4208.0002,
+        1644.3,
+        -259.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 42,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "elk_k_celik_4",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4196.0001,
+        1290.0,
+        -828.5
+      ],
+      "hi_mm": [
+        4234.0002,
+        1309.9999,
+        -765.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 42,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "elk_k_celik_5",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4196.0001,
+        1429.9999,
+        -828.5
+      ],
+      "hi_mm": [
+        4234.0002,
+        1450.0,
+        -765.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 42,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "elk_k_celik_6",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4208.0002,
+        1459.5,
+        -293.0
+      ],
+      "hi_mm": [
+        4224.0,
+        1643.3001,
+        -281.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 29,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "elk_k_celik_7",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4243.0,
+        1633.9999,
+        -314.7
+      ],
+      "hi_mm": [
+        4398.5,
+        1650.0,
+        -302.7
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 29,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "elk_k_celik_8",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4281.0001,
+        1210.0,
+        -828.5
+      ],
+      "hi_mm": [
+        4318.9998,
+        1230.0,
+        -765.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 18,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "elk_k_tarti_celik_0",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4152.0,
+        1378.9999,
+        -299.5
+      ],
+      "hi_mm": [
+        4164.0,
+        1395.0,
+        -266.1598
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 42,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "elk_k_tarti_celik_1",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4300.4999,
+        1503.0,
+        -328.0
+      ],
+      "hi_mm": [
+        4398.5,
+        1515.0,
+        -312.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 29,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "elk_zincir_etiket_0",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4023.5,
+        1470.0,
+        -673.0
+      ],
+      "hi_mm": [
+        4024.0998,
+        1478.0,
+        -629.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 29,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "elk_zincir_etiket_1",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4375.8998,
+        1470.0,
+        -673.0
+      ],
+      "hi_mm": [
+        4376.5001,
+        1478.0,
+        -629.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 29,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "elk_zincir_harting_0",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4023.5,
+        1503.0,
+        -673.0
+      ],
+      "hi_mm": [
+        4052.4001,
+        1596.0,
+        -629.6
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 29,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "elk_zincir_harting_1",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4052.4001,
+        1512.0,
+        -672.8
+      ],
+      "hi_mm": [
+        4090.4002,
+        1587.0,
+        -629.8
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 29,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "elk_zincir_harting_2",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4309.5999,
+        1512.0,
+        -672.8
+      ],
+      "hi_mm": [
+        4347.6,
+        1587.0,
+        -629.8
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 29,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "elk_zincir_harting_3",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4347.6,
+        1503.0,
+        -673.0
+      ],
+      "hi_mm": [
+        4376.5001,
+        1596.0,
+        -629.6
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 29,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "elk_zincir_kanal_0",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4001.5001,
+        1618.0,
+        -783.0
+      ],
+      "hi_mm": [
+        4130.0001,
+        1648.0,
+        -603.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 69,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "elk_zincir_kanal_1",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4001.5001,
+        1648.0,
+        -748.0
+      ],
+      "hi_mm": [
+        4398.5,
+        1855.9999,
+        -718.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 75,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "elk_zincir_kanal_2",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4368.5002,
+        1618.0,
+        -783.0
+      ],
+      "hi_mm": [
+        4398.5,
+        1648.0,
+        -603.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 69,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "elk_zincir_kod_kirmizi_0",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4090.4002,
+        1528.0,
+        -669.0
+      ],
+      "hi_mm": [
+        4091.1999,
+        1572.0,
+        -633.6
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 29,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "elk_zincir_kod_kirmizi_1",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4308.8002,
+        1528.0,
+        -669.0
+      ],
+      "hi_mm": [
+        4309.5999,
+        1572.0,
+        -633.6
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 29,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "elk_zincir_kod_mavi_0",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4026.5002,
+        1576.2,
+        -581.8
+      ],
+      "hi_mm": [
+        4030.4999,
+        1597.8,
+        -560.2
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 29,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "elk_zincir_kod_mavi_1",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4045.4998,
+        1539.0,
+        -598.0
+      ],
+      "hi_mm": [
+        4051.4998,
+        1557.0,
+        -580.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 29,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "elk_zincir_kod_mavi_2",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4348.4998,
+        1539.0,
+        -598.0
+      ],
+      "hi_mm": [
+        4354.4998,
+        1557.0,
+        -580.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 29,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "elk_zincir_kod_mavi_3",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4369.5002,
+        1576.2,
+        -581.8
+      ],
+      "hi_mm": [
+        4373.4999,
+        1597.8,
+        -560.2
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 29,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "elk_zincir_m12_0",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4023.5,
+        1574.0,
+        -584.0
+      ],
+      "hi_mm": [
+        4026.5002,
+        1600.0,
+        -558.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 29,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "elk_zincir_m12_1",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4030.4999,
+        1577.0,
+        -581.0
+      ],
+      "hi_mm": [
+        4069.5,
+        1597.0,
+        -561.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 29,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "elk_zincir_m12_2",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4330.5001,
+        1577.0,
+        -581.0
+      ],
+      "hi_mm": [
+        4369.5002,
+        1597.0,
+        -561.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 29,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "elk_zincir_m12_3",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4373.4999,
+        1574.0,
+        -584.0
+      ],
+      "hi_mm": [
+        4376.5001,
+        1600.0,
+        -558.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 29,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "elk_zincir_paslanmaz_0",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4001.5001,
+        1471.0,
+        -674.0
+      ],
+      "hi_mm": [
+        4021.5001,
+        1480.9999,
+        -664.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 29,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "elk_zincir_paslanmaz_1",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4001.5001,
+        1538.0,
+        -566.0
+      ],
+      "hi_mm": [
+        4021.5001,
+        1548.0,
+        -556.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 29,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "elk_zincir_paslanmaz_2",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4001.5001,
+        1561.0,
+        -566.0
+      ],
+      "hi_mm": [
+        4021.5001,
+        1571.0,
+        -556.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 29,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "elk_zincir_paslanmaz_3",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4001.5001,
+        1589.0,
+        -674.0
+      ],
+      "hi_mm": [
+        4021.5001,
+        1599.0,
+        -664.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 29,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "elk_zincir_paslanmaz_4",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4021.5001,
+        1468.0001,
+        -677.0
+      ],
+      "hi_mm": [
+        4023.5,
+        1602.0,
+        -553.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 29,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "elk_zincir_paslanmaz_5",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4376.5001,
+        1468.0001,
+        -677.0
+      ],
+      "hi_mm": [
+        4378.5,
+        1602.0,
+        -553.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 29,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "elk_zincir_paslanmaz_6",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4378.5,
+        1471.0,
+        -674.0
+      ],
+      "hi_mm": [
+        4398.5,
+        1480.9999,
+        -664.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 29,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "elk_zincir_paslanmaz_7",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4378.5,
+        1538.0,
+        -566.0
+      ],
+      "hi_mm": [
+        4398.5,
+        1548.0,
+        -556.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 29,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "elk_zincir_paslanmaz_8",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4378.5,
+        1561.0,
+        -566.0
+      ],
+      "hi_mm": [
+        4398.5,
+        1571.0,
+        -556.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 29,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "elk_zincir_paslanmaz_9",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4378.5,
+        1589.0,
+        -674.0
+      ],
+      "hi_mm": [
+        4398.5,
+        1599.0,
+        -664.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 29,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "elk_zincir_rakor_0",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4023.5,
+        1538.4737,
+        -600.0
+      ],
+      "hi_mm": [
+        4045.4998,
+        1557.5262,
+        -578.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 29,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "elk_zincir_rakor_1",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4056.3998,
+        1492.0,
+        -666.3
+      ],
+      "hi_mm": [
+        4086.4,
+        1512.0,
+        -636.3
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 29,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "elk_zincir_rakor_2",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4313.6001,
+        1492.0,
+        -666.3
+      ],
+      "hi_mm": [
+        4343.5998,
+        1512.0,
+        -636.3
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 29,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "elk_zincir_rakor_3",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4354.4998,
+        1538.4737,
+        -600.0
+      ],
+      "hi_mm": [
+        4376.5001,
+        1557.5262,
+        -578.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 29,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "emniyet_sari_0",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4324.9998,
+        900.0,
+        24.0
+      ],
+      "hi_mm": [
+        4364.9998,
+        1020.0,
+        44.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 10,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "emniyet_siyah_0",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4332.5,
+        924.0,
+        47.0
+      ],
+      "hi_mm": [
+        4357.5001,
+        996.0,
+        59.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 11,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "guc_24V_NDR-240-24",
+      "role": "purchased_mount_or_fit_requires_proof",
+      "native_bom": [
+        "Güç kaynağı Mean Well NDR-240-24",
+        1,
+        "24 V 10 A · PLC, EC5000, PulsaJet, valfler, sensörler",
+        "TraceParts STEP (gerçek CAD)",
+        "SATIN ALMA"
+      ],
+      "lo_mm": [
+        4074.9998,
+        1697.4,
+        -810.49
+      ],
+      "hi_mm": [
+        4138.0,
+        1822.6,
+        -687.7648
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 68,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "hava_ic_aski_0",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4124.0001,
+        1599.0,
+        -740.5
+      ],
+      "hi_mm": [
+        4138.0,
+        1613.0,
+        -738.5
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 29,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "hava_ic_aski_1",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4130.0001,
+        1599.0,
+        -738.5
+      ],
+      "hi_mm": [
+        4132.0,
+        1613.0,
+        -706.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 29,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "hava_ic_aski_10",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4209.0001,
+        1638.0,
+        -607.0
+      ],
+      "hi_mm": [
+        4223.0,
+        1640.0,
+        -593.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 29,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "hava_ic_aski_11",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4209.0001,
+        1638.0,
+        -497.0
+      ],
+      "hi_mm": [
+        4223.0,
+        1640.0,
+        -483.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 30,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "hava_ic_aski_2",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4152.9999,
+        1599.0,
+        -740.5
+      ],
+      "hi_mm": [
+        4166.9998,
+        1613.0,
+        -738.5
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 29,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "hava_ic_aski_3",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4158.9999,
+        1599.0,
+        -738.5
+      ],
+      "hi_mm": [
+        4160.9998,
+        1613.0,
+        -706.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 29,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "hava_ic_aski_4",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4209.0001,
+        1590.8,
+        -207.0
+      ],
+      "hi_mm": [
+        4223.0,
+        1592.8,
+        -193.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 42,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "hava_ic_aski_6",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4209.0001,
+        1592.8,
+        -201.0
+      ],
+      "hi_mm": [
+        4223.0,
+        1594.0,
+        -199.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 42,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "hava_ic_aski_7",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4209.0001,
+        1592.8,
+        -180.0
+      ],
+      "hi_mm": [
+        4223.0,
+        1594.0,
+        -178.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 42,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "hava_ic_aski_8",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4209.0001,
+        1618.0,
+        -601.0
+      ],
+      "hi_mm": [
+        4223.0,
+        1638.0,
+        -599.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 29,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "hava_ic_aski_9",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4209.0001,
+        1618.0,
+        -491.0
+      ],
+      "hi_mm": [
+        4223.0,
+        1638.0,
+        -489.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 29,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "hava_ic_kanal_0",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4085.0,
+        1235.9999,
+        -734.5
+      ],
+      "hi_mm": [
+        4397.5,
+        1554.0,
+        -718.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 29,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "hava_ic_kanal_1",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4105.9999,
+        1520.0,
+        -706.0
+      ],
+      "hi_mm": [
+        4231.9999,
+        1618.0,
+        -296.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 29,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "hava_ic_kanal_2",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4107.5201,
+        1520.0,
+        -695.565
+      ],
+      "hi_mm": [
+        4116.4799,
+        1521.1999,
+        -694.525
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 29,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "hava_ic_kanal_3",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4199.9998,
+        1594.0,
+        -256.0
+      ],
+      "hi_mm": [
+        4231.9999,
+        1618.0,
+        -170.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 43,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "itici_X_MY-J10_blok_1",
+      "role": "custom_connection_required",
+      "native_bom": [
+        "X ekseni ayak tabanı 304 8 mm",
+        4,
+        "36 × 36",
+        "üretim",
+        "ÜRETİM"
+      ],
+      "lo_mm": [
+        4059.9999,
+        984.5,
+        -686.0
+      ],
+      "hi_mm": [
+        4090.0002,
+        994.0,
+        -674.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 18,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "itici_X_MY-J10_pim_1",
+      "role": "custom_connection_required",
+      "native_bom": [
+        "X ekseni ayak tabanı 304 8 mm",
+        4,
+        "36 × 36",
+        "üretim",
+        "ÜRETİM"
+      ],
+      "lo_mm": [
+        4073.0581,
+        985.2646,
+        -688.0
+      ],
+      "hi_mm": [
+        4077.0001,
+        989.2354,
+        -686.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 18,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "itici_X_MY1B10G-250_AS1201F_0",
+      "role": "purchased_mount_or_fit_requires_proof",
+      "native_bom": [
+        "SMC AS1201F-M5-04A dirsek hız ayar valfi (çıkışta kısma)",
+        4,
+        "M5 · Ø4 hortum · 5 g",
+        "SMC AS-1F-A EU katalog s. 5",
+        "SATIN ALMA"
+      ],
+      "lo_mm": [
+        4367.4998,
+        984.2,
+        -710.0701
+      ],
+      "hi_mm": [
+        4377.5001,
+        997.3,
+        -701.9299
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 18,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "itici_X_MY1B10G-250_AS1201F_1",
+      "role": "custom_connection_required",
+      "native_bom": [
+        "X ekseni ayak tabanı 304 8 mm",
+        4,
+        "36 × 36",
+        "üretim",
+        "ÜRETİM"
+      ],
+      "lo_mm": [
+        4367.4998,
+        984.2,
+        -698.0701
+      ],
+      "hi_mm": [
+        4377.5001,
+        997.3,
+        -689.9299
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 18,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "itici_X_MY1B10G-250_D-M9N_0",
+      "role": "purchased_mount_or_fit_requires_proof",
+      "native_bom": [
+        "SMC D-M9N katı hal oto svic (MY1B yan oluğu)",
+        4,
+        "3 telli NPN · 22 mm · çalışma aralığı 2,5 mm",
+        "SMC Best Pneumatics s. 1199 + MY1B s. 8-11-104",
+        "SATIN ALMA"
+      ],
+      "lo_mm": [
+        4044.0001,
+        970.5,
+        -689.8
+      ],
+      "hi_mm": [
+        4066.0,
+        973.5,
+        -687.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 18,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "itici_X_MY1B10G-250_D-M9N_1",
+      "role": "custom_connection_required",
+      "native_bom": [
+        "X ekseni ayak tabanı 304 8 mm",
+        4,
+        "36 × 36",
+        "üretim",
+        "ÜRETİM"
+      ],
+      "lo_mm": [
+        4294.0001,
+        970.5,
+        -689.8
+      ],
+      "hi_mm": [
+        4316.0,
+        973.5,
+        -687.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 18,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "itici_X_MY1B10G-250_profil",
+      "role": "purchased_mount_or_fit_requires_proof",
+      "native_bom": [
+        "SMC MY1B10G-250 rodless silindir (merkezi borulu, ø10, strok 250)",
+        1,
+        "boy 360 · 0,2–0,8 MPa · 100–500 mm/s · lastik tampon",
+        "SMC MY1B katalog (content2.smcetech.com/pdf/MY1B_2103.pdf) s. 8-11-21 ø10 çizimi",
+        "SATIN ALMA"
+      ],
+      "lo_mm": [
+        4034.9998,
+        964.0,
+        -713.0
+      ],
+      "hi_mm": [
+        4364.9998,
+        983.5,
+        -687.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 16,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "itici_X_RB0805_0",
+      "role": "purchased_mount_or_fit_requires_proof",
+      "native_bom": [
+        "SMC RB0805 şok emici (M8 × 0,75 · strok 5 · 1,0 J · ≤ 1000 mm/s)",
+        2,
+        "X strok sonları",
+        "SMC MY1B katalog s. 8-11-7 / 8-11-17",
+        "SATIN ALMA"
+      ],
+      "lo_mm": [
+        4012.0001,
+        1001.1163,
+        -703.9708
+      ],
+      "hi_mm": [
+        4050.0002,
+        1008.9999,
+        -696.0292
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 18,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "itici_X_RB0805_1",
+      "role": "custom_connection_required",
+      "native_bom": [
+        "X ekseni ayak tabanı 304 8 mm",
+        4,
+        "36 × 36",
+        "üretim",
+        "ÜRETİM"
+      ],
+      "lo_mm": [
+        4349.9999,
+        1001.1163,
+        -703.9708
+      ],
+      "hi_mm": [
+        4388.0,
+        1008.9999,
+        -696.0292
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 18,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "itici_X_ara_-645",
+      "role": "custom_connection_required",
+      "native_bom": [
+        "X ekseni ayak tabanı 304 8 mm",
+        4,
+        "36 × 36",
+        "üretim",
+        "ÜRETİM"
+      ],
+      "lo_mm": [
+        4045.5999,
+        980.0,
+        -661.0
+      ],
+      "hi_mm": [
+        4104.4002,
+        1046.0,
+        -629.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 18,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "itici_X_ara_-755",
+      "role": "custom_connection_required",
+      "native_bom": [
+        "X ekseni ayak tabanı 304 8 mm",
+        4,
+        "36 × 36",
+        "üretim",
+        "ÜRETİM"
+      ],
+      "lo_mm": [
+        4045.5999,
+        980.0,
+        -771.0
+      ],
+      "hi_mm": [
+        4104.4002,
+        1046.0,
+        -739.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 18,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "itici_X_blok_-645",
+      "role": "custom_connection_required",
+      "native_bom": [
+        "X ekseni ayak tabanı 304 8 mm",
+        4,
+        "36 × 36",
+        "üretim",
+        "ÜRETİM"
+      ],
+      "lo_mm": [
+        4045.5999,
+        968.0,
+        -661.0
+      ],
+      "hi_mm": [
+        4104.4002,
+        980.0,
+        -629.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 16,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "itici_X_blok_-755",
+      "role": "purchased_mount_or_fit_requires_proof",
+      "native_bom": [
+        "HIWIN MGN15H blok · X",
+        2,
+        "W 32 · L 58,8 · H 16 · C 6,37 kN · 92 g",
+        "HIWIN MG katalog s. 86 (MGN15H)",
+        "SATIN ALMA"
+      ],
+      "lo_mm": [
+        4045.5999,
+        968.0,
+        -771.0
+      ],
+      "hi_mm": [
+        4104.4002,
+        980.0,
+        -739.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 15,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "itici_X_durdurucu_0",
+      "role": "custom_connection_required",
+      "native_bom": [
+        "X durdurucu braketi 6082 (RB0805 kelepçeli · X taban plakasına 2 × M5)",
+        2,
+        "10 × 49 × 41",
+        "üretim",
+        "ÜRETİM"
+      ],
+      "lo_mm": [
+        4035.9998,
+        964.0,
+        -733.0
+      ],
+      "hi_mm": [
+        4046.0,
+        1013.0,
+        -692.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 16,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "itici_X_durdurucu_1",
+      "role": "custom_connection_required",
+      "native_bom": [
+        "X ekseni ayak tabanı 304 8 mm",
+        4,
+        "36 × 36",
+        "üretim",
+        "ÜRETİM"
+      ],
+      "lo_mm": [
+        4354.0001,
+        964.0,
+        -733.0
+      ],
+      "hi_mm": [
+        4363.9998,
+        1013.0,
+        -692.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 16,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "itici_X_ray_-645",
+      "role": "custom_connection_required",
+      "native_bom": [
+        "X ekseni ayak tabanı 304 8 mm",
+        4,
+        "36 × 36",
+        "üretim",
+        "ÜRETİM"
+      ],
+      "lo_mm": [
+        4020.0,
+        964.0,
+        -652.5
+      ],
+      "hi_mm": [
+        4380.0001,
+        974.0,
+        -637.5
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 16,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "itici_X_ray_-755",
+      "role": "purchased_mount_or_fit_requires_proof",
+      "native_bom": [
+        "HIWIN MGNR15R ray · X · boy 360 (P 40 · E 20)",
+        2,
+        "ray 15 × 10 · M3 × 10 · 1,06 kg/m",
+        "HIWIN MG katalog s. 86 (MGN15H)",
+        "SATIN ALMA"
+      ],
+      "lo_mm": [
+        4020.0,
+        964.0,
+        -762.5
+      ],
+      "hi_mm": [
+        4380.0001,
+        974.0,
+        -747.5
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 15,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "itici_Z_MY1B10G-350_AS1201F_0",
+      "role": "custom_connection_required",
+      "native_bom": [
+        "X ekseni ayak tabanı 304 8 mm",
+        4,
+        "36 × 36",
+        "üretim",
+        "ÜRETİM"
+      ],
+      "lo_mm": [
+        4065.0001,
+        1071.2,
+        -372.5
+      ],
+      "hi_mm": [
+        4073.1001,
+        1084.2701,
+        -362.5
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 18,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "itici_Z_MY1B10G-350_AS1201F_1",
+      "role": "custom_connection_required",
+      "native_bom": [
+        "X ekseni ayak tabanı 304 8 mm",
+        4,
+        "36 × 36",
+        "üretim",
+        "ÜRETİM"
+      ],
+      "lo_mm": [
+        4077.0001,
+        1071.2,
+        -372.5
+      ],
+      "hi_mm": [
+        4085.1002,
+        1084.2701,
+        -362.5
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 18,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "itici_Z_MY1B10G-350_D-M9N_0",
+      "role": "custom_connection_required",
+      "native_bom": [
+        "X ekseni ayak tabanı 304 8 mm",
+        4,
+        "36 × 36",
+        "üretim",
+        "ÜRETİM"
+      ],
+      "lo_mm": [
+        4085.1998,
+        1057.5,
+        -796.0
+      ],
+      "hi_mm": [
+        4087.9998,
+        1060.5,
+        -774.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 23,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "itici_Z_MY1B10G-350_D-M9N_1",
+      "role": "custom_connection_required",
+      "native_bom": [
+        "X ekseni ayak tabanı 304 8 mm",
+        4,
+        "36 × 36",
+        "üretim",
+        "ÜRETİM"
+      ],
+      "lo_mm": [
+        4085.1998,
+        1057.5,
+        -446.0
+      ],
+      "hi_mm": [
+        4087.9998,
+        1060.5,
+        -424.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 23,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "itici_Z_MY1B10G-350_profil",
+      "role": "purchased_mount_or_fit_requires_proof",
+      "native_bom": [
+        "SMC MY1B10G-350 rodless silindir (merkezi borulu, ø10, strok 350)",
+        1,
+        "boy 460 · X arabasının üstünde",
+        "SMC MY1B katalog (content2.smcetech.com/pdf/MY1B_2103.pdf) s. 8-11-21 ø10 çizimi",
+        "SATIN ALMA"
+      ],
+      "lo_mm": [
+        4061.9998,
+        1051.0,
+        -805.0
+      ],
+      "hi_mm": [
+        4087.9998,
+        1070.5,
+        -375.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 23,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "itici_Z_blok_53",
+      "role": "purchased_mount_or_fit_requires_proof",
+      "native_bom": [
+        "HIWIN MGN15H blok · Z",
+        2,
+        "W 32 · L 58,8 · H 16",
+        "HIWIN MG katalog s. 86 (MGN15H)",
+        "SATIN ALMA"
+      ],
+      "lo_mm": [
+        4037.0002,
+        1080.0,
+        -794.4
+      ],
+      "hi_mm": [
+        4068.9998,
+        1092.0,
+        -735.6
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 18,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "itici_Z_blok_97",
+      "role": "custom_connection_required",
+      "native_bom": [
+        "X ekseni ayak tabanı 304 8 mm",
+        4,
+        "36 × 36",
+        "üretim",
+        "ÜRETİM"
+      ],
+      "lo_mm": [
+        4080.9999,
+        1080.0,
+        -794.4
+      ],
+      "hi_mm": [
+        4112.9999,
+        1092.0,
+        -735.6
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 18,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "itici_Z_kopru",
+      "role": "custom_connection_required",
+      "native_bom": [
+        "Z köprü plakası 6082 5 mm",
+        1,
+        "88 × 65",
+        "üretim",
+        "ÜRETİM"
+      ],
+      "lo_mm": [
+        4037.0002,
+        1092.0,
+        -797.5
+      ],
+      "hi_mm": [
+        4125.0,
+        1097.0,
+        -732.5
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 18,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "itici_Z_plaka",
+      "role": "custom_connection_required",
+      "native_bom": [
+        "Z ekseni taban plakası 6082 5 mm (X arabası üstünde)",
+        1,
+        "76 × 460",
+        "üretim",
+        "ÜRETİM"
+      ],
+      "lo_mm": [
+        4037.0002,
+        1046.0,
+        -820.0
+      ],
+      "hi_mm": [
+        4112.9999,
+        1051.0,
+        -360.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 23,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "itici_Z_ray_53",
+      "role": "purchased_mount_or_fit_requires_proof",
+      "native_bom": [
+        "HIWIN MGNR15R ray · Z · boy 460 (P 40 · E 10)",
+        2,
+        "",
+        "HIWIN MG katalog s. 86 (MGN15H)",
+        "SATIN ALMA"
+      ],
+      "lo_mm": [
+        4045.4998,
+        1076.0,
+        -820.0
+      ],
+      "hi_mm": [
+        4060.5001,
+        1086.0,
+        -360.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 23,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "itici_Z_ray_97",
+      "role": "custom_connection_required",
+      "native_bom": [
+        "X ekseni ayak tabanı 304 8 mm",
+        4,
+        "36 × 36",
+        "üretim",
+        "ÜRETİM"
+      ],
+      "lo_mm": [
+        4089.5,
+        1076.0,
+        -820.0
+      ],
+      "hi_mm": [
+        4104.4998,
+        1086.0,
+        -360.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 24,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "itici_Z_yukseltme_53",
+      "role": "custom_connection_required",
+      "native_bom": [
+        "X ekseni ayak tabanı 304 8 mm",
+        4,
+        "36 × 36",
+        "üretim",
+        "ÜRETİM"
+      ],
+      "lo_mm": [
+        4045.4998,
+        1051.0,
+        -820.0
+      ],
+      "hi_mm": [
+        4060.5001,
+        1076.0,
+        -360.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 23,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "itici_Z_yukseltme_97",
+      "role": "custom_connection_required",
+      "native_bom": [
+        "X ekseni ayak tabanı 304 8 mm",
+        4,
+        "36 × 36",
+        "üretim",
+        "ÜRETİM"
+      ],
+      "lo_mm": [
+        4089.5,
+        1051.0,
+        -820.0
+      ],
+      "hi_mm": [
+        4104.4998,
+        1076.0,
+        -360.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 23,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "itici_alt_dudak",
+      "role": "custom_connection_required",
+      "native_bom": [
+        "İtici alt dudağı POM 2 mm",
+        1,
+        "300",
+        "üretim",
+        "ÜRETİM"
+      ],
+      "lo_mm": [
+        4257.9999,
+        996.0,
+        -706.0
+      ],
+      "hi_mm": [
+        4260.0002,
+        996.3,
+        -406.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 34,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "itici_dusey_kol",
+      "role": "custom_connection_required",
+      "native_bom": [
+        "X ekseni ayak tabanı 304 8 mm",
+        4,
+        "36 × 36",
+        "üretim",
+        "ÜRETİM"
+      ],
+      "lo_mm": [
+        4114.9998,
+        1028.0,
+        -566.0
+      ],
+      "hi_mm": [
+        4135.0002,
+        1097.0,
+        -546.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 34,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "itici_one_kol",
+      "role": "custom_connection_required",
+      "native_bom": [
+        "İtici kolu 304 (öne · düşey · yatay)",
+        3,
+        "",
+        "üretim",
+        "ÜRETİM"
+      ],
+      "lo_mm": [
+        4114.9998,
+        1097.0,
+        -771.0
+      ],
+      "hi_mm": [
+        4135.0002,
+        1109.0,
+        -550.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 34,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "itici_sabit_plaka",
+      "role": "custom_connection_required",
+      "native_bom": [
+        "X ekseni taban plakası 6082 6 mm",
+        1,
+        "380 × 170",
+        "üretim",
+        "ÜRETİM"
+      ],
+      "lo_mm": [
+        4010.0002,
+        958.0,
+        -785.0
+      ],
+      "hi_mm": [
+        4389.9999,
+        964.0,
+        -615.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 14,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "itici_yatay_kol",
+      "role": "custom_connection_required",
+      "native_bom": [
+        "X ekseni ayak tabanı 304 8 mm",
+        4,
+        "36 × 36",
+        "üretim",
+        "ÜRETİM"
+      ],
+      "lo_mm": [
+        4135.0002,
+        1028.0,
+        -566.0
+      ],
+      "hi_mm": [
+        4247.0002,
+        1040.0,
+        -546.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 34,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "itici_yuz",
+      "role": "custom_connection_required",
+      "native_bom": [
+        "İtici yüzü POM 8 mm (gıda) · pasif düşey 15 mm yüzer",
+        1,
+        "300 × 24",
+        "üretim",
+        "ÜRETİM"
+      ],
+      "lo_mm": [
+        4251.9999,
+        996.3,
+        -706.0
+      ],
+      "hi_mm": [
+        4260.0002,
+        1020.3,
+        -406.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 34,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "itici_yuz_kilavuz_kovani",
+      "role": "custom_connection_required",
+      "native_bom": [
+        "X ekseni ayak tabanı 304 8 mm",
+        4,
+        "36 × 36",
+        "üretim",
+        "ÜRETİM"
+      ],
+      "lo_mm": [
+        4247.0002,
+        1020.4,
+        -575.0
+      ],
+      "hi_mm": [
+        4263.0,
+        1044.0,
+        -537.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 34,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "itici_yuzer_baglanti",
+      "role": "custom_connection_required",
+      "native_bom": [
+        "Z yüzer pim (özel · ±1 mm): Z rayları silindire bitişik, yandan bağlanan MY-J10 sığmaz",
+        1,
+        "Ø8 pim + POM burç",
+        "üretim [V]",
+        "ÜRETİM"
+      ],
+      "lo_mm": [
+        4071.0001,
+        1077.9999,
+        -773.0
+      ],
+      "hi_mm": [
+        4079.0,
+        1092.0,
+        -757.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 34,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "itici_yuzer_kilavuz",
+      "role": "custom_connection_required",
+      "native_bom": [
+        "X ekseni ayak tabanı 304 8 mm",
+        4,
+        "36 × 36",
+        "üretim",
+        "ÜRETİM"
+      ],
+      "lo_mm": [
+        4250.9999,
+        1020.3,
+        -572.0
+      ],
+      "hi_mm": [
+        4261.0002,
+        1040.0,
+        -540.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 34,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "k_e4_sol_yama_40x40",
+      "role": "connection_requires_source_review",
+      "native_bom": [],
+      "lo_mm": [
+        4001.5001,
+        1789.0,
+        -790.0
+      ],
+      "hi_mm": [
+        4002.9998,
+        1829.0,
+        -750.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 9,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "k_elektrik_sac_0",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4035.9998,
+        1198.0,
+        -765.0
+      ],
+      "hi_mm": [
+        4363.9998,
+        1575.0,
+        -735.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 18,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "k_govde_on_seffaf_2",
+      "role": "connection_requires_source_review",
+      "native_bom": [],
+      "lo_mm": [
+        4395.9999,
+        789.5,
+        59.0
+      ],
+      "hi_mm": [
+        4397.5,
+        791.0,
+        75.25
+      ],
+      "classifier_category": "GRUP",
+      "assembly_step": 98,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "k_govde_on_seffaf_3",
+      "role": "connection_requires_source_review",
+      "native_bom": [],
+      "lo_mm": [
+        4395.9999,
+        2194.0,
+        59.0
+      ],
+      "hi_mm": [
+        4397.5,
+        2195.4999,
+        75.25
+      ],
+      "classifier_category": "GRUP",
+      "assembly_step": 98,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "k_yag_pom_0",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        3924.2265,
+        1791.0,
+        -230.8177
+      ],
+      "hi_mm": [
+        3973.5,
+        1821.0,
+        -181.1823
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 40,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "kafa_adaptoru",
+      "role": "custom_connection_required",
+      "native_bom": [
+        "Kafa adaptörü AISI 304 · 10 mm (boyunduruğun 4 × M8'ine: 80 × 40)",
+        1,
+        "Ø170",
+        "üretim",
+        "ÜRETİM"
+      ],
+      "lo_mm": [
+        4117.4698,
+        1244.5,
+        -290.3802
+      ],
+      "hi_mm": [
+        4284.9998,
+        1254.5,
+        -121.6197
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 19,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "kafa_plakasi_8",
+      "role": "custom_connection_required",
+      "native_bom": [
+        "Kafa plakası Ø230 × 8 AISI 304",
+        1,
+        "",
+        "lazer + CNC"
+      ],
+      "lo_mm": [
+        4088.3417,
+        1166.5,
+        -320.1615
+      ],
+      "hi_mm": [
+        4315.0001,
+        1174.5,
+        -91.8385
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 18,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "kayma_tablasi",
+      "role": "custom_connection_required",
+      "native_bom": [
+        "Kayma tablası UHMW-PE 6 mm (gıda, FDA)",
+        1,
+        "254 × 396 · kesme yükünü taşır",
+        "üretim",
+        "ÜRETİM"
+      ],
+      "lo_mm": [
+        4073.0,
+        988.0,
+        -410.0
+      ],
+      "hi_mm": [
+        4327.0001,
+        994.0,
+        -14.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 12,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "klemens_sirasi",
+      "role": "purchased_mount_or_fit_requires_proof",
+      "native_bom": [
+        "Klemens Phoenix UT 2,5",
+        16,
+        "5,2 × 47,5 × 49",
+        "phoenixcontact.com [V]",
+        "SATIN ALMA"
+      ],
+      "lo_mm": [
+        4171.9999,
+        1616.0001,
+        -810.5
+      ],
+      "hi_mm": [
+        4255.0001,
+        1664.0,
+        -761.5
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 68,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "kopru_kirisi_-126",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4034.9998,
+        1419.5,
+        -146.0
+      ],
+      "hi_mm": [
+        4364.9998,
+        1459.5,
+        -106.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 45,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "koruma_braketi_0",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4296.4573,
+        1166.5,
+        -153.7745
+      ],
+      "hi_mm": [
+        4339.8318,
+        1174.5,
+        -121.8038
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 36,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "koruma_braketi_1",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4193.9998,
+        1166.5,
+        -91.1566
+      ],
+      "hi_mm": [
+        4205.9999,
+        1174.5,
+        -48.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 36,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "koruma_braketi_2",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4060.1678,
+        1166.5,
+        -153.7745
+      ],
+      "hi_mm": [
+        4103.5428,
+        1174.5,
+        -121.8038
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 36,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "koruma_braketi_3",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4060.1678,
+        1166.5,
+        -290.1962
+      ],
+      "hi_mm": [
+        4103.5428,
+        1174.5,
+        -258.2255
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 36,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "koruma_braketi_4",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4193.9998,
+        1166.5,
+        -364.0
+      ],
+      "hi_mm": [
+        4205.9999,
+        1174.5,
+        -320.8434
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 36,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "koruma_braketi_5",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4296.4573,
+        1166.5,
+        -290.1962
+      ],
+      "hi_mm": [
+        4339.8318,
+        1174.5,
+        -258.2255
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 36,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "kose_dikmesi_20_-800_tapa",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4005.0001,
+        1856.5,
+        -815.0
+      ],
+      "hi_mm": [
+        4034.9998,
+        1858.5,
+        -785.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 9,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "kose_dikmesi_20_42_tapa",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4005.0001,
+        1856.5,
+        27.0
+      ],
+      "hi_mm": [
+        4034.9998,
+        1858.5,
+        57.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 9,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "kose_dikmesi_380_-800_tapa",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4364.9998,
+        1856.5,
+        -815.0
+      ],
+      "hi_mm": [
+        4395.0,
+        1858.5,
+        -785.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 9,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "kose_dikmesi_380_42_tapa",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4364.9998,
+        1856.5,
+        27.0
+      ],
+      "hi_mm": [
+        4395.0,
+        1858.5,
+        57.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 10,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "nozul_braketi",
+      "role": "custom_connection_required",
+      "native_bom": [
+        "Nozül braketi 304 · 3 mm (sol saca 2 × M5 · kelepçe bloğuna 2 × M4)",
+        1,
+        "",
+        "üretim",
+        "ÜRETİM"
+      ],
+      "lo_mm": [
+        4001.5001,
+        1150.0,
+        -200.0
+      ],
+      "hi_mm": [
+        4009.9502,
+        1200.0,
+        -140.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 33,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "nozul_kelepce_blogu",
+      "role": "custom_connection_required",
+      "native_bom": [
+        "Nozül kelepçesi 6082 (iki yarım · gövde düzlüklerini sarar · 2 × M4)",
+        1,
+        "v10: ısıtıcı yok (sıvı yağ oda sıcaklığında)",
+        "üretim",
+        "ÜRETİM"
+      ],
+      "lo_mm": [
+        4009.9502,
+        1160.0,
+        -198.0
+      ],
+      "hi_mm": [
+        4040.05,
+        1190.0001,
+        -142.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 34,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "olu_plaka",
+      "role": "custom_connection_required",
+      "native_bom": [
+        "Çıkış ölü plakası 304 (bant → E penceresi · profillere kaynaklı)",
+        1,
+        "18 × 412",
+        "üretim",
+        "ÜRETİM"
+      ],
+      "lo_mm": [
+        4382.0,
+        990.0,
+        -418.0
+      ],
+      "hi_mm": [
+        4398.5,
+        996.0,
+        -6.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 12,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "onyuz_kapak_K_basac_0",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4369.2036,
+        993.0511,
+        31.0
+      ],
+      "hi_mm": [
+        4382.9999,
+        1006.9489,
+        59.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 19,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "onyuz_kapak_K_basac_1",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4369.2036,
+        1423.051,
+        31.0
+      ],
+      "hi_mm": [
+        4382.9999,
+        1436.949,
+        59.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 19,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "onyuz_kapak_K_basac_2",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4369.2036,
+        1793.051,
+        31.0
+      ],
+      "hi_mm": [
+        4382.9999,
+        1806.949,
+        59.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 20,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "onyuz_kapak_K_karsilik_0",
+      "role": "connection_requires_source_review",
+      "native_bom": [],
+      "lo_mm": [
+        4363.9998,
+        980.0,
+        60.0
+      ],
+      "hi_mm": [
+        4388.0,
+        1020.0,
+        61.5
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 98,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "onyuz_kapak_K_karsilik_1",
+      "role": "connection_requires_source_review",
+      "native_bom": [],
+      "lo_mm": [
+        4363.9998,
+        1410.0,
+        60.0
+      ],
+      "hi_mm": [
+        4388.0,
+        1450.0,
+        61.5
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 98,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "onyuz_kapak_K_karsilik_2",
+      "role": "connection_requires_source_review",
+      "native_bom": [],
+      "lo_mm": [
+        4363.9998,
+        1780.0,
+        60.0
+      ],
+      "hi_mm": [
+        4388.0,
+        1820.0001,
+        61.5
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 98,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "plc_S7-1200_1214C",
+      "role": "purchased_mount_or_fit_requires_proof",
+      "native_bom": [
+        "Siemens S7-1200 CPU 1214C DC/DC/DC · 6ES7214-1AG40-0XB0",
+        1,
+        "14 DI / 10 DO / 2 AI · Q0.0 PWM → PulsaJet · 415 g",
+        "Siemens veri sayfası (automation24 kopyası)",
+        "SATIN ALMA"
+      ],
+      "lo_mm": [
+        4145.0,
+        1710.0,
+        -810.5
+      ],
+      "hi_mm": [
+        4255.0001,
+        1809.9999,
+        -735.5
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 68,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "plc_tarti_modulu_SIWAREX_WP231",
+      "role": "purchased_mount_or_fit_requires_proof",
+      "native_bom": [
+        "Siemens SIWAREX WP231 tartı modülü 7MH4960-2AA01 (S7-1200 yan modül · 24 V · RS485 / Ethernet)",
+        1,
+        "70 × 100 × 75 · 280 g · PW15AH (2 mV/V, 300–500 Ω) giriş aralığında · E5DC'lerin yerinde",
+        "HBM PW15AH veri sayfası B01815_04 s. 1–4 · Siemens 7MH4960-2AA01 (SIWAREX WP231) veri sayfası",
+        "SATIN ALMA"
+      ],
+      "lo_mm": [
+        4260.0002,
+        1710.0,
+        -810.5
+      ],
+      "hi_mm": [
+        4329.9999,
+        1809.9999,
+        -735.5
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 68,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "sartlandirici_AW20-F02-A",
+      "role": "purchased_mount_or_fit_requires_proof",
+      "native_bom": [
+        "SMC AW20-F02-A filtre regülatör (5 µm · 0,05–0,7 MPa) + manometre",
+        1,
+        "40 × 155 · 0,21 kg",
+        "SMC AW-A katalog s. 474",
+        "SATIN ALMA"
+      ],
+      "lo_mm": [
+        4290.0,
+        1482.0,
+        -815.7
+      ],
+      "hi_mm": [
+        4329.9999,
+        1637.0,
+        -765.7
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 68,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "sartlandirici_braketi",
+      "role": "purchased_mount_or_fit_requires_proof",
+      "native_bom": [
+        "SMC B240A şartlandırıcı braketi (2,3 mm)",
+        1,
+        "",
+        "SMC AW-A katalog s. 474 [V]",
+        "SATIN ALMA"
+      ],
+      "lo_mm": [
+        4288.0001,
+        1565.0001,
+        -818.0
+      ],
+      "hi_mm": [
+        4331.9998,
+        1575.0,
+        -815.7
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 68,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "sigorta_C10",
+      "role": "purchased_mount_or_fit_requires_proof",
+      "native_bom": [
+        "Otomatik sigorta 1P+N C10",
+        1,
+        "36 × 85 × 70",
+        "[V]",
+        "SATIN ALMA"
+      ],
+      "lo_mm": [
+        4130.0001,
+        1597.5,
+        -810.5
+      ],
+      "hi_mm": [
+        4165.9999,
+        1682.5,
+        -740.5
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 68,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "tahrik_rulosu_EC5000_hex_mil",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4347.6491,
+        963.5,
+        -424.3
+      ],
+      "hi_mm": [
+        4360.3511,
+        974.5,
+        -411.0
+      ],
+      "classifier_category": "GRUP",
+      "assembly_step": 12,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "tahrik_rulosu_EC5000_kablo",
+      "role": "purchased_mount_or_fit_requires_proof",
+      "native_bom": [
+        "EC5000 AI bağlantı kablosu 5 × 0,5 · M8 geçmeli → pano (hız: 2 dijital girişle 4 önayar [V])",
+        1,
+        "",
+        "Interroll EC5000 ø50 IP66 veri sayfası (interroll.com EC5000_50mm_IP66_EN.pdf) s. 55–57",
+        "SATIN ALMA"
+      ],
+      "lo_mm": [
+        4350.6017,
+        965.5255,
+        -484.3
+      ],
+      "hi_mm": [
+        4357.5001,
+        972.4745,
+        -424.3
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 17,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "urun_sensoru_durus_alici",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4344.6002,
+        994.5,
+        -6.0
+      ],
+      "hi_mm": [
+        4355.4001,
+        1025.5001,
+        14.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 18,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "urun_sensoru_durus_braket_0",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4344.6002,
+        987.5,
+        -438.0
+      ],
+      "hi_mm": [
+        4357.3999,
+        1019.5,
+        -418.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 17,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "urun_sensoru_durus_braket_1",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4344.6002,
+        987.5,
+        -6.0
+      ],
+      "hi_mm": [
+        4357.3999,
+        1019.5,
+        14.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 17,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "urun_sensoru_durus_verici",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4344.6002,
+        994.5,
+        -438.0
+      ],
+      "hi_mm": [
+        4355.4001,
+        1025.5001,
+        -418.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 18,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "urun_sensoru_giris_alici",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4099.5998,
+        994.5,
+        -6.0
+      ],
+      "hi_mm": [
+        4110.4002,
+        1025.5001,
+        14.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 18,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "urun_sensoru_giris_braket_0",
+      "role": "custom_connection_required",
+      "native_bom": [
+        "Sensör L braketi 304 · 2 mm (E3Z → bant yan profili)",
+        4,
+        "",
+        "üretim",
+        "ÜRETİM"
+      ],
+      "lo_mm": [
+        4099.5998,
+        987.5,
+        -438.0
+      ],
+      "hi_mm": [
+        4112.4001,
+        1019.5,
+        -418.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 17,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "urun_sensoru_giris_braket_1",
+      "role": "custom_connection_required",
+      "native_bom": [],
+      "lo_mm": [
+        4099.5998,
+        987.5,
+        -6.0
+      ],
+      "hi_mm": [
+        4112.4001,
+        1019.5,
+        14.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 18,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "urun_sensoru_giris_verici",
+      "role": "purchased_mount_or_fit_requires_proof",
+      "native_bom": [
+        "Omron E3Z-T61 karşılıklı ışın fotosel (verici + alıcı · IP67 · 1 ms)",
+        2,
+        "giriş x 105: ürün ön kenarı",
+        "Omron E3Z veri sayfası CSM_E3Z_DS_E_18_10 s. 15 (gövde) [T61 ışın ekseni V]",
+        "SATIN ALMA"
+      ],
+      "lo_mm": [
+        4099.5998,
+        994.5,
+        -438.0
+      ],
+      "hi_mm": [
+        4110.4002,
+        1025.5001,
+        -418.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 18,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "valf_SY3120_0",
+      "role": "purchased_mount_or_fit_requires_proof",
+      "native_bom": [
+        "SMC SY3120-5LZ-C6 5/2 tek bobinli valf (X itici · Z itici · kesici)",
+        3,
+        "10 geniş · 66,9 boy · 24 VDC",
+        "SMC SY3000 katalog 1-4-12",
+        "SATIN ALMA"
+      ],
+      "lo_mm": [
+        4086.0,
+        1482.0,
+        -798.0
+      ],
+      "hi_mm": [
+        4096.4999,
+        1548.9,
+        -769.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 68,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "valf_SY3120_0_rakor_0",
+      "role": "fluid_fit_requires_proof",
+      "native_bom": [],
+      "lo_mm": [
+        4087.893,
+        1486.8233,
+        -769.0
+      ],
+      "hi_mm": [
+        4094.2001,
+        1493.1767,
+        -763.9
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 68,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "valf_SY3120_0_rakor_1",
+      "role": "fluid_fit_requires_proof",
+      "native_bom": [],
+      "lo_mm": [
+        4087.893,
+        1497.0233,
+        -769.0
+      ],
+      "hi_mm": [
+        4094.2001,
+        1503.3767,
+        -763.9
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 68,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "valf_SY3120_1",
+      "role": "fluid_fit_requires_proof",
+      "native_bom": [],
+      "lo_mm": [
+        4096.4999,
+        1482.0,
+        -798.0
+      ],
+      "hi_mm": [
+        4106.9999,
+        1548.9,
+        -769.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 68,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "valf_SY3120_1_rakor_0",
+      "role": "fluid_fit_requires_proof",
+      "native_bom": [],
+      "lo_mm": [
+        4098.393,
+        1486.8233,
+        -769.0
+      ],
+      "hi_mm": [
+        4104.7001,
+        1493.1767,
+        -763.9
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 68,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "valf_SY3120_1_rakor_1",
+      "role": "fluid_fit_requires_proof",
+      "native_bom": [],
+      "lo_mm": [
+        4098.393,
+        1497.0233,
+        -769.0
+      ],
+      "hi_mm": [
+        4104.7001,
+        1503.3767,
+        -763.9
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 68,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "valf_SY3120_2",
+      "role": "fluid_fit_requires_proof",
+      "native_bom": [],
+      "lo_mm": [
+        4106.9999,
+        1482.0,
+        -798.0
+      ],
+      "hi_mm": [
+        4117.0001,
+        1548.9,
+        -769.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 68,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "valf_SY3120_2_rakor_0",
+      "role": "fluid_fit_requires_proof",
+      "native_bom": [],
+      "lo_mm": [
+        4107.9221,
+        1485.8307,
+        -769.0
+      ],
+      "hi_mm": [
+        4116.2,
+        1494.1694,
+        -763.9
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 68,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "valf_SY3120_2_rakor_1",
+      "role": "fluid_fit_requires_proof",
+      "native_bom": [],
+      "lo_mm": [
+        4107.9221,
+        1496.0306,
+        -769.0
+      ],
+      "hi_mm": [
+        4116.2,
+        1504.3694,
+        -763.9
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 68,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "valf_kor_plaka",
+      "role": "purchased_mount_or_fit_requires_proof",
+      "native_bom": [
+        "SMC SY3000-26-9A kör plaka (yedek istasyon)",
+        1,
+        "",
+        "SMC SY3000 katalog 1-4-42",
+        "SATIN ALMA"
+      ],
+      "lo_mm": [
+        4117.4998,
+        1482.0,
+        -798.0
+      ],
+      "hi_mm": [
+        4127.5001,
+        1531.0,
+        -788.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 68,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "yag_T_parcasi",
+      "role": "purchased_mount_or_fit_requires_proof",
+      "native_bom": [
+        "T parçası 316 SS 1/4\" (sensör + basınç hattı + regülatör)",
+        1,
+        "",
+        "[V]",
+        "SATIN ALMA"
+      ],
+      "lo_mm": [
+        4215.0002,
+        1678.7,
+        -530.0
+      ],
+      "hi_mm": [
+        4235.0001,
+        1698.7,
+        -510.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 75,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "yag_basinc_sensoru_PM1704",
+      "role": "purchased_mount_or_fit_requires_proof",
+      "native_bom": [
+        "Gıda basınç sensörü ifm PM1704 (−1…10 bar · 4–20 mA + IO-Link · 3-A · EC 1935/2004 · EHEDG · FDA · IP69K)",
+        1,
+        "Ø30,2 × 111 · G1 Aseptoflex adaptörle [V: adaptör no] · PLC basıncı izler (düşerse: teneke bitti / hortum) · v11: T'nin üstünde dik",
+        "ifm PM1704-01 veri sayfası (31.07.2023) s. 1–4",
+        "SATIN ALMA"
+      ],
+      "lo_mm": [
+        4210.3386,
+        1698.7,
+        -534.9899
+      ],
+      "hi_mm": [
+        4240.0999,
+        1809.7,
+        -505.0101
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 75,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "yag_boru_T_regulator",
+      "role": "fluid_fit_requires_proof",
+      "native_bom": [],
+      "lo_mm": [
+        4235.0001,
+        1685.6172,
+        -523.1519
+      ],
+      "hi_mm": [
+        4267.4999,
+        1691.875,
+        -516.8481
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 93,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "yag_boru_filtre_pompa",
+      "role": "fluid_fit_requires_proof",
+      "native_bom": [],
+      "lo_mm": [
+        4092.9999,
+        1685.6172,
+        -523.1519
+      ],
+      "hi_mm": [
+        4099.9999,
+        1691.875,
+        -516.8481
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 93,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "yag_boru_pompa_T",
+      "role": "fluid_fit_requires_proof",
+      "native_bom": [],
+      "lo_mm": [
+        4200.3002,
+        1685.6172,
+        -523.1519
+      ],
+      "hi_mm": [
+        4215.0002,
+        1691.875,
+        -516.8481
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 93,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "yag_damlama_tavasi_F",
+      "role": "custom_connection_required",
+      "native_bom": [
+        "Yağ damlama tavası AISI 304 1,0 · köşeler kaynaklı (v11 tavası gibi · v3: fırın üstü rafta)",
+        1,
+        "243 × 268 × 20 · teneke + tartı altı",
+        "v3 · fırın üstü",
+        "ÜRETİM"
+      ],
+      "lo_mm": [
+        3742.0001,
+        1348.0,
+        -418.0
+      ],
+      "hi_mm": [
+        3984.9999,
+        1368.0,
+        -150.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 33,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "yag_emme_lansi_1038304",
+      "role": "purchased_mount_or_fit_requires_proof",
+      "native_bom": [
+        "Emme borusu ProMinent 1038304 (350 mm · 10–30 L kap · PVDF + PTFE · dip valfi + süzgeç · 2 kademeli seviye şalteri NC)",
+        1,
+        "dış Ø20 [V] · şalter: 1. kademe 'az kaldı', 2. kademe 'boş' → pompa durur (kuru çalışmaz) · tartının yedeği",
+        "prominent.com 1038304 emme borusu (350 mm · 10–30 L)",
+        "SATIN ALMA"
+      ],
+      "lo_mm": [
+        3934.9067,
+        1431.0,
+        -219.8979
+      ],
+      "hi_mm": [
+        3962.5001,
+        1791.0,
+        -192.1021
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 40,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "yag_tarti_alt_takozu",
+      "role": "custom_connection_required",
+      "native_bom": [
+        "Yük hücresi alt takozu 304 (sabit uç · 2 × M6)",
+        1,
+        "",
+        "üretim",
+        "ÜRETİM"
+      ],
+      "lo_mm": [
+        3788.5001,
+        1357.0,
+        -308.5
+      ],
+      "hi_mm": [
+        3828.5,
+        1367.0,
+        -283.5
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 38,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "yag_tarti_platformu",
+      "role": "custom_connection_required",
+      "native_bom": [
+        "Tartı platformu AISI 304 4 mm (v3: 238 × 238 · teneke 235 × 235)",
+        1,
+        "HBM PW15AH tek nokta yük hücresi üstünde",
+        "v3",
+        "ÜRETİM"
+      ],
+      "lo_mm": [
+        3744.4999,
+        1417.0001,
+        -415.0
+      ],
+      "hi_mm": [
+        3982.5001,
+        1421.3001,
+        -177.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 40,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "yag_tarti_taban_plakasi",
+      "role": "custom_connection_required",
+      "native_bom": [
+        "Tartı taban plakası AISI 304 8 mm (v3: 238 × 238)",
+        1,
+        "yük hücresinin alt takozu 2 × M8",
+        "v3",
+        "ÜRETİM"
+      ],
+      "lo_mm": [
+        3744.4999,
+        1349.0,
+        -415.0
+      ],
+      "hi_mm": [
+        3982.5001,
+        1357.0,
+        -177.0
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 37,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "yag_tarti_ust_takozu",
+      "role": "custom_connection_required",
+      "native_bom": [
+        "Yük hücresi üst takozu 304 (yük ucu · platform 2 × M6)",
+        1,
+        "",
+        "üretim",
+        "ÜRETİM"
+      ],
+      "lo_mm": [
+        3898.5,
+        1406.9999,
+        -308.5
+      ],
+      "hi_mm": [
+        3938.4999,
+        1417.0001,
+        -283.5
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 40,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "yag_tarti_yuk_hucresi_PW15AH",
+      "role": "purchased_mount_or_fit_requires_proof",
+      "native_bom": [
+        "Tek noktalı yük hücresi HBM PW15AH 50 kg (1-PW15AHC3/50KG-1 · C3 · IP68/IP69K · 1.4545 paslanmaz)",
+        1,
+        "150 × 25 × 40 (çizimden [V: CAD]) · platform ≤ 500 × 400 · dolu teneke 17,4 + platform ≈ 2,1 kg → aralığın %%39'u · doğrulama aralığı 5 g",
+        "HBM PW15AH veri sayfası B01815_04 s. 1–4 · Siemens 7MH4960-2AA01 (SIWAREX WP231) veri sayfası",
+        "SATIN ALMA"
+      ],
+      "lo_mm": [
+        3788.5001,
+        1367.0,
+        -308.5
+      ],
+      "hi_mm": [
+        3938.4999,
+        1406.9999,
+        -283.5
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 39,
+      "release_resolved": false,
+      "previously_listed": true
+    },
+    {
+      "part": "yag_tenekesi_18L",
+      "role": "custom_connection_required",
+      "native_bom": [
+        "Standart 18 L kare yağ tenekesi (piyasa · rafine ayçiçek yağı 16,35 kg net · 17,4 kg brüt)",
+        1,
+        "235 × 235 × 355 · Ø42 bas-geç ağız (Peksan 042.021) · günde 0,6–2,3 kg [V] → 1–4 hafta · tartıda (kalan yağ ekranda) · v11: dolabın ARKASINDA, ağız ön-sağda (öne çekilerek değişir)",
+        "bantas.com.tr/yag-tenekeleri (235 × 235 × 355) · peksanplastik.com (32/42 mm ağız) · aysanyaglari.com.tr (brüt 17,4 kg)",
+        "SARF"
+      ],
+      "lo_mm": [
+        3746.0001,
+        1421.0,
+        -413.5
+      ],
+      "hi_mm": [
+        3980.9999,
+        1791.0,
+        -178.5
+      ],
+      "classifier_category": "ACIK",
+      "assembly_step": 40,
+      "release_resolved": false,
+      "previously_listed": true
+    }
+  ],
+  "remaining_count": 216,
+  "production_release": false,
+  "whole_station_connections_verified": false
+}

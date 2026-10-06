@@ -1,0 +1,322 @@
+{
+  "source_model_sha256": "c0c004f133fa4d715aebeb5c21b35df688367bbdb630a35c656aef4b4ff4341b",
+  "source_parts_sha256": "9a599433c1160266de75b4aaf01d6efd307f0466abd8b03c948dfa91cdef36fe",
+  "checks": [
+    {
+      "a": "k79_yag_akis_M5x20_0_on",
+      "b": "k79_yag_akis_ayak_0_on",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true,
+      "joint": "0_on"
+    },
+    {
+      "a": "k79_yag_akis_ayak_0_on",
+      "b": "yag_pompa_plakasi",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true,
+      "joint": "0_on"
+    },
+    {
+      "a": "k79_yag_akis_M5_ara_plaka_0_on",
+      "b": "yag_pompa_rafi",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true,
+      "joint": "0_on"
+    },
+    {
+      "a": "k79_yag_akis_M5_pul_0_on",
+      "b": "k79_yag_akis_M5_ara_plaka_0_on",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true,
+      "joint": "0_on"
+    },
+    {
+      "a": "k79_yag_akis_M5_somun_0_on",
+      "b": "k79_yag_akis_M5_pul_0_on",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true,
+      "joint": "0_on"
+    },
+    {
+      "a": "k79_yag_akis_M5x20_0_on",
+      "b": "k79_yag_akis_M5_somun_0_on",
+      "minimum_sampled_surface_distance_mm": 0.049477368563704716,
+      "contact_within_0_6_mm": true,
+      "joint": "0_on"
+    },
+    {
+      "a": "k79_yag_akis_ayak_kaynagi_0_on_sol",
+      "b": "k79_yag_akis_portal_0",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true
+    },
+    {
+      "a": "k79_yag_akis_ayak_kaynagi_0_on_sol",
+      "b": "k79_yag_akis_ayak_0_on",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true
+    },
+    {
+      "a": "k79_yag_akis_ayak_kaynagi_0_on_sag",
+      "b": "k79_yag_akis_portal_0",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true
+    },
+    {
+      "a": "k79_yag_akis_ayak_kaynagi_0_on_sag",
+      "b": "k79_yag_akis_ayak_0_on",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true
+    },
+    {
+      "a": "k79_yag_akis_M5x20_0_arka",
+      "b": "k79_yag_akis_ayak_0_arka",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true,
+      "joint": "0_arka"
+    },
+    {
+      "a": "k79_yag_akis_ayak_0_arka",
+      "b": "yag_pompa_plakasi",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true,
+      "joint": "0_arka"
+    },
+    {
+      "a": "k79_yag_akis_M5_ara_plaka_0_arka",
+      "b": "yag_pompa_rafi",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true,
+      "joint": "0_arka"
+    },
+    {
+      "a": "k79_yag_akis_M5_pul_0_arka",
+      "b": "k79_yag_akis_M5_ara_plaka_0_arka",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true,
+      "joint": "0_arka"
+    },
+    {
+      "a": "k79_yag_akis_M5_somun_0_arka",
+      "b": "k79_yag_akis_M5_pul_0_arka",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true,
+      "joint": "0_arka"
+    },
+    {
+      "a": "k79_yag_akis_M5x20_0_arka",
+      "b": "k79_yag_akis_M5_somun_0_arka",
+      "minimum_sampled_surface_distance_mm": 0.049477368563704716,
+      "contact_within_0_6_mm": true,
+      "joint": "0_arka"
+    },
+    {
+      "a": "k79_yag_akis_ayak_kaynagi_0_arka_sol",
+      "b": "k79_yag_akis_portal_0",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true
+    },
+    {
+      "a": "k79_yag_akis_ayak_kaynagi_0_arka_sol",
+      "b": "k79_yag_akis_ayak_0_arka",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true
+    },
+    {
+      "a": "k79_yag_akis_ayak_kaynagi_0_arka_sag",
+      "b": "k79_yag_akis_portal_0",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true
+    },
+    {
+      "a": "k79_yag_akis_ayak_kaynagi_0_arka_sag",
+      "b": "k79_yag_akis_ayak_0_arka",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true
+    },
+    {
+      "a": "k79_yag_akis_M5x20_1_on",
+      "b": "k79_yag_akis_ayak_1_on",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true,
+      "joint": "1_on"
+    },
+    {
+      "a": "k79_yag_akis_ayak_1_on",
+      "b": "yag_pompa_plakasi",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true,
+      "joint": "1_on"
+    },
+    {
+      "a": "k79_yag_akis_M5_ara_plaka_1_on",
+      "b": "yag_pompa_rafi",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true,
+      "joint": "1_on"
+    },
+    {
+      "a": "k79_yag_akis_M5_pul_1_on",
+      "b": "k79_yag_akis_M5_ara_plaka_1_on",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true,
+      "joint": "1_on"
+    },
+    {
+      "a": "k79_yag_akis_M5_somun_1_on",
+      "b": "k79_yag_akis_M5_pul_1_on",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true,
+      "joint": "1_on"
+    },
+    {
+      "a": "k79_yag_akis_M5x20_1_on",
+      "b": "k79_yag_akis_M5_somun_1_on",
+      "minimum_sampled_surface_distance_mm": 0.04957358167419364,
+      "contact_within_0_6_mm": true,
+      "joint": "1_on"
+    },
+    {
+      "a": "k79_yag_akis_ayak_kaynagi_1_on_sol",
+      "b": "k79_yag_akis_portal_1",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true
+    },
+    {
+      "a": "k79_yag_akis_ayak_kaynagi_1_on_sol",
+      "b": "k79_yag_akis_ayak_1_on",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true
+    },
+    {
+      "a": "k79_yag_akis_ayak_kaynagi_1_on_sag",
+      "b": "k79_yag_akis_portal_1",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true
+    },
+    {
+      "a": "k79_yag_akis_ayak_kaynagi_1_on_sag",
+      "b": "k79_yag_akis_ayak_1_on",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true
+    },
+    {
+      "a": "k79_yag_akis_M5x20_1_arka",
+      "b": "k79_yag_akis_ayak_1_arka",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true,
+      "joint": "1_arka"
+    },
+    {
+      "a": "k79_yag_akis_ayak_1_arka",
+      "b": "yag_pompa_plakasi",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true,
+      "joint": "1_arka"
+    },
+    {
+      "a": "k79_yag_akis_M5_ara_plaka_1_arka",
+      "b": "yag_pompa_rafi",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true,
+      "joint": "1_arka"
+    },
+    {
+      "a": "k79_yag_akis_M5_pul_1_arka",
+      "b": "k79_yag_akis_M5_ara_plaka_1_arka",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true,
+      "joint": "1_arka"
+    },
+    {
+      "a": "k79_yag_akis_M5_somun_1_arka",
+      "b": "k79_yag_akis_M5_pul_1_arka",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true,
+      "joint": "1_arka"
+    },
+    {
+      "a": "k79_yag_akis_M5x20_1_arka",
+      "b": "k79_yag_akis_M5_somun_1_arka",
+      "minimum_sampled_surface_distance_mm": 0.04957358167419364,
+      "contact_within_0_6_mm": true,
+      "joint": "1_arka"
+    },
+    {
+      "a": "k79_yag_akis_ayak_kaynagi_1_arka_sol",
+      "b": "k79_yag_akis_portal_1",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true
+    },
+    {
+      "a": "k79_yag_akis_ayak_kaynagi_1_arka_sol",
+      "b": "k79_yag_akis_ayak_1_arka",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true
+    },
+    {
+      "a": "k79_yag_akis_ayak_kaynagi_1_arka_sag",
+      "b": "k79_yag_akis_portal_1",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true
+    },
+    {
+      "a": "k79_yag_akis_ayak_kaynagi_1_arka_sag",
+      "b": "k79_yag_akis_ayak_1_arka",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true
+    },
+    {
+      "a": "k79_yag_akis_ust_pad_0",
+      "b": "yag_emis_filtresi",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true
+    },
+    {
+      "a": "k79_yag_akis_ust_pad_0",
+      "b": "k79_yag_akis_pad_yapistirici_0",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true
+    },
+    {
+      "a": "k79_yag_akis_pad_yapistirici_0",
+      "b": "k79_yag_akis_portal_0",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true
+    },
+    {
+      "a": "k79_yag_akis_ust_pad_1",
+      "b": "yag_geri_basinc_regulatoru_KBP",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true
+    },
+    {
+      "a": "k79_yag_akis_ust_pad_1",
+      "b": "k79_yag_akis_pad_yapistirici_1",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true
+    },
+    {
+      "a": "k79_yag_akis_pad_yapistirici_1",
+      "b": "k79_yag_akis_portal_1",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true
+    },
+    {
+      "a": "yag_emis_filtresi",
+      "b": "yag_pompa_plakasi",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true
+    },
+    {
+      "a": "yag_geri_basinc_regulatoru_KBP",
+      "b": "yag_pompa_plakasi",
+      "minimum_sampled_surface_distance_mm": 0.0,
+      "contact_within_0_6_mm": true
+    }
+  ],
+  "passed_selected_geometry_contacts": true,
+  "tool_access_checked": false,
+  "load_capacity_checked": false,
+  "production_release": false
+}

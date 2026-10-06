@@ -1,0 +1,62 @@
+{
+  "source_model_sha256": "c0c004f133fa4d715aebeb5c21b35df688367bbdb630a35c656aef4b4ff4341b",
+  "source_parts_sha256": "9a599433c1160266de75b4aaf01d6efd307f0466abd8b03c948dfa91cdef36fe",
+  "checks": [
+    {
+      "part": "DGRF_M10_civata_0",
+      "nominal_standard": "ISO4762 M10x35 A2-70",
+      "measured_length_mm": 35.0,
+      "measured_mounting_stack_mm": 16.5,
+      "measured_blind_bore_depth_mm": 24.0,
+      "measured_engagement_mm": 18.5,
+      "measured_bottom_clearance_mm": 5.5,
+      "measured_bore_center_error_mm": 3.426342654670477e-05,
+      "measured_nominal_thread_representation_radius_mm": 4.999996555991216,
+      "passed": true,
+      "thread_geometry_representation": "nominal cylindrical thread, not helically meshed teeth"
+    },
+    {
+      "part": "DGRF_M10_civata_1",
+      "nominal_standard": "ISO4762 M10x35 A2-70",
+      "measured_length_mm": 35.0,
+      "measured_mounting_stack_mm": 16.5,
+      "measured_blind_bore_depth_mm": 24.0,
+      "measured_engagement_mm": 18.5,
+      "measured_bottom_clearance_mm": 5.5,
+      "measured_bore_center_error_mm": 8.891212021519216e-06,
+      "measured_nominal_thread_representation_radius_mm": 5.000009430447082,
+      "passed": true,
+      "thread_geometry_representation": "nominal cylindrical thread, not helically meshed teeth"
+    },
+    {
+      "part": "DGRF_M10_civata_2",
+      "nominal_standard": "ISO4762 M10x35 A2-70",
+      "measured_length_mm": 35.0,
+      "measured_mounting_stack_mm": 16.5,
+      "measured_blind_bore_depth_mm": 24.0,
+      "measured_engagement_mm": 18.5,
+      "measured_bottom_clearance_mm": 5.5,
+      "measured_bore_center_error_mm": 7.614871204946082e-05,
+      "measured_nominal_thread_representation_radius_mm": 4.9999850396774415,
+      "passed": true,
+      "thread_geometry_representation": "nominal cylindrical thread, not helically meshed teeth"
+    },
+    {
+      "part": "DGRF_M10_civata_3",
+      "nominal_standard": "ISO4762 M10x35 A2-70",
+      "measured_length_mm": 35.0,
+      "measured_mounting_stack_mm": 16.5,
+      "measured_blind_bore_depth_mm": 24.0,
+      "measured_engagement_mm": 18.5,
+      "measured_bottom_clearance_mm": 5.5,
+      "measured_bore_center_error_mm": 7.387143614325942e-05,
+      "measured_nominal_thread_representation_radius_mm": 4.999997913720582,
+      "passed": true,
+      "thread_geometry_representation": "nominal cylindrical thread, not helically meshed teeth"
+    }
+  ],
+  "passed": true,
+  "tool_access_checked": false,
+  "whole_station_connections_verified": false,
+  "production_release": false
+}

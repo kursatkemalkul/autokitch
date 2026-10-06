@@ -1,0 +1,491 @@
+{
+  "source_parts_sha256": "9a599433c1160266de75b4aaf01d6efd307f0466abd8b03c948dfa91cdef36fe",
+  "source_model_sha256": "c0c004f133fa4d715aebeb5c21b35df688367bbdb630a35c656aef4b4ff4341b",
+  "source_definition": "arastirma/_uretec/h3/h3_k_sac_v1.py:iskelet, cap declaration",
+  "checks": [
+    {
+      "cap": "kose_dikmesi_20_-800_tapa",
+      "profile": "kose_dikmesi_20_-800",
+      "cap_thickness_mm": 2.0,
+      "closed_root_segments": [
+        {
+          "start_mm": [
+            4034.9998,
+            1856.5,
+            -812.5
+          ],
+          "end_mm": [
+            4034.9998,
+            1856.5,
+            -787.5
+          ],
+          "length_mm": 25.0
+        },
+        {
+          "start_mm": [
+            4034.9998,
+            1856.5,
+            -787.5
+          ],
+          "end_mm": [
+            4032.4998,
+            1856.5,
+            -785.0
+          ],
+          "length_mm": 3.5355339059327378
+        },
+        {
+          "start_mm": [
+            4032.4998,
+            1856.5,
+            -785.0
+          ],
+          "end_mm": [
+            4007.5002,
+            1856.5,
+            -785.0
+          ],
+          "length_mm": 24.9996000000001
+        },
+        {
+          "start_mm": [
+            4007.5002,
+            1856.5,
+            -785.0
+          ],
+          "end_mm": [
+            4005.0001,
+            1856.5,
+            -787.5
+          ],
+          "length_mm": 3.5356046173177704
+        },
+        {
+          "start_mm": [
+            4005.0001,
+            1856.5,
+            -787.5
+          ],
+          "end_mm": [
+            4005.0001,
+            1856.5,
+            -812.5
+          ],
+          "length_mm": 25.0
+        },
+        {
+          "start_mm": [
+            4005.0001,
+            1856.5,
+            -812.5
+          ],
+          "end_mm": [
+            4007.5002,
+            1856.5,
+            -815.0
+          ],
+          "length_mm": 3.5356046173177704
+        },
+        {
+          "start_mm": [
+            4007.5002,
+            1856.5,
+            -815.0
+          ],
+          "end_mm": [
+            4032.4998,
+            1856.5,
+            -815.0
+          ],
+          "length_mm": 24.9996000000001
+        },
+        {
+          "start_mm": [
+            4032.4998,
+            1856.5,
+            -815.0
+          ],
+          "end_mm": [
+            4034.9998,
+            1856.5,
+            -812.5
+          ],
+          "length_mm": 3.5355339059327378
+        }
+      ],
+      "perimeter_length_mm": 114.14147704650122,
+      "sampling_max_step_mm": 1.0,
+      "minimum_root_distance_mm": 0.0,
+      "maximum_root_gap_mm": 0.29259991596634294,
+      "source_declared_process": "Continuous perimeter TIG butt weld, then grind flush; native h3_k_sac_v1.iskelet declaration, not a protruding fillet or extra purchased fastener",
+      "source_profile_end_height_mm": 1856.5,
+      "cap_bottom_height_mm": 1856.5,
+      "root_geometry_within_0_6_mm": true,
+      "animation_and_torch_sequence_verified": false
+    },
+    {
+      "cap": "kose_dikmesi_20_42_tapa",
+      "profile": "kose_dikmesi_20_42",
+      "cap_thickness_mm": 2.0,
+      "closed_root_segments": [
+        {
+          "start_mm": [
+            4034.9998,
+            1856.5,
+            29.5
+          ],
+          "end_mm": [
+            4034.9998,
+            1856.5,
+            54.5
+          ],
+          "length_mm": 25.0
+        },
+        {
+          "start_mm": [
+            4034.9998,
+            1856.5,
+            54.5
+          ],
+          "end_mm": [
+            4032.4998,
+            1856.5,
+            57.0
+          ],
+          "length_mm": 3.5355339059327378
+        },
+        {
+          "start_mm": [
+            4032.4998,
+            1856.5,
+            57.0
+          ],
+          "end_mm": [
+            4007.5002,
+            1856.5,
+            57.0
+          ],
+          "length_mm": 24.9996000000001
+        },
+        {
+          "start_mm": [
+            4007.5002,
+            1856.5,
+            57.0
+          ],
+          "end_mm": [
+            4005.0001,
+            1856.5,
+            54.5
+          ],
+          "length_mm": 3.5356046173177704
+        },
+        {
+          "start_mm": [
+            4005.0001,
+            1856.5,
+            54.5
+          ],
+          "end_mm": [
+            4005.0001,
+            1856.5,
+            29.5
+          ],
+          "length_mm": 25.0
+        },
+        {
+          "start_mm": [
+            4005.0001,
+            1856.5,
+            29.5
+          ],
+          "end_mm": [
+            4007.5002,
+            1856.5,
+            27.0
+          ],
+          "length_mm": 3.5356046173177704
+        },
+        {
+          "start_mm": [
+            4007.5002,
+            1856.5,
+            27.0
+          ],
+          "end_mm": [
+            4032.4998,
+            1856.5,
+            27.0
+          ],
+          "length_mm": 24.9996000000001
+        },
+        {
+          "start_mm": [
+            4032.4998,
+            1856.5,
+            27.0
+          ],
+          "end_mm": [
+            4034.9998,
+            1856.5,
+            29.5
+          ],
+          "length_mm": 3.5355339059327378
+        }
+      ],
+      "perimeter_length_mm": 114.14147704650122,
+      "sampling_max_step_mm": 1.0,
+      "minimum_root_distance_mm": 0.0,
+      "maximum_root_gap_mm": 0.27236197931610356,
+      "source_declared_process": "Continuous perimeter TIG butt weld, then grind flush; native h3_k_sac_v1.iskelet declaration, not a protruding fillet or extra purchased fastener",
+      "source_profile_end_height_mm": 1856.5,
+      "cap_bottom_height_mm": 1856.5,
+      "root_geometry_within_0_6_mm": true,
+      "animation_and_torch_sequence_verified": false
+    },
+    {
+      "cap": "kose_dikmesi_380_-800_tapa",
+      "profile": "kose_dikmesi_380_-800",
+      "cap_thickness_mm": 2.0,
+      "closed_root_segments": [
+        {
+          "start_mm": [
+            4395.0,
+            1856.5,
+            -812.5
+          ],
+          "end_mm": [
+            4395.0,
+            1856.5,
+            -787.5
+          ],
+          "length_mm": 25.0
+        },
+        {
+          "start_mm": [
+            4395.0,
+            1856.5,
+            -787.5
+          ],
+          "end_mm": [
+            4392.4999,
+            1856.5,
+            -785.0
+          ],
+          "length_mm": 3.535604617318092
+        },
+        {
+          "start_mm": [
+            4392.4999,
+            1856.5,
+            -785.0
+          ],
+          "end_mm": [
+            4367.4998,
+            1856.5,
+            -785.0
+          ],
+          "length_mm": 25.000100000000202
+        },
+        {
+          "start_mm": [
+            4367.4998,
+            1856.5,
+            -785.0
+          ],
+          "end_mm": [
+            4364.9998,
+            1856.5,
+            -787.5
+          ],
+          "length_mm": 3.5355339059327378
+        },
+        {
+          "start_mm": [
+            4364.9998,
+            1856.5,
+            -787.5
+          ],
+          "end_mm": [
+            4364.9998,
+            1856.5,
+            -812.5
+          ],
+          "length_mm": 25.0
+        },
+        {
+          "start_mm": [
+            4364.9998,
+            1856.5,
+            -812.5
+          ],
+          "end_mm": [
+            4367.4998,
+            1856.5,
+            -815.0
+          ],
+          "length_mm": 3.5355339059327378
+        },
+        {
+          "start_mm": [
+            4367.4998,
+            1856.5,
+            -815.0
+          ],
+          "end_mm": [
+            4392.4999,
+            1856.5,
+            -815.0
+          ],
+          "length_mm": 25.000100000000202
+        },
+        {
+          "start_mm": [
+            4392.4999,
+            1856.5,
+            -815.0
+          ],
+          "end_mm": [
+            4395.0,
+            1856.5,
+            -812.5
+          ],
+          "length_mm": 3.535604617318092
+        }
+      ],
+      "perimeter_length_mm": 114.14247704650207,
+      "sampling_max_step_mm": 1.0,
+      "minimum_root_distance_mm": 0.0,
+      "maximum_root_gap_mm": 0.2928433458439189,
+      "source_declared_process": "Continuous perimeter TIG butt weld, then grind flush; native h3_k_sac_v1.iskelet declaration, not a protruding fillet or extra purchased fastener",
+      "source_profile_end_height_mm": 1856.5,
+      "cap_bottom_height_mm": 1856.5,
+      "root_geometry_within_0_6_mm": true,
+      "animation_and_torch_sequence_verified": false
+    },
+    {
+      "cap": "kose_dikmesi_380_42_tapa",
+      "profile": "kose_dikmesi_380_42",
+      "cap_thickness_mm": 2.0,
+      "closed_root_segments": [
+        {
+          "start_mm": [
+            4395.0,
+            1856.5,
+            29.5
+          ],
+          "end_mm": [
+            4395.0,
+            1856.5,
+            54.5
+          ],
+          "length_mm": 25.0
+        },
+        {
+          "start_mm": [
+            4395.0,
+            1856.5,
+            54.5
+          ],
+          "end_mm": [
+            4392.4999,
+            1856.5,
+            57.0
+          ],
+          "length_mm": 3.535604617318092
+        },
+        {
+          "start_mm": [
+            4392.4999,
+            1856.5,
+            57.0
+          ],
+          "end_mm": [
+            4367.4998,
+            1856.5,
+            57.0
+          ],
+          "length_mm": 25.000100000000202
+        },
+        {
+          "start_mm": [
+            4367.4998,
+            1856.5,
+            57.0
+          ],
+          "end_mm": [
+            4364.9998,
+            1856.5,
+            54.5
+          ],
+          "length_mm": 3.5355339059327378
+        },
+        {
+          "start_mm": [
+            4364.9998,
+            1856.5,
+            54.5
+          ],
+          "end_mm": [
+            4364.9998,
+            1856.5,
+            29.5
+          ],
+          "length_mm": 25.0
+        },
+        {
+          "start_mm": [
+            4364.9998,
+            1856.5,
+            29.5
+          ],
+          "end_mm": [
+            4367.4998,
+            1856.5,
+            27.0
+          ],
+          "length_mm": 3.5355339059327378
+        },
+        {
+          "start_mm": [
+            4367.4998,
+            1856.5,
+            27.0
+          ],
+          "end_mm": [
+            4392.4999,
+            1856.5,
+            27.0
+          ],
+          "length_mm": 25.000100000000202
+        },
+        {
+          "start_mm": [
+            4392.4999,
+            1856.5,
+            27.0
+          ],
+          "end_mm": [
+            4395.0,
+            1856.5,
+            29.5
+          ],
+          "length_mm": 3.535604617318092
+        }
+      ],
+      "perimeter_length_mm": 114.14247704650207,
+      "sampling_max_step_mm": 1.0,
+      "minimum_root_distance_mm": 0.0,
+      "maximum_root_gap_mm": 0.2723619793160831,
+      "source_declared_process": "Continuous perimeter TIG butt weld, then grind flush; native h3_k_sac_v1.iskelet declaration, not a protruding fillet or extra purchased fastener",
+      "source_profile_end_height_mm": 1856.5,
+      "cap_bottom_height_mm": 1856.5,
+      "root_geometry_within_0_6_mm": true,
+      "animation_and_torch_sequence_verified": false
+    }
+  ],
+  "all_cap_root_geometries_within_0_6_mm": true,
+  "animation_integration_complete": false,
+  "production_release": false,
+  "note": "Four source-declared flush butt welds need an explicit fabrication operation and highlight in the common player; this measured report alone does not resolve whole-station connection gates."
+}
