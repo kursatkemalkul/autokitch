@@ -63,6 +63,6 @@ Robot entegrasyon adımı93, makine geometrisini koruyan son render/animasyon ad
 - Depo herkese açık. Oturum kayıtları `_local/claude_oturum/` altında durur (Kemal: kalsın); `_local/` siteye kopyalanmaz. Parola, anahtar, kişisel bilgi depoya konmaz.
 - Büyük ara dosyalar (`.pkl`, 100 MB üstü GLB) depoya konmaz; GLB gerekirse kayıpsız `.gz` olarak.
 
-ZİNCİR KİLİDİ: BOŞ
+ZİNCİR KİLİDİ: CODEX · adım94 · v25 QR diğer tarafta/aynı derinlik, kutu dönüşü koridor içinden · coord/codex-qr-donus-v25
 
 Codex v23/adım92: sağ duvar panosu ve ayrı router bölmesi; gömülü iniş, sıfır kapak, doğru dirsek/kesim ve ayrı kablo yolları. İki tam koşu bayt aynı; kanal/kablo katıları kapalı, modüllerde örtüşme yok, kablo yolunda2mm asgari pay. Elektrik nihai devre/kesit-seçicilik ve döşeme yükü, özel ray ve tam robot çarpışması hâlâ açık. E/K cloud dosyalarına dokunulmadı.
