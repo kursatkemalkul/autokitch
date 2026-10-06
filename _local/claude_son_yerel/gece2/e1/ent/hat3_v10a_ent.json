@@ -1,0 +1,958 @@
+{
+"istasyon": "EMNIYET",
+"mek": "Elektrik",
+"eski_birim": [],
+"parca": {
+"emniyet_F_SOL_braket": {
+"dugum": "EMNIYET__paslanmaz",
+"kpk": 0,
+"kutu": [
+2521.0,
+2589.0,
+2162.5,
+2168.5,
+46.5,
+60.5
+],
+"indis": [
+0,
+0
+],
+"tur": "braket",
+"bom": [
+"Paslanmaz 304 braket 2 mm (sensör → U_F_GOVDE__sac)"
+]
+},
+"emniyet_F_SAG_braket": {
+"dugum": "EMNIYET__paslanmaz",
+"kpk": 0,
+"kutu": [
+3911.0,
+3979.0,
+2162.5,
+2168.5,
+46.5,
+60.5
+],
+"indis": [
+0,
+0
+],
+"tur": "braket",
+"bom": [
+"Paslanmaz 304 braket 2 mm (sensör → U_F_GOVDE__sac)"
+]
+},
+"emniyet_E_UST_SAG_braket": {
+"dugum": "EMNIYET__paslanmaz",
+"kpk": 0,
+"kutu": [
+4881.5,
+4882.5,
+866.0,
+934.0,
+28.0,
+42.0
+],
+"indis": [
+0,
+0
+],
+"tur": "braket",
+"bom": [
+"Paslanmaz 304 braket 2 mm (sensör → E_GOVDE__sac)"
+]
+},
+"emniyet_E_ALT_SOL_braket": {
+"dugum": "EMNIYET__paslanmaz",
+"kpk": 0,
+"kutu": [
+4837.5,
+4841.5,
+166.0,
+234.0,
+28.0,
+42.0
+],
+"indis": [
+0,
+0
+],
+"tur": "braket",
+"bom": [
+"Paslanmaz 304 braket 2 mm (sensör → E_GOVDE__sac)"
+]
+},
+"emniyet_E_ALT_SAG_braket": {
+"dugum": "EMNIYET__paslanmaz",
+"kpk": 0,
+"kutu": [
+4881.5,
+4882.5,
+166.0,
+234.0,
+28.0,
+42.0
+],
+"indis": [
+0,
+0
+],
+"tur": "braket",
+"bom": [
+"Paslanmaz 304 braket 2 mm (sensör → E_GOVDE__sac)"
+]
+},
+"emniyet_A_sensor": {
+"dugum": "EMNIYET__sari",
+"kpk": 0,
+"kutu": [
+1372.5,
+1397.5,
+894.0,
+966.0,
+26.0,
+44.0
+],
+"indis": [
+0,
+0
+],
+"tur": "sensor",
+"bom": [
+"Schmersal RSS36 RFID kodlu emniyet sensörü (IP69K, M12)"
+]
+},
+"emniyet_TOPPING_K1_sensor": {
+"dugum": "EMNIYET__sari",
+"kpk": 0,
+"kutu": [
+1892.5,
+1917.5,
+894.0,
+966.0,
+6.0,
+24.0
+],
+"indis": [
+0,
+0
+],
+"tur": "sensor",
+"bom": [
+"Schmersal RSS36 RFID kodlu emniyet sensörü (IP69K, M12)"
+]
+},
+"emniyet_TOPPING_K2_sensor": {
+"dugum": "EMNIYET__sari",
+"kpk": 0,
+"kutu": [
+2016.5,
+2041.5,
+894.0,
+966.0,
+6.0,
+24.0
+],
+"indis": [
+0,
+0
+],
+"tur": "sensor",
+"bom": [
+"Schmersal RSS36 RFID kodlu emniyet sensörü (IP69K, M12)"
+]
+},
+"emniyet_F_SOL_sensor": {
+"dugum": "EMNIYET__sari",
+"kpk": 0,
+"kutu": [
+2519.0,
+2591.0,
+2137.5,
+2162.5,
+44.5,
+62.5
+],
+"indis": [
+0,
+0
+],
+"tur": "sensor",
+"bom": [
+"Schmersal RSS36 RFID kodlu emniyet sensörü (IP69K, M12)"
+]
+},
+"emniyet_F_SAG_sensor": {
+"dugum": "EMNIYET__sari",
+"kpk": 0,
+"kutu": [
+3909.0,
+3981.0,
+2137.5,
+2162.5,
+44.5,
+62.5
+],
+"indis": [
+0,
+0
+],
+"tur": "sensor",
+"bom": [
+"Schmersal RSS36 RFID kodlu emniyet sensörü (IP69K, M12)"
+]
+},
+"emniyet_K_sensor": {
+"dugum": "EMNIYET__sari",
+"kpk": 0,
+"kutu": [
+4325.0,
+4365.0,
+900.0,
+1020.0,
+24.0,
+44.0
+],
+"indis": [
+0,
+0
+],
+"tur": "sensor",
+"bom": [
+"Schmersal AZM40 kilitli emniyet anahtarı (kapak kilidi, M12)"
+]
+},
+"emniyet_E_UST_SOL_sensor": {
+"dugum": "EMNIYET__sari",
+"kpk": 0,
+"kutu": [
+4832.5,
+4857.5,
+1864.0,
+1936.0,
+26.0,
+44.0
+],
+"indis": [
+0,
+0
+],
+"tur": "sensor",
+"bom": [
+"Schmersal RSS36 RFID kodlu emniyet sensörü (IP69K, M12)"
+]
+},
+"emniyet_E_UST_SAG_sensor": {
+"dugum": "EMNIYET__sari",
+"kpk": 0,
+"kutu": [
+4882.5,
+4907.5,
+864.0,
+936.0,
+26.0,
+44.0
+],
+"indis": [
+0,
+0
+],
+"tur": "sensor",
+"bom": [
+"Schmersal RSS36 RFID kodlu emniyet sensörü (IP69K, M12)"
+]
+},
+"emniyet_E_ALT_SOL_sensor": {
+"dugum": "EMNIYET__sari",
+"kpk": 0,
+"kutu": [
+4812.5,
+4837.5,
+164.0,
+236.0,
+26.0,
+44.0
+],
+"indis": [
+0,
+0
+],
+"tur": "sensor",
+"bom": [
+"Schmersal RSS36 RFID kodlu emniyet sensörü (IP69K, M12)"
+]
+},
+"emniyet_E_ALT_SAG_sensor": {
+"dugum": "EMNIYET__sari",
+"kpk": 0,
+"kutu": [
+4882.5,
+4907.5,
+164.0,
+236.0,
+26.0,
+44.0
+],
+"indis": [
+0,
+0
+],
+"tur": "sensor",
+"bom": [
+"Schmersal RSS36 RFID kodlu emniyet sensörü (IP69K, M12)"
+]
+},
+"emniyet_A_aktuator": {
+"dugum": "EMNIYET__siyah",
+"kpk": 1,
+"kutu": [
+1372.5,
+1397.5,
+894.0,
+966.0,
+47.0,
+59.0
+],
+"indis": [
+0,
+0
+],
+"tur": "aktuator",
+"bom": [
+"Schmersal RST36-1 aktüatör"
+]
+},
+"emniyet_TOPPING_K1_aktuator": {
+"dugum": "EMNIYET__siyah",
+"kpk": 1,
+"kutu": [
+1892.5,
+1917.5,
+894.0,
+966.0,
+27.0,
+39.0
+],
+"indis": [
+0,
+0
+],
+"tur": "aktuator",
+"bom": [
+"Schmersal RST36-1 aktüatör"
+]
+},
+"emniyet_TOPPING_K2_aktuator": {
+"dugum": "EMNIYET__siyah",
+"kpk": 1,
+"kutu": [
+2016.5,
+2041.5,
+894.0,
+966.0,
+27.0,
+39.0
+],
+"indis": [
+0,
+0
+],
+"tur": "aktuator",
+"bom": [
+"Schmersal RST36-1 aktüatör"
+]
+},
+"emniyet_K_aktuator": {
+"dugum": "EMNIYET__siyah",
+"kpk": 1,
+"kutu": [
+4332.5,
+4357.5,
+924.0,
+996.0,
+47.0,
+59.0
+],
+"indis": [
+0,
+0
+],
+"tur": "aktuator",
+"bom": [
+"Schmersal AZM40 aktüatörü"
+]
+},
+"emniyet_E_UST_SOL_aktuator": {
+"dugum": "EMNIYET__siyah",
+"kpk": 1,
+"kutu": [
+4832.5,
+4857.5,
+1864.0,
+1936.0,
+47.0,
+59.0
+],
+"indis": [
+0,
+0
+],
+"tur": "aktuator",
+"bom": [
+"Schmersal RST36-1 aktüatör"
+]
+},
+"emniyet_E_UST_SAG_aktuator": {
+"dugum": "EMNIYET__siyah",
+"kpk": 1,
+"kutu": [
+4882.5,
+4907.5,
+864.0,
+936.0,
+47.0,
+59.0
+],
+"indis": [
+0,
+0
+],
+"tur": "aktuator",
+"bom": [
+"Schmersal RST36-1 aktüatör"
+]
+},
+"emniyet_E_ALT_SOL_aktuator": {
+"dugum": "EMNIYET__siyah",
+"kpk": 1,
+"kutu": [
+4812.5,
+4837.5,
+164.0,
+236.0,
+47.0,
+59.0
+],
+"indis": [
+0,
+0
+],
+"tur": "aktuator",
+"bom": [
+"Schmersal RST36-1 aktüatör"
+]
+},
+"emniyet_E_ALT_SAG_aktuator": {
+"dugum": "EMNIYET__siyah",
+"kpk": 1,
+"kutu": [
+4882.5,
+4907.5,
+164.0,
+236.0,
+47.0,
+59.0
+],
+"indis": [
+0,
+0
+],
+"tur": "aktuator",
+"bom": [
+"Schmersal RST36-1 aktüatör"
+]
+},
+"emniyet_F_SAG_aktuator": {
+"dugum": "EMNIYET__siyah__KAPAK_F_SAG",
+"kpk": 1,
+"kutu": [
+3909.0,
+3981.0,
+2137.5,
+2162.5,
+65.5,
+77.5
+],
+"indis": [
+0,
+0
+],
+"tur": "aktuator",
+"bom": [
+"Schmersal RST36-1 aktüatör"
+]
+},
+"emniyet_F_SOL_aktuator": {
+"dugum": "EMNIYET__siyah__KAPAK_F_SOL",
+"kpk": 1,
+"kutu": [
+2519.0,
+2591.0,
+2137.5,
+2162.5,
+65.5,
+77.5
+],
+"indis": [
+0,
+0
+],
+"tur": "aktuator",
+"bom": [
+"Schmersal RST36-1 aktüatör"
+]
+}
+},
+"karsi": [
+{
+"kapak": "A",
+"tip": "RSS36",
+"karsi": "KAIDE_A__sac",
+"bosluk": 0.5,
+"braket": null
+},
+{
+"kapak": "TOPPING_K1",
+"tip": "RSS36",
+"karsi": "TOPPING_GOVDE__kabuk",
+"bosluk": 0.5,
+"braket": null
+},
+{
+"kapak": "TOPPING_K2",
+"tip": "RSS36",
+"karsi": "TOPPING_GOVDE__kabuk",
+"bosluk": 0.5,
+"braket": null
+},
+{
+"kapak": "F_SOL",
+"tip": "RSS36",
+"karsi": "U_F_GOVDE__sac",
+"bosluk": 6.0,
+"braket": [
+2521.0,
+2162.5,
+46.5,
+2589.0,
+2168.5,
+60.5
+]
+},
+{
+"kapak": "F_SAG",
+"tip": "RSS36",
+"karsi": "U_F_GOVDE__sac",
+"bosluk": 6.0,
+"braket": [
+3911.0,
+2162.5,
+46.5,
+3979.0,
+2168.5,
+60.5
+]
+},
+{
+"kapak": "K",
+"tip": "AZM40",
+"karsi": "K_GOVDE__sac",
+"bosluk": 0.0,
+"braket": null
+},
+{
+"kapak": "E_UST_SOL",
+"tip": "RSS36",
+"karsi": "U_KE_GOVDE__sac",
+"bosluk": 0.5,
+"braket": null
+},
+{
+"kapak": "E_UST_SAG",
+"tip": "RSS36",
+"karsi": "E_GOVDE__sac",
+"bosluk": 1.0,
+"braket": [
+4881.5,
+866.0,
+28.0,
+4882.5,
+934.0,
+42.0
+]
+},
+{
+"kapak": "E_ALT_SOL",
+"tip": "RSS36",
+"karsi": "E_GOVDE__sac",
+"bosluk": 4.0,
+"braket": [
+4837.5,
+166.0,
+28.0,
+4841.5,
+234.0,
+42.0
+]
+},
+{
+"kapak": "E_ALT_SAG",
+"tip": "RSS36",
+"karsi": "E_GOVDE__sac",
+"bosluk": 1.0,
+"braket": [
+4881.5,
+166.0,
+28.0,
+4882.5,
+234.0,
+42.0
+]
+}
+],
+"log": [
+"  A           RSS36 sensör (1372.5, 894.0, 26.0) · aktüatör (1372.5, 894.0, 47.0) · tutunan KAIDE_A__sac (0.5 mm)",
+"  TOPPING_K1  RSS36 sensör (1892.5, 894.0, 6.0) · aktüatör (1892.5, 894.0, 27.0) · tutunan TOPPING_GOVDE__kabuk (0.5 mm)",
+"  TOPPING_K2  RSS36 sensör (2016.5, 894.0, 6.0) · aktüatör (2016.5, 894.0, 27.0) · tutunan TOPPING_GOVDE__kabuk (0.5 mm)",
+"  F_SOL       RSS36 sensör (2519.0, 2137.5, 44.5) · aktüatör (2519.0, 2137.5, 65.5) · tutunan U_F_GOVDE__sac (6.0 mm) · braket",
+"  F_SAG       RSS36 sensör (3909.0, 2137.5, 44.5) · aktüatör (3909.0, 2137.5, 65.5) · tutunan U_F_GOVDE__sac (6.0 mm) · braket",
+"  K           AZM40 sensör (4325.0, 900.0, 24.0) · aktüatör (4332.5, 924.0, 47.0) · tutunan K_GOVDE__sac (0.0 mm)",
+"  E_UST_SOL   RSS36 sensör (4832.5, 1864.0, 26.0) · aktüatör (4832.5, 1864.0, 47.0) · tutunan U_KE_GOVDE__sac (0.5 mm)",
+"  E_UST_SAG   RSS36 sensör (4882.5, 864.0, 26.0) · aktüatör (4882.5, 864.0, 47.0) · tutunan E_GOVDE__sac (1.0 mm) · braket",
+"  E_ALT_SOL   RSS36 sensör (4812.5, 164.0, 26.0) · aktüatör (4812.5, 164.0, 47.0) · tutunan E_GOVDE__sac (4.0 mm) · braket",
+"  E_ALT_SAG   RSS36 sensör (4882.5, 164.0, 26.0) · aktüatör (4882.5, 164.0, 47.0) · tutunan E_GOVDE__sac (1.0 mm) · braket",
+"  yeni düğüm/ağ: EMNIYET__sari (malzeme ME4_EMNIYET__sari ← ME4_salter_sari)",
+"  EMNIYET__sari              =    1 parça ·      12 üçgen · kat 3 · mek 0 · kpk 0 aralık",
+"  yeni düğüm/ağ: EMNIYET__siyah (malzeme ME4_EMNIYET__siyah ← MK_K_GOVDE__siyah)",
+"  EMNIYET__siyah             =    1 parça ·      12 üçgen · kat 3 · mek 0 · kpk 1 aralık",
+"  EMNIYET__sari              +    1 parça ·      12 üçgen · kat 3 · mek 16 · kpk 0 aralık",
+"  EMNIYET__siyah             +    1 parça ·      12 üçgen · kat 3 · mek 16 · kpk 1 aralık",
+"  EMNIYET__sari              +    1 parça ·      12 üçgen · kat 3 · mek 16 · kpk 0 aralık",
+"  EMNIYET__siyah             +    1 parça ·      12 üçgen · kat 3 · mek 16 · kpk 1 aralık",
+"  EMNIYET__sari              +    1 parça ·      12 üçgen · kat 3 · mek 23 · kpk 0 aralık",
+"  yeni düğüm/ağ: EMNIYET__siyah__KAPAK_F_SOL (malzeme ME4_EMNIYET__siyah__KAPAK_F_SOL ← MK_K_GOVDE__siyah)",
+"  EMNIYET__siyah__KAPAK_F_SOL =    1 parça ·      12 üçgen · kat 3 · mek 23 · kpk 1 aralık",
+"  yeni düğüm/ağ: EMNIYET__paslanmaz (malzeme ME4_EMNIYET__paslanmaz ← MU_U_F_GOVDE__paslanmaz)",
+"  EMNIYET__paslanmaz         =    1 parça ·      12 üçgen · kat 3 · mek 23 · kpk 0 aralık",
+"  EMNIYET__sari              +    1 parça ·      12 üçgen · kat 3 · mek 23 · kpk 0 aralık",
+"  yeni düğüm/ağ: EMNIYET__siyah__KAPAK_F_SAG (malzeme ME4_EMNIYET__siyah__KAPAK_F_SAG ← MK_K_GOVDE__siyah)",
+"  EMNIYET__siyah__KAPAK_F_SAG =    1 parça ·      12 üçgen · kat 3 · mek 23 · kpk 1 aralık",
+"  EMNIYET__paslanmaz         +    1 parça ·      12 üçgen · kat 3 · mek 23 · kpk 0 aralık",
+"  EMNIYET__sari              +    1 parça ·      12 üçgen · kat 3 · mek 30 · kpk 0 aralık",
+"  EMNIYET__siyah             +    1 parça ·      12 üçgen · kat 3 · mek 30 · kpk 1 aralık",
+"  EMNIYET__sari              +    1 parça ·      12 üçgen · kat 3 · mek 38 · kpk 0 aralık",
+"  EMNIYET__siyah             +    1 parça ·      12 üçgen · kat 3 · mek 38 · kpk 1 aralık",
+"  EMNIYET__sari              +    1 parça ·      12 üçgen · kat 3 · mek 38 · kpk 0 aralık",
+"  EMNIYET__siyah             +    1 parça ·      12 üçgen · kat 3 · mek 38 · kpk 1 aralık",
+"  EMNIYET__paslanmaz         +    1 parça ·      12 üçgen · kat 3 · mek 38 · kpk 0 aralık",
+"  EMNIYET__sari              +    1 parça ·      12 üçgen · kat 3 · mek 38 · kpk 0 aralık",
+"  EMNIYET__siyah             +    1 parça ·      12 üçgen · kat 3 · mek 38 · kpk 1 aralık",
+"  EMNIYET__paslanmaz         +    1 parça ·      12 üçgen · kat 3 · mek 38 · kpk 0 aralık",
+"  EMNIYET__sari              +    1 parça ·      12 üçgen · kat 3 · mek 38 · kpk 0 aralık",
+"  EMNIYET__siyah             +    1 parça ·      12 üçgen · kat 3 · mek 38 · kpk 1 aralık",
+"  EMNIYET__paslanmaz         +    1 parça ·      12 üçgen · kat 3 · mek 38 · kpk 0 aralık"
+],
+"yer": [
+[
+"A",
+0,
+"",
+[
+[
+1372.5,
+894.0,
+47.0
+],
+[
+1397.5,
+966.0,
+59.0
+]
+],
+[
+[
+1372.5,
+894.0,
+26.0
+],
+[
+1397.5,
+966.0,
+44.0
+]
+],
+"RSS36"
+],
+[
+"TOPPING_K1",
+16,
+"",
+[
+[
+1892.5,
+894.0,
+27.0
+],
+[
+1917.5,
+966.0,
+39.0
+]
+],
+[
+[
+1892.5,
+894.0,
+6.0
+],
+[
+1917.5,
+966.0,
+24.0
+]
+],
+"RSS36"
+],
+[
+"TOPPING_K2",
+16,
+"",
+[
+[
+2016.5,
+894.0,
+27.0
+],
+[
+2041.5,
+966.0,
+39.0
+]
+],
+[
+[
+2016.5,
+894.0,
+6.0
+],
+[
+2041.5,
+966.0,
+24.0
+]
+],
+"RSS36"
+],
+[
+"F_SOL",
+23,
+"__KAPAK_F_SOL",
+[
+[
+2519.0,
+2137.5,
+65.5
+],
+[
+2591.0,
+2162.5,
+77.5
+]
+],
+[
+[
+2519.0,
+2137.5,
+44.5
+],
+[
+2591.0,
+2162.5,
+62.5
+]
+],
+"RSS36"
+],
+[
+"F_SAG",
+23,
+"__KAPAK_F_SAG",
+[
+[
+3909.0,
+2137.5,
+65.5
+],
+[
+3981.0,
+2162.5,
+77.5
+]
+],
+[
+[
+3909.0,
+2137.5,
+44.5
+],
+[
+3981.0,
+2162.5,
+62.5
+]
+],
+"RSS36"
+],
+[
+"K",
+30,
+"",
+[
+[
+4332.5,
+924.0,
+47.0
+],
+[
+4357.5,
+996.0,
+59.0
+]
+],
+[
+[
+4325.0,
+900.0,
+24.0
+],
+[
+4365.0,
+1020.0,
+44.0
+]
+],
+"AZM40"
+],
+[
+"E_UST_SOL",
+38,
+"",
+[
+[
+4832.5,
+1864.0,
+47.0
+],
+[
+4857.5,
+1936.0,
+59.0
+]
+],
+[
+[
+4832.5,
+1864.0,
+26.0
+],
+[
+4857.5,
+1936.0,
+44.0
+]
+],
+"RSS36"
+],
+[
+"E_UST_SAG",
+38,
+"",
+[
+[
+4882.5,
+864.0,
+47.0
+],
+[
+4907.5,
+936.0,
+59.0
+]
+],
+[
+[
+4882.5,
+864.0,
+26.0
+],
+[
+4907.5,
+936.0,
+44.0
+]
+],
+"RSS36"
+],
+[
+"E_ALT_SOL",
+38,
+"",
+[
+[
+4812.5,
+164.0,
+47.0
+],
+[
+4837.5,
+236.0,
+59.0
+]
+],
+[
+[
+4812.5,
+164.0,
+26.0
+],
+[
+4837.5,
+236.0,
+44.0
+]
+],
+"RSS36"
+],
+[
+"E_ALT_SAG",
+38,
+"",
+[
+[
+4882.5,
+164.0,
+47.0
+],
+[
+4907.5,
+236.0,
+59.0
+]
+],
+[
+[
+4882.5,
+164.0,
+26.0
+],
+[
+4907.5,
+236.0,
+44.0
+]
+],
+"RSS36"
+]
+]
+}

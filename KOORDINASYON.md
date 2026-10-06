@@ -15,6 +15,8 @@ Kemal'in kararı (5 Eki 2026): iki ajan aynı anda, farklı istasyonlarda çalı
 | **F montaj animasyonu** (TOPPING v6 yöntemiyle: açınım → büküm → montaj, her parça vidalı / kaynaklı, yol + bağlantı denetimi) | Claude | `claude/f-montaj` | ÇALIŞIYOR (5 Eki) · zincir adımları **67–69** + gerekirse 80–89 |
 | **K montaj animasyonu** (KURALLAR §2, yeni yöntem: açınım → abkant → PEM → gerçek bağlantı; bağlı mı denetimi) | Codex | `codex/k-montaj` | ÇALIŞIYOR · TOPPING v6 altyapısı, 70–73 K düzeltmeleri; dört dosya kaydı 06b99c4 |
 | Standart önlemleri · robot + QR (madde 10–11): hücre kapısı emniyet anahtarı, robot gözdeyken QR müşteri kapısı kilitli + geri bildirim | Codex | (Codex seçer) | Codex'e bildirildi |
+| **E mekanizma montajı**: alt / üst modül mekanizmaları parça parça + vida vida (bugün iki blok geliyor), mevcut E animasyonuna ekleme | Claude (2. oturum) | `claude/e-mekanizma` | BAŞLIYOR (6 Eki) · zincir adımları **81–85** |
+| **A kontrol** · B kaynak görünürlüğü · elektrik + bilgi görünümü · son denetim | Claude (1. oturum) | `claude/a-kontrol` | BAŞLIYOR (6 Eki) · zincir adımları **86–89** |
 | Güvenlik devresi şeması (acil stop + kapı anahtarları + robot, tek röle / güvenlik PLC) | Claude + Codex | — | makine anahtarları bitince |
 
 Bir işe başlamadan önce tabloda başka bir ajanın aynı istasyonu ya da aynı dosyaları almadığını kontrol et.
@@ -43,7 +45,7 @@ Bir işe başlamadan önce tabloda başka bir ajanın aynı istasyonu ya da ayn�
 
 - Zincire yeni adım (58, 59 …) yalnız bir ajan yazar. Yazmaya başlamadan bu dosyanın en altındaki **ZİNCİR KİLİDİ** satırını kendi adınla doldur, commit + push et; adım bitince (iki koşu bayt aynı, SIRA.md kaydı) boşalt.
 - Kilit doluyken öteki ajan model değiştirmez; gerekiyorsa kilit sahibine / Kemal'e yazar.
-- Son model: `_local/claude_son_yerel/hat3_v10h.glb.gz` (adım 66) — branch `claude/topping-montaj-v6` (zincir betikleri 56–66 orada; 56–61 `claude/standart-makine`'de de; main'e birlikte birleştirilecek). Yeni adım çıkınca bu satır güncellenir.
+- Son model: `_local/claude_son_yerel/hat3_v10l.glb.gz` (adım 80 · zincir 67 F, 68–69 + 80 E; E montaj yayında) · önceki: `hat3_v10h.glb.gz` (adım 66) — branch `claude/topping-montaj-v6` (zincir betikleri 56–66 orada; 56–61 `claude/standart-makine`'de de; main'e birlikte birleştirilecek). Yeni adım çıkınca bu satır güncellenir.
 
 ## 4. Branch, birleştirme, yayın
 
