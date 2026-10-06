@@ -1,0 +1,76 @@
+{
+  "version": 24,
+  "method": "finite-segment exact distance, circular fillets; sampled swept floor footprint and sheet openings",
+  "cable_pairs": [
+    {
+      "a": "MAKINE_BESLEME",
+      "b": "QR_GUC",
+      "minimum_surface_clearance_m": 0.010999999999999573
+    },
+    {
+      "a": "MAKINE_BESLEME",
+      "b": "MAKINE_ETHERNET",
+      "minimum_surface_clearance_m": 0.0049999999999998995
+    },
+    {
+      "a": "QR_GUC",
+      "b": "ROBOT_BESLEME",
+      "minimum_surface_clearance_m": 0.005999999999999999
+    },
+    {
+      "a": "QR_GUC",
+      "b": "QR_ETHERNET",
+      "minimum_surface_clearance_m": 0.012999999999999998
+    },
+    {
+      "a": "ROBOT_BESLEME",
+      "b": "SURUCU_BESLEME",
+      "minimum_surface_clearance_m": 0.0029999999999999966
+    },
+    {
+      "a": "ROBOT_BESLEME",
+      "b": "SERVO_MOTOR_KABLO",
+      "minimum_surface_clearance_m": 0.0049999999999999975
+    },
+    {
+      "a": "SURUCU_BESLEME",
+      "b": "MAKINE_ETHERNET",
+      "minimum_surface_clearance_m": 0.0029999999999997867
+    },
+    {
+      "a": "SURUCU_BESLEME",
+      "b": "QR_ETHERNET",
+      "minimum_surface_clearance_m": 0.010999999999999795
+    },
+    {
+      "a": "SERVO_MOTOR_KABLO",
+      "b": "QR_ETHERNET",
+      "minimum_surface_clearance_m": 0.013999999999999999
+    },
+    {
+      "a": "UR_HIGH_FLEX_12M_SABIT",
+      "b": "UR_ETHERNET",
+      "minimum_surface_clearance_m": 0.0032000000000000084
+    },
+    {
+      "a": "MAKINE_ETHERNET",
+      "b": "QR_ETHERNET",
+      "minimum_surface_clearance_m": 0.008840822079655836
+    },
+    {
+      "a": "MAKINE_ETHERNET",
+      "b": "UR_ETHERNET",
+      "minimum_surface_clearance_m": 0.010000000000000016
+    },
+    {
+      "a": "QR_ETHERNET",
+      "b": "UR_ETHERNET",
+      "minimum_surface_clearance_m": 0.002000000000000007
+    }
+  ],
+  "errors": [],
+  "passed": true,
+  "minimum_required_intercable_clearance_m": 0.002,
+  "power_signal_separated": true,
+  "circuit_ratings_certified": false
+}
