@@ -12,7 +12,7 @@ import os, sys, json, pickle
 import numpy as np
 import trimesh
 HERE = os.path.dirname(os.path.abspath(__file__)); os.chdir(HERE)
-D = pickle.load(open('plan_t5.pkl', 'rb'))
+D = pickle.load(open('plan_e.pkl', 'rb'))
 P, HAR, GOR, MF, ADIM = D['P'], D['HAR'], D['GOR'], D['MF'], D['ADIM']
 CEV = set(D['CEVRE'])
 TOL = 0.6
