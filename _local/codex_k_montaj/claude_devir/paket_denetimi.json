@@ -1,0 +1,24 @@
+{
+  "branch": "codex/k-montaj",
+  "model_sha256": "9ce8fdfd34ead660b71ef13660bacb7d451848747e6b4ace648af441c4ab7158",
+  "archive_sha256": "5bfffc97746b5899b6e7eb8acfb7b8ad4d6e3e7b2b00834947d45c0f2394dce4",
+  "gzip_sha256": "ced40990b31a171254827442cdacd6be6dbb88237d7b6bfdd7424a1439f9fe30",
+  "archive_bytes": 24083713,
+  "gzip_bytes": 62472613,
+  "original_model_bytes": 342045108,
+  "portable_roundtrip_exact": true,
+  "objects": {
+    "plan_k_clip_full.pkl": {
+      "original_pickle_sha256": "eeceddad3ee1f1972e97d799573ef4ea75b797d25d37dc620ea08e6a530f0a5d"
+    },
+    "k_parca_clip_verified.pkl": {
+      "original_pickle_sha256": "5766aa0cdbead66d50869124548123b6a15ae15a30b5f1a45c8a53a4c287963c"
+    },
+    "k_bil_clip.pkl": {
+      "original_pickle_sha256": "088d570592ed00b6be1cbc068351d15627c0bef6338ab6113c7d46311d8a4119"
+    }
+  },
+  "pickle_bytes_after_restore_may_differ": true,
+  "all_previous_audits_are_evidence_not_automatic_release": true,
+  "production_release": false
+}

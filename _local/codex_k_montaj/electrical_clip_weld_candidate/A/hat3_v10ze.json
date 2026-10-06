@@ -1,0 +1,63 @@
+{
+  "step": 79,
+  "input_sha256": "5f00073a06682f0f231bef4e93019abc7ecd06ad33be6b1bdd9baeaa206ffc27",
+  "payload_sha256": "0bee38cb8ce76fec35251624d68c4f5815842f2b72fceb3201548bd845cd615f",
+  "output_sha256": "9ce8fdfd34ead660b71ef13660bacb7d451848747e6b4ace648af441c4ab7158",
+  "matched_source_triangles": {
+    "elk_k_tarti_celik_1": 128,
+    "elk_k_celik_1": 348,
+    "elk_k_celik_6": 348,
+    "elk_k_celik_7": 348
+  },
+  "naming_grid_mm": 0.0001,
+  "maximum_naming_grid_adjustment_mm": 7.098652627168584e-05,
+  "repairs": [
+    {
+      "part": "elk_k_celik_1",
+      "closed_status": "Error.NoError",
+      "maximum_declared_precision_adjustment_mm": 0.0,
+      "purpose": "Unchanged exact cable clip template; add only own foot welds"
+    },
+    {
+      "part": "elk_k_celik_6",
+      "closed_status": "Error.NoError",
+      "maximum_declared_precision_adjustment_mm": 0.0,
+      "purpose": "Unchanged exact cable clip template; add only own foot welds"
+    },
+    {
+      "part": "elk_k_celik_7",
+      "closed_status": "Error.NoError",
+      "maximum_declared_precision_adjustment_mm": 0.0,
+      "purpose": "Unchanged exact cable clip template; add only own foot welds"
+    },
+    {
+      "part": "elk_k_tarti_celik_1",
+      "closed_status": "Error.NoError",
+      "maximum_declared_precision_adjustment_mm": 0.0,
+      "purpose": "Unchanged exact cable clip template; add only own foot welds"
+    }
+  ],
+  "source_labels_retained": true,
+  "source_interfaces_intended_unchanged": false,
+  "unrelated_geometry_audit_required": true,
+  "reextraction_required": true,
+  "production_release": false,
+  "added_parts": [
+    "k79_elk_k_celik_1_TIG_0",
+    "k79_elk_k_celik_1_TIG_1",
+    "k79_elk_k_celik_1_TIG_2",
+    "k79_elk_k_celik_1_TIG_3",
+    "k79_elk_k_celik_6_TIG_0",
+    "k79_elk_k_celik_6_TIG_1",
+    "k79_elk_k_celik_6_TIG_2",
+    "k79_elk_k_celik_6_TIG_3",
+    "k79_elk_k_celik_7_TIG_0",
+    "k79_elk_k_celik_7_TIG_1",
+    "k79_elk_k_celik_7_TIG_2",
+    "k79_elk_k_celik_7_TIG_3",
+    "k79_elk_k_tarti_celik_1_TIG_0",
+    "k79_elk_k_tarti_celik_1_TIG_1",
+    "k79_elk_k_tarti_celik_1_TIG_2",
+    "k79_elk_k_tarti_celik_1_TIG_3"
+  ]
+}

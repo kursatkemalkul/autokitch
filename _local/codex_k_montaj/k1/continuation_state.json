@@ -1,13 +1,13 @@
 {
   "task": "codex-k-montaj-v3",
   "branch": "codex/k-montaj",
-  "latest_checkpoint": "878cd4cf",
-  "goal_active": true,
+  "latest_checkpoint": "7b38d2a6 (preceding checkpoint; handoff commit contains the latest clip model/data)",
+  "goal_active": false,
   "k_completed": false,
   "u_started": false,
   "canonical_source_changed": false,
   "production_release": false,
-  "source_model_sha256": "5f00073a06682f0f231bef4e93019abc7ecd06ad33be6b1bdd9baeaa206ffc27",
+  "source_model_sha256": "9ce8fdfd34ead660b71ef13660bacb7d451848747e6b4ace648af441c4ab7158",
   "verified_checkpoints": {
     "site_welds": {
       "commit": "1b2c5efb",
@@ -21,16 +21,18 @@
       "issues": 0
     }
   },
-  "current_candidate": "plan_k_head_full.pkl",
-  "current_candidate_sha256": "aff0a08e934204cbaf6161ab64bc7430d8ce67e03923cdeb41c1fcd9e386537e",
+  "current_candidate": "plan_k_clip_full.pkl",
+  "current_candidate_sha256": "eeceddad3ee1f1972e97d799573ef4ea75b797d25d37dc620ea08e6a530f0a5d",
   "running_ccd_session_id": null,
   "next": [
-    "Integrate four own cable-clip foot welds into private source and preassembly sequence; two supplier-body/unsupported clips still need simple own supports.",
-    "Keep actual mount evidence separate from classifier categories; finish remaining203 connections including knife guards and cable channels.",
-    "Complete manufacturing/fixture/release gates, shared-chain coordination and visual checks; finish K then start U."
+    "Claude reads claude_devir/DEVIR.md and restores latest exact model+portable continuation data.",
+    "Codex stops design work after handoff. Claude completes remaining199 records, release gates and full K; then U."
   ],
   "active_processes": [],
-  "last_verified_work": "Full K rigid-path audit completed: 18513 pairs, zero issues, aff0a08e parent plan. Temporary support text child inherits exact equal motion proof. Four cable-clip foot weld candidates:16 real seams with both-carrier contacts; all16 limiting preassembly TIG envelopes pass, geometry repeats byte-identically. Private only; remaining203 records not closed until actual source/assembly integration.",
-  "next_required": "Integrate four own cable-clip foot welds into private source and preassembly sequence; two supplier-body/unsupported clips still need simple own supports.",
-  "goal_status": "active"
+  "last_verified_work": "1037parts/785552triangles bound; four clip permanent mount records closed,199remain. Old rigid paths exact unchanged,213 additional motion pairs clean.16 TIG tool paths and32 carrier contacts pass. Full model and cache data packaged and roundtrip checked. K/U incomplete.",
+  "next_required": "Handoff only; no further Codex K design",
+  "goal_status": "stopped_for_user_requested_handoff",
+  "handoff_requested": true,
+  "next_owner": "claude",
+  "handoff_status": "prepared; branch push and scope release pending"
 }
