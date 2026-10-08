@@ -1,0 +1,225 @@
+{
+  "root_hash": "42fa9c0b8b177c3de0d18081cc688ffb98a9039c9eb3114253528eedbb374603",
+  "sampled_fk_and_coupling": {
+    "Dough_cycle": {
+      "frames": 84,
+      "invalid_endpoint_IK": 0,
+      "joint_limit_failures": 0,
+      "max_stored_FK_matrix_error": 0,
+      "max_held_coupling_matrix_error": 0,
+      "released_product_stationary_during_retract": true,
+      "wrist_above_TCP_at_release_mm": 16.497095529893755,
+      "source_hash": "42fa9c0b8b177c3de0d18081cc688ffb98a9039c9eb3114253528eedbb374603"
+    },
+    "Cola_cycle": {
+      "frames": 84,
+      "invalid_endpoint_IK": 0,
+      "joint_limit_failures": 0,
+      "max_stored_FK_matrix_error": 5.551115123125783e-17,
+      "max_held_coupling_matrix_error": 5.551115123125783e-17,
+      "released_product_stationary_during_retract": true,
+      "wrist_above_TCP_at_release_mm": -6.965206189590845e-09,
+      "source_hash": "42fa9c0b8b177c3de0d18081cc688ffb98a9039c9eb3114253528eedbb374603"
+    },
+    "Dessert_cycle": {
+      "frames": 84,
+      "invalid_endpoint_IK": 0,
+      "joint_limit_failures": 0,
+      "max_stored_FK_matrix_error": 6.465576835646199e-16,
+      "max_held_coupling_matrix_error": 6.465576835646199e-16,
+      "released_product_stationary_during_retract": true,
+      "wrist_above_TCP_at_release_mm": 84.03507540780319,
+      "source_hash": "42fa9c0b8b177c3de0d18081cc688ffb98a9039c9eb3114253528eedbb374603"
+    },
+    "Box_cycle": {
+      "frames": 74,
+      "invalid_endpoint_IK": 0,
+      "joint_limit_failures": 0,
+      "max_stored_FK_matrix_error": 6.414574028512453e-16,
+      "max_held_coupling_matrix_error": 6.414574028512455e-16,
+      "released_product_stationary_during_retract": true,
+      "wrist_above_TCP_at_release_mm": 19.049205090062248,
+      "source_hash": "42fa9c0b8b177c3de0d18081cc688ffb98a9039c9eb3114253528eedbb374603"
+    }
+  },
+  "physical_grasp_verified": false,
+  "continuous_collision_free_path_verified": false,
+  "new_route_checks": "Conservative bounds only; not clearance qualification",
+  "A_cover_removed_sources": [
+    "A_AGIZ*",
+    "A_ONYUZ*"
+  ],
+  "opener_preserved": true,
+  "carton": {
+    "outer_dimensions_mm": [
+      319.9999928474426,
+      45.00000178813934,
+      319.9999928474426
+    ],
+    "proposed_wall_thickness_mm": 1.5,
+    "wall_thickness_is_assumption": true,
+    "entry_count": 4,
+    "entries": [
+      {
+        "finger": "OEM_DAC_3",
+        "bounds_local_m": [
+          [
+            -0.038289582904338905,
+            -0.038290402433370875,
+            0.1426999992072582
+          ],
+          [
+            0.0004649662922783009,
+            0.00046354275293056734,
+            0.18476891553997993
+          ]
+        ],
+        "opening_bbox_mm": [
+          38.754549196617205,
+          38.75394518630144,
+          42.06891633272172
+        ],
+        "shape": "Diagonal distal-finger envelope, 0.8 mm margin, swept out of near carton edge"
+      },
+      {
+        "finger": "OEM_DAC_2",
+        "bounds_local_m": [
+          [
+            -0.00046354275293056734,
+            -0.03828958290433913,
+            0.1426999992072582
+          ],
+          [
+            0.0382904024333711,
+            0.0004649662922778568,
+            0.18476891553997993
+          ]
+        ],
+        "opening_bbox_mm": [
+          38.753945186301664,
+          38.754549196616985,
+          42.06891633272172
+        ],
+        "shape": "Diagonal distal-finger envelope, 0.8 mm margin, swept out of near carton edge"
+      },
+      {
+        "finger": "OEM_DAC_1",
+        "bounds_local_m": [
+          [
+            -0.0004649662922774127,
+            -0.00046354275293056734,
+            0.1426999992072582
+          ],
+          [
+            0.038289582904338905,
+            0.038290402433370875,
+            0.18476891553997993
+          ]
+        ],
+        "opening_bbox_mm": [
+          38.75454919661632,
+          38.75394518630144,
+          42.06891633272172
+        ],
+        "shape": "Diagonal distal-finger envelope, 0.8 mm margin, swept out of near carton edge"
+      },
+      {
+        "finger": "OEM_DAC_0",
+        "bounds_local_m": [
+          [
+            -0.0382904024333711,
+            -0.0004649662922778568,
+            0.1426999992072582
+          ],
+          [
+            0.00046354275293056734,
+            0.03828958290433913,
+            0.18476891553997993
+          ]
+        ],
+        "opening_bbox_mm": [
+          38.753945186301664,
+          38.754549196616985,
+          42.06891633272172
+        ],
+        "shape": "Diagonal distal-finger envelope, 0.8 mm margin, swept out of near carton edge"
+      }
+    ],
+    "insertion_depth_mm": 12,
+    "root_hash": "42fa9c0b8b177c3de0d18081cc688ffb98a9039c9eb3114253528eedbb374603",
+    "boolean_status": "Error.NoError",
+    "closed_volume_mm3": 387461.98788178025,
+    "cut_volume_mm3": 5889.136634080322,
+    "carton_strength_verified": false,
+    "secure_grasp_verified": false,
+    "description": "Four open finger-entry notches in the closed cardboard carton itself; lid and floor are actually cut. Not a verified commercial die-line."
+  },
+  "OEM_head_sha256": "13e940d304f98a2cdc2ae45d2079395c4f19e7267f7ab398e4c3927356dc84a1",
+  "corrected_dough_release_discrete_check": {
+    "ik_valid": true,
+    "position_error_mm": 0,
+    "angle_error_deg": 0,
+    "tool_hits": [
+      {
+        "part": "TOPPING_MODUL__motor__ACICI",
+        "moving": "UR10E_body_05_mesh_0",
+        "overlap_mm3": 60.741701197640886
+      },
+      {
+        "part": "TOPPING_DONER__TABLA",
+        "moving": "UR10E_body_04_mesh_0",
+        "overlap_mm3": 14.315065886334317
+      },
+      {
+        "part": "TOPPING_DONER__TABLA",
+        "moving": "UR10E_body_04_mesh_0",
+        "overlap_mm3": 4015.8819669366126
+      },
+      {
+        "part": "TOPPING_DONER__TABLA",
+        "moving": "UR10E_body_04_mesh_0",
+        "overlap_mm3": 186.29503112074667
+      },
+      {
+        "part": "TOPPING_DONER__TABLA",
+        "moving": "UR10E_body_04_mesh_0",
+        "overlap_mm3": 70.00137359659517
+      }
+    ],
+    "surface_hits": [],
+    "product_hits": [],
+    "total_overlap_mm3": 4347.235138737929,
+    "fixture_proxy_components": 6,
+    "arm_included": true,
+    "root_hash": "42fa9c0b8b177c3de0d18081cc688ffb98a9039c9eb3114253528eedbb374603"
+  },
+  "corrected_dough_release_native_surface_hits": [
+    {
+      "part": "TOPPING_MODUL__motor__ACICI",
+      "moving": "UR10E_body_05_mesh_0",
+      "native_surface_crossing": true
+    },
+    {
+      "part": "TOPPING_DONER__TABLA",
+      "moving": "UR10E_body_04_mesh_0",
+      "native_surface_crossing": true
+    },
+    {
+      "part": "TOPPING_DONER__TABLA",
+      "moving": "UR10E_body_04_mesh_0",
+      "native_surface_crossing": true
+    },
+    {
+      "part": "TOPPING_DONER__TABLA",
+      "moving": "UR10E_body_04_mesh_0",
+      "native_surface_crossing": true
+    },
+    {
+      "part": "TOPPING_DONER__TABLA",
+      "moving": "UR10E_body_04_mesh_0",
+      "native_surface_crossing": true
+    }
+  ],
+  "total_frames": 326,
+  "all_passed_FK_coupling_and_carton_boolean_checks": true
+}

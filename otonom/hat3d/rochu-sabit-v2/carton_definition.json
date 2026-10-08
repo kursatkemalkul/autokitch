@@ -1,0 +1,104 @@
+{
+  "outer_dimensions_mm": [
+    319.9999928474426,
+    45.00000178813934,
+    319.9999928474426
+  ],
+  "proposed_wall_thickness_mm": 1.5,
+  "wall_thickness_is_assumption": true,
+  "entry_count": 4,
+  "entries": [
+    {
+      "finger": "OEM_DAC_3",
+      "bounds_local_m": [
+        [
+          -0.038289582904338905,
+          -0.038290402433370875,
+          0.1426999992072582
+        ],
+        [
+          0.0004649662922783009,
+          0.00046354275293056734,
+          0.18476891553997993
+        ]
+      ],
+      "opening_bbox_mm": [
+        38.754549196617205,
+        38.75394518630144,
+        42.06891633272172
+      ],
+      "shape": "Diagonal distal-finger envelope, 0.8 mm margin, swept out of near carton edge"
+    },
+    {
+      "finger": "OEM_DAC_2",
+      "bounds_local_m": [
+        [
+          -0.00046354275293056734,
+          -0.03828958290433913,
+          0.1426999992072582
+        ],
+        [
+          0.0382904024333711,
+          0.0004649662922778568,
+          0.18476891553997993
+        ]
+      ],
+      "opening_bbox_mm": [
+        38.753945186301664,
+        38.754549196616985,
+        42.06891633272172
+      ],
+      "shape": "Diagonal distal-finger envelope, 0.8 mm margin, swept out of near carton edge"
+    },
+    {
+      "finger": "OEM_DAC_1",
+      "bounds_local_m": [
+        [
+          -0.0004649662922774127,
+          -0.00046354275293056734,
+          0.1426999992072582
+        ],
+        [
+          0.038289582904338905,
+          0.038290402433370875,
+          0.18476891553997993
+        ]
+      ],
+      "opening_bbox_mm": [
+        38.75454919661632,
+        38.75394518630144,
+        42.06891633272172
+      ],
+      "shape": "Diagonal distal-finger envelope, 0.8 mm margin, swept out of near carton edge"
+    },
+    {
+      "finger": "OEM_DAC_0",
+      "bounds_local_m": [
+        [
+          -0.0382904024333711,
+          -0.0004649662922778568,
+          0.1426999992072582
+        ],
+        [
+          0.00046354275293056734,
+          0.03828958290433913,
+          0.18476891553997993
+        ]
+      ],
+      "opening_bbox_mm": [
+        38.753945186301664,
+        38.754549196616985,
+        42.06891633272172
+      ],
+      "shape": "Diagonal distal-finger envelope, 0.8 mm margin, swept out of near carton edge"
+    }
+  ],
+  "insertion_depth_mm": 12,
+  "root_hash": "42fa9c0b8b177c3de0d18081cc688ffb98a9039c9eb3114253528eedbb374603",
+  "boolean_status": "Error.NoError",
+  "closed_volume_mm3": 387461.98788178025,
+  "cut_volume_mm3": 5889.136634080322,
+  "carton_strength_verified": false,
+  "secure_grasp_verified": false,
+  "description": "Four open finger-entry notches in the closed cardboard carton itself; lid and floor are actually cut. Not a verified commercial die-line."
+}
