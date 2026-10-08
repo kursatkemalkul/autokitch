@@ -1,0 +1,472 @@
+{
+  "source": "Claude completed Tur5 / web v28; native referenced triangles, no station remodel",
+  "stock_count": 42,
+  "stock_component_count": 123,
+  "same_mount_all_poses": true,
+  "same_dough_orientation_pick_place": true,
+  "same_tilt_orientation_pick_place": true,
+  "supplier_tip_travel_is_graph_approximation": true,
+  "window": {
+    "short_star_max_open_diameter_mm": 111,
+    "fixed_neutral_mm": 85.6,
+    "fixed_open_limit_mm": 95.6,
+    "fixed_closed_limit_mm": 63.599999999999994,
+    "box_min_height_with_diagonal_contacts_mm": 44.97199128346441,
+    "entry_clearance_on_95mm_product_mm": 0.5999999999999943,
+    "remaining_closure_on_45mm_box_mm": 0.028008716535588007,
+    "r_min_for_95mm_plus_2mm_entry": 35.0,
+    "r_max_for_45mm_box_contact": 34.31980515339464
+  },
+  "opener_proxy_component_count": 6,
+  "method": "Discrete mesh booleans; non-manifold source components use conservative convex envelopes. Clearance scan every 5mm; 5mm extra shown as proposed margin. Intended soft-tip displacement is illustrative, not FEM or force proof.",
+  "physics_verified": false,
+  "continuous_path_verified": false,
+  "full_robot_environment_certified": false,
+  "poses": {
+    "Dough_pick": {
+      "ik_valid": true,
+      "position_error_mm": 3.738304640782824e-09,
+      "angle_error_deg": 8.00704992411984e-11,
+      "tip_shift_mm": -5.300005960464475,
+      "native_opener_local_overlap_mm3": 0,
+      "native_table_head_overlap_mm3": 0,
+      "other_dough_overlap_mm3": 0.0,
+      "drawer_head_overlap_mm3": 2502.2293365252076,
+      "opener_lift_first_clear_5mm_scan": null,
+      "opener_lift_with_scan_and_margin_mm": null,
+      "actual_head_bottom_y_mm": 212.50000111382414,
+      "intended_head_bottom_y_mm": 212.50000111460687,
+      "local_head_wrist_top_y_mm": 500.3670307133832,
+      "head_proxy_components": 8,
+      "wrist_proxy_components": 0,
+      "root_hash": "42fa9c0b8b177c3de0d18081cc688ffb98a9039c9eb3114253528eedbb374603",
+      "local_environment_hits": [],
+      "environment_proxy_components": 0,
+      "opener_lift_is_diagnostic_only": false,
+      "usable_opener_height_verified": false,
+      "confirmed_native_surface_hits": [
+        {
+          "native_part": "CEK_K1_lahm_1__silikon__CEKMECE",
+          "tool_or_wrist_part": "OEM_DAC_3"
+        }
+      ]
+    },
+    "Dough_place": {
+      "ik_valid": false,
+      "position_error_mm": 144.21008084122013,
+      "angle_error_deg": 10.904004863608137,
+      "tip_shift_mm": -5.300005960464475,
+      "native_opener_local_overlap_mm3": 317056.2930131877,
+      "native_table_head_overlap_mm3": 16118.340302612434,
+      "other_dough_overlap_mm3": 0,
+      "drawer_head_overlap_mm3": 0,
+      "opener_lift_first_clear_5mm_scan": 110,
+      "opener_lift_with_scan_and_margin_mm": 115,
+      "actual_head_bottom_y_mm": 900.9072311871629,
+      "intended_head_bottom_y_mm": 1003.0237177882175,
+      "local_head_wrist_top_y_mm": 1190.7152898609518,
+      "head_proxy_components": 8,
+      "wrist_proxy_components": 0,
+      "root_hash": "42fa9c0b8b177c3de0d18081cc688ffb98a9039c9eb3114253528eedbb374603",
+      "local_environment_hits": [],
+      "environment_proxy_components": 0,
+      "opener_lift_is_diagnostic_only": true,
+      "usable_opener_height_verified": false,
+      "confirmed_native_surface_hits": []
+    },
+    "Cola_pick": {
+      "ik_valid": true,
+      "position_error_mm": 5.087681048627601e-13,
+      "angle_error_deg": 1.0940447976432085e-14,
+      "tip_shift_mm": -10.04060922861099,
+      "native_opener_local_overlap_mm3": 0,
+      "native_table_head_overlap_mm3": 0,
+      "other_dough_overlap_mm3": 0,
+      "drawer_head_overlap_mm3": 0,
+      "opener_lift_first_clear_5mm_scan": null,
+      "opener_lift_with_scan_and_margin_mm": null,
+      "actual_head_bottom_y_mm": 640.5000116050244,
+      "intended_head_bottom_y_mm": 640.5000116050244,
+      "local_head_wrist_top_y_mm": 928.3670412045799,
+      "head_proxy_components": 8,
+      "wrist_proxy_components": 0,
+      "root_hash": "42fa9c0b8b177c3de0d18081cc688ffb98a9039c9eb3114253528eedbb374603",
+      "local_environment_hits": [],
+      "environment_proxy_components": 0,
+      "opener_lift_is_diagnostic_only": false,
+      "usable_opener_height_verified": false,
+      "confirmed_native_surface_hits": []
+    },
+    "Cola_place": {
+      "ik_valid": false,
+      "position_error_mm": 14.841916417849497,
+      "angle_error_deg": 1.1557963988950928,
+      "tip_shift_mm": -10.04060922861099,
+      "native_opener_local_overlap_mm3": 0,
+      "native_table_head_overlap_mm3": 0,
+      "other_dough_overlap_mm3": 0,
+      "drawer_head_overlap_mm3": 0,
+      "opener_lift_first_clear_5mm_scan": null,
+      "opener_lift_with_scan_and_margin_mm": null,
+      "actual_head_bottom_y_mm": 945.5197470537854,
+      "intended_head_bottom_y_mm": 956.9818431503619,
+      "local_head_wrist_top_y_mm": 1233.2779613406633,
+      "head_proxy_components": 8,
+      "wrist_proxy_components": 0,
+      "root_hash": "42fa9c0b8b177c3de0d18081cc688ffb98a9039c9eb3114253528eedbb374603",
+      "local_environment_hits": [
+        {
+          "part": "QR62_shelf_2_1112",
+          "conservative_overlap_mm3": 18770.56335730788,
+          "proxy_components": 0
+        }
+      ],
+      "environment_proxy_components": 0,
+      "opener_lift_is_diagnostic_only": true,
+      "usable_opener_height_verified": false,
+      "confirmed_native_surface_hits": [
+        {
+          "native_part": "QR62_shelf_2_1112",
+          "tool_or_wrist_part": "UR10E_body_06_mesh_0"
+        }
+      ]
+    },
+    "Dessert_pick": {
+      "ik_valid": true,
+      "position_error_mm": 4.996003610813204e-13,
+      "angle_error_deg": 6.830387215759052e-15,
+      "tip_shift_mm": 4.353670340776446,
+      "native_opener_local_overlap_mm3": 0,
+      "native_table_head_overlap_mm3": 0,
+      "other_dough_overlap_mm3": 0,
+      "drawer_head_overlap_mm3": 0,
+      "opener_lift_first_clear_5mm_scan": null,
+      "opener_lift_with_scan_and_margin_mm": null,
+      "actual_head_bottom_y_mm": 260.00000349879275,
+      "intended_head_bottom_y_mm": 260.00000349879264,
+      "local_head_wrist_top_y_mm": 547.8670330983483,
+      "head_proxy_components": 8,
+      "wrist_proxy_components": 0,
+      "root_hash": "42fa9c0b8b177c3de0d18081cc688ffb98a9039c9eb3114253528eedbb374603",
+      "local_environment_hits": [],
+      "environment_proxy_components": 0,
+      "opener_lift_is_diagnostic_only": false,
+      "usable_opener_height_verified": false,
+      "confirmed_native_surface_hits": []
+    },
+    "Dessert_place": {
+      "ik_valid": true,
+      "position_error_mm": 1.0175362097255203e-12,
+      "angle_error_deg": 3.905258068101766e-15,
+      "tip_shift_mm": 4.353670340776446,
+      "native_opener_local_overlap_mm3": 0,
+      "native_table_head_overlap_mm3": 0,
+      "other_dough_overlap_mm3": 0,
+      "drawer_head_overlap_mm3": 0,
+      "opener_lift_first_clear_5mm_scan": null,
+      "opener_lift_with_scan_and_margin_mm": null,
+      "actual_head_bottom_y_mm": 900.3579690678573,
+      "intended_head_bottom_y_mm": 900.3579690678569,
+      "local_head_wrist_top_y_mm": 1188.224998667413,
+      "head_proxy_components": 8,
+      "wrist_proxy_components": 0,
+      "root_hash": "42fa9c0b8b177c3de0d18081cc688ffb98a9039c9eb3114253528eedbb374603",
+      "local_environment_hits": [
+        {
+          "part": "QR62_shelf_2_1112",
+          "conservative_overlap_mm3": 21419.14630015563,
+          "proxy_components": 0
+        }
+      ],
+      "environment_proxy_components": 0,
+      "opener_lift_is_diagnostic_only": false,
+      "usable_opener_height_verified": false,
+      "confirmed_native_surface_hits": [
+        {
+          "native_part": "QR62_shelf_2_1112",
+          "tool_or_wrist_part": "UR10E_body_05_mesh_0"
+        }
+      ]
+    },
+    "Box_pick": {
+      "ik_valid": true,
+      "position_error_mm": 9.264917572290598e-13,
+      "angle_error_deg": 1.9166224315683612e-14,
+      "tip_shift_mm": -10.980194846605361,
+      "native_opener_local_overlap_mm3": 0,
+      "native_table_head_overlap_mm3": 0,
+      "other_dough_overlap_mm3": 0,
+      "drawer_head_overlap_mm3": 0,
+      "opener_lift_first_clear_5mm_scan": null,
+      "opener_lift_with_scan_and_margin_mm": null,
+      "actual_head_bottom_y_mm": 961.1490071232689,
+      "intended_head_bottom_y_mm": 961.1490071232689,
+      "local_head_wrist_top_y_mm": 1052.0857938826712,
+      "head_proxy_components": 8,
+      "wrist_proxy_components": 0,
+      "root_hash": "42fa9c0b8b177c3de0d18081cc688ffb98a9039c9eb3114253528eedbb374603",
+      "local_environment_hits": [
+        {
+          "part": "E_KALIP__sac__NEST",
+          "conservative_overlap_mm3": 2936.4374210466467,
+          "proxy_components": 0
+        },
+        {
+          "part": "E_KALIP__sac",
+          "conservative_overlap_mm3": 3195.317827130609,
+          "proxy_components": 0
+        }
+      ],
+      "environment_proxy_components": 0,
+      "opener_lift_is_diagnostic_only": false,
+      "usable_opener_height_verified": false,
+      "confirmed_native_surface_hits": [
+        {
+          "native_part": "E_KALIP__sac__NEST",
+          "tool_or_wrist_part": "OEM_DAC_3"
+        },
+        {
+          "native_part": "E_KALIP__sac",
+          "tool_or_wrist_part": "OEM_DAC_3"
+        }
+      ]
+    },
+    "Box_place": {
+      "ik_valid": true,
+      "position_error_mm": 3.1697402044390884e-11,
+      "angle_error_deg": 3.223459282457519e-14,
+      "tip_shift_mm": -10.980194846605361,
+      "native_opener_local_overlap_mm3": 0,
+      "native_table_head_overlap_mm3": 0,
+      "other_dough_overlap_mm3": 0,
+      "drawer_head_overlap_mm3": 0,
+      "opener_lift_first_clear_5mm_scan": null,
+      "opener_lift_with_scan_and_margin_mm": null,
+      "actual_head_bottom_y_mm": 848.5490071232516,
+      "intended_head_bottom_y_mm": 848.5490071232688,
+      "local_head_wrist_top_y_mm": 1069.461395865599,
+      "head_proxy_components": 8,
+      "wrist_proxy_components": 0,
+      "root_hash": "42fa9c0b8b177c3de0d18081cc688ffb98a9039c9eb3114253528eedbb374603",
+      "local_environment_hits": [],
+      "environment_proxy_components": 0,
+      "opener_lift_is_diagnostic_only": false,
+      "usable_opener_height_verified": false,
+      "confirmed_native_surface_hits": [],
+      "proposed_stand_surface_hits": []
+    },
+    "Dough_tilt_pick": {
+      "ik_valid": true,
+      "position_error_mm": 1.4130832128153975e-12,
+      "angle_error_deg": 1.3461162680265913e-14,
+      "tip_shift_mm": -5.300005960464475,
+      "native_opener_local_overlap_mm3": 0,
+      "native_table_head_overlap_mm3": 0,
+      "other_dough_overlap_mm3": 2759.2700728093414,
+      "drawer_head_overlap_mm3": 18231.465173166267,
+      "opener_lift_first_clear_5mm_scan": null,
+      "opener_lift_with_scan_and_margin_mm": null,
+      "actual_head_bottom_y_mm": 185.8067803184362,
+      "intended_head_bottom_y_mm": 185.80678031843522,
+      "local_head_wrist_top_y_mm": 439.761407630234,
+      "head_proxy_components": 8,
+      "wrist_proxy_components": 0,
+      "root_hash": "42fa9c0b8b177c3de0d18081cc688ffb98a9039c9eb3114253528eedbb374603",
+      "local_environment_hits": [],
+      "environment_proxy_components": 0,
+      "opener_lift_is_diagnostic_only": false,
+      "usable_opener_height_verified": false,
+      "confirmed_native_surface_hits": [
+        {
+          "native_part": "CEK_K1_lahm_1__hamur__CEKMECE",
+          "tool_or_wrist_part": "CATALOG_CM_1"
+        },
+        {
+          "native_part": "CEK_K1_lahm_1__on_seffaf__CEKMECE",
+          "tool_or_wrist_part": "UR10E_body_04_mesh_0"
+        },
+        {
+          "native_part": "CEK_K1_lahm_1__sac__CEKMECE",
+          "tool_or_wrist_part": "OEM_DAC_1"
+        },
+        {
+          "native_part": "CEK_K1_lahm_1__silikon__CEKMECE",
+          "tool_or_wrist_part": "OEM_DAC_1"
+        }
+      ]
+    },
+    "Dough_tilt_place": {
+      "ik_valid": true,
+      "position_error_mm": 8.326672684688674e-14,
+      "angle_error_deg": 1.009454592273175e-14,
+      "tip_shift_mm": -5.300005960464475,
+      "native_opener_local_overlap_mm3": 319503.5592242564,
+      "native_table_head_overlap_mm3": 14081.898030489489,
+      "other_dough_overlap_mm3": 0,
+      "drawer_head_overlap_mm3": 0,
+      "opener_lift_first_clear_5mm_scan": 155,
+      "opener_lift_with_scan_and_margin_mm": 160,
+      "actual_head_bottom_y_mm": 976.3304969920458,
+      "intended_head_bottom_y_mm": 976.3304969920458,
+      "local_head_wrist_top_y_mm": 1228.820514424241,
+      "head_proxy_components": 8,
+      "wrist_proxy_components": 0,
+      "root_hash": "42fa9c0b8b177c3de0d18081cc688ffb98a9039c9eb3114253528eedbb374603",
+      "local_environment_hits": [],
+      "environment_proxy_components": 0,
+      "opener_lift_is_diagnostic_only": true,
+      "usable_opener_height_verified": false,
+      "confirmed_native_surface_hits": [
+        {
+          "native_part": "TOPPING_MODUL__celik__ACICI",
+          "tool_or_wrist_part": "UR10E_body_04_mesh_0"
+        },
+        {
+          "native_part": "TOPPING_MODUL__motor__ACICI",
+          "tool_or_wrist_part": "UR10E_body_04_mesh_0"
+        },
+        {
+          "native_part": "TOPPING_MODUL__sac__ACICI",
+          "tool_or_wrist_part": "UR10E_body_05_mesh_0"
+        },
+        {
+          "native_part": "TOPPING_DONER__TABLA",
+          "tool_or_wrist_part": "OEM_DAC_1"
+        },
+        {
+          "native_part": "TOPPING_DONER__TABLA",
+          "tool_or_wrist_part": "OEM_DAC_1"
+        }
+      ]
+    },
+    "Dough_clear_pick": {
+      "ik_valid": true,
+      "position_error_mm": 4.154074181055224e-13,
+      "angle_error_deg": 2.0949423878613256e-14,
+      "tip_shift_mm": -5.300005960464475,
+      "native_opener_local_overlap_mm3": 0,
+      "native_table_head_overlap_mm3": 0,
+      "other_dough_overlap_mm3": 0.0,
+      "drawer_head_overlap_mm3": 0.00016019431798810986,
+      "opener_lift_first_clear_5mm_scan": null,
+      "opener_lift_with_scan_and_margin_mm": null,
+      "actual_head_bottom_y_mm": 217.50000111460716,
+      "intended_head_bottom_y_mm": 217.50000111460687,
+      "local_head_wrist_top_y_mm": 505.3670307141627,
+      "head_proxy_components": 8,
+      "wrist_proxy_components": 0,
+      "root_hash": "42fa9c0b8b177c3de0d18081cc688ffb98a9039c9eb3114253528eedbb374603",
+      "local_environment_hits": [],
+      "environment_proxy_components": 0,
+      "opener_lift_is_diagnostic_only": false,
+      "usable_opener_height_verified": false,
+      "confirmed_native_surface_hits": [
+        {
+          "native_part": "CEK_K1_lahm_1__silikon__CEKMECE",
+          "tool_or_wrist_part": "OEM_DAC_3"
+        }
+      ]
+    },
+    "Dough_clear_place": {
+      "ik_valid": false,
+      "position_error_mm": 146.986182047897,
+      "angle_error_deg": 11.111596704819785,
+      "tip_shift_mm": -5.300005960464475,
+      "native_opener_local_overlap_mm3": 321221.3602161832,
+      "native_table_head_overlap_mm3": 18330.592647812467,
+      "other_dough_overlap_mm3": 0,
+      "drawer_head_overlap_mm3": 0,
+      "opener_lift_first_clear_5mm_scan": 115,
+      "opener_lift_with_scan_and_margin_mm": 120,
+      "actual_head_bottom_y_mm": 903.6916894020202,
+      "intended_head_bottom_y_mm": 1008.0237177882174,
+      "local_head_wrist_top_y_mm": 1193.55845936156,
+      "head_proxy_components": 8,
+      "wrist_proxy_components": 0,
+      "root_hash": "42fa9c0b8b177c3de0d18081cc688ffb98a9039c9eb3114253528eedbb374603",
+      "local_environment_hits": [],
+      "environment_proxy_components": 0,
+      "opener_lift_is_diagnostic_only": true,
+      "usable_opener_height_verified": false,
+      "confirmed_native_surface_hits": []
+    },
+    "Box_no_stand_pick": {
+      "ik_valid": true,
+      "position_error_mm": 9.264917572290598e-13,
+      "angle_error_deg": 1.9166224315683612e-14,
+      "tip_shift_mm": -10.980194846605361,
+      "native_opener_local_overlap_mm3": 0,
+      "native_table_head_overlap_mm3": 0,
+      "other_dough_overlap_mm3": 0,
+      "drawer_head_overlap_mm3": 0,
+      "opener_lift_first_clear_5mm_scan": null,
+      "opener_lift_with_scan_and_margin_mm": null,
+      "actual_head_bottom_y_mm": 961.1490071232689,
+      "intended_head_bottom_y_mm": 961.1490071232689,
+      "local_head_wrist_top_y_mm": 1052.0857938826712,
+      "head_proxy_components": 8,
+      "wrist_proxy_components": 0,
+      "root_hash": "42fa9c0b8b177c3de0d18081cc688ffb98a9039c9eb3114253528eedbb374603",
+      "local_environment_hits": [
+        {
+          "part": "E_KALIP__sac__NEST",
+          "conservative_overlap_mm3": 2936.4374210466467,
+          "proxy_components": 0
+        },
+        {
+          "part": "E_KALIP__sac",
+          "conservative_overlap_mm3": 3195.317827130609,
+          "proxy_components": 0
+        }
+      ],
+      "environment_proxy_components": 0,
+      "opener_lift_is_diagnostic_only": false,
+      "usable_opener_height_verified": false,
+      "confirmed_native_surface_hits": [
+        {
+          "native_part": "E_KALIP__sac__NEST",
+          "tool_or_wrist_part": "OEM_DAC_3"
+        },
+        {
+          "native_part": "E_KALIP__sac",
+          "tool_or_wrist_part": "OEM_DAC_3"
+        }
+      ]
+    },
+    "Box_no_stand_place": {
+      "ik_valid": true,
+      "position_error_mm": 7.497910738908617e-12,
+      "angle_error_deg": 1.6453578294643407e-12,
+      "tip_shift_mm": -10.980194846605361,
+      "native_opener_local_overlap_mm3": 0,
+      "native_table_head_overlap_mm3": 0,
+      "other_dough_overlap_mm3": 0,
+      "drawer_head_overlap_mm3": 0,
+      "opener_lift_first_clear_5mm_scan": null,
+      "opener_lift_with_scan_and_margin_mm": null,
+      "actual_head_bottom_y_mm": 829.5481450578181,
+      "intended_head_bottom_y_mm": 829.5481450578217,
+      "local_head_wrist_top_y_mm": 1050.4605338001631,
+      "head_proxy_components": 8,
+      "wrist_proxy_components": 0,
+      "root_hash": "42fa9c0b8b177c3de0d18081cc688ffb98a9039c9eb3114253528eedbb374603",
+      "local_environment_hits": [
+        {
+          "part": "QR62_shelf_2_850",
+          "conservative_overlap_mm3": 2286.5033669090967,
+          "proxy_components": 0
+        }
+      ],
+      "environment_proxy_components": 0,
+      "opener_lift_is_diagnostic_only": false,
+      "usable_opener_height_verified": false,
+      "confirmed_native_surface_hits": [
+        {
+          "native_part": "QR62_shelf_2_850",
+          "tool_or_wrist_part": "OEM_DAC_3"
+        }
+      ]
+    }
+  },
+  "native_surface_confirmation": "Triangle separating-axis tests including coplanar axes, 0.00001mm tolerance. Confirms crossings; does not prove force, clearance margin or continuous trajectory."
+}

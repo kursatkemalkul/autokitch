@@ -1,0 +1,152 @@
+{
+  "radius_mm": 34.3,
+  "angles_deg": [
+    45,
+    135,
+    225,
+    315
+  ],
+  "finger_roots": [
+    [
+      [
+        -0.7071067811865475,
+        0.7071067811865475,
+        0.0,
+        0.02425376259469858
+      ],
+      [
+        -0.7071067811865475,
+        -0.7071067811865475,
+        0.0,
+        0.02425376259469858
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.073
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    [
+      [
+        0.7071067811865474,
+        0.7071067811865478,
+        0.0,
+        -0.024253762594698577
+      ],
+      [
+        -0.7071067811865478,
+        0.7071067811865474,
+        0.0,
+        0.02425376259469858
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.073
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    [
+      [
+        0.7071067811865478,
+        -0.7071067811865475,
+        0.0,
+        -0.024253762594698584
+      ],
+      [
+        0.7071067811865475,
+        0.7071067811865478,
+        0.0,
+        -0.024253762594698577
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.073
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    [
+      [
+        -0.7071067811865466,
+        -0.7071067811865483,
+        0.0,
+        0.024253762594698573
+      ],
+      [
+        0.7071067811865483,
+        -0.7071067811865466,
+        0.0,
+        -0.024253762594698584
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.073
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ]
+  ],
+  "root_z_mm": 73,
+  "tcp_from_wrist_mm": 109.7,
+  "tip_inner_face_outward_from_stem_mm": 8.5,
+  "neutral_diameter_mm": 85.6,
+  "tip_vacuum_approx_mm": -11,
+  "tip_pressure_approx_mm": 5,
+  "plate_outline_mm": 102,
+  "plate_thickness_mm": 8,
+  "slot_centres_mm": [
+    20,
+    42
+  ],
+  "source_steps": {
+    "module": "295afc40b31856228cb6758b1a75051198c8a3257956e60705f482b7c1ed1c54",
+    "adapter": "406e3f70b4a6206f047f3174072186510cc7895602ea191cdce60cf245443ca0"
+  },
+  "module_count": 4,
+  "scale": 0.001,
+  "plate_is_our_proposal": true,
+  "complete_supplier_assembly": false,
+  "physical_grasp_verified": false,
+  "soft_deformation_is_illustrative": true,
+  "root_hash": "42fa9c0b8b177c3de0d18081cc688ffb98a9039c9eb3114253528eedbb374603",
+  "recommended_module": "DAC-1G3527",
+  "supplied_STEP_filename": "BMC-1G3527_SN\u56db\u7ea7.step",
+  "supplier_confirmation_of_STEP_variant_required": true,
+  "source_module_bbox_mm": [
+    26.8,
+    34.8,
+    47.2
+  ],
+  "gripping_face": "+X of supplied STEP; inward after assembly rotation",
+  "pressure_displacement_not_force_simulation": true,
+  "positive_inner_tip_opening_inferred_from_outer_tip_graph": true,
+  "air_hoses_not_modelled": true,
+  "connector_nut_and_thread_details_are_approximate": true,
+  "previous_outward_gripping_face_layout_rejected": true
+}

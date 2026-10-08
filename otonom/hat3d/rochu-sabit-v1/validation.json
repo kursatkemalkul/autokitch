@@ -1,0 +1,43 @@
+{
+  "verification_passed": true,
+  "checks": {
+    "claude_source_gzip_unchanged": true,
+    "supplier_STEP_identity": {
+      "adapter": true,
+      "module": true
+    },
+    "native_copy_max_vertex_error_mm": 0.00023650587532841882,
+    "native_triangle_connectivity_preserved": true,
+    "native_copy_within_0_001mm": true,
+    "copied_primitives": 617,
+    "copied_triangles": 1474868,
+    "flat_gripping_faces_inward": true,
+    "four_fixed_mounts": true,
+    "same_dough_angle_both_ends": true,
+    "audit_matches_current_poses": true,
+    "all_poses_finite": true,
+    "source_stock_single_triangle_fragments": 82,
+    "native_remaining_dough_locations": 41,
+    "selected_plus_remaining_dough": true,
+    "QR_box_stand_only": true,
+    "failed_poses_remain_failed": true
+  },
+  "pose_count": 14,
+  "root_hash": "42fa9c0b8b177c3de0d18081cc688ffb98a9039c9eb3114253528eedbb374603",
+  "limits": {
+    "physical_grasp_verified": false,
+    "continuous_trajectory_verified": false,
+    "complete_arm_collision_verified": false,
+    "soft_tip_deformation": "illustrative, not pneumatic FEM",
+    "held_product_contact_and_load_verified": false,
+    "invalid_IK_is_closest_pose_not_success": true,
+    "native_triangle_crossings_override_zero_boolean_volume": true
+  },
+  "browser": {
+    "unique_rendered_states": 13,
+    "actual_four_mount_matrices_unchanged": true,
+    "all_four_modules": true,
+    "native_stock_42": true
+  },
+  "QR_stand_tool_wrist_surface_crossings": 0
+}
