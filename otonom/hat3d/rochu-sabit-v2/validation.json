@@ -1,0 +1,115 @@
+{
+  "version": 2,
+  "checks_passed": true,
+  "fixed_head_byte_identical_to_V1": true,
+  "root_hash": "42fa9c0b8b177c3de0d18081cc688ffb98a9039c9eb3114253528eedbb374603",
+  "root_count": 4,
+  "stock_count": 42,
+  "closed_carton_dimensions_mm": [
+    319.9999928474426,
+    45.00000178813934,
+    319.9999928474426
+  ],
+  "cardboard_not_cut": true,
+  "changed_support_parts": [
+    {
+      "part": "E_KALIP__sac__NEST",
+      "original_volume_mm3": 554527.6951712582,
+      "remaining_volume_mm3": 549086.1409028064,
+      "valid_boolean": true,
+      "removed_volume_mm3": 5441.554268451791
+    },
+    {
+      "part": "E_KALIP__sac",
+      "original_volume_mm3": 2498061.976339464,
+      "remaining_volume_mm3": 2472852.3506281707,
+      "valid_boolean": true,
+      "removed_volume_mm3": 25209.625711293105
+    }
+  ],
+  "max_native_FK_matrix_error": 6.465576835646199e-16,
+  "max_held_product_coupling_matrix_error": 6.465576835646199e-16,
+  "sequences": {
+    "Dough_pick": {
+      "frames": 1,
+      "invalid_ik_frames": 0,
+      "tool_hit_frames": 1,
+      "product_hit_frames": 0,
+      "secure_grasp_verified": false
+    },
+    "Dough_place": {
+      "frames": 13,
+      "invalid_ik_frames": 0,
+      "tool_hit_frames": 13,
+      "product_hit_frames": 0,
+      "secure_grasp_verified": false
+    },
+    "Cola_pick": {
+      "frames": 1,
+      "invalid_ik_frames": 0,
+      "tool_hit_frames": 0,
+      "product_hit_frames": 0,
+      "secure_grasp_verified": false
+    },
+    "Cola_place": {
+      "frames": 15,
+      "invalid_ik_frames": 0,
+      "tool_hit_frames": 0,
+      "product_hit_frames": 0,
+      "secure_grasp_verified": false
+    },
+    "Dessert_pick": {
+      "frames": 1,
+      "invalid_ik_frames": 0,
+      "tool_hit_frames": 0,
+      "product_hit_frames": 0,
+      "secure_grasp_verified": false
+    },
+    "Dessert_place": {
+      "frames": 15,
+      "invalid_ik_frames": 0,
+      "tool_hit_frames": 0,
+      "product_hit_frames": 0,
+      "secure_grasp_verified": false
+    },
+    "Box_edge": {
+      "frames": 7,
+      "invalid_ik_frames": 0,
+      "tool_hit_frames": 0,
+      "product_hit_frames": 0,
+      "secure_grasp_verified": false
+    },
+    "Box_corner": {
+      "frames": 7,
+      "invalid_ik_frames": 0,
+      "tool_hit_frames": 7,
+      "product_hit_frames": 0,
+      "secure_grasp_verified": false
+    },
+    "Box_corner_right": {
+      "frames": 7,
+      "invalid_ik_frames": 0,
+      "tool_hit_frames": 7,
+      "product_hit_frames": 0,
+      "secure_grasp_verified": false
+    }
+  },
+  "glbs": {
+    "focus": {
+      "sha256": "9de261ddc99be941a5be7f4677c7910d191e9f0c914119d9055a49d4cba7307e",
+      "uncompressed_bytes": 44869012,
+      "meshes": 617
+    },
+    "fixed_head": {
+      "sha256": "13e940d304f98a2cdc2ae45d2079395c4f19e7267f7ab398e4c3927356dc84a1",
+      "uncompressed_bytes": 2594960,
+      "meshes": 23
+    },
+    "e_original": {
+      "sha256": "050190b5247ad8ccd86672f1da6d64f70b501e11a3e0d8e9cbe1ab58be469e15",
+      "uncompressed_bytes": 1600692,
+      "meshes": 2
+    }
+  },
+  "limitations": "Structural checks passed. Failed motion samples remain failed; no continuous path, full shop, force, carton deformation or load qualification."
+}
