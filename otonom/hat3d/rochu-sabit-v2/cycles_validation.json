@@ -2,13 +2,13 @@
   "root_hash": "42fa9c0b8b177c3de0d18081cc688ffb98a9039c9eb3114253528eedbb374603",
   "sampled_fk_and_coupling": {
     "Dough_cycle": {
-      "frames": 84,
+      "frames": 104,
       "invalid_endpoint_IK": 0,
       "joint_limit_failures": 0,
       "max_stored_FK_matrix_error": 0,
       "max_held_coupling_matrix_error": 0,
       "released_product_stationary_during_retract": true,
-      "wrist_above_TCP_at_release_mm": 16.497095529893755,
+      "wrist_above_TCP_at_release_mm": 32.4929351600447,
       "source_hash": "42fa9c0b8b177c3de0d18081cc688ffb98a9039c9eb3114253528eedbb374603"
     },
     "Cola_cycle": {
@@ -157,69 +157,22 @@
   "OEM_head_sha256": "13e940d304f98a2cdc2ae45d2079395c4f19e7267f7ab398e4c3927356dc84a1",
   "corrected_dough_release_discrete_check": {
     "ik_valid": true,
-    "position_error_mm": 0,
-    "angle_error_deg": 0,
-    "tool_hits": [
-      {
-        "part": "TOPPING_MODUL__motor__ACICI",
-        "moving": "UR10E_body_05_mesh_0",
-        "overlap_mm3": 60.741701197640886
-      },
-      {
-        "part": "TOPPING_DONER__TABLA",
-        "moving": "UR10E_body_04_mesh_0",
-        "overlap_mm3": 14.315065886334317
-      },
-      {
-        "part": "TOPPING_DONER__TABLA",
-        "moving": "UR10E_body_04_mesh_0",
-        "overlap_mm3": 4015.8819669366126
-      },
-      {
-        "part": "TOPPING_DONER__TABLA",
-        "moving": "UR10E_body_04_mesh_0",
-        "overlap_mm3": 186.29503112074667
-      },
-      {
-        "part": "TOPPING_DONER__TABLA",
-        "moving": "UR10E_body_04_mesh_0",
-        "overlap_mm3": 70.00137359659517
-      }
-    ],
+    "position_error_mm": 3.4915808093142e-13,
+    "angle_error_deg": 2.395322153510231e-14,
+    "tool_hits": [],
     "surface_hits": [],
     "product_hits": [],
-    "total_overlap_mm3": 4347.235138737929,
+    "total_overlap_mm3": 0,
     "fixture_proxy_components": 6,
     "arm_included": true,
     "root_hash": "42fa9c0b8b177c3de0d18081cc688ffb98a9039c9eb3114253528eedbb374603"
   },
-  "corrected_dough_release_native_surface_hits": [
-    {
-      "part": "TOPPING_MODUL__motor__ACICI",
-      "moving": "UR10E_body_05_mesh_0",
-      "native_surface_crossing": true
-    },
-    {
-      "part": "TOPPING_DONER__TABLA",
-      "moving": "UR10E_body_04_mesh_0",
-      "native_surface_crossing": true
-    },
-    {
-      "part": "TOPPING_DONER__TABLA",
-      "moving": "UR10E_body_04_mesh_0",
-      "native_surface_crossing": true
-    },
-    {
-      "part": "TOPPING_DONER__TABLA",
-      "moving": "UR10E_body_04_mesh_0",
-      "native_surface_crossing": true
-    },
-    {
-      "part": "TOPPING_DONER__TABLA",
-      "moving": "UR10E_body_04_mesh_0",
-      "native_surface_crossing": true
-    }
-  ],
-  "total_frames": 326,
+  "corrected_dough_release_native_surface_hits": [],
+  "dough_release_phase_discrete_checks": {
+    "samples": 47,
+    "all_sampled_release_phases_clear": true,
+    "scope": "Upper turn, approach, opening, short drop and empty retract against unchanged native opener/table; not whole-route continuous qualification"
+  },
+  "total_frames": 346,
   "all_passed_FK_coupling_and_carton_boolean_checks": true
 }
