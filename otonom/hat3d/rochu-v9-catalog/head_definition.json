@@ -1,0 +1,58 @@
+{
+  "model": "DAC-2GN4087[H]/M",
+  "source": "EN Rochu catalog V26.1.pdf physical219 printed218",
+  "pdf_page": 219,
+  "printed_page": 218,
+  "envelope_mm": [
+    106,
+    65,
+    94
+  ],
+  "atmosphere_inner_gap_mm": 87.5,
+  "catalog_workpiece_range_mm": [
+    15,
+    100
+  ],
+  "G_is_certified_stroke": false,
+  "pad_width_mm": 40.7,
+  "pad_depth_mm": 20,
+  "jaw_thickness_mm": 9.25,
+  "module_count": 1,
+  "jaw_count": 2,
+  "root_hash": "3e34f26088eb6187ab2f780098ddf4058f8acfc57a0f93cd4b9ee1ad080b725b",
+  "tcp_from_wrist_mm": 134,
+  "fixed_mount_matrix": [
+    [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "OEM_candidate_STEP_available": false,
+  "mesh_is_catalog_envelope": true,
+  "adapter_custom_unvalidated": true,
+  "jaw_motion": "Rigid lower-jaw rotation about illustrative hinges at z80mm; fixed upper body. No OEM pressure-angle or stroke calibration. G at distal inner tips conservatively bounded15..100mm.",
+  "jaw_pivot_z_mm": 80,
+  "neutral_jaw_length_mm": 64,
+  "physical_grasp_verified": false,
+  "load_safety_claim": false
+}

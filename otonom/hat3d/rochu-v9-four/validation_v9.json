@@ -1,0 +1,271 @@
+{
+  "version": 9,
+  "fixed_root_hash": "1735bc3f35879dc77e4b7f6aec1554c694bd6b32895823bf03cece6c8ab11ea1",
+  "carton_holes": 0,
+  "OEM_neutral_exact": true,
+  "housing_motion_mm": 0,
+  "tip_curve_is_illustration": true,
+  "physical_grasp_verified": false,
+  "continuous_collision_free_verified": false,
+  "motions": {
+    "Dough": {
+      "frames": 61,
+      "max_FK_error": 0.0,
+      "last_held": false,
+      "grasp_blocked": true,
+      "grip": {
+        "open_max_penetration_mm": -2.0382341168719007,
+        "fixed_max_penetration_mm": -2.0882556078030063,
+        "contact_shift_mm": -0.25563907623291016,
+        "tip_angle_deg": -1.2006541288573747,
+        "fingers": [
+          {
+            "name": "OEM_DAC_0",
+            "penetration_mm": -0.4311890615123909,
+            "fixed_penetration_mm": -2.8110797003746866
+          },
+          {
+            "name": "OEM_DAC_1",
+            "penetration_mm": -0.0149402006328625,
+            "fixed_penetration_mm": -2.0882556078030063
+          },
+          {
+            "name": "OEM_DAC_2",
+            "penetration_mm": 6.017463610730189e-08,
+            "fixed_penetration_mm": -2.1003475858095215
+          },
+          {
+            "name": "OEM_DAC_3",
+            "penetration_mm": -0.39109486311771774,
+            "fixed_penetration_mm": -2.7202863873519307
+          }
+        ],
+        "four_contact_candidates": false,
+        "model": "tip-only arc; geometric samples, no pressure/force validation",
+        "belly": {
+          "section_count": 201,
+          "width_mm": 74.05714722017758,
+          "relative_height_mm": -13.008713416385651,
+          "contact_world_m": [
+            0.8889714254362369,
+            0.22032359273023605,
+            0.5020000010728836
+          ],
+          "method": "Maximum X span of201 horizontal native product sections"
+        },
+        "open_shift_mm": -2.25563907623291,
+        "requested_entry_blocked": true,
+        "physical_grasp_verified": false,
+        "fixture_blocked": true,
+        "blocking_fixture": "CEK_K1_lahm_1__silikon__CEKMECE",
+        "actual_lift": false,
+        "stop_above_requested_target_mm": 50
+      },
+      "ungrasped_product_never_lifted": true,
+      "scene_samples": 5,
+      "samples_with_crossings": 0
+    },
+    "Cola": {
+      "frames": 239,
+      "max_FK_error": 8.881784197001252e-16,
+      "last_held": false,
+      "grasp_blocked": false,
+      "grip": {
+        "open_max_penetration_mm": -4.084256414064395,
+        "fixed_max_penetration_mm": -4.084256414064395,
+        "contact_shift_mm": 4.545550346374512,
+        "tip_angle_deg": 21.80613786139541,
+        "fingers": [
+          {
+            "name": "OEM_DAC_3",
+            "penetration_mm": -1.0805385087072419,
+            "fixed_penetration_mm": -4.949639985061767
+          },
+          {
+            "name": "OEM_DAC_2",
+            "penetration_mm": 7.939850860116948e-08,
+            "fixed_penetration_mm": -4.084256414064395
+          },
+          {
+            "name": "OEM_DAC_1",
+            "penetration_mm": -0.09276136067309926,
+            "fixed_penetration_mm": -4.0864878207349244
+          },
+          {
+            "name": "OEM_DAC_0",
+            "penetration_mm": -1.0805438160000902,
+            "fixed_penetration_mm": -4.9612425482354405
+          }
+        ],
+        "four_contact_candidates": false,
+        "model": "tip-only arc; geometric samples, no pressure/force validation",
+        "open_shift_mm": 0,
+        "requested_entry_blocked": false,
+        "physical_grasp_verified": false
+      },
+      "Dik in_side_drift_mm": 5.032640970625835e-10,
+      "Dik y\u00fcksel_side_drift_mm": 8.881784197001252e-13,
+      "scene_samples": 16,
+      "samples_with_crossings": 0
+    },
+    "Dessert": {
+      "frames": 69,
+      "max_FK_error": 0.0,
+      "last_held": false,
+      "grasp_blocked": true,
+      "grip": {
+        "open_max_penetration_mm": 8.305533152554542,
+        "fixed_max_penetration_mm": 5.2986780662929585,
+        "contact_shift_mm": -11.0,
+        "tip_angle_deg": -61.43289704928837,
+        "fingers": [
+          {
+            "name": "OEM_DAC_3",
+            "penetration_mm": 7.9979577047733095,
+            "fixed_penetration_mm": 5.2986780662929585
+          },
+          {
+            "name": "OEM_DAC_2",
+            "penetration_mm": 8.305533152554542,
+            "fixed_penetration_mm": 5.2986780662929585
+          },
+          {
+            "name": "OEM_DAC_1",
+            "penetration_mm": 8.305533152554542,
+            "fixed_penetration_mm": 5.2986780662929585
+          },
+          {
+            "name": "OEM_DAC_0",
+            "penetration_mm": 7.87720460069044,
+            "fixed_penetration_mm": 5.2986780662929585
+          }
+        ],
+        "four_contact_candidates": false,
+        "model": "tip-only arc; geometric samples, no pressure/force validation",
+        "open_shift_mm": -11.0,
+        "requested_entry_blocked": true,
+        "physical_grasp_verified": false,
+        "stopped_before_requested_target_mm": 16.444297790527344,
+        "actual_lift": false
+      },
+      "ungrasped_product_never_lifted": true,
+      "scene_samples": 5,
+      "samples_with_crossings": 0
+    },
+    "Box": {
+      "frames": 69,
+      "max_FK_error": 6.480365935212313e-16,
+      "last_held": false,
+      "grasp_blocked": true,
+      "grip": {
+        "open_max_penetration_mm": 6.4461256809966345,
+        "fixed_max_penetration_mm": 6.4461256809966345,
+        "contact_shift_mm": -11.0,
+        "tip_angle_deg": -61.43289704928837,
+        "fingers": [
+          {
+            "name": "OEM_DAC_3",
+            "penetration_mm": 6.4461256809965235,
+            "fixed_penetration_mm": 6.4461256809965235
+          },
+          {
+            "name": "OEM_DAC_2",
+            "penetration_mm": 6.4461256809965235,
+            "fixed_penetration_mm": 6.4461256809965235
+          },
+          {
+            "name": "OEM_DAC_1",
+            "penetration_mm": 6.4461256809966345,
+            "fixed_penetration_mm": 6.4461256809966345
+          },
+          {
+            "name": "OEM_DAC_0",
+            "penetration_mm": 6.4461256809966345,
+            "fixed_penetration_mm": 6.4461256809966345
+          }
+        ],
+        "four_contact_candidates": false,
+        "model": "tip-only arc; geometric samples, no pressure/force validation",
+        "open_shift_mm": -11.0,
+        "requested_entry_blocked": true,
+        "physical_grasp_verified": false,
+        "stopped_before_requested_target_mm": 20.191088676452644,
+        "actual_lift": false
+      },
+      "ungrasped_product_never_lifted": true,
+      "scene_samples": 5,
+      "samples_with_crossings": 0
+    }
+  },
+  "planned_shelf_layout": {
+    "source": "QR62_shelf_2_850",
+    "usable_bounds_m": [
+      [
+        4.743000030517578,
+        0.8500000238418579,
+        1.75
+      ],
+      [
+        5.2179999351501465,
+        1.1089999675750732,
+        2.0739998817443848
+      ]
+    ],
+    "all_three_inside": true,
+    "product_overlap": false,
+    "loading_order": [
+      "Box",
+      "Cola",
+      "Dessert"
+    ],
+    "products": {
+      "Box": {
+        "bounds_m": [
+          [
+            4.749000003577152,
+            0.85,
+            1.7520000035551555
+          ],
+          [
+            5.068999996425337,
+            0.8950000017898351,
+            2.0719999964031985
+          ]
+        ],
+        "edge_margin_mm": 1.999885341186225
+      },
+      "Cola": {
+        "bounds_m": [
+          [
+            5.121240609228611,
+            0.85,
+            1.9344999952316273
+          ],
+          [
+            5.186759390771389,
+            0.9150410652160644,
+            2.0495000047683702
+          ]
+        ],
+        "edge_margin_mm": 24.499876976014523
+      },
+      "Dessert": {
+        "bounds_m": [
+          [
+            5.107190088270582,
+            0.85,
+            1.7618463296500473
+          ],
+          [
+            5.200809911726393,
+            0.9100000023841858,
+            1.8561536703316002
+          ]
+        ],
+        "edge_margin_mm": 11.846329650047283
+      }
+    },
+    "display_is_proposed_layout_not_completed_delivery": true
+  },
+  "supersedes_v8_grip_and_collision_checks": true
+}

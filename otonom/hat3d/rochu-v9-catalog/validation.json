@@ -1,0 +1,393 @@
+{
+  "model": "DAC-2GN4087[H]/M",
+  "base": "b439bba4",
+  "physical_grasp_verified": false,
+  "continuous_collision_free_verified": false,
+  "OEM_STEP_available": false,
+  "motions": {
+    "Dough": {
+      "frames": 73,
+      "desired_frames": 217,
+      "max_FK_matrix_error": 0.0,
+      "max_held_product_coupling_error": 0,
+      "sampled_scene_poses": 79,
+      "sampled_poses_with_surface_crossings": 1,
+      "grasp_blocked": true,
+      "final_held": false,
+      "grip": {
+        "native_product_width_mm": 74.05978441238403,
+        "grip_G_mm": 74.02772232011257,
+        "entry_G_mm": 79.02772232011257,
+        "release_G_mm": 79.02772232011257,
+        "jaw_angle_deg": 6.065001088377704,
+        "requested_insertion_mm": null,
+        "TCP_from_wrist_mm": 143.15310878539174,
+        "open_insertion_hits": [],
+        "fixed_body_hits": [],
+        "method": "Manifold Boolean of catalogue-envelope components against convex exterior of native product; conservative for non-convex product. Physical clamp force unknown.",
+        "physical_grasp_verified": false,
+        "belly": {
+          "section_width_mm": 74.05714722017758,
+          "section_y_relative_mm": -13.008713416385651,
+          "contact_world_m": [
+            0.8889714254362369,
+            0.22032359273023602,
+            0.5020000010728836
+          ],
+          "method": "Maximum X span in201 horizontal sections of native exterior, lower inner jaw tips placed at that belly level."
+        },
+        "blocked_reason": "Bırakma yolunda açıcı motoruna gövde teması (+95 mm denemesi)",
+        "blocking_fixtures": [
+          {
+            "fixture": "TOPPING_MODUL__motor__ACICI",
+            "moving": "CATALOG_body",
+            "native_surface_crossing": true,
+            "initial_support_contact": false
+          }
+        ]
+      },
+      "Dik in_side_drift_mm": 9.923284416402112e-09,
+      "desired_product_trajectory_max_matrix_error": 3.950643978622992e-10,
+      "all_desired_IK_valid": true,
+      "max_desired_IK_position_error_mm": 2.147534219998568e-07,
+      "max_desired_IK_angle_error_deg": 2.4086008790507184e-08,
+      "desired_max_joint_step_deg": 10.31052798497031,
+      "desired_FK_max_matrix_error": 0.0,
+      "executed_scene_samples": 73,
+      "unwanted_executed_scene_crossings": 0,
+      "initial_support_contacts": [],
+      "tool_product_sample_frames": 73,
+      "tool_product_max_overlap_mm3": 0,
+      "desired_tool_product_blocked_frames": 6,
+      "desired_grip_sampled_contacts": [
+        {
+          "jaw": "CATALOG_jaw_1",
+          "sampled_min_gap_mm": 0.014429836853151313,
+          "point_world_m": [
+            0.9259852865202816,
+            0.22032359896248369,
+            0.5020000010806949
+          ],
+          "point_head_m": [
+            0.0370138610741218,
+            -1.560589915384597e-17,
+            0.1431531025424854
+          ]
+        },
+        {
+          "jaw": "CATALOG_jaw_-1",
+          "sampled_min_gap_mm": 0.014710985667611672,
+          "point_world_m": [
+            0.8519575643720378,
+            0.2203235989625758,
+            0.5020000010806954
+          ],
+          "point_head_m": [
+            -0.037013861074121884,
+            2.2711824090889176e-17,
+            0.1431531025424854
+          ]
+        }
+      ],
+      "G_command_min_max_mm": [
+        75.27772232011257,
+        79.02772232011257
+      ],
+      "blocked_product_motion_after_open_mm": 0.0
+    },
+    "Cola": {
+      "frames": 239,
+      "desired_frames": 239,
+      "max_FK_matrix_error": 0.0,
+      "max_held_product_coupling_error": 0.0,
+      "sampled_scene_poses": 82,
+      "sampled_poses_with_surface_crossings": 0,
+      "grasp_blocked": false,
+      "final_held": false,
+      "grip": {
+        "native_product_width_mm": 65.04106521606445,
+        "grip_G_mm": 64.9989163979006,
+        "entry_G_mm": 69.9989163979006,
+        "release_G_mm": 99.99999,
+        "jaw_angle_deg": 10.190981100660517,
+        "requested_insertion_mm": 12,
+        "TCP_from_wrist_mm": 133.14806741209898,
+        "open_insertion_hits": [],
+        "fixed_body_hits": [],
+        "method": "Manifold Boolean of catalogue-envelope components against convex exterior of native product; conservative for non-convex product. Physical clamp force unknown.",
+        "physical_grasp_verified": false,
+        "blocked_reason": null
+      },
+      "Dik in_side_drift_mm": 3.782241186911506e-08,
+      "Dik yüksel_side_drift_mm": 9.474310225243698e-09,
+      "final_layout_max_error": 0.0,
+      "desired_product_trajectory_max_matrix_error": 4.4124655318444894e-10,
+      "all_desired_IK_valid": true,
+      "max_desired_IK_position_error_mm": 3.3337032032368133e-07,
+      "max_desired_IK_angle_error_deg": 2.7880930110122844e-08,
+      "desired_max_joint_step_deg": 15.444561757990279,
+      "desired_FK_max_matrix_error": 0.0,
+      "executed_scene_samples": 239,
+      "unwanted_executed_scene_crossings": 0,
+      "initial_support_contacts": [
+        {
+          "frame": 37,
+          "phase": "Alt çeneleri kapat · kavrama denemesi",
+          "broad_phase_candidates": 10,
+          "hits": [
+            {
+              "fixture": "CEK_K5_ic1_1__silikon__CEKMECE",
+              "moving": "Product_Cola",
+              "native_surface_crossing": true,
+              "initial_support_contact": true
+            }
+          ]
+        }
+      ],
+      "tool_product_sample_frames": 239,
+      "tool_product_max_overlap_mm3": 0.020440333332200463,
+      "desired_tool_product_blocked_frames": 0,
+      "desired_grip_sampled_contacts": [
+        {
+          "jaw": "CATALOG_jaw_1",
+          "sampled_min_gap_mm": 0.02045990872121035,
+          "point_world_m": [
+            2.901478912607471,
+            0.6239760842862492,
+            0.6030000045726054
+          ],
+          "point_head_m": [
+            0.03249945856241388,
+            1.610879712193905e-17,
+            0.1421719954842875
+          ]
+        },
+        {
+          "jaw": "CATALOG_jaw_-1",
+          "sampled_min_gap_mm": 0.021074045617908155,
+          "point_world_m": [
+            2.836479995482643,
+            0.6239760842862487,
+            0.5962166712760272
+          ],
+          "point_head_m": [
+            -0.03249945856241396,
+            -0.006783333296577063,
+            0.14217199548428758
+          ]
+        }
+      ],
+      "G_command_min_max_mm": [
+        64.9989163979006,
+        99.99999
+      ],
+      "lift_before_drawer_close_mm": 359.99999999650976
+    },
+    "Dessert": {
+      "frames": 49,
+      "desired_frames": 221,
+      "max_FK_matrix_error": 0.0,
+      "max_held_product_coupling_error": 0,
+      "sampled_scene_poses": 78,
+      "sampled_poses_with_surface_crossings": 12,
+      "grasp_blocked": true,
+      "final_held": false,
+      "grip": {
+        "native_product_width_mm": 93.61982345581055,
+        "grip_G_mm": 97.86253334925352,
+        "entry_G_mm": 99.99999,
+        "release_G_mm": 99.99999,
+        "jaw_angle_deg": -4.6300368874066145,
+        "requested_insertion_mm": 10,
+        "TCP_from_wrist_mm": 133.82378168090176,
+        "open_insertion_hits": [],
+        "fixed_body_hits": [],
+        "method": "Manifold Boolean of catalogue-envelope components against convex exterior of native product; conservative for non-convex product. Physical clamp force unknown.",
+        "physical_grasp_verified": false,
+        "blocked_reason": "Derin girişte komşu tatlılara çene teması",
+        "blocking_fixtures": [
+          {
+            "fixture": "CEK_K6_tatli_1__hamur__CEKMECE",
+            "moving": "CATALOG_jaw_1",
+            "native_surface_crossing": true,
+            "initial_support_contact": false
+          },
+          {
+            "fixture": "CEK_K6_tatli_1__hamur__CEKMECE",
+            "moving": "CATALOG_jaw_-1",
+            "native_surface_crossing": true,
+            "initial_support_contact": false
+          }
+        ]
+      },
+      "Dik in_side_drift_mm": 2.28650431921551e-08,
+      "desired_product_trajectory_max_matrix_error": 2.2846924352393216e-10,
+      "all_desired_IK_valid": true,
+      "max_desired_IK_position_error_mm": 2.564291023208719e-07,
+      "max_desired_IK_angle_error_deg": 6.324088811056271e-09,
+      "desired_max_joint_step_deg": 4.778096669295328,
+      "desired_FK_max_matrix_error": 0.0,
+      "executed_scene_samples": 49,
+      "unwanted_executed_scene_crossings": 0,
+      "initial_support_contacts": [],
+      "tool_product_sample_frames": 49,
+      "tool_product_max_overlap_mm3": 0,
+      "desired_tool_product_blocked_frames": 0,
+      "desired_grip_sampled_contacts": [
+        {
+          "jaw": "CATALOG_jaw_1",
+          "sampled_min_gap_mm": 0.0820746725260226,
+          "point_world_m": [
+            3.7010820498718573,
+            0.269340021353992,
+            0.5370000012324506
+          ],
+          "point_head_m": [
+            0.046891986400346995,
+            -2.3528489988047535e-17,
+            0.11898376448575662
+          ]
+        },
+        {
+          "jaw": "CATALOG_jaw_-1",
+          "sampled_min_gap_mm": 0.08207467244103483,
+          "point_world_m": [
+            3.607298077071164,
+            0.26934002135399016,
+            0.5370000012324533
+          ],
+          "point_head_m": [
+            -0.04689198640034644,
+            -5.045218034804665e-17,
+            0.11898376448575657
+          ]
+        }
+      ],
+      "G_command_min_max_mm": [
+        99.99999,
+        99.99999
+      ],
+      "blocked_product_motion_after_open_mm": 0.0
+    },
+    "Box": {
+      "frames": 55,
+      "desired_frames": 203,
+      "max_FK_matrix_error": 0.0,
+      "max_held_product_coupling_error": 0,
+      "sampled_scene_poses": 75,
+      "sampled_poses_with_surface_crossings": 16,
+      "grasp_blocked": true,
+      "final_held": false,
+      "grip": {
+        "native_product_width_mm": 45.00000178813934,
+        "grip_G_mm": 44.964757246777395,
+        "entry_G_mm": 49.964757246777395,
+        "release_G_mm": 49.964757246777395,
+        "jaw_angle_deg": 19.665081163921975,
+        "requested_insertion_mm": 26,
+        "TCP_from_wrist_mm": 138.71084042361724,
+        "open_insertion_hits": [],
+        "fixed_body_hits": [],
+        "method": "Manifold Boolean of catalogue-envelope components against convex exterior of native product; conservative for non-convex product. Physical clamp force unknown.",
+        "physical_grasp_verified": false,
+        "blocked_reason": "Alt çene V9 kutu taşıyıcısına değiyor",
+        "blocking_fixtures": [
+          {
+            "fixture": "E_KALIP__sac__NEST",
+            "moving": "CATALOG_jaw_-1",
+            "native_surface_crossing": true,
+            "initial_support_contact": false
+          }
+        ]
+      },
+      "desired_product_trajectory_max_matrix_error": 1.4477952170466324e-10,
+      "all_desired_IK_valid": true,
+      "max_desired_IK_position_error_mm": 1.705948443563578e-07,
+      "max_desired_IK_angle_error_deg": 7.500652247303274e-11,
+      "desired_max_joint_step_deg": 21.205983460799242,
+      "desired_FK_max_matrix_error": 0.0,
+      "executed_scene_samples": 55,
+      "unwanted_executed_scene_crossings": 0,
+      "initial_support_contacts": [],
+      "tool_product_sample_frames": 55,
+      "tool_product_max_overlap_mm3": 0,
+      "desired_tool_product_blocked_frames": 10,
+      "desired_grip_sampled_contacts": [
+        {
+          "jaw": "CATALOG_jaw_1",
+          "sampled_min_gap_mm": 0.017620886227254218,
+          "point_world_m": [
+            4.638761500110453,
+            1.027582380000762,
+            -0.07201349389506813
+          ],
+          "point_head_m": [
+            0.022482380007842435,
+            -0.020349999889731508,
+            0.13871083433555098
+          ]
+        },
+        {
+          "jaw": "CATALOG_jaw_-1",
+          "sampled_min_gap_mm": 0.017620886227032173,
+          "point_world_m": [
+            4.638761500110442,
+            0.982617619985077,
+            -0.07201349389503493
+          ],
+          "point_head_m": [
+            -0.022482380007842504,
+            -0.02034999988973178,
+            0.13871083433555098
+          ]
+        }
+      ],
+      "G_command_min_max_mm": [
+        49.964757246777395,
+        49.964757246777395
+      ],
+      "blocked_product_motion_after_open_mm": 0.0,
+      "desired_inner_tip_entry_mm": 26.000000000000036,
+      "desired_body_to_carton_front_gap_mm": 32.710840423617185
+    }
+  },
+  "scene_hashes_match": {
+    "focus.glb.gz": true,
+    "focus_manifest.json": true,
+    "rig.json": true,
+    "e_original.glb.gz": true,
+    "carton.glb.gz": true
+  },
+  "catalogue_dimensions_mm": [
+    106,
+    65,
+    94
+  ],
+  "workpiece_range_is_not_certified_stroke": true,
+  "measured_neutral_envelope_mm": [
+    105.99999874830246,
+    64.99999761581421,
+    93.99999305605888
+  ],
+  "max_rigid_body_motion_mm": 0.0,
+  "executed_frames": 416,
+  "desired_IK_frames": 880,
+  "all_executed_scene_samples": 416,
+  "unwanted_executed_scene_crossings": 0,
+  "tool_product_samples": 416,
+  "proposed_layout_pair_intersections_mm3": {
+    "Box-Cola": 0,
+    "Box-Dessert": 0,
+    "Cola-Dessert": 0
+  },
+  "catalogue_only": true,
+  "limitations": [
+    "OEM candidate STEP unavailable; measured neutral envelope is an illustrative subdivision of catalogue dimensions.",
+    "Lower jaws use rigid hinge approximation; no measured pressure, compliance, force or certified stroke.",
+    "Only sampled surfaces/product exterior intersections; no continuous swept-volume, comprehensive containment, self-collision or dynamic singularity qualification.",
+    "Three attempts stopped before pickup. Desired release-only product intersections remain in saved diagnostic paths for Dough/Box, never executed.",
+    "Cola post-release product fall is the V8 kinematic target, with catalogue-specific native wrist withdrawal; physical release/settling remains unverified.",
+    "+95mm dough opener clearance is a trial, not a certified mechanism stroke.",
+    "Proposed same three-product shelf geometry checked; actual blocked products are not placed there by the animations."
+  ]
+}
