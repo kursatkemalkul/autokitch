@@ -3,156 +3,160 @@
     "parts": [
       {
         "name": "OEM_DAC_3",
-        "shift_mm": 2.4300537109375,
-        "closed_penetration_mm": 2.3410059262624072e-05,
-        "entry_max_penetration_mm": -1.5999990000000048,
-        "closing_max_penetration_mm": 2.3410059262624072e-05,
-        "fixed_penetration_mm": -1.5999990000000048
+        "shift_mm": 1.606048583984375,
+        "closed_penetration_mm": 1.011957806093533e-05,
+        "entry_max_penetration_mm": -0.9362897228801758,
+        "closing_max_penetration_mm": 1.011957806093533e-05,
+        "fixed_penetration_mm": -0.9362897228801758
       },
       {
         "name": "OEM_DAC_2",
-        "shift_mm": 2.4300537109375,
-        "closed_penetration_mm": 2.3410059269562966e-05,
-        "entry_max_penetration_mm": -1.5999989999999977,
-        "closing_max_penetration_mm": 2.3410059269562966e-05,
-        "fixed_penetration_mm": -1.5999989999999977
+        "shift_mm": 1.606048583984375,
+        "closed_penetration_mm": 1.0119578064404777e-05,
+        "entry_max_penetration_mm": -0.9370323974445538,
+        "closing_max_penetration_mm": 1.0119578064404777e-05,
+        "fixed_penetration_mm": -0.9370323974445538
       },
       {
         "name": "OEM_DAC_1",
-        "shift_mm": 2.4300537109375,
-        "closed_penetration_mm": 2.3410059262624072e-05,
-        "entry_max_penetration_mm": -1.5999990000000048,
-        "closing_max_penetration_mm": 2.3410059262624072e-05,
-        "fixed_penetration_mm": -1.5999990000000048
+        "shift_mm": 1.606048583984375,
+        "closed_penetration_mm": 1.0119578064404777e-05,
+        "entry_max_penetration_mm": -0.9362897228801723,
+        "closing_max_penetration_mm": 1.0119578064404777e-05,
+        "fixed_penetration_mm": -0.9362897228801723
       },
       {
         "name": "OEM_DAC_0",
-        "shift_mm": 2.4300537109375,
-        "closed_penetration_mm": 2.3410059262624072e-05,
-        "entry_max_penetration_mm": -1.5999990000000048,
-        "closing_max_penetration_mm": 2.3410059262624072e-05,
-        "fixed_penetration_mm": -1.5999990000000048
+        "shift_mm": 1.606048583984375,
+        "closed_penetration_mm": 1.011957806093533e-05,
+        "entry_max_penetration_mm": -0.9370323974445572,
+        "closing_max_penetration_mm": 1.011957806093533e-05,
+        "fixed_penetration_mm": -0.9370323974445572
       }
     ],
     "finger_aabb_overlap_candidates": [],
     "entry_samples": 25,
-    "closure_samples": 25
+    "closure_samples": 25,
+    "passed_hard_geometry": true
   },
   "Cola": {
     "parts": [
       {
         "name": "OEM_DAC_3",
-        "shift_mm": 2.7880859375,
-        "closed_penetration_mm": 1.5213138943037663e-06,
-        "entry_max_penetration_mm": -1.5149920528147176,
-        "closing_max_penetration_mm": 1.5213138943037663e-06,
-        "fixed_penetration_mm": -1.5149920528147176
+        "shift_mm": 3.95367431640625,
+        "closed_penetration_mm": 1.937955829839355e-05,
+        "entry_max_penetration_mm": -3.372546770237898,
+        "closing_max_penetration_mm": 1.937955829839355e-05,
+        "fixed_penetration_mm": -3.372546770237898
       },
       {
         "name": "OEM_DAC_2",
-        "shift_mm": 1.61480712890625,
-        "closed_penetration_mm": 2.0202001189961738e-05,
-        "entry_max_penetration_mm": -1.060354525422108,
-        "closing_max_penetration_mm": 2.0202001189961738e-05,
-        "fixed_penetration_mm": -1.060354525422108
+        "shift_mm": 3.722900390625,
+        "closed_penetration_mm": 3.0301254907993957e-06,
+        "entry_max_penetration_mm": -2.805998257274726,
+        "closing_max_penetration_mm": 3.0301254907993957e-06,
+        "fixed_penetration_mm": -2.805998257274726
       },
       {
         "name": "OEM_DAC_1",
-        "shift_mm": 1.61480712890625,
-        "closed_penetration_mm": 8.202001008927873e-06,
-        "entry_max_penetration_mm": -1.0603665254222892,
-        "closing_max_penetration_mm": 8.202001008927873e-06,
-        "fixed_penetration_mm": -1.0603665254222892
+        "shift_mm": 3.722930908203125,
+        "closed_penetration_mm": 1.7934635498928486e-05,
+        "entry_max_penetration_mm": -2.8060102572749073,
+        "closing_max_penetration_mm": 1.7934635498928486e-05,
+        "fixed_penetration_mm": -2.8060102572749073
       },
       {
         "name": "OEM_DAC_0",
-        "shift_mm": 2.78814697265625,
-        "closed_penetration_mm": 3.459616931822396e-05,
-        "entry_max_penetration_mm": -1.5149974654940848,
-        "closing_max_penetration_mm": 3.459616931822396e-05,
-        "fixed_penetration_mm": -1.5149974654940848
+        "shift_mm": 3.8641357421875,
+        "closed_penetration_mm": 3.686046072537419e-06,
+        "entry_max_penetration_mm": -3.3725516444889774,
+        "closing_max_penetration_mm": 3.686046072537419e-06,
+        "fixed_penetration_mm": -3.3725516444889774
       }
     ],
     "finger_aabb_overlap_candidates": [],
     "entry_samples": 25,
-    "closure_samples": 25
+    "closure_samples": 25,
+    "passed_hard_geometry": true
   },
   "Dessert": {
     "parts": [
       {
         "name": "OEM_DAC_3",
-        "shift_mm": 2.81097412109375,
-        "closed_penetration_mm": 2.9200029803833072e-05,
-        "entry_max_penetration_mm": -1.5292857040794945,
-        "closing_max_penetration_mm": 2.9200029803833072e-05,
-        "fixed_penetration_mm": -1.5292857040794945
+        "shift_mm": 3.966522216796875,
+        "closed_penetration_mm": 9.344230368635298e-06,
+        "entry_max_penetration_mm": -3.386543268280244,
+        "closing_max_penetration_mm": 9.344230368635298e-06,
+        "fixed_penetration_mm": -3.386543268280244
       },
       {
         "name": "OEM_DAC_2",
-        "shift_mm": 1.632080078125,
-        "closed_penetration_mm": 4.170999656771812e-07,
-        "entry_max_penetration_mm": -1.12300082604911,
-        "closing_max_penetration_mm": 4.170999656771812e-07,
-        "fixed_penetration_mm": -1.12300082604911
+        "shift_mm": 3.736297607421875,
+        "closed_penetration_mm": 1.086322688748087e-05,
+        "entry_max_penetration_mm": -2.8179073233262284,
+        "closing_max_penetration_mm": 1.086322688748087e-05,
+        "fixed_penetration_mm": -2.8179073233262284
       },
       {
         "name": "OEM_DAC_1",
-        "shift_mm": 1.63214111328125,
-        "closed_penetration_mm": 4.5468978165930096e-05,
-        "entry_max_penetration_mm": -1.123004049154809,
-        "closing_max_penetration_mm": 4.5468978165930096e-05,
-        "fixed_penetration_mm": -1.123004049154809
+        "shift_mm": 3.736297607421875,
+        "closed_penetration_mm": 1.0797758527580914e-05,
+        "entry_max_penetration_mm": -2.8179075755457377,
+        "closing_max_penetration_mm": 1.0797758527580914e-05,
+        "fixed_penetration_mm": -2.8179075755457377
       },
       {
         "name": "OEM_DAC_0",
-        "shift_mm": 2.81097412109375,
-        "closed_penetration_mm": 2.7838741145647106e-05,
-        "entry_max_penetration_mm": -1.5292879277583118,
-        "closing_max_penetration_mm": 2.7838741145647106e-05,
-        "fixed_penetration_mm": -1.5292879277583118
+        "shift_mm": 3.876708984375,
+        "closed_penetration_mm": 2.68333879005489e-05,
+        "entry_max_penetration_mm": -3.3865462399964645,
+        "closing_max_penetration_mm": 2.68333879005489e-05,
+        "fixed_penetration_mm": -3.3865462399964645
       }
     ],
     "finger_aabb_overlap_candidates": [],
     "entry_samples": 25,
-    "closure_samples": 25
+    "closure_samples": 25,
+    "passed_hard_geometry": true
   },
   "Dough": {
     "parts": [
       {
         "name": "OEM_DAC_3",
-        "shift_mm": -7.59808349609375,
-        "closed_penetration_mm": 1.2918545357110296,
-        "entry_max_penetration_mm": 1.0169742508116912,
-        "closing_max_penetration_mm": 1.2918545357110296,
-        "fixed_penetration_mm": -0.04389925047908194
+        "shift_mm": -0.44146728515625,
+        "closed_penetration_mm": 0.7230708734992584,
+        "entry_max_penetration_mm": 0.5586774958707685,
+        "closing_max_penetration_mm": 0.7230708734992584,
+        "fixed_penetration_mm": 0.5583791381266399
       },
       {
         "name": "OEM_DAC_2",
-        "shift_mm": -8.30267333984375,
-        "closed_penetration_mm": 2.0053812536767817,
-        "entry_max_penetration_mm": 1.7802126502120923,
-        "closing_max_penetration_mm": 2.0053812536767817,
-        "fixed_penetration_mm": 0.8279909334587588
+        "shift_mm": -2.1597900390625,
+        "closed_penetration_mm": 1.0937682304461989,
+        "entry_max_penetration_mm": 0.9990083701416561,
+        "closing_max_penetration_mm": 1.0937682304461989,
+        "fixed_penetration_mm": 0.9990083701416561
       },
       {
         "name": "OEM_DAC_1",
-        "shift_mm": -6.193115234375,
-        "closed_penetration_mm": 1.7665084589905087,
-        "entry_max_penetration_mm": 1.561947684558397,
-        "closing_max_penetration_mm": 1.7665084589905087,
-        "fixed_penetration_mm": 0.7433640173131855
+        "shift_mm": -2.1597900390625,
+        "closed_penetration_mm": 0.9866958442525318,
+        "entry_max_penetration_mm": 0.5710690601504198,
+        "closing_max_penetration_mm": 0.9866958442525318,
+        "fixed_penetration_mm": 0.2870130046622871
       },
       {
         "name": "OEM_DAC_0",
-        "shift_mm": -5.4700927734375,
-        "closed_penetration_mm": 1.3336834390517935,
-        "entry_max_penetration_mm": 0.8495609331076771,
-        "closing_max_penetration_mm": 1.3336834390517935,
-        "fixed_penetration_mm": 0.22324200818343853
+        "shift_mm": -0.30731201171875,
+        "closed_penetration_mm": 0.7000019763101634,
+        "entry_max_penetration_mm": 0.3810176758885092,
+        "closing_max_penetration_mm": 0.7000019763101634,
+        "fixed_penetration_mm": 0.3598454536373544
       }
     ],
     "finger_aabb_overlap_candidates": [],
     "entry_samples": 25,
-    "closure_samples": 25
+    "closure_samples": 25,
+    "passed_hard_geometry": false
   }
 }
