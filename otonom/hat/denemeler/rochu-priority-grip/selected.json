@@ -1,8 +1,9 @@
 {
-  "radius_mm": 53.03300858899106,
-  "mount_axes_mm": 106.06601717798212,
-  "adjacent_axis_spacing_mm": 74.99999999999999,
-  "mounting": "Four fixed roots on the same star; upper pair localX points +Y, lower pair localX points -Y. Mounted once; no per-product root/angle change.",
+  "half_spacing_mm": [
+    25.0,
+    42.0
+  ],
+  "mounting": "All four fixed local -X gripping faces point at tool-axis centre. No per-product mount rotation or spacing change.",
   "dessert_dimensions_mm": [
     65,
     65.5,
@@ -10,235 +11,289 @@
   ],
   "products": {
     "Box": {
-      "radius_mm": 53.03300858899106,
-      "depth_mm": 4.9993896484375,
+      "depth_mm": 5.907873618516263,
       "opening": -11,
       "parts": [
         {
           "name": "OEM_DAC_3",
-          "shift_mm": 2.4300537109375,
-          "surface_mm": 2.3410059262624072e-05,
+          "shift_mm": 1.606048583984375,
+          "surface_mm": 1.011957806093533e-05,
           "tip_contact": true,
           "side_contact": true,
-          "inside_entry_mm": 29.607863883711506,
-          "fixed_mm": -1.5999990000000048,
+          "inside_entry_mm": 31.372708378074236,
+          "fixed_mm": -0.9362897228801758,
+          "whole_closed_mm": 1.011957806093533e-05,
           "point_world_relative": [
-            -0.03249999999999998,
-            -0.022499977589940736,
-            0.1303921321162885
-          ]
+            -0.03061585014558591,
+            -0.022499990880421938,
+            0.12862728762192577
+          ],
+          "inward_axis_dot": 0.9999999999999999
         },
         {
           "name": "OEM_DAC_2",
-          "shift_mm": 2.4300537109375,
-          "surface_mm": 2.3410059269562966e-05,
+          "shift_mm": 1.606048583984375,
+          "surface_mm": 1.0119578064404777e-05,
           "tip_contact": true,
           "side_contact": true,
-          "inside_entry_mm": 29.607863883711506,
-          "fixed_mm": -1.5999989999999977,
+          "inside_entry_mm": 31.372708378074265,
+          "fixed_mm": -0.9370323974445538,
+          "whole_closed_mm": 1.0119578064404777e-05,
           "point_world_relative": [
-            0.04250000000000002,
-            -0.02249997758994073,
-            0.1303921321162885
-          ]
+            0.03061585014558594,
+            -0.022499990880421934,
+            0.12862728762192574
+          ],
+          "inward_axis_dot": 1.0
         },
         {
           "name": "OEM_DAC_1",
-          "shift_mm": 2.4300537109375,
-          "surface_mm": 2.3410059262624072e-05,
+          "shift_mm": 1.606048583984375,
+          "surface_mm": 1.0119578064404777e-05,
           "tip_contact": true,
           "side_contact": true,
-          "inside_entry_mm": 29.607863883711506,
-          "fixed_mm": -1.5999990000000048,
+          "inside_entry_mm": 31.372708378074265,
+          "fixed_mm": -0.9362897228801723,
+          "whole_closed_mm": 1.0119578064404777e-05,
           "point_world_relative": [
-            0.03250000000000001,
-            0.022499977589940736,
-            0.1303921321162885
-          ]
+            0.03061585014558594,
+            0.022499990880421934,
+            0.12862728762192574
+          ],
+          "inward_axis_dot": 1.0
         },
         {
           "name": "OEM_DAC_0",
-          "shift_mm": 2.4300537109375,
-          "surface_mm": 2.3410059262624072e-05,
+          "shift_mm": 1.606048583984375,
+          "surface_mm": 1.011957806093533e-05,
           "tip_contact": true,
           "side_contact": true,
-          "inside_entry_mm": 29.607863883711506,
-          "fixed_mm": -1.5999990000000048,
+          "inside_entry_mm": 31.372708378074236,
+          "fixed_mm": -0.9370323974445572,
+          "whole_closed_mm": 1.011957806093533e-05,
           "point_world_relative": [
-            -0.042499999999999996,
-            0.022499977589940736,
-            0.1303921321162885
-          ]
+            -0.03061585014558591,
+            0.022499990880421938,
+            0.12862728762192577
+          ],
+          "inward_axis_dot": 0.9999999999999999
         }
       ]
     },
     "Cola": {
-      "radius_mm": 53.03300858899106,
-      "depth_mm": 4.677734375,
+      "depth_mm": 7.295872576347185,
       "opening": -11,
       "parts": [
         {
           "name": "OEM_DAC_3",
-          "shift_mm": 2.7880859375,
-          "surface_mm": 1.5213138943037663e-06,
+          "shift_mm": 3.95367431640625,
+          "surface_mm": 1.937955829839355e-05,
           "tip_contact": true,
           "side_contact": true,
-          "inside_entry_mm": 24.979335270148507,
-          "fixed_mm": -1.5149920528147176,
+          "inside_entry_mm": 26.476256027565327,
+          "fixed_mm": -3.372546770237898,
+          "whole_closed_mm": 1.937955829839355e-05,
           "point_world_relative": [
-            0.021621999999999992,
-            0.032520669729851494,
-            -0.023371112236315605
-          ]
+            0.018135070672875196,
+            0.03102374897243467,
+            -0.027208360384606705
+          ],
+          "inward_axis_dot": 0.9999999999999999
         },
         {
           "name": "OEM_DAC_2",
-          "shift_mm": 1.61480712890625,
-          "surface_mm": 2.0202001189961738e-05,
+          "shift_mm": 3.722900390625,
+          "surface_mm": 3.0301254907993957e-06,
           "tip_contact": true,
           "side_contact": true,
-          "inside_entry_mm": 25.151672682653427,
-          "fixed_mm": -1.060354525422108,
+          "inside_entry_mm": 26.401857006792984,
+          "fixed_mm": -2.805998257274726,
+          "whole_closed_mm": 3.0301254907993957e-06,
           "point_world_relative": [
-            -0.022557300000000006,
-            0.03234833231734657,
-            -0.023693594845728968
-          ]
+            -0.01243138039872504,
+            0.031098147993207016,
+            -0.030683073219833146
+          ],
+          "inward_axis_dot": 1.0
         },
         {
           "name": "OEM_DAC_1",
-          "shift_mm": 1.61480712890625,
-          "surface_mm": 8.202001008927873e-06,
+          "shift_mm": 3.722930908203125,
+          "surface_mm": 1.7934635498928486e-05,
           "tip_contact": true,
           "side_contact": true,
-          "inside_entry_mm": 25.151672682653427,
-          "fixed_mm": -1.0603665254222892,
+          "inside_entry_mm": 26.401843053400555,
+          "fixed_mm": -2.8060102572749073,
+          "whole_closed_mm": 1.7934635498928486e-05,
           "point_world_relative": [
-            -0.0225573,
-            0.03234833231734657,
-            0.023693594845729197
-          ]
+            -0.012431366606330816,
+            0.031098161946599444,
+            0.030683050048611073
+          ],
+          "inward_axis_dot": 1.0
         },
         {
           "name": "OEM_DAC_0",
-          "shift_mm": 2.78814697265625,
-          "surface_mm": 3.459616931822396e-05,
+          "shift_mm": 3.8641357421875,
+          "surface_mm": 3.686046072537419e-06,
           "tip_contact": true,
           "side_contact": true,
-          "inside_entry_mm": 24.979317862503624,
-          "fixed_mm": -1.5149974654940848,
+          "inside_entry_mm": 26.758267256812594,
+          "fixed_mm": -3.3725516444889774,
+          "whole_closed_mm": 3.686046072537419e-06,
           "point_world_relative": [
-            0.021622000000000006,
-            0.032520687137496375,
-            0.023371053267920678
-          ]
+            0.018135075084130543,
+            0.030741737743187406,
+            0.027208367795515914
+          ],
+          "inward_axis_dot": 0.9999999999999999
         }
       ]
     },
     "Dessert": {
-      "radius_mm": 53.03300858899106,
-      "depth_mm": 4.9993896484375,
+      "depth_mm": 7.295872576347185,
       "opening": -11,
       "parts": [
         {
           "name": "OEM_DAC_3",
-          "shift_mm": 2.81097412109375,
-          "surface_mm": 2.9200029803833072e-05,
+          "shift_mm": 3.966522216796875,
+          "surface_mm": 9.344230368635298e-06,
           "tip_contact": true,
           "side_contact": true,
-          "inside_entry_mm": 24.794441057330182,
-          "fixed_mm": -1.5292857040794945,
+          "inside_entry_mm": 25.970287234125195,
+          "fixed_mm": -3.386543268280244,
+          "whole_closed_mm": 9.344230368635298e-06,
           "point_world_relative": [
-            0.021621999999999992,
-            0.005205559942669816,
-            -0.02334899892232966
-          ]
+            0.01812918812955821,
+            0.004029713765874805,
+            -0.027198477711834274
+          ],
+          "inward_axis_dot": 0.9999999999999999
         },
         {
           "name": "OEM_DAC_2",
-          "shift_mm": 1.632080078125,
-          "surface_mm": 4.170999656771812e-07,
+          "shift_mm": 3.736297607421875,
+          "surface_mm": 1.086322688748087e-05,
           "tip_contact": true,
           "side_contact": true,
-          "inside_entry_mm": 24.968787815855404,
-          "fixed_mm": -1.12300082604911,
+          "inside_entry_mm": 25.895724428812482,
+          "fixed_mm": -2.8179073233262284,
+          "whole_closed_mm": 1.086322688748087e-05,
           "point_world_relative": [
-            -0.022557300000000006,
-            0.005031213184144595,
-            -0.02367693374850427
-          ]
+            -0.012425326790902825,
+            0.004104276571187518,
+            -0.030672903158691936
+          ],
+          "inward_axis_dot": 1.0
         },
         {
           "name": "OEM_DAC_1",
-          "shift_mm": 1.63214111328125,
-          "surface_mm": 4.5468978165930096e-05,
+          "shift_mm": 3.736297607421875,
+          "surface_mm": 1.0797758527580914e-05,
           "tip_contact": true,
           "side_contact": true,
-          "inside_entry_mm": 24.968771735907723,
-          "fixed_mm": -1.123004049154809,
+          "inside_entry_mm": 25.895724428812482,
+          "fixed_mm": -2.8179075755457377,
+          "whole_closed_mm": 1.0797758527580914e-05,
           "point_world_relative": [
-            -0.0225573,
-            0.005031229264092274,
-            0.023676874886633316
-          ]
+            -0.012425326790902825,
+            0.004104276571187518,
+            0.030672903158691936
+          ],
+          "inward_axis_dot": 1.0
         },
         {
           "name": "OEM_DAC_0",
-          "shift_mm": 2.81097412109375,
-          "surface_mm": 2.7838741145647106e-05,
+          "shift_mm": 3.876708984375,
+          "surface_mm": 2.68333879005489e-05,
           "tip_contact": true,
           "side_contact": true,
-          "inside_entry_mm": 24.794441057330182,
-          "fixed_mm": -1.5292879277583118,
+          "inside_entry_mm": 26.252431110759993,
+          "fixed_mm": -3.3865462399964645,
+          "whole_closed_mm": 2.68333879005489e-05,
           "point_world_relative": [
-            0.021622000000000006,
-            0.005205559942669816,
-            0.02334899892232966
-          ]
+            0.01812917632589933,
+            0.0037475698892400072,
+            0.027198457881687357
+          ],
+          "inward_axis_dot": 0.9999999999999999
         }
       ]
     },
     "Dough": {
-      "radius_mm": 53.03300858899106,
-      "depth_mm": 0.5203544919897105,
-      "shift_mm": -6.797490028946399,
+      "depth_mm": 6.4566133989450964,
+      "opening": -11,
       "parts": [
         {
           "name": "OEM_DAC_3",
-          "open_mm": 1.0169742508116912,
-          "fixed_mm": -0.04389925047908194,
-          "tip_mm": 0.7000017295173238,
-          "whole_closed_mm": 1.2918545357110296,
-          "shift_mm": -7.59808349609375
+          "shift_mm": -0.44146728515625,
+          "surface_mm": 0.7000045749905801,
+          "tip_contact": true,
+          "side_contact": true,
+          "inside_entry_mm": 7.486588767984106,
+          "fixed_mm": 0.5583791381266399,
+          "whole_closed_mm": 0.7230708734992584,
+          "point_world_relative": [
+            0.01595902678110055,
+            -0.015345715232015895,
+            -0.032674237467523334
+          ],
+          "inward_axis_dot": 0.9999999999999999,
+          "tip_mm": 0.7000133265927105
         },
         {
           "name": "OEM_DAC_2",
-          "open_mm": 1.7802126502120923,
-          "fixed_mm": 0.8279909334587588,
-          "tip_mm": 0.7000017147307316,
-          "whole_closed_mm": 2.0053812536767817,
-          "shift_mm": -8.30267333984375
+          "shift_mm": -2.1597900390625,
+          "surface_mm": 0.7000000098926553,
+          "tip_contact": true,
+          "side_contact": true,
+          "inside_entry_mm": 7.3943997637561685,
+          "fixed_mm": 0.9990083701416561,
+          "whole_closed_mm": 1.0937682304461989,
+          "point_world_relative": [
+            -0.016209189364449615,
+            -0.015437904236243832,
+            -0.03309894109045688
+          ],
+          "inward_axis_dot": 1.0,
+          "tip_mm": 0.7000000098926553
         },
         {
           "name": "OEM_DAC_1",
-          "open_mm": 1.561947684558397,
-          "fixed_mm": 0.7433640173131855,
-          "tip_mm": 0.7000130954871662,
-          "whole_closed_mm": 1.7665084589905087,
-          "shift_mm": -6.193115234375
+          "shift_mm": -2.1597900390625,
+          "surface_mm": 0.7000000098926553,
+          "tip_contact": true,
+          "side_contact": true,
+          "inside_entry_mm": 7.3943997637561685,
+          "fixed_mm": 0.2870130046622871,
+          "whole_closed_mm": 0.9866958442525318,
+          "point_world_relative": [
+            -0.016209189364449615,
+            -0.015437904236243832,
+            0.03309894109045688
+          ],
+          "inward_axis_dot": 1.0,
+          "tip_mm": 0.7000000098926553
         },
         {
           "name": "OEM_DAC_0",
-          "open_mm": 0.8495609331076771,
-          "fixed_mm": 0.22324200818343853,
-          "tip_mm": 0.700006540105505,
-          "whole_closed_mm": 1.3336834390517935,
-          "shift_mm": -5.4700927734375
+          "shift_mm": -0.30731201171875,
+          "surface_mm": 0.7000019763101634,
+          "tip_contact": true,
+          "side_contact": true,
+          "inside_entry_mm": 7.510674124996748,
+          "fixed_mm": 0.3598454536373544,
+          "whole_closed_mm": 0.7000019763101634,
+          "point_world_relative": [
+            0.015938942372537325,
+            -0.015321629875003254,
+            0.03264049566113711
+          ],
+          "inward_axis_dot": 0.9999999999999999,
+          "tip_mm": 0.7000019763101634
         }
-      ],
-      "opening": -11
+      ]
     }
   },
-  "status": "Hard-product surface contact candidates, not a load-bearing physical certification. Dough intrusion represents required deformation, not simulated material response.",
-  "assumptions": "Each soft tip may conform to first contact separately; this is geometric compliance, not independent actuators or a validated common-pressure law."
+  "status": "Geometric candidate; pressure-force relation and actual soft compliance unvalidated."
 }
