@@ -1,0 +1,59 @@
+{
+  "mount_axes_mm": 80.0,
+  "dessert_footprint_mm": 80,
+  "items": {
+    "Dough": {
+      "dimensions_xzy_mm": [
+        74.05978441238403,
+        74.99998807907104,
+        45.66460847854614
+      ],
+      "fixed_intrusion_mm": 4.4462009499196995,
+      "max_tip_gap_mm": 4.8194727886027025,
+      "max_tip_overlap_mm": 0,
+      "open_max_overlap_mm": 4.4462009499196995,
+      "shift_mm": -10.497267510307555,
+      "entry_depth_delta_mm": -3.639719831607464
+    },
+    "Cola": {
+      "dimensions_xzy_mm": [
+        65.04106521606445,
+        65.51878154277802,
+        115.00000953674316
+      ],
+      "fixed_intrusion_mm": 0,
+      "max_tip_gap_mm": 6.989404875161892,
+      "max_tip_overlap_mm": 0,
+      "open_max_overlap_mm": 0,
+      "shift_mm": -11.0,
+      "entry_depth_delta_mm": -8.74334564632588
+    },
+    "Dessert": {
+      "dimensions_xzy_mm": [
+        80.0,
+        80.0,
+        60.00000238418579
+      ],
+      "fixed_intrusion_mm": 0,
+      "max_tip_gap_mm": 0.6825858276260157,
+      "max_tip_overlap_mm": 0.682946793454986,
+      "open_max_overlap_mm": 0,
+      "shift_mm": -10.010116053252387,
+      "entry_depth_delta_mm": -8.122123085106843
+    },
+    "Box": {
+      "dimensions_xzy_mm": [
+        319.9999928474426,
+        319.9999928474426,
+        45.00000178813934
+      ],
+      "fixed_intrusion_mm": 0,
+      "max_tip_gap_mm": 0,
+      "max_tip_overlap_mm": 0.22947094261620976,
+      "open_max_overlap_mm": 0,
+      "shift_mm": -1.0286961051302392,
+      "entry_depth_delta_mm": -15.552142572550244
+    }
+  },
+  "note": "Same mount and same unscaled OEM for all four; item-specific insertion and illustrative tip command. No successful all-product grasp."
+}
