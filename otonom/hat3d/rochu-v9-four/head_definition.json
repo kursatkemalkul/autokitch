@@ -1,0 +1,183 @@
+{
+  "radius_mm": 50,
+  "angles_deg": [
+    45,
+    135,
+    225,
+    315
+  ],
+  "finger_roots": [
+    [
+      [
+        0.7071067811865476,
+        -0.7071067811865474,
+        0.0,
+        0.03535533905932738
+      ],
+      [
+        0.7071067811865474,
+        0.7071067811865476,
+        0.0,
+        0.03535533905932738
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.073
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    [
+      [
+        -0.7071067811865472,
+        -0.7071067811865479,
+        0.0,
+        -0.035355339059327376
+      ],
+      [
+        0.7071067811865479,
+        -0.7071067811865472,
+        0.0,
+        0.03535533905932738
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.073
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    [
+      [
+        -0.7071067811865479,
+        0.7071067811865474,
+        0.0,
+        -0.03535533905932738
+      ],
+      [
+        -0.7071067811865474,
+        -0.7071067811865479,
+        0.0,
+        -0.035355339059327376
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.073
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    [
+      [
+        0.7071067811865465,
+        0.7071067811865485,
+        0.0,
+        0.03535533905932737
+      ],
+      [
+        -0.7071067811865485,
+        0.7071067811865465,
+        0.0,
+        -0.03535533905932738
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.073
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ]
+  ],
+  "root_z_mm": 73,
+  "tcp_from_wrist_mm": 109.7,
+  "neutral_diameter_mm": 74.53368387468717,
+  "tip_vacuum_approx_mm": -11,
+  "tip_pressure_approx_mm": 5,
+  "plate_outline_mm": 102,
+  "plate_thickness_mm": 8,
+  "slot_centres_mm": [
+    26,
+    55
+  ],
+  "source_steps": {
+    "module": "295afc40b31856228cb6758b1a75051198c8a3257956e60705f482b7c1ed1c54",
+    "adapter": "406e3f70b4a6206f047f3174072186510cc7895602ea191cdce60cf245443ca0"
+  },
+  "module_count": 4,
+  "scale": 0.001,
+  "plate_is_our_proposal": true,
+  "complete_supplier_assembly": false,
+  "physical_grasp_verified": false,
+  "soft_deformation_is_illustrative": true,
+  "root_hash": "1735bc3f35879dc77e4b7f6aec1554c694bd6b32895823bf03cece6c8ab11ea1",
+  "recommended_module": "DAC-1G3527",
+  "supplied_STEP_filename": "BMC-1G3527_SN\u56db\u7ea7.step",
+  "supplier_confirmation_of_STEP_variant_required": true,
+  "source_module_bbox_mm": [
+    26.8,
+    34.8,
+    47.2
+  ],
+  "gripping_face": "Modules rotated 180 degrees at their longitudinal stems, fixed at radius 50mm for every product",
+  "pressure_displacement_not_force_simulation": true,
+  "air_hoses_not_modelled": true,
+  "connector_nut_and_thread_details_are_approximate": true,
+  "previous_outward_gripping_face_layout_rejected": false,
+  "previous_root_hash": "42fa9c0b8b177c3de0d18081cc688ffb98a9039c9eb3114253528eedbb374603",
+  "mount_reversed_degrees": 180,
+  "proposed_reverse_candidate": true,
+  "deformation_range_is_certified_mechanical_limit": false,
+  "previous_radius_mm": 34.3,
+  "plate_arm_diameter_mm": 140,
+  "star_is_custom_clearance_proposal": true,
+  "tip_inner_face_points": "Toward the head centre after 180 degree rotation",
+  "aperture_is_not_a_certified_load_or_stroke_limit": true,
+  "neutral_geometry_is_supplier_STEP": true,
+  "tip_bend_model": {
+    "kind": "arc neck and straight distal pad; illustrative only",
+    "unchanged_through_local_z_mm": 26,
+    "neck_mm": 6,
+    "straight_distal_pad_mm": 9.2,
+    "restored_straight_housing": true,
+    "measured_pressure_shape_available": false
+  },
+  "v8_apertures_superseded": true,
+  "legacy_v8_aperture_superseded": [
+    {
+      "illustrated_tip_shift_mm": -11,
+      "distal_inscribed_diameter_mm": 96.51840944306247
+    },
+    {
+      "illustrated_tip_shift_mm": 0,
+      "distal_inscribed_diameter_mm": 74.53368387468717
+    },
+    {
+      "illustrated_tip_shift_mm": 5,
+      "distal_inscribed_diameter_mm": 64.54389046061297
+    }
+  ]
+}
