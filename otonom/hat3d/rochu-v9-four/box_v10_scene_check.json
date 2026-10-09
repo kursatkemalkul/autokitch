@@ -1,0 +1,120 @@
+{
+  "scope": "Sampled whole arm/head versus rendered static scene and moving drawer; product contact and continuous paths separate",
+  "full_frame_sampling": false,
+  "rows": [
+    {
+      "frame": 0,
+      "phase": "Alma noktas\u0131n\u0131n \u00f6n\u00fcnde bekle",
+      "hits": [],
+      "native_crossings": 0
+    },
+    {
+      "frame": 8,
+      "phase": "Ters tak\u0131lm\u0131\u015f parmaklar\u0131n esnek u\u00e7lar\u0131n\u0131 a\u00e7",
+      "hits": [],
+      "native_crossings": 0
+    },
+    {
+      "frame": 28,
+      "phase": "Kutu kenar\u0131n\u0131n ortas\u0131na d\u00fcz yakla\u015f",
+      "hits": [
+        {
+          "fixture": "E_KALIP__sac__NEST",
+          "moving": "OEM_DAC_3",
+          "proxy_overlap_mm3": 653.1175341432704,
+          "uses_proxy": true,
+          "native_surface_crossing": true
+        },
+        {
+          "fixture": "E_KALIP__sac__NEST",
+          "moving": "OEM_DAC_2",
+          "proxy_overlap_mm3": 653.2522495414278,
+          "uses_proxy": true,
+          "native_surface_crossing": true
+        }
+      ],
+      "native_crossings": 2
+    },
+    {
+      "frame": 37,
+      "phase": "Yaln\u0131z u\u00e7lar\u0131 kapat \u00b7 kavrama denemesi",
+      "hits": [
+        {
+          "fixture": "E_KALIP__sac__NEST",
+          "moving": "OEM_DAC_3",
+          "proxy_overlap_mm3": 613.2237233916057,
+          "uses_proxy": true,
+          "native_surface_crossing": true
+        },
+        {
+          "fixture": "E_KALIP__sac__NEST",
+          "moving": "OEM_DAC_2",
+          "proxy_overlap_mm3": 612.808878478722,
+          "uses_proxy": true,
+          "native_surface_crossing": true
+        }
+      ],
+      "native_crossings": 2
+    },
+    {
+      "frame": 57,
+      "phase": "Dik y\u00fcksel \u00b7 \u00f6nce \u00fcr\u00fcn \u00e7evresini temizle",
+      "hits": [],
+      "native_crossings": 0
+    },
+    {
+      "frame": 71,
+      "phase": "\u00dcr\u00fcn sabit \u00b7 ray\u0131 ta\u015f\u0131ma i\u00e7in hizala",
+      "hits": [],
+      "native_crossings": 0
+    },
+    {
+      "frame": 93,
+      "phase": "\u00c7ekmece kapal\u0131 \u00b7 d\u00fcz d\u0131\u015far\u0131 ta\u015f\u0131",
+      "hits": [],
+      "native_crossings": 0
+    },
+    {
+      "frame": 113,
+      "phase": "\u0130stasyonlar\u0131n \u00f6n\u00fcnde ta\u015f\u0131ma kotuna \u00e7\u0131k",
+      "hits": [],
+      "native_crossings": 0
+    },
+    {
+      "frame": 143,
+      "phase": "Kutu elde \u00b7 raf\u0131n \u00f6n\u00fcnde y\u00f6nlen",
+      "hits": [],
+      "native_crossings": 0
+    },
+    {
+      "frame": 165,
+      "phase": "Kutuyu d\u00fcz hizada e\u011fimli b\u0131rakma yerine getir",
+      "hits": [],
+      "native_crossings": 0
+    },
+    {
+      "frame": 173,
+      "phase": "Yaln\u0131z u\u00e7lar\u0131 a\u00e7 \u00b7 \u00fcr\u00fcn\u00fc b\u0131rak",
+      "hits": [],
+      "native_crossings": 0
+    },
+    {
+      "frame": 174,
+      "phase": "Yaln\u0131z u\u00e7lar\u0131 a\u00e7 \u00b7 \u00fcr\u00fcn\u00fc b\u0131rak",
+      "hits": [],
+      "native_crossings": 0
+    },
+    {
+      "frame": 180,
+      "phase": "K\u0131sa b\u0131rakma \u00b7 fiziksel deney gerekli",
+      "hits": [],
+      "native_crossings": 0
+    },
+    {
+      "frame": 202,
+      "phase": "Ucu geri \u00e7ek \u00b7 \u00fcr\u00fcn b\u0131rak\u0131ld\u0131",
+      "hits": [],
+      "native_crossings": 0
+    }
+  ]
+}

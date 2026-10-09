@@ -1,0 +1,119 @@
+{
+  "version": 10,
+  "scene_sha256": "9b311d059c5077e94d40cbd5ed0de49550b14dddb71c16b8541e7167c39d5da8",
+  "same_scene_required": true,
+  "carton_holes": 0,
+  "pickup": {
+    "Dough": "Vertical down/up, contact at widest belly. No sideways motion before lifted and drawer closed.",
+    "Cola": "Vertical down/up; raise360mm before drawer closes. Try12mm deeper seating.",
+    "Dessert": "Vertical down/up; try deeper seating, must not intersect body or neighbouring cups.",
+    "Box": "V2 horizontal centre of front edge, closed uncut carton. Deep requested entry26mm. Two-fixed alternative: user requested vertical approach, no carton holes; check actual feasibility instead of forcing contact."
+  },
+  "release": {
+    "Dough": "Same accepted20deg upper diagonal, top view straight. Same table and opener trial95mm lift.",
+    "Cola": "Horizontal near right wall same shelf.",
+    "Dessert": "Near robot in front of cola; no top-view diagonal.30deg pitch only where clearance requires.",
+    "Box": "Same shelf layout, no carton cuts, centre edge."
+  },
+  "blocked_grasps": "User-requested full conceptual motion: carry assumed even when contacts or gaps exist; no collision stop; no physical grasp qualification.",
+  "product_paths": "*_v8_candidate.json contain full desired paths and product transforms; rerun IK for own head TCP and verify, never claim the old head checks apply.",
+  "desired_layout": {
+    "Box": [
+      [
+        -0.9999999999999999,
+        4.230896276305024e-12,
+        1.7258528283837006e-12,
+        4.909000000001244
+      ],
+      [
+        4.2308926768579085e-12,
+        0.9999999999999999,
+        -1.0683615972979061e-12,
+        0.8725000008949175
+      ],
+      [
+        -1.7257757298679869e-12,
+        -1.0682908056038445e-12,
+        -0.9999999999999999,
+        1.911999999979177
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "Cola": [
+      [
+        5.82888826251095e-16,
+        8.094515274650658e-17,
+        -0.9999999999999997,
+        5.154
+      ],
+      [
+        0.9999999999999997,
+        -1.732349083634468e-16,
+        4.7607354756108e-16,
+        0.8825205326080322
+      ],
+      [
+        -2.4963840313477526e-16,
+        -0.9999999999999994,
+        -6.90891947480354e-17,
+        1.9919999999999989
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "Dessert": [
+      [
+        1.0,
+        4.0389678347315804e-28,
+        -1.5146129380243427e-28,
+        5.153999999998487
+      ],
+      [
+        -4.0389678347315804e-28,
+        1.0,
+        9.183549615799125e-41,
+        0.8800000011920929
+      ],
+      [
+        1.5146129380243427e-28,
+        -9.183549615799118e-41,
+        1.0,
+        1.8089999999908237
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ]
+  },
+  "same_static_scene_files": [
+    "focus.glb.gz",
+    "focus_manifest.json",
+    "rig.json",
+    "e_original.glb.gz",
+    "carton.glb.gz"
+  ],
+  "same_deformation_for_BMC": "finger_bend.py/finger-bend.js preserves upper shoulder. Exact neutral STEP, approximate bend. Sign/orientation must match each mounting; no whole-body shear. DAC-2GN4087 alternate uses its own catalogue model, NOT this BMC curve.",
+  "dough_belly_measurement": {
+    "section_count": 201,
+    "width_mm": 74.05714722017758,
+    "relative_height_mm": -13.008713416385651,
+    "contact_world_m": [
+      0.8889714254362369,
+      0.22032359273023605,
+      0.5020000010728836
+    ],
+    "method": "Maximum X span of201 horizontal native product sections"
+  }
+}

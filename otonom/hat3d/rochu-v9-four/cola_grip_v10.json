@@ -1,0 +1,53 @@
+{
+  "contact_shift_mm": -11.0,
+  "open_shift_mm": 0.0,
+  "neutral_reset_each_cycle": true,
+  "open_max_penetration_mm": -4.030950741549036,
+  "fingers": [
+    {
+      "name": "OEM_DAC_3",
+      "penetration_mm": -4.961237039320672,
+      "fixed_penetration_mm": -4.961237039320672
+    },
+    {
+      "name": "OEM_DAC_2",
+      "penetration_mm": -4.035572882067247,
+      "fixed_penetration_mm": -4.035572882067247
+    },
+    {
+      "name": "OEM_DAC_1",
+      "penetration_mm": -4.030950741549036,
+      "fixed_penetration_mm": -4.030950741549036
+    },
+    {
+      "name": "OEM_DAC_0",
+      "penetration_mm": -4.9496454941967,
+      "fixed_penetration_mm": -4.9496454941967
+    }
+  ],
+  "distal_contacts": [
+    {
+      "name": "OEM_DAC_3",
+      "penetration_mm": -16.84949118726779,
+      "fixed_penetration_mm": null
+    },
+    {
+      "name": "OEM_DAC_2",
+      "penetration_mm": -15.451777907764495,
+      "fixed_penetration_mm": null
+    },
+    {
+      "name": "OEM_DAC_1",
+      "penetration_mm": -15.875682994510809,
+      "fixed_penetration_mm": null
+    },
+    {
+      "name": "OEM_DAC_0",
+      "penetration_mm": -16.971145768548883,
+      "fixed_penetration_mm": null
+    }
+  ],
+  "physical_grasp_verified": false,
+  "carrying_is_assumed": true,
+  "selection": "Closest distal pad exterior, no scaling or root adjustment; does not establish secure grasp"
+}
