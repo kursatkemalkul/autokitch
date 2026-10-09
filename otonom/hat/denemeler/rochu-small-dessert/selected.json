@@ -1,0 +1,156 @@
+{
+  "size_mm": 80,
+  "radius_mm": 40.0,
+  "residual_mm": 6.489404875161892,
+  "rows": {
+    "Dough": {
+      "radius_mm": 40.0,
+      "depth_mm": -3.639719831607464,
+      "shift_mm": -10.497267510307555,
+      "parts": [
+        {
+          "name": "OEM_DAC_3",
+          "open_mm": 3.6545674709575517,
+          "fixed_mm": 3.6545674709575517,
+          "tip_mm": -4.8194727886027025,
+          "whole_closed_mm": 3.6545674709575517
+        },
+        {
+          "name": "OEM_DAC_2",
+          "open_mm": 4.254589092927315,
+          "fixed_mm": 4.254589092927315,
+          "tip_mm": -4.209446801958228,
+          "whole_closed_mm": 4.254589092927315
+        },
+        {
+          "name": "OEM_DAC_1",
+          "open_mm": 4.4462009499196995,
+          "fixed_mm": 4.4462009499196995,
+          "tip_mm": -4.1996116144219355,
+          "whole_closed_mm": 4.4462009499196995
+        },
+        {
+          "name": "OEM_DAC_0",
+          "open_mm": 3.8017909334353663,
+          "fixed_mm": 3.8017909334353663,
+          "tip_mm": -4.697021556353993,
+          "whole_closed_mm": 3.8017909334353663
+        }
+      ],
+      "residual_mm": 4.9462009499196995
+    },
+    "Cola": {
+      "radius_mm": 40.0,
+      "depth_mm": -8.74334564632588,
+      "shift_mm": -11.0,
+      "parts": [
+        {
+          "name": "OEM_DAC_3",
+          "open_mm": -1.7135454146973983,
+          "fixed_mm": -2.944945414697399,
+          "tip_mm": -6.867746396206534,
+          "whole_closed_mm": -2.944945414697399
+        },
+        {
+          "name": "OEM_DAC_2",
+          "open_mm": -1.7135454146973983,
+          "fixed_mm": -2.944945414697399,
+          "tip_mm": -5.904593213245837,
+          "whole_closed_mm": -2.944945414697399
+        },
+        {
+          "name": "OEM_DAC_1",
+          "open_mm": -1.7135454146973983,
+          "fixed_mm": -2.944945414697399,
+          "tip_mm": -6.328497599258263,
+          "whole_closed_mm": -2.944945414697399
+        },
+        {
+          "name": "OEM_DAC_0",
+          "open_mm": -1.7135454146973983,
+          "fixed_mm": -2.944945414697399,
+          "tip_mm": -6.989404875161892,
+          "whole_closed_mm": -2.944945414697399
+        }
+      ],
+      "residual_mm": 6.489404875161892
+    },
+    "Dessert": {
+      "radius_mm": 40.0,
+      "depth_mm": -8.122123085106843,
+      "shift_mm": -10.010116053252387,
+      "parts": [
+        {
+          "name": "OEM_DAC_3",
+          "open_mm": -1.509782057231679,
+          "fixed_mm": -2.823723277199708,
+          "tip_mm": -0.515717342976417,
+          "whole_closed_mm": -0.515717342976417
+        },
+        {
+          "name": "OEM_DAC_2",
+          "open_mm": -0.8511232771997064,
+          "fixed_mm": -2.823723277199708,
+          "tip_mm": 0.682946793454986,
+          "whole_closed_mm": 0.682946793454986
+        },
+        {
+          "name": "OEM_DAC_1",
+          "open_mm": -0.8511232771997064,
+          "fixed_mm": -2.823723277199708,
+          "tip_mm": 0.2208334329041814,
+          "whole_closed_mm": 0.2208334329041814
+        },
+        {
+          "name": "OEM_DAC_0",
+          "open_mm": -1.5923232771997073,
+          "fixed_mm": -2.823723277199708,
+          "tip_mm": -0.6825858276260157,
+          "whole_closed_mm": -0.6825858276260157
+        }
+      ],
+      "residual_mm": 0.182946793454986
+    },
+    "Box": {
+      "radius_mm": 40.0,
+      "depth_mm": -15.552142572550244,
+      "shift_mm": -1.0286961051302392,
+      "parts": [
+        {
+          "name": "OEM_DAC_3",
+          "open_mm": -0.48096938856283245,
+          "fixed_mm": -4.7537429962715985,
+          "tip_mm": 0.22947094261616466,
+          "whole_closed_mm": 0.22947094261616466
+        },
+        {
+          "name": "OEM_DAC_2",
+          "open_mm": -0.4809693885627839,
+          "fixed_mm": -4.7537429962715985,
+          "tip_mm": 0.22947094261620976,
+          "whole_closed_mm": 0.22947094261620976
+        },
+        {
+          "name": "OEM_DAC_1",
+          "open_mm": -0.4809693885628151,
+          "fixed_mm": -4.7537429962715985,
+          "tip_mm": 0.229470942616182,
+          "whole_closed_mm": 0.229470942616182
+        },
+        {
+          "name": "OEM_DAC_0",
+          "open_mm": -0.48096938856279775,
+          "fixed_mm": -4.7537429962715985,
+          "tip_mm": 0.22947094261619588,
+          "whole_closed_mm": 0.22947094261619588
+        }
+      ],
+      "residual_mm": 0.019030611437216127
+    }
+  },
+  "status": "comparison candidate, not a successful four-product grasp",
+  "mount_axes_mm": 80.0,
+  "constraints": "Fixed V10 finger orientations. Same root radius for all four. Only dessert footprint reduced; height60mm, other products unscaled. OEM unchanged.",
+  "limits": "Sampled convex exterior, illustrative bend, optimization can miss solutions; no load, neighbour, fixture or pressure validation.",
+  "refinement": "Same chosen mounting; secondary penalty avoids unnecessary fixed-body overlap; full-sample tip refinement."
+}
