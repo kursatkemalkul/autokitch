@@ -1,0 +1,71 @@
+{
+  "version": 10,
+  "contacts_do_not_stop": true,
+  "carrying_is_assumed": true,
+  "physical_grasp_verified": false,
+  "motions": {
+    "Dough": {
+      "frames": 217,
+      "FK_max_error": 6.938893903907231e-17,
+      "start_tip_mm": 0,
+      "end_tip_mm": 0,
+      "grip_shift_mm": -11.0,
+      "side_drift_mm": {
+        "Dik in": 3.3306690738754696e-13,
+        "Dik y\u00fcksel": 2.220446049250313e-13
+      },
+      "grasp_assumption": true,
+      "full_pick_and_place": true,
+      "sampled_contacts": 8,
+      "scene_samples": 15
+    },
+    "Cola": {
+      "frames": 239,
+      "FK_max_error": 8.881784197001252e-16,
+      "start_tip_mm": 0,
+      "end_tip_mm": 0,
+      "grip_shift_mm": -11.0,
+      "side_drift_mm": {
+        "Dik in": 5.032640970625835e-10,
+        "Dik y\u00fcksel": 8.881784197001252e-13
+      },
+      "grasp_assumption": true,
+      "full_pick_and_place": true,
+      "sampled_contacts": 0,
+      "scene_samples": 16
+    },
+    "Dessert": {
+      "frames": 221,
+      "FK_max_error": 3.469446951953614e-18,
+      "start_tip_mm": 0,
+      "end_tip_mm": 0,
+      "grip_shift_mm": -11.0,
+      "side_drift_mm": {
+        "Dik in": 8.881784197001252e-13,
+        "Dik y\u00fcksel": 8.881784197001252e-13
+      },
+      "grasp_assumption": true,
+      "full_pick_and_place": true,
+      "sampled_contacts": 0,
+      "scene_samples": 15
+    },
+    "Box": {
+      "frames": 203,
+      "FK_max_error": 9.992007221626409e-16,
+      "start_tip_mm": 0,
+      "end_tip_mm": 0,
+      "grip_shift_mm": -11.0,
+      "side_drift_mm": {
+        "Dik y\u00fcksel": 1.687538997430238e-11
+      },
+      "grasp_assumption": true,
+      "full_pick_and_place": true,
+      "sampled_contacts": 4,
+      "scene_samples": 14
+    }
+  },
+  "neutral_OEM_vertices_exact": true,
+  "rigid_housing_motion_mm": 0,
+  "radius_unchanged_mm": 50,
+  "sampling_only_not_continuous": true
+}

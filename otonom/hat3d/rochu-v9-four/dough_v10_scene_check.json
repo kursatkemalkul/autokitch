@@ -1,0 +1,155 @@
+{
+  "scope": "Sampled whole arm/head versus rendered static scene and moving drawer; product contact and continuous paths separate",
+  "full_frame_sampling": false,
+  "rows": [
+    {
+      "frame": 0,
+      "phase": "\u00dcr\u00fcn\u00fcn tam \u00fcst\u00fcnde bekle",
+      "hits": [],
+      "native_crossings": 0
+    },
+    {
+      "frame": 8,
+      "phase": "\u00c7ekmeceyi a\u00e7 \u00b7 u\u00e7 yukar\u0131da sabit",
+      "hits": [],
+      "native_crossings": 0
+    },
+    {
+      "frame": 28,
+      "phase": "Dik in \u00b7 yana kayma yok",
+      "hits": [
+        {
+          "fixture": "CEK_K1_lahm_1__silikon__CEKMECE",
+          "moving": "OEM_DAC_3",
+          "proxy_overlap_mm3": 259.61546985862435,
+          "uses_proxy": true,
+          "native_surface_crossing": true
+        },
+        {
+          "fixture": "CEK_K1_lahm_1__silikon__CEKMECE",
+          "moving": "OEM_DAC_2",
+          "proxy_overlap_mm3": 164.6583816608157,
+          "uses_proxy": true,
+          "native_surface_crossing": true
+        },
+        {
+          "fixture": "CEK_K1_lahm_1__silikon__CEKMECE",
+          "moving": "OEM_DAC_1",
+          "proxy_overlap_mm3": 164.6597087799101,
+          "uses_proxy": true,
+          "native_surface_crossing": true
+        },
+        {
+          "fixture": "CEK_K1_lahm_1__silikon__CEKMECE",
+          "moving": "OEM_DAC_0",
+          "proxy_overlap_mm3": 259.61546993983114,
+          "uses_proxy": true,
+          "native_surface_crossing": true
+        }
+      ],
+      "native_crossings": 4
+    },
+    {
+      "frame": 37,
+      "phase": "Yaln\u0131z u\u00e7lar\u0131 kapat \u00b7 kavrama denemesi",
+      "hits": [],
+      "native_crossings": 0
+    },
+    {
+      "frame": 57,
+      "phase": "Dik y\u00fcksel \u00b7 \u00f6nce \u00fcr\u00fcn \u00e7evresini temizle",
+      "hits": [],
+      "native_crossings": 0
+    },
+    {
+      "frame": 73,
+      "phase": "\u00dcr\u00fcn yukar\u0131da sabit \u00b7 \u00e7ekmeceyi tamamen kapat",
+      "hits": [],
+      "native_crossings": 0
+    },
+    {
+      "frame": 95,
+      "phase": "\u00c7ekmece kapal\u0131 \u00b7 d\u00fcz d\u0131\u015far\u0131 ta\u015f\u0131",
+      "hits": [],
+      "native_crossings": 0
+    },
+    {
+      "frame": 115,
+      "phase": "\u0130stasyonlar\u0131n \u00f6n\u00fcnde ta\u015f\u0131ma kotuna \u00e7\u0131k",
+      "hits": [],
+      "native_crossings": 0
+    },
+    {
+      "frame": 139,
+      "phase": "Tablan\u0131n \u00f6n\u00fcne d\u00fcz hizalan",
+      "hits": [],
+      "native_crossings": 0
+    },
+    {
+      "frame": 157,
+      "phase": "Dikey e\u011fimi ayarla \u00b7 \u00fcstten bak\u0131\u015f d\u00fcz",
+      "hits": [],
+      "native_crossings": 0
+    },
+    {
+      "frame": 179,
+      "phase": "Tablaya d\u00fcz hizada \u00fcst e\u011fimle gir",
+      "hits": [],
+      "native_crossings": 0
+    },
+    {
+      "frame": 187,
+      "phase": "Yaln\u0131z u\u00e7lar\u0131 a\u00e7 \u00b7 \u00fcr\u00fcn\u00fc b\u0131rak",
+      "hits": [],
+      "native_crossings": 0
+    },
+    {
+      "frame": 188,
+      "phase": "Yaln\u0131z u\u00e7lar\u0131 a\u00e7 \u00b7 \u00fcr\u00fcn\u00fc b\u0131rak",
+      "hits": [
+        {
+          "fixture": "TOPPING_DONER__TABLA",
+          "moving": "OEM_DAC_2",
+          "proxy_overlap_mm3": 3.5352292535680574,
+          "uses_proxy": true,
+          "native_surface_crossing": true
+        },
+        {
+          "fixture": "TOPPING_DONER__TABLA",
+          "moving": "OEM_DAC_1",
+          "proxy_overlap_mm3": 3.5351758631464105,
+          "uses_proxy": true,
+          "native_surface_crossing": true
+        }
+      ],
+      "native_crossings": 2
+    },
+    {
+      "frame": 194,
+      "phase": "K\u0131sa b\u0131rakma \u00b7 fiziksel deney gerekli",
+      "hits": [
+        {
+          "fixture": "TOPPING_DONER__TABLA",
+          "moving": "OEM_DAC_2",
+          "proxy_overlap_mm3": 3.5352292535680574,
+          "uses_proxy": true,
+          "native_surface_crossing": true
+        },
+        {
+          "fixture": "TOPPING_DONER__TABLA",
+          "moving": "OEM_DAC_1",
+          "proxy_overlap_mm3": 3.5351758631464105,
+          "uses_proxy": true,
+          "native_surface_crossing": true
+        }
+      ],
+      "native_crossings": 2
+    },
+    {
+      "frame": 216,
+      "phase": "Ucu geri \u00e7ek \u00b7 \u00fcr\u00fcn b\u0131rak\u0131ld\u0131",
+      "hits": [],
+      "native_crossings": 0
+    }
+  ]
+}
