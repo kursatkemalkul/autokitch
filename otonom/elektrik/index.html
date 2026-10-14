@@ -1,0 +1,233 @@
+<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>AUTOKITCH · Elektrik ve Kontrol Şeması</title><style>*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#f4f6f8;color:#172334;font:16px/1.55 system-ui}header,main{max-width:1500px;margin:auto;padding:24px}h1{font-size:32px;margin:14px 0}h2{font-size:25px}h3{font-size:20px}h4{font-size:17px}a{color:#0757a5}nav{display:flex;gap:12px;flex-wrap:wrap}nav a{padding:9px 14px;background:#e5edf5;border-radius:7px;text-decoration:none}section{background:white;border:1px solid #d7e0e8;border-radius:12px;margin:22px 0;padding:24px;scroll-margin-top:16px}.drawing{overflow:auto;border:1px solid #c8d8e8;background:#f5f9fd;padding:20px;border-radius:8px}pre{font:14px/1.7 Consolas,monospace;margin:0;white-space:pre;tab-size:4}.table{overflow:auto}table{border-collapse:collapse;min-width:700px;font-size:14px}td{border:1px solid #dce3ea;padding:9px;vertical-align:top}tr:first-child{background:#eaf0f5;font-weight:600}code{background:#eef2f5;padding:1px 4px;overflow-wrap:anywhere}.note{border-left:3px solid #c69734;padding:10px 14px;background:#fff8e8;color:#5a481d}@media(max-width:650px){header,main{padding:14px}section{padding:14px}h1{font-size:26px}}@media print{body{background:white}nav{display:none}header,main{padding:0}section{break-before:page;border:0;padding:0}.drawing,.table{overflow:visible}pre{font-size:8px}table{min-width:0;font-size:9px}}</style></head><body><header><a href="../">← AUTOKITCH</a><h1>Çalışma Sistemi · Elektrik ve Kontrol Şeması</h1><p>Tek beyin Beckhoff CX9240 · EtherCAT istasyon bağlantıları · TwinSAFE güvenliği · güç ve hava tesisatı.</p><p class="note">Mevcut elektrik projesinin 7–11 Ekim 2026 kayıtlarıdır. Kaynaktaki varsayımlar, çelişkiler ve açık kontroller korunmuştur; son kapak revizyonunun üretim devre onayı değildir.</p><nav><a href="#s02">Güç / EtherCAT</a><a href="#s06">Güvenlik</a><a href="#s07">Hava tesisatı</a><a href="#s09">Bina panosu</a></nav><p>Geniş şemalarda yatay kaydırabilirsin.</p></header><main><section id="s02"><h2>Güç dağıtımı ve haberleşme</h2><h2>02 · TEK HAT ŞEMASI + YÜK TABLOSU (üretildi: elektrik_hesap_v1.py)</h2>
+<p>Bina 400 V 3F 50 Hz TN-S varsayımı. Kablo renkleri EN 60204-1 (PE sarı-yeşil · N açık mavi · DC kontrol koyu mavi · güç siyah); 3B&#x27;deki &#x27;güç kırmızı / bilgi mavi / hava yeşil&#x27; yalnız ekran rengidir (STANDART_DURUM §3-13).</p>
+<div class="drawing"><pre>BİNA DAĞITIM ──► DUVAR PANOSU (Codex · sağ duvar 600×700×250)
+                 ├─ iSW 4P 63 A ── iID 4P 63 A 30 mA tip B
+                 ├─ iC60N 3P C32 MAKİNE ──► ANA AYIRICI IP65 40 A 4P (QR sağ yanı, kol 1,21 m, 3 asma kilit) ──► ANA PANO (U_F · 638 · 2 ray × 590) iSW 4P 40 A ── iID 4P 40 A 30 mA tip A
+                 │                                                                                             ├─ iC60N C16 TOPPING ── Han 10B ──► TOPPING panosu (iDPN C10 · 2 × NDR-240-48 · NDR-120-24)
+                 │                                                                                             ├─ iC60N C16 DOLAP  ── Han 10B ──► DOLAP kutusu ──► B panosu (NDR-240-24 · Secop NLE8.8)
+                 │                                                                                             ├─ iC60N C16 K      ── Han 10B ──► K panosu (NDR-120-24)
+                 │                                                                                             ├─ iC60N C16 E      ── Han 10B ──► E panosu (2×NDR-240-24 · NDR-120-24)
+                 │                                                                                             ├─ (ROBOT · QR Harting soketleri: yalnız Han RJ45 = EtherCAT; güç duvar panosundan)
+                 │                                                                                             ├─ iDPN  C16 A      ── Han 10B (arka) ──► açıcı (hazır ürün)
+                 │                                                                                             └─ iDPN  C6  PANO_24V ──► NDR-120-24 ── QUINT4-CAP ── CX9240 · TwinSAFE · switch
+                 ├─ iC60N 3P C32 FIRIN ──► CEE 32 A ──► Sveba TP10 (≈14 kW anma · kendi kumandası)            [AYRI DEVRE — ana panodan geçmez]
+                 ├─ iC60N 1P+N C16 QR ──► QR kutusu iC60N C10 (NDR-120-24 · 12 SSR)                            [duvar panosu QR&#x27;nin sağında, kısa hat]
+                 ├─ iC60N 1P+N C16 ROBOT ──► robot kontrol kutusu (QR rezerv bölmesi, 230 V 10 A)
+                 ├─ iC60N 1P+N C16 EKSEN ──► ray servo NDR-480-48 → EL2911 (GS_STO_RAY) → EL7211
+                 ├─ iC60N 1P+N C16 TEZGÂH ──► ani ısıtıcı 3,5 kW (+ bulaşık MEIKO M-iClean US ayrı)                       [BİNA — Kemal teyidi]
+                 ├─ iC60N 1P+N C10 AYDINLATMA
+                 └─ iC60N 1P+N C6  AĞ ──► ER605 router + LTE yedek (QR modemi KALKTI)
+F kutusu (F üst kabini, sağ ön kapak arkası): 11 Eki YÖNETİCİ (i) — PASİF geçiş kutusu (davlumbaz fanı C6 + 16 PT 2,5); F G/Ç kartları + yükleme bandı EL7062 + NDR-120-24 E panosunda (W133 sinyal · W134 termokupl · W065 motor).
+
+EtherCAT (Cat.6A, Han RJ45 modülleri): CX9240 X001 ──► F ──► K ──► E ──► QR ──► ROBOT/RAY (hat 1)   ·   CX9240 X000 ──► ana pano EK1100 ──► EK1122 ──► dal A: TOPPING · dal B: B (7 Eki topoloji kararı)
+Ethernet (FL SWITCH 1008N): CX ──► router (internet + 4G yedek) · robot TCP · HMI AP · SCADA
+Güvenlik (FSoE): EL6910 + 6×EL1904 + 3×EL2904 ANA PANODA · EL2911 güç grubu kesme (STO) HER İSTASYON PANOSUNDA (TOPPING · F · K · E · RAY · QR kapak)  [F yükleme bandı sürücüsü EL7062 + EL2911 F KUTUSUNDA — istasyon = kapalı ürün]</pre></div>
+<h3>2.1 Yük tablosu (cihaz başına)</h3>
+<div class="table"><table>
+<tr><td>istasyon</td><td>cihaz</td><td>adet</td><td>V</td><td>faz</td><td>W / adet</td><td>W anma</td><td>eşzaman</td><td>W eşzaman</td><td>kaynak</td></tr>
+<tr><td>ANA</td><td>Beckhoff CX9240-0215 (tek beyin)</td><td>1</td><td>24</td><td>DC</td><td>7</td><td>7</td><td>1.0</td><td>7</td><td>[K] Beckhoff CX9240 föyü: maks 7 W</td></tr>
+<tr><td>ANA</td><td>TwinSAFE EL6910 + 6 × EL1904 + 3 × EL2904</td><td>1</td><td>24</td><td>DC</td><td>12</td><td>12</td><td>1.0</td><td>12</td><td>[V] E-bus + alan beslemesi ≈ 12 W (klemens föyleri toplanacak)</td></tr>
+<tr><td>ANA</td><td>EK1100 + EL1809/EL2809 (hat sinyalleri: kule, reset, başlat)</td><td>1</td><td>24</td><td>DC</td><td>4</td><td>4</td><td>1.0</td><td>4</td><td>[V]</td></tr>
+<tr><td>ANA</td><td>Phoenix FL SWITCH 1008N</td><td>1</td><td>24</td><td>DC</td><td>2.2</td><td>2.2</td><td>1.0</td><td>2</td><td>[K] h3_ana_pano_v1 ISI_W</td></tr>
+<tr><td>ANA</td><td>Mean Well NDR-120-24 kaybı</td><td>1</td><td>230</td><td>L</td><td>4</td><td>4</td><td>1.0</td><td>4</td><td>[K] η 0,86 (h3_ana_pano_v1)</td></tr>
+<tr><td>ANA</td><td>QUINT4-CAP DC-UPS bekleme</td><td>1</td><td>24</td><td>DC</td><td>1</td><td>1</td><td>1.0</td><td>1</td><td>[K]</td></tr>
+<tr><td>ANA</td><td>U_F fanları 4 × ebm-papst 4414 FL (STEGO termostatlı)</td><td>4</td><td>24</td><td>DC</td><td>5</td><td>20</td><td>0.5</td><td>10</td><td>[K] 4414 FL 24 V ≈ 5 W (ebm-papst föyü: teyit)</td></tr>
+<tr><td>ANA</td><td>Işık kulesi + reset lambası</td><td>1</td><td>24</td><td>DC</td><td>3</td><td>3</td><td>1.0</td><td>3</td><td>[V]</td></tr>
+<tr><td>TOPPING</td><td>Secop KLF6.6CND yoğuşma ünitesi (R290)</td><td>1</td><td>230</td><td>L</td><td>320</td><td>320</td><td>0.6</td><td>192</td><td>[V] KLF4.8 259 W ölçülü (dükkân ısı 29 Eyl); KLF6.6 ≈ 320 W föyden teyit</td></tr>
+<tr><td>TOPPING</td><td>Evaporatör fanları 2 × San Ace 9WPA 24 V PWM</td><td>2</td><td>24</td><td>DC</td><td>6</td><td>12</td><td>1.0</td><td>12</td><td>[V] fan föyü</td></tr>
+<tr><td>TOPPING</td><td>Pano filtreli fanı Rittal SK 3237.124 + çıkış filtresi SK 3237.200 (11 Eki ısı bütçesi)</td><td>1</td><td>24</td><td>DC</td><td>2.4</td><td>2.4</td><td>1.0</td><td>2</td><td>[K] Rittal föyü 2,4 W · 15 m³/sa</td></tr>
+<tr><td>ROBOT</td><td>Robot bölmesi filtreli fanı Rittal SK 3237.124 + SK 3237.200 (11 Eki ısı bütçesi)</td><td>1</td><td>24</td><td>DC</td><td>2.4</td><td>2.4</td><td>1.0</td><td>2</td><td>[K] Rittal föyü</td></tr>
+<tr><td>TOPPING</td><td>X ekseni Nanotec ST5918S2008-B + NOE2-05-B enkoder (EL7047, 48 V)</td><td>1</td><td>48</td><td>DC</td><td>90</td><td>90</td><td>0.4</td><td>36</td><td>[P] 90 W sınıfı · hareket oranı sim (Nanotec föyünden teyit)</td></tr>
+<tr><td>TOPPING</td><td>Tabla Nanotec ST5918X2008-A + çevre tahriki i 6,33 (TOPPING 189; EL7047, 48 V · enkoder RLS AksIM-2 → EL5042)</td><td>1</td><td>48</td><td>DC</td><td>90</td><td>90</td><td>0.5</td><td>45</td><td>[P] 90 W sınıfı (Nanotec föyünden teyit)</td></tr>
+<tr><td>TOPPING</td><td>Sabit tahrik bant motoru (EL7062 kanalı)</td><td>1</td><td>48</td><td>DC</td><td>60</td><td>60</td><td>0.1</td><td>6</td><td>[K] AX_TOP_BANT</td></tr>
+<tr><td>TOPPING</td><td>Kaşar / sucuk kaset motorları 4 × STP-MTR-23079 (2 × EL7062)</td><td>4</td><td>48</td><td>DC</td><td>60</td><td>240</td><td>0.3</td><td>72</td><td>[K] AX_TOP_KASAR_* / SUCUK_*</td></tr>
+<tr><td>TOPPING</td><td>3 × NDR-240-48 güç kaynağı kaybı (11 Eki: kol 2 ikiye bölündü)</td><td>1</td><td>230</td><td>L</td><td>40</td><td>40</td><td>1.0</td><td>40</td><td>[K] η 0,90 (föy)</td></tr>
+<tr><td>TOPPING</td><td>Valf adası SMC SY3000 12 × 5/2 + 5 döner aktüatör + 2 kesme + fire sileceği</td><td>1</td><td>24</td><td>DC</td><td>6</td><td>6</td><td>1.0</td><td>6</td><td>[K] SY3120 0,35 W / bobin</td></tr>
+<tr><td>TOPPING</td><td>Sensörler (3 endüktif M12 · tabla sıfır M8 · lazer · 2 kaset var) + EK1100 + EL klemensler</td><td>1</td><td>24</td><td>DC</td><td>10</td><td>10</td><td>1.0</td><td>10</td><td>[V]</td></tr>
+<tr><td>TOPPING</td><td>Kapak emniyet RSS36 × 2</td><td>2</td><td>24</td><td>DC</td><td>1</td><td>2</td><td>1.0</td><td>2</td><td>[K] Schmersal ≤ 0,05 A</td></tr>
+<tr><td>TOPPING</td><td>48 V STO kontaktör bobinleri 2 × 3RT2316-1BB40 + 2 × 3RT2015-1BB42 + yerel EL2904 / EL1904</td><td>4</td><td>24</td><td>DC</td><td>4</td><td>16</td><td>1.0</td><td>16</td><td>[K] Siemens 3RT2 S00 bobin 4 W (3RT2015 föyü; 3RT2316 aynı boy [V])</td></tr>
+<tr><td>ROBOT</td><td>48 V STO kontaktör bobinleri 2 × Siemens 3RT2015-1BB42 + yerel EL2904 / EL1904</td><td>2</td><td>24</td><td>DC</td><td>4</td><td>8</td><td>1.0</td><td>8</td><td>[K] Siemens föyü bobin 4 W</td></tr>
+<tr><td>F</td><td>Fırın Sveba Dahlen TP10 (özel 1500 gövde) — AYRI CEE 32 A DEVRESİ</td><td>1</td><td>400</td><td>3F</td><td>14000</td><td>14000</td><td>0.34</td><td>4760</td><td>[K] anma ≈ 14 kW (9,5 × 1316/892) · çeker 4,7 kW (%34) — dükkân ısı 29 Eyl</td></tr>
+<tr><td>F</td><td>Yükleme bandı STP-MTR-23079 (EL7062 + NDR-120-24 E PANOSUNDA — 11 Eki YÖNETİCİ (i): F üst kabin &gt; 40 °C, F kutusu pasif) → 24 V KARAR; istasyon = kapalı ürün)</td><td>1</td><td>24</td><td>DC</td><td>60</td><td>60</td><td>0.1</td><td>6</td><td>[K] AX_F_YBANT · tork payı 9,6 (eksen listesi)</td></tr>
+<tr><td>F</td><td>Davlumbaz fanı Systemair RS 30-15 sileo</td><td>1</td><td>230</td><td>L</td><td>51</td><td>51</td><td>1.0</td><td>51</td><td>[K] 77284 föyü 51 W</td></tr>
+<tr><td>F</td><td>Kompresör JUN-AIR OF302-15B</td><td>1</td><td>230</td><td>L</td><td>440</td><td>440</td><td>0.24</td><td>106</td><td>[K] 0,44 kW · %24 çalışma (dükkân ısı 29 Eyl)</td></tr>
+<tr><td>F</td><td>F G/Ç grubu E panosunda: EK1100 + EL1809 + EL2809 + EL3314 + EL7062 + EL2911 (TP10 sinyal · fan · termokupl · yükleme bandı)</td><td>1</td><td>24</td><td>DC</td><td>6</td><td>6</td><td>1.0</td><td>6</td><td>[V]</td></tr>
+<tr><td>F</td><td>Kapak emniyet RSS36 × 2 + acil stop (adım 58)</td><td>1</td><td>24</td><td>DC</td><td>2</td><td>2</td><td>1.0</td><td>2</td><td>[K]</td></tr>
+<tr><td>K</td><td>Bant: Interroll EC5000 AI Ø50 motorlu rulo</td><td>1</td><td>24</td><td>DC</td><td>35</td><td>35</td><td>0.5</td><td>18</td><td>[K] EC5000 AI 24 V · 35 W sınıfı (föyden teyit)</td></tr>
+<tr><td>K</td><td>Yağ pompası Micropump GJ-N21 + EagleDrive DEMSE</td><td>1</td><td>24</td><td>DC</td><td>60</td><td>60</td><td>0.2</td><td>12</td><td>[V] EagleDrive 24 V ≈ 60 W (föy)</td></tr>
+<tr><td>K</td><td>PulsaJet AAB10000 sprey (PWM bobin)</td><td>1</td><td>24</td><td>DC</td><td>20</td><td>20</td><td>0.1</td><td>2</td><td>[V] Spraying Systems föyü</td></tr>
+<tr><td>K</td><td>Valfler SY3120 × 4 (bıçak in · çek · itici · kilit pimi #3) + AZM40 kilit</td><td>1</td><td>24</td><td>DC</td><td>4</td><td>4</td><td>1.0</td><td>4</td><td>[K]</td></tr>
+<tr><td>K</td><td>Sensörler: 2 × E3Z-T61 · PM1704 · bıçak üst / kilit · EK1100 + EL1008 + EL2008 + EL4002 + EL3356</td><td>1</td><td>24</td><td>DC</td><td>8</td><td>8</td><td>1.0</td><td>8</td><td>[V]</td></tr>
+<tr><td>E</td><td>13 × STP-MTR-23079 (7 × EL7062, 24 V — 9 Eki karar (a)) — aynı anda ≤ 3 eksen</td><td>3</td><td>24</td><td>DC</td><td>60</td><td>180</td><td>0.5</td><td>90</td><td>[K] kutu_cad_v13: aynı anda en çok 3 eksen döner</td></tr>
+<tr><td>E</td><td>2 × NDR-240-24 kaybı</td><td>2</td><td>230</td><td>L</td><td>20</td><td>40</td><td>1.0</td><td>40</td><td>[V] η ≈ 0,92 (NDR-240-24 föyünden teyit)</td></tr>
+<tr><td>E</td><td>Vakum ünitesi SMC ZK2G15K5RWA-08 valfleri + Z silindir valfi</td><td>1</td><td>24</td><td>DC</td><td>3</td><td>3</td><td>1.0</td><td>3</td><td>[K]</td></tr>
+<tr><td>E</td><td>Sensörler 15 (E2E-X2MF1 PNP · E3Z-D62 × 2 · ZK2 vakum anahtarı) + EK1100 + EL1809 + EL2809</td><td>1</td><td>24</td><td>DC</td><td>10</td><td>10</td><td>1.0</td><td>10</td><td>[V]</td></tr>
+<tr><td>E</td><td>Kapak emniyet RSS36 × 4</td><td>4</td><td>24</td><td>DC</td><td>1</td><td>4</td><td>1.0</td><td>4</td><td>[K]</td></tr>
+<tr><td>B</td><td>Secop NLE8.8CN yoğuşma ünitesi (R290)</td><td>1</td><td>230</td><td>L</td><td>407</td><td>407</td><td>0.6</td><td>244</td><td>[K] 407 W (dükkân ısı 29 Eyl)</td></tr>
+<tr><td>B</td><td>Evaporatör fanları 4 × ebm-papst 4414 FL 24 V</td><td>4</td><td>24</td><td>DC</td><td>5</td><td>20</td><td>1.0</td><td>20</td><td>[K] teyit</td></tr>
+<tr><td>B</td><td>Çekmece motoru Transmotec PD3665-24 (EL7342, aynı anda 1)</td><td>1</td><td>24</td><td>DC</td><td>70</td><td>70</td><td>0.15</td><td>10</td><td>[K] 24 V · akım sınırı 3 A (EL7342 3,5 A / kanal)</td></tr>
+<tr><td>B</td><td>NDR-240-24 kaybı</td><td>1</td><td>230</td><td>L</td><td>18</td><td>18</td><td>1.0</td><td>18</td><td>[K]</td></tr>
+<tr><td>B</td><td>42 reed + EK1100 + EK1122 + 12 × EP7342-0002 + 5 × EP1809-0021 (kolon kutuları, Us)</td><td>1</td><td>24</td><td>DC</td><td>15</td><td>15</td><td>1.0</td><td>15</td><td>[V] kutu öz tüketimi; motor akımı ayrı satırda (Up, aynı anda 1 motor)</td></tr>
+<tr><td>QR</td><td>Göz ısıtıcı pedleri 12 × 60 W 230 V (SSR, termostatlı)</td><td>12</td><td>230</td><td>L</td><td>60</td><td>720</td><td>0.3</td><td>216</td><td>[K] 60 W / göz · ort. 218 W (dükkân ısı 29 Eyl)</td></tr>
+<tr><td>QR</td><td>Kapak motorları 12 × 24 V mini redüktörlü (6 × EL7342, aynı anda 1)</td><td>1</td><td>24</td><td>DC</td><td>10</td><td>10</td><td>0.1</td><td>1</td><td>[V]</td></tr>
+<tr><td>QR</td><td>Müşteri mandalları 12 × 24 V (it-aç, darbe)</td><td>1</td><td>24</td><td>DC</td><td>12</td><td>12</td><td>0.05</td><td>1</td><td>[V]</td></tr>
+<tr><td>QR</td><td>QR okuyucu Newland NLS-FM430 (5 V) + PIN tuş takımı Storm 1000 (7&quot; ekran 10 Eki K6 ile KALKTI)</td><td>1</td><td>24</td><td>DC</td><td>4</td><td>4</td><td>1.0</td><td>4</td><td>[V] FM430 föyü 5 V</td></tr>
+<tr><td>QR</td><td>Filtreli fan 2 × 120 mm 24 V</td><td>2</td><td>24</td><td>DC</td><td>4</td><td>8</td><td>1.0</td><td>8</td><td>[V]</td></tr>
+<tr><td>QR</td><td>QR kutusu EK1100 + EL1809 × 2 + EL2809 × 2 + 6 × EL7342 + Mean Well NDR-120-24 kaybı — duvar panosu QR C16</td><td>1</td><td>230</td><td>L</td><td>10</td><td>10</td><td>1.0</td><td>10</td><td>[V]</td></tr>
+<tr><td>QR</td><td>Müşteri kapısı AZM40 × 12 (kilit + kilit izleme, seri; SF8d → UR düzlemi)</td><td>12</td><td>24</td><td>DC</td><td>1</td><td>12</td><td>1.0</td><td>12</td><td>[K]</td></tr>
+<tr><td>ROBOT</td><td>Robot kontrol kutusu (Fairino FR5 2 kW mini / UR10e — Codex alanı) — duvar panosu ROBOT C16</td><td>1</td><td>230</td><td>L</td><td>410</td><td>410</td><td>0.67</td><td>275</td><td>[K] FR5: tepe 410 W · ortalama 276 W · 176–264 V 10 A</td></tr>
+<tr><td>ROBOT</td><td>Ray ekseni servo (EL7211-0010, 48 V) + NDR-480-48 kaybı — duvar panosu EKSEN C16</td><td>1</td><td>230</td><td>L</td><td>250</td><td>250</td><td>0.3</td><td>75</td><td>[V] AM81xx 48 V · ray 0,5 m/s</td></tr>
+<tr><td>DUVAR</td><td>Router TP-Link ER605 + 12 V adaptör + LTE yedek modem</td><td>1</td><td>230</td><td>L</td><td>15</td><td>15</td><td>1.0</td><td>15</td><td>[V]</td></tr>
+<tr><td>DUVAR</td><td>Dükkân aydınlatması LED</td><td>1</td><td>230</td><td>L</td><td>124</td><td>124</td><td>1.0</td><td>124</td><td>[V] dükkân ısı 29 Eyl</td></tr>
+<tr><td>TEZGAH</td><td>Ani su ısıtıcı Stiebel Eltron EIL 3 Premium — BİNA AYRI HAT (SABAH soru 4, Kemal teyidi)</td><td>1</td><td>230</td><td>L</td><td>3500</td><td>3500</td><td>0.05</td><td>175</td><td>[K] EIL 3: 3,5 kW</td></tr>
+<tr><td>TEZGAH</td><td>Bulaşık makinesi MEIKO M-iClean US — BİNA AYRI HAT</td><td>1</td><td>400</td><td>3F</td><td>6000</td><td>6000</td><td>0.1</td><td>600</td><td>[V] M-iClean US föyünden güç teyit (model A+B meiko.com doğruladı)</td></tr>
+<tr><td>DUVAR</td><td>Müşteri kioskü Samsung QM32C (LH32QMCEBGCXEN) 32&quot; dikey — ayırıcı duvar</td><td>1</td><td>230</td><td>L</td><td>55</td><td>55</td><td>0.53</td><td>29</td><td>[K] distribütör föyü: maks 55 W · tipik 29 W · bekleme 0,5 W (Samsung PDF teyit)</td></tr>
+<tr><td>DUVAR</td><td>Bekleme TV&#x27;si Samsung QB43C (LH43QBCEBGCXEN) 43&quot; dikey — sağ duvar</td><td>1</td><td>230</td><td>L</td><td>85</td><td>85</td><td>0.7</td><td>59</td><td>[V] QB43C föyü teyit edilecek</td></tr>
+<tr><td>DUVAR</td><td>Dış cephe şerit ekran LG 37BH7N-H (32:9) — hücre duvarı</td><td>1</td><td>230</td><td>L</td><td>50</td><td>50</td><td>0.8</td><td>40</td><td>[K] Comsys föyü: maks 50 W · tipik 40 W (LG föyü teyit)</td></tr>
+<tr><td>DUVAR</td><td>Müşteri kapısı sürgü operatörü dormakaba ES 200 (+ TS 93)</td><td>1</td><td>230</td><td>L</td><td>250</td><td>250</td><td>0.2</td><td>50</td><td>[K] dormakaba ES 200 veri sayfası: 230 V 50/60 Hz · 250 W</td></tr>
+<tr><td>DUVAR</td><td>Interkom 2N IP Verso 2.0 (PoE 802.3af sınıf 0, 12,95 W) — 2. PoE enjektöründen</td><td>1</td><td>48</td><td>DC</td><td>13</td><td>13</td><td>0.6</td><td>8</td><td>[K] 2N kısa kılavuz: 802.3af sınıf 0 · 12,95 W</td></tr>
+<tr><td>DUVAR</td><td>Wi-Fi AP TP-Link EAP650 (PoE 802.3at, TL-POE160S üstünden, W124)</td><td>1</td><td>48</td><td>DC</td><td>13.5</td><td>13.5</td><td>1.0</td><td>14</td><td>[K] distribütör föyü: AB 13,5 W</td></tr>
+<tr><td>DUVAR</td><td>4G yedek Teltonika RUT241 (12 V adaptör)</td><td>1</td><td>12</td><td>DC</td><td>6.5</td><td>6.5</td><td>1.0</td><td>6</td><td>[V] RUT241 föyü teyit</td></tr>
+<tr><td>ROBOT</td><td>Dükkân bilgisayarı Beckhoff C6030 (QR62 alt servis bölmesi, adım 177) — robot bölmesi NDR-120-24</td><td>1</td><td>24</td><td>DC</td><td>96</td><td>96</td><td>0.5</td><td>48</td><td>[K] Beckhoff C6030 ATEX/IECEx kılavuzu: 24 V besleme sigortası ≤ 4 A → en kötü 96 W</td></tr>
+<tr><td>ROBOT</td><td>Robot UPS APC SMT1500I (1500 VA / 1000 W, sağ duvar zemini, adım 177) — bekleme / şarj kaybı</td><td>1</td><td>230</td><td>L</td><td>30</td><td>30</td><td>1.0</td><td>30</td><td>[V] APC föyü: verim / şarj gücü teyit (UR + C6030 yükü kendi satırlarında, UPS üstünden)</td></tr>
+<tr><td>TEZGAH</td><td>Personel tableti Samsung Galaxy Tab Active5 (SM-X300) — 2 POGO şarj yuvası (tezgâh + A ön yüzü)</td><td>2</td><td>230</td><td>L</td><td>15</td><td>30</td><td>0.5</td><td>15</td><td>[V] 15 W şarj adaptörü (Samsung EP-T1510)</td></tr>
+</table></div>
+<h3>2.2 Kol akımları (230 V tek faz kollar; DC yükler güç kaynağı η 0,9 ile 230 V&#x27;a yansıtıldı)</h3>
+<div class="table"><table>
+<tr><td>kol</td><td>W anma</td><td>W eşzaman</td><td>I anma [A]</td><td>I eşzaman [A]</td><td>sigorta</td></tr>
+<tr><td>ANA PANO (iç)</td><td>59</td><td>48</td><td>0.3</td><td>0.2</td><td>C16 (1P+N)</td></tr>
+<tr><td>TOPPING C16</td><td>947</td><td>462</td><td>4.6</td><td>2.2</td><td>C16 (1P+N)</td></tr>
+<tr><td>DUVAR PANOSU → ROBOT C16 + EKSEN C16 (Codex)</td><td>808</td><td>445</td><td>3.9</td><td>2.1</td><td>C16 (1P+N)</td></tr>
+<tr><td>AYRI DEVRE: Fırın Sveba Dahlen TP10 (özel 1500 gövde</td><td>14000</td><td>4760</td><td>22.5</td><td>7.6</td><td>3P C32</td></tr>
+<tr><td>F (fırın ayrı CEE 32 A · F kutusu sinyal + 230 V bina devresi)</td><td>567</td><td>172</td><td>2.7</td><td>0.8</td><td>C16 (1P+N)</td></tr>
+<tr><td>K C16</td><td>141</td><td>48</td><td>0.7</td><td>0.2</td><td>C16 (1P+N)</td></tr>
+<tr><td>E C16</td><td>259</td><td>159</td><td>1.3</td><td>0.8</td><td>C16 (1P+N)</td></tr>
+<tr><td>DOLAP C16</td><td>542</td><td>313</td><td>2.6</td><td>1.5</td><td>C16 (1P+N)</td></tr>
+<tr><td>DUVAR PANOSU → QR C16 (Codex)</td><td>781</td><td>254</td><td>3.8</td><td>1.2</td><td>C16 (1P+N)</td></tr>
+<tr><td>duvar panosu AĞ / AYDINLATMA</td><td>616</td><td>349</td><td>3.0</td><td>1.7</td><td>C16 (1P+N)</td></tr>
+<tr><td>AYRI DEVRE: Ani su ısıtıcı Stiebel Eltron EIL 3 Prem</td><td>3500</td><td>175</td><td>16.9</td><td>0.8</td><td>C20 — KONTROL</td></tr>
+<tr><td>AYRI DEVRE: Bulaşık makinesi MEIKO M-iClean US</td><td>6000</td><td>600</td><td>9.6</td><td>1.0</td><td>3P C32</td></tr>
+<tr><td>BİNA (ayrı hat)</td><td>30</td><td>15</td><td>0.1</td><td>0.1</td><td>C16 (1P+N)</td></tr>
+</table></div>
+<p><strong>Makine toplamı (ana pano kolları, fırın ve bina hariç):</strong> anma ≈ 4103 W · eşzaman ≈ 1901 W → 3 faza dengeli dağıtımda faz başına ≈ 3.1 A eşzaman (anma 6.6 A). Ana şalter 40 A ve bina 5G6 (≈ 34 A, H07RN-F) yeterli; cos φ ve güç kaynağı tepe akımları (NDR-480-48 açılış) için iC60N C16 eğrisi uygundur. <strong>SABAH 4 Eki şeması ile karşılaştırma:</strong> B 3,6 A · QR 6,4 A · sağ kol 10,1 A · sol kol 4,6 A (belgeye göre düzeltilmiş akımlar) — bu tablo aynı mertebede.</p>
+<p><strong>Faz dağıtımı önerisi (ana pano iC60N&#x27;ler):</strong> L1: TOPPING + A · L2: DOLAP + K · L3: E + ROBOT + QR. PANO_24V L1.</p>
+<h3>2.3 Koruma ve kesit seçimi</h3>
+<p>- Bina → ana ayırıcı → ana pano: H07RN-F 5G6, ≤ 15 m, Iz ≈ 34 A (H07RN-F 6 mm² serbest hava · teyit TS/IEC 60364-5-52), gerilim düşümü %1&#x27;in altında.</p>
+<p>- İstasyon kolları: iC60N 1P+N C16 + H07RN-F 3G2,5 (Iz ≈ 25 A) · Harting Han E 16 A modülü → <strong>soketin sınırı 16 A</strong>, kol sigortası C16 uygun.</p>
+<p>- 48 V motor grupları: TOPPING 2 × NDR-240-48 (2 × 5 A, iki ayrı EL2911 kolu — 7 Eki: NDR-480-48 derinliği 125,2 mm panoya sığmıyordu) · ray NDR-480-48 (10 A) — çıkış kablosu 4 mm², EL2911 10 A sınırı. E&#x27;de 2 × NDR-240-48 (5 A × 2) → iki EL2911 grubu ya da tek EL2911 + 10 A toplam kontrolü (AÇIK: eksen oturumu eşzamanlı akım).</p>
+<p>- 24 V kontrol: PELV, güvenlik beslemesi ayrı sigortalı (2 A), RSS36 / AZM40 toleransı −15/+10 %.</p>
+<p>- Kaçak akım: ana pano iID tip A 30 mA (mevcut); duvar panosunda Codex tip B 63 A — iki RCD seri: seçicilik için üstteki 300 mA tip B gecikmeli olmalı (AÇIK, Codex / elektrikçi).</p>
+<p>- PE: her metal gövde + ana pano PE barası + Harting PE çerçevesi; EtherCAT kablo ekranı tek uçtan (pano) topraklanır.</p>
+<p>- Fırın 14 kW: bina 3P C32 + CEE 32 A, kendi kumandası, ana panoda yalnız sinyal (F kutusu EK1100).</p></section><section id="s06"><h2>Güvenlik bağlantıları</h2><h2>06 · GÜVENLİK DEVRESİ — PANO İÇİ UYGULAMA (7 Eki 2026 gece · Claude)</h2>
+<p><strong>Asıl belge:</strong> güvenlik oturumu <code>claude-guvenlik-yerel/_local/guvenlik_ce/02_GUVENLIK_DEVRESI.md</code> (v2 553a7762): 16 güvenlik fonksiyonu (SF1–SF9 + alt maddeler), PL d/e hesapları (<code>pl_hesap.py</code>), TwinSAFE donanımı, <code>GS_*</code> sinyal adları. Bu dosya o belgeyi <strong>elektrik projesine yerleştirir</strong>: hangi klemens hangi panoda, STO grupları nasıl kablolanır, acil stop + kapı anahtarları + robot zinciri tek hatta nasıl görünür. Tekrar etmez.</p>
+<h3>1. TEK ŞEMA (acil stop + kapı anahtarları + robot)</h3>
+<div class="drawing"><pre>                                   ANA PANO (U_F) · TwinSAFE EL6910 (FSoE, EtherCAT hat 1 üstünde)
+ ACİL STOP XB4BS8442 + 2. NC ───2k──► EL1904-1 ─┐
+ RESET (mavi, aydınlatmalı) ────1k──► EL1904-5 │
+ A  RSS36 ──────────────────────2k──► EL1904-1 │
+ TOPPING RSS36 K1→K2 (seri) ────2k──► EL1904-2 │          ┌─► EL2904-1.1 ──► MS6-SV-E (hava: boşalt / yumuşak dolum)      [SF1 SF2 SF4a SF5]
+ F  RSS36 sol→sağ (seri) ───────2k──► EL1904-2 │          ├─► EL2904-1.2 ──► K AZM40 kilit aç (bıçak üst + kilitli + hava boş) [SF4b]
+ K  AZM40 (kapalı+kilitli) ─────2k──► EL1904-3 ├─ EL6910 ─┼─► EL2904-1.3/1.4 ──► ROBOT acil stop girişi (2k)                [SF1]
+ E  RSS36 ×3 (seri; ust_sag kapısı 121e ile kalktı, 4. kanal KALDIRILDI) ────────────2k──► EL1904-3 │  mantık  ├─► EL2904-2.1/2.2 ──► ROBOT koruyucu durdurma (2k)               [SF7 SF8a]
+ HÜCRE KAPISI AZM40 ────────────2k──► EL1904-4 │          ├─► EL2904-2.3 ──► hücre kapısı AZM40 kilit aç (robot duruyor + ray STO) [SF7c]
+ ROBOT &quot;sistem acil&quot; çıkışı ────2k──► EL1904-4 │          ├─► EL2904-3.3 ──► QR müşteri mandalları ortak 24 V (röle)       [SF8b İPTAL: perde şalteri yok, bkz. §1b]
+ K bıçak üst (1k) + kilit pimi (2k) ► EL1904-5 │          ├─► EL2904-3.4 ──► açıcı emniyet girişi                          [SF6]
+ ROBOT &quot;duruyor&quot; çıkışı ────────2k──► EL1904-6 │          └─► FSoE ──► EL2911 (istasyon panolarında) güç grubu kesme = STO:
+ QR müşteri kapıları AZM40 ×12 (seri) ►2k──► EL1904-6 │                 TOPPING(+F bant) · K · E · RAY · QR kapak            [SF1 SF2 SF3 SF4a SF5 SF7 SF8c]</pre></div>
+<p>- Her 2k = iki kanal, test darbeli (EL1904 çıkış test sinyalleriyle çapraz devre tespiti).</p>
+<p>- EL2911: istasyon panosunda, o istasyonun 48 V (ya da 24 V) motor beslemesi EL2911&#x27;in güç kontaklarından geçer; grup kesilince EL70xx/EL7342/EL7211 terminalleri güçsüz kalır (STO). Beckhoff &quot;etkileşimsiz terminal&quot; listesi kontrolü eksen oturumunda (AÇIK).</p>
+<p>- Fırın ısıtması güvenlik zincirinde değil (SF1: sıcak fırın tehlike yaratmaz) — DO_F_ISITICI standart PLC&#x27;den.</p>
+<h3>1b. QR ZİP-PERDE · SF8d (9 Eki 2026 · YÖNETİCİ SON KARAR: şaltersiz)</h3>
+<p>- <strong>SF8d:</strong> herhangi bir müşteri kapısı kilitsizken robot QR yüz bölgesi dışında ya da &lt;= 250 mm/s (PLr d). Zincir: 12 × AZM40 (müşteri kapısı kilidi + kilit izleme, seri) → EL1904-6 (W047) → EL6910 → EL2904 → UR10e güvenli giriş (indirgenmiş mod düzlemi), Kat 3.</p>
+<p>- <strong>İPTAL:</strong> perde konum şalteri (modele sığmıyor), W048 (12 × 2NC), SF8b (robot kapağı açıkken mandal gücü kesik), EL1904×6 / EL2904×3 ek modülleri GEREKMEZ — mevcut EL1904-6 / EL2904 çıkışı kullanılır.</p>
+<p>- <strong>Enkoder</strong> (Faulhaber 2342 + EL7342) güvenlik zincirinde DEĞİL: program çapraz kontrolü (alt konum ↔ uç sensörü çelişkisi / kapanmama → <code>PERDE_TUTARSIZ</code>, o göz kilitli). (c) &#x27;yalnız enkoder&#x27; tek başına PL &lt;= b → yetmez (hesap 07).</p>
+<p>- <strong>PL d</strong>, PFHd ≈ 2,0E-7 (UR10e girişi %91) — <code>perde_pl_hesap.py</code> → <code>07_QR_PERDE_PL_HESABI.md</code> (PLr risk grafiği, kaynaklar).</p>
+<p>- <strong>Kalan risk:</strong> yırtık / delik perde hiçbir güvenlik elemanıyla görülmez → açılış listesi &#x27;perde sağlam&#x27; maddesi (HMI).</p>
+<p>- <strong>İSTEK (Robot oturumu):</strong> UR güvenlik yapılandırması: bu girişte QR yüz bölgesi sınırı + indirgenmiş mod 250 mm/s.</p>
+<h3>2. KABLOLAMA (bkz. 04 · W030–W050)</h3>
+<div class="table"><table>
+<tr><td>Zincir</td><td>Kablo</td><td>Yol</td><td>Not</td></tr>
+<tr><td>Acil stop (TEK buton, <strong>F sağ üst kapak</strong> — adım 58, x 3625 / y 1600, yerden 1,60 m; güvenlik v3 7893d385) + reset</td><td>W040 ÖLFLEX 110 CY 7G0,5 · istasyon F</td><td>kapağın menteşe tarafından esnek döngü → F kutusu → ana pano (ikisi de U_F içinde)</td><td>KARAR (E oturumu 7 Eki): tek buton, modeldeki yer F sağ üst kapak; KURALLAR §6&#x27;daki &quot;B ön kapağı&quot; metni hatalı (düzeltme E oturumunda). Buton XB4BS8442 + 2. NC (ZBE102); kapak açıkken de erişilebilir / çalışır.</td></tr>
+<tr><td>A RSS36</td><td>W045 M12 8 pin</td><td>A</td><td>TOPPING dikme içinden (A boş kabuk kuralı)</td><td>A+B oturumu küçük iş</td></tr>
+<tr><td>TOPPING / F / E RSS36 zincirleri</td><td>W041 W042 W044</td><td>istasyon iç kanalı → üst hat → ana pano</td><td>zincir ≤ 30 m, 31 sensör</td></tr>
+<tr><td>K AZM40</td><td>W043</td><td>K panosu üstünden ana panoya (kilit bobini EL2904&#x27;ten)</td><td></td></tr>
+<tr><td>Hücre kapısı AZM40</td><td>W046</td><td>Codex ince duvar → zemin üstü kanal</td><td></td></tr>
+<tr><td>Robot güvenlik I/O</td><td>W030 W031 ekranlı</td><td>ana pano ↔ robot kutusu (QR rezerv bölmesi), Cat.6A yanında</td><td>FR5: 16 DI/16 DO + güvenlik girişleri çift kanal (NPN varsayılan; PNP için geniş gerilimli 2 kW kutu) [K] — Codex teyit</td></tr>
+<tr><td>QR müşteri kapıları AZM40 ×12 seri zincir (W047)</td><td>W047</td><td>QR içi orta dikey kanal</td><td>9 Eki: RSS36 yerine AZM40 (kilit + izleme); W048 İPTAL</td></tr>
+<tr><td>MS6-SV-E</td><td>W049</td><td>ana pano → F üst kabin kompresör çıkışı</td><td>ayda ≥ 1 test çevrimi (DO_HAT_HAVA_TEST_ISTEK)</td></tr>
+</table></div>
+<h3>3. BESLEME</h3>
+<p>- Güvenlik cihazları 24 V PELV, ana panoda ayrı sigorta (X3:3-4, 2 A); QUINT4-CAP ile kesintide reset gerekmeden kapanma.</p>
+<p>- EL2911 grup beslemeleri her istasyonun kendi NDR&#x27;sinden (TOPPING 2 × NDR-240-48 → 2 × EL2911 — iki kaynak paralellenmez, her kol kendi güvenli çıkışı; E 2 × NDR-240-24 → 2 × EL2911 (9 Eki 24 V), K NDR-120-24, QR NDR-120-24, RAY NDR-480-48).</p>
+<h3>4. AÇIK</h3>
+<p>1. ~~Acil stop yeri~~ KAPANDI: F sağ üst kapak (adım 58; KURALLAR §6 metni düzeltilecek).</p>
+<p>2. EL2911 ↔ EL70xx uygunluğu ve E&#x27;de grup sayısı (eksen oturumu).</p>
+<p>3. Robot modeli (FR5 / UR10e) ve güvenlik I/O tipi (Codex).</p>
+<p>4. Açıcı emniyet girişi şartnamesi (PL d, PFHd ≤ 5E-7) satın alma şartnamesine.</p>
+<p>5. Bölge bölge hava boşaltma istenirse istasyon başına valf (model değişikliği).</p></section><section id="s07"><h2>Hava tesisatı</h2><h2>07 · PNÖMATİK ŞEMA (7 Eki 2026 gece · Claude)</h2>
+<p>Kaynak: mekanizma tablosu (mekanizma_v3_8.json · */Hava üniteleri), üreteç BOM&#x27;ları (topping_cad_v31 · topping_uno_cad_v19 · kesme_cad_v10 · kutu_cad_v13 · h3_firin_ust_v1), zincir adım 60 (MS6-SV-E), güvenlik v2 §1c (K bıçak kilidi). Model değişmedi.</p>
+<h3>1. ŞEMA</h3>
+<div class="drawing"><pre>KOMPRESÖR JUN-AIR OF302-15B (F üst kabin · 15 L tank · 8 bar maks · FAD 38 l/min @ 8 bar · 43 @ 7 · 51 @ 5 [K] · 230 V 0,44 kW · 65 dB)
+ │  kompresör çıkış vanası (kompresor_cikis_vana) · spiral servis halkası (d4) · otomatik tank tahliyesi
+ ▼
+FESTO MS6-SV-E  güvenli yumuşak başlatma + hızlı boşaltma (PL e Kat 4 · GS_HAVA_ACIK · test ayda ≥ 1)   [adım 60]
+ │  susturucu üstte
+ ▼  ANA HAVA HATTI PU Ø8 (hava_ana · F üst kabin → üst hat kanalı · QSSF8 J1/J2/J3 geçme bağlantıları)
+ ├──► TOPPING kolu  ── şartlandırıcı filtre + regülatör (sartlandirici_filtre_regulator + manometre, 6 bar [V]) ──► VALF ADASI SMC SY3000 (valf_adasi_SS5Y3 · 12 × 5/2 · D-sub 25 → EL2809)
+ │        ├─ 5 × UNO piston silindiri Ø32 (harç · kıyma · patates · tavuk · kuşbaşı — pnomatik_silindir_D32, hız kısıcı) 
+ │        ├─ 5 × döner valf aktüatörü (valf_dondurme_aktuatoru, 90°)
+ │        ├─ 2 × yayıcı kesme valfi (harç · patates spreader_valf)
+ │        ├─ fire sileceği SMC CJ2B10-20 (fire_silecegi_silindiri)
+ │        └─ kıyma orta UNO Ø6 hortumları (kiyma_orta_hava_hortumu_D6 ×2)
+ ├──► K kolu  ── şartlandırıcı SMC AW20-F02-A ──► 4 × SMC SY3120 (bıçak İN · bıçak ÇEK · itici · #3 kilit pimi ÇEK)
+ │        ├─ bıçak silindiri Festo DGRF-C-63-125 (yıldız bıçak, KALIR) + KARAR (b2, 7 Eki): yay kapamalı kilit pimi Festo AEN-16-15-A-P-A-Z (tek etkili ÇEKEN: hava → pim dışarı, hava kesilince yay pimi boyunduruk deliğine iter; pim Ø12 1.4057, yalnız bıçak YUKARIDA hizalı) + 2 × SMT-8M-A (574334) → GS_K_BICAK_KILITLI (2 kanal, ana pano EL1904-5, W043) · valf SY3120 #3 → DO_K_KILIT_PIM · pim kesme hesabı: F = 1870 + 59 = 1929 N × 2 = 3858 N → τ 34,1 MPa / 121 MPa (%28) · HGL pilot çek valf ek önlem [güvenlik v2 §1c]
+ │        └─ aktarma iticisi SMC MY1B16-250 kolsuz silindir + 2 × AS1201F-M5-06 hız ayar + 2 × D-M9BL
+ ├──► E kolu  ── (hava_QSSF8_J3_E) ──► vakum ünitesi SMC ZK2G15K5RWA-08 (ejektör Ø1,5 · besleme + bırakma valfi · vakum anahtarı PNP DI_E_VAKUM_OK) → 4 vantuz (vakum_vantuz) + vakum manifoldu
+ │        └─ Z silindiri SMC CDQ2B16-20DZ (vakum başlığı iniş) · valf EL2809&#x27;dan
+ └──► (A: hava YOK — açıcı hazır alınır · F: hava yok · B: hava yok · QR: hava yok)
+Her kolda: yüksek/alçak basınç ayrımı yok (tek 6 bar). Hortum PU Ø8 ana · Ø6 cihaz (SMC KQ2 geçme rakorlar · duvar geçişi KQ2E bulkhead).</pre></div>
+<h3>2. HAVA TÜKETİMİ (tam yük 52 ürün/sa · sim 2. saat)</h3>
+<div class="table"><table>
+<tr><td>Tüketici</td><td>Çevrim başına</td><td>Ürün başına</td><td>Saatlik (52 ürün)</td><td>Kaynak</td></tr>
+<tr><td>UNO piston Ø32 × strok ≤ 100 (gidiş + dönüş, 6 bar)</td><td>V = 2 × 0,8 dm³ × 7 bar(a) ≈ 1,1 Nl</td><td>1–2 doz</td><td>≈ 100 Nl</td><td>[V] hesap: A = 8,0 cm², s 100 mm</td></tr>
+<tr><td>Döner aktüatör 90° ×2</td><td>≈ 0,1 Nl</td><td>1–2</td><td>≈ 10 Nl</td><td>[V]</td></tr>
+<tr><td>Kesme valfi + fire sileceği CJ2B10-20</td><td>≈ 0,05 Nl</td><td>1</td><td>≈ 3 Nl</td><td>[V]</td></tr>
+<tr><td>K bıçak DGRF-C-63-125 (gidiş + dönüş)</td><td>2 × 0,39 dm³ × 7 ≈ 5,5 Nl</td><td>1</td><td>≈ 285 Nl</td><td>[V] hesap: A 31 cm² · s 125</td></tr>
+<tr><td>K kilit pimi AEN-16-15 (tek etkili, çekme)</td><td>2,0 cm² × 1,5 cm × 7 ≈ 0,02 Nl</td><td>1</td><td>≈ 1 Nl</td><td>[V] hesap: Ø16 · s 15</td></tr>
+<tr><td>K itici MY1B16-250</td><td>2 × 0,05 × 7 ≈ 0,7 Nl</td><td>1</td><td>≈ 36 Nl</td><td>[V]</td></tr>
+<tr><td>E vakum ejektör ZK2 (0,4 MPa&#x27;da 90 l/min hava)</td><td>90 l/min × 3 s tutma ≈ 4,5 Nl</td><td>1 kutu</td><td>≈ 235 Nl</td><td>[K] SMC ZK2 föyü (kutu_cad_v13)</td></tr>
+<tr><td>E Z silindiri CDQ2B16-20</td><td>≈ 0,05 Nl</td><td>1</td><td>≈ 3 Nl</td><td>[V]</td></tr>
+<tr><td><strong>Toplam</strong></td><td></td><td></td><td><strong>≈ 670 Nl/sa ≈ 11 Nl/min</strong></td><td>kaçak payı +%20 → ≈ 13 Nl/min</td></tr>
+</table></div>
+<p><strong>Kompresör:</strong> FAD 38 l/min @ 8 bar → ortalama yük ≈ %35 (dükkân ısı hesabı %24 ile uyumlu) → <strong>yeterli</strong>; 15 L tank 6→8 bar arasında ≈ 30 Nl depolar, bıçak + ejektör aynı anda (≈ 10 Nl) tankı 1 bar&#x27;dan az düşürür. Sıcaklık: JUN-AIR ortam sınırı 40 °C [K], fırın üstü kabin 35 °C hesap (dükkân ısı) → sınırda, kabin fanları (4 × 4414 FL) şart.</p>
+<h3>3. GÜVENLİK (EN ISO 4414 · EN ISO 13849-1)</h3>
+<p>- Enerji kesilince MS6-SV-E hattı boşaltır; yeniden verildiğinde yumuşak dolum — beklenmedik hareket yok (adım 60).</p>
+<p>- K bıçağı düşmez (b2): bıçak YUKARIDA iken yay kapamalı kilit pimi (AEN-16-15) boyunduruğa girer; hava kesilince pim kendiliğinden kilitler, 2 kanallı izleme GS_K_BICAK_KILITLI (EL1904-5); HGL pilot çek valf ek önlem (tek başına yeterli değil, Festo). Çevrim: bıçak üst + kilitli → DO_K_KILIT_PIM (pim çek) → pim dışarı → İN → ÇEK → üst → pim bırak → kilitli (program FB_Kesme 20/22/21/25/27; 2 s içinde olmazsa alarm 28 K_PIM_HATA). Yeniden başlatmada önce ÇEK tarafına basınç (DO_K_BICAK_CEK).</p>
+<p>- UNO pistonları: hava kesilince ürün basıncı yok (döner valf hazneye döner), tehlike yok.</p>
+<p>- E vakum: hava kesilince vantuz bırakır, karton düşer (tehlike yok).</p>
+<p>- Tank 15 L: Basit Basınçlı Kaplar — tedarikçi CE&#x27;si (STANDART_DURUM §2).</p>
+<p>- Bakım: ana şalter kilitlenince kompresör durur + MS6 boşaltır; tank kendi tahliye musluğuyla (adım 60 notu).</p>
+<h3>4. AÇIK</h3>
+<p>1. UNO silindir strok / çap teyidi (topping_uno_cad_v19: pnomatik_silindir_D32 — üretici kodu seçilmemiş: Festo DSNU-32 / SMC CDQ2B32).</p>
+<p>2. Bölge bölge boşaltma (istasyon başına valf) istenirse model değişikliği (güvenlik v2 §3.2 notu).</p>
+<p>3. Şartlandırıcı su kabı erişimi (SABAH soru 10: otomatik tahliyeli tip?).</p>
+<p>4. E vakum: karton gözenekliliği denemesi (kutu_cad_v13 notu) — ejektör boyu değişebilir.</p></section><section id="s09"><h2>Bina ve duvar panosu</h2><h2>09 · BİNA DAĞITIMI — GÖMÜLÜ ZEMİN KANALI KESİTLERİ (üretildi: elektrik_hesap_v1.py)</h2>
+<p><strong>Kemal kararı 12:55:</strong> (1) şalter kutusu (duvar panosu) KALIR, bina beslemesi DUVARDAN girer. (2) Dağıtım kutunun ALTINDAN ayrılır; her kol gideceği yere (makine teknik sütunu, QR, robot kutusu, fırın CEE, tezgâh, AP) GÖMÜLÜ zemin kanalıyla gider; <strong>zemin üstünde kanal yok.</strong> (3) Kanallar KÜÇÜK ve STANDART katalog ölçüsünde (OBO / Legrand döşeme altı kanal — standart iç genişlik × yükseklik föyden), doluluk ≤ %50&#x27;yi sağlayan EN KÜÇÜK standart boy; güç ve veri AYRI bölme. Makinenin ayırıcısı (kol 1,2 m) şalter kutusunun yanında, duvarda (W001 duvar yüzeyinde, zemin kanalına girmez).</p>
+<p><strong>Bu belge kanal ÖLÇÜSÜ seçmez</strong> (güzergâh uzunluğu, dirsek sayısı ve standart ürün seçimi QR + robot oturumunda); her kol için kablo dış çaplarından GEREKEN ISI KESİTİNİ verir. Kanal iç serbest alanı ≥ ΣA ÷ 0,50; büküm yarıçapı R ≥ 5 × Ø (sabit döşeme, KABLO_SAHIPLIK kural 2) → dirsek / iniş yarıçapı kablonun en büyüğüne göre.</p>
+<div class="table"><table>
+<tr><td>kol</td><td>bölme</td><td>hedef</td><td>kablo (dış Ø mm)</td><td>ΣA mm²</td><td>gereken iç serbest alan mm² (≤ %50)</td><td>min. büküm R mm (5 × Ø)</td></tr>
+<tr><td>MAKİNE (iC60N 3P C32)</td><td>güç</td><td>ayırıcı (sağ duvar x 5360, panonun yanında) → gömülü kanal → teknik sütun → U_KE → ana pano</td><td>W002 (Ø19,9)</td><td>311</td><td>622</td><td>100</td></tr>
+<tr><td>FIRIN (iC60N 3P C32)</td><td>güç</td><td>fırın TP10 CEE 32 A prizi (duvarda, fırına dokunmadan)</td><td>W003 (Ø19,9)</td><td>311</td><td>622</td><td>100</td></tr>
+<tr><td>TEZGÂH (iC60N 1P+N C16)</td><td>güç</td><td>tezgâh IP44 prizi (ani ısıtıcı)</td><td>W004 (Ø12,5)</td><td>123</td><td>245</td><td>62</td></tr>
+<tr><td>ROBOT (iC60N C16)</td><td>güç</td><td>QR alt giriş → robot kontrol kutusu</td><td>W014 (Ø12,5)</td><td>123</td><td>245</td><td>62</td></tr>
+<tr><td>EKSEN (iC60N C16)</td><td>güç</td><td>QR alt giriş → robot bölmesi, ray servo</td><td>W014b (Ø12,5)</td><td>123</td><td>245</td><td>62</td></tr>
+<tr><td>QR (iC60N C16)</td><td>güç</td><td>QR istasyon kutusu (KEL-DPZ giriş plakası)</td><td>W015 (Ø12,5)</td><td>123</td><td>245</td><td>62</td></tr>
+<tr><td>ANA PANO → ER605 (duvar panosu)</td><td>veri</td><td>ana pano FL SWITCH → duvar panosu router (W002 ile aynı gömülü yol, VERİ bölmesi)</td><td>W020 (Ø8,7)</td><td>59</td><td>119</td><td>44</td></tr>
+<tr><td>HMI AP</td><td>veri</td><td>ana pano switch → Wi-Fi erişim noktası (personel duvarı)</td><td>W029 (Ø8,7)</td><td>59</td><td>119</td><td>44</td></tr>
+<tr><td>E → QR EtherCAT</td><td>veri</td><td>E EK1100 OUT → QR EK1100 IN</td><td>W025 (Ø8,7)</td><td>59</td><td>119</td><td>44</td></tr>
+</table></div>
+<h3>Ortak gövde (kutunun altından çıkan tüm kollar aynı kanalda gidiyorsa en kötü hâl)</h3>
+<p>- <strong>GÜÇ bölmesi:</strong> W002, W003, W004, W014, W014b, W015 → ΣA = 1113 mm² → iç serbest alan ≥ 2226 mm² (≤ %50 doluluk)</p>
+<p>- <strong>VERI bölmesi:</strong> W020, W029, W025 → ΣA = 178 mm² → iç serbest alan ≥ 357 mm² (≤ %50 doluluk)</p>
+<p><strong>Ayrı bölme (güç ↔ veri):</strong> 400 V H07RN-F 5G6 ile Cat.6A / EtherCAT aynı bölmede DEĞİL (EMC gereği: veri hattı güç hattından ayrı bölme; üretici kurulum kılavuzu [V — madde numarası föyden teyit]). Kanalda ara bölme / çift bölmeli profil seçilir.</p>
+<p><strong>Açık / varsayım:</strong> kablo dış çapı [K] Lapp föyü (W003 / W020 dahil [V] işaretliler 04&#x27;te); kanal standart iç ölçüsü ve OBO / Legrand ürün kodu föyden QR + robot oturumunca seçilecek (bu oturumda föy erişilmedi → VARSAYIM yok, değer yok); kablo sayıları yeni kablo eklenince (W045b … ) bu tablo yeniden üretilir.</p></section></main></body></html>
