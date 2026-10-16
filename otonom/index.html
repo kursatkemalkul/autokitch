@@ -225,6 +225,25 @@
         -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
   .stat p{font-size:16px;color:var(--gray);max-width:300px;margin:0 auto;line-height:1.45}
   .note{margin-top:30px;font-size:14px;color:var(--gray);text-align:center}
+  .vkat-wrap{text-align:left;margin-top:48px}
+  .vkat{display:flex;gap:16px;align-items:flex-start;margin:46px 0 16px;padding-top:22px;border-top:1px solid #232833}
+  .vkat:first-child{margin-top:0}
+  .vkat-n{font-size:13px;font-weight:700;letter-spacing:.1em;color:var(--blue);padding-top:5px}
+  .vkat h3{color:#fff;font-size:22px;font-weight:600;margin:0;text-wrap:balance}
+  .vkat h3 span{color:var(--gray);font-weight:400;font-size:14px}
+  .vkat p{color:#8a94a4;font-size:14px;margin:4px 0 0}
+  .vgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+  @media(max-width:980px){.vgrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+  @media(max-width:640px){.vgrid{grid-template-columns:1fr}}
+  .vk{display:flex;flex-direction:column;gap:12px;padding:14px;border:1px solid #232833;border-radius:16px;background:#12151c;min-width:0}
+  .vk-ust{display:flex;flex-direction:column;gap:4px;flex:1}
+  .vk-ulke{align-self:flex-start;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);border:1px solid #2a3a52;border-radius:999px;padding:2px 9px}
+  .vk h4{color:#fff;font-size:16.5px;font-weight:600;margin:4px 0 0}
+  .vk p{color:#8a94a4;font-size:13px;line-height:1.45;margin:0}
+  .vk .yt{border-radius:12px}
+  details.oyuncu{margin-top:52px;border:1px solid #232833;border-radius:16px;background:#0e1117;padding:16px 18px}
+  details.oyuncu summary{cursor:pointer;color:#fff;font-weight:600;font-size:16px;text-align:left}
+  details.oyuncu summary span{color:var(--gray);font-weight:400;font-size:13px}
   .ytgrid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:30px;text-align:left}
   @media(max-width:760px){.ytgrid{grid-template-columns:1fr}}
   .yt{position:relative;width:100%;padding-top:56.25%;border-radius:16px;overflow:hidden;border:1px solid #2a2a2d}
@@ -416,6 +435,17 @@ section#store-m a[style*="color:var(--blue)"]{color:#c2600f!important}
 
 #topbtn{position:fixed;left:14px;bottom:14px;z-index:95;width:44px;height:44px;border-radius:50%;border:1px solid #dfe6f0;background:rgba(255,255,255,.95);color:#1a49b8;font-size:19px;font-weight:800;cursor:pointer;box-shadow:0 6px 18px rgba(20,40,80,.18);display:none;font-family:inherit}
 #topbtn:hover{border-color:#1a49b8}
+/* video kartları (Pazar Kanıtı) */
+.vkat{border-top-color:#e3e9f2!important}
+.vkat-n{color:var(--sblue)!important}
+.vkat h3{color:#0f1726!important}
+.vkat p,.vk p{color:#5a6880!important}
+.vk{background:#fff!important;border-color:#e3e9f2!important;box-shadow:0 10px 30px rgba(20,40,80,.06)}
+.vk h4{color:#0f1726!important}
+.vk-ulke{color:var(--sblue)!important;border-color:#cdd9f0!important;background:#f1f5fd}
+.vk .yt{border-color:#e3e9f2!important}
+details.oyuncu{background:#fff!important;border-color:#e3e9f2!important}
+details.oyuncu summary{color:#0f1726!important}
 </style>
 </head>
 <body>
@@ -1334,8 +1364,111 @@ section#store-m a[style*="color:var(--blue)"]{color:#c2600f!important}
         <img src="../assets/ca1-robotik.jpg" alt="AI destekli robotik mutfak — saatte 120 yemek" loading="lazy" style="width:100%;aspect-ratio:16/12;object-fit:cover;object-position:top;display:block">
         <div class="body"><h3>Saatte 120 yemek, insansız — bugün markette</h3><p>Circus CA-1: 7 m²'de saatte ~120 öğün, 36 malzeme silosu, günde 1 saatten az insan müdahalesi. Ekim 2025'ten beri Almanya'da REWE süpermarketlerinde canlı; yemek fiyatı €3,50–7. "Store" konseptimizin kalbindeki teknoloji sahada çalışıyor.</p></div>
       </div>
-    <div class="rv d1" style="margin-top:52px;text-align:left">
-<div class="subh" style="text-align:center">Küresel harita — 64 oyuncu, 4 kıta <span>· tamamı, tıklanabilir</span></div>
+    <div class="vkat-wrap">
+    <div class="vkat rv d1"><span class="vkat-n">01</span><div><h3>Pizza robotları ve otomatları <span>· 8 video</span></h3><p>En yakın rakipler: hamurdan kutuya pizza yapan makineler.</p></div></div>
+    <div class="vgrid">
+      <article class="vk">
+        <div class="vk-ust"><span class="vk-ulke">İsrail</span><h4>Hyper Food Robotics</h4><p>Konteyner içinde tam insansız pizza restoranı; Pizza Hut İsrail için çalışıyor.</p></div>
+        <div class="yt"><iframe src="https://www.youtube-nocookie.com/embed/w629j9Pd8vQ?rel=0" title="Hyper Food Robotics" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div>
+      </article>
+      <article class="vk">
+        <div class="vk-ust"><span class="vk-ulke">İtalya</span><h4>Let's Pizza GEN 2</h4><p>Taban, sos, fırın ve kutu tek otomatta; satılık tek komple sistem.</p></div>
+        <div class="yt"><iframe src="https://www.youtube-nocookie.com/embed/5Ij6T2q75Lo?rel=0" title="Let's Pizza GEN 2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div>
+      </article>
+      <article class="vk">
+        <div class="vk-ust"><span class="vk-ulke">Fransa</span><h4>Pazzi</h4><p>3 robot kollu pizzacı; Paris ve Val d'Europe'ta çalışan şube.</p></div>
+        <div class="yt"><iframe src="https://www.youtube-nocookie.com/embed/ewPMWyXT5eI?rel=0" title="Pazzi" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div>
+      </article>
+      <article class="vk">
+        <div class="vk-ust"><span class="vk-ulke">ABD</span><h4>Nala Pizzaiola</h4><p>7 eksenli kol hamuru presler ve malzemeyi serer; saatte 50 pizza.</p></div>
+        <div class="yt"><iframe src="https://www.youtube-nocookie.com/embed/84U72eii5mY?rel=0" title="Nala Pizzaiola" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div>
+      </article>
+      <article class="vk">
+        <div class="vk-ust"><span class="vk-ulke">ABD</span><h4>Lab2Fab PizzaBot</h4><p>Sos, peynir ve pepperoni hattı; Middleby grubunun çözümü.</p></div>
+        <div class="yt"><iframe src="https://www.youtube-nocookie.com/embed/Umv8HLiHjoA?rel=0" title="Lab2Fab PizzaBot" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div>
+      </article>
+      <article class="vk">
+        <div class="vk-ust"><span class="vk-ulke">ABD</span><h4>XRobotics xPizza Cube 3.0</h4><p>Tezgâh üstü topping robotu; mevcut pizzacıya eklenir.</p></div>
+        <div class="yt"><iframe src="https://www.youtube-nocookie.com/embed/hqEaC2igCrs?rel=0" title="XRobotics xPizza Cube 3.0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div>
+      </article>
+      <article class="vk">
+        <div class="vk-ust"><span class="vk-ulke">ABD</span><h4>Appetronix</h4><p>Columbus havalimanında Donatos için insansız pizza kioskı.</p></div>
+        <div class="yt"><iframe src="https://www.youtube-nocookie.com/embed/drgGuFU6JDw?rel=0" title="Appetronix" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div>
+      </article>
+      <article class="vk">
+        <div class="vk-ust"><span class="vk-ulke">Avustralya</span><h4>Pizzabot</h4><p>Sydney Bondi'de 7/24 çalışan pizza otomatı.</p></div>
+        <div class="yt"><iframe src="https://www.youtube-nocookie.com/embed/5h572vnufCY?rel=0" title="Pizzabot" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div>
+      </article>
+    </div>
+    <div class="vkat rv d1"><span class="vkat-n">02</span><div><h3>Otonom robotik mutfaklar <span>· 6 video</span></h3><p>Sahada çalışan, insansız yemek üreten tam mutfaklar.</p></div></div>
+    <div class="vgrid">
+      <article class="vk">
+        <div class="vk-ust"><span class="vk-ulke">Almanya</span><h4>Circus CA-1</h4><p>7 m²'de saatte ~120 öğün; REWE süpermarketlerinde canlı.</p></div>
+        <div class="yt"><iframe src="https://www.youtube-nocookie.com/embed/WpuD0xHoH9g?rel=0" title="Circus CA-1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div>
+      </article>
+      <article class="vk">
+        <div class="vk-ust"><span class="vk-ulke">Almanya</span><h4>goodBytz</h4><p>Modüler robotik mutfak; kantin ve restoran için.</p></div>
+        <div class="yt"><iframe src="https://www.youtube-nocookie.com/embed/GiG6Kmz_FfE?rel=0" title="goodBytz" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div>
+      </article>
+      <article class="vk">
+        <div class="vk-ust"><span class="vk-ulke">İsrail</span><h4>Beastro · Kitchen Robotics</h4><p>Bowl ve sıcak yemek pişiren kapalı robotik mutfak.</p></div>
+        <div class="yt"><iframe src="https://www.youtube-nocookie.com/embed/9ltFcBn9lKU?rel=0" title="Beastro · Kitchen Robotics" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div>
+      </article>
+      <article class="vk">
+        <div class="vk-ust"><span class="vk-ulke">Hollanda</span><h4>Eatch</h4><p>Merkez mutfakta günde 5.000 öğün üreten robotik hat.</p></div>
+        <div class="yt"><iframe src="https://www.youtube-nocookie.com/embed/qtkONuUDwHI?rel=0" title="Eatch" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div>
+      </article>
+      <article class="vk">
+        <div class="vk-ust"><span class="vk-ulke">Letonya</span><h4>RoboEatz ARK</h4><p>Riga'da çalışan otonom robotik mutfak noktası (AFP).</p></div>
+        <div class="yt"><iframe src="https://www.youtube-nocookie.com/embed/Ey1yIivlgCk?rel=0" title="RoboEatz ARK" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div>
+      </article>
+      <article class="vk">
+        <div class="vk-ust"><span class="vk-ulke">Çin</span><h4>Botinkit OMNI</h4><p>Akıllı wok istasyonu; yapay zekâ destekli mutfak yönetimi.</p></div>
+        <div class="yt"><iframe src="https://www.youtube-nocookie.com/embed/Kcw0kw2v8ps?rel=0" title="Botinkit OMNI" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div>
+      </article>
+    </div>
+    <div class="vkat rv d1"><span class="vkat-n">03</span><div><h3>Tek görevli robotlar ve istasyonlar <span>· 3 video</span></h3><p>Tek işi yapan makineler; bir kısmı bizim istasyonlarımız için tedarik adayı.</p></div></div>
+    <div class="vgrid">
+      <article class="vk">
+        <div class="vk-ust"><span class="vk-ulke">ABD</span><h4>Aniai Alpha Grill</h4><p>Çift plakalı otonom burger ızgarası.</p></div>
+        <div class="yt"><iframe src="https://www.youtube-nocookie.com/embed/HLvhpA6ceew?rel=0" title="Aniai Alpha Grill" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div>
+      </article>
+      <article class="vk">
+        <div class="vk-ust"><span class="vk-ulke">Çin</span><h4>Juyou sos makinesi</h4><p>Pizza sosu serme istasyonu; TOPPING için incelenen aday.</p></div>
+        <div class="yt"><iframe src="https://www.youtube-nocookie.com/embed/XJLFVg1xXgE?rel=0" title="Juyou sos makinesi" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div>
+      </article>
+      <article class="vk">
+        <div class="vk-ust"><span class="vk-ulke">Hindistan</span><h4>Nosh</h4><p>Evler için tezgâh üstü robot şef (CES 2026).</p></div>
+        <div class="yt"><iframe src="https://www.youtube-nocookie.com/embed/qhV1lXGUOsQ?rel=0" title="Nosh" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div>
+      </article>
+    </div>
+    <div class="vkat rv d1"><span class="vkat-n">04</span><div><h3>Sektör derlemeleri <span>· 5 video</span></h3><p>Robotik mutfak hareketinin genel görünümü.</p></div></div>
+    <div class="vgrid">
+      <article class="vk">
+        <div class="vk-ust"><span class="vk-ulke">Derleme</span><h4>10 restoran robotu</h4><p>Foodverge: yemek sektörünü değiştiren 10 restoran robotu.</p></div>
+        <div class="yt"><iframe src="https://www.youtube-nocookie.com/embed/FdyGRRmhDwg?rel=0" title="10 restoran robotu" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div>
+      </article>
+      <article class="vk">
+        <div class="vk-ust"><span class="vk-ulke">Derleme</span><h4>4 dakikada pişiren mutfak</h4><p>Siparişi 4 dakikanın altında pişiren robotik mutfak.</p></div>
+        <div class="yt"><iframe src="https://www.youtube-nocookie.com/embed/u7x2HqQ9A1U?rel=0" title="4 dakikada pişiren mutfak" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div>
+      </article>
+      <article class="vk">
+        <div class="vk-ust"><span class="vk-ulke">Tanıtım</span><h4>Auto-Chef</h4><p>Kendi kendine pişiren otonom mutfak konsepti.</p></div>
+        <div class="yt"><iframe src="https://www.youtube-nocookie.com/embed/zyFJp_x72Os?rel=0" title="Auto-Chef" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div>
+      </article>
+      <article class="vk">
+        <div class="vk-ust"><span class="vk-ulke">Tanıtım</span><h4>Auto-Chef · kullanım</h4><p>Elle pişirmeyi ortadan kaldıran ev mutfağı kurgusu.</p></div>
+        <div class="yt"><iframe src="https://www.youtube-nocookie.com/embed/ipD41yLKA8E?rel=0" title="Auto-Chef · kullanım" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div>
+      </article>
+      <article class="vk">
+        <div class="vk-ust"><span class="vk-ulke">Derleme</span><h4>Akıllı otomatik mutfaklar</h4><p>Yüksek teknolojili otomatik mutfak örnekleri.</p></div>
+        <div class="yt"><iframe src="https://www.youtube-nocookie.com/embed/RbVWv-9E4-4?rel=0" title="Akıllı otomatik mutfaklar" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div>
+      </article>
+    </div>
+    </div>
+    <details class="oyuncu rv d1">
+      <summary>Küresel harita: 64 oyuncu, 4 kıta <span>· tüm liste, tıklanabilir</span></summary>
+      <div style="text-align:left">
 <div style="font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);margin:28px 0 12px">Kuzey Amerika · 28</div>
 <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(215px,1fr));gap:10px">
 <a href="https://www.aniai.ai/" target="_blank" rel="noopener" style="display:block;padding:11px 13px;border:1px solid #232833;border-radius:12px;background:#12151c"><b style="color:#fff;font-size:13.5px">Aniai ↗</b><span style="display:block;color:#8a94a4;font-size:12px;margin-top:3px;line-height:1.35">burger ızgara robotu</span></a>
@@ -1413,7 +1546,8 @@ section#store-m a[style*="color:var(--blue)"]{color:#c2600f!important}
 <a href="https://www.pizzabot.com.au" target="_blank" rel="noopener" style="display:block;padding:11px 13px;border:1px solid #232833;border-radius:12px;background:#12151c"><b style="color:#fff;font-size:13.5px">Pizzabot ↗</b><span style="display:block;color:#8a94a4;font-size:12px;margin-top:3px;line-height:1.35">pizza otomat robotu</span></a>
 </div>
 <p class="note" style="margin-top:18px">Liste: "Kitchens of Tomorrow — Mapping the Global Robotic Kitchen &amp; Hospitality Robotics" (Mart 2026) araştırmasının tamamı; bağlantılar şirketlerin resmî siteleridir. Türkiye: otonom mutfak üretimi tarafında henüz yerli oyuncu yok.</p>
-</div>
+      </div>
+    </details>
     <div class="grid g2" style="text-align:left;margin-top:44px">
       <div class="card rv d1"><div class="n">Kanıt 01 · Fransa</div><h3>~2.500 kurulu pizza otomatı</h3><p>Fransa'da bugün yaklaşık 2.500 insansız pizza otomatı sahada ve her yıl 300–500 yenisi kuruluyor. Bu rakam bir şirket beyanı değil; Fransız Ulusal Meclisi'ne verilen 2025 tarihli resmî yanıtta kayda geçti. İnsansız yemek satış noktası Avrupa'da günlük hayatın parçası hâline geldi. Pazar lideri Adial'in makinesi ~€40–50 bine satılıyor; bakım dahil €639/ay leasing seçeneği bile var — saha verisiyle başabaş noktası <b style="color:#fff">günde yalnızca 4–7 pizza</b>.</p></div>
       <div class="card rv d2"><div class="n">Kanıt 02 · ABD &amp; Asya</div><h3>Yo-Kai Express — 150+ istasyon</h3><p>ABD, Japonya, Tayvan ve Güney Kore'de 150'den fazla insansız sıcak yemek istasyonu işletiyor. Bir kase yemeği 45–90 saniyede hazırlıyor; havalimanlarında personelsiz, 7/24 satış yapıyor.</p></div>
@@ -1423,33 +1557,6 @@ section#store-m a[style*="color:var(--blue)"]{color:#c2600f!important}
     <p class="lead rv center" style="margin-top:34px;font-size:18px">Bu örneklerin ortak birim şablonu net: <b style="color:#fff;font-weight:600">1–7 m² alan · 0 personel · günde ~1 saat ikmal · 6–12 $ ürün fiyatı</b>. AUTOKITCH'in farkı, bu kanıtlanmış şablonu tek ürüne kilitlenmeden <b style="color:#fff;font-weight:600">modüler bir platformda</b> ve Türkiye'nin üretim maliyeti avantajıyla kurmak.</p>
 
     <blockquote class="rv d1" style="margin:40px auto 0;max-width:760px;border-left:3px solid var(--blue);padding:6px 0 6px 22px;text-align:left;color:#fff;font-size:19px;font-weight:500;line-height:1.55">"Yemeğin geleceği sadece ne yediğimizle ilgili olmayabilir — onu kimin ya da neyin pişirdiğiyle de ilgili."<div class="n" style="margin-top:10px">Kitchens of Tomorrow · Global Robotic Kitchen Map, Mart 2026</div></blockquote>
-    <h3 class="rv d1" style="color:#fff;font-weight:600;font-size:21px;margin-top:56px;text-align:center">Sektörden örnekler <span style="color:var(--gray);font-weight:400;font-size:15px">· harici / YouTube</span></h3>
-    <div class="ytgrid">
-      <div class="rv d1"><div class="yt"><iframe src="https://www.youtube-nocookie.com/embed/GiG6Kmz_FfE?rel=0" title="GoodBytz Robotic Kitchen" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div><div class="ycap"><b>GoodBytz</b> · robotik mutfak (Almanya)</div></div>
-      <div class="rv d2"><div class="yt"><iframe src="https://www.youtube-nocookie.com/embed/u7x2HqQ9A1U?rel=0" title="Robotic kitchen cooks in minutes" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div><div class="ycap"><b>Robotik mutfak</b> · ~4 dakikada pişirme</div></div>
-      <div class="rv d1"><div class="yt"><iframe src="https://www.youtube-nocookie.com/embed/zyFJp_x72Os?rel=0" title="Tesla of Kitchens autonomous robotic kitchen" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div><div class="ycap"><b>"Tesla of Kitchens"</b> · otonom robotik mutfak</div></div>
-      <div class="rv d2"><div class="yt"><iframe src="https://www.youtube-nocookie.com/embed/ipD41yLKA8E?rel=0" title="Auto-Chef self-cooking kitchen" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div><div class="ycap"><b>Auto-Chef</b> · kendi kendine pişiren mutfak</div></div>
-      <div class="rv d1"><div class="yt"><iframe src="https://www.youtube-nocookie.com/embed/9ltFcBn9lKU?rel=0" title="Beastro robotic kitchen by Kitchen Robotics" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div><div class="ycap"><b>Beastro</b> · Kitchen Robotics (robotik mutfak)</div></div>
-      <div class="rv d2"><div class="yt"><iframe src="https://www.youtube-nocookie.com/embed/RbVWv-9E4-4?rel=0" title="Intelligent automated kitchens" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div><div class="ycap"><b>Akıllı otomatik mutfaklar</b> · sektör derlemesi</div></div>
-      <div class="rv d1"><div class="yt"><iframe src="https://www.youtube-nocookie.com/embed/qhV1lXGUOsQ?rel=0" title="Nosh home robo-chef" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div><div class="ycap"><b>Nosh</b> · ev için robo-şef (CES 2026)</div></div>
-      <div class="rv d2"><div class="yt"><iframe src="https://www.youtube-nocookie.com/embed/FdyGRRmhDwg?rel=0" title="10 restaurant robots overview" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div><div class="ycap"><b>10 restoran robotu</b> · sektör derlemesi (Foodverge)</div></div>
-    </div>
-    <h3 class="rv d1" style="color:#fff;font-weight:600;font-size:21px;margin-top:56px;text-align:center">Takipteki makineler iş başında <span style="color:var(--gray);font-weight:400;font-size:15px">· TAM İSABET listesi — üreticilerin kendi videoları</span></h3>
-    <div class="ytgrid">
-      <div class="rv d1"><div class="yt"><iframe src="https://www.youtube-nocookie.com/embed/5Ij6T2q75Lo?rel=0" title="Let's Pizza GEN 2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div><div class="ycap"><b>Let's Pizza GEN 2</b> · taban→sos→fırın→kutu (resmî)</div></div>
-      <div class="rv d2"><div class="yt"><iframe src="https://www.youtube-nocookie.com/embed/ewPMWyXT5eI?rel=0" title="Pazzi robotik pizzeria" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div><div class="ycap"><b>Pazzi</b> · 3 kollu robotik pizzeria (resmî)</div></div>
-      <div class="rv d1"><div class="yt"><iframe src="https://www.youtube-nocookie.com/embed/84U72eii5mY?rel=0" title="Nala Pizzaiola" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div><div class="ycap"><b>Nala Pizzaiola</b> · kol merkezli pizza robotu (resmî)</div></div>
-      <div class="rv d2"><div class="yt"><iframe src="https://www.youtube-nocookie.com/embed/Umv8HLiHjoA?rel=0" title="Lab2Fab PizzaBot" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div><div class="ycap"><b>Lab2Fab PizzaBot</b> · sos+peynir+pepperoni hattı (resmî)</div></div>
-      <div class="rv d1"><div class="yt"><iframe src="https://www.youtube-nocookie.com/embed/hqEaC2igCrs?rel=0" title="xRobotics xPizza Cube 3.0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div><div class="ycap"><b>xPizza Cube 3.0</b> · tezgâh üstü topping robotu (resmî)</div></div>
-      <div class="rv d2"><div class="yt"><iframe src="https://www.youtube-nocookie.com/embed/drgGuFU6JDw?rel=0" title="Appetronix Donatos kiosk" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div><div class="ycap"><b>Appetronix</b> · Columbus havalimanında insansız pizza kioski (basın)</div></div>
-      <div class="rv d1"><div class="yt"><iframe src="https://www.youtube-nocookie.com/embed/5h572vnufCY?rel=0" title="Pizzabot Avustralya" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div><div class="ycap"><b>Pizzabot</b> · Bondi'de 7/24 pizza otomatı (resmî)</div></div>
-      <div class="rv d2"><div class="yt"><iframe src="https://www.youtube-nocookie.com/embed/XJLFVg1xXgE?rel=0" title="Juyou sos makinesi" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div><div class="ycap"><b>Juyou</b> · sos serme istasyonu — topping adaylarından biri (üretici)</div></div>
-      <div class="rv d1"><div class="yt"><iframe src="https://www.youtube-nocookie.com/embed/WpuD0xHoH9g?rel=0" title="Circus CA-1 demo" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div><div class="ycap"><b>Circus CA-1</b> · REWE'lerdeki otonom mutfak (resmî demo)</div></div>
-      <div class="rv d2"><div class="yt"><iframe src="https://www.youtube-nocookie.com/embed/Kcw0kw2v8ps?rel=0" title="BOTINKIT OMNI" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div><div class="ycap"><b>Botinkit OMNI</b> · akıllı wok istasyonu (resmî)</div></div>
-      <div class="rv d1"><div class="yt"><iframe src="https://www.youtube-nocookie.com/embed/qtkONuUDwHI?rel=0" title="Eatch robotik mutfak" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div><div class="ycap"><b>Eatch</b> · günde 5.000 öğünlük robotik hat (resmî)</div></div>
-      <div class="rv d2"><div class="yt"><iframe src="https://www.youtube-nocookie.com/embed/HLvhpA6ceew?rel=0" title="Aniai Alpha Grill" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div><div class="ycap"><b>Aniai Alpha Grill</b> · çift plakalı otonom ızgara (resmî)</div></div>
-      <div class="rv d1"><div class="yt"><iframe src="https://www.youtube-nocookie.com/embed/Ey1yIivlgCk?rel=0" title="RoboEatz ARK Riga" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div><div class="ycap"><b>RoboEatz ARK</b> · Riga'da çalışan nokta (AFP)</div></div>
-    </div>
     <p class="note">Harici / üçüncü taraf örneklerdir (AUTOKITCH'e ait değildir) — kategorinin gerçek ve aktif olduğunu gösterir. Kaynaklar: Kitchens of Tomorrow (Mart 2026) · Assemblée Nationale yazılı soru n.5990 (2025) · Circus Group / Interesting Engineering · Vending Connection · SlashGear · Sifted. Rakamlar yayın tarihlerindeki beyanlardır.</p>
   </div>
 </section>
